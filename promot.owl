@@ -1,15 +1,24 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="http://purl.obolibrary.org/obo/promot/imports/bfo_import.owl#"
-     xml:base="http://purl.obolibrary.org/obo/promot/imports/bfo_import.owl"
+<rdf:RDF xmlns="http://purl.obolibrary.org/obo/promot.owl#"
+     xml:base="http://purl.obolibrary.org/obo/promot.owl"
+     xmlns:dce="http://purl.org/dc/elements/1.1/"
      xmlns:obo="http://purl.obolibrary.org/obo/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     xmlns:terms="http://purl.org/dc/terms/">
-    <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/promot/imports/bfo_import.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/promot/releases/2025-05-20/imports/bfo_import.owl"/>
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:mondo="http://purl.obolibrary.org/obo/mondo#"
+     xmlns:dcterms="http://purl.org/dc/terms/"
+     xmlns:subsets="http://purl.obolibrary.org/obo/ro/subsets#"
+     xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
+    <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/promot.owl">
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/promot/releases/2025-05-20/promot.owl"/>
+        <dcterms:description>Ontology for building the relational database of the PROMOT project</dcterms:description>
+        <dcterms:license rdf:resource="https://creativecommons.org/licenses/unspecified"/>
+        <dcterms:title>PROMOT Common Data Model ontology</dcterms:title>
+        <oboInOwl:date>20:05:2025 12:02</oboInOwl:date>
         <owl:versionInfo>2025-05-20</owl:versionInfo>
     </owl:Ontology>
     
@@ -38,9 +47,21 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/IAO_0000111 -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000111"/>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/IAO_0000112 -->
 
     <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000112"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000114 -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000114"/>
     
 
 
@@ -56,6 +77,12 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/IAO_0000117 -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000117"/>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/IAO_0000118 -->
 
     <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000118"/>
@@ -65,6 +92,12 @@
     <!-- http://purl.obolibrary.org/obo/IAO_0000119 -->
 
     <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000119"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000233 -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000233"/>
     
 
 
@@ -92,9 +125,387 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/RO_0001900 -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/RO_0001900"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0002259 -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/RO_0002259">
+        <rdfs:subPropertyOf rdf:resource="http://www.geneontology.org/formats/oboInOwl#SubsetProperty"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/valid_for_go_gp2term -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/valid_for_go_gp2term">
+        <rdfs:subPropertyOf rdf:resource="http://www.geneontology.org/formats/oboInOwl#SubsetProperty"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/mondo#clingen -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/mondo#clingen">
+        <rdfs:subPropertyOf rdf:resource="http://www.geneontology.org/formats/oboInOwl#SubsetProperty"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/mondo#curated_content_resource -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/mondo#curated_content_resource"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/mondo#disease_grouping -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/mondo#disease_grouping">
+        <rdfs:subPropertyOf rdf:resource="http://www.geneontology.org/formats/oboInOwl#SubsetProperty"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/mondo#excluded_subClassOf -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/mondo#excluded_subClassOf"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/mondo#gard_rare -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/mondo#gard_rare">
+        <rdfs:subPropertyOf rdf:resource="http://www.geneontology.org/formats/oboInOwl#SubsetProperty"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/mondo#nord_rare -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/mondo#nord_rare">
+        <rdfs:subPropertyOf rdf:resource="http://www.geneontology.org/formats/oboInOwl#SubsetProperty"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/mondo#ordo_disorder -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/mondo#ordo_disorder">
+        <rdfs:subPropertyOf rdf:resource="http://www.geneontology.org/formats/oboInOwl#SubsetProperty"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/mondo#ordo_group_of_disorders -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/mondo#ordo_group_of_disorders">
+        <rdfs:subPropertyOf rdf:resource="http://www.geneontology.org/formats/oboInOwl#SubsetProperty"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/mondo#orphanet_rare -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/mondo#orphanet_rare">
+        <rdfs:subPropertyOf rdf:resource="http://www.geneontology.org/formats/oboInOwl#SubsetProperty"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/mondo#otar -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/mondo#otar">
+        <rdfs:subPropertyOf rdf:resource="http://www.geneontology.org/formats/oboInOwl#SubsetProperty"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/mondo#rare -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/mondo#rare">
+        <rdfs:subPropertyOf rdf:resource="http://www.geneontology.org/formats/oboInOwl#SubsetProperty"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/mondo#should_conform_to -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/mondo#should_conform_to"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ro/subsets#ro-eco -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/ro/subsets#ro-eco">
+        <rdfs:subPropertyOf rdf:resource="http://www.geneontology.org/formats/oboInOwl#SubsetProperty"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/contributor -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/contributor"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/date -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/date"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/description -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/description">
+        <rdfs:label>description</rdfs:label>
+    </owl:AnnotationProperty>
+    
+
+
     <!-- http://purl.org/dc/terms/license -->
 
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/license"/>
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/license">
+        <rdfs:label>license</rdfs:label>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/source -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/source"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/title -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/title">
+        <rdfs:label>title</rdfs:label>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://www.geneontology.org/formats/oboInOwl#SubsetProperty -->
+
+    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#SubsetProperty"/>
+    
+
+
+    <!-- http://www.geneontology.org/formats/oboInOwl#created_by -->
+
+    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#created_by"/>
+    
+
+
+    <!-- http://www.geneontology.org/formats/oboInOwl#creation_date -->
+
+    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#creation_date"/>
+    
+
+
+    <!-- http://www.geneontology.org/formats/oboInOwl#date -->
+
+    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#date"/>
+    
+
+
+    <!-- http://www.geneontology.org/formats/oboInOwl#hasDbXref -->
+
+    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
+    
+
+
+    <!-- http://www.geneontology.org/formats/oboInOwl#hasExactSynonym -->
+
+    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+    
+
+
+    <!-- http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym -->
+
+    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
+    
+
+
+    <!-- http://www.geneontology.org/formats/oboInOwl#hasSynonymType -->
+
+    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#hasSynonymType"/>
+    
+
+
+    <!-- http://www.geneontology.org/formats/oboInOwl#id -->
+
+    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#id"/>
+    
+
+
+    <!-- http://www.geneontology.org/formats/oboInOwl#inSubset -->
+
+    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#inSubset"/>
+    
+
+
+    <!-- http://www.geneontology.org/formats/oboInOwl#source -->
+
+    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#source"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#closeMatch -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#closeMatch"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#exactMatch -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#exactMatch"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0001015 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0001015">
+        <owl:inverseOf rdf:resource="http://purl.obolibrary.org/obo/RO_0001025"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <obo:IAO_0000111 xml:lang="en">is location of</obo:IAO_0000111>
+        <obo:IAO_0000112 xml:lang="en">my head is the location of my brain</obo:IAO_0000112>
+        <obo:IAO_0000112 xml:lang="en">this cage is the location of this rat</obo:IAO_0000112>
+        <obo:IAO_0000115 xml:lang="en">a relation between two independent continuants, the location and the target, in which the target is entirely within the location</obo:IAO_0000115>
+        <obo:IAO_0000116 xml:lang="en">Most location relations will only hold at certain times, but this is difficult to specify in OWL. See http://purl.obolibrary.org/obo/ro/docs/temporal-semantics/</obo:IAO_0000116>
+        <obo:IAO_0000118 xml:lang="en">location_of</obo:IAO_0000118>
+        <obo:RO_0001900 rdf:resource="http://purl.obolibrary.org/obo/RO_0001901"/>
+        <rdfs:label xml:lang="en">location of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0001025 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0001025">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <obo:IAO_0000111 xml:lang="en">located in</obo:IAO_0000111>
+        <obo:IAO_0000112 xml:lang="en">my brain is located in my head</obo:IAO_0000112>
+        <obo:IAO_0000112 xml:lang="en">this rat is located in this cage</obo:IAO_0000112>
+        <obo:IAO_0000115 xml:lang="en">a relation between two independent continuants, the target and the location, in which the target is entirely within the location</obo:IAO_0000115>
+        <obo:IAO_0000116 xml:lang="en">Location as a relation between instances: The primitive instance-level relation c located_in r at t reflects the fact that each continuant is at any given time associated with exactly one spatial region, namely its exact location. Following we can use this relation to define a further instance-level location relation - not between a continuant and the region which it exactly occupies, but rather between one continuant and another. c is located in c1, in this sense, whenever the spatial region occupied by c is part_of the spatial region occupied by c1.    Note that this relation comprehends both the relation of exact location between one continuant and another which obtains when r and r1 are identical (for example, when a portion of fluid exactly fills a cavity), as well as those sorts of inexact location relations which obtain, for example, between brain and head or between ovum and uterus</obo:IAO_0000116>
+        <obo:IAO_0000116 xml:lang="en">Most location relations will only hold at certain times, but this is difficult to specify in OWL. See http://purl.obolibrary.org/obo/ro/docs/temporal-semantics/</obo:IAO_0000116>
+        <obo:IAO_0000118 xml:lang="en">located_in</obo:IAO_0000118>
+        <obo:RO_0001900 rdf:resource="http://purl.obolibrary.org/obo/RO_0001901"/>
+        <dcterms:source>http://www.obofoundry.org/ro/#OBO_REL:located_in</dcterms:source>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/valid_for_go_gp2term"/>
+        <rdfs:label xml:lang="en">located in</rdfs:label>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://wiki.geneontology.org/Located_in</rdfs:seeAlso>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0002200 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0002200">
+        <owl:inverseOf rdf:resource="http://purl.obolibrary.org/obo/RO_0002201"/>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000125"/>
+        <obo:IAO_0000115>A relationship that holds between a biological entity and a phenotype. Here a phenotype is construed broadly as any kind of quality of an organism part, a collection of these qualities, or a change in quality or qualities (e.g. abnormally increased temperature). The subject of this relationship can be an organism (where the organism has the phenotype, i.e. the qualities inhere in parts of this organism), a genomic entity such as a gene or genotype (if modifications of the gene or the genotype causes the phenotype), or a condition such as a disease (such that if the condition inheres in an organism, then the organism has the phenotype).</obo:IAO_0000115>
+        <obo:IAO_0000117 rdf:resource="https://orcid.org/0000-0002-6601-2165"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/ro/subsets#ro-eco"/>
+        <rdfs:label xml:lang="en">has phenotype</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0002201 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0002201">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000125"/>
+        <obo:IAO_0000115>inverse of has phenotype</obo:IAO_0000115>
+        <obo:IAO_0000117 rdf:resource="https://orcid.org/0000-0002-6601-2165"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/RO_0002259"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/ro/subsets#ro-eco"/>
+        <rdfs:label xml:lang="en">phenotype of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0002452 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0002452">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/RO_0002200"/>
+        <obo:IAO_0000115>A relation that holds between a disease or an organism and a phenotype</obo:IAO_0000115>
+        <obo:IAO_0000117 rdf:resource="https://orcid.org/0000-0002-6601-2165"/>
+        <rdfs:label>has symptom</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0004013 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0004013">
+        <obo:IAO_0000115>Relates a gene to condition, such that a mutation in this gene is sufficient to produce the condition and that can be passed on to offspring[modified from orphanet].</obo:IAO_0000115>
+        <oboInOwl:created_by rdf:resource="https://orcid.org/0000-0002-6601-2165"/>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-11-05T02:56:40Z</oboInOwl:creation_date>
+        <rdfs:label>is causal germline mutation in</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://www.orpha.net/ORDO/Orphanet_317343"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0004029 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0004029">
+        <obo:IAO_0000115>A relationship between a disease and some feature of that disease, where the feature is either a phenotype or an isolated disease.</obo:IAO_0000115>
+        <oboInOwl:created_by rdf:resource="https://orcid.org/0000-0002-6601-2165"/>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-12-26T19:50:53Z</oboInOwl:creation_date>
+        <rdfs:label>disease has feature</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0004030 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0004030">
+        <obo:IAO_0000115>A relationship between a disease and an anatomical structure where the material basis of the disease is some pathological change in the structure. Anatomical structure includes cellular and sub-cellular entities, such as chromosome and organelles.</obo:IAO_0000115>
+        <oboInOwl:created_by rdf:resource="https://orcid.org/0000-0002-6601-2165"/>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-12-26T19:58:44Z</oboInOwl:creation_date>
+        <rdfs:label>disease arises from alteration in structure</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0009006 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0009006">
+        <owl:inverseOf rdf:resource="http://purl.obolibrary.org/obo/RO_0009007"/>
+        <obo:IAO_0000112 xml:lang="en">A mass measurement assay measures an material&apos;s mass characteristic. A radioactivity detection assay measures the amount of radiation (alpha, beta or gamma ray emmissions) coming from a material.</obo:IAO_0000112>
+        <obo:IAO_0000115 xml:lang="en">A relation between an assay and a characteristic, in which the assay generates a data item which is a measure of a characteristic.</obo:IAO_0000115>
+        <dcterms:contributor rdf:resource="https://orcid.org/0000-0002-8844-9165"/>
+        <dcterms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-05-23T15:24:15Z</dcterms:date>
+        <rdfs:label xml:lang="en">assay measures characteristic</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0009007 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0009007">
+        <obo:IAO_0000115 xml:lang="en">Inverse of &apos;assay measures characteristic&apos;</obo:IAO_0000115>
+        <dcterms:contributor rdf:resource="https://orcid.org/0000-0002-8844-9165"/>
+        <dcterms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-05-23T15:29:50Z</dcterms:date>
+        <rdfs:label xml:lang="en">characteristic measured by assay</rdfs:label>
+    </owl:ObjectProperty>
     
 
 
@@ -939,8 +1350,8 @@
         <obo:IAO_0000112 xml:lang="en">the nitrogen atoms in the atmosphere</obo:IAO_0000112>
         <obo:IAO_0000112 xml:lang="en">the restaurants in Palo Alto</obo:IAO_0000112>
         <obo:IAO_0000112 xml:lang="en">your collection of Meissen ceramic plates.</obo:IAO_0000112>
-        <obo:IAO_0000116 xml:lang="en">BFO 2 Reference: object aggregates may gain and lose parts while remaining numerically identical (one and the same individual) over time. This holds both for aggregates whose membership is determined naturally (the aggregate of cells in your body) and aggregates determined by fiat (a baseball team, a congressional committee).</obo:IAO_0000116>
         <obo:IAO_0000116>An entity a is an object aggregate if and only if there is a mutually exhaustive and pairwise disjoint partition of a into objects </obo:IAO_0000116>
+        <obo:IAO_0000116 xml:lang="en">BFO 2 Reference: object aggregates may gain and lose parts while remaining numerically identical (one and the same individual) over time. This holds both for aggregates whose membership is determined naturally (the aggregate of cells in your body) and aggregates determined by fiat (a baseball team, a congressional committee).</obo:IAO_0000116>
         <obo:IAO_0000119>ISBN:978-3-938793-98-5pp124-158#Thomas Bittner and Barry Smith, &apos;A Theory of Granular Partitions&apos;, in K. Munn and B. Smith (eds.), Applied Ontology: An Introduction, Frankfurt/Lancaster: ontos, 2008, 125-158.</obo:IAO_0000119>
         <obo:IAO_0000600 xml:lang="en">b is an object aggregate means: b is a material entity consisting exactly of a plurality of objects as member_parts at all times at which b exists. (axiom label in BFO2 Reference: [025-004])</obo:IAO_0000600>
         <obo:IAO_0000602>(forall (x) (if (ObjectAggregate x) (and (MaterialEntity x) (forall (t) (if (existsAt x t) (exists (y z) (and (Object y) (Object z) (memberPartOfAt y x t) (memberPartOfAt z x t) (not (= y z)))))) (not (exists (w t_1) (and (memberPartOfAt w x t_1) (not (Object w)))))))) // axiom label in BFO2 CLIF: [025-004] </obo:IAO_0000602>
@@ -1549,6 +1960,830 @@
         <owl:annotatedTarget xml:lang="en">A history is a process that is the sum of the totality of processes taking place in the spatiotemporal region occupied by a material entity or site, including processes on the surface of the entity or within the cavities to which it serves as host. (axiom label in BFO2 Reference: [138-001])</owl:annotatedTarget>
         <obo:IAO_0010000 rdf:resource="http://purl.obolibrary.org/obo/bfo/axiom/138-001"/>
     </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MONDO_0000001 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MONDO_0000001">
+        <obo:IAO_0000115>A disease is a disposition to undergo pathological processes that exists in an organism because of one or more disorders in that organism.</obo:IAO_0000115>
+        <oboInOwl:hasDbXref>DOID:4</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>ICD9:799.9</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>MEDGEN:4347</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>MESH:D004194</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>NCIT:C2991</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>OGMS:0000031</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>Orphanet:377788</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>SCTID:64572001</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>UMLS:C0012634</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym>condition</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>disease</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>disease or disorder</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>disease or disorder, non-neoplastic</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>diseases</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>diseases and disorders</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>disorder</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>disorders</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>medical condition</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>other disease</oboInOwl:hasExactSynonym>
+        <oboInOwl:id>MONDO:0000001</oboInOwl:id>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/mondo#ordo_disorder"/>
+        <rdfs:label>disease</rdfs:label>
+        <skos:exactMatch rdf:resource="http://identifiers.org/medgen/4347"/>
+        <skos:exactMatch rdf:resource="http://identifiers.org/mesh/D004194"/>
+        <skos:exactMatch rdf:resource="http://identifiers.org/snomedct/64572001"/>
+        <skos:exactMatch rdf:resource="http://linkedlifedata.com/resource/umls/id/C0012634"/>
+        <skos:exactMatch rdf:resource="http://purl.obolibrary.org/obo/DOID_4"/>
+        <skos:exactMatch rdf:resource="http://purl.obolibrary.org/obo/NCIT_C2991"/>
+        <skos:exactMatch rdf:resource="http://www.orpha.net/ORDO/Orphanet_377788"/>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MONDO_0000001"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A disease is a disposition to undergo pathological processes that exists in an organism because of one or more disorders in that organism.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>OGMS:0000031</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MONDO_0000001"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
+        <owl:annotatedTarget>DOID:4</owl:annotatedTarget>
+        <oboInOwl:source>EFO:0000408</oboInOwl:source>
+        <oboInOwl:source>MONDO:equivalentTo</oboInOwl:source>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MONDO_0000001"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
+        <owl:annotatedTarget>ICD9:799.9</owl:annotatedTarget>
+        <oboInOwl:source>MONDO:i2s</oboInOwl:source>
+        <oboInOwl:source>MONDO:relatedTo</oboInOwl:source>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MONDO_0000001"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
+        <owl:annotatedTarget>MEDGEN:4347</owl:annotatedTarget>
+        <oboInOwl:source>MONDO:MEDGEN</oboInOwl:source>
+        <oboInOwl:source>MONDO:equivalentTo</oboInOwl:source>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MONDO_0000001"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
+        <owl:annotatedTarget>MESH:D004194</owl:annotatedTarget>
+        <oboInOwl:source>DOID:4</oboInOwl:source>
+        <oboInOwl:source>EFO:0000408</oboInOwl:source>
+        <oboInOwl:source>MONDO:equivalentTo</oboInOwl:source>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MONDO_0000001"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
+        <owl:annotatedTarget>NCIT:C2991</owl:annotatedTarget>
+        <oboInOwl:source>DOID:4</oboInOwl:source>
+        <oboInOwl:source>MONDO:equivalentTo</oboInOwl:source>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MONDO_0000001"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
+        <owl:annotatedTarget>OGMS:0000031</owl:annotatedTarget>
+        <oboInOwl:source>MONDO:equivalentTo</oboInOwl:source>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MONDO_0000001"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
+        <owl:annotatedTarget>Orphanet:377788</owl:annotatedTarget>
+        <oboInOwl:source>MONDO:equivalentTo</oboInOwl:source>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MONDO_0000001"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
+        <owl:annotatedTarget>SCTID:64572001</owl:annotatedTarget>
+        <oboInOwl:source>DOID:4</oboInOwl:source>
+        <oboInOwl:source>EFO:0000408</oboInOwl:source>
+        <oboInOwl:source>MONDO:equivalentTo</oboInOwl:source>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MONDO_0000001"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
+        <owl:annotatedTarget>UMLS:C0012634</owl:annotatedTarget>
+        <oboInOwl:source>MEDGEN:4347</oboInOwl:source>
+        <oboInOwl:source>MONDO:MEDGEN</oboInOwl:source>
+        <oboInOwl:source>MONDO:equivalentTo</oboInOwl:source>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MONDO_0000001"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget>condition</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>NCIT:C2991</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MONDO_0000001"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget>disease</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>DOID:4</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>NCIT:C2991</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>Orphanet:377788</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MONDO_0000001"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget>disease or disorder</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>NCIT:C2991</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MONDO_0000001"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget>disease or disorder, non-neoplastic</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>NCIT:C2991</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MONDO_0000001"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget>diseases</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>NCIT:C2991</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MONDO_0000001"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget>diseases and disorders</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>NCIT:C2991</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MONDO_0000001"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget>disorder</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>NCIT:C2991</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MONDO_0000001"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget>disorders</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>NCIT:C2991</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MONDO_0000001"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget>other disease</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>NCIT:C2991</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MONDO_0000001"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#inSubset"/>
+        <owl:annotatedTarget rdf:resource="http://purl.obolibrary.org/obo/mondo#ordo_disorder"/>
+        <oboInOwl:source>Orphanet:377788</oboInOwl:source>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MONDO_0008116 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MONDO_0008116">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MONDO_0000001"/>
+        <obo:IAO_0000115>Oculopharyngeal muscular dystrophy (OPMD) is an adult-onset progressive myopathy characterized by progressive eyelid ptosis, dysphagia, dysarthria and proximal limb weakness.</obo:IAO_0000115>
+        <obo:IAO_0000233 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://github.com/monarch-initiative/mondo/issues/5658</obo:IAO_0000233>
+        <mondo:curated_content_resource rdf:resource="http://purl.obolibrary.org/obo/oculopharyngeal_muscular_dystrophy_1"/>
+        <mondo:should_conform_to rdf:resource="http://purl.obolibrary.org/obo/mondo/patterns/OMIM_phenotypic_series.yaml"/>
+        <oboInOwl:hasDbXref>DOID:11719</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>GARD:7245</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>MEDGEN:75730</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>MESH:D039141</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>MedDRA:10052181</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>NANDO:1200493</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>NORD:1523</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>OMIMPS:164300</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>Orphanet:270</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>SCTID:77097004</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>UMLS:C0270952</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>icd11.foundation:1354386293</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym>OPMD</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>muscular dystrophy, oculopharyngeal</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>oculopharyngeal muscular dystrophy</oboInOwl:hasExactSynonym>
+        <oboInOwl:id>MONDO:0008116</oboInOwl:id>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/mondo#gard_rare"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/mondo#nord_rare"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/mondo#ordo_disorder"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/mondo#orphanet_rare"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/mondo#otar"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/mondo#rare"/>
+        <rdfs:label>oculopharyngeal muscular dystrophy</rdfs:label>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://rarediseases.info.nih.gov/diseases/7245/oculopharyngeal-muscular-dystrophy</rdfs:seeAlso>
+        <skos:closeMatch rdf:resource="http://identifiers.org/meddra/10052181"/>
+        <skos:exactMatch rdf:resource="http://identifiers.org/medgen/75730"/>
+        <skos:exactMatch rdf:resource="http://identifiers.org/mesh/D039141"/>
+        <skos:exactMatch rdf:resource="http://identifiers.org/snomedct/77097004"/>
+        <skos:exactMatch rdf:resource="http://linkedlifedata.com/resource/umls/id/C0270952"/>
+        <skos:exactMatch rdf:resource="http://purl.obolibrary.org/obo/DOID_11719"/>
+        <skos:exactMatch rdf:resource="http://purl.obolibrary.org/obo/mondo/sources/icd11foundation/1354386293"/>
+        <skos:exactMatch rdf:resource="http://www.orpha.net/ORDO/Orphanet_270"/>
+        <skos:exactMatch rdf:resource="https://omim.org/phenotypicSeries/PS164300"/>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MONDO_0008116"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>Oculopharyngeal muscular dystrophy (OPMD) is an adult-onset progressive myopathy characterized by progressive eyelid ptosis, dysphagia, dysarthria and proximal limb weakness.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>Orphanet:270</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MONDO_0008116"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/mondo#curated_content_resource"/>
+        <owl:annotatedTarget rdf:resource="http://purl.obolibrary.org/obo/oculopharyngeal_muscular_dystrophy_1"/>
+        <oboInOwl:source>MONDO:MalaCards</oboInOwl:source>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MONDO_0008116"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
+        <owl:annotatedTarget>DOID:11719</owl:annotatedTarget>
+        <oboInOwl:source>MONDO:equivalentTo</oboInOwl:source>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MONDO_0008116"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
+        <owl:annotatedTarget>GARD:7245</owl:annotatedTarget>
+        <oboInOwl:source>MONDO:GARD</oboInOwl:source>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MONDO_0008116"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
+        <owl:annotatedTarget>MEDGEN:75730</owl:annotatedTarget>
+        <oboInOwl:source>MONDO:MEDGEN</oboInOwl:source>
+        <oboInOwl:source>MONDO:equivalentTo</oboInOwl:source>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MONDO_0008116"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
+        <owl:annotatedTarget>MESH:D039141</owl:annotatedTarget>
+        <oboInOwl:source>DOID:11719</oboInOwl:source>
+        <oboInOwl:source>MONDO:equivalentTo</oboInOwl:source>
+        <oboInOwl:source>Orphanet:270</oboInOwl:source>
+        <oboInOwl:source>Orphanet:270/e</oboInOwl:source>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MONDO_0008116"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
+        <owl:annotatedTarget>MedDRA:10052181</owl:annotatedTarget>
+        <oboInOwl:source>Orphanet:270</oboInOwl:source>
+        <oboInOwl:source>Orphanet:270/e</oboInOwl:source>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MONDO_0008116"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
+        <owl:annotatedTarget>NANDO:1200493</owl:annotatedTarget>
+        <oboInOwl:source>MONDO:NANDO</oboInOwl:source>
+        <oboInOwl:source>https://orcid.org/0000-0002-0170-9172</oboInOwl:source>
+        <oboInOwl:source>https://orcid.org/0000-0003-0011-764X</oboInOwl:source>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MONDO_0008116"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
+        <owl:annotatedTarget>NORD:1523</owl:annotatedTarget>
+        <oboInOwl:source>MONDO:NORD</oboInOwl:source>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MONDO_0008116"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
+        <owl:annotatedTarget>OMIMPS:164300</owl:annotatedTarget>
+        <oboInOwl:source>MONDO:equivalentTo</oboInOwl:source>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MONDO_0008116"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
+        <owl:annotatedTarget>Orphanet:270</owl:annotatedTarget>
+        <oboInOwl:source>MONDO:equivalentTo</oboInOwl:source>
+        <oboInOwl:source>OMIM:164300</oboInOwl:source>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MONDO_0008116"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
+        <owl:annotatedTarget>SCTID:77097004</owl:annotatedTarget>
+        <oboInOwl:source>DOID:11719</oboInOwl:source>
+        <oboInOwl:source>MONDO:equivalentTo</oboInOwl:source>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MONDO_0008116"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
+        <owl:annotatedTarget>UMLS:C0270952</owl:annotatedTarget>
+        <oboInOwl:source>MEDGEN:75730</oboInOwl:source>
+        <oboInOwl:source>MONDO:MEDGEN</oboInOwl:source>
+        <oboInOwl:source>MONDO:equivalentTo</oboInOwl:source>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MONDO_0008116"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
+        <owl:annotatedTarget>icd11.foundation:1354386293</owl:annotatedTarget>
+        <oboInOwl:source>MONDO:equivalentTo</oboInOwl:source>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MONDO_0008116"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget>OPMD</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>MONDO:Lexical</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>Orphanet:270</oboInOwl:hasDbXref>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/mondo#ABBREVIATION"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MONDO_0008116"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget>muscular dystrophy, oculopharyngeal</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>DOID:11719</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MONDO_0008116"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget>oculopharyngeal muscular dystrophy</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>DOID:11719</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>MONDO:Lexical</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>OMIMPS:164300</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>Orphanet:270</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>icd11.foundation:1354386293</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MONDO_0008116"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#inSubset"/>
+        <owl:annotatedTarget rdf:resource="http://purl.obolibrary.org/obo/mondo#gard_rare"/>
+        <oboInOwl:source>GARD:7245</oboInOwl:source>
+        <oboInOwl:source>MONDO:GARD</oboInOwl:source>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MONDO_0008116"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#inSubset"/>
+        <owl:annotatedTarget rdf:resource="http://purl.obolibrary.org/obo/mondo#nord_rare"/>
+        <oboInOwl:source>MONDO:NORD</oboInOwl:source>
+        <oboInOwl:source>NORD:1523</oboInOwl:source>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MONDO_0008116"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#inSubset"/>
+        <owl:annotatedTarget rdf:resource="http://purl.obolibrary.org/obo/mondo#ordo_disorder"/>
+        <oboInOwl:source>Orphanet:270</oboInOwl:source>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MONDO_0008116"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#inSubset"/>
+        <owl:annotatedTarget rdf:resource="http://purl.obolibrary.org/obo/mondo#orphanet_rare"/>
+        <oboInOwl:source>Orphanet:270</oboInOwl:source>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MONDO_0008116"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#inSubset"/>
+        <owl:annotatedTarget rdf:resource="http://purl.obolibrary.org/obo/mondo#otar"/>
+        <oboInOwl:source>MONDO:OTAR</oboInOwl:source>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MONDO_0008116"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#seeAlso"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://rarediseases.info.nih.gov/diseases/7245/oculopharyngeal-muscular-dystrophy</owl:annotatedTarget>
+        <oboInOwl:source>GARD:0007245</oboInOwl:source>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MONDO_0018940 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MONDO_0018940">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MONDO_0000001"/>
+        <obo:IAO_0000115>Congenital myasthenic syndrome (CMS) is a group of genetic disorders of impaired neuromuscular transmission at the motor endplate characterized by fatigable muscle weakness.</obo:IAO_0000115>
+        <obo:IAO_0000233 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://github.com/monarch-initiative/mondo/issues/6744</obo:IAO_0000233>
+        <mondo:curated_content_resource rdf:resource="https://www.malacards.org/card/congenital_myasthenic_syndrome"/>
+        <mondo:excluded_subClassOf rdf:resource="http://purl.obolibrary.org/obo/MONDO_0020260"/>
+        <mondo:should_conform_to rdf:resource="http://purl.obolibrary.org/obo/mondo/patterns/OMIM_phenotypic_series.yaml"/>
+        <oboInOwl:hasDbXref>DOID:3635</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>GARD:11902</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>ICD9:358.00</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>ICD9:V17.89</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>MEDGEN:155650</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>MESH:D020294</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>NANDO:1200021</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>NCIT:C84647</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>NORD:1893</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>OMIMPS:601462</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>Orphanet:590</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>SCTID:230672006</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>UMLS:C0751882</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>icd11.foundation:1515367530</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym>CMS</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>Congenital Myasthenic Syndromes</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>myasthenic syndrome, congenital</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasRelatedSynonym>congenital MG</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>congenital myasthenia</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>erb-Goldflam syndrome</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>familial limb-girdle myasthenia</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>myasthenia gravis congenital</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>myasthenia gravis pseudoparalytica</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:id>MONDO:0018940</oboInOwl:id>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/mondo#gard_rare"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/mondo#nord_rare"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/mondo#ordo_disorder"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/mondo#orphanet_rare"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/mondo#otar"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/mondo#rare"/>
+        <rdfs:label>congenital myasthenic syndrome</rdfs:label>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://rarediseases.info.nih.gov/diseases/11902/congenital-myasthenic-syndrome</rdfs:seeAlso>
+        <skos:exactMatch rdf:resource="http://identifiers.org/medgen/155650"/>
+        <skos:exactMatch rdf:resource="http://identifiers.org/mesh/D020294"/>
+        <skos:exactMatch rdf:resource="http://identifiers.org/snomedct/230672006"/>
+        <skos:exactMatch rdf:resource="http://linkedlifedata.com/resource/umls/id/C0751882"/>
+        <skos:exactMatch rdf:resource="http://purl.obolibrary.org/obo/DOID_3635"/>
+        <skos:exactMatch rdf:resource="http://purl.obolibrary.org/obo/NCIT_C84647"/>
+        <skos:exactMatch rdf:resource="http://purl.obolibrary.org/obo/mondo/sources/icd11foundation/1515367530"/>
+        <skos:exactMatch rdf:resource="http://www.orpha.net/ORDO/Orphanet_590"/>
+        <skos:exactMatch rdf:resource="https://omim.org/phenotypicSeries/PS601462"/>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MONDO_0018940"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>Congenital myasthenic syndrome (CMS) is a group of genetic disorders of impaired neuromuscular transmission at the motor endplate characterized by fatigable muscle weakness.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>Orphanet:590</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MONDO_0018940"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/mondo#curated_content_resource"/>
+        <owl:annotatedTarget rdf:resource="https://www.malacards.org/card/congenital_myasthenic_syndrome"/>
+        <oboInOwl:source>MONDO:MalaCards</oboInOwl:source>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MONDO_0018940"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/mondo#excluded_subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://purl.obolibrary.org/obo/MONDO_0020260"/>
+        <oboInOwl:source>Orphanet:590</oboInOwl:source>
+        <oboInOwl:source>https://github.com/Orphanet/ORDO/issues/17</oboInOwl:source>
+        <oboInOwl:source>https://orcid.org/0000-0001-5208-3432</oboInOwl:source>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MONDO_0018940"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
+        <owl:annotatedTarget>DOID:3635</owl:annotatedTarget>
+        <oboInOwl:source>MONDO:equivalentTo</oboInOwl:source>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MONDO_0018940"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
+        <owl:annotatedTarget>GARD:11902</owl:annotatedTarget>
+        <oboInOwl:source>MONDO:GARD</oboInOwl:source>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MONDO_0018940"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
+        <owl:annotatedTarget>ICD9:358.00</owl:annotatedTarget>
+        <oboInOwl:source>MONDO:i2s</oboInOwl:source>
+        <oboInOwl:source>MONDO:relatedTo</oboInOwl:source>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MONDO_0018940"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
+        <owl:annotatedTarget>ICD9:V17.89</owl:annotatedTarget>
+        <oboInOwl:source>MONDO:i2s</oboInOwl:source>
+        <oboInOwl:source>MONDO:relatedTo</oboInOwl:source>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MONDO_0018940"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
+        <owl:annotatedTarget>MEDGEN:155650</owl:annotatedTarget>
+        <oboInOwl:source>MONDO:MEDGEN</oboInOwl:source>
+        <oboInOwl:source>MONDO:equivalentTo</oboInOwl:source>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MONDO_0018940"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
+        <owl:annotatedTarget>MESH:D020294</owl:annotatedTarget>
+        <oboInOwl:source>DOID:3635</oboInOwl:source>
+        <oboInOwl:source>MONDO:equivalentTo</oboInOwl:source>
+        <oboInOwl:source>Orphanet:590</oboInOwl:source>
+        <oboInOwl:source>Orphanet:590/e</oboInOwl:source>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MONDO_0018940"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
+        <owl:annotatedTarget>NANDO:1200021</owl:annotatedTarget>
+        <oboInOwl:source>MONDO:NANDO</oboInOwl:source>
+        <oboInOwl:source>https://orcid.org/0000-0002-0170-9172</oboInOwl:source>
+        <oboInOwl:source>https://orcid.org/0000-0003-0011-764X</oboInOwl:source>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MONDO_0018940"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
+        <owl:annotatedTarget>NCIT:C84647</owl:annotatedTarget>
+        <oboInOwl:source>DOID:3635</oboInOwl:source>
+        <oboInOwl:source>MONDO:equivalentTo</oboInOwl:source>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MONDO_0018940"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
+        <owl:annotatedTarget>NORD:1893</owl:annotatedTarget>
+        <oboInOwl:source>MONDO:NORD</oboInOwl:source>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MONDO_0018940"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
+        <owl:annotatedTarget>OMIMPS:601462</owl:annotatedTarget>
+        <oboInOwl:source>DOID:3635</oboInOwl:source>
+        <oboInOwl:source>MONDO:equivalentTo</oboInOwl:source>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MONDO_0018940"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
+        <owl:annotatedTarget>Orphanet:590</owl:annotatedTarget>
+        <oboInOwl:source>DOID:3635</oboInOwl:source>
+        <oboInOwl:source>MONDO:equivalentTo</oboInOwl:source>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MONDO_0018940"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
+        <owl:annotatedTarget>SCTID:230672006</owl:annotatedTarget>
+        <oboInOwl:source>DOID:3635</oboInOwl:source>
+        <oboInOwl:source>MONDO:equivalentTo</oboInOwl:source>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MONDO_0018940"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
+        <owl:annotatedTarget>UMLS:C0751882</owl:annotatedTarget>
+        <oboInOwl:source>MEDGEN:155650</oboInOwl:source>
+        <oboInOwl:source>MONDO:MEDGEN</oboInOwl:source>
+        <oboInOwl:source>MONDO:equivalentTo</oboInOwl:source>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MONDO_0018940"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
+        <owl:annotatedTarget>icd11.foundation:1515367530</owl:annotatedTarget>
+        <oboInOwl:source>MONDO:equivalentTo</oboInOwl:source>
+        <oboInOwl:source>Orphanet:590</oboInOwl:source>
+        <oboInOwl:source>https://orcid.org/0000-0002-4142-7153</oboInOwl:source>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MONDO_0018940"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget>CMS</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>Orphanet:590</oboInOwl:hasDbXref>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/mondo#ABBREVIATION"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MONDO_0018940"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget>Congenital Myasthenic Syndromes</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>NORD:1893</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>icd11.foundation:1515367530</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MONDO_0018940"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget>myasthenic syndrome, congenital</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>OMIMPS:601462</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MONDO_0018940"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
+        <owl:annotatedTarget>congenital MG</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>GARD:0000098</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MONDO_0018940"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
+        <owl:annotatedTarget>congenital myasthenia</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>GARD:0011902</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MONDO_0018940"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
+        <owl:annotatedTarget>erb-Goldflam syndrome</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>GARD:0000098</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MONDO_0018940"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
+        <owl:annotatedTarget>myasthenia gravis congenital</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>GARD:0000098</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MONDO_0018940"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
+        <owl:annotatedTarget>myasthenia gravis pseudoparalytica</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>GARD:0000098</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MONDO_0018940"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#inSubset"/>
+        <owl:annotatedTarget rdf:resource="http://purl.obolibrary.org/obo/mondo#gard_rare"/>
+        <oboInOwl:source>GARD:11902</oboInOwl:source>
+        <oboInOwl:source>MONDO:GARD</oboInOwl:source>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MONDO_0018940"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#inSubset"/>
+        <owl:annotatedTarget rdf:resource="http://purl.obolibrary.org/obo/mondo#nord_rare"/>
+        <oboInOwl:source>MONDO:NORD</oboInOwl:source>
+        <oboInOwl:source>NORD:1893</oboInOwl:source>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MONDO_0018940"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#inSubset"/>
+        <owl:annotatedTarget rdf:resource="http://purl.obolibrary.org/obo/mondo#ordo_disorder"/>
+        <oboInOwl:source>Orphanet:590</oboInOwl:source>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MONDO_0018940"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#inSubset"/>
+        <owl:annotatedTarget rdf:resource="http://purl.obolibrary.org/obo/mondo#orphanet_rare"/>
+        <oboInOwl:source>Orphanet:590</oboInOwl:source>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MONDO_0018940"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#inSubset"/>
+        <owl:annotatedTarget rdf:resource="http://purl.obolibrary.org/obo/mondo#otar"/>
+        <oboInOwl:source>MONDO:OTAR</oboInOwl:source>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MONDO_0018940"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#seeAlso"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://rarediseases.info.nih.gov/diseases/11902/congenital-myasthenic-syndrome</owl:annotatedTarget>
+        <oboInOwl:source>GARD:0011902</oboInOwl:source>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MONDO_0019952 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MONDO_0019952">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MONDO_0000001"/>
+        <obo:IAO_0000233 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://github.com/monarch-initiative/mondo/issues/4069</obo:IAO_0000233>
+        <obo:IAO_0000233 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://github.com/monarch-initiative/mondo/issues/5658</obo:IAO_0000233>
+        <mondo:curated_content_resource rdf:resource="http://purl.obolibrary.org/obo/congenital_myopathy"/>
+        <mondo:curated_content_resource rdf:resource="https://search.clinicalgenome.org/kb/conditions/MONDO:0019952"/>
+        <mondo:excluded_subClassOf rdf:resource="http://purl.obolibrary.org/obo/MONDO_0100167"/>
+        <mondo:should_conform_to rdf:resource="http://purl.obolibrary.org/obo/mondo/patterns/OMIM_phenotypic_series.yaml"/>
+        <oboInOwl:hasDbXref>DOID:0080100</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>DOID:0081337</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>GARD:5898</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>MEDGEN:124381</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>MedDRA:10062547</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>NANDO:1200477</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>NANDO:2100234</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>OMIMPS:117000</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>Orphanet:97245</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>UMLS:C0270960</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>icd11.foundation:1185572073</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym>congenital myopathy</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasRelatedSynonym>Batten Turner congenital myopathy</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>myopathy congenital</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:id>MONDO:0019952</oboInOwl:id>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/mondo#clingen"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/mondo#disease_grouping"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/mondo#gard_rare"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/mondo#ordo_group_of_disorders"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/mondo#otar"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/mondo#rare"/>
+        <rdfs:label>congenital myopathy</rdfs:label>
+        <skos:closeMatch rdf:resource="http://identifiers.org/meddra/10062547"/>
+        <skos:exactMatch rdf:resource="http://identifiers.org/medgen/124381"/>
+        <skos:exactMatch rdf:resource="http://linkedlifedata.com/resource/umls/id/C0270960"/>
+        <skos:exactMatch rdf:resource="http://purl.obolibrary.org/obo/DOID_0081337"/>
+        <skos:exactMatch rdf:resource="http://purl.obolibrary.org/obo/mondo/sources/icd11foundation/1185572073"/>
+        <skos:exactMatch rdf:resource="http://www.orpha.net/ORDO/Orphanet_97245"/>
+        <skos:exactMatch rdf:resource="https://omim.org/phenotypicSeries/PS117000"/>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MONDO_0019952"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/mondo#curated_content_resource"/>
+        <owl:annotatedTarget rdf:resource="http://purl.obolibrary.org/obo/congenital_myopathy"/>
+        <oboInOwl:source>MONDO:MalaCards</oboInOwl:source>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MONDO_0019952"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/mondo#curated_content_resource"/>
+        <owl:annotatedTarget rdf:resource="https://search.clinicalgenome.org/kb/conditions/MONDO:0019952"/>
+        <oboInOwl:source>MONDO:CLINGEN</oboInOwl:source>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MONDO_0019952"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/mondo#excluded_subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://purl.obolibrary.org/obo/MONDO_0100167"/>
+        <oboInOwl:source>https://orcid.org/0000-0001-5208-3432</oboInOwl:source>
+        <oboInOwl:source>https://orcid.org/0000-0002-0736-9199</oboInOwl:source>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MONDO_0019952"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
+        <owl:annotatedTarget>DOID:0080100</owl:annotatedTarget>
+        <oboInOwl:source>MONDO:equivalentObsolete</oboInOwl:source>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MONDO_0019952"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
+        <owl:annotatedTarget>DOID:0081337</owl:annotatedTarget>
+        <oboInOwl:source>MONDO:equivalentTo</oboInOwl:source>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MONDO_0019952"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
+        <owl:annotatedTarget>GARD:5898</owl:annotatedTarget>
+        <oboInOwl:source>MONDO:GARD</oboInOwl:source>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MONDO_0019952"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
+        <owl:annotatedTarget>MEDGEN:124381</owl:annotatedTarget>
+        <oboInOwl:source>MONDO:MEDGEN</oboInOwl:source>
+        <oboInOwl:source>MONDO:equivalentTo</oboInOwl:source>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MONDO_0019952"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
+        <owl:annotatedTarget>MedDRA:10062547</owl:annotatedTarget>
+        <oboInOwl:source>Orphanet:97245</oboInOwl:source>
+        <oboInOwl:source>Orphanet:97245/e</oboInOwl:source>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MONDO_0019952"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
+        <owl:annotatedTarget>NANDO:1200477</owl:annotatedTarget>
+        <oboInOwl:source>MONDO:NANDO</oboInOwl:source>
+        <oboInOwl:source>https://orcid.org/0000-0002-0170-9172</oboInOwl:source>
+        <oboInOwl:source>https://orcid.org/0000-0003-0011-764X</oboInOwl:source>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MONDO_0019952"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
+        <owl:annotatedTarget>NANDO:2100234</owl:annotatedTarget>
+        <oboInOwl:source>MONDO:NANDO</oboInOwl:source>
+        <oboInOwl:source>https://orcid.org/0000-0002-0170-9172</oboInOwl:source>
+        <oboInOwl:source>https://orcid.org/0000-0003-0011-764X</oboInOwl:source>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MONDO_0019952"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
+        <owl:annotatedTarget>OMIMPS:117000</owl:annotatedTarget>
+        <oboInOwl:source>MONDO:equivalentTo</oboInOwl:source>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MONDO_0019952"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
+        <owl:annotatedTarget>Orphanet:97245</owl:annotatedTarget>
+        <oboInOwl:source>MONDO:equivalentTo</oboInOwl:source>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MONDO_0019952"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
+        <owl:annotatedTarget>UMLS:C0270960</owl:annotatedTarget>
+        <oboInOwl:source>MEDGEN:124381</oboInOwl:source>
+        <oboInOwl:source>MONDO:MEDGEN</oboInOwl:source>
+        <oboInOwl:source>MONDO:equivalentTo</oboInOwl:source>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MONDO_0019952"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
+        <owl:annotatedTarget>icd11.foundation:1185572073</owl:annotatedTarget>
+        <oboInOwl:source>MONDO:equivalentTo</oboInOwl:source>
+        <oboInOwl:source>Orphanet:97245</oboInOwl:source>
+        <oboInOwl:source>https://orcid.org/0000-0001-5208-3432</oboInOwl:source>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MONDO_0019952"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget>congenital myopathy</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>DOID:0081337</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>Orphanet:97245</oboInOwl:hasDbXref>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/mondo#CLINGEN_LABEL"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MONDO_0019952"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
+        <owl:annotatedTarget>Batten Turner congenital myopathy</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>GARD:0005898</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MONDO_0019952"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
+        <owl:annotatedTarget>myopathy congenital</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>GARD:0005898</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MONDO_0019952"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#inSubset"/>
+        <owl:annotatedTarget rdf:resource="http://purl.obolibrary.org/obo/mondo#clingen"/>
+        <oboInOwl:source>MONDO:CLINGEN</oboInOwl:source>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MONDO_0019952"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#inSubset"/>
+        <owl:annotatedTarget rdf:resource="http://purl.obolibrary.org/obo/mondo#gard_rare"/>
+        <oboInOwl:source>GARD:5898</oboInOwl:source>
+        <oboInOwl:source>MONDO:GARD</oboInOwl:source>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MONDO_0019952"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#inSubset"/>
+        <owl:annotatedTarget rdf:resource="http://purl.obolibrary.org/obo/mondo#ordo_group_of_disorders"/>
+        <oboInOwl:source>Orphanet:97245</oboInOwl:source>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MONDO_0019952"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#inSubset"/>
+        <owl:annotatedTarget rdf:resource="http://purl.obolibrary.org/obo/mondo#otar"/>
+        <oboInOwl:source>MONDO:OTAR</oboInOwl:source>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROMOT_0000000 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0000000">
+        <rdfs:label xml:lang="en">root node</rdfs:label>
+    </owl:Class>
 </rdf:RDF>
 
 
