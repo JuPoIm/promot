@@ -23,6 +23,7 @@ Import(<http://purl.obolibrary.org/obo/promot/imports/whofic_import.owl>)
 Import(<http://purl.obolibrary.org/obo/promot/releases/2025-05-20/imports/bfo_import.owl>)
 Import(<http://purl.obolibrary.org/obo/promot/releases/2025-05-20/imports/fma_import.owl>)
 Import(<http://purl.obolibrary.org/obo/promot/releases/2025-05-20/imports/mondo_import.owl>)
+Import(<http://purl.obolibrary.org/obo/promot/releases/2025-05-20/imports/ro_import.owl>)
 Annotation(dcterms:description "Ontology for building the relational database of the PROMOT project")
 Annotation(dcterms:license <https://creativecommons.org/licenses/unspecified>)
 Annotation(dcterms:title "PROMOT Common Data Model ontology")
@@ -46,6 +47,39 @@ AnnotationAssertion(rdfs:label dcterms:license "license")
 # Annotation Property: dcterms:title (title)
 
 AnnotationAssertion(rdfs:label dcterms:title "title")
+
+
+############################
+#   Object Properties
+############################
+
+# Object Property: <http://purl.obolibrary.org/obo/RO_0001015> (location of)
+
+ObjectPropertyDomain(<http://purl.obolibrary.org/obo/RO_0001015> <http://purl.obolibrary.org/obo/FMA_62955>)
+
+# Object Property: <http://purl.obolibrary.org/obo/RO_0001025> (located in)
+
+ObjectPropertyRange(<http://purl.obolibrary.org/obo/RO_0001025> <http://purl.obolibrary.org/obo/FMA_62955>)
+
+# Object Property: <http://purl.obolibrary.org/obo/RO_0002200> (has phenotype)
+
+ObjectPropertyDomain(<http://purl.obolibrary.org/obo/RO_0002200> <http://purl.obolibrary.org/obo/MONDO_0000001>)
+
+# Object Property: <http://purl.obolibrary.org/obo/RO_0002201> (phenotype of)
+
+ObjectPropertyRange(<http://purl.obolibrary.org/obo/RO_0002201> <http://purl.obolibrary.org/obo/MONDO_0000001>)
+
+# Object Property: <http://purl.obolibrary.org/obo/RO_0004013> (is causal germline mutation in)
+
+ObjectPropertyRange(<http://purl.obolibrary.org/obo/RO_0004013> <http://purl.obolibrary.org/obo/MONDO_0000001>)
+
+# Object Property: <http://purl.obolibrary.org/obo/RO_0004029> (disease has feature)
+
+ObjectPropertyDomain(<http://purl.obolibrary.org/obo/RO_0004029> <http://purl.obolibrary.org/obo/MONDO_0000001>)
+
+# Object Property: <http://purl.obolibrary.org/obo/RO_0004030> (disease arises from alteration in structure)
+
+ObjectPropertyDomain(<http://purl.obolibrary.org/obo/RO_0004030> <http://purl.obolibrary.org/obo/MONDO_0000001>)
 
 
 

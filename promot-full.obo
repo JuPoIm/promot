@@ -1,6 +1,6 @@
 format-version: 1.2
 data-version: promot/releases/2025-05-20/promot-full.owl
-date: 20:05:2025 13:36
+date: 20:05:2025 13:47
 subsetdef: clingen ""
 subsetdef: disease_grouping ""
 subsetdef: gard_rare ""
@@ -13653,6 +13653,7 @@ property_value: IAO:0000112 "this cage is the location of this rat" xsd:string
 property_value: IAO:0000116 "Most location relations will only hold at certain times, but this is difficult to specify in OWL. See http://purl.obolibrary.org/obo/ro/docs/temporal-semantics/" xsd:string
 property_value: IAO:0000118 "location_of" xsd:string
 property_value: RO:0001900 RO:0001901
+domain: FMA:62955 ! Anatomical entity
 is_transitive: true
 inverse_of: RO:0001025 ! located in
 
@@ -13670,6 +13671,7 @@ property_value: IAO:0000116 "Most location relations will only hold at certain t
 property_value: IAO:0000118 "located_in" xsd:string
 property_value: RO:0001900 RO:0001901
 property_value: seeAlso "https://wiki.geneontology.org/Located_in" xsd:anyURI
+range: FMA:62955 ! Anatomical entity
 is_transitive: true
 
 [Typedef]
@@ -13679,6 +13681,7 @@ def: "A relationship that holds between a biological entity and a phenotype. Her
 subset: ro-eco
 property_value: IAO:0000114 IAO:0000125
 property_value: IAO:0000117 https://orcid.org/0000-0002-6601-2165
+domain: MONDO:0000001 ! disease
 inverse_of: RO:0002201 ! phenotype of
 
 [Typedef]
@@ -13689,6 +13692,7 @@ subset: ro-eco
 subset: RO:0002259
 property_value: IAO:0000114 IAO:0000125
 property_value: IAO:0000117 https://orcid.org/0000-0002-6601-2165
+range: MONDO:0000001 ! disease
 is_functional: true
 
 [Typedef]
@@ -13703,6 +13707,7 @@ id: RO:0004013
 name: is causal germline mutation in
 def: "Relates a gene to condition, such that a mutation in this gene is sufficient to produce the condition and that can be passed on to offspring[modified from orphanet]." []
 property_value: seeAlso Orphanet:317343
+range: MONDO:0000001 ! disease
 created_by: https://orcid.org/0000-0002-6601-2165
 creation_date: 2017-11-05T02:56:40Z
 
@@ -13710,6 +13715,7 @@ creation_date: 2017-11-05T02:56:40Z
 id: RO:0004029
 name: disease has feature
 def: "A relationship between a disease and some feature of that disease, where the feature is either a phenotype or an isolated disease." []
+domain: MONDO:0000001 ! disease
 created_by: https://orcid.org/0000-0002-6601-2165
 creation_date: 2017-12-26T19:50:53Z
 
@@ -13717,6 +13723,7 @@ creation_date: 2017-12-26T19:50:53Z
 id: RO:0004030
 name: disease arises from alteration in structure
 def: "A relationship between a disease and an anatomical structure where the material basis of the disease is some pathological change in the structure. Anatomical structure includes cellular and sub-cellular entities, such as chromosome and organelles." []
+domain: MONDO:0000001 ! disease
 created_by: https://orcid.org/0000-0002-6601-2165
 creation_date: 2017-12-26T19:58:44Z
 
