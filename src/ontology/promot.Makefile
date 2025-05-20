@@ -17,10 +17,15 @@ imports/mondo_import.owl: mirror/mondo.owl imports/mondo_terms_combined.txt
 		annotate --ontology-iri $(ONTBASE)/$@ $(ANNOTATE_ONTOLOGY_VERSION) --output $@.tmp.owl && mv $@.tmp.owl $@; fi
 # FMA
 imports/fma_import.owl: mirror/fma.owl imports/fma_terms_combined.txt
+	if [ $(IMP) = true ]; then $(ROBOT) filter -i $< -T $(IMPORTDIR)/fma_terms_alone.txt  \
+        --select "self annotations" --signature true \
+		--output $@.tmp.owl; fi
 	if [ $(IMP) = true ]; then $(ROBOT) query -i $< --update ../sparql/preprocess-module.ru \
 		filter -T imports/fma_terms_combined.txt --select "self descendants annotations" --signature true \
         query --update ../sparql/inject-subset-declaration.ru --update ../sparql/postprocess-module.ru \
-		annotate --ontology-iri $(ONTBASE)/$@ $(ANNOTATE_ONTOLOGY_VERSION) --output $@.tmp.owl && mv $@.tmp.owl $@; fi
+		annotate --ontology-iri $(ONTBASE)/$@ $(ANNOTATE_ONTOLOGY_VERSION) \
+		merge -i $@.tmp.owl \
+		--output $@.tmp.owl && mv $@.tmp.owl $@; fi
 # HP
 imports/hp_import.owl: mirror/hp.owl imports/hp_terms_combined.txt
 	if [ $(IMP) = true ]; then $(ROBOT) query -i $< --update ../sparql/preprocess-module.ru \
