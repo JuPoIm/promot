@@ -10,7 +10,7 @@
 # More information: https://github.com/INCATools/ontology-development-kit/
 
 # Fingerprint of the configuration file when this Makefile was last generated
-CONFIG_HASH=                0db19aa21d6fa66ee799889d1d9cbd3d888cee746ed0bd390eb4eb3e13bb594d
+CONFIG_HASH=                aaa70305f4a3725f951b6a4e4227bb41c7742ad4b937a012affb4357ee74887f
 
 
 # ----------------------------------------
@@ -352,7 +352,7 @@ ALLSEED = $(PRESEED) \
 $(IMPORTSEED): $(ALLSEED) | $(TMPDIR)
 	if [ $(IMP) = true ]; then cat $(ALLSEED) | sort | uniq > $@; fi
 
-ANNOTATION_PROPERTIES=rdfs:label dc:description dc:source 
+ANNOTATION_PROPERTIES=rdfs:label rdfs:comment dc:description dc:source oboInOwl:hasDbXref IAO:0000111 IAO:0000112 IAO:0000115 IAO:0000116 IAO:0000117 IAO:0000118 IAO:0000119 IAO:0000412 
 
 # ----------------------------------------
 # Import modules
@@ -414,6 +414,13 @@ $(IMPORTDIR)/snomed_import.owl: $(MIRRORDIR)/snomed.owl
 
 $(IMPORTDIR)/ro_import.owl: $(MIRRORDIR)/ro.owl
 	echo "ERROR: You have configured your default module type to be custom; this behavior needs to be overwritten in promot.Makefile!" && false
+## Module for ontology: ncit
+
+$(IMPORTDIR)/ncit_import.owl: $(MIRRORDIR)/ncit.owl $(IMPORTDIR)/ncit_terms_combined.txt
+	if [ $(IMP) = true ] && [ $(IMP_LARGE) = true ]; then $(ROBOT) extract -i $< -T $(IMPORTDIR)/ncit_terms_combined.txt --force true  --copy-ontology-annotations true --individuals include --method BOT \
+		query --update ../sparql/inject-subset-declaration.ru --update ../sparql/inject-synonymtype-declaration.ru --update ../sparql/postprocess-module.ru \
+		$(ANNOTATE_CONVERT_FILE); fi
+
 
 .PHONY: refresh-imports
 refresh-imports:
@@ -457,9 +464,14 @@ mirror-bfo: | $(TMPDIR)
 ## ONTOLOGY: mondo
 .PHONY: mirror-mondo
 .PRECIOUS: $(MIRRORDIR)/mondo.owl
+ifeq ($(strip $(IMP_LARGE)),true)
 mirror-mondo: | $(TMPDIR)
 	curl -L $(OBOBASE)/mondo.owl --create-dirs -o $(TMPDIR)/mondo-download.owl --retry 4 --max-time 200 && \
 	$(ROBOT) convert -i $(TMPDIR)/mondo-download.owl -o $(TMPDIR)/$@.owl
+else
+mirror-mondo:
+	@echo "Not refreshing mondo because refreshing large imports is disabled (IMP_LARGE=$(IMP_LARGE))."
+endif
 
 
 ## ONTOLOGY: orcidio
@@ -495,9 +507,14 @@ mirror-whofic: | $(TMPDIR)
 ## ONTOLOGY: snomed
 .PHONY: mirror-snomed
 .PRECIOUS: $(MIRRORDIR)/snomed.owl
+ifeq ($(strip $(IMP_LARGE)),true)
 mirror-snomed: | $(TMPDIR)
 	curl -L $(OBOBASE)/snomed.owl --create-dirs -o $(TMPDIR)/snomed-download.owl --retry 4 --max-time 200 && \
 	$(ROBOT) convert -i $(TMPDIR)/snomed-download.owl -o $(TMPDIR)/$@.owl
+else
+mirror-snomed:
+	@echo "Not refreshing snomed because refreshing large imports is disabled (IMP_LARGE=$(IMP_LARGE))."
+endif
 
 
 ## ONTOLOGY: ro
@@ -518,9 +535,14 @@ mirror-biolink: | $(TMPDIR)
 ## ONTOLOGY: ncit
 .PHONY: mirror-ncit
 .PRECIOUS: $(MIRRORDIR)/ncit.owl
+ifeq ($(strip $(IMP_LARGE)),true)
 mirror-ncit: | $(TMPDIR)
 	curl -L $(OBOBASE)/ncit.owl --create-dirs -o $(TMPDIR)/ncit-download.owl --retry 4 --max-time 200 && \
 	$(ROBOT) convert -i $(TMPDIR)/ncit-download.owl -o $(TMPDIR)/$@.owl
+else
+mirror-ncit:
+	@echo "Not refreshing ncit because refreshing large imports is disabled (IMP_LARGE=$(IMP_LARGE))."
+endif
 
 
 ## ONTOLOGY: obi

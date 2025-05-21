@@ -4,14 +4,17 @@ github_org: JuPoIm
 git_main_branch: main
 repo: promot_ontology
 contact: juliette.potier@institutimagine.org
+creators:
+  - "Juliette Potier"
 contributors:
   - "Juliette Potier"
   - "Paul Fabry"
   - "Christina Khnaisser"
   - "Anita Burgun"
   - "Cynthia Gagnon"
-creators:
-  - "Juliette Potier"
+  - "Carole Faviez"
+  - "Elizabeth Angelevski"
+  - "Mansoore Gholizade"
 description: "Ontology for building the relational database of the PROMOT project"
 release_artefacts:
   - base
@@ -27,14 +30,25 @@ license: https://creativecommons.org/licenses/unspecified
 import_group:
   annotation_properties:
     - rdfs:label
+    - rdfs:comment
     - dc:description
     - dc:source
+    - oboInOwl:hasDbXref
+    - IAO:0000111
+    - IAO:0000112
+    - IAO:0000115
+    - IAO:0000116
+    - IAO:0000117
+    - IAO:0000118
+    - IAO:0000119
+    - IAO:0000412
   release_imports: TRUE
   products:
     - id: bfo
       module_type: custom
     - id: mondo
       module_type: custom
+      is_large: TRUE
     - id: orcidio
       mirror_from: https://w3id.org/orcidio/orcidio.owl
       module_type: filter
@@ -48,12 +62,14 @@ import_group:
       mirror_from: https://raw.githubusercontent.com/whoficitc/harmonization/main/ontology/whofic-2024-01-21.owl
       module_type: custom
     - id: snomed
+      is_large: TRUE
       module_type: custom
     - id: ro
       module_type: custom
     - id: biolink
       mirror_from: https://w3id.org/biolink/biolink-model.owl.ttl
     - id: ncit
+      is_large: TRUE
     - id: obi
     - id: efo
       mirror_from: http://www.ebi.ac.uk/efo/efo.owl

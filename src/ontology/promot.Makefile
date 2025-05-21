@@ -48,8 +48,6 @@ imports/whofic_import.owl: mirror/whofic.owl imports/whofic_terms_combined.txt
 		annotate --ontology-iri $(ONTBASE)/$@ $(ANNOTATE_ONTOLOGY_VERSION) --output $@.tmp.owl && mv $@.tmp.owl $@; fi
 # SNOMED
 imports/snomed_import.owl: mirror/snomed.owl imports/snomed_terms_combined.txt
-	if [ $(IMP) = true ]; then $(ROBOT) query -i $< --update ../sparql/preprocess-module.ru \
-		filter -T imports/snomed_terms_combined.txt --select "self ancestors annotations" --signature true \
-        collapse --threshold 2 \
-        query --update ../sparql/inject-subset-declaration.ru --update ../sparql/postprocess-module.ru \
+	if [ $(IMP) = true ]; then $(ROBOT) filter -i $< -T imports/snomed_terms_combined.txt --select "self parents annotations" --signature true \
 		annotate --ontology-iri $(ONTBASE)/$@ $(ANNOTATE_ONTOLOGY_VERSION) --output $@.tmp.owl && mv $@.tmp.owl $@; fi
+.PRECIOUS: imports/snomed_import.owl
