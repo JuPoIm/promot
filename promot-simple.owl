@@ -1,6 +1,7 @@
 <?xml version="1.0"?>
 <rdf:RDF xmlns="http://purl.obolibrary.org/obo/promot/promot-simple.owl#"
      xml:base="http://purl.obolibrary.org/obo/promot/promot-simple.owl"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
      xmlns:obo="http://purl.obolibrary.org/obo/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
@@ -11,12 +12,12 @@
      xmlns:subsets="http://purl.obolibrary.org/obo/ro/subsets#"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/promot/promot-simple.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/promot/releases/2025-05-20/promot-simple.owl"/>
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/promot/releases/2025-05-26/promot-simple.owl"/>
         <terms:description>Ontology for building the relational database of the PROMOT project</terms:description>
         <terms:license rdf:resource="https://creativecommons.org/licenses/unspecified"/>
         <terms:title>PROMOT Common Data Model ontology</terms:title>
-        <oboInOwl:date>20:05:2025 13:47</oboInOwl:date>
-        <owl:versionInfo>2025-05-20</owl:versionInfo>
+        <oboInOwl:date>26:05:2025 15:06</oboInOwl:date>
+        <owl:versionInfo>2025-05-26</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -52,7 +53,9 @@
 
     <!-- http://purl.obolibrary.org/obo/IAO_0000115 -->
 
-    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000115"/>
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000115">
+        <rdfs:label>definition</rdfs:label>
+    </owl:AnnotationProperty>
     
 
 
@@ -101,6 +104,30 @@
     <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/ro/subsets#ro-eco">
         <rdfs:subPropertyOf rdf:resource="http://www.geneontology.org/formats/oboInOwl#SubsetProperty"/>
     </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/creator -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/creator"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/date -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/date"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/contributor -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/contributor"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/date -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/date"/>
     
 
 
@@ -188,6 +215,7 @@
         <obo:IAO_0000118 xml:lang="en">location_of</obo:IAO_0000118>
         <obo:RO_0001900 rdf:resource="http://purl.obolibrary.org/obo/RO_0001901"/>
         <rdfs:label xml:lang="en">location of</rdfs:label>
+        <rdfs:label>location of</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -207,6 +235,7 @@
         <terms:source>http://www.obofoundry.org/ro/#OBO_REL:located_in</terms:source>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/valid_for_go_gp2term"/>
         <rdfs:label xml:lang="en">located in</rdfs:label>
+        <rdfs:label>located in</rdfs:label>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://wiki.geneontology.org/Located_in</rdfs:seeAlso>
     </owl:ObjectProperty>
     
@@ -221,6 +250,7 @@
         <obo:IAO_0000117 rdf:resource="https://orcid.org/0000-0002-6601-2165"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/ro/subsets#ro-eco"/>
         <rdfs:label xml:lang="en">has phenotype</rdfs:label>
+        <rdfs:label>has phenotype</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -235,6 +265,18 @@
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/RO_0002259"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/ro/subsets#ro-eco"/>
         <rdfs:label xml:lang="en">phenotype of</rdfs:label>
+        <rdfs:label>phenotype of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0002452 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0002452">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/RO_0002200"/>
+        <obo:IAO_0000115>A relation that holds between a disease or an organism and a phenotype</obo:IAO_0000115>
+        <obo:IAO_0000117 rdf:resource="https://orcid.org/0000-0002-6601-2165"/>
+        <rdfs:label>has symptom</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -273,6 +315,53 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/RO_0009006 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0009006">
+        <owl:inverseOf rdf:resource="http://purl.obolibrary.org/obo/RO_0009007"/>
+        <obo:IAO_0000112 xml:lang="en">A mass measurement assay measures an material&apos;s mass characteristic. A radioactivity detection assay measures the amount of radiation (alpha, beta or gamma ray emmissions) coming from a material.</obo:IAO_0000112>
+        <obo:IAO_0000115 xml:lang="en">A relation between an assay and a characteristic, in which the assay generates a data item which is a measure of a characteristic.</obo:IAO_0000115>
+        <terms:contributor rdf:resource="https://orcid.org/0000-0002-8844-9165"/>
+        <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-05-23T15:24:15Z</terms:date>
+        <rdfs:label xml:lang="en">assay measures characteristic</rdfs:label>
+        <rdfs:label>assay measures characteristic</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0009007 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0009007">
+        <obo:IAO_0000115 xml:lang="en">Inverse of &apos;assay measures characteristic&apos;</obo:IAO_0000115>
+        <terms:contributor rdf:resource="https://orcid.org/0000-0002-8844-9165"/>
+        <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-05-23T15:29:50Z</terms:date>
+        <rdfs:label xml:lang="en">characteristic measured by assay</rdfs:label>
+        <rdfs:label>characteristic measured by assay</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROMOT_property-1 -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.obolibrary.org/obo/PROMOT_property-1">
+        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0000101"/>
+        <obo:IAO_0000115>Age of an individual</obo:IAO_0000115>
+        <rdfs:label>age in years</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -289,6 +378,139 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0000000">
         <rdfs:label xml:lang="en">root node</rdfs:label>
     </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROMOT_0000001 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0000001">
+        <rdfs:label>PABPN1</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROMOT_0000002 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0000002">
+        <rdfs:label>RYR1</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROMOT_0000003 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0000003">
+        <rdfs:label>TTN</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROMOT_0000004 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0000004">
+        <rdfs:label>NEB</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROMOT_0000005 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0000005">
+        <rdfs:label>MTM1</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROMOT_0000006 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0000006">
+        <rdfs:label>ACTA1</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROMOT_0000007 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0000007">
+        <rdfs:label>SELENON</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROMOT_0000008 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0000008">
+        <rdfs:label>CHRNE</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROMOT_0000009 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0000009">
+        <rdfs:label>DOK7</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROMOT_0000010 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0000010">
+        <rdfs:label>COLQ</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROMOT_0000011 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0000011">
+        <rdfs:label>RAPSN</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROMOT_0000012 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0000012">
+        <rdfs:label>GFPT1</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROMOT_0000013 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0000013">
+        <rdfs:label>GMPPB</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROMOT_0000101 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0000101">
+        <obo:IAO_0000115>personne faisant partie de l’étude PROMOT</obo:IAO_0000115>
+        <rdfs:label>Patient</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROMOT_0000100 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/PROMOT_0000100">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0000101"/>
+        <rdfs:label>Individu test</rdfs:label>
+    </owl:NamedIndividual>
 </rdf:RDF>
 
 

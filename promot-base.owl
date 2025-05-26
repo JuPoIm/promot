@@ -2,6 +2,7 @@
 <rdf:RDF xmlns="http://purl.obolibrary.org/obo/promot/promot-base.owl#"
      xml:base="http://purl.obolibrary.org/obo/promot/promot-base.owl"
      xmlns:dce="http://purl.org/dc/elements/1.1/"
+     xmlns:obo="http://purl.obolibrary.org/obo/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
@@ -10,13 +11,13 @@
      xmlns:dcterms="http://purl.org/dc/terms/"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/promot/promot-base.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/promot/releases/2025-05-20/promot-base.owl"/>
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/promot/releases/2025-05-26/promot-base.owl"/>
         <dce:type rdf:resource="http://purl.obolibrary.org/obo/IAO_8000001"/>
         <dcterms:description>Ontology for building the relational database of the PROMOT project</dcterms:description>
         <dcterms:license rdf:resource="https://creativecommons.org/licenses/unspecified"/>
         <dcterms:title>PROMOT Common Data Model ontology</dcterms:title>
-        <oboInOwl:date>20:05:2025 13:47</oboInOwl:date>
-        <owl:versionInfo>2025-05-20</owl:versionInfo>
+        <oboInOwl:date>26:05:2025 15:06</oboInOwl:date>
+        <owl:versionInfo>2025-05-26</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -29,6 +30,12 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000115 -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000115"/>
     
 
 
@@ -65,6 +72,45 @@
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0004013 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0004013"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROMOT_property-1 -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.obolibrary.org/obo/PROMOT_property-1">
+        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0000101"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <obo:IAO_0000115>Age of an individual</obo:IAO_0000115>
+        <rdfs:label>age in years</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
     // Classes
     //
     ///////////////////////////////////////////////////////////////////////////////////////
@@ -73,11 +119,259 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/BFO_0000031 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000031"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MONDO_0008116 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MONDO_0008116"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MONDO_0018940 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MONDO_0018940"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MONDO_0019952 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MONDO_0019952"/>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/PROMOT_0000000 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0000000">
         <rdfs:label xml:lang="en">root node</rdfs:label>
     </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROMOT_0000001 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0000001">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000031"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0004013"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/MONDO_0008116"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label>PABPN1</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROMOT_0000002 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0000002">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000031"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0004013"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/MONDO_0019952"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label>RYR1</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROMOT_0000003 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0000003">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000031"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0004013"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/MONDO_0019952"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label>TTN</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROMOT_0000004 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0000004">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000031"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0004013"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/MONDO_0019952"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label>NEB</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROMOT_0000005 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0000005">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000031"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0004013"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/MONDO_0019952"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label>MTM1</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROMOT_0000006 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0000006">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000031"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0004013"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/MONDO_0019952"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label>ACTA1</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROMOT_0000007 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0000007">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000031"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0004013"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/MONDO_0019952"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label>SELENON</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROMOT_0000008 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0000008">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000031"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0004013"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/MONDO_0018940"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label>CHRNE</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROMOT_0000009 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0000009">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000031"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0004013"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/MONDO_0018940"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label>DOK7</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROMOT_0000010 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0000010">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000031"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0004013"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/MONDO_0018940"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label>COLQ</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROMOT_0000011 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0000011">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000031"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0004013"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/MONDO_0018940"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label>RAPSN</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROMOT_0000012 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0000012">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000031"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0004013"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/MONDO_0018940"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label>GFPT1</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROMOT_0000013 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0000013">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000031"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0004013"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/MONDO_0018940"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label>GMPPB</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROMOT_0000101 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0000101">
+        <obo:IAO_0000115>personne faisant partie de l’étude PROMOT</obo:IAO_0000115>
+        <rdfs:label>Patient</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROMOT_0000100 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/PROMOT_0000100">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0000101"/>
+        <rdfs:label>Individu test</rdfs:label>
+    </owl:NamedIndividual>
 </rdf:RDF>
 
 

@@ -1,13 +1,14 @@
 format-version: 1.2
-data-version: promot/releases/2025-05-20/promot-simple.owl
-date: 20:05:2025 13:47
+data-version: promot/releases/2025-05-26/promot-simple.owl
+date: 26:05:2025 15:06
 subsetdef: http://purl.obolibrary.org/obo/valid_for_go_gp2term ""
 subsetdef: ro-eco ""
 subsetdef: RO:0002259 ""
+idspace: dc http://purl.org/dc/elements/1.1/ 
 idspace: oboInOwl http://www.geneontology.org/formats/oboInOwl# 
 idspace: terms http://purl.org/dc/terms/ 
 ontology: promot/promot-simple
-property_value: owl:versionInfo "2025-05-20" xsd:string
+property_value: owl:versionInfo "2025-05-26" xsd:string
 property_value: terms:description "Ontology for building the relational database of the PROMOT project" xsd:string
 property_value: terms:license https://creativecommons.org/licenses/unspecified
 property_value: terms:title "PROMOT Common Data Model ontology" xsd:string
@@ -15,6 +16,63 @@ property_value: terms:title "PROMOT Common Data Model ontology" xsd:string
 [Term]
 id: PROMOT:0000000
 name: root node
+
+[Term]
+id: PROMOT:0000001
+name: PABPN1
+
+[Term]
+id: PROMOT:0000002
+name: RYR1
+
+[Term]
+id: PROMOT:0000003
+name: TTN
+
+[Term]
+id: PROMOT:0000004
+name: NEB
+
+[Term]
+id: PROMOT:0000005
+name: MTM1
+
+[Term]
+id: PROMOT:0000006
+name: ACTA1
+
+[Term]
+id: PROMOT:0000007
+name: SELENON
+
+[Term]
+id: PROMOT:0000008
+name: CHRNE
+
+[Term]
+id: PROMOT:0000009
+name: DOK7
+
+[Term]
+id: PROMOT:0000010
+name: COLQ
+
+[Term]
+id: PROMOT:0000011
+name: RAPSN
+
+[Term]
+id: PROMOT:0000012
+name: GFPT1
+
+[Term]
+id: PROMOT:0000013
+name: GMPPB
+
+[Term]
+id: PROMOT:0000101
+name: Patient
+def: "personne faisant partie de l’étude PROMOT" []
 
 [Typedef]
 id: RO:0001015
@@ -65,6 +123,13 @@ property_value: IAO:0000117 https://orcid.org/0000-0002-6601-2165
 is_functional: true
 
 [Typedef]
+id: RO:0002452
+name: has symptom
+def: "A relation that holds between a disease or an organism and a phenotype" []
+property_value: IAO:0000117 https://orcid.org/0000-0002-6601-2165
+is_a: RO:0002200 ! has phenotype
+
+[Typedef]
 id: RO:0004013
 name: is causal germline mutation in
 def: "Relates a gene to condition, such that a mutation in this gene is sufficient to produce the condition and that can be passed on to offspring[modified from orphanet]." []
@@ -85,4 +150,20 @@ name: disease arises from alteration in structure
 def: "A relationship between a disease and an anatomical structure where the material basis of the disease is some pathological change in the structure. Anatomical structure includes cellular and sub-cellular entities, such as chromosome and organelles." []
 created_by: https://orcid.org/0000-0002-6601-2165
 creation_date: 2017-12-26T19:58:44Z
+
+[Typedef]
+id: RO:0009006
+name: assay measures characteristic
+def: "A relation between an assay and a characteristic, in which the assay generates a data item which is a measure of a characteristic." []
+property_value: IAO:0000112 "A mass measurement assay measures an material's mass characteristic. A radioactivity detection assay measures the amount of radiation (alpha, beta or gamma ray emmissions) coming from a material." xsd:string
+property_value: terms:contributor https://orcid.org/0000-0002-8844-9165
+property_value: terms:date "2023-05-23T15:24:15Z" xsd:dateTime
+inverse_of: RO:0009007 ! characteristic measured by assay
+
+[Typedef]
+id: RO:0009007
+name: characteristic measured by assay
+def: "Inverse of 'assay measures characteristic'" []
+property_value: terms:contributor https://orcid.org/0000-0002-8844-9165
+property_value: terms:date "2023-05-23T15:29:50Z" xsd:dateTime
 

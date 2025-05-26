@@ -10,7 +10,7 @@
 # More information: https://github.com/INCATools/ontology-development-kit/
 
 # Fingerprint of the configuration file when this Makefile was last generated
-CONFIG_HASH=                aaa70305f4a3725f951b6a4e4227bb41c7742ad4b937a012affb4357ee74887f
+CONFIG_HASH=                7472d9b37fb5a62891f6e9274bc55520850d61a59a0a59219c79378ac2c44407
 
 
 # ----------------------------------------
@@ -54,7 +54,7 @@ OBODATE ?=                  $(shell date +'%d:%m:%Y %H:%M')
 VERSION=                    $(TODAY)
 ANNOTATE_ONTOLOGY_VERSION = annotate -V $(ONTBASE)/releases/$(VERSION)/$@ --annotation owl:versionInfo $(VERSION)
 ANNOTATE_CONVERT_FILE =     annotate --ontology-iri $(ONTBASE)/$@ $(ANNOTATE_ONTOLOGY_VERSION) convert -f ofn --output $@.tmp.owl && mv $@.tmp.owl $@
-OTHER_SRC =                 
+OTHER_SRC =                 $(COMPONENTSDIR)/pheno_with_relations.owl 
 ONTOLOGYTERMS =             $(TMPDIR)/ontologyterms.txt
 EDIT_PREPROCESSED =         $(TMPDIR)/$(ONT)-preprocess.owl
 
@@ -160,7 +160,7 @@ all_main: $(MAIN_FILES)
 # ----------------------------------------
 
 
-IMPORTS =  bfo mondo orcidio fma hp whofic snomed ro biolink ncit obi efo
+IMPORTS =  bfo mondo orcidio fma hp whofic snomed ro biolink ncit obi efo ioio bioassay
 
 IMPORT_ROOTS = $(patsubst %, $(IMPORTDIR)/%_import, $(IMPORTS))
 IMPORT_OWL_FILES = $(foreach n,$(IMPORT_ROOTS), $(n).owl)
@@ -442,6 +442,45 @@ refresh-%:
 no-mirror-refresh-%:
 	$(MAKE) IMP=true IMP_LARGE=true MIR=false PAT=false $(IMPORTDIR)/$*_import.owl -B
 
+
+# ----------------------------------------
+# Components
+# ----------------------------------------
+# Some ontologies contain external and internal components. A component is included in the ontology in its entirety.
+
+COMP=true # Global parameter to bypass component generation
+
+.PHONY: all_components
+all_components: $(OTHER_SRC)
+
+.PHONY: recreate-components
+recreate-components:
+	$(MAKE) COMP=true IMP=false MIR=true PAT=true IMP_LARGE=false all_components -B
+
+.PHONY: no-mirror-recreate-components
+no-mirror-recreate-components:
+	$(MAKE) COMP=true IMP=false MIR=false PAT=true IMP_LARGE=false all_components -B
+
+.PHONY: recreate-%
+recreate-%:
+	$(MAKE) COMP=true IMP=false IMP_LARGE=false MIR=true PAT=true $(COMPONENTSDIR)/$*.owl -B
+
+.PHONY: no-mirror-recreate-%
+no-mirror-recreate-%:
+	$(MAKE) COMP=true IMP=false IMP_LARGE=false MIR=false PAT=true $(COMPONENTSDIR)/$*.owl -B
+
+$(COMPONENTSDIR)/%.owl: | $(COMPONENTSDIR)
+	test -f $@ || touch $@
+.PRECIOUS: $(COMPONENTSDIR)/%.owl
+
+
+
+$(COMPONENTSDIR)/pheno_with_relations.owl: $(TEMPLATEDIR)/pheno_with_relations.csv
+	if [ $(COMP) = true ] ; then $(ROBOT) template --add-prefixes config/context.json \
+		$(patsubst %, --template %, $^) \
+		$(ANNOTATE_CONVERT_FILE); fi
+
+.PRECIOUS: $(COMPONENTSDIR)/pheno_with_relations.owl
 # ----------------------------------------
 # Mirroring upstream ontologies
 # ----------------------------------------
@@ -558,6 +597,21 @@ mirror-obi: | $(TMPDIR)
 .PRECIOUS: $(MIRRORDIR)/efo.owl
 mirror-efo: | $(TMPDIR)
 	$(ROBOT) convert -I http://www.ebi.ac.uk/efo/efo.owl -o $(TMPDIR)/$@.owl
+
+
+## ONTOLOGY: ioio
+.PHONY: mirror-ioio
+.PRECIOUS: $(MIRRORDIR)/ioio.owl
+mirror-ioio: | $(TMPDIR)
+	curl -L $(OBOBASE)/ioio.owl --create-dirs -o $(TMPDIR)/ioio-download.owl --retry 4 --max-time 200 && \
+	$(ROBOT) convert -i $(TMPDIR)/ioio-download.owl -o $(TMPDIR)/$@.owl
+
+
+## ONTOLOGY: bioassay
+.PHONY: mirror-bioassay
+.PRECIOUS: $(MIRRORDIR)/bioassay.owl
+mirror-bioassay: | $(TMPDIR)
+	$(ROBOT) convert -I http://www.bioassayontology.org/bao/bao_complete.owl -o $(TMPDIR)/$@.owl
 
 
 $(MIRRORDIR)/%.owl: mirror-% | $(MIRRORDIR)

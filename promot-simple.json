@@ -13,17 +13,78 @@
         "val" : "PROMOT Common Data Model ontology"
       }, {
         "pred" : "http://www.geneontology.org/formats/oboInOwl#date",
-        "val" : "20:05:2025 13:47"
+        "val" : "26:05:2025 15:06"
       }, {
         "pred" : "http://www.w3.org/2002/07/owl#versionInfo",
-        "val" : "2025-05-20"
+        "val" : "2025-05-26"
       } ],
-      "version" : "http://purl.obolibrary.org/obo/promot/releases/2025-05-20/promot-simple.json"
+      "version" : "http://purl.obolibrary.org/obo/promot/releases/2025-05-26/promot-simple.json"
     },
     "nodes" : [ {
       "id" : "http://purl.obolibrary.org/obo/PROMOT_0000000",
       "lbl" : "root node",
       "type" : "CLASS"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PROMOT_0000001",
+      "lbl" : "PABPN1",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PROMOT_0000002",
+      "lbl" : "RYR1",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PROMOT_0000003",
+      "lbl" : "TTN",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PROMOT_0000004",
+      "lbl" : "NEB",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PROMOT_0000005",
+      "lbl" : "MTM1",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PROMOT_0000006",
+      "lbl" : "ACTA1",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PROMOT_0000007",
+      "lbl" : "SELENON",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PROMOT_0000008",
+      "lbl" : "CHRNE",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PROMOT_0000009",
+      "lbl" : "DOK7",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PROMOT_0000010",
+      "lbl" : "COLQ",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PROMOT_0000011",
+      "lbl" : "RAPSN",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PROMOT_0000012",
+      "lbl" : "GFPT1",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PROMOT_0000013",
+      "lbl" : "GMPPB",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PROMOT_0000101",
+      "lbl" : "Patient",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "personne faisant partie de l’étude PROMOT"
+        }
+      }
     }, {
       "id" : "http://purl.obolibrary.org/obo/RO_0001015",
       "lbl" : "location of",
@@ -129,6 +190,20 @@
         } ]
       }
     }, {
+      "id" : "http://purl.obolibrary.org/obo/RO_0002452",
+      "lbl" : "has symptom",
+      "type" : "PROPERTY",
+      "propertyType" : "OBJECT",
+      "meta" : {
+        "definition" : {
+          "val" : "A relation that holds between a disease or an organism and a phenotype"
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
+          "val" : "https://orcid.org/0000-0002-6601-2165"
+        } ]
+      }
+    }, {
       "id" : "http://purl.obolibrary.org/obo/RO_0004013",
       "lbl" : "is causal germline mutation in",
       "type" : "PROPERTY",
@@ -183,6 +258,57 @@
         } ]
       }
     }, {
+      "id" : "http://purl.obolibrary.org/obo/RO_0009006",
+      "lbl" : "assay measures characteristic",
+      "type" : "PROPERTY",
+      "propertyType" : "OBJECT",
+      "meta" : {
+        "definition" : {
+          "val" : "A relation between an assay and a characteristic, in which the assay generates a data item which is a measure of a characteristic."
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000112",
+          "val" : "A mass measurement assay measures an material's mass characteristic. A radioactivity detection assay measures the amount of radiation (alpha, beta or gamma ray emmissions) coming from a material."
+        }, {
+          "pred" : "http://purl.org/dc/terms/contributor",
+          "val" : "https://orcid.org/0000-0002-8844-9165"
+        }, {
+          "pred" : "http://purl.org/dc/terms/date",
+          "val" : "2023-05-23T15:24:15Z"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/RO_0009007",
+      "lbl" : "characteristic measured by assay",
+      "type" : "PROPERTY",
+      "propertyType" : "OBJECT",
+      "meta" : {
+        "definition" : {
+          "val" : "Inverse of 'assay measures characteristic'"
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.org/dc/terms/contributor",
+          "val" : "https://orcid.org/0000-0002-8844-9165"
+        }, {
+          "pred" : "http://purl.org/dc/terms/date",
+          "val" : "2023-05-23T15:29:50Z"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PROMOT_property-1",
+      "lbl" : "age in years",
+      "type" : "PROPERTY",
+      "propertyType" : "DATA",
+      "meta" : {
+        "definition" : {
+          "val" : "Age of an individual"
+        }
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PROMOT_0000100",
+      "lbl" : "Individu test",
+      "type" : "INDIVIDUAL"
+    }, {
       "id" : "http://purl.obolibrary.org/obo/IAO_0000111",
       "type" : "PROPERTY",
       "propertyType" : "ANNOTATION"
@@ -196,6 +322,7 @@
       "propertyType" : "ANNOTATION"
     }, {
       "id" : "http://purl.obolibrary.org/obo/IAO_0000115",
+      "lbl" : "definition",
       "type" : "PROPERTY",
       "propertyType" : "ANNOTATION"
     }, {
@@ -224,6 +351,22 @@
       "propertyType" : "ANNOTATION"
     }, {
       "id" : "http://purl.obolibrary.org/obo/ro/subsets#ro-eco",
+      "type" : "PROPERTY",
+      "propertyType" : "ANNOTATION"
+    }, {
+      "id" : "http://purl.org/dc/elements/1.1/creator",
+      "type" : "PROPERTY",
+      "propertyType" : "ANNOTATION"
+    }, {
+      "id" : "http://purl.org/dc/elements/1.1/date",
+      "type" : "PROPERTY",
+      "propertyType" : "ANNOTATION"
+    }, {
+      "id" : "http://purl.org/dc/terms/contributor",
+      "type" : "PROPERTY",
+      "propertyType" : "ANNOTATION"
+    }, {
+      "id" : "http://purl.org/dc/terms/date",
       "type" : "PROPERTY",
       "propertyType" : "ANNOTATION"
     }, {
@@ -267,6 +410,14 @@
       "propertyType" : "ANNOTATION"
     } ],
     "edges" : [ {
+      "sub" : "http://purl.obolibrary.org/obo/PROMOT_0000100",
+      "pred" : "type",
+      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000101"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/RO_0002452",
+      "pred" : "subPropertyOf",
+      "obj" : "http://purl.obolibrary.org/obo/RO_0002200"
+    }, {
       "sub" : "http://purl.obolibrary.org/obo/RO_0001015",
       "pred" : "inverseOf",
       "obj" : "http://purl.obolibrary.org/obo/RO_0001025"
@@ -274,6 +425,10 @@
       "sub" : "http://purl.obolibrary.org/obo/RO_0002200",
       "pred" : "inverseOf",
       "obj" : "http://purl.obolibrary.org/obo/RO_0002201"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/RO_0009006",
+      "pred" : "inverseOf",
+      "obj" : "http://purl.obolibrary.org/obo/RO_0009007"
     } ]
   } ]
 }

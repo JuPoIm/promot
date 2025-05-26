@@ -27,6 +27,14 @@ export_formats:
   - obo
   - json
 license: https://creativecommons.org/licenses/unspecified
+use_template: TRUE
+components:
+  products:
+    - filename: pheno_with_relations.owl
+      use_template: TRUE
+      template_options: --add-prefixes config/context.json
+      templates:
+        - pheno_with_relations.csv
 import_group:
   annotation_properties:
     - rdfs:label
@@ -73,6 +81,9 @@ import_group:
     - id: obi
     - id: efo
       mirror_from: http://www.ebi.ac.uk/efo/efo.owl
+    - id: ioio
+    - id: bioassay
+      mirror_from: http://www.bioassayontology.org/bao/bao_complete.owl
 robot_java_args: '-Xmx8G'
 robot_report:
   use_labels: TRUE

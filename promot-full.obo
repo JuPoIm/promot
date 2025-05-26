@@ -1,9 +1,10 @@
 format-version: 1.2
-data-version: promot/releases/2025-05-20/promot-full.owl
-date: 20:05:2025 13:47
+data-version: promot/releases/2025-05-26/promot-full.owl
+date: 26:05:2025 15:06
 subsetdef: clingen ""
 subsetdef: disease_grouping ""
 subsetdef: gard_rare ""
+subsetdef: hposlim_core ""
 subsetdef: http://purl.obolibrary.org/obo/valid_for_go_gp2term ""
 subsetdef: nord_rare ""
 subsetdef: ordo_disorder ""
@@ -21,7 +22,7 @@ ontology: promot/promot-full
 property_value: dcterms:description "Ontology for building the relational database of the PROMOT project" xsd:string
 property_value: dcterms:license https://creativecommons.org/licenses/unspecified
 property_value: dcterms:title "PROMOT Common Data Model ontology" xsd:string
-property_value: owl:versionInfo "2025-05-20" xsd:string
+property_value: owl:versionInfo "2025-05-26" xsd:string
 
 [Term]
 id: BFO:0000001
@@ -13480,6 +13481,1121 @@ synonym: "Line of bony union" EXACT []
 is_a: FMA:7499 ! Synostosis
 
 [Term]
+id: HP:0000028
+name: Cryptorchidism
+alt_id: HP:0000797
+def: "Testis in inguinal canal. That is, absence of one or both testes from the scrotum owing to failure of the testis or testes to descend through the inguinal canal to the scrotum." [https://orcid.org/0000-0002-0736-9199, PMID:23650202]
+comment: The gonad is mobile and can be retracted superiorly by the cremaster muscle reflex stimulated, for instance, by cold or touch. A retracted testis is not cryptorchidism. An abdominal testis cannot be distinguished by physical examination from an (Apparently) absent testis and requires radiological (or, rarely, surgical) procedures for assessment.
+synonym: "Cryptorchism" EXACT [https://orcid.org/0000-0001-5208-3432]
+synonym: "Undescended testes" EXACT layperson []
+synonym: "Undescended testis" EXACT layperson []
+xref: Fyler:4493
+xref: SNOMEDCT_US:204878001
+xref: UMLS:C0010417
+is_a: HP:0000118 ! Phenotypic abnormality
+relationship: RO:0002201 MONDO:0019952 ! phenotype of congenital myopathy
+
+[Term]
+id: HP:0000118
+name: Phenotypic abnormality
+def: "A phenotypic abnormality." [https://orcid.org/0000-0002-0736-9199]
+comment: This is the root of the phenotypic abnormality subontology of the HPO.
+synonym: "Organ abnormality" EXACT []
+xref: UMLS:C4021819
+is_a: BFO:0000016 ! disposition
+
+[Term]
+id: HP:0000153
+name: Abnormality of the mouth
+def: "An abnormality of the mouth." [https://orcid.org/0000-0002-0736-9199]
+subset: hposlim_core
+synonym: "Abnormal mouth" EXACT layperson [https://orcid.org/0000-0002-5316-1399]
+synonym: "Abnormality of the mouth" EXACT layperson []
+xref: SNOMEDCT_US:128334002
+xref: UMLS:C0026633
+is_a: HP:0000271 ! Abnormality of the face
+
+[Term]
+id: HP:0000218
+name: High palate
+alt_id: HP:0000156
+alt_id: HP:0009080
+alt_id: HP:0009082
+alt_id: HP:0009097
+def: "Height of the palate more than 2 SD above the mean (objective) or palatal height at the level of the first permanent molar more than twice the height of the teeth (subjective)." [PMID:19125428]
+comment: The measuring device for this assessment is described in (Hall JG, Froster-Iskenius UG, Allanson JE, Gripp K, Slavotinek A. 2006. Handbook of Normal Physical Measurements. 2nd edition. Oxford Medical, publishers). A high palate is often associated with a narrow palate. However, a narrow palate can easily give a false appearance of a high palate. Height and width of the palate should be assessed and coded separately. We do not recommend the subjective determination because this term can be overused and applied inaccurately.
+synonym: "Elevated palate" EXACT layperson [https://orcid.org/0000-0001-5889-4463]
+synonym: "High arched palate" EXACT []
+synonym: "High palate" EXACT layperson []
+synonym: "High, arched palate" EXACT []
+synonym: "High-arched palate" EXACT []
+synonym: "Increased palatal height" EXACT layperson [https://orcid.org/0000-0001-5889-4463]
+synonym: "Ogival palate" RELATED []
+synonym: "Palate high-arched" EXACT []
+synonym: "Palate, high-arched" EXACT []
+xref: SNOMEDCT_US:27272007
+xref: UMLS:C0240635
+is_a: HP:0000153 ! Abnormality of the mouth
+relationship: RO:0002201 MONDO:0019952 ! phenotype of congenital myopathy
+
+[Term]
+id: HP:0000271
+name: Abnormality of the face
+def: "An abnormality of the face." [https://orcid.org/0000-0002-0736-9199]
+subset: hposlim_core
+synonym: "Abnormal face" EXACT layperson [https://orcid.org/0000-0002-5316-1399]
+synonym: "Abnormality of the countenance" BROAD [https://orcid.org/0000-0001-5889-4463]
+synonym: "Abnormality of the face" EXACT layperson []
+synonym: "Abnormality of the physiognomy" BROAD [https://orcid.org/0000-0001-5889-4463]
+synonym: "Abnormality of the visage" BROAD [https://orcid.org/0000-0001-5889-4463]
+synonym: "Anomaly of face" RELATED [https://orcid.org/0000-0001-5889-4463]
+synonym: "Anomaly of the face" RELATED [https://orcid.org/0000-0001-5889-4463]
+synonym: "Disorder of face" BROAD layperson [https://orcid.org/0000-0001-5889-4463]
+synonym: "Disorder of the face" NARROW layperson [https://orcid.org/0000-0001-5889-4463]
+synonym: "Facial abnormality" EXACT layperson [https://orcid.org/0000-0001-5889-4463]
+synonym: "Facial anomaly" RELATED [https://orcid.org/0000-0001-5889-4463]
+xref: SNOMEDCT_US:118930001
+xref: SNOMEDCT_US:32003007
+xref: SNOMEDCT_US:398206004
+xref: SNOMEDCT_US:398302004
+xref: UMLS:C0266617
+xref: UMLS:C1290857
+xref: UMLS:C4025871
+is_a: HP:0000118 ! Phenotypic abnormality
+
+[Term]
+id: HP:0000276
+name: Long face
+alt_id: HP:0000334
+def: "Facial height (length) is more than 2 standard deviations above the mean (objective); or, an apparent increase in the height (length) of the face (subjective)." [PMID:19125436]
+comment: Objective measurement of the face height is made with sliding calipers from the nasion, just above the depth of the nasal root, to the gnathion, the inferior border of the mandible, both in the midline. Note that long face is distinct from narrow face.
+subset: hposlim_core
+synonym: "Elongation of face" EXACT layperson [https://orcid.org/0000-0001-5889-4463]
+synonym: "Increased height of face" EXACT layperson [https://orcid.org/0000-0001-5889-4463]
+synonym: "Increased length of face" EXACT layperson [https://orcid.org/0000-0001-5889-4463]
+synonym: "Increased vertical dimension of face" EXACT [https://orcid.org/0000-0001-5889-4463]
+synonym: "Long face" EXACT layperson []
+synonym: "Long facies" EXACT [https://orcid.org/0000-0001-5889-4463]
+synonym: "Vertical elongation of face" EXACT layperson [https://orcid.org/0000-0001-5889-4463]
+synonym: "Vertical enlargement of face" EXACT layperson [https://orcid.org/0000-0001-5889-4463]
+synonym: "Vertical excess of face" EXACT [https://orcid.org/0000-0001-5889-4463]
+synonym: "Vertical Facial Excess" EXACT [https://orcid.org/0000-0001-5889-4463]
+synonym: "Vertical hyperplasia of face" EXACT [https://orcid.org/0000-0001-5889-4463]
+synonym: "Vertical overgrowth of face" EXACT layperson [https://orcid.org/0000-0001-5889-4463]
+xref: UMLS:C1836047
+is_a: HP:0000271 ! Abnormality of the face
+relationship: RO:0002201 MONDO:0019952 ! phenotype of congenital myopathy
+
+[Term]
+id: HP:0000467
+name: Neck muscle weakness
+def: "Decreased strength of the neck musculature." [https://orcid.org/0000-0002-0736-9199]
+synonym: "Flaccid neck" NARROW layperson [https://orcid.org/0000-0001-5889-4463]
+synonym: "Floppy neck" EXACT layperson [https://orcid.org/0000-0001-5889-4463]
+synonym: "Neck muscle weakness" EXACT layperson []
+xref: UMLS:C0240479
+is_a: HP:0001324 ! Muscle weakness
+
+[Term]
+id: HP:0000508
+name: Ptosis
+def: "The upper eyelid margin is positioned 3 mm or more lower than usual and covers the superior portion of the iris (objective); or, the upper lid margin obscures at least part of the pupil (subjective)." [PMID:19125427]
+subset: hposlim_core
+synonym: "Blepharoptosis" EXACT []
+synonym: "Drooping upper eyelid" EXACT layperson [https://orcid.org/0000-0001-5208-3432]
+synonym: "Eye drop" RELATED layperson []
+synonym: "Eyelid ptosis" EXACT [https://orcid.org/0000-0002-5316-1399]
+synonym: "Palpebral ptosis" EXACT []
+xref: SNOMEDCT_US:11934000
+xref: UMLS:C0005745
+is_a: HP:0012373 ! Abnormal eye physiology
+relationship: RO:0002201 MONDO:0019952 ! phenotype of congenital myopathy
+
+[Term]
+id: HP:0000597
+name: Ophthalmoparesis
+relationship: RO:0002201 MONDO:0019952 ! phenotype of congenital myopathy
+
+[Term]
+id: HP:0000602
+name: Ophthalmoplegia
+def: "Paralysis of one or more extraocular muscles that are responsible for eye movements." [https://orcid.org/0000-0002-0736-9199]
+synonym: "Eye muscle paralysis" EXACT layperson [https://orcid.org/0000-0001-5208-3432, https://orcid.org/0000-0001-5889-4463]
+synonym: "Paralysis of extraocular eye movement" EXACT [https://orcid.org/0000-0001-5208-3432, https://orcid.org/0000-0001-5889-4463]
+xref: SNOMEDCT_US:16110005
+xref: UMLS:C0029089
+is_a: HP:0012373 ! Abnormal eye physiology
+relationship: RO:0002201 MONDO:0019952 ! phenotype of congenital myopathy
+
+[Term]
+id: HP:0000766
+name: Abnormal sternum morphology
+alt_id: HP:0000780
+alt_id: HP:0006586
+alt_id: HP:0006594
+alt_id: HP:0006605
+alt_id: HP:0006630
+alt_id: HP:0006708
+def: "An anomaly of the sternum, also known as the breastbone." [https://orcid.org/0000-0002-0736-9199]
+subset: hposlim_core
+synonym: "Abnormality of the sternum" EXACT layperson []
+synonym: "Pectus carinatum or pectus excavatum" EXACT []
+synonym: "Pectus deformities" EXACT []
+synonym: "Pectus deformity" EXACT []
+synonym: "Pectus excavatum or carinatum" EXACT []
+synonym: "Pectus excavatum or pectus carinatum" EXACT []
+synonym: "Pectus excavatum/carinatum" EXACT []
+synonym: "Sternal anomalies" EXACT layperson []
+xref: UMLS:C1860493
+is_a: HP:0009121 ! Abnormal axial skeleton morphology
+
+[Term]
+id: HP:0000767
+name: Pectus excavatum
+alt_id: HP:0006613
+alt_id: HP:0006617
+def: "A defect of the chest wall characterized by a depression of the sternum, giving the chest (\"pectus\") a caved-in (\"excavatum\") appearance." [https://orcid.org/0000-0002-0736-9199]
+subset: hposlim_core
+synonym: "Funnel chest" EXACT layperson []
+xref: SNOMEDCT_US:391987005
+xref: UMLS:C2051831
+is_a: HP:0000766 ! Abnormal sternum morphology
+relationship: RO:0002201 MONDO:0019952 ! phenotype of congenital myopathy
+
+[Term]
+id: HP:0000768
+name: Pectus carinatum
+alt_id: HP:0006639
+def: "A deformity of the chest caused by overgrowth of the ribs and characterized by protrusion of the sternum." [https://orcid.org/0000-0002-0736-9199]
+subset: hposlim_core
+synonym: "Pigeon chest" EXACT layperson [https://en.wikipedia.org/wiki/pectus_carinatum, https://orcid.org/0000-0001-5208-3432]
+xref: SNOMEDCT_US:205101001
+xref: UMLS:C0158731
+is_a: HP:0000766 ! Abnormal sternum morphology
+relationship: RO:0002201 MONDO:0019952 ! phenotype of congenital myopathy
+
+[Term]
+id: HP:0000925
+name: Abnormality of the vertebral column
+def: "Any abnormality of the vertebral column." [https://orcid.org/0000-0002-0736-9199]
+subset: hposlim_core
+synonym: "Abnormal spine" EXACT layperson [https://orcid.org/0000-0002-5316-1399]
+synonym: "Abnormal vertebral column" EXACT layperson []
+synonym: "Abnormality of the backbone" RELATED layperson []
+synonym: "Abnormality of the spine" EXACT layperson []
+synonym: "Abnormality of the vertebral column" EXACT layperson []
+xref: UMLS:C4020882
+xref: UMLS:C4021789
+is_a: HP:0009121 ! Abnormal axial skeleton morphology
+
+[Term]
+id: HP:0001197
+name: Abnormality of prenatal development or birth
+def: "An abnormality of the fetus or the birth of the fetus, excluding structural abnormalities." [https://orcid.org/0000-0002-0736-9199]
+comment: Because of the close link between prenatal developmental abnormalities and abnormalities of the birth process, a single term is chosen to subsume both classes of abnormality.
+synonym: "Abnormality of prenatal development or birth" EXACT layperson []
+xref: UMLS:C4025797
+is_a: HP:0000118 ! Phenotypic abnormality
+
+[Term]
+id: HP:0001252
+name: Hypotonia
+relationship: RO:0002201 MONDO:0019952 ! phenotype of congenital myopathy
+
+[Term]
+id: HP:0001265
+name: Hyporeflexia
+alt_id: HP:0002467
+def: "Reduction of neurologic reflexes such as the knee-jerk reaction." [https://orcid.org/0000-0002-0736-9199]
+synonym: "Decreased reflex response" EXACT layperson []
+synonym: "Decreased reflexes" EXACT layperson [https://orcid.org/0000-0001-5208-3432, https://orcid.org/0000-0002-6548-5200]
+xref: SNOMEDCT_US:405946002
+xref: UMLS:C0700078
+is_a: HP:0001315 ! Reduced tendon reflexes
+relationship: RO:0002201 MONDO:0019952 ! phenotype of congenital myopathy
+
+[Term]
+id: HP:0001270
+name: Motor delay
+alt_id: HP:0001307
+alt_id: HP:0002130
+alt_id: HP:0006788
+alt_id: HP:0006826
+alt_id: HP:0006909
+alt_id: HP:0006950
+alt_id: HP:0006968
+alt_id: HP:0007219
+alt_id: HP:0007251
+def: "A type of Developmental delay characterized by a delay in acquiring motor skills." [https://orcid.org/0000-0002-0736-9199]
+synonym: "Delay in development of motor milestones" EXACT []
+synonym: "Delay in motor development" EXACT []
+synonym: "Delayed development of motor milestones" EXACT []
+synonym: "Delayed early motor milestones" EXACT []
+synonym: "Delayed motor development" EXACT []
+synonym: "Delayed motor milestones" EXACT []
+synonym: "Locomotor delay" EXACT []
+synonym: "Motor developmental delay" EXACT []
+synonym: "Motor developmental milestones not achieved" EXACT []
+synonym: "Motor retardation" EXACT []
+synonym: "No development of motor milestones" RELATED []
+synonym: "Retarded motor development" EXACT []
+synonym: "Slow development of motor milestones" EXACT []
+xref: UMLS:C1854301
+xref: UMLS:C4020874
+is_a: HP:0012759 ! Neurodevelopmental abnormality
+relationship: RO:0002201 MONDO:0019952 ! phenotype of congenital myopathy
+
+[Term]
+id: HP:0001284
+name: Areflexia
+alt_id: HP:0001314
+def: "Absence of neurologic reflexes such as the knee-jerk reaction." [https://orcid.org/0000-0002-0736-9199]
+comment: The stretch reflexes (also called deep tendon reflexes) include the knee-jerk reflex (patellar reflex, the biceps reflex, the triceps reflex, and the ankle jerk reflex or Achilles tendon reflex).
+synonym: "Absent deep tendon reflexes" EXACT []
+synonym: "Absent reflexes" BROAD layperson []
+synonym: "Absent tendon reflexes" EXACT layperson []
+synonym: "Deep tendon reflexes absent" EXACT []
+synonym: "Loss of deep tendon reflexes" EXACT []
+synonym: "Lost deep tendon reflexes" EXACT []
+xref: SNOMEDCT_US:349006
+xref: SNOMEDCT_US:37280007
+xref: UMLS:C0234146
+xref: UMLS:C0241772
+xref: UMLS:C0278124
+is_a: HP:0001315 ! Reduced tendon reflexes
+relationship: RO:0002201 MONDO:0019952 ! phenotype of congenital myopathy
+
+[Term]
+id: HP:0001288
+name: Gait disturbance
+relationship: RO:0002201 MONDO:0019952 ! phenotype of congenital myopathy
+
+[Term]
+id: HP:0001315
+name: Reduced tendon reflexes
+alt_id: HP:0001316
+def: "Diminution of tendon reflexes, which is an invariable sign of peripheral nerve disease." [https://orcid.org/0000-0002-0736-9199, PMID:20941667]
+comment: The deep tendon reflex is a monosynaptic reflex arc with sensory and motor nerve components, but the arc is much more vulnerable to sensory nerve damage. Ankle plantar flexion is retained in all but the most severe peripheral neuropathies, and thus loss of the Achilles tendon reflex in an objective indication of a substantial sensory nerve defect.
+synonym: "Absent or decreased deep tendon reflexes" EXACT []
+synonym: "Decreased deep tendon reflexes" EXACT []
+synonym: "Decreased tendon reflexes" EXACT []
+synonym: "Decreased to absent deep tendon reflexes" EXACT []
+synonym: "Decreased/absent deep tendon reflexes" EXACT []
+synonym: "Depressed tendon reflexes" EXACT []
+synonym: "Diminished deep tendon reflexes" EXACT []
+synonym: "Diminished or absent deep tendon reflexes" EXACT []
+synonym: "Diminished or absent tendon reflexes" EXACT []
+synonym: "Hypoactive to absent deep tendon reflexes" EXACT []
+synonym: "Impaired tendon reflexes" EXACT []
+synonym: "Reduced/absent deep tendon reflexes" EXACT []
+synonym: "Weak or absent deep tendon reflexes" EXACT []
+xref: UMLS:C1866934
+is_a: HP:0100022 ! Abnormality of movement
+
+[Term]
+id: HP:0001319
+name: Neonatal hypotonia
+alt_id: HP:0006830
+alt_id: HP:0008976
+def: "Muscular hypotonia (abnormally low muscle tone) manifesting in the neonatal period." [https://orcid.org/0000-0002-0736-9199]
+synonym: "Congenital hypotonia" RELATED []
+synonym: "Hypotonia, in neonatal onset" EXACT []
+synonym: "Hypotonia, neonatal" EXACT []
+synonym: "Low muscle tone, in neonatal onset" EXACT layperson [https://orcid.org/0000-0001-5208-3432]
+xref: SNOMEDCT_US:205294008
+xref: UMLS:C2267233
+is_a: HP:0011804 ! Abnormal muscle physiology
+relationship: RO:0002201 MONDO:0019952 ! phenotype of congenital myopathy
+
+[Term]
+id: HP:0001324
+name: Muscle weakness
+alt_id: HP:0002309
+alt_id: HP:0008979
+alt_id: HP:0009012
+alt_id: HP:0009061
+def: "Reduced strength of muscles." [https://orcid.org/0000-0002-0736-9199, PMID:15832536]
+comment: It is important clinical to distinguish between muscle weakness, fatigue, and asthenia. Fatigue describes the inability to continue performing a task after multiple repetitions; in contrast, a patient with primary weakness is unable to perform the first repetition of the task. Asthenia is a sense of weariness or exhaustion in the absence of muscle weakness. Conditions that result in intrinsic muscle weakness can be divided into several main categories: infectious, neurologic, endocrine, inflammatory, rheumatologic, genetic, metabolic, electrolyte-induced, or drug-induced.
+synonym: "Muscle weakness" EXACT layperson []
+synonym: "Muscular weakness" EXACT layperson []
+xref: SNOMEDCT_US:26544005
+xref: UMLS:C0151786
+is_a: HP:0011804 ! Abnormal muscle physiology
+relationship: RO:0002201 MONDO:0019952 ! phenotype of congenital myopathy
+
+[Term]
+id: HP:0001328
+name: Specific learning disability
+alt_id: HP:0007234
+def: "Impairment of certain skills such as reading or writing, coordination, self-control, or attention that interfere with the ability to learn. The impairment is not related to a global deficiency of intelligence." [https://orcid.org/0000-0002-0736-9199]
+comment: The term learning disability is used with different meanings in different contexts. Significant impairments of mental functioning with a reduction in IQ below 70 should be coded as mental retardation.
+xref: UMLS:C4025790
+is_a: HP:0012759 ! Neurodevelopmental abnormality
+relationship: RO:0002201 MONDO:0019952 ! phenotype of congenital myopathy
+
+[Term]
+id: HP:0001374
+name: Congenital hip dislocation
+synonym: "Congenital dislocation of the hip" EXACT []
+synonym: "Congenital dislocation of the hips" EXACT []
+synonym: "Congenital hip anomaly" EXACT []
+synonym: "Congenital hip dislocations" EXACT []
+synonym: "Dislocated hip since birth" EXACT layperson [https://orcid.org/0000-0001-5208-3432]
+xref: SNOMEDCT_US:48334007
+xref: SNOMEDCT_US:52781008
+xref: UMLS:C0019555
+is_a: HP:0002814 ! Abnormality of the lower limb
+is_a: HP:0011842 ! Abnormal skeletal morphology
+relationship: RO:0002201 MONDO:0019952 ! phenotype of congenital myopathy
+
+[Term]
+id: HP:0001531
+name: Failure to thrive in infancy
+alt_id: HP:0008863
+alt_id: HP:0008925
+synonym: "Failure to thrive in first year of life" EXACT []
+synonym: "Faltering weight in infancy" EXACT layperson [https://orcid.org/0000-0001-5208-3432]
+synonym: "Weight faltering in infancy" EXACT layperson [https://orcid.org/0000-0001-5208-3432]
+xref: UMLS:C1867873
+is_a: HP:0000118 ! Phenotypic abnormality
+relationship: RO:0002201 MONDO:0019952 ! phenotype of congenital myopathy
+
+[Term]
+id: HP:0001558
+name: Decreased fetal movement
+alt_id: HP:0001559
+alt_id: HP:0006840
+alt_id: HP:0007630
+alt_id: HP:0007631
+def: "An abnormal reduction in quantity or strength of fetal movements." [https://orcid.org/0000-0002-0736-9199]
+synonym: "Decreased fetal activity" EXACT []
+synonym: "Decreased fetal movements" EXACT []
+synonym: "Decreased foetal activity" EXACT uk_spelling []
+synonym: "Decreased foetal movement" EXACT uk_spelling []
+synonym: "Decreased foetal movements" EXACT uk_spelling []
+synonym: "Decreased movement in utero" EXACT []
+synonym: "Dminished fetal movement" EXACT []
+synonym: "Dminished foetal movement" EXACT uk_spelling []
+synonym: "Fetal hypokinesia" EXACT []
+synonym: "Foetal hypokinesia" EXACT uk_spelling []
+synonym: "Less than 10 fetal movements in 12 hours" EXACT layperson [PMID:2729383]
+synonym: "Less than 10 foetal movements in 12 hours" EXACT uk_spelling []
+synonym: "Reduced fetal movement" EXACT []
+synonym: "Reduced fetal movements" EXACT []
+synonym: "Reduced foetal movement" EXACT uk_spelling []
+synonym: "Reduced foetal movements" EXACT uk_spelling []
+xref: SNOMEDCT_US:276369006
+xref: UMLS:C0235659
+is_a: HP:0001197 ! Abnormality of prenatal development or birth
+relationship: RO:0002201 MONDO:0019952 ! phenotype of congenital myopathy
+
+[Term]
+id: HP:0001618
+name: Dysphonia
+def: "Difficulty in speaking due to a physical disorder of the mouth, tongue, throat, or vocal cords. Associated with a known physical or neurological cause." []
+synonym: "Inability to produce voice sounds" EXACT layperson [https://orcid.org/0000-0001-5208-3432, https://orcid.org/0000-0001-8430-6039, https://orcid.org/0000-0002-2592-4715, https://orcid.org/0000-0002-9593-5508, https://orcid.org/0000-0003-3777-1389]
+synonym: "Voice change" EXACT layperson [https://orcid.org/0000-0001-8430-6039, https://orcid.org/0000-0002-2592-4715, https://orcid.org/0000-0002-9593-5508, https://orcid.org/0000-0003-3777-1389]
+xref: SNOMEDCT_US:47004009
+xref: UMLS:C1527344
+is_a: HP:0000118 ! Phenotypic abnormality
+relationship: RO:0002201 MONDO:0019952 ! phenotype of congenital myopathy
+property_value: dcterms:contributor https://orcid.org/0000-0001-8430-6039
+property_value: dcterms:contributor https://orcid.org/0000-0002-2592-4715
+property_value: dcterms:contributor https://orcid.org/0000-0002-9593-5508
+property_value: dcterms:contributor https://orcid.org/0000-0003-3777-1389
+
+[Term]
+id: HP:0001622
+name: Premature birth
+def: "The birth of a baby of less than 37 weeks of gestational age." [https://orcid.org/0000-0002-0736-9199]
+synonym: "Premature birth" EXACT layperson []
+synonym: "Premature delivery" EXACT []
+synonym: "Premature delivery of affected infants" EXACT layperson []
+synonym: "Preterm birth" EXACT []
+synonym: "Preterm delivery" EXACT layperson []
+synonym: "Shortened gestation time" EXACT []
+xref: SNOMEDCT_US:282020008
+xref: SNOMEDCT_US:367494004
+xref: SNOMEDCT_US:49550006
+xref: UMLS:C0151526
+xref: UMLS:C0233315
+is_a: HP:0001197 ! Abnormality of prenatal development or birth
+relationship: RO:0002201 MONDO:0019952 ! phenotype of congenital myopathy
+
+[Term]
+id: HP:0001761
+name: Pes cavus
+alt_id: HP:0008075
+def: "An increase in height of the medial longitudinal arch of the foot that does not flatten on weight bearing (i.e., a distinctly hollow form of the sole of the foot when it is bearing weight)." [https://orcid.org/0000-0002-0736-9199, PMID:19125433]
+subset: hposlim_core
+synonym: "Cavus foot" EXACT []
+synonym: "High-arched foot" EXACT layperson [https://orcid.org/0000-0002-6548-5200]
+xref: MEDDRA:10034743 "Pes cavus"
+xref: SNOMEDCT_US:205091006
+xref: UMLS:C0728829
+is_a: HP:0002814 ! Abnormality of the lower limb
+relationship: RO:0002201 MONDO:0019952 ! phenotype of congenital myopathy
+
+[Term]
+id: HP:0002015
+name: Dysphagia
+alt_id: HP:0002569
+def: "Difficulty in swallowing." [https://orcid.org/0000-0002-0736-9199]
+subset: hposlim_core
+synonym: "Deglutition disorder" RELATED []
+synonym: "Difficulty swallowing" EXACT []
+synonym: "Poor swallowing" EXACT layperson []
+synonym: "Swallowing difficulties" EXACT layperson []
+synonym: "Swallowing difficulty" EXACT layperson []
+xref: MEDDRA:10013950 "Dysphagia"
+xref: SNOMEDCT_US:288939007
+xref: SNOMEDCT_US:40739000
+xref: UMLS:C0011168
+is_a: HP:0012638 ! Abnormal nervous system physiology
+is_a: HP:0025032 ! Abnormality of digestive system physiology
+relationship: RO:0002201 MONDO:0019952 ! phenotype of congenital myopathy
+
+[Term]
+id: HP:0002047
+name: Malignant hyperthermia
+alt_id: HP:0004896
+def: "Malignant hyperthermia is characterized by a rapid increase in temperature to 39-42 degrees C. Malignant hyperthermia may occur in response to either inhalational anesthetics such as halothane, to muscle relaxants such as succinylcholine, or to exercise." [https://orcid.org/0000-0002-0736-9199]
+xref: SNOMEDCT_US:213026003
+xref: SNOMEDCT_US:405501007
+xref: UMLS:C0024591
+is_a: HP:0000118 ! Phenotypic abnormality
+relationship: RO:0002201 MONDO:0019952 ! phenotype of congenital myopathy
+
+[Term]
+id: HP:0002058
+name: Myopathic facies
+alt_id: HP:0004647
+def: "A facial appearance characteristic of myopathic conditions. The face appears expressionless with sunken cheeks, bilateral ptosis, and inability to elevate the corners of the mouth, due to muscle weakness." [https://orcid.org/0000-0002-0736-9199]
+synonym: "Myopathic face" EXACT []
+synonym: "Myopathic facial appearance" EXACT [https://orcid.org/0000-0001-5889-4463]
+xref: SNOMEDCT_US:26432009
+xref: UMLS:C0332615
+is_a: HP:0000271 ! Abnormality of the face
+relationship: RO:0002201 MONDO:0019952 ! phenotype of congenital myopathy
+
+[Term]
+id: HP:0002068
+name: Neuromuscular dysphagia
+xref: UMLS:C4025729
+is_a: HP:0002015 ! Dysphagia
+
+[Term]
+id: HP:0002093
+name: Respiratory insufficiency
+relationship: RO:0002201 MONDO:0019952 ! phenotype of congenital myopathy
+
+[Term]
+id: HP:0002359
+name: Frequent falls
+synonym: "Frequent falls" EXACT layperson []
+xref: UMLS:C0850703
+is_a: HP:0011804 ! Abnormal muscle physiology
+relationship: RO:0002201 MONDO:0019952 ! phenotype of congenital myopathy
+
+[Term]
+id: HP:0002515
+name: Waddling gait
+def: "Weakness of the hip girdle and upper thigh muscles, for instance in myopathies, leads to an instability of the pelvis on standing and walking. If the muscles extending the hip joint are affected, the posture in that joint becomes flexed and lumbar lordosis increases. The patients usually have difficulties standing up from a sitting position. Due to weakness in the gluteus medius muscle, the hip on the side of the swinging leg drops with each step (referred to as Trendelenburg sign). The gait appears waddling. The patients frequently attempt to counteract the dropping of the hip on the swinging side by bending the trunk towards the side which is in the stance phase (in the German language literature this is referred to as Duchenne sign). Similar gait patterns can be caused by orthopedic conditions when the origin and the insertion site of the gluteus medius muscle are closer to each other than normal, for instance due to a posttraumatic elevation of the trochanter or pseudarthrosis of the femoral neck." [PMID:27770207]
+synonym: "Waddling gait" EXACT layperson []
+synonym: "Waddling walk" EXACT layperson [https://orcid.org/0000-0001-5208-3432]
+xref: SNOMEDCT_US:271706000
+xref: UMLS:C0231712
+is_a: HP:0100022 ! Abnormality of movement
+relationship: RO:0002201 MONDO:0019952 ! phenotype of congenital myopathy
+
+[Term]
+id: HP:0002650
+name: Scoliosis
+alt_id: HP:0002770
+alt_id: HP:0003303
+alt_id: HP:0003317
+alt_id: HP:0003415
+def: "The presence of an abnormal lateral curvature of the spine." [https://orcid.org/0000-0002-0736-9199]
+subset: hposlim_core
+synonym: "Cobb angle greater than ten degrees" RELATED []
+xref: Fyler:4160
+xref: SNOMEDCT_US:111266001
+xref: SNOMEDCT_US:64217002
+xref: UMLS:C0037932
+xref: UMLS:C0700208
+is_a: HP:0010674 ! Abnormal curvature of the vertebral column
+relationship: RO:0002201 MONDO:0019952 ! phenotype of congenital myopathy
+
+[Term]
+id: HP:0002795
+name: Abnormal respiratory system physiology
+alt_id: HP:0005952
+def: "Abnormal function of the respiratory system." []
+synonym: "Abnormal respiration" EXACT [https://orcid.org/0000-0001-5208-3432]
+synonym: "Functional respiratory abnormality" EXACT layperson []
+synonym: "Impaired pulmonary function" RELATED []
+synonym: "Respiratory problem" RELATED layperson []
+xref: Fyler:4200
+xref: UMLS:C4025677
+is_a: HP:0000118 ! Phenotypic abnormality
+
+[Term]
+id: HP:0002814
+name: Abnormality of the lower limb
+def: "An abnormality of the leg." [https://orcid.org/0000-0002-0736-9199]
+subset: hposlim_core
+synonym: "Abnormality of the leg" EXACT []
+synonym: "Abnormality of the lower limb" EXACT layperson []
+synonym: "Lower limb deformities" EXACT layperson []
+xref: SNOMEDCT_US:449715001
+xref: UMLS:C1096086
+is_a: HP:0040064 ! Abnormality of limbs
+
+[Term]
+id: HP:0002828
+name: Multiple joint contractures
+xref: SNOMEDCT_US:19393004
+xref: SNOMEDCT_US:202264009
+xref: UMLS:C0158118
+is_a: HP:0011805 ! Abnormal skeletal muscle morphology
+is_a: HP:0011842 ! Abnormal skeletal morphology
+relationship: RO:0002201 MONDO:0019952 ! phenotype of congenital myopathy
+
+[Term]
+id: HP:0003011
+name: Abnormality of the musculature
+alt_id: HP:0003197
+alt_id: HP:0003708
+alt_id: HP:0040290
+def: "Abnormality originating in one or more muscles, i.e., of the set of muscles of body." [https://orcid.org/0000-0002-0736-9199]
+synonym: "Muscular abnormality" EXACT layperson []
+xref: UMLS:C4021745
+is_a: HP:0033127 ! Abnormality of the musculoskeletal system
+
+[Term]
+id: HP:0003306
+name: Spinal rigidity
+def: "Reduced ability to move the vertebral column with a resulting limitation of neck and trunk flexion." [https://orcid.org/0000-0002-0736-9199, PMID:11601420, PMID:2246660]
+synonym: "Reduced spine movement" EXACT layperson [https://orcid.org/0000-0002-6548-5200]
+synonym: "Rigid spine" EXACT []
+xref: UMLS:C1858025
+is_a: HP:0000925 ! Abnormality of the vertebral column
+relationship: RO:0002201 MONDO:0019952 ! phenotype of congenital myopathy
+
+[Term]
+id: HP:0003307
+name: Hyperlordosis
+alt_id: HP:0002939
+def: "Abnormally increased curvature (anterior concavity) of the lumbar or cervical spine." [https://orcid.org/0000-0002-0736-9199]
+subset: hposlim_core
+synonym: "Lordosis" EXACT []
+synonym: "Prominent swayback" EXACT layperson [https://orcid.org/0000-0001-6908-9849]
+xref: SNOMEDCT_US:249710008
+xref: SNOMEDCT_US:61960001
+xref: UMLS:C0024003
+is_a: HP:0010674 ! Abnormal curvature of the vertebral column
+relationship: RO:0002201 MONDO:0019952 ! phenotype of congenital myopathy
+
+[Term]
+id: HP:0003326
+name: Myalgia
+alt_id: HP:0003718
+def: "Pain in muscle." [https://orcid.org/0000-0002-0736-9199]
+synonym: "Muscle ache" EXACT layperson [https://orcid.org/0000-0002-0736-9199]
+synonym: "Muscle pain" EXACT layperson [https://orcid.org/0000-0002-0736-9199]
+synonym: "Myalgias" RELATED plural_form [https://orcid.org/0000-0002-5316-1399]
+xref: SNOMEDCT_US:68962001
+xref: UMLS:C0231528
+is_a: HP:0025142 ! Constitutional symptom
+relationship: RO:0002201 MONDO:0019952 ! phenotype of congenital myopathy
+
+[Term]
+id: HP:0003327
+name: Axial muscle weakness
+def: "Reduced strength of the axial musculature (i.e., of the muscles of the head and neck, spine, and ribs)." [https://orcid.org/0000-0002-0736-9199]
+xref: UMLS:C1843697
+is_a: HP:0001324 ! Muscle weakness
+
+[Term]
+id: HP:0003391
+name: Gowers sign
+name: Gowers sign 
+def: "A phenomenon whereby patients are not able to stand up without the use of the hands owing to weakness of the proximal muscles of the lower limbs." [https://orcid.org/0000-0002-0736-9199]
+synonym: "Gower sign" EXACT []
+synonym: "Positive Gower sign" EXACT []
+synonym: "Positive Gowers sign" EXACT []
+xref: SNOMEDCT_US:298294005
+xref: SNOMEDCT_US:85905009
+xref: UMLS:C0234182
+xref: UMLS:C0575071
+is_a: HP:0001324 ! Muscle weakness
+
+[Term]
+id: HP:0003394
+name: Muscle spasm
+alt_id: HP:0009018
+alt_id: HP:0031988
+def: "Sudden and involuntary contractions of one or more muscles." [https://orcid.org/0000-0002-0736-9199]
+synonym: "Muscle cramps" EXACT plural_form []
+synonym: "Muscle spasms" EXACT plural_form []
+xref: SNOMEDCT_US:55300003
+xref: UMLS:C0026821
+is_a: HP:0011804 ! Abnormal muscle physiology
+relationship: RO:0002201 MONDO:0019952 ! phenotype of congenital myopathy
+
+[Term]
+id: HP:0003457
+name: EMG abnormality
+alt_id: HP:0002177
+alt_id: HP:0003751
+alt_id: HP:0003753
+alt_id: HP:0100286
+def: "Abnormal results of investigations using electromyography (EMG)." [https://orcid.org/0000-0002-0736-9199, PMID:15961866, PMID:18751841]
+synonym: "Abnormal electromyography finding" EXACT []
+synonym: "Abnormal EMG" EXACT []
+synonym: "Electromyogram abnormal" EXACT []
+synonym: "EMG abnormalities" EXACT []
+xref: SNOMEDCT_US:274523007
+xref: UMLS:C0476403
+is_a: HP:0011804 ! Abnormal muscle physiology
+
+[Term]
+id: HP:0003473
+name: Fatigable weakness
+alt_id: HP:0003399
+alt_id: HP:0003428
+alt_id: HP:0100794
+def: "A type of weakness that occurs after a muscle group is used and lessens if the muscle group has some rest. That is, there is diminution of strength with repetitive muscle actions." [https://orcid.org/0000-0002-0736-9199]
+comment: This type of weakness is pathognomonic for an abnormality of the neuromuscular junction such as myasthenia gravis. A characteristic form of muscular weakness that worsens after use of affected muscles. Myasthenia is caused by failure of neuromuscular transmission, which results from the binding of autoantibodies to proteins involved in signaling at the neuromuscular junction, including especially the nicotinic acetyl choline receptor (AChR) or, less frequently, a muscle-specific tyrosine kinase involved in AChR clustering.
+synonym: "Fatigable weakness of limb muscles" EXACT []
+synonym: "Generalised muscle weakness due to defect at the neuromuscular junction" EXACT uk_spelling []
+synonym: "Generalized muscle weakness due to defect at the neuromuscular junction" EXACT []
+synonym: "Myasthenia" EXACT []
+synonym: "Myasthenic weakness" EXACT []
+synonym: "Proximal muscle weakness due to defect at the neuromuscular junction" EXACT []
+xref: UMLS:C0947912
+is_a: HP:0001324 ! Muscle weakness
+is_a: HP:0012638 ! Abnormal nervous system physiology
+
+[Term]
+id: HP:0003690
+name: Limb muscle weakness
+alt_id: HP:0002534
+def: "Reduced strength and weakness of the muscles of the arms and legs." [https://orcid.org/0009-0006-4530-3154]
+synonym: "Limb muscle weakness" EXACT layperson []
+synonym: "Limb weakness" EXACT layperson []
+xref: SNOMEDCT_US:713514005
+xref: UMLS:C0587246
+is_a: HP:0001324 ! Muscle weakness
+is_a: HP:0011805 ! Abnormal skeletal muscle morphology
+is_a: HP:0040064 ! Abnormality of limbs
+
+[Term]
+id: HP:0005216
+name: Impaired mastication
+def: "An abnormal reduction in the ability to masticate (chew), i.e., in the ability to crush and ground food in preparation for swallowing." [PMID:23713640]
+comment: Chewing and swallowing are interrelated. The act of chewing plays a fundamental role in the process of swallowing food. Mastication prepares food for swallowing by breaking it into small particles. Accordingly, loss of teeth has been associated with swallowing difficulties. Chewing difficulties may be caused by loss of teeth, partial dentures, or by tooth pain. Swallowing difficulties, in contrast, are often characterized by difficulties swallowing liquids, reflux, throat spasms, choking on dry food, or dysphagia.
+synonym: "Chewing difficulties" EXACT layperson []
+synonym: "Chewing difficulty" EXACT layperson []
+synonym: "Difficulty chewing" EXACT layperson []
+xref: SNOMEDCT_US:162020001
+xref: UMLS:C0239043
+is_a: HP:0000153 ! Abnormality of the mouth
+relationship: RO:0002201 MONDO:0019952 ! phenotype of congenital myopathy
+
+[Term]
+id: HP:0007695
+name: Abnormal pupillary light reflex
+def: "An abnormality of the reflex that controls the diameter of the pupil, in response to the intensity of light that falls on the retina of the eye." [https://orcid.org/0000-0002-0736-9199]
+xref: UMLS:C1970591
+is_a: HP:0012373 ! Abnormal eye physiology
+relationship: RO:0002201 MONDO:0019952 ! phenotype of congenital myopathy
+
+[Term]
+id: HP:0008872
+name: Feeding difficulties in infancy
+alt_id: HP:0002016
+alt_id: HP:0002022
+alt_id: HP:0002568
+def: "Impaired feeding performance of an infant as manifested by difficulties such as weak and ineffective sucking, brief bursts of sucking, and falling asleep during sucking. There may be difficulties with chewing or maintaining attention." [https://orcid.org/0000-0002-0736-9199]
+xref: UMLS:C2674608
+is_a: HP:0011968 ! Feeding difficulties
+relationship: RO:0002201 MONDO:0019952 ! phenotype of congenital myopathy
+
+[Term]
+id: HP:0009121
+name: Abnormal axial skeleton morphology
+def: "An abnormality of the axial skeleton, which comprises the skull, the vertebral column, the ribs and the sternum." [https://orcid.org/0000-0002-0736-9199]
+synonym: "Abnormality of the axial skeleton" RELATED []
+xref: UMLS:C4020785
+xref: UMLS:C4024586
+is_a: HP:0011842 ! Abnormal skeletal morphology
+property_value: dcterms:creator https://orcid.org/0000-0002-0736-9199
+creation_date: 2008-04-05T11:16:00Z
+
+[Term]
+id: HP:0010674
+name: Abnormal curvature of the vertebral column
+def: "The presence of an abnormal curvature of the vertebral column." [https://orcid.org/0000-0002-0736-9199]
+synonym: "Abnormal curve of the backbone" EXACT layperson [https://orcid.org/0000-0001-6908-9849]
+synonym: "Abnormal curve of the spine" EXACT layperson [https://orcid.org/0000-0001-6908-9849]
+synonym: "Abnormal curving of the spine" EXACT []
+synonym: "Abnormality of the curvature of the vertebral column" EXACT []
+synonym: "Curvature of spine" EXACT []
+synonym: "Curved spine" EXACT []
+xref: UMLS:C4023747
+is_a: HP:0000925 ! Abnormality of the vertebral column
+property_value: dce:creator "sandra1" xsd:string
+creation_date: 2010-02-27T06:28:19Z
+
+[Term]
+id: HP:0011470
+name: Nasogastric tube feeding in infancy
+def: "Feeding problem necessitating nasogastric tube feeding." [HPO_CONTRIBUTOR:DDD_ncarter]
+comment: This is a severe form of feeding problems in infancy.
+xref: UMLS:C4023343
+is_a: HP:0008872 ! Feeding difficulties in infancy
+is_a: HP:0033454 ! Tube feeding
+property_value: dcterms:creator https://orcid.org/0000-0002-0736-9199
+creation_date: 2012-03-25T07:53:46Z
+
+[Term]
+id: HP:0011471
+name: Gastrostomy tube feeding in infancy
+def: "Feeding problem necessitating gastrostomy tube feeding." [HPO_CONTRIBUTOR:DDD_ncarter]
+comment: This is an extremely severe form of feeding problems in infancy.
+synonym: "PEG-fed in infancy" RELATED []
+xref: UMLS:C4020748
+xref: UMLS:C4023342
+is_a: HP:0008872 ! Feeding difficulties in infancy
+is_a: HP:0033454 ! Tube feeding
+property_value: dcterms:creator https://orcid.org/0000-0002-0736-9199
+creation_date: 2012-03-25T10:00:00Z
+
+[Term]
+id: HP:0011804
+name: Abnormal muscle physiology
+def: "A functional abnormality of a skeletal muscle." [https://orcid.org/0000-0002-0736-9199]
+synonym: "Abnormality of muscle physiology" EXACT []
+synonym: "Issue with muscle function" EXACT layperson []
+xref: UMLS:C4023182
+is_a: HP:0003011 ! Abnormality of the musculature
+property_value: dcterms:creator https://orcid.org/0000-0002-0736-9199
+creation_date: 2012-04-25T02:00:15Z
+
+[Term]
+id: HP:0011805
+name: Abnormal skeletal muscle morphology
+alt_id: HP:0003735
+def: "A structural abnormality of a skeletal muscle." [https://orcid.org/0000-0002-0736-9199]
+synonym: "Abnormal muscle morphology" EXACT []
+synonym: "Abnormality of muscle morphology" EXACT []
+synonym: "Abnormally shaped muscle" EXACT layperson [https://orcid.org/0000-0001-5208-3432]
+synonym: "Issue with muscle structure" EXACT layperson []
+xref: UMLS:C4023181
+is_a: HP:0003011 ! Abnormality of the musculature
+property_value: dcterms:creator https://orcid.org/0000-0002-0736-9199
+creation_date: 2012-04-25T02:00:34Z
+
+[Term]
+id: HP:0011842
+name: Abnormal skeletal morphology
+def: "An abnormality of the form, structure, or size of the skeletal system." [https://orcid.org/0000-0002-0736-9199]
+synonym: "Abnormality of skeletal morphology" EXACT []
+synonym: "Abnormally shaped skeletal" EXACT layperson [https://orcid.org/0000-0001-5208-3432]
+xref: UMLS:C4023165
+is_a: HP:0033127 ! Abnormality of the musculoskeletal system
+property_value: dcterms:creator https://orcid.org/0000-0002-0736-9199
+creation_date: 2012-05-07T08:08:37Z
+
+[Term]
+id: HP:0011968
+name: Feeding difficulties
+def: "Impaired ability to eat related to problems gathering food and getting ready to suck, chew, or swallow it." [https://orcid.org/0000-0002-6647-5493, PMID:34006516]
+comment: Difficulties with eating and drinking, resulting in decreased oral nutrition
+subset: hposlim_core
+synonym: "Decreased oral intake" EXACT []
+synonym: "Feeding difficulties" EXACT layperson []
+synonym: "Feeding problems" EXACT layperson []
+synonym: "Poor feeding" EXACT layperson []
+xref: SNOMEDCT_US:78164000
+xref: UMLS:C0232466
+is_a: HP:0025032 ! Abnormality of digestive system physiology
+property_value: dcterms:creator https://orcid.org/0000-0002-0736-9199
+creation_date: 2012-07-18T10:25:05Z
+
+[Term]
+id: HP:0012373
+name: Abnormal eye physiology
+def: "A functional anomaly of the eye." [https://orcid.org/0000-0002-0736-9199]
+synonym: "Abnormal eye physiology" EXACT layperson []
+synonym: "Abnormal vision physiology" BROAD []
+xref: UMLS:C4022924
+is_a: HP:0000118 ! Phenotypic abnormality
+property_value: dcterms:creator https://orcid.org/0000-0002-0736-9199
+creation_date: 2013-10-13T03:45:37Z
+
+[Term]
+id: HP:0012531
+name: Pain
+relationship: RO:0002201 MONDO:0019952 ! phenotype of congenital myopathy
+
+[Term]
+id: HP:0012638
+name: Abnormal nervous system physiology
+def: "A functional anomaly of the nervous system." [https://orcid.org/0000-0002-0736-9199]
+synonym: "Abnormality of nervous system physiology" EXACT []
+xref: UMLS:C4022811
+is_a: HP:0000118 ! Phenotypic abnormality
+property_value: dcterms:creator https://orcid.org/0000-0002-0736-9199
+creation_date: 2014-01-19T08:02:46Z
+
+[Term]
+id: HP:0012759
+name: Neurodevelopmental abnormality
+def: "A deviation from normal of the neurological development of a child, which may include any or all of the aspects of the development of personal, social, gross or fine motor, and cognitive abilities." [HPO_CONTRIBUTOR:KI_phemming]
+comment: This term should be used to describe abnormalities with onset in the developmental period.
+xref: UMLS:C4022737
+is_a: HP:0012638 ! Abnormal nervous system physiology
+property_value: dcterms:creator https://orcid.org/0000-0002-0736-9199
+creation_date: 2014-04-03T12:20:28Z
+
+[Term]
+id: HP:0012768
+name: Neonatal asphyxia
+def: "Respiratory failure in the newborn." [https://orcid.org/0000-0002-0736-9199]
+synonym: "Asphyxia neonatorum" EXACT []
+xref: SNOMEDCT_US:28314004
+xref: SNOMEDCT_US:413654009
+xref: UMLS:C0004045
+is_a: HP:0002795 ! Abnormal respiratory system physiology
+relationship: RO:0002201 MONDO:0019952 ! phenotype of congenital myopathy
+property_value: dcterms:creator https://orcid.org/0000-0002-0736-9199
+creation_date: 2014-04-07T12:39:08Z
+
+[Term]
+id: HP:0025031
+name: Abnormality of the digestive system
+comment: Any anomaly of the digestive system, a collection of organs that is made up of the gastrointestinal tract and the liver, pancreas, and gallbladder. The gastrointestinal tract is a series of hollow organs joined in a long, twisting tube from the mouth to the anus, including the mouth, esophagus, stomach, small intestine, large intestine and anus.
+is_a: HP:0000118 ! Phenotypic abnormality
+property_value: dce:date "2016-08-27T13:44:32Z" xsd:dateTime
+property_value: dcterms:creator https://orcid.org/0000-0002-0736-9199
+
+[Term]
+id: HP:0025032
+name: Abnormality of digestive system physiology
+def: "A functional anomaly of the digestive system." []
+is_a: HP:0025031 ! Abnormality of the digestive system
+property_value: dce:date "2016-08-27T13:58:05Z" xsd:dateTime
+property_value: dcterms:creator https://orcid.org/0000-0002-0736-9199
+
+[Term]
+id: HP:0025142
+name: Constitutional symptom
+def: "A symptom or manifestation indicating a systemic or general effect of a disease and that may affect the general well-being or status of an individual." []
+comment: Note that we use the preferred term label constitutional symptom because this reflects common usage, but we do not restrict the term or its descendents to the narrow meaning of symptom, i.e., a complaint related by a patient to a physician. There is no generally accepted classification of what defines a constitutional symptom, but examples include weight loss, fatigue, general weakness, night sweats, shaking, chills, fever, and vomiting.
+is_a: HP:0000118 ! Phenotypic abnormality
+property_value: dce:date "2016-11-29T11:02:54Z" xsd:dateTime
+property_value: dcterms:creator https://orcid.org/0000-0002-0736-9199
+
+[Term]
+id: HP:0025156
+name: Dependency on intravenous nutrition
+def: "Inability to be weaned from intravenous (parenteral) nutrition, as judged by the hydration status (urine output, blood urea nitrogen, creatinine, urine sodium concentration), ability to maintain weight, stool output, and serum electrolyte status." [PMID:16770168]
+comment: Total parenteral nutrition (TPN) refers to the application of an intravenous nutritional solution in individuals with gastrointestinal disorders that prevent them from absorbing a sufficient amount of nutrients from the gut to maintain health. The solution contains protein, carbohydrates (in the form of glucose), glucose, fat, vitamins, and minerals. Dependency on TPN is essentially a manifestation of the continued severity of a gastrointestinal disorder.
+synonym: "Dependency on IV nutrition" EXACT abbreviation []
+is_a: HP:0025032 ! Abnormality of digestive system physiology
+relationship: RO:0002201 MONDO:0019952 ! phenotype of congenital myopathy
+property_value: dce:date "2016-12-04T12:14:59Z" xsd:dateTime
+property_value: dcterms:creator https://orcid.org/0000-0002-0736-9199
+
+[Term]
+id: HP:0025479
+name: Self-neglect
+def: "A pathological neglect of personal needs and well-being that includes attending to self-grooming, personal care and the attention to cleanliness of personal space." []
+is_a: HP:0012638 ! Abnormal nervous system physiology
+relationship: RO:0002201 MONDO:0019952 ! phenotype of congenital myopathy
+property_value: dce:date "2017-05-14T13:39:41Z" xsd:dateTime
+property_value: dcterms:contributor https://orcid.org/0000-0002-1111-7357
+property_value: dcterms:contributor https://orcid.org/0000-0002-7954-5235
+property_value: dcterms:contributor https://orcid.org/0000-0003-2897-0458
+property_value: dcterms:contributor https://orcid.org/0000-0003-4298-5074
+property_value: dcterms:contributor https://orcid.org/0000-0003-4618-6544
+property_value: dcterms:creator https://orcid.org/0000-0002-0736-9199
+
+[Term]
+id: HP:0030000
+name: EMG: repetitive nerve stimulation abnormality
+def: "Abnormality observed upon electromyography when nerve studied is electrically stimulated six to ten times at 2 or 3 Hertz." [HPO_CONTRIBUTOR:UToronto_htrang]
+xref: UMLS:C4022681
+is_a: HP:0003457 ! EMG abnormality
+relationship: RO:0002201 MONDO:0019952 ! phenotype of congenital myopathy
+
+[Term]
+id: HP:0030006
+name: Single fiber EMG abnormality
+relationship: RO:0002201 MONDO:0019952 ! phenotype of congenital myopathy
+
+[Term]
+id: HP:0030193
+name: Fatigable weakness of chewing muscles
+def: "A type of weakness of the muscles involved in chewing that occurs after a muscle group is used and lessens if the muscle group has some rest. That is, there is diminution of strength with repetitive muscle actions." [HPO_CONTRIBUTOR:UNCL_tevangelista, PMID:17986328]
+xref: UMLS:C4022590
+is_a: HP:0003473 ! Fatigable weakness
+
+[Term]
+id: HP:0030197
+name: Fatigable weakness of skeletal muscles
+def: "A type of weakness of skeletal muscle that occurs after a muscle group is used and lessens if the muscle group has some rest. That is, there is diminution of strength with repetitive muscle actions." []
+xref: UMLS:C4022586
+is_a: HP:0003473 ! Fatigable weakness
+
+[Term]
+id: HP:0030205
+name: Increased jitter at single fiber EMG
+def: "The variation in the time interval between the two action potentials of the same motor unit is called jitter. This term therefore applies to increased variability in the interval between successive action potentials of the same motor unit, which is measured by electromyography (EMG)." [HPO_CONTRIBUTOR:UK_rheller, PMID:21654930]
+comment: Increased jitter values are not pathogonomic for myasthenia, but indicate disturbed neuromuscular transmission.
+synonym: "Increased jitter at single fibre electromyography" EXACT uk_spelling []
+synonym: "Increased jitter at single fibre EMG" EXACT uk_spelling []
+xref: UMLS:C4021045
+is_a: HP:0003457 ! EMG abnormality
+relationship: RO:0002201 MONDO:0019952 ! phenotype of congenital myopathy
+
+[Term]
+id: HP:0030319
+name: Weakness of facial musculature
+def: "Reduced strength of one or more muscles innervated by the facial nerve (the seventh cranial nerve)." [https://orcid.org/0000-0002-0736-9199]
+synonym: "Decreased facial muscle strength" EXACT layperson [https://orcid.org/0000-0001-5889-4463]
+synonym: "Decreased strength of facial muscles" EXACT layperson [https://orcid.org/0000-0001-5889-4463]
+synonym: "Face weakness" EXACT layperson []
+synonym: "Facial muscle weakness" EXACT layperson [https://orcid.org/0000-0001-5208-3432]
+synonym: "Facial weakness" EXACT layperson [https://orcid.org/0000-0001-5208-3432]
+synonym: "Myasthenia of facial muscles" EXACT [https://orcid.org/0000-0001-5889-4463]
+synonym: "Reduced facial muscle strength" EXACT layperson [https://orcid.org/0000-0001-5889-4463]
+synonym: "Weakness of face" EXACT layperson []
+synonym: "Weakness of facial musculature" EXACT layperson []
+xref: UMLS:C4022514
+is_a: HP:0000271 ! Abnormality of the face
+is_a: HP:0011805 ! Abnormal skeletal muscle morphology
+relationship: RO:0002201 MONDO:0019952 ! phenotype of congenital myopathy
+
+[Term]
+id: HP:0030884
+name: Gastrojejunal tube feeding in infancy
+def: "Feeding problem necessitating gastrojejunal tube feeding." [PMID:11827911]
+comment: The rationale for gastrojejunal tube feeding is that placing the tip of the tube beyond the ligament of Treitz prevented duodenogastric reflux or gastro-esophageal reflux. Gastrojejunal feeding tubes have since been used in children who are deemed too unfit for antireflux surgery or where fundoplication has failed.
+synonym: "Gastro-jejunal tube feeding in infancy" EXACT []
+xref: UMLS:C4280681
+is_a: HP:0008872 ! Feeding difficulties in infancy
+is_a: HP:0033454 ! Tube feeding
+
+[Term]
+id: HP:0031058
+name: Impairment of activities of daily living
+relationship: RO:0002201 MONDO:0019952 ! phenotype of congenital myopathy
+
+[Term]
+id: HP:0031063
+name: Impaired feeding ability
+def: "Applies to an individual who needs partial or total help with feeding or requires parenteral feeding." []
+is_a: HP:0025142 ! Constitutional symptom
+relationship: RO:0002201 MONDO:0019952 ! phenotype of congenital myopathy
+property_value: dce:date "2017-05-28T22:24:24Z" xsd:dateTime
+property_value: dcterms:creator https://orcid.org/0000-0002-0736-9199
+
+[Term]
+id: HP:0031914
+name: Fluctuating
+def: "Varying irregularly over time in severity, amount, or amplitude." []
+is_a: BFO:0000019 ! quality
+relationship: RO:0002201 MONDO:0019952 ! phenotype of congenital myopathy
+property_value: dce:date "2018-07-01T21:29:25Z" xsd:dateTime
+property_value: dcterms:creator https://orcid.org/0000-0002-0736-9199
+
+[Term]
+id: HP:0032341
+name: Reduced forced vital capacity
+def: "An abnormal reduction in the amount of air a person can expel following maximal inspiration." [PMID:22347750, PMID:24695507]
+comment: The threshold for an abnormally low FVC is defined as less than the LLN for adults or less than 80 percent of predicted for those five to 18 years of age, indicating a restrictive pattern. The LLLN (lower limit of normal) is a measurement less than the fifth percentile of spirometry data obtained from the Third National Health and Nutrition Examination Survey (NHANES III).
+synonym: "Decreased forced vital capacity" EXACT []
+synonym: "Reduced FVC" EXACT abbreviation []
+is_a: HP:0002795 ! Abnormal respiratory system physiology
+relationship: RO:0002201 MONDO:0019952 ! phenotype of congenital myopathy
+property_value: dce:date "2019-02-21T12:48:52Z" xsd:dateTime
+property_value: dcterms:creator https://orcid.org/0000-0002-0736-9199
+
+[Term]
+id: HP:0033127
+name: Abnormality of the musculoskeletal system
+def: "An anomaly of the musculoskeletal system, which consists of the bones of the skeleton, muscles, cartilage, tendons, ligaments, joints, and other connective tissue. The musculoskeletal system supports the weight of the body, maintains body position and produces movements of the body or of parts of the body." []
+is_a: HP:0000118 ! Phenotypic abnormality
+property_value: dce:date "2020-09-05T13:35:03Z" xsd:dateTime
+property_value: dcterms:creator https://orcid.org/0000-0002-0736-9199
+
+[Term]
+id: HP:0033454
+name: Tube feeding
+def: "Feeding problem necessitating food and nutrient delivery via a tube." [PMID:25874832, PMID:28044031]
+is_a: HP:0011968 ! Feeding difficulties
+relationship: RO:0002201 MONDO:0019952 ! phenotype of congenital myopathy
+property_value: dce:date "2021-01-09T21:48:41Z" xsd:dateTime
+property_value: dcterms:creator https://orcid.org/0000-0002-0736-9199
+
+[Term]
+id: HP:0033994
+name: Dependency on parenteral nutrition
+def: "Inability to ingest sufficient quantities of nutrition by mouth or by tube-feeding with the corresponding requirement for intravenous administration of nutrition." []
+is_a: HP:0011968 ! Feeding difficulties
+relationship: RO:0002201 MONDO:0019952 ! phenotype of congenital myopathy
+property_value: dce:date "2021-08-21T12:07:39Z" xsd:dateTime
+property_value: dcterms:creator https://orcid.org/0000-0002-0736-9199
+
+[Term]
+id: HP:0040064
+name: Abnormality of limbs
+synonym: "Abnormal limbs" EXACT layperson [https://orcid.org/0000-0002-5316-1399]
+synonym: "Abnormality of limbs" EXACT layperson []
+synonym: "Dysmelia" RELATED [https://orcid.org/0000-0002-0736-9199]
+synonym: "Limb anomaly" EXACT [https://orcid.org/0000-0001-5208-3432]
+xref: SNOMEDCT_US:445144002
+xref: UMLS:C0239337
+xref: UMLS:C4073131
+is_a: HP:0000118 ! Phenotypic abnormality
+property_value: dcterms:creator https://orcid.org/0000-0002-5316-1399
+
+[Term]
+id: HP:0040288
+name: Nasogastric tube feeding
+def: "The condition of inability to eat normally treated by placement of a thin tube through the nose into the stomach that is then used to carry food." [PMID:25874832]
+is_a: HP:0033454 ! Tube feeding
+
+[Term]
+id: HP:0100022
+name: Abnormality of movement
+alt_id: HP:0001294
+def: "An abnormality of movement with a neurological basis characterized by changes in coordination and speed of voluntary movements." [https://orcid.org/0000-0002-0736-9199]
+comment: Movement disorders are characterized by the phenotypic abnormalities including abnormal involuntary movements, akathisia, akinesia, athetosis, ataxia, ballismus, bradykinesia, chorea, dyskinesia, dystonia, and myoclonus tics, tremor, spasms, and stereotypy.
+synonym: "Abnormality of movement" EXACT layperson []
+synonym: "Movement disorder" EXACT layperson []
+synonym: "Unusual movement" EXACT layperson []
+xref: SNOMEDCT_US:60342002
+xref: UMLS:C0026650
+is_a: HP:0012638 ! Abnormal nervous system physiology
+property_value: dcterms:creator https://orcid.org/0009-0006-4530-3154
+creation_date: 2010-05-28T11:48:50Z
+
+[Term]
+id: HP:0200136
+name: Oral-pharyngeal dysphagia
+synonym: "Oral pharyngeal dysphagia" EXACT [https://orcid.org/0000-0001-5208-3432]
+synonym: "Oropharyngeal dysphagia" EXACT [https://orcid.org/0000-0001-5889-4463]
+xref: SNOMEDCT_US:71457002
+xref: UMLS:C0267071
+is_a: HP:0002015 ! Dysphagia
+property_value: dcterms:creator https://orcid.org/0000-0002-5316-1399
+creation_date: 2013-06-12T11:05:35Z
+
+[Term]
 id: MONDO:0000001
 name: disease
 def: "A disease is a disposition to undergo pathological processes that exists in an organism because of one or more disorders in that organism." [OGMS:0000031]
@@ -13538,6 +14654,7 @@ xref: Orphanet:270 {source="MONDO:equivalentTo", source="OMIM:164300"}
 xref: SCTID:77097004 {source="MONDO:equivalentTo", source="DOID:11719"}
 xref: UMLS:C0270952 {source="MONDO:equivalentTo", source="MONDO:MEDGEN", source="MEDGEN:75730"}
 is_a: MONDO:0000001 ! disease
+relationship: RO:0004030 PROMOT:0000001 {all_only="true"} ! disease arises from alteration in structure PABPN1
 property_value: curated_content_resource oculopharyngeal_muscular_dystrophy:1 {source="MONDO:MalaCards"}
 property_value: IAO:0000233 "https://github.com/monarch-initiative/mondo/issues/5658" xsd:anyURI
 property_value: seeAlso "https://rarediseases.info.nih.gov/diseases/7245/oculopharyngeal-muscular-dystrophy" xsd:anyURI {source="GARD:0007245"}
@@ -13586,6 +14703,12 @@ xref: Orphanet:590 {source="MONDO:equivalentTo", source="DOID:3635"}
 xref: SCTID:230672006 {source="MONDO:equivalentTo", source="DOID:3635"}
 xref: UMLS:C0751882 {source="MEDGEN:155650", source="MONDO:equivalentTo", source="MONDO:MEDGEN"}
 is_a: MONDO:0000001 ! disease
+relationship: RO:0004030 PROMOT:0000008 ! disease arises from alteration in structure CHRNE
+relationship: RO:0004030 PROMOT:0000009 ! disease arises from alteration in structure DOK7
+relationship: RO:0004030 PROMOT:0000010 ! disease arises from alteration in structure COLQ
+relationship: RO:0004030 PROMOT:0000011 ! disease arises from alteration in structure RAPSN
+relationship: RO:0004030 PROMOT:0000012 ! disease arises from alteration in structure GFPT1
+relationship: RO:0004030 PROMOT:0000013 ! disease arises from alteration in structure GMPPB
 property_value: curated_content_resource https://www.malacards.org/card/congenital_myasthenic_syndrome {source="MONDO:MalaCards"}
 property_value: excluded_subClassOf MONDO:0020260 {source="Orphanet:590", source="https://github.com/Orphanet/ORDO/issues/17", source="https://orcid.org/0000-0001-5208-3432"}
 property_value: IAO:0000233 "https://github.com/monarch-initiative/mondo/issues/6744" xsd:anyURI
@@ -13625,6 +14748,12 @@ xref: OMIMPS:117000 {source="MONDO:equivalentTo"}
 xref: Orphanet:97245 {source="MONDO:equivalentTo"}
 xref: UMLS:C0270960 {source="MONDO:equivalentTo", source="MONDO:MEDGEN", source="MEDGEN:124381"}
 is_a: MONDO:0000001 ! disease
+relationship: RO:0004030 PROMOT:0000002 ! disease arises from alteration in structure RYR1
+relationship: RO:0004030 PROMOT:0000003 ! disease arises from alteration in structure TTN
+relationship: RO:0004030 PROMOT:0000004 ! disease arises from alteration in structure NEB
+relationship: RO:0004030 PROMOT:0000005 ! disease arises from alteration in structure MTM1
+relationship: RO:0004030 PROMOT:0000006 ! disease arises from alteration in structure ACTA1
+relationship: RO:0004030 PROMOT:0000007 ! disease arises from alteration in structure SELENON
 property_value: curated_content_resource congenital:myopathy {source="MONDO:MalaCards"}
 property_value: curated_content_resource https://search.clinicalgenome.org/kb/conditions/MONDO:0019952 {source="MONDO:CLINGEN"}
 property_value: excluded_subClassOf MONDO:0100167 {source="https://orcid.org/0000-0001-5208-3432", source="https://orcid.org/0000-0002-0736-9199"}
@@ -13642,6 +14771,142 @@ property_value: skos:exactMatch Orphanet:97245
 [Term]
 id: PROMOT:0000000
 name: root node
+
+[Term]
+id: PROMOT:0000001
+name: PABPN1
+is_a: BFO:0000031 ! generically dependent continuant
+relationship: RO:0004013 MONDO:0008116 ! is causal germline mutation in oculopharyngeal muscular dystrophy
+
+[Term]
+id: PROMOT:0000002
+name: RYR1
+is_a: BFO:0000031 ! generically dependent continuant
+relationship: RO:0004013 MONDO:0019952 ! is causal germline mutation in congenital myopathy
+
+[Term]
+id: PROMOT:0000003
+name: TTN
+is_a: BFO:0000031 ! generically dependent continuant
+relationship: RO:0004013 MONDO:0019952 ! is causal germline mutation in congenital myopathy
+
+[Term]
+id: PROMOT:0000004
+name: NEB
+is_a: BFO:0000031 ! generically dependent continuant
+relationship: RO:0004013 MONDO:0019952 ! is causal germline mutation in congenital myopathy
+
+[Term]
+id: PROMOT:0000005
+name: MTM1
+is_a: BFO:0000031 ! generically dependent continuant
+relationship: RO:0004013 MONDO:0019952 ! is causal germline mutation in congenital myopathy
+
+[Term]
+id: PROMOT:0000006
+name: ACTA1
+is_a: BFO:0000031 ! generically dependent continuant
+relationship: RO:0004013 MONDO:0019952 ! is causal germline mutation in congenital myopathy
+
+[Term]
+id: PROMOT:0000007
+name: SELENON
+is_a: BFO:0000031 ! generically dependent continuant
+relationship: RO:0004013 MONDO:0019952 ! is causal germline mutation in congenital myopathy
+
+[Term]
+id: PROMOT:0000008
+name: CHRNE
+is_a: BFO:0000031 ! generically dependent continuant
+relationship: RO:0004013 MONDO:0018940 ! is causal germline mutation in congenital myasthenic syndrome
+
+[Term]
+id: PROMOT:0000009
+name: DOK7
+is_a: BFO:0000031 ! generically dependent continuant
+relationship: RO:0004013 MONDO:0018940 ! is causal germline mutation in congenital myasthenic syndrome
+
+[Term]
+id: PROMOT:0000010
+name: COLQ
+is_a: BFO:0000031 ! generically dependent continuant
+relationship: RO:0004013 MONDO:0018940 ! is causal germline mutation in congenital myasthenic syndrome
+
+[Term]
+id: PROMOT:0000011
+name: RAPSN
+is_a: BFO:0000031 ! generically dependent continuant
+relationship: RO:0004013 MONDO:0018940 ! is causal germline mutation in congenital myasthenic syndrome
+
+[Term]
+id: PROMOT:0000012
+name: GFPT1
+is_a: BFO:0000031 ! generically dependent continuant
+relationship: RO:0004013 MONDO:0018940 ! is causal germline mutation in congenital myasthenic syndrome
+
+[Term]
+id: PROMOT:0000013
+name: GMPPB
+is_a: BFO:0000031 ! generically dependent continuant
+relationship: RO:0004013 MONDO:0018940 ! is causal germline mutation in congenital myasthenic syndrome
+
+[Term]
+id: PROMOT:0000101
+name: Patient
+def: "personne faisant partie de l’étude PROMOT" []
+
+[Term]
+id: http://snomed.info/id/252478000
+name: 6-minute walk test (procedure)
+is_a: http://snomed.info/id/302761001 ! Walking exercise test (procedure)
+property_value: skos:altLabel "6MWT - 6 minute walk test" xsd:string
+property_value: skos:altLabel "Timed six minute walk" xsd:string
+property_value: skos:prefLabel "6-minute walk test" xsd:string
+
+[Term]
+id: http://snomed.info/id/252482003
+name: Stair-climbing test (procedure)
+is_a: http://snomed.info/id/302761001 ! Walking exercise test (procedure)
+property_value: skos:prefLabel "Stair-climbing test" xsd:string
+
+[Term]
+id: http://snomed.info/id/273249006
+name: Assessment scales (assessment scale)
+property_value: skos:prefLabel "Assessment scales" xsd:string
+
+[Term]
+id: http://snomed.info/id/273252003
+name: ABC behavioral checklist (assessment scale)
+is_a: http://snomed.info/id/273249006 ! Assessment scales (assessment scale)
+property_value: skos:altLabel "ABC chart" xsd:string
+property_value: skos:prefLabel "ABC behavioral checklist" xsd:string
+property_value: skos:prefLabel "ABC behavioural checklist" xsd:string
+
+[Term]
+id: http://snomed.info/id/273306008
+name: Beck depression inventory (assessment scale)
+is_a: http://snomed.info/id/273249006 ! Assessment scales (assessment scale)
+property_value: skos:altLabel "BDI - Beck depression inventory" xsd:string
+property_value: skos:prefLabel "Beck depression inventory" xsd:string
+
+[Term]
+id: http://snomed.info/id/273481004
+name: Geriatric depression scale (assessment scale)
+is_a: http://snomed.info/id/273249006 ! Assessment scales (assessment scale)
+property_value: skos:altLabel "GDS - Geriatric depression scale" xsd:string
+property_value: skos:altLabel "Geriatric depression score" xsd:string
+property_value: skos:prefLabel "Geriatric depression scale" xsd:string
+
+[Term]
+id: http://snomed.info/id/302761001
+name: Walking exercise test (procedure)
+is_a: http://snomed.info/id/76746007 ! Cardiovascular stress testing (procedure)
+property_value: skos:prefLabel "Walking exercise test" xsd:string
+
+[Term]
+id: http://snomed.info/id/76746007
+name: Cardiovascular stress testing (procedure)
+property_value: skos:prefLabel "Cardiovascular stress testing" xsd:string
 
 [Typedef]
 id: RO:0001015
