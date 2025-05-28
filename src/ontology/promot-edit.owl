@@ -9,7 +9,7 @@ Prefix(dcterms:=<http://purl.org/dc/terms/>)
 
 
 Ontology(<http://purl.obolibrary.org/obo/promot.owl>
-Import(<http://purl.obolibrary.org/obo/promot/components/pheno_with_relations.owl>)
+Import(<http://purl.obolibrary.org/obo/promot/components/relations_newclasses.owl>)
 Import(<http://purl.obolibrary.org/obo/promot/imports/bfo_import.owl>)
 Import(<http://purl.obolibrary.org/obo/promot/imports/efo_import.owl>)
 Import(<http://purl.obolibrary.org/obo/promot/imports/fma_import.owl>)
@@ -25,12 +25,23 @@ Import(<http://purl.obolibrary.org/obo/promot/releases/2025-05-20/imports/bfo_im
 Import(<http://purl.obolibrary.org/obo/promot/releases/2025-05-20/imports/fma_import.owl>)
 Import(<http://purl.obolibrary.org/obo/promot/releases/2025-05-20/imports/mondo_import.owl>)
 Import(<http://purl.obolibrary.org/obo/promot/releases/2025-05-20/imports/ro_import.owl>)
-Import(<http://purl.obolibrary.org/obo/promot/releases/2025-05-26/imports/hp_import.owl>)
+Import(<http://purl.obolibrary.org/obo/promot/releases/2025-05-21/imports/snomed_import.owl>)
+Import(<http://purl.obolibrary.org/obo/promot/releases/2025-05-28/components/relations_newclasses.owl>)
+Import(<http://purl.obolibrary.org/obo/promot/releases/2025-05-28/imports/hp_import.owl>)
+Import(<http://purl.obolibrary.org/obo/promot/releases/2025-05-28/patterns/definitions.owl>)
 Annotation(dcterms:description "Ontology for building the relational database of the PROMOT project")
 Annotation(dcterms:license <https://creativecommons.org/licenses/unspecified>)
 Annotation(dcterms:title "PROMOT Common Data Model ontology")
 
+Declaration(Class(<http://purl.obolibrary.org/obo/HP_0000597>))
+Declaration(Class(<http://purl.obolibrary.org/obo/HP_0001252>))
+Declaration(Class(<http://purl.obolibrary.org/obo/HP_0001288>))
+Declaration(Class(<http://purl.obolibrary.org/obo/HP_0002093>))
+Declaration(Class(<http://purl.obolibrary.org/obo/HP_0012531>))
+Declaration(Class(<http://purl.obolibrary.org/obo/HP_0030006>))
+Declaration(Class(<http://purl.obolibrary.org/obo/HP_0031058>))
 Declaration(Class(<http://purl.obolibrary.org/obo/PROMOT_0000000>))
+Declaration(Class(<http://purl.obolibrary.org/obo/PROMOT_0000101>))
 Declaration(AnnotationProperty(dce:creator))
 Declaration(AnnotationProperty(dce:date))
 Declaration(AnnotationProperty(dcterms:description))
@@ -111,6 +122,34 @@ SubClassOf(<http://purl.obolibrary.org/obo/FMA_62955> <http://purl.obolibrary.or
 
 SubClassOf(<http://purl.obolibrary.org/obo/FMA_7490> <http://purl.obolibrary.org/obo/FMA_62955>)
 
+# Class: <http://purl.obolibrary.org/obo/HP_0000597> (Ophthalmoparesis)
+
+SubClassOf(<http://purl.obolibrary.org/obo/HP_0000597> <http://purl.obolibrary.org/obo/HP_0000118>)
+
+# Class: <http://purl.obolibrary.org/obo/HP_0001252> (Hypotonia)
+
+SubClassOf(<http://purl.obolibrary.org/obo/HP_0001252> <http://purl.obolibrary.org/obo/HP_0000118>)
+
+# Class: <http://purl.obolibrary.org/obo/HP_0001288> (Gait disturbance)
+
+SubClassOf(<http://purl.obolibrary.org/obo/HP_0001288> <http://purl.obolibrary.org/obo/HP_0000118>)
+
+# Class: <http://purl.obolibrary.org/obo/HP_0002093> (Respiratory insufficiency)
+
+SubClassOf(<http://purl.obolibrary.org/obo/HP_0002093> <http://purl.obolibrary.org/obo/HP_0000118>)
+
+# Class: <http://purl.obolibrary.org/obo/HP_0012531> (Pain)
+
+SubClassOf(<http://purl.obolibrary.org/obo/HP_0012531> <http://purl.obolibrary.org/obo/HP_0000118>)
+
+# Class: <http://purl.obolibrary.org/obo/HP_0030006> (Single fiber EMG abnormality)
+
+SubClassOf(<http://purl.obolibrary.org/obo/HP_0030006> <http://purl.obolibrary.org/obo/HP_0000118>)
+
+# Class: <http://purl.obolibrary.org/obo/HP_0031058> (Impairment of activities of daily living)
+
+SubClassOf(<http://purl.obolibrary.org/obo/HP_0031058> <http://purl.obolibrary.org/obo/HP_0000118>)
+
 # Class: <http://purl.obolibrary.org/obo/MONDO_0000001> (disease)
 
 SubClassOf(<http://purl.obolibrary.org/obo/MONDO_0000001> <http://purl.obolibrary.org/obo/BFO_0000016>)
@@ -118,6 +157,18 @@ SubClassOf(<http://purl.obolibrary.org/obo/MONDO_0000001> <http://purl.obolibrar
 # Class: <http://purl.obolibrary.org/obo/PROMOT_0000000> (root node)
 
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/PROMOT_0000000> "root node"@en)
+
+# Class: <http://purl.obolibrary.org/obo/PROMOT_0000101> (Patient)
+
+SubClassOf(<http://purl.obolibrary.org/obo/PROMOT_0000101> <http://purl.obolibrary.org/obo/BFO_0000040>)
+
+# Class: <http://snomed.info/id/273249006> (Assessment scales (assessment scale))
+
+SubClassOf(<http://snomed.info/id/273249006> <http://purl.obolibrary.org/obo/BFO_0000015>)
+
+# Class: <http://snomed.info/id/76746007> (Cardiovascular stress testing (procedure))
+
+SubClassOf(<http://snomed.info/id/76746007> <http://purl.obolibrary.org/obo/BFO_0000015>)
 
 
 )

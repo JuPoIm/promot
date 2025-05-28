@@ -12,8 +12,8 @@
      xmlns:terms="http://purl.org/dc/terms/"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/promot/imports/hp_import.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/promot/releases/2025-05-26/imports/hp_import.owl"/>
-        <owl:versionInfo>2025-05-26</owl:versionInfo>
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/promot/releases/2025-05-28/imports/hp_import.owl"/>
+        <owl:versionInfo>2025-05-28</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -214,6 +214,17 @@
     <!-- http://purl.obolibrary.org/obo/BFO_0000019 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000019"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/HP_0000001 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0000001">
+        <oboInOwl:hasDbXref>UMLS:C0444868</oboInOwl:hasDbXref>
+        <oboInOwl:id>HP:0000001</oboInOwl:id>
+        <rdfs:comment>Root of all terms in the Human Phenotype Ontology.</rdfs:comment>
+        <rdfs:label>All</rdfs:label>
+    </owl:Class>
     
 
 
@@ -1528,7 +1539,7 @@
     <!-- http://purl.obolibrary.org/obo/HP_0002359 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0002359">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0011804"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0004302"/>
         <oboInOwl:hasDbXref>UMLS:C0850703</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym>Frequent falls</oboInOwl:hasExactSynonym>
         <oboInOwl:id>HP:0002359</oboInOwl:id>
@@ -1964,6 +1975,33 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/HP_0003551 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0003551">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0004302"/>
+        <obo:IAO_0000115>Reduced ability to climb stairs.</obo:IAO_0000115>
+        <oboInOwl:hasAlternativeId>HP:0007019</oboInOwl:hasAlternativeId>
+        <oboInOwl:hasDbXref>SNOMEDCT_US:282195009</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>UMLS:C0239067</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym>Difficulty walking up stairs</oboInOwl:hasExactSynonym>
+        <oboInOwl:id>HP:0003551</oboInOwl:id>
+        <rdfs:label>Difficulty climbing stairs</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0003551"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>Reduced ability to climb stairs.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0003551"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget>Difficulty walking up stairs</owl:annotatedTarget>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#layperson"/>
+    </owl:Axiom>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/HP_0003690 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0003690">
@@ -1997,6 +2035,20 @@
         <owl:annotatedTarget>Limb weakness</owl:annotatedTarget>
         <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#layperson"/>
     </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/HP_0004302 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0004302">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0011804"/>
+        <terms:creator rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
+        <oboInOwl:creation_date>2008-02-20T11:52:00Z</oboInOwl:creation_date>
+        <oboInOwl:hasDbXref>UMLS:C4025360</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym>Functional motor problems</oboInOwl:hasExactSynonym>
+        <oboInOwl:id>HP:0004302</oboInOwl:id>
+        <rdfs:label>Functional motor deficit</rdfs:label>
+    </owl:Class>
     
 
 

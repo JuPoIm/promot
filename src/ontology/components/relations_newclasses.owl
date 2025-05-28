@@ -1,4 +1,4 @@
-Prefix(:=<http://purl.obolibrary.org/obo/promot/components/pheno_with_relations.owl#>)
+Prefix(:=<http://purl.obolibrary.org/obo/promot/components/relations_newclasses.owl#>)
 Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
 Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
 Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
@@ -6,8 +6,8 @@ Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
 Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
 
 
-Ontology(<http://purl.obolibrary.org/obo/promot/components/pheno_with_relations.owl>
-<http://purl.obolibrary.org/obo/promot/releases/2025-05-28/components/pheno_with_relations.owl>
+Ontology(<http://purl.obolibrary.org/obo/promot/components/relations_newclasses.owl>
+<http://purl.obolibrary.org/obo/promot/releases/2025-05-28/components/relations_newclasses.owl>
 Annotation(owl:versionInfo "2025-05-28")
 
 Declaration(Class(<http://id.who.int/icd/entity/1621488596>))
@@ -116,8 +116,6 @@ Declaration(ObjectProperty(<https://w3id.org/biolink/vocab/affected_by>))
 Declaration(ObjectProperty(<https://w3id.org/biolink/vocab/affects>))
 Declaration(ObjectProperty(<https://w3id.org/biolink/vocab/related_to>))
 Declaration(DataProperty(<http://purl.obolibrary.org/obo/PROMOT_property-1>))
-Declaration(NamedIndividual(<http://id.who.int/icd/entity/1621488596>))
-Declaration(NamedIndividual(<http://id.who.int/icd/entity/1993770860>))
 Declaration(NamedIndividual(<http://id.who.int/icd/entity/2021370201>))
 Declaration(NamedIndividual(<http://purl.obolibrary.org/obo/PROMOT_I000001>))
 Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/IAO_0000115>))
@@ -219,13 +217,19 @@ AnnotationAssertion(rdfs:label <http://id.who.int/icd/entity/2021370201> "Functi
 #   Classes
 ############################
 
-# Class: <http://id.who.int/icd/entity/1621488596> (Neuromusculoskeletal and movement-related functions)
+# Class: <http://id.who.int/icd/entity/1621488596> (Neuromusculoskeletal and movement-related functions’)
 
 AnnotationAssertion(rdfs:label <http://id.who.int/icd/entity/1621488596> "Neuromusculoskeletal and movement-related functions")
+AnnotationAssertion(rdfs:label <http://id.who.int/icd/entity/1621488596> "Neuromusculoskeletal and movement-related functions’")
+SubClassOf(<http://id.who.int/icd/entity/1621488596> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0009007> <http://snomed.info/id/252482003>))
+SubClassOf(<http://id.who.int/icd/entity/1621488596> ObjectSomeValuesFrom(<https://w3id.org/biolink/vocab/affects> <http://id.who.int/icd/entity/1993770860>))
 
-# Class: <http://id.who.int/icd/entity/1993770860> (Going up and down stairs)
+# Class: <http://id.who.int/icd/entity/1993770860> (Going up and down stairs’)
 
 AnnotationAssertion(rdfs:label <http://id.who.int/icd/entity/1993770860> "Going up and down stairs")
+AnnotationAssertion(rdfs:label <http://id.who.int/icd/entity/1993770860> "Going up and down stairs’")
+SubClassOf(<http://id.who.int/icd/entity/1993770860> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0009007> <http://snomed.info/id/252482003>))
+SubClassOf(<http://id.who.int/icd/entity/1993770860> ObjectSomeValuesFrom(<https://w3id.org/biolink/vocab/affected_by> <http://id.who.int/icd/entity/1621488596>))
 
 # Class: <http://id.who.int/icd/entity/2021370201> (Functions of the eyelid)
 
@@ -704,16 +708,6 @@ SubClassOf(<http://snomed.info/id/252482003> ObjectSomeValuesFrom(<http://purl.o
 ############################
 #   Named Individuals
 ############################
-
-# Individual: <http://id.who.int/icd/entity/1621488596> (Neuromusculoskeletal and movement-related functions)
-
-ClassAssertion(<http://purl.obolibrary.org/obo/FMA_49033> <http://id.who.int/icd/entity/1621488596>)
-ClassAssertion(ObjectSomeValuesFrom(<https://w3id.org/biolink/vocab/affects> <http://id.who.int/icd/entity/1993770860>) <http://id.who.int/icd/entity/1621488596>)
-
-# Individual: <http://id.who.int/icd/entity/1993770860> (Going up and down stairs)
-
-ClassAssertion(<http://purl.obolibrary.org/obo/FMA_49033> <http://id.who.int/icd/entity/1993770860>)
-ClassAssertion(ObjectSomeValuesFrom(<https://w3id.org/biolink/vocab/affected_by> <http://id.who.int/icd/entity/1621488596>) <http://id.who.int/icd/entity/1993770860>)
 
 # Individual: <http://id.who.int/icd/entity/2021370201> (Functions of the eyelid)
 

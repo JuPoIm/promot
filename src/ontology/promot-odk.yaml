@@ -28,13 +28,25 @@ export_formats:
   - json
 license: https://creativecommons.org/licenses/unspecified
 use_template: TRUE
+use_dosdps: true
 components:
+  release_components: TRUE
   products:
-    - filename: pheno_with_relations.owl
+    - filename: relations_newclasses.owl
       use_template: TRUE
       template_options: --add-prefixes config/context.json
       templates:
-        - pheno_with_relations.csv
+        - disease_function.csv
+        - disease_gene.csv
+        - disease_pheno.csv
+        - disease_structure.csv
+        - function_activity.csv
+        - function_structure.csv
+        - patient_classes.csv
+        - pheno_anatomy.csv
+        - pheno_function.csv
+        - test_activity.csv
+        - test_function.csv
 import_group:
   annotation_properties:
     - rdfs:label
@@ -74,6 +86,7 @@ import_group:
       module_type: custom
     - id: ro
       module_type: custom
+    - id: vo
     - id: biolink
       mirror_from: https://w3id.org/biolink/biolink-model.owl.ttl
     - id: ncit
