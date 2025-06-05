@@ -18,21 +18,24 @@ Import(<http://purl.obolibrary.org/obo/promot/imports/mondo_import.owl>)
 Import(<http://purl.obolibrary.org/obo/promot/imports/ncit_import.owl>)
 Import(<http://purl.obolibrary.org/obo/promot/imports/obi_import.owl>)
 Import(<http://purl.obolibrary.org/obo/promot/imports/orcidio_import.owl>)
-Import(<http://purl.obolibrary.org/obo/promot/imports/ro_import.owl>)
 Import(<http://purl.obolibrary.org/obo/promot/imports/snomed_import.owl>)
-Import(<http://purl.obolibrary.org/obo/promot/imports/whofic_import.owl>)
+Import(<http://purl.obolibrary.org/obo/promot/patterns/definitions.owl>)
 Import(<http://purl.obolibrary.org/obo/promot/releases/2025-05-20/imports/bfo_import.owl>)
 Import(<http://purl.obolibrary.org/obo/promot/releases/2025-05-20/imports/fma_import.owl>)
 Import(<http://purl.obolibrary.org/obo/promot/releases/2025-05-20/imports/mondo_import.owl>)
-Import(<http://purl.obolibrary.org/obo/promot/releases/2025-05-20/imports/ro_import.owl>)
 Import(<http://purl.obolibrary.org/obo/promot/releases/2025-05-21/imports/snomed_import.owl>)
-Import(<http://purl.obolibrary.org/obo/promot/releases/2025-05-28/components/relations_newclasses.owl>)
-Import(<http://purl.obolibrary.org/obo/promot/releases/2025-05-28/imports/hp_import.owl>)
-Import(<http://purl.obolibrary.org/obo/promot/releases/2025-05-28/patterns/definitions.owl>)
+Import(<http://purl.obolibrary.org/obo/promot/releases/2025-06-02/imports/hp_import.owl>)
+Import(<http://purl.obolibrary.org/obo/promot/releases/2025-06-02/imports/whofic_import.owl>)
+Import(<http://purl.obolibrary.org/obo/promot/releases/2025-06-05/components/relations_newclasses.owl>)
+Import(<http://purl.obolibrary.org/obo/promot/releases/2025-06-05/patterns/definitions.owl>)
 Annotation(dcterms:description "Ontology for building the relational database of the PROMOT project")
 Annotation(dcterms:license <https://creativecommons.org/licenses/unspecified>)
 Annotation(dcterms:title "PROMOT Common Data Model ontology")
 
+Declaration(Class(<http://id.who.int/icd/entity/1621488596>))
+Declaration(Class(<http://id.who.int/icd/entity/1993770860>))
+Declaration(Class(<http://id.who.int/icd/entity/2021370201>))
+Declaration(Class(<http://purl.obolibrary.org/obo/HP_0000118>))
 Declaration(Class(<http://purl.obolibrary.org/obo/HP_0000597>))
 Declaration(Class(<http://purl.obolibrary.org/obo/HP_0001252>))
 Declaration(Class(<http://purl.obolibrary.org/obo/HP_0001288>))
@@ -42,6 +45,8 @@ Declaration(Class(<http://purl.obolibrary.org/obo/HP_0030006>))
 Declaration(Class(<http://purl.obolibrary.org/obo/HP_0031058>))
 Declaration(Class(<http://purl.obolibrary.org/obo/PROMOT_0000000>))
 Declaration(Class(<http://purl.obolibrary.org/obo/PROMOT_0000101>))
+Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0004029>))
+Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0004030>))
 Declaration(AnnotationProperty(dce:creator))
 Declaration(AnnotationProperty(dce:date))
 Declaration(AnnotationProperty(dcterms:description))
@@ -88,11 +93,11 @@ ObjectPropertyRange(<http://purl.obolibrary.org/obo/RO_0002201> <http://purl.obo
 
 ObjectPropertyRange(<http://purl.obolibrary.org/obo/RO_0004013> <http://purl.obolibrary.org/obo/MONDO_0000001>)
 
-# Object Property: <http://purl.obolibrary.org/obo/RO_0004029> (disease has feature)
+# Object Property: <http://purl.obolibrary.org/obo/RO_0004029> (<http://purl.obolibrary.org/obo/RO_0004029>)
 
 ObjectPropertyDomain(<http://purl.obolibrary.org/obo/RO_0004029> <http://purl.obolibrary.org/obo/MONDO_0000001>)
 
-# Object Property: <http://purl.obolibrary.org/obo/RO_0004030> (disease arises from alteration in structure)
+# Object Property: <http://purl.obolibrary.org/obo/RO_0004030> (<http://purl.obolibrary.org/obo/RO_0004030>)
 
 ObjectPropertyDomain(<http://purl.obolibrary.org/obo/RO_0004030> <http://purl.obolibrary.org/obo/MONDO_0000001>)
 
@@ -101,6 +106,18 @@ ObjectPropertyDomain(<http://purl.obolibrary.org/obo/RO_0004030> <http://purl.ob
 ############################
 #   Classes
 ############################
+
+# Class: <http://id.who.int/icd/entity/1621488596> (Neuromusculoskeletal and movement-related functions’)
+
+SubClassOf(<http://id.who.int/icd/entity/1621488596> <http://id.who.int/icd/entity/567313968>)
+
+# Class: <http://id.who.int/icd/entity/1993770860> (Going up and down stairs’)
+
+SubClassOf(<http://id.who.int/icd/entity/1993770860> <http://purl.obolibrary.org/obo/BFO_0000003>)
+
+# Class: <http://id.who.int/icd/entity/2021370201> (Functions of the eyelid)
+
+SubClassOf(<http://id.who.int/icd/entity/2021370201> <http://id.who.int/icd/entity/567313968>)
 
 # Class: <http://purl.obolibrary.org/obo/FMA_23133> (Anatomical coordinate)
 
@@ -126,7 +143,7 @@ SubClassOf(<http://purl.obolibrary.org/obo/FMA_7490> <http://purl.obolibrary.org
 
 SubClassOf(<http://purl.obolibrary.org/obo/HP_0000597> <http://purl.obolibrary.org/obo/HP_0000118>)
 
-# Class: <http://purl.obolibrary.org/obo/HP_0001252> (Hypotonia)
+# Class: <http://purl.obolibrary.org/obo/HP_0001252> (<http://purl.obolibrary.org/obo/HP_0001252>)
 
 SubClassOf(<http://purl.obolibrary.org/obo/HP_0001252> <http://purl.obolibrary.org/obo/HP_0000118>)
 
@@ -138,15 +155,15 @@ SubClassOf(<http://purl.obolibrary.org/obo/HP_0001288> <http://purl.obolibrary.o
 
 SubClassOf(<http://purl.obolibrary.org/obo/HP_0002093> <http://purl.obolibrary.org/obo/HP_0000118>)
 
-# Class: <http://purl.obolibrary.org/obo/HP_0012531> (Pain)
+# Class: <http://purl.obolibrary.org/obo/HP_0012531> (<http://purl.obolibrary.org/obo/HP_0012531>)
 
 SubClassOf(<http://purl.obolibrary.org/obo/HP_0012531> <http://purl.obolibrary.org/obo/HP_0000118>)
 
-# Class: <http://purl.obolibrary.org/obo/HP_0030006> (Single fiber EMG abnormality)
+# Class: <http://purl.obolibrary.org/obo/HP_0030006> (<http://purl.obolibrary.org/obo/HP_0030006>)
 
 SubClassOf(<http://purl.obolibrary.org/obo/HP_0030006> <http://purl.obolibrary.org/obo/HP_0000118>)
 
-# Class: <http://purl.obolibrary.org/obo/HP_0031058> (Impairment of activities of daily living)
+# Class: <http://purl.obolibrary.org/obo/HP_0031058> (<http://purl.obolibrary.org/obo/HP_0031058>)
 
 SubClassOf(<http://purl.obolibrary.org/obo/HP_0031058> <http://purl.obolibrary.org/obo/HP_0000118>)
 
@@ -162,13 +179,25 @@ AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/PROMOT_0000000> "
 
 SubClassOf(<http://purl.obolibrary.org/obo/PROMOT_0000101> <http://purl.obolibrary.org/obo/BFO_0000040>)
 
+# Class: <http://snomed.info/id/183135000> (Mobility aid (physical object))
+
+SubClassOf(<http://snomed.info/id/183135000> <http://purl.obolibrary.org/obo/BFO_0000030>)
+
 # Class: <http://snomed.info/id/273249006> (Assessment scales (assessment scale))
 
 SubClassOf(<http://snomed.info/id/273249006> <http://purl.obolibrary.org/obo/BFO_0000015>)
 
+# Class: <http://snomed.info/id/360296002> (Assistive equipment (physical object) )
+
+SubClassOf(<http://snomed.info/id/360296002> <http://purl.obolibrary.org/obo/BFO_0000030>)
+
+# Class: <http://snomed.info/id/386053000> (Evaluation procedure (procedure))
+
+SubClassOf(<http://snomed.info/id/386053000> <http://purl.obolibrary.org/obo/BFO_0000015>)
+
 # Class: <http://snomed.info/id/76746007> (Cardiovascular stress testing (procedure))
 
-SubClassOf(<http://snomed.info/id/76746007> <http://purl.obolibrary.org/obo/BFO_0000015>)
+SubClassOf(<http://snomed.info/id/76746007> <http://snomed.info/id/386053000>)
 
 
 )

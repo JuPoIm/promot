@@ -4,17 +4,17 @@ github_org: JuPoIm
 git_main_branch: main
 repo: promot_ontology
 contact: juliette.potier@institutimagine.org
-creators:
-  - "Juliette Potier"
-contributors:
-  - "Juliette Potier"
-  - "Paul Fabry"
-  - "Christina Khnaisser"
-  - "Anita Burgun"
-  - "Cynthia Gagnon"
-  - "Carole Faviez"
-  - "Elizabeth Angelevski"
-  - "Mansoore Gholizade"
+# creators:
+#   - "Juliette Potier"
+# contributors:
+#   - "Juliette Potier"
+#   - "Paul Fabry"
+#   - "Christina Khnaisser"
+#   - "Anita Burgun"
+#   - "Cynthia Gagnon"
+#   - "Carole Faviez"
+#   - "Elizabeth Angelevski"
+#   - "Mansoore Gholizade"
 description: "Ontology for building the relational database of the PROMOT project"
 release_artefacts:
   - base
@@ -28,7 +28,7 @@ export_formats:
   - json
 license: https://creativecommons.org/licenses/unspecified
 use_template: TRUE
-use_dosdps: true
+use_dosdps: TRUE
 components:
   release_components: TRUE
   products:
@@ -36,7 +36,6 @@ components:
       use_template: TRUE
       template_options: --add-prefixes config/context.json
       templates:
-        - disease_function.csv
         - disease_gene.csv
         - disease_pheno.csv
         - disease_structure.csv
@@ -45,8 +44,9 @@ components:
         - patient_classes.csv
         - pheno_anatomy.csv
         - pheno_function.csv
-        - test_activity.csv
-        - test_function.csv
+        - procedure_activity.csv
+        - procedure_function.csv       
+#        - anatomy_structure.csv
 import_group:
   annotation_properties:
     - rdfs:label
@@ -66,37 +66,41 @@ import_group:
   products:
     - id: bfo
       module_type: custom
+    - id: bioassay
+      mirror_from: http://www.bioassayontology.org/bao/bao_complete.owl
+    - id: biolink
+      mirror_from: https://w3id.org/biolink/biolink-model.owl.ttl
+    - id: efo
+      mirror_from: http://www.ebi.ac.uk/efo/efo.owl
+    - id: fma
+      module_type: custom
+    - id: hp
+      module_type: custom
+    - id: ioio
     - id: mondo
       module_type: custom
+      is_large: TRUE
+    - id: ncit
       is_large: TRUE
     - id: orcidio
       mirror_from: https://w3id.org/orcidio/orcidio.owl
       module_type: filter
       base_iris:
         - https://orcid.org/
-    - id: fma
+    - id: obi
+    - id: ro
       module_type: custom
-    - id: hp
-      module_type: custom
-    - id: whofic
-      mirror_from: https://raw.githubusercontent.com/whoficitc/harmonization/main/ontology/whofic-2024-01-21.owl
-      module_type: custom
+    - id: scdo
     - id: snomed
       is_large: TRUE
       module_type: custom
-    - id: ro
+    - id: so
+      is_large: TRUE
       module_type: custom
     - id: vo
-    - id: biolink
-      mirror_from: https://w3id.org/biolink/biolink-model.owl.ttl
-    - id: ncit
-      is_large: TRUE
-    - id: obi
-    - id: efo
-      mirror_from: http://www.ebi.ac.uk/efo/efo.owl
-    - id: ioio
-    - id: bioassay
-      mirror_from: http://www.bioassayontology.org/bao/bao_complete.owl
+    - id: whofic
+      mirror_from: https://raw.githubusercontent.com/whoficitc/harmonization/main/ontology/whofic-2024-01-21.owl
+      module_type: custom
 robot_java_args: '-Xmx8G'
 robot_report:
   use_labels: TRUE

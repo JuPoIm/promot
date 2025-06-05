@@ -1,0 +1,57 @@
+pattern_name: diseases_pattern
+
+pattern_iri: http://purl.obolibrary.org/obo/promot/patterns/gene_disease_pattern.yaml
+
+description: "This template describes a disease by linking the disease to its related mutation, phenotypes and body structures."
+
+classes:
+  disease_pattern: mondo:0000001
+  structure: WHOFIC:1626363729
+  gene: SO:0000704
+  phenotype: HP:0000118
+
+
+relations:
+  has_material_basis_in_mutation_in: RO:0004003
+  has_phenotype: RO:0002200
+  affects: BIOLINK:affects
+
+vars:
+  phenotype: "phenotype"
+  gene: "gene"
+  structure: "structure"
+  disease: "disease_pattern"
+      
+logical_axioms:
+  - axiom_type: equivalentTo
+    text: "%s and 'has_material_basis_in_mutation_in' some %s"
+    vars:
+      - disease
+      - gene
+  
+  - axiom_type: subClassOf
+    text: "'has_material_basis_in_mutation_in' some %s"
+    vars:
+      - gene
+
+  - axiom_type: subClassOf
+    text: "'has_phenotype' some %s"
+    vars:
+      - phenotype
+
+  - axiom_type: equivalentTo
+    text: "%s and 'has_phenotype' some %s"
+    vars:
+      - disease
+      - phenotype
+
+  - axiom_type: subClassOf
+    text: "'affects' some %s"
+    vars:
+      - structure
+
+  - axiom_type: equivalentTo
+    text: "%s and 'affects' some %s"
+    vars:
+      - disease
+      - structure

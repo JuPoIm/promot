@@ -10,7 +10,7 @@
 # More information: https://github.com/INCATools/ontology-development-kit/
 
 # Fingerprint of the configuration file when this Makefile was last generated
-CONFIG_HASH=                fdb7007f2b6a18b2c8b124ebd49665d09fd73a4b44ece1f61b24fc551e81aa6b
+CONFIG_HASH=                bd58dc32270f9c7215bdf2ee6e134b2c5e1ab2fb2bcfe8f1adbf07c3045aadb3
 
 
 # ----------------------------------------
@@ -165,7 +165,7 @@ all_main: $(MAIN_FILES)
 # ----------------------------------------
 
 
-IMPORTS =  bfo mondo orcidio fma hp whofic snomed ro vo biolink ncit obi efo ioio bioassay
+IMPORTS =  bfo bioassay biolink efo fma hp ioio mondo ncit orcidio obi ro scdo snomed so vo whofic
 
 IMPORT_ROOTS = $(patsubst %, $(IMPORTDIR)/%_import, $(IMPORTS))
 IMPORT_OWL_FILES = $(foreach n,$(IMPORT_ROOTS), $(n).owl)
@@ -388,10 +388,25 @@ $(IMPORTDIR)/%_import.owl: $(MIRRORDIR)/%.owl $(IMPORTDIR)/%_terms_combined.txt
 
 $(IMPORTDIR)/bfo_import.owl: $(MIRRORDIR)/bfo.owl
 	echo "ERROR: You have configured your default module type to be custom; this behavior needs to be overwritten in promot.Makefile!" && false
+## Module for ontology: fma
+
+$(IMPORTDIR)/fma_import.owl: $(MIRRORDIR)/fma.owl
+	echo "ERROR: You have configured your default module type to be custom; this behavior needs to be overwritten in promot.Makefile!" && false
+## Module for ontology: hp
+
+$(IMPORTDIR)/hp_import.owl: $(MIRRORDIR)/hp.owl
+	echo "ERROR: You have configured your default module type to be custom; this behavior needs to be overwritten in promot.Makefile!" && false
 ## Module for ontology: mondo
 
 $(IMPORTDIR)/mondo_import.owl: $(MIRRORDIR)/mondo.owl
 	echo "ERROR: You have configured your default module type to be custom; this behavior needs to be overwritten in promot.Makefile!" && false
+## Module for ontology: ncit
+
+$(IMPORTDIR)/ncit_import.owl: $(MIRRORDIR)/ncit.owl $(IMPORTDIR)/ncit_terms_combined.txt
+	if [ $(IMP) = true ] && [ $(IMP_LARGE) = true ]; then $(ROBOT) extract -i $< -T $(IMPORTDIR)/ncit_terms_combined.txt --force true  --copy-ontology-annotations true --individuals include --method BOT \
+		query --update ../sparql/inject-subset-declaration.ru --update ../sparql/inject-synonymtype-declaration.ru --update ../sparql/postprocess-module.ru \
+		$(ANNOTATE_CONVERT_FILE); fi
+
 ## Module for ontology: orcidio
 
 $(IMPORTDIR)/orcidio_import.owl: $(MIRRORDIR)/orcidio.owl $(IMPORTDIR)/orcidio_terms_combined.txt
@@ -402,33 +417,22 @@ $(IMPORTDIR)/orcidio_import.owl: $(MIRRORDIR)/orcidio.owl $(IMPORTDIR)/orcidio_t
 		query --update ../sparql/inject-subset-declaration.ru --update ../sparql/inject-synonymtype-declaration.ru --update ../sparql/postprocess-module.ru \
 		$(ANNOTATE_CONVERT_FILE); fi
 
-## Module for ontology: fma
+## Module for ontology: ro
 
-$(IMPORTDIR)/fma_import.owl: $(MIRRORDIR)/fma.owl
-	echo "ERROR: You have configured your default module type to be custom; this behavior needs to be overwritten in promot.Makefile!" && false
-## Module for ontology: hp
-
-$(IMPORTDIR)/hp_import.owl: $(MIRRORDIR)/hp.owl
-	echo "ERROR: You have configured your default module type to be custom; this behavior needs to be overwritten in promot.Makefile!" && false
-## Module for ontology: whofic
-
-$(IMPORTDIR)/whofic_import.owl: $(MIRRORDIR)/whofic.owl
+$(IMPORTDIR)/ro_import.owl: $(MIRRORDIR)/ro.owl
 	echo "ERROR: You have configured your default module type to be custom; this behavior needs to be overwritten in promot.Makefile!" && false
 ## Module for ontology: snomed
 
 $(IMPORTDIR)/snomed_import.owl: $(MIRRORDIR)/snomed.owl
 	echo "ERROR: You have configured your default module type to be custom; this behavior needs to be overwritten in promot.Makefile!" && false
-## Module for ontology: ro
+## Module for ontology: so
 
-$(IMPORTDIR)/ro_import.owl: $(MIRRORDIR)/ro.owl
+$(IMPORTDIR)/so_import.owl: $(MIRRORDIR)/so.owl
 	echo "ERROR: You have configured your default module type to be custom; this behavior needs to be overwritten in promot.Makefile!" && false
-## Module for ontology: ncit
+## Module for ontology: whofic
 
-$(IMPORTDIR)/ncit_import.owl: $(MIRRORDIR)/ncit.owl $(IMPORTDIR)/ncit_terms_combined.txt
-	if [ $(IMP) = true ] && [ $(IMP_LARGE) = true ]; then $(ROBOT) extract -i $< -T $(IMPORTDIR)/ncit_terms_combined.txt --force true  --copy-ontology-annotations true --individuals include --method BOT \
-		query --update ../sparql/inject-subset-declaration.ru --update ../sparql/inject-synonymtype-declaration.ru --update ../sparql/postprocess-module.ru \
-		$(ANNOTATE_CONVERT_FILE); fi
-
+$(IMPORTDIR)/whofic_import.owl: $(MIRRORDIR)/whofic.owl
+	echo "ERROR: You have configured your default module type to be custom; this behavior needs to be overwritten in promot.Makefile!" && false
 
 .PHONY: refresh-imports
 refresh-imports:
@@ -483,7 +487,7 @@ $(COMPONENTSDIR)/%.owl: | $(COMPONENTSDIR)
 
 
 
-$(COMPONENTSDIR)/relations_newclasses.owl: $(TEMPLATEDIR)/disease_function.csv $(TEMPLATEDIR)/disease_gene.csv $(TEMPLATEDIR)/disease_pheno.csv $(TEMPLATEDIR)/disease_structure.csv $(TEMPLATEDIR)/function_activity.csv $(TEMPLATEDIR)/function_structure.csv $(TEMPLATEDIR)/patient_classes.csv $(TEMPLATEDIR)/pheno_anatomy.csv $(TEMPLATEDIR)/pheno_function.csv $(TEMPLATEDIR)/test_activity.csv $(TEMPLATEDIR)/test_function.csv
+$(COMPONENTSDIR)/relations_newclasses.owl: $(TEMPLATEDIR)/disease_gene.csv $(TEMPLATEDIR)/disease_pheno.csv $(TEMPLATEDIR)/disease_structure.csv $(TEMPLATEDIR)/function_activity.csv $(TEMPLATEDIR)/function_structure.csv $(TEMPLATEDIR)/patient_classes.csv $(TEMPLATEDIR)/pheno_anatomy.csv $(TEMPLATEDIR)/pheno_function.csv $(TEMPLATEDIR)/procedure_activity.csv $(TEMPLATEDIR)/procedure_function.csv
 	if [ $(COMP) = true ] ; then $(ROBOT) template --add-prefixes config/context.json \
 		$(patsubst %, --template %, $^) \
 		$(ANNOTATE_CONVERT_FILE); fi
@@ -508,24 +512,25 @@ mirror-bfo: | $(TMPDIR)
 	$(ROBOT) convert -i $(TMPDIR)/bfo-download.owl -o $(TMPDIR)/$@.owl
 
 
-## ONTOLOGY: mondo
-.PHONY: mirror-mondo
-.PRECIOUS: $(MIRRORDIR)/mondo.owl
-ifeq ($(strip $(IMP_LARGE)),true)
-mirror-mondo: | $(TMPDIR)
-	curl -L $(OBOBASE)/mondo.owl --create-dirs -o $(TMPDIR)/mondo-download.owl --retry 4 --max-time 200 && \
-	$(ROBOT) convert -i $(TMPDIR)/mondo-download.owl -o $(TMPDIR)/$@.owl
-else
-mirror-mondo:
-	@echo "Not refreshing mondo because refreshing large imports is disabled (IMP_LARGE=$(IMP_LARGE))."
-endif
+## ONTOLOGY: bioassay
+.PHONY: mirror-bioassay
+.PRECIOUS: $(MIRRORDIR)/bioassay.owl
+mirror-bioassay: | $(TMPDIR)
+	$(ROBOT) convert -I http://www.bioassayontology.org/bao/bao_complete.owl -o $(TMPDIR)/$@.owl
 
 
-## ONTOLOGY: orcidio
-.PHONY: mirror-orcidio
-.PRECIOUS: $(MIRRORDIR)/orcidio.owl
-mirror-orcidio: | $(TMPDIR)
-	$(ROBOT) convert -I https://w3id.org/orcidio/orcidio.owl -o $(TMPDIR)/$@.owl
+## ONTOLOGY: biolink
+.PHONY: mirror-biolink
+.PRECIOUS: $(MIRRORDIR)/biolink.owl
+mirror-biolink: | $(TMPDIR)
+	$(ROBOT) convert -I https://w3id.org/biolink/biolink-model.owl.ttl -o $(TMPDIR)/$@.owl
+
+
+## ONTOLOGY: efo
+.PHONY: mirror-efo
+.PRECIOUS: $(MIRRORDIR)/efo.owl
+mirror-efo: | $(TMPDIR)
+	$(ROBOT) convert -I http://www.ebi.ac.uk/efo/efo.owl -o $(TMPDIR)/$@.owl
 
 
 ## ONTOLOGY: fma
@@ -544,47 +549,25 @@ mirror-hp: | $(TMPDIR)
 	$(ROBOT) convert -i $(TMPDIR)/hp-download.owl -o $(TMPDIR)/$@.owl
 
 
-## ONTOLOGY: whofic
-.PHONY: mirror-whofic
-.PRECIOUS: $(MIRRORDIR)/whofic.owl
-mirror-whofic: | $(TMPDIR)
-	$(ROBOT) convert -I https://raw.githubusercontent.com/whoficitc/harmonization/main/ontology/whofic-2024-01-21.owl -o $(TMPDIR)/$@.owl
+## ONTOLOGY: ioio
+.PHONY: mirror-ioio
+.PRECIOUS: $(MIRRORDIR)/ioio.owl
+mirror-ioio: | $(TMPDIR)
+	curl -L $(OBOBASE)/ioio.owl --create-dirs -o $(TMPDIR)/ioio-download.owl --retry 4 --max-time 200 && \
+	$(ROBOT) convert -i $(TMPDIR)/ioio-download.owl -o $(TMPDIR)/$@.owl
 
 
-## ONTOLOGY: snomed
-.PHONY: mirror-snomed
-.PRECIOUS: $(MIRRORDIR)/snomed.owl
+## ONTOLOGY: mondo
+.PHONY: mirror-mondo
+.PRECIOUS: $(MIRRORDIR)/mondo.owl
 ifeq ($(strip $(IMP_LARGE)),true)
-mirror-snomed: | $(TMPDIR)
-	curl -L $(OBOBASE)/snomed.owl --create-dirs -o $(TMPDIR)/snomed-download.owl --retry 4 --max-time 200 && \
-	$(ROBOT) convert -i $(TMPDIR)/snomed-download.owl -o $(TMPDIR)/$@.owl
+mirror-mondo: | $(TMPDIR)
+	curl -L $(OBOBASE)/mondo.owl --create-dirs -o $(TMPDIR)/mondo-download.owl --retry 4 --max-time 200 && \
+	$(ROBOT) convert -i $(TMPDIR)/mondo-download.owl -o $(TMPDIR)/$@.owl
 else
-mirror-snomed:
-	@echo "Not refreshing snomed because refreshing large imports is disabled (IMP_LARGE=$(IMP_LARGE))."
+mirror-mondo:
+	@echo "Not refreshing mondo because refreshing large imports is disabled (IMP_LARGE=$(IMP_LARGE))."
 endif
-
-
-## ONTOLOGY: ro
-.PHONY: mirror-ro
-.PRECIOUS: $(MIRRORDIR)/ro.owl
-mirror-ro: | $(TMPDIR)
-	curl -L $(OBOBASE)/ro.owl --create-dirs -o $(TMPDIR)/ro-download.owl --retry 4 --max-time 200 && \
-	$(ROBOT) convert -i $(TMPDIR)/ro-download.owl -o $(TMPDIR)/$@.owl
-
-
-## ONTOLOGY: vo
-.PHONY: mirror-vo
-.PRECIOUS: $(MIRRORDIR)/vo.owl
-mirror-vo: | $(TMPDIR)
-	curl -L $(OBOBASE)/vo.owl --create-dirs -o $(TMPDIR)/vo-download.owl --retry 4 --max-time 200 && \
-	$(ROBOT) convert -i $(TMPDIR)/vo-download.owl -o $(TMPDIR)/$@.owl
-
-
-## ONTOLOGY: biolink
-.PHONY: mirror-biolink
-.PRECIOUS: $(MIRRORDIR)/biolink.owl
-mirror-biolink: | $(TMPDIR)
-	$(ROBOT) convert -I https://w3id.org/biolink/biolink-model.owl.ttl -o $(TMPDIR)/$@.owl
 
 
 ## ONTOLOGY: ncit
@@ -600,6 +583,13 @@ mirror-ncit:
 endif
 
 
+## ONTOLOGY: orcidio
+.PHONY: mirror-orcidio
+.PRECIOUS: $(MIRRORDIR)/orcidio.owl
+mirror-orcidio: | $(TMPDIR)
+	$(ROBOT) convert -I https://w3id.org/orcidio/orcidio.owl -o $(TMPDIR)/$@.owl
+
+
 ## ONTOLOGY: obi
 .PHONY: mirror-obi
 .PRECIOUS: $(MIRRORDIR)/obi.owl
@@ -608,26 +598,61 @@ mirror-obi: | $(TMPDIR)
 	$(ROBOT) convert -i $(TMPDIR)/obi-download.owl -o $(TMPDIR)/$@.owl
 
 
-## ONTOLOGY: efo
-.PHONY: mirror-efo
-.PRECIOUS: $(MIRRORDIR)/efo.owl
-mirror-efo: | $(TMPDIR)
-	$(ROBOT) convert -I http://www.ebi.ac.uk/efo/efo.owl -o $(TMPDIR)/$@.owl
+## ONTOLOGY: ro
+.PHONY: mirror-ro
+.PRECIOUS: $(MIRRORDIR)/ro.owl
+mirror-ro: | $(TMPDIR)
+	curl -L $(OBOBASE)/ro.owl --create-dirs -o $(TMPDIR)/ro-download.owl --retry 4 --max-time 200 && \
+	$(ROBOT) convert -i $(TMPDIR)/ro-download.owl -o $(TMPDIR)/$@.owl
 
 
-## ONTOLOGY: ioio
-.PHONY: mirror-ioio
-.PRECIOUS: $(MIRRORDIR)/ioio.owl
-mirror-ioio: | $(TMPDIR)
-	curl -L $(OBOBASE)/ioio.owl --create-dirs -o $(TMPDIR)/ioio-download.owl --retry 4 --max-time 200 && \
-	$(ROBOT) convert -i $(TMPDIR)/ioio-download.owl -o $(TMPDIR)/$@.owl
+## ONTOLOGY: scdo
+.PHONY: mirror-scdo
+.PRECIOUS: $(MIRRORDIR)/scdo.owl
+mirror-scdo: | $(TMPDIR)
+	curl -L $(OBOBASE)/scdo.owl --create-dirs -o $(TMPDIR)/scdo-download.owl --retry 4 --max-time 200 && \
+	$(ROBOT) convert -i $(TMPDIR)/scdo-download.owl -o $(TMPDIR)/$@.owl
 
 
-## ONTOLOGY: bioassay
-.PHONY: mirror-bioassay
-.PRECIOUS: $(MIRRORDIR)/bioassay.owl
-mirror-bioassay: | $(TMPDIR)
-	$(ROBOT) convert -I http://www.bioassayontology.org/bao/bao_complete.owl -o $(TMPDIR)/$@.owl
+## ONTOLOGY: snomed
+.PHONY: mirror-snomed
+.PRECIOUS: $(MIRRORDIR)/snomed.owl
+ifeq ($(strip $(IMP_LARGE)),true)
+mirror-snomed: | $(TMPDIR)
+	curl -L $(OBOBASE)/snomed.owl --create-dirs -o $(TMPDIR)/snomed-download.owl --retry 4 --max-time 200 && \
+	$(ROBOT) convert -i $(TMPDIR)/snomed-download.owl -o $(TMPDIR)/$@.owl
+else
+mirror-snomed:
+	@echo "Not refreshing snomed because refreshing large imports is disabled (IMP_LARGE=$(IMP_LARGE))."
+endif
+
+
+## ONTOLOGY: so
+.PHONY: mirror-so
+.PRECIOUS: $(MIRRORDIR)/so.owl
+ifeq ($(strip $(IMP_LARGE)),true)
+mirror-so: | $(TMPDIR)
+	curl -L $(OBOBASE)/so.owl --create-dirs -o $(TMPDIR)/so-download.owl --retry 4 --max-time 200 && \
+	$(ROBOT) convert -i $(TMPDIR)/so-download.owl -o $(TMPDIR)/$@.owl
+else
+mirror-so:
+	@echo "Not refreshing so because refreshing large imports is disabled (IMP_LARGE=$(IMP_LARGE))."
+endif
+
+
+## ONTOLOGY: vo
+.PHONY: mirror-vo
+.PRECIOUS: $(MIRRORDIR)/vo.owl
+mirror-vo: | $(TMPDIR)
+	curl -L $(OBOBASE)/vo.owl --create-dirs -o $(TMPDIR)/vo-download.owl --retry 4 --max-time 200 && \
+	$(ROBOT) convert -i $(TMPDIR)/vo-download.owl -o $(TMPDIR)/$@.owl
+
+
+## ONTOLOGY: whofic
+.PHONY: mirror-whofic
+.PRECIOUS: $(MIRRORDIR)/whofic.owl
+mirror-whofic: | $(TMPDIR)
+	$(ROBOT) convert -I https://raw.githubusercontent.com/whoficitc/harmonization/main/ontology/whofic-2024-01-21.owl -o $(TMPDIR)/$@.owl
 
 
 $(MIRRORDIR)/%.owl: mirror-% | $(MIRRORDIR)

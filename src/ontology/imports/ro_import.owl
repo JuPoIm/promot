@@ -1,6 +1,7 @@
 <?xml version="1.0"?>
 <rdf:RDF xmlns="http://purl.obolibrary.org/obo/promot/imports/ro_import.owl#"
      xml:base="http://purl.obolibrary.org/obo/promot/imports/ro_import.owl"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
      xmlns:obo="http://purl.obolibrary.org/obo/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
@@ -11,8 +12,8 @@
      xmlns:subsets="http://purl.obolibrary.org/obo/ro/subsets#"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/promot/imports/ro_import.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/promot/releases/2025-05-20/imports/ro_import.owl"/>
-        <owl:versionInfo>2025-05-20</owl:versionInfo>
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/promot/releases/2025-06-05/imports/ro_import.owl"/>
+        <owl:versionInfo>2025-06-05</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -100,15 +101,15 @@
     
 
 
-    <!-- http://purl.org/dc/terms/contributor -->
+    <!-- http://purl.org/dc/elements/1.1/creator -->
 
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/contributor"/>
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/creator"/>
     
 
 
-    <!-- http://purl.org/dc/terms/date -->
+    <!-- http://purl.org/dc/elements/1.1/date -->
 
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/date"/>
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/date"/>
     
 
 
@@ -235,13 +236,14 @@
     
 
 
-    <!-- http://purl.obolibrary.org/obo/RO_0002452 -->
+    <!-- http://purl.obolibrary.org/obo/RO_0004003 -->
 
-    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0002452">
-        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/RO_0002200"/>
-        <obo:IAO_0000115>A relation that holds between a disease or an organism and a phenotype</obo:IAO_0000115>
-        <obo:IAO_0000117 rdf:resource="https://orcid.org/0000-0002-6601-2165"/>
-        <rdfs:label>has symptom</rdfs:label>
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0004003">
+        <owl:inverseOf rdf:resource="http://purl.obolibrary.org/obo/RO_0004013"/>
+        <oboInOwl:created_by rdf:resource="https://orcid.org/0000-0002-6601-2165"/>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-11-05T02:45:54Z</oboInOwl:creation_date>
+        <rdfs:label>has material basis in germline mutation in</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://www.orpha.net/ORDO/Orphanet_317343"/>
     </owl:ObjectProperty>
     
 
@@ -280,30 +282,6 @@
     
 
 
-    <!-- http://purl.obolibrary.org/obo/RO_0009006 -->
-
-    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0009006">
-        <owl:inverseOf rdf:resource="http://purl.obolibrary.org/obo/RO_0009007"/>
-        <obo:IAO_0000112 xml:lang="en">A mass measurement assay measures an material&apos;s mass characteristic. A radioactivity detection assay measures the amount of radiation (alpha, beta or gamma ray emmissions) coming from a material.</obo:IAO_0000112>
-        <obo:IAO_0000115 xml:lang="en">A relation between an assay and a characteristic, in which the assay generates a data item which is a measure of a characteristic.</obo:IAO_0000115>
-        <terms:contributor rdf:resource="https://orcid.org/0000-0002-8844-9165"/>
-        <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-05-23T15:24:15Z</terms:date>
-        <rdfs:label xml:lang="en">assay measures characteristic</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/RO_0009007 -->
-
-    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0009007">
-        <obo:IAO_0000115 xml:lang="en">Inverse of &apos;assay measures characteristic&apos;</obo:IAO_0000115>
-        <terms:contributor rdf:resource="https://orcid.org/0000-0002-8844-9165"/>
-        <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-05-23T15:29:50Z</terms:date>
-        <rdfs:label xml:lang="en">characteristic measured by assay</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -312,6 +290,26 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000003 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000003">
+        <obo:IAO_0000115 xml:lang="en">An entity that has temporal parts and that happens, unfolds or develops through time.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">occurrent</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000015 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000015">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000003"/>
+        <obo:IAO_0000115 xml:lang="en">p is a process = Def. p is an occurrent that has temporal proper parts and for some time t, p s-depends_on some material entity at t. (axiom label in BFO2 Reference: [083-003])</obo:IAO_0000115>
+        <rdfs:comment xml:lang="en">An occurrent that has temporal proper parts and for some time t, p s-depends_on some material entity at t.</rdfs:comment>
+        <rdfs:label xml:lang="en">process</rdfs:label>
+    </owl:Class>
     
 
 

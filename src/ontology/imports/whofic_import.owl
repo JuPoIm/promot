@@ -1,13 +1,818 @@
-Prefix(:=<http://purl.obolibrary.org/obo/promot/imports/whofic_import.owl>)
-Prefix(obo:=<http://purl.obolibrary.org/obo/>)
-Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
-Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
-Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
-Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
-Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
-Prefix(oboInOwl:=<http://www.geneontology.org/formats/oboInOwl#>)
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://purl.obolibrary.org/obo/promot/imports/whofic_import.owl#"
+     xml:base="http://purl.obolibrary.org/obo/promot/imports/whofic_import.owl"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:schema="http://id.who.int/icd/schema/">
+    <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/promot/imports/whofic_import.owl">
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/promot/releases/2025-06-02/imports/whofic_import.owl"/>
+        <owl:versionInfo>2025-06-02</owl:versionInfo>
+    </owl:Ontology>
+    
 
-Ontology(<http://purl.obolibrary.org/obo/promot/imports/whofic_import.owl>
-# This is a placeholder, it will be regenerated when makefile is first executed.
-)
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://id.who.int/icd/schema/browserUrl -->
+
+    <owl:AnnotationProperty rdf:about="http://id.who.int/icd/schema/browserUrl"/>
+    
+
+
+    <!-- http://id.who.int/icd/schema/exclusion -->
+
+    <owl:AnnotationProperty rdf:about="http://id.who.int/icd/schema/exclusion"/>
+    
+
+
+    <!-- http://id.who.int/icd/schema/foundationReference -->
+
+    <owl:AnnotationProperty rdf:about="http://id.who.int/icd/schema/foundationReference"/>
+    
+
+
+    <!-- http://id.who.int/icd/schema/inclusion -->
+
+    <owl:AnnotationProperty rdf:about="http://id.who.int/icd/schema/inclusion"/>
+    
+
+
+    <!-- http://id.who.int/icd/schema/narrowerTerm -->
+
+    <owl:AnnotationProperty rdf:about="http://id.who.int/icd/schema/narrowerTerm"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#altLabel -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#altLabel"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#definition -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#definition"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#prefLabel -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#prefLabel"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://id.who.int/icd/entity/1019379329 -->
+
+    <owl:Class rdf:about="http://id.who.int/icd/entity/1019379329">
+        <rdfs:subClassOf rdf:resource="http://id.who.int/icd/entity/644658903"/>
+        <schema:browserUrl rdf:resource="https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F1019379329"/>
+        <rdfs:label xml:lang="en">Structure of upper extremity</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://id.who.int/icd/entity/1074234719 -->
+
+    <owl:Class rdf:about="http://id.who.int/icd/entity/1074234719">
+        <rdfs:subClassOf rdf:resource="http://id.who.int/icd/entity/150502901"/>
+        <schema:browserUrl rdf:resource="https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F1074234719"/>
+        <rdfs:label xml:lang="en">Bending</rdfs:label>
+        <skos:definition xml:lang="en">Tilting the back downwards or to the side, at the torso, such as in bowing or reaching down for an object.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://id.who.int/icd/entity/1090716697 -->
+
+    <owl:Class rdf:about="http://id.who.int/icd/entity/1090716697">
+        <rdfs:subClassOf rdf:resource="http://id.who.int/icd/entity/2031311308"/>
+        <schema:browserUrl rdf:resource="https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F1090716697"/>
+        <schema:inclusion xml:lang="en">cooperation of both eyes</schema:inclusion>
+        <schema:inclusion xml:lang="en">fixation of the eye</schema:inclusion>
+        <schema:inclusion xml:lang="en">tracking movements of the eye</schema:inclusion>
+        <schema:inclusion xml:lang="en">voluntary movements of the eye</schema:inclusion>
+        <schema:narrowerTerm xml:lang="en">cooperation of both eyes</schema:narrowerTerm>
+        <schema:narrowerTerm xml:lang="en">fixation of the eye</schema:narrowerTerm>
+        <schema:narrowerTerm xml:lang="en">tracking movements of the eye</schema:narrowerTerm>
+        <schema:narrowerTerm xml:lang="en">voluntary movements of the eye</schema:narrowerTerm>
+        <rdfs:label xml:lang="en">Functions of external muscles of the eye</rdfs:label>
+        <skos:definition xml:lang="en">Functions of the muscles that are used to look in different directions, to follow an object as it moves across the visual field, to produce saccadic jumps to catch up with a moving target, and to fix the eye.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://id.who.int/icd/entity/1224012103 -->
+
+    <owl:Class rdf:about="http://id.who.int/icd/entity/1224012103">
+        <schema:browserUrl rdf:resource="https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F1224012103"/>
+        <rdfs:label xml:lang="en">Classification Entities</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://id.who.int/icd/entity/1233939003 -->
+
+    <owl:Class rdf:about="http://id.who.int/icd/entity/1233939003">
+        <rdfs:subClassOf rdf:resource="http://id.who.int/icd/entity/1019379329"/>
+        <schema:browserUrl rdf:resource="https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F1233939003"/>
+        <rdfs:label xml:lang="en">Muscles of hand</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://id.who.int/icd/entity/1250916538 -->
+
+    <owl:Class rdf:about="http://id.who.int/icd/entity/1250916538">
+        <rdfs:subClassOf rdf:resource="http://id.who.int/icd/entity/495844982"/>
+        <schema:browserUrl rdf:resource="https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F1250916538"/>
+        <rdfs:label xml:lang="en">Diaphragm</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://id.who.int/icd/entity/1278239861 -->
+
+    <owl:Class rdf:about="http://id.who.int/icd/entity/1278239861">
+        <rdfs:subClassOf rdf:resource="http://id.who.int/icd/entity/1929433903"/>
+        <schema:browserUrl rdf:resource="https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F1278239861"/>
+        <rdfs:label xml:lang="en">Muscles of ankle and foot</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://id.who.int/icd/entity/1334556216 -->
+
+    <owl:Class rdf:about="http://id.who.int/icd/entity/1334556216">
+        <rdfs:subClassOf rdf:resource="http://id.who.int/icd/entity/2048203604"/>
+        <schema:browserUrl rdf:resource="https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F1334556216"/>
+        <rdfs:label xml:lang="en">Walking and moving</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://id.who.int/icd/entity/1337026722 -->
+
+    <owl:Class rdf:about="http://id.who.int/icd/entity/1337026722">
+        <rdfs:subClassOf rdf:resource="http://id.who.int/icd/entity/1360101629"/>
+        <schema:browserUrl rdf:resource="https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F1337026722"/>
+        <schema:inclusion xml:lang="en">diaphragm as involved in breathing</schema:inclusion>
+        <schema:narrowerTerm xml:lang="en">diaphragm as involved in breathing</schema:narrowerTerm>
+        <rdfs:label xml:lang="en">Functions of the diaphragm</rdfs:label>
+        <skos:definition xml:lang="en">Functions of the diaphragm as involved in breathing.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://id.who.int/icd/entity/1360101629 -->
+
+    <owl:Class rdf:about="http://id.who.int/icd/entity/1360101629">
+        <rdfs:subClassOf rdf:resource="http://id.who.int/icd/entity/567313968"/>
+        <rdfs:subClassOf rdf:resource="http://id.who.int/icd/entity/861284911"/>
+        <schema:browserUrl rdf:resource="https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F1360101629"/>
+        <schema:exclusion xml:lang="en">Additional functions of the respiratory system</schema:exclusion>
+        <schema:exclusion xml:lang="en">Exercise tolerance functions</schema:exclusion>
+        <schema:exclusion xml:lang="en">Respiration functions</schema:exclusion>
+        <rdfs:label xml:lang="en">Respiratory muscle functions</rdfs:label>
+        <skos:definition xml:lang="en">Functions of the muscles involved in breathing.</skos:definition>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://id.who.int/icd/entity/1360101629"/>
+        <owl:annotatedProperty rdf:resource="http://id.who.int/icd/schema/exclusion"/>
+        <owl:annotatedTarget xml:lang="en">Additional functions of the respiratory system</owl:annotatedTarget>
+        <schema:foundationReference rdf:resource="http://id.who.int/icd/entity/1682107878"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://id.who.int/icd/entity/1360101629"/>
+        <owl:annotatedProperty rdf:resource="http://id.who.int/icd/schema/exclusion"/>
+        <owl:annotatedTarget xml:lang="en">Exercise tolerance functions</owl:annotatedTarget>
+        <schema:foundationReference rdf:resource="http://id.who.int/icd/entity/1409534054"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://id.who.int/icd/entity/1360101629"/>
+        <owl:annotatedProperty rdf:resource="http://id.who.int/icd/schema/exclusion"/>
+        <owl:annotatedTarget xml:lang="en">Respiration functions</owl:annotatedTarget>
+        <schema:foundationReference rdf:resource="http://id.who.int/icd/entity/446199613"/>
+    </owl:Axiom>
+    
+
+
+    <!-- http://id.who.int/icd/entity/1407133273 -->
+
+    <owl:Class rdf:about="http://id.who.int/icd/entity/1407133273">
+        <rdfs:subClassOf rdf:resource="http://id.who.int/icd/entity/274570113"/>
+        <schema:browserUrl rdf:resource="https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F1407133273"/>
+        <rdfs:label xml:lang="en">Power of muscles in lower half of the body</rdfs:label>
+        <skos:altLabel xml:lang="en">Functions involved in power of muscles in lower half of the body</skos:altLabel>
+        <skos:definition xml:lang="en">Functions related to the force generated by the contraction of the muscles and muscle groups found in the lower half of the body.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://id.who.int/icd/entity/1462755743 -->
+
+    <owl:Class rdf:about="http://id.who.int/icd/entity/1462755743">
+        <rdfs:subClassOf rdf:resource="http://id.who.int/icd/entity/150502901"/>
+        <schema:browserUrl rdf:resource="https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F1462755743"/>
+        <rdfs:label xml:lang="en">Standing</rdfs:label>
+        <skos:definition xml:lang="en">Getting into and out of a standing position or changing body position from standing to any other position, such as lying down or sitting down.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://id.who.int/icd/entity/1486425186 -->
+
+    <owl:Class rdf:about="http://id.who.int/icd/entity/1486425186">
+        <rdfs:subClassOf rdf:resource="http://id.who.int/icd/entity/1360101629"/>
+        <schema:browserUrl rdf:resource="https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F1486425186"/>
+        <rdfs:label xml:lang="en">Functions of the thoracic respiratory muscles</rdfs:label>
+        <skos:definition xml:lang="en">Functions of the thoracic muscles involved in breathing.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://id.who.int/icd/entity/150502901 -->
+
+    <owl:Class rdf:about="http://id.who.int/icd/entity/150502901">
+        <rdfs:subClassOf rdf:resource="http://id.who.int/icd/entity/2048203604"/>
+        <schema:browserUrl rdf:resource="https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F150502901"/>
+        <schema:exclusion xml:lang="en">Transferring oneself</schema:exclusion>
+        <rdfs:label xml:lang="en">Changing basic body position</rdfs:label>
+        <skos:definition xml:lang="en">Getting into and out of a body position and moving from one location to another, such as getting up out of a chair to lie down on a bed, and getting into and out of positions of sitting, standing, kneeling or squatting.</skos:definition>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://id.who.int/icd/entity/150502901"/>
+        <owl:annotatedProperty rdf:resource="http://id.who.int/icd/schema/exclusion"/>
+        <owl:annotatedTarget xml:lang="en">Transferring oneself</owl:annotatedTarget>
+        <schema:foundationReference rdf:resource="http://id.who.int/icd/entity/1119392889"/>
+    </owl:Axiom>
+    
+
+
+    <!-- http://id.who.int/icd/entity/1550548595 -->
+
+    <owl:Class rdf:about="http://id.who.int/icd/entity/1550548595">
+        <rdfs:subClassOf rdf:resource="http://id.who.int/icd/entity/1334556216"/>
+        <schema:browserUrl rdf:resource="https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F1550548595"/>
+        <schema:exclusion xml:lang="en">Moving around</schema:exclusion>
+        <schema:exclusion xml:lang="en">Transferring oneself</schema:exclusion>
+        <rdfs:label xml:lang="en">Walking</rdfs:label>
+        <skos:definition xml:lang="en">Moving along a surface on foot, step by step, so that one foot is always on the ground, such as when strolling, sauntering, walking forwards, backwards, or sideways.</skos:definition>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://id.who.int/icd/entity/1550548595"/>
+        <owl:annotatedProperty rdf:resource="http://id.who.int/icd/schema/exclusion"/>
+        <owl:annotatedTarget xml:lang="en">Moving around</owl:annotatedTarget>
+        <schema:foundationReference rdf:resource="http://id.who.int/icd/entity/712447084"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://id.who.int/icd/entity/1550548595"/>
+        <owl:annotatedProperty rdf:resource="http://id.who.int/icd/schema/exclusion"/>
+        <owl:annotatedTarget xml:lang="en">Transferring oneself</owl:annotatedTarget>
+        <schema:foundationReference rdf:resource="http://id.who.int/icd/entity/1119392889"/>
+    </owl:Axiom>
+    
+
+
+    <!-- http://id.who.int/icd/entity/1571232890 -->
+
+    <owl:Class rdf:about="http://id.who.int/icd/entity/1571232890">
+        <rdfs:subClassOf rdf:resource="http://id.who.int/icd/entity/495844982"/>
+        <schema:browserUrl rdf:resource="https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F1571232890"/>
+        <rdfs:label xml:lang="en">Intercostal muscles</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://id.who.int/icd/entity/1626363729 -->
+
+    <owl:Class rdf:about="http://id.who.int/icd/entity/1626363729">
+        <rdfs:subClassOf rdf:resource="http://id.who.int/icd/entity/619527855"/>
+        <schema:browserUrl rdf:resource="https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F1626363729"/>
+        <rdfs:label xml:lang="en">Body structures</rdfs:label>
+        <skos:definition xml:lang="en">Body structures are anatomical parts of the body such as organs, limbs and their components.
+Impairments are problems in body function or structure as a significant deviation or loss.
+First qualifier
+Generic qualifier with the negative scale, used to indicate the extent or an impairment:</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://id.who.int/icd/entity/1789365017 -->
+
+    <owl:Class rdf:about="http://id.who.int/icd/entity/1789365017">
+        <rdfs:subClassOf rdf:resource="http://id.who.int/icd/entity/274570113"/>
+        <schema:browserUrl rdf:resource="https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F1789365017"/>
+        <rdfs:label xml:lang="en">Power of isolated muscles and muscle groups</rdfs:label>
+        <skos:altLabel xml:lang="en"> Functions involved in power of isolated muscles and muscle groups</skos:altLabel>
+        <skos:definition xml:lang="en">Functions related to the force generated by the contraction of specific and isolated muscles and muscle groups.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://id.who.int/icd/entity/1794398084 -->
+
+    <owl:Class rdf:about="http://id.who.int/icd/entity/1794398084">
+        <rdfs:subClassOf rdf:resource="http://id.who.int/icd/entity/1929433903"/>
+        <schema:browserUrl rdf:resource="https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F1794398084"/>
+        <rdfs:label xml:lang="en">Muscles of thigh</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://id.who.int/icd/entity/1831985718 -->
+
+    <owl:Class rdf:about="http://id.who.int/icd/entity/1831985718">
+        <rdfs:subClassOf rdf:resource="http://id.who.int/icd/entity/1916167881"/>
+        <schema:browserUrl rdf:resource="https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F1831985718"/>
+        <rdfs:label xml:lang="en">Vestibular function of balance</rdfs:label>
+        <skos:definition xml:lang="en">Sensory functions of the inner ear related to determining the balance of the body.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://id.who.int/icd/entity/1851215071 -->
+
+    <owl:Class rdf:about="http://id.who.int/icd/entity/1851215071">
+        <rdfs:subClassOf rdf:resource="http://id.who.int/icd/entity/150502901"/>
+        <schema:browserUrl rdf:resource="https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F1851215071"/>
+        <rdfs:label xml:lang="en">Rolling over</rdfs:label>
+        <skos:definition xml:lang="en">Moving the body from one position to another while lying such as turning from side to side or from stomach to back.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://id.who.int/icd/entity/1867012554 -->
+
+    <owl:Class rdf:about="http://id.who.int/icd/entity/1867012554">
+        <rdfs:subClassOf rdf:resource="http://id.who.int/icd/entity/1019379329"/>
+        <schema:browserUrl rdf:resource="https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F1867012554"/>
+        <rdfs:label xml:lang="en">Muscles of upper arm</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://id.who.int/icd/entity/1867763097 -->
+
+    <owl:Class rdf:about="http://id.who.int/icd/entity/1867763097">
+        <rdfs:subClassOf rdf:resource="http://id.who.int/icd/entity/2031311308"/>
+        <schema:browserUrl rdf:resource="https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F1867763097"/>
+        <schema:inclusion xml:lang="en">functions of accommodation</schema:inclusion>
+        <schema:inclusion xml:lang="en">pupillar reflex</schema:inclusion>
+        <schema:narrowerTerm xml:lang="en">functions of accommodation</schema:narrowerTerm>
+        <schema:narrowerTerm xml:lang="en">pupillar reflex</schema:narrowerTerm>
+        <rdfs:label xml:lang="en">Functions of internal muscles of the eye</rdfs:label>
+        <skos:definition xml:lang="en">Functions of the muscles inside the eye, such as the iris, that adjust the shape and size of the pupil and lens of the eye.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://id.who.int/icd/entity/1874889854 -->
+
+    <owl:Class rdf:about="http://id.who.int/icd/entity/1874889854">
+        <rdfs:subClassOf rdf:resource="http://id.who.int/icd/entity/644658903"/>
+        <schema:browserUrl rdf:resource="https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F1874889854"/>
+        <rdfs:label xml:lang="en">Muscles of head and neck region</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://id.who.int/icd/entity/1916167881 -->
+
+    <owl:Class rdf:about="http://id.who.int/icd/entity/1916167881">
+        <rdfs:subClassOf rdf:resource="http://id.who.int/icd/entity/567313968"/>
+        <rdfs:subClassOf rdf:resource="http://id.who.int/icd/entity/861284911"/>
+        <schema:browserUrl rdf:resource="https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F1916167881"/>
+        <rdfs:label xml:lang="en">Sensory functions and pain</rdfs:label>
+        <skos:definition xml:lang="en">This chapter is about the functions of the senses, seeing, hearing, tasting and so on, as well as the sensation of pain.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://id.who.int/icd/entity/1929433903 -->
+
+    <owl:Class rdf:about="http://id.who.int/icd/entity/1929433903">
+        <rdfs:subClassOf rdf:resource="http://id.who.int/icd/entity/644658903"/>
+        <schema:browserUrl rdf:resource="https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F1929433903"/>
+        <rdfs:label xml:lang="en">Structure of lower extremity</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://id.who.int/icd/entity/193884831 -->
+
+    <owl:Class rdf:about="http://id.who.int/icd/entity/193884831">
+        <rdfs:subClassOf rdf:resource="http://id.who.int/icd/entity/150502901"/>
+        <schema:browserUrl rdf:resource="https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F193884831"/>
+        <schema:inclusion xml:lang="en">getting into a prostrate position</schema:inclusion>
+        <rdfs:label xml:lang="en">Lying down</rdfs:label>
+        <skos:definition xml:lang="en">Getting into and out of a lying down position or changing body position, from horizontal to any other position, such as standing up or sitting down.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://id.who.int/icd/entity/1992934882 -->
+
+    <owl:Class rdf:about="http://id.who.int/icd/entity/1992934882">
+        <rdfs:subClassOf rdf:resource="http://id.who.int/icd/entity/1360101629"/>
+        <schema:browserUrl rdf:resource="https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F1992934882"/>
+        <rdfs:label xml:lang="en">Functions of accessory respiratory muscles</rdfs:label>
+        <skos:definition xml:lang="en">Functions of the additional muscles involved in breathing.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://id.who.int/icd/entity/1993770860 -->
+
+    <owl:Class rdf:about="http://id.who.int/icd/entity/1993770860">
+        <rdfs:subClassOf rdf:resource="http://id.who.int/icd/entity/1334556216"/>
+        <schema:browserUrl rdf:resource="https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F1993770860"/>
+        <schema:exclusion xml:lang="en">Climbing</schema:exclusion>
+        <schema:exclusion xml:lang="en">Walking</schema:exclusion>
+        <rdfs:label xml:lang="en">Going up and down stairs</rdfs:label>
+        <skos:definition xml:lang="en">Moving upwards and downwards so that at least one foot is always on the ground such as ascending and descending stairs or curbs.</skos:definition>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://id.who.int/icd/entity/1993770860"/>
+        <owl:annotatedProperty rdf:resource="http://id.who.int/icd/schema/exclusion"/>
+        <owl:annotatedTarget xml:lang="en">Climbing</owl:annotatedTarget>
+        <schema:foundationReference rdf:resource="http://id.who.int/icd/entity/569279495"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://id.who.int/icd/entity/1993770860"/>
+        <owl:annotatedProperty rdf:resource="http://id.who.int/icd/schema/exclusion"/>
+        <owl:annotatedTarget xml:lang="en">Walking</owl:annotatedTarget>
+        <schema:foundationReference rdf:resource="http://id.who.int/icd/entity/1550548595"/>
+    </owl:Axiom>
+    
+
+
+    <!-- http://id.who.int/icd/entity/2021370201 -->
+
+    <owl:Class rdf:about="http://id.who.int/icd/entity/2021370201">
+        <rdfs:subClassOf rdf:resource="http://id.who.int/icd/entity/2031311308"/>
+        <schema:browserUrl rdf:resource="https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F2021370201"/>
+        <rdfs:label xml:lang="en">Functions of the eyelid</rdfs:label>
+        <skos:definition xml:lang="en">Functions of the eyelid, such as the protective reflex.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://id.who.int/icd/entity/2031311308 -->
+
+    <owl:Class rdf:about="http://id.who.int/icd/entity/2031311308">
+        <rdfs:subClassOf rdf:resource="http://id.who.int/icd/entity/1916167881"/>
+        <schema:browserUrl rdf:resource="https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F2031311308"/>
+        <schema:exclusion xml:lang="en">Seeing functions</schema:exclusion>
+        <rdfs:label xml:lang="en">Functions of structures adjoining the eye</rdfs:label>
+        <skos:definition xml:lang="en">Functions of structures in and around the eye that facilitate seeing functions.</skos:definition>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://id.who.int/icd/entity/2031311308"/>
+        <owl:annotatedProperty rdf:resource="http://id.who.int/icd/schema/exclusion"/>
+        <owl:annotatedTarget xml:lang="en">Seeing functions</owl:annotatedTarget>
+        <schema:foundationReference rdf:resource="http://id.who.int/icd/entity/848997900"/>
+    </owl:Axiom>
+    
+
+
+    <!-- http://id.who.int/icd/entity/2038376479 -->
+
+    <owl:Class rdf:about="http://id.who.int/icd/entity/2038376479">
+        <rdfs:subClassOf rdf:resource="http://id.who.int/icd/entity/150502901"/>
+        <schema:browserUrl rdf:resource="https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F2038376479"/>
+        <schema:exclusion xml:lang="en">Transferring oneself</schema:exclusion>
+        <schema:exclusion xml:lang="en">Walking</schema:exclusion>
+        <rdfs:label xml:lang="en">Shifting the body&apos;s centre of gravity</rdfs:label>
+        <skos:definition xml:lang="en">Adjusting or moving the weight of the body from one position to another while sitting, standing or lying, such as moving from one foot to another while standing.</skos:definition>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://id.who.int/icd/entity/2038376479"/>
+        <owl:annotatedProperty rdf:resource="http://id.who.int/icd/schema/exclusion"/>
+        <owl:annotatedTarget xml:lang="en">Transferring oneself</owl:annotatedTarget>
+        <schema:foundationReference rdf:resource="http://id.who.int/icd/entity/1119392889"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://id.who.int/icd/entity/2038376479"/>
+        <owl:annotatedProperty rdf:resource="http://id.who.int/icd/schema/exclusion"/>
+        <owl:annotatedTarget xml:lang="en">Walking</owl:annotatedTarget>
+        <schema:foundationReference rdf:resource="http://id.who.int/icd/entity/1550548595"/>
+    </owl:Axiom>
+    
+
+
+    <!-- http://id.who.int/icd/entity/2048203604 -->
+
+    <owl:Class rdf:about="http://id.who.int/icd/entity/2048203604">
+        <rdfs:subClassOf rdf:resource="http://id.who.int/icd/entity/619527855"/>
+        <rdfs:subClassOf rdf:resource="http://id.who.int/icd/entity/861284911"/>
+        <schema:browserUrl rdf:resource="https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F2048203604"/>
+        <rdfs:label xml:lang="en">Mobility</rdfs:label>
+        <skos:definition xml:lang="en">This chapter is about moving by changing body position or location or by transferring from one place to another, by carrying, moving or manipulating objects, by walking, running or climbing, and by using various forms of transportation.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://id.who.int/icd/entity/2106585049 -->
+
+    <owl:Class rdf:about="http://id.who.int/icd/entity/2106585049">
+        <rdfs:subClassOf rdf:resource="http://id.who.int/icd/entity/274570113"/>
+        <schema:browserUrl rdf:resource="https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F2106585049"/>
+        <rdfs:label xml:lang="en">Power of muscles of one limb</rdfs:label>
+        <skos:altLabel xml:lang="en">Functions involved in power of muscles of one limb</skos:altLabel>
+        <skos:definition xml:lang="en">Functions related to the force generated by the contraction of the muscles and muscle groups of one arm or leg.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://id.who.int/icd/entity/246722870 -->
+
+    <owl:Class rdf:about="http://id.who.int/icd/entity/246722870">
+        <rdfs:subClassOf rdf:resource="http://id.who.int/icd/entity/1626363729"/>
+        <schema:browserUrl rdf:resource="https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F246722870"/>
+        <schema:exclusion xml:lang="en">Facial hair</schema:exclusion>
+        <rdfs:label xml:lang="en">Structures around eye</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://id.who.int/icd/entity/246722870"/>
+        <owl:annotatedProperty rdf:resource="http://id.who.int/icd/schema/exclusion"/>
+        <owl:annotatedTarget xml:lang="en">Facial hair</owl:annotatedTarget>
+        <schema:foundationReference rdf:resource="http://id.who.int/icd/entity/530165680"/>
+    </owl:Axiom>
+    
+
+
+    <!-- http://id.who.int/icd/entity/256519617 -->
+
+    <owl:Class rdf:about="http://id.who.int/icd/entity/256519617">
+        <rdfs:subClassOf rdf:resource="http://id.who.int/icd/entity/1550548595"/>
+        <schema:browserUrl rdf:resource="https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F256519617"/>
+        <rdfs:label xml:lang="en">Walking on different surfaces</rdfs:label>
+        <skos:definition xml:lang="en">Walking on sloping, uneven, or moving surfaces, such as on grass, gravel or ice and snow, or walking aboard a ship, train or other vehicle.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://id.who.int/icd/entity/274570113 -->
+
+    <owl:Class rdf:about="http://id.who.int/icd/entity/274570113">
+        <rdfs:subClassOf rdf:resource="http://id.who.int/icd/entity/567313968"/>
+        <rdfs:subClassOf rdf:resource="http://id.who.int/icd/entity/861284911"/>
+        <schema:browserUrl rdf:resource="https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F274570113"/>
+        <schema:exclusion xml:lang="en">Functions of structures adjoining the eye</schema:exclusion>
+        <schema:exclusion xml:lang="en">Muscle endurance functions</schema:exclusion>
+        <schema:exclusion xml:lang="en">Muscle tone functions</schema:exclusion>
+        <rdfs:label xml:lang="en">Muscle power functions</rdfs:label>
+        <skos:definition xml:lang="en">Functions related to the force generated by the contraction of a muscle or muscle groups.</skos:definition>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://id.who.int/icd/entity/274570113"/>
+        <owl:annotatedProperty rdf:resource="http://id.who.int/icd/schema/exclusion"/>
+        <owl:annotatedTarget xml:lang="en">Functions of structures adjoining the eye</owl:annotatedTarget>
+        <schema:foundationReference rdf:resource="http://id.who.int/icd/entity/2031311308"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://id.who.int/icd/entity/274570113"/>
+        <owl:annotatedProperty rdf:resource="http://id.who.int/icd/schema/exclusion"/>
+        <owl:annotatedTarget xml:lang="en">Muscle endurance functions</owl:annotatedTarget>
+        <schema:foundationReference rdf:resource="http://id.who.int/icd/entity/389047611"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://id.who.int/icd/entity/274570113"/>
+        <owl:annotatedProperty rdf:resource="http://id.who.int/icd/schema/exclusion"/>
+        <owl:annotatedTarget xml:lang="en">Muscle tone functions</owl:annotatedTarget>
+        <schema:foundationReference rdf:resource="http://id.who.int/icd/entity/1839310222"/>
+    </owl:Axiom>
+    
+
+
+    <!-- http://id.who.int/icd/entity/278512890 -->
+
+    <owl:Class rdf:about="http://id.who.int/icd/entity/278512890">
+        <rdfs:subClassOf rdf:resource="http://id.who.int/icd/entity/644658903"/>
+        <schema:browserUrl rdf:resource="https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F278512890"/>
+        <rdfs:label xml:lang="en">Muscles of shoulder region</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://id.who.int/icd/entity/294830867 -->
+
+    <owl:Class rdf:about="http://id.who.int/icd/entity/294830867">
+        <rdfs:subClassOf rdf:resource="http://id.who.int/icd/entity/1019379329"/>
+        <schema:browserUrl rdf:resource="https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F294830867"/>
+        <rdfs:label xml:lang="en">Muscles of forearm</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://id.who.int/icd/entity/338611549 -->
+
+    <owl:Class rdf:about="http://id.who.int/icd/entity/338611549">
+        <rdfs:subClassOf rdf:resource="http://id.who.int/icd/entity/1929433903"/>
+        <schema:browserUrl rdf:resource="https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F338611549"/>
+        <rdfs:label xml:lang="en">Muscles of lower leg</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://id.who.int/icd/entity/405925948 -->
+
+    <owl:Class rdf:about="http://id.who.int/icd/entity/405925948">
+        <rdfs:subClassOf rdf:resource="http://id.who.int/icd/entity/246722870"/>
+        <schema:browserUrl rdf:resource="https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F405925948"/>
+        <rdfs:label xml:lang="en">External ocular muscles</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://id.who.int/icd/entity/409094401 -->
+
+    <owl:Class rdf:about="http://id.who.int/icd/entity/409094401">
+        <rdfs:subClassOf rdf:resource="http://id.who.int/icd/entity/1550548595"/>
+        <schema:browserUrl rdf:resource="https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F409094401"/>
+        <rdfs:label xml:lang="en">Walking around obstacles</rdfs:label>
+        <skos:definition xml:lang="en">Walking in ways required to avoid moving and immobile objects, people, animals, and vehicles, such as walking around a marketplace or shop, around or through traffic or other crowded areas.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://id.who.int/icd/entity/480646751 -->
+
+    <owl:Class rdf:about="http://id.who.int/icd/entity/480646751">
+        <rdfs:subClassOf rdf:resource="http://id.who.int/icd/entity/150502901"/>
+        <schema:browserUrl rdf:resource="https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F480646751"/>
+        <rdfs:label xml:lang="en">Squatting</rdfs:label>
+        <skos:definition xml:lang="en">Getting into and out of the seated or crouched posture on one&apos;s haunches with knees closely drawn up or sitting on one&apos;s heels, such as may be necessary in toilets that are at floor level, or changing body position from squatting to any other position, such as standing up.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://id.who.int/icd/entity/495844982 -->
+
+    <owl:Class rdf:about="http://id.who.int/icd/entity/495844982">
+        <rdfs:subClassOf rdf:resource="http://id.who.int/icd/entity/1626363729"/>
+        <schema:browserUrl rdf:resource="https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F495844982"/>
+        <rdfs:label xml:lang="en">Muscles of respiration</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://id.who.int/icd/entity/555410497 -->
+
+    <owl:Class rdf:about="http://id.who.int/icd/entity/555410497">
+        <rdfs:subClassOf rdf:resource="http://id.who.int/icd/entity/1550548595"/>
+        <schema:browserUrl rdf:resource="https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F555410497"/>
+        <rdfs:label xml:lang="en">Walking short distances</rdfs:label>
+        <skos:definition xml:lang="en">Walking for less than a kilometre, such as walking around rooms or hallways, within a building or for short distances outside.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://id.who.int/icd/entity/556694745 -->
+
+    <owl:Class rdf:about="http://id.who.int/icd/entity/556694745">
+        <rdfs:subClassOf rdf:resource="http://id.who.int/icd/entity/274570113"/>
+        <schema:browserUrl rdf:resource="https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F556694745"/>
+        <rdfs:label xml:lang="en">Power of muscles of the trunk</rdfs:label>
+        <skos:altLabel xml:lang="en"> Functions involved in power of muscles of the trunk</skos:altLabel>
+        <skos:definition xml:lang="en">Functions related to the force generated by the contraction of muscles and muscle groups in the trunk.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://id.who.int/icd/entity/567313968 -->
+
+    <owl:Class rdf:about="http://id.who.int/icd/entity/567313968">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000034"/>
+        <schema:browserUrl rdf:resource="https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F567313968"/>
+        <rdfs:label xml:lang="en">Body functions</rdfs:label>
+        <skos:definition xml:lang="en">Body functions are the physiological functions of body systems (including psychological functions).
+Impairments are problems in body function or structure as a significant deviation or loss.
+Broad ranges of percentages are provided for those cases in which calibrated assessment instruments or other standards are available to quantify the impairment in body function. For example, when &quot;no impairment&quot; or &quot;complete impairment&quot; in body function is coded, this scaling may have margin of error of up to 5%. &quot;Moderate impairment&quot; is generally up to half of the scale of total impairment. The percentages are to be calibrated in different domains with reference to population standards as percentiles. For this quantification to be used in a uniform manner, assessment procedures need to be developed through research.
+For a further explanation of coding conventions in ICF, refer to Annex 2.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://id.who.int/icd/entity/58064740 -->
+
+    <owl:Class rdf:about="http://id.who.int/icd/entity/58064740">
+        <rdfs:subClassOf rdf:resource="http://id.who.int/icd/entity/644658903"/>
+        <schema:browserUrl rdf:resource="https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F58064740"/>
+        <rdfs:label xml:lang="en">Muscles of trunk</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://id.who.int/icd/entity/619527855 -->
+
+    <owl:Class rdf:about="http://id.who.int/icd/entity/619527855">
+        <rdfs:subClassOf rdf:resource="http://id.who.int/icd/entity/1224012103"/>
+        <schema:browserUrl rdf:resource="https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F619527855"/>
+        <rdfs:label xml:lang="en">ICF Category</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://id.who.int/icd/entity/635353887 -->
+
+    <owl:Class rdf:about="http://id.who.int/icd/entity/635353887">
+        <rdfs:subClassOf rdf:resource="http://id.who.int/icd/entity/150502901"/>
+        <schema:browserUrl rdf:resource="https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F635353887"/>
+        <rdfs:label xml:lang="en">Kneeling</rdfs:label>
+        <skos:definition xml:lang="en">Getting into and out of a position where the body is supported by the knees with legs bent, such as during prayers, or changing body position from kneeling to any other position, such as standing up.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://id.who.int/icd/entity/644658903 -->
+
+    <owl:Class rdf:about="http://id.who.int/icd/entity/644658903">
+        <rdfs:subClassOf rdf:resource="http://id.who.int/icd/entity/1626363729"/>
+        <schema:browserUrl rdf:resource="https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F644658903"/>
+        <rdfs:label xml:lang="en">Structures related to movement</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://id.who.int/icd/entity/855039967 -->
+
+    <owl:Class rdf:about="http://id.who.int/icd/entity/855039967">
+        <rdfs:subClassOf rdf:resource="http://id.who.int/icd/entity/150502901"/>
+        <schema:browserUrl rdf:resource="https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F855039967"/>
+        <schema:inclusion xml:lang="en">getting into a sitting position with bent legs or cross-legged</schema:inclusion>
+        <schema:inclusion xml:lang="en">getting into a sitting position with feet supported or unsupported</schema:inclusion>
+        <rdfs:label xml:lang="en">Sitting</rdfs:label>
+        <skos:definition xml:lang="en">Getting into and out of a seated position and changing body position from sitting down to any other position, such as standing up or lying down.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://id.who.int/icd/entity/861284911 -->
+
+    <owl:Class rdf:about="http://id.who.int/icd/entity/861284911">
+        <rdfs:subClassOf rdf:resource="http://id.who.int/icd/entity/1224012103"/>
+        <schema:browserUrl rdf:resource="https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F861284911"/>
+        <rdfs:label xml:lang="en">Generic functioning domains</rdfs:label>
+        <skos:definition xml:lang="en">This subsection contains a generic set of functioning categories of high explanatory power derived from the ICF Annex 9. 
+
+</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://id.who.int/icd/entity/906369049 -->
+
+    <owl:Class rdf:about="http://id.who.int/icd/entity/906369049">
+        <rdfs:subClassOf rdf:resource="http://id.who.int/icd/entity/274570113"/>
+        <schema:browserUrl rdf:resource="https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F906369049"/>
+        <rdfs:label xml:lang="en">Power of muscles of all limbs</rdfs:label>
+        <skos:altLabel xml:lang="en">Functions involved in power of muscles of all limbs</skos:altLabel>
+        <skos:definition xml:lang="en">Functions related to the force generated by the contraction of muscles and muscle groups of all four limbs.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://id.who.int/icd/entity/912341436 -->
+
+    <owl:Class rdf:about="http://id.who.int/icd/entity/912341436">
+        <rdfs:subClassOf rdf:resource="http://id.who.int/icd/entity/246722870"/>
+        <schema:browserUrl rdf:resource="https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F912341436"/>
+        <rdfs:label xml:lang="en">Eyelid</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000034 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000034"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
 

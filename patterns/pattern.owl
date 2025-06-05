@@ -1,0 +1,30 @@
+Prefix(:=<urn:unnamed:ontology#ont1>)
+Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
+Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
+Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
+Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
+Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
+
+
+Ontology(<urn:unnamed:ontology#ont1>
+
+Declaration(Class(<http://purl.obolibrary.org/obo/BFO_0000031>))
+Declaration(Class(<http://purl.obolibrary.org/obo/MONDO_0000001>))
+Declaration(Class(<http://purl.obolibrary.org/obo/promot/patterns/gene_disease_pattern.yaml>))
+Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0004013>))
+Declaration(AnnotationProperty(<http://purl.org/dc/terms/title>))
+
+
+
+############################
+#   Classes
+############################
+
+# Class: <http://purl.obolibrary.org/obo/promot/patterns/gene_disease_pattern.yaml> (<http://purl.obolibrary.org/obo/promot/patterns/gene_disease_pattern.yaml>)
+
+AnnotationAssertion(<http://purl.org/dc/terms/title> <http://purl.obolibrary.org/obo/promot/patterns/gene_disease_pattern.yaml> "gene_disease_pattern"^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/promot/patterns/gene_disease_pattern.yaml> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/BFO_0000031> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0004013> <http://purl.obolibrary.org/obo/MONDO_0000001>)))
+SubClassOf(<http://purl.obolibrary.org/obo/promot/patterns/gene_disease_pattern.yaml> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0004013> <http://purl.obolibrary.org/obo/MONDO_0000001>))
+
+
+)
