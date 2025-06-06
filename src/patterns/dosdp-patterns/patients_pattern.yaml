@@ -1,0 +1,71 @@
+pattern_name: relations_pattern
+
+pattern_iri: http://purl.obolibrary.org/obo/promot/patterns/gene_disease_pattern.yaml
+
+description: "Use this template to link the entities of the ontology to each other."
+
+contributors:
+  - https://orcid.org/0009-0000-5160-7927 # J. Potier
+
+classes:
+  patient: PROMOT:0000101
+  gene: SO:0000704
+  assistive_equipment: SNOMED:360296002
+  phenotype: HP:0000118
+
+relations:
+  is_assessed_by: PROMOT:R000001
+  uses_assistive_equipment: PROMOT:R000002
+  has_phenotype: RO:0002200
+  has_gene_mutation: VO:0001039
+
+data_list_vars:
+  orcid: xsd:anyURI
+
+vars:
+  patient: "'patient'"
+  phenotype: "'phenotype'"
+  gene: "'gene'"
+  aid: "'assistive_equipment'"
+
+      
+logical_axioms:
+ 
+  - axiom_type: subClassOf
+    text: "'has_phenotype' some %s"
+    vars:
+      - phenotype
+
+  - axiom_type: equivalentTo
+    text: "'patient' and 'has_phenotype' some %s"
+    vars:
+      - phenotype
+
+  - axiom_type: subClassOf
+    text: "'has_gene_mutation' some %s"
+    vars:
+      - gene
+  - axiom_type: equivalentTo
+    text: "'gene' and 'has_gene_mutation' some %s"
+    vars:
+      - gene
+
+  - axiom_type: subClassOf
+    text: "'uses_assistive_equipment' some %s"
+    vars:
+    - aid
+
+  - axiom_type: equivalentTo
+    text: "'patient' and 'uses_assistive_equipment' some %s"
+    vars:
+    - aid
+
+  - axiom_type: subClassOf
+    text: "'is_assessed_by' some %s"
+    vars:
+      - evaluation_procedure
+      
+  - axiom_type: equivalentTo
+    text: "'patient' and 'is_assessed_by' some %s"
+    vars:
+      - evaluation_procedure
