@@ -10,7 +10,7 @@
 # More information: https://github.com/INCATools/ontology-development-kit/
 
 # Fingerprint of the configuration file when this Makefile was last generated
-CONFIG_HASH=                bd58dc32270f9c7215bdf2ee6e134b2c5e1ab2fb2bcfe8f1adbf07c3045aadb3
+CONFIG_HASH=                a5172c2fe6c1fbed790a7c1057bfd60ebfc8fad5bc3eed2bbf7179a284ada90c
 
 
 # ----------------------------------------
@@ -54,7 +54,7 @@ OBODATE ?=                  $(shell date +'%d:%m:%Y %H:%M')
 VERSION=                    $(TODAY)
 ANNOTATE_ONTOLOGY_VERSION = annotate -V $(ONTBASE)/releases/$(VERSION)/$@ --annotation owl:versionInfo $(VERSION)
 ANNOTATE_CONVERT_FILE =     annotate --ontology-iri $(ONTBASE)/$@ $(ANNOTATE_ONTOLOGY_VERSION) convert -f ofn --output $@.tmp.owl && mv $@.tmp.owl $@
-OTHER_SRC =                 $(PATTERNDIR)/definitions.owl $(COMPONENTSDIR)/relations_newclasses.owl 
+OTHER_SRC =                 $(PATTERNDIR)/definitions.owl $(COMPONENTSDIR)/PROMOT_classes_relations.owl 
 ONTOLOGYTERMS =             $(TMPDIR)/ontologyterms.txt
 EDIT_PREPROCESSED =         $(TMPDIR)/$(ONT)-preprocess.owl
 PATTERNDIR=                 ../patterns
@@ -165,7 +165,7 @@ all_main: $(MAIN_FILES)
 # ----------------------------------------
 
 
-IMPORTS =  bfo bioassay biolink efo fma hp ioio mondo ncit orcidio obi ro scdo snomed so vo whofic
+IMPORTS =  bfo bioassay biolink efo fma hp mondo ncit orcidio obi ro scdo snomed so vo whofic
 
 IMPORT_ROOTS = $(patsubst %, $(IMPORTDIR)/%_import, $(IMPORTS))
 IMPORT_OWL_FILES = $(foreach n,$(IMPORT_ROOTS), $(n).owl)
@@ -388,6 +388,10 @@ $(IMPORTDIR)/%_import.owl: $(MIRRORDIR)/%.owl $(IMPORTDIR)/%_terms_combined.txt
 
 $(IMPORTDIR)/bfo_import.owl: $(MIRRORDIR)/bfo.owl
 	echo "ERROR: You have configured your default module type to be custom; this behavior needs to be overwritten in promot.Makefile!" && false
+## Module for ontology: biolink
+
+$(IMPORTDIR)/biolink_import.owl: $(MIRRORDIR)/biolink.owl
+	echo "ERROR: You have configured your default module type to be custom; this behavior needs to be overwritten in promot.Makefile!" && false
 ## Module for ontology: fma
 
 $(IMPORTDIR)/fma_import.owl: $(MIRRORDIR)/fma.owl
@@ -487,12 +491,12 @@ $(COMPONENTSDIR)/%.owl: | $(COMPONENTSDIR)
 
 
 
-$(COMPONENTSDIR)/relations_newclasses.owl: $(TEMPLATEDIR)/disease_gene.csv $(TEMPLATEDIR)/disease_pheno.csv $(TEMPLATEDIR)/disease_structure.csv $(TEMPLATEDIR)/function_activity.csv $(TEMPLATEDIR)/function_structure.csv $(TEMPLATEDIR)/patient_classes.csv $(TEMPLATEDIR)/pheno_anatomy.csv $(TEMPLATEDIR)/pheno_function.csv $(TEMPLATEDIR)/procedure_activity.csv $(TEMPLATEDIR)/procedure_function.csv
+$(COMPONENTSDIR)/PROMOT_classes_relations.owl: $(TEMPLATEDIR)/PROMOT-classes-relations.csv
 	if [ $(COMP) = true ] ; then $(ROBOT) template --add-prefixes config/context.json \
 		$(patsubst %, --template %, $^) \
 		$(ANNOTATE_CONVERT_FILE); fi
 
-.PRECIOUS: $(COMPONENTSDIR)/relations_newclasses.owl
+.PRECIOUS: $(COMPONENTSDIR)/PROMOT_classes_relations.owl
 # ----------------------------------------
 # Mirroring upstream ontologies
 # ----------------------------------------
@@ -547,14 +551,6 @@ mirror-fma: | $(TMPDIR)
 mirror-hp: | $(TMPDIR)
 	curl -L $(OBOBASE)/hp.owl --create-dirs -o $(TMPDIR)/hp-download.owl --retry 4 --max-time 200 && \
 	$(ROBOT) convert -i $(TMPDIR)/hp-download.owl -o $(TMPDIR)/$@.owl
-
-
-## ONTOLOGY: ioio
-.PHONY: mirror-ioio
-.PRECIOUS: $(MIRRORDIR)/ioio.owl
-mirror-ioio: | $(TMPDIR)
-	curl -L $(OBOBASE)/ioio.owl --create-dirs -o $(TMPDIR)/ioio-download.owl --retry 4 --max-time 200 && \
-	$(ROBOT) convert -i $(TMPDIR)/ioio-download.owl -o $(TMPDIR)/$@.owl
 
 
 ## ONTOLOGY: mondo

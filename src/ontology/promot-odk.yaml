@@ -32,21 +32,11 @@ use_dosdps: TRUE
 components:
   release_components: TRUE
   products:
-    - filename: relations_newclasses.owl
+    - filename: PROMOT_classes_relations.owl
       use_template: TRUE
       template_options: --add-prefixes config/context.json
       templates:
-        - disease_gene.csv
-        - disease_pheno.csv
-        - disease_structure.csv
-        - function_activity.csv
-        - function_structure.csv
-        - patient_classes.csv
-        - pheno_anatomy.csv
-        - pheno_function.csv
-        - procedure_activity.csv
-        - procedure_function.csv       
-#        - anatomy_structure.csv
+        - PROMOT-classes-relations.csv
 import_group:
   annotation_properties:
     - rdfs:label
@@ -64,41 +54,41 @@ import_group:
     - IAO:0000412
   release_imports: TRUE
   products:
-    - id: bfo
+    - id: bfo # high-level classes
       module_type: custom
-    - id: bioassay
+    - id: bioassay # mutated ?
       mirror_from: http://www.bioassayontology.org/bao/bao_complete.owl
-    - id: biolink
+    - id: biolink # relations
       mirror_from: https://w3id.org/biolink/biolink-model.owl.ttl
-    - id: efo
+      module_type: custom
+    - id: efo # to delete ?
       mirror_from: http://www.ebi.ac.uk/efo/efo.owl
-    - id: fma
+    - id: fma # anatomy
       module_type: custom
-    - id: hp
+    - id: hp # phenotypes
       module_type: custom
-    - id: ioio
-    - id: mondo
+    - id: mondo # diseases
       module_type: custom
       is_large: TRUE
-    - id: ncit
+    - id: ncit # genes, tests, devices
       is_large: TRUE
-    - id: orcidio
+    - id: orcidio # code orcid, to delete ?
       mirror_from: https://w3id.org/orcidio/orcidio.owl
       module_type: filter
       base_iris:
         - https://orcid.org/
-    - id: obi
-    - id: ro
+    - id: obi # to delete ?
+    - id: ro # relations
       module_type: custom
-    - id: scdo
-    - id: snomed
+    - id: scdo # measures relation
+    - id: snomed # tests, devices
       is_large: TRUE
       module_type: custom
-    - id: so
+    - id: so # 'gene'
       is_large: TRUE
       module_type: custom
-    - id: vo
-    - id: whofic
+    - id: vo # has gene mutation
+    - id: whofic # body structures, functions, activities
       mirror_from: https://raw.githubusercontent.com/whoficitc/harmonization/main/ontology/whofic-2024-01-21.owl
       module_type: custom
 robot_java_args: '-Xmx8G'
