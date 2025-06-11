@@ -22,6 +22,7 @@ Import(<http://purl.obolibrary.org/obo/promot/releases/2025-05-20/imports/mondo_
 Import(<http://purl.obolibrary.org/obo/promot/releases/2025-05-21/imports/snomed_import.owl>)
 Import(<http://purl.obolibrary.org/obo/promot/releases/2025-06-02/imports/hp_import.owl>)
 Import(<http://purl.obolibrary.org/obo/promot/releases/2025-06-02/imports/whofic_import.owl>)
+Import(<http://purl.obolibrary.org/obo/promot/releases/2025-06-11/imports/sio_import.owl>)
 Annotation(dcterms:description "Ontology for building the relational database of the PROMOT project")
 Annotation(dcterms:license <https://creativecommons.org/licenses/unspecified>)
 Annotation(dcterms:title "PROMOT Common Data Model ontology")
@@ -39,6 +40,12 @@ Declaration(Class(<http://purl.obolibrary.org/obo/HP_0030006>))
 Declaration(Class(<http://purl.obolibrary.org/obo/HP_0031058>))
 Declaration(Class(<http://purl.obolibrary.org/obo/PROMOT_0000000>))
 Declaration(Class(<http://purl.obolibrary.org/obo/PROMOT_0000101>))
+Declaration(Class(<http://snomed.info/id/183135000>))
+Declaration(Class(<http://snomed.info/id/360296002>))
+Declaration(Class(<http://snomed.info/id/386053000>))
+Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002200>))
+Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002201>))
+Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0004013>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0004029>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0004030>))
 Declaration(AnnotationProperty(dce:creator))
@@ -75,15 +82,15 @@ ObjectPropertyDomain(<http://purl.obolibrary.org/obo/RO_0001015> <http://purl.ob
 
 ObjectPropertyRange(<http://purl.obolibrary.org/obo/RO_0001025> <http://purl.obolibrary.org/obo/FMA_62955>)
 
-# Object Property: <http://purl.obolibrary.org/obo/RO_0002200> (has phenotype)
+# Object Property: <http://purl.obolibrary.org/obo/RO_0002200> (<http://purl.obolibrary.org/obo/RO_0002200>)
 
 ObjectPropertyDomain(<http://purl.obolibrary.org/obo/RO_0002200> <http://purl.obolibrary.org/obo/MONDO_0000001>)
 
-# Object Property: <http://purl.obolibrary.org/obo/RO_0002201> (phenotype of)
+# Object Property: <http://purl.obolibrary.org/obo/RO_0002201> (<http://purl.obolibrary.org/obo/RO_0002201>)
 
 ObjectPropertyRange(<http://purl.obolibrary.org/obo/RO_0002201> <http://purl.obolibrary.org/obo/MONDO_0000001>)
 
-# Object Property: <http://purl.obolibrary.org/obo/RO_0004013> (is causal germline mutation in)
+# Object Property: <http://purl.obolibrary.org/obo/RO_0004013> (<http://purl.obolibrary.org/obo/RO_0004013>)
 
 ObjectPropertyRange(<http://purl.obolibrary.org/obo/RO_0004013> <http://purl.obolibrary.org/obo/MONDO_0000001>)
 
@@ -101,11 +108,11 @@ ObjectPropertyDomain(<http://purl.obolibrary.org/obo/RO_0004030> <http://purl.ob
 #   Classes
 ############################
 
-# Class: <http://id.who.int/icd/entity/1621488596> (Neuromusculoskeletal and movement-related functions’)
+# Class: <http://id.who.int/icd/entity/1621488596> (<http://id.who.int/icd/entity/1621488596>)
 
 SubClassOf(<http://id.who.int/icd/entity/1621488596> <http://id.who.int/icd/entity/567313968>)
 
-# Class: <http://id.who.int/icd/entity/1993770860> (Going up and down stairs’)
+# Class: <http://id.who.int/icd/entity/1993770860> (Going up and down stairs)
 
 SubClassOf(<http://id.who.int/icd/entity/1993770860> <http://purl.obolibrary.org/obo/BFO_0000003>)
 
@@ -169,11 +176,23 @@ SubClassOf(<http://purl.obolibrary.org/obo/MONDO_0000001> <http://purl.obolibrar
 
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/PROMOT_0000000> "root node"@en)
 
-# Class: <http://purl.obolibrary.org/obo/PROMOT_0000101> (Patient)
+# Class: <http://purl.obolibrary.org/obo/PROMOT_0000101> (<http://purl.obolibrary.org/obo/PROMOT_0000101>)
 
 SubClassOf(<http://purl.obolibrary.org/obo/PROMOT_0000101> <http://purl.obolibrary.org/obo/BFO_0000040>)
 
-# Class: <http://snomed.info/id/183135000> (Mobility aid (physical object))
+# Class: <http://semanticscience.org/resource/SIO_000475> (biological quality)
+
+SubClassOf(<http://semanticscience.org/resource/SIO_000475> <http://purl.obolibrary.org/obo/BFO_0000019>)
+
+# Class: <http://semanticscience.org/resource/SIO_010029> (biological sex)
+
+SubClassOf(<http://semanticscience.org/resource/SIO_010029> <http://semanticscience.org/resource/SIO_000475>)
+
+# Class: <http://semanticscience.org/resource/SIO_010057> (life status)
+
+SubClassOf(<http://semanticscience.org/resource/SIO_010057> <http://semanticscience.org/resource/SIO_000475>)
+
+# Class: <http://snomed.info/id/183135000> (<http://snomed.info/id/183135000>)
 
 SubClassOf(<http://snomed.info/id/183135000> <http://purl.obolibrary.org/obo/BFO_0000030>)
 
@@ -181,11 +200,11 @@ SubClassOf(<http://snomed.info/id/183135000> <http://purl.obolibrary.org/obo/BFO
 
 SubClassOf(<http://snomed.info/id/273249006> <http://purl.obolibrary.org/obo/BFO_0000015>)
 
-# Class: <http://snomed.info/id/360296002> (Assistive equipment (physical object) )
+# Class: <http://snomed.info/id/360296002> (<http://snomed.info/id/360296002>)
 
 SubClassOf(<http://snomed.info/id/360296002> <http://purl.obolibrary.org/obo/BFO_0000030>)
 
-# Class: <http://snomed.info/id/386053000> (Evaluation procedure (procedure))
+# Class: <http://snomed.info/id/386053000> (<http://snomed.info/id/386053000>)
 
 SubClassOf(<http://snomed.info/id/386053000> <http://purl.obolibrary.org/obo/BFO_0000015>)
 
