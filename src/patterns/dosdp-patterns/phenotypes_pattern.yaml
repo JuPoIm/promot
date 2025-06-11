@@ -8,7 +8,7 @@ contributors:
   - https://orcid.org/0009-0000-5160-7927 # J. Potier
 
 classes:
-  phenotype: HP:0000118
+  phenotypic_abnormality: HP:0000118
   disease: mondo:0000001
   structure: WHOFIC:1626363729
   anatomy: FMA:62955
@@ -34,6 +34,7 @@ vars:
   function: "function"
   structure: "structure"
   source: "source"
+  phenotype: "phenotypic_abnormality"
 
 annotations:
   - annotationProperty: found_in
@@ -43,7 +44,7 @@ annotations:
       
 logical_axioms:
   - axiom_type: equivalentTo
-    text: "'phenotype' and 'phenotype_of' some %s"
+    text: "'phenotypic_abnormality' and 'phenotype_of' some %s"
     vars:
       - disease
   
@@ -58,7 +59,7 @@ logical_axioms:
       - structure
 
   - axiom_type: equivalentTo
-    text: "'phenotype' and 'related_to' some %s"
+    text: "'phenotypic_abnormality' and 'related_to' some %s"
     vars:
       - structure
 
@@ -68,7 +69,7 @@ logical_axioms:
       - function
 
   - axiom_type: equivalentTo
-    text: "'phenotype' and 'related_to' some %s"
+    text: "'phenotypic_abnormality' and 'related_to' some %s"
     vars:
       - function
 
@@ -78,6 +79,6 @@ logical_axioms:
       - anatomy
 
   - axiom_type: equivalentTo
-    text: "'phenotype' and 'has_location' some %s"
+    text: "'phenotypic_abnormality' and 'has_location' some %s"
     vars:
       - anatomy

@@ -46,6 +46,17 @@ imports/whofic_import.owl: mirror/whofic-2024-01-21.owl imports/whofic_terms_com
         collapse --threshold 2 \
         query --update ../sparql/inject-subset-declaration.ru --update ../sparql/postprocess-module.ru \
 		annotate --ontology-iri $(ONTBASE)/$@ $(ANNOTATE_ONTOLOGY_VERSION) --output $@.tmp.owl && mv $@.tmp.owl $@; fi
+# SIO
+imports/sio_import.owl: mirror/sio.owl imports/sio_terms_combined.txt
+	if [ $(IMP) = true ]; then $(ROBOT) filter -i $< -T $(IMPORTDIR)/sio_terms_alone.txt  \
+        --select "self annotations" --signature true \
+		--output $@.tmp.owl; fi
+	if [ $(IMP) = true ]; then $(ROBOT) query -i $< --update ../sparql/preprocess-module.ru \
+		filter -T imports/sio_terms_combined.txt --select "self descendants annotations" --signature true \
+        query --update ../sparql/inject-subset-declaration.ru --update ../sparql/postprocess-module.ru \
+		annotate --ontology-iri $(ONTBASE)/$@ $(ANNOTATE_ONTOLOGY_VERSION) \
+		merge -i $@.tmp.owl \
+		--output $@.tmp.owl && mv $@.tmp.owl $@; fi
 # SNOMED
 imports/snomed_import.owl: mirror/snomed.owl imports/snomed_terms_combined.txt
 	if [ $(IMP) = true ]; then $(ROBOT) filter -i $< -T imports/snomed_terms_combined.txt --select "self parents annotations" --signature true \

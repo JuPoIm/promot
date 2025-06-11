@@ -10,7 +10,7 @@
 # More information: https://github.com/INCATools/ontology-development-kit/
 
 # Fingerprint of the configuration file when this Makefile was last generated
-CONFIG_HASH=                a5172c2fe6c1fbed790a7c1057bfd60ebfc8fad5bc3eed2bbf7179a284ada90c
+CONFIG_HASH=                2dde59b75e04ec9fe5e77cf2165d2e681f232005de508e102bee6fab4d1d27c9
 
 
 # ----------------------------------------
@@ -165,7 +165,7 @@ all_main: $(MAIN_FILES)
 # ----------------------------------------
 
 
-IMPORTS =  bfo bioassay biolink efo fma hp mondo ncit orcidio obi ro scdo snomed so vo whofic
+IMPORTS =  bfo bioassay biolink efo fma hp mondo ncit orcidio obi ro scdo sio snomed so vo whofic
 
 IMPORT_ROOTS = $(patsubst %, $(IMPORTDIR)/%_import, $(IMPORTS))
 IMPORT_OWL_FILES = $(foreach n,$(IMPORT_ROOTS), $(n).owl)
@@ -388,10 +388,6 @@ $(IMPORTDIR)/%_import.owl: $(MIRRORDIR)/%.owl $(IMPORTDIR)/%_terms_combined.txt
 
 $(IMPORTDIR)/bfo_import.owl: $(MIRRORDIR)/bfo.owl
 	echo "ERROR: You have configured your default module type to be custom; this behavior needs to be overwritten in promot.Makefile!" && false
-## Module for ontology: biolink
-
-$(IMPORTDIR)/biolink_import.owl: $(MIRRORDIR)/biolink.owl
-	echo "ERROR: You have configured your default module type to be custom; this behavior needs to be overwritten in promot.Makefile!" && false
 ## Module for ontology: fma
 
 $(IMPORTDIR)/fma_import.owl: $(MIRRORDIR)/fma.owl
@@ -424,6 +420,10 @@ $(IMPORTDIR)/orcidio_import.owl: $(MIRRORDIR)/orcidio.owl $(IMPORTDIR)/orcidio_t
 ## Module for ontology: ro
 
 $(IMPORTDIR)/ro_import.owl: $(MIRRORDIR)/ro.owl
+	echo "ERROR: You have configured your default module type to be custom; this behavior needs to be overwritten in promot.Makefile!" && false
+## Module for ontology: sio
+
+$(IMPORTDIR)/sio_import.owl: $(MIRRORDIR)/sio.owl
 	echo "ERROR: You have configured your default module type to be custom; this behavior needs to be overwritten in promot.Makefile!" && false
 ## Module for ontology: snomed
 
@@ -608,6 +608,14 @@ mirror-ro: | $(TMPDIR)
 mirror-scdo: | $(TMPDIR)
 	curl -L $(OBOBASE)/scdo.owl --create-dirs -o $(TMPDIR)/scdo-download.owl --retry 4 --max-time 200 && \
 	$(ROBOT) convert -i $(TMPDIR)/scdo-download.owl -o $(TMPDIR)/$@.owl
+
+
+## ONTOLOGY: sio
+.PHONY: mirror-sio
+.PRECIOUS: $(MIRRORDIR)/sio.owl
+mirror-sio: | $(TMPDIR)
+	curl -L $(OBOBASE)/sio.owl --create-dirs -o $(TMPDIR)/sio-download.owl --retry 4 --max-time 200 && \
+	$(ROBOT) convert -i $(TMPDIR)/sio-download.owl -o $(TMPDIR)/$@.owl
 
 
 ## ONTOLOGY: snomed

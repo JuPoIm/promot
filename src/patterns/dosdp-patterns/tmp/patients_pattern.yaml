@@ -11,11 +11,12 @@ classes:
   patient: PROMOT:0000101
   gene: SO:0000704
   assistive_equipment: SNOMED:360296002
-  phenotype: HP:0000118
+  phenotypic_abnormality: HP:0000118
+  evaluation_procedure: SNOMED:386053000
 
 relations:
-  is_assessed_by: PROMOT:R000001
-  uses_assistive_equipment: PROMOT:R000002
+  is_assessed_by: PROMOT:2000001
+  uses_assistive_equipment: PROMOT:2000002
   has_phenotype: RO:0002200
   has_gene_mutation: VO:0001039
 
@@ -24,11 +25,11 @@ data_list_vars:
 
 vars:
   patient: "'patient'"
-  phenotype: "'phenotype'"
+  phenotype: "'phenotypic_abnormality'"
   gene: "'gene'"
   aid: "'assistive_equipment'"
+  procedure: "'evaluation_procedure'"
 
-      
 logical_axioms:
  
   - axiom_type: subClassOf
@@ -63,9 +64,9 @@ logical_axioms:
   - axiom_type: subClassOf
     text: "'is_assessed_by' some %s"
     vars:
-      - evaluation_procedure
+      - procedure
       
   - axiom_type: equivalentTo
     text: "'patient' and 'is_assessed_by' some %s"
     vars:
-      - evaluation_procedure
+      - procedure

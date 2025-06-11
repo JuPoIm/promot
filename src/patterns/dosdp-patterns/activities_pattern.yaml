@@ -9,8 +9,8 @@ contributors:
 
 classes:
   activity: WHOFIC:1394728112
-  function: WHOFIC:567313968
   structure: WHOFIC:1626363729
+  function: WHOFIC:567313968
 
 relations:
   affected_by: BIOLINK:affected_by
@@ -19,9 +19,9 @@ data_list_vars:
   orcid: xsd:anyURI
 
 vars:
-  function: "'function'"
-  structure: "'structure'"
   activity: "'activity'"
+  structure: "'structure'"
+  function: "'function'"
       
 logical_axioms:
   - axiom_type: equivalentTo
@@ -40,6 +40,6 @@ logical_axioms:
       - structure
   
   - axiom_type: subClassOf
-    text: "'affected_by some %s"
+    text: "'affected_by' some %s"
     vars:
       - structure
