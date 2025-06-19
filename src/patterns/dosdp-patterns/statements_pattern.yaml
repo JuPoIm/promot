@@ -1,0 +1,31 @@
+pattern_name: statements_pattern
+
+pattern_iri: statements_pattern.yaml
+
+description: "Use this template to link the statements to the related demographic history details."
+
+contributors:
+  - https://orcid.org/0009-0000-5160-7927 # J. Potier
+
+classes:
+  demographic_history_detail: http://snomed.info/id/302147001
+  statements: PROMOT:5000001
+
+relations:
+  has_member: RO:0002351
+
+data_list_vars:
+  orcid: xsd:anyURI
+
+vars:
+  demographic: "demographic_history_detail"
+
+# equivalentTo:
+#   text: "'gene' and 'is_causal_germline_mutation_in' some %s"
+#   vars:
+#     - disease
+
+subClassOf:
+  text: "'has_member' some %s"
+  vars:
+    - demographic

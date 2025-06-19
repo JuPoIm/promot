@@ -11,13 +11,13 @@
      xmlns:dcterms="http://purl.org/dc/terms/"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/promot/promot-base.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/promot/releases/2025-05-27/promot-base.owl"/>
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/promot/releases/2025-06-19/promot-base.owl"/>
         <dce:type rdf:resource="http://purl.obolibrary.org/obo/IAO_8000001"/>
         <dcterms:description>Ontology for building the relational database of the PROMOT project</dcterms:description>
         <dcterms:license rdf:resource="https://creativecommons.org/licenses/unspecified"/>
         <dcterms:title>PROMOT Common Data Model ontology</dcterms:title>
-        <oboInOwl:date>27:05:2025 11:44</oboInOwl:date>
-        <owl:versionInfo>2025-05-27</owl:versionInfo>
+        <oboInOwl:date>19:06:2025 10:34</oboInOwl:date>
+        <owl:versionInfo>2025-06-19</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -36,6 +36,22 @@
     <!-- http://purl.obolibrary.org/obo/IAO_0000115 -->
 
     <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000115"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000117 -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000117"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROMOT_1000001 -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/PROMOT_1000001">
+        <obo:IAO_0000115>SIO:000475</obo:IAO_0000115>
+        <obo:IAO_0000117>Juliette POTIER</obo:IAO_0000117>
+        <rdfs:label>found in</rdfs:label>
+    </owl:AnnotationProperty>
     
 
 
@@ -80,31 +96,63 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/PROMOT_2000001 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/PROMOT_2000001">
+        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/HP_0000118"/>
+        <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/FMA_62955"/>
+        <obo:IAO_0000115>a relation between a phenotype and an anatomical entity, where the anatomical entity is the location of the phenotype.</obo:IAO_0000115>
+        <obo:IAO_0000117>Juliette POTIER</obo:IAO_0000117>
+        <rdfs:label>has location</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROMOT_2000002 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/PROMOT_2000002">
+        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/PROMOT_3000101"/>
+        <rdfs:range rdf:resource="http://snomed.info/id/360296002"/>
+        <obo:IAO_0000115>a relation between a human and an device, where the device is an assistive equipment used by the human in order to move or to accomplish something, such as a task or an activity.</obo:IAO_0000115>
+        <obo:IAO_0000117>Juliette POTIER</obo:IAO_0000117>
+        <rdfs:label>uses assistive equipment</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROMOT_2000003 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/PROMOT_2000003">
+        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/PROMOT_3000101"/>
+        <rdfs:range rdf:resource="http://snomed.info/id/386053000"/>
+        <obo:IAO_0000115>a relation between a human and an evaluation procedure, where the human is assessed by an evaluation procedure, such as a test, a questionnaire or a scale.</obo:IAO_0000115>
+        <obo:IAO_0000117>Juliette POTIER</obo:IAO_0000117>
+        <rdfs:label>is assessed by</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0002200 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0002200"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0002351 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0002351"/>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/RO_0004013 -->
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0004013"/>
     
 
 
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Data properties
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
+    <!-- http://purl.obolibrary.org/obo/VO_0001039 -->
 
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/PROMOT_property-1 -->
-
-    <owl:DatatypeProperty rdf:about="http://purl.obolibrary.org/obo/PROMOT_property-1">
-        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0000101"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
-        <obo:IAO_0000115>Age of an individual</obo:IAO_0000115>
-        <rdfs:label>age in years</rdfs:label>
-    </owl:DatatypeProperty>
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/VO_0001039"/>
     
 
 
@@ -119,15 +167,21 @@
     
 
 
-    <!-- http://purl.obolibrary.org/obo/BFO_0000031 -->
+    <!-- http://purl.obolibrary.org/obo/FMA_62955 -->
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000031"/>
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_62955"/>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/BFO_0000040 -->
+    <!-- http://purl.obolibrary.org/obo/HP_0000118 -->
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000040"/>
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0000118"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000030 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IAO_0000030"/>
     
 
 
@@ -160,7 +214,7 @@
     <!-- http://purl.obolibrary.org/obo/PROMOT_0000001 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0000001">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000031"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0000704"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0004013"/>
@@ -175,7 +229,7 @@
     <!-- http://purl.obolibrary.org/obo/PROMOT_0000002 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0000002">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000031"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0000704"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0004013"/>
@@ -190,7 +244,7 @@
     <!-- http://purl.obolibrary.org/obo/PROMOT_0000003 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0000003">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000031"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0000704"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0004013"/>
@@ -205,7 +259,7 @@
     <!-- http://purl.obolibrary.org/obo/PROMOT_0000004 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0000004">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000031"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0000704"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0004013"/>
@@ -220,7 +274,7 @@
     <!-- http://purl.obolibrary.org/obo/PROMOT_0000005 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0000005">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000031"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0000704"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0004013"/>
@@ -235,7 +289,7 @@
     <!-- http://purl.obolibrary.org/obo/PROMOT_0000006 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0000006">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000031"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0000704"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0004013"/>
@@ -250,7 +304,7 @@
     <!-- http://purl.obolibrary.org/obo/PROMOT_0000007 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0000007">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000031"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0000704"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0004013"/>
@@ -265,7 +319,7 @@
     <!-- http://purl.obolibrary.org/obo/PROMOT_0000008 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0000008">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000031"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0000704"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0004013"/>
@@ -280,7 +334,7 @@
     <!-- http://purl.obolibrary.org/obo/PROMOT_0000009 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0000009">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000031"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0000704"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0004013"/>
@@ -295,7 +349,7 @@
     <!-- http://purl.obolibrary.org/obo/PROMOT_0000010 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0000010">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000031"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0000704"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0004013"/>
@@ -310,7 +364,7 @@
     <!-- http://purl.obolibrary.org/obo/PROMOT_0000011 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0000011">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000031"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0000704"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0004013"/>
@@ -325,7 +379,7 @@
     <!-- http://purl.obolibrary.org/obo/PROMOT_0000012 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0000012">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000031"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0000704"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0004013"/>
@@ -340,7 +394,7 @@
     <!-- http://purl.obolibrary.org/obo/PROMOT_0000013 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0000013">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000031"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0000704"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0004013"/>
@@ -352,13 +406,235 @@
     
 
 
-    <!-- http://purl.obolibrary.org/obo/PROMOT_0000101 -->
+    <!-- http://purl.obolibrary.org/obo/PROMOT_3000101 -->
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0000101">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000040"/>
-        <obo:IAO_0000115>personne faisant partie de l’étude PROMOT</obo:IAO_0000115>
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_3000101">
+        <rdfs:subClassOf rdf:resource="http://snomed.info/id/337915000"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROMOT_2000002"/>
+                <owl:someValuesFrom rdf:resource="http://snomed.info/id/360296002"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROMOT_2000003"/>
+                <owl:someValuesFrom rdf:resource="http://snomed.info/id/386053000"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002200"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/HP_0000118"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/VO_0001039"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/SO_0000704"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000115>Participant à l’étude PROMOT</obo:IAO_0000115>
         <rdfs:label>Patient</rdfs:label>
     </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROMOT_5000001 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_5000001">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
+        <rdfs:label>Patient statement</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROMOT_5000002 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_5000002">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_5000001"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002351"/>
+                <owl:someValuesFrom rdf:resource="http://snomed.info/id/184100006"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label>Biological sex statement</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROMOT_5000003 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_5000003">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_5000001"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002351"/>
+                <owl:someValuesFrom rdf:resource="http://snomed.info/id/125680007"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label>Marital status statement</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROMOT_5000004 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_5000004">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_5000001"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002351"/>
+                <owl:someValuesFrom rdf:resource="http://snomed.info/id/184104002"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label>Occupation statement</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROMOT_5000005 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_5000005">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_5000001"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002351"/>
+                <owl:someValuesFrom rdf:resource="http://snomed.info/id/186034007"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label>Ethnicity statement</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROMOT_5000006 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_5000006">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_5000001"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002351"/>
+                <owl:someValuesFrom rdf:resource="http://snomed.info/id/184099003"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label>Date of birth statement</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROMOT_5000007 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_5000007">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_5000001"/>
+        <rdfs:label>Date of death statement</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROMOT_5000008 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_5000008">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_5000001"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002351"/>
+                <owl:someValuesFrom rdf:resource="http://snomed.info/id/224326003"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label>Achieved qualification statement</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROMOT_5000009 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_5000009">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_5000001"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002351"/>
+                <owl:someValuesFrom rdf:resource="http://snomed.info/id/224288002"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label>Duration of formal education statement</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROMOT_5000010 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_5000010">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
+        <rdfs:label>Patient identifier</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SO_0000704 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SO_0000704"/>
+    
+
+
+    <!-- http://snomed.info/id/125680007 -->
+
+    <owl:Class rdf:about="http://snomed.info/id/125680007"/>
+    
+
+
+    <!-- http://snomed.info/id/184099003 -->
+
+    <owl:Class rdf:about="http://snomed.info/id/184099003"/>
+    
+
+
+    <!-- http://snomed.info/id/184100006 -->
+
+    <owl:Class rdf:about="http://snomed.info/id/184100006"/>
+    
+
+
+    <!-- http://snomed.info/id/184104002 -->
+
+    <owl:Class rdf:about="http://snomed.info/id/184104002"/>
+    
+
+
+    <!-- http://snomed.info/id/186034007 -->
+
+    <owl:Class rdf:about="http://snomed.info/id/186034007"/>
+    
+
+
+    <!-- http://snomed.info/id/224288002 -->
+
+    <owl:Class rdf:about="http://snomed.info/id/224288002"/>
+    
+
+
+    <!-- http://snomed.info/id/224326003 -->
+
+    <owl:Class rdf:about="http://snomed.info/id/224326003"/>
+    
+
+
+    <!-- http://snomed.info/id/337915000 -->
+
+    <owl:Class rdf:about="http://snomed.info/id/337915000"/>
+    
+
+
+    <!-- http://snomed.info/id/360296002 -->
+
+    <owl:Class rdf:about="http://snomed.info/id/360296002"/>
+    
+
+
+    <!-- http://snomed.info/id/386053000 -->
+
+    <owl:Class rdf:about="http://snomed.info/id/386053000"/>
     
 
 
@@ -373,11 +649,12 @@
     
 
 
-    <!-- http://purl.obolibrary.org/obo/PROMOT_0000100 -->
+    <!-- http://purl.obolibrary.org/obo/PROMOT_I000001 -->
 
-    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/PROMOT_0000100">
-        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0000101"/>
-        <rdfs:label>Individu test</rdfs:label>
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/PROMOT_I000001">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/PROMOT_3000101"/>
+        <obo:IAO_0000115>Test individual</obo:IAO_0000115>
+        <rdfs:label>Patient_Test</rdfs:label>
     </owl:NamedIndividual>
 </rdf:RDF>
 

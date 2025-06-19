@@ -1,6 +1,6 @@
 pattern_name: relations_pattern
 
-pattern_iri: http://purl.obolibrary.org/obo/promot/patterns/gene_disease_pattern.yaml
+pattern_iri: procedures_pattern.yaml
 
 description: "Use this template to link the evaluation procedures to the body functions, structures and activities they measure."
 
@@ -8,10 +8,10 @@ contributors:
   - https://orcid.org/0009-0000-5160-7927 # J. Potier
 
 classes:
-  function: WHOFIC:567313968
-  structure: WHOFIC:1626363729
-  activity: WHOFIC:1394728112
-  evaluation_procedure: SNOMED:386053000
+  function: http://id.who.int/icd/entity/567313968
+  structure: http://id.who.int/icd/entity/1626363729
+  activity: http://id.who.int/icd/entity/1394728112
+  evaluation_procedure: http://snomed.info/id/386053000
 
 relations:
   measures: SCDO:1000194
@@ -26,30 +26,30 @@ vars:
   activity: "activity"
       
 logical_axioms:
-  - axiom_type: equivalentTo
-    text: "'evaluation_procedure' and 'measures' some %s"
-    vars:
-      - function
+  # - axiom_type: equivalentTo
+  #   text: "'evaluation_procedure' and 'measures' some %s"
+  #   vars:
+  #     - function
 
   - axiom_type: subClassOf
     text: "'measures' some %s"
     vars:
       - function
 
-  - axiom_type: equivalentTo
-    text: "'evaluation_procedure' and 'measures' some %s"
-    vars:
-      - structure
+  # - axiom_type: equivalentTo
+  #   text: "'evaluation_procedure' and 'measures' some %s"
+  #   vars:
+  #     - structure
 
   - axiom_type: subClassOf
     text: "'measures' some %s"
     vars:
       - structure
 
-  - axiom_type: equivalentTo
-    text: "'evaluation_procedure' and 'measures' some %s"
-    vars:
-      - activity
+  # - axiom_type: equivalentTo
+  #   text: "'evaluation_procedure' and 'measures' some %s"
+  #   vars:
+  #     - activity
 
   - axiom_type: subClassOf
     text: "'measures' some %s"
