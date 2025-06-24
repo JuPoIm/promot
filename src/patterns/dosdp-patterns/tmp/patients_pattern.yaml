@@ -19,9 +19,6 @@ classes:
 relations:
   uses_assistive_equipment:	PROMOT:2000002
   is_assessed_by:	PROMOT:2000003
-  has_date_of_birth:	PROMOT:2000004
-  has_date_of_death:	PROMOT:2000005
-  has_age_in_year:	PROMOT:2000007
   has_gene_mutation:	VO:0001039
   has_quality:	SIO:000217
   has_phenotype:	RO:0002200
@@ -31,13 +28,29 @@ data_list_vars:
 
 vars:
   disease: "disease"
-
-equivalentTo:
-  text: "'gene' and 'is_causal_germline_mutation_in' some %s"
-  vars:
-    - disease
+  gene : "gene"
 
 subClassOf:
-  text: "'is_causal_germline_mutation_in' some %s"
+  text: "'has_gene_mutation' some %s"
   vars:
-    - disease
+    - gene
+
+subClassOf:
+  text: "'is_assessed_by' some %s"
+  vars:
+    - evaluation_procedure
+
+subClassOf:
+  text: "'uses_assistive_equipment' some %s"
+  vars:
+    - assistive_equipment
+
+subClassOf:
+  text: "'has_quality' some %s"
+  vars:
+    - quality
+
+subClassOf:
+  text: "'has_phenotype' some %s"
+  vars:
+    - phenotype

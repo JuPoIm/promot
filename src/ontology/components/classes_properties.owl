@@ -7,15 +7,15 @@ Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
 
 
 Ontology(<http://purl.obolibrary.org/obo/promot/components/classes_properties.owl>
-<http://purl.obolibrary.org/obo/promot/releases/2025-06-19/components/classes_properties.owl>
-Annotation(owl:versionInfo "2025-06-19")
+<http://purl.obolibrary.org/obo/promot/releases/2025-06-24/components/classes_properties.owl>
+Annotation(owl:versionInfo "2025-06-24")
 
 Declaration(Class(<http://id.who.int/icd/entity/1394728112>))
 Declaration(Class(<http://id.who.int/icd/entity/1626363729>))
 Declaration(Class(<http://id.who.int/icd/entity/423829389>))
 Declaration(Class(<http://id.who.int/icd/entity/567313968>))
-Declaration(Class(<http://purl.obolibrary.org/obo/BFO_0000003>))
 Declaration(Class(<http://purl.obolibrary.org/obo/BFO_0000015>))
+Declaration(Class(<http://purl.obolibrary.org/obo/BFO_0000016>))
 Declaration(Class(<http://purl.obolibrary.org/obo/BFO_0000019>))
 Declaration(Class(<http://purl.obolibrary.org/obo/BFO_0000028>))
 Declaration(Class(<http://purl.obolibrary.org/obo/BFO_0000031>))
@@ -25,8 +25,6 @@ Declaration(Class(<http://purl.obolibrary.org/obo/FMA_62955>))
 Declaration(Class(<http://purl.obolibrary.org/obo/HP_0000118>))
 Declaration(Class(<http://purl.obolibrary.org/obo/IAO_0000030>))
 Declaration(Class(<http://purl.obolibrary.org/obo/MONDO_0000001>))
-Declaration(Class(<http://purl.obolibrary.org/obo/NCIT_C13442>))
-Declaration(Class(<http://purl.obolibrary.org/obo/NCIT_C73706>))
 Declaration(Class(<http://purl.obolibrary.org/obo/PROMOT_0000001>))
 Declaration(Class(<http://purl.obolibrary.org/obo/PROMOT_0000002>))
 Declaration(Class(<http://purl.obolibrary.org/obo/PROMOT_0000003>))
@@ -52,7 +50,9 @@ Declaration(Class(<http://purl.obolibrary.org/obo/PROMOT_5000008>))
 Declaration(Class(<http://purl.obolibrary.org/obo/PROMOT_5000009>))
 Declaration(Class(<http://purl.obolibrary.org/obo/PROMOT_5000010>))
 Declaration(Class(<http://purl.obolibrary.org/obo/SO_0000704>))
-Declaration(Class(<http://snomed.info/id/160476009>))
+Declaration(Class(<http://semanticscience.org/resource/SIO_000475>))
+Declaration(Class(<http://semanticscience.org/resource/SIO_000498>))
+Declaration(Class(<http://semanticscience.org/resource/SIO_001209>))
 Declaration(Class(<http://snomed.info/id/302147001>))
 Declaration(Class(<http://snomed.info/id/337915000>))
 Declaration(Class(<http://snomed.info/id/360296002>))
@@ -63,6 +63,8 @@ Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/PROMOT_2000003>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002200>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002351>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/VO_0001039>))
+Declaration(ObjectProperty(<http://semanticscience.org/resource/SIO_000217>))
+Declaration(ObjectProperty(<http://semanticscience.org/resource/SIO_000671>))
 Declaration(ObjectProperty(<https://w3id.org/biolink/vocab/affected_by>))
 Declaration(ObjectProperty(<https://w3id.org/biolink/vocab/affects>))
 Declaration(ObjectProperty(<https://w3id.org/biolink/vocab/related_to>))
@@ -158,21 +160,13 @@ SubClassOf(<http://id.who.int/icd/entity/423829389> <http://purl.obolibrary.org/
 
 SubClassOf(<http://id.who.int/icd/entity/567313968> <http://purl.obolibrary.org/obo/BFO_0000034>)
 
-# Class: <http://purl.obolibrary.org/obo/BFO_0000015> (process)
-
-SubClassOf(<http://purl.obolibrary.org/obo/BFO_0000015> <http://purl.obolibrary.org/obo/BFO_0000003>)
-
 # Class: <http://purl.obolibrary.org/obo/FMA_62955> (Anatomical entity)
 
 SubClassOf(<http://purl.obolibrary.org/obo/FMA_62955> <http://purl.obolibrary.org/obo/BFO_0000040>)
 
-# Class: <http://purl.obolibrary.org/obo/NCIT_C13442> (<http://purl.obolibrary.org/obo/NCIT_C13442>)
+# Class: <http://purl.obolibrary.org/obo/HP_0000118> (Phenotypic abnormality)
 
-SubClassOf(<http://purl.obolibrary.org/obo/NCIT_C13442> <http://purl.obolibrary.org/obo/BFO_0000019>)
-
-# Class: <http://purl.obolibrary.org/obo/NCIT_C73706> (<http://purl.obolibrary.org/obo/NCIT_C73706>)
-
-SubClassOf(<http://purl.obolibrary.org/obo/NCIT_C73706> <http://purl.obolibrary.org/obo/BFO_0000019>)
+SubClassOf(<http://purl.obolibrary.org/obo/HP_0000118> <http://purl.obolibrary.org/obo/BFO_0000016>)
 
 # Class: <http://purl.obolibrary.org/obo/PROMOT_0000001> (PABPN1)
 
@@ -247,6 +241,7 @@ SubClassOf(<http://purl.obolibrary.org/obo/PROMOT_3000101> ObjectSomeValuesFrom(
 SubClassOf(<http://purl.obolibrary.org/obo/PROMOT_3000101> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PROMOT_2000003> <http://snomed.info/id/386053000>))
 SubClassOf(<http://purl.obolibrary.org/obo/PROMOT_3000101> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002200> <http://purl.obolibrary.org/obo/HP_0000118>))
 SubClassOf(<http://purl.obolibrary.org/obo/PROMOT_3000101> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/VO_0001039> <http://purl.obolibrary.org/obo/SO_0000704>))
+SubClassOf(<http://purl.obolibrary.org/obo/PROMOT_3000101> ObjectSomeValuesFrom(<http://semanticscience.org/resource/SIO_000217> <http://semanticscience.org/resource/SIO_000475>))
 
 # Class: <http://purl.obolibrary.org/obo/PROMOT_5000001> (Patient statement)
 
@@ -302,10 +297,22 @@ SubClassOf(<http://purl.obolibrary.org/obo/PROMOT_5000010> <http://purl.obolibra
 
 SubClassOf(<http://purl.obolibrary.org/obo/SO_0000704> <http://purl.obolibrary.org/obo/BFO_0000031>)
 
-# Class: <http://snomed.info/id/302147001> (Demographic history detail (observable entity))
+# Class: <http://semanticscience.org/resource/SIO_000475> (biological quality)
+
+SubClassOf(<http://semanticscience.org/resource/SIO_000475> <http://purl.obolibrary.org/obo/BFO_0000019>)
+
+# Class: <http://semanticscience.org/resource/SIO_000498> (person)
+
+SubClassOf(<http://semanticscience.org/resource/SIO_000498> <http://purl.obolibrary.org/obo/BFO_0000040>)
+
+# Class: <http://semanticscience.org/resource/SIO_001209> (assertional qualifier)
+
+SubClassOf(<http://semanticscience.org/resource/SIO_001209> <http://purl.obolibrary.org/obo/BFO_0000019>)
+
+# Class: <http://snomed.info/id/302147001> (Demographic history detail )
 
 AnnotationAssertion(rdfs:label <http://snomed.info/id/302147001> "Demographic history detail ")
-SubClassOf(<http://snomed.info/id/302147001> <http://snomed.info/id/160476009>)
+SubClassOf(<http://snomed.info/id/302147001> <http://purl.obolibrary.org/obo/IAO_0000030>)
 
 # Class: <http://snomed.info/id/337915000> (Homo sapiens (organism))
 

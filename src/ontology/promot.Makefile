@@ -56,7 +56,7 @@ imports/whofic_import.owl: mirror/whofic-2024-01-21.owl imports/whofic_terms_com
         --select "self descendants annotations" --signature true \
 		--output $@.tmp.owl; fi
 	if [ $(IMP) = true ]; then $(ROBOT) query -i $< --update ../sparql/preprocess-module.ru \
-		filter -T imports/whofic_terms.txt --select "self ancestors annotations" --signature true \
+		filter -T imports/whofic_terms.txt --select "self ancestors annotations" --exclude-term imports/whofic_exclude_terms.txt --signature true \
         collapse --threshold 2 \
         query --update ../sparql/inject-subset-declaration.ru --update ../sparql/postprocess-module.ru \
 		annotate --ontology-iri $(ONTBASE)/$@ $(ANNOTATE_ONTOLOGY_VERSION) \
