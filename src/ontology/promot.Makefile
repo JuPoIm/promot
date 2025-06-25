@@ -12,7 +12,7 @@ imports/bfo_import.owl: mirror/bfo.owl imports/bfo_terms_combined.txt
 # MONDO
 imports/mondo_import.owl: mirror/mondo.owl imports/mondo_terms_combined.txt
 	if [ $(IMP) = true ]; then $(ROBOT) query -i $< --update ../sparql/preprocess-module.ru \
-		filter -T imports/mondo_terms_combined.txt --select "self annotations" --signature true \
+		filter -T imports/mondo_terms_combined.txt --select "self annotations" --exclude-terms imports/hp_terms.txt --signature true \
         query --update ../sparql/inject-subset-declaration.ru --update ../sparql/postprocess-module.ru \
 		annotate --ontology-iri $(ONTBASE)/$@ $(ANNOTATE_ONTOLOGY_VERSION) --output $@.tmp.owl && mv $@.tmp.owl $@; fi
 # FMA
@@ -30,19 +30,15 @@ imports/fma_import.owl: mirror/fma.owl imports/fma_terms_combined.txt
 imports/hp_import.owl: mirror/hp.owl imports/hp_terms_combined.txt
 	if [ $(IMP) = true ]; then $(ROBOT) query -i $< --update ../sparql/preprocess-module.ru \
 		filter -T imports/hp_terms.txt --select "self ancestors annotations" --signature true \
-        collapse --threshold 2 \
+        collapse --threshold 2 --precious-terms imports/hp_terms.txt \
         query --update ../sparql/inject-subset-declaration.ru --update ../sparql/postprocess-module.ru \
 		annotate --ontology-iri $(ONTBASE)/$@ $(ANNOTATE_ONTOLOGY_VERSION) --output $@.tmp.owl && mv $@.tmp.owl $@; fi
 # NCIT
 imports/ncit_import.owl: mirror/ncit.owl imports/ncit_terms_combined.txt
-	if [ $(IMP) = true ]; then $(ROBOT) filter -i $< -T $(IMPORTDIR)/ncit_terms.txt  \
-        --select "self annotations" --signature true \
-		--output $@.tmp.owl; fi
 	if [ $(IMP) = true ]; then $(ROBOT) query -i $< --update ../sparql/preprocess-module.ru \
-		filter -T imports/ncit_terms_descendants.txt --select "self descendants annotations" --signature true \
+		filter -T imports/ncit_terms.txt --select "self annotations" --signature true \
         query --update ../sparql/inject-subset-declaration.ru --update ../sparql/postprocess-module.ru \
 		annotate --ontology-iri $(ONTBASE)/$@ $(ANNOTATE_ONTOLOGY_VERSION) \
-		merge -i $@.tmp.owl \
 		--output $@.tmp.owl && mv $@.tmp.owl $@; fi
 # RO
 imports/ro_import.owl: mirror/ro.owl imports/ro_terms_combined.txt
@@ -56,8 +52,9 @@ imports/whofic_import.owl: mirror/whofic-2024-01-21.owl imports/whofic_terms_com
         --select "self descendants annotations" --signature true \
 		--output $@.tmp.owl; fi
 	if [ $(IMP) = true ]; then $(ROBOT) query -i $< --update ../sparql/preprocess-module.ru \
-		filter -T imports/whofic_terms.txt --select "self ancestors annotations" --exclude-term imports/whofic_exclude_terms.txt --signature true \
-        collapse --threshold 2 \
+		filter -T imports/whofic_terms.txt --select "self ancestors annotations" --signature true \
+		remove -T imports/whofic_exclude_terms.txt --select "self annotations" --signature true \
+        collapse --threshold 2 --precious-terms imports/whofic_terms_combined.txt \
         query --update ../sparql/inject-subset-declaration.ru --update ../sparql/postprocess-module.ru \
 		annotate --ontology-iri $(ONTBASE)/$@ $(ANNOTATE_ONTOLOGY_VERSION) \
 		merge -i $@.tmp.owl \
