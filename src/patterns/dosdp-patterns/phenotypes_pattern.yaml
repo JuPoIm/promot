@@ -1,6 +1,6 @@
 pattern_name: phenotypes_pattern
 
-pattern_iri: http://purl.obolibrary.org/obo/promot/patterns/gene_disease_pattern.yaml
+pattern_iri: phenotypes_pattern.yaml
 
 description: "Use this template to link the phenotypes to the relevant patient, body function, body structure, anatomy and diseases."
 
@@ -9,18 +9,18 @@ contributors:
 
 classes:
   phenotypic_abnormality: HP:0000118
-  disease: mondo:0000001
-  structure: WHOFIC:1626363729
+  disease: MONDO:0000001
+  structure: http://id.who.int/icd/entity/1626363729
   anatomy: FMA:62955
-  function: WHOFIC:567313968
+  function: http://id.who.int/icd/entity/567313968
 
 relations:
   phenotype_of: RO:0002201
-  related_to: BIOLINK:related_to
-  has_location: PROMOT:R000003
+  related_to: https://w3id.org/biolink/vocab/related_to
+  has_location: PROMOT:2000001
 
 annotationProperties:
-  found_in: PROMOT:A000001
+  found_in: PROMOT:1000001
 
 data_list_vars:
   orcid: xsd:anyURI
@@ -38,15 +38,15 @@ vars:
 
 annotations:
   - annotationProperty: found_in
-    text: "found in %s"
+    text: "%s"
     vars:
       - source
       
 logical_axioms:
-  - axiom_type: equivalentTo
-    text: "'phenotypic_abnormality' and 'phenotype_of' some %s"
-    vars:
-      - disease
+  # - axiom_type: equivalentTo
+  #   text: "'phenotypic_abnormality' and 'phenotype_of' some %s"
+  #   vars:
+  #     - disease
   
   - axiom_type: subClassOf
     text: "'phenotype_of' some %s"
@@ -58,27 +58,27 @@ logical_axioms:
     vars:
       - structure
 
-  - axiom_type: equivalentTo
-    text: "'phenotypic_abnormality' and 'related_to' some %s"
-    vars:
-      - structure
+  # - axiom_type: equivalentTo
+  #   text: "'phenotypic_abnormality' and 'related_to' some %s"
+  #   vars:
+  #     - structure
 
   - axiom_type: subClassOf
     text: "'related_to' some %s"
     vars:
       - function
 
-  - axiom_type: equivalentTo
-    text: "'phenotypic_abnormality' and 'related_to' some %s"
-    vars:
-      - function
+  # - axiom_type: equivalentTo
+  #   text: "'phenotypic_abnormality' and 'related_to' some %s"
+  #   vars:
+  #     - function
 
   - axiom_type: subClassOf
     text: "'has_location' some %s"
     vars:
       - anatomy
 
-  - axiom_type: equivalentTo
-    text: "'phenotypic_abnormality' and 'has_location' some %s"
-    vars:
-      - anatomy
+  # - axiom_type: equivalentTo
+  #   text: "'phenotypic_abnormality' and 'has_location' some %s"
+  #   vars:
+  #     - anatomy

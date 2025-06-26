@@ -1,6 +1,6 @@
 pattern_name: genes_pattern
 
-pattern_iri: http://purl.obolibrary.org/obo/promot/patterns/gene_disease_pattern.yaml
+pattern_iri: genes_pattern.yaml
 
 description: "Use this template to link the genes to the related diseases."
 
@@ -9,7 +9,7 @@ contributors:
 
 classes:
   gene: SO:0000704
-  disease: mondo:0000001
+  disease: MONDO:0000001
 
 relations:
   is_causal_germline_mutation_in: RO:0004013
@@ -20,10 +20,10 @@ data_list_vars:
 vars:
   disease: "disease"
 
-equivalentTo:
-  text: "'gene' and 'is_causal_germline_mutation_in' some %s"
-  vars:
-    - disease
+# equivalentTo:
+#   text: "'gene' and 'is_causal_germline_mutation_in' some %s"
+#   vars:
+#     - disease
 
 subClassOf:
   text: "'is_causal_germline_mutation_in' some %s"

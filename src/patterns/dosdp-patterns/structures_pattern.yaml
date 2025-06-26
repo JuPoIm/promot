@@ -1,6 +1,6 @@
 pattern_name: structures_pattern
 
-pattern_iri: http://purl.obolibrary.org/obo/promot/patterns/gene_disease_pattern.yaml
+pattern_iri: structures_pattern.yaml
 
 description: "Use this template to link the body structures to the body functions and activities they affect."
 
@@ -8,14 +8,14 @@ contributors:
   - https://orcid.org/0009-0000-5160-7927 # J. Potier
 
 classes:
-  structure: WHOFIC:1626363729
-  function: WHOFIC:567313968
-  activity: WHOFIC:1394728112
-  disease: mondo:0000001
+  structure: http://id.who.int/icd/entity/1626363729
+  function: http://id.who.int/icd/entity/567313968
+  activity: http://id.who.int/icd/entity/1394728112
+  disease: MONDO:0000001
 
 relations:
-  affects: BIOLINK:affects
-  affected_by: BIOLINK:affected_by
+  affects: https://w3id.org/biolink/vocab/affects
+  affected_by: https://w3id.org/biolink/vocab/affected_by
 
 data_list_vars:
   orcid: xsd:anyURI
@@ -27,30 +27,30 @@ vars:
   activity: "'activity'"
 
 logical_axioms:
-  - axiom_type: equivalentTo
-    text: "'structure' and 'affects' some %s"
-    vars:
-      - activity
+  # - axiom_type: equivalentTo
+  #   text: "'structure' and 'affects' some %s"
+  #   vars:
+  #     - activity
 
   - axiom_type: subClassOf
     text: "'affects' some %s"
     vars:
       - activity
 
-  - axiom_type: equivalentTo
-    text: "'structure' and 'affects' some %s"
-    vars:
-      - function
+  # - axiom_type: equivalentTo
+  #   text: "'structure' and 'affects' some %s"
+  #   vars:
+  #     - function
 
   - axiom_type: subClassOf
     text: "'affects' some %s"
     vars:
       - function
 
-  - axiom_type: equivalentTo
-    text: "'structure' and 'affected_by' some %s"
-    vars:
-      - disease
+  # - axiom_type: equivalentTo
+  #   text: "'structure' and 'affected_by' some %s"
+  #   vars:
+  #     - disease
   
   - axiom_type: subClassOf
     text: "'affected_by' some %s"

@@ -10,7 +10,7 @@
 # More information: https://github.com/INCATools/ontology-development-kit/
 
 # Fingerprint of the configuration file when this Makefile was last generated
-CONFIG_HASH=                2dde59b75e04ec9fe5e77cf2165d2e681f232005de508e102bee6fab4d1d27c9
+CONFIG_HASH=                09f8716a984bbebf3dc3ece2a46c16e79aeffe2e3a2eec341e493cbb99a625ce
 
 
 # ----------------------------------------
@@ -54,7 +54,7 @@ OBODATE ?=                  $(shell date +'%d:%m:%Y %H:%M')
 VERSION=                    $(TODAY)
 ANNOTATE_ONTOLOGY_VERSION = annotate -V $(ONTBASE)/releases/$(VERSION)/$@ --annotation owl:versionInfo $(VERSION)
 ANNOTATE_CONVERT_FILE =     annotate --ontology-iri $(ONTBASE)/$@ $(ANNOTATE_ONTOLOGY_VERSION) convert -f ofn --output $@.tmp.owl && mv $@.tmp.owl $@
-OTHER_SRC =                 $(PATTERNDIR)/definitions.owl $(COMPONENTSDIR)/PROMOT_classes_relations.owl 
+OTHER_SRC =                 $(PATTERNDIR)/definitions.owl $(COMPONENTSDIR)/classes_properties.owl 
 ONTOLOGYTERMS =             $(TMPDIR)/ontologyterms.txt
 EDIT_PREPROCESSED =         $(TMPDIR)/$(ONT)-preprocess.owl
 PATTERNDIR=                 ../patterns
@@ -165,7 +165,7 @@ all_main: $(MAIN_FILES)
 # ----------------------------------------
 
 
-IMPORTS =  bfo bioassay biolink efo fma hp mondo ncit orcidio obi ro scdo sio snomed so vo whofic
+IMPORTS =  bfo biolink fma hp iao mondo ncit orcidio ro scdo sio snomed so vo whofic
 
 IMPORT_ROOTS = $(patsubst %, $(IMPORTDIR)/%_import, $(IMPORTS))
 IMPORT_OWL_FILES = $(foreach n,$(IMPORT_ROOTS), $(n).owl)
@@ -376,37 +376,39 @@ $(IMPORTDIR)/%_terms_combined.txt: $(IMPORTSEED) $(IMPORTDIR)/%_terms.txt
 
 
 
-$(IMPORTDIR)/%_import.owl: $(MIRRORDIR)/%.owl $(IMPORTDIR)/%_terms_combined.txt
-	if [ $(IMP) = true ]; then $(ROBOT) query -i $< --update ../sparql/preprocess-module.ru \
-		extract -T $(IMPORTDIR)/$*_terms_combined.txt --force true --copy-ontology-annotations true --individuals include --method BOT \
-		query --update ../sparql/inject-subset-declaration.ru --update ../sparql/inject-synonymtype-declaration.ru --update ../sparql/postprocess-module.ru \
-		$(ANNOTATE_CONVERT_FILE); fi
+$(IMPORTDIR)/%_import.owl: $(MIRRORDIR)/%.owl
+	echo "ERROR: You have configured your default module type to be custom; this behavior needs to be overwritten in promot.Makefile!" && false
 
 .PRECIOUS: $(IMPORTDIR)/%_import.owl
 
-## Module for ontology: bfo
+## Module for ontology: biolink
 
-$(IMPORTDIR)/bfo_import.owl: $(MIRRORDIR)/bfo.owl
-	echo "ERROR: You have configured your default module type to be custom; this behavior needs to be overwritten in promot.Makefile!" && false
-## Module for ontology: fma
+$(IMPORTDIR)/biolink_import.owl: $(MIRRORDIR)/biolink.owl $(IMPORTDIR)/biolink_terms_combined.txt
+	if [ $(IMP) = true ]; then $(ROBOT) query -i $< --update ../sparql/preprocess-module.ru \
+    extract -T $(IMPORTDIR)/biolink_terms_combined.txt --copy-ontology-annotations true --force true --method BOT \
+    remove --base-iri $(OBOBASE)/BIOLINK --axioms external --preserve-structure false --trim false \
+		remove $(patsubst %, --term %, $(ANNOTATION_PROPERTIES)) --term rdfs:label --term IAO:0000115  -T $(IMPORTDIR)/biolink_terms_combined.txt --select complement \
+		query --update ../sparql/inject-subset-declaration.ru --update ../sparql/inject-synonymtype-declaration.ru --update ../sparql/postprocess-module.ru \
+		$(ANNOTATE_CONVERT_FILE); fi
 
-$(IMPORTDIR)/fma_import.owl: $(MIRRORDIR)/fma.owl
-	echo "ERROR: You have configured your default module type to be custom; this behavior needs to be overwritten in promot.Makefile!" && false
-## Module for ontology: hp
+## Module for ontology: iao
 
-$(IMPORTDIR)/hp_import.owl: $(MIRRORDIR)/hp.owl
-	echo "ERROR: You have configured your default module type to be custom; this behavior needs to be overwritten in promot.Makefile!" && false
+$(IMPORTDIR)/iao_import.owl: $(MIRRORDIR)/iao.owl $(IMPORTDIR)/iao_terms_combined.txt
+	if [ $(IMP) = true ]; then $(ROBOT) query -i $< --update ../sparql/preprocess-module.ru \
+    extract -T $(IMPORTDIR)/iao_terms_combined.txt --copy-ontology-annotations true --force true --method BOT \
+    remove --base-iri $(OBOBASE)/IAO --axioms external --preserve-structure false --trim false \
+		remove $(patsubst %, --term %, $(ANNOTATION_PROPERTIES)) --term rdfs:label --term IAO:0000115  -T $(IMPORTDIR)/iao_terms_combined.txt --select complement \
+		query --update ../sparql/inject-subset-declaration.ru --update ../sparql/inject-synonymtype-declaration.ru --update ../sparql/postprocess-module.ru \
+		$(ANNOTATE_CONVERT_FILE); fi
+
 ## Module for ontology: mondo
 
 $(IMPORTDIR)/mondo_import.owl: $(MIRRORDIR)/mondo.owl
 	echo "ERROR: You have configured your default module type to be custom; this behavior needs to be overwritten in promot.Makefile!" && false
 ## Module for ontology: ncit
 
-$(IMPORTDIR)/ncit_import.owl: $(MIRRORDIR)/ncit.owl $(IMPORTDIR)/ncit_terms_combined.txt
-	if [ $(IMP) = true ] && [ $(IMP_LARGE) = true ]; then $(ROBOT) extract -i $< -T $(IMPORTDIR)/ncit_terms_combined.txt --force true  --copy-ontology-annotations true --individuals include --method BOT \
-		query --update ../sparql/inject-subset-declaration.ru --update ../sparql/inject-synonymtype-declaration.ru --update ../sparql/postprocess-module.ru \
-		$(ANNOTATE_CONVERT_FILE); fi
-
+$(IMPORTDIR)/ncit_import.owl: $(MIRRORDIR)/ncit.owl
+	echo "ERROR: You have configured your default module type to be custom; this behavior needs to be overwritten in promot.Makefile!" && false
 ## Module for ontology: orcidio
 
 $(IMPORTDIR)/orcidio_import.owl: $(MIRRORDIR)/orcidio.owl $(IMPORTDIR)/orcidio_terms_combined.txt
@@ -417,14 +419,6 @@ $(IMPORTDIR)/orcidio_import.owl: $(MIRRORDIR)/orcidio.owl $(IMPORTDIR)/orcidio_t
 		query --update ../sparql/inject-subset-declaration.ru --update ../sparql/inject-synonymtype-declaration.ru --update ../sparql/postprocess-module.ru \
 		$(ANNOTATE_CONVERT_FILE); fi
 
-## Module for ontology: ro
-
-$(IMPORTDIR)/ro_import.owl: $(MIRRORDIR)/ro.owl
-	echo "ERROR: You have configured your default module type to be custom; this behavior needs to be overwritten in promot.Makefile!" && false
-## Module for ontology: sio
-
-$(IMPORTDIR)/sio_import.owl: $(MIRRORDIR)/sio.owl
-	echo "ERROR: You have configured your default module type to be custom; this behavior needs to be overwritten in promot.Makefile!" && false
 ## Module for ontology: snomed
 
 $(IMPORTDIR)/snomed_import.owl: $(MIRRORDIR)/snomed.owl
@@ -432,10 +426,6 @@ $(IMPORTDIR)/snomed_import.owl: $(MIRRORDIR)/snomed.owl
 ## Module for ontology: so
 
 $(IMPORTDIR)/so_import.owl: $(MIRRORDIR)/so.owl
-	echo "ERROR: You have configured your default module type to be custom; this behavior needs to be overwritten in promot.Makefile!" && false
-## Module for ontology: whofic
-
-$(IMPORTDIR)/whofic_import.owl: $(MIRRORDIR)/whofic.owl
 	echo "ERROR: You have configured your default module type to be custom; this behavior needs to be overwritten in promot.Makefile!" && false
 
 .PHONY: refresh-imports
@@ -491,12 +481,12 @@ $(COMPONENTSDIR)/%.owl: | $(COMPONENTSDIR)
 
 
 
-$(COMPONENTSDIR)/PROMOT_classes_relations.owl: $(TEMPLATEDIR)/PROMOT-classes-relations.csv
+$(COMPONENTSDIR)/classes_properties.owl: $(TEMPLATEDIR)/classes_properties.csv
 	if [ $(COMP) = true ] ; then $(ROBOT) template --add-prefixes config/context.json \
 		$(patsubst %, --template %, $^) \
 		$(ANNOTATE_CONVERT_FILE); fi
 
-.PRECIOUS: $(COMPONENTSDIR)/PROMOT_classes_relations.owl
+.PRECIOUS: $(COMPONENTSDIR)/classes_properties.owl
 # ----------------------------------------
 # Mirroring upstream ontologies
 # ----------------------------------------
@@ -516,25 +506,11 @@ mirror-bfo: | $(TMPDIR)
 	$(ROBOT) convert -i $(TMPDIR)/bfo-download.owl -o $(TMPDIR)/$@.owl
 
 
-## ONTOLOGY: bioassay
-.PHONY: mirror-bioassay
-.PRECIOUS: $(MIRRORDIR)/bioassay.owl
-mirror-bioassay: | $(TMPDIR)
-	$(ROBOT) convert -I http://www.bioassayontology.org/bao/bao_complete.owl -o $(TMPDIR)/$@.owl
-
-
 ## ONTOLOGY: biolink
 .PHONY: mirror-biolink
 .PRECIOUS: $(MIRRORDIR)/biolink.owl
 mirror-biolink: | $(TMPDIR)
 	$(ROBOT) convert -I https://w3id.org/biolink/biolink-model.owl.ttl -o $(TMPDIR)/$@.owl
-
-
-## ONTOLOGY: efo
-.PHONY: mirror-efo
-.PRECIOUS: $(MIRRORDIR)/efo.owl
-mirror-efo: | $(TMPDIR)
-	$(ROBOT) convert -I http://www.ebi.ac.uk/efo/efo.owl -o $(TMPDIR)/$@.owl
 
 
 ## ONTOLOGY: fma
@@ -551,6 +527,14 @@ mirror-fma: | $(TMPDIR)
 mirror-hp: | $(TMPDIR)
 	curl -L $(OBOBASE)/hp.owl --create-dirs -o $(TMPDIR)/hp-download.owl --retry 4 --max-time 200 && \
 	$(ROBOT) convert -i $(TMPDIR)/hp-download.owl -o $(TMPDIR)/$@.owl
+
+
+## ONTOLOGY: iao
+.PHONY: mirror-iao
+.PRECIOUS: $(MIRRORDIR)/iao.owl
+mirror-iao: | $(TMPDIR)
+	curl -L $(OBOBASE)/iao.owl --create-dirs -o $(TMPDIR)/iao-download.owl --retry 4 --max-time 200 && \
+	$(ROBOT) convert -i $(TMPDIR)/iao-download.owl -o $(TMPDIR)/$@.owl
 
 
 ## ONTOLOGY: mondo
@@ -584,14 +568,6 @@ endif
 .PRECIOUS: $(MIRRORDIR)/orcidio.owl
 mirror-orcidio: | $(TMPDIR)
 	$(ROBOT) convert -I https://w3id.org/orcidio/orcidio.owl -o $(TMPDIR)/$@.owl
-
-
-## ONTOLOGY: obi
-.PHONY: mirror-obi
-.PRECIOUS: $(MIRRORDIR)/obi.owl
-mirror-obi: | $(TMPDIR)
-	curl -L $(OBOBASE)/obi.owl --create-dirs -o $(TMPDIR)/obi-download.owl --retry 4 --max-time 200 && \
-	$(ROBOT) convert -i $(TMPDIR)/obi-download.owl -o $(TMPDIR)/$@.owl
 
 
 ## ONTOLOGY: ro

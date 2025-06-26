@@ -1,72 +1,56 @@
-pattern_name: relations_pattern
+pattern_name: patients_pattern
 
 pattern_iri: http://purl.obolibrary.org/obo/promot/patterns/gene_disease_pattern.yaml
 
-description: "Use this template to link the patient class to their mutation, assistive equipments they use, procedure they are assessed by and the phenotype they have."
+description: "Use this template to link the patient class to the related classes."
 
 contributors:
   - https://orcid.org/0009-0000-5160-7927 # J. Potier
 
 classes:
-  patient: PROMOT:0000101
+  patient: PROMOT:3000101
   gene: SO:0000704
   assistive_equipment: SNOMED:360296002
-  phenotypic_abnormality: HP:0000118
+  demographic_history_detail: SNOMED:302147001
+  biological_quality: SIO:000475
   evaluation_procedure: SNOMED:386053000
+  phenotype: HP:0000118
 
 relations:
-  is_assessed_by: PROMOT:2000001
-  uses_assistive_equipment: PROMOT:2000002
-  has_phenotype: RO:0002200
-  has_gene_mutation: VO:0001039
+  uses_assistive_equipment:	PROMOT:2000002
+  is_assessed_by:	PROMOT:2000003
+  has_gene_mutation:	VO:0001039
+  has_quality:	SIO:000217
+  has_phenotype:	RO:0002200
 
 data_list_vars:
   orcid: xsd:anyURI
 
 vars:
-  patient: "'patient'"
-  phenotype: "'phenotypic_abnormality'"
-  gene: "'gene'"
-  aid: "'assistive_equipment'"
-  procedure: "'evaluation_procedure'"
+  disease: "disease"
+  gene : "gene"
 
-logical_axioms:
- 
-  - axiom_type: subClassOf
-    text: "'has_phenotype' some %s"
-    vars:
-      - phenotype
+subClassOf:
+  text: "'has_gene_mutation' some %s"
+  vars:
+    - gene
 
-  - axiom_type: equivalentTo
-    text: "'patient' and 'has_phenotype' some %s"
-    vars:
-      - phenotype
+subClassOf:
+  text: "'is_assessed_by' some %s"
+  vars:
+    - evaluation_procedure
 
-  - axiom_type: subClassOf
-    text: "'has_gene_mutation' some %s"
-    vars:
-      - gene
-  - axiom_type: equivalentTo
-    text: "'gene' and 'has_gene_mutation' some %s"
-    vars:
-      - gene
+subClassOf:
+  text: "'uses_assistive_equipment' some %s"
+  vars:
+    - assistive_equipment
 
-  - axiom_type: subClassOf
-    text: "'uses_assistive_equipment' some %s"
-    vars:
-    - aid
+subClassOf:
+  text: "'has_quality' some %s"
+  vars:
+    - quality
 
-  - axiom_type: equivalentTo
-    text: "'patient' and 'uses_assistive_equipment' some %s"
-    vars:
-    - aid
-
-  - axiom_type: subClassOf
-    text: "'is_assessed_by' some %s"
-    vars:
-      - procedure
-      
-  - axiom_type: equivalentTo
-    text: "'patient' and 'is_assessed_by' some %s"
-    vars:
-      - procedure
+subClassOf:
+  text: "'has_phenotype' some %s"
+  vars:
+    - phenotype

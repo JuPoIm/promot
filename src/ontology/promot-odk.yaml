@@ -26,17 +26,17 @@ export_formats:
   - owl
   - obo
   - json
-license: https://creativecommons.org/licenses/unspecified
+#license: https://creativecommons.org/licenses/unspecified
 use_template: TRUE
 use_dosdps: TRUE
 components:
   release_components: TRUE
   products:
-    - filename: PROMOT_classes_relations.owl
+    - filename: classes_properties.owl
       use_template: TRUE
       template_options: --add-prefixes config/context.json
       templates:
-        - PROMOT-classes-relations.csv
+        - classes_properties.csv
 import_group:
   annotation_properties:
     - rdfs:label
@@ -53,22 +53,17 @@ import_group:
     - IAO:0000119
     - IAO:0000412
   release_imports: TRUE
+  module_type: custom
   products:
     - id: bfo # high-level classes
-      module_type: custom
-    - id: bioassay # mutated ?
-      mirror_from: http://www.bioassayontology.org/bao/bao_complete.owl
     - id: biolink # relations
       mirror_from: https://w3id.org/biolink/biolink-model.owl.ttl
-      mirror_type: custom
-    - id: efo # to delete ?
-      mirror_from: http://www.ebi.ac.uk/efo/efo.owl
+      module_type: filter
     - id: fma # anatomy
-      module_type: custom
     - id: hp # phenotypes
-      module_type: custom
+    - id: iao
+      module_type: filter
     - id: mondo # diseases
-      module_type: custom
       is_large: TRUE
     - id: ncit # genes, tests, devices
       is_large: TRUE
@@ -77,23 +72,17 @@ import_group:
       module_type: filter
       base_iris:
         - https://orcid.org/
-    - id: obi # to delete ?
     - id: ro # relations
-      module_type: custom
     - id: scdo # measures relation
-    - id: sio # biological quality
-      module_type: custom
+    - id: sio # life status, parental transmission
     - id: snomed # tests, devices
       is_large: TRUE
-      module_type: custom
     - id: so # 'gene'
       is_large: TRUE
-      module_type: custom
     - id: vo # has gene mutation
     - id: whofic # body structures, functions, activities
       mirror_from: https://raw.githubusercontent.com/whoficitc/harmonization/main/ontology/whofic-2024-01-21.owl
-      module_type: custom
-robot_java_args: '-Xmx8G'
+robot_java_args: '-Xmx25G'
 robot_report:
   use_labels: TRUE
   fail_on: ERROR

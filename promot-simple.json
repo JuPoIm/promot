@@ -3,6 +3,27 @@
     "id" : "http://purl.obolibrary.org/obo/promot/promot-simple.json",
     "meta" : {
       "basicPropertyValues" : [ {
+        "pred" : "http://purl.org/dc/elements/1.1/contributor",
+        "val" : "Anita Burgun MD, PhD"
+      }, {
+        "pred" : "http://purl.org/dc/elements/1.1/contributor",
+        "val" : "Carole Faviez PhD"
+      }, {
+        "pred" : "http://purl.org/dc/elements/1.1/contributor",
+        "val" : "Cynthia Gagnon PhD"
+      }, {
+        "pred" : "http://purl.org/dc/elements/1.1/contributor",
+        "val" : "Elizabeth Angelevski"
+      }, {
+        "pred" : "http://purl.org/dc/elements/1.1/contributor",
+        "val" : "Mansoore Gholizade MD"
+      }, {
+        "pred" : "http://purl.org/dc/elements/1.1/creator",
+        "val" : "Juliette Potier MSc"
+      }, {
+        "pred" : "http://purl.org/dc/elements/1.1/creator",
+        "val" : "Paul Fabry PhD student"
+      }, {
         "pred" : "http://purl.org/dc/terms/description",
         "val" : "Ontology for building the relational database of the PROMOT project"
       }, {
@@ -13,12 +34,12 @@
         "val" : "PROMOT Common Data Model ontology"
       }, {
         "pred" : "http://www.geneontology.org/formats/oboInOwl#date",
-        "val" : "27:05:2025 11:45"
+        "val" : "26:06:2025 09:19"
       }, {
         "pred" : "http://www.w3.org/2002/07/owl#versionInfo",
-        "val" : "2025-05-27"
+        "val" : "2025-06-26"
       } ],
-      "version" : "http://purl.obolibrary.org/obo/promot/releases/2025-05-27/promot-simple.json"
+      "version" : "http://purl.obolibrary.org/obo/promot/releases/2025-06-26/promot-simple.json"
     },
     "nodes" : [ {
       "id" : "http://purl.obolibrary.org/obo/PROMOT_0000000",
@@ -77,80 +98,94 @@
       "lbl" : "GMPPB",
       "type" : "CLASS"
     }, {
-      "id" : "http://purl.obolibrary.org/obo/PROMOT_0000101",
+      "id" : "http://purl.obolibrary.org/obo/PROMOT_3000101",
       "lbl" : "Patient",
       "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "personne faisant partie de l’étude PROMOT"
+          "val" : "Participant of PROMOT study"
         }
       }
     }, {
-      "id" : "http://purl.obolibrary.org/obo/RO_0001015",
-      "lbl" : "location of",
+      "id" : "http://purl.obolibrary.org/obo/PROMOT_5000001",
+      "lbl" : "Patient statement",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PROMOT_5000002",
+      "lbl" : "Biological sex statement",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PROMOT_5000003",
+      "lbl" : "Marital status statement",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PROMOT_5000004",
+      "lbl" : "Occupation statement",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PROMOT_5000005",
+      "lbl" : "Ethnicity statement",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PROMOT_5000006",
+      "lbl" : "Date of birth statement",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PROMOT_5000007",
+      "lbl" : "Date of death statement",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PROMOT_5000008",
+      "lbl" : "Achieved qualification statement",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PROMOT_5000009",
+      "lbl" : "Duration of formal education statement",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PROMOT_5000010",
+      "lbl" : "Patient identifier",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PROMOT_2000001",
+      "lbl" : "has location",
       "type" : "PROPERTY",
       "propertyType" : "OBJECT",
       "meta" : {
         "definition" : {
-          "val" : "a relation between two independent continuants, the location and the target, in which the target is entirely within the location"
+          "val" : "a relation between a phenotype and an anatomical entity, where the anatomical entity is the location of the phenotype."
         },
         "basicPropertyValues" : [ {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000111",
-          "val" : "is location of"
-        }, {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000112",
-          "val" : "my head is the location of my brain"
-        }, {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000112",
-          "val" : "this cage is the location of this rat"
-        }, {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000116",
-          "val" : "Most location relations will only hold at certain times, but this is difficult to specify in OWL. See http://purl.obolibrary.org/obo/ro/docs/temporal-semantics/"
-        }, {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000118",
-          "val" : "location_of"
-        }, {
-          "pred" : "http://purl.obolibrary.org/obo/RO_0001900",
-          "val" : "http://purl.obolibrary.org/obo/RO_0001901"
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
+          "val" : "Juliette Potier"
         } ]
       }
     }, {
-      "id" : "http://purl.obolibrary.org/obo/RO_0001025",
-      "lbl" : "located in",
+      "id" : "http://purl.obolibrary.org/obo/PROMOT_2000002",
+      "lbl" : "uses assistive equipment",
       "type" : "PROPERTY",
       "propertyType" : "OBJECT",
       "meta" : {
         "definition" : {
-          "val" : "a relation between two independent continuants, the target and the location, in which the target is entirely within the location"
+          "val" : "a relation between a human and an device, where the device is an assistive equipment used by the human in order to move or to accomplish something, such as a task or an activity."
         },
-        "subsets" : [ "http://purl.obolibrary.org/obo/valid_for_go_gp2term" ],
         "basicPropertyValues" : [ {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000111",
-          "val" : "located in"
-        }, {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000112",
-          "val" : "my brain is located in my head"
-        }, {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000112",
-          "val" : "this rat is located in this cage"
-        }, {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000116",
-          "val" : "Location as a relation between instances: The primitive instance-level relation c located_in r at t reflects the fact that each continuant is at any given time associated with exactly one spatial region, namely its exact location. Following we can use this relation to define a further instance-level location relation - not between a continuant and the region which it exactly occupies, but rather between one continuant and another. c is located in c1, in this sense, whenever the spatial region occupied by c is part_of the spatial region occupied by c1.    Note that this relation comprehends both the relation of exact location between one continuant and another which obtains when r and r1 are identical (for example, when a portion of fluid exactly fills a cavity), as well as those sorts of inexact location relations which obtain, for example, between brain and head or between ovum and uterus"
-        }, {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000116",
-          "val" : "Most location relations will only hold at certain times, but this is difficult to specify in OWL. See http://purl.obolibrary.org/obo/ro/docs/temporal-semantics/"
-        }, {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000118",
-          "val" : "located_in"
-        }, {
-          "pred" : "http://purl.obolibrary.org/obo/RO_0001900",
-          "val" : "http://purl.obolibrary.org/obo/RO_0001901"
-        }, {
-          "pred" : "http://purl.org/dc/terms/source",
-          "val" : "http://www.obofoundry.org/ro/#OBO_REL:located_in"
-        }, {
-          "pred" : "http://www.w3.org/2000/01/rdf-schema#seeAlso",
-          "val" : "https://wiki.geneontology.org/Located_in"
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
+          "val" : "Juliette Potier"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PROMOT_2000003",
+      "lbl" : "is assessed by",
+      "type" : "PROPERTY",
+      "propertyType" : "OBJECT",
+      "meta" : {
+        "definition" : {
+          "val" : "a relation between a human and an evaluation procedure, where the human is assessed by an evaluation procedure, such as a test, a questionnaire or a scale."
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
+          "val" : "Juliette Potier"
         } ]
       }
     }, {
@@ -190,17 +225,43 @@
         } ]
       }
     }, {
-      "id" : "http://purl.obolibrary.org/obo/RO_0002452",
-      "lbl" : "has symptom",
+      "id" : "http://purl.obolibrary.org/obo/RO_0002351",
+      "lbl" : "has member",
       "type" : "PROPERTY",
       "propertyType" : "OBJECT",
       "meta" : {
         "definition" : {
-          "val" : "A relation that holds between a disease or an organism and a phenotype"
+          "val" : "has member is a mereological relation between a collection and an item."
         },
         "basicPropertyValues" : [ {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000119",
+          "val" : "SIO"
+        }, {
+          "pred" : "http://purl.obolibrary.org/obo/RO_0001900",
+          "val" : "http://purl.obolibrary.org/obo/RO_0001901"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/RO_0004003",
+      "lbl" : "has material basis in germline mutation in",
+      "type" : "PROPERTY",
+      "propertyType" : "OBJECT",
+      "meta" : {
+        "xrefs" : [ {
+          "val" : "RO:0004003"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
           "val" : "https://orcid.org/0000-0002-6601-2165"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
+          "val" : "2017-11-05T02:45:54Z"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#shorthand",
+          "val" : "has_material_basis_in_germline_mutation_in"
+        }, {
+          "pred" : "http://www.w3.org/2000/01/rdf-schema#seeAlso",
+          "val" : "http://www.orpha.net/ORDO/Orphanet_317343"
         } ]
       }
     }, {
@@ -224,96 +285,150 @@
         } ]
       }
     }, {
-      "id" : "http://purl.obolibrary.org/obo/RO_0004029",
-      "lbl" : "disease has feature",
+      "id" : "http://purl.obolibrary.org/obo/SCDO_1000194",
+      "lbl" : "measures",
       "type" : "PROPERTY",
       "propertyType" : "OBJECT",
       "meta" : {
         "definition" : {
-          "val" : "A relationship between a disease and some feature of that disease, where the feature is either a phenotype or an isolated disease."
+          "val" : "A relation between a diagnostic tool and the diagnostic measurement that it measures."
         },
         "basicPropertyValues" : [ {
-          "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
-          "val" : "https://orcid.org/0000-0002-6601-2165"
-        }, {
-          "pred" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
-          "val" : "2017-12-26T19:50:53Z"
+          "pred" : "http://purl.org/dc/elements/1.1/creator",
+          "val" : "SCDO (Jade Hotchkiss)"
         } ]
       }
     }, {
-      "id" : "http://purl.obolibrary.org/obo/RO_0004030",
-      "lbl" : "disease arises from alteration in structure",
+      "id" : "http://purl.obolibrary.org/obo/VO_0001039",
+      "lbl" : "has gene mutation",
       "type" : "PROPERTY",
       "propertyType" : "OBJECT",
       "meta" : {
         "definition" : {
-          "val" : "A relationship between a disease and an anatomical structure where the material basis of the disease is some pathological change in the structure. Anatomical structure includes cellular and sub-cellular entities, such as chromosome and organelles."
+          "val" : "An object property that represents an organism has a mutation of a specific gene from the organism genome."
         },
         "basicPropertyValues" : [ {
-          "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
-          "val" : "https://orcid.org/0000-0002-6601-2165"
-        }, {
-          "pred" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
-          "val" : "2017-12-26T19:58:44Z"
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
+          "val" : "Oliver He"
         } ]
       }
     }, {
-      "id" : "http://purl.obolibrary.org/obo/RO_0009006",
-      "lbl" : "assay measures characteristic",
+      "id" : "http://semanticscience.org/resource/SIO_000217",
+      "lbl" : "has quality",
+      "type" : "PROPERTY",
+      "propertyType" : "OBJECT",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.org/dc/elements/1.1/identifier",
+          "val" : "SIO_000217"
+        }, {
+          "pred" : "http://purl.org/dc/terms/description",
+          "val" : "has quality is a relation between an entity and the quality that it bears."
+        }, {
+          "pred" : "http://www.w3.org/2000/01/rdf-schema#isDefinedBy",
+          "val" : "http://semanticscience.org/ontology/sio.owl"
+        } ]
+      }
+    }, {
+      "id" : "http://semanticscience.org/resource/SIO_000671",
+      "lbl" : "has identifier",
+      "type" : "PROPERTY",
+      "propertyType" : "OBJECT",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.org/dc/elements/1.1/identifier",
+          "val" : "SIO_000671"
+        }, {
+          "pred" : "http://purl.org/dc/terms/description",
+          "val" : "a relation between an entity and an identifier."
+        }, {
+          "pred" : "http://www.w3.org/2000/01/rdf-schema#isDefinedBy",
+          "val" : "http://semanticscience.org/ontology/sio.owl"
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/biolink/vocab/affected_by",
+      "lbl" : "affected by",
       "type" : "PROPERTY",
       "propertyType" : "OBJECT",
       "meta" : {
         "definition" : {
-          "val" : "A relation between an assay and a characteristic, in which the assay generates a data item which is a measure of a characteristic."
+          "val" : "describes an entity of which the state or quality is affected by another existing entity."
         },
+        "comments" : [ "https://bioportal.bioontology.org/ontologies/BIOLINK" ],
         "basicPropertyValues" : [ {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000112",
-          "val" : "A mass measurement assay measures an material's mass characteristic. A radioactivity detection assay measures the amount of radiation (alpha, beta or gamma ray emmissions) coming from a material."
-        }, {
-          "pred" : "http://purl.org/dc/terms/contributor",
-          "val" : "https://orcid.org/0000-0002-8844-9165"
-        }, {
-          "pred" : "http://purl.org/dc/terms/date",
-          "val" : "2023-05-23T15:24:15Z"
+          "pred" : "http://www.w3.org/2000/01/rdf-schema#seeAlso",
+          "val" : "https://biolink.github.io/biolink-model/"
         } ]
       }
     }, {
-      "id" : "http://purl.obolibrary.org/obo/RO_0009007",
-      "lbl" : "characteristic measured by assay",
+      "id" : "https://w3id.org/biolink/vocab/affects",
+      "lbl" : "affects",
       "type" : "PROPERTY",
       "propertyType" : "OBJECT",
       "meta" : {
         "definition" : {
-          "val" : "Inverse of 'assay measures characteristic'"
+          "val" : "Describes an entity that has an effect on the state or quality of another existing entity."
         },
+        "comments" : [ "https://bioportal.bioontology.org/ontologies/BIOLINK" ],
         "basicPropertyValues" : [ {
-          "pred" : "http://purl.org/dc/terms/contributor",
-          "val" : "https://orcid.org/0000-0002-8844-9165"
-        }, {
-          "pred" : "http://purl.org/dc/terms/date",
-          "val" : "2023-05-23T15:29:50Z"
+          "pred" : "http://www.w3.org/2000/01/rdf-schema#seeAlso",
+          "val" : "https://biolink.github.io/biolink-model/"
         } ]
       }
     }, {
-      "id" : "http://purl.obolibrary.org/obo/PROMOT_property-1",
-      "lbl" : "age in years",
+      "id" : "https://w3id.org/biolink/vocab/related_to",
+      "lbl" : "related to",
       "type" : "PROPERTY",
-      "propertyType" : "DATA",
+      "propertyType" : "OBJECT",
       "meta" : {
         "definition" : {
-          "val" : "Age of an individual"
+          "val" : "A relationship that is asserted between two named things"
+        },
+        "comments" : [ "https://bioportal.bioontology.org/ontologies/BIOLINK" ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.w3.org/2000/01/rdf-schema#seeAlso",
+          "val" : "https://biolink.github.io/biolink-model/"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PROMOT_I000001",
+      "lbl" : "Patient_PROMOT",
+      "type" : "INDIVIDUAL",
+      "meta" : {
+        "definition" : {
+          "val" : "Test_PROMOT"
         }
       }
     }, {
-      "id" : "http://purl.obolibrary.org/obo/PROMOT_0000100",
-      "lbl" : "Individu test",
-      "type" : "INDIVIDUAL"
+      "id" : "http://purl.obolibrary.org/obo/PROMOT_I000002",
+      "lbl" : "Patient_SIO",
+      "type" : "INDIVIDUAL",
+      "meta" : {
+        "definition" : {
+          "val" : "Test_SIO"
+        }
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PROMOT_I000003",
+      "lbl" : "DOB1",
+      "type" : "INDIVIDUAL",
+      "meta" : {
+        "definition" : {
+          "val" : "Test"
+        }
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PROMOT_I000004",
+      "lbl" : "DOBstat1",
+      "type" : "INDIVIDUAL",
+      "meta" : {
+        "definition" : {
+          "val" : "Test"
+        }
+      }
     }, {
       "id" : "http://purl.obolibrary.org/obo/IAO_0000111",
-      "type" : "PROPERTY",
-      "propertyType" : "ANNOTATION"
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/IAO_0000112",
       "type" : "PROPERTY",
       "propertyType" : "ANNOTATION"
     }, {
@@ -324,19 +439,85 @@
       "id" : "http://purl.obolibrary.org/obo/IAO_0000115",
       "lbl" : "definition",
       "type" : "PROPERTY",
-      "propertyType" : "ANNOTATION"
+      "propertyType" : "ANNOTATION",
+      "meta" : {
+        "definition" : {
+          "val" : "The official definition, explaining the meaning of a class or property. Shall be Aristotelian, formalized and normalized. Can be augmented with colloquial definitions."
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000111",
+          "val" : "definition"
+        }, {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000114",
+          "val" : "http://purl.obolibrary.org/obo/IAO_0000122"
+        }, {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000116",
+          "val" : "2012-04-05: \nBarry Smith\n\nThe official OBI definition, explaining the meaning of a class or property: 'Shall be Aristotelian, formalized and normalized. Can be augmented with colloquial definitions'  is terrible.\n\nCan you fix to something like:\n\nA statement of necessary and sufficient conditions explaining the meaning of an expression referring to a class or property.\n\nAlan Ruttenberg\n\nYour proposed definition is a reasonable candidate, except that it is very common that necessary and sufficient conditions are not given. Mostly they are necessary, occasionally they are necessary and sufficient or just sufficient. Often they use terms that are not themselves defined and so they effectively can't be evaluated by those criteria. \n\nOn the specifics of the proposed definition:\n\nWe don't have definitions of 'meaning' or 'expression' or 'property'. For 'reference' in the intended sense I think we use the term 'denotation'. For 'expression', I think we you mean symbol, or identifier. For 'meaning' it differs for class and property. For class we want documentation that let's the intended reader determine whether an entity is instance of the class, or not. For property we want documentation that let's the intended reader determine, given a pair of potential relata, whether the assertion that the relation holds is true. The 'intended reader' part suggests that we also specify who, we expect, would be able to understand the definition, and also generalizes over human and computer reader to include textual and logical definition. \n\nPersonally, I am more comfortable weakening definition to documentation, with instructions as to what is desirable. \n\nWe also have the outstanding issue of how to aim different definitions to different audiences. A clinical audience reading chebi wants a different sort of definition documentation/definition from a chemistry trained audience, and similarly there is a need for a definition that is adequate for an ontologist to work with."
+        }, {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000116",
+          "val" : "2012-04-05: \nBarry Smith\n\nThe official OBI definition, explaining the meaning of a class or property: 'Shall be Aristotelian, formalized and normalized. Can be augmented with colloquial definitions'  is terrible.\n\nCan you fix to something like:\n\nA statement of necessary and sufficient conditions explaining the meaning of an expression referring to a class or property.\n\nAlan Ruttenberg\n\nYour proposed definition is a reasonable candidate, except that it is very common that necessary and sufficient conditions are not given. Mostly they are necessary, occasionally they are necessary and sufficient or just sufficient. Often they use terms that are not themselves defined and so they effectively can't be evaluated by those criteria. \n\nOn the specifics of the proposed definition:\n\nWe don't have definitions of 'meaning' or 'expression' or 'property'. For 'reference' in the intended sense I think we use the term 'denotation'. For 'expression', I think we you mean symbol, or identifier. For 'meaning' it differs for class and property. For class we want documentation that let's the intended reader determine whether an entity is instance of the class, or not. For property we want documentation that let's the intended reader determine, given a pair of potential relata, whether the assertion that the relation holds is true. The 'intended reader' part suggests that we also specify who, we expect, would be able to understand the definition, and also generalizes over human and computer reader to include textual and logical definition. \n\nPersonally, I am more comfortable weakening definition to documentation, with instructions as to what is desirable. \n\nWe also have the outstanding issue of how to aim different definitions to different audiences. A clinical audience reading chebi wants a different sort of definition documentation/definition from a chemistry trained audience, and similarly there is a need for a definition that is adequate for an ontologist to work with.  "
+        }, {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
+          "val" : "PERSON:Daniel Schober"
+        }, {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000119",
+          "val" : "GROUP:OBI:<http://purl.obolibrary.org/obo/obi>"
+        }, {
+          "pred" : "http://www.w3.org/2000/01/rdf-schema#isDefinedBy",
+          "val" : "http://purl.obolibrary.org/obo/iao.owl"
+        } ]
+      }
     }, {
       "id" : "http://purl.obolibrary.org/obo/IAO_0000116",
       "type" : "PROPERTY",
       "propertyType" : "ANNOTATION"
     }, {
       "id" : "http://purl.obolibrary.org/obo/IAO_0000117",
+      "lbl" : "term editor",
+      "type" : "PROPERTY",
+      "propertyType" : "ANNOTATION",
+      "meta" : {
+        "definition" : {
+          "val" : "Name of editor entering the term in the file. The term editor is a point of contact for information regarding the term. The term editor may be, but is not always, the author of the definition, which may have been worked upon by several people"
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000111",
+          "val" : "term editor"
+        }, {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000114",
+          "val" : "http://purl.obolibrary.org/obo/IAO_0000122"
+        }, {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000116",
+          "val" : "20110707, MC: label update to term editor and definition modified accordingly. See https://github.com/information-artifact-ontology/IAO/issues/115."
+        }, {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
+          "val" : "PERSON:Daniel Schober"
+        }, {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000119",
+          "val" : "GROUP:OBI:<http://purl.obolibrary.org/obo/obi>"
+        }, {
+          "pred" : "http://www.w3.org/2000/01/rdf-schema#isDefinedBy",
+          "val" : "http://purl.obolibrary.org/obo/iao.owl"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/IAO_0000119",
       "type" : "PROPERTY",
       "propertyType" : "ANNOTATION"
     }, {
-      "id" : "http://purl.obolibrary.org/obo/IAO_0000118",
+      "id" : "http://purl.obolibrary.org/obo/PROMOT_1000001",
+      "lbl" : "found in",
       "type" : "PROPERTY",
-      "propertyType" : "ANNOTATION"
+      "propertyType" : "ANNOTATION",
+      "meta" : {
+        "definition" : {
+          "val" : "SIO:000475"
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
+          "val" : "Juliette Potier"
+        } ]
+      }
     }, {
       "id" : "http://purl.obolibrary.org/obo/RO_0001900",
       "type" : "PROPERTY",
@@ -346,11 +527,11 @@
       "type" : "PROPERTY",
       "propertyType" : "ANNOTATION"
     }, {
-      "id" : "http://purl.obolibrary.org/obo/valid_for_go_gp2term",
+      "id" : "http://purl.obolibrary.org/obo/ro/subsets#ro-eco",
       "type" : "PROPERTY",
       "propertyType" : "ANNOTATION"
     }, {
-      "id" : "http://purl.obolibrary.org/obo/ro/subsets#ro-eco",
+      "id" : "http://purl.org/dc/elements/1.1/contributor",
       "type" : "PROPERTY",
       "propertyType" : "ANNOTATION"
     }, {
@@ -358,15 +539,7 @@
       "type" : "PROPERTY",
       "propertyType" : "ANNOTATION"
     }, {
-      "id" : "http://purl.org/dc/elements/1.1/date",
-      "type" : "PROPERTY",
-      "propertyType" : "ANNOTATION"
-    }, {
-      "id" : "http://purl.org/dc/terms/contributor",
-      "type" : "PROPERTY",
-      "propertyType" : "ANNOTATION"
-    }, {
-      "id" : "http://purl.org/dc/terms/date",
+      "id" : "http://purl.org/dc/elements/1.1/identifier",
       "type" : "PROPERTY",
       "propertyType" : "ANNOTATION"
     }, {
@@ -377,10 +550,6 @@
     }, {
       "id" : "http://purl.org/dc/terms/license",
       "lbl" : "license",
-      "type" : "PROPERTY",
-      "propertyType" : "ANNOTATION"
-    }, {
-      "id" : "http://purl.org/dc/terms/source",
       "type" : "PROPERTY",
       "propertyType" : "ANNOTATION"
     }, {
@@ -405,30 +574,82 @@
       "type" : "PROPERTY",
       "propertyType" : "ANNOTATION"
     }, {
+      "id" : "http://www.geneontology.org/formats/oboInOwl#hasDbXref",
+      "type" : "PROPERTY",
+      "propertyType" : "ANNOTATION"
+    }, {
+      "id" : "http://www.geneontology.org/formats/oboInOwl#id",
+      "type" : "PROPERTY",
+      "propertyType" : "ANNOTATION"
+    }, {
       "id" : "http://www.geneontology.org/formats/oboInOwl#inSubset",
+      "type" : "PROPERTY",
+      "propertyType" : "ANNOTATION"
+    }, {
+      "id" : "http://www.geneontology.org/formats/oboInOwl#shorthand",
       "type" : "PROPERTY",
       "propertyType" : "ANNOTATION"
     } ],
     "edges" : [ {
-      "sub" : "http://purl.obolibrary.org/obo/PROMOT_0000100",
+      "sub" : "http://purl.obolibrary.org/obo/PROMOT_5000001",
+      "pred" : "http://purl.obolibrary.org/obo/RO_0002351",
+      "obj" : "http://purl.obolibrary.org/obo/PROMOT_3000101"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PROMOT_5000001",
+      "pred" : "http://purl.obolibrary.org/obo/RO_0002351",
+      "obj" : "http://purl.obolibrary.org/obo/PROMOT_5000010"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PROMOT_5000002",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PROMOT_5000001"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PROMOT_5000003",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PROMOT_5000001"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PROMOT_5000004",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PROMOT_5000001"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PROMOT_5000005",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PROMOT_5000001"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PROMOT_5000006",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PROMOT_5000001"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PROMOT_5000007",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PROMOT_5000001"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PROMOT_5000008",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PROMOT_5000001"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PROMOT_5000009",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PROMOT_5000001"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PROMOT_I000001",
       "pred" : "type",
-      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000101"
+      "obj" : "http://purl.obolibrary.org/obo/PROMOT_3000101"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/RO_0002452",
-      "pred" : "subPropertyOf",
-      "obj" : "http://purl.obolibrary.org/obo/RO_0002200"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/RO_0001015",
-      "pred" : "inverseOf",
-      "obj" : "http://purl.obolibrary.org/obo/RO_0001025"
+      "sub" : "http://purl.obolibrary.org/obo/PROMOT_I000004",
+      "pred" : "type",
+      "obj" : "http://purl.obolibrary.org/obo/PROMOT_5000006"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/RO_0002200",
       "pred" : "inverseOf",
       "obj" : "http://purl.obolibrary.org/obo/RO_0002201"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/RO_0009006",
+      "sub" : "http://purl.obolibrary.org/obo/RO_0004003",
       "pred" : "inverseOf",
-      "obj" : "http://purl.obolibrary.org/obo/RO_0009007"
+      "obj" : "http://purl.obolibrary.org/obo/RO_0004013"
+    } ],
+    "domainRangeAxioms" : [ {
+      "predicateId" : "http://purl.obolibrary.org/obo/RO_0002351",
+      "domainClassIds" : [ "http://purl.obolibrary.org/obo/PROMOT_5000001" ]
     } ]
   } ]
 }

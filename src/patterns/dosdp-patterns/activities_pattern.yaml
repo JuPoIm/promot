@@ -1,6 +1,6 @@
 pattern_name: activities_pattern
 
-pattern_iri: http://purl.obolibrary.org/obo/promot/patterns/gene_disease_pattern.yaml
+pattern_iri: activities_pattern.yaml
 
 description: "Use this template to link the activities to the body functions and/or the body structures that affects them."
 
@@ -8,12 +8,12 @@ contributors:
   - https://orcid.org/0009-0000-5160-7927 # J. Potier
 
 classes:
-  activity: WHOFIC:1394728112
-  structure: WHOFIC:1626363729
-  function: WHOFIC:567313968
+  activity: http://id.who.int/icd/entity/1394728112
+  structure: http://id.who.int/icd/entity/1626363729
+  function: http://id.who.int/icd/entity/567313968
 
 relations:
-  affected_by: BIOLINK:affected_by
+  affected_by: https://w3id.org/biolink/vocab/affected_by
 
 data_list_vars:
   orcid: xsd:anyURI
@@ -24,20 +24,20 @@ vars:
   function: "'function'"
       
 logical_axioms:
-  - axiom_type: equivalentTo
-    text: "'activity' and 'affected_by' some %s"
-    vars:
-      - function
+  # - axiom_type: equivalentTo
+  #   text: "'activity' and 'affected_by' some %s"
+  #   vars:
+  #     - function
 
   - axiom_type: subClassOf
     text: "'affected_by' some %s"
     vars:
       - function
 
-  - axiom_type: equivalentTo
-    text: "'activity' and 'affected_by' some %s"
-    vars:
-      - structure
+  # - axiom_type: equivalentTo
+  #   text: "'activity' and 'affected_by' some %s"
+  #   vars:
+  #     - structure
   
   - axiom_type: subClassOf
     text: "'affected_by' some %s"

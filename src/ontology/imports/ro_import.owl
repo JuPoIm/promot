@@ -1,19 +1,17 @@
 <?xml version="1.0"?>
 <rdf:RDF xmlns="http://purl.obolibrary.org/obo/promot/imports/ro_import.owl#"
      xml:base="http://purl.obolibrary.org/obo/promot/imports/ro_import.owl"
-     xmlns:dc="http://purl.org/dc/elements/1.1/"
      xmlns:obo="http://purl.obolibrary.org/obo/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     xmlns:terms="http://purl.org/dc/terms/"
      xmlns:subsets="http://purl.obolibrary.org/obo/ro/subsets#"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/promot/imports/ro_import.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/promot/releases/2025-06-05/imports/ro_import.owl"/>
-        <owl:versionInfo>2025-06-05</owl:versionInfo>
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/promot/releases/2025-06-18/imports/ro_import.owl"/>
+        <owl:versionInfo>2025-06-18</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -71,6 +69,12 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/IAO_0000119 -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000119"/>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/RO_0001900 -->
 
     <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/RO_0001900"/>
@@ -85,55 +89,11 @@
     
 
 
-    <!-- http://purl.obolibrary.org/obo/valid_for_go_gp2term -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/valid_for_go_gp2term">
-        <rdfs:subPropertyOf rdf:resource="http://www.geneontology.org/formats/oboInOwl#SubsetProperty"/>
-    </owl:AnnotationProperty>
-    
-
-
     <!-- http://purl.obolibrary.org/obo/ro/subsets#ro-eco -->
 
     <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/ro/subsets#ro-eco">
         <rdfs:subPropertyOf rdf:resource="http://www.geneontology.org/formats/oboInOwl#SubsetProperty"/>
     </owl:AnnotationProperty>
-    
-
-
-    <!-- http://purl.org/dc/elements/1.1/creator -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/creator"/>
-    
-
-
-    <!-- http://purl.org/dc/elements/1.1/date -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/date"/>
-    
-
-
-    <!-- http://purl.org/dc/terms/description -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/description"/>
-    
-
-
-    <!-- http://purl.org/dc/terms/license -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/license"/>
-    
-
-
-    <!-- http://purl.org/dc/terms/source -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/source"/>
-    
-
-
-    <!-- http://purl.org/dc/terms/title -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/title"/>
     
 
 
@@ -172,39 +132,32 @@
     
 
 
-    <!-- http://purl.obolibrary.org/obo/RO_0001015 -->
+    <!-- http://purl.obolibrary.org/obo/RO_0000053 -->
 
-    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0001015">
-        <owl:inverseOf rdf:resource="http://purl.obolibrary.org/obo/RO_0001025"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
-        <obo:IAO_0000111 xml:lang="en">is location of</obo:IAO_0000111>
-        <obo:IAO_0000112 xml:lang="en">my head is the location of my brain</obo:IAO_0000112>
-        <obo:IAO_0000112 xml:lang="en">this cage is the location of this rat</obo:IAO_0000112>
-        <obo:IAO_0000115 xml:lang="en">a relation between two independent continuants, the location and the target, in which the target is entirely within the location</obo:IAO_0000115>
-        <obo:IAO_0000116 xml:lang="en">Most location relations will only hold at certain times, but this is difficult to specify in OWL. See http://purl.obolibrary.org/obo/ro/docs/temporal-semantics/</obo:IAO_0000116>
-        <obo:IAO_0000118 xml:lang="en">location_of</obo:IAO_0000118>
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0000053">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <obo:IAO_0000111 xml:lang="en">bearer of</obo:IAO_0000111>
+        <obo:IAO_0000112 xml:lang="en">this apple is bearer of this red color</obo:IAO_0000112>
+        <obo:IAO_0000112 xml:lang="en">this vase is bearer of this fragility</obo:IAO_0000112>
+        <obo:IAO_0000115 xml:lang="en">Inverse of characteristic_of</obo:IAO_0000115>
+        <obo:IAO_0000116 xml:lang="en">A bearer can have many dependents, and its dependents can exist for different periods of time, but none of its dependents can exist when the bearer does not exist.</obo:IAO_0000116>
+        <obo:IAO_0000118 xml:lang="en">bearer_of</obo:IAO_0000118>
+        <obo:IAO_0000118 xml:lang="en">is bearer of</obo:IAO_0000118>
         <obo:RO_0001900 rdf:resource="http://purl.obolibrary.org/obo/RO_0001901"/>
-        <rdfs:label xml:lang="en">location of</rdfs:label>
+        <rdfs:label xml:lang="en">has characteristic</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/RO_0001025 -->
+    <!-- http://purl.obolibrary.org/obo/RO_0000086 -->
 
-    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0001025">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
-        <obo:IAO_0000111 xml:lang="en">located in</obo:IAO_0000111>
-        <obo:IAO_0000112 xml:lang="en">my brain is located in my head</obo:IAO_0000112>
-        <obo:IAO_0000112 xml:lang="en">this rat is located in this cage</obo:IAO_0000112>
-        <obo:IAO_0000115 xml:lang="en">a relation between two independent continuants, the target and the location, in which the target is entirely within the location</obo:IAO_0000115>
-        <obo:IAO_0000116 xml:lang="en">Location as a relation between instances: The primitive instance-level relation c located_in r at t reflects the fact that each continuant is at any given time associated with exactly one spatial region, namely its exact location. Following we can use this relation to define a further instance-level location relation - not between a continuant and the region which it exactly occupies, but rather between one continuant and another. c is located in c1, in this sense, whenever the spatial region occupied by c is part_of the spatial region occupied by c1.    Note that this relation comprehends both the relation of exact location between one continuant and another which obtains when r and r1 are identical (for example, when a portion of fluid exactly fills a cavity), as well as those sorts of inexact location relations which obtain, for example, between brain and head or between ovum and uterus</obo:IAO_0000116>
-        <obo:IAO_0000116 xml:lang="en">Most location relations will only hold at certain times, but this is difficult to specify in OWL. See http://purl.obolibrary.org/obo/ro/docs/temporal-semantics/</obo:IAO_0000116>
-        <obo:IAO_0000118 xml:lang="en">located_in</obo:IAO_0000118>
-        <obo:RO_0001900 rdf:resource="http://purl.obolibrary.org/obo/RO_0001901"/>
-        <terms:source>http://www.obofoundry.org/ro/#OBO_REL:located_in</terms:source>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/valid_for_go_gp2term"/>
-        <rdfs:label xml:lang="en">located in</rdfs:label>
-        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://wiki.geneontology.org/Located_in</rdfs:seeAlso>
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0000086">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/RO_0000053"/>
+        <obo:IAO_0000112 xml:lang="en">this apple has quality this red color</obo:IAO_0000112>
+        <obo:IAO_0000115 xml:lang="en">a relation between an independent continuant (the bearer) and a quality, in which the quality specifically depends on the bearer for its existence</obo:IAO_0000115>
+        <obo:IAO_0000116 xml:lang="en">A bearer can have many qualities, and its qualities can exist for different periods of time, but none of its qualities can exist when the bearer does not exist.</obo:IAO_0000116>
+        <obo:IAO_0000118 xml:lang="en">has_quality</obo:IAO_0000118>
+        <rdfs:label xml:lang="en">has quality</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -212,7 +165,6 @@
     <!-- http://purl.obolibrary.org/obo/RO_0002200 -->
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0002200">
-        <owl:inverseOf rdf:resource="http://purl.obolibrary.org/obo/RO_0002201"/>
         <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000125"/>
         <obo:IAO_0000115>A relationship that holds between a biological entity and a phenotype. Here a phenotype is construed broadly as any kind of quality of an organism part, a collection of these qualities, or a change in quality or qualities (e.g. abnormally increased temperature). The subject of this relationship can be an organism (where the organism has the phenotype, i.e. the qualities inhere in parts of this organism), a genomic entity such as a gene or genotype (if modifications of the gene or the genotype causes the phenotype), or a condition such as a disease (such that if the condition inheres in an organism, then the organism has the phenotype).</obo:IAO_0000115>
         <obo:IAO_0000117 rdf:resource="https://orcid.org/0000-0002-6601-2165"/>
@@ -232,6 +184,18 @@
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/RO_0002259"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/ro/subsets#ro-eco"/>
         <rdfs:label xml:lang="en">phenotype of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0002351 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0002351">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <obo:IAO_0000115>has member is a mereological relation between a collection and an item.</obo:IAO_0000115>
+        <obo:IAO_0000119>SIO</obo:IAO_0000119>
+        <obo:RO_0001900 rdf:resource="http://purl.obolibrary.org/obo/RO_0001901"/>
+        <rdfs:label xml:lang="en">has member</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -257,89 +221,9 @@
         <rdfs:label>is causal germline mutation in</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://www.orpha.net/ORDO/Orphanet_317343"/>
     </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/RO_0004029 -->
-
-    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0004029">
-        <obo:IAO_0000115>A relationship between a disease and some feature of that disease, where the feature is either a phenotype or an isolated disease.</obo:IAO_0000115>
-        <oboInOwl:created_by rdf:resource="https://orcid.org/0000-0002-6601-2165"/>
-        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-12-26T19:50:53Z</oboInOwl:creation_date>
-        <rdfs:label>disease has feature</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/RO_0004030 -->
-
-    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0004030">
-        <obo:IAO_0000115>A relationship between a disease and an anatomical structure where the material basis of the disease is some pathological change in the structure. Anatomical structure includes cellular and sub-cellular entities, such as chromosome and organelles.</obo:IAO_0000115>
-        <oboInOwl:created_by rdf:resource="https://orcid.org/0000-0002-6601-2165"/>
-        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-12-26T19:58:44Z</oboInOwl:creation_date>
-        <rdfs:label>disease arises from alteration in structure</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Classes
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/BFO_0000003 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000003">
-        <obo:IAO_0000115 xml:lang="en">An entity that has temporal parts and that happens, unfolds or develops through time.</obo:IAO_0000115>
-        <rdfs:label xml:lang="en">occurrent</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/BFO_0000015 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000015">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000003"/>
-        <obo:IAO_0000115 xml:lang="en">p is a process = Def. p is an occurrent that has temporal proper parts and for some time t, p s-depends_on some material entity at t. (axiom label in BFO2 Reference: [083-003])</obo:IAO_0000115>
-        <rdfs:comment xml:lang="en">An occurrent that has temporal proper parts and for some time t, p s-depends_on some material entity at t.</rdfs:comment>
-        <rdfs:label xml:lang="en">process</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/BFO_0000016 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000016">
-        <rdfs:label xml:lang="en">disposition</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/BFO_0000040 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000040">
-        <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/BFO_0000141"/>
-        <obo:IAO_0000115 xml:lang="en">An independent continuant that is spatially extended whose identity is independent of that of other entities and can be maintained through time.</obo:IAO_0000115>
-        <obo:IAO_0000116 xml:lang="en">Elucidation: An independent continuant that is spatially extended whose identity is independent of that of other entities and can be maintained through time.</obo:IAO_0000116>
-        <rdfs:label xml:lang="en">material entity</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/BFO_0000141 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000141">
-        <rdfs:label xml:lang="en">immaterial entity</rdfs:label>
-    </owl:Class>
 </rdf:RDF>
 
 
 
-<!-- Generated by the OWL API (version 4.5.29) https://github.com/owlcs/owlapi -->
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
 

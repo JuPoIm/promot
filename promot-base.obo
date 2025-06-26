@@ -1,15 +1,22 @@
 format-version: 1.2
-data-version: promot/releases/2025-05-27/promot-base.owl
-date: 27:05:2025 11:44
+data-version: promot/releases/2025-06-26/promot-base.owl
+date: 26:06:2025 09:18
 idspace: dce http://purl.org/dc/elements/1.1/ 
 idspace: dcterms http://purl.org/dc/terms/ 
 idspace: oboInOwl http://www.geneontology.org/formats/oboInOwl# 
 ontology: promot/promot-base
+property_value: dce:contributor "Anita Burgun MD, PhD" xsd:string
+property_value: dce:contributor "Carole Faviez PhD" xsd:string
+property_value: dce:contributor "Cynthia Gagnon PhD" xsd:string
+property_value: dce:contributor "Elizabeth Angelevski" xsd:string
+property_value: dce:contributor "Mansoore Gholizade MD" xsd:string
+property_value: dce:creator "Juliette Potier MSc" xsd:string
+property_value: dce:creator "Paul Fabry PhD student" xsd:string
 property_value: dce:type IAO:8000001
 property_value: dcterms:description "Ontology for building the relational database of the PROMOT project" xsd:string
 property_value: dcterms:license https://creativecommons.org/licenses/unspecified
 property_value: dcterms:title "PROMOT Common Data Model ontology" xsd:string
-property_value: owl:versionInfo "2025-05-27" xsd:string
+property_value: owl:versionInfo "2025-06-26" xsd:string
 
 [Term]
 id: PROMOT:0000000
@@ -18,84 +25,173 @@ name: root node
 [Term]
 id: PROMOT:0000001
 name: PABPN1
-is_a: BFO:0000031
+is_a: SO:0000704
 relationship: RO:0004013 MONDO:0008116
 
 [Term]
 id: PROMOT:0000002
 name: RYR1
-is_a: BFO:0000031
+is_a: SO:0000704
 relationship: RO:0004013 MONDO:0019952
 
 [Term]
 id: PROMOT:0000003
 name: TTN
-is_a: BFO:0000031
+is_a: SO:0000704
 relationship: RO:0004013 MONDO:0019952
 
 [Term]
 id: PROMOT:0000004
 name: NEB
-is_a: BFO:0000031
+is_a: SO:0000704
 relationship: RO:0004013 MONDO:0019952
 
 [Term]
 id: PROMOT:0000005
 name: MTM1
-is_a: BFO:0000031
+is_a: SO:0000704
 relationship: RO:0004013 MONDO:0019952
 
 [Term]
 id: PROMOT:0000006
 name: ACTA1
-is_a: BFO:0000031
+is_a: SO:0000704
 relationship: RO:0004013 MONDO:0019952
 
 [Term]
 id: PROMOT:0000007
 name: SELENON
-is_a: BFO:0000031
+is_a: SO:0000704
 relationship: RO:0004013 MONDO:0019952
 
 [Term]
 id: PROMOT:0000008
 name: CHRNE
-is_a: BFO:0000031
+is_a: SO:0000704
 relationship: RO:0004013 MONDO:0018940
 
 [Term]
 id: PROMOT:0000009
 name: DOK7
-is_a: BFO:0000031
+is_a: SO:0000704
 relationship: RO:0004013 MONDO:0018940
 
 [Term]
 id: PROMOT:0000010
 name: COLQ
-is_a: BFO:0000031
+is_a: SO:0000704
 relationship: RO:0004013 MONDO:0018940
 
 [Term]
 id: PROMOT:0000011
 name: RAPSN
-is_a: BFO:0000031
+is_a: SO:0000704
 relationship: RO:0004013 MONDO:0018940
 
 [Term]
 id: PROMOT:0000012
 name: GFPT1
-is_a: BFO:0000031
+is_a: SO:0000704
 relationship: RO:0004013 MONDO:0018940
 
 [Term]
 id: PROMOT:0000013
 name: GMPPB
-is_a: BFO:0000031
+is_a: SO:0000704
 relationship: RO:0004013 MONDO:0018940
 
 [Term]
-id: PROMOT:0000101
+id: PROMOT:3000101
 name: Patient
-def: "personne faisant partie de l’étude PROMOT" []
-is_a: BFO:0000040
+def: "Participant of PROMOT study" []
+is_a: http://snomed.info/id/337915000
+relationship: PROMOT:2000002 http://snomed.info/id/360296002 ! uses assistive equipment
+relationship: PROMOT:2000003 http://snomed.info/id/386053000 ! is assessed by
+relationship: RO:0002200 HP:0000118
+relationship: SIO:000217 SIO:000475
+relationship: VO:0001039 SO:0000704
+
+[Term]
+id: PROMOT:5000001
+name: Patient statement
+is_a: IAO:0000030
+relationship: RO:0002351 http://snomed.info/id/302147001
+relationship: RO:0002351 PROMOT:3000101 ! Patient
+relationship: RO:0002351 PROMOT:5000010 ! Patient identifier
+relationship: RO:0002351 SIO:000393
+
+[Term]
+id: PROMOT:5000002
+name: Biological sex statement
+is_a: PROMOT:5000001 ! Patient statement
+relationship: RO:0002351 http://snomed.info/id/184100006
+
+[Term]
+id: PROMOT:5000003
+name: Marital status statement
+is_a: PROMOT:5000001 ! Patient statement
+relationship: RO:0002351 http://snomed.info/id/125680007
+
+[Term]
+id: PROMOT:5000004
+name: Occupation statement
+is_a: PROMOT:5000001 ! Patient statement
+relationship: RO:0002351 http://snomed.info/id/184104002
+
+[Term]
+id: PROMOT:5000005
+name: Ethnicity statement
+is_a: PROMOT:5000001 ! Patient statement
+relationship: RO:0002351 http://snomed.info/id/186034007
+
+[Term]
+id: PROMOT:5000006
+name: Date of birth statement
+is_a: PROMOT:5000001 ! Patient statement
+relationship: RO:0002351 http://snomed.info/id/184099003
+
+[Term]
+id: PROMOT:5000007
+name: Date of death statement
+is_a: PROMOT:5000001 ! Patient statement
+relationship: RO:0002351 http://snomed.info/id/399753006
+
+[Term]
+id: PROMOT:5000008
+name: Achieved qualification statement
+is_a: PROMOT:5000001 ! Patient statement
+relationship: RO:0002351 http://snomed.info/id/224326003
+
+[Term]
+id: PROMOT:5000009
+name: Duration of formal education statement
+is_a: PROMOT:5000001 ! Patient statement
+relationship: RO:0002351 http://snomed.info/id/224288002
+
+[Term]
+id: PROMOT:5000010
+name: Patient identifier
+is_a: IAO:0000030
+
+[Typedef]
+id: PROMOT:2000001
+name: has location
+def: "a relation between a phenotype and an anatomical entity, where the anatomical entity is the location of the phenotype." []
+property_value: IAO:0000117 "Juliette Potier" xsd:string
+domain: HP:0000118
+range: FMA:62955
+
+[Typedef]
+id: PROMOT:2000002
+name: uses assistive equipment
+def: "a relation between a human and an device, where the device is an assistive equipment used by the human in order to move or to accomplish something, such as a task or an activity." []
+property_value: IAO:0000117 "Juliette Potier" xsd:string
+range: http://snomed.info/id/360296002
+
+[Typedef]
+id: PROMOT:2000003
+name: is assessed by
+def: "a relation between a human and an evaluation procedure, where the human is assessed by an evaluation procedure, such as a test, a questionnaire or a scale." []
+property_value: IAO:0000117 "Juliette Potier" xsd:string
+range: http://snomed.info/id/386053000
 
