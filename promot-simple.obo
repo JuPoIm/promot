@@ -1,13 +1,20 @@
 format-version: 1.2
-data-version: promot/releases/2025-06-19/promot-simple.owl
-date: 19:06:2025 10:34
+data-version: promot/releases/2025-06-26/promot-simple.owl
+date: 26:06:2025 09:19
 subsetdef: ro-eco ""
 subsetdef: RO:0002259 ""
 idspace: dc http://purl.org/dc/elements/1.1/ 
 idspace: oboInOwl http://www.geneontology.org/formats/oboInOwl# 
 idspace: terms http://purl.org/dc/terms/ 
 ontology: promot/promot-simple
-property_value: owl:versionInfo "2025-06-19" xsd:string
+property_value: dc:contributor "Anita Burgun MD, PhD" xsd:string
+property_value: dc:contributor "Carole Faviez PhD" xsd:string
+property_value: dc:contributor "Cynthia Gagnon PhD" xsd:string
+property_value: dc:contributor "Elizabeth Angelevski" xsd:string
+property_value: dc:contributor "Mansoore Gholizade MD" xsd:string
+property_value: dc:creator "Juliette Potier MSc" xsd:string
+property_value: dc:creator "Paul Fabry PhD student" xsd:string
+property_value: owl:versionInfo "2025-06-26" xsd:string
 property_value: terms:description "Ontology for building the relational database of the PROMOT project" xsd:string
 property_value: terms:license https://creativecommons.org/licenses/unspecified
 property_value: terms:title "PROMOT Common Data Model ontology" xsd:string
@@ -71,11 +78,13 @@ name: GMPPB
 [Term]
 id: PROMOT:3000101
 name: Patient
-def: "Participant à l’étude PROMOT" []
+def: "Participant of PROMOT study" []
 
 [Term]
 id: PROMOT:5000001
 name: Patient statement
+relationship: RO:0002351 PROMOT:3000101 ! has member Patient
+relationship: RO:0002351 PROMOT:5000010 ! has member Patient identifier
 
 [Term]
 id: PROMOT:5000002
@@ -125,21 +134,19 @@ name: Patient identifier
 id: PROMOT:2000001
 name: has location
 def: "a relation between a phenotype and an anatomical entity, where the anatomical entity is the location of the phenotype." []
-property_value: IAO:0000117 "Juliette POTIER" xsd:string
+property_value: IAO:0000117 "Juliette Potier" xsd:string
 
 [Typedef]
 id: PROMOT:2000002
 name: uses assistive equipment
 def: "a relation between a human and an device, where the device is an assistive equipment used by the human in order to move or to accomplish something, such as a task or an activity." []
-property_value: IAO:0000117 "Juliette POTIER" xsd:string
-domain: PROMOT:3000101 ! Patient
+property_value: IAO:0000117 "Juliette Potier" xsd:string
 
 [Typedef]
 id: PROMOT:2000003
 name: is assessed by
 def: "a relation between a human and an evaluation procedure, where the human is assessed by an evaluation procedure, such as a test, a questionnaire or a scale." []
-property_value: IAO:0000117 "Juliette POTIER" xsd:string
-domain: PROMOT:3000101 ! Patient
+property_value: IAO:0000117 "Juliette Potier" xsd:string
 
 [Typedef]
 id: RO:0002200
@@ -183,6 +190,21 @@ def: "A relation between a diagnostic tool and the diagnostic measurement that i
 property_value: dc:creator "SCDO (Jade Hotchkiss)" xsd:string
 
 [Typedef]
+id: SIO:000217
+name: has quality
+property_value: dc:identifier "SIO_000217" xsd:string
+property_value: isDefinedBy http://semanticscience.org/ontology/sio.owl
+property_value: terms:description "has quality is a relation between an entity and the quality that it bears." xsd:string
+is_inverse_functional: true
+
+[Typedef]
+id: SIO:000671
+name: has identifier
+property_value: dc:identifier "SIO_000671" xsd:string
+property_value: isDefinedBy http://semanticscience.org/ontology/sio.owl
+property_value: terms:description "a relation between an entity and an identifier." xsd:string
+
+[Typedef]
 id: VO:0001039
 name: has gene mutation
 def: "An object property that represents an organism has a mutation of a specific gene from the organism genome." []
@@ -191,7 +213,7 @@ property_value: IAO:0000117 "Oliver He" xsd:string
 [Typedef]
 id: affected:by
 name: affected by
-def: "describes an entity of which the state or quality is affected by another existing entity. " []
+def: "describes an entity of which the state or quality is affected by another existing entity." []
 comment: https://bioportal.bioontology.org/ontologies/BIOLINK
 property_value: seeAlso https://biolink.github.io/biolink-model/
 
@@ -207,14 +229,14 @@ creation_date: 2017-11-05T02:45:54Z
 [Typedef]
 id: https://w3id.org/biolink/vocab/affects
 name: affects
-def: "Describes an entity that has an effect on the state or quality of another existing entity. " []
+def: "Describes an entity that has an effect on the state or quality of another existing entity." []
 comment: https://bioportal.bioontology.org/ontologies/BIOLINK
 property_value: seeAlso https://biolink.github.io/biolink-model/
 
 [Typedef]
 id: related:to
 name: related to
-def: "A relationship that is asserted between two named things " []
+def: "A relationship that is asserted between two named things" []
 comment: https://bioportal.bioontology.org/ontologies/BIOLINK
 property_value: seeAlso https://biolink.github.io/biolink-model/
 
