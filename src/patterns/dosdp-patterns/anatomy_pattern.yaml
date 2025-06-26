@@ -1,0 +1,35 @@
+pattern_name: anatomy_pattern
+
+pattern_iri: anatomy_pattern.yaml
+
+contributors:
+  - https://orcid.org/0009-0000-5160-7927 # J. Potier
+
+description: "Use this template to link the phenotypes to the anatomy they are related to."
+
+status: development
+
+classes:
+  anatomy: FMA:62955
+  structure: http://id.who.int/icd/entity/1626363729
+
+relations:
+  related_to: https://w3id.org/biolink/vocab/related_to
+
+data_list_vars:
+  orcid: xsd:anyURI
+
+vars:
+  anatomy: "'anatomy'"
+  structure: "'structure'"
+      
+logical_axioms:
+  # - axiom_type: equivalentTo
+  #   text: "'anatomy' and 'related_to' some %s"
+  #   vars:
+  #     - structure
+
+  - axiom_type: subClassOf
+    text: "'related_to' some %s"
+    vars:
+      - structure

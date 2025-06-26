@@ -1,0 +1,56 @@
+pattern_name: patients_pattern
+
+pattern_iri: http://purl.obolibrary.org/obo/promot/patterns/gene_disease_pattern.yaml
+
+description: "Use this template to link the patient class to the related classes."
+
+contributors:
+  - https://orcid.org/0009-0000-5160-7927 # J. Potier
+
+classes:
+  patient: PROMOT:3000101
+  gene: SO:0000704
+  assistive_equipment: SNOMED:360296002
+  demographic_history_detail: SNOMED:302147001
+  biological_quality: SIO:000475
+  evaluation_procedure: SNOMED:386053000
+  phenotype: HP:0000118
+
+relations:
+  uses_assistive_equipment:	PROMOT:2000002
+  is_assessed_by:	PROMOT:2000003
+  has_gene_mutation:	VO:0001039
+  has_quality:	SIO:000217
+  has_phenotype:	RO:0002200
+
+data_list_vars:
+  orcid: xsd:anyURI
+
+vars:
+  disease: "disease"
+  gene : "gene"
+
+subClassOf:
+  text: "'has_gene_mutation' some %s"
+  vars:
+    - gene
+
+subClassOf:
+  text: "'is_assessed_by' some %s"
+  vars:
+    - evaluation_procedure
+
+subClassOf:
+  text: "'uses_assistive_equipment' some %s"
+  vars:
+    - assistive_equipment
+
+subClassOf:
+  text: "'has_quality' some %s"
+  vars:
+    - quality
+
+subClassOf:
+  text: "'has_phenotype' some %s"
+  vars:
+    - phenotype
