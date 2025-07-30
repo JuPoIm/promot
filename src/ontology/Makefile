@@ -10,7 +10,7 @@
 # More information: https://github.com/INCATools/ontology-development-kit/
 
 # Fingerprint of the configuration file when this Makefile was last generated
-CONFIG_HASH=                09f8716a984bbebf3dc3ece2a46c16e79aeffe2e3a2eec341e493cbb99a625ce
+CONFIG_HASH=                83f1fffae05946c81558a67871c197dc2d33fef4f499d77e10270ffb4059bf85
 
 
 # ----------------------------------------
@@ -165,7 +165,7 @@ all_main: $(MAIN_FILES)
 # ----------------------------------------
 
 
-IMPORTS =  bfo biolink fma hp iao mondo ncit orcidio ro scdo sio snomed so vo whofic
+IMPORTS =  bfo fma hp iao mondo ncit obi orcidio ro scdo sio snomed vo whofic
 
 IMPORT_ROOTS = $(patsubst %, $(IMPORTDIR)/%_import, $(IMPORTS))
 IMPORT_OWL_FILES = $(foreach n,$(IMPORT_ROOTS), $(n).owl)
@@ -381,16 +381,6 @@ $(IMPORTDIR)/%_import.owl: $(MIRRORDIR)/%.owl
 
 .PRECIOUS: $(IMPORTDIR)/%_import.owl
 
-## Module for ontology: biolink
-
-$(IMPORTDIR)/biolink_import.owl: $(MIRRORDIR)/biolink.owl $(IMPORTDIR)/biolink_terms_combined.txt
-	if [ $(IMP) = true ]; then $(ROBOT) query -i $< --update ../sparql/preprocess-module.ru \
-    extract -T $(IMPORTDIR)/biolink_terms_combined.txt --copy-ontology-annotations true --force true --method BOT \
-    remove --base-iri $(OBOBASE)/BIOLINK --axioms external --preserve-structure false --trim false \
-		remove $(patsubst %, --term %, $(ANNOTATION_PROPERTIES)) --term rdfs:label --term IAO:0000115  -T $(IMPORTDIR)/biolink_terms_combined.txt --select complement \
-		query --update ../sparql/inject-subset-declaration.ru --update ../sparql/inject-synonymtype-declaration.ru --update ../sparql/postprocess-module.ru \
-		$(ANNOTATE_CONVERT_FILE); fi
-
 ## Module for ontology: iao
 
 $(IMPORTDIR)/iao_import.owl: $(MIRRORDIR)/iao.owl $(IMPORTDIR)/iao_terms_combined.txt
@@ -409,6 +399,16 @@ $(IMPORTDIR)/mondo_import.owl: $(MIRRORDIR)/mondo.owl
 
 $(IMPORTDIR)/ncit_import.owl: $(MIRRORDIR)/ncit.owl
 	echo "ERROR: You have configured your default module type to be custom; this behavior needs to be overwritten in promot.Makefile!" && false
+## Module for ontology: obi
+
+$(IMPORTDIR)/obi_import.owl: $(MIRRORDIR)/obi.owl $(IMPORTDIR)/obi_terms_combined.txt
+	if [ $(IMP) = true ]; then $(ROBOT) query -i $< --update ../sparql/preprocess-module.ru \
+    extract -T $(IMPORTDIR)/obi_terms_combined.txt --copy-ontology-annotations true --force true --method BOT \
+    remove --base-iri $(OBOBASE)/OBI --axioms external --preserve-structure false --trim false \
+		remove $(patsubst %, --term %, $(ANNOTATION_PROPERTIES)) --term rdfs:label --term IAO:0000115  -T $(IMPORTDIR)/obi_terms_combined.txt --select complement \
+		query --update ../sparql/inject-subset-declaration.ru --update ../sparql/inject-synonymtype-declaration.ru --update ../sparql/postprocess-module.ru \
+		$(ANNOTATE_CONVERT_FILE); fi
+
 ## Module for ontology: orcidio
 
 $(IMPORTDIR)/orcidio_import.owl: $(MIRRORDIR)/orcidio.owl $(IMPORTDIR)/orcidio_terms_combined.txt
@@ -422,10 +422,6 @@ $(IMPORTDIR)/orcidio_import.owl: $(MIRRORDIR)/orcidio.owl $(IMPORTDIR)/orcidio_t
 ## Module for ontology: snomed
 
 $(IMPORTDIR)/snomed_import.owl: $(MIRRORDIR)/snomed.owl
-	echo "ERROR: You have configured your default module type to be custom; this behavior needs to be overwritten in promot.Makefile!" && false
-## Module for ontology: so
-
-$(IMPORTDIR)/so_import.owl: $(MIRRORDIR)/so.owl
 	echo "ERROR: You have configured your default module type to be custom; this behavior needs to be overwritten in promot.Makefile!" && false
 
 .PHONY: refresh-imports
@@ -506,13 +502,6 @@ mirror-bfo: | $(TMPDIR)
 	$(ROBOT) convert -i $(TMPDIR)/bfo-download.owl -o $(TMPDIR)/$@.owl
 
 
-## ONTOLOGY: biolink
-.PHONY: mirror-biolink
-.PRECIOUS: $(MIRRORDIR)/biolink.owl
-mirror-biolink: | $(TMPDIR)
-	$(ROBOT) convert -I https://w3id.org/biolink/biolink-model.owl.ttl -o $(TMPDIR)/$@.owl
-
-
 ## ONTOLOGY: fma
 .PHONY: mirror-fma
 .PRECIOUS: $(MIRRORDIR)/fma.owl
@@ -563,6 +552,14 @@ mirror-ncit:
 endif
 
 
+## ONTOLOGY: obi
+.PHONY: mirror-obi
+.PRECIOUS: $(MIRRORDIR)/obi.owl
+mirror-obi: | $(TMPDIR)
+	curl -L $(OBOBASE)/obi.owl --create-dirs -o $(TMPDIR)/obi-download.owl --retry 4 --max-time 200 && \
+	$(ROBOT) convert -i $(TMPDIR)/obi-download.owl -o $(TMPDIR)/$@.owl
+
+
 ## ONTOLOGY: orcidio
 .PHONY: mirror-orcidio
 .PRECIOUS: $(MIRRORDIR)/orcidio.owl
@@ -604,19 +601,6 @@ mirror-snomed: | $(TMPDIR)
 else
 mirror-snomed:
 	@echo "Not refreshing snomed because refreshing large imports is disabled (IMP_LARGE=$(IMP_LARGE))."
-endif
-
-
-## ONTOLOGY: so
-.PHONY: mirror-so
-.PRECIOUS: $(MIRRORDIR)/so.owl
-ifeq ($(strip $(IMP_LARGE)),true)
-mirror-so: | $(TMPDIR)
-	curl -L $(OBOBASE)/so.owl --create-dirs -o $(TMPDIR)/so-download.owl --retry 4 --max-time 200 && \
-	$(ROBOT) convert -i $(TMPDIR)/so-download.owl -o $(TMPDIR)/$@.owl
-else
-mirror-so:
-	@echo "Not refreshing so because refreshing large imports is disabled (IMP_LARGE=$(IMP_LARGE))."
 endif
 
 

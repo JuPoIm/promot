@@ -56,9 +56,6 @@ import_group:
   module_type: custom
   products:
     - id: bfo # high-level classes
-    - id: biolink # relations
-      mirror_from: https://w3id.org/biolink/biolink-model.owl.ttl
-      module_type: filter
     - id: fma # anatomy
     - id: hp # phenotypes
     - id: iao
@@ -67,6 +64,8 @@ import_group:
       is_large: TRUE
     - id: ncit # genes, tests, devices
       is_large: TRUE
+    - id: obi
+      module_type: filter
     - id: orcidio # code orcid, to delete ?
       mirror_from: https://w3id.org/orcidio/orcidio.owl
       module_type: filter
@@ -76,8 +75,6 @@ import_group:
     - id: scdo # measures relation
     - id: sio # life status, parental transmission
     - id: snomed # tests, devices
-      is_large: TRUE
-    - id: so # 'gene'
       is_large: TRUE
     - id: vo # has gene mutation
     - id: whofic # body structures, functions, activities

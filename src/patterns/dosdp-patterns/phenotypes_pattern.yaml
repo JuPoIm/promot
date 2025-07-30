@@ -43,11 +43,7 @@ annotations:
       - source
       
 logical_axioms:
-  # - axiom_type: equivalentTo
-  #   text: "'phenotypic_abnormality' and 'phenotype_of' some %s"
-  #   vars:
-  #     - disease
-  
+
   - axiom_type: subClassOf
     text: "'phenotype_of' some %s"
     vars:
@@ -58,27 +54,12 @@ logical_axioms:
     vars:
       - structure
 
-  # - axiom_type: equivalentTo
-  #   text: "'phenotypic_abnormality' and 'related_to' some %s"
-  #   vars:
-  #     - structure
-
   - axiom_type: subClassOf
     text: "'related_to' some %s"
     vars:
       - function
 
-  # - axiom_type: equivalentTo
-  #   text: "'phenotypic_abnormality' and 'related_to' some %s"
-  #   vars:
-  #     - function
-
   - axiom_type: subClassOf
     text: "'has_location' some %s"
     vars:
       - anatomy
-
-  # - axiom_type: equivalentTo
-  #   text: "'phenotypic_abnormality' and 'has_location' some %s"
-  #   vars:
-  #     - anatomy

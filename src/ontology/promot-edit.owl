@@ -15,37 +15,39 @@ Import(<http://purl.obolibrary.org/obo/promot/imports/fma_import.owl>)
 Import(<http://purl.obolibrary.org/obo/promot/imports/hp_import.owl>)
 Import(<http://purl.obolibrary.org/obo/promot/imports/iao_import.owl>)
 Import(<http://purl.obolibrary.org/obo/promot/imports/mondo_import.owl>)
+Import(<http://purl.obolibrary.org/obo/promot/imports/obi_import.owl>)
 Import(<http://purl.obolibrary.org/obo/promot/imports/ro_import.owl>)
 Import(<http://purl.obolibrary.org/obo/promot/imports/scdo_import.owl>)
 Import(<http://purl.obolibrary.org/obo/promot/imports/sio_import.owl>)
 Import(<http://purl.obolibrary.org/obo/promot/imports/snomed_import.owl>)
-Import(<http://purl.obolibrary.org/obo/promot/imports/so_import.owl>)
 Import(<http://purl.obolibrary.org/obo/promot/imports/vo_import.owl>)
 Import(<http://purl.obolibrary.org/obo/promot/imports/whofic_import.owl>)
 Import(<http://purl.obolibrary.org/obo/promot/patterns/definitions.owl>)
 Import(<http://purl.obolibrary.org/obo/promot/releases/2025-06-18/imports/bfo_import.owl>)
-Import(<http://purl.obolibrary.org/obo/promot/releases/2025-06-18/imports/fma_import.owl>)
 Import(<http://purl.obolibrary.org/obo/promot/releases/2025-06-18/imports/iao_import.owl>)
 Import(<http://purl.obolibrary.org/obo/promot/releases/2025-06-18/imports/ro_import.owl>)
 Import(<http://purl.obolibrary.org/obo/promot/releases/2025-06-18/imports/scdo_import.owl>)
-Import(<http://purl.obolibrary.org/obo/promot/releases/2025-06-18/imports/so_import.owl>)
 Import(<http://purl.obolibrary.org/obo/promot/releases/2025-06-18/imports/vo_import.owl>)
-Import(<http://purl.obolibrary.org/obo/promot/releases/2025-06-19/imports/sio_import.owl>)
-Import(<http://purl.obolibrary.org/obo/promot/releases/2025-06-23/imports/snomed_import.owl>)
-Import(<http://purl.obolibrary.org/obo/promot/releases/2025-06-25/components/classes_properties.owl>)
-Import(<http://purl.obolibrary.org/obo/promot/releases/2025-06-25/imports/hp_import.owl>)
 Import(<http://purl.obolibrary.org/obo/promot/releases/2025-06-25/imports/mondo_import.owl>)
-Import(<http://purl.obolibrary.org/obo/promot/releases/2025-06-25/imports/whofic_import.owl>)
-Import(<http://purl.obolibrary.org/obo/promot/releases/2025-06-25/patterns/definitions.owl>)
+Import(<http://purl.obolibrary.org/obo/promot/releases/2025-07-03/imports/sio_import.owl>)
+Import(<http://purl.obolibrary.org/obo/promot/releases/2025-07-03/imports/snomed_import.owl>)
+Import(<http://purl.obolibrary.org/obo/promot/releases/2025-07-03/imports/whofic_import.owl>)
+Import(<http://purl.obolibrary.org/obo/promot/releases/2025-07-30/components/classes_properties.owl>)
+Import(<http://purl.obolibrary.org/obo/promot/releases/2025-07-04/imports/fma_import.owl>)
+Import(<http://purl.obolibrary.org/obo/promot/releases/2025-07-30/imports/hp_import.owl>)
+Import(<http://purl.obolibrary.org/obo/promot/releases/2025-07-04/imports/obi_import.owl>)
+Import(<http://purl.obolibrary.org/obo/promot/releases/2025-07-30/patterns/definitions.owl>)
 Annotation(dce:contributor "Anita Burgun MD, PhD")
 Annotation(dce:contributor "Carole Faviez PhD")
 Annotation(dce:contributor "Cynthia Gagnon PhD")
+Annotation(dce:contributor "ERDERA — European Rare Diseases Research Alliance")
 Annotation(dce:contributor "Elizabeth Angelevski")
 Annotation(dce:contributor "Mansoore Gholizade MD")
+Annotation(dce:contributor "Daniel Natera De Benito MD, PhD")
+Annotation(dce:contributor "Hanns Lochmuller MD, PhD")
 Annotation(dce:creator "Juliette Potier MSc")
-Annotation(dce:creator "Paul Fabry PhD student")
+Annotation(dce:creator "Paul Fabry MD, PhD student")
 Annotation(dcterms:description "Ontology for building the relational database of the PROMOT project")
-Annotation(dcterms:license <https://creativecommons.org/licenses/unspecified>)
 Annotation(dcterms:title "PROMOT Common Data Model ontology")
 
 Declaration(Class(<http://purl.obolibrary.org/obo/PROMOT_0000000>))
@@ -82,29 +84,21 @@ SubClassOf(<http://purl.obolibrary.org/obo/FMA_5022> <http://purl.obolibrary.org
 
 SubClassOf(<http://purl.obolibrary.org/obo/FMA_7490> <http://purl.obolibrary.org/obo/FMA_62955>)
 
+# Class: <http://purl.obolibrary.org/obo/HP_0031797> (Clinical course)
+
+SubClassOf(<http://purl.obolibrary.org/obo/HP_0031797> <http://purl.obolibrary.org/obo/HP_0000118>)
+
+# Class: <http://purl.obolibrary.org/obo/NCBITaxon_9606> (<http://purl.obolibrary.org/obo/NCBITaxon_9606>)
+
+SubClassOf(<http://purl.obolibrary.org/obo/NCBITaxon_9606> <http://purl.obolibrary.org/obo/OBI_0100026>)
+
 # Class: <http://purl.obolibrary.org/obo/PROMOT_0000000> (root node)
 
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/PROMOT_0000000> "root node"@en)
 
-# Class: <http://purl.obolibrary.org/obo/PROMOT_3000101> (Patient)
-
-SubClassOf(<http://purl.obolibrary.org/obo/PROMOT_3000101> <http://snomed.info/id/337915000>)
-
 # Class: <http://semanticscience.org/resource/SIO_000475> (biological quality)
 
 SubClassOf(<http://semanticscience.org/resource/SIO_000475> <http://purl.obolibrary.org/obo/BFO_0000019>)
-
-# Class: <http://semanticscience.org/resource/SIO_000498> (person)
-
-SubClassOf(<http://semanticscience.org/resource/SIO_000498> <http://purl.obolibrary.org/obo/BFO_0000040>)
-
-# Class: <http://semanticscience.org/resource/SIO_000959> (existence quality)
-
-SubClassOf(<http://semanticscience.org/resource/SIO_000959> <http://purl.obolibrary.org/obo/BFO_0000019>)
-
-# Class: <http://semanticscience.org/resource/SIO_001209> (assertional qualifier)
-
-SubClassOf(<http://semanticscience.org/resource/SIO_001209> <http://purl.obolibrary.org/obo/BFO_0000019>)
 
 # Class: <http://semanticscience.org/resource/SIO_001268> (parental transmission)
 
@@ -114,13 +108,17 @@ SubClassOf(<http://semanticscience.org/resource/SIO_001268> <http://semanticscie
 
 SubClassOf(<http://semanticscience.org/resource/SIO_010057> <http://semanticscience.org/resource/SIO_000475>)
 
+# Class: <http://snomed.info/id/12239004> (Throat clearing (observable entity))
+
+SubClassOf(<http://snomed.info/id/12239004> <http://purl.obolibrary.org/obo/BFO_0000016>)
+
 # Class: <http://snomed.info/id/125680007> (Marital status (observable entity))
 
 SubClassOf(<http://snomed.info/id/125680007> <http://snomed.info/id/302147001>)
 
 # Class: <http://snomed.info/id/12894003> (Functional assessment (procedure))
 
-SubClassOf(<http://snomed.info/id/12894003> <http://purl.obolibrary.org/obo/BFO_0000015>)
+SubClassOf(<http://snomed.info/id/12894003> <http://snomed.info/id/386053000>)
 
 # Class: <http://snomed.info/id/160476009> (Social / personal history observable (observable entity))
 
@@ -134,25 +132,29 @@ SubClassOf(<http://snomed.info/id/183135000> <http://purl.obolibrary.org/obo/BFO
 
 SubClassOf(<http://snomed.info/id/184099003> <http://snomed.info/id/302147001>)
 
-# Class: <http://snomed.info/id/273252003> (ABC behavioral checklist (assessment scale))
+# Class: <http://snomed.info/id/224899006> (Walking aid (physical object))
 
-SubClassOf(<http://snomed.info/id/273252003> <http://purl.obolibrary.org/obo/BFO_0000003>)
+SubClassOf(<http://snomed.info/id/224899006> <http://snomed.info/id/360296002>)
 
-# Class: <http://snomed.info/id/273306008> (Beck depression inventory (assessment scale))
+# Class: <http://snomed.info/id/252478000> (6-minute walk test (procedure))
 
-SubClassOf(<http://snomed.info/id/273306008> <http://purl.obolibrary.org/obo/BFO_0000003>)
+SubClassOf(<http://snomed.info/id/252478000> <http://snomed.info/id/386053000>)
 
-# Class: <http://snomed.info/id/273481004> (Geriatric depression scale (assessment scale))
+# Class: <http://snomed.info/id/252482003> (Stair-climbing test (procedure))
 
-SubClassOf(<http://snomed.info/id/273481004> <http://purl.obolibrary.org/obo/BFO_0000003>)
+SubClassOf(<http://snomed.info/id/252482003> <http://snomed.info/id/386053000>)
 
-# Class: <http://snomed.info/id/302761001> (Walking exercise test (procedure))
+# Class: <http://snomed.info/id/298059007> (Date of onset (observable entity))
 
-SubClassOf(<http://snomed.info/id/302761001> <http://snomed.info/id/386053000>)
+SubClassOf(<http://snomed.info/id/298059007> <http://purl.obolibrary.org/obo/IAO_0000030>)
 
 # Class: <http://snomed.info/id/360296002> (Assistive equipment (physical object))
 
 SubClassOf(<http://snomed.info/id/360296002> <http://purl.obolibrary.org/obo/BFO_0000030>)
+
+# Class: <http://snomed.info/id/364578004> (Observable feature of walking (observable entity))
+
+SubClassOf(<http://snomed.info/id/364578004> <http://purl.obolibrary.org/obo/IAO_0000030>)
 
 # Class: <http://snomed.info/id/386053000> (Evaluation procedure (procedure))
 
