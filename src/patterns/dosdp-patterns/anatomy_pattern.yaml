@@ -12,9 +12,11 @@ status: development
 classes:
   anatomy: FMA:62955
   structure: http://id.who.int/icd/entity/1626363729
+  phenotypic_abnormality: HP:0000118
 
 relations:
   related_to: https://w3id.org/biolink/vocab/related_to
+  is_location_of: PROMOT:2000001
 
 data_list_vars:
   orcid: xsd:anyURI
@@ -22,6 +24,7 @@ data_list_vars:
 vars:
   anatomy: "'anatomy'"
   structure: "'structure'"
+  phenotype: "'phenotypic_abnormality'"
       
 logical_axioms:
 
@@ -29,3 +32,8 @@ logical_axioms:
     text: "'related_to' some %s"
     vars:
       - structure
+
+  - axiom_type: subClassOf
+    text: "'is_location_of' some %s"
+    vars:
+      - phenotype

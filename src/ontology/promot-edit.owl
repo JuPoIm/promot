@@ -25,30 +25,46 @@ Import(<http://purl.obolibrary.org/obo/promot/imports/whofic_import.owl>)
 Import(<http://purl.obolibrary.org/obo/promot/patterns/definitions.owl>)
 Import(<http://purl.obolibrary.org/obo/promot/releases/2025-06-18/imports/bfo_import.owl>)
 Import(<http://purl.obolibrary.org/obo/promot/releases/2025-06-18/imports/iao_import.owl>)
-Import(<http://purl.obolibrary.org/obo/promot/releases/2025-06-18/imports/ro_import.owl>)
 Import(<http://purl.obolibrary.org/obo/promot/releases/2025-06-18/imports/scdo_import.owl>)
 Import(<http://purl.obolibrary.org/obo/promot/releases/2025-06-18/imports/vo_import.owl>)
 Import(<http://purl.obolibrary.org/obo/promot/releases/2025-06-25/imports/mondo_import.owl>)
-Import(<http://purl.obolibrary.org/obo/promot/releases/2025-07-03/imports/sio_import.owl>)
-Import(<http://purl.obolibrary.org/obo/promot/releases/2025-07-03/imports/snomed_import.owl>)
 Import(<http://purl.obolibrary.org/obo/promot/releases/2025-07-03/imports/whofic_import.owl>)
-Import(<http://purl.obolibrary.org/obo/promot/releases/2025-07-30/components/classes_properties.owl>)
-Import(<http://purl.obolibrary.org/obo/promot/releases/2025-07-04/imports/fma_import.owl>)
-Import(<http://purl.obolibrary.org/obo/promot/releases/2025-07-30/imports/hp_import.owl>)
-Import(<http://purl.obolibrary.org/obo/promot/releases/2025-07-04/imports/obi_import.owl>)
-Import(<http://purl.obolibrary.org/obo/promot/releases/2025-07-30/patterns/definitions.owl>)
-Annotation(dce:contributor "Anita Burgun MD, PhD")
-Annotation(dce:contributor "Carole Faviez PhD")
-Annotation(dce:contributor "Cynthia Gagnon PhD")
-Annotation(dce:contributor "ERDERA — European Rare Diseases Research Alliance")
+Import(<http://purl.obolibrary.org/obo/promot/releases/2025-07-30/imports/ro_import.owl>)
+Import(<http://purl.obolibrary.org/obo/promot/releases/2025-07-30/imports/sio_import.owl>)
+Import(<http://purl.obolibrary.org/obo/promot/releases/2025-08-04/imports/snomed_import.owl>)
+Import(<http://purl.obolibrary.org/obo/promot/releases/2025-08-05/imports/fma_import.owl>)
+Import(<http://purl.obolibrary.org/obo/promot/releases/2025-08-07/imports/hp_import.owl>)
+Annotation(dce:contributor "Anita Burgun MD, PhD
+https://orcid.org/0000-0001-6855-4366")
+Annotation(dce:contributor "Carole Faviez PhD
+https://orcid.org/0000-0002-1500-0236")
+Annotation(dce:contributor "Cynthia Gagnon PhD
+https://orcid.org/0000-0003-2829-8470")
+Annotation(dce:contributor "Daniel Natera De Benito MD, PhD
+https://orcid.org/0000-0001-7764-2085")
 Annotation(dce:contributor "Elizabeth Angelevski")
+Annotation(dce:contributor "European Rare Diseases Research Alliance (ERDERA)
+
+Website: https://erdera.org")
+Annotation(dce:contributor "Hanns Lochmuller MD, PhD
+https://orcid.org/0000-0003-2324-8001")
 Annotation(dce:contributor "Mansoore Gholizade MD")
-Annotation(dce:contributor "Daniel Natera De Benito MD, PhD")
-Annotation(dce:contributor "Hanns Lochmuller MD, PhD")
-Annotation(dce:creator "Juliette Potier MSc")
-Annotation(dce:creator "Paul Fabry MD, PhD student")
-Annotation(dcterms:description "Ontology for building the relational database of the PROMOT project")
+Annotation(dce:creator "Juliette Potier MSc
+https://orcid.org/0009-0000-5160-7927")
+Annotation(dce:creator "Paul Fabry MD, PhD student
+https://orcid.org/0000-0002-3336-2476")
+Annotation(dcterms:description "Ontology for building the database of the PROMOT project
+
+See also: https://www.promotinitiative.com")
 Annotation(dcterms:title "PROMOT Common Data Model ontology")
+Annotation(rdfs:comment "Also contributor for the gathering ??
+Thomas Bongivault, MSc
+Marc Vincent, PhD
+
+???")
+Annotation(rdfs:comment "The 'Performing a Rare Disease-Oriented Master Observational Trial' (PROMOT) project aims to generate a learning and knowledge mobilization platform allowing the development of a precision medicine approach for rare neuromuscular diseases.
+
+See also: https://www.promotinitiative.com/project")
 
 Declaration(Class(<http://purl.obolibrary.org/obo/PROMOT_0000000>))
 Declaration(AnnotationProperty(dcterms:description))
@@ -88,9 +104,13 @@ SubClassOf(<http://purl.obolibrary.org/obo/FMA_7490> <http://purl.obolibrary.org
 
 SubClassOf(<http://purl.obolibrary.org/obo/HP_0031797> <http://purl.obolibrary.org/obo/HP_0000118>)
 
-# Class: <http://purl.obolibrary.org/obo/NCBITaxon_9606> (<http://purl.obolibrary.org/obo/NCBITaxon_9606>)
+# Class: <http://purl.obolibrary.org/obo/NCBITaxon_9606> (Homo sapiens)
 
 SubClassOf(<http://purl.obolibrary.org/obo/NCBITaxon_9606> <http://purl.obolibrary.org/obo/OBI_0100026>)
+
+# Class: <http://purl.obolibrary.org/obo/OBI_0100026> (organism)
+
+SubClassOf(<http://purl.obolibrary.org/obo/OBI_0100026> <http://purl.obolibrary.org/obo/BFO_0000040>)
 
 # Class: <http://purl.obolibrary.org/obo/PROMOT_0000000> (root node)
 

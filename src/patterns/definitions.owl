@@ -7,8 +7,8 @@ Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
 
 
 Ontology(<http://purl.obolibrary.org/obo/promot/patterns/definitions.owl>
-<http://purl.obolibrary.org/obo/promot/releases/2025-07-30/patterns/definitions.owl>
-Annotation(owl:versionInfo "2025-07-30")
+<http://purl.obolibrary.org/obo/promot/releases/2025-08-07/patterns/definitions.owl>
+Annotation(owl:versionInfo "2025-08-07")
 
 Declaration(Class(<http://id.who.int/icd/entity/1019379329>))
 Declaration(Class(<http://id.who.int/icd/entity/1034220517>))
@@ -64,7 +64,6 @@ Declaration(Class(<http://id.who.int/icd/entity/923782542>))
 Declaration(Class(<http://purl.obolibrary.org/obo/FMA_13354>))
 Declaration(Class(<http://purl.obolibrary.org/obo/FMA_22470>))
 Declaration(Class(<http://purl.obolibrary.org/obo/FMA_22471>))
-Declaration(Class(<http://purl.obolibrary.org/obo/FMA_32558>))
 Declaration(Class(<http://purl.obolibrary.org/obo/FMA_33531>))
 Declaration(Class(<http://purl.obolibrary.org/obo/FMA_37367>))
 Declaration(Class(<http://purl.obolibrary.org/obo/FMA_37368>))
@@ -78,6 +77,7 @@ Declaration(Class(<http://purl.obolibrary.org/obo/FMA_46834>))
 Declaration(Class(<http://purl.obolibrary.org/obo/FMA_48996>))
 Declaration(Class(<http://purl.obolibrary.org/obo/FMA_49006>))
 Declaration(Class(<http://purl.obolibrary.org/obo/FMA_49033>))
+Declaration(Class(<http://purl.obolibrary.org/obo/FMA_50188>))
 Declaration(Class(<http://purl.obolibrary.org/obo/FMA_58274>))
 Declaration(Class(<http://purl.obolibrary.org/obo/FMA_74060>))
 Declaration(Class(<http://purl.obolibrary.org/obo/FMA_9617>))
@@ -115,8 +115,8 @@ Declaration(Class(<http://purl.obolibrary.org/obo/HP_0007340>))
 Declaration(Class(<http://purl.obolibrary.org/obo/HP_0007715>))
 Declaration(Class(<http://purl.obolibrary.org/obo/HP_0007838>))
 Declaration(Class(<http://purl.obolibrary.org/obo/HP_0008959>))
-Declaration(Class(<http://purl.obolibrary.org/obo/HP_0008987>))
 Declaration(Class(<http://purl.obolibrary.org/obo/HP_0008994>))
+Declaration(Class(<http://purl.obolibrary.org/obo/HP_0008997>))
 Declaration(Class(<http://purl.obolibrary.org/obo/HP_0009023>))
 Declaration(Class(<http://purl.obolibrary.org/obo/HP_0009053>))
 Declaration(Class(<http://purl.obolibrary.org/obo/HP_0011968>))
@@ -339,88 +339,132 @@ SubClassOf(<http://id.who.int/icd/entity/870135798> ObjectSomeValuesFrom(<https:
 
 # Class: <http://purl.obolibrary.org/obo/FMA_13354> (<http://purl.obolibrary.org/obo/FMA_13354>)
 
+SubClassOf(<http://purl.obolibrary.org/obo/FMA_13354> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PROMOT_2000001> <http://purl.obolibrary.org/obo/HP_0004878>))
 SubClassOf(<http://purl.obolibrary.org/obo/FMA_13354> ObjectSomeValuesFrom(<https://w3id.org/biolink/vocab/related_to> <http://id.who.int/icd/entity/1571232890>))
 
 # Class: <http://purl.obolibrary.org/obo/FMA_22470> (<http://purl.obolibrary.org/obo/FMA_22470>)
 
+SubClassOf(<http://purl.obolibrary.org/obo/FMA_22470> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PROMOT_2000001> <http://purl.obolibrary.org/obo/HP_0003701>))
+SubClassOf(<http://purl.obolibrary.org/obo/FMA_22470> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PROMOT_2000001> <http://purl.obolibrary.org/obo/HP_0007340>))
+SubClassOf(<http://purl.obolibrary.org/obo/FMA_22470> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PROMOT_2000001> <http://purl.obolibrary.org/obo/HP_0008994>))
 SubClassOf(<http://purl.obolibrary.org/obo/FMA_22470> ObjectSomeValuesFrom(<https://w3id.org/biolink/vocab/related_to> <http://id.who.int/icd/entity/1794398084>))
 
 # Class: <http://purl.obolibrary.org/obo/FMA_22471> (<http://purl.obolibrary.org/obo/FMA_22471>)
 
+SubClassOf(<http://purl.obolibrary.org/obo/FMA_22471> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PROMOT_2000001> <http://purl.obolibrary.org/obo/HP_0002460>))
+SubClassOf(<http://purl.obolibrary.org/obo/FMA_22471> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PROMOT_2000001> <http://purl.obolibrary.org/obo/HP_0007340>))
+SubClassOf(<http://purl.obolibrary.org/obo/FMA_22471> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PROMOT_2000001> <http://purl.obolibrary.org/obo/HP_0009053>))
 SubClassOf(<http://purl.obolibrary.org/obo/FMA_22471> ObjectSomeValuesFrom(<https://w3id.org/biolink/vocab/related_to> <http://id.who.int/icd/entity/338611549>))
-
-# Class: <http://purl.obolibrary.org/obo/FMA_32558> (<http://purl.obolibrary.org/obo/FMA_32558>)
-
-SubClassOf(<http://purl.obolibrary.org/obo/FMA_32558> ObjectSomeValuesFrom(<https://w3id.org/biolink/vocab/related_to> <http://id.who.int/icd/entity/1019379329>))
-SubClassOf(<http://purl.obolibrary.org/obo/FMA_32558> ObjectSomeValuesFrom(<https://w3id.org/biolink/vocab/related_to> <http://id.who.int/icd/entity/1929433903>))
 
 # Class: <http://purl.obolibrary.org/obo/FMA_33531> (<http://purl.obolibrary.org/obo/FMA_33531>)
 
+SubClassOf(<http://purl.obolibrary.org/obo/FMA_33531> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PROMOT_2000001> <http://purl.obolibrary.org/obo/HP_0003701>))
+SubClassOf(<http://purl.obolibrary.org/obo/FMA_33531> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PROMOT_2000001> <http://purl.obolibrary.org/obo/HP_0008997>))
 SubClassOf(<http://purl.obolibrary.org/obo/FMA_33531> ObjectSomeValuesFrom(<https://w3id.org/biolink/vocab/related_to> <http://id.who.int/icd/entity/278512890>))
 
 # Class: <http://purl.obolibrary.org/obo/FMA_37367> (<http://purl.obolibrary.org/obo/FMA_37367>)
 
+SubClassOf(<http://purl.obolibrary.org/obo/FMA_37367> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PROMOT_2000001> <http://purl.obolibrary.org/obo/HP_0003325>))
+SubClassOf(<http://purl.obolibrary.org/obo/FMA_37367> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PROMOT_2000001> <http://purl.obolibrary.org/obo/HP_0003701>))
+SubClassOf(<http://purl.obolibrary.org/obo/FMA_37367> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PROMOT_2000001> <http://purl.obolibrary.org/obo/HP_0007340>))
+SubClassOf(<http://purl.obolibrary.org/obo/FMA_37367> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PROMOT_2000001> <http://purl.obolibrary.org/obo/HP_0008994>))
 SubClassOf(<http://purl.obolibrary.org/obo/FMA_37367> ObjectSomeValuesFrom(<https://w3id.org/biolink/vocab/related_to> <http://id.who.int/icd/entity/793188683>))
+
+# Class: <http://purl.obolibrary.org/obo/FMA_37368> (<http://purl.obolibrary.org/obo/FMA_37368>)
+
+SubClassOf(<http://purl.obolibrary.org/obo/FMA_37368> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PROMOT_2000001> <http://purl.obolibrary.org/obo/HP_0002460>))
+SubClassOf(<http://purl.obolibrary.org/obo/FMA_37368> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PROMOT_2000001> <http://purl.obolibrary.org/obo/HP_0009053>))
 
 # Class: <http://purl.obolibrary.org/obo/FMA_37369> (<http://purl.obolibrary.org/obo/FMA_37369>)
 
+SubClassOf(<http://purl.obolibrary.org/obo/FMA_37369> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PROMOT_2000001> <http://purl.obolibrary.org/obo/HP_0002460>))
+SubClassOf(<http://purl.obolibrary.org/obo/FMA_37369> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PROMOT_2000001> <http://purl.obolibrary.org/obo/HP_0007340>))
+SubClassOf(<http://purl.obolibrary.org/obo/FMA_37369> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PROMOT_2000001> <http://purl.obolibrary.org/obo/HP_0009053>))
 SubClassOf(<http://purl.obolibrary.org/obo/FMA_37369> ObjectSomeValuesFrom(<https://w3id.org/biolink/vocab/related_to> <http://id.who.int/icd/entity/1278239861>))
 
 # Class: <http://purl.obolibrary.org/obo/FMA_37370> (<http://purl.obolibrary.org/obo/FMA_37370>)
 
+SubClassOf(<http://purl.obolibrary.org/obo/FMA_37370> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PROMOT_2000001> <http://purl.obolibrary.org/obo/HP_0003701>))
+SubClassOf(<http://purl.obolibrary.org/obo/FMA_37370> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PROMOT_2000001> <http://purl.obolibrary.org/obo/HP_0008997>))
 SubClassOf(<http://purl.obolibrary.org/obo/FMA_37370> ObjectSomeValuesFrom(<https://w3id.org/biolink/vocab/related_to> <http://id.who.int/icd/entity/1867012554>))
 
 # Class: <http://purl.obolibrary.org/obo/FMA_37371> (<http://purl.obolibrary.org/obo/FMA_37371>)
 
+SubClassOf(<http://purl.obolibrary.org/obo/FMA_37371> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PROMOT_2000001> <http://purl.obolibrary.org/obo/HP_0002460>))
+SubClassOf(<http://purl.obolibrary.org/obo/FMA_37371> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PROMOT_2000001> <http://purl.obolibrary.org/obo/HP_0008959>))
 SubClassOf(<http://purl.obolibrary.org/obo/FMA_37371> ObjectSomeValuesFrom(<https://w3id.org/biolink/vocab/related_to> <http://id.who.int/icd/entity/294830867>))
 
 # Class: <http://purl.obolibrary.org/obo/FMA_37372> (<http://purl.obolibrary.org/obo/FMA_37372>)
 
+SubClassOf(<http://purl.obolibrary.org/obo/FMA_37372> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PROMOT_2000001> <http://purl.obolibrary.org/obo/HP_0002460>))
+SubClassOf(<http://purl.obolibrary.org/obo/FMA_37372> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PROMOT_2000001> <http://purl.obolibrary.org/obo/HP_0008959>))
 SubClassOf(<http://purl.obolibrary.org/obo/FMA_37372> ObjectSomeValuesFrom(<https://w3id.org/biolink/vocab/related_to> <http://id.who.int/icd/entity/1233939003>))
 
 # Class: <http://purl.obolibrary.org/obo/FMA_46689> (<http://purl.obolibrary.org/obo/FMA_46689>)
 
+SubClassOf(<http://purl.obolibrary.org/obo/FMA_46689> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PROMOT_2000001> <http://purl.obolibrary.org/obo/HP_0000183>))
+SubClassOf(<http://purl.obolibrary.org/obo/FMA_46689> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PROMOT_2000001> <http://purl.obolibrary.org/obo/HP_0005216>))
+SubClassOf(<http://purl.obolibrary.org/obo/FMA_46689> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PROMOT_2000001> <http://purl.obolibrary.org/obo/HP_0012473>))
 SubClassOf(<http://purl.obolibrary.org/obo/FMA_46689> ObjectSomeValuesFrom(<https://w3id.org/biolink/vocab/related_to> <http://id.who.int/icd/entity/1874889854>))
 
 # Class: <http://purl.obolibrary.org/obo/FMA_46751> (<http://purl.obolibrary.org/obo/FMA_46751>)
 
+SubClassOf(<http://purl.obolibrary.org/obo/FMA_46751> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PROMOT_2000001> <http://purl.obolibrary.org/obo/HP_0030319>))
 SubClassOf(<http://purl.obolibrary.org/obo/FMA_46751> ObjectSomeValuesFrom(<https://w3id.org/biolink/vocab/related_to> <http://id.who.int/icd/entity/1874889854>))
 
 # Class: <http://purl.obolibrary.org/obo/FMA_46834> (<http://purl.obolibrary.org/obo/FMA_46834>)
 
+SubClassOf(<http://purl.obolibrary.org/obo/FMA_46834> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PROMOT_2000001> <http://purl.obolibrary.org/obo/HP_0005216>))
 SubClassOf(<http://purl.obolibrary.org/obo/FMA_46834> ObjectSomeValuesFrom(<https://w3id.org/biolink/vocab/related_to> <http://id.who.int/icd/entity/1874889854>))
 
 # Class: <http://purl.obolibrary.org/obo/FMA_48996> (<http://purl.obolibrary.org/obo/FMA_48996>)
 
+SubClassOf(<http://purl.obolibrary.org/obo/FMA_48996> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PROMOT_2000001> <http://purl.obolibrary.org/obo/HP_0005216>))
 SubClassOf(<http://purl.obolibrary.org/obo/FMA_48996> ObjectSomeValuesFrom(<https://w3id.org/biolink/vocab/related_to> <http://id.who.int/icd/entity/1874889854>))
 
 # Class: <http://purl.obolibrary.org/obo/FMA_49006> (<http://purl.obolibrary.org/obo/FMA_49006>)
 
+SubClassOf(<http://purl.obolibrary.org/obo/FMA_49006> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PROMOT_2000001> <http://purl.obolibrary.org/obo/HP_0005216>))
 SubClassOf(<http://purl.obolibrary.org/obo/FMA_49006> ObjectSomeValuesFrom(<https://w3id.org/biolink/vocab/related_to> <http://id.who.int/icd/entity/1874889854>))
 
 # Class: <http://purl.obolibrary.org/obo/FMA_49033> (<http://purl.obolibrary.org/obo/FMA_49033>)
 
+SubClassOf(<http://purl.obolibrary.org/obo/FMA_49033> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PROMOT_2000001> <http://purl.obolibrary.org/obo/HP_0000508>))
+SubClassOf(<http://purl.obolibrary.org/obo/FMA_49033> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PROMOT_2000001> <http://purl.obolibrary.org/obo/HP_0000597>))
+SubClassOf(<http://purl.obolibrary.org/obo/FMA_49033> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PROMOT_2000001> <http://purl.obolibrary.org/obo/HP_0007715>))
+SubClassOf(<http://purl.obolibrary.org/obo/FMA_49033> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PROMOT_2000001> <http://purl.obolibrary.org/obo/HP_0007838>))
 SubClassOf(<http://purl.obolibrary.org/obo/FMA_49033> ObjectSomeValuesFrom(<https://w3id.org/biolink/vocab/related_to> <http://id.who.int/icd/entity/1874889854>))
 SubClassOf(<http://purl.obolibrary.org/obo/FMA_49033> ObjectSomeValuesFrom(<https://w3id.org/biolink/vocab/related_to> <http://id.who.int/icd/entity/405925948>))
 
+# Class: <http://purl.obolibrary.org/obo/FMA_50188> (<http://purl.obolibrary.org/obo/FMA_50188>)
+
+SubClassOf(<http://purl.obolibrary.org/obo/FMA_50188> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PROMOT_2000001> <http://purl.obolibrary.org/obo/HP_0003690>))
+SubClassOf(<http://purl.obolibrary.org/obo/FMA_50188> ObjectSomeValuesFrom(<https://w3id.org/biolink/vocab/related_to> <http://id.who.int/icd/entity/1019379329>))
+SubClassOf(<http://purl.obolibrary.org/obo/FMA_50188> ObjectSomeValuesFrom(<https://w3id.org/biolink/vocab/related_to> <http://id.who.int/icd/entity/1929433903>))
+
 # Class: <http://purl.obolibrary.org/obo/FMA_58274> (<http://purl.obolibrary.org/obo/FMA_58274>)
 
+SubClassOf(<http://purl.obolibrary.org/obo/FMA_58274> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PROMOT_2000001> <http://purl.obolibrary.org/obo/HP_0009023>))
 SubClassOf(<http://purl.obolibrary.org/obo/FMA_58274> ObjectSomeValuesFrom(<https://w3id.org/biolink/vocab/related_to> <http://id.who.int/icd/entity/58064740>))
 
 # Class: <http://purl.obolibrary.org/obo/FMA_74060> (<http://purl.obolibrary.org/obo/FMA_74060>)
 
+SubClassOf(<http://purl.obolibrary.org/obo/FMA_74060> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PROMOT_2000001> <http://purl.obolibrary.org/obo/HP_0005216>))
 SubClassOf(<http://purl.obolibrary.org/obo/FMA_74060> ObjectSomeValuesFrom(<https://w3id.org/biolink/vocab/related_to> <http://id.who.int/icd/entity/1874889854>))
 
 # Class: <http://purl.obolibrary.org/obo/FMA_9617> (<http://purl.obolibrary.org/obo/FMA_9617>)
 
+SubClassOf(<http://purl.obolibrary.org/obo/FMA_9617> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PROMOT_2000001> <http://purl.obolibrary.org/obo/HP_0000467>))
 SubClassOf(<http://purl.obolibrary.org/obo/FMA_9617> ObjectSomeValuesFrom(<https://w3id.org/biolink/vocab/related_to> <http://id.who.int/icd/entity/1874889854>))
 
 # Class: <http://purl.obolibrary.org/obo/FMA_9620> (<http://purl.obolibrary.org/obo/FMA_9620>)
 
+SubClassOf(<http://purl.obolibrary.org/obo/FMA_9620> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PROMOT_2000001> <http://purl.obolibrary.org/obo/HP_0009023>))
 SubClassOf(<http://purl.obolibrary.org/obo/FMA_9620> ObjectSomeValuesFrom(<https://w3id.org/biolink/vocab/related_to> <http://id.who.int/icd/entity/58064740>))
 
 # Class: <http://purl.obolibrary.org/obo/FMA_9622> (<http://purl.obolibrary.org/obo/FMA_9622>)
 
+SubClassOf(<http://purl.obolibrary.org/obo/FMA_9622> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PROMOT_2000001> <http://purl.obolibrary.org/obo/HP_0007340>))
 SubClassOf(<http://purl.obolibrary.org/obo/FMA_9622> ObjectSomeValuesFrom(<https://w3id.org/biolink/vocab/related_to> <http://id.who.int/icd/entity/644658903>))
 
 # Class: <http://purl.obolibrary.org/obo/HP_0000006> (<http://purl.obolibrary.org/obo/HP_0000006>)
@@ -431,7 +475,6 @@ SubClassOf(<http://purl.obolibrary.org/obo/HP_0000006> ObjectSomeValuesFrom(<htt
 # Class: <http://purl.obolibrary.org/obo/HP_0000183> (<http://purl.obolibrary.org/obo/HP_0000183>)
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/PROMOT_1000001> <http://purl.obolibrary.org/obo/HP_0000183> "OPMD Survey")
-SubClassOf(<http://purl.obolibrary.org/obo/HP_0000183> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PROMOT_2000001> <http://purl.obolibrary.org/obo/FMA_46689>))
 SubClassOf(<http://purl.obolibrary.org/obo/HP_0000183> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002201> <http://purl.obolibrary.org/obo/MONDO_0008116>))
 SubClassOf(<http://purl.obolibrary.org/obo/HP_0000183> ObjectSomeValuesFrom(<https://w3id.org/biolink/vocab/related_to> <http://id.who.int/icd/entity/1789365017>))
 SubClassOf(<http://purl.obolibrary.org/obo/HP_0000183> ObjectSomeValuesFrom(<https://w3id.org/biolink/vocab/related_to> <http://id.who.int/icd/entity/1874889854>))
@@ -440,7 +483,6 @@ SubClassOf(<http://purl.obolibrary.org/obo/HP_0000183> ObjectSomeValuesFrom(<htt
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/PROMOT_1000001> <http://purl.obolibrary.org/obo/HP_0000467> "OPMD HPO")
 AnnotationAssertion(<http://purl.obolibrary.org/obo/PROMOT_1000001> <http://purl.obolibrary.org/obo/HP_0000467> "OPMD Scoping review")
-SubClassOf(<http://purl.obolibrary.org/obo/HP_0000467> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PROMOT_2000001> <http://purl.obolibrary.org/obo/FMA_9617>))
 SubClassOf(<http://purl.obolibrary.org/obo/HP_0000467> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002201> <http://purl.obolibrary.org/obo/MONDO_0008116>))
 SubClassOf(<http://purl.obolibrary.org/obo/HP_0000467> ObjectSomeValuesFrom(<https://w3id.org/biolink/vocab/related_to> <http://id.who.int/icd/entity/1789365017>))
 SubClassOf(<http://purl.obolibrary.org/obo/HP_0000467> ObjectSomeValuesFrom(<https://w3id.org/biolink/vocab/related_to> <http://id.who.int/icd/entity/1874889854>))
@@ -449,7 +491,6 @@ SubClassOf(<http://purl.obolibrary.org/obo/HP_0000467> ObjectSomeValuesFrom(<htt
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/PROMOT_1000001> <http://purl.obolibrary.org/obo/HP_0000508> "OPMD HPO")
 AnnotationAssertion(<http://purl.obolibrary.org/obo/PROMOT_1000001> <http://purl.obolibrary.org/obo/HP_0000508> "OPMD Survey")
-SubClassOf(<http://purl.obolibrary.org/obo/HP_0000508> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PROMOT_2000001> <http://purl.obolibrary.org/obo/FMA_49033>))
 SubClassOf(<http://purl.obolibrary.org/obo/HP_0000508> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002201> <http://purl.obolibrary.org/obo/MONDO_0008116>))
 SubClassOf(<http://purl.obolibrary.org/obo/HP_0000508> ObjectSomeValuesFrom(<https://w3id.org/biolink/vocab/related_to> <http://id.who.int/icd/entity/1789365017>))
 SubClassOf(<http://purl.obolibrary.org/obo/HP_0000508> ObjectSomeValuesFrom(<https://w3id.org/biolink/vocab/related_to> <http://id.who.int/icd/entity/1874889854>))
@@ -464,7 +505,6 @@ SubClassOf(<http://purl.obolibrary.org/obo/HP_0000544> ObjectSomeValuesFrom(<htt
 # Class: <http://purl.obolibrary.org/obo/HP_0000597> (<http://purl.obolibrary.org/obo/HP_0000597>)
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/PROMOT_1000001> <http://purl.obolibrary.org/obo/HP_0000597> "OPMD Scoping review")
-SubClassOf(<http://purl.obolibrary.org/obo/HP_0000597> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PROMOT_2000001> <http://purl.obolibrary.org/obo/FMA_49033>))
 SubClassOf(<http://purl.obolibrary.org/obo/HP_0000597> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002201> <http://purl.obolibrary.org/obo/MONDO_0008116>))
 SubClassOf(<http://purl.obolibrary.org/obo/HP_0000597> ObjectSomeValuesFrom(<https://w3id.org/biolink/vocab/related_to> <http://id.who.int/icd/entity/1789365017>))
 SubClassOf(<http://purl.obolibrary.org/obo/HP_0000597> ObjectSomeValuesFrom(<https://w3id.org/biolink/vocab/related_to> <http://id.who.int/icd/entity/405925948>))
@@ -530,11 +570,6 @@ SubClassOf(<http://purl.obolibrary.org/obo/HP_0002141> ObjectSomeValuesFrom(<htt
 # Class: <http://purl.obolibrary.org/obo/HP_0002460> (<http://purl.obolibrary.org/obo/HP_0002460>)
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/PROMOT_1000001> <http://purl.obolibrary.org/obo/HP_0002460> "OPMD HPO")
-SubClassOf(<http://purl.obolibrary.org/obo/HP_0002460> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PROMOT_2000001> <http://purl.obolibrary.org/obo/FMA_22471>))
-SubClassOf(<http://purl.obolibrary.org/obo/HP_0002460> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PROMOT_2000001> <http://purl.obolibrary.org/obo/FMA_37368>))
-SubClassOf(<http://purl.obolibrary.org/obo/HP_0002460> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PROMOT_2000001> <http://purl.obolibrary.org/obo/FMA_37369>))
-SubClassOf(<http://purl.obolibrary.org/obo/HP_0002460> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PROMOT_2000001> <http://purl.obolibrary.org/obo/FMA_37371>))
-SubClassOf(<http://purl.obolibrary.org/obo/HP_0002460> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PROMOT_2000001> <http://purl.obolibrary.org/obo/FMA_37372>))
 SubClassOf(<http://purl.obolibrary.org/obo/HP_0002460> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002201> <http://purl.obolibrary.org/obo/MONDO_0008116>))
 SubClassOf(<http://purl.obolibrary.org/obo/HP_0002460> ObjectSomeValuesFrom(<https://w3id.org/biolink/vocab/related_to> <http://id.who.int/icd/entity/1233939003>))
 SubClassOf(<http://purl.obolibrary.org/obo/HP_0002460> ObjectSomeValuesFrom(<https://w3id.org/biolink/vocab/related_to> <http://id.who.int/icd/entity/1278239861>))
@@ -555,7 +590,6 @@ SubClassOf(<http://purl.obolibrary.org/obo/HP_0003236> ObjectSomeValuesFrom(<htt
 # Class: <http://purl.obolibrary.org/obo/HP_0003325> (<http://purl.obolibrary.org/obo/HP_0003325>)
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/PROMOT_1000001> <http://purl.obolibrary.org/obo/HP_0003325> "OPMD HPO")
-SubClassOf(<http://purl.obolibrary.org/obo/HP_0003325> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PROMOT_2000001> <http://purl.obolibrary.org/obo/FMA_37367>))
 SubClassOf(<http://purl.obolibrary.org/obo/HP_0003325> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002201> <http://purl.obolibrary.org/obo/MONDO_0008116>))
 SubClassOf(<http://purl.obolibrary.org/obo/HP_0003325> ObjectSomeValuesFrom(<https://w3id.org/biolink/vocab/related_to> <http://id.who.int/icd/entity/1789365017>))
 SubClassOf(<http://purl.obolibrary.org/obo/HP_0003325> ObjectSomeValuesFrom(<https://w3id.org/biolink/vocab/related_to> <http://id.who.int/icd/entity/278512890>))
@@ -584,7 +618,6 @@ SubClassOf(<http://purl.obolibrary.org/obo/HP_0003676> ObjectSomeValuesFrom(<htt
 # Class: <http://purl.obolibrary.org/obo/HP_0003690> (<http://purl.obolibrary.org/obo/HP_0003690>)
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/PROMOT_1000001> <http://purl.obolibrary.org/obo/HP_0003690> "OPMD HPO")
-SubClassOf(<http://purl.obolibrary.org/obo/HP_0003690> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PROMOT_2000001> <http://purl.obolibrary.org/obo/FMA_32558>))
 SubClassOf(<http://purl.obolibrary.org/obo/HP_0003690> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002201> <http://purl.obolibrary.org/obo/MONDO_0008116>))
 SubClassOf(<http://purl.obolibrary.org/obo/HP_0003690> ObjectSomeValuesFrom(<https://w3id.org/biolink/vocab/related_to> <http://id.who.int/icd/entity/1019379329>))
 SubClassOf(<http://purl.obolibrary.org/obo/HP_0003690> ObjectSomeValuesFrom(<https://w3id.org/biolink/vocab/related_to> <http://id.who.int/icd/entity/1789365017>))
@@ -593,10 +626,6 @@ SubClassOf(<http://purl.obolibrary.org/obo/HP_0003690> ObjectSomeValuesFrom(<htt
 # Class: <http://purl.obolibrary.org/obo/HP_0003701> (<http://purl.obolibrary.org/obo/HP_0003701>)
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/PROMOT_1000001> <http://purl.obolibrary.org/obo/HP_0003701> "OPMD HPO")
-SubClassOf(<http://purl.obolibrary.org/obo/HP_0003701> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PROMOT_2000001> <http://purl.obolibrary.org/obo/FMA_22470>))
-SubClassOf(<http://purl.obolibrary.org/obo/HP_0003701> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PROMOT_2000001> <http://purl.obolibrary.org/obo/FMA_33531>))
-SubClassOf(<http://purl.obolibrary.org/obo/HP_0003701> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PROMOT_2000001> <http://purl.obolibrary.org/obo/FMA_37367>))
-SubClassOf(<http://purl.obolibrary.org/obo/HP_0003701> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PROMOT_2000001> <http://purl.obolibrary.org/obo/FMA_37370>))
 SubClassOf(<http://purl.obolibrary.org/obo/HP_0003701> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002201> <http://purl.obolibrary.org/obo/MONDO_0008116>))
 SubClassOf(<http://purl.obolibrary.org/obo/HP_0003701> ObjectSomeValuesFrom(<https://w3id.org/biolink/vocab/related_to> <http://id.who.int/icd/entity/1789365017>))
 SubClassOf(<http://purl.obolibrary.org/obo/HP_0003701> ObjectSomeValuesFrom(<https://w3id.org/biolink/vocab/related_to> <http://id.who.int/icd/entity/1794398084>))
@@ -617,7 +646,6 @@ SubClassOf(<http://purl.obolibrary.org/obo/HP_0004303> ObjectSomeValuesFrom(<htt
 # Class: <http://purl.obolibrary.org/obo/HP_0004878> (<http://purl.obolibrary.org/obo/HP_0004878>)
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/PROMOT_1000001> <http://purl.obolibrary.org/obo/HP_0004878> "OPMD Scoping review")
-SubClassOf(<http://purl.obolibrary.org/obo/HP_0004878> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PROMOT_2000001> <http://purl.obolibrary.org/obo/FMA_13354>))
 SubClassOf(<http://purl.obolibrary.org/obo/HP_0004878> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002201> <http://purl.obolibrary.org/obo/MONDO_0008116>))
 SubClassOf(<http://purl.obolibrary.org/obo/HP_0004878> ObjectSomeValuesFrom(<https://w3id.org/biolink/vocab/related_to> <http://id.who.int/icd/entity/1571232890>))
 SubClassOf(<http://purl.obolibrary.org/obo/HP_0004878> ObjectSomeValuesFrom(<https://w3id.org/biolink/vocab/related_to> <http://id.who.int/icd/entity/556694745>))
@@ -625,11 +653,6 @@ SubClassOf(<http://purl.obolibrary.org/obo/HP_0004878> ObjectSomeValuesFrom(<htt
 # Class: <http://purl.obolibrary.org/obo/HP_0005216> (<http://purl.obolibrary.org/obo/HP_0005216>)
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/PROMOT_1000001> <http://purl.obolibrary.org/obo/HP_0005216> "OPMD Article")
-SubClassOf(<http://purl.obolibrary.org/obo/HP_0005216> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PROMOT_2000001> <http://purl.obolibrary.org/obo/FMA_46689>))
-SubClassOf(<http://purl.obolibrary.org/obo/HP_0005216> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PROMOT_2000001> <http://purl.obolibrary.org/obo/FMA_46834>))
-SubClassOf(<http://purl.obolibrary.org/obo/HP_0005216> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PROMOT_2000001> <http://purl.obolibrary.org/obo/FMA_48996>))
-SubClassOf(<http://purl.obolibrary.org/obo/HP_0005216> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PROMOT_2000001> <http://purl.obolibrary.org/obo/FMA_49006>))
-SubClassOf(<http://purl.obolibrary.org/obo/HP_0005216> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PROMOT_2000001> <http://purl.obolibrary.org/obo/FMA_74060>))
 SubClassOf(<http://purl.obolibrary.org/obo/HP_0005216> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002201> <http://purl.obolibrary.org/obo/MONDO_0008116>))
 SubClassOf(<http://purl.obolibrary.org/obo/HP_0005216> ObjectSomeValuesFrom(<https://w3id.org/biolink/vocab/related_to> <http://id.who.int/icd/entity/1389818830>))
 SubClassOf(<http://purl.obolibrary.org/obo/HP_0005216> ObjectSomeValuesFrom(<https://w3id.org/biolink/vocab/related_to> <http://id.who.int/icd/entity/1789365017>))
@@ -638,11 +661,6 @@ SubClassOf(<http://purl.obolibrary.org/obo/HP_0005216> ObjectSomeValuesFrom(<htt
 # Class: <http://purl.obolibrary.org/obo/HP_0007340> (<http://purl.obolibrary.org/obo/HP_0007340>)
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/PROMOT_1000001> <http://purl.obolibrary.org/obo/HP_0007340> "OPMD Survey")
-SubClassOf(<http://purl.obolibrary.org/obo/HP_0007340> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PROMOT_2000001> <http://purl.obolibrary.org/obo/FMA_22470>))
-SubClassOf(<http://purl.obolibrary.org/obo/HP_0007340> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PROMOT_2000001> <http://purl.obolibrary.org/obo/FMA_22471>))
-SubClassOf(<http://purl.obolibrary.org/obo/HP_0007340> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PROMOT_2000001> <http://purl.obolibrary.org/obo/FMA_37367>))
-SubClassOf(<http://purl.obolibrary.org/obo/HP_0007340> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PROMOT_2000001> <http://purl.obolibrary.org/obo/FMA_37369>))
-SubClassOf(<http://purl.obolibrary.org/obo/HP_0007340> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PROMOT_2000001> <http://purl.obolibrary.org/obo/FMA_9622>))
 SubClassOf(<http://purl.obolibrary.org/obo/HP_0007340> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002201> <http://purl.obolibrary.org/obo/MONDO_0008116>))
 SubClassOf(<http://purl.obolibrary.org/obo/HP_0007340> ObjectSomeValuesFrom(<https://w3id.org/biolink/vocab/related_to> <http://id.who.int/icd/entity/1278239861>))
 SubClassOf(<http://purl.obolibrary.org/obo/HP_0007340> ObjectSomeValuesFrom(<https://w3id.org/biolink/vocab/related_to> <http://id.who.int/icd/entity/1407133273>))
@@ -655,7 +673,6 @@ SubClassOf(<http://purl.obolibrary.org/obo/HP_0007340> ObjectSomeValuesFrom(<htt
 # Class: <http://purl.obolibrary.org/obo/HP_0007715> (<http://purl.obolibrary.org/obo/HP_0007715>)
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/PROMOT_1000001> <http://purl.obolibrary.org/obo/HP_0007715> "OPMD Scoping review")
-SubClassOf(<http://purl.obolibrary.org/obo/HP_0007715> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PROMOT_2000001> <http://purl.obolibrary.org/obo/FMA_49033>))
 SubClassOf(<http://purl.obolibrary.org/obo/HP_0007715> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002201> <http://purl.obolibrary.org/obo/MONDO_0008116>))
 SubClassOf(<http://purl.obolibrary.org/obo/HP_0007715> ObjectSomeValuesFrom(<https://w3id.org/biolink/vocab/related_to> <http://id.who.int/icd/entity/1789365017>))
 SubClassOf(<http://purl.obolibrary.org/obo/HP_0007715> ObjectSomeValuesFrom(<https://w3id.org/biolink/vocab/related_to> <http://id.who.int/icd/entity/405925948>))
@@ -663,7 +680,6 @@ SubClassOf(<http://purl.obolibrary.org/obo/HP_0007715> ObjectSomeValuesFrom(<htt
 # Class: <http://purl.obolibrary.org/obo/HP_0007838> (<http://purl.obolibrary.org/obo/HP_0007838>)
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/PROMOT_1000001> <http://purl.obolibrary.org/obo/HP_0007838> "OPMD HPO")
-SubClassOf(<http://purl.obolibrary.org/obo/HP_0007838> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PROMOT_2000001> <http://purl.obolibrary.org/obo/FMA_49033>))
 SubClassOf(<http://purl.obolibrary.org/obo/HP_0007838> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002201> <http://purl.obolibrary.org/obo/MONDO_0008116>))
 SubClassOf(<http://purl.obolibrary.org/obo/HP_0007838> ObjectSomeValuesFrom(<https://w3id.org/biolink/vocab/related_to> <http://id.who.int/icd/entity/1789365017>))
 SubClassOf(<http://purl.obolibrary.org/obo/HP_0007838> ObjectSomeValuesFrom(<https://w3id.org/biolink/vocab/related_to> <http://id.who.int/icd/entity/405925948>))
@@ -672,40 +688,32 @@ SubClassOf(<http://purl.obolibrary.org/obo/HP_0007838> ObjectSomeValuesFrom(<htt
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/PROMOT_1000001> <http://purl.obolibrary.org/obo/HP_0008959> "OPMD Scoping review")
 AnnotationAssertion(<http://purl.obolibrary.org/obo/PROMOT_1000001> <http://purl.obolibrary.org/obo/HP_0008959> "OPMD Survey")
-SubClassOf(<http://purl.obolibrary.org/obo/HP_0008959> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PROMOT_2000001> <http://purl.obolibrary.org/obo/FMA_37371>))
-SubClassOf(<http://purl.obolibrary.org/obo/HP_0008959> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PROMOT_2000001> <http://purl.obolibrary.org/obo/FMA_37372>))
 SubClassOf(<http://purl.obolibrary.org/obo/HP_0008959> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002201> <http://purl.obolibrary.org/obo/MONDO_0008116>))
 SubClassOf(<http://purl.obolibrary.org/obo/HP_0008959> ObjectSomeValuesFrom(<https://w3id.org/biolink/vocab/related_to> <http://id.who.int/icd/entity/1233939003>))
 SubClassOf(<http://purl.obolibrary.org/obo/HP_0008959> ObjectSomeValuesFrom(<https://w3id.org/biolink/vocab/related_to> <http://id.who.int/icd/entity/1789365017>))
 SubClassOf(<http://purl.obolibrary.org/obo/HP_0008959> ObjectSomeValuesFrom(<https://w3id.org/biolink/vocab/related_to> <http://id.who.int/icd/entity/294830867>))
 
-# Class: <http://purl.obolibrary.org/obo/HP_0008987> (<http://purl.obolibrary.org/obo/HP_0008987>)
-
-AnnotationAssertion(<http://purl.obolibrary.org/obo/PROMOT_1000001> <http://purl.obolibrary.org/obo/HP_0008987> "OPMD Scoping review")
-AnnotationAssertion(<http://purl.obolibrary.org/obo/PROMOT_1000001> <http://purl.obolibrary.org/obo/HP_0008987> "OPMD Survey")
-SubClassOf(<http://purl.obolibrary.org/obo/HP_0008987> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PROMOT_2000001> <http://purl.obolibrary.org/obo/FMA_33531>))
-SubClassOf(<http://purl.obolibrary.org/obo/HP_0008987> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PROMOT_2000001> <http://purl.obolibrary.org/obo/FMA_37370>))
-SubClassOf(<http://purl.obolibrary.org/obo/HP_0008987> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002201> <http://purl.obolibrary.org/obo/MONDO_0008116>))
-SubClassOf(<http://purl.obolibrary.org/obo/HP_0008987> ObjectSomeValuesFrom(<https://w3id.org/biolink/vocab/related_to> <http://id.who.int/icd/entity/1789365017>))
-SubClassOf(<http://purl.obolibrary.org/obo/HP_0008987> ObjectSomeValuesFrom(<https://w3id.org/biolink/vocab/related_to> <http://id.who.int/icd/entity/1867012554>))
-SubClassOf(<http://purl.obolibrary.org/obo/HP_0008987> ObjectSomeValuesFrom(<https://w3id.org/biolink/vocab/related_to> <http://id.who.int/icd/entity/278512890>))
-
 # Class: <http://purl.obolibrary.org/obo/HP_0008994> (<http://purl.obolibrary.org/obo/HP_0008994>)
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/PROMOT_1000001> <http://purl.obolibrary.org/obo/HP_0008994> "OPMD Scoping review")
 AnnotationAssertion(<http://purl.obolibrary.org/obo/PROMOT_1000001> <http://purl.obolibrary.org/obo/HP_0008994> "OPMD Survey")
-SubClassOf(<http://purl.obolibrary.org/obo/HP_0008994> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PROMOT_2000001> <http://purl.obolibrary.org/obo/FMA_22470>))
-SubClassOf(<http://purl.obolibrary.org/obo/HP_0008994> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PROMOT_2000001> <http://purl.obolibrary.org/obo/FMA_37367>))
 SubClassOf(<http://purl.obolibrary.org/obo/HP_0008994> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002201> <http://purl.obolibrary.org/obo/MONDO_0008116>))
 SubClassOf(<http://purl.obolibrary.org/obo/HP_0008994> ObjectSomeValuesFrom(<https://w3id.org/biolink/vocab/related_to> <http://id.who.int/icd/entity/1789365017>))
 SubClassOf(<http://purl.obolibrary.org/obo/HP_0008994> ObjectSomeValuesFrom(<https://w3id.org/biolink/vocab/related_to> <http://id.who.int/icd/entity/1794398084>))
 SubClassOf(<http://purl.obolibrary.org/obo/HP_0008994> ObjectSomeValuesFrom(<https://w3id.org/biolink/vocab/related_to> <http://id.who.int/icd/entity/793188683>))
 
+# Class: <http://purl.obolibrary.org/obo/HP_0008997> (<http://purl.obolibrary.org/obo/HP_0008997>)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/PROMOT_1000001> <http://purl.obolibrary.org/obo/HP_0008997> "OPMD Scoping review")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/PROMOT_1000001> <http://purl.obolibrary.org/obo/HP_0008997> "OPMD Survey")
+SubClassOf(<http://purl.obolibrary.org/obo/HP_0008997> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002201> <http://purl.obolibrary.org/obo/MONDO_0008116>))
+SubClassOf(<http://purl.obolibrary.org/obo/HP_0008997> ObjectSomeValuesFrom(<https://w3id.org/biolink/vocab/related_to> <http://id.who.int/icd/entity/1789365017>))
+SubClassOf(<http://purl.obolibrary.org/obo/HP_0008997> ObjectSomeValuesFrom(<https://w3id.org/biolink/vocab/related_to> <http://id.who.int/icd/entity/1867012554>))
+SubClassOf(<http://purl.obolibrary.org/obo/HP_0008997> ObjectSomeValuesFrom(<https://w3id.org/biolink/vocab/related_to> <http://id.who.int/icd/entity/278512890>))
+
 # Class: <http://purl.obolibrary.org/obo/HP_0009023> (<http://purl.obolibrary.org/obo/HP_0009023>)
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/PROMOT_1000001> <http://purl.obolibrary.org/obo/HP_0009023> "OPMD Scoping review")
-SubClassOf(<http://purl.obolibrary.org/obo/HP_0009023> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PROMOT_2000001> <http://purl.obolibrary.org/obo/FMA_58274>))
-SubClassOf(<http://purl.obolibrary.org/obo/HP_0009023> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PROMOT_2000001> <http://purl.obolibrary.org/obo/FMA_9620>))
 SubClassOf(<http://purl.obolibrary.org/obo/HP_0009023> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002201> <http://purl.obolibrary.org/obo/MONDO_0008116>))
 SubClassOf(<http://purl.obolibrary.org/obo/HP_0009023> ObjectSomeValuesFrom(<https://w3id.org/biolink/vocab/related_to> <http://id.who.int/icd/entity/1789365017>))
 SubClassOf(<http://purl.obolibrary.org/obo/HP_0009023> ObjectSomeValuesFrom(<https://w3id.org/biolink/vocab/related_to> <http://id.who.int/icd/entity/58064740>))
@@ -714,9 +722,6 @@ SubClassOf(<http://purl.obolibrary.org/obo/HP_0009023> ObjectSomeValuesFrom(<htt
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/PROMOT_1000001> <http://purl.obolibrary.org/obo/HP_0009053> "OPMD Scoping review")
 AnnotationAssertion(<http://purl.obolibrary.org/obo/PROMOT_1000001> <http://purl.obolibrary.org/obo/HP_0009053> "OPMD Survey")
-SubClassOf(<http://purl.obolibrary.org/obo/HP_0009053> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PROMOT_2000001> <http://purl.obolibrary.org/obo/FMA_22471>))
-SubClassOf(<http://purl.obolibrary.org/obo/HP_0009053> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PROMOT_2000001> <http://purl.obolibrary.org/obo/FMA_37368>))
-SubClassOf(<http://purl.obolibrary.org/obo/HP_0009053> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PROMOT_2000001> <http://purl.obolibrary.org/obo/FMA_37369>))
 SubClassOf(<http://purl.obolibrary.org/obo/HP_0009053> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002201> <http://purl.obolibrary.org/obo/MONDO_0008116>))
 SubClassOf(<http://purl.obolibrary.org/obo/HP_0009053> ObjectSomeValuesFrom(<https://w3id.org/biolink/vocab/related_to> <http://id.who.int/icd/entity/1278239861>))
 SubClassOf(<http://purl.obolibrary.org/obo/HP_0009053> ObjectSomeValuesFrom(<https://w3id.org/biolink/vocab/related_to> <http://id.who.int/icd/entity/1789365017>))
@@ -744,7 +749,6 @@ SubClassOf(<http://purl.obolibrary.org/obo/HP_0012378> ObjectSomeValuesFrom(<htt
 # Class: <http://purl.obolibrary.org/obo/HP_0012473> (<http://purl.obolibrary.org/obo/HP_0012473>)
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/PROMOT_1000001> <http://purl.obolibrary.org/obo/HP_0012473> "OPMD HPO")
-SubClassOf(<http://purl.obolibrary.org/obo/HP_0012473> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PROMOT_2000001> <http://purl.obolibrary.org/obo/FMA_46689>))
 SubClassOf(<http://purl.obolibrary.org/obo/HP_0012473> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002201> <http://purl.obolibrary.org/obo/MONDO_0008116>))
 SubClassOf(<http://purl.obolibrary.org/obo/HP_0012473> ObjectSomeValuesFrom(<https://w3id.org/biolink/vocab/related_to> <http://id.who.int/icd/entity/1789365017>))
 SubClassOf(<http://purl.obolibrary.org/obo/HP_0012473> ObjectSomeValuesFrom(<https://w3id.org/biolink/vocab/related_to> <http://id.who.int/icd/entity/1874889854>))
@@ -773,7 +777,6 @@ SubClassOf(<http://purl.obolibrary.org/obo/HP_0012548> ObjectSomeValuesFrom(<htt
 AnnotationAssertion(<http://purl.obolibrary.org/obo/PROMOT_1000001> <http://purl.obolibrary.org/obo/HP_0030319> "OPMD HPO")
 AnnotationAssertion(<http://purl.obolibrary.org/obo/PROMOT_1000001> <http://purl.obolibrary.org/obo/HP_0030319> "OPMD Scoping review")
 AnnotationAssertion(<http://purl.obolibrary.org/obo/PROMOT_1000001> <http://purl.obolibrary.org/obo/HP_0030319> "OPMD Survey")
-SubClassOf(<http://purl.obolibrary.org/obo/HP_0030319> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PROMOT_2000001> <http://purl.obolibrary.org/obo/FMA_46751>))
 SubClassOf(<http://purl.obolibrary.org/obo/HP_0030319> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002201> <http://purl.obolibrary.org/obo/MONDO_0008116>))
 SubClassOf(<http://purl.obolibrary.org/obo/HP_0030319> ObjectSomeValuesFrom(<https://w3id.org/biolink/vocab/related_to> <http://id.who.int/icd/entity/1789365017>))
 SubClassOf(<http://purl.obolibrary.org/obo/HP_0030319> ObjectSomeValuesFrom(<https://w3id.org/biolink/vocab/related_to> <http://id.who.int/icd/entity/1874889854>))
@@ -870,8 +873,8 @@ SubClassOf(<http://purl.obolibrary.org/obo/MONDO_0008116> ObjectSomeValuesFrom(<
 SubClassOf(<http://purl.obolibrary.org/obo/MONDO_0008116> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002200> <http://purl.obolibrary.org/obo/HP_0007715>))
 SubClassOf(<http://purl.obolibrary.org/obo/MONDO_0008116> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002200> <http://purl.obolibrary.org/obo/HP_0007838>))
 SubClassOf(<http://purl.obolibrary.org/obo/MONDO_0008116> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002200> <http://purl.obolibrary.org/obo/HP_0008959>))
-SubClassOf(<http://purl.obolibrary.org/obo/MONDO_0008116> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002200> <http://purl.obolibrary.org/obo/HP_0008987>))
 SubClassOf(<http://purl.obolibrary.org/obo/MONDO_0008116> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002200> <http://purl.obolibrary.org/obo/HP_0008994>))
+SubClassOf(<http://purl.obolibrary.org/obo/MONDO_0008116> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002200> <http://purl.obolibrary.org/obo/HP_0008997>))
 SubClassOf(<http://purl.obolibrary.org/obo/MONDO_0008116> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002200> <http://purl.obolibrary.org/obo/HP_0009023>))
 SubClassOf(<http://purl.obolibrary.org/obo/MONDO_0008116> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002200> <http://purl.obolibrary.org/obo/HP_0009053>))
 SubClassOf(<http://purl.obolibrary.org/obo/MONDO_0008116> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002200> <http://purl.obolibrary.org/obo/HP_0011968>))

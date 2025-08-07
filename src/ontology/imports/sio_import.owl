@@ -10,8 +10,8 @@
      xmlns:terms="http://purl.org/dc/terms/"
      xmlns:resource="http://semanticscience.org/resource/">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/promot/imports/sio_import.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/promot/releases/2025-07-03/imports/sio_import.owl"/>
-        <owl:versionInfo>2025-07-03</owl:versionInfo>
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/promot/releases/2025-07-30/imports/sio_import.owl"/>
+        <owl:versionInfo>2025-07-30</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -59,11 +59,23 @@
     <!-- http://semanticscience.org/resource/SIO_000217 -->
 
     <owl:ObjectProperty rdf:about="http://semanticscience.org/resource/SIO_000217">
+        <owl:inverseOf rdf:resource="http://semanticscience.org/resource/SIO_000218"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
         <dc:identifier>SIO_000217</dc:identifier>
         <terms:description xml:lang="en">has quality is a relation between an entity and the quality that it bears.</terms:description>
         <rdfs:isDefinedBy rdf:resource="http://semanticscience.org/ontology/sio.owl"/>
         <rdfs:label xml:lang="en">has quality</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://semanticscience.org/resource/SIO_000218 -->
+
+    <owl:ObjectProperty rdf:about="http://semanticscience.org/resource/SIO_000218">
+        <dc:identifier>SIO_000218</dc:identifier>
+        <terms:description xml:lang="en">is quality of is a relation between a quality and the entity that it is a property of.</terms:description>
+        <rdfs:isDefinedBy rdf:resource="http://semanticscience.org/ontology/sio.owl"/>
+        <rdfs:label xml:lang="en">is quality of</rdfs:label>
     </owl:ObjectProperty>
     
 
