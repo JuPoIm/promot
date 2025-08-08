@@ -5,25 +5,21 @@ pattern_iri: anatomy_pattern.yaml
 contributors:
   - https://orcid.org/0009-0000-5160-7927 # J. Potier
 
-description: "Use this template to link the phenotypes to the anatomy they are related to."
+description: "Use this template to link the anatomical entity to the phenotypes and body structures they are related to."
 
 status: development
 
 classes:
-  anatomy: FMA:62955
-  structure: http://id.who.int/icd/entity/1626363729
+  anatomical_entity: FMA:62955
+  body_structure: http://id.who.int/icd/entity/1626363729
   phenotypic_abnormality: HP:0000118
 
 relations:
   related_to: https://w3id.org/biolink/vocab/related_to
   is_location_of: PROMOT:2000001
 
-data_list_vars:
-  orcid: xsd:anyURI
-
 vars:
-  anatomy: "'anatomy'"
-  structure: "'structure'"
+  structure: "'body_structure'"
   phenotype: "'phenotypic_abnormality'"
       
 logical_axioms:

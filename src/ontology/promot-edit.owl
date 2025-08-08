@@ -9,7 +9,7 @@ Prefix(dcterms:=<http://purl.org/dc/terms/>)
 
 
 Ontology(<http://purl.obolibrary.org/obo/promot.owl>
-Import(<http://purl.obolibrary.org/obo/promot/components/classes_properties.owl>)
+Import(<http://purl.obolibrary.org/obo/promot/components/promot_onto.owl>)
 Import(<http://purl.obolibrary.org/obo/promot/imports/bfo_import.owl>)
 Import(<http://purl.obolibrary.org/obo/promot/imports/fma_import.owl>)
 Import(<http://purl.obolibrary.org/obo/promot/imports/hp_import.owl>)
@@ -26,14 +26,17 @@ Import(<http://purl.obolibrary.org/obo/promot/patterns/definitions.owl>)
 Import(<http://purl.obolibrary.org/obo/promot/releases/2025-06-18/imports/bfo_import.owl>)
 Import(<http://purl.obolibrary.org/obo/promot/releases/2025-06-18/imports/iao_import.owl>)
 Import(<http://purl.obolibrary.org/obo/promot/releases/2025-06-18/imports/scdo_import.owl>)
-Import(<http://purl.obolibrary.org/obo/promot/releases/2025-06-18/imports/vo_import.owl>)
-Import(<http://purl.obolibrary.org/obo/promot/releases/2025-06-25/imports/mondo_import.owl>)
 Import(<http://purl.obolibrary.org/obo/promot/releases/2025-07-03/imports/whofic_import.owl>)
-Import(<http://purl.obolibrary.org/obo/promot/releases/2025-07-30/imports/ro_import.owl>)
+Import(<http://purl.obolibrary.org/obo/promot/releases/2025-08-07/imports/ro_import.owl>)
 Import(<http://purl.obolibrary.org/obo/promot/releases/2025-07-30/imports/sio_import.owl>)
 Import(<http://purl.obolibrary.org/obo/promot/releases/2025-08-04/imports/snomed_import.owl>)
 Import(<http://purl.obolibrary.org/obo/promot/releases/2025-08-05/imports/fma_import.owl>)
+Import(<http://purl.obolibrary.org/obo/promot/releases/2025-08-07/components/promot_onto.owl>)
 Import(<http://purl.obolibrary.org/obo/promot/releases/2025-08-07/imports/hp_import.owl>)
+Import(<http://purl.obolibrary.org/obo/promot/releases/2025-08-07/imports/mondo_import.owl>)
+Import(<http://purl.obolibrary.org/obo/promot/releases/2025-08-07/imports/obi_import.owl>)
+Import(<http://purl.obolibrary.org/obo/promot/releases/2025-08-07/imports/vo_import.owl>)
+Import(<http://purl.obolibrary.org/obo/promot/releases/2025-08-07/patterns/definitions.owl>)
 Annotation(dce:contributor "Anita Burgun MD, PhD
 https://orcid.org/0000-0001-6855-4366")
 Annotation(dce:contributor "Carole Faviez PhD
@@ -104,29 +107,9 @@ SubClassOf(<http://purl.obolibrary.org/obo/FMA_7490> <http://purl.obolibrary.org
 
 SubClassOf(<http://purl.obolibrary.org/obo/HP_0031797> <http://purl.obolibrary.org/obo/HP_0000118>)
 
-# Class: <http://purl.obolibrary.org/obo/NCBITaxon_9606> (Homo sapiens)
-
-SubClassOf(<http://purl.obolibrary.org/obo/NCBITaxon_9606> <http://purl.obolibrary.org/obo/OBI_0100026>)
-
-# Class: <http://purl.obolibrary.org/obo/OBI_0100026> (organism)
-
-SubClassOf(<http://purl.obolibrary.org/obo/OBI_0100026> <http://purl.obolibrary.org/obo/BFO_0000040>)
-
 # Class: <http://purl.obolibrary.org/obo/PROMOT_0000000> (root node)
 
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/PROMOT_0000000> "root node"@en)
-
-# Class: <http://semanticscience.org/resource/SIO_000475> (biological quality)
-
-SubClassOf(<http://semanticscience.org/resource/SIO_000475> <http://purl.obolibrary.org/obo/BFO_0000019>)
-
-# Class: <http://semanticscience.org/resource/SIO_001268> (parental transmission)
-
-SubClassOf(<http://semanticscience.org/resource/SIO_001268> <http://semanticscience.org/resource/SIO_000475>)
-
-# Class: <http://semanticscience.org/resource/SIO_010057> (life status)
-
-SubClassOf(<http://semanticscience.org/resource/SIO_010057> <http://semanticscience.org/resource/SIO_000475>)
 
 # Class: <http://snomed.info/id/12239004> (Throat clearing (observable entity))
 
@@ -139,10 +122,6 @@ SubClassOf(<http://snomed.info/id/125680007> <http://snomed.info/id/302147001>)
 # Class: <http://snomed.info/id/12894003> (Functional assessment (procedure))
 
 SubClassOf(<http://snomed.info/id/12894003> <http://snomed.info/id/386053000>)
-
-# Class: <http://snomed.info/id/160476009> (Social / personal history observable (observable entity))
-
-SubClassOf(<http://snomed.info/id/160476009> <http://purl.obolibrary.org/obo/IAO_0000030>)
 
 # Class: <http://snomed.info/id/183135000> (Mobility aid (physical object))
 
@@ -164,10 +143,6 @@ SubClassOf(<http://snomed.info/id/252478000> <http://snomed.info/id/386053000>)
 
 SubClassOf(<http://snomed.info/id/252482003> <http://snomed.info/id/386053000>)
 
-# Class: <http://snomed.info/id/298059007> (Date of onset (observable entity))
-
-SubClassOf(<http://snomed.info/id/298059007> <http://purl.obolibrary.org/obo/IAO_0000030>)
-
 # Class: <http://snomed.info/id/360296002> (Assistive equipment (physical object))
 
 SubClassOf(<http://snomed.info/id/360296002> <http://purl.obolibrary.org/obo/BFO_0000030>)
@@ -175,14 +150,6 @@ SubClassOf(<http://snomed.info/id/360296002> <http://purl.obolibrary.org/obo/BFO
 # Class: <http://snomed.info/id/364578004> (Observable feature of walking (observable entity))
 
 SubClassOf(<http://snomed.info/id/364578004> <http://purl.obolibrary.org/obo/IAO_0000030>)
-
-# Class: <http://snomed.info/id/386053000> (Evaluation procedure (procedure))
-
-SubClassOf(<http://snomed.info/id/386053000> <http://purl.obolibrary.org/obo/BFO_0000015>)
-
-# Class: <http://snomed.info/id/399753006> (Date of death (observable entity))
-
-SubClassOf(<http://snomed.info/id/399753006> <http://purl.obolibrary.org/obo/IAO_0000030>)
 
 # Class: <http://snomed.info/id/450737006> (Assessment using thirty second chair stand test (procedure))
 

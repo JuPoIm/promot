@@ -1,4 +1,4 @@
-Prefix(:=<http://purl.obolibrary.org/obo/promot/components/classes_properties.owl#>)
+Prefix(:=<http://purl.obolibrary.org/obo/promot/components/promot_onto.owl#>)
 Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
 Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
 Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
@@ -6,8 +6,8 @@ Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
 Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
 
 
-Ontology(<http://purl.obolibrary.org/obo/promot/components/classes_properties.owl>
-<http://purl.obolibrary.org/obo/promot/releases/2025-08-07/components/classes_properties.owl>
+Ontology(<http://purl.obolibrary.org/obo/promot/components/promot_onto.owl>
+<http://purl.obolibrary.org/obo/promot/releases/2025-08-07/components/promot_onto.owl>
 Annotation(owl:versionInfo "2025-08-07")
 
 Declaration(Class(<http://id.who.int/icd/entity/1280021050>))
@@ -32,6 +32,7 @@ Declaration(Class(<http://purl.obolibrary.org/obo/HP_0000118>))
 Declaration(Class(<http://purl.obolibrary.org/obo/IAO_0000030>))
 Declaration(Class(<http://purl.obolibrary.org/obo/MONDO_0000001>))
 Declaration(Class(<http://purl.obolibrary.org/obo/NCBITaxon_9606>))
+Declaration(Class(<http://purl.obolibrary.org/obo/OBI_0100026>))
 Declaration(Class(<http://purl.obolibrary.org/obo/PROMOT_0000001>))
 Declaration(Class(<http://purl.obolibrary.org/obo/PROMOT_0000002>))
 Declaration(Class(<http://purl.obolibrary.org/obo/PROMOT_0000003>))
@@ -69,12 +70,14 @@ Declaration(Class(<http://purl.obolibrary.org/obo/PROMOT_7000003>))
 Declaration(Class(<http://semanticscience.org/resource/SIO_000475>))
 Declaration(Class(<http://semanticscience.org/resource/SIO_001268>))
 Declaration(Class(<http://semanticscience.org/resource/SIO_010057>))
+Declaration(Class(<http://snomed.info/id/160476009>))
 Declaration(Class(<http://snomed.info/id/184099003>))
 Declaration(Class(<http://snomed.info/id/224076006>))
 Declaration(Class(<http://snomed.info/id/298059007>))
 Declaration(Class(<http://snomed.info/id/302147001>))
 Declaration(Class(<http://snomed.info/id/360296002>))
 Declaration(Class(<http://snomed.info/id/386053000>))
+Declaration(Class(<http://snomed.info/id/399753006>))
 Declaration(Class(<http://snomed.info/id/57427004>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/PROMOT_2000001>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/PROMOT_2000002>))
@@ -91,6 +94,7 @@ Declaration(ObjectProperty(<https://w3id.org/biolink/vocab/affects>))
 Declaration(ObjectProperty(<https://w3id.org/biolink/vocab/related_to>))
 Declaration(DataProperty(<http://purl.obolibrary.org/obo/RO_0004003>))
 Declaration(DataProperty(<http://purl.obolibrary.org/obo/RO_0004013>))
+Declaration(DataProperty(<http://purl.obolibrary.org/obo/RO_0004029>))
 Declaration(DataProperty(<http://purl.obolibrary.org/obo/SCDO_1000194>))
 Declaration(DataProperty(<http://semanticscience.org/resource/SIO_000217>))
 Declaration(DataProperty(<http://semanticscience.org/resource/SIO_000300>))
@@ -129,14 +133,16 @@ ObjectPropertyRange(<http://purl.obolibrary.org/obo/PROMOT_2000001> <http://purl
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/PROMOT_2000002> "a relation between a device and a patient, where the patient uses an assistive equipment in order to move or to accomplish something, such as a task or an activity.")
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000117> <http://purl.obolibrary.org/obo/PROMOT_2000002> "Juliette Potier")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/PROMOT_2000002> "is used by")
-ObjectPropertyRange(<http://purl.obolibrary.org/obo/PROMOT_2000002> <http://snomed.info/id/360296002>)
+ObjectPropertyDomain(<http://purl.obolibrary.org/obo/PROMOT_2000002> <http://snomed.info/id/360296002>)
+ObjectPropertyRange(<http://purl.obolibrary.org/obo/PROMOT_2000002> <http://purl.obolibrary.org/obo/PROMOT_3000001>)
 
 # Object Property: <http://purl.obolibrary.org/obo/PROMOT_2000003> (assesses)
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/PROMOT_2000003> "a relation between an evaluation procedure and a patient, where the patient is assessed by an evaluation procedure, such as a test, a questionnaire or a scale.")
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000117> <http://purl.obolibrary.org/obo/PROMOT_2000003> "Juliette Potier")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/PROMOT_2000003> "assesses")
-ObjectPropertyRange(<http://purl.obolibrary.org/obo/PROMOT_2000003> <http://snomed.info/id/386053000>)
+ObjectPropertyDomain(<http://purl.obolibrary.org/obo/PROMOT_2000003> <http://snomed.info/id/386053000>)
+ObjectPropertyRange(<http://purl.obolibrary.org/obo/PROMOT_2000003> <http://purl.obolibrary.org/obo/PROMOT_3000001>)
 
 # Object Property: <http://purl.obolibrary.org/obo/RO_0002351> (<http://purl.obolibrary.org/obo/RO_0002351>)
 
@@ -242,14 +248,18 @@ SubClassOf(<http://purl.obolibrary.org/obo/FMA_62955> <http://purl.obolibrary.or
 # Class: <http://purl.obolibrary.org/obo/HP_0000118> (<http://purl.obolibrary.org/obo/HP_0000118>)
 
 SubClassOf(<http://purl.obolibrary.org/obo/HP_0000118> <http://purl.obolibrary.org/obo/BFO_0000016>)
-SubClassOf(<http://purl.obolibrary.org/obo/HP_0000118> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002201> <http://purl.obolibrary.org/obo/MONDO_0000001>))
 SubClassOf(<http://purl.obolibrary.org/obo/HP_0000118> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002201> <http://purl.obolibrary.org/obo/PROMOT_3000001>))
 SubClassOf(<http://purl.obolibrary.org/obo/HP_0000118> DataSomeValuesFrom(<http://semanticscience.org/resource/SIO_000217> <http://purl.obolibrary.org/obo/PROMOT_6000001>))
 
 # Class: <http://purl.obolibrary.org/obo/MONDO_0000001> (<http://purl.obolibrary.org/obo/MONDO_0000001>)
 
-SubClassOf(<http://purl.obolibrary.org/obo/MONDO_0000001> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002200> <http://purl.obolibrary.org/obo/HP_0000118>))
+SubClassOf(<http://purl.obolibrary.org/obo/MONDO_0000001> <http://purl.obolibrary.org/obo/BFO_0000016>)
 SubClassOf(<http://purl.obolibrary.org/obo/MONDO_0000001> DataSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0004003> <http://purl.obolibrary.org/obo/PROMOT_0000001>))
+SubClassOf(<http://purl.obolibrary.org/obo/MONDO_0000001> DataSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0004029> <http://purl.obolibrary.org/obo/HP_0000118>))
+
+# Class: <http://purl.obolibrary.org/obo/OBI_0100026> (<http://purl.obolibrary.org/obo/OBI_0100026>)
+
+SubClassOf(<http://purl.obolibrary.org/obo/OBI_0100026> <http://purl.obolibrary.org/obo/BFO_0000040>)
 
 # Class: <http://purl.obolibrary.org/obo/PROMOT_0000001> (mutation)
 
@@ -502,11 +512,17 @@ SubClassOf(<http://semanticscience.org/resource/SIO_000475> <http://purl.obolibr
 
 # Class: <http://semanticscience.org/resource/SIO_001268> (<http://semanticscience.org/resource/SIO_001268>)
 
+SubClassOf(<http://semanticscience.org/resource/SIO_001268> <http://semanticscience.org/resource/SIO_000475>)
 SubClassOf(<http://semanticscience.org/resource/SIO_001268> ObjectSomeValuesFrom(<http://semanticscience.org/resource/SIO_000218> <http://purl.obolibrary.org/obo/PROMOT_0000001>))
 
 # Class: <http://semanticscience.org/resource/SIO_010057> (<http://semanticscience.org/resource/SIO_010057>)
 
+SubClassOf(<http://semanticscience.org/resource/SIO_010057> <http://semanticscience.org/resource/SIO_000475>)
 SubClassOf(<http://semanticscience.org/resource/SIO_010057> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000080> <http://purl.obolibrary.org/obo/PROMOT_3000001>))
+
+# Class: <http://snomed.info/id/160476009> (<http://snomed.info/id/160476009>)
+
+SubClassOf(<http://snomed.info/id/160476009> <http://purl.obolibrary.org/obo/IAO_0000030>)
 
 # Class: <http://snomed.info/id/224076006> (<http://snomed.info/id/224076006>)
 
@@ -528,10 +544,15 @@ SubClassOf(<http://snomed.info/id/360296002> ObjectSomeValuesFrom(<http://purl.o
 # Class: <http://snomed.info/id/386053000> (Evaluation procedure (procedure))
 
 AnnotationAssertion(rdfs:label <http://snomed.info/id/386053000> "Evaluation procedure (procedure)")
+SubClassOf(<http://snomed.info/id/386053000> <http://purl.obolibrary.org/obo/BFO_0000015>)
 SubClassOf(<http://snomed.info/id/386053000> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PROMOT_2000003> <http://purl.obolibrary.org/obo/PROMOT_3000001>))
 SubClassOf(<http://snomed.info/id/386053000> DataSomeValuesFrom(<http://purl.obolibrary.org/obo/SCDO_1000194> <http://id.who.int/icd/entity/1394728112>))
 SubClassOf(<http://snomed.info/id/386053000> DataSomeValuesFrom(<http://purl.obolibrary.org/obo/SCDO_1000194> <http://id.who.int/icd/entity/1626363729>))
 SubClassOf(<http://snomed.info/id/386053000> DataSomeValuesFrom(<http://purl.obolibrary.org/obo/SCDO_1000194> <http://id.who.int/icd/entity/567313968>))
+
+# Class: <http://snomed.info/id/399753006> (<http://snomed.info/id/399753006>)
+
+SubClassOf(<http://snomed.info/id/399753006> <http://purl.obolibrary.org/obo/IAO_0000030>)
 
 # Class: <http://snomed.info/id/57427004> (<http://snomed.info/id/57427004>)
 

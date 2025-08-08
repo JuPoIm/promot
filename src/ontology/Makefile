@@ -10,7 +10,7 @@
 # More information: https://github.com/INCATools/ontology-development-kit/
 
 # Fingerprint of the configuration file when this Makefile was last generated
-CONFIG_HASH=                990ddd9019b3799d4d6b999318b25370cdc179306ff24f376697aaaafa04a022
+CONFIG_HASH=                3d57d041b0b30ce4ebfd29f735a273075a88905fda560ecbf963da7fbac7b20c
 
 
 # ----------------------------------------
@@ -54,7 +54,7 @@ OBODATE ?=                  $(shell date +'%d:%m:%Y %H:%M')
 VERSION=                    $(TODAY)
 ANNOTATE_ONTOLOGY_VERSION = annotate -V $(ONTBASE)/releases/$(VERSION)/$@ --annotation owl:versionInfo $(VERSION)
 ANNOTATE_CONVERT_FILE =     annotate --ontology-iri $(ONTBASE)/$@ $(ANNOTATE_ONTOLOGY_VERSION) convert -f ofn --output $@.tmp.owl && mv $@.tmp.owl $@
-OTHER_SRC =                 $(PATTERNDIR)/definitions.owl $(COMPONENTSDIR)/classes_properties.owl 
+OTHER_SRC =                 $(PATTERNDIR)/definitions.owl $(COMPONENTSDIR)/promot_onto.owl 
 ONTOLOGYTERMS =             $(TMPDIR)/ontologyterms.txt
 EDIT_PREPROCESSED =         $(TMPDIR)/$(ONT)-preprocess.owl
 PATTERNDIR=                 ../patterns
@@ -467,12 +467,12 @@ $(COMPONENTSDIR)/%.owl: | $(COMPONENTSDIR)
 
 
 
-$(COMPONENTSDIR)/classes_properties.owl: $(TEMPLATEDIR)/classes_properties.csv
+$(COMPONENTSDIR)/promot_onto.owl: $(TEMPLATEDIR)/promot_onto.csv
 	if [ $(COMP) = true ] ; then $(ROBOT) template --add-prefixes config/context.json \
 		$(patsubst %, --template %, $^) \
 		$(ANNOTATE_CONVERT_FILE); fi
 
-.PRECIOUS: $(COMPONENTSDIR)/classes_properties.owl
+.PRECIOUS: $(COMPONENTSDIR)/promot_onto.owl
 # ----------------------------------------
 # Mirroring upstream ontologies
 # ----------------------------------------

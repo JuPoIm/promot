@@ -2,29 +2,23 @@ pattern_name: structures_pattern
 
 pattern_iri: structures_pattern.yaml
 
-description: "Use this template to link the body structures to the body functions and activities they affect."
+description: "Use this template to link the body structures to the phenotypes and activities they are related to."
 
 contributors:
   - https://orcid.org/0009-0000-5160-7927 # J. Potier
 
 classes:
-  structure: http://id.who.int/icd/entity/1626363729
-  function: http://id.who.int/icd/entity/567313968
-  activity: http://id.who.int/icd/entity/1394728112
-  disease: MONDO:0000001
+  body_structures: http://id.who.int/icd/entity/1626363729
+  activities_participations: http://id.who.int/icd/entity/1394728112
+  phenotypic_abnormality: HP:0000118
 
 relations:
   affects: https://w3id.org/biolink/vocab/affects
-  affected_by: https://w3id.org/biolink/vocab/affected_by
-
-data_list_vars:
-  orcid: xsd:anyURI
+  related_to: https://w3id.org/biolink/vocab/related_to
 
 vars:
-  structure: "'structure'"
-  disease: "'disease'"
-  function: "'function'"
-  activity: "'activity'"
+  phenotype: "'phenotypic_abnormality'"
+  activity: "'activities_participations'"
 
 logical_axioms:
 
@@ -32,13 +26,8 @@ logical_axioms:
     text: "'affects' some %s"
     vars:
       - activity
-
-  - axiom_type: subClassOf
-    text: "'affects' some %s"
-    vars:
-      - function
   
   - axiom_type: subClassOf
-    text: "'affected_by' some %s"
+    text: "'related_to' some %s"
     vars:
-      - disease
+      - phenotype

@@ -2,27 +2,23 @@ pattern_name: functions_pattern
 
 pattern_iri: functions_pattern.yaml
 
-description: "Use this template to link the body functions to the body structures that affect them and to the activities they affect."
+description: "Use this template to link the body functions to the phenotypes and activities and participations they are related to."
 
 contributors:
   - https://orcid.org/0009-0000-5160-7927 # J. Potier
 
 classes:
-  function: http://id.who.int/icd/entity/567313968
-  structure: http://id.who.int/icd/entity/1626363729
-  activity: http://id.who.int/icd/entity/1394728112
+  body_functions: http://id.who.int/icd/entity/567313968
+  phenotypic_abnormality: HP:0000118
+  activities_participations: http://id.who.int/icd/entity/1394728112
 
 relations:
   affects: https://w3id.org/biolink/vocab/affects
-  affected_by: https://w3id.org/biolink/vocab/affected_by
-
-data_list_vars:
-  orcid: xsd:anyURI
+  related_to: https://w3id.org/biolink/vocab/related_to
 
 vars:
-  function: "function"
-  structure: "structure"
-  activity: "activity"
+  phenotype: "phenotypic_abnormality"
+  activity: "activities_participations"
 
 logical_axioms:
 
@@ -32,6 +28,6 @@ logical_axioms:
       - activity
   
   - axiom_type: subClassOf
-    text: "'affected_by' some %s"
+    text: "'related_to' some %s"
     vars:
-      - structure
+      - phenotype

@@ -42,4 +42,4 @@ These are the components in PROMOT
 
 | Filename | URL |
 | -------- | --- |
-| classes_properties.owl | None |
+| promot_onto.owl | None |
