@@ -1,22 +1,30 @@
 format-version: 1.2
-data-version: promot/releases/2025-06-26/promot-base.owl
-date: 26:06:2025 09:18
+data-version: promot/releases/2025-08-12/promot-base.owl
+date: 12:08:2025 13:36
 idspace: dce http://purl.org/dc/elements/1.1/ 
 idspace: dcterms http://purl.org/dc/terms/ 
 idspace: oboInOwl http://www.geneontology.org/formats/oboInOwl# 
+remark: Also contributor for the gathering ??\nThomas Bongivault, MSc\nMarc Vincent, PhD\n\n???
+remark: The 'Performing a Rare Disease-Oriented Master Observational Trial' (PROMOT) project aims to generate a learning and knowledge mobilization platform allowing the development of a precision medicine approach for rare neuromuscular diseases.\n\nSee also: https://www.promotinitiative.com/project
 ontology: promot/promot-base
-property_value: dce:contributor "Anita Burgun MD, PhD" xsd:string
-property_value: dce:contributor "Carole Faviez PhD" xsd:string
-property_value: dce:contributor "Cynthia Gagnon PhD" xsd:string
-property_value: dce:contributor "Elizabeth Angelevski" xsd:string
+property_value: dce:contributor "Anita Burgun MD, PhD\nhttps://orcid.org/0000-0001-6855-4366" xsd:string
+property_value: dce:contributor "Carole Faviez PhD\nhttps://orcid.org/0000-0002-1500-0236" xsd:string
+property_value: dce:contributor "Cynthia Gagnon PhD\nhttps://orcid.org/0000-0003-2829-8470" xsd:string
+property_value: dce:contributor "Daniel Natera De Benito MD, PhD\nhttps://orcid.org/0000-0001-7764-2085" xsd:string
+property_value: dce:contributor "Elizabeth Angelevski PhD" xsd:string
+property_value: dce:contributor "European Rare Diseases Research Alliance (ERDERA)\n\nWebsite: https://erdera.org" xsd:string
+property_value: dce:contributor "Hanns Lochmuller MD, PhD\nhttps://orcid.org/0000-0003-2324-8001" xsd:string
 property_value: dce:contributor "Mansoore Gholizade MD" xsd:string
-property_value: dce:creator "Juliette Potier MSc" xsd:string
-property_value: dce:creator "Paul Fabry PhD student" xsd:string
+property_value: dce:creator "Juliette Potier MSc\nhttps://orcid.org/0009-0000-5160-7927" xsd:string
+property_value: dce:creator "Paul Fabry MD, PhD student\nhttps://orcid.org/0000-0002-3336-2476" xsd:string
 property_value: dce:type IAO:8000001
-property_value: dcterms:description "Ontology for building the relational database of the PROMOT project" xsd:string
-property_value: dcterms:license https://creativecommons.org/licenses/unspecified
+property_value: dcterms:description "Ontology for building the database of the PROMOT project\n\nSee also: https://www.promotinitiative.com" xsd:string
 property_value: dcterms:title "PROMOT Common Data Model ontology" xsd:string
-property_value: owl:versionInfo "2025-06-26" xsd:string
+property_value: owl:versionInfo "2025-08-12" xsd:string
+
+[Term]
+id: FMA:62955
+equivalent_to: PROMOT:7000001 ! Phenotypically related anatomical entity
 
 [Term]
 id: PROMOT:0000000
@@ -24,174 +32,308 @@ name: root node
 
 [Term]
 id: PROMOT:0000001
-name: PABPN1
-is_a: SO:0000704
-relationship: RO:0004013 MONDO:0008116
+name: mutation
+is_a: BFO:0000002
+property_value: IAO:0000117 "Juliette Potier" xsd:string
 
 [Term]
 id: PROMOT:0000002
-name: RYR1
-is_a: SO:0000704
-relationship: RO:0004013 MONDO:0019952
+name: PABPN1 mutation
+def: "Mutation located within the PABPN1 gene" []
+is_a: PROMOT:0000001 ! mutation
+relationship: RO:0004013 MONDO:0008116
+property_value: IAO:0000117 "Juliette Potier" xsd:string
 
 [Term]
 id: PROMOT:0000003
-name: TTN
-is_a: SO:0000704
+name: RYR1 mutation
+def: "Mutation located within the RYR1 gene" []
+is_a: PROMOT:0000001 ! mutation
 relationship: RO:0004013 MONDO:0019952
+property_value: IAO:0000117 "Juliette Potier" xsd:string
 
 [Term]
 id: PROMOT:0000004
-name: NEB
-is_a: SO:0000704
+name: TTN mutation
+def: "Mutation located within the TTN gene" []
+is_a: PROMOT:0000001 ! mutation
 relationship: RO:0004013 MONDO:0019952
+property_value: IAO:0000117 "Juliette Potier" xsd:string
 
 [Term]
 id: PROMOT:0000005
-name: MTM1
-is_a: SO:0000704
+name: NEB mutation
+def: "Mutation located within the NEB gene" []
+is_a: PROMOT:0000001 ! mutation
 relationship: RO:0004013 MONDO:0019952
+property_value: IAO:0000117 "Juliette Potier" xsd:string
 
 [Term]
 id: PROMOT:0000006
-name: ACTA1
-is_a: SO:0000704
+name: MTM1 mutation
+def: "Mutation located within the MTM1 gene" []
+is_a: PROMOT:0000001 ! mutation
 relationship: RO:0004013 MONDO:0019952
+property_value: IAO:0000117 "Juliette Potier" xsd:string
 
 [Term]
 id: PROMOT:0000007
-name: SELENON
-is_a: SO:0000704
+name: ACTA1 mutation
+def: "Mutation located within the ACTA1 gene" []
+is_a: PROMOT:0000001 ! mutation
 relationship: RO:0004013 MONDO:0019952
+property_value: IAO:0000117 "Juliette Potier" xsd:string
 
 [Term]
 id: PROMOT:0000008
-name: CHRNE
-is_a: SO:0000704
-relationship: RO:0004013 MONDO:0018940
+name: SELENON mutation
+def: "Mutation located within the SELENON gene" []
+is_a: PROMOT:0000001 ! mutation
+relationship: RO:0004013 MONDO:0019952
+property_value: IAO:0000117 "Juliette Potier" xsd:string
 
 [Term]
 id: PROMOT:0000009
-name: DOK7
-is_a: SO:0000704
+name: CHRNE mutation
+def: "Mutation located within the CHRNE gene" []
+is_a: PROMOT:0000001 ! mutation
 relationship: RO:0004013 MONDO:0018940
+property_value: IAO:0000117 "Juliette Potier" xsd:string
 
 [Term]
 id: PROMOT:0000010
-name: COLQ
-is_a: SO:0000704
+name: DOK7 mutation
+def: "Mutation located within the DOK7 gene" []
+is_a: PROMOT:0000001 ! mutation
 relationship: RO:0004013 MONDO:0018940
+property_value: IAO:0000117 "Juliette Potier" xsd:string
 
 [Term]
 id: PROMOT:0000011
-name: RAPSN
-is_a: SO:0000704
+name: COLQ mutation
+def: "Mutation located within the COLQ gene" []
+is_a: PROMOT:0000001 ! mutation
 relationship: RO:0004013 MONDO:0018940
+property_value: IAO:0000117 "Juliette Potier" xsd:string
 
 [Term]
 id: PROMOT:0000012
-name: GFPT1
-is_a: SO:0000704
+name: RAPSN mutation
+def: "Mutation located within the RAPSN gene" []
+is_a: PROMOT:0000001 ! mutation
 relationship: RO:0004013 MONDO:0018940
+property_value: IAO:0000117 "Juliette Potier" xsd:string
 
 [Term]
 id: PROMOT:0000013
-name: GMPPB
-is_a: SO:0000704
+name: GFPT1 mutation
+def: "Mutation located within the GFPT1 gene" []
+is_a: PROMOT:0000001 ! mutation
 relationship: RO:0004013 MONDO:0018940
+property_value: IAO:0000117 "Juliette Potier" xsd:string
 
 [Term]
-id: PROMOT:3000101
+id: PROMOT:0000014
+name: GMPPB mutation
+def: "Mutation located within the GMPPB gene" []
+is_a: PROMOT:0000001 ! mutation
+relationship: RO:0004013 MONDO:0018940
+property_value: IAO:0000117 "Juliette Potier" xsd:string
+
+[Term]
+id: PROMOT:3000001
 name: Patient
-def: "Participant of PROMOT study" []
-is_a: http://snomed.info/id/337915000
-relationship: PROMOT:2000002 http://snomed.info/id/360296002 ! uses assistive equipment
-relationship: PROMOT:2000003 http://snomed.info/id/386053000 ! is assessed by
-relationship: RO:0002200 HP:0000118
-relationship: SIO:000217 SIO:000475
-relationship: VO:0001039 SO:0000704
+def: "Participant of PROMOT" []
+is_a: NCBITaxon:9606
+relationship: VO:0001039 PROMOT:0000001 ! mutation
+
+[Term]
+id: PROMOT:4000001
+name: Patient statement
+def: "A statement regarding a patient" []
+is_a: IAO:0000030
+relationship: RO:0002351 http://snomed.info/id/302147001
+relationship: RO:0002351 PROMOT:3000001 ! Patient
+relationship: RO:0002351 PROMOT:5000001 ! Patient identifier
+property_value: IAO:0000117 "Juliette Potier" xsd:string
+
+[Term]
+id: PROMOT:4000002
+name: Biological sex statement
+def: "A statement regarding the biological sex of a patient" []
+is_a: PROMOT:4000001 ! Patient statement
+relationship: RO:0002351 http://snomed.info/id/184100006
+property_value: IAO:0000117 "Juliette Potier" xsd:string
+
+[Term]
+id: PROMOT:4000003
+name: Marital status statement
+def: "A statement regarding the marital status of a patient" []
+is_a: PROMOT:4000001 ! Patient statement
+relationship: RO:0002351 http://snomed.info/id/125680007
+property_value: IAO:0000117 "Juliette Potier" xsd:string
+
+[Term]
+id: PROMOT:4000004
+name: Occupation statement
+def: "A statement regarding the occupation of a patient, such as work" []
+is_a: PROMOT:4000001 ! Patient statement
+relationship: RO:0002351 http://snomed.info/id/184104002
+property_value: IAO:0000117 "Juliette Potier" xsd:string
+
+[Term]
+id: PROMOT:4000005
+name: Ethnicity statement
+def: "A statement regarding the ethnicity of a patient" []
+is_a: PROMOT:4000001 ! Patient statement
+relationship: RO:0002351 http://snomed.info/id/186034007
+property_value: IAO:0000117 "Juliette Potier" xsd:string
+
+[Term]
+id: PROMOT:4000006
+name: Date of birth statement
+def: "A statement regarding the date of birth of a patient" []
+is_a: PROMOT:4000001 ! Patient statement
+relationship: RO:0002351 http://snomed.info/id/184099003
+property_value: IAO:0000117 "Juliette Potier" xsd:string
+
+[Term]
+id: PROMOT:4000007
+name: Date of death statement
+def: "A statement regarding the date of death of a patient" []
+is_a: PROMOT:4000001 ! Patient statement
+relationship: RO:0002351 http://snomed.info/id/399753006
+property_value: IAO:0000117 "Juliette Potier" xsd:string
+
+[Term]
+id: PROMOT:4000008
+name: Achieved qualification statement
+def: "A statement regarding the qualification achieved by a patient" []
+is_a: PROMOT:4000001 ! Patient statement
+relationship: RO:0002351 http://snomed.info/id/224326003
+property_value: IAO:0000117 "Juliette Potier" xsd:string
+
+[Term]
+id: PROMOT:4000009
+name: Duration of formal education statement
+def: "A statement regarding the duration of formal education followed by a patient" []
+is_a: PROMOT:4000001 ! Patient statement
+relationship: RO:0002351 http://snomed.info/id/224288002
+property_value: IAO:0000117 "Juliette Potier" xsd:string
+
+[Term]
+id: PROMOT:4000010
+name: Handedness statement
+def: "A statement regarding the handedness of a patient" []
+is_a: PROMOT:4000001 ! Patient statement
+property_value: IAO:0000117 "Juliette Potier" xsd:string
+
+[Term]
+id: PROMOT:4000011
+name: First language statement
+def: "A statement regarding the first language spoken by a patient" []
+is_a: PROMOT:4000001 ! Patient statement
+property_value: IAO:0000117 "Juliette Potier" xsd:string
 
 [Term]
 id: PROMOT:5000001
-name: Patient statement
-is_a: IAO:0000030
-relationship: RO:0002351 http://snomed.info/id/302147001
-relationship: RO:0002351 PROMOT:3000101 ! Patient
-relationship: RO:0002351 PROMOT:5000010 ! Patient identifier
-relationship: RO:0002351 SIO:000393
-
-[Term]
-id: PROMOT:5000002
-name: Biological sex statement
-is_a: PROMOT:5000001 ! Patient statement
-relationship: RO:0002351 http://snomed.info/id/184100006
-
-[Term]
-id: PROMOT:5000003
-name: Marital status statement
-is_a: PROMOT:5000001 ! Patient statement
-relationship: RO:0002351 http://snomed.info/id/125680007
-
-[Term]
-id: PROMOT:5000004
-name: Occupation statement
-is_a: PROMOT:5000001 ! Patient statement
-relationship: RO:0002351 http://snomed.info/id/184104002
-
-[Term]
-id: PROMOT:5000005
-name: Ethnicity statement
-is_a: PROMOT:5000001 ! Patient statement
-relationship: RO:0002351 http://snomed.info/id/186034007
-
-[Term]
-id: PROMOT:5000006
-name: Date of birth statement
-is_a: PROMOT:5000001 ! Patient statement
-relationship: RO:0002351 http://snomed.info/id/184099003
-
-[Term]
-id: PROMOT:5000007
-name: Date of death statement
-is_a: PROMOT:5000001 ! Patient statement
-relationship: RO:0002351 http://snomed.info/id/399753006
-
-[Term]
-id: PROMOT:5000008
-name: Achieved qualification statement
-is_a: PROMOT:5000001 ! Patient statement
-relationship: RO:0002351 http://snomed.info/id/224326003
-
-[Term]
-id: PROMOT:5000009
-name: Duration of formal education statement
-is_a: PROMOT:5000001 ! Patient statement
-relationship: RO:0002351 http://snomed.info/id/224288002
-
-[Term]
-id: PROMOT:5000010
 name: Patient identifier
+def: "An information content entity that is used to refer to one instance of a patient." []
 is_a: IAO:0000030
+property_value: IAO:0000117 "Juliette Potier" xsd:string
+
+[Term]
+id: PROMOT:6000001
+name: presence qualifier
+def: "A qualifier for stating the presence, absence or uncertainty of a phenotype instance." []
+is_a: BFO:0000019
+relationship: SIO:000218 HP:0000118
+property_value: IAO:0000117 "Juliette Potier" xsd:string
+
+[Term]
+id: PROMOT:6000002
+name: absent
+def: "A qualifier for an instance of a phenotype which is absent." []
+is_a: PROMOT:6000001 ! presence qualifier
+property_value: IAO:0000117 "Juliette Potier" xsd:string
+
+[Term]
+id: PROMOT:6000003
+name: present
+def: "Qualifies an instance of a phenotype as present." []
+is_a: PROMOT:6000001 ! presence qualifier
+property_value: IAO:0000117 "Juliette Potier" xsd:string
+
+[Term]
+id: PROMOT:6000004
+name: unsure
+def: "Qualifies an instance of a phenotype as unsure." []
+is_a: PROMOT:6000001 ! presence qualifier
+property_value: IAO:0000117 "Juliette Potier" xsd:string
+
+[Term]
+id: PROMOT:7000001
+name: Phenotypically related anatomical entity
+def: "An anatomical entity related to a phenotype such that the anatomical entity is the location of the phenotype." []
+is_a: BFO:0000040
+relationship: PROMOT:2000001 HP:0000118 ! is location of
+relationship: related:to http://id.who.int/icd/entity/1626363729
+property_value: IAO:0000117 "Juliette Potier" xsd:string
+
+[Term]
+id: PROMOT:7000002
+name: Phenotypically related body structure
+def: "A body structure related to a phenotype such that the body structure is the location of the phenotype." []
+comment: (JP: unsure about definition)
+is_a: BFO:0000028
+relationship: related:to HP:0000118
+property_value: IAO:0000117 "Juliette Potier" xsd:string
+
+[Term]
+id: PROMOT:7000003
+name: Phenotypically related body function
+def: "A body function related to a phenotype such that the body function is impacted by the phenotype existence." []
+comment: (JP: unsure about definition)
+is_a: BFO:0000034
+relationship: related:to HP:0000118
+property_value: IAO:0000117 "Juliette Potier" xsd:string
+
+[Term]
+id: PROMOT:8000001
+name: Onset statement
+def: "A statement regarding the date of onset of a phenotype" []
+is_a: IAO:0000030
+property_value: IAO:0000117 "Juliette Potier" xsd:string
+
+[Term]
+id: http://id.who.int/icd/entity/1626363729
+equivalent_to: PROMOT:7000002 ! Phenotypically related body structure
+
+[Term]
+id: http://id.who.int/icd/entity/567313968
+equivalent_to: PROMOT:7000003 ! Phenotypically related body function
 
 [Typedef]
 id: PROMOT:2000001
-name: has location
-def: "a relation between a phenotype and an anatomical entity, where the anatomical entity is the location of the phenotype." []
+name: is location of
+def: "A relation between a phenotypically related anatomical entity and a phenotype, where the phenotype is located in the phenotypically related anatomical entity." []
 property_value: IAO:0000117 "Juliette Potier" xsd:string
-domain: HP:0000118
-range: FMA:62955
+domain: PROMOT:7000001 ! Phenotypically related anatomical entity
+range: HP:0000118
 
 [Typedef]
 id: PROMOT:2000002
-name: uses assistive equipment
-def: "a relation between a human and an device, where the device is an assistive equipment used by the human in order to move or to accomplish something, such as a task or an activity." []
+name: is used by
+def: "A relation between a device and a patient, where the patient uses an assistive equipment in order to move or to accomplish something, such as a task or an activity." []
 property_value: IAO:0000117 "Juliette Potier" xsd:string
-range: http://snomed.info/id/360296002
+domain: http://snomed.info/id/360296002
+range: PROMOT:3000001 ! Patient
 
 [Typedef]
 id: PROMOT:2000003
-name: is assessed by
-def: "a relation between a human and an evaluation procedure, where the human is assessed by an evaluation procedure, such as a test, a questionnaire or a scale." []
+name: assesses
+def: "A relation between an evaluation procedure and a patient, where the patient is assessed by an evaluation procedure, such as a test, a questionnaire or a scale." []
 property_value: IAO:0000117 "Juliette Potier" xsd:string
-range: http://snomed.info/id/386053000
+domain: http://snomed.info/id/386053000
+range: PROMOT:3000001 ! Patient
 

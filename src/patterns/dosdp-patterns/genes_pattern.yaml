@@ -2,30 +2,26 @@ pattern_name: genes_pattern
 
 pattern_iri: genes_pattern.yaml
 
-description: "Use this template to link the genes to the related diseases."
+description: "Use this template to link the genes to the diseases they are related to."
 
 contributors:
   - https://orcid.org/0009-0000-5160-7927 # J. Potier
 
 classes:
-  gene: SO:0000704
+  mutation: PROMOT:0000001
   disease: MONDO:0000001
 
 relations:
   is_causal_germline_mutation_in: RO:0004013
 
-data_list_vars:
-  orcid: xsd:anyURI
-
 vars:
   disease: "disease"
 
-# equivalentTo:
-#   text: "'gene' and 'is_causal_germline_mutation_in' some %s"
-#   vars:
-#     - disease
 
-subClassOf:
-  text: "'is_causal_germline_mutation_in' some %s"
-  vars:
-    - disease
+logical_axioms:
+
+  - axiom_type: subClassOf
+    text: "'is_causal_germline_mutation_in' some %s"
+    vars:
+      - disease
+  

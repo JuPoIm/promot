@@ -10,7 +10,7 @@
 # More information: https://github.com/INCATools/ontology-development-kit/
 
 # Fingerprint of the configuration file when this Makefile was last generated
-CONFIG_HASH=                09f8716a984bbebf3dc3ece2a46c16e79aeffe2e3a2eec341e493cbb99a625ce
+CONFIG_HASH=                84b21b271bab5431746872041c9faa6c475aaa340857a2cdac7c932e0a90ac9b
 
 
 # ----------------------------------------
@@ -54,7 +54,7 @@ OBODATE ?=                  $(shell date +'%d:%m:%Y %H:%M')
 VERSION=                    $(TODAY)
 ANNOTATE_ONTOLOGY_VERSION = annotate -V $(ONTBASE)/releases/$(VERSION)/$@ --annotation owl:versionInfo $(VERSION)
 ANNOTATE_CONVERT_FILE =     annotate --ontology-iri $(ONTBASE)/$@ $(ANNOTATE_ONTOLOGY_VERSION) convert -f ofn --output $@.tmp.owl && mv $@.tmp.owl $@
-OTHER_SRC =                 $(PATTERNDIR)/definitions.owl $(COMPONENTSDIR)/classes_properties.owl 
+OTHER_SRC =                 $(PATTERNDIR)/definitions.owl $(COMPONENTSDIR)/promot_onto.owl 
 ONTOLOGYTERMS =             $(TMPDIR)/ontologyterms.txt
 EDIT_PREPROCESSED =         $(TMPDIR)/$(ONT)-preprocess.owl
 PATTERNDIR=                 ../patterns
@@ -165,7 +165,7 @@ all_main: $(MAIN_FILES)
 # ----------------------------------------
 
 
-IMPORTS =  bfo biolink fma hp iao mondo ncit orcidio ro scdo sio snomed so vo whofic
+IMPORTS =  bfo fma hp iao mondo ncit obi orcidio ro scdo sio snomed vo whofic
 
 IMPORT_ROOTS = $(patsubst %, $(IMPORTDIR)/%_import, $(IMPORTS))
 IMPORT_OWL_FILES = $(foreach n,$(IMPORT_ROOTS), $(n).owl)
@@ -381,16 +381,6 @@ $(IMPORTDIR)/%_import.owl: $(MIRRORDIR)/%.owl
 
 .PRECIOUS: $(IMPORTDIR)/%_import.owl
 
-## Module for ontology: biolink
-
-$(IMPORTDIR)/biolink_import.owl: $(MIRRORDIR)/biolink.owl $(IMPORTDIR)/biolink_terms_combined.txt
-	if [ $(IMP) = true ]; then $(ROBOT) query -i $< --update ../sparql/preprocess-module.ru \
-    extract -T $(IMPORTDIR)/biolink_terms_combined.txt --copy-ontology-annotations true --force true --method BOT \
-    remove --base-iri $(OBOBASE)/BIOLINK --axioms external --preserve-structure false --trim false \
-		remove $(patsubst %, --term %, $(ANNOTATION_PROPERTIES)) --term rdfs:label --term IAO:0000115  -T $(IMPORTDIR)/biolink_terms_combined.txt --select complement \
-		query --update ../sparql/inject-subset-declaration.ru --update ../sparql/inject-synonymtype-declaration.ru --update ../sparql/postprocess-module.ru \
-		$(ANNOTATE_CONVERT_FILE); fi
-
 ## Module for ontology: iao
 
 $(IMPORTDIR)/iao_import.owl: $(MIRRORDIR)/iao.owl $(IMPORTDIR)/iao_terms_combined.txt
@@ -422,10 +412,6 @@ $(IMPORTDIR)/orcidio_import.owl: $(MIRRORDIR)/orcidio.owl $(IMPORTDIR)/orcidio_t
 ## Module for ontology: snomed
 
 $(IMPORTDIR)/snomed_import.owl: $(MIRRORDIR)/snomed.owl
-	echo "ERROR: You have configured your default module type to be custom; this behavior needs to be overwritten in promot.Makefile!" && false
-## Module for ontology: so
-
-$(IMPORTDIR)/so_import.owl: $(MIRRORDIR)/so.owl
 	echo "ERROR: You have configured your default module type to be custom; this behavior needs to be overwritten in promot.Makefile!" && false
 
 .PHONY: refresh-imports
@@ -481,12 +467,12 @@ $(COMPONENTSDIR)/%.owl: | $(COMPONENTSDIR)
 
 
 
-$(COMPONENTSDIR)/classes_properties.owl: $(TEMPLATEDIR)/classes_properties.csv
+$(COMPONENTSDIR)/promot_onto.owl: $(TEMPLATEDIR)/promot_onto.csv
 	if [ $(COMP) = true ] ; then $(ROBOT) template --add-prefixes config/context.json \
 		$(patsubst %, --template %, $^) \
 		$(ANNOTATE_CONVERT_FILE); fi
 
-.PRECIOUS: $(COMPONENTSDIR)/classes_properties.owl
+.PRECIOUS: $(COMPONENTSDIR)/promot_onto.owl
 # ----------------------------------------
 # Mirroring upstream ontologies
 # ----------------------------------------
@@ -504,13 +490,6 @@ ifeq ($(strip $(MIR)),true)
 mirror-bfo: | $(TMPDIR)
 	curl -L $(OBOBASE)/bfo.owl --create-dirs -o $(TMPDIR)/bfo-download.owl --retry 4 --max-time 200 && \
 	$(ROBOT) convert -i $(TMPDIR)/bfo-download.owl -o $(TMPDIR)/$@.owl
-
-
-## ONTOLOGY: biolink
-.PHONY: mirror-biolink
-.PRECIOUS: $(MIRRORDIR)/biolink.owl
-mirror-biolink: | $(TMPDIR)
-	$(ROBOT) convert -I https://w3id.org/biolink/biolink-model.owl.ttl -o $(TMPDIR)/$@.owl
 
 
 ## ONTOLOGY: fma
@@ -563,6 +542,14 @@ mirror-ncit:
 endif
 
 
+## ONTOLOGY: obi
+.PHONY: mirror-obi
+.PRECIOUS: $(MIRRORDIR)/obi.owl
+mirror-obi: | $(TMPDIR)
+	curl -L $(OBOBASE)/obi.owl --create-dirs -o $(TMPDIR)/obi-download.owl --retry 4 --max-time 200 && \
+	$(ROBOT) convert -i $(TMPDIR)/obi-download.owl -o $(TMPDIR)/$@.owl
+
+
 ## ONTOLOGY: orcidio
 .PHONY: mirror-orcidio
 .PRECIOUS: $(MIRRORDIR)/orcidio.owl
@@ -604,19 +591,6 @@ mirror-snomed: | $(TMPDIR)
 else
 mirror-snomed:
 	@echo "Not refreshing snomed because refreshing large imports is disabled (IMP_LARGE=$(IMP_LARGE))."
-endif
-
-
-## ONTOLOGY: so
-.PHONY: mirror-so
-.PRECIOUS: $(MIRRORDIR)/so.owl
-ifeq ($(strip $(IMP_LARGE)),true)
-mirror-so: | $(TMPDIR)
-	curl -L $(OBOBASE)/so.owl --create-dirs -o $(TMPDIR)/so-download.owl --retry 4 --max-time 200 && \
-	$(ROBOT) convert -i $(TMPDIR)/so-download.owl -o $(TMPDIR)/$@.owl
-else
-mirror-so:
-	@echo "Not refreshing so because refreshing large imports is disabled (IMP_LARGE=$(IMP_LARGE))."
 endif
 
 
@@ -908,6 +882,8 @@ update_repo:
 	sh $(SCRIPTSDIR)/update_repo.sh
 	
 
+update_docs:
+	mkdocs gh-deploy --config-file ../../mkdocs.yaml
 
 # Note to future generations: computing the real path relative to the
 # current directory is a way to ensure we only clean up directories that

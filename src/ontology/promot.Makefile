@@ -10,9 +10,9 @@ imports/bfo_import.owl: mirror/bfo.owl imports/bfo_terms_combined.txt
         query --update ../sparql/inject-subset-declaration.ru --update ../sparql/postprocess-module.ru \
 		annotate --ontology-iri $(ONTBASE)/$@ $(ANNOTATE_ONTOLOGY_VERSION) --output $@.tmp.owl && mv $@.tmp.owl $@; fi
 # MONDO
-imports/mondo_import.owl: mirror/mondo.owl imports/mondo_terms_combined.txt
+imports/mondo_import.owl: mirror/mondo.owl imports/mondo_terms.txt
 	if [ $(IMP) = true ]; then $(ROBOT) query -i $< --update ../sparql/preprocess-module.ru \
-		filter -T imports/mondo_terms_combined.txt --select "self annotations" --exclude-terms imports/hp_terms.txt --signature true \
+		filter -T imports/mondo_terms.txt --select "self annotations" --exclude-terms imports/hp_terms.txt --signature true \
         query --update ../sparql/inject-subset-declaration.ru --update ../sparql/postprocess-module.ru \
 		annotate --ontology-iri $(ONTBASE)/$@ $(ANNOTATE_ONTOLOGY_VERSION) --output $@.tmp.owl && mv $@.tmp.owl $@; fi
 # FMA
@@ -86,15 +86,18 @@ imports/snomed_import.owl: mirror/snomed.owl imports/snomed_terms_combined.txt
 		annotate --ontology-iri $(ONTBASE)/$@ $(ANNOTATE_ONTOLOGY_VERSION) \
 		merge -i $@.tmp.owl \
 		--output $@.tmp.owl && mv $@.tmp.owl $@; fi
-# SO
-imports/so_import.owl: mirror/so.owl imports/so_terms_combined.txt
-	if [ $(IMP) = true ]; then $(ROBOT) query -i $< --update ../sparql/preprocess-module.ru \
-		filter -T imports/so_terms_combined.txt --select "self annotations" --signature true \
-        query --update ../sparql/inject-subset-declaration.ru --update ../sparql/postprocess-module.ru \
-		annotate --ontology-iri $(ONTBASE)/$@ $(ANNOTATE_ONTOLOGY_VERSION) --output $@.tmp.owl && mv $@.tmp.owl $@; fi
 # VO
-imports/vo_import.owl: mirror/vo.owl imports/vo_terms_combined.txt
+imports/vo_import.owl: mirror/vo.owl imports/vo_terms.txt
 	if [ $(IMP) = true ]; then $(ROBOT) query -i $< --update ../sparql/preprocess-module.ru \
-		filter -T imports/vo_terms_combined.txt --select "self annotations" --signature true \
+		filter -T imports/vo_terms.txt --select "self annotations" --signature true \
         query --update ../sparql/inject-subset-declaration.ru --update ../sparql/postprocess-module.ru \
 		annotate --ontology-iri $(ONTBASE)/$@ $(ANNOTATE_ONTOLOGY_VERSION) --output $@.tmp.owl && mv $@.tmp.owl $@; fi
+# OBI
+imports/obi_import.owl: mirror/obi.owl imports/obi_terms.txt
+	if [ $(IMP) = true ]; then $(ROBOT) query -i $< --update ../sparql/preprocess-module.ru \
+		filter -T imports/obi_terms.txt --select "self annotations" --signature true \
+        query --update ../sparql/inject-subset-declaration.ru --update ../sparql/postprocess-module.ru \
+		annotate --ontology-iri $(ONTBASE)/$@ $(ANNOTATE_ONTOLOGY_VERSION) --output $@.tmp.owl && mv $@.tmp.owl $@; fi
+# DOCUMENTATION
+documentation:
+  documentation_system: mkdocs
