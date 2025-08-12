@@ -7,8 +7,8 @@ Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
 
 
 Ontology(<http://purl.obolibrary.org/obo/promot/components/promot_onto.owl>
-<http://purl.obolibrary.org/obo/promot/releases/2025-08-07/components/promot_onto.owl>
-Annotation(owl:versionInfo "2025-08-07")
+<http://purl.obolibrary.org/obo/promot/releases/2025-08-12/components/promot_onto.owl>
+Annotation(owl:versionInfo "2025-08-12")
 
 Declaration(Class(<http://id.who.int/icd/entity/1280021050>))
 Declaration(Class(<http://id.who.int/icd/entity/1394728112>))
@@ -19,6 +19,7 @@ Declaration(Class(<http://id.who.int/icd/entity/524499668>))
 Declaration(Class(<http://id.who.int/icd/entity/567313968>))
 Declaration(Class(<http://id.who.int/icd/entity/591104711>))
 Declaration(Class(<http://id.who.int/icd/entity/721275161>))
+Declaration(Class(<http://purl.obolibrary.org/obo/BFO_0000001>))
 Declaration(Class(<http://purl.obolibrary.org/obo/BFO_0000002>))
 Declaration(Class(<http://purl.obolibrary.org/obo/BFO_0000015>))
 Declaration(Class(<http://purl.obolibrary.org/obo/BFO_0000016>))
@@ -33,6 +34,7 @@ Declaration(Class(<http://purl.obolibrary.org/obo/IAO_0000030>))
 Declaration(Class(<http://purl.obolibrary.org/obo/MONDO_0000001>))
 Declaration(Class(<http://purl.obolibrary.org/obo/NCBITaxon_9606>))
 Declaration(Class(<http://purl.obolibrary.org/obo/OBI_0100026>))
+Declaration(Class(<http://purl.obolibrary.org/obo/PROMOT_0000000>))
 Declaration(Class(<http://purl.obolibrary.org/obo/PROMOT_0000001>))
 Declaration(Class(<http://purl.obolibrary.org/obo/PROMOT_0000002>))
 Declaration(Class(<http://purl.obolibrary.org/obo/PROMOT_0000003>))
@@ -67,6 +69,7 @@ Declaration(Class(<http://purl.obolibrary.org/obo/PROMOT_6000004>))
 Declaration(Class(<http://purl.obolibrary.org/obo/PROMOT_7000001>))
 Declaration(Class(<http://purl.obolibrary.org/obo/PROMOT_7000002>))
 Declaration(Class(<http://purl.obolibrary.org/obo/PROMOT_7000003>))
+Declaration(Class(<http://purl.obolibrary.org/obo/PROMOT_8000001>))
 Declaration(Class(<http://semanticscience.org/resource/SIO_000475>))
 Declaration(Class(<http://semanticscience.org/resource/SIO_001268>))
 Declaration(Class(<http://semanticscience.org/resource/SIO_010057>))
@@ -98,8 +101,6 @@ Declaration(DataProperty(<http://purl.obolibrary.org/obo/RO_0004029>))
 Declaration(DataProperty(<http://purl.obolibrary.org/obo/SCDO_1000194>))
 Declaration(DataProperty(<http://semanticscience.org/resource/SIO_000217>))
 Declaration(DataProperty(<http://semanticscience.org/resource/SIO_000300>))
-Declaration(NamedIndividual(<http://purl.obolibrary.org/obo/PROMOT_I000003>))
-Declaration(NamedIndividual(<http://purl.obolibrary.org/obo/PROMOT_I000004>))
 Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/IAO_0000115>))
 Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/IAO_0000117>))
 Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/PROMOT_1000001>))
@@ -110,7 +111,7 @@ Declaration(Datatype(xsd:date))
 
 # Annotation Property: <http://purl.obolibrary.org/obo/PROMOT_1000001> (found in)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/PROMOT_1000001> "indicates the source of the class.")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/PROMOT_1000001> "Indicates the source of the class.")
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000117> <http://purl.obolibrary.org/obo/PROMOT_1000001> "Juliette Potier")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/PROMOT_1000001> "found in")
 AnnotationPropertyRange(<http://purl.obolibrary.org/obo/PROMOT_1000001> xsd:string)
@@ -122,7 +123,7 @@ AnnotationPropertyRange(<http://purl.obolibrary.org/obo/PROMOT_1000001> xsd:stri
 
 # Object Property: <http://purl.obolibrary.org/obo/PROMOT_2000001> (is location of)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/PROMOT_2000001> "a relation between a phenotypically related anatomical entity and a phenotype, where the phenotype is located in the phenotypically related anatomical entity.")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/PROMOT_2000001> "A relation between a phenotypically related anatomical entity and a phenotype, where the phenotype is located in the phenotypically related anatomical entity.")
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000117> <http://purl.obolibrary.org/obo/PROMOT_2000001> "Juliette Potier")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/PROMOT_2000001> "is location of")
 ObjectPropertyDomain(<http://purl.obolibrary.org/obo/PROMOT_2000001> <http://purl.obolibrary.org/obo/PROMOT_7000001>)
@@ -130,7 +131,7 @@ ObjectPropertyRange(<http://purl.obolibrary.org/obo/PROMOT_2000001> <http://purl
 
 # Object Property: <http://purl.obolibrary.org/obo/PROMOT_2000002> (is used by)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/PROMOT_2000002> "a relation between a device and a patient, where the patient uses an assistive equipment in order to move or to accomplish something, such as a task or an activity.")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/PROMOT_2000002> "A relation between a device and a patient, where the patient uses an assistive equipment in order to move or to accomplish something, such as a task or an activity.")
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000117> <http://purl.obolibrary.org/obo/PROMOT_2000002> "Juliette Potier")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/PROMOT_2000002> "is used by")
 ObjectPropertyDomain(<http://purl.obolibrary.org/obo/PROMOT_2000002> <http://snomed.info/id/360296002>)
@@ -138,7 +139,7 @@ ObjectPropertyRange(<http://purl.obolibrary.org/obo/PROMOT_2000002> <http://purl
 
 # Object Property: <http://purl.obolibrary.org/obo/PROMOT_2000003> (assesses)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/PROMOT_2000003> "a relation between an evaluation procedure and a patient, where the patient is assessed by an evaluation procedure, such as a test, a questionnaire or a scale.")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/PROMOT_2000003> "A relation between an evaluation procedure and a patient, where the patient is assessed by an evaluation procedure, such as a test, a questionnaire or a scale.")
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000117> <http://purl.obolibrary.org/obo/PROMOT_2000003> "Juliette Potier")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/PROMOT_2000003> "assesses")
 ObjectPropertyDomain(<http://purl.obolibrary.org/obo/PROMOT_2000003> <http://snomed.info/id/386053000>)
@@ -150,7 +151,7 @@ ObjectPropertyDomain(<http://purl.obolibrary.org/obo/RO_0002351> <http://purl.ob
 
 # Object Property: <https://w3id.org/biolink/vocab/affected_by> (affected by)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <https://w3id.org/biolink/vocab/affected_by> "describes an entity of which the state or quality is affected by another existing entity.")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <https://w3id.org/biolink/vocab/affected_by> "Describes an entity of which the state or quality is affected by another existing entity.")
 AnnotationAssertion(rdfs:comment <https://w3id.org/biolink/vocab/affected_by> "https://bioportal.bioontology.org/ontologies/BIOLINK")
 AnnotationAssertion(rdfs:label <https://w3id.org/biolink/vocab/affected_by> "affected by")
 AnnotationAssertion(rdfs:seeAlso <https://w3id.org/biolink/vocab/affected_by> <https://biolink.github.io/biolink-model/>)
@@ -185,6 +186,7 @@ DataPropertyRange(<http://semanticscience.org/resource/SIO_000300> xsd:date)
 
 # Datatype: <http://purl.obolibrary.org/obo/PROMOT_0000001> (mutation)
 
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000117> <http://purl.obolibrary.org/obo/PROMOT_0000001> "Juliette Potier")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/PROMOT_0000001> "mutation")
 
 # Datatype: <http://purl.obolibrary.org/obo/PROMOT_6000001> (presence qualifier)
@@ -236,6 +238,10 @@ SubClassOf(<http://id.who.int/icd/entity/591104711> ObjectSomeValuesFrom(<http:/
 
 SubClassOf(<http://id.who.int/icd/entity/721275161> ObjectSomeValuesFrom(<http://semanticscience.org/resource/SIO_000218> <http://id.who.int/icd/entity/1394728112>))
 
+# Class: <http://purl.obolibrary.org/obo/BFO_0000001> (<http://purl.obolibrary.org/obo/BFO_0000001>)
+
+SubClassOf(<http://purl.obolibrary.org/obo/BFO_0000001> <http://purl.obolibrary.org/obo/PROMOT_0000000>)
+
 # Class: <http://purl.obolibrary.org/obo/FMA_50188> (<http://purl.obolibrary.org/obo/FMA_50188>)
 
 SubClassOf(<http://purl.obolibrary.org/obo/FMA_50188> <http://purl.obolibrary.org/obo/FMA_62955>)
@@ -267,95 +273,95 @@ SubClassOf(<http://purl.obolibrary.org/obo/PROMOT_0000001> <http://purl.obolibra
 SubClassOf(<http://purl.obolibrary.org/obo/PROMOT_0000001> DataSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0004013> <http://purl.obolibrary.org/obo/MONDO_0000001>))
 SubClassOf(<http://purl.obolibrary.org/obo/PROMOT_0000001> DataSomeValuesFrom(<http://semanticscience.org/resource/SIO_000217> <http://semanticscience.org/resource/SIO_001268>))
 
-# Class: <http://purl.obolibrary.org/obo/PROMOT_0000002> (mutated PABPN1)
+# Class: <http://purl.obolibrary.org/obo/PROMOT_0000002> (PABPN1 mutation)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/PROMOT_0000002> "mutation located within the PABPN1 gene")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/PROMOT_0000002> "Mutation located within the PABPN1 gene")
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000117> <http://purl.obolibrary.org/obo/PROMOT_0000002> "Juliette Potier")
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/PROMOT_0000002> "mutated PABPN1")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/PROMOT_0000002> "PABPN1 mutation")
 SubClassOf(<http://purl.obolibrary.org/obo/PROMOT_0000002> <http://purl.obolibrary.org/obo/PROMOT_0000001>)
 
-# Class: <http://purl.obolibrary.org/obo/PROMOT_0000003> (mutated RYR1)
+# Class: <http://purl.obolibrary.org/obo/PROMOT_0000003> (RYR1 mutation)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/PROMOT_0000003> "mutation located within the RYR1 gene")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/PROMOT_0000003> "Mutation located within the RYR1 gene")
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000117> <http://purl.obolibrary.org/obo/PROMOT_0000003> "Juliette Potier")
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/PROMOT_0000003> "mutated RYR1")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/PROMOT_0000003> "RYR1 mutation")
 SubClassOf(<http://purl.obolibrary.org/obo/PROMOT_0000003> <http://purl.obolibrary.org/obo/PROMOT_0000001>)
 
-# Class: <http://purl.obolibrary.org/obo/PROMOT_0000004> (mutated TTN)
+# Class: <http://purl.obolibrary.org/obo/PROMOT_0000004> (TTN mutation)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/PROMOT_0000004> "mutation located within the TTN gene")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/PROMOT_0000004> "Mutation located within the TTN gene")
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000117> <http://purl.obolibrary.org/obo/PROMOT_0000004> "Juliette Potier")
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/PROMOT_0000004> "mutated TTN")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/PROMOT_0000004> "TTN mutation")
 SubClassOf(<http://purl.obolibrary.org/obo/PROMOT_0000004> <http://purl.obolibrary.org/obo/PROMOT_0000001>)
 
-# Class: <http://purl.obolibrary.org/obo/PROMOT_0000005> (mutated NEB)
+# Class: <http://purl.obolibrary.org/obo/PROMOT_0000005> (NEB mutation)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/PROMOT_0000005> "mutation located within the NEB gene")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/PROMOT_0000005> "Mutation located within the NEB gene")
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000117> <http://purl.obolibrary.org/obo/PROMOT_0000005> "Juliette Potier")
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/PROMOT_0000005> "mutated NEB")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/PROMOT_0000005> "NEB mutation")
 SubClassOf(<http://purl.obolibrary.org/obo/PROMOT_0000005> <http://purl.obolibrary.org/obo/PROMOT_0000001>)
 
-# Class: <http://purl.obolibrary.org/obo/PROMOT_0000006> (mutated MTM1)
+# Class: <http://purl.obolibrary.org/obo/PROMOT_0000006> (MTM1 mutation)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/PROMOT_0000006> "mutation located within the MTM1 gene")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/PROMOT_0000006> "Mutation located within the MTM1 gene")
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000117> <http://purl.obolibrary.org/obo/PROMOT_0000006> "Juliette Potier")
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/PROMOT_0000006> "mutated MTM1")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/PROMOT_0000006> "MTM1 mutation")
 SubClassOf(<http://purl.obolibrary.org/obo/PROMOT_0000006> <http://purl.obolibrary.org/obo/PROMOT_0000001>)
 
-# Class: <http://purl.obolibrary.org/obo/PROMOT_0000007> (mutated ACTA1)
+# Class: <http://purl.obolibrary.org/obo/PROMOT_0000007> (ACTA1 mutation)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/PROMOT_0000007> "mutation located within the ACTA1 gene")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/PROMOT_0000007> "Mutation located within the ACTA1 gene")
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000117> <http://purl.obolibrary.org/obo/PROMOT_0000007> "Juliette Potier")
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/PROMOT_0000007> "mutated ACTA1")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/PROMOT_0000007> "ACTA1 mutation")
 SubClassOf(<http://purl.obolibrary.org/obo/PROMOT_0000007> <http://purl.obolibrary.org/obo/PROMOT_0000001>)
 
-# Class: <http://purl.obolibrary.org/obo/PROMOT_0000008> (mutated SELENON)
+# Class: <http://purl.obolibrary.org/obo/PROMOT_0000008> (SELENON mutation)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/PROMOT_0000008> "mutation located within the SELENON gene")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/PROMOT_0000008> "Mutation located within the SELENON gene")
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000117> <http://purl.obolibrary.org/obo/PROMOT_0000008> "Juliette Potier")
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/PROMOT_0000008> "mutated SELENON")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/PROMOT_0000008> "SELENON mutation")
 SubClassOf(<http://purl.obolibrary.org/obo/PROMOT_0000008> <http://purl.obolibrary.org/obo/PROMOT_0000001>)
 
-# Class: <http://purl.obolibrary.org/obo/PROMOT_0000009> (mutated CHRNE)
+# Class: <http://purl.obolibrary.org/obo/PROMOT_0000009> (CHRNE mutation)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/PROMOT_0000009> "mutation located within the CHRNE gene")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/PROMOT_0000009> "Mutation located within the CHRNE gene")
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000117> <http://purl.obolibrary.org/obo/PROMOT_0000009> "Juliette Potier")
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/PROMOT_0000009> "mutated CHRNE")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/PROMOT_0000009> "CHRNE mutation")
 SubClassOf(<http://purl.obolibrary.org/obo/PROMOT_0000009> <http://purl.obolibrary.org/obo/PROMOT_0000001>)
 
-# Class: <http://purl.obolibrary.org/obo/PROMOT_0000010> (mutated DOK7)
+# Class: <http://purl.obolibrary.org/obo/PROMOT_0000010> (DOK7 mutation)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/PROMOT_0000010> "mutation located within the DOK7 gene")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/PROMOT_0000010> "Mutation located within the DOK7 gene")
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000117> <http://purl.obolibrary.org/obo/PROMOT_0000010> "Juliette Potier")
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/PROMOT_0000010> "mutated DOK7")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/PROMOT_0000010> "DOK7 mutation")
 SubClassOf(<http://purl.obolibrary.org/obo/PROMOT_0000010> <http://purl.obolibrary.org/obo/PROMOT_0000001>)
 
-# Class: <http://purl.obolibrary.org/obo/PROMOT_0000011> (mutated COLQ)
+# Class: <http://purl.obolibrary.org/obo/PROMOT_0000011> (COLQ mutation)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/PROMOT_0000011> "mutation located within the COLQ gene")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/PROMOT_0000011> "Mutation located within the COLQ gene")
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000117> <http://purl.obolibrary.org/obo/PROMOT_0000011> "Juliette Potier")
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/PROMOT_0000011> "mutated COLQ")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/PROMOT_0000011> "COLQ mutation")
 SubClassOf(<http://purl.obolibrary.org/obo/PROMOT_0000011> <http://purl.obolibrary.org/obo/PROMOT_0000001>)
 
-# Class: <http://purl.obolibrary.org/obo/PROMOT_0000012> (mutated RAPSN)
+# Class: <http://purl.obolibrary.org/obo/PROMOT_0000012> (RAPSN mutation)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/PROMOT_0000012> "mutation located within the RAPSN gene")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/PROMOT_0000012> "Mutation located within the RAPSN gene")
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000117> <http://purl.obolibrary.org/obo/PROMOT_0000012> "Juliette Potier")
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/PROMOT_0000012> "mutated RAPSN")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/PROMOT_0000012> "RAPSN mutation")
 SubClassOf(<http://purl.obolibrary.org/obo/PROMOT_0000012> <http://purl.obolibrary.org/obo/PROMOT_0000001>)
 
-# Class: <http://purl.obolibrary.org/obo/PROMOT_0000013> (mutated GFPT1)
+# Class: <http://purl.obolibrary.org/obo/PROMOT_0000013> (GFPT1 mutation)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/PROMOT_0000013> "mutation located within the GFPT1 gene")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/PROMOT_0000013> "Mutation located within the GFPT1 gene")
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000117> <http://purl.obolibrary.org/obo/PROMOT_0000013> "Juliette Potier")
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/PROMOT_0000013> "mutated GFPT1")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/PROMOT_0000013> "GFPT1 mutation")
 SubClassOf(<http://purl.obolibrary.org/obo/PROMOT_0000013> <http://purl.obolibrary.org/obo/PROMOT_0000001>)
 
-# Class: <http://purl.obolibrary.org/obo/PROMOT_0000014> (mutated GMPPB)
+# Class: <http://purl.obolibrary.org/obo/PROMOT_0000014> (GMPPB mutation)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/PROMOT_0000014> "mutation located within the GMPPB gene")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/PROMOT_0000014> "Mutation located within the GMPPB gene")
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000117> <http://purl.obolibrary.org/obo/PROMOT_0000014> "Juliette Potier")
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/PROMOT_0000014> "mutated GMPPB")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/PROMOT_0000014> "GMPPB mutation")
 SubClassOf(<http://purl.obolibrary.org/obo/PROMOT_0000014> <http://purl.obolibrary.org/obo/PROMOT_0000001>)
 
 # Class: <http://purl.obolibrary.org/obo/PROMOT_3000001> (Patient)
@@ -378,70 +384,70 @@ SubClassOf(<http://purl.obolibrary.org/obo/PROMOT_4000001> ObjectSomeValuesFrom(
 
 # Class: <http://purl.obolibrary.org/obo/PROMOT_4000002> (Biological sex statement)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/PROMOT_4000002> "A statement regarding a patient’s biological sex")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/PROMOT_4000002> "A statement regarding the biological sex of a patient")
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000117> <http://purl.obolibrary.org/obo/PROMOT_4000002> "Juliette Potier")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/PROMOT_4000002> "Biological sex statement")
 SubClassOf(<http://purl.obolibrary.org/obo/PROMOT_4000002> <http://purl.obolibrary.org/obo/PROMOT_4000001>)
 
 # Class: <http://purl.obolibrary.org/obo/PROMOT_4000003> (Marital status statement)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/PROMOT_4000003> "A statement regarding a patient’s marital status")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/PROMOT_4000003> "A statement regarding the marital status of a patient")
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000117> <http://purl.obolibrary.org/obo/PROMOT_4000003> "Juliette Potier")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/PROMOT_4000003> "Marital status statement")
 SubClassOf(<http://purl.obolibrary.org/obo/PROMOT_4000003> <http://purl.obolibrary.org/obo/PROMOT_4000001>)
 
 # Class: <http://purl.obolibrary.org/obo/PROMOT_4000004> (Occupation statement)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/PROMOT_4000004> "A statement regarding a patient’s occupation, such as work")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/PROMOT_4000004> "A statement regarding the occupation of a patient, such as work")
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000117> <http://purl.obolibrary.org/obo/PROMOT_4000004> "Juliette Potier")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/PROMOT_4000004> "Occupation statement")
 SubClassOf(<http://purl.obolibrary.org/obo/PROMOT_4000004> <http://purl.obolibrary.org/obo/PROMOT_4000001>)
 
 # Class: <http://purl.obolibrary.org/obo/PROMOT_4000005> (Ethnicity statement)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/PROMOT_4000005> "A statement regarding a patient’s ethnicity")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/PROMOT_4000005> "A statement regarding the ethnicity of a patient")
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000117> <http://purl.obolibrary.org/obo/PROMOT_4000005> "Juliette Potier")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/PROMOT_4000005> "Ethnicity statement")
 SubClassOf(<http://purl.obolibrary.org/obo/PROMOT_4000005> <http://purl.obolibrary.org/obo/PROMOT_4000001>)
 
 # Class: <http://purl.obolibrary.org/obo/PROMOT_4000006> (Date of birth statement)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/PROMOT_4000006> "A statement regarding a patient’s date of birth")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/PROMOT_4000006> "A statement regarding the date of birth of a patient")
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000117> <http://purl.obolibrary.org/obo/PROMOT_4000006> "Juliette Potier")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/PROMOT_4000006> "Date of birth statement")
 SubClassOf(<http://purl.obolibrary.org/obo/PROMOT_4000006> <http://purl.obolibrary.org/obo/PROMOT_4000001>)
 
 # Class: <http://purl.obolibrary.org/obo/PROMOT_4000007> (Date of death statement)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/PROMOT_4000007> "A statement regarding a patient’s date of death")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/PROMOT_4000007> "A statement regarding the date of death of a patient")
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000117> <http://purl.obolibrary.org/obo/PROMOT_4000007> "Juliette Potier")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/PROMOT_4000007> "Date of death statement")
 SubClassOf(<http://purl.obolibrary.org/obo/PROMOT_4000007> <http://purl.obolibrary.org/obo/PROMOT_4000001>)
 
 # Class: <http://purl.obolibrary.org/obo/PROMOT_4000008> (Achieved qualification statement)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/PROMOT_4000008> "A statement regarding a patient’s achieved qualification")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/PROMOT_4000008> "A statement regarding the qualification achieved by a patient")
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000117> <http://purl.obolibrary.org/obo/PROMOT_4000008> "Juliette Potier")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/PROMOT_4000008> "Achieved qualification statement")
 SubClassOf(<http://purl.obolibrary.org/obo/PROMOT_4000008> <http://purl.obolibrary.org/obo/PROMOT_4000001>)
 
 # Class: <http://purl.obolibrary.org/obo/PROMOT_4000009> (Duration of formal education statement)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/PROMOT_4000009> "A statement regarding the duration of a patient’s formal education")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/PROMOT_4000009> "A statement regarding the duration of formal education followed by a patient")
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000117> <http://purl.obolibrary.org/obo/PROMOT_4000009> "Juliette Potier")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/PROMOT_4000009> "Duration of formal education statement")
 SubClassOf(<http://purl.obolibrary.org/obo/PROMOT_4000009> <http://purl.obolibrary.org/obo/PROMOT_4000001>)
 
 # Class: <http://purl.obolibrary.org/obo/PROMOT_4000010> (Handedness statement)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/PROMOT_4000010> "A statement regarding a patient’s handedness")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/PROMOT_4000010> "A statement regarding the handedness of a patient")
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000117> <http://purl.obolibrary.org/obo/PROMOT_4000010> "Juliette Potier")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/PROMOT_4000010> "Handedness statement")
 SubClassOf(<http://purl.obolibrary.org/obo/PROMOT_4000010> <http://purl.obolibrary.org/obo/PROMOT_4000001>)
 
 # Class: <http://purl.obolibrary.org/obo/PROMOT_4000011> (First language statement)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/PROMOT_4000011> "A statement regarding a patient’s first language ")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/PROMOT_4000011> "A statement regarding the first language spoken by a patient")
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000117> <http://purl.obolibrary.org/obo/PROMOT_4000011> "Juliette Potier")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/PROMOT_4000011> "First language statement")
 SubClassOf(<http://purl.obolibrary.org/obo/PROMOT_4000011> <http://purl.obolibrary.org/obo/PROMOT_4000001>)
@@ -506,6 +512,13 @@ AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/PROMOT_7000003> "
 SubClassOf(<http://purl.obolibrary.org/obo/PROMOT_7000003> <http://purl.obolibrary.org/obo/BFO_0000034>)
 SubClassOf(<http://purl.obolibrary.org/obo/PROMOT_7000003> ObjectSomeValuesFrom(<https://w3id.org/biolink/vocab/related_to> <http://purl.obolibrary.org/obo/HP_0000118>))
 
+# Class: <http://purl.obolibrary.org/obo/PROMOT_8000001> (Onset statement)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/PROMOT_8000001> "A statement regarding the date of onset of a phenotype")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000117> <http://purl.obolibrary.org/obo/PROMOT_8000001> "Juliette Potier")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/PROMOT_8000001> "Onset statement")
+SubClassOf(<http://purl.obolibrary.org/obo/PROMOT_8000001> <http://purl.obolibrary.org/obo/IAO_0000030>)
+
 # Class: <http://semanticscience.org/resource/SIO_000475> (<http://semanticscience.org/resource/SIO_000475>)
 
 SubClassOf(<http://semanticscience.org/resource/SIO_000475> <http://purl.obolibrary.org/obo/BFO_0000019>)
@@ -532,18 +545,12 @@ SubClassOf(<http://snomed.info/id/224076006> <http://snomed.info/id/302147001>)
 
 SubClassOf(<http://snomed.info/id/298059007> <http://purl.obolibrary.org/obo/IAO_0000030>)
 
-# Class: <http://snomed.info/id/302147001> (Demographic history detail)
+# Class: <http://snomed.info/id/360296002> (<http://snomed.info/id/360296002>)
 
-AnnotationAssertion(rdfs:label <http://snomed.info/id/302147001> "Demographic history detail")
-
-# Class: <http://snomed.info/id/360296002> (Assistive equipment (physical object))
-
-AnnotationAssertion(rdfs:label <http://snomed.info/id/360296002> "Assistive equipment (physical object)")
 SubClassOf(<http://snomed.info/id/360296002> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PROMOT_2000002> <http://purl.obolibrary.org/obo/PROMOT_3000001>))
 
-# Class: <http://snomed.info/id/386053000> (Evaluation procedure (procedure))
+# Class: <http://snomed.info/id/386053000> (<http://snomed.info/id/386053000>)
 
-AnnotationAssertion(rdfs:label <http://snomed.info/id/386053000> "Evaluation procedure (procedure)")
 SubClassOf(<http://snomed.info/id/386053000> <http://purl.obolibrary.org/obo/BFO_0000015>)
 SubClassOf(<http://snomed.info/id/386053000> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PROMOT_2000003> <http://purl.obolibrary.org/obo/PROMOT_3000001>))
 SubClassOf(<http://snomed.info/id/386053000> DataSomeValuesFrom(<http://purl.obolibrary.org/obo/SCDO_1000194> <http://id.who.int/icd/entity/1394728112>))
@@ -557,23 +564,6 @@ SubClassOf(<http://snomed.info/id/399753006> <http://purl.obolibrary.org/obo/IAO
 # Class: <http://snomed.info/id/57427004> (<http://snomed.info/id/57427004>)
 
 SubClassOf(<http://snomed.info/id/57427004> <http://purl.obolibrary.org/obo/IAO_0000030>)
-
-
-############################
-#   Named Individuals
-############################
-
-# Individual: <http://purl.obolibrary.org/obo/PROMOT_I000003> (DOB1)
-
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/PROMOT_I000003> "Test for 1 instance of a date of birth")
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/PROMOT_I000003> "DOB1")
-ClassAssertion(<http://snomed.info/id/184099003> <http://purl.obolibrary.org/obo/PROMOT_I000003>)
-
-# Individual: <http://purl.obolibrary.org/obo/PROMOT_I000004> (DOBstat1)
-
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/PROMOT_I000004> "Test for 1 instance of a date of birth statement.")
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/PROMOT_I000004> "DOBstat1")
-ClassAssertion(<http://purl.obolibrary.org/obo/PROMOT_4000006> <http://purl.obolibrary.org/obo/PROMOT_I000004>)
 
 
 )

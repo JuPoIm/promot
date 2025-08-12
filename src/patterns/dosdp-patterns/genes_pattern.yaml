@@ -17,7 +17,11 @@ relations:
 vars:
   disease: "disease"
 
-subClassOf:
-  text: "'is_causal_germline_mutation_in' some %s"
-  vars:
-    - disease
+
+logical_axioms:
+
+  - axiom_type: subClassOf
+    text: "'is_causal_germline_mutation_in' some %s"
+    vars:
+      - disease
+  
