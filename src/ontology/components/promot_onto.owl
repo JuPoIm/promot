@@ -7,8 +7,8 @@ Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
 
 
 Ontology(<http://purl.obolibrary.org/obo/promot/components/promot_onto.owl>
-<http://purl.obolibrary.org/obo/promot/releases/2025-08-12/components/promot_onto.owl>
-Annotation(owl:versionInfo "2025-08-12")
+<http://purl.obolibrary.org/obo/promot/releases/2025-08-13/components/promot_onto.owl>
+Annotation(owl:versionInfo "2025-08-13")
 
 Declaration(Class(<http://id.who.int/icd/entity/1280021050>))
 Declaration(Class(<http://id.who.int/icd/entity/1394728112>))
@@ -49,6 +49,7 @@ Declaration(Class(<http://purl.obolibrary.org/obo/PROMOT_0000011>))
 Declaration(Class(<http://purl.obolibrary.org/obo/PROMOT_0000012>))
 Declaration(Class(<http://purl.obolibrary.org/obo/PROMOT_0000013>))
 Declaration(Class(<http://purl.obolibrary.org/obo/PROMOT_0000014>))
+Declaration(Class(<http://purl.obolibrary.org/obo/PROMOT_1100001>))
 Declaration(Class(<http://purl.obolibrary.org/obo/PROMOT_3000001>))
 Declaration(Class(<http://purl.obolibrary.org/obo/PROMOT_4000001>))
 Declaration(Class(<http://purl.obolibrary.org/obo/PROMOT_4000002>))
@@ -70,6 +71,16 @@ Declaration(Class(<http://purl.obolibrary.org/obo/PROMOT_7000001>))
 Declaration(Class(<http://purl.obolibrary.org/obo/PROMOT_7000002>))
 Declaration(Class(<http://purl.obolibrary.org/obo/PROMOT_7000003>))
 Declaration(Class(<http://purl.obolibrary.org/obo/PROMOT_8000001>))
+Declaration(Class(<http://purl.obolibrary.org/obo/PROMOT_9000001>))
+Declaration(Class(<http://purl.obolibrary.org/obo/PROMOT_9000002>))
+Declaration(Class(<http://purl.obolibrary.org/obo/PROMOT_9000003>))
+Declaration(Class(<http://purl.obolibrary.org/obo/PROMOT_9000004>))
+Declaration(Class(<http://purl.obolibrary.org/obo/PROMOT_9000005>))
+Declaration(Class(<http://purl.obolibrary.org/obo/PROMOT_9000006>))
+Declaration(Class(<http://purl.obolibrary.org/obo/PROMOT_9000007>))
+Declaration(Class(<http://purl.obolibrary.org/obo/PROMOT_9000008>))
+Declaration(Class(<http://purl.obolibrary.org/obo/PROMOT_9000009>))
+Declaration(Class(<http://purl.obolibrary.org/obo/PROMOT_9000010>))
 Declaration(Class(<http://semanticscience.org/resource/SIO_000475>))
 Declaration(Class(<http://semanticscience.org/resource/SIO_001268>))
 Declaration(Class(<http://semanticscience.org/resource/SIO_010057>))
@@ -189,6 +200,13 @@ DataPropertyRange(<http://semanticscience.org/resource/SIO_000300> xsd:date)
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000117> <http://purl.obolibrary.org/obo/PROMOT_0000001> "Juliette Potier")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/PROMOT_0000001> "mutation")
 
+# Datatype: <http://purl.obolibrary.org/obo/PROMOT_1100001> (Abnormal disposition)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/PROMOT_1100001> "A disposition that differs from the norm, such as a disease or a phenotypic abnormality")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000117> <http://purl.obolibrary.org/obo/PROMOT_1100001> "Juliette Potier")
+AnnotationAssertion(rdfs:comment <http://purl.obolibrary.org/obo/PROMOT_1100001> "(to validate)")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/PROMOT_1100001> "Abnormal disposition")
+
 # Datatype: <http://purl.obolibrary.org/obo/PROMOT_6000001> (presence qualifier)
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/PROMOT_6000001> "A qualifier for stating the presence, absence or uncertainty of a phenotype instance.")
@@ -210,7 +228,6 @@ SubClassOf(<http://id.who.int/icd/entity/1394728112> <http://purl.obolibrary.org
 
 # Class: <http://id.who.int/icd/entity/1626363729> (<http://id.who.int/icd/entity/1626363729>)
 
-EquivalentClasses(<http://id.who.int/icd/entity/1626363729> <http://purl.obolibrary.org/obo/PROMOT_7000002>)
 SubClassOf(<http://id.who.int/icd/entity/1626363729> <http://purl.obolibrary.org/obo/BFO_0000028>)
 
 # Class: <http://id.who.int/icd/entity/423829389> (<http://id.who.int/icd/entity/423829389>)
@@ -227,7 +244,6 @@ SubClassOf(<http://id.who.int/icd/entity/524499668> ObjectSomeValuesFrom(<http:/
 
 # Class: <http://id.who.int/icd/entity/567313968> (<http://id.who.int/icd/entity/567313968>)
 
-EquivalentClasses(<http://id.who.int/icd/entity/567313968> <http://purl.obolibrary.org/obo/PROMOT_7000003>)
 SubClassOf(<http://id.who.int/icd/entity/567313968> <http://purl.obolibrary.org/obo/BFO_0000034>)
 
 # Class: <http://id.who.int/icd/entity/591104711> (<http://id.who.int/icd/entity/591104711>)
@@ -248,18 +264,17 @@ SubClassOf(<http://purl.obolibrary.org/obo/FMA_50188> <http://purl.obolibrary.or
 
 # Class: <http://purl.obolibrary.org/obo/FMA_62955> (<http://purl.obolibrary.org/obo/FMA_62955>)
 
-EquivalentClasses(<http://purl.obolibrary.org/obo/FMA_62955> <http://purl.obolibrary.org/obo/PROMOT_7000001>)
 SubClassOf(<http://purl.obolibrary.org/obo/FMA_62955> <http://purl.obolibrary.org/obo/BFO_0000040>)
 
 # Class: <http://purl.obolibrary.org/obo/HP_0000118> (<http://purl.obolibrary.org/obo/HP_0000118>)
 
-SubClassOf(<http://purl.obolibrary.org/obo/HP_0000118> <http://purl.obolibrary.org/obo/BFO_0000016>)
+SubClassOf(<http://purl.obolibrary.org/obo/HP_0000118> <http://purl.obolibrary.org/obo/PROMOT_1100001>)
 SubClassOf(<http://purl.obolibrary.org/obo/HP_0000118> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002201> <http://purl.obolibrary.org/obo/PROMOT_3000001>))
 SubClassOf(<http://purl.obolibrary.org/obo/HP_0000118> DataSomeValuesFrom(<http://semanticscience.org/resource/SIO_000217> <http://purl.obolibrary.org/obo/PROMOT_6000001>))
 
 # Class: <http://purl.obolibrary.org/obo/MONDO_0000001> (<http://purl.obolibrary.org/obo/MONDO_0000001>)
 
-SubClassOf(<http://purl.obolibrary.org/obo/MONDO_0000001> <http://purl.obolibrary.org/obo/BFO_0000016>)
+SubClassOf(<http://purl.obolibrary.org/obo/MONDO_0000001> <http://purl.obolibrary.org/obo/PROMOT_1100001>)
 SubClassOf(<http://purl.obolibrary.org/obo/MONDO_0000001> DataSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0004003> <http://purl.obolibrary.org/obo/PROMOT_0000001>))
 SubClassOf(<http://purl.obolibrary.org/obo/MONDO_0000001> DataSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0004029> <http://purl.obolibrary.org/obo/HP_0000118>))
 
@@ -270,7 +285,7 @@ SubClassOf(<http://purl.obolibrary.org/obo/OBI_0100026> <http://purl.obolibrary.
 # Class: <http://purl.obolibrary.org/obo/PROMOT_0000001> (mutation)
 
 SubClassOf(<http://purl.obolibrary.org/obo/PROMOT_0000001> <http://purl.obolibrary.org/obo/BFO_0000002>)
-SubClassOf(<http://purl.obolibrary.org/obo/PROMOT_0000001> DataSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0004013> <http://purl.obolibrary.org/obo/MONDO_0000001>))
+SubClassOf(<http://purl.obolibrary.org/obo/PROMOT_0000001> DataSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0004013> <http://purl.obolibrary.org/obo/PROMOT_1100001>))
 SubClassOf(<http://purl.obolibrary.org/obo/PROMOT_0000001> DataSomeValuesFrom(<http://semanticscience.org/resource/SIO_000217> <http://semanticscience.org/resource/SIO_001268>))
 
 # Class: <http://purl.obolibrary.org/obo/PROMOT_0000002> (PABPN1 mutation)
@@ -363,6 +378,10 @@ AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.ob
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000117> <http://purl.obolibrary.org/obo/PROMOT_0000014> "Juliette Potier")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/PROMOT_0000014> "GMPPB mutation")
 SubClassOf(<http://purl.obolibrary.org/obo/PROMOT_0000014> <http://purl.obolibrary.org/obo/PROMOT_0000001>)
+
+# Class: <http://purl.obolibrary.org/obo/PROMOT_1100001> (Abnormal disposition)
+
+SubClassOf(<http://purl.obolibrary.org/obo/PROMOT_1100001> <http://purl.obolibrary.org/obo/BFO_0000016>)
 
 # Class: <http://purl.obolibrary.org/obo/PROMOT_3000001> (Patient)
 
@@ -490,7 +509,8 @@ SubClassOf(<http://purl.obolibrary.org/obo/PROMOT_6000004> <http://purl.obolibra
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/PROMOT_7000001> "An anatomical entity related to a phenotype such that the anatomical entity is the location of the phenotype.")
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000117> <http://purl.obolibrary.org/obo/PROMOT_7000001> "Juliette Potier")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/PROMOT_7000001> "Phenotypically related anatomical entity")
-SubClassOf(<http://purl.obolibrary.org/obo/PROMOT_7000001> <http://purl.obolibrary.org/obo/BFO_0000040>)
+EquivalentClasses(<http://purl.obolibrary.org/obo/PROMOT_7000001> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/FMA_62955> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PROMOT_2000001> <http://purl.obolibrary.org/obo/HP_0000118>)))
+SubClassOf(<http://purl.obolibrary.org/obo/PROMOT_7000001> <http://purl.obolibrary.org/obo/FMA_62955>)
 SubClassOf(<http://purl.obolibrary.org/obo/PROMOT_7000001> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PROMOT_2000001> <http://purl.obolibrary.org/obo/HP_0000118>))
 SubClassOf(<http://purl.obolibrary.org/obo/PROMOT_7000001> ObjectSomeValuesFrom(<https://w3id.org/biolink/vocab/related_to> <http://id.who.int/icd/entity/1626363729>))
 
@@ -500,7 +520,8 @@ AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.ob
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000117> <http://purl.obolibrary.org/obo/PROMOT_7000002> "Juliette Potier")
 AnnotationAssertion(rdfs:comment <http://purl.obolibrary.org/obo/PROMOT_7000002> "(JP: unsure about definition)")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/PROMOT_7000002> "Phenotypically related body structure")
-SubClassOf(<http://purl.obolibrary.org/obo/PROMOT_7000002> <http://purl.obolibrary.org/obo/BFO_0000028>)
+EquivalentClasses(<http://purl.obolibrary.org/obo/PROMOT_7000002> ObjectIntersectionOf(<http://id.who.int/icd/entity/1626363729> ObjectSomeValuesFrom(<https://w3id.org/biolink/vocab/related_to> <http://purl.obolibrary.org/obo/HP_0000118>)))
+SubClassOf(<http://purl.obolibrary.org/obo/PROMOT_7000002> <http://id.who.int/icd/entity/1626363729>)
 SubClassOf(<http://purl.obolibrary.org/obo/PROMOT_7000002> ObjectSomeValuesFrom(<https://w3id.org/biolink/vocab/related_to> <http://purl.obolibrary.org/obo/HP_0000118>))
 
 # Class: <http://purl.obolibrary.org/obo/PROMOT_7000003> (Phenotypically related body function)
@@ -509,7 +530,8 @@ AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.ob
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000117> <http://purl.obolibrary.org/obo/PROMOT_7000003> "Juliette Potier")
 AnnotationAssertion(rdfs:comment <http://purl.obolibrary.org/obo/PROMOT_7000003> "(JP: unsure about definition)")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/PROMOT_7000003> "Phenotypically related body function")
-SubClassOf(<http://purl.obolibrary.org/obo/PROMOT_7000003> <http://purl.obolibrary.org/obo/BFO_0000034>)
+EquivalentClasses(<http://purl.obolibrary.org/obo/PROMOT_7000003> ObjectIntersectionOf(<http://id.who.int/icd/entity/567313968> ObjectSomeValuesFrom(<https://w3id.org/biolink/vocab/related_to> <http://purl.obolibrary.org/obo/HP_0000118>)))
+SubClassOf(<http://purl.obolibrary.org/obo/PROMOT_7000003> <http://id.who.int/icd/entity/567313968>)
 SubClassOf(<http://purl.obolibrary.org/obo/PROMOT_7000003> ObjectSomeValuesFrom(<https://w3id.org/biolink/vocab/related_to> <http://purl.obolibrary.org/obo/HP_0000118>))
 
 # Class: <http://purl.obolibrary.org/obo/PROMOT_8000001> (Onset statement)
@@ -518,6 +540,76 @@ AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.ob
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000117> <http://purl.obolibrary.org/obo/PROMOT_8000001> "Juliette Potier")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/PROMOT_8000001> "Onset statement")
 SubClassOf(<http://purl.obolibrary.org/obo/PROMOT_8000001> <http://purl.obolibrary.org/obo/IAO_0000030>)
+
+# Class: <http://purl.obolibrary.org/obo/PROMOT_9000001> (Risk of fall)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/PROMOT_9000001> "The patient is at risk of fall")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000117> <http://purl.obolibrary.org/obo/PROMOT_9000001> "Juliette Potier")
+AnnotationAssertion(rdfs:comment <http://purl.obolibrary.org/obo/PROMOT_9000001> "(JP: unsure, OPMD)")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/PROMOT_9000001> "Risk of fall")
+
+# Class: <http://purl.obolibrary.org/obo/PROMOT_9000002> (Decreased walking speed)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/PROMOT_9000002> "Walking speed decreased in comparison to a normal walking speed")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000117> <http://purl.obolibrary.org/obo/PROMOT_9000002> "Juliette Potier")
+AnnotationAssertion(rdfs:comment <http://purl.obolibrary.org/obo/PROMOT_9000002> "(JP: unsure, OPMD)")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/PROMOT_9000002> "Decreased walking speed")
+
+# Class: <http://purl.obolibrary.org/obo/PROMOT_9000003> (Difficulty rising from a chair)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/PROMOT_9000003> "Difficulty rising from a chair, difficulty to move from a sitting position to a standing position")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000117> <http://purl.obolibrary.org/obo/PROMOT_9000003> "Juliette Potier")
+AnnotationAssertion(rdfs:comment <http://purl.obolibrary.org/obo/PROMOT_9000003> "(JP: unsure, OPMD)")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/PROMOT_9000003> "Difficulty rising from a chair")
+
+# Class: <http://purl.obolibrary.org/obo/PROMOT_9000004> (Blockage sensation in the throat / food entrapment)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/PROMOT_9000004> "OPMD")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000117> <http://purl.obolibrary.org/obo/PROMOT_9000004> "Juliette Potier")
+AnnotationAssertion(rdfs:comment <http://purl.obolibrary.org/obo/PROMOT_9000004> "(JP: unsure, OPMD)")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/PROMOT_9000004> "Blockage sensation in the throat / food entrapment")
+
+# Class: <http://purl.obolibrary.org/obo/PROMOT_9000005> (Multiple swallowing per bolus)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/PROMOT_9000005> "OPMD")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000117> <http://purl.obolibrary.org/obo/PROMOT_9000005> "Juliette Potier")
+AnnotationAssertion(rdfs:comment <http://purl.obolibrary.org/obo/PROMOT_9000005> "(JP: unsure, OPMD)")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/PROMOT_9000005> "Multiple swallowing per bolus")
+
+# Class: <http://purl.obolibrary.org/obo/PROMOT_9000006> (Needing to spit out food or liquids)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/PROMOT_9000006> "OPMD")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000117> <http://purl.obolibrary.org/obo/PROMOT_9000006> "Juliette Potier")
+AnnotationAssertion(rdfs:comment <http://purl.obolibrary.org/obo/PROMOT_9000006> "(JP: unsure, OPMD)")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/PROMOT_9000006> "Needing to spit out food or liquids")
+
+# Class: <http://purl.obolibrary.org/obo/PROMOT_9000007> (Pharyngo-nasal and pharyngo-oral regurgitation)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/PROMOT_9000007> "OPMD")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000117> <http://purl.obolibrary.org/obo/PROMOT_9000007> "Juliette Potier")
+AnnotationAssertion(rdfs:comment <http://purl.obolibrary.org/obo/PROMOT_9000007> "(JP: unsure, OPMD)")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/PROMOT_9000007> "Pharyngo-nasal and pharyngo-oral regurgitation")
+
+# Class: <http://purl.obolibrary.org/obo/PROMOT_9000008> (Presence of secretions)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/PROMOT_9000008> "OPMD")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000117> <http://purl.obolibrary.org/obo/PROMOT_9000008> "Juliette Potier")
+AnnotationAssertion(rdfs:comment <http://purl.obolibrary.org/obo/PROMOT_9000008> "(JP: unsure, OPMD)")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/PROMOT_9000008> "Presence of secretions")
+
+# Class: <http://purl.obolibrary.org/obo/PROMOT_9000009> (Generalized fatigability of muscles)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/PROMOT_9000009> "CM")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000117> <http://purl.obolibrary.org/obo/PROMOT_9000009> "Juliette Potier")
+AnnotationAssertion(rdfs:comment <http://purl.obolibrary.org/obo/PROMOT_9000009> "(JP: unsure, CM)")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/PROMOT_9000009> "Generalized fatigability of muscles")
+
+# Class: <http://purl.obolibrary.org/obo/PROMOT_9000010> (Arthrogryposis during neonatal period)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/PROMOT_9000010> "Joint stiffness or joint contractures during neonatal period")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000117> <http://purl.obolibrary.org/obo/PROMOT_9000010> "Juliette Potier")
+AnnotationAssertion(rdfs:comment <http://purl.obolibrary.org/obo/PROMOT_9000010> "(JP: unsure, CM)")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/PROMOT_9000010> "Arthrogryposis during neonatal period")
 
 # Class: <http://semanticscience.org/resource/SIO_000475> (<http://semanticscience.org/resource/SIO_000475>)
 

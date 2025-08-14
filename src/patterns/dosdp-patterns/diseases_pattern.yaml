@@ -7,23 +7,15 @@ description: "This template describes a disease by linking the disease to its re
 classes:
   disease_pattern: MONDO:0000001
   structure: http://id.who.int/icd/entity/1626363729
-  mutation: PROMOT:0000001
   phenotype: HP:0000118
 
 relations:
-  has_material_basis_in_mutation_in: RO:0004003
   disease_has_feature: RO:0004029
 
 vars:
   phenotype: "phenotype"
-  mutation: "mutation"
       
 logical_axioms:
-
-  - axiom_type: subClassOf
-    text: "'has_material_basis_in_mutation_in' some %s"
-    vars:
-      - mutation
 
   - axiom_type: subClassOf
     text: "'disease_has_feature' some %s"
