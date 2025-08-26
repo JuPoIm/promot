@@ -10,7 +10,7 @@
 # More information: https://github.com/INCATools/ontology-development-kit/
 
 # Fingerprint of the configuration file when this Makefile was last generated
-CONFIG_HASH=                1ac461e583c6cb25bf9b08209a03ef94f5b897def486b1daf3c3d6a760174efa
+CONFIG_HASH=                ad301b0474f0d79476c893a3d9e085eea364a8dbc017b62fbd67e5b6543e508c
 
 
 # ----------------------------------------
@@ -165,7 +165,7 @@ all_main: $(MAIN_FILES)
 # ----------------------------------------
 
 
-IMPORTS =  bfo fma hp iao mondo ncit obi orcidio ro scdo sio snomed vo whofic
+IMPORTS =  bfo fma hp iao mondo obi ro scdo sio snomed vo whofic
 
 IMPORT_ROOTS = $(patsubst %, $(IMPORTDIR)/%_import, $(IMPORTS))
 IMPORT_OWL_FILES = $(foreach n,$(IMPORT_ROOTS), $(n).owl)
@@ -395,20 +395,6 @@ $(IMPORTDIR)/iao_import.owl: $(MIRRORDIR)/iao.owl $(IMPORTDIR)/iao_terms_combine
 
 $(IMPORTDIR)/mondo_import.owl: $(MIRRORDIR)/mondo.owl
 	echo "ERROR: You have configured your default module type to be custom; this behavior needs to be overwritten in promot.Makefile!" && false
-## Module for ontology: ncit
-
-$(IMPORTDIR)/ncit_import.owl: $(MIRRORDIR)/ncit.owl
-	echo "ERROR: You have configured your default module type to be custom; this behavior needs to be overwritten in promot.Makefile!" && false
-## Module for ontology: orcidio
-
-$(IMPORTDIR)/orcidio_import.owl: $(MIRRORDIR)/orcidio.owl $(IMPORTDIR)/orcidio_terms_combined.txt
-	if [ $(IMP) = true ]; then $(ROBOT) query -i $< --update ../sparql/preprocess-module.ru \
-    extract -T $(IMPORTDIR)/orcidio_terms_combined.txt --copy-ontology-annotations true --force true --method BOT \
-    remove --base-iri https://orcid.org/ --axioms external --preserve-structure false --trim false \
-		remove $(patsubst %, --term %, $(ANNOTATION_PROPERTIES)) --term rdfs:label --term IAO:0000115  -T $(IMPORTDIR)/orcidio_terms_combined.txt --select complement \
-		query --update ../sparql/inject-subset-declaration.ru --update ../sparql/inject-synonymtype-declaration.ru --update ../sparql/postprocess-module.ru \
-		$(ANNOTATE_CONVERT_FILE); fi
-
 ## Module for ontology: snomed
 
 $(IMPORTDIR)/snomed_import.owl: $(MIRRORDIR)/snomed.owl
@@ -529,32 +515,12 @@ mirror-mondo:
 endif
 
 
-## ONTOLOGY: ncit
-.PHONY: mirror-ncit
-.PRECIOUS: $(MIRRORDIR)/ncit.owl
-ifeq ($(strip $(IMP_LARGE)),true)
-mirror-ncit: | $(TMPDIR)
-	curl -L $(OBOBASE)/ncit.owl --create-dirs -o $(TMPDIR)/ncit-download.owl --retry 4 --max-time 200 && \
-	$(ROBOT) convert -i $(TMPDIR)/ncit-download.owl -o $(TMPDIR)/$@.owl
-else
-mirror-ncit:
-	@echo "Not refreshing ncit because refreshing large imports is disabled (IMP_LARGE=$(IMP_LARGE))."
-endif
-
-
 ## ONTOLOGY: obi
 .PHONY: mirror-obi
 .PRECIOUS: $(MIRRORDIR)/obi.owl
 mirror-obi: | $(TMPDIR)
 	curl -L $(OBOBASE)/obi.owl --create-dirs -o $(TMPDIR)/obi-download.owl --retry 4 --max-time 200 && \
 	$(ROBOT) convert -i $(TMPDIR)/obi-download.owl -o $(TMPDIR)/$@.owl
-
-
-## ONTOLOGY: orcidio
-.PHONY: mirror-orcidio
-.PRECIOUS: $(MIRRORDIR)/orcidio.owl
-mirror-orcidio: | $(TMPDIR)
-	$(ROBOT) convert -I https://w3id.org/orcidio/orcidio.owl -o $(TMPDIR)/$@.owl
 
 
 ## ONTOLOGY: ro

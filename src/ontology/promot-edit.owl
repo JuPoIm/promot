@@ -9,7 +9,6 @@ Prefix(dcterms:=<http://purl.org/dc/terms/>)
 
 
 Ontology(<http://purl.obolibrary.org/obo/promot.owl>
-Import(<http://purl.obolibrary.org/obo/promot/components/promot_onto.owl>)
 Import(<http://purl.obolibrary.org/obo/promot/imports/bfo_import.owl>)
 Import(<http://purl.obolibrary.org/obo/promot/imports/fma_import.owl>)
 Import(<http://purl.obolibrary.org/obo/promot/imports/hp_import.owl>)
@@ -23,19 +22,21 @@ Import(<http://purl.obolibrary.org/obo/promot/imports/snomed_import.owl>)
 Import(<http://purl.obolibrary.org/obo/promot/imports/vo_import.owl>)
 Import(<http://purl.obolibrary.org/obo/promot/imports/whofic_import.owl>)
 Import(<http://purl.obolibrary.org/obo/promot/patterns/definitions.owl>)
+Import(<http://purl.obolibrary.org/obo/promot/components/promot_onto.owl>)
 Import(<http://purl.obolibrary.org/obo/promot/releases/2025-06-18/imports/bfo_import.owl>)
 Import(<http://purl.obolibrary.org/obo/promot/releases/2025-06-18/imports/iao_import.owl>)
 Import(<http://purl.obolibrary.org/obo/promot/releases/2025-06-18/imports/scdo_import.owl>)
 Import(<http://purl.obolibrary.org/obo/promot/releases/2025-07-03/imports/whofic_import.owl>)
 Import(<http://purl.obolibrary.org/obo/promot/releases/2025-07-30/imports/sio_import.owl>)
-Import(<http://purl.obolibrary.org/obo/promot/releases/2025-08-22/imports/snomed_import.owl>)
 Import(<http://purl.obolibrary.org/obo/promot/releases/2025-08-05/imports/fma_import.owl>)
 Import(<http://purl.obolibrary.org/obo/promot/releases/2025-08-07/imports/mondo_import.owl>)
 Import(<http://purl.obolibrary.org/obo/promot/releases/2025-08-07/imports/obi_import.owl>)
 Import(<http://purl.obolibrary.org/obo/promot/releases/2025-08-07/imports/ro_import.owl>)
 Import(<http://purl.obolibrary.org/obo/promot/releases/2025-08-08/imports/vo_import.owl>)
-Import(<http://purl.obolibrary.org/obo/promot/releases/2025-08-22/imports/hp_import.owl>)
-
+Import(<http://purl.obolibrary.org/obo/promot/releases/2025-08-22/imports/snomed_import.owl>)
+Import(<http://purl.obolibrary.org/obo/promot/releases/2025-08-25/imports/hp_import.owl>)
+Import(<http://purl.obolibrary.org/obo/promot/releases/2025-08-25/components/promot_onto.owl>)
+Import(<http://purl.obolibrary.org/obo/promot/releases/2025-08-25/patterns/definitions.owl>)
 Annotation(dce:contributor "Anita Burgun MD, PhD
 https://orcid.org/0000-0001-6855-4366")
 Annotation(dce:contributor "Carole Faviez PhD
@@ -72,6 +73,7 @@ Annotation(rdfs:comment "The 'Performing a Rare Disease-Oriented Master Observat
 See also: https://www.promotinitiative.com/project")
 
 Declaration(Class(<http://purl.obolibrary.org/obo/PROMOT_0000000>))
+Declaration(Class(<http://snomed.info/id/12239004>))
 Declaration(NamedIndividual(<http://purl.obolibrary.org/obo/PROMOT_045e367e_c3fd_4c0a_83f3_8fa7e169ca10>))
 Declaration(NamedIndividual(<http://purl.obolibrary.org/obo/PROMOT_2f6cb1e4_4623_43c2_8ccc_396235d9964c>))
 Declaration(NamedIndividual(<http://purl.obolibrary.org/obo/PROMOT_63268922_ae6e_4073_aaa1_f1b9169268b2>))
@@ -113,59 +115,59 @@ SubClassOf(<http://purl.obolibrary.org/obo/FMA_5022> <http://purl.obolibrary.org
 
 SubClassOf(<http://purl.obolibrary.org/obo/FMA_7490> <http://purl.obolibrary.org/obo/FMA_62955>)
 
-# Class: <http://purl.obolibrary.org/obo/HP_0000006> (Autosomal dominant inheritance)
+# Class: <http://purl.obolibrary.org/obo/HP_0000005> (Mode of inheritance)
 
-SubClassOf(<http://purl.obolibrary.org/obo/HP_0000006> <http://purl.obolibrary.org/obo/BFO_0000002>)
+SubClassOf(<http://purl.obolibrary.org/obo/HP_0000005> <http://purl.obolibrary.org/obo/BFO_0000031>)
 
-# Class: <http://purl.obolibrary.org/obo/HP_0031797> (Clinical course)
+# Class: <http://purl.obolibrary.org/obo/HP_0012823> (Clinical modifier)
 
-SubClassOf(<http://purl.obolibrary.org/obo/HP_0031797> <http://purl.obolibrary.org/obo/BFO_0000019>)
+SubClassOf(<http://purl.obolibrary.org/obo/HP_0012823> <http://purl.obolibrary.org/obo/BFO_0000019>)
+
+# Class: <http://purl.obolibrary.org/obo/HP_0012824> (Severity)
+
+SubClassOf(<http://purl.obolibrary.org/obo/HP_0012824> <http://purl.obolibrary.org/obo/HP_0012823>)
+
+# Class: <http://purl.obolibrary.org/obo/HP_0025280> (Pain characteristic)
+
+SubClassOf(<http://purl.obolibrary.org/obo/HP_0025280> <http://purl.obolibrary.org/obo/HP_0012823>)
+
+# Class: <http://purl.obolibrary.org/obo/HP_0032316> (Family history)
+
+SubClassOf(<http://purl.obolibrary.org/obo/HP_0032316> <http://purl.obolibrary.org/obo/IAO_0000030>)
 
 # Class: <http://purl.obolibrary.org/obo/PROMOT_0000000> (root node)
 
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/PROMOT_0000000> "root node"@en)
 
-# Class: <http://purl.obolibrary.org/obo/PROMOT_9000001> (Risk of fall)
+# Class: <http://purl.obolibrary.org/obo/PROMOT_3100005> (Relative)
 
-SubClassOf(<http://purl.obolibrary.org/obo/PROMOT_9000001> <http://purl.obolibrary.org/obo/PROMOT_1100001>)
+SubClassOf(<http://purl.obolibrary.org/obo/PROMOT_3100005> ObjectSomeValuesFrom(<https://w3id.org/biolink/vocab/related_to> <http://purl.obolibrary.org/obo/PROMOT_3000001>))
 
-# Class: <http://purl.obolibrary.org/obo/PROMOT_9000002> (Decreased walking speed)
+# Class: <http://purl.obolibrary.org/obo/PROMOT_4000011> (First language statement)
 
-SubClassOf(<http://purl.obolibrary.org/obo/PROMOT_9000002> <http://purl.obolibrary.org/obo/PROMOT_1100001>)
+SubClassOf(<http://purl.obolibrary.org/obo/PROMOT_4000011> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002351> <http://snomed.info/id/224076006>))
 
-# Class: <http://purl.obolibrary.org/obo/PROMOT_9000003> (Difficulty rising from a chair)
+# Class: <http://purl.obolibrary.org/obo/PROMOT_4000014> (Gender Identity statement)
 
-SubClassOf(<http://purl.obolibrary.org/obo/PROMOT_9000003> <http://purl.obolibrary.org/obo/PROMOT_1100001>)
+SubClassOf(<http://purl.obolibrary.org/obo/PROMOT_4000014> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002351> <http://snomed.info/id/263495000>))
 
-# Class: <http://purl.obolibrary.org/obo/PROMOT_9000004> (Blockage sensation in the throat / food entrapment)
+# Class: <http://purl.obolibrary.org/obo/PROMOT_4000015> (Country of Birth statement)
 
-SubClassOf(<http://purl.obolibrary.org/obo/PROMOT_9000004> <http://purl.obolibrary.org/obo/PROMOT_1100001>)
+SubClassOf(<http://purl.obolibrary.org/obo/PROMOT_4000015> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002351> <http://snomed.info/id/370159000>))
 
-# Class: <http://purl.obolibrary.org/obo/PROMOT_9000005> (Multiple swallowing per bolus)
+# Class: <http://purl.obolibrary.org/obo/PROMOT_8000001> (Phenotype statement)
 
-SubClassOf(<http://purl.obolibrary.org/obo/PROMOT_9000005> <http://purl.obolibrary.org/obo/PROMOT_1100001>)
+SubClassOf(<http://purl.obolibrary.org/obo/PROMOT_8000001> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002351> <http://purl.obolibrary.org/obo/HP_0000118>))
 
-# Class: <http://purl.obolibrary.org/obo/PROMOT_9000006> (Needing to spit out food or liquids)
+# Class: <http://purl.obolibrary.org/obo/PROMOT_8000002> (Date of onset statement)
 
-SubClassOf(<http://purl.obolibrary.org/obo/PROMOT_9000006> <http://purl.obolibrary.org/obo/PROMOT_1100001>)
+SubClassOf(<http://purl.obolibrary.org/obo/PROMOT_8000002> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002351> <http://snomed.info/id/298059007>))
 
-# Class: <http://purl.obolibrary.org/obo/PROMOT_9000007> (Pharyngo-nasal and pharyngo-oral regurgitation)
+# Class: <http://purl.obolibrary.org/obo/PROMOT_8200005> (Individual statement)
 
-SubClassOf(<http://purl.obolibrary.org/obo/PROMOT_9000007> <http://purl.obolibrary.org/obo/PROMOT_1100001>)
+SubClassOf(<http://purl.obolibrary.org/obo/PROMOT_8200005> <http://purl.obolibrary.org/obo/IAO_0000030>)
 
-# Class: <http://purl.obolibrary.org/obo/PROMOT_9000008> (Presence of secretions)
-
-SubClassOf(<http://purl.obolibrary.org/obo/PROMOT_9000008> <http://purl.obolibrary.org/obo/PROMOT_1100001>)
-
-# Class: <http://purl.obolibrary.org/obo/PROMOT_9000009> (Generalized fatigability of muscles)
-
-SubClassOf(<http://purl.obolibrary.org/obo/PROMOT_9000009> <http://purl.obolibrary.org/obo/PROMOT_1100001>)
-
-# Class: <http://purl.obolibrary.org/obo/PROMOT_9000010> (Arthrogryposis during neonatal period)
-
-SubClassOf(<http://purl.obolibrary.org/obo/PROMOT_9000010> <http://purl.obolibrary.org/obo/PROMOT_1100001>)
-
-# Class: <http://snomed.info/id/12239004> (Throat clearing (observable entity))
+# Class: <http://snomed.info/id/12239004> (<http://snomed.info/id/12239004>)
 
 SubClassOf(<http://snomed.info/id/12239004> <http://purl.obolibrary.org/obo/BFO_0000016>)
 
@@ -173,9 +175,17 @@ SubClassOf(<http://snomed.info/id/12239004> <http://purl.obolibrary.org/obo/BFO_
 
 SubClassOf(<http://snomed.info/id/125680007> <http://snomed.info/id/302147001>)
 
+# Class: <http://snomed.info/id/127362006> (Previous pregnancies (finding))
+
+SubClassOf(<http://snomed.info/id/127362006> <http://purl.obolibrary.org/obo/IAO_0000030>)
+
 # Class: <http://snomed.info/id/12894003> (Functional assessment (procedure))
 
 SubClassOf(<http://snomed.info/id/12894003> <http://snomed.info/id/386053000>)
+
+# Class: <http://snomed.info/id/1296886006> (Determination of sex by karyotyping (procedure))
+
+SubClassOf(<http://snomed.info/id/1296886006> <http://snomed.info/id/386053000>)
 
 # Class: <http://snomed.info/id/183135000> (Mobility aid (physical object))
 
@@ -197,6 +207,10 @@ SubClassOf(<http://snomed.info/id/252478000> <http://snomed.info/id/386053000>)
 
 SubClassOf(<http://snomed.info/id/252482003> <http://snomed.info/id/386053000>)
 
+# Class: <http://snomed.info/id/263495000> (Gender (observable entity))
+
+SubClassOf(<http://snomed.info/id/263495000> <http://purl.obolibrary.org/obo/IAO_0000030>)
+
 # Class: <http://snomed.info/id/360296002> (Assistive equipment (physical object))
 
 SubClassOf(<http://snomed.info/id/360296002> <http://purl.obolibrary.org/obo/BFO_0000030>)
@@ -204,6 +218,10 @@ SubClassOf(<http://snomed.info/id/360296002> <http://purl.obolibrary.org/obo/BFO
 # Class: <http://snomed.info/id/364578004> (Observable feature of walking (observable entity))
 
 SubClassOf(<http://snomed.info/id/364578004> <http://purl.obolibrary.org/obo/IAO_0000030>)
+
+# Class: <http://snomed.info/id/370159000> (Country of birth (finding))
+
+SubClassOf(<http://snomed.info/id/370159000> <http://purl.obolibrary.org/obo/IAO_0000030>)
 
 # Class: <http://snomed.info/id/450737006> (Assessment using thirty second chair stand test (procedure))
 

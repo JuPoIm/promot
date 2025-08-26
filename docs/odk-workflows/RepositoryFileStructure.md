@@ -21,9 +21,7 @@ These are the current imports in PROMOT
 | hp | http://purl.obolibrary.org/obo/hp.owl | None |
 | iao | http://purl.obolibrary.org/obo/iao.owl | filter |
 | mondo | http://purl.obolibrary.org/obo/mondo.owl | None |
-| ncit | http://purl.obolibrary.org/obo/ncit.owl | None |
 | obi | http://purl.obolibrary.org/obo/obi.owl | None |
-| orcidio | https://w3id.org/orcidio/orcidio.owl | filter |
 | ro | http://purl.obolibrary.org/obo/ro.owl | None |
 | scdo | http://purl.obolibrary.org/obo/scdo.owl | None |
 | sio | http://purl.obolibrary.org/obo/sio.owl | None |

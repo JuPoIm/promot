@@ -4,17 +4,6 @@ github_org: JuPoIm
 git_main_branch: main
 repo: promot_ontology
 contact: juliette.potier@institutimagine.org
-# creators:
-#   - "Juliette Potier"
-# contributors:
-#   - "Juliette Potier"
-#   - "Paul Fabry"
-#   - "Christina Khnaisser"
-#   - "Anita Burgun"
-#   - "Cynthia Gagnon"
-#   - "Carole Faviez"
-#   - "Elizabeth Angelevski"
-#   - "Mansoore Gholizade"
 description: "Ontology for building the relational database of the PROMOT project"
 release_artefacts:
   - base
@@ -29,8 +18,8 @@ export_formats:
 license: https://creativecommons.org/licenses/by-nc-sa/4.0/deed.fr
 documentation:
   documentation_system: mkdocs
-use_template: TRUE
-use_dosdps: TRUE
+use_dosdps: TRUE # PROMOT axioms
+use_template: TRUE # PROMOT classes, properties and axioms
 components:
   release_components: TRUE
   products:
@@ -60,24 +49,17 @@ import_group:
     - id: bfo # high-level classes
     - id: fma # anatomy classes
     - id: hp # phenotypes classes
-    - id: iao
+    - id: iao # information content entity class
       module_type: filter
     - id: mondo # diseases classes
       is_large: TRUE
-    - id: ncit # genes, tests, devices
-      is_large: TRUE
-    - id: obi # classes
-    - id: orcidio # code orcid, to delete ?
-      mirror_from: https://w3id.org/orcidio/orcidio.owl
-      module_type: filter
-      base_iris:
-        - https://orcid.org/
-    - id: ro # relations
-    - id: scdo # measures relation
+    - id: obi # 'Organism' and 'Homo sapiens' classes
+    - id: ro # object properties
+    - id: scdo # 'measures' object property
     - id: sio # life status, parental transmission
     - id: snomed # tests, devices
       is_large: TRUE
-    - id: vo # has gene mutation
+    - id: vo # 'has gene mutation' object property
     - id: whofic # body structures, functions, activities classes
       mirror_from: https://raw.githubusercontent.com/whoficitc/harmonization/main/ontology/whofic-2024-01-21.owl
 robot_java_args: '-Xmx25G'

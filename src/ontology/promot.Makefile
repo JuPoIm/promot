@@ -17,7 +17,7 @@ imports/mondo_import.owl: mirror/mondo.owl imports/mondo_terms.txt
 		annotate --ontology-iri $(ONTBASE)/$@ $(ANNOTATE_ONTOLOGY_VERSION) --output $@.tmp.owl && mv $@.tmp.owl $@; fi
 # FMA : classes
 imports/fma_import.owl: mirror/fma.owl imports/fma_terms_combined.txt
-	if [ $(IMP) = true ]; then $(ROBOT) filter -i $< -T $(IMPORTDIR)/fma_terms.txt  \
+	if [ $(IMP) = true ]; then $(ROBOT) filter -i $< -T $(IMPORTDIR)/fma_terms.txt \
         --select "self descendants annotations" --signature true \
 		--output $@.tmp.owl; fi
 	if [ $(IMP) = true ]; then $(ROBOT) query -i $< --update ../sparql/preprocess-module.ru \
@@ -28,10 +28,10 @@ imports/fma_import.owl: mirror/fma.owl imports/fma_terms_combined.txt
 		--output $@.tmp.owl && mv $@.tmp.owl $@; fi
 # HP : classes 
 imports/hp_import.owl: mirror/hp.owl imports/hp_terms_combined.txt
-	if [ $(IMP) = true ]; then $(ROBOT) filter -i $< -T $(IMPORTDIR)/hp_terms_descendants.txt  \
+	if [ $(IMP) = true ]; then $(ROBOT) filter -i $< -T $(IMPORTDIR)/hp_terms_descendants.txt \
         --select "self descendants annotations" --signature true \
 		--output $@.tmp.owl; fi
-	if [ $(IMP) = true ]; then $(ROBOT) filter -i $< -T $(IMPORTDIR)/hp_terms_alone.txt  \
+	if [ $(IMP) = true ]; then $(ROBOT) filter -i $< -T $(IMPORTDIR)/hp_terms_alone.txt \
         --select "self annotations" --signature true \
 		merge -i $@.tmp.owl \
 		--output $@.tmp.owl; fi
@@ -42,13 +42,6 @@ imports/hp_import.owl: mirror/hp.owl imports/hp_terms_combined.txt
 		annotate --ontology-iri $(ONTBASE)/$@ $(ANNOTATE_ONTOLOGY_VERSION) \
 		merge -i $@.tmp.owl \
 		--output $@.tmp.owl && mv $@.tmp.owl $@; fi
-# NCIT
-imports/ncit_import.owl: mirror/ncit.owl imports/ncit_terms_combined.txt
-	if [ $(IMP) = true ]; then $(ROBOT) query -i $< --update ../sparql/preprocess-module.ru \
-		filter -T imports/ncit_terms.txt --select "self annotations" --signature true \
-        query --update ../sparql/inject-subset-declaration.ru --update ../sparql/postprocess-module.ru \
-		annotate --ontology-iri $(ONTBASE)/$@ $(ANNOTATE_ONTOLOGY_VERSION) \
-		--output $@.tmp.owl && mv $@.tmp.owl $@; fi
 # RO
 imports/ro_import.owl: mirror/ro.owl imports/ro_terms_combined.txt
 	if [ $(IMP) = true ]; then $(ROBOT) query -i $< --update ../sparql/preprocess-module.ru \
@@ -57,7 +50,7 @@ imports/ro_import.owl: mirror/ro.owl imports/ro_terms_combined.txt
 		annotate --ontology-iri $(ONTBASE)/$@ $(ANNOTATE_ONTOLOGY_VERSION) --output $@.tmp.owl && mv $@.tmp.owl $@; fi
 # WHOFIC
 imports/whofic_import.owl: mirror/whofic-2024-01-21.owl imports/whofic_terms_combined.txt
-	if [ $(IMP) = true ]; then $(ROBOT) filter -i $< -T $(IMPORTDIR)/whofic_terms_descendants.txt  \
+	if [ $(IMP) = true ]; then $(ROBOT) filter -i $< -T $(IMPORTDIR)/whofic_terms_descendants.txt \
         --select "self descendants annotations" --signature true \
 		--output $@.tmp.owl; fi
 	if [ $(IMP) = true ]; then $(ROBOT) query -i $< --update ../sparql/preprocess-module.ru \
@@ -77,7 +70,7 @@ imports/scdo_import.owl: mirror/scdo.owl imports/scdo_terms_combined.txt
 		--output $@.tmp.owl && mv $@.tmp.owl $@; fi
 # SIO
 imports/sio_import.owl: mirror/sio.owl imports/sio_terms_combined.txt
-	if [ $(IMP) = true ]; then $(ROBOT) filter -i $< -T $(IMPORTDIR)/sio_terms_alone.txt  \
+	if [ $(IMP) = true ]; then $(ROBOT) filter -i $< -T $(IMPORTDIR)/sio_terms_alone.txt \
         --select "self annotations" --signature true \
 		--output $@.tmp.owl; fi
 	if [ $(IMP) = true ]; then $(ROBOT) query -i $< --update ../sparql/preprocess-module.ru \
@@ -88,14 +81,15 @@ imports/sio_import.owl: mirror/sio.owl imports/sio_terms_combined.txt
 		--output $@.tmp.owl && mv $@.tmp.owl $@; fi
 # SNOMED
 imports/snomed_import.owl: mirror/snomed.owl imports/snomed_terms_combined.txt
-	if [ $(IMP) = true ]; then $(ROBOT) filter -i $< -T $(IMPORTDIR)/snomed_terms_alone.txt  \
+	if [ $(IMP) = true ]; then $(ROBOT) filter -i $< -T $(IMPORTDIR)/snomed_terms_alone.txt \
         --select "self annotations" --signature true \
 		--output $@.tmp.owl; fi
-	if [ $(IMP) = true ]; then $(ROBOT) filter -i $< -T imports/snomed_terms_descendants.txt --select "self descendants annotations" --signature true \
+	if [ $(IMP) = true ]; then $(ROBOT) filter -i $< -T imports/snomed_terms_descendants.txt \
+		--select "self descendants annotations" --signature true \
 		annotate --ontology-iri $(ONTBASE)/$@ $(ANNOTATE_ONTOLOGY_VERSION) \
 		merge -i $@.tmp.owl \
 		--output $@.tmp.owl && mv $@.tmp.owl $@; fi
-# VO : object property 'has gene mutation'
+# VO
 imports/vo_import.owl: mirror/vo.owl imports/vo_terms.txt
 	if [ $(IMP) = true ]; then $(ROBOT) query -i $< --update ../sparql/preprocess-module.ru \
 		filter -T imports/vo_terms.txt --select "self annotations" --signature true \
