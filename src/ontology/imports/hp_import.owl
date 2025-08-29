@@ -12,8 +12,8 @@
      xmlns:terms="http://purl.org/dc/terms/"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/promot/imports/hp_import.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/promot/releases/2025-08-25/imports/hp_import.owl"/>
-        <owl:versionInfo>2025-08-25</owl:versionInfo>
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/promot/releases/2025-08-29/imports/hp_import.owl"/>
+        <owl:versionInfo>2025-08-29</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -150,6 +150,17 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/HP_0000001 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0000001">
+        <oboInOwl:hasDbXref>UMLS:C0444868</oboInOwl:hasDbXref>
+        <oboInOwl:id>HP:0000001</oboInOwl:id>
+        <rdfs:comment>Root of all terms in the Human Phenotype Ontology.</rdfs:comment>
+        <rdfs:label>All</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/HP_0000005 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0000005">
@@ -176,7 +187,7 @@
     <!-- http://purl.obolibrary.org/obo/HP_0000006 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0000006">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0000005"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0000001"/>
         <obo:IAO_0000115>A mode of inheritance that is observed for traits related to a gene encoded on one of the autosomes (i.e., the human chromosomes 1-22) in which a trait manifests in heterozygotes. In the context of medical genetics, an autosomal dominant disorder is caused when a single copy of the mutant allele is present. Males and females are affected equally, and can both transmit the disorder with a risk of 50% for each child of inheriting the mutant allele.</obo:IAO_0000115>
         <oboInOwl:hasAlternativeId>HP:0001415</oboInOwl:hasAlternativeId>
         <oboInOwl:hasAlternativeId>HP:0001447</oboInOwl:hasAlternativeId>
@@ -269,6 +280,7 @@
     <!-- http://purl.obolibrary.org/obo/HP_0000118 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0000118">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0000001"/>
         <obo:IAO_0000115>A phenotypic abnormality.</obo:IAO_0000115>
         <oboInOwl:hasDbXref>UMLS:C4021819</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym>Organ abnormality</oboInOwl:hasExactSynonym>
@@ -933,10 +945,88 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/HP_0000707 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0000707">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0000118"/>
+        <obo:IAO_0000115>An abnormality of the nervous system.</obo:IAO_0000115>
+        <oboInOwl:hasAlternativeId>HP:0001333</oboInOwl:hasAlternativeId>
+        <oboInOwl:hasAlternativeId>HP:0006987</oboInOwl:hasAlternativeId>
+        <oboInOwl:hasBroadSynonym>Brain and/or spinal cord issue</oboInOwl:hasBroadSynonym>
+        <oboInOwl:hasDbXref>SNOMEDCT_US:88425004</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>UMLS:C0497552</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym>Abnormality of the nervous system</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>Neurologic abnormalities</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>Neurological abnormality</oboInOwl:hasExactSynonym>
+        <oboInOwl:id>HP:0000707</oboInOwl:id>
+        <rdfs:comment>The nervous system comprises the neuraxis (brain, spinal cord, and ventricles), the autonomic nervous system, the enteric nervous system, and the peripheral nervous system.</rdfs:comment>
+        <rdfs:label>Abnormality of the nervous system</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0000707"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>An abnormality of the nervous system.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0000707"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasBroadSynonym"/>
+        <owl:annotatedTarget>Brain and/or spinal cord issue</owl:annotatedTarget>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#layperson"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0000707"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget>Abnormality of the nervous system</owl:annotatedTarget>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#layperson"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0000707"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget>Neurologic abnormalities</owl:annotatedTarget>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#layperson"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0000707"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget>Neurological abnormality</owl:annotatedTarget>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#layperson"/>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/HP_0000765 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0000765">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0009121"/>
+        <obo:IAO_0000115>Any abnormality of the thorax (the region of the body formed by the sternum, the thoracic vertebrae and the ribs).</obo:IAO_0000115>
+        <oboInOwl:hasAlternativeId>HP:0100655</oboInOwl:hasAlternativeId>
+        <oboInOwl:hasDbXref>UMLS:C4021797</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym>Abnormality of the chest</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>Abnormality of the thorax</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>Structural abnormality of the chest wall</oboInOwl:hasExactSynonym>
+        <oboInOwl:id>HP:0000765</oboInOwl:id>
+        <rdfs:label>Abnormal thorax morphology</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0000765"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>Any abnormality of the thorax (the region of the body formed by the sternum, the thoracic vertebrae and the ribs).</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0000765"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget>Abnormality of the chest</owl:annotatedTarget>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#layperson"/>
+    </owl:Axiom>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/HP_0000766 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0000766">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0009121"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0000765"/>
         <obo:IAO_0000115>An anomaly of the sternum, also known as the breastbone.</obo:IAO_0000115>
         <oboInOwl:hasAlternativeId>HP:0000780</oboInOwl:hasAlternativeId>
         <oboInOwl:hasAlternativeId>HP:0006586</oboInOwl:hasAlternativeId>
@@ -1032,6 +1122,31 @@
         <owl:annotatedTarget>Pigeon chest</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:resource="https://orcid.org/0000-0001-5208-3432"/>
         <oboInOwl:hasDbXref>https://en.wikipedia.org/wiki/pectus_carinatum</oboInOwl:hasDbXref>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#layperson"/>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/HP_0000886 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0000886">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0001547"/>
+        <obo:IAO_0000115>Malformation of the rib cage.</obo:IAO_0000115>
+        <oboInOwl:hasDbXref>UMLS:C1838659</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym>Deformed rib cage</oboInOwl:hasExactSynonym>
+        <oboInOwl:id>HP:0000886</oboInOwl:id>
+        <rdfs:label>Deformed rib cage</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0000886"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>Malformation of the rib cage.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0000886"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget>Deformed rib cage</owl:annotatedTarget>
         <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#layperson"/>
     </owl:Axiom>
     
@@ -1305,6 +1420,19 @@
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0001288"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>The term gait disturbance can refer to any disruption of the ability to walk.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
+        <oboInOwl:hasDbXref>PMID:27770207</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0001288"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget>Abnormal gait</owl:annotatedTarget>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#layperson"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0001288"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
         <owl:annotatedTarget>Abnormal walk</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:resource="https://orcid.org/0000-0001-5208-3432"/>
@@ -1320,19 +1448,6 @@
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0001288"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
         <owl:annotatedTarget>Impaired gait</owl:annotatedTarget>
-        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#layperson"/>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0001288"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>The term gait disturbance can refer to any disruption of the ability to walk.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
-        <oboInOwl:hasDbXref>PMID:27770207</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0001288"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>Abnormal gait</owl:annotatedTarget>
         <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#layperson"/>
     </owl:Axiom>
     
@@ -1716,6 +1831,31 @@
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
         <owl:annotatedTarget>Weight faltering in infancy</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:resource="https://orcid.org/0000-0001-5208-3432"/>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#layperson"/>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/HP_0001547 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0001547">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0000765"/>
+        <obo:IAO_0000115>A morphological anomaly of the rib cage.</obo:IAO_0000115>
+        <oboInOwl:hasDbXref>UMLS:C4025763</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym>Abnormality of the rib cage</oboInOwl:hasExactSynonym>
+        <oboInOwl:id>HP:0001547</oboInOwl:id>
+        <rdfs:label>Abnormal rib cage morphology</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0001547"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A morphological anomaly of the rib cage.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0001547"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget>Abnormality of the rib cage</owl:annotatedTarget>
         <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#layperson"/>
     </owl:Axiom>
     
@@ -2139,7 +2279,7 @@
     <!-- http://purl.obolibrary.org/obo/HP_0002094 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0002094">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0002795"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0002793"/>
         <obo:IAO_0000115>Difficult or labored breathing. Dyspnea is a subjective feeling only the patient can rate, e.g., on a Borg scale.</obo:IAO_0000115>
         <oboInOwl:hasDbXref>SNOMEDCT_US:230145002</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>SNOMEDCT_US:267036007</oboInOwl:hasDbXref>
@@ -2243,6 +2383,31 @@
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
         <owl:annotatedTarget>Laboured breathing</owl:annotatedTarget>
         <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#uk_spelling"/>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/HP_0002104 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0002104">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0002793"/>
+        <obo:IAO_0000115>Lack of breathing with no movement of the respiratory muscles and no exchange of air in the lungs. This term refers to a disposition to have recurrent episodes of apnea rather than to a single event.</obo:IAO_0000115>
+        <oboInOwl:hasAlternativeId>HP:0005936</oboInOwl:hasAlternativeId>
+        <oboInOwl:hasAlternativeId>HP:0005958</oboInOwl:hasAlternativeId>
+        <oboInOwl:hasDbXref>SNOMEDCT_US:1023001</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>SNOMEDCT_US:248583008</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>UMLS:C0003578</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym>Absence of spontaneous respiration</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>Apneic episodes</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>Apnoea</oboInOwl:hasExactSynonym>
+        <oboInOwl:id>HP:0002104</oboInOwl:id>
+        <rdfs:label>Apnea</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0002104"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>Lack of breathing with no movement of the respiratory muscles and no exchange of air in the lungs. This term refers to a disposition to have recurrent episodes of apnea rather than to a single event.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
     </owl:Axiom>
     
 
@@ -2492,6 +2657,45 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/HP_0002793 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0002793">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0002795"/>
+        <obo:IAO_0000115>An anomaly of the rhythm or depth of breathing.</obo:IAO_0000115>
+        <oboInOwl:hasDbXref>UMLS:C1837388</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym>Abnormal pattern of respiration</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>Abnormal respiratory patterns</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>Unusual breathing patterns</oboInOwl:hasExactSynonym>
+        <oboInOwl:id>HP:0002793</oboInOwl:id>
+        <rdfs:label>Abnormal pattern of respiration</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0002793"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>An anomaly of the rhythm or depth of breathing.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0002793"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget>Abnormal pattern of respiration</owl:annotatedTarget>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#layperson"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0002793"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget>Abnormal respiratory patterns</owl:annotatedTarget>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#layperson"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0002793"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget>Unusual breathing patterns</owl:annotatedTarget>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#layperson"/>
+    </owl:Axiom>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/HP_0002795 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0002795">
@@ -2603,6 +2807,34 @@
         <oboInOwl:id>HP:0002828</oboInOwl:id>
         <rdfs:label>Multiple joint contractures</rdfs:label>
     </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/HP_0002878 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0002878">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0002093"/>
+        <obo:IAO_0000115>A severe form of respiratory insufficiency characterized by inadequate gas exchange such that the levels of oxygen or carbon dioxide cannot be maintained within normal limits.</obo:IAO_0000115>
+        <oboInOwl:hasAlternativeId>HP:0004877</oboInOwl:hasAlternativeId>
+        <oboInOwl:hasDbXref>SNOMEDCT_US:409622000</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>UMLS:C1145670</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym>Respiratory failure</oboInOwl:hasExactSynonym>
+        <oboInOwl:id>HP:0002878</oboInOwl:id>
+        <rdfs:comment>Respiratory failure is classified as type 1 with hypoxemia (arterial partial pressure of oxygen less than 60 mmHg) without hypercapnea, and type 2 with hypoxemia in the present of hypercapnea (partial pressure of carbon dioxide over 50 mmHg).</rdfs:comment>
+        <rdfs:label>Respiratory failure</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0002878"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A severe form of respiratory insufficiency characterized by inadequate gas exchange such that the levels of oxygen or carbon dioxide cannot be maintained within normal limits.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0002878"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget>Respiratory failure</owl:annotatedTarget>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#layperson"/>
+    </owl:Axiom>
     
 
 
@@ -4043,6 +4275,50 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/HP_0004885 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0004885">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0002098"/>
+        <oboInOwl:hasDbXref>UMLS:C1844945</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym>Episodic difficulty breathing</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>respiratory distress, episodic</oboInOwl:hasExactSynonym>
+        <oboInOwl:id>HP:0004885</oboInOwl:id>
+        <rdfs:label>Episodic respiratory distress</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0004885"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget>Episodic difficulty breathing</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:resource="https://orcid.org/0000-0001-6908-9849"/>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#layperson"/>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/HP_0004887 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0004887">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0002093"/>
+        <obo:IAO_0000115>A state of respiratory distress that requires a life saving intervention in the form of gaining airway access and instituting positive pressure ventilation.</obo:IAO_0000115>
+        <oboInOwl:hasAlternativeId>HP:0004883</oboInOwl:hasAlternativeId>
+        <oboInOwl:hasDbXref>UMLS:C4025279</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym>Respiratory distress necessitating mechanical ventilation</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>Respiratory distress requiring endotracheal intubation</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>Respiratory distress requiring mechanical ventilation</oboInOwl:hasExactSynonym>
+        <oboInOwl:id>HP:0004887</oboInOwl:id>
+        <rdfs:label>Respiratory failure requiring assisted ventilation</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0004887"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A state of respiratory distress that requires a life saving intervention in the form of gaining airway access and instituting positive pressure ventilation.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:resource="https://orcid.org/0000-0002-7440-8864"/>
+        <oboInOwl:hasDbXref>PMID:18710593</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>PMID:28620428</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/HP_0004889 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0004889">
@@ -4120,6 +4396,24 @@
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
         <owl:annotatedTarget>Early foetal demise</owl:annotatedTarget>
         <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#uk_spelling"/>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/HP_0005949 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0005949">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0002104"/>
+        <obo:IAO_0000115>Recurrent episodes of apnea occurring during infancy.</obo:IAO_0000115>
+        <oboInOwl:hasDbXref>UMLS:C3807980</oboInOwl:hasDbXref>
+        <oboInOwl:id>HP:0005949</oboInOwl:id>
+        <rdfs:label>Apneic episodes in infancy</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0005949"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>Recurrent episodes of apnea occurring during infancy.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
     </owl:Axiom>
     
 
@@ -5308,7 +5602,7 @@
     <!-- http://purl.obolibrary.org/obo/HP_0012638 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0012638">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0000118"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0000707"/>
         <obo:IAO_0000115>A functional anomaly of the nervous system.</obo:IAO_0000115>
         <terms:creator rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
         <oboInOwl:creation_date>2014-01-19T08:02:46Z</oboInOwl:creation_date>
@@ -5930,20 +6224,6 @@
     
 
 
-    <!-- http://purl.obolibrary.org/obo/HP_0025820 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0025820">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0032316"/>
-        <obo:IAO_0000115>The parents of the index patient are related as second cousins or closer.</obo:IAO_0000115>
-        <dc:creator rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
-        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-04-24T16:26:47Z</dc:date>
-        <oboInOwl:hasExactSynonym>Consanguineous</oboInOwl:hasExactSynonym>
-        <rdfs:comment>Consanguinity has a major role in congenital and genetic diseases.</rdfs:comment>
-        <rdfs:label>Offspring of consanguineous relationship</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- http://purl.obolibrary.org/obo/HP_0030000 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0030000">
@@ -5986,10 +6266,29 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/HP_0030192 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0030192">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0003473"/>
+        <obo:IAO_0000115>A type of weakness of the bulbar muscles (muscles of the mouth and throat responsible for speech and swallowing) that occurs after a muscle group is used and lessens if the muscle group has some rest. That is, there is diminution of strength with repetitive muscle actions.</obo:IAO_0000115>
+        <oboInOwl:hasDbXref>UMLS:C4022591</oboInOwl:hasDbXref>
+        <rdfs:label>Fatigable weakness of bulbar muscles</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0030192"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A type of weakness of the bulbar muscles (muscles of the mouth and throat responsible for speech and swallowing) that occurs after a muscle group is used and lessens if the muscle group has some rest. That is, there is diminution of strength with repetitive muscle actions.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
+        <oboInOwl:hasDbXref>HPO_CONTRIBUTOR:UNCL_mbertoli</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>PMID:17986328</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/HP_0030193 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0030193">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0003473"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0030192"/>
         <obo:IAO_0000115>A type of weakness of the muscles involved in chewing that occurs after a muscle group is used and lessens if the muscle group has some rest. That is, there is diminution of strength with repetitive muscle actions.</obo:IAO_0000115>
         <oboInOwl:hasDbXref>UMLS:C4022590</oboInOwl:hasDbXref>
         <rdfs:label>Fatigable weakness of chewing muscles</rdfs:label>
@@ -5999,6 +6298,42 @@
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A type of weakness of the muscles involved in chewing that occurs after a muscle group is used and lessens if the muscle group has some rest. That is, there is diminution of strength with repetitive muscle actions.</owl:annotatedTarget>
         <oboInOwl:hasDbXref>HPO_CONTRIBUTOR:UNCL_tevangelista</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>PMID:17986328</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/HP_0030194 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0030194">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0030192"/>
+        <obo:IAO_0000115>A type of weakness of the muscles involved in speech that occurs after a muscle group is used and lessens if the muscle group has some rest. That is, there is diminution of strength with repetitive muscle actions.</obo:IAO_0000115>
+        <oboInOwl:hasDbXref>UMLS:C4022589</oboInOwl:hasDbXref>
+        <rdfs:label>Fatigable weakness of speech muscles</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0030194"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A type of weakness of the muscles involved in speech that occurs after a muscle group is used and lessens if the muscle group has some rest. That is, there is diminution of strength with repetitive muscle actions.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:resource="https://orcid.org/0000-0003-2324-8001"/>
+        <oboInOwl:hasDbXref>PMID:17986328</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/HP_0030195 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0030195">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0030192"/>
+        <obo:IAO_0000115>A type of weakness of the muscles involved in swallowing that occurs after a muscle group is used and lessens if the muscle group has some rest. That is, there is diminution of strength with repetitive muscle actions.</obo:IAO_0000115>
+        <oboInOwl:hasDbXref>UMLS:C4022588</oboInOwl:hasDbXref>
+        <rdfs:label>Fatigable weakness of swallowing muscles</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0030195"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A type of weakness of the muscles involved in swallowing that occurs after a muscle group is used and lessens if the muscle group has some rest. That is, there is diminution of strength with repetitive muscle actions.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>HPO_CONTRIBUTOR:UK_rheller</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>PMID:17986328</oboInOwl:hasDbXref>
     </owl:Axiom>
     
@@ -6029,6 +6364,57 @@
         <oboInOwl:hasDbXref>UMLS:C4022586</oboInOwl:hasDbXref>
         <rdfs:label>Fatigable weakness of skeletal muscles</rdfs:label>
     </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/HP_0030198 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0030198">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0030197"/>
+        <obo:IAO_0000115>A type of weakness of a skeletal muscle of distal part of a limb that occurs after a muscle group is used and lessens if the muscle group has some rest. That is, there is diminution of strength with repetitive muscle actions.</obo:IAO_0000115>
+        <oboInOwl:hasDbXref>UMLS:C4022585</oboInOwl:hasDbXref>
+        <rdfs:label>Fatigable weakness of distal limb muscles</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0030198"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A type of weakness of a skeletal muscle of distal part of a limb that occurs after a muscle group is used and lessens if the muscle group has some rest. That is, there is diminution of strength with repetitive muscle actions.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>HPO_CONTRIBUTOR:UK_rheller</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/HP_0030199 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0030199">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0030197"/>
+        <obo:IAO_0000115>A type of weakness of a skeletal muscle in the neck that occurs after a muscle group is used and lessens if the muscle group has some rest. That is, there is diminution of strength with repetitive muscle actions.</obo:IAO_0000115>
+        <oboInOwl:hasDbXref>UMLS:C4022584</oboInOwl:hasDbXref>
+        <rdfs:label>Fatigable weakness of neck muscles</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0030199"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A type of weakness of a skeletal muscle in the neck that occurs after a muscle group is used and lessens if the muscle group has some rest. That is, there is diminution of strength with repetitive muscle actions.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>HPO_CONTRIBUTOR:UK_rheller</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/HP_0030200 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0030200">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0030197"/>
+        <obo:IAO_0000115>A type of weakness of a skeletal muscle of proximal part of a limb that occurs after a muscle group is used and lessens if the muscle group has some rest. That is, there is diminution of strength with repetitive muscle actions.</obo:IAO_0000115>
+        <oboInOwl:hasDbXref>UMLS:C4022583</oboInOwl:hasDbXref>
+        <rdfs:label>Fatiguable weakness of proximal limb muscles</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0030200"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A type of weakness of a skeletal muscle of proximal part of a limb that occurs after a muscle group is used and lessens if the muscle group has some rest. That is, there is diminution of strength with repetitive muscle actions.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>HPO_CONTRIBUTOR:UK_rheller</oboInOwl:hasDbXref>
+    </owl:Axiom>
     
 
 
@@ -6394,7 +6780,7 @@
     <!-- http://purl.obolibrary.org/obo/HP_0031797 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0031797">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0012823"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0000001"/>
         <obo:IAO_0000115>The course a disease typically takes from its onset, progression in time, and eventual resolution or death of the affected individual.</obo:IAO_0000115>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-02-25T14:55:46Z</dc:date>
         <terms:creator rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
@@ -6485,34 +6871,9 @@
     
 
 
-    <!-- http://purl.obolibrary.org/obo/HP_0032317 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0032317">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0032316"/>
-        <obo:IAO_0000115>A close blood relative had cancer.</obo:IAO_0000115>
-        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-02-14T11:43:34Z</dc:date>
-        <terms:creator rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
-        <rdfs:label>Family history of cancer</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/HP_0032318 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0032318">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0032316"/>
-        <obo:IAO_0000115>A close blood relative had heart disease.</obo:IAO_0000115>
-        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-02-14T11:45:48Z</dc:date>
-        <terms:creator rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
-        <rdfs:label>Family history of heart disease</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- http://purl.obolibrary.org/obo/HP_0032319 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0032319">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0032316"/>
         <obo:IAO_0000115>Health status of a family member with respect to the disease being investigated in a proband.</obo:IAO_0000115>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-02-14T11:46:18Z</dc:date>
         <terms:creator rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
@@ -6688,6 +7049,26 @@
         <owl:annotatedTarget>Feeding problem necessitating food and nutrient delivery via a tube.</owl:annotatedTarget>
         <oboInOwl:hasDbXref>PMID:25874832</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>PMID:28044031</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/HP_0033580 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0033580">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0000707"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0012638"/>
+        <obo:IAO_0000115>An abnormal finding in a compound motor action potential measurement in EMG. Nerve conduction studies involve the application of a depolarising square wave electrical pulses to the skin over a peripheral nerve producing: (1) a propagated nerve action potential (NAP) recorded at a distant point over the same nerve: and (2) a compound muscle action potential (CMAP) arising from the activation of muscle fibers in a target muscle supplied by the nerve. In both cases these may be recorded with surface or needle electrodes. The CMAP is a summated voltage response from the individual muscle fiber action potentials. The shortest latency of the CMAP is the time from stimulus artifact to onset of the response and is a biphasic response with an initial upward deflection followed by a smaller downward deflection. The CMAP amplitude is measured from baseline to negative peak (the neurophysiological convention is that negative voltage is demonstrated by an upward deflection) and measured in millivolts (mV).</obo:IAO_0000115>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-01-24T16:18:16Z</dc:date>
+        <terms:creator rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
+        <rdfs:label>Compound motor action potential abnormality</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0033580"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>An abnormal finding in a compound motor action potential measurement in EMG. Nerve conduction studies involve the application of a depolarising square wave electrical pulses to the skin over a peripheral nerve producing: (1) a propagated nerve action potential (NAP) recorded at a distant point over the same nerve: and (2) a compound muscle action potential (CMAP) arising from the activation of muscle fibers in a target muscle supplied by the nerve. In both cases these may be recorded with surface or needle electrodes. The CMAP is a summated voltage response from the individual muscle fiber action potentials. The shortest latency of the CMAP is the time from stimulus artifact to onset of the response and is a biphasic response with an initial upward deflection followed by a smaller downward deflection. The CMAP amplitude is measured from baseline to negative peak (the neurophysiological convention is that negative voltage is demonstrated by an upward deflection) and measured in millivolts (mV).</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>PMID:15961865</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>PMID:26744834</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -7206,6 +7587,25 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/HP_6000327 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_6000327">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0001547"/>
+        <obo:IAO_0000115>The anteroposterior dimension of the chest on the lateral radiograph is often relatively narrow compared with the chest width on the frontal radiograph.</obo:IAO_0000115>
+        <obo:IAO_0000233 rdf:resource="https://github.com/obophenotype/human-phenotype-ontology/issues/7791"/>
+        <terms:contributor rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
+        <oboInOwl:hasExactSynonym>Flat chest</oboInOwl:hasExactSynonym>
+        <rdfs:label>Thoracic cage flatness</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_6000327"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>The anteroposterior dimension of the chest on the lateral radiograph is often relatively narrow compared with the chest width on the frontal radiograph.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>PMID:3500611</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/HP_6000684 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_6000684">
@@ -7313,5 +7713,5 @@
 
 
 
-<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+<!-- Generated by the OWL API (version 4.5.29) https://github.com/owlcs/owlapi -->
 

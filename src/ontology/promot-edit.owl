@@ -30,13 +30,15 @@ Import(<http://purl.obolibrary.org/obo/promot/releases/2025-07-30/imports/sio_im
 Import(<http://purl.obolibrary.org/obo/promot/releases/2025-08-05/imports/fma_import.owl>)
 Import(<http://purl.obolibrary.org/obo/promot/releases/2025-08-07/imports/mondo_import.owl>)
 Import(<http://purl.obolibrary.org/obo/promot/releases/2025-08-08/imports/vo_import.owl>)
-Import(<http://purl.obolibrary.org/obo/promot/releases/2025-08-25/imports/hp_import.owl>)
-Import(<http://purl.obolibrary.org/obo/promot/releases/2025-08-27/components/promot_onto.owl>)
+Import(<http://purl.obolibrary.org/obo/promot/releases/2025-08-29/imports/hp_import.owl>)
 Import(<http://purl.obolibrary.org/obo/promot/releases/2025-08-27/imports/iao_import.owl>)
 Import(<http://purl.obolibrary.org/obo/promot/releases/2025-08-27/imports/obi_import.owl>)
 Import(<http://purl.obolibrary.org/obo/promot/releases/2025-08-27/imports/ro_import.owl>)
 Import(<http://purl.obolibrary.org/obo/promot/releases/2025-08-27/imports/snomed_import.owl>)
-Import(<http://purl.obolibrary.org/obo/promot/releases/2025-08-27/patterns/definitions.owl>)
+Import(<http://purl.obolibrary.org/obo/promot/releases/2025-08-29/patterns/definitions.owl>)
+Import(<http://purl.obolibrary.org/obo/promot/releases/2025-08-29/components/promot_onto.owl>)
+
+
 Annotation(dce:contributor "Anita Burgun MD, PhD
 https://orcid.org/0000-0001-6855-4366")
 Annotation(dce:contributor "Carole Faviez PhD
@@ -72,25 +74,12 @@ Annotation(rdfs:comment "The 'Performing a Rare Disease-Oriented Master Observat
 
 See also: https://www.promotinitiative.com/project")
 
-Declaration(Class(<http://purl.obolibrary.org/obo/PROMOT_2eeb2339_b0b0_4d84_b1ec_0892c52bd073>))
-Declaration(Class(<http://purl.obolibrary.org/obo/PROMOT_4cf50d80_af31_4d2a_9c2d_2aae129919b9>))
-Declaration(Class(<http://purl.obolibrary.org/obo/PROMOT_747d5dd5_a18b_4882_bab4_b16d5c9b33ad>))
-Declaration(Class(<http://purl.obolibrary.org/obo/PROMOT_8e2b7694_0cb2_4288_a47b_9b020aa83e7b>))
-Declaration(Class(<http://purl.obolibrary.org/obo/PROMOT_915c7f8e_e5d5_414c_966c_da85ac158029>))
-Declaration(Class(<http://purl.obolibrary.org/obo/PROMOT_9981472f_6dba_4fda_8d3e_84a7da867a17>))
-Declaration(Class(<http://purl.obolibrary.org/obo/PROMOT_a3d57900_4d39_4722_b590_12bdfdd5873a>))
-Declaration(Class(<http://purl.obolibrary.org/obo/PROMOT_af13fa7f_1c0a_4c3e_b3cb_b4ed15fa9bab>))
-Declaration(Class(<http://purl.obolibrary.org/obo/PROMOT_be2624a5_543e_47f3_bbbb_e5f9772caf5d>))
-Declaration(Class(<http://purl.obolibrary.org/obo/PROMOT_d609d525_4f63_46cf_a68c_2ae986effa65>))
 Declaration(Class(<http://purl.obolibrary.org/obo/PROMOT_f4480c24_2423_4a4f_b687_f0d1109c6520>))
-Declaration(Class(<http://purl.obolibrary.org/obo/PROMOT_f4a4eb9b_d854_4f30_a406_c940447c5ddf>))
-Declaration(Class(<http://snomed.info/id/12239004>))
 Declaration(Class(<http://snomed.info/id/127362006>))
 Declaration(Class(<http://snomed.info/id/12894003>))
 Declaration(Class(<http://snomed.info/id/1296886006>))
 Declaration(Class(<http://snomed.info/id/252478000>))
 Declaration(Class(<http://snomed.info/id/252482003>))
-Declaration(Class(<http://snomed.info/id/263495000>))
 Declaration(Class(<http://snomed.info/id/364578004>))
 Declaration(Class(<http://snomed.info/id/450737006>))
 Declaration(NamedIndividual(<http://purl.obolibrary.org/obo/PROMOT_045e367e_c3fd_4c0a_83f3_8fa7e169ca10>))
@@ -126,38 +115,17 @@ AnnotationAssertion(rdfs:label dcterms:title "title")
 #   Classes
 ############################
 
-# Class: <http://purl.obolibrary.org/obo/FMA_5022> (Muscle organ)
+# Class: <http://purl.obolibrary.org/obo/HP_0000005> (Mode of inheritance)
 
-SubClassOf(<http://purl.obolibrary.org/obo/FMA_5022> <http://purl.obolibrary.org/obo/FMA_62955>)
-
-# Class: <http://purl.obolibrary.org/obo/FMA_7490> (Joint)
-
-SubClassOf(<http://purl.obolibrary.org/obo/FMA_7490> <http://purl.obolibrary.org/obo/FMA_62955>)
+SubClassOf(<http://purl.obolibrary.org/obo/HP_0000005> <http://purl.obolibrary.org/obo/BFO_0000019>)
 
 # Class: <http://purl.obolibrary.org/obo/HP_0032316> (Family history)
 
 SubClassOf(<http://purl.obolibrary.org/obo/HP_0032316> <http://purl.obolibrary.org/obo/IAO_0000030>)
 
-# Class: <http://purl.obolibrary.org/obo/PROMOT_2eeb2339_b0b0_4d84_b1ec_0892c52bd073> (Finding)
+# Class: <http://purl.obolibrary.org/obo/PROMOT_3100001> (Medication)
 
-AnnotationAssertion(dce:creator <http://purl.obolibrary.org/obo/PROMOT_2eeb2339_b0b0_4d84_b1ec_0892c52bd073> <https://orcid.org/0009-0000-5160-7927>)
-AnnotationAssertion(dce:date <http://purl.obolibrary.org/obo/PROMOT_2eeb2339_b0b0_4d84_b1ec_0892c52bd073> "2025-08-27T12:42:53Z"^^xsd:dateTime)
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/PROMOT_2eeb2339_b0b0_4d84_b1ec_0892c52bd073> "Finding"@fr)
-SubClassOf(<http://purl.obolibrary.org/obo/PROMOT_2eeb2339_b0b0_4d84_b1ec_0892c52bd073> <http://purl.obolibrary.org/obo/IAO_0000030>)
-
-# Class: <http://purl.obolibrary.org/obo/PROMOT_4cf50d80_af31_4d2a_9c2d_2aae129919b9> (gender identity not recorded)
-
-AnnotationAssertion(dce:creator <http://purl.obolibrary.org/obo/PROMOT_4cf50d80_af31_4d2a_9c2d_2aae129919b9> <https://orcid.org/0009-0000-5160-7927>)
-AnnotationAssertion(dce:date <http://purl.obolibrary.org/obo/PROMOT_4cf50d80_af31_4d2a_9c2d_2aae129919b9> "2025-08-27T13:11:45Z"^^xsd:dateTime)
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/PROMOT_4cf50d80_af31_4d2a_9c2d_2aae129919b9> "gender identity not recorded"@fr)
-SubClassOf(<http://purl.obolibrary.org/obo/PROMOT_4cf50d80_af31_4d2a_9c2d_2aae129919b9> <http://snomed.info/id/33821000087103>)
-
-# Class: <http://purl.obolibrary.org/obo/PROMOT_747d5dd5_a18b_4882_bab4_b16d5c9b33ad> (Nonbinary gender identity)
-
-AnnotationAssertion(dce:creator <http://purl.obolibrary.org/obo/PROMOT_747d5dd5_a18b_4882_bab4_b16d5c9b33ad> <https://orcid.org/0009-0000-5160-7927>)
-AnnotationAssertion(dce:date <http://purl.obolibrary.org/obo/PROMOT_747d5dd5_a18b_4882_bab4_b16d5c9b33ad> "2025-08-27T13:11:14Z"^^xsd:dateTime)
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/PROMOT_747d5dd5_a18b_4882_bab4_b16d5c9b33ad> "Nonbinary gender identity"@fr)
-SubClassOf(<http://purl.obolibrary.org/obo/PROMOT_747d5dd5_a18b_4882_bab4_b16d5c9b33ad> <http://snomed.info/id/33821000087103>)
+SubClassOf(<http://purl.obolibrary.org/obo/PROMOT_3100001> <http://purl.obolibrary.org/obo/BFO_0000030>)
 
 # Class: <http://purl.obolibrary.org/obo/PROMOT_8000002> (unkown life status)
 
@@ -168,55 +136,6 @@ SubClassOf(<http://purl.obolibrary.org/obo/PROMOT_8000002> ObjectSomeValuesFrom(
 
 SubClassOf(<http://purl.obolibrary.org/obo/PROMOT_8000003> <http://semanticscience.org/resource/SIO_001268>)
 
-# Class: <http://purl.obolibrary.org/obo/PROMOT_8e2b7694_0cb2_4288_a47b_9b020aa83e7b> (sex unkown)
-
-AnnotationAssertion(dce:creator <http://purl.obolibrary.org/obo/PROMOT_8e2b7694_0cb2_4288_a47b_9b020aa83e7b> <https://orcid.org/0009-0000-5160-7927>)
-AnnotationAssertion(dce:date <http://purl.obolibrary.org/obo/PROMOT_8e2b7694_0cb2_4288_a47b_9b020aa83e7b> "2025-08-27T13:09:36Z"^^xsd:dateTime)
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/PROMOT_8e2b7694_0cb2_4288_a47b_9b020aa83e7b> "sex unkown"@fr)
-SubClassOf(<http://purl.obolibrary.org/obo/PROMOT_8e2b7694_0cb2_4288_a47b_9b020aa83e7b> <http://snomed.info/id/184100006>)
-
-# Class: <http://purl.obolibrary.org/obo/PROMOT_915c7f8e_e5d5_414c_966c_da85ac158029> (Male)
-
-AnnotationAssertion(dce:creator <http://purl.obolibrary.org/obo/PROMOT_915c7f8e_e5d5_414c_966c_da85ac158029> <https://orcid.org/0009-0000-5160-7927>)
-AnnotationAssertion(dce:date <http://purl.obolibrary.org/obo/PROMOT_915c7f8e_e5d5_414c_966c_da85ac158029> "2025-08-27T13:08:10Z"^^xsd:dateTime)
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/PROMOT_915c7f8e_e5d5_414c_966c_da85ac158029> "Male"@fr)
-SubClassOf(<http://purl.obolibrary.org/obo/PROMOT_915c7f8e_e5d5_414c_966c_da85ac158029> <http://snomed.info/id/184100006>)
-
-# Class: <http://purl.obolibrary.org/obo/PROMOT_9981472f_6dba_4fda_8d3e_84a7da867a17> (Male gender identity)
-
-AnnotationAssertion(dce:creator <http://purl.obolibrary.org/obo/PROMOT_9981472f_6dba_4fda_8d3e_84a7da867a17> <https://orcid.org/0009-0000-5160-7927>)
-AnnotationAssertion(dce:date <http://purl.obolibrary.org/obo/PROMOT_9981472f_6dba_4fda_8d3e_84a7da867a17> "2025-08-27T13:10:52Z"^^xsd:dateTime)
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/PROMOT_9981472f_6dba_4fda_8d3e_84a7da867a17> "Male gender identity"@fr)
-SubClassOf(<http://purl.obolibrary.org/obo/PROMOT_9981472f_6dba_4fda_8d3e_84a7da867a17> <http://snomed.info/id/33821000087103>)
-
-# Class: <http://purl.obolibrary.org/obo/PROMOT_a3d57900_4d39_4722_b590_12bdfdd5873a> (Female gender identity)
-
-AnnotationAssertion(dce:creator <http://purl.obolibrary.org/obo/PROMOT_a3d57900_4d39_4722_b590_12bdfdd5873a> <https://orcid.org/0009-0000-5160-7927>)
-AnnotationAssertion(dce:date <http://purl.obolibrary.org/obo/PROMOT_a3d57900_4d39_4722_b590_12bdfdd5873a> "2025-08-27T13:10:42Z"^^xsd:dateTime)
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/PROMOT_a3d57900_4d39_4722_b590_12bdfdd5873a> "Female gender identity"@fr)
-SubClassOf(<http://purl.obolibrary.org/obo/PROMOT_a3d57900_4d39_4722_b590_12bdfdd5873a> <http://snomed.info/id/33821000087103>)
-
-# Class: <http://purl.obolibrary.org/obo/PROMOT_af13fa7f_1c0a_4c3e_b3cb_b4ed15fa9bab> (Female)
-
-AnnotationAssertion(dce:creator <http://purl.obolibrary.org/obo/PROMOT_af13fa7f_1c0a_4c3e_b3cb_b4ed15fa9bab> <https://orcid.org/0009-0000-5160-7927>)
-AnnotationAssertion(dce:date <http://purl.obolibrary.org/obo/PROMOT_af13fa7f_1c0a_4c3e_b3cb_b4ed15fa9bab> "2025-08-27T13:08:03Z"^^xsd:dateTime)
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/PROMOT_af13fa7f_1c0a_4c3e_b3cb_b4ed15fa9bab> "Female"@fr)
-SubClassOf(<http://purl.obolibrary.org/obo/PROMOT_af13fa7f_1c0a_4c3e_b3cb_b4ed15fa9bab> <http://snomed.info/id/184100006>)
-
-# Class: <http://purl.obolibrary.org/obo/PROMOT_be2624a5_543e_47f3_bbbb_e5f9772caf5d> (sex not recorded)
-
-AnnotationAssertion(dce:creator <http://purl.obolibrary.org/obo/PROMOT_be2624a5_543e_47f3_bbbb_e5f9772caf5d> <https://orcid.org/0009-0000-5160-7927>)
-AnnotationAssertion(dce:date <http://purl.obolibrary.org/obo/PROMOT_be2624a5_543e_47f3_bbbb_e5f9772caf5d> "2025-08-27T13:09:49Z"^^xsd:dateTime)
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/PROMOT_be2624a5_543e_47f3_bbbb_e5f9772caf5d> "sex not recorded"@fr)
-SubClassOf(<http://purl.obolibrary.org/obo/PROMOT_be2624a5_543e_47f3_bbbb_e5f9772caf5d> <http://snomed.info/id/184100006>)
-
-# Class: <http://purl.obolibrary.org/obo/PROMOT_d609d525_4f63_46cf_a68c_2ae986effa65> (Intersex)
-
-AnnotationAssertion(dce:creator <http://purl.obolibrary.org/obo/PROMOT_d609d525_4f63_46cf_a68c_2ae986effa65> <https://orcid.org/0009-0000-5160-7927>)
-AnnotationAssertion(dce:date <http://purl.obolibrary.org/obo/PROMOT_d609d525_4f63_46cf_a68c_2ae986effa65> "2025-08-27T13:09:21Z"^^xsd:dateTime)
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/PROMOT_d609d525_4f63_46cf_a68c_2ae986effa65> "Intersex"@fr)
-SubClassOf(<http://purl.obolibrary.org/obo/PROMOT_d609d525_4f63_46cf_a68c_2ae986effa65> <http://snomed.info/id/184100006>)
-
 # Class: <http://purl.obolibrary.org/obo/PROMOT_f4480c24_2423_4a4f_b687_f0d1109c6520> (Quality statement)
 
 AnnotationAssertion(dce:creator <http://purl.obolibrary.org/obo/PROMOT_f4480c24_2423_4a4f_b687_f0d1109c6520> <https://orcid.org/0009-0000-5160-7927>)
@@ -224,20 +143,9 @@ AnnotationAssertion(dce:date <http://purl.obolibrary.org/obo/PROMOT_f4480c24_242
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/PROMOT_f4480c24_2423_4a4f_b687_f0d1109c6520> "Quality statement"@fr)
 SubClassOf(<http://purl.obolibrary.org/obo/PROMOT_f4480c24_2423_4a4f_b687_f0d1109c6520> <http://purl.obolibrary.org/obo/PROMOT_4000001>)
 
-# Class: <http://purl.obolibrary.org/obo/PROMOT_f4a4eb9b_d854_4f30_a406_c940447c5ddf> (gender identity unkown)
-
-AnnotationAssertion(dce:creator <http://purl.obolibrary.org/obo/PROMOT_f4a4eb9b_d854_4f30_a406_c940447c5ddf> <https://orcid.org/0009-0000-5160-7927>)
-AnnotationAssertion(dce:date <http://purl.obolibrary.org/obo/PROMOT_f4a4eb9b_d854_4f30_a406_c940447c5ddf> "2025-08-27T13:11:29Z"^^xsd:dateTime)
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/PROMOT_f4a4eb9b_d854_4f30_a406_c940447c5ddf> "gender identity unkown"@fr)
-SubClassOf(<http://purl.obolibrary.org/obo/PROMOT_f4a4eb9b_d854_4f30_a406_c940447c5ddf> <http://snomed.info/id/33821000087103>)
-
-# Class: <http://snomed.info/id/125680007> (Marital status (observable entity))
-
-SubClassOf(<http://snomed.info/id/125680007> <http://snomed.info/id/302147001>)
-
 # Class: <http://snomed.info/id/127362006> (Previous pregnancies (finding))
 
-SubClassOf(<http://snomed.info/id/127362006> <http://purl.obolibrary.org/obo/PROMOT_2eeb2339_b0b0_4d84_b1ec_0892c52bd073>)
+SubClassOf(<http://snomed.info/id/127362006> <http://snomed.info/id/404684003>)
 
 # Class: <http://snomed.info/id/12894003> (Functional assessment (procedure))
 
@@ -246,14 +154,6 @@ SubClassOf(<http://snomed.info/id/12894003> <http://snomed.info/id/386053000>)
 # Class: <http://snomed.info/id/1296886006> (Determination of sex by karyotyping (procedure))
 
 SubClassOf(<http://snomed.info/id/1296886006> <http://snomed.info/id/386053000>)
-
-# Class: <http://snomed.info/id/183135000> (Mobility aid (physical object))
-
-SubClassOf(<http://snomed.info/id/183135000> <http://purl.obolibrary.org/obo/BFO_0000030>)
-
-# Class: <http://snomed.info/id/184099003> (Date of birth (observable entity))
-
-SubClassOf(<http://snomed.info/id/184099003> <http://snomed.info/id/302147001>)
 
 # Class: <http://snomed.info/id/224899006> (Walking aid (physical object))
 
@@ -267,13 +167,13 @@ SubClassOf(<http://snomed.info/id/252478000> <http://snomed.info/id/386053000>)
 
 SubClassOf(<http://snomed.info/id/252482003> <http://snomed.info/id/386053000>)
 
-# Class: <http://snomed.info/id/360296002> (Assistive equipment (physical object))
+# Class: <http://snomed.info/id/364578004> (Observable feature of walking (observable entity))
 
-SubClassOf(<http://snomed.info/id/360296002> <http://purl.obolibrary.org/obo/BFO_0000030>)
+SubClassOf(<http://snomed.info/id/364578004> <http://snomed.info/id/363787002>)
 
 # Class: <http://snomed.info/id/370159000> (Country of birth (finding))
 
-SubClassOf(<http://snomed.info/id/370159000> <http://purl.obolibrary.org/obo/PROMOT_2eeb2339_b0b0_4d84_b1ec_0892c52bd073>)
+SubClassOf(<http://snomed.info/id/370159000> <http://snomed.info/id/404684003>)
 
 # Class: <http://snomed.info/id/450737006> (Assessment using thirty second chair stand test (procedure))
 
