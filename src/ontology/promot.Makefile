@@ -9,6 +9,12 @@ imports/bfo_import.owl: mirror/bfo.owl imports/bfo_terms_combined.txt
 		extract -T imports/bfo_terms_combined.txt --force true --method TOP \
         query --update ../sparql/inject-subset-declaration.ru --update ../sparql/postprocess-module.ru \
 		annotate --ontology-iri $(ONTBASE)/$@ $(ANNOTATE_ONTOLOGY_VERSION) --output $@.tmp.owl && mv $@.tmp.owl $@; fi
+# ECO : classes
+imports/eco_import.owl: mirror/eco.owl imports/eco_terms.txt
+	if [ $(IMP) = true ]; then $(ROBOT) query -i $< --update ../sparql/preprocess-module.ru \
+		filter -T imports/eco_terms.txt --select "self annotations" --exclude-terms imports/eco_terms.txt --signature true \
+        query --update ../sparql/inject-subset-declaration.ru --update ../sparql/postprocess-module.ru \
+		annotate --ontology-iri $(ONTBASE)/$@ $(ANNOTATE_ONTOLOGY_VERSION) --output $@.tmp.owl && mv $@.tmp.owl $@; fi
 # MONDO : classes
 imports/mondo_import.owl: mirror/mondo.owl imports/mondo_terms.txt
 	if [ $(IMP) = true ]; then $(ROBOT) query -i $< --update ../sparql/preprocess-module.ru \

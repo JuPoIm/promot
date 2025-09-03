@@ -17,6 +17,7 @@ These are the current imports in PROMOT
 | Import | URL | Type |
 | ------ | --- | ---- |
 | bfo | http://purl.obolibrary.org/obo/bfo.owl | None |
+| eco | http://purl.obolibrary.org/obo/eco.owl | None |
 | fma | http://purl.obolibrary.org/obo/fma.owl | None |
 | hp | http://purl.obolibrary.org/obo/hp.owl | None |
 | iao | http://purl.obolibrary.org/obo/iao.owl | filter |

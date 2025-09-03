@@ -10,7 +10,7 @@
 # More information: https://github.com/INCATools/ontology-development-kit/
 
 # Fingerprint of the configuration file when this Makefile was last generated
-CONFIG_HASH=                ad301b0474f0d79476c893a3d9e085eea364a8dbc017b62fbd67e5b6543e508c
+CONFIG_HASH=                33572488f4000f771f045893249df7d0cc741822a8081cd762142a30289de526
 
 
 # ----------------------------------------
@@ -165,7 +165,7 @@ all_main: $(MAIN_FILES)
 # ----------------------------------------
 
 
-IMPORTS =  bfo fma hp iao mondo obi ro scdo sio snomed vo whofic
+IMPORTS =  bfo eco fma hp iao mondo obi ro scdo sio snomed vo whofic
 
 IMPORT_ROOTS = $(patsubst %, $(IMPORTDIR)/%_import, $(IMPORTS))
 IMPORT_OWL_FILES = $(foreach n,$(IMPORT_ROOTS), $(n).owl)
@@ -476,6 +476,14 @@ ifeq ($(strip $(MIR)),true)
 mirror-bfo: | $(TMPDIR)
 	curl -L $(OBOBASE)/bfo.owl --create-dirs -o $(TMPDIR)/bfo-download.owl --retry 4 --max-time 200 && \
 	$(ROBOT) convert -i $(TMPDIR)/bfo-download.owl -o $(TMPDIR)/$@.owl
+
+
+## ONTOLOGY: eco
+.PHONY: mirror-eco
+.PRECIOUS: $(MIRRORDIR)/eco.owl
+mirror-eco: | $(TMPDIR)
+	curl -L $(OBOBASE)/eco.owl --create-dirs -o $(TMPDIR)/eco-download.owl --retry 4 --max-time 200 && \
+	$(ROBOT) convert -i $(TMPDIR)/eco-download.owl -o $(TMPDIR)/$@.owl
 
 
 ## ONTOLOGY: fma
