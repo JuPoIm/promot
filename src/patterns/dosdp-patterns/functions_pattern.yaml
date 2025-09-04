@@ -1,0 +1,34 @@
+pattern_name: functions_pattern
+
+pattern_iri: functions_pattern.yaml
+
+description: "Use this template to link the body functions to the phenotypes and activities and participations they are related to."
+
+contributors:
+  - https://orcid.org/0009-0000-5160-7927 # J. Potier
+
+classes:
+  body_functions: http://id.who.int/icd/entity/567313968
+  phenotypic_abnormality: HP:0000118
+  activities_participations: http://id.who.int/icd/entity/1394728112
+
+relations:
+  affects: https://w3id.org/biolink/vocab/affects
+  related_to: https://w3id.org/biolink/vocab/related_to
+
+vars:
+  phenotype: "phenotypic_abnormality"
+  activity: "activities_participations"
+
+
+logical_axioms:
+
+  - axiom_type: subClassOf
+    text: "'affects' some %s"
+    vars:
+      - activity
+  
+  - axiom_type: subClassOf
+    text: "'related_to' some %s"
+    vars:
+      - phenotype

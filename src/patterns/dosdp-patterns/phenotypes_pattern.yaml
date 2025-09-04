@@ -1,0 +1,26 @@
+pattern_name: phenotypes_pattern
+
+pattern_iri: phenotypes_pattern.yaml
+
+description: "Use this template to link the phenotypes to the relevant sources."
+
+contributors:
+  - https://orcid.org/0009-0000-5160-7927 # J. Potier
+
+classes:
+  phenotypic_abnormality: HP:0000118
+
+annotationProperties:
+  found_in: PROMOT:1000001
+
+data_vars:
+  source: xsd:string
+
+vars:
+  source: "source"
+
+annotations:
+  - annotationProperty: found_in
+    text: "%s"
+    vars:
+      - source

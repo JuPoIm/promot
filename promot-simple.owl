@@ -1,0 +1,800 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://purl.obolibrary.org/obo/promot/promot-simple.owl#"
+     xml:base="http://purl.obolibrary.org/obo/promot/promot-simple.owl"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:obo="http://purl.obolibrary.org/obo/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:subsets="http://purl.obolibrary.org/obo/ro/subsets#"
+     xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
+    <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/promot/promot-simple.owl">
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/promot/releases/2025-08-12/promot-simple.owl"/>
+        <dc:contributor>Anita Burgun MD, PhD
+https://orcid.org/0000-0001-6855-4366</dc:contributor>
+        <dc:contributor>Carole Faviez PhD
+https://orcid.org/0000-0002-1500-0236</dc:contributor>
+        <dc:contributor>Cynthia Gagnon PhD
+https://orcid.org/0000-0003-2829-8470</dc:contributor>
+        <dc:contributor>Daniel Natera De Benito MD, PhD
+https://orcid.org/0000-0001-7764-2085</dc:contributor>
+        <dc:contributor>Elizabeth Angelevski PhD</dc:contributor>
+        <dc:contributor>European Rare Diseases Research Alliance (ERDERA)
+
+Website: https://erdera.org</dc:contributor>
+        <dc:contributor>Hanns Lochmuller MD, PhD
+https://orcid.org/0000-0003-2324-8001</dc:contributor>
+        <dc:contributor>Mansoore Gholizade MD</dc:contributor>
+        <dc:creator>Juliette Potier MSc
+https://orcid.org/0009-0000-5160-7927</dc:creator>
+        <dc:creator>Paul Fabry MD, PhD student
+https://orcid.org/0000-0002-3336-2476</dc:creator>
+        <terms:description>Ontology for building the database of the PROMOT project
+
+See also: https://www.promotinitiative.com</terms:description>
+        <terms:title>PROMOT Common Data Model ontology</terms:title>
+        <oboInOwl:date>12:08:2025 13:36</oboInOwl:date>
+        <rdfs:comment>Also contributor for the gathering ??
+Thomas Bongivault, MSc
+Marc Vincent, PhD
+
+???</rdfs:comment>
+        <rdfs:comment>The &apos;Performing a Rare Disease-Oriented Master Observational Trial&apos; (PROMOT) project aims to generate a learning and knowledge mobilization platform allowing the development of a precision medicine approach for rare neuromuscular diseases.
+
+See also: https://www.promotinitiative.com/project</rdfs:comment>
+        <owl:versionInfo>2025-08-12</owl:versionInfo>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000111 -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000111"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000112 -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000112"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000114 -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000114"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000115 -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000115">
+        <obo:IAO_0000111 xml:lang="en">definition</obo:IAO_0000111>
+        <obo:IAO_0000115 xml:lang="en">The official definition, explaining the meaning of a class or property. Shall be Aristotelian, formalized and normalized. Can be augmented with colloquial definitions.</obo:IAO_0000115>
+        <obo:IAO_0000116 xml:lang="en">2012-04-05: 
+Barry Smith
+
+The official OBI definition, explaining the meaning of a class or property: &apos;Shall be Aristotelian, formalized and normalized. Can be augmented with colloquial definitions&apos;  is terrible.
+
+Can you fix to something like:
+
+A statement of necessary and sufficient conditions explaining the meaning of an expression referring to a class or property.
+
+Alan Ruttenberg
+
+Your proposed definition is a reasonable candidate, except that it is very common that necessary and sufficient conditions are not given. Mostly they are necessary, occasionally they are necessary and sufficient or just sufficient. Often they use terms that are not themselves defined and so they effectively can&apos;t be evaluated by those criteria. 
+
+On the specifics of the proposed definition:
+
+We don&apos;t have definitions of &apos;meaning&apos; or &apos;expression&apos; or &apos;property&apos;. For &apos;reference&apos; in the intended sense I think we use the term &apos;denotation&apos;. For &apos;expression&apos;, I think we you mean symbol, or identifier. For &apos;meaning&apos; it differs for class and property. For class we want documentation that let&apos;s the intended reader determine whether an entity is instance of the class, or not. For property we want documentation that let&apos;s the intended reader determine, given a pair of potential relata, whether the assertion that the relation holds is true. The &apos;intended reader&apos; part suggests that we also specify who, we expect, would be able to understand the definition, and also generalizes over human and computer reader to include textual and logical definition. 
+
+Personally, I am more comfortable weakening definition to documentation, with instructions as to what is desirable. 
+
+We also have the outstanding issue of how to aim different definitions to different audiences. A clinical audience reading chebi wants a different sort of definition documentation/definition from a chemistry trained audience, and similarly there is a need for a definition that is adequate for an ontologist to work with.  </obo:IAO_0000116>
+        <obo:IAO_0000117 xml:lang="en">PERSON:Daniel Schober</obo:IAO_0000117>
+        <obo:IAO_0000119 xml:lang="en">GROUP:OBI:&lt;http://purl.obolibrary.org/obo/obi&gt;</obo:IAO_0000119>
+        <rdfs:isDefinedBy rdf:resource="http://purl.obolibrary.org/obo/iao.owl"/>
+        <rdfs:label xml:lang="en">definition</rdfs:label>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000116 -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000116"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000117 -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000117">
+        <obo:IAO_0000111 xml:lang="en">term editor</obo:IAO_0000111>
+        <obo:IAO_0000115 xml:lang="en">Name of editor entering the term in the file. The term editor is a point of contact for information regarding the term. The term editor may be, but is not always, the author of the definition, which may have been worked upon by several people</obo:IAO_0000115>
+        <obo:IAO_0000116 xml:lang="en">20110707, MC: label update to term editor and definition modified accordingly. See https://github.com/information-artifact-ontology/IAO/issues/115.</obo:IAO_0000116>
+        <obo:IAO_0000117 xml:lang="en">PERSON:Daniel Schober</obo:IAO_0000117>
+        <obo:IAO_0000119 xml:lang="en">GROUP:OBI:&lt;http://purl.obolibrary.org/obo/obi&gt;</obo:IAO_0000119>
+        <rdfs:isDefinedBy rdf:resource="http://purl.obolibrary.org/obo/iao.owl"/>
+        <rdfs:label xml:lang="en">term editor</rdfs:label>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000118 -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000118"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000119 -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000119"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROMOT_1000001 -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/PROMOT_1000001">
+        <obo:IAO_0000115>Indicates the source of the class.</obo:IAO_0000115>
+        <obo:IAO_0000117>Juliette Potier</obo:IAO_0000117>
+        <rdfs:label>found in</rdfs:label>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0001900 -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/RO_0001900"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0002259 -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/RO_0002259">
+        <rdfs:subPropertyOf rdf:resource="http://www.geneontology.org/formats/oboInOwl#SubsetProperty"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ro/subsets#ro-eco -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/ro/subsets#ro-eco">
+        <rdfs:subPropertyOf rdf:resource="http://www.geneontology.org/formats/oboInOwl#SubsetProperty"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/contributor -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/contributor"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/creator -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/creator"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/identifier -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/identifier"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/description -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/description">
+        <rdfs:label>description</rdfs:label>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/license -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/license">
+        <rdfs:label>license</rdfs:label>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/title -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/title">
+        <rdfs:label>title</rdfs:label>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://www.geneontology.org/formats/oboInOwl#SubsetProperty -->
+
+    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#SubsetProperty"/>
+    
+
+
+    <!-- http://www.geneontology.org/formats/oboInOwl#date -->
+
+    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#date"/>
+    
+
+
+    <!-- http://www.geneontology.org/formats/oboInOwl#inSubset -->
+
+    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#inSubset"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROMOT_2000001 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/PROMOT_2000001">
+        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/PROMOT_7000001"/>
+        <obo:IAO_0000115>A relation between a phenotypically related anatomical entity and a phenotype, where the phenotype is located in the phenotypically related anatomical entity.</obo:IAO_0000115>
+        <obo:IAO_0000117>Juliette Potier</obo:IAO_0000117>
+        <rdfs:label>is location of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROMOT_2000002 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/PROMOT_2000002">
+        <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/PROMOT_3000001"/>
+        <obo:IAO_0000115>A relation between a device and a patient, where the patient uses an assistive equipment in order to move or to accomplish something, such as a task or an activity.</obo:IAO_0000115>
+        <obo:IAO_0000117>Juliette Potier</obo:IAO_0000117>
+        <rdfs:label>is used by</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROMOT_2000003 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/PROMOT_2000003">
+        <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/PROMOT_3000001"/>
+        <obo:IAO_0000115>A relation between an evaluation procedure and a patient, where the patient is assessed by an evaluation procedure, such as a test, a questionnaire or a scale.</obo:IAO_0000115>
+        <obo:IAO_0000117>Juliette Potier</obo:IAO_0000117>
+        <rdfs:label>assesses</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0000080 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0000080">
+        <obo:IAO_0000112 xml:lang="en">this red color is a quality of this apple</obo:IAO_0000112>
+        <obo:IAO_0000115 xml:lang="en">a relation between a quality and an independent continuant (the bearer), in which the quality specifically depends on the bearer for its existence</obo:IAO_0000115>
+        <obo:IAO_0000116 xml:lang="en">A quality inheres in its bearer at all times for which the quality exists.</obo:IAO_0000116>
+        <obo:IAO_0000118 xml:lang="en">is quality of</obo:IAO_0000118>
+        <obo:IAO_0000118 xml:lang="en">quality_of</obo:IAO_0000118>
+        <rdfs:comment>This relation is modeled after the BFO relation of the same name which was in BFO2, but is used in a more restricted sense - specifically, we model this relation as functional (inherited from characteristic-of). Note that this relation is now removed from BFO2020.</rdfs:comment>
+        <rdfs:label xml:lang="en">quality of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0002200 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0002200">
+        <owl:inverseOf rdf:resource="http://purl.obolibrary.org/obo/RO_0002201"/>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000125"/>
+        <obo:IAO_0000115>A relationship that holds between a biological entity and a phenotype. Here a phenotype is construed broadly as any kind of quality of an organism part, a collection of these qualities, or a change in quality or qualities (e.g. abnormally increased temperature). The subject of this relationship can be an organism (where the organism has the phenotype, i.e. the qualities inhere in parts of this organism), a genomic entity such as a gene or genotype (if modifications of the gene or the genotype causes the phenotype), or a condition such as a disease (such that if the condition inheres in an organism, then the organism has the phenotype).</obo:IAO_0000115>
+        <obo:IAO_0000117 rdf:resource="https://orcid.org/0000-0002-6601-2165"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/ro/subsets#ro-eco"/>
+        <rdfs:label xml:lang="en">has phenotype</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0002201 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0002201">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000125"/>
+        <obo:IAO_0000115>inverse of has phenotype</obo:IAO_0000115>
+        <obo:IAO_0000117 rdf:resource="https://orcid.org/0000-0002-6601-2165"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/RO_0002259"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/ro/subsets#ro-eco"/>
+        <rdfs:label xml:lang="en">phenotype of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0002351 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0002351">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/PROMOT_4000001"/>
+        <obo:IAO_0000115>has member is a mereological relation between a collection and an item.</obo:IAO_0000115>
+        <obo:IAO_0000119>SIO</obo:IAO_0000119>
+        <obo:RO_0001900 rdf:resource="http://purl.obolibrary.org/obo/RO_0001901"/>
+        <rdfs:label xml:lang="en">has member</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/VO_0001039 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/VO_0001039">
+        <obo:IAO_0000115>An object property that represents an organism has a mutation of a specific gene from the organism genome.</obo:IAO_0000115>
+        <obo:IAO_0000117>Oliver He</obo:IAO_0000117>
+        <rdfs:label>has gene mutation</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://semanticscience.org/resource/SIO_000218 -->
+
+    <owl:ObjectProperty rdf:about="http://semanticscience.org/resource/SIO_000218">
+        <dc:identifier>SIO_000218</dc:identifier>
+        <terms:description xml:lang="en">is quality of is a relation between a quality and the entity that it is a property of.</terms:description>
+        <rdfs:isDefinedBy rdf:resource="http://semanticscience.org/ontology/sio.owl"/>
+        <rdfs:label xml:lang="en">is quality of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://semanticscience.org/resource/SIO_000671 -->
+
+    <owl:ObjectProperty rdf:about="http://semanticscience.org/resource/SIO_000671">
+        <dc:identifier>SIO_000671</dc:identifier>
+        <terms:description>a relation between an entity and an identifier.</terms:description>
+        <rdfs:isDefinedBy rdf:resource="http://semanticscience.org/ontology/sio.owl"/>
+        <rdfs:label xml:lang="en">has identifier</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/biolink/vocab/affected_by -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/biolink/vocab/affected_by">
+        <obo:IAO_0000115>Describes an entity of which the state or quality is affected by another existing entity.</obo:IAO_0000115>
+        <rdfs:comment>https://bioportal.bioontology.org/ontologies/BIOLINK</rdfs:comment>
+        <rdfs:label>affected by</rdfs:label>
+        <rdfs:seeAlso rdf:resource="https://biolink.github.io/biolink-model/"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/biolink/vocab/affects -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/biolink/vocab/affects">
+        <obo:IAO_0000115>Describes an entity that has an effect on the state or quality of another existing entity.</obo:IAO_0000115>
+        <rdfs:comment>https://bioportal.bioontology.org/ontologies/BIOLINK</rdfs:comment>
+        <rdfs:label>affects</rdfs:label>
+        <rdfs:seeAlso rdf:resource="https://biolink.github.io/biolink-model/"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/biolink/vocab/related_to -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/biolink/vocab/related_to">
+        <obo:IAO_0000115>A relationship that is asserted between two named things</obo:IAO_0000115>
+        <rdfs:comment>https://bioportal.bioontology.org/ontologies/BIOLINK</rdfs:comment>
+        <rdfs:label>related to</rdfs:label>
+        <rdfs:seeAlso rdf:resource="https://biolink.github.io/biolink-model/"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROMOT_0000000 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0000000">
+        <rdfs:label xml:lang="en">root node</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROMOT_0000002 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0000002">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0000000"/>
+        <obo:IAO_0000115>Mutation located within the PABPN1 gene</obo:IAO_0000115>
+        <obo:IAO_0000117>Juliette Potier</obo:IAO_0000117>
+        <rdfs:label>PABPN1 mutation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROMOT_0000003 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0000003">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0000000"/>
+        <obo:IAO_0000115>Mutation located within the RYR1 gene</obo:IAO_0000115>
+        <obo:IAO_0000117>Juliette Potier</obo:IAO_0000117>
+        <rdfs:label>RYR1 mutation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROMOT_0000004 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0000004">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0000000"/>
+        <obo:IAO_0000115>Mutation located within the TTN gene</obo:IAO_0000115>
+        <obo:IAO_0000117>Juliette Potier</obo:IAO_0000117>
+        <rdfs:label>TTN mutation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROMOT_0000005 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0000005">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0000000"/>
+        <obo:IAO_0000115>Mutation located within the NEB gene</obo:IAO_0000115>
+        <obo:IAO_0000117>Juliette Potier</obo:IAO_0000117>
+        <rdfs:label>NEB mutation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROMOT_0000006 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0000006">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0000000"/>
+        <obo:IAO_0000115>Mutation located within the MTM1 gene</obo:IAO_0000115>
+        <obo:IAO_0000117>Juliette Potier</obo:IAO_0000117>
+        <rdfs:label>MTM1 mutation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROMOT_0000007 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0000007">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0000000"/>
+        <obo:IAO_0000115>Mutation located within the ACTA1 gene</obo:IAO_0000115>
+        <obo:IAO_0000117>Juliette Potier</obo:IAO_0000117>
+        <rdfs:label>ACTA1 mutation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROMOT_0000008 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0000008">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0000000"/>
+        <obo:IAO_0000115>Mutation located within the SELENON gene</obo:IAO_0000115>
+        <obo:IAO_0000117>Juliette Potier</obo:IAO_0000117>
+        <rdfs:label>SELENON mutation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROMOT_0000009 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0000009">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0000000"/>
+        <obo:IAO_0000115>Mutation located within the CHRNE gene</obo:IAO_0000115>
+        <obo:IAO_0000117>Juliette Potier</obo:IAO_0000117>
+        <rdfs:label>CHRNE mutation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROMOT_0000010 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0000010">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0000000"/>
+        <obo:IAO_0000115>Mutation located within the DOK7 gene</obo:IAO_0000115>
+        <obo:IAO_0000117>Juliette Potier</obo:IAO_0000117>
+        <rdfs:label>DOK7 mutation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROMOT_0000011 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0000011">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0000000"/>
+        <obo:IAO_0000115>Mutation located within the COLQ gene</obo:IAO_0000115>
+        <obo:IAO_0000117>Juliette Potier</obo:IAO_0000117>
+        <rdfs:label>COLQ mutation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROMOT_0000012 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0000012">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0000000"/>
+        <obo:IAO_0000115>Mutation located within the RAPSN gene</obo:IAO_0000115>
+        <obo:IAO_0000117>Juliette Potier</obo:IAO_0000117>
+        <rdfs:label>RAPSN mutation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROMOT_0000013 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0000013">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0000000"/>
+        <obo:IAO_0000115>Mutation located within the GFPT1 gene</obo:IAO_0000115>
+        <obo:IAO_0000117>Juliette Potier</obo:IAO_0000117>
+        <rdfs:label>GFPT1 mutation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROMOT_0000014 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0000014">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0000000"/>
+        <obo:IAO_0000115>Mutation located within the GMPPB gene</obo:IAO_0000115>
+        <obo:IAO_0000117>Juliette Potier</obo:IAO_0000117>
+        <rdfs:label>GMPPB mutation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROMOT_3000001 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_3000001">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0000000"/>
+        <obo:IAO_0000115>Participant of PROMOT</obo:IAO_0000115>
+        <rdfs:label>Patient</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROMOT_4000001 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_4000001">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0000000"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002351"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROMOT_3000001"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002351"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROMOT_5000001"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000115>A statement regarding a patient</obo:IAO_0000115>
+        <obo:IAO_0000117>Juliette Potier</obo:IAO_0000117>
+        <rdfs:label>Patient statement</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROMOT_4000002 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_4000002">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_4000001"/>
+        <obo:IAO_0000115>A statement regarding the biological sex of a patient</obo:IAO_0000115>
+        <obo:IAO_0000117>Juliette Potier</obo:IAO_0000117>
+        <rdfs:label>Biological sex statement</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROMOT_4000003 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_4000003">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_4000001"/>
+        <obo:IAO_0000115>A statement regarding the marital status of a patient</obo:IAO_0000115>
+        <obo:IAO_0000117>Juliette Potier</obo:IAO_0000117>
+        <rdfs:label>Marital status statement</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROMOT_4000004 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_4000004">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_4000001"/>
+        <obo:IAO_0000115>A statement regarding the occupation of a patient, such as work</obo:IAO_0000115>
+        <obo:IAO_0000117>Juliette Potier</obo:IAO_0000117>
+        <rdfs:label>Occupation statement</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROMOT_4000005 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_4000005">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_4000001"/>
+        <obo:IAO_0000115>A statement regarding the ethnicity of a patient</obo:IAO_0000115>
+        <obo:IAO_0000117>Juliette Potier</obo:IAO_0000117>
+        <rdfs:label>Ethnicity statement</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROMOT_4000006 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_4000006">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_4000001"/>
+        <obo:IAO_0000115>A statement regarding the date of birth of a patient</obo:IAO_0000115>
+        <obo:IAO_0000117>Juliette Potier</obo:IAO_0000117>
+        <rdfs:label>Date of birth statement</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROMOT_4000007 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_4000007">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_4000001"/>
+        <obo:IAO_0000115>A statement regarding the date of death of a patient</obo:IAO_0000115>
+        <obo:IAO_0000117>Juliette Potier</obo:IAO_0000117>
+        <rdfs:label>Date of death statement</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROMOT_4000008 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_4000008">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_4000001"/>
+        <obo:IAO_0000115>A statement regarding the qualification achieved by a patient</obo:IAO_0000115>
+        <obo:IAO_0000117>Juliette Potier</obo:IAO_0000117>
+        <rdfs:label>Achieved qualification statement</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROMOT_4000009 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_4000009">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_4000001"/>
+        <obo:IAO_0000115>A statement regarding the duration of formal education followed by a patient</obo:IAO_0000115>
+        <obo:IAO_0000117>Juliette Potier</obo:IAO_0000117>
+        <rdfs:label>Duration of formal education statement</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROMOT_4000010 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_4000010">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_4000001"/>
+        <obo:IAO_0000115>A statement regarding the handedness of a patient</obo:IAO_0000115>
+        <obo:IAO_0000117>Juliette Potier</obo:IAO_0000117>
+        <rdfs:label>Handedness statement</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROMOT_4000011 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_4000011">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_4000001"/>
+        <obo:IAO_0000115>A statement regarding the first language spoken by a patient</obo:IAO_0000115>
+        <obo:IAO_0000117>Juliette Potier</obo:IAO_0000117>
+        <rdfs:label>First language statement</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROMOT_5000001 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_5000001">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0000000"/>
+        <obo:IAO_0000115>An information content entity that is used to refer to one instance of a patient.</obo:IAO_0000115>
+        <obo:IAO_0000117>Juliette Potier</obo:IAO_0000117>
+        <rdfs:label>Patient identifier</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROMOT_6000002 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_6000002">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0000000"/>
+        <obo:IAO_0000115>A qualifier for an instance of a phenotype which is absent.</obo:IAO_0000115>
+        <obo:IAO_0000117>Juliette Potier</obo:IAO_0000117>
+        <rdfs:label>absent</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROMOT_6000003 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_6000003">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0000000"/>
+        <obo:IAO_0000115>Qualifies an instance of a phenotype as present.</obo:IAO_0000115>
+        <obo:IAO_0000117>Juliette Potier</obo:IAO_0000117>
+        <rdfs:label>present</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROMOT_6000004 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_6000004">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0000000"/>
+        <obo:IAO_0000115>Qualifies an instance of a phenotype as unsure.</obo:IAO_0000115>
+        <obo:IAO_0000117>Juliette Potier</obo:IAO_0000117>
+        <rdfs:label>unsure</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROMOT_7000001 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_7000001">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0000000"/>
+        <obo:IAO_0000115>An anatomical entity related to a phenotype such that the anatomical entity is the location of the phenotype.</obo:IAO_0000115>
+        <obo:IAO_0000117>Juliette Potier</obo:IAO_0000117>
+        <rdfs:label>Phenotypically related anatomical entity</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROMOT_7000002 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_7000002">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0000000"/>
+        <obo:IAO_0000115>A body structure related to a phenotype such that the body structure is the location of the phenotype.</obo:IAO_0000115>
+        <obo:IAO_0000117>Juliette Potier</obo:IAO_0000117>
+        <rdfs:comment>(JP: unsure about definition)</rdfs:comment>
+        <rdfs:label>Phenotypically related body structure</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROMOT_7000003 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_7000003">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0000000"/>
+        <obo:IAO_0000115>A body function related to a phenotype such that the body function is impacted by the phenotype existence.</obo:IAO_0000115>
+        <obo:IAO_0000117>Juliette Potier</obo:IAO_0000117>
+        <rdfs:comment>(JP: unsure about definition)</rdfs:comment>
+        <rdfs:label>Phenotypically related body function</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROMOT_8000001 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_8000001">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0000000"/>
+        <obo:IAO_0000115>A statement regarding the date of onset of a phenotype</obo:IAO_0000115>
+        <obo:IAO_0000117>Juliette Potier</obo:IAO_0000117>
+        <rdfs:label>Onset statement</rdfs:label>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29) https://github.com/owlcs/owlapi -->
+

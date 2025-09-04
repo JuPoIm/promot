@@ -10,7 +10,7 @@
 # More information: https://github.com/INCATools/ontology-development-kit/
 
 # Fingerprint of the configuration file when this Makefile was last generated
-CONFIG_HASH=                a93d751b16c1dc6c53e1e93bcdda1caba57b656956afe146481b8e4696270f55
+CONFIG_HASH=                84b21b271bab5431746872041c9faa6c475aaa340857a2cdac7c932e0a90ac9b
 
 
 # ----------------------------------------
@@ -54,9 +54,14 @@ OBODATE ?=                  $(shell date +'%d:%m:%Y %H:%M')
 VERSION=                    $(TODAY)
 ANNOTATE_ONTOLOGY_VERSION = annotate -V $(ONTBASE)/releases/$(VERSION)/$@ --annotation owl:versionInfo $(VERSION)
 ANNOTATE_CONVERT_FILE =     annotate --ontology-iri $(ONTBASE)/$@ $(ANNOTATE_ONTOLOGY_VERSION) convert -f ofn --output $@.tmp.owl && mv $@.tmp.owl $@
-OTHER_SRC =                 
+OTHER_SRC =                 $(PATTERNDIR)/definitions.owl $(COMPONENTSDIR)/promot_onto.owl 
 ONTOLOGYTERMS =             $(TMPDIR)/ontologyterms.txt
 EDIT_PREPROCESSED =         $(TMPDIR)/$(ONT)-preprocess.owl
+PATTERNDIR=                 ../patterns
+PATTERN_TESTER=             dosdp validate -i
+DOSDPT=                     dosdp-tools
+PATTERN_RELEASE_FILES=      $(PATTERNDIR)/definitions.owl $(PATTERNDIR)/pattern.owl
+
 
 FORMATS = $(sort  owl obo json owl)
 FORMATS_INCL_TSV = $(sort $(FORMATS) tsv)
@@ -80,7 +85,7 @@ all: all_odk
 all_odk: odkversion config_check test custom_reports all_assets
 
 .PHONY: test
-test: odkversion reason_test sparql_test robot_reports $(REPORTDIR)/validate_profile_owl2dl_$(ONT).owl.txt
+test: odkversion dosdp_validation reason_test sparql_test robot_reports $(REPORTDIR)/validate_profile_owl2dl_$(ONT).owl.txt
 	echo "Finished running all tests successfully."
 
 .PHONY: test
@@ -160,7 +165,7 @@ all_main: $(MAIN_FILES)
 # ----------------------------------------
 
 
-IMPORTS =  bfo mondo orcidio fma hp whofic snomed ro biolink ncit obi efo
+IMPORTS =  bfo fma hp iao mondo ncit obi orcidio ro scdo sio snomed vo whofic
 
 IMPORT_ROOTS = $(patsubst %, $(IMPORTDIR)/%_import, $(IMPORTS))
 IMPORT_OWL_FILES = $(foreach n,$(IMPORT_ROOTS), $(n).owl)
@@ -263,6 +268,7 @@ check_for_robot_updates:
 ASSETS = \
   $(IMPORT_FILES) \
   $(MAIN_FILES) \
+  $(PATTERN_RELEASE_FILES) \
   $(REPORT_FILES) \
   $(SUBSET_FILES) \
   $(MAPPING_FILES)
@@ -296,6 +302,7 @@ CLEANFILES=$(MAIN_FILES) $(SRCMERGED) $(EDIT_PREPROCESSED)
 .PHONY: prepare_release
 prepare_release: all_odk
 	rsync -R $(RELEASE_ASSETS) $(RELEASEDIR) &&\
+	mkdir -p $(RELEASEDIR)/patterns && cp -rf $(PATTERN_RELEASE_FILES) $(RELEASEDIR)/patterns &&\
 	rm -f $(CLEANFILES) &&\
 	echo "Release files are now in $(RELEASEDIR) - now you should commit, push and make a release \
         on your git hosting site such as GitHub or GitLab"
@@ -303,6 +310,7 @@ prepare_release: all_odk
 .PHONY: prepare_initial_release
 prepare_initial_release: all_assets
 	rsync -R $(RELEASE_ASSETS) $(RELEASEDIR) &&\
+	mkdir -p $(RELEASEDIR)/patterns && cp -rf $(PATTERN_RELEASE_FILES) $(RELEASEDIR)/patterns &&\
 	rm -f $(patsubst %, ./%, $(CLEANFILES)) &&\
 	cd $(RELEASEDIR) && git add $(RELEASE_ASSETS)
 
@@ -346,13 +354,13 @@ $(SIMPLESEED): $(SRCMERGED) $(ONTOLOGYTERMS)
 	echo "http://www.geneontology.org/formats/oboInOwl#SynonymTypeProperty" >> $@
 
 
-ALLSEED = $(PRESEED) \
+ALLSEED = $(PRESEED)  $(TMPDIR)/all_pattern_terms.txt \
 
 
 $(IMPORTSEED): $(ALLSEED) | $(TMPDIR)
 	if [ $(IMP) = true ]; then cat $(ALLSEED) | sort | uniq > $@; fi
 
-ANNOTATION_PROPERTIES=rdfs:label dc:description dc:source 
+ANNOTATION_PROPERTIES=rdfs:label rdfs:comment dc:description dc:source oboInOwl:hasDbXref IAO:0000111 IAO:0000112 IAO:0000115 IAO:0000116 IAO:0000117 IAO:0000118 IAO:0000119 IAO:0000412 
 
 # ----------------------------------------
 # Import modules
@@ -368,28 +376,29 @@ $(IMPORTDIR)/%_terms_combined.txt: $(IMPORTSEED) $(IMPORTDIR)/%_terms.txt
 
 
 
-$(IMPORTDIR)/%_import.owl: $(MIRRORDIR)/%.owl $(IMPORTDIR)/%_terms_combined.txt
-	if [ $(IMP) = true ]; then $(ROBOT) query -i $< --update ../sparql/preprocess-module.ru \
-		extract -T $(IMPORTDIR)/$*_terms_combined.txt --force true --copy-ontology-annotations true --individuals include --method BOT \
-		query --update ../sparql/inject-subset-declaration.ru --update ../sparql/inject-synonymtype-declaration.ru --update ../sparql/postprocess-module.ru \
-		$(ANNOTATE_CONVERT_FILE); fi
+$(IMPORTDIR)/%_import.owl: $(MIRRORDIR)/%.owl
+	echo "ERROR: You have configured your default module type to be custom; this behavior needs to be overwritten in promot.Makefile!" && false
 
 .PRECIOUS: $(IMPORTDIR)/%_import.owl
 
-## Module for ontology: bfo
+## Module for ontology: iao
 
-$(IMPORTDIR)/bfo_import.owl: $(MIRRORDIR)/bfo.owl
-	echo "ERROR: You have configured your default module type to be custom; this behavior needs to be overwritten in promot.Makefile!" && false
-## Module for ontology: mondo
-
-$(IMPORTDIR)/mondo_import.owl: $(MIRRORDIR)/mondo.owl $(IMPORTDIR)/mondo_terms_combined.txt
+$(IMPORTDIR)/iao_import.owl: $(MIRRORDIR)/iao.owl $(IMPORTDIR)/iao_terms_combined.txt
 	if [ $(IMP) = true ]; then $(ROBOT) query -i $< --update ../sparql/preprocess-module.ru \
-    extract -T $(IMPORTDIR)/mondo_terms_combined.txt --copy-ontology-annotations true --force true --method BOT \
-    remove --base-iri $(OBOBASE)/MONDO --axioms external --preserve-structure false --trim false \
-		remove $(patsubst %, --term %, $(ANNOTATION_PROPERTIES)) --term rdfs:label --term IAO:0000115  -T $(IMPORTDIR)/mondo_terms_combined.txt --select complement \
+    extract -T $(IMPORTDIR)/iao_terms_combined.txt --copy-ontology-annotations true --force true --method BOT \
+    remove --base-iri $(OBOBASE)/IAO --axioms external --preserve-structure false --trim false \
+		remove $(patsubst %, --term %, $(ANNOTATION_PROPERTIES)) --term rdfs:label --term IAO:0000115  -T $(IMPORTDIR)/iao_terms_combined.txt --select complement \
 		query --update ../sparql/inject-subset-declaration.ru --update ../sparql/inject-synonymtype-declaration.ru --update ../sparql/postprocess-module.ru \
 		$(ANNOTATE_CONVERT_FILE); fi
 
+## Module for ontology: mondo
+
+$(IMPORTDIR)/mondo_import.owl: $(MIRRORDIR)/mondo.owl
+	echo "ERROR: You have configured your default module type to be custom; this behavior needs to be overwritten in promot.Makefile!" && false
+## Module for ontology: ncit
+
+$(IMPORTDIR)/ncit_import.owl: $(MIRRORDIR)/ncit.owl
+	echo "ERROR: You have configured your default module type to be custom; this behavior needs to be overwritten in promot.Makefile!" && false
 ## Module for ontology: orcidio
 
 $(IMPORTDIR)/orcidio_import.owl: $(MIRRORDIR)/orcidio.owl $(IMPORTDIR)/orcidio_terms_combined.txt
@@ -400,41 +409,9 @@ $(IMPORTDIR)/orcidio_import.owl: $(MIRRORDIR)/orcidio.owl $(IMPORTDIR)/orcidio_t
 		query --update ../sparql/inject-subset-declaration.ru --update ../sparql/inject-synonymtype-declaration.ru --update ../sparql/postprocess-module.ru \
 		$(ANNOTATE_CONVERT_FILE); fi
 
-## Module for ontology: fma
-
-$(IMPORTDIR)/fma_import.owl: $(MIRRORDIR)/fma.owl
-	echo "ERROR: You have configured your default module type to be custom; this behavior needs to be overwritten in promot.Makefile!" && false
-## Module for ontology: hp
-
-$(IMPORTDIR)/hp_import.owl: $(MIRRORDIR)/hp.owl
-	echo "ERROR: You have configured your default module type to be custom; this behavior needs to be overwritten in promot.Makefile!" && false
-## Module for ontology: whofic
-
-$(IMPORTDIR)/whofic_import.owl: $(MIRRORDIR)/whofic.owl
-	echo "ERROR: You have configured your default module type to be custom; this behavior needs to be overwritten in promot.Makefile!" && false
 ## Module for ontology: snomed
 
 $(IMPORTDIR)/snomed_import.owl: $(MIRRORDIR)/snomed.owl
-	echo "ERROR: You have configured your default module type to be custom; this behavior needs to be overwritten in promot.Makefile!" && false
-## Module for ontology: ro
-
-$(IMPORTDIR)/ro_import.owl: $(MIRRORDIR)/ro.owl
-	echo "ERROR: You have configured your default module type to be custom; this behavior needs to be overwritten in promot.Makefile!" && false
-## Module for ontology: biolink
-
-$(IMPORTDIR)/biolink_import.owl: $(MIRRORDIR)/biolink.owl
-	echo "ERROR: You have configured your default module type to be custom; this behavior needs to be overwritten in promot.Makefile!" && false
-## Module for ontology: ncit
-
-$(IMPORTDIR)/ncit_import.owl: $(MIRRORDIR)/ncit.owl
-	echo "ERROR: You have configured your default module type to be custom; this behavior needs to be overwritten in promot.Makefile!" && false
-## Module for ontology: obi
-
-$(IMPORTDIR)/obi_import.owl: $(MIRRORDIR)/obi.owl
-	echo "ERROR: You have configured your default module type to be custom; this behavior needs to be overwritten in promot.Makefile!" && false
-## Module for ontology: efo
-
-$(IMPORTDIR)/efo_import.owl: $(MIRRORDIR)/efo.owl
 	echo "ERROR: You have configured your default module type to be custom; this behavior needs to be overwritten in promot.Makefile!" && false
 
 .PHONY: refresh-imports
@@ -457,6 +434,45 @@ refresh-%:
 no-mirror-refresh-%:
 	$(MAKE) IMP=true IMP_LARGE=true MIR=false PAT=false $(IMPORTDIR)/$*_import.owl -B
 
+
+# ----------------------------------------
+# Components
+# ----------------------------------------
+# Some ontologies contain external and internal components. A component is included in the ontology in its entirety.
+
+COMP=true # Global parameter to bypass component generation
+
+.PHONY: all_components
+all_components: $(OTHER_SRC)
+
+.PHONY: recreate-components
+recreate-components:
+	$(MAKE) COMP=true IMP=false MIR=true PAT=true IMP_LARGE=false all_components -B
+
+.PHONY: no-mirror-recreate-components
+no-mirror-recreate-components:
+	$(MAKE) COMP=true IMP=false MIR=false PAT=true IMP_LARGE=false all_components -B
+
+.PHONY: recreate-%
+recreate-%:
+	$(MAKE) COMP=true IMP=false IMP_LARGE=false MIR=true PAT=true $(COMPONENTSDIR)/$*.owl -B
+
+.PHONY: no-mirror-recreate-%
+no-mirror-recreate-%:
+	$(MAKE) COMP=true IMP=false IMP_LARGE=false MIR=false PAT=true $(COMPONENTSDIR)/$*.owl -B
+
+$(COMPONENTSDIR)/%.owl: | $(COMPONENTSDIR)
+	test -f $@ || touch $@
+.PRECIOUS: $(COMPONENTSDIR)/%.owl
+
+
+
+$(COMPONENTSDIR)/promot_onto.owl: $(TEMPLATEDIR)/promot_onto.csv
+	if [ $(COMP) = true ] ; then $(ROBOT) template --add-prefixes config/context.json \
+		$(patsubst %, --template %, $^) \
+		$(ANNOTATE_CONVERT_FILE); fi
+
+.PRECIOUS: $(COMPONENTSDIR)/promot_onto.owl
 # ----------------------------------------
 # Mirroring upstream ontologies
 # ----------------------------------------
@@ -476,26 +492,12 @@ mirror-bfo: | $(TMPDIR)
 	$(ROBOT) convert -i $(TMPDIR)/bfo-download.owl -o $(TMPDIR)/$@.owl
 
 
-## ONTOLOGY: mondo
-.PHONY: mirror-mondo
-.PRECIOUS: $(MIRRORDIR)/mondo.owl
-mirror-mondo: | $(TMPDIR)
-	curl -L $(OBOBASE)/mondo.owl --create-dirs -o $(TMPDIR)/mondo-download.owl --retry 4 --max-time 200 && \
-	$(ROBOT) convert -i $(TMPDIR)/mondo-download.owl -o $(TMPDIR)/$@.owl
-
-
-## ONTOLOGY: orcidio
-.PHONY: mirror-orcidio
-.PRECIOUS: $(MIRRORDIR)/orcidio.owl
-mirror-orcidio: | $(TMPDIR)
-	$(ROBOT) convert -I https://w3id.org/orcidio/orcidio.owl -o $(TMPDIR)/$@.owl
-
-
 ## ONTOLOGY: fma
 .PHONY: mirror-fma
 .PRECIOUS: $(MIRRORDIR)/fma.owl
-$(MIRRORDIR)/fma.owl: 
-	echo "ERROR: You have configured your default mirror type to be custom; this behavior needs to be overwritten in promot.Makefile!" && false
+mirror-fma: | $(TMPDIR)
+	curl -L $(OBOBASE)/fma.owl --create-dirs -o $(TMPDIR)/fma-download.owl --retry 4 --max-time 200 && \
+	$(ROBOT) convert -i $(TMPDIR)/fma-download.owl -o $(TMPDIR)/$@.owl
 
 
 ## ONTOLOGY: hp
@@ -506,42 +508,38 @@ mirror-hp: | $(TMPDIR)
 	$(ROBOT) convert -i $(TMPDIR)/hp-download.owl -o $(TMPDIR)/$@.owl
 
 
-## ONTOLOGY: whofic
-.PHONY: mirror-whofic
-.PRECIOUS: $(MIRRORDIR)/whofic.owl
-mirror-whofic: | $(TMPDIR)
-	$(ROBOT) convert -I https://raw.githubusercontent.com/whoficitc/harmonization/main/ontology/whofic-2024-01-21.owl -o $(TMPDIR)/$@.owl
+## ONTOLOGY: iao
+.PHONY: mirror-iao
+.PRECIOUS: $(MIRRORDIR)/iao.owl
+mirror-iao: | $(TMPDIR)
+	curl -L $(OBOBASE)/iao.owl --create-dirs -o $(TMPDIR)/iao-download.owl --retry 4 --max-time 200 && \
+	$(ROBOT) convert -i $(TMPDIR)/iao-download.owl -o $(TMPDIR)/$@.owl
 
 
-## ONTOLOGY: snomed
-.PHONY: mirror-snomed
-.PRECIOUS: $(MIRRORDIR)/snomed.owl
-mirror-snomed: | $(TMPDIR)
-	curl -L $(OBOBASE)/snomed.owl --create-dirs -o $(TMPDIR)/snomed-download.owl --retry 4 --max-time 200 && \
-	$(ROBOT) convert -i $(TMPDIR)/snomed-download.owl -o $(TMPDIR)/$@.owl
-
-
-## ONTOLOGY: ro
-.PHONY: mirror-ro
-.PRECIOUS: $(MIRRORDIR)/ro.owl
-mirror-ro: | $(TMPDIR)
-	curl -L $(OBOBASE)/ro.owl --create-dirs -o $(TMPDIR)/ro-download.owl --retry 4 --max-time 200 && \
-	$(ROBOT) convert -i $(TMPDIR)/ro-download.owl -o $(TMPDIR)/$@.owl
-
-
-## ONTOLOGY: biolink
-.PHONY: mirror-biolink
-.PRECIOUS: $(MIRRORDIR)/biolink.owl
-mirror-biolink: | $(TMPDIR)
-	$(ROBOT) convert -I https://w3id.org/biolink/biolink-model.owl.ttl -o $(TMPDIR)/$@.owl
+## ONTOLOGY: mondo
+.PHONY: mirror-mondo
+.PRECIOUS: $(MIRRORDIR)/mondo.owl
+ifeq ($(strip $(IMP_LARGE)),true)
+mirror-mondo: | $(TMPDIR)
+	curl -L $(OBOBASE)/mondo.owl --create-dirs -o $(TMPDIR)/mondo-download.owl --retry 4 --max-time 200 && \
+	$(ROBOT) convert -i $(TMPDIR)/mondo-download.owl -o $(TMPDIR)/$@.owl
+else
+mirror-mondo:
+	@echo "Not refreshing mondo because refreshing large imports is disabled (IMP_LARGE=$(IMP_LARGE))."
+endif
 
 
 ## ONTOLOGY: ncit
 .PHONY: mirror-ncit
 .PRECIOUS: $(MIRRORDIR)/ncit.owl
+ifeq ($(strip $(IMP_LARGE)),true)
 mirror-ncit: | $(TMPDIR)
 	curl -L $(OBOBASE)/ncit.owl --create-dirs -o $(TMPDIR)/ncit-download.owl --retry 4 --max-time 200 && \
 	$(ROBOT) convert -i $(TMPDIR)/ncit-download.owl -o $(TMPDIR)/$@.owl
+else
+mirror-ncit:
+	@echo "Not refreshing ncit because refreshing large imports is disabled (IMP_LARGE=$(IMP_LARGE))."
+endif
 
 
 ## ONTOLOGY: obi
@@ -552,11 +550,63 @@ mirror-obi: | $(TMPDIR)
 	$(ROBOT) convert -i $(TMPDIR)/obi-download.owl -o $(TMPDIR)/$@.owl
 
 
-## ONTOLOGY: efo
-.PHONY: mirror-efo
-.PRECIOUS: $(MIRRORDIR)/efo.owl
-mirror-efo: | $(TMPDIR)
-	$(ROBOT) convert -I http://www.ebi.ac.uk/efo/efo.owl -o $(TMPDIR)/$@.owl
+## ONTOLOGY: orcidio
+.PHONY: mirror-orcidio
+.PRECIOUS: $(MIRRORDIR)/orcidio.owl
+mirror-orcidio: | $(TMPDIR)
+	$(ROBOT) convert -I https://w3id.org/orcidio/orcidio.owl -o $(TMPDIR)/$@.owl
+
+
+## ONTOLOGY: ro
+.PHONY: mirror-ro
+.PRECIOUS: $(MIRRORDIR)/ro.owl
+mirror-ro: | $(TMPDIR)
+	curl -L $(OBOBASE)/ro.owl --create-dirs -o $(TMPDIR)/ro-download.owl --retry 4 --max-time 200 && \
+	$(ROBOT) convert -i $(TMPDIR)/ro-download.owl -o $(TMPDIR)/$@.owl
+
+
+## ONTOLOGY: scdo
+.PHONY: mirror-scdo
+.PRECIOUS: $(MIRRORDIR)/scdo.owl
+mirror-scdo: | $(TMPDIR)
+	curl -L $(OBOBASE)/scdo.owl --create-dirs -o $(TMPDIR)/scdo-download.owl --retry 4 --max-time 200 && \
+	$(ROBOT) convert -i $(TMPDIR)/scdo-download.owl -o $(TMPDIR)/$@.owl
+
+
+## ONTOLOGY: sio
+.PHONY: mirror-sio
+.PRECIOUS: $(MIRRORDIR)/sio.owl
+mirror-sio: | $(TMPDIR)
+	curl -L $(OBOBASE)/sio.owl --create-dirs -o $(TMPDIR)/sio-download.owl --retry 4 --max-time 200 && \
+	$(ROBOT) convert -i $(TMPDIR)/sio-download.owl -o $(TMPDIR)/$@.owl
+
+
+## ONTOLOGY: snomed
+.PHONY: mirror-snomed
+.PRECIOUS: $(MIRRORDIR)/snomed.owl
+ifeq ($(strip $(IMP_LARGE)),true)
+mirror-snomed: | $(TMPDIR)
+	curl -L $(OBOBASE)/snomed.owl --create-dirs -o $(TMPDIR)/snomed-download.owl --retry 4 --max-time 200 && \
+	$(ROBOT) convert -i $(TMPDIR)/snomed-download.owl -o $(TMPDIR)/$@.owl
+else
+mirror-snomed:
+	@echo "Not refreshing snomed because refreshing large imports is disabled (IMP_LARGE=$(IMP_LARGE))."
+endif
+
+
+## ONTOLOGY: vo
+.PHONY: mirror-vo
+.PRECIOUS: $(MIRRORDIR)/vo.owl
+mirror-vo: | $(TMPDIR)
+	curl -L $(OBOBASE)/vo.owl --create-dirs -o $(TMPDIR)/vo-download.owl --retry 4 --max-time 200 && \
+	$(ROBOT) convert -i $(TMPDIR)/vo-download.owl -o $(TMPDIR)/$@.owl
+
+
+## ONTOLOGY: whofic
+.PHONY: mirror-whofic
+.PRECIOUS: $(MIRRORDIR)/whofic.owl
+mirror-whofic: | $(TMPDIR)
+	$(ROBOT) convert -I https://raw.githubusercontent.com/whoficitc/harmonization/main/ontology/whofic-2024-01-21.owl -o $(TMPDIR)/$@.owl
 
 
 $(MIRRORDIR)/%.owl: mirror-% | $(MIRRORDIR)
@@ -603,6 +653,100 @@ custom_reports: $(EDIT_PREPROCESSED) | $(REPORTDIR)
 ifneq ($(SPARQL_EXPORTS_ARGS),)
 	$(ROBOT) query -f tsv --use-graphs true -i $< $(SPARQL_EXPORTS_ARGS)
 endif
+# ----------------------------------------
+# DOSDP Templates/Patterns
+# ----------------------------------------
+
+PAT=true # Global parameter to bypass pattern generation
+ALL_PATTERN_FILES=$(wildcard $(PATTERNDIR)/dosdp-patterns/*.yaml)
+ALL_PATTERN_NAMES=$(strip $(patsubst %.yaml,%, $(notdir $(wildcard $(PATTERNDIR)/dosdp-patterns/*.yaml))))
+
+PATTERN_CLEAN_FILES=../patterns/all_pattern_terms.txt \
+	$(DOSDP_OWL_FILES_DEFAULT) $(DOSDP_TERM_FILES_DEFAULT) \
+	
+
+# Note to future generations: prepending ./ is a safety measure to ensure that 
+# the environment does not malicously set `PATTERN_CLEAN_FILES` to `\`.
+.PHONY: pattern_clean
+pattern_clean:
+	rm -f $(PATTERN_CLEAN_FILES)
+
+.PHONY: patterns
+patterns dosdp:
+	echo "Validating all DOSDP templates"
+	$(MAKE) dosdp_validation
+	echo "Building $(PATTERNDIR)/definitions.owl"
+	$(MAKE) $(PATTERNDIR)/pattern.owl $(PATTERNDIR)/definitions.owl
+
+# DOSDP Template Validation
+
+$(TMPDIR)/pattern_schema_checks: $(ALL_PATTERN_FILES) | $(TMPDIR)
+	$(PATTERN_TESTER) $(PATTERNDIR)/dosdp-patterns/ && touch $@
+
+.PHONY: pattern_schema_checks
+pattern_schema_checks dosdp_validation: $(TMPDIR)/pattern_schema_checks
+
+.PHONY: update_patterns
+update_patterns: download_patterns
+	if [ -n "$$(find $(TMPDIR) -type f -path '$(TMPDIR)/dosdp/*.yaml')" ]; then cp -r $(TMPDIR)/dosdp/*.yaml $(PATTERNDIR)/dosdp-patterns; fi
+
+# This command is a workaround for the absence of -N and -i in wget of alpine (the one ODK depend on now).
+# It downloads all patterns specified in external.txt
+.PHONY: download_patterns
+download_patterns:
+	if [ $(PAT) = true ]; then rm -f $(TMPDIR)/dosdp/*.yaml.1 || true; fi
+	if [ $(PAT) = true ] && [ -s $(PATTERNDIR)/dosdp-patterns/external.txt ]; then wget -i $(PATTERNDIR)/dosdp-patterns/external.txt --backups=1 -P $(TMPDIR)/dosdp; fi
+	if [ $(PAT) = true ]; then rm -f $(TMPDIR)/dosdp/*.yaml.1 || true; fi
+
+$(PATTERNDIR)/dospd-patterns/%.yml: download_patterns
+	if [ $(PAT) = true ] ; then if cmp -s $(TMPDIR)/dosdp-$*.yml $@ ; then echo "DOSDP templates identical."; else echo "DOSDP templates different, updating." &&\
+		cp $(TMPDIR)/dosdp-$*.yml $@; fi; fi
+
+
+# DOSDP Template: Pipelines
+# Each pipeline gets its own directory structure
+
+# DOSDP default pipeline
+
+DOSDP_TSV_FILES_DEFAULT = $(wildcard $(PATTERNDIR)/data/default/*.tsv)
+DOSDP_OWL_FILES_DEFAULT = $(patsubst %.tsv, $(PATTERNDIR)/data/default/%.ofn, $(notdir $(wildcard $(PATTERNDIR)/data/default/*.tsv)))
+DOSDP_TERM_FILES_DEFAULT = $(patsubst %.tsv, $(PATTERNDIR)/data/default/%.txt, $(notdir $(wildcard $(PATTERNDIR)/data/default/*.tsv)))
+DOSDP_PATTERN_NAMES_DEFAULT = $(strip $(patsubst %.tsv,%, $(notdir $(wildcard $(PATTERNDIR)/data/default/*.tsv))))
+
+$(DOSDP_OWL_FILES_DEFAULT): $(EDIT_PREPROCESSED) $(DOSDP_TSV_FILES_DEFAULT) $(ALL_PATTERN_FILES)
+	if [ $(PAT) = true ] && [ "${DOSDP_PATTERN_NAMES_DEFAULT}" ]; then $(DOSDPT) generate --catalog=$(CATALOG) \
+    --infile=$(PATTERNDIR)/data/default/ --template=$(PATTERNDIR)/dosdp-patterns --batch-patterns="$(DOSDP_PATTERN_NAMES_DEFAULT)" \
+    --ontology=$< --obo-prefixes=true --outfile=$(PATTERNDIR)/data/default; fi
+
+
+# Generate template file seeds
+
+## Generate template file seeds
+$(PATTERNDIR)/data/default/%.txt: $(PATTERNDIR)/dosdp-patterns/%.yaml $(PATTERNDIR)/data/default/%.tsv
+	if [ $(PAT) = true ]; then $(DOSDPT) terms --infile=$(word 2, $^) --template=$< --obo-prefixes=true --outfile=$@; fi
+
+
+# Generating the seed file from all the TSVs. If Pattern generation is deactivated, we still extract a seed from definitions.owl
+$(TMPDIR)/all_pattern_terms.txt: $(DOSDP_TERM_FILES_DEFAULT)   $(TMPDIR)/pattern_owl_seed.txt
+	if [ $(PAT) = true ]; then cat $^ | sort | uniq > $@; else $(ROBOT) query --use-graphs true -f csv -i $(PATTERNDIR)/definitions.owl \
+    --query ../sparql/terms.sparql $@; fi
+
+$(TMPDIR)/pattern_owl_seed.txt: $(PATTERNDIR)/pattern.owl
+	if [ $(PAT) = true ]; then $(ROBOT) query --use-graphs true -f csv -i $< --query ../sparql/terms.sparql $@; fi
+
+# Pattern pipeline main targets: the generated OWL files
+
+# Create pattern.owl, an ontology of all DOSDP patterns
+$(PATTERNDIR)/pattern.owl: $(ALL_PATTERN_FILES)
+	if [ $(PAT) = true ]; then $(DOSDPT) prototype --obo-prefixes true --template=$(PATTERNDIR)/dosdp-patterns --outfile=$@; fi
+
+# Generating the individual pattern modules and merging them into definitions.owl
+$(PATTERNDIR)/definitions.owl: $(DOSDP_OWL_FILES_DEFAULT)  
+	if [ $(PAT) = true ] && [ "${DOSDP_PATTERN_NAMES_DEFAULT}" ]   && [ $(PAT) = true ]; then $(ROBOT) merge $(addprefix -i , $^) \
+		annotate --ontology-iri $(ONTBASE)/patterns/definitions.owl  --version-iri $(ONTBASE)/releases/$(TODAY)/patterns/definitions.owl \
+      --annotation owl:versionInfo $(VERSION) -o definitions.ofn && mv definitions.ofn $@; fi
+
+
 
 # ----------------------------------------
 # Release artefacts: export formats
@@ -708,7 +852,7 @@ public_release:
 # General Validation
 # ----------------------------------------
 TSV=
-ALL_TSV_FILES=
+ALL_TSV_FILES=$(DOSDP_TSV_FILES_DEFAULT)
 
 validate-tsv: $(TSV) | $(TMPDIR)
 	for FILE in $< ; do \
@@ -738,6 +882,8 @@ update_repo:
 	sh $(SCRIPTSDIR)/update_repo.sh
 	
 
+update_docs:
+	mkdocs gh-deploy --config-file ../../mkdocs.yaml
 
 # Note to future generations: computing the real path relative to the
 # current directory is a way to ensure we only clean up directories that
@@ -745,6 +891,7 @@ update_repo:
 # the *DIR variables.
 .PHONY: clean
 clean:
+	$(MAKE) pattern_clean
 	for dir in $(MIRRORDIR) $(TMPDIR) $(UPDATEREPODIR) ; do      \
 		reldir=$$(realpath --relative-to=$$(pwd) $$dir) ;    \
 		case $$reldir in .*|"") ;; *) rm -rf $$reldir/* ;; esac \
@@ -782,6 +929,15 @@ Imports management:
 * refresh-%:				Refresh a single import, i.e. refresh-go will refresh 'imports/go_import.owl'.
 * no-mirror-refresh-%:			Refresh a single import without updating the mirror, i.e. refresh-go will refresh 'imports/go_import.owl'.
 * mirror-%:				Refresh a single mirror.
+
+DOSDP templates
+* dosdp:			Run the DOSDP patterns pipeline: Run tests, then build OWL files from the tables.
+* patterns:			Alias of the 'dosdp' command
+* pattern_clean:		Delete all temporary pattern files
+* dosdp_validation:		Run all validation checks on DOSDP template files and tables
+* pattern_schema_checks:	Alias of the 'dosdp_validation' command
+* update_patterns:		Pull updated patterns listed in dosdp-patterns/external.txt
+* dosdp-matches-%:		Run the DOSDP matches/query pipeline as configured in your promot-odk.yaml file.
 
 Editor utilities:
 * validate_idranges:	Make sure your ID ranges file is formatted correctly

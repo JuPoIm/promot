@@ -1,0 +1,32 @@
+pattern_name: diseases_pattern
+
+pattern_iri: diseases_pattern.yaml
+
+description: "This template describes a disease by linking the disease to its related mutation and phenotypes."
+
+classes:
+  disease_pattern: MONDO:0000001
+  structure: http://id.who.int/icd/entity/1626363729
+  mutation: PROMOT:0000001
+  phenotype: HP:0000118
+
+relations:
+  has_material_basis_in_mutation_in: RO:0004003
+  has_phenotype: RO:0002200
+
+vars:
+  phenotype: "phenotype"
+  mutation: "mutation"
+  disease: "disease_pattern"
+      
+logical_axioms:
+  
+  - axiom_type: subClassOf
+    text: "'has_material_basis_in_mutation_in' some %s"
+    vars:
+      - mutation
+
+  - axiom_type: subClassOf
+    text: "'has_phenotype' some %s"
+    vars:
+      - phenotype
