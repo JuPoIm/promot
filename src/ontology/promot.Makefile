@@ -43,7 +43,64 @@ imports/hp_import.owl: mirror/hp.owl imports/hp_terms_combined.txt
 		--output $@.tmp.owl; fi
 	if [ $(IMP) = true ]; then $(ROBOT) query -i $< --update ../sparql/preprocess-module.ru \
 		filter -T imports/hp_terms_ancestors.txt --select "self ancestors annotations" --signature true \
-        collapse --threshold 2 --precious-terms imports/hp_terms_ancestors.txt \
+        query --update ../sparql/inject-subset-declaration.ru --update ../sparql/postprocess-module.ru \
+		annotate --ontology-iri $(ONTBASE)/$@ $(ANNOTATE_ONTOLOGY_VERSION) \
+		merge -i $@.tmp.owl \
+		--output $@.tmp.owl && mv $@.tmp.owl $@; fi
+# HP FR : classes 
+imports/hp-fr_import.owl: mirror/hp-fr.owl imports/hp_terms_combined.txt
+	if [ $(IMP) = true ]; then $(ROBOT) filter -i $< -T $(IMPORTDIR)/hp_terms_descendants.txt \
+        --select "self descendants annotations" --signature true \
+		--drop-axiom-annotations rdfs:comment \
+		--drop-axiom-annotations oboInOwl:id \
+		--drop-axiom-annotations oboInOwl:hasAlternativeId \
+		--drop-axiom-annotations obo:IAO_0000115 \
+		--drop-axiom-annotations oboInOwl:hasExactSynonym \
+		--drop-axiom-annotations oboInOwl:hasDbXref \
+		--output $@.tmp.owl; fi
+	if [ $(IMP) = true ]; then $(ROBOT) filter -i $< -T $(IMPORTDIR)/hp_terms_alone.txt \
+        --select "self annotations" --signature true \
+		--drop-axiom-annotations rdfs:comment \
+		--drop-axiom-annotations oboInOwl:id \
+		--drop-axiom-annotations oboInOwl:hasAlternativeId \
+		--drop-axiom-annotations obo:IAO_0000115 \
+		--drop-axiom-annotations oboInOwl:hasExactSynonym \
+		--drop-axiom-annotations oboInOwl:hasDbXref \
+		merge -i $@.tmp.owl \
+		--output $@.tmp.owl; fi
+	if [ $(IMP) = true ]; then $(ROBOT) query -i $< --update ../sparql/preprocess-module.ru \
+		filter -T imports/hp_terms_ancestors.txt --select "self ancestors annotations" --signature true \
+		--drop-axiom-annotations rdfs:comment \
+		--drop-axiom-annotations oboInOwl:id \
+		--drop-axiom-annotations oboInOwl:hasAlternativeId \
+		--drop-axiom-annotations obo:IAO_0000115 \
+		--drop-axiom-annotations oboInOwl:hasExactSynonym \
+		--drop-axiom-annotations oboInOwl:hasDbXref \
+        query --update ../sparql/inject-subset-declaration.ru --update ../sparql/postprocess-module.ru \
+		annotate --ontology-iri $(ONTBASE)/$@ $(ANNOTATE_ONTOLOGY_VERSION) \
+		merge -i $@.tmp.owl \
+		--output $@.tmp.owl && mv $@.tmp.owl $@; fi
+# HP : classes 
+imports/hp-es_import.owl: mirror/hp-international.owl imports/hp_terms_combined.txt
+	if [ $(IMP) = true ]; then $(ROBOT) filter -i $< -T $(IMPORTDIR)/hp_terms_descendants.txt \
+		--select "rdfs:label=@es" \
+		--select "dc:date" \
+		--select "dcterms:creator" \
+		--select "rdfs:comment" \
+		--select "obo:IAO:0000115=@es" \
+        --select "self descendants" --signature true \
+		--output $@.tmp.owl; fi
+	if [ $(IMP) = true ]; then $(ROBOT) filter -i $< -T $(IMPORTDIR)/hp_terms_alone.txt \
+		--select "rdfs:label=@es" \
+		--select "dc:date" \
+		--select "dcterms:creator" \
+		--select "rdfs:comment" \
+		--select "obo:IAO:0000115=@es" \
+        --select "self" --signature true \
+		merge -i $@.tmp.owl \
+		--output $@.tmp.owl; fi
+	if [ $(IMP) = true ]; then $(ROBOT) query -i $< --update ../sparql/preprocess-module.ru \
+		filter -T imports/hp_terms_ancestors.txt --select "rdfs:label=@es" --select "dc:date" --select "dcterms:creator" --select "rdfs:comment" --select "obo:IAO:0000115=@es" --select "self ancestors" --signature true \
         query --update ../sparql/inject-subset-declaration.ru --update ../sparql/postprocess-module.ru \
 		annotate --ontology-iri $(ONTBASE)/$@ $(ANNOTATE_ONTOLOGY_VERSION) \
 		merge -i $@.tmp.owl \
@@ -62,7 +119,6 @@ imports/whofic_import.owl: mirror/whofic-2024-01-21.owl imports/whofic_terms_com
 	if [ $(IMP) = true ]; then $(ROBOT) query -i $< --update ../sparql/preprocess-module.ru \
 		filter -T imports/whofic_terms.txt --select "self ancestors annotations" --signature true \
 		remove -T imports/whofic_exclude_terms.txt --select "self annotations" --signature true \
-        collapse --threshold 2 --precious-terms imports/whofic_terms_combined.txt \
         query --update ../sparql/inject-subset-declaration.ru --update ../sparql/postprocess-module.ru \
 		annotate --ontology-iri $(ONTBASE)/$@ $(ANNOTATE_ONTOLOGY_VERSION) \
 		merge -i $@.tmp.owl \
@@ -90,8 +146,9 @@ imports/snomed_import.owl: mirror/snomed.owl imports/snomed_terms_combined.txt
 	if [ $(IMP) = true ]; then $(ROBOT) filter -i $< -T $(IMPORTDIR)/snomed_terms_alone.txt \
         --select "self annotations" --signature true \
 		--output $@.tmp.owl; fi
-	if [ $(IMP) = true ]; then $(ROBOT) filter -i $< -T imports/snomed_terms_descendants.txt \
-		--select "self descendants annotations" --signature true \
+	if [ $(IMP) = true ]; then $(ROBOT) query -i $< --update ../sparql/preprocess-module.ru \
+		filter -T imports/snomed_terms_descendants.txt --select "self descendants annotations" --signature true \
+        query --update ../sparql/inject-subset-declaration.ru --update ../sparql/postprocess-module.ru \
 		annotate --ontology-iri $(ONTBASE)/$@ $(ANNOTATE_ONTOLOGY_VERSION) \
 		merge -i $@.tmp.owl \
 		--output $@.tmp.owl && mv $@.tmp.owl $@; fi

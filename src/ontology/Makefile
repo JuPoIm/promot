@@ -10,7 +10,7 @@
 # More information: https://github.com/INCATools/ontology-development-kit/
 
 # Fingerprint of the configuration file when this Makefile was last generated
-CONFIG_HASH=                33572488f4000f771f045893249df7d0cc741822a8081cd762142a30289de526
+CONFIG_HASH=                71f10737690cd64552392f69afe058bca966d22ff6fd9fe6d3ab9c4b897ee360
 
 
 # ----------------------------------------
@@ -165,7 +165,7 @@ all_main: $(MAIN_FILES)
 # ----------------------------------------
 
 
-IMPORTS =  bfo eco fma hp iao mondo obi ro scdo sio snomed vo whofic
+IMPORTS =  bfo eco fma hp hp-fr hp-es iao mondo obi ro scdo sio snomed vo whofic
 
 IMPORT_ROOTS = $(patsubst %, $(IMPORTDIR)/%_import, $(IMPORTS))
 IMPORT_OWL_FILES = $(foreach n,$(IMPORT_ROOTS), $(n).owl)
@@ -453,7 +453,7 @@ $(COMPONENTSDIR)/%.owl: | $(COMPONENTSDIR)
 
 
 
-$(COMPONENTSDIR)/promot_onto.owl: $(TEMPLATEDIR)/promot_onto.csv
+$(COMPONENTSDIR)/promot_onto.owl: $(TEMPLATEDIR)/promot-onto.csv
 	if [ $(COMP) = true ] ; then $(ROBOT) template --add-prefixes config/context.json \
 		$(patsubst %, --template %, $^) \
 		$(ANNOTATE_CONVERT_FILE); fi
@@ -500,6 +500,14 @@ mirror-fma: | $(TMPDIR)
 mirror-hp: | $(TMPDIR)
 	curl -L $(OBOBASE)/hp.owl --create-dirs -o $(TMPDIR)/hp-download.owl --retry 4 --max-time 200 && \
 	$(ROBOT) convert -i $(TMPDIR)/hp-download.owl -o $(TMPDIR)/$@.owl
+
+
+## ONTOLOGY: hp-fr
+## You have configured your default mirror type to no_mirror.
+
+
+## ONTOLOGY: hp-es
+## You have configured your default mirror type to no_mirror.
 
 
 ## ONTOLOGY: iao

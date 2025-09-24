@@ -20,6 +20,8 @@ These are the current imports in PROMOT
 | eco | http://purl.obolibrary.org/obo/eco.owl | None |
 | fma | http://purl.obolibrary.org/obo/fma.owl | None |
 | hp | http://purl.obolibrary.org/obo/hp.owl | None |
+| hp-fr | http://purl.obolibrary.org/obo/hp-fr.owl | None |
+| hp-es | http://purl.obolibrary.org/obo/hp-es.owl | None |
 | iao | http://purl.obolibrary.org/obo/iao.owl | filter |
 | mondo | http://purl.obolibrary.org/obo/mondo.owl | None |
 | obi | http://purl.obolibrary.org/obo/obi.owl | None |
