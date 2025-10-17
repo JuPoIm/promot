@@ -32,7 +32,7 @@ imports/fma_import.owl: mirror/fma.owl imports/fma_terms_combined.txt
 		annotate --ontology-iri $(ONTBASE)/$@ $(ANNOTATE_ONTOLOGY_VERSION) \
 		merge -i $@.tmp.owl \
 		--output $@.tmp.owl && mv $@.tmp.owl $@; fi
-# HP : classes 
+# HP EN : classes 
 imports/hp_import.owl: mirror/hp.owl imports/hp_terms_combined.txt
 	if [ $(IMP) = true ]; then $(ROBOT) filter -i $< -T $(IMPORTDIR)/hp_terms_descendants.txt \
         --select "self descendants annotations" --signature true \
@@ -80,7 +80,7 @@ imports/hp-fr_import.owl: mirror/hp-fr.owl imports/hp_terms_combined.txt
 		annotate --ontology-iri $(ONTBASE)/$@ $(ANNOTATE_ONTOLOGY_VERSION) \
 		merge -i $@.tmp.owl \
 		--output $@.tmp.owl && mv $@.tmp.owl $@; fi
-# HP : classes 
+# HP ES : classes 
 imports/hp-es_import.owl: mirror/hp-international.owl imports/hp_terms_combined.txt
 	if [ $(IMP) = true ]; then $(ROBOT) filter -i $< -T $(IMPORTDIR)/hp_terms_descendants.txt \
 		--select "rdfs:label=@es" \
@@ -111,9 +111,22 @@ imports/ro_import.owl: mirror/ro.owl imports/ro_terms_combined.txt
 		filter -T imports/ro_terms.txt --select "self annotations" --signature true \
         query --update ../sparql/inject-subset-declaration.ru --update ../sparql/postprocess-module.ru \
 		annotate --ontology-iri $(ONTBASE)/$@ $(ANNOTATE_ONTOLOGY_VERSION) --output $@.tmp.owl && mv $@.tmp.owl $@; fi
-# WHOFIC
-imports/whofic_import.owl: mirror/whofic-2024-01-21.owl imports/whofic_terms_combined.txt
+# WHOFIC EN
+imports/whofic_import.owl: mirror/whofic-2025-05-24.owl imports/whofic_terms_combined.txt
 	if [ $(IMP) = true ]; then $(ROBOT) filter -i $< -T $(IMPORTDIR)/whofic_terms_descendants.txt \
+        --select "self descendants annotations" --signature true \
+		--output $@.tmp.owl; fi
+	if [ $(IMP) = true ]; then $(ROBOT) query -i $< --update ../sparql/preprocess-module.ru \
+		filter -T imports/whofic_terms.txt --select "self ancestors annotations" --signature true \
+		remove -T imports/whofic_exclude_terms.txt --select "self annotations" --signature true \
+        query --update ../sparql/inject-subset-declaration.ru --update ../sparql/postprocess-module.ru \
+		annotate --ontology-iri $(ONTBASE)/$@ $(ANNOTATE_ONTOLOGY_VERSION) \
+		merge -i $@.tmp.owl \
+		--output $@.tmp.owl && mv $@.tmp.owl $@; fi
+# WHOFIC FR / ES
+imports/whofic_fr-es_import.owl: mirror/CGTS_SEM_ICF_02_06.xrdf imports/whofic_terms_combined.txt
+	if [ $(IMP) = true ]; then $(ROBOT) convert -i $< --format owl -o mirror/CGTS_SEM_ICF_02_06.owl \
+		filter -T $(IMPORTDIR)/whofic_terms_descendants.txt \
         --select "self descendants annotations" --signature true \
 		--output $@.tmp.owl; fi
 	if [ $(IMP) = true ]; then $(ROBOT) query -i $< --update ../sparql/preprocess-module.ru \

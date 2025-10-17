@@ -1,3 +1,4 @@
+#### GENERAL INFORMATIONS
 id: promot
 title: "PROMOT Common Data Model ontology"
 github_org: JuPoIm
@@ -5,6 +6,10 @@ git_main_branch: main
 repo: promot_ontology
 contact: juliette.potier@institutimagine.org
 description: "Ontology for building the relational database of the PROMOT project"
+license: https://creativecommons.org/licenses/by-nc-sa/4.0/
+documentation:
+  documentation_system: mkdocs
+#### RELEASE CONFIG
 release_artefacts:
   - base
   - full
@@ -15,19 +20,38 @@ export_formats:
   - owl
   - obo
   - json
-license: https://creativecommons.org/licenses/by-nc-sa/4.0/
-documentation:
-  documentation_system: mkdocs
-use_dosdps: TRUE # PROMOT axioms
-use_template: TRUE # PROMOT classes, properties and axioms
+#### USE CONFIG
+use_context: TRUE # uses context.json file for prefixes
+use_dosdps: TRUE # uses Dead Simple Owl Design patterns for creating PROMOT axioms
+use_template: TRUE # uses ROBOT templates for creating PROMOT classes, properties and axioms
+use_mappings: TRUE # uses SSSOM mapping files
+#### HOMEMADE SSSOM MODULE
+mappings:
+  products:
+    - filename: snomed-ncit.sssom.tsv
+bridges:
+  products:
+    - filename: bridge1.owl
+      from_sssom: snomed-ncit.sssom.tsv
+sssom_mappingset_group:
+  products:
+    - id: promot-mappings
+bridge_group:
+  products:
+    - id: promot-bridge
+      sources:
+        - promot-mappings
+#### HOMEMADE MODULE
 components:
   release_components: TRUE
   products:
-    - filename: promot_onto.owl
-      use_template: TRUE
+    - filename: promot-component.owl
       template_options: --add-prefixes config/context.json
       templates:
-        - promot-onto.csv
+        - promot-component.csv
+      mappings:
+        - snomed-ncit.sssom.tsv
+#### IMPORTED MODULES
 import_group:
   annotation_properties:
     - rdfs:label
@@ -35,14 +59,11 @@ import_group:
     - dc:description
     - dc:source
     - oboInOwl:hasDbXref
-    - IAO:0000111
-    - IAO:0000112
-    - IAO:0000115
-    - IAO:0000116
-    - IAO:0000117
-    - IAO:0000118
-    - IAO:0000119
-    - IAO:0000412
+    - IAO:0000115 # definition
+    - IAO:0000116 # editor note
+    - IAO:0000117 # term editor
+    - IAO:0000119 # definition source
+    - IAO:0000412 # imported from
   release_imports: TRUE
   module_type: custom
   products:
@@ -50,14 +71,14 @@ import_group:
     - id: eco # evidence classes
     - id: fma # anatomy classes
     - id: hp # phenotypes classes
-    - id: hp-fr
-      mirror_type: no_mirror
-    - id: hp-es
-      mirror_type: no_mirror
+    - id: hp-fr # french release
     - id: iao # information content entity class
       module_type: filter
     - id: mondo # diseases classes
       is_large: TRUE
+    - id: ncit # demographic and observable entity classes
+      is_large: TRUE
+      module_type: filter
     - id: obi # 'Organism' and 'Homo sapiens' classes
     - id: ro # object properties
     - id: scdo # 'measures' object property
@@ -66,7 +87,9 @@ import_group:
       is_large: TRUE
     - id: vo # 'has gene mutation' object property
     - id: whofic # body structures, functions, activities classes
-      mirror_from: https://raw.githubusercontent.com/whoficitc/harmonization/main/ontology/whofic-2024-01-21.owl
+      mirror_from: https://raw.githubusercontent.com/whoficitc/harmonization/main/ontology/whofic-2025-05-24.owl
+    - id: whofic_fr-es # body
+#### ROBOT CONFIG
 robot_java_args: '-Xmx25G'
 robot_report:
   use_labels: TRUE
