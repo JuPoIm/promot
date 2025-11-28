@@ -1,32 +1,64 @@
 Prefix(:=<http://purl.obolibrary.org/obo/promot.owl#>)
+Prefix(hp:=<http://purl.obolibrary.org/obo/hp#>)
 Prefix(dce:=<http://purl.org/dc/elements/1.1/>)
+Prefix(obo:=<http://purl.obolibrary.org/obo/>)
 Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
 Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
 Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
 Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
 Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
+Prefix(skos:=<http://www.w3.org/2004/02/skos/core#>)
+Prefix(label:=<http://www.w3.org/2000/01/rdf-schema#label@>)
+Prefix(mondo:=<http://purl.obolibrary.org/obo/mondo#>)
+Prefix(sssom:=<https://w3id.org/sssom/>)
+Prefix(vocab:=<https://w3id.org/biolink/vocab/>)
+Prefix(schema:=<http://id.who.int/icd/schema/>)
+Prefix(babelon:=<https://w3id.org/babelon/>)
 Prefix(dcterms:=<http://purl.org/dc/terms/>)
+Prefix(subsets:=<http://purl.obolibrary.org/obo/ro/subsets#>)
+Prefix(oboInOwl:=<http://www.geneontology.org/formats/oboInOwl#>)
+Prefix(resource:=<http://semanticscience.org/resource/>)
+Prefix(IAO_0000115:=<http://purl.obolibrary.org/obo/IAO_0000115@>)
 
 
 Ontology(<http://purl.obolibrary.org/obo/promot.owl>
-Import(<http://purl.obolibrary.org/obo/promot/components/promot-component.owl>)
 Import(<http://purl.obolibrary.org/obo/promot/imports/bfo_import.owl>)
 Import(<http://purl.obolibrary.org/obo/promot/imports/eco_import.owl>)
 Import(<http://purl.obolibrary.org/obo/promot/imports/fma_import.owl>)
-Import(<http://purl.obolibrary.org/obo/promot/imports/hp-fr_import.owl>)
+Import(<http://purl.obolibrary.org/obo/promot/imports/hp-es-bab_import.owl>)
+Import(<http://purl.obolibrary.org/obo/promot/imports/hp-fr-bab_import.owl>)
+Import(<http://purl.obolibrary.org/obo/promot/imports/hp-fr-syn_import.owl>)
 Import(<http://purl.obolibrary.org/obo/promot/imports/hp_import.owl>)
 Import(<http://purl.obolibrary.org/obo/promot/imports/iao_import.owl>)
 Import(<http://purl.obolibrary.org/obo/promot/imports/mondo_import.owl>)
-Import(<http://purl.obolibrary.org/obo/promot/imports/ncit_import.owl>)
 Import(<http://purl.obolibrary.org/obo/promot/imports/obi_import.owl>)
+Import(<http://purl.obolibrary.org/obo/promot/imports/orcidio_import.owl>)
 Import(<http://purl.obolibrary.org/obo/promot/imports/ro_import.owl>)
-Import(<http://purl.obolibrary.org/obo/promot/imports/scdo_import.owl>)
 Import(<http://purl.obolibrary.org/obo/promot/imports/sio_import.owl>)
+Import(<http://purl.obolibrary.org/obo/promot/imports/snomed-fr_import.owl>)
 Import(<http://purl.obolibrary.org/obo/promot/imports/snomed_import.owl>)
 Import(<http://purl.obolibrary.org/obo/promot/imports/vo_import.owl>)
-Import(<http://purl.obolibrary.org/obo/promot/imports/whofic_fr-es_import.owl>)
 Import(<http://purl.obolibrary.org/obo/promot/imports/whofic_import.owl>)
 Import(<http://purl.obolibrary.org/obo/promot/patterns/definitions.owl>)
+Import(<http://purl.obolibrary.org/obo/promot/releases/2025-07-30/imports/sio_import.owl>)
+Import(<http://purl.obolibrary.org/obo/promot/releases/2025-10-13/patterns/definitions.owl>)
+Import(<http://purl.obolibrary.org/obo/promot/releases/2025-10-17/imports/bfo_import.owl>)
+Import(<http://purl.obolibrary.org/obo/promot/releases/2025-10-17/imports/fma_import.owl>)
+Import(<http://purl.obolibrary.org/obo/promot/releases/2025-10-17/imports/scdo_import.owl>)
+Import(<http://purl.obolibrary.org/obo/promot/releases/2025-10-27/imports/hp-es-bab_import.owl>)
+Import(<http://purl.obolibrary.org/obo/promot/releases/2025-10-27/imports/hp-fr-bab_import.owl>)
+Import(<http://purl.obolibrary.org/obo/promot/releases/2025-10-28/imports/mondo_import.owl>)
+Import(<http://purl.obolibrary.org/obo/promot/releases/2025-10-28/imports/obi_import.owl>)
+Import(<http://purl.obolibrary.org/obo/promot/releases/2025-10-31/imports/whofic_import.owl>)
+Import(<http://purl.obolibrary.org/obo/promot/releases/2025-11-04/imports/hp_import.owl>)
+Import(<http://purl.obolibrary.org/obo/promot/releases/2025-11-05/imports/eco_import.owl>)
+Import(<http://purl.obolibrary.org/obo/promot/releases/2025-11-05/imports/iao_import.owl>)
+Import(<http://purl.obolibrary.org/obo/promot/releases/2025-11-05/imports/ro_import.owl>)
+Import(<http://purl.obolibrary.org/obo/promot/releases/2025-11-06/imports/snomed_import.owl>)
+Import(<http://purl.obolibrary.org/obo/promot/releases/2025-11-17/imports/snomed-fr_import.owl>)
+Import(<http://purl.obolibrary.org/obo/promot/releases/2025-11-20/components/promot-component.owl>)
+Import(<http://purl.obolibrary.org/obo/promot/releases/2025-11-24/components/promot-component.owl>)
+Import(<http://purl.obolibrary.org/obo/promot/releases/2025-11-24/imports/snomed_import.owl>)
 Annotation(dce:contributor "Anita Burgun MD, PhD
 https://orcid.org/0000-0001-6855-4366")
 Annotation(dce:contributor "Carole Faviez PhD, research engineer
@@ -49,6 +81,7 @@ Annotation(dce:creator "Paul Fabry MD, PhD student
 https://orcid.org/0000-0002-3336-2476")
 Annotation(dcterms:description "Ontology for building the database of the PROMOT project
 See also: https://www.promotinitiative.com")
+Annotation(dcterms:license "https://creativecommons.org/licenses/by-nc-sa/4.0/")
 Annotation(dcterms:title "PROMOT Common Data Model ontology")
 Annotation(rdfs:comment "Also contributor for the gathering ?
 OPMD form
@@ -59,8 +92,7 @@ comment JP: unsure
 ???")
 Annotation(rdfs:comment "The 'Performing a Rare Disease-Oriented Master Observational Trial' (PROMOT) project aims to generate a learning and knowledge mobilization platform allowing the development of a precision medicine approach for rare neuromuscular diseases.
 See also: https://www.promotinitiative.com/project")
-Annotation(<https://w3id.org/babelon/comment> "License: https://creativecommons.org/licenses/by-nc-sa/4.0/")
-Annotation(<https://w3id.org/babelon/comment> "This ontology has been build with among others following works:
+Annotation(babelon:comment "This ontology has been build with among others following works:
 
 - BFO:
 See: https://basic-formal-ontology.org/
@@ -91,35 +123,67 @@ See: https://www.snomed.org/
 See: https://github.com/oborel/obo-relations/
 Licence: https://creativecommons.org/publicdomain/zero/1.0/")
 
-Declaration(Class(<http://purl.obolibrary.org/obo/PROMOT_0000001>))
-Declaration(Class(<http://purl.obolibrary.org/obo/PROMOT_0000002>))
-Declaration(Class(<http://purl.obolibrary.org/obo/PROMOT_0cfc8fb9_6220_4c4e_b5ae_68ce3dab89cc>))
-Declaration(Class(<http://purl.obolibrary.org/obo/PROMOT_8000002>))
-Declaration(Class(<http://purl.obolibrary.org/obo/PROMOT_8000003>))
+Declaration(Class(<http://id.who.int/icd/entity/1789365017>))
+Declaration(Class(<http://id.who.int/icd/entity/1874889854>))
+Declaration(Class(obo:BFO_0000019))
+Declaration(Class(obo:HP_0000005))
+Declaration(Class(obo:HP_0000006))
+Declaration(Class(obo:HP_0000467))
+Declaration(Class(obo:HP_0012823))
+Declaration(Class(obo:HP_0031797))
+Declaration(Class(obo:MONDO_0000001))
+Declaration(Class(obo:MONDO_0008116))
+Declaration(Class(obo:OBI_0100026))
+Declaration(Class(obo:PROMOT_0000001))
+Declaration(Class(obo:PROMOT_0000002))
+Declaration(Class(obo:PROMOT_3000001))
+Declaration(Class(obo:PROMOT_4100001))
+Declaration(Class(obo:PROMOT_4400001))
+Declaration(Class(obo:PROMOT_8000002))
+Declaration(Class(obo:PROMOT_8f682e22_7348_4cec_b82b_4cb33daf4ce2))
+Declaration(Class(obo:PROMOT_b88d1a49_35a8_4dca_99ac_f1a76c7542fb))
+Declaration(Class(obo:PROMOT_fd3d01ec_4ef5_4eae_b7b2_cadc794b6294))
+Declaration(Class(resource:SIO_000475))
+Declaration(Class(resource:SIO_001268))
+Declaration(Class(resource:SIO_010057))
+Declaration(Class(<http://snomed.info/id/128927009>))
 Declaration(Class(<http://snomed.info/id/12894003>))
-Declaration(Class(<http://snomed.info/id/1296886006>))
+Declaration(Class(<http://snomed.info/id/184099003>))
 Declaration(Class(<http://snomed.info/id/252478000>))
 Declaration(Class(<http://snomed.info/id/252482003>))
-Declaration(Class(<http://snomed.info/id/364578004>))
+Declaration(Class(<http://snomed.info/id/360296002>))
+Declaration(Class(<http://snomed.info/id/363787002>))
 Declaration(Class(<http://snomed.info/id/450737006>))
-Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/PROMOT_2000003>))
-Declaration(NamedIndividual(<http://purl.obolibrary.org/obo/PROMOT_045e367e_c3fd_4c0a_83f3_8fa7e169ca10>))
-Declaration(NamedIndividual(<http://purl.obolibrary.org/obo/PROMOT_2f6cb1e4_4623_43c2_8ccc_396235d9964c>))
-Declaration(NamedIndividual(<http://purl.obolibrary.org/obo/PROMOT_4aa31cbd_93a8_49ee_9ee6_cd62539a363d>))
-Declaration(NamedIndividual(<http://purl.obolibrary.org/obo/PROMOT_4aec0649_f47c_4cf5_8d52_6659520329f3>))
-Declaration(NamedIndividual(<http://purl.obolibrary.org/obo/PROMOT_54514f77_3728_4cec_b940_55ca09dcedaa>))
-Declaration(NamedIndividual(<http://purl.obolibrary.org/obo/PROMOT_55e848ce_51db_42a0_940f_15923ec4e545>))
-Declaration(NamedIndividual(<http://purl.obolibrary.org/obo/PROMOT_5983b3f4_1adc_4137_82eb_33d21553d5d9>))
-Declaration(NamedIndividual(<http://purl.obolibrary.org/obo/PROMOT_63268922_ae6e_4073_aaa1_f1b9169268b2>))
-Declaration(NamedIndividual(<http://purl.obolibrary.org/obo/PROMOT_72e84e9a_428b_4bf5_8375_803f56af8fcb>))
-Declaration(NamedIndividual(<http://purl.obolibrary.org/obo/PROMOT_87bb9c1c_7476_4b9d_80b8_b38f6d11a78a>))
-Declaration(NamedIndividual(<http://purl.obolibrary.org/obo/PROMOT_8b624364_d55d_42e1_ba54_92a69fbc6957>))
-Declaration(NamedIndividual(<http://purl.obolibrary.org/obo/PROMOT_f3fdf642_5216_4c2e_a169_505c66985082>))
+Declaration(Class(<http://snomed.info/id/58938008>))
+Declaration(Class(<http://snomed.info/id/78272007>))
+Declaration(ObjectProperty(obo:PROMOT_2000003))
+Declaration(ObjectProperty(obo:RO_0002201))
+Declaration(ObjectProperty(obo:RO_0002351))
+Declaration(ObjectProperty(obo:RO_0004003))
+Declaration(ObjectProperty(obo:RO_0004013))
+Declaration(ObjectProperty(obo:RO_0004029))
+Declaration(ObjectProperty(obo:VO_0001039))
+Declaration(ObjectProperty(vocab:related_to))
+Declaration(DataProperty(resource:SIO_000300))
+Declaration(NamedIndividual(obo:PROMOT_045e367e_c3fd_4c0a_83f3_8fa7e169ca10))
+Declaration(NamedIndividual(obo:PROMOT_2f6cb1e4_4623_43c2_8ccc_396235d9964c))
+Declaration(NamedIndividual(obo:PROMOT_4aa31cbd_93a8_49ee_9ee6_cd62539a363d))
+Declaration(NamedIndividual(obo:PROMOT_4aec0649_f47c_4cf5_8d52_6659520329f3))
+Declaration(NamedIndividual(obo:PROMOT_54514f77_3728_4cec_b940_55ca09dcedaa))
+Declaration(NamedIndividual(obo:PROMOT_55e848ce_51db_42a0_940f_15923ec4e545))
+Declaration(NamedIndividual(obo:PROMOT_5983b3f4_1adc_4137_82eb_33d21553d5d9))
+Declaration(NamedIndividual(obo:PROMOT_63268922_ae6e_4073_aaa1_f1b9169268b2))
+Declaration(NamedIndividual(obo:PROMOT_72e84e9a_428b_4bf5_8375_803f56af8fcb))
+Declaration(NamedIndividual(obo:PROMOT_87bb9c1c_7476_4b9d_80b8_b38f6d11a78a))
+Declaration(NamedIndividual(obo:PROMOT_8b624364_d55d_42e1_ba54_92a69fbc6957))
+Declaration(NamedIndividual(obo:PROMOT_f3fdf642_5216_4c2e_a169_505c66985082))
 Declaration(AnnotationProperty(dce:contributor))
+Declaration(AnnotationProperty(dce:creator))
+Declaration(AnnotationProperty(dce:date))
 Declaration(AnnotationProperty(dcterms:description))
 Declaration(AnnotationProperty(dcterms:license))
 Declaration(AnnotationProperty(dcterms:title))
-Declaration(AnnotationProperty(<https://w3id.org/babelon/comment>))
+Declaration(AnnotationProperty(babelon:comment))
 Declaration(Datatype(xsd:date))
 ############################
 #   Annotation Properties
@@ -142,35 +206,35 @@ AnnotationAssertion(rdfs:label dcterms:title "title")
 #   Object Properties
 ############################
 
-# Object Property: <http://purl.obolibrary.org/obo/PROMOT_2000003> (<http://purl.obolibrary.org/obo/PROMOT_2000003>)
+# Object Property: obo:PROMOT_2000003 (évalue)
 
-ObjectPropertyDomain(<http://purl.obolibrary.org/obo/PROMOT_2000003> <http://snomed.info/id/128927009>)
+ObjectPropertyDomain(obo:PROMOT_2000003 <http://snomed.info/id/128927009>)
 
-# Object Property: <http://purl.obolibrary.org/obo/RO_0004003> (has material basis in germline mutation in)
+# Object Property: obo:RO_0004003 (has material basis in germline mutation in)
 
-ObjectPropertyRange(<http://purl.obolibrary.org/obo/RO_0004003> <http://purl.obolibrary.org/obo/PROMOT_0000001>)
+ObjectPropertyRange(obo:RO_0004003 obo:PROMOT_0000001)
 
-# Object Property: <http://purl.obolibrary.org/obo/RO_0004013> (is causal germline mutation in)
+# Object Property: obo:RO_0004013 (obo:RO_0004013)
 
-ObjectPropertyDomain(<http://purl.obolibrary.org/obo/RO_0004013> <http://purl.obolibrary.org/obo/PROMOT_0000001>)
+ObjectPropertyDomain(obo:RO_0004013 obo:PROMOT_0000001)
 
-# Object Property: <http://purl.obolibrary.org/obo/RO_0004029> (disease has feature)
+# Object Property: obo:RO_0004029 (disease has feature)
 
-ObjectPropertyDomain(<http://purl.obolibrary.org/obo/RO_0004029> <http://purl.obolibrary.org/obo/MONDO_0000001>)
+ObjectPropertyDomain(obo:RO_0004029 obo:MONDO_0000001)
 
-# Object Property: <http://purl.obolibrary.org/obo/VO_0001039> (has gene mutation)
+# Object Property: obo:VO_0001039 (obo:VO_0001039)
 
-ObjectPropertyDomain(<http://purl.obolibrary.org/obo/VO_0001039> <http://purl.obolibrary.org/obo/OBI_0100026>)
-ObjectPropertyRange(<http://purl.obolibrary.org/obo/VO_0001039> <http://purl.obolibrary.org/obo/PROMOT_0000001>)
+ObjectPropertyDomain(obo:VO_0001039 obo:OBI_0100026)
+ObjectPropertyRange(obo:VO_0001039 obo:PROMOT_0000001)
 
 
 ############################
 #   Data Properties
 ############################
 
-# Data Property: <http://semanticscience.org/resource/SIO_000300> (has value)
+# Data Property: resource:SIO_000300 (has value)
 
-DataPropertyDomain(<http://semanticscience.org/resource/SIO_000300> <http://snomed.info/id/363787002>)
+DataPropertyDomain(resource:SIO_000300 <http://snomed.info/id/363787002>)
 
 
 
@@ -178,143 +242,135 @@ DataPropertyDomain(<http://semanticscience.org/resource/SIO_000300> <http://snom
 #   Classes
 ############################
 
-# Class: <http://purl.obolibrary.org/obo/HP_0000005> (Mode de transmission )
+# Class: obo:PROMOT_4200001 (declaración sobre un fenotipo)
 
-SubClassOf(<http://purl.obolibrary.org/obo/HP_0000005> <http://purl.obolibrary.org/obo/BFO_0000019>)
+SubClassOf(obo:PROMOT_4200001 ObjectSomeValuesFrom(obo:RO_0002351 obo:ECO_0006151))
 
-# Class: <http://purl.obolibrary.org/obo/HP_0000006> (Transmission autosomique dominante)
+# Class: obo:PROMOT_8000002 (état vital inconnu)
 
-SubClassOf(<http://purl.obolibrary.org/obo/HP_0000006> <http://purl.obolibrary.org/obo/HP_0000005>)
+SubClassOf(obo:PROMOT_8000002 resource:SIO_010057)
 
-# Class: <http://purl.obolibrary.org/obo/HP_0031797> (Évolution clinique)
+# Class: obo:PROMOT_8f682e22_7348_4cec_b82b_4cb33daf4ce2 (unrecorded life status)
 
-SubClassOf(<http://purl.obolibrary.org/obo/HP_0031797> <http://purl.obolibrary.org/obo/HP_0012823>)
+AnnotationAssertion(dce:creator obo:PROMOT_8f682e22_7348_4cec_b82b_4cb33daf4ce2 <https://orcid.org/0009-0000-5160-7927>)
+AnnotationAssertion(dce:date obo:PROMOT_8f682e22_7348_4cec_b82b_4cb33daf4ce2 "2025-11-10T13:29:45Z"^^xsd:dateTime)
+AnnotationAssertion(rdfs:label obo:PROMOT_8f682e22_7348_4cec_b82b_4cb33daf4ce2 "unrecorded life status"@en)
+SubClassOf(obo:PROMOT_8f682e22_7348_4cec_b82b_4cb33daf4ce2 obo:PROMOT_8000002)
 
-# Class: <http://purl.obolibrary.org/obo/HP_0032319> (Health status)
+# Class: obo:PROMOT_b88d1a49_35a8_4dca_99ac_f1a76c7542fb (unkown transmission)
 
-SubClassOf(<http://purl.obolibrary.org/obo/HP_0032319> <http://semanticscience.org/resource/SIO_000475>)
+AnnotationAssertion(dce:creator obo:PROMOT_b88d1a49_35a8_4dca_99ac_f1a76c7542fb <https://orcid.org/0009-0000-5160-7927>)
+AnnotationAssertion(dce:date obo:PROMOT_b88d1a49_35a8_4dca_99ac_f1a76c7542fb "2025-11-24T14:38:15Z"^^xsd:dateTime)
+AnnotationAssertion(rdfs:label obo:PROMOT_b88d1a49_35a8_4dca_99ac_f1a76c7542fb "unkown transmission"@en)
+SubClassOf(obo:PROMOT_b88d1a49_35a8_4dca_99ac_f1a76c7542fb resource:SIO_001268)
 
-# Class: <http://purl.obolibrary.org/obo/PROMOT_0cfc8fb9_6220_4c4e_b5ae_68ce3dab89cc> (unkown)
+# Class: obo:PROMOT_fd3d01ec_4ef5_4eae_b7b2_cadc794b6294 (unrecorded transmission)
 
-AnnotationAssertion(dce:creator <http://purl.obolibrary.org/obo/PROMOT_0cfc8fb9_6220_4c4e_b5ae_68ce3dab89cc> <https://orcid.org/0009-0000-5160-7927>)
-AnnotationAssertion(dce:date <http://purl.obolibrary.org/obo/PROMOT_0cfc8fb9_6220_4c4e_b5ae_68ce3dab89cc> "2025-09-04T13:45:32Z"^^xsd:dateTime)
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/PROMOT_0cfc8fb9_6220_4c4e_b5ae_68ce3dab89cc> "unkown"@fr)
-SubClassOf(<http://purl.obolibrary.org/obo/PROMOT_0cfc8fb9_6220_4c4e_b5ae_68ce3dab89cc> <http://purl.obolibrary.org/obo/HP_0032319>)
+AnnotationAssertion(dce:creator obo:PROMOT_fd3d01ec_4ef5_4eae_b7b2_cadc794b6294 <https://orcid.org/0009-0000-5160-7927>)
+AnnotationAssertion(dce:date obo:PROMOT_fd3d01ec_4ef5_4eae_b7b2_cadc794b6294 "2025-11-24T14:38:28Z"^^xsd:dateTime)
+AnnotationAssertion(rdfs:label obo:PROMOT_fd3d01ec_4ef5_4eae_b7b2_cadc794b6294 "unrecorded transmission"@en)
+SubClassOf(obo:PROMOT_fd3d01ec_4ef5_4eae_b7b2_cadc794b6294 obo:PROMOT_b88d1a49_35a8_4dca_99ac_f1a76c7542fb)
 
-# Class: <http://purl.obolibrary.org/obo/PROMOT_8000002> (<http://purl.obolibrary.org/obo/PROMOT_8000002>)
+# Class: <http://snomed.info/id/398192003> (comorbidités)
 
-SubClassOf(<http://purl.obolibrary.org/obo/PROMOT_8000002> <http://semanticscience.org/resource/SIO_010057>)
+SubClassOf(<http://snomed.info/id/398192003> <http://snomed.info/id/363787002>)
 
-# Class: <http://purl.obolibrary.org/obo/PROMOT_8000003> (<http://purl.obolibrary.org/obo/PROMOT_8000003>)
+# Class: <http://snomed.info/id/87405001> (canne)
 
-SubClassOf(<http://purl.obolibrary.org/obo/PROMOT_8000003> <http://semanticscience.org/resource/SIO_001268>)
-
-# Class: <http://snomed.info/id/1296886006> (Determination of sex by karyotyping (procedure))
-
-SubClassOf(<http://snomed.info/id/1296886006> <http://snomed.info/id/12894003>)
-
-# Class: <http://snomed.info/id/364578004> (Observable feature of walking (observable entity))
-
-SubClassOf(<http://snomed.info/id/364578004> <http://snomed.info/id/363787002>)
-
-# Class: <http://snomed.info/id/58938008> (Wheelchair device (physical object))
-
-SubClassOf(<http://snomed.info/id/58938008> <http://snomed.info/id/360296002>)
+SubClassOf(<http://snomed.info/id/87405001> <http://snomed.info/id/224899006>)
 
 
 ############################
 #   Named Individuals
 ############################
 
-# Individual: <http://purl.obolibrary.org/obo/PROMOT_045e367e_c3fd_4c0a_83f3_8fa7e169ca10> (DOBPatient)
+# Individual: obo:PROMOT_045e367e_c3fd_4c0a_83f3_8fa7e169ca10 (DOBPatient)
 
-AnnotationAssertion(dce:creator <http://purl.obolibrary.org/obo/PROMOT_045e367e_c3fd_4c0a_83f3_8fa7e169ca10> <https://orcid.org/0009-0000-5160-7927>)
-AnnotationAssertion(dce:date <http://purl.obolibrary.org/obo/PROMOT_045e367e_c3fd_4c0a_83f3_8fa7e169ca10> "2025-08-22T07:22:55Z"^^xsd:dateTime)
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/PROMOT_045e367e_c3fd_4c0a_83f3_8fa7e169ca10> "DOBPatient"@fr)
-ClassAssertion(<http://snomed.info/id/184099003> <http://purl.obolibrary.org/obo/PROMOT_045e367e_c3fd_4c0a_83f3_8fa7e169ca10>)
-DataPropertyAssertion(<http://semanticscience.org/resource/SIO_000300> <http://purl.obolibrary.org/obo/PROMOT_045e367e_c3fd_4c0a_83f3_8fa7e169ca10> "10/05/1990"^^xsd:date)
+AnnotationAssertion(dce:creator obo:PROMOT_045e367e_c3fd_4c0a_83f3_8fa7e169ca10 <https://orcid.org/0009-0000-5160-7927>)
+AnnotationAssertion(dce:date obo:PROMOT_045e367e_c3fd_4c0a_83f3_8fa7e169ca10 "2025-08-22T07:22:55Z"^^xsd:dateTime)
+AnnotationAssertion(rdfs:label obo:PROMOT_045e367e_c3fd_4c0a_83f3_8fa7e169ca10 "DOBPatient"@fr)
+ClassAssertion(<http://snomed.info/id/184099003> obo:PROMOT_045e367e_c3fd_4c0a_83f3_8fa7e169ca10)
+DataPropertyAssertion(resource:SIO_000300 obo:PROMOT_045e367e_c3fd_4c0a_83f3_8fa7e169ca10 "10/05/1990"^^xsd:date)
 
-# Individual: <http://purl.obolibrary.org/obo/PROMOT_2f6cb1e4_4623_43c2_8ccc_396235d9964c> (MHNR_Patient)
+# Individual: obo:PROMOT_2f6cb1e4_4623_43c2_8ccc_396235d9964c (MHNR_Patient)
 
-AnnotationAssertion(dce:creator <http://purl.obolibrary.org/obo/PROMOT_2f6cb1e4_4623_43c2_8ccc_396235d9964c> <https://orcid.org/0009-0000-5160-7927>)
-AnnotationAssertion(dce:date <http://purl.obolibrary.org/obo/PROMOT_2f6cb1e4_4623_43c2_8ccc_396235d9964c> "2025-08-22T07:37:20Z"^^xsd:dateTime)
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/PROMOT_2f6cb1e4_4623_43c2_8ccc_396235d9964c> "MHNR_Patient"@fr)
-ClassAssertion(<http://id.who.int/icd/entity/1874889854> <http://purl.obolibrary.org/obo/PROMOT_2f6cb1e4_4623_43c2_8ccc_396235d9964c>)
-ObjectPropertyAssertion(<https://w3id.org/biolink/vocab/related_to> <http://purl.obolibrary.org/obo/PROMOT_2f6cb1e4_4623_43c2_8ccc_396235d9964c> <http://purl.obolibrary.org/obo/PROMOT_72e84e9a_428b_4bf5_8375_803f56af8fcb>)
+AnnotationAssertion(dce:creator obo:PROMOT_2f6cb1e4_4623_43c2_8ccc_396235d9964c <https://orcid.org/0009-0000-5160-7927>)
+AnnotationAssertion(dce:date obo:PROMOT_2f6cb1e4_4623_43c2_8ccc_396235d9964c "2025-08-22T07:37:20Z"^^xsd:dateTime)
+AnnotationAssertion(rdfs:label obo:PROMOT_2f6cb1e4_4623_43c2_8ccc_396235d9964c "MHNR_Patient"@fr)
+ClassAssertion(<http://id.who.int/icd/entity/1874889854> obo:PROMOT_2f6cb1e4_4623_43c2_8ccc_396235d9964c)
+ObjectPropertyAssertion(vocab:related_to obo:PROMOT_2f6cb1e4_4623_43c2_8ccc_396235d9964c obo:PROMOT_72e84e9a_428b_4bf5_8375_803f56af8fcb)
 
-# Individual: <http://purl.obolibrary.org/obo/PROMOT_4aa31cbd_93a8_49ee_9ee6_cd62539a363d> (PowerIMPatient)
+# Individual: obo:PROMOT_4aa31cbd_93a8_49ee_9ee6_cd62539a363d (PowerIMPatient)
 
-AnnotationAssertion(dce:creator <http://purl.obolibrary.org/obo/PROMOT_4aa31cbd_93a8_49ee_9ee6_cd62539a363d> <https://orcid.org/0009-0000-5160-7927>)
-AnnotationAssertion(dce:date <http://purl.obolibrary.org/obo/PROMOT_4aa31cbd_93a8_49ee_9ee6_cd62539a363d> "2025-09-10T13:32:19Z"^^xsd:dateTime)
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/PROMOT_4aa31cbd_93a8_49ee_9ee6_cd62539a363d> "PowerIMPatient"@fr)
-ClassAssertion(<http://id.who.int/icd/entity/1789365017> <http://purl.obolibrary.org/obo/PROMOT_4aa31cbd_93a8_49ee_9ee6_cd62539a363d>)
+AnnotationAssertion(dce:creator obo:PROMOT_4aa31cbd_93a8_49ee_9ee6_cd62539a363d <https://orcid.org/0009-0000-5160-7927>)
+AnnotationAssertion(dce:date obo:PROMOT_4aa31cbd_93a8_49ee_9ee6_cd62539a363d "2025-09-10T13:32:19Z"^^xsd:dateTime)
+AnnotationAssertion(rdfs:label obo:PROMOT_4aa31cbd_93a8_49ee_9ee6_cd62539a363d "PowerIMPatient"@fr)
+ClassAssertion(<http://id.who.int/icd/entity/1789365017> obo:PROMOT_4aa31cbd_93a8_49ee_9ee6_cd62539a363d)
 
-# Individual: <http://purl.obolibrary.org/obo/PROMOT_4aec0649_f47c_4cf5_8d52_6659520329f3> (StatementRelative)
+# Individual: obo:PROMOT_4aec0649_f47c_4cf5_8d52_6659520329f3 (StatementRelative)
 
-AnnotationAssertion(dce:creator <http://purl.obolibrary.org/obo/PROMOT_4aec0649_f47c_4cf5_8d52_6659520329f3> <https://orcid.org/0009-0000-5160-7927>)
-AnnotationAssertion(dce:date <http://purl.obolibrary.org/obo/PROMOT_4aec0649_f47c_4cf5_8d52_6659520329f3> "2025-09-10T13:36:27Z"^^xsd:dateTime)
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/PROMOT_4aec0649_f47c_4cf5_8d52_6659520329f3> "StatementRelative"@fr)
-ClassAssertion(<http://purl.obolibrary.org/obo/PROMOT_4400001> <http://purl.obolibrary.org/obo/PROMOT_4aec0649_f47c_4cf5_8d52_6659520329f3>)
+AnnotationAssertion(dce:creator obo:PROMOT_4aec0649_f47c_4cf5_8d52_6659520329f3 <https://orcid.org/0009-0000-5160-7927>)
+AnnotationAssertion(dce:date obo:PROMOT_4aec0649_f47c_4cf5_8d52_6659520329f3 "2025-09-10T13:36:27Z"^^xsd:dateTime)
+AnnotationAssertion(rdfs:label obo:PROMOT_4aec0649_f47c_4cf5_8d52_6659520329f3 "StatementRelative"@fr)
+ClassAssertion(obo:PROMOT_4400001 obo:PROMOT_4aec0649_f47c_4cf5_8d52_6659520329f3)
 
-# Individual: <http://purl.obolibrary.org/obo/PROMOT_54514f77_3728_4cec_b940_55ca09dcedaa> (RelativePatient)
+# Individual: obo:PROMOT_54514f77_3728_4cec_b940_55ca09dcedaa (RelativePatient)
 
-AnnotationAssertion(dce:creator <http://purl.obolibrary.org/obo/PROMOT_54514f77_3728_4cec_b940_55ca09dcedaa> <https://orcid.org/0009-0000-5160-7927>)
-AnnotationAssertion(dce:date <http://purl.obolibrary.org/obo/PROMOT_54514f77_3728_4cec_b940_55ca09dcedaa> "2025-09-10T13:35:00Z"^^xsd:dateTime)
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/PROMOT_54514f77_3728_4cec_b940_55ca09dcedaa> "RelativePatient"@fr)
-ClassAssertion(<http://snomed.info/id/78272007> <http://purl.obolibrary.org/obo/PROMOT_54514f77_3728_4cec_b940_55ca09dcedaa>)
+AnnotationAssertion(dce:creator obo:PROMOT_54514f77_3728_4cec_b940_55ca09dcedaa <https://orcid.org/0009-0000-5160-7927>)
+AnnotationAssertion(dce:date obo:PROMOT_54514f77_3728_4cec_b940_55ca09dcedaa "2025-09-10T13:35:00Z"^^xsd:dateTime)
+AnnotationAssertion(rdfs:label obo:PROMOT_54514f77_3728_4cec_b940_55ca09dcedaa "RelativePatient"@fr)
+ClassAssertion(<http://snomed.info/id/78272007> obo:PROMOT_54514f77_3728_4cec_b940_55ca09dcedaa)
 
-# Individual: <http://purl.obolibrary.org/obo/PROMOT_55e848ce_51db_42a0_940f_15923ec4e545> (DOBRelative)
+# Individual: obo:PROMOT_55e848ce_51db_42a0_940f_15923ec4e545 (DOBRelative)
 
-AnnotationAssertion(dce:creator <http://purl.obolibrary.org/obo/PROMOT_55e848ce_51db_42a0_940f_15923ec4e545> <https://orcid.org/0009-0000-5160-7927>)
-AnnotationAssertion(dce:date <http://purl.obolibrary.org/obo/PROMOT_55e848ce_51db_42a0_940f_15923ec4e545> "2025-09-10T13:36:37Z"^^xsd:dateTime)
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/PROMOT_55e848ce_51db_42a0_940f_15923ec4e545> "DOBRelative"@fr)
-ClassAssertion(<http://snomed.info/id/184099003> <http://purl.obolibrary.org/obo/PROMOT_55e848ce_51db_42a0_940f_15923ec4e545>)
+AnnotationAssertion(dce:creator obo:PROMOT_55e848ce_51db_42a0_940f_15923ec4e545 <https://orcid.org/0009-0000-5160-7927>)
+AnnotationAssertion(dce:date obo:PROMOT_55e848ce_51db_42a0_940f_15923ec4e545 "2025-09-10T13:36:37Z"^^xsd:dateTime)
+AnnotationAssertion(rdfs:label obo:PROMOT_55e848ce_51db_42a0_940f_15923ec4e545 "DOBRelative"@fr)
+ClassAssertion(<http://snomed.info/id/184099003> obo:PROMOT_55e848ce_51db_42a0_940f_15923ec4e545)
 
-# Individual: <http://purl.obolibrary.org/obo/PROMOT_5983b3f4_1adc_4137_82eb_33d21553d5d9> (MN_Patient)
+# Individual: obo:PROMOT_5983b3f4_1adc_4137_82eb_33d21553d5d9 (MN_Patient)
 
-AnnotationAssertion(dce:creator <http://purl.obolibrary.org/obo/PROMOT_5983b3f4_1adc_4137_82eb_33d21553d5d9> <https://orcid.org/0009-0000-5160-7927>)
-AnnotationAssertion(dce:date <http://purl.obolibrary.org/obo/PROMOT_5983b3f4_1adc_4137_82eb_33d21553d5d9> "2025-09-10T13:40:32Z"^^xsd:dateTime)
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/PROMOT_5983b3f4_1adc_4137_82eb_33d21553d5d9> "MN_Patient"@fr)
+AnnotationAssertion(dce:creator obo:PROMOT_5983b3f4_1adc_4137_82eb_33d21553d5d9 <https://orcid.org/0009-0000-5160-7927>)
+AnnotationAssertion(dce:date obo:PROMOT_5983b3f4_1adc_4137_82eb_33d21553d5d9 "2025-09-10T13:40:32Z"^^xsd:dateTime)
+AnnotationAssertion(rdfs:label obo:PROMOT_5983b3f4_1adc_4137_82eb_33d21553d5d9 "MN_Patient"@fr)
 
-# Individual: <http://purl.obolibrary.org/obo/PROMOT_63268922_ae6e_4073_aaa1_f1b9169268b2> (MutationPatient)
+# Individual: obo:PROMOT_63268922_ae6e_4073_aaa1_f1b9169268b2 (MutationPatient)
 
-AnnotationAssertion(dce:creator <http://purl.obolibrary.org/obo/PROMOT_63268922_ae6e_4073_aaa1_f1b9169268b2> <https://orcid.org/0009-0000-5160-7927>)
-AnnotationAssertion(dce:date <http://purl.obolibrary.org/obo/PROMOT_63268922_ae6e_4073_aaa1_f1b9169268b2> "2025-08-22T07:12:26Z"^^xsd:dateTime)
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/PROMOT_63268922_ae6e_4073_aaa1_f1b9169268b2> "MutationPatient"@fr)
-ClassAssertion(<http://purl.obolibrary.org/obo/PROMOT_0000002> <http://purl.obolibrary.org/obo/PROMOT_63268922_ae6e_4073_aaa1_f1b9169268b2>)
-ObjectPropertyAssertion(<http://purl.obolibrary.org/obo/VO_0001039> <http://purl.obolibrary.org/obo/PROMOT_63268922_ae6e_4073_aaa1_f1b9169268b2> <http://purl.obolibrary.org/obo/PROMOT_63268922_ae6e_4073_aaa1_f1b9169268b2>)
+AnnotationAssertion(dce:creator obo:PROMOT_63268922_ae6e_4073_aaa1_f1b9169268b2 <https://orcid.org/0009-0000-5160-7927>)
+AnnotationAssertion(dce:date obo:PROMOT_63268922_ae6e_4073_aaa1_f1b9169268b2 "2025-08-22T07:12:26Z"^^xsd:dateTime)
+AnnotationAssertion(rdfs:label obo:PROMOT_63268922_ae6e_4073_aaa1_f1b9169268b2 "MutationPatient"@fr)
+ObjectPropertyAssertion(obo:VO_0001039 obo:PROMOT_63268922_ae6e_4073_aaa1_f1b9169268b2 obo:PROMOT_63268922_ae6e_4073_aaa1_f1b9169268b2)
 
-# Individual: <http://purl.obolibrary.org/obo/PROMOT_72e84e9a_428b_4bf5_8375_803f56af8fcb> (NMWPatient)
+# Individual: obo:PROMOT_72e84e9a_428b_4bf5_8375_803f56af8fcb (NMWPatient)
 
-AnnotationAssertion(dce:creator <http://purl.obolibrary.org/obo/PROMOT_72e84e9a_428b_4bf5_8375_803f56af8fcb> <https://orcid.org/0009-0000-5160-7927>)
-AnnotationAssertion(dce:date <http://purl.obolibrary.org/obo/PROMOT_72e84e9a_428b_4bf5_8375_803f56af8fcb> "2025-08-22T07:16:11Z"^^xsd:dateTime)
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/PROMOT_72e84e9a_428b_4bf5_8375_803f56af8fcb> "NMWPatient"@fr)
-ClassAssertion(<http://purl.obolibrary.org/obo/HP_0000467> <http://purl.obolibrary.org/obo/PROMOT_72e84e9a_428b_4bf5_8375_803f56af8fcb>)
-ObjectPropertyAssertion(<http://purl.obolibrary.org/obo/RO_0002201> <http://purl.obolibrary.org/obo/PROMOT_72e84e9a_428b_4bf5_8375_803f56af8fcb> <http://purl.obolibrary.org/obo/PROMOT_f3fdf642_5216_4c2e_a169_505c66985082>)
+AnnotationAssertion(dce:creator obo:PROMOT_72e84e9a_428b_4bf5_8375_803f56af8fcb <https://orcid.org/0009-0000-5160-7927>)
+AnnotationAssertion(dce:date obo:PROMOT_72e84e9a_428b_4bf5_8375_803f56af8fcb "2025-08-22T07:16:11Z"^^xsd:dateTime)
+AnnotationAssertion(rdfs:label obo:PROMOT_72e84e9a_428b_4bf5_8375_803f56af8fcb "NMWPatient"@fr)
+ClassAssertion(obo:HP_0000467 obo:PROMOT_72e84e9a_428b_4bf5_8375_803f56af8fcb)
+ObjectPropertyAssertion(obo:RO_0002201 obo:PROMOT_72e84e9a_428b_4bf5_8375_803f56af8fcb obo:PROMOT_f3fdf642_5216_4c2e_a169_505c66985082)
 
-# Individual: <http://purl.obolibrary.org/obo/PROMOT_87bb9c1c_7476_4b9d_80b8_b38f6d11a78a> (DiseasePatient)
+# Individual: obo:PROMOT_87bb9c1c_7476_4b9d_80b8_b38f6d11a78a (DiseasePatient)
 
-AnnotationAssertion(dce:creator <http://purl.obolibrary.org/obo/PROMOT_87bb9c1c_7476_4b9d_80b8_b38f6d11a78a> <https://orcid.org/0009-0000-5160-7927>)
-AnnotationAssertion(dce:date <http://purl.obolibrary.org/obo/PROMOT_87bb9c1c_7476_4b9d_80b8_b38f6d11a78a> "2025-09-10T13:34:20Z"^^xsd:dateTime)
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/PROMOT_87bb9c1c_7476_4b9d_80b8_b38f6d11a78a> "DiseasePatient"@fr)
-ClassAssertion(<http://purl.obolibrary.org/obo/MONDO_0008116> <http://purl.obolibrary.org/obo/PROMOT_87bb9c1c_7476_4b9d_80b8_b38f6d11a78a>)
+AnnotationAssertion(dce:creator obo:PROMOT_87bb9c1c_7476_4b9d_80b8_b38f6d11a78a <https://orcid.org/0009-0000-5160-7927>)
+AnnotationAssertion(dce:date obo:PROMOT_87bb9c1c_7476_4b9d_80b8_b38f6d11a78a "2025-09-10T13:34:20Z"^^xsd:dateTime)
+AnnotationAssertion(rdfs:label obo:PROMOT_87bb9c1c_7476_4b9d_80b8_b38f6d11a78a "DiseasePatient"@fr)
+ClassAssertion(obo:MONDO_0008116 obo:PROMOT_87bb9c1c_7476_4b9d_80b8_b38f6d11a78a)
 
-# Individual: <http://purl.obolibrary.org/obo/PROMOT_8b624364_d55d_42e1_ba54_92a69fbc6957> (StatementPatient)
+# Individual: obo:PROMOT_8b624364_d55d_42e1_ba54_92a69fbc6957 (StatementPatient)
 
-AnnotationAssertion(dce:creator <http://purl.obolibrary.org/obo/PROMOT_8b624364_d55d_42e1_ba54_92a69fbc6957> <https://orcid.org/0009-0000-5160-7927>)
-AnnotationAssertion(dce:date <http://purl.obolibrary.org/obo/PROMOT_8b624364_d55d_42e1_ba54_92a69fbc6957> "2025-08-22T07:21:14Z"^^xsd:dateTime)
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/PROMOT_8b624364_d55d_42e1_ba54_92a69fbc6957> "StatementPatient"@fr)
-ClassAssertion(<http://purl.obolibrary.org/obo/PROMOT_4100001> <http://purl.obolibrary.org/obo/PROMOT_8b624364_d55d_42e1_ba54_92a69fbc6957>)
-ObjectPropertyAssertion(<http://purl.obolibrary.org/obo/RO_0002351> <http://purl.obolibrary.org/obo/PROMOT_8b624364_d55d_42e1_ba54_92a69fbc6957> <http://purl.obolibrary.org/obo/PROMOT_045e367e_c3fd_4c0a_83f3_8fa7e169ca10>)
-ObjectPropertyAssertion(<http://purl.obolibrary.org/obo/RO_0002351> <http://purl.obolibrary.org/obo/PROMOT_8b624364_d55d_42e1_ba54_92a69fbc6957> <http://purl.obolibrary.org/obo/PROMOT_f3fdf642_5216_4c2e_a169_505c66985082>)
+AnnotationAssertion(dce:creator obo:PROMOT_8b624364_d55d_42e1_ba54_92a69fbc6957 <https://orcid.org/0009-0000-5160-7927>)
+AnnotationAssertion(dce:date obo:PROMOT_8b624364_d55d_42e1_ba54_92a69fbc6957 "2025-08-22T07:21:14Z"^^xsd:dateTime)
+AnnotationAssertion(rdfs:label obo:PROMOT_8b624364_d55d_42e1_ba54_92a69fbc6957 "StatementPatient"@fr)
+ClassAssertion(obo:PROMOT_4100001 obo:PROMOT_8b624364_d55d_42e1_ba54_92a69fbc6957)
+ObjectPropertyAssertion(obo:RO_0002351 obo:PROMOT_8b624364_d55d_42e1_ba54_92a69fbc6957 obo:PROMOT_045e367e_c3fd_4c0a_83f3_8fa7e169ca10)
+ObjectPropertyAssertion(obo:RO_0002351 obo:PROMOT_8b624364_d55d_42e1_ba54_92a69fbc6957 obo:PROMOT_f3fdf642_5216_4c2e_a169_505c66985082)
 
-# Individual: <http://purl.obolibrary.org/obo/PROMOT_f3fdf642_5216_4c2e_a169_505c66985082> (PatientTest)
+# Individual: obo:PROMOT_f3fdf642_5216_4c2e_a169_505c66985082 (PatientTest)
 
-AnnotationAssertion(dce:creator <http://purl.obolibrary.org/obo/PROMOT_f3fdf642_5216_4c2e_a169_505c66985082> <https://orcid.org/0009-0000-5160-7927>)
-AnnotationAssertion(dce:date <http://purl.obolibrary.org/obo/PROMOT_f3fdf642_5216_4c2e_a169_505c66985082> "2025-08-22T07:11:19Z"^^xsd:dateTime)
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/PROMOT_f3fdf642_5216_4c2e_a169_505c66985082> "PatientTest"@fr)
-ClassAssertion(<http://purl.obolibrary.org/obo/PROMOT_3000001> <http://purl.obolibrary.org/obo/PROMOT_f3fdf642_5216_4c2e_a169_505c66985082>)
+AnnotationAssertion(dce:creator obo:PROMOT_f3fdf642_5216_4c2e_a169_505c66985082 <https://orcid.org/0009-0000-5160-7927>)
+AnnotationAssertion(dce:date obo:PROMOT_f3fdf642_5216_4c2e_a169_505c66985082 "2025-08-22T07:11:19Z"^^xsd:dateTime)
+AnnotationAssertion(rdfs:label obo:PROMOT_f3fdf642_5216_4c2e_a169_505c66985082 "PatientTest"@fr)
+ClassAssertion(obo:PROMOT_3000001 obo:PROMOT_f3fdf642_5216_4c2e_a169_505c66985082)
 
 
-AnnotationAssertion(rdfs:comment <http://snomed.info/id/224899006> "cf. Gait disturbance")
 )

@@ -1,16 +1,60 @@
 <?xml version="1.0"?>
 <rdf:RDF xmlns="http://purl.obolibrary.org/obo/promot/imports/bfo_import.owl#"
      xml:base="http://purl.obolibrary.org/obo/promot/imports/bfo_import.owl"
+     xmlns:HP="http://purl.obolibrary.org/obo/HP_"
+     xmlns:RO="http://purl.obolibrary.org/obo/RO_"
+     xmlns:VO="http://purl.obolibrary.org/obo/VO_"
+     xmlns:cc="http://creativecommons.org/ns#"
+     xmlns:BFO="http://purl.obolibrary.org/obo/BFO_"
+     xmlns:FMA="http://purl.obolibrary.org/obo/FMA_"
+     xmlns:IAO="http://purl.obolibrary.org/obo/IAO_"
+     xmlns:OBI="http://purl.obolibrary.org/obo/OBI_"
+     xmlns:SIO="http://semanticscience.org/resource/SIO_"
      xmlns:obo="http://purl.obolibrary.org/obo/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:HGNC="http://identifiers.org/hgnc/"
+     xmlns:OMOP="https://athena.ohdsi.org/search-terms/terms/"
+     xmlns:SCDO="http://purl.obolibrary.org/obo/SCDO_"
+     xmlns:dc11="http://purl.org/dc/elements/1.1/"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
+     xmlns:prov="http://www.w3.org/ns/prov#"
+     xmlns:rdfa="http://www.w3.org/ns/rdfa#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     xmlns:terms="http://purl.org/dc/terms/">
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+     xmlns:void="http://rdfs.org/ns/void#"
+     xmlns:CPONT="https://w3id.org/cpont/vocab/CPONT_"
+     xmlns:MONDO="http://purl.obolibrary.org/obo/MONDO_"
+     xmlns:chebi="http://purl.obolibrary.org/obo/chebi/"
+     xmlns:sssom="https://w3id.org/sssom/"
+     xmlns:swrla="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#"
+     xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:PROMOT="http://purl.obolibrary.org/obo/PROMOT_"
+     xmlns:SNOMED="http://snomed.info/id/"
+     xmlns:WHOFIC="http://id.who.int/icd/entity/"
+     xmlns:schema="http://schema.org/"
+     xmlns:BIOLINK="https://w3id.org/biolink/vocab/"
+     xmlns:omoprel="https://w3id.org/cpont/omop/relations/"
+     xmlns:subsets="http://purl.obolibrary.org/obo/ro/subsets#"
+     xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#"
+     xmlns:omoptype="https://w3id.org/cpont/omop/types/"
+     xmlns:NCBITaxon="http://purl.obolibrary.org/obo/NCBITaxon_"
+     xmlns:ncbitaxon="http://purl.obolibrary.org/obo/ncbitaxon#"
+     xmlns:omopclass="https://w3id.org/cpont/omop/classes/"
+     xmlns:ace_lexicon="http://attempto.ifi.uzh.ch/ace_lexicon#"
+     xmlns:uberon_core="http://purl.obolibrary.org/obo/uberon/core#"
+     xmlns:CPATH_PERSON="https://w3id.org/cpont/person/"
+     xmlns:CPATH_CARE_SITE="https://w3id.org/cpont/care_site/"
+     xmlns:CPATH_MEASUREMENT="https://w3id.org/cpont/measurement/"
+     xmlns:CPATH_VISIT_OCCURRENCE="https://w3id.org/cpont/visit_occurrence/"
+     xmlns:CPATH_CONDITION_OCCURRENCE="https://w3id.org/cpont/condition_occurrence/">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/promot/imports/bfo_import.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/promot/releases/2025-06-18/imports/bfo_import.owl"/>
-        <owl:versionInfo>2025-06-18</owl:versionInfo>
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/promot/releases/2025-10-17/imports/bfo_import.owl"/>
+        <owl:versionInfo>2025-10-17</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -951,8 +995,8 @@
         <obo:IAO_0000112 xml:lang="en">the nitrogen atoms in the atmosphere</obo:IAO_0000112>
         <obo:IAO_0000112 xml:lang="en">the restaurants in Palo Alto</obo:IAO_0000112>
         <obo:IAO_0000112 xml:lang="en">your collection of Meissen ceramic plates.</obo:IAO_0000112>
-        <obo:IAO_0000116>An entity a is an object aggregate if and only if there is a mutually exhaustive and pairwise disjoint partition of a into objects </obo:IAO_0000116>
         <obo:IAO_0000116 xml:lang="en">BFO 2 Reference: object aggregates may gain and lose parts while remaining numerically identical (one and the same individual) over time. This holds both for aggregates whose membership is determined naturally (the aggregate of cells in your body) and aggregates determined by fiat (a baseball team, a congressional committee).</obo:IAO_0000116>
+        <obo:IAO_0000116>An entity a is an object aggregate if and only if there is a mutually exhaustive and pairwise disjoint partition of a into objects </obo:IAO_0000116>
         <obo:IAO_0000119>ISBN:978-3-938793-98-5pp124-158#Thomas Bittner and Barry Smith, &apos;A Theory of Granular Partitions&apos;, in K. Munn and B. Smith (eds.), Applied Ontology: An Introduction, Frankfurt/Lancaster: ontos, 2008, 125-158.</obo:IAO_0000119>
         <obo:IAO_0000600 xml:lang="en">b is an object aggregate means: b is a material entity consisting exactly of a plurality of objects as member_parts at all times at which b exists. (axiom label in BFO2 Reference: [025-004])</obo:IAO_0000600>
         <obo:IAO_0000602>(forall (x) (if (ObjectAggregate x) (and (MaterialEntity x) (forall (t) (if (existsAt x t) (exists (y z) (and (Object y) (Object z) (memberPartOfAt y x t) (memberPartOfAt z x t) (not (= y z)))))) (not (exists (w t_1) (and (memberPartOfAt w x t_1) (not (Object w)))))))) // axiom label in BFO2 CLIF: [025-004] </obo:IAO_0000602>
@@ -1565,5 +1609,5 @@
 
 
 
-<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+<!-- Generated by the OWL API (version 4.5.29) https://github.com/owlcs/owlapi -->
 

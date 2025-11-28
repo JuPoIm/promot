@@ -20,18 +20,21 @@ These are the current imports in PROMOT
 | eco | http://purl.obolibrary.org/obo/eco.owl | custom |
 | fma | http://purl.obolibrary.org/obo/fma.owl | custom |
 | hp | http://purl.obolibrary.org/obo/hp.owl | custom |
-| hp-fr | http://purl.obolibrary.org/obo/hp-fr.owl | custom |
+| hp-fr-bab | https://raw.githubusercontent.com/obophenotype/human-phenotype-ontology/refs/heads/master/src/translations/hp-fr.babelon.owl | mirror |
+| hp-fr-syn | https://raw.githubusercontent.com/obophenotype/human-phenotype-ontology/refs/heads/master/src/translations/hp-fr.synonyms.owl | custom |
+| hp-es-bab | https://raw.githubusercontent.com/obophenotype/human-phenotype-ontology/refs/heads/master/src/translations/hp-es.babelon.owl | custom |
 | iao | http://purl.obolibrary.org/obo/iao.owl | filter |
 | mondo | http://purl.obolibrary.org/obo/mondo.owl | custom |
-| ncit | http://purl.obolibrary.org/obo/ncit.owl | filter |
 | obi | http://purl.obolibrary.org/obo/obi.owl | custom |
+| orcidio | https://w3id.org/orcidio/orcidio.owl | filter |
 | ro | http://purl.obolibrary.org/obo/ro.owl | custom |
 | scdo | http://purl.obolibrary.org/obo/scdo.owl | custom |
 | sio | http://purl.obolibrary.org/obo/sio.owl | custom |
 | snomed | http://purl.obolibrary.org/obo/snomed.owl | custom |
+| snomed-fr | http://purl.obolibrary.org/obo/snomed-fr.owl | custom |
 | vo | http://purl.obolibrary.org/obo/vo.owl | custom |
 | whofic | https://raw.githubusercontent.com/whoficitc/harmonization/main/ontology/whofic-2025-05-24.owl | custom |
-| whofic_fr-es | http://purl.obolibrary.org/obo/whofic_fr-es.owl | custom |
+| biolink | https://w3id.org/biolink/biolink-model.owl.ttl | custom |
 ## Components
 Components, in contrast to imports, are considered full members of the ontology. This means that any axiom in a component is also included in the ontology base - which means it is considered _native_ to the ontology. While this sounds complicated, consider this: conceptually, no component should be part of more than one ontology. If that seems to be the case, we are most likely talking about an import. Components are often not needed for ontologies, but there are some use cases:
 

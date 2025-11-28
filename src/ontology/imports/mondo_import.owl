@@ -1,18 +1,61 @@
 <?xml version="1.0"?>
 <rdf:RDF xmlns="http://purl.obolibrary.org/obo/promot/imports/mondo_import.owl#"
      xml:base="http://purl.obolibrary.org/obo/promot/imports/mondo_import.owl"
+     xmlns:HP="http://purl.obolibrary.org/obo/HP_"
+     xmlns:RO="http://purl.obolibrary.org/obo/RO_"
+     xmlns:VO="http://purl.obolibrary.org/obo/VO_"
+     xmlns:cc="http://creativecommons.org/ns#"
+     xmlns:BFO="http://purl.obolibrary.org/obo/BFO_"
+     xmlns:FMA="http://purl.obolibrary.org/obo/FMA_"
+     xmlns:IAO="http://purl.obolibrary.org/obo/IAO_"
+     xmlns:OBI="http://purl.obolibrary.org/obo/OBI_"
+     xmlns:SIO="http://semanticscience.org/resource/SIO_"
      xmlns:obo="http://purl.obolibrary.org/obo/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:HGNC="http://identifiers.org/hgnc/"
+     xmlns:OMOP="https://athena.ohdsi.org/search-terms/terms/"
+     xmlns:SCDO="http://purl.obolibrary.org/obo/SCDO_"
+     xmlns:dc11="http://purl.org/dc/elements/1.1/"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
+     xmlns:prov="http://www.w3.org/ns/prov#"
+     xmlns:rdfa="http://www.w3.org/ns/rdfa#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+     xmlns:void="http://rdfs.org/ns/void#"
+     xmlns:CPONT="https://w3id.org/cpont/vocab/CPONT_"
+     xmlns:MONDO="http://purl.obolibrary.org/obo/MONDO_"
+     xmlns:chebi="http://purl.obolibrary.org/obo/chebi/"
      xmlns:mondo="http://purl.obolibrary.org/obo/mondo#"
-     xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
+     xmlns:sssom="https://w3id.org/sssom/"
+     xmlns:swrla="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#"
+     xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:PROMOT="http://purl.obolibrary.org/obo/PROMOT_"
+     xmlns:SNOMED="http://snomed.info/id/"
+     xmlns:WHOFIC="http://id.who.int/icd/entity/"
+     xmlns:schema="http://schema.org/"
+     xmlns:BIOLINK="https://w3id.org/biolink/vocab/"
+     xmlns:omoprel="https://w3id.org/cpont/omop/relations/"
+     xmlns:subsets="http://purl.obolibrary.org/obo/ro/subsets#"
+     xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#"
+     xmlns:omoptype="https://w3id.org/cpont/omop/types/"
+     xmlns:NCBITaxon="http://purl.obolibrary.org/obo/NCBITaxon_"
+     xmlns:ncbitaxon="http://purl.obolibrary.org/obo/ncbitaxon#"
+     xmlns:omopclass="https://w3id.org/cpont/omop/classes/"
+     xmlns:ace_lexicon="http://attempto.ifi.uzh.ch/ace_lexicon#"
+     xmlns:uberon_core="http://purl.obolibrary.org/obo/uberon/core#"
+     xmlns:CPATH_PERSON="https://w3id.org/cpont/person/"
+     xmlns:CPATH_CARE_SITE="https://w3id.org/cpont/care_site/"
+     xmlns:CPATH_MEASUREMENT="https://w3id.org/cpont/measurement/"
+     xmlns:CPATH_VISIT_OCCURRENCE="https://w3id.org/cpont/visit_occurrence/"
+     xmlns:CPATH_CONDITION_OCCURRENCE="https://w3id.org/cpont/condition_occurrence/">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/promot/imports/mondo_import.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/promot/releases/2025-08-07/imports/mondo_import.owl"/>
-        <owl:versionInfo>2025-08-07</owl:versionInfo>
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/promot/releases/2025-10-28/imports/mondo_import.owl"/>
+        <owl:versionInfo>2025-10-28</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -37,6 +80,12 @@
     <!-- http://purl.obolibrary.org/obo/IAO_0000233 -->
 
     <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000233"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OMO_0002001 -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/OMO_0002001"/>
     
 
 
@@ -403,12 +452,12 @@
         <rdfs:label>oculopharyngeal muscular dystrophy</rdfs:label>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://rarediseases.info.nih.gov/diseases/7245/oculopharyngeal-muscular-dystrophy</rdfs:seeAlso>
         <skos:closeMatch rdf:resource="http://identifiers.org/meddra/10052181"/>
+        <skos:exactMatch rdf:resource="http://id.who.int/icd/entity/1354386293"/>
         <skos:exactMatch rdf:resource="http://identifiers.org/medgen/75730"/>
         <skos:exactMatch rdf:resource="http://identifiers.org/mesh/D039141"/>
         <skos:exactMatch rdf:resource="http://identifiers.org/snomedct/77097004"/>
         <skos:exactMatch rdf:resource="http://linkedlifedata.com/resource/umls/id/C0270952"/>
         <skos:exactMatch rdf:resource="http://purl.obolibrary.org/obo/DOID_11719"/>
-        <skos:exactMatch rdf:resource="http://purl.obolibrary.org/obo/mondo/sources/icd11foundation/1354386293"/>
         <skos:exactMatch rdf:resource="http://www.orpha.net/ORDO/Orphanet_270"/>
         <skos:exactMatch rdf:resource="https://omim.org/phenotypicSeries/PS164300"/>
     </owl:Class>
@@ -613,13 +662,13 @@
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/mondo#rare"/>
         <rdfs:label>congenital myasthenic syndrome</rdfs:label>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://rarediseases.info.nih.gov/diseases/11902/congenital-myasthenic-syndrome</rdfs:seeAlso>
+        <skos:exactMatch rdf:resource="http://id.who.int/icd/entity/1515367530"/>
         <skos:exactMatch rdf:resource="http://identifiers.org/medgen/155650"/>
         <skos:exactMatch rdf:resource="http://identifiers.org/mesh/D020294"/>
         <skos:exactMatch rdf:resource="http://identifiers.org/snomedct/230672006"/>
         <skos:exactMatch rdf:resource="http://linkedlifedata.com/resource/umls/id/C0751882"/>
         <skos:exactMatch rdf:resource="http://purl.obolibrary.org/obo/DOID_3635"/>
         <skos:exactMatch rdf:resource="http://purl.obolibrary.org/obo/NCIT_C84647"/>
-        <skos:exactMatch rdf:resource="http://purl.obolibrary.org/obo/mondo/sources/icd11foundation/1515367530"/>
         <skos:exactMatch rdf:resource="http://www.orpha.net/ORDO/Orphanet_590"/>
         <skos:exactMatch rdf:resource="https://omim.org/phenotypicSeries/PS601462"/>
     </owl:Class>
@@ -754,6 +803,7 @@
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MONDO_0018940"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
         <owl:annotatedTarget>Congenital Myasthenic Syndromes</owl:annotatedTarget>
+        <obo:OMO_0002001>https://w3id.org/information-resource-registry/nord</obo:OMO_0002001>
         <oboInOwl:hasDbXref>NORD:1893</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>icd11.foundation:1515367530</oboInOwl:hasDbXref>
     </owl:Axiom>
@@ -867,10 +917,10 @@
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/mondo#rare"/>
         <rdfs:label>congenital myopathy</rdfs:label>
         <skos:closeMatch rdf:resource="http://identifiers.org/meddra/10062547"/>
+        <skos:exactMatch rdf:resource="http://id.who.int/icd/entity/1185572073"/>
         <skos:exactMatch rdf:resource="http://identifiers.org/medgen/124381"/>
         <skos:exactMatch rdf:resource="http://linkedlifedata.com/resource/umls/id/C0270960"/>
         <skos:exactMatch rdf:resource="http://purl.obolibrary.org/obo/DOID_0081337"/>
-        <skos:exactMatch rdf:resource="http://purl.obolibrary.org/obo/mondo/sources/icd11foundation/1185572073"/>
         <skos:exactMatch rdf:resource="http://www.orpha.net/ORDO/Orphanet_97245"/>
         <skos:exactMatch rdf:resource="https://omim.org/phenotypicSeries/PS117000"/>
     </owl:Class>
@@ -973,9 +1023,9 @@
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MONDO_0019952"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
         <owl:annotatedTarget>congenital myopathy</owl:annotatedTarget>
+        <obo:OMO_0002001>https://w3id.org/information-resource-registry/clingen</obo:OMO_0002001>
         <oboInOwl:hasDbXref>DOID:0081337</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>Orphanet:97245</oboInOwl:hasDbXref>
-        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/mondo#CLINGEN_LABEL"/>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MONDO_0019952"/>

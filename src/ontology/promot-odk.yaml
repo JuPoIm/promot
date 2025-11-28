@@ -1,12 +1,12 @@
 #### GENERAL INFORMATIONS
 id: promot
-title: "PROMOT Common Data Model ontology"
+title: "PROMOT ontology"
 github_org: JuPoIm
 git_main_branch: main
 repo: promot_ontology
 contact: juliette.potier@institutimagine.org
-description: "Ontology for building the relational database of the PROMOT project"
-license: https://creativecommons.org/licenses/by-nc-sa/4.0/
+description: "Ontology for modeling the three following neuromuscular diseases : OPMD, Congenital myopathies and Congenital myastenic syndroms. It aims to be also an ontology for building the PROMOT project relational database."
+license: "https://creativecommons.org/licenses/by-nc-sa/4.0/"
 documentation:
   documentation_system: mkdocs
 #### RELEASE CONFIG
@@ -22,35 +22,30 @@ export_formats:
   - json
 #### USE CONFIG
 use_context: TRUE # uses context.json file for prefixes
-use_dosdps: TRUE # uses Dead Simple Owl Design patterns for creating PROMOT axioms
+use_dosdps: TRUE # uses Dead Simple Owl Design Patterns for creating PROMOT axioms
 use_template: TRUE # uses ROBOT templates for creating PROMOT classes, properties and axioms
 use_mappings: TRUE # uses SSSOM mapping files
 #### HOMEMADE SSSOM MODULE
-mappings:
-  products:
-    - filename: snomed-ncit.sssom.tsv
-bridges:
-  products:
-    - filename: bridge1.owl
-      from_sssom: snomed-ncit.sssom.tsv
 sssom_mappingset_group:
   products:
     - id: promot-mappings
-bridge_group:
-  products:
-    - id: promot-bridge
-      sources:
-        - promot-mappings
+    - id: ICF_to_CIF_promot-mappings
+  release_mappings: TRUE
+  http://purl.obolibrary.org/obo/ro/bridge/sio-ro-bridge.owl
 #### HOMEMADE MODULE
 components:
   release_components: TRUE
   products:
     - filename: promot-component.owl
+      use_template: TRUE
       template_options: --add-prefixes config/context.json
       templates:
         - promot-component.csv
+        - ICF_labels_es-fr.tsv
+      use_mappings: TRUE
       mappings:
-        - snomed-ncit.sssom.tsv
+        - promot-mappings.sssom.tsv
+        - ICF_to_CIF_promot-mappings.sssom.tsv
 #### IMPORTED MODULES
 import_group:
   annotation_properties:
@@ -58,42 +53,48 @@ import_group:
     - rdfs:comment
     - dc:description
     - dc:source
+    - dc:date
+    - dcterms:creator
     - oboInOwl:hasDbXref
     - IAO:0000115 # definition
     - IAO:0000116 # editor note
     - IAO:0000117 # term editor
     - IAO:0000119 # definition source
     - IAO:0000412 # imported from
-  release_imports: TRUE
+  release_imports: FALSE
   module_type: custom
   products:
     - id: bfo # high-level classes
     - id: eco # evidence classes
     - id: fma # anatomy classes
     - id: hp # phenotypes classes
-    - id: hp-fr # french release
+    - id: hp-fr-bab # french babelon
+      mirror_from: https://raw.githubusercontent.com/obophenotype/human-phenotype-ontology/refs/heads/master/src/translations/hp-fr.babelon.owl
+      module_type: mirror
+    - id: hp-fr-syn # french synonyms
+      mirror_from: https://raw.githubusercontent.com/obophenotype/human-phenotype-ontology/refs/heads/master/src/translations/hp-fr.synonyms.owl
+    - id: hp-es-bab # spanish babelon
+      mirror_from: https://raw.githubusercontent.com/obophenotype/human-phenotype-ontology/refs/heads/master/src/translations/hp-es.babelon.owl
     - id: iao # information content entity class
       module_type: filter
     - id: mondo # diseases classes
       is_large: TRUE
-    - id: ncit # demographic and observable entity classes
-      is_large: TRUE
-      module_type: filter
     - id: obi # 'Organism' and 'Homo sapiens' classes
     - id: ro # object properties
-    - id: scdo # 'measures' object property
     - id: sio # life status, parental transmission
-    - id: snomed # tests, devices
+      mirror_type: no_mirror
+    - id: snomed # See promot.Makefile for details
+      is_large: TRUE
+    - id: snomed-fr # See promot.Makefile for details
       is_large: TRUE
     - id: vo # 'has gene mutation' object property
     - id: whofic # body structures, functions, activities classes
       mirror_from: https://raw.githubusercontent.com/whoficitc/harmonization/main/ontology/whofic-2025-05-24.owl
-    - id: whofic_fr-es # body
 #### ROBOT CONFIG
 robot_java_args: '-Xmx25G'
 robot_report:
   use_labels: TRUE
-  fail_on: ERROR
-  custom_profile: TRUE
+  fail_on: NULL
+  custom_profile: FALSE
   report_on: 
     - edit

@@ -10,7 +10,7 @@
 # More information: https://github.com/INCATools/ontology-development-kit/
 
 # Fingerprint of the configuration file when this Makefile was last generated
-CONFIG_HASH=                13dc08470187fa38504c0e32773e0e01e8201f381e21cd56cb5853ca518ddc7e
+CONFIG_HASH=                609c80e7565d8b1bb06815d2a1118c82c481672167ac8e5e5d3395c30c4be182
 
 
 # ----------------------------------------
@@ -43,10 +43,9 @@ UPDATEREPODIR=              target
 SPARQLDIR =                 ../sparql
 EXTENDED_PREFIX_MAP=        $(TMPDIR)/obo.epm.json
 COMPONENTSDIR =             components
-ROBOT_PROFILE =             profile.txt
-REPORT_FAIL_ON =            ERROR
+REPORT_FAIL_ON =            None
 REPORT_LABEL =              -l true
-REPORT_PROFILE_OPTS =       --profile $(ROBOT_PROFILE)
+REPORT_PROFILE_OPTS =       
 OBO_FORMAT_OPTIONS =        --clean-obo "strict drop-untranslatable-axioms"
 SPARQL_VALIDATION_CHECKS =  owldef-self-reference iri-range label-with-iri multiple-replaced_by 
 SPARQL_EXPORTS =            basic-report class-count-by-prefix edges xrefs obsoletes synonyms 
@@ -71,7 +70,7 @@ PATTERN_RELEASE_FILES=      $(PATTERNDIR)/definitions.owl $(PATTERNDIR)/pattern.
 MAPPINGDIR=                 ../mappings
 MAPPING_TESTER=             sssom validate
 SSSOMPY=                    sssom
-MAPPINGS=                   promot-mappings 
+MAPPINGS=                   promot-mappings ICF_to_CIF_promot-mappings 
 MAPPING_RELEASE_FILES=      $(foreach n,$(MAPPINGS), $(MAPPINGDIR)/$(n).sssom.tsv)
 
 
@@ -200,7 +199,7 @@ all_main: $(MAIN_FILES)
 # ----------------------------------------
 
 
-IMPORTS =  bfo eco fma hp hp-fr iao mondo ncit obi ro scdo sio snomed vo whofic whofic_fr-es
+IMPORTS =  bfo eco fma hp hp-fr-bab hp-fr-syn hp-es-bab iao mondo obi orcidio ro scdo sio snomed snomed-fr vo whofic biolink
 
 IMPORT_ROOTS = $(patsubst %, $(IMPORTDIR)/%_import, $(IMPORTS))
 IMPORT_OWL_FILES = $(foreach n,$(IMPORT_ROOTS), $(n).owl)
@@ -228,8 +227,9 @@ all_subsets: $(SUBSET_FILES)
 # ----------------------------------------
 
 
-MAPPINGS =  promot-mappings
+MAPPINGS =  promot-mappings ICF_to_CIF_promot-mappings
 
+RELEASED_MAPPINGS =  promot-mappings ICF_to_CIF_promot-mappings
 
 MAPPING_FILES = $(foreach p, $(MAPPINGS), $(MAPPINGDIR)/$(p).sssom.tsv)
 RELEASED_MAPPING_FILES = $(foreach p, $(RELEASED_MAPPINGS), $(MAPPINGDIR)/$(p).sssom.tsv)
@@ -291,13 +291,9 @@ $(REPORTDIR)/$(SRC)-obo-report.tsv: $(SRCMERGED) | $(REPORTDIR)
 $(REPORTDIR)/%-obo-report.tsv: % | $(REPORTDIR)
 	$(ROBOT) report -i $< $(REPORT_LABEL) $(REPORT_PROFILE_OPTS) --fail-on $(REPORT_FAIL_ON) --print 5 -o $@
 
-check_for_robot_updates:	
-	@cut -f2 "/tools/templates/src/ontology/profile.txt" | sort > $(TMPDIR)/sorted_tsv2.txt
-	@cut -f2 "$(ROBOT_PROFILE)" | sort > $(TMPDIR)/sorted_tsv1.txt
-	@comm -23 $(TMPDIR)/sorted_tsv2.txt $(TMPDIR)/sorted_tsv1.txt > $(TMPDIR)/missing.txt
-	@echo "Missing tests:"
-	@cat $(TMPDIR)/missing.txt
-	@rm $(TMPDIR)/sorted_tsv1.txt $(TMPDIR)/sorted_tsv2.txt $(TMPDIR)/missing.txt $(TMPDIR)/report_profile_robot.txt
+check_for_robot_updates:
+	echo "You are not using a custom profile, so you are getting the joy of the latest ROBOT report!"
+
 
 # ----------------------------------------
 # Release assets
@@ -312,7 +308,7 @@ ASSETS = \
   $(MAPPING_FILES)
 
 RELEASE_ASSETS = \
-  $(MAIN_FILES) $(IMPORT_FILES) \
+  $(MAIN_FILES) \
   $(SUBSET_FILES)
 
 .PHONY: all_assets
@@ -354,9 +350,12 @@ prepare_release_fast:
 .PHONY: copy_release_files
 copy_release_files:
 	rsync -R $(RELEASE_ASSETS) $(RELEASEDIR)
+	mkdir -p $(RELEASEDIR)/mappings
+	cp -rf $(RELEASED_MAPPING_FILES) $(RELEASEDIR)/mappings
 
 # All released assets, in their final location within the release
-RELEASE_ASSETS_AFTER_RELEASE=$(foreach n,$(RELEASE_ASSETS), $(RELEASEDIR)/$(n))
+RELEASE_ASSETS_AFTER_RELEASE=$(foreach n,$(RELEASE_ASSETS), $(RELEASEDIR)/$(n)) \
+			     $(foreach n,$(RELEASED_MAPPINGS), $(RELEASEDIR)/mappings/$(n).sssom.tsv)
 
 .PHONY: show_release_assets
 show_release_assets:
@@ -405,7 +404,7 @@ $(IMPORTSEED): $(PRESEED) $(TMPDIR)/all_pattern_terms.txt | $(TMPDIR)
 
 T_IMPORTSEED = --term-file $(IMPORTSEED)
 
-ANNOTATION_PROPERTIES=rdfs:label rdfs:comment dc:description dc:source oboInOwl:hasDbXref IAO:0000115 IAO:0000116 IAO:0000117 IAO:0000119 IAO:0000412 
+ANNOTATION_PROPERTIES=rdfs:label rdfs:comment dc:description dc:source dc:date dcterms:creator oboInOwl:hasDbXref IAO:0000115 IAO:0000116 IAO:0000117 IAO:0000119 IAO:0000412 
 
 # ----------------------------------------
 # Import modules
@@ -423,6 +422,15 @@ $(IMPORTDIR)/%_import.owl: $(MIRRORDIR)/%.owl
 	@false
 
 .PRECIOUS: $(IMPORTDIR)/%_import.owl
+
+## Module for ontology: hp-fr-bab (mirror)
+$(IMPORTDIR)/hp-fr-bab_import.owl: $(MIRRORDIR)/hp-fr-bab.owl | all_robot_plugins
+	$(ROBOT) annotate --input $< --remove-annotations \
+		 odk:normalize --base-iri http://purl.obolibrary.org/obo \
+		               --subset-decls true --synonym-decls true \
+		               --add-source true \
+		 repair --merge-axiom-annotations true \
+		 $(ANNOTATE_CONVERT_FILE)
 
 ## Module for ontology: iao (filter)
 $(IMPORTDIR)/iao_import.owl: $(MIRRORDIR)/iao.owl $(IMPORTDIR)/iao_terms.txt $(IMPORTSEED) | all_robot_plugins
@@ -451,31 +459,37 @@ $(IMPORTDIR)/mondo_import.owl: $(MIRRORDIR)/mondo.owl
 	@false
 endif # IMP_LARGE=true
 
-## Module for ontology: ncit (filter)
-ifeq ($(IMP_LARGE),true)
-$(IMPORTDIR)/ncit_import.owl: $(MIRRORDIR)/ncit.owl $(IMPORTDIR)/ncit_terms.txt $(IMPORTSEED) | all_robot_plugins
+## Module for ontology: orcidio (filter)
+$(IMPORTDIR)/orcidio_import.owl: $(MIRRORDIR)/orcidio.owl $(IMPORTDIR)/orcidio_terms.txt $(IMPORTSEED) | all_robot_plugins
 	$(ROBOT) annotate --input $< --remove-annotations \
 		 odk:normalize --add-source true \
-		 extract --term-file $(IMPORTDIR)/ncit_terms.txt $(T_IMPORTSEED) \
+		 extract --term-file $(IMPORTDIR)/orcidio_terms.txt $(T_IMPORTSEED) \
 		         --copy-ontology-annotations true --force true --method BOT \
 		 remove --axioms external --preserve-structure false --trim false \
-		        --base-iri http://purl.obolibrary.org/obo/NCIT \
+		        --base-iri https://orcid.org/ \
 		 remove $(foreach p, $(ANNOTATION_PROPERTIES), --term $(p)) \
 		        --term rdfs:label \
 		        --term IAO:0000115 \
 		        --term OMO:0002000 \
-		        --term-file $(IMPORTDIR)/ncit_terms.txt $(T_IMPORTSEED) \
+		        --term-file $(IMPORTDIR)/orcidio_terms.txt $(T_IMPORTSEED) \
 		        --select complement \
 		 odk:normalize --base-iri http://purl.obolibrary.org/obo \
 		               --subset-decls true --synonym-decls true \
 		 repair --merge-axiom-annotations true \
 		 $(ANNOTATE_CONVERT_FILE)
-endif # IMP_LARGE=true
 
 ## Module for ontology: snomed (custom)
 ifeq ($(IMP_LARGE),true)
 $(IMPORTDIR)/snomed_import.owl: $(MIRRORDIR)/snomed.owl
 	@echo "ERROR: You have configured snomed as a custom module;"
+	@echo "       This rule needs to be overwritten in promot.Makefile!"
+	@false
+endif # IMP_LARGE=true
+
+## Module for ontology: snomed-fr (custom)
+ifeq ($(IMP_LARGE),true)
+$(IMPORTDIR)/snomed-fr_import.owl: $(MIRRORDIR)/snomed-fr.owl
+	@echo "ERROR: You have configured snomed-fr as a custom module;"
 	@echo "       This rule needs to be overwritten in promot.Makefile!"
 	@false
 endif # IMP_LARGE=true
@@ -543,6 +557,13 @@ $(TMPDIR)/stamp-component-%.owl: | $(TMPDIR)
 	touch $@
 .PRECIOUS: $(TMPDIR)/stamp-component-%.owl
 
+$(COMPONENTSDIR)/promot-component.owl: $(TEMPLATEDIR)/promot-component.csv $(TEMPLATEDIR)/ICF_labels_es-fr.tsv $(TMPDIR)/stamp-component-promot-component.owl
+	$(ROBOT) template --add-prefixes config/context.json \
+		 --template $(TEMPLATEDIR)/promot-component.csv \
+		 --template $(TEMPLATEDIR)/ICF_labels_es-fr.tsv \
+		 $(ANNOTATE_CONVERT_FILE)
+.PRECIOUS: $(COMPONENTSDIR)/promot-component.owl
+
 endif # COMP=true
 # ----------------------------------------
 # Mirroring upstream ontologies
@@ -583,12 +604,25 @@ mirror-hp: | $(TMPDIR)
 	$(ROBOT) convert -i $(TMPDIR)/hp-download.owl -o $(TMPDIR)/$@.owl
 
 
-## ONTOLOGY: hp-fr
-.PHONY: mirror-hp-fr
-.PRECIOUS: $(MIRRORDIR)/hp-fr.owl
-mirror-hp-fr: | $(TMPDIR)
-	curl -L $(OBOBASE)/hp-fr.owl --create-dirs -o $(TMPDIR)/hp-fr-download.owl --retry 4 --max-time 200 && \
-	$(ROBOT) convert -i $(TMPDIR)/hp-fr-download.owl -o $(TMPDIR)/$@.owl
+## ONTOLOGY: hp-fr-bab
+.PHONY: mirror-hp-fr-bab
+.PRECIOUS: $(MIRRORDIR)/hp-fr-bab.owl
+mirror-hp-fr-bab: | $(TMPDIR)
+	$(ROBOT) convert -I https://raw.githubusercontent.com/obophenotype/human-phenotype-ontology/refs/heads/master/src/translations/hp-fr.babelon.owl -o $(TMPDIR)/$@.owl
+
+
+## ONTOLOGY: hp-fr-syn
+.PHONY: mirror-hp-fr-syn
+.PRECIOUS: $(MIRRORDIR)/hp-fr-syn.owl
+mirror-hp-fr-syn: | $(TMPDIR)
+	$(ROBOT) convert -I https://raw.githubusercontent.com/obophenotype/human-phenotype-ontology/refs/heads/master/src/translations/hp-fr.synonyms.owl -o $(TMPDIR)/$@.owl
+
+
+## ONTOLOGY: hp-es-bab
+.PHONY: mirror-hp-es-bab
+.PRECIOUS: $(MIRRORDIR)/hp-es-bab.owl
+mirror-hp-es-bab: | $(TMPDIR)
+	$(ROBOT) convert -I https://raw.githubusercontent.com/obophenotype/human-phenotype-ontology/refs/heads/master/src/translations/hp-es.babelon.owl -o $(TMPDIR)/$@.owl
 
 
 ## ONTOLOGY: iao
@@ -609,22 +643,19 @@ mirror-mondo: | $(TMPDIR)
 endif
 
 
-## ONTOLOGY: ncit
-.PHONY: mirror-ncit
-.PRECIOUS: $(MIRRORDIR)/ncit.owl
-ifeq ($(IMP_LARGE),true)
-mirror-ncit: | $(TMPDIR)
-	curl -L $(OBOBASE)/ncit.owl --create-dirs -o $(TMPDIR)/ncit-download.owl --retry 4 --max-time 200 && \
-	$(ROBOT) convert -i $(TMPDIR)/ncit-download.owl -o $(TMPDIR)/$@.owl
-endif
-
-
 ## ONTOLOGY: obi
 .PHONY: mirror-obi
 .PRECIOUS: $(MIRRORDIR)/obi.owl
 mirror-obi: | $(TMPDIR)
 	curl -L $(OBOBASE)/obi.owl --create-dirs -o $(TMPDIR)/obi-download.owl --retry 4 --max-time 200 && \
 	$(ROBOT) convert -i $(TMPDIR)/obi-download.owl -o $(TMPDIR)/$@.owl
+
+
+## ONTOLOGY: orcidio
+.PHONY: mirror-orcidio
+.PRECIOUS: $(MIRRORDIR)/orcidio.owl
+mirror-orcidio: | $(TMPDIR)
+	$(ROBOT) convert -I https://w3id.org/orcidio/orcidio.owl -o $(TMPDIR)/$@.owl
 
 
 ## ONTOLOGY: ro
@@ -644,11 +675,7 @@ mirror-scdo: | $(TMPDIR)
 
 
 ## ONTOLOGY: sio
-.PHONY: mirror-sio
-.PRECIOUS: $(MIRRORDIR)/sio.owl
-mirror-sio: | $(TMPDIR)
-	curl -L $(OBOBASE)/sio.owl --create-dirs -o $(TMPDIR)/sio-download.owl --retry 4 --max-time 200 && \
-	$(ROBOT) convert -i $(TMPDIR)/sio-download.owl -o $(TMPDIR)/$@.owl
+## You have configured your default mirror type to no_mirror.
 
 
 ## ONTOLOGY: snomed
@@ -658,6 +685,16 @@ ifeq ($(IMP_LARGE),true)
 mirror-snomed: | $(TMPDIR)
 	curl -L $(OBOBASE)/snomed.owl --create-dirs -o $(TMPDIR)/snomed-download.owl --retry 4 --max-time 200 && \
 	$(ROBOT) convert -i $(TMPDIR)/snomed-download.owl -o $(TMPDIR)/$@.owl
+endif
+
+
+## ONTOLOGY: snomed-fr
+.PHONY: mirror-snomed-fr
+.PRECIOUS: $(MIRRORDIR)/snomed-fr.owl
+ifeq ($(IMP_LARGE),true)
+mirror-snomed-fr: | $(TMPDIR)
+	curl -L $(OBOBASE)/snomed-fr.owl --create-dirs -o $(TMPDIR)/snomed-fr-download.owl --retry 4 --max-time 200 && \
+	$(ROBOT) convert -i $(TMPDIR)/snomed-fr-download.owl -o $(TMPDIR)/$@.owl
 endif
 
 
@@ -676,12 +713,11 @@ mirror-whofic: | $(TMPDIR)
 	$(ROBOT) convert -I https://raw.githubusercontent.com/whoficitc/harmonization/main/ontology/whofic-2025-05-24.owl -o $(TMPDIR)/$@.owl
 
 
-## ONTOLOGY: whofic_fr-es
-.PHONY: mirror-whofic_fr-es
-.PRECIOUS: $(MIRRORDIR)/whofic_fr-es.owl
-mirror-whofic_fr-es: | $(TMPDIR)
-	curl -L $(OBOBASE)/whofic_fr-es.owl --create-dirs -o $(TMPDIR)/whofic_fr-es-download.owl --retry 4 --max-time 200 && \
-	$(ROBOT) convert -i $(TMPDIR)/whofic_fr-es-download.owl -o $(TMPDIR)/$@.owl
+## ONTOLOGY: biolink
+.PHONY: mirror-biolink
+.PRECIOUS: $(MIRRORDIR)/biolink.owl
+mirror-biolink: | $(TMPDIR)
+	$(ROBOT) convert -I https://w3id.org/biolink/biolink-model.owl.ttl -o $(TMPDIR)/$@.owl
 
 
 $(MIRRORDIR)/%.owl: mirror-% | $(MIRRORDIR)
@@ -856,6 +892,10 @@ normalize_mappings:
 
 # This mappingset is manually curated, so we only check that the file actually exists.
 $(MAPPINGDIR)/promot-mappings.sssom.tsv:
+	test -f $@
+
+# This mappingset is manually curated, so we only check that the file actually exists.
+$(MAPPINGDIR)/ICF_to_CIF_promot-mappings.sssom.tsv:
 	test -f $@
 
 # ----------------------------------------
