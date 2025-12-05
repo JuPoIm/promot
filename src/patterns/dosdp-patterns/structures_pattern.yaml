@@ -2,33 +2,40 @@ pattern_name: structures_pattern
 
 pattern_iri: structures_pattern.yaml
 
-description: "Use this template to link the body structures to the phenotypes and activities they are related to."
+description: "Use this template to link the body structures to the entities they are related to, the body structures being the subject of the relationship and the other entities the object of the relation, that includes phenotypes, body functions and activities and participation."
 
 contributors:
   - https://orcid.org/0009-0000-5160-7927 # J. Potier
 
 classes:
-  body_structures: http://id.who.int/icd/entity/1626363729
-  activities_participations: http://id.who.int/icd/entity/1394728112
+  body_structure: http://id.who.int/icd/entity/1626363729
   phenotypic_abnormality: HP:0000118
+  activities_participation: http://id.who.int/icd/entity/1394728112
+  body_function: http://id.who.int/icd/entity/567313968
 
 relations:
-  affects: https://w3id.org/biolink/vocab/affects
-  related_to: https://w3id.org/biolink/vocab/related_to
+  has_disposition: RO:0000091
+  affects: PROMOT:2000006
+  involved_in: RO:0002331
 
 vars:
   phenotype: "'phenotypic_abnormality'"
-  activity: "'activities_participations'"
-
+  activity: "'activities_participation'"
+  function: "'body_function'"
 
 logical_axioms:
+
+  - axiom_type: subClassOf
+    text: "'has_disposition' some %s"
+    vars:
+      - phenotype
 
   - axiom_type: subClassOf
     text: "'affects' some %s"
     vars:
       - activity
-  
+
   - axiom_type: subClassOf
-    text: "'related_to' some %s"
+    text: "'involved_in' some %s"
     vars:
-      - phenotype
+      - function

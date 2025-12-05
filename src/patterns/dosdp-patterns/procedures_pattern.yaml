@@ -1,0 +1,48 @@
+pattern_name: procedures_pattern
+
+pattern_iri: procedures_pattern.yaml
+
+description: "Use this template to link the evaluation procedures to the entities they assessed, that includes phenotypes, body functions, body structures and activities and participation. The procedure is the subject of the relation."
+
+contributors:
+  - https://orcid.org/0009-0000-5160-7927 # J. Potier
+
+classes:
+  procedure_by_method: SNOMED:386053000
+  body_function: http://id.who.int/icd/entity/567313968
+  body_structure: http://id.who.int/icd/entity/1626363729
+  activities_participation: http://id.who.int/icd/entity/1394728112
+  phenotypic_abnormality: HP:0000118
+
+relations:
+  measures: PROMOT:2000004
+  is_related_to: SIO:000001
+
+vars:
+  procedure: "procedure_by_method"
+  function: "body_function"
+  structure: "body_structure"
+  activity: "activities_participation"
+  phenotype: "phenotypic_abnormality"
+      
+logical_axioms:
+
+  - axiom_type: subClassOf
+    text: "'measures' some %s"
+    vars:
+      - function
+
+  - axiom_type: subClassOf
+    text: "'measures' some %s"
+    vars:
+      - structure
+
+  - axiom_type: subClassOf
+    text: "'measures' some %s"
+    vars:
+      - activity
+
+  - axiom_type: subClassOf
+    text: "'is_related_to' some %s"
+    vars:
+      - phenotype

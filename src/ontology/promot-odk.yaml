@@ -30,8 +30,18 @@ sssom_mappingset_group:
   products:
     - id: promot-mappings
     - id: ICF_to_CIF_promot-mappings
+    - id: ICF_to_CIF_all-mappings
   release_mappings: TRUE
-  http://purl.obolibrary.org/obo/ro/bridge/sio-ro-bridge.owl
+bridge_group:
+  products:
+    - id: promot-bridge
+      sources:
+        - promot-mappings
+    - id: icf-cif-fr-bridge
+      sources:
+        - ICF_to_CIF_all-mappings
+  release_bridges: TRUE
+#  http://purl.obolibrary.org/obo/ro/bridge/sio-ro-bridge.owl
 #### HOMEMADE MODULE
 components:
   release_components: TRUE
@@ -85,8 +95,7 @@ import_group:
       mirror_type: no_mirror
     - id: snomed # See promot.Makefile for details
       is_large: TRUE
-    - id: snomed-fr # See promot.Makefile for details
-      is_large: TRUE
+      mirror_type: no_mirror
     - id: vo # 'has gene mutation' object property
     - id: whofic # body structures, functions, activities classes
       mirror_from: https://raw.githubusercontent.com/whoficitc/harmonization/main/ontology/whofic-2025-05-24.owl

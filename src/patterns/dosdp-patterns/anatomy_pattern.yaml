@@ -2,12 +2,10 @@ pattern_name: anatomy_pattern
 
 pattern_iri: anatomy_pattern.yaml
 
+description: "Use this template to link the anatomical entity to the phenotypes and body structures they are related to, the anatomical entity being the subject of the relation."
+
 contributors:
   - https://orcid.org/0009-0000-5160-7927 # J. Potier
-
-description: "Use this template to link the anatomical entity to the phenotypes and body structures they are related to."
-
-status: development
 
 classes:
   anatomical_entity: FMA:62955
@@ -15,22 +13,21 @@ classes:
   phenotypic_abnormality: HP:0000118
 
 relations:
-  related_to: https://w3id.org/biolink/vocab/related_to
-  bearer_of: RO:0000053
+  located_in: RO:0001025
+  has_disposition: RO:0000091
 
 vars:
   structure: "'body_structure'"
   phenotype: "'phenotypic_abnormality'"
 
-
 logical_axioms:
 
   - axiom_type: subClassOf
-    text: "'related_to' some %s"
+    text: "'located_in' some %s"
     vars:
       - structure
 
   - axiom_type: subClassOf
-    text: "'bearer_of' some %s"
+    text: "'has_disposition' some %s"
     vars:
       - phenotype

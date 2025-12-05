@@ -2,22 +2,22 @@ pattern_name: statements_pattern
 
 pattern_iri: statements_pattern.yaml
 
-description: "Use this template to link the statements to the related demographic history details."
+description: "Use this template to link a statement to the information content entity that is a member of that statement."
 
 contributors:
   - https://orcid.org/0009-0000-5160-7927 # J. Potier
 
 classes:
-  information: http://purl.obolibrary.org/obo/IAO_0000030
+  information_content_entity: IAO:0000030
   statements: PROMOT:5000001
 
 relations:
   has_member: RO:0002351
 
 vars:
-  info: "'information'"
+  information: "'information_content_entity'"
 
 subClassOf:
   text: "'has_member' some %s"
   vars:
-    - info
+    - information

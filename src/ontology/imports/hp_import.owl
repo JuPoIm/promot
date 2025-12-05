@@ -54,8 +54,8 @@
      xmlns:CPATH_VISIT_OCCURRENCE="https://w3id.org/cpont/visit_occurrence/"
      xmlns:CPATH_CONDITION_OCCURRENCE="https://w3id.org/cpont/condition_occurrence/">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/promot/imports/hp_import.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/promot/releases/2025-11-04/imports/hp_import.owl"/>
-        <owl:versionInfo>2025-11-04</owl:versionInfo>
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/promot/releases/2025-12-05/imports/hp_import.owl"/>
+        <owl:versionInfo>2025-12-05</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -258,6 +258,45 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/HP_0000007 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0000007">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0034345"/>
+        <obo:IAO_0000115>A mode of inheritance that is observed for traits related to a gene encoded on one of the autosomes (i.e., the human chromosomes 1-22) in which a trait manifests in individuals with two pathogenic alleles, either homozygotes (two copies of the same mutant allele) or compound heterozygotes (whereby each copy of a gene has a distinct mutant allele).</obo:IAO_0000115>
+        <oboInOwl:hasAlternativeId>HP:0001416</oboInOwl:hasAlternativeId>
+        <oboInOwl:hasAlternativeId>HP:0001526</oboInOwl:hasAlternativeId>
+        <oboInOwl:hasAlternativeId>HP:0031362</oboInOwl:hasAlternativeId>
+        <oboInOwl:hasDbXref>SNOMEDCT_US:258211005</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>UMLS:C0441748</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>UMLS:C4020899</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym>Autosomal recessive</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>biallelic_autosomal</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasRelatedSynonym>Autosomal recessive form</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>Autosomal recessive predisposition</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:id>HP:0000007</oboInOwl:id>
+        <rdfs:label>Autosomal recessive inheritance</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0000007"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A mode of inheritance that is observed for traits related to a gene encoded on one of the autosomes (i.e., the human chromosomes 1-22) in which a trait manifests in individuals with two pathogenic alleles, either homozygotes (two copies of the same mutant allele) or compound heterozygotes (whereby each copy of a gene has a distinct mutant allele).</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0000007"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget>biallelic_autosomal</owl:annotatedTarget>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#allelic_requirement"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0000007"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
+        <owl:annotatedTarget>Autosomal recessive form</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:resource="https://orcid.org/0000-0002-5316-1399"/>
+    </owl:Axiom>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/HP_0000028 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0000028">
@@ -276,13 +315,6 @@
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0000028"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>Testis in inguinal canal. That is, absence of one or both testes from the scrotum owing to failure of the testis or testes to descend through the inguinal canal to the scrotum.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
-        <oboInOwl:hasDbXref>PMID:23650202</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0000028"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
         <owl:annotatedTarget>Cryptorchism</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:resource="https://orcid.org/0000-0001-5208-3432"/>
@@ -298,6 +330,13 @@
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
         <owl:annotatedTarget>Undescended testis</owl:annotatedTarget>
         <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#layperson"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0000028"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>Testis in inguinal canal. That is, absence of one or both testes from the scrotum owing to failure of the testis or testes to descend through the inguinal canal to the scrotum.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
+        <oboInOwl:hasDbXref>PMID:23650202</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -1211,6 +1250,12 @@
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0000504"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget>Vision issue</owl:annotatedTarget>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#layperson"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0000504"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>Abnormality of eyesight (visual perception).</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
@@ -1227,12 +1272,6 @@
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0000504"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
         <owl:annotatedTarget>Abnormality of vision</owl:annotatedTarget>
-        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#layperson"/>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0000504"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>Vision issue</owl:annotatedTarget>
         <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#layperson"/>
     </owl:Axiom>
     
@@ -1256,18 +1295,6 @@
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0000508"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>Eyelid ptosis</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:resource="https://orcid.org/0000-0002-5316-1399"/>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0000508"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
-        <owl:annotatedTarget>Eye drop</owl:annotatedTarget>
-        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#layperson"/>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0000508"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>The upper eyelid margin is positioned 3 mm or more lower than usual and covers the superior portion of the iris (objective); or, the upper lid margin obscures at least part of the pupil (subjective).</owl:annotatedTarget>
         <oboInOwl:hasDbXref>PMID:19125427</oboInOwl:hasDbXref>
@@ -1277,6 +1304,18 @@
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
         <owl:annotatedTarget>Drooping upper eyelid</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:resource="https://orcid.org/0000-0001-5208-3432"/>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#layperson"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0000508"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget>Eyelid ptosis</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:resource="https://orcid.org/0000-0002-5316-1399"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0000508"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
+        <owl:annotatedTarget>Eye drop</owl:annotatedTarget>
         <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#layperson"/>
     </owl:Axiom>
     
@@ -4317,6 +4356,56 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/HP_0002172 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0002172">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0100022"/>
+        <obo:IAO_0000115>A tendency to fall or the inability to keep oneself from falling; imbalance. The retropulsion test is widely regarded as the gold standard to evaluate postural instability, Use of the retropulsion test includes a rapid balance perturbation in the backward direction, and the number of balance correcting steps (or total absence thereof) is used to rate the degree of postural instability. Healthy subjects correct such perturbations with either one or two large steps, or without taking any steps, hinging rapidly at the hips while swinging the arms forward as a counterweight. In patients with balance impairment, balance correcting steps are often too small, forcing patients to take more than two steps. Taking three or more steps is generally considered to be abnormal, and taking more than five steps is regarded as being clearly abnormal. Markedly affected patients continue to step backward without ever regaining their balance and must be caught by the examiner (this would be called true retropulsion). Even more severely affected patients fail to correct entirely, and fall backward like a pushed toy soldier, without taking any corrective steps.</obo:IAO_0000115>
+        <oboInOwl:hasDbXref>UMLS:C1843921</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym>Balance impairment</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasRelatedSynonym>Abnormal retropulsion test</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>Imbalance</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:id>HP:0002172</oboInOwl:id>
+        <rdfs:label>Postural instability</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0002172"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A tendency to fall or the inability to keep oneself from falling; imbalance. The retropulsion test is widely regarded as the gold standard to evaluate postural instability, Use of the retropulsion test includes a rapid balance perturbation in the backward direction, and the number of balance correcting steps (or total absence thereof) is used to rate the degree of postural instability. Healthy subjects correct such perturbations with either one or two large steps, or without taking any steps, hinging rapidly at the hips while swinging the arms forward as a counterweight. In patients with balance impairment, balance correcting steps are often too small, forcing patients to take more than two steps. Taking three or more steps is generally considered to be abnormal, and taking more than five steps is regarded as being clearly abnormal. Markedly affected patients continue to step backward without ever regaining their balance and must be caught by the examiner (this would be called true retropulsion). Even more severely affected patients fail to correct entirely, and fall backward like a pushed toy soldier, without taking any corrective steps.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>PMID:25613349</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0002172"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget>Balance impairment</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:resource="https://orcid.org/0000-0002-6548-5200"/>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#layperson"/>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/HP_0002317 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0002317">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0001288"/>
+        <oboInOwl:hasDbXref>SNOMEDCT_US:22631008</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>SNOMEDCT_US:394616008</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>UMLS:C0231686</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym>Gait instability</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>Unsteady walk</oboInOwl:hasExactSynonym>
+        <oboInOwl:id>HP:0002317</oboInOwl:id>
+        <rdfs:label>Unsteady gait</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0002317"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget>Unsteady walk</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:resource="https://orcid.org/0000-0001-5208-3432"/>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#layperson"/>
+    </owl:Axiom>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/HP_0002359 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0002359">
@@ -5040,6 +5129,52 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/HP_0003200 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0003200">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0004303"/>
+        <obo:IAO_0000115>An abnormal appearance of muscle fibers observed on muscle biopsy. Ragged red fibers can be visualized with Gomori trichrome staining as irregular and intensely red subsarcolemmal zones, whereas the normal myofibrils are green. The margins of affect fibers appear red and ragged. The ragged-red is due to the accumulation of abnormal mitochondria below the plasma membrane of the muscle fiber, leading to the appearance of a red rim and speckled sarcoplasm.</obo:IAO_0000115>
+        <oboInOwl:hasAlternativeId>HP:0009076</oboInOwl:hasAlternativeId>
+        <oboInOwl:hasDbXref>UMLS:C3275417</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym>Mitochondrial proliferation in muscle tissue</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>Ragged red muscle fibers</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>Ragged red muscle fibres</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>Ragged-red fibers</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>Ragged-red fibres</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>Ragged-red muscle fibres</oboInOwl:hasExactSynonym>
+        <oboInOwl:id>HP:0003200</oboInOwl:id>
+        <rdfs:comment>This finding is demonstrated by muscle biopsy. Note that additionally, muscle fibers with mitochondrial proliferation stain darkly for succinic dehydrogenase (SDH).</rdfs:comment>
+        <rdfs:label>Ragged-red muscle fibers</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0003200"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>An abnormal appearance of muscle fibers observed on muscle biopsy. Ragged red fibers can be visualized with Gomori trichrome staining as irregular and intensely red subsarcolemmal zones, whereas the normal myofibrils are green. The margins of affect fibers appear red and ragged. The ragged-red is due to the accumulation of abnormal mitochondria below the plasma membrane of the muscle fiber, leading to the appearance of a red rim and speckled sarcoplasm.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
+        <oboInOwl:hasDbXref>PMID:12075011</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>PMID:16537564</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0003200"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget>Ragged red muscle fibres</owl:annotatedTarget>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#uk_spelling"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0003200"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget>Ragged-red fibres</owl:annotatedTarget>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#uk_spelling"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0003200"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget>Ragged-red muscle fibres</owl:annotatedTarget>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#uk_spelling"/>
+    </owl:Axiom>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/HP_0003236 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0003236">
@@ -5704,128 +5839,6 @@
     
 
 
-    <!-- http://purl.obolibrary.org/obo/HP_0003554 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0003554">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0100295"/>
-        <obo:IAO_0000115>Atrophy (wasting) affecting primary type 2 muscle fibers. This feature in general can only be observed on muscle biopsy.</obo:IAO_0000115>
-        <oboInOwl:hasDbXref>UMLS:C1864580</oboInOwl:hasDbXref>
-        <oboInOwl:hasExactSynonym>Type 2 fiber atrophy</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>Type 2 fibre atrophy</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>Type 2 muscle fibre atrophy</oboInOwl:hasExactSynonym>
-        <oboInOwl:id>HP:0003554</oboInOwl:id>
-        <rdfs:comment>This finding can be demonstrated by muscle biopsy.</rdfs:comment>
-        <rdfs:label>Type 2 muscle fiber atrophy</rdfs:label>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0003554"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>Atrophy (wasting) affecting primary type 2 muscle fibers. This feature in general can only be observed on muscle biopsy.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0003554"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>Type 2 fibre atrophy</owl:annotatedTarget>
-        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#uk_spelling"/>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0003554"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>Type 2 muscle fibre atrophy</owl:annotatedTarget>
-        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#uk_spelling"/>
-    </owl:Axiom>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/HP_0003555 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0003555">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0004303"/>
-        <obo:IAO_0000115>Fiber splitting or branching is a common finding in human and rat skeletal muscle pathology. Fiber splitting refers to longitudinal halving of the complete fiber, while branching originates from a regenerating end of a necrotic fiber as invaginations of the sarcolemma. In fiber branching, one end of the fiber remains intact as a single entity, while the other end has several branches.</obo:IAO_0000115>
-        <oboInOwl:hasDbXref>UMLS:C1836057</oboInOwl:hasDbXref>
-        <oboInOwl:hasExactSynonym>Fiber splitting</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>Fibre splitting</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>Muscle fiber splitting</oboInOwl:hasExactSynonym>
-        <oboInOwl:id>HP:0003555</oboInOwl:id>
-        <rdfs:label>Muscle fiber splitting</rdfs:label>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0003555"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>Fiber splitting or branching is a common finding in human and rat skeletal muscle pathology. Fiber splitting refers to longitudinal halving of the complete fiber, while branching originates from a regenerating end of a necrotic fiber as invaginations of the sarcolemma. In fiber branching, one end of the fiber remains intact as a single entity, while the other end has several branches.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>PMID:6123177</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/HP_0003557 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0003557">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0012084"/>
-        <obo:IAO_0000115>An abnormally high degree of muscle fiber size variation. This phenotypic feature can be observed upon muscle biopsy.</obo:IAO_0000115>
-        <oboInOwl:hasAlternativeId>HP:0003556</oboInOwl:hasAlternativeId>
-        <oboInOwl:hasDbXref>UMLS:C1843700</oboInOwl:hasDbXref>
-        <oboInOwl:hasExactSynonym>Increased fiber size variation</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>Increased fibre size variation</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>Increased variability in muscle fiber size</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>Increased variability in muscle fibre diameter</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>Increased variability in muscle fibre size</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>Increased variation in fiber size</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>Increased variation in fibre size</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>Increased variation in muscle fiber size</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>Increased variation in muscle fibre size</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>Variation in muscle fiber size</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>Variation in muscle fibre size</oboInOwl:hasExactSynonym>
-        <oboInOwl:id>HP:0003557</oboInOwl:id>
-        <rdfs:comment>This finding can be demonstrated by muscle biopsy.</rdfs:comment>
-        <rdfs:label>Increased variability in muscle fiber diameter</rdfs:label>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0003557"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>An abnormally high degree of muscle fiber size variation. This phenotypic feature can be observed upon muscle biopsy.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0003557"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>Increased fibre size variation</owl:annotatedTarget>
-        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#uk_spelling"/>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0003557"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>Increased variability in muscle fibre diameter</owl:annotatedTarget>
-        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#uk_spelling"/>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0003557"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>Increased variability in muscle fibre size</owl:annotatedTarget>
-        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#uk_spelling"/>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0003557"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>Increased variation in fibre size</owl:annotatedTarget>
-        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#uk_spelling"/>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0003557"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>Increased variation in muscle fibre size</owl:annotatedTarget>
-        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#uk_spelling"/>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0003557"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>Variation in muscle fibre size</owl:annotatedTarget>
-        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#uk_spelling"/>
-    </owl:Axiom>
-    
-
-
     <!-- http://purl.obolibrary.org/obo/HP_0003577 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0003577">
@@ -5907,34 +5920,6 @@
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A type of adult onset with onset of symptoms after the age of 60 years.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
-    </owl:Axiom>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/HP_0003587 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0003587">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0011008"/>
-        <obo:IAO_0000115>Gradual, very slow onset of disease manifestations.</obo:IAO_0000115>
-        <oboInOwl:hasDbXref>SNOMEDCT_US:367326009</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>SNOMEDCT_US:61751001</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>UMLS:C0332164</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>UMLS:C1298634</oboInOwl:hasDbXref>
-        <oboInOwl:hasExactSynonym>Gradual onset</oboInOwl:hasExactSynonym>
-        <oboInOwl:id>HP:0003587</oboInOwl:id>
-        <rdfs:label>Insidious onset</rdfs:label>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0003587"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>Gradual, very slow onset of disease manifestations.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0003587"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>Gradual onset</owl:annotatedTarget>
-        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#layperson"/>
     </owl:Axiom>
     
 
@@ -6247,50 +6232,6 @@
     
 
 
-    <!-- http://purl.obolibrary.org/obo/HP_0003687 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0003687">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0004303"/>
-        <obo:IAO_0000115>An abnormality in which the nuclei of sarcomeres take on an abnormally central localization (or in which this feature is found in an increased proportion of muscle cells).</obo:IAO_0000115>
-        <oboInOwl:hasDbXref>UMLS:C1842170</oboInOwl:hasDbXref>
-        <oboInOwl:hasExactSynonym>Central nuclei</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>Centralised nuclei</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>Centralised sarcomeric nuclei</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>Centralized nuclei</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>Centralized sarcomeric nuclei</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>Centrally nucleated skeletal muscle fibres</oboInOwl:hasExactSynonym>
-        <oboInOwl:id>HP:0003687</oboInOwl:id>
-        <rdfs:comment>Normally, the nuclei of muscle cells are located peripherally, immediately under the plasma membrane (sarcolemma).</rdfs:comment>
-        <rdfs:label>Centrally nucleated skeletal muscle fibers</rdfs:label>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0003687"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>An abnormality in which the nuclei of sarcomeres take on an abnormally central localization (or in which this feature is found in an increased proportion of muscle cells).</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
-        <oboInOwl:hasDbXref>PMID:20181480</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0003687"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>Centralised nuclei</owl:annotatedTarget>
-        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#uk_spelling"/>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0003687"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>Centralised sarcomeric nuclei</owl:annotatedTarget>
-        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#uk_spelling"/>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0003687"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>Centrally nucleated skeletal muscle fibres</owl:annotatedTarget>
-        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#uk_spelling"/>
-    </owl:Axiom>
-    
-
-
     <!-- http://purl.obolibrary.org/obo/HP_0003690 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0003690">
@@ -6435,32 +6376,6 @@
     
 
 
-    <!-- http://purl.obolibrary.org/obo/HP_0003713 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0003713">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0004303"/>
-        <obo:IAO_0000115>Abnormal cell death involving muscle fibers usually associated with break in, or absence of, muscle surface fiber membrane and resulting in irreversible damage to muscle fibers.</obo:IAO_0000115>
-        <oboInOwl:hasAlternativeId>HP:0003726</oboInOwl:hasAlternativeId>
-        <oboInOwl:hasDbXref>UMLS:C1850848</oboInOwl:hasDbXref>
-        <oboInOwl:hasExactSynonym>Muscle fibre necrosis</oboInOwl:hasExactSynonym>
-        <oboInOwl:id>HP:0003713</oboInOwl:id>
-        <rdfs:label>Muscle fiber necrosis</rdfs:label>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0003713"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>Abnormal cell death involving muscle fibers usually associated with break in, or absence of, muscle surface fiber membrane and resulting in irreversible damage to muscle fibers.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0003713"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>Muscle fibre necrosis</owl:annotatedTarget>
-        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#uk_spelling"/>
-    </owl:Axiom>
-    
-
-
     <!-- http://purl.obolibrary.org/obo/HP_0003722 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0003722">
@@ -6536,133 +6451,6 @@
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>Weakness of the muscles of the pelvic girdle (also known as the hip girdle), that is, lack of strength of the muscles around the pelvis.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
-    </owl:Axiom>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/HP_0003755 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0003755">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0012084"/>
-        <obo:IAO_0000115>The presence of abnormal muscle fiber size such that type 1 fibers are smaller than type 2 fibers.</obo:IAO_0000115>
-        <oboInOwl:hasDbXref>UMLS:C4025571</oboInOwl:hasDbXref>
-        <oboInOwl:hasExactSynonym>Type 1 fibres relatively smaller than type 2 fibres</oboInOwl:hasExactSynonym>
-        <oboInOwl:id>HP:0003755</oboInOwl:id>
-        <rdfs:comment>This feature can only be observed on muscle biopsy.</rdfs:comment>
-        <rdfs:label>Type 1 fibers relatively smaller than type 2 fibers</rdfs:label>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0003755"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>The presence of abnormal muscle fiber size such that type 1 fibers are smaller than type 2 fibers.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0003755"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>Type 1 fibres relatively smaller than type 2 fibres</owl:annotatedTarget>
-        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#uk_spelling"/>
-    </owl:Axiom>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/HP_0003787 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0003787">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0003789"/>
-        <obo:IAO_0000115>Multiple small zones of sarcomeric disorganization and lack of oxidative activity (known as minicores) in type 1 and type 2 muscle fibers.</obo:IAO_0000115>
-        <oboInOwl:hasDbXref>UMLS:C4025568</oboInOwl:hasDbXref>
-        <oboInOwl:hasExactSynonym>Type 1 and type 2 muscle fibre minicore regions</oboInOwl:hasExactSynonym>
-        <oboInOwl:id>HP:0003787</oboInOwl:id>
-        <rdfs:label>Type 1 and type 2 muscle fiber minicore regions</rdfs:label>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0003787"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>Multiple small zones of sarcomeric disorganization and lack of oxidative activity (known as minicores) in type 1 and type 2 muscle fibers.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0003787"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>Type 1 and type 2 muscle fibre minicore regions</owl:annotatedTarget>
-        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#uk_spelling"/>
-    </owl:Axiom>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/HP_0003789 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0003789">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0003198"/>
-        <obo:IAO_0000115>Multiple small zones of sarcomeric disorganization and lack of oxidative activity (known as minicores) in muscle fibers.</obo:IAO_0000115>
-        <oboInOwl:hasAlternativeId>HP:0003804</oboInOwl:hasAlternativeId>
-        <oboInOwl:hasDbXref>UMLS:C1850674</oboInOwl:hasDbXref>
-        <oboInOwl:id>HP:0003789</oboInOwl:id>
-        <rdfs:label>Minicore myopathy</rdfs:label>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0003789"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>Multiple small zones of sarcomeric disorganization and lack of oxidative activity (known as minicores) in muscle fibers.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
-    </owl:Axiom>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/HP_0003798 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0003798">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0100303"/>
-        <obo:IAO_0000115>Nemaline rods are abnormal bodies that can occur in skeletal muscle fibers. The rods can be observed on histological analysis of muscle biopsy tissue or upon electron microscopy, where they appear either as extensions of sarcomeric Z-lines, in random array without obvious attachment to Z-lines (often in areas devoid of sarcomeres) or in large clusters localized at the sarcolemma or intermyofibrillar spaces.</obo:IAO_0000115>
-        <oboInOwl:hasDbXref>UMLS:C3808039</oboInOwl:hasDbXref>
-        <oboInOwl:hasExactSynonym>Nemaline rods</oboInOwl:hasExactSynonym>
-        <oboInOwl:id>HP:0003798</oboInOwl:id>
-        <rdfs:comment>This finding can be demonstrated by muscle biopsy, which shows nemaline bodies (rods) on Gomori trichrome staining. Rod bodies characteristically stain red with MGT. The rods are delicate and accumulate subsarcolemmaly. They stain negative with ATPase, NADH and SDH as they lack myosin and mitochondria. Rods are characteristic of nemaline myopathy but also seen in central core disease and various other diseases which include neurogenic disorders (amyotrophic lateral sclerosis, spinal muscular atrophy, undefined), inflammatory myopathies (dermatomyositis, polymyositis, periarteritis nodosa), metabolic myopathy (mitochondrial myopathy), muscular dystrophy (LGMD) and some undefined myopathies (Liouet al; Diagnostic role of nemaline rod in neuromuscular disease. Acta Neurol Sinica 1992;1: 218-23).</rdfs:comment>
-        <rdfs:label>Nemaline bodies</rdfs:label>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0003798"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>Nemaline rods are abnormal bodies that can occur in skeletal muscle fibers. The rods can be observed on histological analysis of muscle biopsy tissue or upon electron microscopy, where they appear either as extensions of sarcomeric Z-lines, in random array without obvious attachment to Z-lines (often in areas devoid of sarcomeres) or in large clusters localized at the sarcolemma or intermyofibrillar spaces.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
-        <oboInOwl:hasDbXref>PMID:11333380</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/HP_0003803 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0003803">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0033684"/>
-        <obo:IAO_0000115>An abnormal predominance of type I muscle fibers (in general, this feature can only be observed on muscle biopsy).</obo:IAO_0000115>
-        <oboInOwl:hasAlternativeId>HP:0003721</oboInOwl:hasAlternativeId>
-        <oboInOwl:hasAlternativeId>HP:0003807</oboInOwl:hasAlternativeId>
-        <oboInOwl:hasDbXref>UMLS:C1854387</oboInOwl:hasDbXref>
-        <oboInOwl:hasExactSynonym>Type 1 muscle fibre predominance</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>Type I muscle fiber predominance</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>Type I muscle fibre predominance</oboInOwl:hasExactSynonym>
-        <oboInOwl:id>HP:0003803</oboInOwl:id>
-        <rdfs:comment>This finding is demonstrated by muscle biopsy.</rdfs:comment>
-        <rdfs:label>Type 1 muscle fiber predominance</rdfs:label>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0003803"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>An abnormal predominance of type I muscle fibers (in general, this feature can only be observed on muscle biopsy).</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0003803"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>Type 1 muscle fibre predominance</owl:annotatedTarget>
-        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#uk_spelling"/>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0003803"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>Type I muscle fibre predominance</owl:annotatedTarget>
-        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#uk_spelling"/>
     </owl:Axiom>
     
 
@@ -7664,24 +7452,6 @@
     
 
 
-    <!-- http://purl.obolibrary.org/obo/HP_0009025 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0009025">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0003549"/>
-        <obo:IAO_0000115>The presence of an abnormally increased amount of connective tissue.</obo:IAO_0000115>
-        <oboInOwl:hasDbXref>UMLS:C1866021</oboInOwl:hasDbXref>
-        <oboInOwl:id>HP:0009025</oboInOwl:id>
-        <rdfs:label>Increased connective tissue</rdfs:label>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0009025"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>The presence of an abnormally increased amount of connective tissue.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
-    </owl:Axiom>
-    
-
-
     <!-- http://purl.obolibrary.org/obo/HP_0009027 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0009027">
@@ -7798,77 +7568,6 @@
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>Reduced strength of the distal musculature of the legs.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
-    </owl:Axiom>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/HP_0009058 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0009058">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0034370"/>
-        <obo:IAO_0000115>An abnormal accumulation of lipids in skeletal muscle.</obo:IAO_0000115>
-        <oboInOwl:hasAlternativeId>HP:0100949</oboInOwl:hasAlternativeId>
-        <oboInOwl:hasDbXref>UMLS:C1837262</oboInOwl:hasDbXref>
-        <oboInOwl:hasExactSynonym>Fat accumulation in muscle fibers</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>Fat accumulation in muscle fibres</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>Fat deposits in muscle fibers</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>Fat deposits in muscle fibres</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>Increased muscle lipid content</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>Lipid accumulation in skeletal muscle</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>Muscle lipidosis</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>Skeletal muscle lipid accumulation</oboInOwl:hasExactSynonym>
-        <oboInOwl:id>HP:0009058</oboInOwl:id>
-        <rdfs:comment>Increased neutral lipid content may be observed on muscle biopsies specimen with the specific staining of Sudan black or oil red O techniques by optic microscopy.</rdfs:comment>
-        <rdfs:label>Increased muscle lipid content</rdfs:label>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0009058"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>An abnormal accumulation of lipids in skeletal muscle.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
-        <oboInOwl:hasDbXref>PMID:20691590</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0009058"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>Fat accumulation in muscle fibers</owl:annotatedTarget>
-        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#layperson"/>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0009058"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>Fat accumulation in muscle fibres</owl:annotatedTarget>
-        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#uk_spelling"/>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0009058"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>Fat deposits in muscle fibers</owl:annotatedTarget>
-        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#layperson"/>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0009058"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>Fat deposits in muscle fibres</owl:annotatedTarget>
-        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#uk_spelling"/>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0009058"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>Increased muscle lipid content</owl:annotatedTarget>
-        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#layperson"/>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0009058"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>Lipid accumulation in skeletal muscle</owl:annotatedTarget>
-        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#layperson"/>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0009058"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>Skeletal muscle lipid accumulation</owl:annotatedTarget>
-        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#layperson"/>
     </owl:Axiom>
     
 
@@ -8107,80 +7806,6 @@
     
 
 
-    <!-- http://purl.obolibrary.org/obo/HP_0011009 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0011009">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0011008"/>
-        <obo:IAO_0000115>Sudden appearance of disease manifestations over a short period of time.</obo:IAO_0000115>
-        <terms:creator rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
-        <oboInOwl:creation_date>2011-02-20T10:23:18Z</oboInOwl:creation_date>
-        <oboInOwl:hasDbXref>SNOMEDCT_US:272118002</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>UMLS:C0205178</oboInOwl:hasDbXref>
-        <oboInOwl:hasExactSynonym>Acute onset</oboInOwl:hasExactSynonym>
-        <oboInOwl:id>HP:0011009</oboInOwl:id>
-        <rdfs:comment>The word acute is applied to different time scales depending on the disease or manifestation and does not have an exact definition in minutes, hours, or days.</rdfs:comment>
-        <rdfs:label>Acute</rdfs:label>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0011009"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>Sudden appearance of disease manifestations over a short period of time.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
-    </owl:Axiom>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/HP_0011010 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0011010">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0011008"/>
-        <obo:IAO_0000115>Slow, creeping onset, slow progress and long continuance of disease manifestations.</obo:IAO_0000115>
-        <terms:creator rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
-        <oboInOwl:creation_date>2011-02-20T10:25:55Z</oboInOwl:creation_date>
-        <oboInOwl:hasDbXref>SNOMEDCT_US:90734009</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>UMLS:C0205191</oboInOwl:hasDbXref>
-        <oboInOwl:hasExactSynonym>Chronic</oboInOwl:hasExactSynonym>
-        <oboInOwl:id>HP:0011010</oboInOwl:id>
-        <rdfs:comment>According to the U.S. National Center for Health Statistics, a chronic condition is one lasting 3 months or more.</rdfs:comment>
-        <rdfs:label>Chronic</rdfs:label>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0011010"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>Slow, creeping onset, slow progress and long continuance of disease manifestations.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0011010"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>Chronic</owl:annotatedTarget>
-        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#layperson"/>
-    </owl:Axiom>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/HP_0011011 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0011011">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0011008"/>
-        <obo:IAO_0000115>Somewhat rapid onset and change of disease manifestations.</obo:IAO_0000115>
-        <terms:creator rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
-        <oboInOwl:creation_date>2011-02-20T10:27:54Z</oboInOwl:creation_date>
-        <oboInOwl:hasDbXref>SNOMEDCT_US:19939008</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>UMLS:C0205365</oboInOwl:hasDbXref>
-        <oboInOwl:id>HP:0011011</oboInOwl:id>
-        <rdfs:comment>Subacute is between acute and chronic.</rdfs:comment>
-        <rdfs:label>Subacute</rdfs:label>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0011011"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>Somewhat rapid onset and change of disease manifestations.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
-    </owl:Axiom>
-    
-
-
     <!-- http://purl.obolibrary.org/obo/HP_0011021 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0011021">
@@ -8273,7 +7898,6 @@
     <!-- http://purl.obolibrary.org/obo/HP_0011420 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0011420">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0040006"/>
         <obo:IAO_0000115>The age group when the cessation of life happens.</obo:IAO_0000115>
         <oboInOwl:hasDbXref>UMLS:C1546180</oboInOwl:hasDbXref>
         <oboInOwl:id>HP:0011420</oboInOwl:id>
@@ -8676,33 +8300,6 @@
     
 
 
-    <!-- http://purl.obolibrary.org/obo/HP_0011807 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0011807">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0100295"/>
-        <obo:IAO_0000115>Atrophy (wasting) affecting primary type 1 muscle fibers. This feature in general can only be observed on muscle biopsy.</obo:IAO_0000115>
-        <terms:creator rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
-        <oboInOwl:creation_date>2012-04-26T12:05:14Z</oboInOwl:creation_date>
-        <oboInOwl:hasDbXref>UMLS:C4023180</oboInOwl:hasDbXref>
-        <oboInOwl:hasExactSynonym>Type 1 muscle fibre atrophy</oboInOwl:hasExactSynonym>
-        <oboInOwl:id>HP:0011807</oboInOwl:id>
-        <rdfs:label>Type 1 muscle fiber atrophy</rdfs:label>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0011807"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>Atrophy (wasting) affecting primary type 1 muscle fibers. This feature in general can only be observed on muscle biopsy.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0011807"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>Type 1 muscle fibre atrophy</owl:annotatedTarget>
-        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#uk_spelling"/>
-    </owl:Axiom>
-    
-
-
     <!-- http://purl.obolibrary.org/obo/HP_0011842 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0011842">
@@ -8815,33 +8412,6 @@
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
         <owl:annotatedTarget>Poor feeding</owl:annotatedTarget>
         <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#layperson"/>
-    </owl:Axiom>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/HP_0012084 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0012084">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0004303"/>
-        <obo:IAO_0000115>Any abnormality of the size of the skeletal muscle cell.</obo:IAO_0000115>
-        <terms:creator rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
-        <oboInOwl:creation_date>2012-08-20T03:19:54Z</oboInOwl:creation_date>
-        <oboInOwl:hasDbXref>UMLS:C4023051</oboInOwl:hasDbXref>
-        <oboInOwl:hasExactSynonym>Abnormality of skeletal muscle fibre size</oboInOwl:hasExactSynonym>
-        <oboInOwl:id>HP:0012084</oboInOwl:id>
-        <rdfs:label>Abnormality of skeletal muscle fiber size</rdfs:label>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0012084"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>Any abnormality of the size of the skeletal muscle cell.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0012084"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>Abnormality of skeletal muscle fibre size</owl:annotatedTarget>
-        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#uk_spelling"/>
     </owl:Axiom>
     
 
@@ -9009,6 +8579,26 @@
         <owl:annotatedTarget>Wasting of the tongue</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:resource="https://orcid.org/0000-0001-5889-4463"/>
         <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#layperson"/>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/HP_0012497 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0012497">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0004347"/>
+        <obo:IAO_0000115>A decrease in the maximum amount of pressure of expired air achieved by a person after a full inspiration.</obo:IAO_0000115>
+        <terms:creator rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
+        <oboInOwl:creation_date>2013-11-30T08:28:49Z</oboInOwl:creation_date>
+        <oboInOwl:hasDbXref>UMLS:C4022879</oboInOwl:hasDbXref>
+        <oboInOwl:id>HP:0012497</oboInOwl:id>
+        <rdfs:label>Reduced maximal expiratory pressure</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0012497"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A decrease in the maximum amount of pressure of expired air achieved by a person after a full inspiration.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:resource="https://orcid.org/0000-0001-5208-3432"/>
     </owl:Axiom>
     
 
@@ -9417,18 +9007,6 @@
     
 
 
-    <!-- http://purl.obolibrary.org/obo/HP_0020201 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0020201">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0004303"/>
-        <obo:IAO_0000115>Any structural anomaly of the sarcomere, which is unit of a myofibril in a muscle cell, composed of an array of overlapping thick and thin filaments between two adjacent Z disks.</obo:IAO_0000115>
-        <terms:creator rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
-        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-12-23T15:56:20Z</oboInOwl:creation_date>
-        <rdfs:label>Abnormal sarcomere morphology</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- http://purl.obolibrary.org/obo/HP_0025031 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0025031">
@@ -9462,18 +9040,6 @@
         <terms:creator rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
         <rdfs:comment>Note that we use the preferred term label constitutional symptom because this reflects common usage, but we do not restrict the term or its descendents to the narrow meaning of symptom, i.e., a complaint related by a patient to a physician. There is no generally accepted classification of what defines a constitutional symptom, but examples include weight loss, fatigue, general weakness, night sweats, shaking, chills, fever, and vomiting.</rdfs:comment>
         <rdfs:label>Constitutional symptom</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/HP_0025153 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0025153">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0011008"/>
-        <obo:IAO_0000115>Short-lived and not permanent. This term applies to a phenotypic abnormality that is temporary and of short duration.</obo:IAO_0000115>
-        <dc11:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-12-03T22:19:26Z</dc11:date>
-        <terms:creator rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
-        <rdfs:label>Transient</rdfs:label>
     </owl:Class>
     
 
@@ -9529,196 +9095,6 @@
         <owl:annotatedTarget>Functional abnormality of the oesophagus</owl:annotatedTarget>
         <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#uk_spelling"/>
     </owl:Axiom>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/HP_0025279 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0025279">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0011008"/>
-        <dc11:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-12-18T15:18:09Z</dc11:date>
-        <terms:creator rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
-        <rdfs:label>Migratory</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/HP_0025280 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0025280">
-        <obo:IAO_0000115>A pain characteristic is defined as a subjective category or type of pain.</obo:IAO_0000115>
-        <dc11:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-12-18T15:21:51Z</dc11:date>
-        <terms:creator rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
-        <rdfs:label>Pain characteristic</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/HP_0025281 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0025281">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0025280"/>
-        <obo:IAO_0000115>Applied to pain that is described as sharp, i.e., sudden and severe.</obo:IAO_0000115>
-        <dc11:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-12-18T15:23:03Z</dc11:date>
-        <terms:creator rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
-        <oboInOwl:hasExactSynonym>Stabbing pain</oboInOwl:hasExactSynonym>
-        <rdfs:label>Sharp</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/HP_0025282 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0025282">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0025280"/>
-        <obo:IAO_0000115>Applied to pain that is dull, i.e., not severe but that continues over a long period of time.</obo:IAO_0000115>
-        <dc11:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-12-18T15:23:43Z</dc11:date>
-        <terms:creator rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
-        <oboInOwl:hasExactSynonym>Dull pain</oboInOwl:hasExactSynonym>
-        <rdfs:label>Dull</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/HP_0025283 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0025283">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0025280"/>
-        <obo:IAO_0000115>Applied to pain that is tender, i.e., elicited by touching the affected body part.</obo:IAO_0000115>
-        <dc11:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-12-18T15:25:03Z</dc11:date>
-        <terms:creator rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
-        <rdfs:label>Tender</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/HP_0025284 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0025284">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0025280"/>
-        <obo:IAO_0000115>Applied to pain that wakes the affecting individual from sleep.</obo:IAO_0000115>
-        <dc11:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-12-18T15:26:21Z</dc11:date>
-        <terms:creator rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
-        <rdfs:label>Sleep-interrupting</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/HP_0025297 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0025297">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0011008"/>
-        <obo:IAO_0000115>Applied to an abnormality whose duration is extended over a longer period of time than is expected or usual (e.g., prolonged fever lasts longer than one usually sees with an infection).</obo:IAO_0000115>
-        <dc11:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-12-18T16:26:30Z</dc11:date>
-        <terms:creator rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
-        <rdfs:label>Prolonged</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/HP_0025301 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0025301">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0011008"/>
-        <obo:IAO_0000115>Applies to an abnormality that occurs in or is exacerbated during the night.</obo:IAO_0000115>
-        <dc11:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-12-20T12:30:06Z</dc11:date>
-        <terms:creator rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
-        <rdfs:label>Nocturnal</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/HP_0025302 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0025302">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0011008"/>
-        <obo:IAO_0000115>Applies to a sign, symptom, or other abnormality that occurs in or is exacerbated in the day time.</obo:IAO_0000115>
-        <dc11:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-12-20T12:31:12Z</dc11:date>
-        <terms:creator rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
-        <rdfs:label>Diurnal</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/HP_0025303 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0025303">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0031796"/>
-        <obo:IAO_0000115>Applied to a sign, symptom, or other manifestation that occurs multiple times at usually irregular intervals. The occurrences are separated by an interval in which the sign, symptom, or manifestation is not present.</obo:IAO_0000115>
-        <dc11:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-12-21T00:51:43Z</dc11:date>
-        <terms:creator rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
-        <oboInOwl:hasExactSynonym>Now and then</oboInOwl:hasExactSynonym>
-        <rdfs:comment>In our definition, episodic is synonymous with intermittent and recurrent. The term does not imply any particular temporal pattern of the recurrence.</rdfs:comment>
-        <rdfs:label>Episodic</rdfs:label>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0025303"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>Now and then</owl:annotatedTarget>
-        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#layperson"/>
-    </owl:Axiom>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/HP_0025304 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0025304">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0031796"/>
-        <obo:IAO_0000115>Applies to a sign, symptom, or other manifestation that recurs with a fixed time interval, i.e., the symptom-free periods are always of the same length.</obo:IAO_0000115>
-        <dc11:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-12-21T00:55:09Z</dc11:date>
-        <terms:creator rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
-        <oboInOwl:hasExactSynonym>Cyclic</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>Cyclical</oboInOwl:hasExactSynonym>
-        <rdfs:label>Periodic</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/HP_0025305 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0025305">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0025304"/>
-        <obo:IAO_0000115>Applies to a sign, symptom, or other manifestation that is episodic with a fixed time interval of one day (24 hours).</obo:IAO_0000115>
-        <dc11:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-12-21T00:57:17Z</dc11:date>
-        <terms:creator rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
-        <rdfs:label>Quotidian</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/HP_0025306 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0025306">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0011009"/>
-        <obo:IAO_0000115>Acute appearance of disease manifestations in a period of minutes.</obo:IAO_0000115>
-        <dc11:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-12-21T01:00:35Z</dc11:date>
-        <terms:creator rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
-        <rdfs:label>Acute emergence over minutes</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/HP_0025307 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0025307">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0011009"/>
-        <obo:IAO_0000115>Acute appearance of disease manifestations in a period of hours.</obo:IAO_0000115>
-        <dc11:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-12-21T01:01:25Z</dc11:date>
-        <terms:creator rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
-        <rdfs:label>Acute emergence over hours</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/HP_0025308 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0025308">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0011009"/>
-        <obo:IAO_0000115>Acute appearance of disease manifestations in a period of days.</obo:IAO_0000115>
-        <dc11:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-12-21T01:01:46Z</dc11:date>
-        <terms:creator rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
-        <rdfs:label>Acute emergence over days</rdfs:label>
-    </owl:Class>
     
 
 
@@ -9816,32 +9192,6 @@
         <dc11:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-08-07T17:25:08Z</dc11:date>
         <terms:creator rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
         <rdfs:label>Abnormal cognitive process</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/HP_0025803 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0025803">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0025280"/>
-        <obo:IAO_0000115>Applies to pain that colocalizes with lesions in the skin or mucous membranes.</obo:IAO_0000115>
-        <dc11:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-03-01T12:27:12Z</dc11:date>
-        <terms:creator rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
-        <oboInOwl:hasExactSynonym>Skin or mucosal lesions painful</oboInOwl:hasExactSynonym>
-        <rdfs:label>Mucocutaneous lesion painful</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/HP_0025804 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0025804">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0025280"/>
-        <obo:IAO_0000115>Applies to pain that is localizes to a swollen lymph node.</obo:IAO_0000115>
-        <dc11:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-03-01T12:34:52Z</dc11:date>
-        <terms:creator rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
-        <oboInOwl:hasExactSynonym>Lymph node pain</oboInOwl:hasExactSynonym>
-        <rdfs:label>Painful lymphadenopathy</rdfs:label>
     </owl:Class>
     
 
@@ -10181,31 +9531,6 @@
         <owl:annotatedTarget>Reduced velocity and acceleration in the pupillary light response.</owl:annotatedTarget>
         <oboInOwl:hasDbXref>HPO_CONTRIBUTOR:UNCL_tevangelista</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>PMID:974056</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/HP_0030230 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0030230">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0004303"/>
-        <obo:IAO_0000115>The presence of disorganized areas called cores in the center of muscle fibers. There is a typical appearance of the biopsy on light microscopy, where the muscle cells have cores that are devoid of mitochondria and specific enzymes. Cores are typically well demarcated and centrally located, but may occasionally be multiple and of eccentric.</obo:IAO_0000115>
-        <oboInOwl:hasDbXref>UMLS:C4022568</oboInOwl:hasDbXref>
-        <oboInOwl:hasExactSynonym>Central core regions in muscle fibres</oboInOwl:hasExactSynonym>
-        <rdfs:label>Central core regions in muscle fibers</rdfs:label>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0030230"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>The presence of disorganized areas called cores in the center of muscle fibers. There is a typical appearance of the biopsy on light microscopy, where the muscle cells have cores that are devoid of mitochondria and specific enzymes. Cores are typically well demarcated and centrally located, but may occasionally be multiple and of eccentric.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:resource="https://orcid.org/0000-0001-9046-3540"/>
-        <oboInOwl:hasDbXref>PMID:17504518</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0030230"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>Central core regions in muscle fibres</owl:annotatedTarget>
-        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#uk_spelling"/>
     </owl:Axiom>
     
 
@@ -10573,32 +9898,6 @@
     
 
 
-    <!-- http://purl.obolibrary.org/obo/HP_0031237 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0031237">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0020201"/>
-        <obo:IAO_0000115>An abnormally increased proportion of nuclei of sarcomeres with an internal localization. Individual muscle fibers are syncytia, formed by embryonic fusion of many myoblasts or later, myosatellite cells. Each muscle fiber contains many nuclei, peripherally positioned immediately adjacent to the sarcolemmal membrane. In healthy muscle only 3-5% of fibers contain nuclei that are located internally, within the cell, but many disease processes lead to internal nuclei.</obo:IAO_0000115>
-        <dc11:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-07-02T20:11:21Z</dc11:date>
-        <terms:creator rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
-        <oboInOwl:hasExactSynonym>Internally nucleated skeletal muscle fibres</oboInOwl:hasExactSynonym>
-        <rdfs:comment>A normal muscle fiber contains many nuclei, peripherally positioned immediately adjacent to the sarcolemmal membrane. In healthy muscle only 3-5 percent of fibers contain nuclei that are located internally, within the cell, but many disease processes lead to internal nuclei.</rdfs:comment>
-        <rdfs:label>Internally nucleated skeletal muscle fibers</rdfs:label>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0031237"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>An abnormally increased proportion of nuclei of sarcomeres with an internal localization. Individual muscle fibers are syncytia, formed by embryonic fusion of many myoblasts or later, myosatellite cells. Each muscle fiber contains many nuclei, peripherally positioned immediately adjacent to the sarcolemmal membrane. In healthy muscle only 3-5% of fibers contain nuclei that are located internally, within the cell, but many disease processes lead to internal nuclei.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>PMID:22938878</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0031237"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>Internally nucleated skeletal muscle fibres</owl:annotatedTarget>
-        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#uk_spelling"/>
-    </owl:Axiom>
-    
-
-
     <!-- http://purl.obolibrary.org/obo/HP_0031374 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0031374">
@@ -10607,19 +9906,6 @@
         <dc11:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-09-02T01:47:35Z</dc11:date>
         <terms:creator rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
         <rdfs:label>Ankle weakness</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/HP_0031796 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0031796">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0011008"/>
-        <obo:IAO_0000115>Applies to a sign, symptom or manifestation that occurs multiple times separated by intervals in which the sign, symptom, or manifestation is not present.</obo:IAO_0000115>
-        <dc11:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-02-25T14:40:47Z</dc11:date>
-        <terms:creator rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
-        <oboInOwl:hasExactSynonym>Intermittent</oboInOwl:hasExactSynonym>
-        <rdfs:label>Recurrent</rdfs:label>
     </owl:Class>
     
 
@@ -10686,18 +9972,6 @@
     
 
 
-    <!-- http://purl.obolibrary.org/obo/HP_0031915 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0031915">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0011008"/>
-        <obo:IAO_0000115>This modifier can be applied to a phenotypic feature that does not vary in severity or amount over time.</obo:IAO_0000115>
-        <dc11:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-07-01T21:31:19Z</dc11:date>
-        <terms:creator rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
-        <rdfs:label>Stable</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- http://purl.obolibrary.org/obo/HP_0032043 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0032043">
@@ -10737,18 +10011,6 @@
         <dc11:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-01-12T13:45:59Z</dc11:date>
         <terms:creator rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
         <rdfs:label>Abnormal circulating metabolite concentration</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/HP_0032243 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0032243">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0001939"/>
-        <obo:IAO_0000115>Any deviation from the normal concentration of a metabolite in a tissue.</obo:IAO_0000115>
-        <dc11:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-01-27T11:56:39Z</dc11:date>
-        <terms:creator rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
-        <rdfs:label>Abnormal tissue metabolite concentration</rdfs:label>
     </owl:Class>
     
 
@@ -10793,25 +10055,6 @@
     
 
 
-    <!-- http://purl.obolibrary.org/obo/HP_0032342 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0032342">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0030878"/>
-        <obo:IAO_0000115>An abnormal reduction in the amount of air a person can forcefully expel in one second.</obo:IAO_0000115>
-        <dc11:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-02-21T12:54:07Z</dc11:date>
-        <terms:creator rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
-        <oboInOwl:hasExactSynonym>Reduced FEV1</oboInOwl:hasExactSynonym>
-        <rdfs:label>Reduced forced expiratory volume in one second</rdfs:label>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0032342"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>Reduced FEV1</owl:annotatedTarget>
-        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#abbreviation"/>
-    </owl:Axiom>
-    
-
-
     <!-- http://purl.obolibrary.org/obo/HP_0033127 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0033127">
@@ -10834,32 +10077,6 @@
         <oboInOwl:hasExactSynonym>Difficulty walking down stairs</oboInOwl:hasExactSynonym>
         <rdfs:label>Difficulty descending stairs</rdfs:label>
     </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/HP_0033349 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0033349">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0031796"/>
-        <obo:IAO_0000115>A fourfold or greater increase of usual seizure frequency within a 3-day period, where the patient demonstrates full recovery between seizure events within the cluster. The seizure cluster should be recognizable by the primary clinician, carer or patient.</obo:IAO_0000115>
-        <dc11:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-11-30T22:08:36Z</dc11:date>
-        <terms:creator rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
-        <oboInOwl:hasExactSynonym>Acute repetitive seizures</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>Crescendo seizures</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>Cyclical seizures</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>Recurrent seizures</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>Seizure flurries</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>Serial seizures</oboInOwl:hasExactSynonym>
-        <rdfs:comment>This term should be used with an HPO term for the appropriate type of seizure to denote clustered occurrence of seizures. There is no consensus within the medical community regarding the definition of a seizure cluster, where limitations of current clinical definitions include poor sensitivity and specificity. The proposed definition is meant to serve as a placeholder until a more robust definition, likely facilitated by technological advances in seizure tracking devices and personalized cluster identification is agreed upon.</rdfs:comment>
-        <rdfs:label>Seizure cluster</rdfs:label>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0033349"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>A fourfold or greater increase of usual seizure frequency within a 3-day period, where the patient demonstrates full recovery between seizure events within the cluster. The seizure cluster should be recognizable by the primary clinician, carer or patient.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>PMID:29871784</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>PMID:32305858</oboInOwl:hasDbXref>
-    </owl:Axiom>
     
 
 
@@ -10960,24 +10177,6 @@
     
 
 
-    <!-- http://purl.obolibrary.org/obo/HP_0033684 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0033684">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0004303"/>
-        <obo:IAO_0000115>Ay deviation from the normal distribution of fiber types in skeletal muscle. The skeletal muscle groups of the mammalian body are made up of bundles of muscle fibers. These fibers can be assigned to different Types, with characteristic movement rates, response to neural inputs, and metabolic styles. Skeletal muscle fibers are broadly classified as slow-twitch (type 1) and fast-twitch (type 2). Multiple fiber types are generally intermingled within a single muscle group, and different muscle groups have varying proportions of fiber types</obo:IAO_0000115>
-        <dc11:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-03-07T22:37:42Z</dc11:date>
-        <terms:creator rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
-        <rdfs:label>Abnormal muscle fiber-type distribution</rdfs:label>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0033684"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>Ay deviation from the normal distribution of fiber types in skeletal muscle. The skeletal muscle groups of the mammalian body are made up of bundles of muscle fibers. These fibers can be assigned to different Types, with characteristic movement rates, response to neural inputs, and metabolic styles. Skeletal muscle fibers are broadly classified as slow-twitch (type 1) and fast-twitch (type 2). Multiple fiber types are generally intermingled within a single muscle group, and different muscle groups have varying proportions of fiber types</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>PMID:27199166</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    
-
-
     <!-- http://purl.obolibrary.org/obo/HP_0033695 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0033695">
@@ -11048,6 +10247,34 @@
         <terms:creator rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
         <rdfs:label>Dependency on parenteral nutrition</rdfs:label>
     </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/HP_0034045 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0034045">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0004303"/>
+        <obo:IAO_0000115>Normal muscle fibers are polygonal-shaped in cross section, are multinucleated, and have minimal amounts of endomysial connective tissue. In contrast, angulated (also known as angular) muscle fibers have long and narrow vertices (corners) with sharp edges and a pointed tip.</obo:IAO_0000115>
+        <dc11:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-10-19T16:38:38Z</dc11:date>
+        <terms:creator rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
+        <oboInOwl:hasExactSynonym>Angular muscle fibers</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>Angular muscle fibres</oboInOwl:hasExactSynonym>
+        <rdfs:comment>Muscle fibers showing neurogenic atrophy are compressed by neighboring non-atrophic fibers and may show an angulated appearance on a transverse section. See Figure 3A in PMID:32529201.</rdfs:comment>
+        <rdfs:label>Angulated muscle fibers</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0034045"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>Normal muscle fibers are polygonal-shaped in cross section, are multinucleated, and have minimal amounts of endomysial connective tissue. In contrast, angulated (also known as angular) muscle fibers have long and narrow vertices (corners) with sharp edges and a pointed tip.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>PMID:22938878</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>PMID:32529201</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0034045"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget>Angular muscle fibres</owl:annotatedTarget>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#uk_spelling"/>
+    </owl:Axiom>
     
 
 
@@ -11160,36 +10387,6 @@
     
 
 
-    <!-- http://purl.obolibrary.org/obo/HP_0034370 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0034370">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0011805"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0032243"/>
-        <dc11:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-09-05T10:59:04Z</dc11:date>
-        <terms:creator rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
-        <rdfs:label>Abnormal muscle tissue metabolite concentration</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/HP_0034382 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0034382">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0031797"/>
-        <obo:IAO_0000115>A decrease in or disappearance of signs and symptoms typically associated with a disease course.</obo:IAO_0000115>
-        <dc11:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-09-05T14:19:59Z</dc11:date>
-        <terms:creator rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
-        <rdfs:label>Disease remission</rdfs:label>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0034382"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>A decrease in or disappearance of signs and symptoms typically associated with a disease course.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:resource="https://orcid.org/0000-0001-8314-2140"/>
-    </owl:Axiom>
-    
-
-
     <!-- http://purl.obolibrary.org/obo/HP_0034392 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0034392">
@@ -11246,17 +10443,6 @@
         <terms:creator rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
         <oboInOwl:hasAlternativeId>HP:5200128</oboInOwl:hasAlternativeId>
         <rdfs:label>Abnormal communication</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/HP_0040006 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0040006">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0031797"/>
-        <terms:creator rdf:resource="https://orcid.org/0000-0002-5316-1399"/>
-        <oboInOwl:hasDbXref>UMLS:C4022499</oboInOwl:hasDbXref>
-        <rdfs:label>Mortality/Aging</rdfs:label>
     </owl:Class>
     
 
@@ -11495,82 +10681,6 @@
     
 
 
-    <!-- http://purl.obolibrary.org/obo/HP_0100293 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0100293">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0004303"/>
-        <obo:IAO_0000115>The presence of an increased amount of muscle fibers with an increased diameter. This feature can be ascertained by microscopic examination of a muscle biopsy sample. Together with fiber size variation and atrophied muscle fibers, and hypertrophied muscle fibers are commonly found in myopathies.</obo:IAO_0000115>
-        <terms:creator rdf:resource="https://orcid.org/0009-0006-4530-3154"/>
-        <oboInOwl:creation_date>2010-08-10T01:57:00Z</oboInOwl:creation_date>
-        <oboInOwl:hasDbXref>SNOMEDCT_US:42091004</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>UMLS:C0333759</oboInOwl:hasDbXref>
-        <oboInOwl:hasExactSynonym>Muscle fiber hypertrophy</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>Muscle fibre hypertrophy</oboInOwl:hasExactSynonym>
-        <oboInOwl:id>HP:0100293</oboInOwl:id>
-        <rdfs:comment>Muscle hypertrophy can be assessed at the whole-muscle level (macroscopic methods) or the muscle fiber level (microscopic methods). This term refers to hypertrophy assessed at the microscopic level.</rdfs:comment>
-        <rdfs:label>Hypertrophied muscle fibers</rdfs:label>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0100293"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>Muscle fibre hypertrophy</owl:annotatedTarget>
-        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#uk_spelling"/>
-    </owl:Axiom>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/HP_0100295 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0100295">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0004303"/>
-        <terms:creator rdf:resource="https://orcid.org/0009-0006-4530-3154"/>
-        <oboInOwl:creation_date>2010-08-10T01:58:24Z</oboInOwl:creation_date>
-        <oboInOwl:hasAlternativeId>HP:0100294</oboInOwl:hasAlternativeId>
-        <oboInOwl:hasDbXref>SNOMEDCT_US:67867005</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>UMLS:C0333751</oboInOwl:hasDbXref>
-        <oboInOwl:hasExactSynonym>Muscle fiber atrophy</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>Muscle fiber degeneration</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>Muscle fibre degeneration</oboInOwl:hasExactSynonym>
-        <oboInOwl:id>HP:0100295</oboInOwl:id>
-        <rdfs:label>Muscle fiber atrophy</rdfs:label>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0100295"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>Muscle fiber degeneration</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:resource="https://orcid.org/0000-0001-5208-3432"/>
-        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#layperson"/>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0100295"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>Muscle fibre degeneration</owl:annotatedTarget>
-        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#uk_spelling"/>
-    </owl:Axiom>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/HP_0100297 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0100297">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0004303"/>
-        <obo:IAO_0000115>An increased volume of the endomysium, which is a connective tissue sheath that surrounds each muscle fiber. Together, bundles of muscle fibers form a fasciculus, surrounded by another layer of connective tissue called the perimysium.</obo:IAO_0000115>
-        <terms:creator rdf:resource="https://orcid.org/0009-0006-4530-3154"/>
-        <oboInOwl:creation_date>2010-08-10T02:06:32Z</oboInOwl:creation_date>
-        <oboInOwl:hasDbXref>UMLS:C4022161</oboInOwl:hasDbXref>
-        <oboInOwl:hasExactSynonym>Endomysial fibrosis</oboInOwl:hasExactSynonym>
-        <oboInOwl:id>HP:0100297</oboInOwl:id>
-        <rdfs:label>Increased endomysial connective tissue</rdfs:label>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0100297"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>An increased volume of the endomysium, which is a connective tissue sheath that surrounds each muscle fiber. Together, bundles of muscle fibers form a fasciculus, surrounded by another layer of connective tissue called the perimysium.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>PMID:32508678</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    
-
-
     <!-- http://purl.obolibrary.org/obo/HP_0100299 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0100299">
@@ -11587,84 +10697,6 @@
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0100299"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
         <owl:annotatedTarget>Muscle fibre inclusion bodies</owl:annotatedTarget>
-        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#uk_spelling"/>
-    </owl:Axiom>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/HP_0100301 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0100301">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0100303"/>
-        <obo:IAO_0000115>Unusual regions of densely packed membranous tubules known as tubular aggregates which present as membranous inclusions, derived from membranes of sarcoplasmic reticulum and mitochondria, containing miscellaneous proteins with a variety of enzymatic activities.</obo:IAO_0000115>
-        <terms:creator rdf:resource="https://orcid.org/0009-0006-4530-3154"/>
-        <oboInOwl:creation_date>2010-08-10T02:31:27Z</oboInOwl:creation_date>
-        <oboInOwl:hasDbXref>UMLS:C4021024</oboInOwl:hasDbXref>
-        <oboInOwl:hasExactSynonym>Muscle fiber tubular aggregates</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>Muscle fibre tubular aggregates</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>Muscle fibre tubular inclusions</oboInOwl:hasExactSynonym>
-        <oboInOwl:id>HP:0100301</oboInOwl:id>
-        <rdfs:label>Muscle fiber tubular inclusions</rdfs:label>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0100301"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>Unusual regions of densely packed membranous tubules known as tubular aggregates which present as membranous inclusions, derived from membranes of sarcoplasmic reticulum and mitochondria, containing miscellaneous proteins with a variety of enzymatic activities.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:resource="https://orcid.org/0009-0006-4530-3154"/>
-        <oboInOwl:hasDbXref>PMID:15113116</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0100301"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>Muscle fibre tubular aggregates</owl:annotatedTarget>
-        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#uk_spelling"/>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0100301"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>Muscle fibre tubular inclusions</owl:annotatedTarget>
-        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#uk_spelling"/>
-    </owl:Axiom>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/HP_0100303 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0100303">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0100299"/>
-        <obo:IAO_0000115>The presence of inclusion bodies within the cytoplasm of muscle cells. Inclusion bodies are aggregates (deposits) or stainable material, usually misfolded proteins.</obo:IAO_0000115>
-        <terms:creator rdf:resource="https://orcid.org/0009-0006-4530-3154"/>
-        <oboInOwl:creation_date>2010-08-10T02:39:22Z</oboInOwl:creation_date>
-        <oboInOwl:hasAlternativeId>HP:0003790</oboInOwl:hasAlternativeId>
-        <oboInOwl:hasDbXref>UMLS:C4022157</oboInOwl:hasDbXref>
-        <oboInOwl:hasExactSynonym>Muscle fiber cytoplasmic bodies</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>Muscle fibre cytoplasmatic inclusion bodies</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>Muscle fibre cytoplasmic bodies</oboInOwl:hasExactSynonym>
-        <oboInOwl:id>HP:0100303</oboInOwl:id>
-        <rdfs:label>Muscle fiber cytoplasmatic inclusion bodies</rdfs:label>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0100303"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>The presence of inclusion bodies within the cytoplasm of muscle cells. Inclusion bodies are aggregates (deposits) or stainable material, usually misfolded proteins.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0100303"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>Muscle fiber cytoplasmic bodies</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>http://neuromuscular.wustl.edu/pathol/cytobod.htm</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0100303"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>Muscle fibre cytoplasmatic inclusion bodies</owl:annotatedTarget>
-        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#uk_spelling"/>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0100303"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>Muscle fibre cytoplasmic bodies</owl:annotatedTarget>
         <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#uk_spelling"/>
     </owl:Axiom>
     
@@ -11930,18 +10962,6 @@
     
 
 
-    <!-- http://purl.obolibrary.org/obo/HP_4000182 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_4000182">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0025280"/>
-        <obo:IAO_0000115>Pain improves or worsens with changes in body position.</obo:IAO_0000115>
-        <dc11:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-02-19T16:44:38Z</dc11:date>
-        <oboInOwl:hasExactSynonym>Positional nature to pain</oboInOwl:hasExactSynonym>
-        <rdfs:label>Positionally dependent pain</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- http://purl.obolibrary.org/obo/HP_5200241 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_5200241">
@@ -11955,74 +10975,6 @@
         <terms:contributor rdf:resource="https://orcid.org/0000-0003-2598-6622"/>
         <terms:contributor rdf:resource="https://orcid.org/0000-0003-4014-4490"/>
         <rdfs:label>Recurrent maladaptive behavior</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/HP_6000040 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_6000040">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0025280"/>
-        <obo:IAO_0000115>Neuropathic pain is triggered by lesions to the somatosensory nervous system that alter its structure and function so that pain occurs spontaneously and responses to noxious and innocuous stimuli are pathologically amplified.</obo:IAO_0000115>
-        <obo:IAO_0000233 rdf:resource="https://github.com/obophenotype/human-phenotype-ontology/issues/10141"/>
-        <terms:contributor rdf:resource="https://orcid.org/0009-0005-6714-5727"/>
-        <rdfs:comment>Neuropathic pain can be characterized by pain that is triggered when clothes touch the skin, spontaneous burning that feels like boiling water, bursts of pins and needles(paresthesias) in the feet upon walking , a continuous crushing pain after an amputation as if your phantom foot is being squeezed, or a band of searing pain around the body at the level at whichsensation was lost after a spinal cord injury.</rdfs:comment>
-        <rdfs:label>Neuropathic pain</rdfs:label>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_6000040"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>Neuropathic pain is triggered by lesions to the somatosensory nervous system that alter its structure and function so that pain occurs spontaneously and responses to noxious and innocuous stimuli are pathologically amplified.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>PMID:19400724</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/HP_6000048 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_6000048">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0025280"/>
-        <obo:IAO_0000115>Discomfort in the chest described as pressure, heaviness, or tightness.</obo:IAO_0000115>
-        <obo:IAO_0000233 rdf:resource="https://github.com/obophenotype/human-phenotype-ontology/issues/10135"/>
-        <terms:contributor rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
-        <rdfs:label>Chest pain described as pressure</rdfs:label>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_6000048"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>Discomfort in the chest described as pressure, heaviness, or tightness.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>PMID:21250256</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/HP_6000049 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_6000049">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0025280"/>
-        <obo:IAO_0000115>Chest pain described as a tearing or ripping sensation.</obo:IAO_0000115>
-        <obo:IAO_0000233 rdf:resource="https://github.com/obophenotype/human-phenotype-ontology/issues/10136"/>
-        <terms:contributor rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
-        <rdfs:comment>The pain of aortic dissection may be described as tearing or ripping and does not improve with nitroglycerin.</rdfs:comment>
-        <rdfs:label>Chest pain described as ripping or tearing</rdfs:label>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_6000049"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>Chest pain described as a tearing or ripping sensation.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>PMID:21250256</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/HP_6000305 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_6000305">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0011008"/>
-        <obo:IAO_0000115>Refers to symptomatology that begins in the proximal limbs and subsequently affects the distal limbs.</obo:IAO_0000115>
-        <obo:IAO_0000233 rdf:resource="https://github.com/obophenotype/human-phenotype-ontology/issues/9922"/>
-        <terms:contributor rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
-        <rdfs:label>Proximal to distal progression</rdfs:label>
     </owl:Class>
     
 
@@ -12070,36 +11022,6 @@
     
 
 
-    <!-- http://purl.obolibrary.org/obo/HP_6000684 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_6000684">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0025280"/>
-        <obo:IAO_0000115>Pain that is perceived to extend or spread out from one area of the body to another.</obo:IAO_0000115>
-        <obo:IAO_0000233 rdf:resource="https://github.com/obophenotype/human-phenotype-ontology/issues/9933"/>
-        <terms:contributor rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
-        <rdfs:label>Radiating pain</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/HP_6000707 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_6000707">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0025280"/>
-        <obo:IAO_0000115>Pain at night.</obo:IAO_0000115>
-        <obo:IAO_0000233 rdf:resource="https://github.com/obophenotype/human-phenotype-ontology/issues/10488"/>
-        <terms:contributor rdf:resource="https://orcid.org/0000-0001-8612-1062"/>
-        <rdfs:label>Noctural pain</rdfs:label>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_6000707"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>Pain at night.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>PMID:37214788</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    
-
-
     <!-- http://purl.obolibrary.org/obo/HP_6001011 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_6001011">
@@ -12115,67 +11037,9 @@
         <owl:annotatedTarget>Wet voice is a perceptual vocal quality that is gurgly or liquid sounding and is due to the voice being produced through moisture. It is commonly used as an indicator of penetration and/or aspiration in clinical swallowing assessments and bedside screening tests.</owl:annotatedTarget>
         <oboInOwl:hasDbXref>PMID:25001523</oboInOwl:hasDbXref>
     </owl:Axiom>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/HP_6001123 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_6001123">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0025280"/>
-        <obo:IAO_0000115>Exquisite tenderness in a specific region, beyond what one would surmise from examination.</obo:IAO_0000115>
-        <obo:IAO_0000233 rdf:resource="https://github.com/obophenotype/human-phenotype-ontology/issues/10695"/>
-        <terms:contributor rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
-        <rdfs:comment>This finding may be observed with several diseases including necrotizing fasciitis and gas gangrene.</rdfs:comment>
-        <rdfs:label>Pain disproportionate to abnormality on physical exam</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/HP_6001148 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_6001148">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0025280"/>
-        <obo:IAO_0000115>Pain in extremity that worsens with joint is passively flexed.</obo:IAO_0000115>
-        <obo:IAO_0000233 rdf:resource="https://github.com/obophenotype/human-phenotype-ontology/issues/10786"/>
-        <terms:contributor rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
-        <rdfs:comment>This feature may be observed in acute compartment syndrome.</rdfs:comment>
-        <rdfs:label>Pain exacerbated by passive flexion at joint</rdfs:label>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_6001148"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>Pain in extremity that worsens with joint is passively flexed.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>PMID:25878982</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/HP_6001152 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_6001152">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0025280"/>
-        <obo:IAO_0000115>Pain worsens with wrist ulnar or radial deviation.</obo:IAO_0000115>
-        <obo:IAO_0000233 rdf:resource="https://github.com/obophenotype/human-phenotype-ontology/issues/10742"/>
-        <terms:contributor rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
-        <rdfs:comment>Ulnar: Triangular fibrocartilage complex tear; Ulnocarpal abutment syndrome Radial: Triangular fibrocartilage complex tear.</rdfs:comment>
-        <rdfs:label>Pain exacerbated by wrist deviation</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/HP_6001203 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_6001203">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0025280"/>
-        <obo:IAO_0000115>A popping or snapping sensation (noise or feeling) at the time of an injury.</obo:IAO_0000115>
-        <obo:IAO_0000233 rdf:resource="https://github.com/obophenotype/human-phenotype-ontology/issues/9914"/>
-        <terms:contributor rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
-        <rdfs:comment>Sudden snapping or popping at the time of an injury can be a sign of significant damage to muscles, tendons, ligaments, or bones.</rdfs:comment>
-        <rdfs:label>Snapping sensation at time of injury</rdfs:label>
-    </owl:Class>
 </rdf:RDF>
 
 
 
-<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+<!-- Generated by the OWL API (version 4.5.29) https://github.com/owlcs/owlapi -->
 

@@ -10,7 +10,7 @@
 # More information: https://github.com/INCATools/ontology-development-kit/
 
 # Fingerprint of the configuration file when this Makefile was last generated
-CONFIG_HASH=                609c80e7565d8b1bb06815d2a1118c82c481672167ac8e5e5d3395c30c4be182
+CONFIG_HASH=                bbb903eecdcdeb849954dbe4103bde4fbc0a7e93d912e272e8416c3c26d63edf
 
 
 # ----------------------------------------
@@ -70,7 +70,7 @@ PATTERN_RELEASE_FILES=      $(PATTERNDIR)/definitions.owl $(PATTERNDIR)/pattern.
 MAPPINGDIR=                 ../mappings
 MAPPING_TESTER=             sssom validate
 SSSOMPY=                    sssom
-MAPPINGS=                   promot-mappings ICF_to_CIF_promot-mappings 
+MAPPINGS=                   promot-mappings ICF_to_CIF_promot-mappings ICF_to_CIF_all-mappings 
 MAPPING_RELEASE_FILES=      $(foreach n,$(MAPPINGS), $(MAPPINGDIR)/$(n).sssom.tsv)
 
 
@@ -199,7 +199,7 @@ all_main: $(MAIN_FILES)
 # ----------------------------------------
 
 
-IMPORTS =  bfo eco fma hp hp-fr-bab hp-fr-syn hp-es-bab iao mondo obi orcidio ro scdo sio snomed snomed-fr vo whofic biolink
+IMPORTS =  bfo eco fma hp hp-fr-bab hp-fr-syn hp-es-bab iao mondo obi ro sio snomed snomed-fr vo whofic
 
 IMPORT_ROOTS = $(patsubst %, $(IMPORTDIR)/%_import, $(IMPORTS))
 IMPORT_OWL_FILES = $(foreach n,$(IMPORT_ROOTS), $(n).owl)
@@ -227,9 +227,9 @@ all_subsets: $(SUBSET_FILES)
 # ----------------------------------------
 
 
-MAPPINGS =  promot-mappings ICF_to_CIF_promot-mappings
+MAPPINGS =  promot-mappings ICF_to_CIF_promot-mappings ICF_to_CIF_all-mappings
 
-RELEASED_MAPPINGS =  promot-mappings ICF_to_CIF_promot-mappings
+RELEASED_MAPPINGS =  promot-mappings ICF_to_CIF_promot-mappings ICF_to_CIF_all-mappings
 
 MAPPING_FILES = $(foreach p, $(MAPPINGS), $(MAPPINGDIR)/$(p).sssom.tsv)
 RELEASED_MAPPING_FILES = $(foreach p, $(RELEASED_MAPPINGS), $(MAPPINGDIR)/$(p).sssom.tsv)
@@ -459,28 +459,9 @@ $(IMPORTDIR)/mondo_import.owl: $(MIRRORDIR)/mondo.owl
 	@false
 endif # IMP_LARGE=true
 
-## Module for ontology: orcidio (filter)
-$(IMPORTDIR)/orcidio_import.owl: $(MIRRORDIR)/orcidio.owl $(IMPORTDIR)/orcidio_terms.txt $(IMPORTSEED) | all_robot_plugins
-	$(ROBOT) annotate --input $< --remove-annotations \
-		 odk:normalize --add-source true \
-		 extract --term-file $(IMPORTDIR)/orcidio_terms.txt $(T_IMPORTSEED) \
-		         --copy-ontology-annotations true --force true --method BOT \
-		 remove --axioms external --preserve-structure false --trim false \
-		        --base-iri https://orcid.org/ \
-		 remove $(foreach p, $(ANNOTATION_PROPERTIES), --term $(p)) \
-		        --term rdfs:label \
-		        --term IAO:0000115 \
-		        --term OMO:0002000 \
-		        --term-file $(IMPORTDIR)/orcidio_terms.txt $(T_IMPORTSEED) \
-		        --select complement \
-		 odk:normalize --base-iri http://purl.obolibrary.org/obo \
-		               --subset-decls true --synonym-decls true \
-		 repair --merge-axiom-annotations true \
-		 $(ANNOTATE_CONVERT_FILE)
-
 ## Module for ontology: snomed (custom)
 ifeq ($(IMP_LARGE),true)
-$(IMPORTDIR)/snomed_import.owl: $(MIRRORDIR)/snomed.owl
+$(IMPORTDIR)/snomed_import.owl: 
 	@echo "ERROR: You have configured snomed as a custom module;"
 	@echo "       This rule needs to be overwritten in promot.Makefile!"
 	@false
@@ -488,7 +469,7 @@ endif # IMP_LARGE=true
 
 ## Module for ontology: snomed-fr (custom)
 ifeq ($(IMP_LARGE),true)
-$(IMPORTDIR)/snomed-fr_import.owl: $(MIRRORDIR)/snomed-fr.owl
+$(IMPORTDIR)/snomed-fr_import.owl: 
 	@echo "ERROR: You have configured snomed-fr as a custom module;"
 	@echo "       This rule needs to be overwritten in promot.Makefile!"
 	@false
@@ -651,13 +632,6 @@ mirror-obi: | $(TMPDIR)
 	$(ROBOT) convert -i $(TMPDIR)/obi-download.owl -o $(TMPDIR)/$@.owl
 
 
-## ONTOLOGY: orcidio
-.PHONY: mirror-orcidio
-.PRECIOUS: $(MIRRORDIR)/orcidio.owl
-mirror-orcidio: | $(TMPDIR)
-	$(ROBOT) convert -I https://w3id.org/orcidio/orcidio.owl -o $(TMPDIR)/$@.owl
-
-
 ## ONTOLOGY: ro
 .PHONY: mirror-ro
 .PRECIOUS: $(MIRRORDIR)/ro.owl
@@ -666,35 +640,19 @@ mirror-ro: | $(TMPDIR)
 	$(ROBOT) convert -i $(TMPDIR)/ro-download.owl -o $(TMPDIR)/$@.owl
 
 
-## ONTOLOGY: scdo
-.PHONY: mirror-scdo
-.PRECIOUS: $(MIRRORDIR)/scdo.owl
-mirror-scdo: | $(TMPDIR)
-	curl -L $(OBOBASE)/scdo.owl --create-dirs -o $(TMPDIR)/scdo-download.owl --retry 4 --max-time 200 && \
-	$(ROBOT) convert -i $(TMPDIR)/scdo-download.owl -o $(TMPDIR)/$@.owl
-
-
 ## ONTOLOGY: sio
 ## You have configured your default mirror type to no_mirror.
 
 
 ## ONTOLOGY: snomed
-.PHONY: mirror-snomed
-.PRECIOUS: $(MIRRORDIR)/snomed.owl
-ifeq ($(IMP_LARGE),true)
-mirror-snomed: | $(TMPDIR)
-	curl -L $(OBOBASE)/snomed.owl --create-dirs -o $(TMPDIR)/snomed-download.owl --retry 4 --max-time 200 && \
-	$(ROBOT) convert -i $(TMPDIR)/snomed-download.owl -o $(TMPDIR)/$@.owl
+
+ifeq ($(IMP_LARGE),true)## You have configured your default mirror type to no_mirror.
 endif
 
 
 ## ONTOLOGY: snomed-fr
-.PHONY: mirror-snomed-fr
-.PRECIOUS: $(MIRRORDIR)/snomed-fr.owl
-ifeq ($(IMP_LARGE),true)
-mirror-snomed-fr: | $(TMPDIR)
-	curl -L $(OBOBASE)/snomed-fr.owl --create-dirs -o $(TMPDIR)/snomed-fr-download.owl --retry 4 --max-time 200 && \
-	$(ROBOT) convert -i $(TMPDIR)/snomed-fr-download.owl -o $(TMPDIR)/$@.owl
+
+ifeq ($(IMP_LARGE),true)## You have configured your default mirror type to no_mirror.
 endif
 
 
@@ -711,13 +669,6 @@ mirror-vo: | $(TMPDIR)
 .PRECIOUS: $(MIRRORDIR)/whofic.owl
 mirror-whofic: | $(TMPDIR)
 	$(ROBOT) convert -I https://raw.githubusercontent.com/whoficitc/harmonization/main/ontology/whofic-2025-05-24.owl -o $(TMPDIR)/$@.owl
-
-
-## ONTOLOGY: biolink
-.PHONY: mirror-biolink
-.PRECIOUS: $(MIRRORDIR)/biolink.owl
-mirror-biolink: | $(TMPDIR)
-	$(ROBOT) convert -I https://w3id.org/biolink/biolink-model.owl.ttl -o $(TMPDIR)/$@.owl
 
 
 $(MIRRORDIR)/%.owl: mirror-% | $(MIRRORDIR)
@@ -896,6 +847,10 @@ $(MAPPINGDIR)/promot-mappings.sssom.tsv:
 
 # This mappingset is manually curated, so we only check that the file actually exists.
 $(MAPPINGDIR)/ICF_to_CIF_promot-mappings.sssom.tsv:
+	test -f $@
+
+# This mappingset is manually curated, so we only check that the file actually exists.
+$(MAPPINGDIR)/ICF_to_CIF_all-mappings.sssom.tsv:
 	test -f $@
 
 # ----------------------------------------
