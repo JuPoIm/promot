@@ -33,6 +33,51 @@ $(IMPORTDIR)/eco_import.owl: $(MIRRORDIR)/eco.owl $(IMPORTDIR)/eco_terms.txt
 		annotate --ontology-iri $(ONTBASE)/$@ $(ANNOTATE_ONTOLOGY_VERSION) --output $@.tmp.owl && mv $@.tmp.owl $@; fi
 
 # ----------------------------------------
+# Module FMA : classes
+# ----------------------------------------
+$(IMPORTDIR)/fma_import.owl: $(MIRRORDIR)/fma.owl $(IMPORTDIR)/fma_terms_combined.txt
+	if [ $(IMP) = true ]; then $(ROBOT) query -i $< --update $(SPARQLDIR)/preprocess-module.ru \
+		filter -T $(IMPORTDIR)/fma_terms_ancestors.txt \
+        --select "self ancestors annotations" \
+		--signature true \
+        query --update $(SPARQLDIR)/inject-subset-declaration.ru --update $(SPARQLDIR)/postprocess-module.ru \
+		annotate --ontology-iri $(ONTBASE)/$@ $(ANNOTATE_ONTOLOGY_VERSION) \
+		--output $@.tmp.owl && mv $@.tmp.owl $@; fi
+
+# ----------------------------------------
+# Module HP (EN-FR-ES) : classes
+# ----------------------------------------
+# Downloading of the French and Spanish translation from github (hp-es.synonyms.owl empty on 08/12/25)
+# Merging of the data babelon and synonyms with mirror hp.owl
+# Import of self descendants annotations
+# Import of self annotations
+# Import of self ancestors annotations
+$(IMPORTDIR)/hp_import.owl: $(MIRRORDIR)/hp.owl $(IMPORTDIR)/hp_terms_combined.txt
+	if [ $(IMP) = true ]; then \
+		curl -L https://raw.githubusercontent.com/obophenotype/human-phenotype-ontology/refs/heads/master/src/translations/hp-fr.babelon.owl \
+		--output $(DATADIR)/hp-fr.babelon.owl; \
+		curl -L https://raw.githubusercontent.com/obophenotype/human-phenotype-ontology/refs/heads/master/src/translations/hp-es.babelon.owl \
+		--output $(DATADIR)/hp-es.babelon.owl; \
+		curl -L https://raw.githubusercontent.com/obophenotype/human-phenotype-ontology/refs/heads/master/src/translations/hp-fr.synonyms.owl \
+		--output $(DATADIR)/hp-fr.synonyms.owl;\
+		$(ROBOT) merge -i $< -i $(DATADIR)/hp-fr.babelon.owl -i $(DATADIR)/hp-es.babelon.owl -i $(DATADIR)/hp-fr.synonyms.owl \
+		query --update $(SPARQLDIR)/preprocess-module.ru \
+		filter -T $(IMPORTDIR)/hp_terms_descendants.txt \
+        --select "self descendants annotations" --signature true \
+		--output $@.tmp.owl ; \
+		$(ROBOT) filter -i $< -T $(IMPORTDIR)/hp_terms_alone.txt \
+        --select "self annotations" --signature true \
+		merge -i $@.tmp.owl \
+		--output $@.tmp.owl ; \
+		$(ROBOT) filter -i $< -T $(IMPORTDIR)/hp_terms_ancestors.txt \
+		--select "self ancestors annotations" --signature true \
+		remove -T $(IMPORTDIR)/hp_exclude_terms.txt --select "self annotations" --signature true \
+        query --update $(SPARQLDIR)/inject-subset-declaration.ru --update $(SPARQLDIR)/postprocess-module.ru \
+		annotate --ontology-iri $(ONTBASE)/$@ $(ANNOTATE_ONTOLOGY_VERSION) \
+		merge -i $@.tmp.owl \
+		--output $@.tmp.owl && mv $@.tmp.owl $@; fi
+
+# ----------------------------------------
 # Module MONDO : classes
 # ----------------------------------------
 imports/mondo_import.owl: $(MIRRORDIR)/mondo.owl $(IMPORTDIR)/mondo_terms.txt
@@ -42,41 +87,13 @@ imports/mondo_import.owl: $(MIRRORDIR)/mondo.owl $(IMPORTDIR)/mondo_terms.txt
 		annotate --ontology-iri $(ONTBASE)/$@ $(ANNOTATE_ONTOLOGY_VERSION) --output $@.tmp.owl && mv $@.tmp.owl $@; fi
 
 # ----------------------------------------
-# Module FMA : classes
+# Module OBI : 2 classes
 # ----------------------------------------
-$(IMPORTDIR)/fma_import.owl: $(MIRRORDIR)/fma.owl $(IMPORTDIR)/fma_terms_combined.txt
+$(IMPORTDIR)/obi_import.owl: $(MIRRORDIR)/obi.owl $(IMPORTDIR)/obi_terms.txt
 	if [ $(IMP) = true ]; then $(ROBOT) query -i $< --update $(SPARQLDIR)/preprocess-module.ru \
-		filter -T $(IMPORTDIR)/fma_terms.txt \
-        --select "self descendants annotations" \
-		--select "rdfs:label=~'^(?!.*\bRight|Left|right|left\b).*'" \
-		--signature true \
-		--output $@.tmp.owl; \
-		$(ROBOT) query -i $< --update $(SPARQLDIR)/preprocess-module.ru \
-		filter -T $(IMPORTDIR)/fma_terms_alone.txt --select "self annotations" --signature true \
+		filter -T $(IMPORTDIR)/obi_terms.txt --select "self annotations" --signature true \
         query --update $(SPARQLDIR)/inject-subset-declaration.ru --update $(SPARQLDIR)/postprocess-module.ru \
-		annotate --ontology-iri $(ONTBASE)/$@ $(ANNOTATE_ONTOLOGY_VERSION) \
-		merge -i $@.tmp.owl \
-		--output $@.tmp.owl && mv $@.tmp.owl $@; fi
-
-# ----------------------------------------
-# Module HP EN : classes
-# ----------------------------------------
-$(IMPORTDIR)/hp_import.owl: $(MIRRORDIR)/hp.owl $(IMPORTDIR)/hp_terms_combined.txt
-	if [ $(IMP) = true ]; then $(ROBOT) query -i $< --update $(SPARQLDIR)/preprocess-module.ru \
-		filter -T $(IMPORTDIR)/hp_terms_descendants.txt \
-        --select "self descendants annotations" --signature true \
-		--output $@.tmp.owl; \
-		$(ROBOT) filter -i $< -T $(IMPORTDIR)/hp_terms_alone.txt \
-        --select "self annotations" --signature true \
-		merge -i $@.tmp.owl \
-		--output $@.tmp.owl; \
-		$(ROBOT) query -i $< --update $(SPARQLDIR)/preprocess-module.ru \
-		filter -T $(IMPORTDIR)/hp_terms_ancestors.txt --select "self ancestors annotations" --signature true \
-		remove -T $(IMPORTDIR)/hp_exclude_terms.txt --select "self annotations" --signature true \
-        query --update $(SPARQLDIR)/inject-subset-declaration.ru --update $(SPARQLDIR)/postprocess-module.ru \
-		annotate --ontology-iri $(ONTBASE)/$@ $(ANNOTATE_ONTOLOGY_VERSION) \
-		merge -i $@.tmp.owl \
-		--output $@.tmp.owl && mv $@.tmp.owl $@; fi
+		annotate --ontology-iri $(ONTBASE)/$@ $(ANNOTATE_ONTOLOGY_VERSION) --output $@.tmp.owl && mv $@.tmp.owl $@; fi
 
 # ----------------------------------------
 # Module RO
@@ -86,6 +103,54 @@ $(IMPORTDIR)/ro_import.owl: $(MIRRORDIR)/ro.owl $(IMPORTDIR)/ro_terms_combined.t
 		filter -T $(IMPORTDIR)/ro_terms.txt --select "self annotations" --signature true \
         query --update $(SPARQLDIR)/inject-subset-declaration.ru --update $(SPARQLDIR)/postprocess-module.ru \
 		annotate --ontology-iri $(ONTBASE)/$@ $(ANNOTATE_ONTOLOGY_VERSION) --output $@.tmp.owl && mv $@.tmp.owl $@; fi
+
+# ----------------------------------------
+# Module SIO : no-mirror-refresh
+# ----------------------------------------
+$(IMPORTDIR)/sio_import.owl: $(MIRRORDIR)/sio-release.owl $(IMPORTDIR)/sio_terms_combined.txt
+	if [ $(IMP) = true ]; then $(ROBOT) query -i $< --update $(SPARQLDIR)/preprocess-module.ru \
+		filter -T $(IMPORTDIR)/sio_terms_alone.txt \
+        --select "self annotations" --signature true \
+		--output $@.tmp.owl; \
+		$(ROBOT) query -i $< --update $(SPARQLDIR)/preprocess-module.ru \
+		filter -T $(IMPORTDIR)/sio_terms.txt --select "self descendants annotations" --signature true \
+        query --update $(SPARQLDIR)/inject-subset-declaration.ru --update $(SPARQLDIR)/postprocess-module.ru \
+		annotate --ontology-iri $(ONTBASE)/$@ $(ANNOTATE_ONTOLOGY_VERSION) \
+		merge -i $@.tmp.owl \
+		--output $@.tmp.owl && mv $@.tmp.owl $@; fi
+
+# ----------------------------------------
+# Module SNOMED : no-mirror-refresh
+# ----------------------------------------
+# REQUIREMENTS
+# 1. Download the latest SNOMED CT international edition (RF2 files) from https://www.nlm.nih.gov/healthit/snomedct/international.html
+# 2. Download the latest SNOMED CT Spanish (castellano) edition from https://www.nlm.nih.gov/healthit/snomedct/international.html
+# 3. Add the Spanish (castellano) files to the SNOMED CT international .zip (if needed, create a new .zip such as 'SNOMEDCT_en-es' to combine them)
+# 4. Convert RF2 files to owl with https://github.com/IHTSDO/snomed-owl-toolkit/releases
+# 5. Put the resulting 'ontology-2025-11-14_EN-ES.owl' in ../data/
+# 6. Download the latest SNOMED CT French edition from https://smt.esante.gouv.fr/terminologie-snomed-ct-fr/
+# 7. Put 'terminologie-snomed-ct-fr/dat/SnomedCT-NationalFR_OWL_asserted_20250621.owl' in ../data/
+# 8. Use hereafter code
+# OR
+# A. Download the latest SNOMED CT French edition from https://smt.esante.gouv.fr/terminologie-snomed-ct-fr/
+# B. Same process than 1. to 5. with french files added in .zip at stage 3.
+# C. Custom hereafter code to fit your choice
+# OR
+# a. Same process than 1. to 6.
+# b. Merge the .owl resulting from 4. with terminologie-snomed-ct-fr/dat/SnomedCT-NationalFR_OWL_asserted_20250621.owl (French edition)
+# c. Put the resulting .owl in ../data/
+# d. Custom hereafter code to fit your choice
+$(IMPORTDIR)/snomed_import.owl: $(DATADIR)/ontology-2025-11-14_EN-ES.owl $(DATADIR)/SnomedCT_NationalFR_OWL.owl
+	if [ $(IMP) = true ]; then $(ROBOT) query -i $< --update $(SPARQLDIR)/preprocess-module.ru \
+		filter -T $(IMPORTDIR)/snomed_terms.txt --select "self annotations" --signature true \
+		query --update $(SPARQLDIR)/inject-subset-declaration.ru --update $(SPARQLDIR)/postprocess-module.ru \
+		annotate --ontology-iri $(ONTBASE)/$@ $(ANNOTATE_ONTOLOGY_VERSION) \
+		--output $@.tmp.owl ; \
+		$(ROBOT) query -i $(DATADIR)/SnomedCT_NationalFR_OWL.owl --update $(SPARQLDIR)/preprocess-module.ru \
+		filter -T $(IMPORTDIR)/snomed_terms.txt --select "self annotations" --signature true \
+		query --update $(SPARQLDIR)/inject-subset-declaration.ru --update $(SPARQLDIR)/postprocess-module.ru \
+		annotate --ontology-iri $(ONTBASE)/$@ $(ANNOTATE_ONTOLOGY_VERSION) \
+		merge -i $@.tmp.owl --output $@.tmp.owl && mv $@.tmp.owl $@ ; fi
 
 # ----------------------------------------
 # Module WHOFIC EN : no-mirror-refresh
@@ -114,90 +179,6 @@ $(IMPORTDIR)/whofic_import.owl: $(MIRRORDIR)/whofic-2025-05-24.owl $(IMPORTDIR)/
 		--output $@.tmp.owl && mv $@.tmp.owl $@; fi
 
 # ----------------------------------------
-# Module SIO : no-mirror-refresh
-# ----------------------------------------
-$(IMPORTDIR)/sio_import.owl: $(MIRRORDIR)/sio-release.owl $(IMPORTDIR)/sio_terms_combined.txt
-	if [ $(IMP) = true ]; then $(ROBOT) query -i $< --update $(SPARQLDIR)/preprocess-module.ru \
-		filter -i $< -T $(IMPORTDIR)/sio_terms_alone.txt \
-        --select "self annotations" --signature true \
-		--output $@.tmp.owl; \
-		$(ROBOT) query -i $< --update $(SPARQLDIR)/preprocess-module.ru \
-		filter -T $(IMPORTDIR)/sio_terms.txt --select "self descendants annotations" --signature true \
-        query --update $(SPARQLDIR)/inject-subset-declaration.ru --update $(SPARQLDIR)/postprocess-module.ru \
-		annotate --ontology-iri $(ONTBASE)/$@ $(ANNOTATE_ONTOLOGY_VERSION) \
-		merge -i $@.tmp.owl \
-		--output $@.tmp.owl && mv $@.tmp.owl $@; fi
-
-# ----------------------------------------
-# Module SNOMED : no-mirror-refresh
-# ----------------------------------------
-# 1. Download the latest SNOMED CT international edition (RF2 files) from https://www.nlm.nih.gov/healthit/snomedct/international.html
-# 2. Download the latest SNOMED CT Spanish (castellano) edition from https://www.nlm.nih.gov/healthit/snomedct/international.html
-# 3. Download the latest SNOMED CT French edition from https://smt.esante.gouv.fr/terminologie-snomed-ct-fr/
-# 4. Merge the Spanish (castellano) and French files to the SNOMED CT international .zip (or create a new .zip such as 'SNOMEDCT_en-es-fr' if need to combine them)
-# 5. Convert RF2 files to owl with https://github.com/IHTSDO/snomed-owl-toolkit/releases
-# 6. Put the resulting snomed.owl in ../data/
-## Note that you can also merge the terminologie-snomed-ct-fr/dat/SnomedCT-NationalFR_OWL_asserted_20250621.owl (French edition) to the .owl merging international and Spanish version 
-$(IMPORTDIR)/snomed_import.owl: $(DATADIR)/ontology-2025-11-14_EN-ES.owl $(DATADIR)/SnomedCT_NationalFR_OWL.owl
-	if [ $(IMP) = true ]; then $(ROBOT) query -i $< --update $(SPARQLDIR)/preprocess-module.ru \
-		filter -T $(IMPORTDIR)/snomed_terms.txt --select "self annotations" --signature true \
-		query --update $(SPARQLDIR)/inject-subset-declaration.ru --update $(SPARQLDIR)/postprocess-module.ru \
-		annotate --ontology-iri $(ONTBASE)/$@ $(ANNOTATE_ONTOLOGY_VERSION) \
-		--output $@.tmp.owl ; \
-		$(ROBOT) query -i $(DATADIR)/SnomedCT_NationalFR_OWL.owl --update $(SPARQLDIR)/preprocess-module.ru \
-		filter -T $(IMPORTDIR)/snomed_terms.txt --select "self annotations" --signature true \
-		query --update $(SPARQLDIR)/inject-subset-declaration.ru --update $(SPARQLDIR)/postprocess-module.ru \
-		annotate --ontology-iri $(ONTBASE)/$@ $(ANNOTATE_ONTOLOGY_VERSION) \
-		merge -i $@.tmp.owl --output $@.tmp.owl && mv $@.tmp.owl $@ ; fi
-
-# ----------------------------------------
-# Module SNOMED FR : no-mirror-refresh
-# ----------------------------------------
-# Download the latest SNOMED CT French edition from https://smt.esante.gouv.fr/terminologie-snomed-ct-fr/
-# Use the SnomedCT_NationalFR_OWL.owl version in the /terminologie-snomed-ct-fr/dat/ and put it in ../data/
-# OR 
-# Convert RF2 files in /terminologie-snomed-ct-fr/src/ to owl with https://github.com/IHTSDO/snomed-owl-toolkit/releases
-# and put the resulting .owl in ../data/
-$(IMPORTDIR)/snomed-fr_import.owl: $(DATADIR)/SnomedCT_NationalFR_OWL.owl
-	if [ $(IMP) = true ]; then $(ROBOT) query -i $< --update $(SPARQLDIR)/preprocess-module.ru \
-		filter -T $(IMPORTDIR)/snomed_terms.txt --select "self annotations" --signature true \
-		query --update $(SPARQLDIR)/inject-subset-declaration.ru --update $(SPARQLDIR)/postprocess-module.ru \
-		annotate --ontology-iri $(ONTBASE)/$@ $(ANNOTATE_ONTOLOGY_VERSION) \
-		--output $@.tmp.owl && mv $@.tmp.owl $@; fi
-
-# ----------------------------------------
-# Module VO 
-# ----------------------------------------
-$(IMPORTDIR)/vo_import.owl: $(MIRRORDIR)/vo.owl $(IMPORTDIR)/vo_terms.txt
-	if [ $(IMP) = true ]; then $(ROBOT) query -i $< --update $(SPARQLDIR)/preprocess-module.ru \
-		filter -T $(IMPORTDIR)/vo_terms.txt --select "self annotations" --signature true \
-        query --update $(SPARQLDIR)/inject-subset-declaration.ru --update $(SPARQLDIR)/postprocess-module.ru \
-		annotate --ontology-iri $(ONTBASE)/$@ $(ANNOTATE_ONTOLOGY_VERSION) --output $@.tmp.owl && mv $@.tmp.owl $@; fi
-
-# ----------------------------------------
-# Module OBI : 2 classes
-# ----------------------------------------
-$(IMPORTDIR)/obi_import.owl: $(MIRRORDIR)/obi.owl $(IMPORTDIR)/obi_terms.txt
-	if [ $(IMP) = true ]; then $(ROBOT) query -i $< --update $(SPARQLDIR)/preprocess-module.ru \
-		filter -T $(IMPORTDIR)/obi_terms.txt --select "self annotations" --signature true \
-        query --update $(SPARQLDIR)/inject-subset-declaration.ru --update $(SPARQLDIR)/postprocess-module.ru \
-		annotate --ontology-iri $(ONTBASE)/$@ $(ANNOTATE_ONTOLOGY_VERSION) --output $@.tmp.owl && mv $@.tmp.owl $@; fi
-
-# ----------------------------------------
-# Module HP ES babelon :
-# ----------------------------------------
-$(IMPORTDIR)/hp-es-bab_import.owl: $(MIRRORDIR)/hp-es-bab.owl
-	if [ $(IMP) = true ]; then $(ROBOT) annotate -i $< --ontology-iri $(ONTBASE)/$@ $(ANNOTATE_ONTOLOGY_VERSION) \
-	--output $@.tmp.owl && mv $@.tmp.owl $@; fi
-
-# ----------------------------------------
-# Module HP FR babelon :
-# ----------------------------------------
-$(IMPORTDIR)/hp-fr-bab_import.owl: $(MIRRORDIR)/hp-fr-bab.owl
-	if [ $(IMP) = true ]; then $(ROBOT) annotate -i $< --ontology-iri $(ONTBASE)/$@ $(ANNOTATE_ONTOLOGY_VERSION) \
-	--output $@.tmp.owl && mv $@.tmp.owl $@; fi
-
-# ----------------------------------------
 # Documentation / Documentación
 # ----------------------------------------
 documentation:
@@ -223,8 +204,8 @@ documentation:
 # 5. python script that creates 2 files : one with the overall ICF-CIF mapping and a second with ICF URIs used in PROMOT only
 # 6. creates two SSSOM files for the two herebefore files
 # ----------------------------------------
-.PHONY: translation-mapping-ICF
-translation-mapping-ICF:
+.PHONY: translation-ICF
+translation-ICF:
 	curl -L https://data.bioportal.lirmm.fr/ontologies/ICF/submissions/2/download?apikey=1de0a270-29c5-4dda-b043-7c3580628cd5 -o $(DATADIR)/cif-asip.ttl
 	$(ROBOT) --prefix "skos: http://www.w3.org/2004/02/skos/core#" --prefix "rdfs: http://www.w3.org/2000/01/rdf-schema#" -vvv export -i $(DATADIR)/cif-asip.ttl --header "IRI|skos:notation|skos:altLabel" --export $(SCRIPTS_DATA)/CIF-ASIP.tsv
 	curl -L "https://icdcdn.who.int/static/releasefiles/2025-01/SimpleTabulation-ICF-fr.zip" -o $(SCRIPTS_DATA)/SimpleTabulation-ICF-fr.zip
@@ -253,7 +234,6 @@ extract-pheno:
 	-o $(SOURCESDIR)/genes_to_phenotype.txt
 	python3.12 $(SCRIPTSDIR)/python/Stat_GeneToPheno.py
 
-
 # ----------------------------------------
 # Merge the imports, components and patterns into promot-edit.owl for control purpose 
 # ----------------------------------------
@@ -264,4 +244,4 @@ merge-edit:
 	for file in "$(COMPONENTSDIR)/*.owl"; do \
 	if [ -f "$file" ]; then $(ROBOT) merge -i $file -i $(SRC) -o $(SRC); fi \
 	done
-	$(ROBOT) merge -i $(PATTERNDIR)/definitions.owl -i $(SRC) -o $(SRC)
+	$(ROBOT) merge -i $(PATTERNDIR)/definitions.owl -i $(SRC) -o promot-edit-merged.owl

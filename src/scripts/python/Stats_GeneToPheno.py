@@ -11,7 +11,7 @@
 # 29/10/2025 : modif du script pour intégration en ligne
 
 # ------------ Imports utilisés ------------#
-#import csv
+import csv
 import pandas as pd
 
 # ------------ Variables globales ------------#
@@ -25,25 +25,81 @@ import pandas as pd
 # dico_gen_OPMD = {}
 
 # DISEASE GROUP	| GENE NAME
-genes_df = pd.read_csv("genes_names.tsv")
+genes_df = pd.read_csv("../data/genes_names.tsv")
 # DISEASE GROUP	| DISEASE NAME	| ORPHA CODE | OMIM CODE
-diseases_df = pd.read_csv("diseases_codes.tsv")
+diseases_df = pd.read_csv("../data/diseases_codes.tsv")
 
 # ncbi_gene_id	| gene_symbol	| hpo_id	| hpo_name	| frequency	| disease_id
 data_df = pd.read_csv("genes_to_phenotype.txt")
 
 ### creation de df de travail
-columns = ['Disease group', 'Gene', 'HPO id', 'Disease id', 'Disease name']
+columns = ['Disease group', 'Gene name', 'HPO id', 'HPO name' 'Disease id', 'Disease name']
 results_df = pd.DataFrame(columns=columns)
 
 columns = ['Disease name', 'Disease id', 'NB of HPO codes']
-stats_df = pd.DataFrame(columns=columns)
+stats_diseases_df = pd.DataFrame(columns=columns)
 
 columns = ['Gene name', 'NB of HPO codes']
-stats_df = pd.DataFrame(columns=columns)
+stats_genes_df = pd.DataFrame(columns=columns)
 
-for index, row in genes_df.iterrows():
+with open('../data/genes_to_phenotype_24-12-12.txt', newline='', encoding='utf-8') as file:
+    reader = csv.reader(file, delimiter='\t', quotechar='"', quoting=csv.QUOTE_MINIMAL)  
+    for index, row in genes_df.iterrows():
+        disease = row['DISEASE GROUP']
+        gene = row['GENE NAME']
+        for line in reader:
+             if 
 
+
+        maladie = 'OPMD'
+        compteur_maladies = {}
+        for code, name in dico_codes_OPMD.items():
+            compteur_maladies[name] = 0 
+        dico_pheno_dis = {}
+        for code, name in dico_codes_OPMD.items():
+            dico_pheno_dis[name] = []
+
+        compteur_genes = {}
+        for code, name in dico_gen_OPMD.items():
+            compteur_genes[name] = 0
+
+        with open('./Data/genes_diseases/24-12-12/genes_to_phenotype_24-12-12_upgraded-codes2.txt', newline='', encoding='utf-8') as file:
+            reader = csv.reader(file, delimiter='\t', quotechar='"', quoting=csv.QUOTE_MINIMAL)  
+            outputfile= f"./resultats/Liste_phenos_genes-"+ maladie +"_09-04-25_positifs.csv"
+            # Création du dico : gène de la maladie -> liste de phéno associée
+            dico_pheno_gen = {}
+            for id_gene, nom_gene in dico_gen_OPMD.items():
+                dico_pheno_gen[nom_gene] = []
+            # ------------ 2/3 Récupération des phénotypes pour chaque gène associé à la maladie ------------#    
+            with open(outputfile, 'w', newline='', encoding='utf-8') as csvfile:
+                gene_writer = csv.writer(csvfile, delimiter='\t', quotechar='|', quoting=csv.QUOTE_MINIMAL)
+                compteur_gen = 0
+                for row in reader:
+                    gene_name = row[1]
+                    hpo_id = row[2]
+                    hpo_label = row[3]
+                    dis_id = row[5]
+                    ident = hpo_id
+                    if gene_name in dico_gen_OPMD.values() :
+                        if dis_id in dico_codes_OPMD.keys() :
+                        #compteur_gen += 1
+                        #dico_pheno_gen[nom_gene].append(ident)
+                            if ident not in dico_pheno_gen[gene_name]:
+                                compteur_genes[gene_name] += 1
+                                dico_pheno_gen[gene_name].append(ident)
+                            dis_name = dico_codes_OPMD[dis_id] 
+                            if hpo_id not in dico_pheno_dis[dis_name] :
+                                compteur_maladies[dis_name] +=1
+                                dico_pheno_dis[dis_name].append(hpo_id)
+                            gene_writer.writerow([gene_name, ident, hpo_label, dis_id, dico_codes_OPMD[dis_id]])
+                        #else :
+                        #    gene_writer.writerow([gene_name, ident, hpo_label])
+        with open(f"./resultats/STAT_phenos_genes_maladies_"+ maladie +"_sdoub_2.csv", 'w', newline='', encoding='utf-8') as csvfile:
+            stat_writer = csv.writer(csvfile, delimiter='\t', quotechar='|', quoting=csv.QUOTE_MINIMAL)
+            for nom, nombre in compteur_maladies.items():
+                    stat_writer.writerow([nom, [k for k, v in dico_codes_OPMD.items() if v == nom], nombre]) 
+            for nom, nombre in compteur_genes.items():
+                    stat_writer.writerow([nom, [v for k, v in dico_gen_CMS.items() if v == nom], nombre])    
 # ------------------------------------------------------------------------------------#
 #                                        MAIN                                         #
 # ------------------------------------------------------------------------------------#

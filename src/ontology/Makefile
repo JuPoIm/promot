@@ -10,7 +10,7 @@
 # More information: https://github.com/INCATools/ontology-development-kit/
 
 # Fingerprint of the configuration file when this Makefile was last generated
-CONFIG_HASH=                bbb903eecdcdeb849954dbe4103bde4fbc0a7e93d912e272e8416c3c26d63edf
+CONFIG_HASH=                491c42319ad097e6bb48782f7582a4765eba534ee7d7d6d71e58e815d6277be9
 
 
 # ----------------------------------------
@@ -199,7 +199,7 @@ all_main: $(MAIN_FILES)
 # ----------------------------------------
 
 
-IMPORTS =  bfo eco fma hp hp-fr-bab hp-fr-syn hp-es-bab iao mondo obi ro sio snomed snomed-fr vo whofic
+IMPORTS =  bfo eco fma hp iao mondo obi ro sio snomed whofic
 
 IMPORT_ROOTS = $(patsubst %, $(IMPORTDIR)/%_import, $(IMPORTS))
 IMPORT_OWL_FILES = $(foreach n,$(IMPORT_ROOTS), $(n).owl)
@@ -423,15 +423,6 @@ $(IMPORTDIR)/%_import.owl: $(MIRRORDIR)/%.owl
 
 .PRECIOUS: $(IMPORTDIR)/%_import.owl
 
-## Module for ontology: hp-fr-bab (mirror)
-$(IMPORTDIR)/hp-fr-bab_import.owl: $(MIRRORDIR)/hp-fr-bab.owl | all_robot_plugins
-	$(ROBOT) annotate --input $< --remove-annotations \
-		 odk:normalize --base-iri http://purl.obolibrary.org/obo \
-		               --subset-decls true --synonym-decls true \
-		               --add-source true \
-		 repair --merge-axiom-annotations true \
-		 $(ANNOTATE_CONVERT_FILE)
-
 ## Module for ontology: iao (filter)
 $(IMPORTDIR)/iao_import.owl: $(MIRRORDIR)/iao.owl $(IMPORTDIR)/iao_terms.txt $(IMPORTSEED) | all_robot_plugins
 	$(ROBOT) annotate --input $< --remove-annotations \
@@ -463,14 +454,6 @@ endif # IMP_LARGE=true
 ifeq ($(IMP_LARGE),true)
 $(IMPORTDIR)/snomed_import.owl: 
 	@echo "ERROR: You have configured snomed as a custom module;"
-	@echo "       This rule needs to be overwritten in promot.Makefile!"
-	@false
-endif # IMP_LARGE=true
-
-## Module for ontology: snomed-fr (custom)
-ifeq ($(IMP_LARGE),true)
-$(IMPORTDIR)/snomed-fr_import.owl: 
-	@echo "ERROR: You have configured snomed-fr as a custom module;"
 	@echo "       This rule needs to be overwritten in promot.Makefile!"
 	@false
 endif # IMP_LARGE=true
@@ -585,27 +568,6 @@ mirror-hp: | $(TMPDIR)
 	$(ROBOT) convert -i $(TMPDIR)/hp-download.owl -o $(TMPDIR)/$@.owl
 
 
-## ONTOLOGY: hp-fr-bab
-.PHONY: mirror-hp-fr-bab
-.PRECIOUS: $(MIRRORDIR)/hp-fr-bab.owl
-mirror-hp-fr-bab: | $(TMPDIR)
-	$(ROBOT) convert -I https://raw.githubusercontent.com/obophenotype/human-phenotype-ontology/refs/heads/master/src/translations/hp-fr.babelon.owl -o $(TMPDIR)/$@.owl
-
-
-## ONTOLOGY: hp-fr-syn
-.PHONY: mirror-hp-fr-syn
-.PRECIOUS: $(MIRRORDIR)/hp-fr-syn.owl
-mirror-hp-fr-syn: | $(TMPDIR)
-	$(ROBOT) convert -I https://raw.githubusercontent.com/obophenotype/human-phenotype-ontology/refs/heads/master/src/translations/hp-fr.synonyms.owl -o $(TMPDIR)/$@.owl
-
-
-## ONTOLOGY: hp-es-bab
-.PHONY: mirror-hp-es-bab
-.PRECIOUS: $(MIRRORDIR)/hp-es-bab.owl
-mirror-hp-es-bab: | $(TMPDIR)
-	$(ROBOT) convert -I https://raw.githubusercontent.com/obophenotype/human-phenotype-ontology/refs/heads/master/src/translations/hp-es.babelon.owl -o $(TMPDIR)/$@.owl
-
-
 ## ONTOLOGY: iao
 .PHONY: mirror-iao
 .PRECIOUS: $(MIRRORDIR)/iao.owl
@@ -648,20 +610,6 @@ mirror-ro: | $(TMPDIR)
 
 ifeq ($(IMP_LARGE),true)## You have configured your default mirror type to no_mirror.
 endif
-
-
-## ONTOLOGY: snomed-fr
-
-ifeq ($(IMP_LARGE),true)## You have configured your default mirror type to no_mirror.
-endif
-
-
-## ONTOLOGY: vo
-.PHONY: mirror-vo
-.PRECIOUS: $(MIRRORDIR)/vo.owl
-mirror-vo: | $(TMPDIR)
-	curl -L $(OBOBASE)/vo.owl --create-dirs -o $(TMPDIR)/vo-download.owl --retry 4 --max-time 200 && \
-	$(ROBOT) convert -i $(TMPDIR)/vo-download.owl -o $(TMPDIR)/$@.owl
 
 
 ## ONTOLOGY: whofic

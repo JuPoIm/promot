@@ -39,6 +39,7 @@
      xmlns:WHOFIC="http://id.who.int/icd/entity/"
      xmlns:schema="http://schema.org/"
      xmlns:BIOLINK="https://w3id.org/biolink/vocab/"
+     xmlns:babelon="https://w3id.org/babelon/"
      xmlns:omoprel="https://w3id.org/cpont/omop/relations/"
      xmlns:subsets="http://purl.obolibrary.org/obo/ro/subsets#"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#"
@@ -54,8 +55,8 @@
      xmlns:CPATH_VISIT_OCCURRENCE="https://w3id.org/cpont/visit_occurrence/"
      xmlns:CPATH_CONDITION_OCCURRENCE="https://w3id.org/cpont/condition_occurrence/">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/promot/imports/hp_import.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/promot/releases/2025-12-05/imports/hp_import.owl"/>
-        <owl:versionInfo>2025-12-05</owl:versionInfo>
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/promot/releases/2025-12-12/imports/hp_import.owl"/>
+        <owl:versionInfo>2025-12-12</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -172,6 +173,36 @@
     <!-- http://www.geneontology.org/formats/oboInOwl#inSubset -->
 
     <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#inSubset"/>
+    
+
+
+    <!-- https://w3id.org/babelon/comment -->
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/babelon/comment"/>
+    
+
+
+    <!-- https://w3id.org/babelon/source_language -->
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/babelon/source_language"/>
+    
+
+
+    <!-- https://w3id.org/babelon/source_value -->
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/babelon/source_value"/>
+    
+
+
+    <!-- https://w3id.org/babelon/translation_language -->
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/babelon/translation_language"/>
+    
+
+
+    <!-- https://w3id.org/babelon/translation_status -->
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/babelon/translation_status"/>
     
 
 
@@ -3150,9 +3181,15 @@
         <oboInOwl:hasExactSynonym>Death in infancy</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>Infantile death</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>Lethal in infancy</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym xml:lang="fr">Mort dans la petite enfance</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym xml:lang="fr">Mort dans la petite enfance|Mortinatalité ou mort chez le nourisson|mort dans la période néonatale du nourisson</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym xml:lang="fr">Mortinatalité ou mort chez le nourisson</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym xml:lang="fr">mort dans la période néonatale du nourisson</oboInOwl:hasExactSynonym>
         <oboInOwl:hasRelatedSynonym>Death in early childhood</oboInOwl:hasRelatedSynonym>
         <oboInOwl:id>HP:0001522</oboInOwl:id>
         <rdfs:label>Death in infancy</rdfs:label>
+        <rdfs:label xml:lang="fr">Mort du nourisson</rdfs:label>
+        <rdfs:label xml:lang="es">Muerte en la infancia</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0001522"/>
@@ -3183,6 +3220,25 @@
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
         <owl:annotatedTarget>Death in early childhood</owl:annotatedTarget>
         <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#layperson"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0001522"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+        <owl:annotatedTarget xml:lang="fr">Mort du nourisson</owl:annotatedTarget>
+        <babelon:comment>label of HP:0001522 (Death in infancy)  ; mortality_aging</babelon:comment>
+        <babelon:source_language>en</babelon:source_language>
+        <babelon:source_value>Death in infancy</babelon:source_value>
+        <babelon:translation_language>fr</babelon:translation_language>
+        <babelon:translation_status>OFFICIAL</babelon:translation_status>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0001522"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+        <owl:annotatedTarget xml:lang="es">Muerte en la infancia</owl:annotatedTarget>
+        <babelon:source_language>en</babelon:source_language>
+        <babelon:source_value>Death in infancy</babelon:source_value>
+        <babelon:translation_language>es</babelon:translation_language>
+        <babelon:translation_status>OFFICIAL</babelon:translation_status>
     </owl:Axiom>
     
 
@@ -5851,10 +5907,14 @@
         <oboInOwl:hasAlternativeId>HP:0003666</oboInOwl:hasAlternativeId>
         <oboInOwl:hasDbXref>UMLS:C1836142</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>UMLS:C2752013</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym xml:lang="fr">d&apos;appararition in utéro</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym xml:lang="fr">d&apos;apparition congénitale</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>Onset at birth</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>Symptoms present at birth</oboInOwl:hasExactSynonym>
         <oboInOwl:id>HP:0003577</oboInOwl:id>
         <rdfs:comment>Congenital onset literally means present at birth. Congenital abnormalities are thus generally acquired during fetal development. Congenital abnormalities are often but not always hereditary in nature. Whether a disease manifestation is diagnosed to be intrauterine or congenital may depend on the time at which diagnostic procedures are performed. Thus, most congenital abnormalities are also intrauterine. This term should be used for phenotypic abnormalities or diseases initially observed at the time of birth. For abnormalities observed prior to (e.g., by fetal ultrasound), use the term Antenatal onset (HP:0030674).</rdfs:comment>
+        <rdfs:label xml:lang="fr">Début congénital</rdfs:label>
+        <rdfs:label xml:lang="es">Inicio congénito</rdfs:label>
         <rdfs:label>Congenital onset</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -5870,6 +5930,25 @@
         <oboInOwl:hasDbXref rdf:resource="https://orcid.org/0000-0002-6548-5200"/>
         <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#layperson"/>
     </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0003577"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+        <owl:annotatedTarget xml:lang="fr">Début congénital</owl:annotatedTarget>
+        <babelon:comment>label of HP:0003577 (Congenital onset)  ; clinicalcourse</babelon:comment>
+        <babelon:source_language>en</babelon:source_language>
+        <babelon:source_value>Congenital onset</babelon:source_value>
+        <babelon:translation_language>fr</babelon:translation_language>
+        <babelon:translation_status>OFFICIAL</babelon:translation_status>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0003577"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+        <owl:annotatedTarget xml:lang="es">Inicio congénito</owl:annotatedTarget>
+        <babelon:source_language>en</babelon:source_language>
+        <babelon:source_value>Congenital onset</babelon:source_value>
+        <babelon:translation_language>es</babelon:translation_language>
+        <babelon:translation_status>OFFICIAL</babelon:translation_status>
+    </owl:Axiom>
     
 
 
@@ -5884,10 +5963,13 @@
         <oboInOwl:hasAlternativeId>HP:0003662</oboInOwl:hasAlternativeId>
         <oboInOwl:hasAlternativeId>HP:0003669</oboInOwl:hasAlternativeId>
         <oboInOwl:hasDbXref>UMLS:C1853562</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym xml:lang="fr">Onset in adulthood|Onset in early adulthood|Symptoms begin in adulthood</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>Onset in adulthood</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>Onset in early adulthood</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>Symptoms begin in adulthood</oboInOwl:hasExactSynonym>
         <oboInOwl:id>HP:0003581</oboInOwl:id>
+        <rdfs:label xml:lang="fr">Début à l&apos;âge adulte</rdfs:label>
+        <rdfs:label xml:lang="es">Inicio adulto</rdfs:label>
         <rdfs:label>Adult onset</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -5903,6 +5985,25 @@
         <oboInOwl:hasDbXref rdf:resource="https://orcid.org/0000-0002-6548-5200"/>
         <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#layperson"/>
     </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0003581"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+        <owl:annotatedTarget xml:lang="fr">Début à l&apos;âge adulte</owl:annotatedTarget>
+        <babelon:comment>label of HP:0003581 (Adult onset)  ; clinicalcourse</babelon:comment>
+        <babelon:source_language>en</babelon:source_language>
+        <babelon:source_value>Adult onset</babelon:source_value>
+        <babelon:translation_language>fr</babelon:translation_language>
+        <babelon:translation_status>OFFICIAL</babelon:translation_status>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0003581"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+        <owl:annotatedTarget xml:lang="es">Inicio adulto</owl:annotatedTarget>
+        <babelon:source_language>en</babelon:source_language>
+        <babelon:source_value>Adult onset</babelon:source_value>
+        <babelon:translation_language>es</babelon:translation_language>
+        <babelon:translation_status>OFFICIAL</babelon:translation_status>
+    </owl:Axiom>
     
 
 
@@ -5913,6 +6014,8 @@
         <obo:IAO_0000115>A type of adult onset with onset of symptoms after the age of 60 years.</obo:IAO_0000115>
         <oboInOwl:hasDbXref>UMLS:C4025592</oboInOwl:hasDbXref>
         <oboInOwl:id>HP:0003584</oboInOwl:id>
+        <rdfs:label xml:lang="fr">Début tardif</rdfs:label>
+        <rdfs:label xml:lang="es">Inicio tardío</rdfs:label>
         <rdfs:label>Late onset</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -5920,6 +6023,25 @@
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A type of adult onset with onset of symptoms after the age of 60 years.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0003584"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+        <owl:annotatedTarget xml:lang="fr">Début tardif</owl:annotatedTarget>
+        <babelon:comment>label of HP:0003584 (Late onset)  ; clinicalcourse</babelon:comment>
+        <babelon:source_language>en</babelon:source_language>
+        <babelon:source_value>Late onset</babelon:source_value>
+        <babelon:translation_language>fr</babelon:translation_language>
+        <babelon:translation_status>OFFICIAL</babelon:translation_status>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0003584"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+        <owl:annotatedTarget xml:lang="es">Inicio tardío</owl:annotatedTarget>
+        <babelon:source_language>en</babelon:source_language>
+        <babelon:source_value>Late onset</babelon:source_value>
+        <babelon:translation_language>es</babelon:translation_language>
+        <babelon:translation_status>OFFICIAL</babelon:translation_status>
     </owl:Axiom>
     
 
@@ -5941,11 +6063,14 @@
         <oboInOwl:hasAlternativeId>HP:0003672</oboInOwl:hasAlternativeId>
         <oboInOwl:hasAlternativeId>HP:0010573</oboInOwl:hasAlternativeId>
         <oboInOwl:hasDbXref>UMLS:C1848924</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym xml:lang="fr">Onset in first year of life|Onset in infancy</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>Infantile onset</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>Onset in first year of life</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>Onset in infancy</oboInOwl:hasExactSynonym>
         <oboInOwl:id>HP:0003593</oboInOwl:id>
         <rdfs:comment>Onset of signs or symptoms of disease within the first 12 months of life.</rdfs:comment>
+        <rdfs:label xml:lang="fr">Apparition dans l&apos;enfance</rdfs:label>
+        <rdfs:label xml:lang="es">Inicio infantil</rdfs:label>
         <rdfs:label>Infantile onset</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -5972,6 +6097,25 @@
         <owl:annotatedTarget>Onset in infancy</owl:annotatedTarget>
         <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#layperson"/>
     </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0003593"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+        <owl:annotatedTarget xml:lang="fr">Apparition dans l&apos;enfance</owl:annotatedTarget>
+        <babelon:comment>label of HP:0003593 (Infantile onset)  ; clinicalcourse</babelon:comment>
+        <babelon:source_language>en</babelon:source_language>
+        <babelon:source_value>Infantile onset</babelon:source_value>
+        <babelon:translation_language>fr</babelon:translation_language>
+        <babelon:translation_status>OFFICIAL</babelon:translation_status>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0003593"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+        <owl:annotatedTarget xml:lang="es">Inicio infantil</owl:annotatedTarget>
+        <babelon:source_language>en</babelon:source_language>
+        <babelon:source_value>Infantile onset</babelon:source_value>
+        <babelon:translation_language>es</babelon:translation_language>
+        <babelon:translation_status>OFFICIAL</babelon:translation_status>
+    </owl:Axiom>
     
 
 
@@ -5983,6 +6127,8 @@
         <oboInOwl:hasDbXref>UMLS:C1969363</oboInOwl:hasDbXref>
         <oboInOwl:id>HP:0003596</oboInOwl:id>
         <rdfs:comment>Middle age is of course not amenable to precise definitions. We suggest using this term for onset of disease symptoms between the age of 40 and 60 years.</rdfs:comment>
+        <rdfs:label xml:lang="fr">D&apos;apparition à l&apos;âge moyen</rdfs:label>
+        <rdfs:label xml:lang="es">Inicio en mediana edad</rdfs:label>
         <rdfs:label>Middle age onset</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -5990,6 +6136,25 @@
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A type of adult onset with onset of symptoms at the age of 40 to 60 years.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0003596"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+        <owl:annotatedTarget xml:lang="fr">D&apos;apparition à l&apos;âge moyen</owl:annotatedTarget>
+        <babelon:comment>label of HP:0003596 (Middle age onset)  ; clinicalcourse</babelon:comment>
+        <babelon:source_language>en</babelon:source_language>
+        <babelon:source_value>Middle age onset</babelon:source_value>
+        <babelon:translation_language>fr</babelon:translation_language>
+        <babelon:translation_status>OFFICIAL</babelon:translation_status>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0003596"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+        <owl:annotatedTarget xml:lang="es">Inicio en mediana edad</owl:annotatedTarget>
+        <babelon:source_language>en</babelon:source_language>
+        <babelon:source_value>Middle age onset</babelon:source_value>
+        <babelon:translation_language>es</babelon:translation_language>
+        <babelon:translation_status>OFFICIAL</babelon:translation_status>
     </owl:Axiom>
     
 
@@ -6013,8 +6178,12 @@
         <oboInOwl:hasAlternativeId>HP:0003661</oboInOwl:hasAlternativeId>
         <oboInOwl:hasAlternativeId>HP:0003670</oboInOwl:hasAlternativeId>
         <oboInOwl:hasDbXref>UMLS:C4025588</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym xml:lang="fr">Apparition dans l&apos;enfance</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym xml:lang="fr">Signs and symptoms begin before 15 years of age</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>Signs and symptoms begin before 15 years of age</oboInOwl:hasExactSynonym>
         <oboInOwl:id>HP:0003621</oboInOwl:id>
+        <rdfs:label xml:lang="fr">Début d&apos;apparition juvénile</rdfs:label>
+        <rdfs:label xml:lang="es">Inicio juvenil</rdfs:label>
         <rdfs:label>Juvenile onset</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -6031,6 +6200,25 @@
         <oboInOwl:hasDbXref rdf:resource="https://orcid.org/0000-0002-6548-5200"/>
         <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#layperson"/>
     </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0003621"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+        <owl:annotatedTarget xml:lang="fr">Début d&apos;apparition juvénile</owl:annotatedTarget>
+        <babelon:comment>label of HP:0003621 (Juvenile onset)  ; clinicalcourse</babelon:comment>
+        <babelon:source_language>en</babelon:source_language>
+        <babelon:source_value>Juvenile onset</babelon:source_value>
+        <babelon:translation_language>fr</babelon:translation_language>
+        <babelon:translation_status>OFFICIAL</babelon:translation_status>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0003621"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+        <owl:annotatedTarget xml:lang="es">Inicio juvenil</owl:annotatedTarget>
+        <babelon:source_language>en</babelon:source_language>
+        <babelon:source_value>Juvenile onset</babelon:source_value>
+        <babelon:translation_language>es</babelon:translation_language>
+        <babelon:translation_status>OFFICIAL</babelon:translation_status>
+    </owl:Axiom>
     
 
 
@@ -6041,10 +6229,13 @@
         <obo:IAO_0000115>Onset of signs or symptoms of disease within the first 28 days of life.</obo:IAO_0000115>
         <oboInOwl:hasAlternativeId>HP:0003622</oboInOwl:hasAlternativeId>
         <oboInOwl:hasDbXref>UMLS:C1855106</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym xml:lang="fr">Onset in first weeks of life|Onset in neonatal period</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>Neonatal onset</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>Onset in first weeks of life</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>Onset in neonatal period</oboInOwl:hasExactSynonym>
         <oboInOwl:id>HP:0003623</oboInOwl:id>
+        <rdfs:label xml:lang="fr">Début néonatal</rdfs:label>
+        <rdfs:label xml:lang="es">Inicio neonatal</rdfs:label>
         <rdfs:label>Neonatal onset</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -6058,6 +6249,25 @@
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
         <owl:annotatedTarget>Neonatal onset</owl:annotatedTarget>
         <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#layperson"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0003623"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+        <owl:annotatedTarget xml:lang="fr">Début néonatal</owl:annotatedTarget>
+        <babelon:comment>label of HP:0003623 (Neonatal onset)  ; clinicalcourse</babelon:comment>
+        <babelon:source_language>en</babelon:source_language>
+        <babelon:source_value>Neonatal onset</babelon:source_value>
+        <babelon:translation_language>fr</babelon:translation_language>
+        <babelon:translation_status>OFFICIAL</babelon:translation_status>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0003623"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+        <owl:annotatedTarget xml:lang="es">Inicio neonatal</owl:annotatedTarget>
+        <babelon:source_language>en</babelon:source_language>
+        <babelon:source_value>Neonatal onset</babelon:source_value>
+        <babelon:translation_language>es</babelon:translation_language>
+        <babelon:translation_status>OFFICIAL</babelon:translation_status>
     </owl:Axiom>
     
 
@@ -6081,10 +6291,15 @@
         <oboInOwl:hasAlternativeId>HP:0003668</oboInOwl:hasAlternativeId>
         <oboInOwl:hasAlternativeId>HP:0011007</oboInOwl:hasAlternativeId>
         <oboInOwl:hasDbXref>UMLS:C0206132</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym xml:lang="fr">début de</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym xml:lang="fr">âge de début à l&apos;adolescence</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym xml:lang="fr">âge de début à l&apos;adolescence|d&apos;apparition d&apos;âge variable|d&apos;appararition à l&apos;enfance ou chez l&apos;adulte jeune|début de|âge de début</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>Age of onset</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>Age symptoms begin</oboInOwl:hasExactSynonym>
         <oboInOwl:id>HP:0003674</oboInOwl:id>
         <rdfs:comment>Adolescent is defined by WHO as a person between 10-19 years of age.</rdfs:comment>
+        <rdfs:label xml:lang="es">Comienzo</rdfs:label>
+        <rdfs:label xml:lang="fr">Début</rdfs:label>
         <rdfs:label>Onset</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -6100,6 +6315,25 @@
         <oboInOwl:hasDbXref rdf:resource="https://orcid.org/0000-0002-6548-5200"/>
         <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#layperson"/>
     </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0003674"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+        <owl:annotatedTarget xml:lang="es">Comienzo</owl:annotatedTarget>
+        <babelon:source_language>en</babelon:source_language>
+        <babelon:source_value>Onset</babelon:source_value>
+        <babelon:translation_language>es</babelon:translation_language>
+        <babelon:translation_status>OFFICIAL</babelon:translation_status>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0003674"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+        <owl:annotatedTarget xml:lang="fr">Début</owl:annotatedTarget>
+        <babelon:comment>label of HP:0003674 (Onset)  ; clinicalcourse</babelon:comment>
+        <babelon:source_language>en</babelon:source_language>
+        <babelon:source_value>Onset</babelon:source_value>
+        <babelon:translation_language>fr</babelon:translation_language>
+        <babelon:translation_status>OFFICIAL</babelon:translation_status>
+    </owl:Axiom>
     
 
 
@@ -6112,9 +6346,13 @@
         <oboInOwl:hasDbXref>SNOMEDCT_US:255314001</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>UMLS:C0205329</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>UMLS:C1864985</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym xml:lang="fr">Progressif</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym xml:lang="fr">trouble évolutif</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>Worsens with time</oboInOwl:hasExactSynonym>
         <oboInOwl:hasRelatedSynonym>Progressive disorder</oboInOwl:hasRelatedSynonym>
         <oboInOwl:id>HP:0003676</oboInOwl:id>
+        <rdfs:label xml:lang="es">Progresivo</rdfs:label>
+        <rdfs:label xml:lang="fr">Trouble progressif</rdfs:label>
         <rdfs:label>Progressive</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -6124,6 +6362,25 @@
         <oboInOwl:hasDbXref rdf:resource="https://orcid.org/0000-0001-5208-3432"/>
         <oboInOwl:hasDbXref rdf:resource="https://orcid.org/0000-0002-6548-5200"/>
         <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#layperson"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0003676"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+        <owl:annotatedTarget xml:lang="es">Progresivo</owl:annotatedTarget>
+        <babelon:source_language>en</babelon:source_language>
+        <babelon:source_value>Progressive</babelon:source_value>
+        <babelon:translation_language>es</babelon:translation_language>
+        <babelon:translation_status>OFFICIAL</babelon:translation_status>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0003676"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+        <owl:annotatedTarget xml:lang="fr">Trouble progressif</owl:annotatedTarget>
+        <babelon:comment>label of HP:0003676 (Progressive)  ; clinicalcourse</babelon:comment>
+        <babelon:source_language>en</babelon:source_language>
+        <babelon:source_value>Progressive</babelon:source_value>
+        <babelon:translation_language>fr</babelon:translation_language>
+        <babelon:translation_status>OFFICIAL</babelon:translation_status>
     </owl:Axiom>
     
 
@@ -6136,11 +6393,15 @@
         <oboInOwl:hasAlternativeId>HP:0003675</oboInOwl:hasAlternativeId>
         <oboInOwl:hasAlternativeId>HP:0003681</oboInOwl:hasAlternativeId>
         <oboInOwl:hasDbXref>UMLS:C1854494</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym xml:lang="fr">Progression lente</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym xml:lang="fr">Progression très lente</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>Signs and symptoms worsen slowly with time</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>Slow disease progression</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>Slow progression</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>Slowly progressive disorder</oboInOwl:hasExactSynonym>
         <oboInOwl:id>HP:0003677</oboInOwl:id>
+        <rdfs:label xml:lang="es">Progresión lenta</rdfs:label>
+        <rdfs:label xml:lang="fr">Progression lente</rdfs:label>
         <rdfs:label>Slowly progressive</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -6150,6 +6411,25 @@
         <oboInOwl:hasDbXref rdf:resource="https://orcid.org/0000-0001-5208-3432"/>
         <oboInOwl:hasDbXref rdf:resource="https://orcid.org/0000-0002-6548-5200"/>
         <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#layperson"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0003677"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+        <owl:annotatedTarget xml:lang="es">Progresión lenta</owl:annotatedTarget>
+        <babelon:source_language>en</babelon:source_language>
+        <babelon:source_value>Slowly progressive</babelon:source_value>
+        <babelon:translation_language>es</babelon:translation_language>
+        <babelon:translation_status>CANDIDATE</babelon:translation_status>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0003677"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+        <owl:annotatedTarget xml:lang="fr">Progression lente</owl:annotatedTarget>
+        <babelon:comment>label of HP:0003677 (Slow progression)  ; clinicalcourse</babelon:comment>
+        <babelon:source_language>en</babelon:source_language>
+        <babelon:source_value>Slowly progressive</babelon:source_value>
+        <babelon:translation_language>fr</babelon:translation_language>
+        <babelon:translation_status>CANDIDATE</babelon:translation_status>
     </owl:Axiom>
     
 
@@ -6162,10 +6442,13 @@
         <oboInOwl:hasDbXref>UMLS:C1838681</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>UMLS:C1850776</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym>Rapid progression</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym xml:lang="fr">Rapid progression|Rapidly progressive disorder|Worsening quickly</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>Worsening quickly</oboInOwl:hasExactSynonym>
         <oboInOwl:hasRelatedSynonym>Rapidly progressive disorder</oboInOwl:hasRelatedSynonym>
         <oboInOwl:id>HP:0003678</oboInOwl:id>
+        <rdfs:label xml:lang="fr">Rapidement progressive</rdfs:label>
         <rdfs:label>Rapidly progressive</rdfs:label>
+        <rdfs:label xml:lang="es">Rápidamente progresivo</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0003678"/>
@@ -6180,6 +6463,25 @@
         <owl:annotatedTarget>Rapidly progressive disorder</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:resource="https://orcid.org/0000-0002-5316-1399"/>
     </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0003678"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+        <owl:annotatedTarget xml:lang="fr">Rapidement progressive</owl:annotatedTarget>
+        <babelon:comment>label of HP:0003678 (Rapidly progressive)  ; clinicalcourse</babelon:comment>
+        <babelon:source_language>en</babelon:source_language>
+        <babelon:source_value>Rapidly progressive</babelon:source_value>
+        <babelon:translation_language>fr</babelon:translation_language>
+        <babelon:translation_status>OFFICIAL</babelon:translation_status>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0003678"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+        <owl:annotatedTarget xml:lang="es">Rápidamente progresivo</owl:annotatedTarget>
+        <babelon:source_language>en</babelon:source_language>
+        <babelon:source_value>Rapidly progressive</babelon:source_value>
+        <babelon:translation_language>es</babelon:translation_language>
+        <babelon:translation_status>OFFICIAL</babelon:translation_status>
+    </owl:Axiom>
     
 
 
@@ -6189,8 +6491,29 @@
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0031797"/>
         <oboInOwl:hasDbXref>UMLS:C4025580</oboInOwl:hasDbXref>
         <oboInOwl:id>HP:0003679</oboInOwl:id>
+        <rdfs:label xml:lang="es">Ritmo de progresión</rdfs:label>
+        <rdfs:label xml:lang="fr">Rythme de la progression</rdfs:label>
         <rdfs:label>Pace of progression</rdfs:label>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0003679"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+        <owl:annotatedTarget xml:lang="es">Ritmo de progresión</owl:annotatedTarget>
+        <babelon:source_language>en</babelon:source_language>
+        <babelon:source_value>Pace of progression</babelon:source_value>
+        <babelon:translation_language>es</babelon:translation_language>
+        <babelon:translation_status>OFFICIAL</babelon:translation_status>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0003679"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+        <owl:annotatedTarget xml:lang="fr">Rythme de la progression</owl:annotatedTarget>
+        <babelon:comment>label of HP:0003679 (Pace of progression)  ; clinicalcourse</babelon:comment>
+        <babelon:source_language>en</babelon:source_language>
+        <babelon:source_value>Pace of progression</babelon:source_value>
+        <babelon:translation_language>fr</babelon:translation_language>
+        <babelon:translation_status>OFFICIAL</babelon:translation_status>
+    </owl:Axiom>
     
 
 
@@ -6207,7 +6530,11 @@
         <oboInOwl:hasExactSynonym>Nonprogressive course</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>Nonprogressive disorder</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>Stationary</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym xml:lang="fr">non progressive ou lentement progressive</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym xml:lang="fr">trouble non progressif</oboInOwl:hasExactSynonym>
         <oboInOwl:id>HP:0003680</oboInOwl:id>
+        <rdfs:label xml:lang="es">No progresivo</rdfs:label>
+        <rdfs:label xml:lang="fr">Non progressif</rdfs:label>
         <rdfs:label>Nonprogressive</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -6216,6 +6543,25 @@
         <owl:annotatedTarget>Does not worsen</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/hp#layperson"/>
         <oboInOwl:hasDbXref rdf:resource="https://orcid.org/0000-0002-6548-5200"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0003680"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+        <owl:annotatedTarget xml:lang="es">No progresivo</owl:annotatedTarget>
+        <babelon:source_language>en</babelon:source_language>
+        <babelon:source_value>Nonprogressive</babelon:source_value>
+        <babelon:translation_language>es</babelon:translation_language>
+        <babelon:translation_status>OFFICIAL</babelon:translation_status>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0003680"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+        <owl:annotatedTarget xml:lang="fr">Non progressif</owl:annotatedTarget>
+        <babelon:comment>label of HP:0003680 (Nonprogressive)  ; clinicalcourse</babelon:comment>
+        <babelon:source_language>en</babelon:source_language>
+        <babelon:source_value>Nonprogressive</babelon:source_value>
+        <babelon:translation_language>fr</babelon:translation_language>
+        <babelon:translation_status>OFFICIAL</babelon:translation_status>
     </owl:Axiom>
     
 
@@ -6227,8 +6573,29 @@
         <obo:IAO_0000115>Applies to a disease manifestation that quickly increases in scope or severity with a rate that varies. For instance, progression may be slow in one time period and rapid in another.</obo:IAO_0000115>
         <oboInOwl:hasDbXref>UMLS:C1970284</oboInOwl:hasDbXref>
         <oboInOwl:id>HP:0003682</oboInOwl:id>
+        <rdfs:label xml:lang="es">Tasa de progresión variable</rdfs:label>
+        <rdfs:label xml:lang="fr">Taux de progression variable</rdfs:label>
         <rdfs:label>Variable progression rate</rdfs:label>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0003682"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+        <owl:annotatedTarget xml:lang="es">Tasa de progresión variable</owl:annotatedTarget>
+        <babelon:source_language>en</babelon:source_language>
+        <babelon:source_value>Variable progression rate</babelon:source_value>
+        <babelon:translation_language>es</babelon:translation_language>
+        <babelon:translation_status>OFFICIAL</babelon:translation_status>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0003682"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+        <owl:annotatedTarget xml:lang="fr">Taux de progression variable</owl:annotatedTarget>
+        <babelon:comment>label of HP:0003682 (Variable progression rate)  ; clinicalcourse</babelon:comment>
+        <babelon:source_language>en</babelon:source_language>
+        <babelon:source_value>Variable progression rate</babelon:source_value>
+        <babelon:translation_language>fr</babelon:translation_language>
+        <babelon:translation_status>OFFICIAL</babelon:translation_status>
+    </owl:Axiom>
     
 
 
@@ -6516,7 +6883,12 @@
         <oboInOwl:hasDbXref>SNOMEDCT_US:276506001</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>UMLS:C0410916</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym>Neonatal lethal</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym xml:lang="fr">mort du nouveau-né</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym xml:lang="fr">mort du nouveau-né|mort néonatale fréquente|mort de la majortié des nourissons rapidement après la naissance</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym xml:lang="fr">mort néonatale fréquente</oboInOwl:hasExactSynonym>
         <oboInOwl:id>HP:0003811</oboInOwl:id>
+        <rdfs:label xml:lang="fr">Décès néonatal</rdfs:label>
+        <rdfs:label xml:lang="es">Muerte neonatal</rdfs:label>
         <rdfs:label>Neonatal death</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -6531,6 +6903,25 @@
         <owl:annotatedTarget>Neonatal lethal</owl:annotatedTarget>
         <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#layperson"/>
     </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0003811"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+        <owl:annotatedTarget xml:lang="fr">Décès néonatal</owl:annotatedTarget>
+        <babelon:comment>label of HP:0003811 (Neonatal death)  ; mortality_aging</babelon:comment>
+        <babelon:source_language>en</babelon:source_language>
+        <babelon:source_value>Neonatal death</babelon:source_value>
+        <babelon:translation_language>fr</babelon:translation_language>
+        <babelon:translation_status>OFFICIAL</babelon:translation_status>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0003811"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+        <owl:annotatedTarget xml:lang="es">Muerte neonatal</owl:annotatedTarget>
+        <babelon:source_language>en</babelon:source_language>
+        <babelon:source_value>Neonatal death</babelon:source_value>
+        <babelon:translation_language>es</babelon:translation_language>
+        <babelon:translation_status>OFFICIAL</babelon:translation_status>
+    </owl:Axiom>
     
 
 
@@ -6543,9 +6934,12 @@
         <oboInOwl:hasAlternativeId>HP:0004149</oboInOwl:hasAlternativeId>
         <oboInOwl:hasDbXref>UMLS:C1843392</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym>Death in childhood</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym xml:lang="fr">Mort précoce</oboInOwl:hasExactSynonym>
         <oboInOwl:id>HP:0003819</oboInOwl:id>
         <rdfs:comment>previous def was: &apos;has part&apos; some (premature and (&apos;inheres in&apos; some death) and (&apos;has modifier&apos; some abnormal))</rdfs:comment>
         <rdfs:label>Death in childhood</rdfs:label>
+        <rdfs:label xml:lang="fr">Mort dans l&apos;enfance</rdfs:label>
+        <rdfs:label xml:lang="es">Muerte en la infancia</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0003819"/>
@@ -6558,6 +6952,25 @@
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
         <owl:annotatedTarget>Death in childhood</owl:annotatedTarget>
         <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#layperson"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0003819"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+        <owl:annotatedTarget xml:lang="fr">Mort dans l&apos;enfance</owl:annotatedTarget>
+        <babelon:comment>label of HP:0003819 (Death in childhood)  ; mortality_aging</babelon:comment>
+        <babelon:source_language>en</babelon:source_language>
+        <babelon:source_value>Death in childhood</babelon:source_value>
+        <babelon:translation_language>fr</babelon:translation_language>
+        <babelon:translation_status>OFFICIAL</babelon:translation_status>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0003819"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+        <owl:annotatedTarget xml:lang="es">Muerte en la infancia</owl:annotatedTarget>
+        <babelon:source_language>en</babelon:source_language>
+        <babelon:source_value>Death in childhood</babelon:source_value>
+        <babelon:translation_language>es</babelon:translation_language>
+        <babelon:translation_status>OFFICIAL</babelon:translation_status>
     </owl:Axiom>
     
 
@@ -6575,14 +6988,22 @@
         <oboInOwl:hasDbXref>UMLS:C0595939</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym>Late fetal death</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>Late foetal death</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym xml:lang="fr">Mortalité périnatale</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>Stillbirth</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>Stillborn</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym xml:lang="fr">mort-né</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym xml:lang="fr">mort-né ou mort peu après la naissance</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym xml:lang="fr">mort-né|perte foetale|mortinaissance|mort-né ou mort peu après la naissance|Mortinatalité ou mort néonatale</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym xml:lang="fr">mortinaissance</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym xml:lang="fr">perte foetale</oboInOwl:hasExactSynonym>
         <oboInOwl:hasRelatedSynonym>Fetal death</oboInOwl:hasRelatedSynonym>
         <oboInOwl:hasRelatedSynonym>Fetal demise</oboInOwl:hasRelatedSynonym>
         <oboInOwl:hasRelatedSynonym>Foetal death</oboInOwl:hasRelatedSynonym>
         <oboInOwl:hasRelatedSynonym>Foetal demise</oboInOwl:hasRelatedSynonym>
         <oboInOwl:id>HP:0003826</oboInOwl:id>
         <rdfs:comment>The age at which fetal demise is legally classified asa a miscarriage varies between countries with the US being 20 gestational weeks and the UK being 24 gestational weeks. The HPO chooses the average of these age ranges.</rdfs:comment>
+        <rdfs:label xml:lang="fr">Mort né</rdfs:label>
+        <rdfs:label xml:lang="es">Mortinato</rdfs:label>
         <rdfs:label>Stillbirth</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -6626,6 +7047,25 @@
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
         <owl:annotatedTarget>Foetal demise</owl:annotatedTarget>
         <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#uk_spelling"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0003826"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+        <owl:annotatedTarget xml:lang="fr">Mort né</owl:annotatedTarget>
+        <babelon:comment>label of HP:0003826 (Stillbirth)  ; mortality_aging</babelon:comment>
+        <babelon:source_language>en</babelon:source_language>
+        <babelon:source_value>Stillbirth</babelon:source_value>
+        <babelon:translation_language>fr</babelon:translation_language>
+        <babelon:translation_status>OFFICIAL</babelon:translation_status>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0003826"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+        <owl:annotatedTarget xml:lang="es">Mortinato</owl:annotatedTarget>
+        <babelon:source_language>en</babelon:source_language>
+        <babelon:source_value>Stillbirth</babelon:source_value>
+        <babelon:translation_language>es</babelon:translation_language>
+        <babelon:translation_status>OFFICIAL</babelon:translation_status>
     </owl:Axiom>
     
 
@@ -7033,10 +7473,14 @@
         <oboInOwl:hasDbXref>UMLS:C0000786</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym>Early fetal demise</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>Early foetal demise</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym xml:lang="fr">Fausse couche</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym xml:lang="fr">Miscarriage</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>Spontaneous abortion</oboInOwl:hasExactSynonym>
         <oboInOwl:id>HP:0005268</oboInOwl:id>
         <rdfs:comment>The age at which fetal demise is legally classified asa a miscarriage varies between countries with the US being 20 gestational weeks and the UK being 24 gestational weeks. The HPO chooses the average of these age ranges.</rdfs:comment>
+        <rdfs:label xml:lang="es">Aborto espontáneo</rdfs:label>
         <rdfs:label>Miscarriage</rdfs:label>
+        <rdfs:label xml:lang="fr">Risque accru d&apos;avortement spontané</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0005268"/>
@@ -7049,6 +7493,25 @@
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
         <owl:annotatedTarget>Early foetal demise</owl:annotatedTarget>
         <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#uk_spelling"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0005268"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+        <owl:annotatedTarget xml:lang="es">Aborto espontáneo</owl:annotatedTarget>
+        <babelon:source_language>en</babelon:source_language>
+        <babelon:source_value>Miscarriage</babelon:source_value>
+        <babelon:translation_language>es</babelon:translation_language>
+        <babelon:translation_status>CANDIDATE</babelon:translation_status>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0005268"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+        <owl:annotatedTarget xml:lang="fr">Risque accru d&apos;avortement spontané</owl:annotatedTarget>
+        <babelon:comment>label of HP:0005268 (Spontaneous abortion)  ; abnormality of prenatal development or birth</babelon:comment>
+        <babelon:source_language>en</babelon:source_language>
+        <babelon:source_value>Miscarriage</babelon:source_value>
+        <babelon:translation_language>fr</babelon:translation_language>
+        <babelon:translation_status>CANDIDATE</babelon:translation_status>
     </owl:Axiom>
     
 
@@ -7902,12 +8365,33 @@
         <oboInOwl:hasDbXref>UMLS:C1546180</oboInOwl:hasDbXref>
         <oboInOwl:id>HP:0011420</oboInOwl:id>
         <rdfs:label>Age of death</rdfs:label>
+        <rdfs:label xml:lang="fr">Décès</rdfs:label>
+        <rdfs:label xml:lang="es">Edad de la muerte</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0011420"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>The age group when the cessation of life happens.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0011420"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+        <owl:annotatedTarget xml:lang="fr">Décès</owl:annotatedTarget>
+        <babelon:comment>label of HP:0011420 (Age of death)  ; mortality_aging</babelon:comment>
+        <babelon:source_language>en</babelon:source_language>
+        <babelon:source_value>Age of death</babelon:source_value>
+        <babelon:translation_language>fr</babelon:translation_language>
+        <babelon:translation_status>OFFICIAL</babelon:translation_status>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0011420"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+        <owl:annotatedTarget xml:lang="es">Edad de la muerte</owl:annotatedTarget>
+        <babelon:source_language>en</babelon:source_language>
+        <babelon:source_value>Age of death</babelon:source_value>
+        <babelon:translation_language>es</babelon:translation_language>
+        <babelon:translation_status>OFFICIAL</babelon:translation_status>
     </owl:Axiom>
     
 
@@ -7923,6 +8407,8 @@
         <oboInOwl:hasExactSynonym>Death in adolescence</oboInOwl:hasExactSynonym>
         <oboInOwl:id>HP:0011421</oboInOwl:id>
         <rdfs:label>Death in adolescence</rdfs:label>
+        <rdfs:label xml:lang="fr">Mort à l&apos;adolescence</rdfs:label>
+        <rdfs:label xml:lang="es">Muerte en la adolescencia</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0011421"/>
@@ -7935,6 +8421,25 @@
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
         <owl:annotatedTarget>Death in adolescence</owl:annotatedTarget>
         <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#layperson"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0011421"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+        <owl:annotatedTarget xml:lang="fr">Mort à l&apos;adolescence</owl:annotatedTarget>
+        <babelon:comment>label of HP:0011421 (Death in adolescence)  ; mortality_aging</babelon:comment>
+        <babelon:source_language>en</babelon:source_language>
+        <babelon:source_value>Death in adolescence</babelon:source_value>
+        <babelon:translation_language>fr</babelon:translation_language>
+        <babelon:translation_status>OFFICIAL</babelon:translation_status>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0011421"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+        <owl:annotatedTarget xml:lang="es">Muerte en la adolescencia</owl:annotatedTarget>
+        <babelon:source_language>en</babelon:source_language>
+        <babelon:source_value>Death in adolescence</babelon:source_value>
+        <babelon:translation_language>es</babelon:translation_language>
+        <babelon:translation_status>OFFICIAL</babelon:translation_status>
     </owl:Axiom>
     
 
@@ -7986,6 +8491,8 @@
         <oboInOwl:hasDbXref>UMLS:C4023348</oboInOwl:hasDbXref>
         <oboInOwl:id>HP:0011460</oboInOwl:id>
         <rdfs:comment>The time interval of a gestation is called the gestation period. In human obstetrics, gestational age refers to the fertilization age plus two weeks. This is approximately the duration since the woman&apos;s last menstrual period began.</rdfs:comment>
+        <rdfs:label xml:lang="fr">Apparition embryonnaire</rdfs:label>
+        <rdfs:label xml:lang="es">Embrionario</rdfs:label>
         <rdfs:label>Embryonal onset</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -7993,6 +8500,25 @@
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>Onset of disease at up to 8 weeks following fertilization (corresponding to 10 weeks of gestation).</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:resource="https://orcid.org/0000-0002-7744-1790"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0011460"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+        <owl:annotatedTarget xml:lang="fr">Apparition embryonnaire</owl:annotatedTarget>
+        <babelon:comment>label of HP:0011460 (Embryonal onset)  ; clinicalcourse</babelon:comment>
+        <babelon:source_language>en</babelon:source_language>
+        <babelon:source_value>Embryonal onset</babelon:source_value>
+        <babelon:translation_language>fr</babelon:translation_language>
+        <babelon:translation_status>OFFICIAL</babelon:translation_status>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0011460"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+        <owl:annotatedTarget xml:lang="es">Embrionario</owl:annotatedTarget>
+        <babelon:source_language>en</babelon:source_language>
+        <babelon:source_value>Embryonal onset</babelon:source_value>
+        <babelon:translation_language>es</babelon:translation_language>
+        <babelon:translation_status>OFFICIAL</babelon:translation_status>
     </owl:Axiom>
     
 
@@ -8008,7 +8534,9 @@
         <oboInOwl:hasExactSynonym>Foetal onset</oboInOwl:hasExactSynonym>
         <oboInOwl:id>HP:0011461</oboInOwl:id>
         <rdfs:comment>The time interval of a gestation is called the gestation period. In human obstetrics, gestational age refers to the fertilization age plus two weeks. This is approximately the duration since the woman&apos;s last menstrual period began.</rdfs:comment>
+        <rdfs:label xml:lang="fr">Apparition foetale</rdfs:label>
         <rdfs:label>Fetal onset</rdfs:label>
+        <rdfs:label xml:lang="es">Inicio en período fetal</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0011461"/>
@@ -8022,6 +8550,25 @@
         <owl:annotatedTarget>Foetal onset</owl:annotatedTarget>
         <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#uk_spelling"/>
     </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0011461"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+        <owl:annotatedTarget xml:lang="fr">Apparition foetale</owl:annotatedTarget>
+        <babelon:comment>label of HP:0011461 (Fetal onset)  ; clinicalcourse</babelon:comment>
+        <babelon:source_language>en</babelon:source_language>
+        <babelon:source_value>Fetal onset</babelon:source_value>
+        <babelon:translation_language>fr</babelon:translation_language>
+        <babelon:translation_status>OFFICIAL</babelon:translation_status>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0011461"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+        <owl:annotatedTarget xml:lang="es">Inicio en período fetal</owl:annotatedTarget>
+        <babelon:source_language>en</babelon:source_language>
+        <babelon:source_value>Fetal onset</babelon:source_value>
+        <babelon:translation_language>es</babelon:translation_language>
+        <babelon:translation_status>OFFICIAL</babelon:translation_status>
+    </owl:Axiom>
     
 
 
@@ -8034,6 +8581,8 @@
         <oboInOwl:creation_date>2012-03-25T07:01:15Z</oboInOwl:creation_date>
         <oboInOwl:hasDbXref>UMLS:C3554568</oboInOwl:hasDbXref>
         <oboInOwl:id>HP:0011462</oboInOwl:id>
+        <rdfs:label xml:lang="fr">Apparition chez l&apos;adulte jeune</rdfs:label>
+        <rdfs:label xml:lang="es">Inicio adulto joven</rdfs:label>
         <rdfs:label>Young adult onset</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -8041,6 +8590,25 @@
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>Onset of disease at the age of between 16 and 40 years.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:resource="https://orcid.org/0000-0002-6410-0882"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0011462"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+        <owl:annotatedTarget xml:lang="fr">Apparition chez l&apos;adulte jeune</owl:annotatedTarget>
+        <babelon:comment>label of HP:0011462 (Young adult onset)  ; clinicalcourse</babelon:comment>
+        <babelon:source_language>en</babelon:source_language>
+        <babelon:source_value>Young adult onset</babelon:source_value>
+        <babelon:translation_language>fr</babelon:translation_language>
+        <babelon:translation_status>OFFICIAL</babelon:translation_status>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0011462"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+        <owl:annotatedTarget xml:lang="es">Inicio adulto joven</owl:annotatedTarget>
+        <babelon:source_language>en</babelon:source_language>
+        <babelon:source_value>Young adult onset</babelon:source_value>
+        <babelon:translation_language>es</babelon:translation_language>
+        <babelon:translation_status>OFFICIAL</babelon:translation_status>
     </owl:Axiom>
     
 
@@ -8055,9 +8623,13 @@
         <oboInOwl:hasAlternativeId>HP:0003586</oboInOwl:hasAlternativeId>
         <oboInOwl:hasAlternativeId>HP:0003617</oboInOwl:hasAlternativeId>
         <oboInOwl:hasDbXref>UMLS:C1837352</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym xml:lang="fr">Symptoms begin in childhood</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym xml:lang="fr">d&apos;apparition entre trois mois et cinq ans</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>Symptoms begin in childhood</oboInOwl:hasExactSynonym>
         <oboInOwl:id>HP:0011463</oboInOwl:id>
         <rdfs:comment>This term refers to ages up to but not including the fifth birthday (see Juvenile onset).</rdfs:comment>
+        <rdfs:label xml:lang="fr">Apparition chez l&apos;enfant</rdfs:label>
+        <rdfs:label xml:lang="es">Inicio en la infancia</rdfs:label>
         <rdfs:label>Childhood onset</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -8072,6 +8644,25 @@
         <owl:annotatedTarget>Symptoms begin in childhood</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:resource="https://orcid.org/0000-0002-6548-5200"/>
         <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#layperson"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0011463"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+        <owl:annotatedTarget xml:lang="fr">Apparition chez l&apos;enfant</owl:annotatedTarget>
+        <babelon:comment>label of HP:0011463 (Childhood onset)  ; clinicalcourse</babelon:comment>
+        <babelon:source_language>en</babelon:source_language>
+        <babelon:source_value>Childhood onset</babelon:source_value>
+        <babelon:translation_language>fr</babelon:translation_language>
+        <babelon:translation_status>OFFICIAL</babelon:translation_status>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0011463"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+        <owl:annotatedTarget xml:lang="es">Inicio en la infancia</owl:annotatedTarget>
+        <babelon:source_language>en</babelon:source_language>
+        <babelon:source_value>Childhood onset</babelon:source_value>
+        <babelon:translation_language>es</babelon:translation_language>
+        <babelon:translation_status>OFFICIAL</babelon:translation_status>
     </owl:Axiom>
     
 
@@ -8857,15 +9448,37 @@
         <oboInOwl:hasDbXref>SNOMEDCT_US:103370009</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>UMLS:C0522510</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym>Intensity</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym xml:lang="fr">Intensité</oboInOwl:hasExactSynonym>
         <oboInOwl:id>HP:0012824</oboInOwl:id>
         <rdfs:comment>Synonymous with PATO:0000049, intensity.</rdfs:comment>
+        <rdfs:label xml:lang="es">Gravedad</rdfs:label>
         <rdfs:label>Severity</rdfs:label>
+        <rdfs:label xml:lang="fr">Sévérité</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0012824"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>The intensity or degree of a manifestation.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0012824"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+        <owl:annotatedTarget xml:lang="es">Gravedad</owl:annotatedTarget>
+        <babelon:source_language>en</babelon:source_language>
+        <babelon:source_value>Severity</babelon:source_value>
+        <babelon:translation_language>es</babelon:translation_language>
+        <babelon:translation_status>OFFICIAL</babelon:translation_status>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0012824"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+        <owl:annotatedTarget xml:lang="fr">Sévérité</owl:annotatedTarget>
+        <babelon:comment>label of HP:0012824 (Severity)  ; modifier</babelon:comment>
+        <babelon:source_language>en</babelon:source_language>
+        <babelon:source_value>Severity</babelon:source_value>
+        <babelon:translation_language>fr</babelon:translation_language>
+        <babelon:translation_status>OFFICIAL</babelon:translation_status>
     </owl:Axiom>
     
 
@@ -8882,6 +9495,8 @@
         <oboInOwl:hasExactSynonym>Mild</oboInOwl:hasExactSynonym>
         <oboInOwl:id>HP:0012825</oboInOwl:id>
         <rdfs:comment>PATO:0000394, mild.</rdfs:comment>
+        <rdfs:label xml:lang="es">Leve</rdfs:label>
+        <rdfs:label xml:lang="fr">Légère</rdfs:label>
         <rdfs:label>Mild</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -8895,6 +9510,25 @@
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
         <owl:annotatedTarget>Mild</owl:annotatedTarget>
         <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#layperson"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0012825"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+        <owl:annotatedTarget xml:lang="es">Leve</owl:annotatedTarget>
+        <babelon:source_language>en</babelon:source_language>
+        <babelon:source_value>Mild</babelon:source_value>
+        <babelon:translation_language>es</babelon:translation_language>
+        <babelon:translation_status>OFFICIAL</babelon:translation_status>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0012825"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+        <owl:annotatedTarget xml:lang="fr">Légère</owl:annotatedTarget>
+        <babelon:comment>label of HP:0012825 (Mild)  ; modifier</babelon:comment>
+        <babelon:source_language>en</babelon:source_language>
+        <babelon:source_value>Mild</babelon:source_value>
+        <babelon:translation_language>fr</babelon:translation_language>
+        <babelon:translation_status>OFFICIAL</babelon:translation_status>
     </owl:Axiom>
     
 
@@ -8911,13 +9545,34 @@
         <oboInOwl:hasDbXref>UMLS:C0205081</oboInOwl:hasDbXref>
         <oboInOwl:id>HP:0012826</oboInOwl:id>
         <rdfs:comment>PATO:0000395, moderate.</rdfs:comment>
+        <rdfs:label xml:lang="es">Moderado</rdfs:label>
         <rdfs:label>Moderate</rdfs:label>
+        <rdfs:label xml:lang="fr">Modéré</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0012826"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>Having a medium degree of severity. For quantitative traits, a deviation of between three and four standard deviations from the appropriate population mean.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0012826"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+        <owl:annotatedTarget xml:lang="es">Moderado</owl:annotatedTarget>
+        <babelon:source_language>en</babelon:source_language>
+        <babelon:source_value>Moderate</babelon:source_value>
+        <babelon:translation_language>es</babelon:translation_language>
+        <babelon:translation_status>OFFICIAL</babelon:translation_status>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0012826"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+        <owl:annotatedTarget xml:lang="fr">Modéré</owl:annotatedTarget>
+        <babelon:comment>label of HP:0012826 (Moderate)  ; modifier</babelon:comment>
+        <babelon:source_language>en</babelon:source_language>
+        <babelon:source_value>Moderate</babelon:source_value>
+        <babelon:translation_language>fr</babelon:translation_language>
+        <babelon:translation_status>OFFICIAL</babelon:translation_status>
     </owl:Axiom>
     
 
@@ -8934,6 +9589,8 @@
         <oboInOwl:id>HP:0012827</oboInOwl:id>
         <rdfs:comment>PATO:0000394, mild.</rdfs:comment>
         <rdfs:label>Borderline</rdfs:label>
+        <rdfs:label xml:lang="fr">Intermédiaire</rdfs:label>
+        <rdfs:label xml:lang="es">Límite</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0012827"/>
@@ -8946,6 +9603,25 @@
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
         <owl:annotatedTarget>Borderline</owl:annotatedTarget>
         <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#layperson"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0012827"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+        <owl:annotatedTarget xml:lang="fr">Intermédiaire</owl:annotatedTarget>
+        <babelon:comment>label of HP:0012827 (Borderline)  ; modifier</babelon:comment>
+        <babelon:source_language>en</babelon:source_language>
+        <babelon:source_value>Borderline</babelon:source_value>
+        <babelon:translation_language>fr</babelon:translation_language>
+        <babelon:translation_status>OFFICIAL</babelon:translation_status>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0012827"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+        <owl:annotatedTarget xml:lang="es">Límite</owl:annotatedTarget>
+        <babelon:source_language>en</babelon:source_language>
+        <babelon:source_value>Borderline</babelon:source_value>
+        <babelon:translation_language>es</babelon:translation_language>
+        <babelon:translation_status>OFFICIAL</babelon:translation_status>
     </owl:Axiom>
     
 
@@ -8962,7 +9638,9 @@
         <oboInOwl:hasExactSynonym>Severe</oboInOwl:hasExactSynonym>
         <oboInOwl:id>HP:0012828</oboInOwl:id>
         <rdfs:comment>PATO:0000396, severe.</rdfs:comment>
+        <rdfs:label xml:lang="es">Grave</rdfs:label>
         <rdfs:label>Severe</rdfs:label>
+        <rdfs:label xml:lang="fr">Sévère</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0012828"/>
@@ -8975,6 +9653,25 @@
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
         <owl:annotatedTarget>Severe</owl:annotatedTarget>
         <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#layperson"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0012828"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+        <owl:annotatedTarget xml:lang="es">Grave</owl:annotatedTarget>
+        <babelon:source_language>en</babelon:source_language>
+        <babelon:source_value>Severe</babelon:source_value>
+        <babelon:translation_language>es</babelon:translation_language>
+        <babelon:translation_status>OFFICIAL</babelon:translation_status>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0012828"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+        <owl:annotatedTarget xml:lang="fr">Sévère</owl:annotatedTarget>
+        <babelon:comment>label of HP:0012828 (Severe)  ; modifier</babelon:comment>
+        <babelon:source_language>en</babelon:source_language>
+        <babelon:source_value>Severe</babelon:source_value>
+        <babelon:translation_language>fr</babelon:translation_language>
+        <babelon:translation_status>OFFICIAL</babelon:translation_status>
     </owl:Axiom>
     
 
@@ -8990,7 +9687,9 @@
         <oboInOwl:hasDbXref>UMLS:C0439808</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym>Profound</oboInOwl:hasExactSynonym>
         <oboInOwl:id>HP:0012829</oboInOwl:id>
+        <rdfs:label xml:lang="fr">Profondément</rdfs:label>
         <rdfs:label>Profound</rdfs:label>
+        <rdfs:label xml:lang="es">Profundo</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0012829"/>
@@ -9003,6 +9702,25 @@
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
         <owl:annotatedTarget>Profound</owl:annotatedTarget>
         <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#layperson"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0012829"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+        <owl:annotatedTarget xml:lang="fr">Profondément</owl:annotatedTarget>
+        <babelon:comment>label of HP:0012829 (Profound)  ; modifier</babelon:comment>
+        <babelon:source_language>en</babelon:source_language>
+        <babelon:source_value>Profound</babelon:source_value>
+        <babelon:translation_language>fr</babelon:translation_language>
+        <babelon:translation_status>OFFICIAL</babelon:translation_status>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0012829"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+        <owl:annotatedTarget xml:lang="es">Profundo</owl:annotatedTarget>
+        <babelon:source_language>en</babelon:source_language>
+        <babelon:source_value>Profound</babelon:source_value>
+        <babelon:translation_language>es</babelon:translation_language>
+        <babelon:translation_status>OFFICIAL</babelon:translation_status>
     </owl:Axiom>
     
 
@@ -9123,7 +9841,17 @@
         <terms:creator rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
         <rdfs:comment>This term includes the full 16th year of age up to the completed 18th year of age (i.e., less than the 19th birthday).</rdfs:comment>
         <rdfs:label>Early young adult onset</rdfs:label>
+        <rdfs:label xml:lang="es">Inicio temprano en adultos jóvenes</rdfs:label>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0025708"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+        <owl:annotatedTarget xml:lang="es">Inicio temprano en adultos jóvenes</owl:annotatedTarget>
+        <babelon:source_language>en</babelon:source_language>
+        <babelon:source_value>Early young adult onset</babelon:source_value>
+        <babelon:translation_language>es</babelon:translation_language>
+        <babelon:translation_status>OFFICIAL</babelon:translation_status>
+    </owl:Axiom>
     
 
 
@@ -9134,8 +9862,18 @@
         <obo:IAO_0000115>Onset of disease at an age of greater than or equal to 19 to under 25 years.</obo:IAO_0000115>
         <terms:creator rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
         <rdfs:comment>This term includes the full 19th year of age up to the completed 25th year of age (i.e., less than the 25th birthday).</rdfs:comment>
+        <rdfs:label xml:lang="es">Inicio adulto joven intermedio</rdfs:label>
         <rdfs:label>Intermediate young adult onset</rdfs:label>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0025709"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+        <owl:annotatedTarget xml:lang="es">Inicio adulto joven intermedio</owl:annotatedTarget>
+        <babelon:source_language>en</babelon:source_language>
+        <babelon:source_value>Intermediate young adult onset</babelon:source_value>
+        <babelon:translation_language>es</babelon:translation_language>
+        <babelon:translation_status>OFFICIAL</babelon:translation_status>
+    </owl:Axiom>
     
 
 
@@ -9146,8 +9884,18 @@
         <obo:IAO_0000115>Onset of disease at an age of greater than or equal to 25 to under 40 years.</obo:IAO_0000115>
         <terms:creator rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
         <rdfs:comment>This term includes the full 25th year of age up to the completed 40th year of age (i.e., less than the 40th birthday).</rdfs:comment>
+        <rdfs:label xml:lang="es">Inicio tardío en adultos jóvenes</rdfs:label>
         <rdfs:label>Late young adult onset</rdfs:label>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0025710"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+        <owl:annotatedTarget xml:lang="es">Inicio tardío en adultos jóvenes</owl:annotatedTarget>
+        <babelon:source_language>en</babelon:source_language>
+        <babelon:source_value>Late young adult onset</babelon:source_value>
+        <babelon:translation_language>es</babelon:translation_language>
+        <babelon:translation_status>OFFICIAL</babelon:translation_status>
+    </owl:Axiom>
     
 
 
@@ -9192,6 +9940,20 @@
         <dc11:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-08-07T17:25:08Z</dc11:date>
         <terms:creator rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
         <rdfs:label>Abnormal cognitive process</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/HP_0025820 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0025820">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0032316"/>
+        <obo:IAO_0000115>The parents of the index patient are related as second cousins or closer.</obo:IAO_0000115>
+        <dc11:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-04-24T16:26:47Z</dc11:date>
+        <terms:creator rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
+        <oboInOwl:hasExactSynonym>Consanguineous</oboInOwl:hasExactSynonym>
+        <rdfs:comment>Consanguinity has a major role in congenital and genetic diseases.</rdfs:comment>
+        <rdfs:label>Offspring of consanguineous relationship</rdfs:label>
     </owl:Class>
     
 
@@ -9680,12 +10442,33 @@
         <oboInOwl:hasExactSynonym>Onset in utero</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>Prenatal onset</oboInOwl:hasExactSynonym>
         <rdfs:label>Antenatal onset</rdfs:label>
+        <rdfs:label xml:lang="fr">Apparition prénatale</rdfs:label>
+        <rdfs:label xml:lang="es">Inicio prenatal</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0030674"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>Onset prior to birth.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0030674"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+        <owl:annotatedTarget xml:lang="fr">Apparition prénatale</owl:annotatedTarget>
+        <babelon:comment>label of HP:0030674 (Antenatal onset)  ; clinicalcourse</babelon:comment>
+        <babelon:source_language>en</babelon:source_language>
+        <babelon:source_value>Antenatal onset</babelon:source_value>
+        <babelon:translation_language>fr</babelon:translation_language>
+        <babelon:translation_status>OFFICIAL</babelon:translation_status>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0030674"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+        <owl:annotatedTarget xml:lang="es">Inicio prenatal</owl:annotatedTarget>
+        <babelon:source_language>en</babelon:source_language>
+        <babelon:source_value>Antenatal onset</babelon:source_value>
+        <babelon:translation_language>es</babelon:translation_language>
+        <babelon:translation_status>OFFICIAL</babelon:translation_status>
     </owl:Axiom>
     
 
@@ -10198,7 +10981,17 @@
         <dc11:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-04-30T11:20:03Z</dc11:date>
         <terms:creator rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
         <rdfs:label>Death in adulthood</rdfs:label>
+        <rdfs:label xml:lang="es">Muerte en la edad adulta</rdfs:label>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0033763"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+        <owl:annotatedTarget xml:lang="es">Muerte en la edad adulta</owl:annotatedTarget>
+        <babelon:source_language>en</babelon:source_language>
+        <babelon:source_value>Death in adulthood</babelon:source_value>
+        <babelon:translation_language>es</babelon:translation_language>
+        <babelon:translation_status>OFFICIAL</babelon:translation_status>
+    </owl:Axiom>
     
 
 
@@ -10210,12 +11003,22 @@
         <dc11:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-04-30T11:20:49Z</dc11:date>
         <terms:creator rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
         <rdfs:label>Death in middle age</rdfs:label>
+        <rdfs:label xml:lang="es">Muerte en la mediana edad</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0033764"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>Death between the age of 40 and 60 years.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:resource="https://orcid.org/0000-0002-6410-0882"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0033764"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+        <owl:annotatedTarget xml:lang="es">Muerte en la mediana edad</owl:annotatedTarget>
+        <babelon:source_language>en</babelon:source_language>
+        <babelon:source_value>Death in middle age</babelon:source_value>
+        <babelon:translation_language>es</babelon:translation_language>
+        <babelon:translation_status>OFFICIAL</babelon:translation_status>
     </owl:Axiom>
     
 
@@ -10228,12 +11031,22 @@
         <dc11:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-04-30T11:21:09Z</dc11:date>
         <terms:creator rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
         <rdfs:label>Death in late adulthood</rdfs:label>
+        <rdfs:label xml:lang="es">Muerte en la edad adulta tardía</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0033765"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>Death at an age of at least 60 years.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:resource="https://orcid.org/0000-0002-6410-0882"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0033765"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+        <owl:annotatedTarget xml:lang="es">Muerte en la edad adulta tardía</owl:annotatedTarget>
+        <babelon:source_language>en</babelon:source_language>
+        <babelon:source_value>Death in late adulthood</babelon:source_value>
+        <babelon:translation_language>es</babelon:translation_language>
+        <babelon:translation_status>OFFICIAL</babelon:translation_status>
     </owl:Axiom>
     
 
@@ -10317,8 +11130,18 @@
         <obo:IAO_0000115>This term refers to a phenotypic feature that was first observed prior to birth during the third trimester, which is defined as 28 weeks and zero days (28+0) of gestation and beyond.</obo:IAO_0000115>
         <dc11:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-04-07T15:49:34Z</dc11:date>
         <terms:creator rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
+        <rdfs:label xml:lang="es">Inicio en el tercer trimestre de la gestación</rdfs:label>
         <rdfs:label>Third trimester onset</rdfs:label>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0034197"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+        <owl:annotatedTarget xml:lang="es">Inicio en el tercer trimestre de la gestación</owl:annotatedTarget>
+        <babelon:source_language>en</babelon:source_language>
+        <babelon:source_value>Third trimester onset</babelon:source_value>
+        <babelon:translation_language>es</babelon:translation_language>
+        <babelon:translation_status>OFFICIAL</babelon:translation_status>
+    </owl:Axiom>
     
 
 
@@ -10329,8 +11152,18 @@
         <obo:IAO_0000115>This term refers to a phenotypic feature that was first observed prior to birth during the second trimester, which comprises the range of gestational ages from 14 0/7 weeks to 27 6/7 (inclusive).</obo:IAO_0000115>
         <dc11:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-04-07T16:11:04Z</dc11:date>
         <terms:creator rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
+        <rdfs:label xml:lang="es">Inicio en el segundo trimestre de la gestación</rdfs:label>
         <rdfs:label>Second trimester onset</rdfs:label>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0034198"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+        <owl:annotatedTarget xml:lang="es">Inicio en el segundo trimestre de la gestación</owl:annotatedTarget>
+        <babelon:source_language>en</babelon:source_language>
+        <babelon:source_value>Second trimester onset</babelon:source_value>
+        <babelon:translation_language>es</babelon:translation_language>
+        <babelon:translation_status>OFFICIAL</babelon:translation_status>
+    </owl:Axiom>
     
 
 
@@ -10343,6 +11176,7 @@
         <terms:creator rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
         <oboInOwl:hasExactSynonym>Early fetal onset</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>Early foetal onset</oboInOwl:hasExactSynonym>
+        <rdfs:label xml:lang="es">Inicio tardío del primer trimestre de la gestación</rdfs:label>
         <rdfs:label>Late first trimester onset</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -10350,6 +11184,15 @@
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
         <owl:annotatedTarget>Early foetal onset</owl:annotatedTarget>
         <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#uk_spelling"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0034199"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+        <owl:annotatedTarget xml:lang="es">Inicio tardío del primer trimestre de la gestación</owl:annotatedTarget>
+        <babelon:source_language>en</babelon:source_language>
+        <babelon:source_value>Late first trimester onset</babelon:source_value>
+        <babelon:translation_language>es</babelon:translation_language>
+        <babelon:translation_status>OFFICIAL</babelon:translation_status>
     </owl:Axiom>
     
 
@@ -10363,6 +11206,7 @@
         <terms:creator rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
         <oboInOwl:hasExactSynonym>Death before birth</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>Intrauterine death</oboInOwl:hasExactSynonym>
+        <rdfs:label xml:lang="es">Muerte prenatal</rdfs:label>
         <rdfs:label>Prenatal death</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -10370,6 +11214,15 @@
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
         <owl:annotatedTarget>Death before birth</owl:annotatedTarget>
         <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#layperson"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0034241"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+        <owl:annotatedTarget xml:lang="es">Muerte prenatal</owl:annotatedTarget>
+        <babelon:source_language>en</babelon:source_language>
+        <babelon:source_value>Prenatal death</babelon:source_value>
+        <babelon:translation_language>es</babelon:translation_language>
+        <babelon:translation_status>OFFICIAL</babelon:translation_status>
     </owl:Axiom>
     
 
@@ -10769,6 +11622,8 @@
         <oboInOwl:hasExactSynonym>Death in early adulthood</oboInOwl:hasExactSynonym>
         <oboInOwl:id>HP:0100613</oboInOwl:id>
         <rdfs:label>Death in early adulthood</rdfs:label>
+        <rdfs:label xml:lang="fr">Mort prématurée de l&apos;adulte jeune</rdfs:label>
+        <rdfs:label xml:lang="es">Muerte en la adultez temprana</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0100613"/>
@@ -10781,6 +11636,25 @@
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
         <owl:annotatedTarget>Death in early adulthood</owl:annotatedTarget>
         <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#layperson"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0100613"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+        <owl:annotatedTarget xml:lang="fr">Mort prématurée de l&apos;adulte jeune</owl:annotatedTarget>
+        <babelon:comment>label of HP:0100613 (Death in early adulthood)  ; mortality_aging</babelon:comment>
+        <babelon:source_language>en</babelon:source_language>
+        <babelon:source_value>Death in early adulthood</babelon:source_value>
+        <babelon:translation_language>fr</babelon:translation_language>
+        <babelon:translation_status>OFFICIAL</babelon:translation_status>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0100613"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+        <owl:annotatedTarget xml:lang="es">Muerte en la adultez temprana</owl:annotatedTarget>
+        <babelon:source_language>en</babelon:source_language>
+        <babelon:source_value>Death in early adulthood</babelon:source_value>
+        <babelon:translation_language>es</babelon:translation_language>
+        <babelon:translation_status>OFFICIAL</babelon:translation_status>
     </owl:Axiom>
     
 
@@ -10915,8 +11789,11 @@
         <obo:IAO_0000115>Onset of disease manifestations before adulthood, defined here as before the age of 16 years, but excluding neonatal or congenital onset.</obo:IAO_0000115>
         <dc11:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-11-01T15:27:45Z</dc11:date>
         <terms:creator rdf:resource="https://orcid.org/0000-0001-5208-3432"/>
+        <oboInOwl:hasExactSynonym xml:lang="fr">Onset before adulthood</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>Onset before adulthood</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>Paediatric onset</oboInOwl:hasExactSynonym>
+        <rdfs:label xml:lang="fr">Apparition en pédiatrie</rdfs:label>
+        <rdfs:label xml:lang="es">Inicio pediátrico</rdfs:label>
         <rdfs:label>Pediatric onset</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -10931,6 +11808,25 @@
         <owl:annotatedTarget>Paediatric onset</owl:annotatedTarget>
         <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#uk_spelling"/>
     </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0410280"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+        <owl:annotatedTarget xml:lang="fr">Apparition en pédiatrie</owl:annotatedTarget>
+        <babelon:comment>label of HP:0410280 (Pediatric onset)  ; clinicalcourse</babelon:comment>
+        <babelon:source_language>en</babelon:source_language>
+        <babelon:source_value>Pediatric onset</babelon:source_value>
+        <babelon:translation_language>fr</babelon:translation_language>
+        <babelon:translation_status>OFFICIAL</babelon:translation_status>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0410280"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+        <owl:annotatedTarget xml:lang="es">Inicio pediátrico</owl:annotatedTarget>
+        <babelon:source_language>en</babelon:source_language>
+        <babelon:source_value>Pediatric onset</babelon:source_value>
+        <babelon:translation_language>es</babelon:translation_language>
+        <babelon:translation_status>OFFICIAL</babelon:translation_status>
+    </owl:Axiom>
     
 
 
@@ -10941,8 +11837,18 @@
         <obo:IAO_0000115>Onset of a phenotypic abnormality or a disease during childbirth or in the period immediately following.</obo:IAO_0000115>
         <dc11:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-05-02T20:36:09Z</dc11:date>
         <terms:creator rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
+        <rdfs:label xml:lang="es">Comienzo puerpural</rdfs:label>
         <rdfs:label>Puerpural onset</rdfs:label>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_4000040"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+        <owl:annotatedTarget xml:lang="es">Comienzo puerpural</owl:annotatedTarget>
+        <babelon:source_language>en</babelon:source_language>
+        <babelon:source_value>Puerpural onset</babelon:source_value>
+        <babelon:translation_language>es</babelon:translation_language>
+        <babelon:translation_status>OFFICIAL</babelon:translation_status>
+    </owl:Axiom>
     
 
 
@@ -10986,8 +11892,18 @@
         <obo:IAO_0000115>Onset of signs or symptoms of disease during the period of a woman&apos;s life shortly before the occurrence of the menopause.</obo:IAO_0000115>
         <obo:IAO_0000233 rdf:resource="https://github.com/obophenotype/human-phenotype-ontology/issues/7603"/>
         <terms:contributor rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
+        <rdfs:label xml:lang="es">Inicio perimenopáusico</rdfs:label>
         <rdfs:label>Perimenopausal onset</rdfs:label>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_6000314"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+        <owl:annotatedTarget xml:lang="es">Inicio perimenopáusico</owl:annotatedTarget>
+        <babelon:source_language>en</babelon:source_language>
+        <babelon:source_value>Perimenopausal onset</babelon:source_value>
+        <babelon:translation_language>es</babelon:translation_language>
+        <babelon:translation_status>OFFICIAL</babelon:translation_status>
+    </owl:Axiom>
     
 
 
@@ -10998,8 +11914,18 @@
         <obo:IAO_0000115>Onset of signs or symptoms of disease during the period of a woman&apos;s life after the occurrence of the menopause.</obo:IAO_0000115>
         <obo:IAO_0000233 rdf:resource="https://github.com/obophenotype/human-phenotype-ontology/issues/7603"/>
         <terms:contributor rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
+        <rdfs:label xml:lang="es">Inicio posmenopáusico</rdfs:label>
         <rdfs:label>Postmenopausal onset</rdfs:label>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_6000315"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+        <owl:annotatedTarget xml:lang="es">Inicio posmenopáusico</owl:annotatedTarget>
+        <babelon:source_language>en</babelon:source_language>
+        <babelon:source_value>Postmenopausal onset</babelon:source_value>
+        <babelon:translation_language>es</babelon:translation_language>
+        <babelon:translation_status>OFFICIAL</babelon:translation_status>
+    </owl:Axiom>
     
 
 
