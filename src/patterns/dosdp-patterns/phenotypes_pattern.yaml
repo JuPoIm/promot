@@ -9,6 +9,10 @@ contributors:
 
 classes:
   phenotypic_abnormality: HP:0000118
+  activities_participation: http://id.who.int/icd/entity/1394728112
+
+relations:
+  affects: PROMOT:2000005
 
 annotationProperties:
   found_in: PROMOT:1000001
@@ -18,9 +22,17 @@ data_vars:
 
 vars:
   source: "'source'"
+  activity: "activities_participation"
 
 annotations:
   - annotationProperty: found_in
     text: "%s"
     vars:
       - source
+
+logical_axioms:
+
+  - axiom_type: subClassOf
+    text: "'affects' some %s"
+    vars:
+      - activity

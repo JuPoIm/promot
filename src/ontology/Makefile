@@ -10,7 +10,7 @@
 # More information: https://github.com/INCATools/ontology-development-kit/
 
 # Fingerprint of the configuration file when this Makefile was last generated
-CONFIG_HASH=                491c42319ad097e6bb48782f7582a4765eba534ee7d7d6d71e58e815d6277be9
+CONFIG_HASH=                dab480c9c5764f205de4486cb6d8d7a1d6c32452ad2d1ed625ae8a64579f7aa1
 
 
 # ----------------------------------------
@@ -199,7 +199,7 @@ all_main: $(MAIN_FILES)
 # ----------------------------------------
 
 
-IMPORTS =  bfo eco fma hp iao mondo obi ro sio snomed whofic
+IMPORTS =  bfo eco fma hp iao ordo obi ro sio snomed whofic
 
 IMPORT_ROOTS = $(patsubst %, $(IMPORTDIR)/%_import, $(IMPORTS))
 IMPORT_OWL_FILES = $(foreach n,$(IMPORT_ROOTS), $(n).owl)
@@ -442,14 +442,6 @@ $(IMPORTDIR)/iao_import.owl: $(MIRRORDIR)/iao.owl $(IMPORTDIR)/iao_terms.txt $(I
 		 repair --merge-axiom-annotations true \
 		 $(ANNOTATE_CONVERT_FILE)
 
-## Module for ontology: mondo (custom)
-ifeq ($(IMP_LARGE),true)
-$(IMPORTDIR)/mondo_import.owl: $(MIRRORDIR)/mondo.owl
-	@echo "ERROR: You have configured mondo as a custom module;"
-	@echo "       This rule needs to be overwritten in promot.Makefile!"
-	@false
-endif # IMP_LARGE=true
-
 ## Module for ontology: snomed (custom)
 ifeq ($(IMP_LARGE),true)
 $(IMPORTDIR)/snomed_import.owl: 
@@ -576,14 +568,11 @@ mirror-iao: | $(TMPDIR)
 	$(ROBOT) convert -i $(TMPDIR)/iao-download.owl -o $(TMPDIR)/$@.owl
 
 
-## ONTOLOGY: mondo
-.PHONY: mirror-mondo
-.PRECIOUS: $(MIRRORDIR)/mondo.owl
-ifeq ($(IMP_LARGE),true)
-mirror-mondo: | $(TMPDIR)
-	curl -L $(OBOBASE)/mondo.owl --create-dirs -o $(TMPDIR)/mondo-download.owl --retry 4 --max-time 200 && \
-	$(ROBOT) convert -i $(TMPDIR)/mondo-download.owl -o $(TMPDIR)/$@.owl
-endif
+## ONTOLOGY: ordo
+.PHONY: mirror-ordo
+.PRECIOUS: $(MIRRORDIR)/ordo.owl
+mirror-ordo: | $(TMPDIR)
+	$(ROBOT) convert -I https://www.orphadata.com/data/ontologies/ordo/last_version/ORDO_en_4.8.owl -o $(TMPDIR)/$@.owl
 
 
 ## ONTOLOGY: obi

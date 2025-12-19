@@ -21,7 +21,7 @@ These are the current imports in PROMOT
 | fma | http://purl.obolibrary.org/obo/fma.owl | custom |
 | hp | http://purl.obolibrary.org/obo/hp.owl | custom |
 | iao | http://purl.obolibrary.org/obo/iao.owl | filter |
-| mondo | http://purl.obolibrary.org/obo/mondo.owl | custom |
+| ordo | https://www.orphadata.com/data/ontologies/ordo/last_version/ORDO_en_4.8.owl | custom |
 | obi | http://purl.obolibrary.org/obo/obi.owl | custom |
 | ro | http://purl.obolibrary.org/obo/ro.owl | custom |
 | sio | http://purl.obolibrary.org/obo/sio.owl | custom |

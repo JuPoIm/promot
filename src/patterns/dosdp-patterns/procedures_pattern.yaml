@@ -15,8 +15,8 @@ classes:
   phenotypic_abnormality: HP:0000118
 
 relations:
-  measures: PROMOT:2000004
-  is_related_to: SIO:000001
+  measures: PROMOT:2000003
+  assesses: PROMOT:2000002
 
 vars:
   procedure: "procedure_by_method"
@@ -43,6 +43,6 @@ logical_axioms:
       - activity
 
   - axiom_type: subClassOf
-    text: "'is_related_to' some %s"
+    text: "'assesses' some %s"
     vars:
       - phenotype
