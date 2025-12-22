@@ -15,8 +15,8 @@ classes:
 
 relations:
   has_disposition: RO:0000091
-  affects: PROMOT:2000005
   involved_in: RO:0002331
+  functionally_related_to: RO:0002328
 
 vars:
   phenotype: "'phenotypic_abnormality'"
@@ -31,11 +31,11 @@ logical_axioms:
       - phenotype
 
   - axiom_type: subClassOf
-    text: "'affects' some %s"
+    text: "'involved_in' some %s"
     vars:
       - activity
 
   - axiom_type: subClassOf
-    text: "'involved_in' some %s"
+    text: "'functionally_related_to' some %s"
     vars:
       - function

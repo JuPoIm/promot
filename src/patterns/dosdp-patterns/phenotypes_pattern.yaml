@@ -10,6 +10,7 @@ contributors:
 classes:
   phenotypic_abnormality: HP:0000118
   activities_participation: http://id.who.int/icd/entity/1394728112
+  body_function: http://id.who.int/icd/entity/567313968
 
 relations:
   affects: PROMOT:2000005
@@ -22,7 +23,8 @@ data_vars:
 
 vars:
   source: "'source'"
-  activity: "activities_participation"
+  activity: "'activities_participation'"
+  function: "'body_function'"
 
 annotations:
   - annotationProperty: found_in
@@ -36,3 +38,8 @@ logical_axioms:
     text: "'affects' some %s"
     vars:
       - activity
+
+  - axiom_type: subClassOf
+    text: "'affects' some %s"
+    vars:
+      - function

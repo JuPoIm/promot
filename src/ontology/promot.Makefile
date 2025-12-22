@@ -237,6 +237,6 @@ extract-pheno:
 # Merge the imports, components and patterns into promot-edit-merged.owl for control purpose 
 # ----------------------------------------
 merge-edit:
-	$(ROBOT) merge -i imports/bfo_import.owl -i imports/fma_import.owl -i imports/eco_import.owl -i imports/whofic_import.owl -i imports/iao_import.owl \
+	$(ROBOT) merge -i promot-edit.owl -i imports/bfo_import.owl -i imports/fma_import.owl -i imports/eco_import.owl -i imports/whofic_import.owl -i imports/iao_import.owl \
 	-i imports/hp_import.owl -i imports/snomed_import.owl -i imports/obi_import.owl -i imports/ordo_import.owl -i imports/ro_import.owl \
 	-i imports/sio_import.owl -i patterns/definitions.owl -i components/promot-component.owl -o promot-edit-merged.owl
