@@ -10,7 +10,7 @@
 # More information: https://github.com/INCATools/ontology-development-kit/
 
 # Fingerprint of the configuration file when this Makefile was last generated
-CONFIG_HASH=                dab480c9c5764f205de4486cb6d8d7a1d6c32452ad2d1ed625ae8a64579f7aa1
+CONFIG_HASH=                66de5bc627e1f93665d2975729ddf848cd8744080d8e0c9f29528b00b5bc74e6
 
 
 # ----------------------------------------
@@ -199,7 +199,7 @@ all_main: $(MAIN_FILES)
 # ----------------------------------------
 
 
-IMPORTS =  bfo eco fma hp iao ordo obi ro sio snomed whofic
+IMPORTS =  bfo eco fma hp iao icf ordo obi ro sio snomed
 
 IMPORT_ROOTS = $(patsubst %, $(IMPORTDIR)/%_import, $(IMPORTS))
 IMPORT_OWL_FILES = $(foreach n,$(IMPORT_ROOTS), $(n).owl)
@@ -548,8 +548,7 @@ mirror-eco: | $(TMPDIR)
 .PHONY: mirror-fma
 .PRECIOUS: $(MIRRORDIR)/fma.owl
 mirror-fma: | $(TMPDIR)
-	curl -L $(OBOBASE)/fma.owl --create-dirs -o $(TMPDIR)/fma-download.owl --retry 4 --max-time 200 && \
-	$(ROBOT) convert -i $(TMPDIR)/fma-download.owl -o $(TMPDIR)/$@.owl
+	$(ROBOT) convert -I http://purl.org/sig/ont/fma.owl -o $(TMPDIR)/$@.owl
 
 
 ## ONTOLOGY: hp
@@ -566,6 +565,13 @@ mirror-hp: | $(TMPDIR)
 mirror-iao: | $(TMPDIR)
 	curl -L $(OBOBASE)/iao.owl --create-dirs -o $(TMPDIR)/iao-download.owl --retry 4 --max-time 200 && \
 	$(ROBOT) convert -i $(TMPDIR)/iao-download.owl -o $(TMPDIR)/$@.owl
+
+
+## ONTOLOGY: icf
+.PHONY: mirror-icf
+.PRECIOUS: $(MIRRORDIR)/icf.owl
+mirror-icf: | $(TMPDIR)
+	$(ROBOT) convert -I https://raw.githubusercontent.com/whoficitc/harmonization/main/ontology/whofic-2025-05-24.owl -o $(TMPDIR)/$@.owl
 
 
 ## ONTOLOGY: ordo
@@ -599,13 +605,6 @@ mirror-ro: | $(TMPDIR)
 
 ifeq ($(IMP_LARGE),true)## You have configured your default mirror type to no_mirror.
 endif
-
-
-## ONTOLOGY: whofic
-.PHONY: mirror-whofic
-.PRECIOUS: $(MIRRORDIR)/whofic.owl
-mirror-whofic: | $(TMPDIR)
-	$(ROBOT) convert -I https://raw.githubusercontent.com/whoficitc/harmonization/main/ontology/whofic-2025-05-24.owl -o $(TMPDIR)/$@.owl
 
 
 $(MIRRORDIR)/%.owl: mirror-% | $(MIRRORDIR)

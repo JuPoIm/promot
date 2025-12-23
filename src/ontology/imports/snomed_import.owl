@@ -8,6 +8,7 @@
      xmlns:BFO="http://purl.obolibrary.org/obo/BFO_"
      xmlns:FMA="http://purl.obolibrary.org/obo/FMA_"
      xmlns:IAO="http://purl.obolibrary.org/obo/IAO_"
+     xmlns:ICF="http://id.who.int/icd/entity/"
      xmlns:OBI="http://purl.obolibrary.org/obo/OBI_"
      xmlns:SIO="http://semanticscience.org/resource/SIO_"
      xmlns:obo="http://purl.obolibrary.org/obo/"
@@ -35,7 +36,6 @@
      xmlns:terms="http://purl.org/dc/terms/"
      xmlns:PROMOT="http://purl.obolibrary.org/obo/PROMOT_"
      xmlns:SNOMED="http://snomed.info/id/"
-     xmlns:WHOFIC="http://id.who.int/icd/entity/"
      xmlns:schema="http://schema.org/"
      xmlns:BIOLINK="https://w3id.org/biolink/vocab/"
      xmlns:omoprel="https://w3id.org/cpont/omop/relations/"
@@ -54,8 +54,8 @@
      xmlns:CPATH_VISIT_OCCURRENCE="https://w3id.org/cpont/visit_occurrence/"
      xmlns:CPATH_CONDITION_OCCURRENCE="https://w3id.org/cpont/condition_occurrence/">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/promot/imports/snomed_import.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/promot/releases/2025-12-19/imports/snomed_import.owl"/>
-        <owl:versionInfo>2025-12-19</owl:versionInfo>
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/promot/releases/2025-12-23/imports/snomed_import.owl"/>
+        <owl:versionInfo>2025-12-23</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -600,6 +600,24 @@
     
 
 
+    <!-- http://snomed.info/id/23088002 -->
+
+    <owl:Class rdf:about="http://snomed.info/id/23088002">
+        <sct-ext:definitionStatus>Primitif</sct-ext:definitionStatus>
+        <sct-ext:fsn xml:lang="en">Ambidextrous (finding)</sct-ext:fsn>
+        <dc11:type>finding</dc11:type>
+        <rdfs:label xml:lang="en">Ambidextrous</rdfs:label>
+        <rdfs:label xml:lang="en">Ambidextrous (finding)</rdfs:label>
+        <rdfs:label xml:lang="es">ambidestreza (hallazgo)</rdfs:label>
+        <rdfs:label xml:lang="fr">ambidextre</rdfs:label>
+        <skos:altLabel xml:lang="es">ambidiestro</skos:altLabel>
+        <skos:notation>23088002</skos:notation>
+        <skos:prefLabel xml:lang="en">Ambidextrous</skos:prefLabel>
+        <skos:prefLabel xml:lang="es">ambidestreza</skos:prefLabel>
+    </owl:Class>
+    
+
+
     <!-- http://snomed.info/id/248326004 -->
 
     <owl:Class rdf:about="http://snomed.info/id/248326004">
@@ -854,6 +872,25 @@
         <skos:notation>363787002</skos:notation>
         <skos:prefLabel xml:lang="en">Observable entity</skos:prefLabel>
         <skos:prefLabel xml:lang="es">entidad observable</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://snomed.info/id/364940007 -->
+
+    <owl:Class rdf:about="http://snomed.info/id/364940007">
+        <sct-ext:definitionStatus>Défini</sct-ext:definitionStatus>
+        <sct-ext:fsn xml:lang="en">Handedness finding (finding)</sct-ext:fsn>
+        <dc11:type>finding</dc11:type>
+        <rdfs:label xml:lang="en">Handedness finding</rdfs:label>
+        <rdfs:label xml:lang="en">Handedness finding (finding)</rdfs:label>
+        <rdfs:label xml:lang="fr">constatation concernant la main dominante</rdfs:label>
+        <rdfs:label xml:lang="es">hallazgo en la preferencia manual (hallazgo)</rdfs:label>
+        <skos:altLabel xml:lang="fr">constatation concernant la manualité</skos:altLabel>
+        <skos:altLabel xml:lang="fr">constatation concernant la prévalence manuelle</skos:altLabel>
+        <skos:notation>364940007</skos:notation>
+        <skos:prefLabel xml:lang="en">Handedness finding</skos:prefLabel>
+        <skos:prefLabel xml:lang="es">hallazgo en la preferencia manual</skos:prefLabel>
     </owl:Class>
     
 
@@ -1233,6 +1270,23 @@
     
 
 
+    <!-- http://snomed.info/id/46669005 -->
+
+    <owl:Class rdf:about="http://snomed.info/id/46669005">
+        <sct-ext:definitionStatus>Primitif</sct-ext:definitionStatus>
+        <sct-ext:fsn xml:lang="en">Right handed (finding)</sct-ext:fsn>
+        <dc11:type>finding</dc11:type>
+        <rdfs:label xml:lang="en">Right handed</rdfs:label>
+        <rdfs:label xml:lang="en">Right handed (finding)</rdfs:label>
+        <rdfs:label xml:lang="es">dextrolateralidad (hallazgo)</rdfs:label>
+        <rdfs:label xml:lang="fr">droitier</rdfs:label>
+        <skos:notation>46669005</skos:notation>
+        <skos:prefLabel xml:lang="en">Right handed</skos:prefLabel>
+        <skos:prefLabel xml:lang="es">dextrolateralidad</skos:prefLabel>
+    </owl:Class>
+    
+
+
     <!-- http://snomed.info/id/50121007 -->
 
     <owl:Class rdf:about="http://snomed.info/id/50121007">
@@ -1395,6 +1449,26 @@
         <skos:notation>65656005</skos:notation>
         <skos:prefLabel xml:lang="en">Natural mother</skos:prefLabel>
         <skos:prefLabel xml:lang="es">madre natural</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://snomed.info/id/709880000 -->
+
+    <owl:Class rdf:about="http://snomed.info/id/709880000">
+        <rdfs:subClassOf rdf:resource="http://snomed.info/id/364940007"/>
+        <sct-ext:definitionStatus>Primitif</sct-ext:definitionStatus>
+        <sct-ext:fsn xml:lang="en">Unknown handedness (finding)</sct-ext:fsn>
+        <dc11:type>finding</dc11:type>
+        <rdfs:label xml:lang="en">Unknown handedness</rdfs:label>
+        <rdfs:label xml:lang="en">Unknown handedness (finding)</rdfs:label>
+        <rdfs:label xml:lang="es">lateralidad desconocida (hallazgo)</rdfs:label>
+        <rdfs:label xml:lang="fr">manualité inconnue</rdfs:label>
+        <skos:altLabel xml:lang="en">Unknown dominant side</skos:altLabel>
+        <skos:altLabel xml:lang="fr">préférence manuelle inconnue</skos:altLabel>
+        <skos:notation>709880000</skos:notation>
+        <skos:prefLabel xml:lang="en">Unknown handedness</skos:prefLabel>
+        <skos:prefLabel xml:lang="es">lateralidad desconocida</skos:prefLabel>
     </owl:Class>
     
 
@@ -1705,6 +1779,24 @@
         <skos:notation>87405001</skos:notation>
         <skos:prefLabel xml:lang="en">Cane</skos:prefLabel>
         <skos:prefLabel xml:lang="es">bastón, dispositivo</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://snomed.info/id/87683000 -->
+
+    <owl:Class rdf:about="http://snomed.info/id/87683000">
+        <sct-ext:definitionStatus>Primitif</sct-ext:definitionStatus>
+        <sct-ext:fsn xml:lang="en">Left handed (finding)</sct-ext:fsn>
+        <dc11:type>finding</dc11:type>
+        <rdfs:label xml:lang="en">Left handed</rdfs:label>
+        <rdfs:label xml:lang="en">Left handed (finding)</rdfs:label>
+        <rdfs:label xml:lang="fr">gaucher</rdfs:label>
+        <rdfs:label xml:lang="es">sinistrómano (hallazgo)</rdfs:label>
+        <skos:altLabel xml:lang="en">LH - Left handed</skos:altLabel>
+        <skos:notation>87683000</skos:notation>
+        <skos:prefLabel xml:lang="en">Left handed</skos:prefLabel>
+        <skos:prefLabel xml:lang="es">sinistrómano</skos:prefLabel>
     </owl:Class>
     
 

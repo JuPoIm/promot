@@ -8,6 +8,7 @@
      xmlns:BFO="http://purl.obolibrary.org/obo/BFO_"
      xmlns:FMA="http://purl.obolibrary.org/obo/FMA_"
      xmlns:IAO="http://purl.obolibrary.org/obo/IAO_"
+     xmlns:ICF="http://id.who.int/icd/entity/"
      xmlns:OBI="http://purl.obolibrary.org/obo/OBI_"
      xmlns:SIO="http://semanticscience.org/resource/SIO_"
      xmlns:obo="http://purl.obolibrary.org/obo/"
@@ -35,7 +36,6 @@
      xmlns:terms="http://purl.org/dc/terms/"
      xmlns:PROMOT="http://purl.obolibrary.org/obo/PROMOT_"
      xmlns:SNOMED="http://snomed.info/id/"
-     xmlns:WHOFIC="http://id.who.int/icd/entity/"
      xmlns:schema="http://schema.org/"
      xmlns:BIOLINK="https://w3id.org/biolink/vocab/"
      xmlns:omoprel="https://w3id.org/cpont/omop/relations/"
@@ -54,8 +54,8 @@
      xmlns:CPATH_VISIT_OCCURRENCE="https://w3id.org/cpont/visit_occurrence/"
      xmlns:CPATH_CONDITION_OCCURRENCE="https://w3id.org/cpont/condition_occurrence/">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/promot/imports/sio_import.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/promot/releases/2025-12-22/imports/sio_import.owl"/>
-        <owl:versionInfo>2025-12-22</owl:versionInfo>
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/promot/releases/2025-12-23/imports/sio_import.owl"/>
+        <owl:versionInfo>2025-12-23</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -164,10 +164,10 @@
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <dc11:identifier>SIO_000300</dc11:identifier>
         <terms:description xml:lang="en">A relation between a informational entity and its actual value (numeric, date, text, etc).</terms:description>
-        <resource:subset xml:lang="en">sadi</resource:subset>
         <resource:subset>core</resource:subset>
         <resource:subset>nlp</resource:subset>
         <resource:subset>relations</resource:subset>
+        <resource:subset xml:lang="en">sadi</resource:subset>
         <rdfs:isDefinedBy rdf:resource="http://semanticscience.org/ontology/sio.owl"/>
         <rdfs:label xml:lang="en">has value</rdfs:label>
     </owl:DatatypeProperty>

@@ -89,7 +89,7 @@ sssom_df.to_csv('../scripts/python/data/ICF_to_CIF-ASIP_all.tsv', sep='\t', inde
 # on crée le tsv qui sera converti par la commande sssom-py en un fichier SSSOM pour seulement les mappings des iri présents dans whofic_import
 promot_df = pd.DataFrame(columns=sssom_df.columns)
 
-with open ('../scripts/python/data/whofic_import_iri.tsv', encoding='utf-8') as tsvfile:
+with open ('../scripts/python/data/icf_import_iri.tsv', encoding='utf-8') as tsvfile:
     reader = csv.reader(tsvfile, delimiter = '\t', quotechar = '"', quoting = csv.QUOTE_MINIMAL)
     for row in reader:
         iri = row[0]

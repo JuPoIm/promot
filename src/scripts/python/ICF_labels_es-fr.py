@@ -45,11 +45,11 @@ with open('../data/SimpleTabulation-ICF-es.txt', newline='', encoding='utf-8') a
 
 template_df = pd.DataFrame(columns=columns)
 template_df.loc[0]= {'ID': 'ID',
-            'Label FR': 'AL rdfs:label@fr',	
-            'Label ES' : 'AL rdfs:label@es',
+            'Label FR': '>AL rdfs:label@fr',	
+            'Label ES' : '>AL rdfs:label@es',
             'Comment': 'A rdfs:comment'}
 
-with open ('../scripts/python/data/whofic_import_iri.tsv', encoding='utf-8') as tsvfile:
+with open ('../scripts/python/data/icf_import_iri.tsv', encoding='utf-8') as tsvfile:
     reader = csv.reader(tsvfile, delimiter = '\t', quotechar = '"', quoting = csv.QUOTE_MINIMAL)
     for row in reader:
         iri = row[0]

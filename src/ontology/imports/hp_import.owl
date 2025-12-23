@@ -9,6 +9,7 @@
      xmlns:BFO="http://purl.obolibrary.org/obo/BFO_"
      xmlns:FMA="http://purl.obolibrary.org/obo/FMA_"
      xmlns:IAO="http://purl.obolibrary.org/obo/IAO_"
+     xmlns:ICF="http://id.who.int/icd/entity/"
      xmlns:OBI="http://purl.obolibrary.org/obo/OBI_"
      xmlns:SIO="http://semanticscience.org/resource/SIO_"
      xmlns:obo="http://purl.obolibrary.org/obo/"
@@ -36,7 +37,6 @@
      xmlns:terms="http://purl.org/dc/terms/"
      xmlns:PROMOT="http://purl.obolibrary.org/obo/PROMOT_"
      xmlns:SNOMED="http://snomed.info/id/"
-     xmlns:WHOFIC="http://id.who.int/icd/entity/"
      xmlns:schema="http://schema.org/"
      xmlns:BIOLINK="https://w3id.org/biolink/vocab/"
      xmlns:babelon="https://w3id.org/babelon/"
@@ -55,8 +55,8 @@
      xmlns:CPATH_VISIT_OCCURRENCE="https://w3id.org/cpont/visit_occurrence/"
      xmlns:CPATH_CONDITION_OCCURRENCE="https://w3id.org/cpont/condition_occurrence/">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/promot/imports/hp_import.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/promot/releases/2025-12-15/imports/hp_import.owl"/>
-        <owl:versionInfo>2025-12-15</owl:versionInfo>
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/promot/releases/2025-12-23/imports/hp_import.owl"/>
+        <owl:versionInfo>2025-12-23</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -10474,65 +10474,6 @@
     
 
 
-    <!-- http://purl.obolibrary.org/obo/HP_0003560 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0003560">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0011805"/>
-        <obo:IAO_0000115>The term dystrophy means abnormal growth. However, muscular dystrophy is used to describe primary myopathies with a genetic basis and a progressive course characterized by progressive skeletal muscle weakness and wasting, defects in muscle proteins, and histological features of muscle fiber degeneration (necrosis) and regeneration. If possible, it is preferred to use other HPO terms to describe the precise phenotypic abnormalities.</obo:IAO_0000115>
-        <oboInOwl:hasAlternativeId>HP:0003544</oboInOwl:hasAlternativeId>
-        <oboInOwl:hasAlternativeId>HP:0003741</oboInOwl:hasAlternativeId>
-        <oboInOwl:hasAlternativeId>HP:0003793</oboInOwl:hasAlternativeId>
-        <oboInOwl:hasAlternativeId>HP:0003806</oboInOwl:hasAlternativeId>
-        <oboInOwl:hasAlternativeId>HP:0007081</oboInOwl:hasAlternativeId>
-        <oboInOwl:hasDbXref>SNOMEDCT_US:193225000</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>SNOMEDCT_US:73297009</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>UMLS:C0026850</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>UMLS:C1864711</oboInOwl:hasDbXref>
-        <oboInOwl:hasExactSynonym xml:lang="fr">Dystrophie musculaire</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym xml:lang="fr">changements dystrophiques possiblement présents</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasNarrowSynonym>Congenital muscular dystrophy</oboInOwl:hasNarrowSynonym>
-        <oboInOwl:hasRelatedSynonym>Muscle biopsy shows dystrophic changes</oboInOwl:hasRelatedSynonym>
-        <oboInOwl:id>HP:0003560</oboInOwl:id>
-        <rdfs:comment>Muscular dystrophy can be demonstrated by muscle biopsy.</rdfs:comment>
-        <rdfs:label xml:lang="es">Distrofia muscular</rdfs:label>
-        <rdfs:label xml:lang="fr">Dystrophie musculaire</rdfs:label>
-        <rdfs:label>Muscular dystrophy</rdfs:label>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0003560"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>The term dystrophy means abnormal growth. However, muscular dystrophy is used to describe primary myopathies with a genetic basis and a progressive course characterized by progressive skeletal muscle weakness and wasting, defects in muscle proteins, and histological features of muscle fiber degeneration (necrosis) and regeneration. If possible, it is preferred to use other HPO terms to describe the precise phenotypic abnormalities.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:resource="https://orcid.org/0000-0001-9046-3540"/>
-        <oboInOwl:hasDbXref rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0003560"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
-        <owl:annotatedTarget>Muscle biopsy shows dystrophic changes</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:resource="https://orcid.org/0000-0002-5316-1399"/>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0003560"/>
-        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
-        <owl:annotatedTarget xml:lang="es">Distrofia muscular</owl:annotatedTarget>
-        <babelon:source_language>en</babelon:source_language>
-        <babelon:source_value>Muscular dystrophy</babelon:source_value>
-        <babelon:translation_language>es</babelon:translation_language>
-        <babelon:translation_status>OFFICIAL</babelon:translation_status>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0003560"/>
-        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
-        <owl:annotatedTarget xml:lang="fr">Dystrophie musculaire</owl:annotatedTarget>
-        <babelon:comment>label of HP:0003560 (Muscular dystrophy)  ; abnormality of the musculature</babelon:comment>
-        <babelon:source_language>en</babelon:source_language>
-        <babelon:source_value>Muscular dystrophy</babelon:source_value>
-        <babelon:translation_language>fr</babelon:translation_language>
-        <babelon:translation_status>OFFICIAL</babelon:translation_status>
-    </owl:Axiom>
-    
-
-
     <!-- http://purl.obolibrary.org/obo/HP_0003577 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0003577">
@@ -11920,75 +11861,6 @@
     
 
 
-    <!-- http://purl.obolibrary.org/obo/HP_0004303 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0004303">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0011805"/>
-        <obo:IAO_0000115>Any abnormality of the skeletal muscle cell. Muscle fibers are subdivided into two types. Type I fibers are fatigue-resistant and rich in oxidative enzymes (they stain light with the myosin ATPase reaction), and type II fibers are fast-contracting, fatigue-prone, and rich in glycolytic enzymes (these fibers stain darkly). Normal muscle tissue has a random distribution of type I and type II fibers.</obo:IAO_0000115>
-        <terms:creator rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
-        <oboInOwl:creation_date>2008-02-20T12:04:00Z</oboInOwl:creation_date>
-        <oboInOwl:hasAlternativeId>HP:0003706</oboInOwl:hasAlternativeId>
-        <oboInOwl:hasAlternativeId>HP:0011806</oboInOwl:hasAlternativeId>
-        <oboInOwl:hasDbXref>UMLS:C4021663</oboInOwl:hasDbXref>
-        <oboInOwl:hasExactSynonym xml:lang="fr">Abnormal skeletal muscle fiber morphology</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>Abnormal muscle fibre morphology</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>Abnormal skeletal muscle fiber morphology</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>Abnormal skeletal muscle fibre morphology</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>Abnormality of muscle fibers</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>Abnormality of muscle fibres</oboInOwl:hasExactSynonym>
-        <oboInOwl:id>HP:0004303</oboInOwl:id>
-        <rdfs:comment>Normal human muscle is composed of many individual muscle fibers bundled together by layers of connective tissue that are arranged in a nesting-doll like fashion. The inner most structure, the single muscle fiber, is covered by a thin layer of primarily reticular fibers called the endomysium. The endomysium is quite inconspicuous and muscle fibers appear to be in direct contact with each other. The finest capillaries, nerve twigs and lymphatic capillaries are found within the endomysium. Groups of muscle fibers are bound together by the thicker perimysium, forming structures called fascicles. Capillaries, nerve fibers and lymphatic vessels also track in the perimyseum. Bundles of fascicles are encased within the dense irregular connective tissue of the epimysium. These connective tissue layers provide mechanical protection for the muscle fibers and increase the tensile strength of the muscle. The layers are continuous with the tendon, which provides attachment to bone. Individual muscle fibers are syncytia, formed by embryonic fusion of many myoblasts or later, myosatellite cells. Each muscle fiber contains many nuclei, peripherally positioned immediately adjacent to the sarcolemmal membrane. In healthy muscle only 3-5 percent of fibers contain nuclei that are located internally, within the cell, but many disease processes lead to internal nuclei. Each nucleus provides a segment of the cell with needed translated protein products.</rdfs:comment>
-        <rdfs:label xml:lang="fr">Anomalie des fibres musculaires</rdfs:label>
-        <rdfs:label xml:lang="es">Anomalía de las fibras musculares</rdfs:label>
-        <rdfs:label>Abnormal muscle fiber morphology</rdfs:label>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0004303"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>Any abnormality of the skeletal muscle cell. Muscle fibers are subdivided into two types. Type I fibers are fatigue-resistant and rich in oxidative enzymes (they stain light with the myosin ATPase reaction), and type II fibers are fast-contracting, fatigue-prone, and rich in glycolytic enzymes (these fibers stain darkly). Normal muscle tissue has a random distribution of type I and type II fibers.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
-        <oboInOwl:hasDbXref>PMID:22938878</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0004303"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>Abnormal muscle fibre morphology</owl:annotatedTarget>
-        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#uk_spelling"/>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0004303"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>Abnormal skeletal muscle fibre morphology</owl:annotatedTarget>
-        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#uk_spelling"/>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0004303"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>Abnormality of muscle fibres</owl:annotatedTarget>
-        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#uk_spelling"/>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0004303"/>
-        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
-        <owl:annotatedTarget xml:lang="fr">Anomalie des fibres musculaires</owl:annotatedTarget>
-        <babelon:comment>label of HP:0004303 (Abnormality of muscle fibers)  ; abnormality of the musculature</babelon:comment>
-        <babelon:source_language>en</babelon:source_language>
-        <babelon:source_value>Abnormal muscle fiber morphology</babelon:source_value>
-        <babelon:translation_language>fr</babelon:translation_language>
-        <babelon:translation_status>CANDIDATE</babelon:translation_status>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0004303"/>
-        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
-        <owl:annotatedTarget xml:lang="es">Anomalía de las fibras musculares</owl:annotatedTarget>
-        <babelon:source_language>en</babelon:source_language>
-        <babelon:source_value>Abnormal muscle fiber morphology</babelon:source_value>
-        <babelon:translation_language>es</babelon:translation_language>
-        <babelon:translation_status>OFFICIAL</babelon:translation_status>
-    </owl:Axiom>
-    
-
-
     <!-- http://purl.obolibrary.org/obo/HP_0004322 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0004322">
@@ -12551,6 +12423,18 @@
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0005216"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>An abnormal reduction in the ability to masticate (chew), i.e., in the ability to crush and ground food in preparation for swallowing.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>PMID:23713640</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0005216"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget>Chewing difficulties</owl:annotatedTarget>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#layperson"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0005216"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
         <owl:annotatedTarget>Chewing difficulty</owl:annotatedTarget>
         <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#layperson"/>
@@ -12579,18 +12463,6 @@
         <babelon:source_value>Impaired mastication</babelon:source_value>
         <babelon:translation_language>es</babelon:translation_language>
         <babelon:translation_status>OFFICIAL</babelon:translation_status>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0005216"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>An abnormal reduction in the ability to masticate (chew), i.e., in the ability to crush and ground food in preparation for swallowing.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>PMID:23713640</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0005216"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>Chewing difficulties</owl:annotatedTarget>
-        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#layperson"/>
     </owl:Axiom>
     
 
@@ -12663,18 +12535,6 @@
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0005268"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>A pregnancy that ends at a stage in which the fetus is incapable of surviving on its own, defined as the spontaneous loss of a fetus before the 22th week of pregnancy.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0005268"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>Early foetal demise</owl:annotatedTarget>
-        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#uk_spelling"/>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0005268"/>
         <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
         <owl:annotatedTarget xml:lang="es">Aborto espontáneo</owl:annotatedTarget>
         <babelon:source_language>en</babelon:source_language>
@@ -12691,6 +12551,18 @@
         <babelon:source_value>Miscarriage</babelon:source_value>
         <babelon:translation_language>fr</babelon:translation_language>
         <babelon:translation_status>CANDIDATE</babelon:translation_status>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0005268"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A pregnancy that ends at a stage in which the fetus is incapable of surviving on its own, defined as the spontaneous loss of a fetus before the 22th week of pregnancy.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0005268"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget>Early foetal demise</owl:annotatedTarget>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#uk_spelling"/>
     </owl:Axiom>
     
 
@@ -18659,6 +18531,30 @@
         <owl:annotatedTarget xml:lang="es">Disminución de la calidad de vida relacionada con la salud</owl:annotatedTarget>
         <babelon:source_language>en</babelon:source_language>
         <babelon:source_value>Diminished health-related quality of life</babelon:source_value>
+        <babelon:translation_language>es</babelon:translation_language>
+        <babelon:translation_status>OFFICIAL</babelon:translation_status>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/HP_0033666 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0033666">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0033665"/>
+        <obo:IAO_0000115>A reduction in the ability to perform activities of daily living as compared to previous abilities because of functional deficits due to illness. The 36-item Short Form (SF-36) health survey questionnaire is one of many methods used to measure patients&apos; perceptions of diminished physical functioning.</obo:IAO_0000115>
+        <dc11:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-02-28T14:50:02Z</dc11:date>
+        <terms:creator rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
+        <oboInOwl:hasExactSynonym>Decline in physical functional health</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>Diminished physical health</oboInOwl:hasExactSynonym>
+        <rdfs:label xml:lang="es">Funcionamiento físico disminuido</rdfs:label>
+        <rdfs:label>Diminished physical functioning</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0033666"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+        <owl:annotatedTarget xml:lang="es">Funcionamiento físico disminuido</owl:annotatedTarget>
+        <babelon:source_language>en</babelon:source_language>
+        <babelon:source_value>Diminished physical functioning</babelon:source_value>
         <babelon:translation_language>es</babelon:translation_language>
         <babelon:translation_status>OFFICIAL</babelon:translation_status>
     </owl:Axiom>

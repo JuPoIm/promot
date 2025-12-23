@@ -152,22 +152,22 @@ $(IMPORTDIR)/snomed_import.owl: $(DATADIR)/ontology-2025-11-14_EN-ES.owl $(DATAD
 		merge -i $@.tmp.owl --output $@.tmp.owl && mv $@.tmp.owl $@ ; fi
 
 # ----------------------------------------
-# Module WHOFIC EN : no-mirror-refresh
+# Module ICF EN : no-mirror-refresh
 # ----------------------------------------
 # 1. extraction des termes avec enfants avec filter
 # 2. extratcion des termes avec ancêtres en excluant certains terms avec filter et remove
 # 3. merge des fichiers
 # 4. rename des préfixes skos pour passer les tests de la release
-$(IMPORTDIR)/whofic_import.owl: $(MIRRORDIR)/whofic-2025-05-24.owl $(IMPORTDIR)/whofic_terms_descendants.txt $(IMPORTDIR)/whofic_terms.txt $(IMPORTDIR)/whofic_exclude_terms.txt
+$(IMPORTDIR)/icf_import.owl: $(MIRRORDIR)/whofic-2025-05-24.owl $(IMPORTDIR)/icf_terms_descendants.txt $(IMPORTDIR)/icf_terms.txt $(IMPORTDIR)/icf_exclude_terms.txt
 	if [ $(IMP) = true ]; then $(ROBOT) query -i $< --update $(SPARQLDIR)/preprocess-module.ru \
-		filter -T $(IMPORTDIR)/whofic_terms_descendants.txt \
+		filter -T $(IMPORTDIR)/icf_terms_descendants.txt \
         --select "self descendants annotations" \
 		--exclude-term http://id.who.int/icd/entity/721275161 \
 		--signature true \
 		--output $@.tmp.owl; \
 		$(ROBOT) query -i $< --update $(SPARQLDIR)/preprocess-module.ru \
-		filter -T $(IMPORTDIR)/whofic_terms.txt --select "self ancestors annotations" --signature true \
-		remove -T $(IMPORTDIR)/whofic_exclude_terms.txt --select "self annotations" --signature true \
+		filter -T $(IMPORTDIR)/icf_terms.txt --select "self ancestors annotations" --signature true \
+		remove -T $(IMPORTDIR)/icf_exclude_terms.txt --select "self annotations" --signature true \
         query --update $(SPARQLDIR)/inject-subset-declaration.ru --update $(SPARQLDIR)/postprocess-module.ru \
 		annotate --ontology-iri $(ONTBASE)/$@ $(ANNOTATE_ONTOLOGY_VERSION) \
 		merge -i $@.tmp.owl \
@@ -192,14 +192,14 @@ documentation:
 # 1. téléchargement de CIF-ASIP 2020
 # 2. export des données intéressantes en csv (URIs, codes, labels)
 # 3. téléchargement des traductions officielles des labels pour ICF 2025
-# 4. export des IRI depuis whofic_import pour filtrer les mappings pour le sssom du projet en 5.
+# 4. export des IRI depuis icf_import pour filtrer les mappings pour le sssom du projet en 5.
 # 5. exécution du script de mapping via les codes ICF
 # 6. création du SSSOM pour les deux fichiers créés par le script python : un avec les codes utilisés par PROMOT et un avec tous les codes ICF mappés aux codes CIF-ASIP
 # ------------------ EN ----------------------
 # 1. download of CIF-ASIP 2020
 # 2. csv export of interesting CIF-ASIP data (URIs, codes, labels)
 # 3. download of translated labels with codes from 2025 ICF browser
-# 4. csv export of IRIs belonging to whofic_import (to create a mapping file with ICF URIs used in PROMOT only)
+# 4. csv export of IRIs belonging to icf_import (to create a mapping file with ICF URIs used in PROMOT only)
 # 5. python script that creates 2 files : one with the overall ICF-CIF mapping and a second with ICF URIs used in PROMOT only
 # 6. creates two SSSOM files for the two herebefore files
 # ----------------------------------------
@@ -217,7 +217,7 @@ translation-ICF:
 	mv $(SCRIPTS_DATA)/SimpleTabulation-ICF-es/SimpleTabulation-ICF-es.txt $(DATADIR)/SimpleTabulation-ICF-es.txt
 	rm $(SCRIPTS_DATA)/SimpleTabulation-ICF-es.zip
 	rm -r $(SCRIPTS_DATA)/SimpleTabulation-ICF-es/
-	$(ROBOT) export -i $(IMPORTDIR)/whofic_import.owl --header "IRI" --export $(SCRIPTS_DATA)/whofic_import_iri.tsv
+	$(ROBOT) export -i $(IMPORTDIR)/icf_import.owl --header "IRI" --export $(SCRIPTS_DATA)/icf_import_iri.tsv
 	python3.12 $(SCRIPTSDIR)/python/CIF-ICF_mapping.py $(VERSION)
 	python3.12 $(SCRIPTSDIR)/python/ICF_labels_es-fr.py
 	$(SSSOMPY) parse -m $(METADATADIR)/mapping-all.yml -o $(MAPPINGDIR)/ICF_to_CIF_all-mappings.sssom.tsv $(SCRIPTS_DATA)/ICF_to_CIF-ASIP_all.tsv
@@ -237,6 +237,6 @@ extract-pheno:
 # Merge the imports, components and patterns into promot-edit-merged.owl for control purpose 
 # ----------------------------------------
 merge-edit:
-	$(ROBOT) merge -i promot-edit.owl -i imports/bfo_import.owl -i imports/fma_import.owl -i imports/eco_import.owl -i imports/whofic_import.owl -i imports/iao_import.owl \
+	$(ROBOT) merge -i promot-edit.owl -i imports/bfo_import.owl -i imports/fma_import.owl -i imports/eco_import.owl -i imports/icf_import.owl -i imports/iao_import.owl \
 	-i imports/hp_import.owl -i imports/snomed_import.owl -i imports/obi_import.owl -i imports/ordo_import.owl -i imports/ro_import.owl \
-	-i imports/sio_import.owl -i patterns/definitions.owl -i components/promot-component.owl -o promot-edit-merged.owl
+	-i imports/sio_import.owl -i patterns/definitions.owl -i components/promot-component.owl -o promot-edit.owl
