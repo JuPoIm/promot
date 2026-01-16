@@ -22,25 +22,25 @@ export_formats:
   - json
 #### USE CONFIG
 use_context: TRUE # uses context.json file for prefixes
-use_dosdps: TRUE # uses Dead Simple Owl Design Patterns for creating PROMOT axioms
+#use_dosdps: TRUE # uses Dead Simple Owl Design Patterns for creating PROMOT axioms
 use_template: TRUE # uses ROBOT templates for creating PROMOT classes, properties and axioms
 use_mappings: TRUE # uses SSSOM mapping files
 #### HOMEMADE SSSOM MODULE
 sssom_mappingset_group:
   products:
     - id: promot-mappings
-    - id: ICF_to_CIF_promot-mappings
-    - id: ICF_to_CIF_all-mappings
+    - id: icf-to-cif_promot-mappings
+    - id: icf-to-cif_all-mappings
   release_mappings: TRUE
-bridge_group:
-  products:
-    - id: promot-bridge
-      sources:
-        - promot-mappings
-    - id: icf-cif-fr-bridge
-      sources:
-        - ICF_to_CIF_all-mappings
-  release_bridges: TRUE
+# bridge_group:
+#   products:
+#     - id: promot-bridge
+#       sources:
+#         - promot-mappings
+#     - id: icf-cif-fr-bridge
+#       sources:
+#         - icf-to-cif_all-mappings
+#   release_bridges: TRUE
 #  http://purl.obolibrary.org/obo/ro/bridge/sio-ro-bridge.owl
 #### HOMEMADE MODULE
 components:
@@ -50,12 +50,11 @@ components:
       use_template: TRUE
       template_options: --add-prefixes config/context.json
       templates:
-        - promot-component.csv
-        - ICF_labels_es-fr.tsv
+        - promot-component-test.tsv
       use_mappings: TRUE
       mappings:
         - promot-mappings.sssom.tsv
-        - ICF_to_CIF_promot-mappings.sssom.tsv
+        - icf-to-cif_promot-mappings.sssom.tsv
 #### IMPORTED MODULES
 import_group:
   annotation_properties:

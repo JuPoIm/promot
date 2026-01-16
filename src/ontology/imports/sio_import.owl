@@ -54,8 +54,8 @@
      xmlns:CPATH_VISIT_OCCURRENCE="https://w3id.org/cpont/visit_occurrence/"
      xmlns:CPATH_CONDITION_OCCURRENCE="https://w3id.org/cpont/condition_occurrence/">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/promot/imports/sio_import.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/promot/releases/2025-12-23/imports/sio_import.owl"/>
-        <owl:versionInfo>2025-12-23</owl:versionInfo>
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/promot/releases/2026-01-16/imports/sio_import.owl"/>
+        <owl:versionInfo>2026-01-16</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -89,9 +89,21 @@
     
 
 
+    <!-- http://semanticscience.org/resource/equivalentTo -->
+
+    <owl:AnnotationProperty rdf:about="http://semanticscience.org/resource/equivalentTo"/>
+    
+
+
     <!-- http://semanticscience.org/resource/subset -->
 
     <owl:AnnotationProperty rdf:about="http://semanticscience.org/resource/subset"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#example -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#example"/>
     
 
 
@@ -121,6 +133,22 @@
     
 
 
+    <!-- http://semanticscience.org/resource/SIO_000061 -->
+
+    <owl:ObjectProperty rdf:about="http://semanticscience.org/resource/SIO_000061">
+        <rdfs:subPropertyOf rdf:resource="http://semanticscience.org/resource/SIO_000001"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <dc11:identifier>SIO_000061</dc11:identifier>
+        <terms:description xml:lang="en">A is located in B iff the spatialtemporial region occupied by A is part of the spatialtemporal region occupied by B. [T][R]</terms:description>
+        <resource:equivalentTo>OBO_REL:located_in</resource:equivalentTo>
+        <resource:subset>core</resource:subset>
+        <rdfs:isDefinedBy rdf:resource="http://semanticscience.org/ontology/sio.owl"/>
+        <rdfs:label xml:lang="en">is located in</rdfs:label>
+        <skos:example xml:lang="en">A parasite in the interior of a person&apos;s intestine is located in their intestinal lumen.</skos:example>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://semanticscience.org/resource/SIO_000217 -->
 
     <owl:ObjectProperty rdf:about="http://semanticscience.org/resource/SIO_000217">
@@ -143,6 +171,46 @@
         <terms:description xml:lang="en">is quality of is a relation between a quality and the entity that it is a property of.</terms:description>
         <rdfs:isDefinedBy rdf:resource="http://semanticscience.org/ontology/sio.owl"/>
         <rdfs:label xml:lang="en">is quality of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://semanticscience.org/resource/SIO_000229 -->
+
+    <owl:ObjectProperty rdf:about="http://semanticscience.org/resource/SIO_000229">
+        <rdfs:subPropertyOf rdf:resource="http://semanticscience.org/resource/SIO_000001"/>
+        <dc11:identifier>SIO_000229</dc11:identifier>
+        <terms:description xml:lang="en">has output is a relation between an process and an entity, where the entity is present at the end of the process.</terms:description>
+        <resource:subset>core</resource:subset>
+        <resource:subset xml:lang="en">sadi</resource:subset>
+        <rdfs:isDefinedBy rdf:resource="http://semanticscience.org/ontology/sio.owl"/>
+        <rdfs:label xml:lang="en">has output</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://semanticscience.org/resource/SIO_000235 -->
+
+    <owl:ObjectProperty rdf:about="http://semanticscience.org/resource/SIO_000235">
+        <rdfs:subPropertyOf rdf:resource="http://semanticscience.org/resource/SIO_000001"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <dc11:identifier>SIO_000235</dc11:identifier>
+        <terms:description xml:lang="en">has disposition is the relation between an entity and a disposition that it bears.</terms:description>
+        <rdfs:isDefinedBy rdf:resource="http://semanticscience.org/ontology/sio.owl"/>
+        <rdfs:label xml:lang="en">has disposition</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://semanticscience.org/resource/SIO_000674 -->
+
+    <owl:ObjectProperty rdf:about="http://semanticscience.org/resource/SIO_000674">
+        <rdfs:subPropertyOf rdf:resource="http://semanticscience.org/resource/SIO_000001"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <dc11:identifier>SIO_000674</dc11:identifier>
+        <terms:description xml:lang="en">is unique identifier for is a relation between an identifier and an entity that it uniquely identifies</terms:description>
+        <rdfs:isDefinedBy rdf:resource="http://semanticscience.org/ontology/sio.owl"/>
+        <rdfs:label xml:lang="en">is unique identifier for</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -252,6 +320,17 @@
         <terms:description>paternally transmitted is the quality of a biological organism in which the (genetic) material is transmitted from the paternal line.</terms:description>
         <rdfs:isDefinedBy rdf:resource="http://semanticscience.org/ontology/sio.owl"/>
         <rdfs:label xml:lang="en">paternally transmitted</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/SIO_010000 -->
+
+    <owl:Class rdf:about="http://semanticscience.org/resource/SIO_010000">
+        <dc11:identifier>SIO_010000</dc11:identifier>
+        <terms:description xml:lang="en">A biological organisn is a biological entity that consists of one or more cells and is capable of genomic replication (independently or not).</terms:description>
+        <rdfs:isDefinedBy rdf:resource="http://semanticscience.org/ontology/sio.owl"/>
+        <rdfs:label xml:lang="en">organism</rdfs:label>
     </owl:Class>
     
 

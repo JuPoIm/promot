@@ -96,4 +96,4 @@ with open ('../scripts/python/data/icf_import_iri.tsv', encoding='utf-8') as tsv
         data = sssom_df[sssom_df['subject_id'] == iri]
         promot_df = pd.concat([promot_df, data], ignore_index = True)
 
-promot_df.to_csv('../scripts/python/data/ICF_to_CIF-ASIP_promot.tsv', sep='\t', index=False)
+promot_df.to_csv('../scripts/python/data/icf-to-cif-ASIP_promot.tsv', sep='\t', index=False)

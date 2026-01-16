@@ -106,6 +106,8 @@ $(IMPORTDIR)/ro_import.owl: $(MIRRORDIR)/ro.owl $(IMPORTDIR)/ro_terms.txt
 # ----------------------------------------
 # Module SIO : no-mirror-refresh
 # ----------------------------------------
+# 1. Download file from https://data.bioontology.org/ontologies/SIO/submissions/94/download?apikey=8b5b7825-538d-40e0-9e9e-5ab9274a9aeb
+# 2. Put it in /mirror/
 $(IMPORTDIR)/sio_import.owl: $(MIRRORDIR)/sio-release.owl $(IMPORTDIR)/sio_terms_alone.txt $(IMPORTDIR)/sio_terms.txt
 	if [ $(IMP) = true ]; then $(ROBOT) query -i $< --update $(SPARQLDIR)/preprocess-module.ru \
 		filter -T $(IMPORTDIR)/sio_terms_alone.txt \
@@ -154,10 +156,12 @@ $(IMPORTDIR)/snomed_import.owl: $(DATADIR)/ontology-2025-11-14_EN-ES.owl $(DATAD
 # ----------------------------------------
 # Module ICF EN : no-mirror-refresh
 # ----------------------------------------
-# 1. extraction des termes avec enfants avec filter
-# 2. extratcion des termes avec ancêtres en excluant certains terms avec filter et remove
-# 3. merge des fichiers
-# 4. rename des préfixes skos pour passer les tests de la release
+# 1. Download file from https://github.com/whoficitc/harmonization/blob/main/ontology/whofic-2025-05-24.owl
+# 2. Put it in /mirror/
+# A. extraction des termes avec enfants avec filter
+# B. extratcion des termes avec ancêtres en excluant certains terms avec filter et remove
+# C. merge des fichiers
+# D. rename des préfixes skos pour passer les tests de la release
 $(IMPORTDIR)/icf_import.owl: $(MIRRORDIR)/whofic-2025-05-24.owl $(IMPORTDIR)/icf_terms_descendants.txt $(IMPORTDIR)/icf_terms.txt $(IMPORTDIR)/icf_exclude_terms.txt
 	if [ $(IMP) = true ]; then $(ROBOT) query -i $< --update $(SPARQLDIR)/preprocess-module.ru \
 		filter -T $(IMPORTDIR)/icf_terms_descendants.txt \
@@ -203,8 +207,8 @@ documentation:
 # 5. python script that creates 2 files : one with the overall ICF-CIF mapping and a second with ICF URIs used in PROMOT only
 # 6. creates two SSSOM files for the two herebefore files
 # ----------------------------------------
-.PHONY: translation-ICF
-translation-ICF:
+.PHONY: translation-icf
+translation-icf:
 	curl -L https://data.bioportal.lirmm.fr/ontologies/ICF/submissions/2/download?apikey=1de0a270-29c5-4dda-b043-7c3580628cd5 -o $(DATADIR)/cif-asip.ttl
 	$(ROBOT) --prefix "skos: http://www.w3.org/2004/02/skos/core#" --prefix "rdfs: http://www.w3.org/2000/01/rdf-schema#" -vvv export -i $(DATADIR)/cif-asip.ttl --header "IRI|skos:notation|skos:altLabel" --export $(SCRIPTS_DATA)/CIF-ASIP.tsv
 	curl -L "https://icdcdn.who.int/static/releasefiles/2025-01/SimpleTabulation-ICF-fr.zip" -o $(SCRIPTS_DATA)/SimpleTabulation-ICF-fr.zip
@@ -220,8 +224,8 @@ translation-ICF:
 	$(ROBOT) export -i $(IMPORTDIR)/icf_import.owl --header "IRI" --export $(SCRIPTS_DATA)/icf_import_iri.tsv
 	python3.12 $(SCRIPTSDIR)/python/CIF-ICF_mapping.py $(VERSION)
 	python3.12 $(SCRIPTSDIR)/python/ICF_labels_es-fr.py
-	$(SSSOMPY) parse -m $(METADATADIR)/mapping-all.yml -o $(MAPPINGDIR)/ICF_to_CIF_all-mappings.sssom.tsv $(SCRIPTS_DATA)/ICF_to_CIF-ASIP_all.tsv
-	$(SSSOMPY) parse -m $(METADATADIR)/mapping-promot.yml -o $(MAPPINGDIR)/ICF_to_CIF_promot-mappings.sssom.tsv $(SCRIPTS_DATA)/ICF_to_CIF-ASIP_promot.tsv
+	$(SSSOMPY) parse -m $(METADATADIR)/mapping-all.yml -o $(MAPPINGDIR)/icf-to-cif_all-mappings.sssom.tsv $(SCRIPTS_DATA)/ICF_to_CIF-ASIP_all.tsv
+	$(SSSOMPY) parse -m $(METADATADIR)/mapping-promot.yml -o $(MAPPINGDIR)/icf-to-cif_promot-mappings.sssom.tsv $(SCRIPTS_DATA)/ICF_to_CIF-ASIP_promot.tsv
 
 # ----------------------------------------
 # Extract phenotypes associated with a gene and a disease in HPO

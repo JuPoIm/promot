@@ -12,7 +12,7 @@ import pandas as pd
 
 # df creation
 # création de la dataframe au format template ROBOT
-columns = ['ID', 'Label FR', 'Label ES', 'Comment']
+columns = ['ID', 'Label EN', 'Label FR', 'Label ES', 'Comment']
 df = pd.DataFrame(columns=columns)
 
 # Read file with 2025 Fundational URI and french translated labels from https://icdcdn.who.int/static/releasefiles/2025-01/SimpleTabulation-ICF-fr.zip
@@ -38,13 +38,18 @@ with open('../data/SimpleTabulation-ICF-es.txt', newline='', encoding='utf-8') a
             pass
         else:
             icf_uri = row[0]
+            label_en = row[4]
+            while '- ' in label_en :
+                label_en = re.sub('- ', '', label_en)  # suppression des '- ' dans les labels 
             label_es = row[5]
             while '- ' in label_es :
                 label_es = re.sub('- ', '', label_es)  # suppression des '- ' dans les labels 
             df.loc[df['ID'] == icf_uri, 'Label ES'] = label_es
+            df.loc[df['ID'] == icf_uri, 'Label EN'] = label_en
 
 template_df = pd.DataFrame(columns=columns)
 template_df.loc[0]= {'ID': 'ID',
+            'Label EN': 'A rdfs:label',
             'Label FR': '>AL rdfs:label@fr',	
             'Label ES' : '>AL rdfs:label@es',
             'Comment': 'A rdfs:comment'}
@@ -56,4 +61,4 @@ with open ('../scripts/python/data/icf_import_iri.tsv', encoding='utf-8') as tsv
         data = df[df['ID'] == iri]
         template_df = pd.concat([template_df, data], ignore_index = True)
 
-template_df.to_csv('../templates/ICF_labels_es-fr.tsv', sep='\t', index=False)
+template_df.to_csv('../templates/icf_labels_es-fr.tsv', sep='\t', index=False)
