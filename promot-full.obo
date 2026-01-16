@@ -1,6 +1,6 @@
 format-version: 1.2
-data-version: promot/releases/2025-08-12/promot-full.owl
-date: 12:08:2025 13:35
+data-version: promot/releases/2025-08-14/promot-full.owl
+date: 14:08:2025 12:19
 subsetdef: clingen ""
 subsetdef: disease_grouping ""
 subsetdef: gard_rare ""
@@ -35,7 +35,7 @@ property_value: dce:creator "Juliette Potier MSc\nhttps://orcid.org/0009-0000-51
 property_value: dce:creator "Paul Fabry MD, PhD student\nhttps://orcid.org/0000-0002-3336-2476" xsd:string
 property_value: dcterms:description "Ontology for building the database of the PROMOT project\n\nSee also: https://www.promotinitiative.com" xsd:string
 property_value: dcterms:title "PROMOT Common Data Model ontology" xsd:string
-property_value: owl:versionInfo "2025-08-12" xsd:string
+property_value: owl:versionInfo "2025-08-14" xsd:string
 
 [Term]
 id: BFO:0000001
@@ -4719,6 +4719,7 @@ name: Muscle of shoulder
 namespace: fma
 synonym: "Shoulder muscle" EXACT []
 is_a: FMA:37347 ! Muscle of pectoral girdle
+is_a: PROMOT:7000001 ! Phenotypically related anatomical entity
 relationship: PROMOT:2000001 HP:0008997 ! is location of Proximal muscle weakness in upper limbs
 relationship: related:to http://id.who.int/icd/entity/278512890 ! Muscles of shoulder region
 
@@ -5981,6 +5982,7 @@ name: Muscle of arm
 namespace: fma
 synonym: "Arm muscle" EXACT []
 is_a: FMA:37348 ! Muscle of free upper limb
+is_a: PROMOT:7000001 ! Phenotypically related anatomical entity
 relationship: PROMOT:2000001 HP:0008997 ! is location of Proximal muscle weakness in upper limbs
 relationship: related:to http://id.who.int/icd/entity/1867012554 ! Muscles of upper arm
 
@@ -5990,6 +5992,7 @@ name: Muscle of forearm
 namespace: fma
 synonym: "Forearm muscle" EXACT []
 is_a: FMA:37348 ! Muscle of free upper limb
+is_a: PROMOT:7000001 ! Phenotypically related anatomical entity
 relationship: PROMOT:2000001 HP:0008959 ! is location of Distal upper limb muscle weakness
 relationship: related:to http://id.who.int/icd/entity/294830867 ! Muscles of forearm
 
@@ -5999,6 +6002,7 @@ name: Muscle of hand
 namespace: fma
 synonym: "Hand muscle" EXACT []
 is_a: FMA:37348 ! Muscle of free upper limb
+is_a: PROMOT:7000001 ! Phenotypically related anatomical entity
 relationship: PROMOT:2000001 HP:0008959 ! is location of Distal upper limb muscle weakness
 relationship: related:to http://id.who.int/icd/entity/1233939003 ! Muscles of hand
 
@@ -8175,6 +8179,7 @@ name: Muscle of tongue
 namespace: fma
 synonym: "Tongue muscle" EXACT []
 is_a: FMA:9616 ! Muscle of head
+is_a: PROMOT:7000001 ! Phenotypically related anatomical entity
 relationship: PROMOT:2000001 HP:0000183 ! is location of Tongue muscle weakness
 relationship: PROMOT:2000001 HP:0005216 ! is location of Impaired mastication
 relationship: PROMOT:2000001 HP:0012473 ! is location of Tongue atrophy
@@ -8424,6 +8429,7 @@ namespace: fma
 synonym: "Face muscle" EXACT []
 synonym: "Facial muscle" EXACT []
 is_a: FMA:9616 ! Muscle of head
+is_a: PROMOT:7000001 ! Phenotypically related anatomical entity
 relationship: PROMOT:2000001 HP:0030319 ! is location of Weakness of facial musculature
 relationship: related:to http://id.who.int/icd/entity/1874889854 ! Muscles of head and neck region
 
@@ -8921,6 +8927,7 @@ name: Temporalis
 namespace: fma
 synonym: "Temporal muscle" EXACT []
 is_a: FMA:57791 ! Muscle of head proper
+is_a: PROMOT:7000001 ! Phenotypically related anatomical entity
 relationship: PROMOT:2000001 HP:0005216 ! is location of Impaired mastication
 relationship: related:to http://id.who.int/icd/entity/1874889854 ! Muscles of head and neck region
 
@@ -9228,7 +9235,6 @@ namespace: fma
 synonym: "Limb musculature" EXACT []
 synonym: "Muscle group of limb" EXACT []
 synonym: "Set of muscles of limb" EXACT []
-is_a: FMA:62955 ! Anatomical entity
 is_a: PROMOT:7000001 ! Phenotypically related anatomical entity
 relationship: PROMOT:2000001 HP:0003690 ! is location of Limb muscle weakness
 relationship: related:to http://id.who.int/icd/entity/1019379329 ! Structure of upper extremity
@@ -9276,7 +9282,6 @@ name: Muscle organ
 namespace: fma
 def: "Nonparenchymatous organ that primarily consists of skeletal muscle tissue aggregated into macroscopic fasciculi by connective tissue; together with other muscles, it constitutes the muscular system. Examples: biceps, diaphragm, masseter, right third external intercostal muscle, external oblique, levator ani, serratus anterior." []
 is_a: FMA:62955 ! Anatomical entity
-is_a: PROMOT:7000001 ! Phenotypically related anatomical entity
 
 [Term]
 id: FMA:51029
@@ -10026,6 +10031,7 @@ namespace: fma
 def: "Muscle organ which is a part of the trunk. Examples: external intercostal muscle, external oblique,  levator ani." []
 synonym: "Trunk muscle" EXACT []
 is_a: FMA:5022 ! Muscle organ
+is_a: PROMOT:7000001 ! Phenotypically related anatomical entity
 relationship: PROMOT:2000001 HP:0009023 ! is location of Abdominal wall muscle weakness
 relationship: related:to http://id.who.int/icd/entity/58064740 ! Muscles of trunk
 
@@ -10101,7 +10107,6 @@ name: Anatomical entity
 namespace: fma
 def: "Organismal continuant entity which is enclosed by the bona fide boundary of an organism or is an attribute of its structural organization. Examples: cell, heart, head, peritoneal cavity, apex of lung, anatomical term, sagittal plane." []
 is_a: BFO:0000040 ! material entity
-equivalent_to: PROMOT:7000001 ! Phenotypically related anatomical entity
 
 [Term]
 id: FMA:64822
@@ -10912,6 +10917,7 @@ id: FMA:74060
 name: Masticatory muscle
 namespace: fma
 is_a: FMA:9616 ! Muscle of head
+is_a: PROMOT:7000001 ! Phenotypically related anatomical entity
 relationship: PROMOT:2000001 HP:0005216 ! is location of Impaired mastication
 relationship: related:to http://id.who.int/icd/entity/1874889854 ! Muscles of head and neck region
 
@@ -10921,7 +10927,6 @@ name: Joint
 namespace: fma
 def: "Heterogeneous cluster which consists of two or more adjacent bones or cartilages, parts of  which are interconnected by organ parts that consist of various types of connective tissue. Together with other joints and bones, a joint constitutes the skeletal system. Examples: pubic symphysis, knee joint, temporomandibular joint." []
 is_a: FMA:62955 ! Anatomical entity
-is_a: PROMOT:7000001 ! Phenotypically related anatomical entity
 
 [Term]
 id: FMA:7491
@@ -12614,6 +12619,7 @@ namespace: fma
 def: "Muscle organ which is a part of the neck. Examples: platysma, sternocleidomastoid, cricothyroid muscle." []
 synonym: "Neck muscle" EXACT []
 is_a: FMA:5022 ! Muscle organ
+is_a: PROMOT:7000001 ! Phenotypically related anatomical entity
 relationship: PROMOT:2000001 HP:0000467 ! is location of Neck muscle weakness
 relationship: related:to http://id.who.int/icd/entity/1874889854 ! Muscles of head and neck region
 
@@ -12649,6 +12655,7 @@ name: Muscle of lower limb
 namespace: fma
 synonym: "Lower limb muscle" EXACT []
 is_a: FMA:5022 ! Muscle organ
+is_a: PROMOT:7000001 ! Phenotypically related anatomical entity
 relationship: PROMOT:2000001 HP:0007340 ! is location of Lower limb muscle weakness
 relationship: related:to http://id.who.int/icd/entity/644658903 ! Structures related to movement
 
@@ -13089,8 +13096,8 @@ def: "A phenotypic abnormality." [https://orcid.org/0000-0002-0736-9199]
 comment: This is the root of the phenotypic abnormality subontology of the HPO.
 synonym: "Organ abnormality" EXACT []
 xref: UMLS:C4021819
-is_a: BFO:0000016 ! disposition
 is_a: HP:0000001 ! All
+is_a: PROMOT:1100001 ! Abnormal disposition
 relationship: resource:SIO_000217 PROMOT:6000001 ! presence qualifier
 relationship: RO:0002201 PROMOT:3000001 ! phenotype of Patient
 
@@ -15409,7 +15416,7 @@ xref: OGMS:0000031 {source="MONDO:equivalentTo"}
 xref: Orphanet:377788 {source="MONDO:equivalentTo"}
 xref: SCTID:64572001 {source="MONDO:equivalentTo", source="DOID:4", source="EFO:0000408"}
 xref: UMLS:C0012634 {source="MEDGEN:4347", source="MONDO:equivalentTo", source="MONDO:MEDGEN"}
-is_a: BFO:0000016 ! disposition
+is_a: PROMOT:1100001 ! Abnormal disposition
 relationship: RO:0004003 PROMOT:0000001 ! has material basis in germline mutation in mutation
 relationship: RO:0004029 HP:0000118 ! disease has feature Phenotypic abnormality
 property_value: skos:exactMatch DOID:4
@@ -15446,7 +15453,6 @@ xref: Orphanet:270 {source="MONDO:equivalentTo", source="OMIM:164300"}
 xref: SCTID:77097004 {source="MONDO:equivalentTo", source="DOID:11719"}
 xref: UMLS:C0270952 {source="MONDO:equivalentTo", source="MONDO:MEDGEN", source="MEDGEN:75730"}
 is_a: MONDO:0000001 ! disease
-relationship: RO:0004003 PROMOT:0000002 ! has material basis in germline mutation in PABPN1 mutation
 relationship: RO:0004029 HP:0000006 ! disease has feature Autosomal dominant inheritance
 relationship: RO:0004029 HP:0000183 ! disease has feature Tongue muscle weakness
 relationship: RO:0004029 HP:0000467 ! disease has feature Neck muscle weakness
@@ -15537,12 +15543,6 @@ xref: Orphanet:590 {source="MONDO:equivalentTo", source="DOID:3635"}
 xref: SCTID:230672006 {source="MONDO:equivalentTo", source="DOID:3635"}
 xref: UMLS:C0751882 {source="MEDGEN:155650", source="MONDO:equivalentTo", source="MONDO:MEDGEN"}
 is_a: MONDO:0000001 ! disease
-relationship: RO:0004003 PROMOT:0000009 ! has material basis in germline mutation in CHRNE mutation
-relationship: RO:0004003 PROMOT:0000010 ! has material basis in germline mutation in DOK7 mutation
-relationship: RO:0004003 PROMOT:0000011 ! has material basis in germline mutation in COLQ mutation
-relationship: RO:0004003 PROMOT:0000012 ! has material basis in germline mutation in RAPSN mutation
-relationship: RO:0004003 PROMOT:0000013 ! has material basis in germline mutation in GFPT1 mutation
-relationship: RO:0004003 PROMOT:0000014 ! has material basis in germline mutation in GMPPB mutation
 relationship: RO:0004029 HP:0000508 ! disease has feature Ptosis
 relationship: RO:0004029 HP:0000544 ! disease has feature External ophthalmoplegia
 relationship: RO:0004029 HP:0001270 ! disease has feature Motor delay
@@ -15633,12 +15633,6 @@ xref: OMIMPS:117000 {source="MONDO:equivalentTo"}
 xref: Orphanet:97245 {source="MONDO:equivalentTo"}
 xref: UMLS:C0270960 {source="MONDO:equivalentTo", source="MONDO:MEDGEN", source="MEDGEN:124381"}
 is_a: MONDO:0000001 ! disease
-relationship: RO:0004003 PROMOT:0000003 ! has material basis in germline mutation in RYR1 mutation
-relationship: RO:0004003 PROMOT:0000004 ! has material basis in germline mutation in TTN mutation
-relationship: RO:0004003 PROMOT:0000005 ! has material basis in germline mutation in NEB mutation
-relationship: RO:0004003 PROMOT:0000006 ! has material basis in germline mutation in MTM1 mutation
-relationship: RO:0004003 PROMOT:0000007 ! has material basis in germline mutation in ACTA1 mutation
-relationship: RO:0004003 PROMOT:0000008 ! has material basis in germline mutation in SELENON mutation
 relationship: RO:0004029 HP:0000028 ! disease has feature Cryptorchidism
 relationship: RO:0004029 HP:0000218 ! disease has feature High palate
 relationship: RO:0004029 HP:0000276 ! disease has feature Long face
@@ -15754,7 +15748,7 @@ id: PROMOT:0000001
 name: mutation
 is_a: BFO:0000002 ! continuant
 relationship: resource:SIO_000217 resource:SIO_001268 ! parental transmission
-relationship: RO:0004013 MONDO:0000001 ! is causal germline mutation in disease
+relationship: RO:0004013 PROMOT:1100001 ! is causal germline mutation in Abnormal disposition
 property_value: IAO:0000117 "Juliette Potier" xsd:string
 
 [Term]
@@ -15762,7 +15756,6 @@ id: PROMOT:0000002
 name: PABPN1 mutation
 def: "Mutation located within the PABPN1 gene" []
 is_a: PROMOT:0000001 ! mutation
-relationship: RO:0004013 MONDO:0008116 ! is causal germline mutation in oculopharyngeal muscular dystrophy
 property_value: IAO:0000117 "Juliette Potier" xsd:string
 
 [Term]
@@ -15770,7 +15763,6 @@ id: PROMOT:0000003
 name: RYR1 mutation
 def: "Mutation located within the RYR1 gene" []
 is_a: PROMOT:0000001 ! mutation
-relationship: RO:0004013 MONDO:0019952 ! is causal germline mutation in congenital myopathy
 property_value: IAO:0000117 "Juliette Potier" xsd:string
 
 [Term]
@@ -15778,7 +15770,6 @@ id: PROMOT:0000004
 name: TTN mutation
 def: "Mutation located within the TTN gene" []
 is_a: PROMOT:0000001 ! mutation
-relationship: RO:0004013 MONDO:0019952 ! is causal germline mutation in congenital myopathy
 property_value: IAO:0000117 "Juliette Potier" xsd:string
 
 [Term]
@@ -15786,7 +15777,6 @@ id: PROMOT:0000005
 name: NEB mutation
 def: "Mutation located within the NEB gene" []
 is_a: PROMOT:0000001 ! mutation
-relationship: RO:0004013 MONDO:0019952 ! is causal germline mutation in congenital myopathy
 property_value: IAO:0000117 "Juliette Potier" xsd:string
 
 [Term]
@@ -15794,7 +15784,6 @@ id: PROMOT:0000006
 name: MTM1 mutation
 def: "Mutation located within the MTM1 gene" []
 is_a: PROMOT:0000001 ! mutation
-relationship: RO:0004013 MONDO:0019952 ! is causal germline mutation in congenital myopathy
 property_value: IAO:0000117 "Juliette Potier" xsd:string
 
 [Term]
@@ -15802,7 +15791,6 @@ id: PROMOT:0000007
 name: ACTA1 mutation
 def: "Mutation located within the ACTA1 gene" []
 is_a: PROMOT:0000001 ! mutation
-relationship: RO:0004013 MONDO:0019952 ! is causal germline mutation in congenital myopathy
 property_value: IAO:0000117 "Juliette Potier" xsd:string
 
 [Term]
@@ -15810,7 +15798,6 @@ id: PROMOT:0000008
 name: SELENON mutation
 def: "Mutation located within the SELENON gene" []
 is_a: PROMOT:0000001 ! mutation
-relationship: RO:0004013 MONDO:0019952 ! is causal germline mutation in congenital myopathy
 property_value: IAO:0000117 "Juliette Potier" xsd:string
 
 [Term]
@@ -15818,7 +15805,6 @@ id: PROMOT:0000009
 name: CHRNE mutation
 def: "Mutation located within the CHRNE gene" []
 is_a: PROMOT:0000001 ! mutation
-relationship: RO:0004013 MONDO:0018940 ! is causal germline mutation in congenital myasthenic syndrome
 property_value: IAO:0000117 "Juliette Potier" xsd:string
 
 [Term]
@@ -15826,7 +15812,6 @@ id: PROMOT:0000010
 name: DOK7 mutation
 def: "Mutation located within the DOK7 gene" []
 is_a: PROMOT:0000001 ! mutation
-relationship: RO:0004013 MONDO:0018940 ! is causal germline mutation in congenital myasthenic syndrome
 property_value: IAO:0000117 "Juliette Potier" xsd:string
 
 [Term]
@@ -15834,7 +15819,6 @@ id: PROMOT:0000011
 name: COLQ mutation
 def: "Mutation located within the COLQ gene" []
 is_a: PROMOT:0000001 ! mutation
-relationship: RO:0004013 MONDO:0018940 ! is causal germline mutation in congenital myasthenic syndrome
 property_value: IAO:0000117 "Juliette Potier" xsd:string
 
 [Term]
@@ -15842,7 +15826,6 @@ id: PROMOT:0000012
 name: RAPSN mutation
 def: "Mutation located within the RAPSN gene" []
 is_a: PROMOT:0000001 ! mutation
-relationship: RO:0004013 MONDO:0018940 ! is causal germline mutation in congenital myasthenic syndrome
 property_value: IAO:0000117 "Juliette Potier" xsd:string
 
 [Term]
@@ -15850,7 +15833,6 @@ id: PROMOT:0000013
 name: GFPT1 mutation
 def: "Mutation located within the GFPT1 gene" []
 is_a: PROMOT:0000001 ! mutation
-relationship: RO:0004013 MONDO:0018940 ! is causal germline mutation in congenital myasthenic syndrome
 property_value: IAO:0000117 "Juliette Potier" xsd:string
 
 [Term]
@@ -15858,7 +15840,14 @@ id: PROMOT:0000014
 name: GMPPB mutation
 def: "Mutation located within the GMPPB gene" []
 is_a: PROMOT:0000001 ! mutation
-relationship: RO:0004013 MONDO:0018940 ! is causal germline mutation in congenital myasthenic syndrome
+property_value: IAO:0000117 "Juliette Potier" xsd:string
+
+[Term]
+id: PROMOT:1100001
+name: Abnormal disposition
+def: "A disposition that differs from the norm, such as a disease or a phenotypic abnormality" []
+comment: (to validate)
+is_a: BFO:0000016 ! disposition
 property_value: IAO:0000117 "Juliette Potier" xsd:string
 
 [Term]
@@ -15997,7 +15986,9 @@ property_value: IAO:0000117 "Juliette Potier" xsd:string
 id: PROMOT:7000001
 name: Phenotypically related anatomical entity
 def: "An anatomical entity related to a phenotype such that the anatomical entity is the location of the phenotype." []
-is_a: BFO:0000040 ! material entity
+is_a: FMA:62955 ! Anatomical entity
+intersection_of: FMA:62955 ! Anatomical entity
+intersection_of: PROMOT:2000001 HP:0000118 ! is location of Phenotypic abnormality
 relationship: PROMOT:2000001 HP:0000118 ! is location of Phenotypic abnormality
 relationship: related:to http://id.who.int/icd/entity/1626363729 ! Body structures
 property_value: IAO:0000117 "Juliette Potier" xsd:string
@@ -16007,7 +15998,9 @@ id: PROMOT:7000002
 name: Phenotypically related body structure
 def: "A body structure related to a phenotype such that the body structure is the location of the phenotype." []
 comment: (JP: unsure about definition)
-is_a: BFO:0000028 ! three-dimensional spatial region
+is_a: http://id.who.int/icd/entity/1626363729 ! Body structures
+intersection_of: http://id.who.int/icd/entity/1626363729 ! Body structures
+intersection_of: related:to HP:0000118 ! Phenotypic abnormality
 relationship: related:to HP:0000118 ! Phenotypic abnormality
 property_value: IAO:0000117 "Juliette Potier" xsd:string
 
@@ -16016,7 +16009,9 @@ id: PROMOT:7000003
 name: Phenotypically related body function
 def: "A body function related to a phenotype such that the body function is impacted by the phenotype existence." []
 comment: (JP: unsure about definition)
-is_a: BFO:0000034 ! function
+is_a: http://id.who.int/icd/entity/567313968 ! Body functions
+intersection_of: http://id.who.int/icd/entity/567313968 ! Body functions
+intersection_of: related:to HP:0000118 ! Phenotypic abnormality
 relationship: related:to HP:0000118 ! Phenotypic abnormality
 property_value: IAO:0000117 "Juliette Potier" xsd:string
 
@@ -16025,6 +16020,76 @@ id: PROMOT:8000001
 name: Onset statement
 def: "A statement regarding the date of onset of a phenotype" []
 is_a: IAO:0000030 ! information content entity
+property_value: IAO:0000117 "Juliette Potier" xsd:string
+
+[Term]
+id: PROMOT:9000001
+name: Risk of fall
+def: "The patient is at risk of fall" []
+comment: (JP: unsure, OPMD)
+property_value: IAO:0000117 "Juliette Potier" xsd:string
+
+[Term]
+id: PROMOT:9000002
+name: Decreased walking speed
+def: "Walking speed decreased in comparison to a normal walking speed" []
+comment: (JP: unsure, OPMD)
+property_value: IAO:0000117 "Juliette Potier" xsd:string
+
+[Term]
+id: PROMOT:9000003
+name: Difficulty rising from a chair
+def: "Difficulty rising from a chair, difficulty to move from a sitting position to a standing position" []
+comment: (JP: unsure, OPMD)
+property_value: IAO:0000117 "Juliette Potier" xsd:string
+
+[Term]
+id: PROMOT:9000004
+name: Blockage sensation in the throat / food entrapment
+def: "OPMD" []
+comment: (JP: unsure, OPMD)
+property_value: IAO:0000117 "Juliette Potier" xsd:string
+
+[Term]
+id: PROMOT:9000005
+name: Multiple swallowing per bolus
+def: "OPMD" []
+comment: (JP: unsure, OPMD)
+property_value: IAO:0000117 "Juliette Potier" xsd:string
+
+[Term]
+id: PROMOT:9000006
+name: Needing to spit out food or liquids
+def: "OPMD" []
+comment: (JP: unsure, OPMD)
+property_value: IAO:0000117 "Juliette Potier" xsd:string
+
+[Term]
+id: PROMOT:9000007
+name: Pharyngo-nasal and pharyngo-oral regurgitation
+def: "OPMD" []
+comment: (JP: unsure, OPMD)
+property_value: IAO:0000117 "Juliette Potier" xsd:string
+
+[Term]
+id: PROMOT:9000008
+name: Presence of secretions
+def: "OPMD" []
+comment: (JP: unsure, OPMD)
+property_value: IAO:0000117 "Juliette Potier" xsd:string
+
+[Term]
+id: PROMOT:9000009
+name: Generalized fatigability of muscles
+def: "CM" []
+comment: (JP: unsure, CM)
+property_value: IAO:0000117 "Juliette Potier" xsd:string
+
+[Term]
+id: PROMOT:9000010
+name: Arthrogryposis during neonatal period
+def: "Joint stiffness or joint contractures during neonatal period" []
+comment: (JP: unsure, CM)
 property_value: IAO:0000117 "Juliette Potier" xsd:string
 
 [Term]
@@ -16037,6 +16102,7 @@ property_value: schema:browserUrl https://icd.who.int/dev11/f/en#/http%3A%2F%2Fi
 id: http://id.who.int/icd/entity/1034220517
 name: Alternative vocalization functions
 is_a: http://id.who.int/icd/entity/388067588 ! Voice and speech functions
+is_a: PROMOT:7000003 ! Phenotypically related body function
 relationship: related:to HP:0001618 ! Dysphonia
 property_value: schema:browserUrl https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F1034220517
 property_value: schema:exclusion "Articulation functions" xsd:string {schema:foundationReference="http://id.who.int/icd/entity/1919311435"}
@@ -16061,6 +16127,7 @@ property_value: schema:browserUrl https://icd.who.int/dev11/f/en#/http%3A%2F%2Fi
 id: http://id.who.int/icd/entity/1065560247
 name: Pain in stomach or abdomen
 is_a: http://id.who.int/icd/entity/577558794 ! Pain in body part
+is_a: PROMOT:7000003 ! Phenotypically related body function
 relationship: related:to HP:0012531 ! Pain
 property_value: schema:browserUrl https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F1065560247
 property_value: schema:inclusion "pain in the pelvic region" xsd:string
@@ -16077,6 +16144,7 @@ property_value: schema:browserUrl https://icd.who.int/dev11/f/en#/http%3A%2F%2Fi
 id: http://id.who.int/icd/entity/1109440237
 name: Speed of speech
 is_a: http://id.who.int/icd/entity/213697684 ! Fluency and rhythm of speech functions
+is_a: PROMOT:7000003 ! Phenotypically related body function
 relationship: related:to HP:0001618 ! Dysphonia
 property_value: schema:browserUrl https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F1109440237
 property_value: skos:altLabel "Functions involved in speed of speech" xsd:string
@@ -16105,6 +16173,7 @@ property_value: skos:altLabel "restriction, not specified " xsd:string
 id: http://id.who.int/icd/entity/117147127
 name: Pain in chest
 is_a: http://id.who.int/icd/entity/577558794 ! Pain in body part
+is_a: PROMOT:7000003 ! Phenotypically related body function
 relationship: related:to HP:0012531 ! Pain
 property_value: schema:browserUrl https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F117147127
 property_value: skos:definition "Sensation of unpleasant feeling indicating potential or actual damage to some body structure felt in the chest." xsd:string
@@ -16113,6 +16182,7 @@ property_value: skos:definition "Sensation of unpleasant feeling indicating pote
 id: http://id.who.int/icd/entity/1174312718
 name: Manipulation of food in the mouth
 is_a: http://id.who.int/icd/entity/363211474 ! Ingestion functions
+is_a: PROMOT:7000003 ! Phenotypically related body function
 relationship: related:to HP:0011968 ! Feeding difficulties
 property_value: schema:browserUrl https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F1174312718
 property_value: skos:definition "Functions of moving food around the mouth with the teeth and tongue." xsd:string
@@ -16169,6 +16239,7 @@ property_value: schema:browserUrl https://icd.who.int/dev11/f/en#/http%3A%2F%2Fi
 id: http://id.who.int/icd/entity/1299345975
 name: Pain in upper limb
 is_a: http://id.who.int/icd/entity/577558794 ! Pain in body part
+is_a: PROMOT:7000003 ! Phenotypically related body function
 relationship: related:to HP:0012531 ! Pain
 property_value: schema:browserUrl https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F1299345975
 property_value: skos:definition "Sensation of unpleasant feeling indicating potential or actual damage to some body structure felt in either one or both upper limbs, including hands." xsd:string
@@ -16177,6 +16248,7 @@ property_value: skos:definition "Sensation of unpleasant feeling indicating pote
 id: http://id.who.int/icd/entity/1328466963
 name: Gait pattern functions
 is_a: http://id.who.int/icd/entity/627064928 ! Movement functions
+is_a: PROMOT:7000003 ! Phenotypically related body function
 relationship: related:to HP:0001288 ! Gait disturbance
 property_value: schema:browserUrl https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F1328466963
 property_value: schema:exclusion "Control of voluntary movement functions" xsd:string {schema:foundationReference="http://id.who.int/icd/entity/838096586"}
@@ -16206,6 +16278,7 @@ property_value: schema:browserUrl https://icd.who.int/dev11/f/en#/http%3A%2F%2Fi
 id: http://id.who.int/icd/entity/1360101629
 name: Respiratory muscle functions
 is_a: http://id.who.int/icd/entity/744367503 ! Functions of the respiratory system
+is_a: PROMOT:7000003 ! Phenotypically related body function
 relationship: related:to HP:0002098 ! Respiratory distress
 property_value: schema:browserUrl https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F1360101629
 property_value: schema:exclusion "Additional functions of the respiratory system" xsd:string {schema:foundationReference="http://id.who.int/icd/entity/1682107878"}
@@ -16217,7 +16290,6 @@ property_value: skos:definition "Functions of the muscles involved in breathing.
 id: http://id.who.int/icd/entity/1363559646
 name: Mental functions
 is_a: http://id.who.int/icd/entity/567313968 ! Body functions
-is_a: PROMOT:7000003 ! Phenotypically related body function
 property_value: schema:browserUrl https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F1363559646
 property_value: skos:definition "This chapter is about the functions of the brain: both global mental functions, such as consciousness, energy and drive, and specific mental functions, such as memory, language and calculation mental functions." xsd:string
 
@@ -16225,6 +16297,7 @@ property_value: skos:definition "This chapter is about the functions of the brai
 id: http://id.who.int/icd/entity/1389818830
 name: Chewing
 is_a: http://id.who.int/icd/entity/363211474 ! Ingestion functions
+is_a: PROMOT:7000003 ! Phenotypically related body function
 relationship: related:to HP:0005216 ! Impaired mastication
 relationship: related:to HP:0011968 ! Feeding difficulties
 property_value: schema:browserUrl https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F1389818830
@@ -16254,6 +16327,7 @@ property_value: skos:altLabel "restriction, not applicable " xsd:string
 id: http://id.who.int/icd/entity/1407133273
 name: Power of muscles in lower half of the body
 is_a: http://id.who.int/icd/entity/274570113 ! Muscle power functions
+is_a: PROMOT:7000003 ! Phenotypically related body function
 relationship: related:to HP:0007340 ! Lower limb muscle weakness
 property_value: schema:browserUrl https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F1407133273
 property_value: skos:altLabel "Functions involved in power of muscles in lower half of the body" xsd:string
@@ -16269,6 +16343,7 @@ property_value: schema:browserUrl https://icd.who.int/dev11/f/en#/http%3A%2F%2Fi
 id: http://id.who.int/icd/entity/1426641453
 name: Melody of speech
 is_a: http://id.who.int/icd/entity/213697684 ! Fluency and rhythm of speech functions
+is_a: PROMOT:7000003 ! Phenotypically related body function
 relationship: related:to HP:0001618 ! Dysphonia
 property_value: schema:browserUrl https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F1426641453
 property_value: schema:inclusion "intonation" xsd:string
@@ -16303,6 +16378,7 @@ property_value: skos:definition "Producing words, phrases and longer passages in
 id: http://id.who.int/icd/entity/1515853559
 name: Pain in lower limb
 is_a: http://id.who.int/icd/entity/577558794 ! Pain in body part
+is_a: PROMOT:7000003 ! Phenotypically related body function
 relationship: related:to HP:0012531 ! Pain
 property_value: schema:browserUrl https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F1515853559
 property_value: skos:definition "Sensation of unpleasant feeling indicating potential or actual damage to some body structure felt in either one or both lower limbs, including feet." xsd:string
@@ -16353,7 +16429,6 @@ property_value: skos:definition "This chapter is about caring for oneself, washi
 id: http://id.who.int/icd/entity/161488596
 name: Neuromusculoskeletal and movement-related functions
 is_a: http://id.who.int/icd/entity/567313968 ! Body functions
-is_a: PROMOT:7000003 ! Phenotypically related body function
 property_value: schema:browserUrl https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F161488596
 property_value: skos:definition "This chapter is about the functions of movement and mobility, including functions of joints, bones, reflexes and muscles." xsd:string
 
@@ -16367,7 +16442,6 @@ property_value: schema:browserUrl https://icd.who.int/dev11/f/en#/http%3A%2F%2Fi
 id: http://id.who.int/icd/entity/1626363729
 name: Body structures
 is_a: BFO:0000028 ! three-dimensional spatial region
-equivalent_to: PROMOT:7000002 ! Phenotypically related body structure
 property_value: schema:browserUrl https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F1626363729
 property_value: skos:definition "Body structures are anatomical parts of the body such as organs, limbs and their components.\nImpairments are problems in body function or structure as a significant deviation or loss.\nFirst qualifier\nGeneric qualifier with the negative scale, used to indicate the extent or an impairment:" xsd:string
 
@@ -16414,6 +16488,7 @@ property_value: schema:browserUrl https://icd.who.int/dev11/f/en#/http%3A%2F%2Fi
 id: http://id.who.int/icd/entity/1789365017
 name: Power of isolated muscles and muscle groups
 is_a: http://id.who.int/icd/entity/274570113 ! Muscle power functions
+is_a: PROMOT:7000003 ! Phenotypically related body function
 relationship: related:to HP:0000183 ! Tongue muscle weakness
 relationship: related:to HP:0000467 ! Neck muscle weakness
 relationship: related:to HP:0003325 ! Limb-girdle muscle weakness
@@ -16443,6 +16518,7 @@ property_value: schema:browserUrl https://icd.who.int/dev11/f/en#/http%3A%2F%2Fi
 id: http://id.who.int/icd/entity/1806589582
 name: Biting
 is_a: http://id.who.int/icd/entity/363211474 ! Ingestion functions
+is_a: PROMOT:7000003 ! Phenotypically related body function
 relationship: related:to HP:0011968 ! Feeding difficulties
 property_value: schema:browserUrl https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F1806589582
 property_value: skos:definition "Functions of cutting into, piercing or tearing off food with the front teeth." xsd:string
@@ -16473,6 +16549,7 @@ property_value: schema:browserUrl https://icd.who.int/dev11/f/en#/http%3A%2F%2Fi
 id: http://id.who.int/icd/entity/1831985718
 name: Vestibular function of balance
 is_a: http://id.who.int/icd/entity/1916167881 ! Sensory functions and pain
+is_a: PROMOT:7000003 ! Phenotypically related body function
 relationship: related:to HP:0002141 ! Gait imbalance
 property_value: schema:browserUrl https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F1831985718
 property_value: skos:definition "Sensory functions of the inner ear related to determining the balance of the body." xsd:string
@@ -16481,7 +16558,6 @@ property_value: skos:definition "Sensory functions of the inner ear related to d
 id: http://id.who.int/icd/entity/1843740951
 name: The eye, ear and related structures
 is_a: http://id.who.int/icd/entity/1626363729 ! Body structures
-is_a: PROMOT:7000002 ! Phenotypically related body structure
 property_value: schema:browserUrl https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F1843740951
 
 [Term]
@@ -16499,6 +16575,7 @@ property_value: skos:definition "Functions of the production of characteristics 
 id: http://id.who.int/icd/entity/1864074583
 name: Energy level
 is_a: http://id.who.int/icd/entity/1363559646 ! Mental functions
+is_a: PROMOT:7000003 ! Phenotypically related body function
 relationship: related:to HP:0012378 ! Fatigue
 property_value: schema:browserUrl https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F1864074583
 property_value: skos:altLabel "Functions involved in energy level" xsd:string
@@ -16545,7 +16622,6 @@ property_value: schema:browserUrl https://icd.who.int/dev11/f/en#/http%3A%2F%2Fi
 id: http://id.who.int/icd/entity/1916167881
 name: Sensory functions and pain
 is_a: http://id.who.int/icd/entity/567313968 ! Body functions
-is_a: PROMOT:7000003 ! Phenotypically related body function
 property_value: schema:browserUrl https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F1916167881
 property_value: skos:definition "This chapter is about the functions of the senses, seeing, hearing, tasting and so on, as well as the sensation of pain." xsd:string
 
@@ -16607,6 +16683,7 @@ property_value: schema:browserUrl https://icd.who.int/dev11/f/en#/http%3A%2F%2Fi
 id: http://id.who.int/icd/entity/2021370201
 name: Functions of the eyelid
 is_a: http://id.who.int/icd/entity/1916167881 ! Sensory functions and pain
+is_a: PROMOT:7000003 ! Phenotypically related body function
 relationship: related:to HP:0000508 ! Ptosis
 property_value: schema:browserUrl https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F2021370201
 property_value: skos:definition "Functions of the eyelid, such as the protective reflex." xsd:string
@@ -16636,6 +16713,7 @@ property_value: schema:browserUrl https://icd.who.int/dev11/f/en#/http%3A%2F%2Fi
 id: http://id.who.int/icd/entity/2069371821
 name: Rhythm of speech
 is_a: http://id.who.int/icd/entity/213697684 ! Fluency and rhythm of speech functions
+is_a: PROMOT:7000003 ! Phenotypically related body function
 relationship: related:to HP:0001618 ! Dysphonia
 property_value: schema:browserUrl https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F2069371821
 property_value: skos:altLabel "Functions involved in rhythm of speech" xsd:string
@@ -16645,6 +16723,7 @@ property_value: skos:definition "Functions of the modulated, tempo and stress pa
 id: http://id.who.int/icd/entity/2089171534
 name: Sucking
 is_a: http://id.who.int/icd/entity/363211474 ! Ingestion functions
+is_a: PROMOT:7000003 ! Phenotypically related body function
 relationship: related:to HP:0011968 ! Feeding difficulties
 property_value: schema:browserUrl https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F2089171534
 property_value: skos:definition "Functions of drawing food or liquids into the mouth by a suction force produced by movements of the cheeks, lips and tongue." xsd:string
@@ -16677,7 +16756,6 @@ property_value: schema:browserUrl https://icd.who.int/dev11/f/en#/http%3A%2F%2Fi
 [Term]
 id: http://id.who.int/icd/entity/256640543
 name: Structure of salivary glands
-is_a: http://id.who.int/icd/entity/1626363729 ! Body structures
 is_a: PROMOT:7000002 ! Phenotypically related body structure
 relationship: related:to HP:0011968 ! Feeding difficulties
 property_value: schema:browserUrl https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F256640543
@@ -16722,6 +16800,7 @@ property_value: schema:browserUrl https://icd.who.int/dev11/f/en#/http%3A%2F%2Fi
 id: http://id.who.int/icd/entity/299098423
 name: Pain in head and neck
 is_a: http://id.who.int/icd/entity/577558794 ! Pain in body part
+is_a: PROMOT:7000003 ! Phenotypically related body function
 relationship: related:to HP:0012531 ! Pain
 property_value: schema:browserUrl https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F299098423
 property_value: skos:definition "Sensation of unpleasant feeling indicating potential or actual damage to some body structure felt in the head and neck." xsd:string
@@ -16750,7 +16829,6 @@ property_value: skos:altLabel "MILD restriction" xsd:string
 id: http://id.who.int/icd/entity/363211474
 name: Ingestion functions
 is_a: http://id.who.int/icd/entity/567313968 ! Body functions
-is_a: PROMOT:7000003 ! Phenotypically related body function
 property_value: schema:browserUrl https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F363211474
 property_value: schema:exclusion "Sensations associated with the digestive system" xsd:string {schema:foundationReference="http://id.who.int/icd/entity/2028728035"}
 property_value: skos:definition "Functions related to taking in and manipulating solids or liquids through the mouth into the body." xsd:string
@@ -16774,7 +16852,6 @@ property_value: skos:altLabel "COMPLETE capacity restriction" xsd:string
 id: http://id.who.int/icd/entity/388067588
 name: Voice and speech functions
 is_a: http://id.who.int/icd/entity/567313968 ! Body functions
-is_a: PROMOT:7000003 ! Phenotypically related body function
 property_value: schema:browserUrl https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F388067588
 property_value: skos:definition "This chapter is about the functions of producing sounds and speech." xsd:string
 
@@ -16795,6 +16872,7 @@ property_value: skos:altLabel "NO restriction" xsd:string
 id: http://id.who.int/icd/entity/405925948
 name: External ocular muscles
 is_a: http://id.who.int/icd/entity/1843740951 ! The eye, ear and related structures
+is_a: PROMOT:7000002 ! Phenotypically related body structure
 relationship: related:to HP:0007715 ! Weak extraocular muscles
 relationship: related:to HP:0007838 ! Progressive ptosis
 property_value: schema:browserUrl https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F405925948
@@ -16816,6 +16894,7 @@ property_value: schema:browserUrl https://icd.who.int/dev11/f/en#/http%3A%2F%2Fi
 id: http://id.who.int/icd/entity/446199613
 name: Respiration functions
 is_a: http://id.who.int/icd/entity/744367503 ! Functions of the respiratory system
+is_a: PROMOT:7000003 ! Phenotypically related body function
 relationship: related:to HP:0002098 ! Respiratory distress
 property_value: schema:browserUrl https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F446199613
 property_value: schema:exclusion "Additional functions of the respiratory system" xsd:string {schema:foundationReference="http://id.who.int/icd/entity/1682107878"}
@@ -16833,6 +16912,7 @@ property_value: schema:browserUrl https://icd.who.int/dev11/f/en#/http%3A%2F%2Fi
 id: http://id.who.int/icd/entity/454325322
 name: Pain in multiple body parts
 is_a: http://id.who.int/icd/entity/894218497 ! Sensation of pain
+is_a: PROMOT:7000003 ! Phenotypically related body function
 relationship: related:to HP:0012531 ! Pain
 property_value: schema:browserUrl https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F454325322
 property_value: skos:altLabel "Sensation of pain in multiple body parts" xsd:string
@@ -16857,6 +16937,7 @@ property_value: schema:browserUrl https://icd.who.int/dev11/f/en#/http%3A%2F%2Fi
 id: http://id.who.int/icd/entity/495844982
 name: Muscles of respiration
 is_a: http://id.who.int/icd/entity/829058183 ! Structure of respiratory system
+is_a: PROMOT:7000002 ! Phenotypically related body structure
 relationship: related:to HP:0002098 ! Respiratory distress
 relationship: related:to HP:0032342 ! Reduced forced expiratory volume in one second
 property_value: schema:browserUrl https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F495844982
@@ -16878,6 +16959,7 @@ property_value: schema:browserUrl https://icd.who.int/dev11/f/en#/http%3A%2F%2Fi
 id: http://id.who.int/icd/entity/539470158
 name: Salivation
 is_a: http://id.who.int/icd/entity/363211474 ! Ingestion functions
+is_a: PROMOT:7000003 ! Phenotypically related body function
 relationship: related:to HP:0011968 ! Feeding difficulties
 property_value: schema:browserUrl https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F539470158
 property_value: skos:definition "Function of the production of saliva within the mouth." xsd:string
@@ -16901,6 +16983,7 @@ property_value: skos:definition "Walking for less than a kilometre, such as walk
 id: http://id.who.int/icd/entity/556694745
 name: Power of muscles of the trunk
 is_a: http://id.who.int/icd/entity/274570113 ! Muscle power functions
+is_a: PROMOT:7000003 ! Phenotypically related body function
 relationship: related:to HP:0004878 ! Intercostal muscle weakness
 property_value: schema:browserUrl https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F556694745
 property_value: skos:altLabel " Functions involved in power of muscles of the trunk" xsd:string
@@ -16916,7 +16999,6 @@ property_value: schema:browserUrl https://icd.who.int/dev11/f/en#/http%3A%2F%2Fi
 id: http://id.who.int/icd/entity/567313968
 name: Body functions
 is_a: BFO:0000034 ! function
-equivalent_to: PROMOT:7000003 ! Phenotypically related body function
 property_value: schema:browserUrl https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F567313968
 property_value: skos:definition "Body functions are the physiological functions of body systems (including psychological functions).\nImpairments are problems in body function or structure as a significant deviation or loss.\nBroad ranges of percentages are provided for those cases in which calibrated assessment instruments or other standards are available to quantify the impairment in body function. For example, when \"no impairment\" or \"complete impairment\" in body function is coded, this scaling may have margin of error of up to 5%. \"Moderate impairment\" is generally up to half of the scale of total impairment. The percentages are to be calibrated in different domains with reference to population standards as percentiles. For this quantification to be used in a uniform manner, assessment procedures need to be developed through research.\nFor a further explanation of coding conventions in ICF, refer to Annex 2." xsd:string
 
@@ -16924,6 +17006,7 @@ property_value: skos:definition "Body functions are the physiological functions 
 id: http://id.who.int/icd/entity/576915490
 name: Involuntary movement reaction functions
 is_a: http://id.who.int/icd/entity/627064928 ! Movement functions
+is_a: PROMOT:7000003 ! Phenotypically related body function
 relationship: related:to HP:0002141 ! Gait imbalance
 property_value: schema:browserUrl https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F576915490
 property_value: schema:exclusion "Motor reflex functions" xsd:string {schema:foundationReference="http://id.who.int/icd/entity/1777008610"}
@@ -16978,7 +17061,6 @@ property_value: schema:browserUrl https://icd.who.int/dev11/f/en#/http%3A%2F%2Fi
 [Term]
 id: http://id.who.int/icd/entity/644658903
 name: Structures related to movement
-is_a: http://id.who.int/icd/entity/1626363729 ! Body structures
 is_a: PROMOT:7000002 ! Phenotypically related body structure
 relationship: related:to HP:0002141 ! Gait imbalance
 relationship: related:to HP:0007340 ! Lower limb muscle weakness
@@ -16994,6 +17076,7 @@ property_value: schema:browserUrl https://icd.who.int/dev11/f/en#/http%3A%2F%2Fi
 id: http://id.who.int/icd/entity/682314871
 name: Pain in back
 is_a: http://id.who.int/icd/entity/577558794 ! Pain in body part
+is_a: PROMOT:7000003 ! Phenotypically related body function
 relationship: related:to HP:0012531 ! Pain
 property_value: schema:browserUrl https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F682314871
 property_value: schema:inclusion "low backache" xsd:string
@@ -17006,6 +17089,7 @@ property_value: skos:definition "Sensation of unpleasant feeling indicating pote
 id: http://id.who.int/icd/entity/68679181
 name: Vestibular labyrinth
 is_a: http://id.who.int/icd/entity/1843740951 ! The eye, ear and related structures
+is_a: PROMOT:7000002 ! Phenotypically related body structure
 relationship: related:to HP:0002141 ! Gait imbalance
 property_value: schema:browserUrl https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F68679181
 
@@ -17025,6 +17109,7 @@ property_value: schema:browserUrl https://icd.who.int/dev11/f/en#/http%3A%2F%2Fi
 id: http://id.who.int/icd/entity/712570723
 name: Voice functions
 is_a: http://id.who.int/icd/entity/388067588 ! Voice and speech functions
+is_a: PROMOT:7000003 ! Phenotypically related body function
 relationship: related:to HP:0001618 ! Dysphonia
 property_value: schema:browserUrl https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F712570723
 property_value: schema:exclusion "Alternative vocalization functions" xsd:string {schema:foundationReference="http://id.who.int/icd/entity/1034220517"}
@@ -17056,7 +17141,6 @@ property_value: skos:altLabel "MODERATE restriction" xsd:string
 id: http://id.who.int/icd/entity/744367503
 name: Functions of the respiratory system
 is_a: http://id.who.int/icd/entity/567313968 ! Body functions
-is_a: PROMOT:7000003 ! Phenotypically related body function
 property_value: schema:browserUrl https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F744367503
 
 [Term]
@@ -17091,13 +17175,13 @@ property_value: schema:browserUrl https://icd.who.int/dev11/f/en#/http%3A%2F%2Fi
 id: http://id.who.int/icd/entity/829058183
 name: Structure of respiratory system
 is_a: http://id.who.int/icd/entity/1626363729 ! Body structures
-is_a: PROMOT:7000002 ! Phenotypically related body structure
 property_value: schema:browserUrl https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F829058183
 
 [Term]
 id: http://id.who.int/icd/entity/870135798
 name: Lungs
 is_a: http://id.who.int/icd/entity/829058183 ! Structure of respiratory system
+is_a: PROMOT:7000002 ! Phenotypically related body structure
 relationship: related:to HP:0002098 ! Respiratory distress
 property_value: schema:browserUrl https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F870135798
 
@@ -17111,6 +17195,7 @@ property_value: schema:browserUrl https://icd.who.int/dev11/f/en#/http%3A%2F%2Fi
 id: http://id.who.int/icd/entity/893697482
 name: Generalized pain
 is_a: http://id.who.int/icd/entity/894218497 ! Sensation of pain
+is_a: PROMOT:7000003 ! Phenotypically related body function
 relationship: related:to HP:0012531 ! Pain
 property_value: schema:browserUrl https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F893697482
 property_value: skos:altLabel "Sensation of generalized pain" xsd:string
@@ -17143,6 +17228,7 @@ property_value: schema:browserUrl https://icd.who.int/dev11/f/en#/http%3A%2F%2Fi
 id: http://id.who.int/icd/entity/923782542
 name: Swallowing
 is_a: http://id.who.int/icd/entity/363211474 ! Ingestion functions
+is_a: PROMOT:7000003 ! Phenotypically related body function
 relationship: related:to HP:0002015 ! Dysphagia
 relationship: related:to HP:0011968 ! Feeding difficulties
 property_value: schema:browserUrl https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F923782542

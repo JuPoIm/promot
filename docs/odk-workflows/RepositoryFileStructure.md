@@ -16,21 +16,17 @@ These are the current imports in PROMOT
 
 | Import | URL | Type |
 | ------ | --- | ---- |
-| bfo | http://purl.obolibrary.org/obo/bfo.owl | None |
-| fma | http://purl.obolibrary.org/obo/fma.owl | None |
-| hp | http://purl.obolibrary.org/obo/hp.owl | None |
+| bfo | http://purl.obolibrary.org/obo/bfo.owl | custom |
+| eco | http://purl.obolibrary.org/obo/eco.owl | custom |
+| fma | http://purl.org/sig/ont/fma.owl | custom |
+| hp | http://purl.obolibrary.org/obo/hp.owl | custom |
 | iao | http://purl.obolibrary.org/obo/iao.owl | filter |
-| mondo | http://purl.obolibrary.org/obo/mondo.owl | None |
-| ncit | http://purl.obolibrary.org/obo/ncit.owl | None |
-| obi | http://purl.obolibrary.org/obo/obi.owl | None |
-| orcidio | https://w3id.org/orcidio/orcidio.owl | filter |
-| ro | http://purl.obolibrary.org/obo/ro.owl | None |
-| scdo | http://purl.obolibrary.org/obo/scdo.owl | None |
-| sio | http://purl.obolibrary.org/obo/sio.owl | None |
-| snomed | http://purl.obolibrary.org/obo/snomed.owl | None |
-| vo | http://purl.obolibrary.org/obo/vo.owl | None |
-| whofic | https://raw.githubusercontent.com/whoficitc/harmonization/main/ontology/whofic-2024-01-21.owl | None |
-
+| icf | https://raw.githubusercontent.com/whoficitc/harmonization/main/ontology/whofic-2025-05-24.owl | custom |
+| ordo | https://www.orphadata.com/data/ontologies/ordo/last_version/ORDO_en_4.8.owl | custom |
+| obi | http://purl.obolibrary.org/obo/obi.owl | custom |
+| ro | http://purl.obolibrary.org/obo/ro.owl | custom |
+| sio | http://purl.obolibrary.org/obo/sio.owl | custom |
+| snomed | http://purl.obolibrary.org/obo/snomed.owl | custom |
 ## Components
 Components, in contrast to imports, are considered full members of the ontology. This means that any axiom in a component is also included in the ontology base - which means it is considered _native_ to the ontology. While this sounds complicated, consider this: conceptually, no component should be part of more than one ontology. If that seems to be the case, we are most likely talking about an import. Components are often not needed for ontologies, but there are some use cases:
 
@@ -42,4 +38,4 @@ These are the components in PROMOT
 
 | Filename | URL |
 | -------- | --- |
-| promot_onto.owl | None |
+| promot-component.owl | None |
