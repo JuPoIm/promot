@@ -10,7 +10,7 @@
 # More information: https://github.com/INCATools/ontology-development-kit/
 
 # Fingerprint of the configuration file when this Makefile was last generated
-CONFIG_HASH=                dbd44dd30a77b70d8db024ae810e246dd583d03401bd17bd2749de0b324b392b
+CONFIG_HASH=                1882452c454e248c23d1276b8608b5057e0ceb965c9fb13546f6bf2d4055d0ea
 
 
 # ----------------------------------------
@@ -194,7 +194,7 @@ all_main: $(MAIN_FILES)
 # ----------------------------------------
 
 
-IMPORTS =  bfo eco fma hp iao icf ordo obi ro sio snomed
+IMPORTS =  bfo eco fma hp iao icf ordo ro sio snomed
 
 IMPORT_ROOTS = $(patsubst %, $(IMPORTDIR)/%_import, $(IMPORTS))
 IMPORT_OWL_FILES = $(foreach n,$(IMPORT_ROOTS), $(n).owl)
@@ -572,14 +572,6 @@ mirror-icf: | $(TMPDIR)
 .PRECIOUS: $(MIRRORDIR)/ordo.owl
 mirror-ordo: | $(TMPDIR)
 	$(ROBOT) convert -I https://www.orphadata.com/data/ontologies/ordo/last_version/ORDO_en_4.8.owl -o $(TMPDIR)/$@.owl
-
-
-## ONTOLOGY: obi
-.PHONY: mirror-obi
-.PRECIOUS: $(MIRRORDIR)/obi.owl
-mirror-obi: | $(TMPDIR)
-	curl -L $(OBOBASE)/obi.owl --create-dirs -o $(TMPDIR)/obi-download.owl --retry 4 --max-time 200 && \
-	$(ROBOT) convert -i $(TMPDIR)/obi-download.owl -o $(TMPDIR)/$@.owl
 
 
 ## ONTOLOGY: ro

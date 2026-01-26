@@ -1,366 +1,769 @@
 format-version: 1.2
-data-version: promot/releases/2025-08-14/promot-simple.owl
-date: 14:08:2025 12:20
+data-version: promot/releases/2026-01-20/promot-simple.owl
+date: 20:01:2026 16:30
 subsetdef: ro-eco ""
 subsetdef: RO:0002259 ""
-idspace: dc http://purl.org/dc/elements/1.1/ 
+idspace: ace_lexicon http://attempto.ifi.uzh.ch/ace_lexicon# 
+idspace: BIOLINK https://w3id.org/biolink/vocab/ 
+idspace: cc http://creativecommons.org/ns# 
+idspace: CPATH_CARE_SITE https://w3id.org/cpont/care_site/ 
+idspace: CPATH_CONDITION_OCCURRENCE https://w3id.org/cpont/condition_occurrence/ 
+idspace: CPATH_MEASUREMENT https://w3id.org/cpont/measurement/ 
+idspace: CPATH_PERSON https://w3id.org/cpont/person/ 
+idspace: CPATH_VISIT_OCCURRENCE https://w3id.org/cpont/visit_occurrence/ 
+idspace: CPONT https://w3id.org/cpont/vocab/CPONT_ 
+idspace: dc11 http://purl.org/dc/elements/1.1/ 
+idspace: foaf http://xmlns.com/foaf/0.1/ 
+idspace: HGNC http://identifiers.org/hgnc/ 
+idspace: ICF http://id.who.int/icd/entity/ 
 idspace: oboInOwl http://www.geneontology.org/formats/oboInOwl# 
+idspace: OMOP https://athena.ohdsi.org/search-terms/terms/ 
+idspace: omopclass https://w3id.org/cpont/omop/classes/ 
+idspace: omoprel https://w3id.org/cpont/omop/relations/ 
+idspace: omoptype https://w3id.org/cpont/omop/types/ 
+idspace: prov http://www.w3.org/ns/prov# 
+idspace: rdfa http://www.w3.org/ns/rdfa# 
+idspace: resource http://semanticscience.org/resource/ 
+idspace: schema http://schema.org/ 
+idspace: SIO http://semanticscience.org/resource/SIO_ 
+idspace: skos http://www.w3.org/2004/02/skos/core# 
+idspace: SNOMED http://snomed.info/id/ 
+idspace: sssom https://w3id.org/sssom/ 
+idspace: swrl http://www.w3.org/2003/11/swrl# 
+idspace: swrla http://swrl.stanford.edu/ontologies/3.3/swrla.owl# 
+idspace: swrlb http://www.w3.org/2003/11/swrlb# 
 idspace: terms http://purl.org/dc/terms/ 
-remark: Also contributor for the gathering ??\nThomas Bongivault, MSc\nMarc Vincent, PhD\n\n???
-remark: The 'Performing a Rare Disease-Oriented Master Observational Trial' (PROMOT) project aims to generate a learning and knowledge mobilization platform allowing the development of a precision medicine approach for rare neuromuscular diseases.\n\nSee also: https://www.promotinitiative.com/project
+idspace: void http://rdfs.org/ns/void# 
 ontology: promot/promot-simple
-property_value: dc:contributor "Anita Burgun MD, PhD\nhttps://orcid.org/0000-0001-6855-4366" xsd:string
-property_value: dc:contributor "Carole Faviez PhD\nhttps://orcid.org/0000-0002-1500-0236" xsd:string
-property_value: dc:contributor "Cynthia Gagnon PhD\nhttps://orcid.org/0000-0003-2829-8470" xsd:string
-property_value: dc:contributor "Daniel Natera De Benito MD, PhD\nhttps://orcid.org/0000-0001-7764-2085" xsd:string
-property_value: dc:contributor "Elizabeth Angelevski PhD" xsd:string
-property_value: dc:contributor "European Rare Diseases Research Alliance (ERDERA)\n\nWebsite: https://erdera.org" xsd:string
-property_value: dc:contributor "Hanns Lochmuller MD, PhD\nhttps://orcid.org/0000-0003-2324-8001" xsd:string
-property_value: dc:contributor "Mansoore Gholizade MD" xsd:string
-property_value: dc:creator "Juliette Potier MSc\nhttps://orcid.org/0009-0000-5160-7927" xsd:string
-property_value: dc:creator "Paul Fabry MD, PhD student\nhttps://orcid.org/0000-0002-3336-2476" xsd:string
-property_value: owl:versionInfo "2025-08-14" xsd:string
-property_value: terms:description "Ontology for building the database of the PROMOT project\n\nSee also: https://www.promotinitiative.com" xsd:string
-property_value: terms:title "PROMOT Common Data Model ontology" xsd:string
+property_value: owl:versionInfo "2026-01-20" xsd:string
+property_value: terms:description "Ontology for modeling the three following neuromuscular diseases : OPMD, Congenital myopathies and Congenital myastenic syndroms. It aims to be also an ontology for building the PROMOT project relational database." xsd:string
+property_value: terms:license https://creativecommons.org/licenses/by-nc-sa/4.0/
+property_value: terms:title "PROMOT ontology" xsd:string
 
 [Term]
 id: PROMOT:0000000
 name: root node
 
 [Term]
+id: PROMOT:0000001
+name: genetic mutation {def="Une altération génétique qui est rare dans une population.", name="mutation génetique", name="mutación genética", def="A sequence alteration that is very rare allele in a population.", def="Una alteración genética que es rara en una población."}
+comment: Gene Ontology Resource  {IAO:0000119="GENO:0000492"}
+property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
+
+[Term]
 id: PROMOT:0000002
-name: PABPN1 mutation
-def: "Mutation located within the PABPN1 gene" []
-is_a: PROMOT:0000000 ! root node
-property_value: IAO:0000117 "Juliette Potier" xsd:string
+name: PABPN1 mutation {name="mutation du gène PABPN1", def="A sequence alteration located within the PABPN1 gene.", name="mutación del gen PAPBN1", def="Una alteración genética ubicada en el gen PABPN1.", def="Une altération génétique située au niveau du gène PABPN1."}
+comment: JP: Translated to spanish using Bing Translator
+is_a: PROMOT:0000001 ! genetic mutation
+property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
 id: PROMOT:0000003
-name: RYR1 mutation
-def: "Mutation located within the RYR1 gene" []
-is_a: PROMOT:0000000 ! root node
-property_value: IAO:0000117 "Juliette Potier" xsd:string
+name: RYR1 mutation {name="mutación del gen RYR1", name="mutation du gène RYR1", def="Una alteración genética ubicada en el gen RYR1.", def="Une altération génétique située au niveau du gène RYR1.", def="A sequence alteration located within the RYR1 gene."}
+comment: JP: Translated to spanish using Bing Translator
+is_a: PROMOT:0000001 ! genetic mutation
+property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
 id: PROMOT:0000004
-name: TTN mutation
-def: "Mutation located within the TTN gene" []
-is_a: PROMOT:0000000 ! root node
-property_value: IAO:0000117 "Juliette Potier" xsd:string
+name: TTN mutation {name="mutación del gen TTN", def="Une altération génétique située au niveau du gène TTN.", def="Una alteración genética ubicada en el gen TTN.", def="A sequence alteration located within the TTN gene.", name="mutation du gène TTN"}
+comment: JP: Translated to spanish using Bing Translator
+is_a: PROMOT:0000001 ! genetic mutation
+property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
 id: PROMOT:0000005
-name: NEB mutation
-def: "Mutation located within the NEB gene" []
-is_a: PROMOT:0000000 ! root node
-property_value: IAO:0000117 "Juliette Potier" xsd:string
+name: NEB mutation {name="mutación del gen NEB", def="Une altération génétique située au niveau du gène NEB.", def="Una alteración genética ubicada en el gen NEB.", def="A sequence alteration located within the NEB gene.", name="mutation du gène NEB"}
+comment: JP: Translated to spanish using Bing Translator
+is_a: PROMOT:0000001 ! genetic mutation
+property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
 id: PROMOT:0000006
-name: MTM1 mutation
-def: "Mutation located within the MTM1 gene" []
-is_a: PROMOT:0000000 ! root node
-property_value: IAO:0000117 "Juliette Potier" xsd:string
+name: MTM1 mutation {def="Une altération génétique située au niveau du gène MTM1.", def="A sequence alteration located within the MTM1 gene.", name="mutation du gène NMTM1", name="mutación del gen NMTM1", def="Una alteración genética ubicada en el gen MTM1."}
+comment: JP: Translated to spanish using Bing Translator
+is_a: PROMOT:0000001 ! genetic mutation
+property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
 id: PROMOT:0000007
-name: ACTA1 mutation
-def: "Mutation located within the ACTA1 gene" []
-is_a: PROMOT:0000000 ! root node
-property_value: IAO:0000117 "Juliette Potier" xsd:string
+name: ACTA1 mutation {name="mutation du gène ACTA1", def="Une altération génétique située au niveau du gène ACTA1.", def="Una alteración genética ubicada en el gen ACTA1.", name="mutación del gen ACTA1", def="A sequence alteration located within the ACTA1 gene."}
+comment: JP: Translated to spanish using Bing Translator
+is_a: PROMOT:0000001 ! genetic mutation
+property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
 id: PROMOT:0000008
-name: SELENON mutation
-def: "Mutation located within the SELENON gene" []
-is_a: PROMOT:0000000 ! root node
-property_value: IAO:0000117 "Juliette Potier" xsd:string
+name: SELENON mutation {name="mutation du gène SELENON", def="Une altération génétique située au niveau du gène SELENON.", def="Una alteración genética ubicada en el gen SELENON.", name="mutación del gen SELENON", def="A sequence alteration located within the SELENON gene."}
+comment: JP: Translated to spanish using Bing Translator
+is_a: PROMOT:0000001 ! genetic mutation
+property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
 id: PROMOT:0000009
-name: CHRNE mutation
-def: "Mutation located within the CHRNE gene" []
-is_a: PROMOT:0000000 ! root node
-property_value: IAO:0000117 "Juliette Potier" xsd:string
+name: CHRNE mutation {name="mutación del gen CHRNE", def="Une altération génétique située au niveau du gène CHRNE.", def="A sequence alteration located within the CHRNE gene.", name="mutation du gène CHRNE", def="Una alteración genética ubicada en el gen CHRNE."}
+comment: JP: Translated to spanish using Bing Translator
+is_a: PROMOT:0000001 ! genetic mutation
+property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
 id: PROMOT:0000010
-name: DOK7 mutation
-def: "Mutation located within the DOK7 gene" []
-is_a: PROMOT:0000000 ! root node
-property_value: IAO:0000117 "Juliette Potier" xsd:string
+name: DOK7 mutation {def="Una alteración genética ubicada en el gen DOK7.", def="Une altération génétique située au niveau du gène DOK7.", name="mutación del gen DOK7", def="A sequence alteration located within the DOK7 gene.", name="mutation du gène DOK7"}
+comment: JP: Translated to spanish using Bing Translator
+is_a: PROMOT:0000001 ! genetic mutation
+property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
 id: PROMOT:0000011
-name: COLQ mutation
-def: "Mutation located within the COLQ gene" []
-is_a: PROMOT:0000000 ! root node
-property_value: IAO:0000117 "Juliette Potier" xsd:string
+name: COLQ mutation {def="Une altération génétique située au niveau du gène COLQ.", name="mutación del gen COLQ", def="A sequence alteration located within the COLQ gene.", def="Una alteración genética ubicada en el gen COLQ.", name="mutation du gène COLQ"}
+comment: JP: Translated to spanish using Bing Translator
+is_a: PROMOT:0000001 ! genetic mutation
+property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
 id: PROMOT:0000012
-name: RAPSN mutation
-def: "Mutation located within the RAPSN gene" []
-is_a: PROMOT:0000000 ! root node
-property_value: IAO:0000117 "Juliette Potier" xsd:string
+name: RAPSN mutation {def="Une altération génétique située au niveau du gène RAPSN.", def="A sequence alteration located within the RAPSN gene.", name="mutation du gène RAPSN", def="Una alteración genética ubicada en el gen RAPSN.", name="mutación del gen RAPSN"}
+comment: JP: Translated to spanish using Bing Translator
+is_a: PROMOT:0000001 ! genetic mutation
+property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
 id: PROMOT:0000013
-name: GFPT1 mutation
-def: "Mutation located within the GFPT1 gene" []
-is_a: PROMOT:0000000 ! root node
-property_value: IAO:0000117 "Juliette Potier" xsd:string
+name: GFPT1 mutation {name="mutación del gen GFPT1", def="Une altération génétique située au niveau du gène GFPT1.", def="Una alteración genética ubicada en el gen GFPT1.", def="A sequence alteration located within the GFPT1 gene.", name="mutation du gène GFPT1"}
+comment: JP: Translated to spanish using Bing Translator
+is_a: PROMOT:0000001 ! genetic mutation
+property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
 id: PROMOT:0000014
-name: GMPPB mutation
-def: "Mutation located within the GMPPB gene" []
-is_a: PROMOT:0000000 ! root node
-property_value: IAO:0000117 "Juliette Potier" xsd:string
+name: GMPPB mutation {def="Une altération génétique située au niveau du gène GMPPB.", def="A sequence alteration located within the GMPPB gene.", name="mutation du gène GMPPB", def="Una alteración genética ubicada en el gen GMPPB.", name="mutación del gen GMPPB"}
+comment: JP: Translated to spanish using Bing Translator
+is_a: PROMOT:0000001 ! genetic mutation
+property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
-id: PROMOT:3000001
-name: Patient
-def: "Participant of PROMOT" []
-is_a: PROMOT:0000000 ! root node
+id: PROMOT:0000015
+name: Phenotypically related anatomical entity {name="Entité anatomique liée à un phénotype", def="An anatomical entity related to a phenotype such that the anatomical entity is the location of the phenotype.", name="entidad anatómica relacionada con un fenotipo"}
+comment: (JP : unsure, attention au lien avec les body structures)
+property_value: IAO:0000117 "Paul Fabry, https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
-id: PROMOT:4000001
-name: Patient statement
-def: "A statement regarding a patient" []
-is_a: PROMOT:0000000 ! root node
-relationship: RO:0002351 PROMOT:3000001 ! has member Patient
-relationship: RO:0002351 PROMOT:5000001 ! has member Patient identifier
-property_value: IAO:0000117 "Juliette Potier" xsd:string
-
-[Term]
-id: PROMOT:4000002
-name: Biological sex statement
-def: "A statement regarding the biological sex of a patient" []
-is_a: PROMOT:4000001 ! Patient statement
-property_value: IAO:0000117 "Juliette Potier" xsd:string
-
-[Term]
-id: PROMOT:4000003
-name: Marital status statement
-def: "A statement regarding the marital status of a patient" []
-is_a: PROMOT:4000001 ! Patient statement
-property_value: IAO:0000117 "Juliette Potier" xsd:string
-
-[Term]
-id: PROMOT:4000004
-name: Occupation statement
-def: "A statement regarding the occupation of a patient, such as work" []
-is_a: PROMOT:4000001 ! Patient statement
-property_value: IAO:0000117 "Juliette Potier" xsd:string
-
-[Term]
-id: PROMOT:4000005
-name: Ethnicity statement
-def: "A statement regarding the ethnicity of a patient" []
-is_a: PROMOT:4000001 ! Patient statement
-property_value: IAO:0000117 "Juliette Potier" xsd:string
-
-[Term]
-id: PROMOT:4000006
-name: Date of birth statement
-def: "A statement regarding the date of birth of a patient" []
-is_a: PROMOT:4000001 ! Patient statement
-property_value: IAO:0000117 "Juliette Potier" xsd:string
-
-[Term]
-id: PROMOT:4000007
-name: Date of death statement
-def: "A statement regarding the date of death of a patient" []
-is_a: PROMOT:4000001 ! Patient statement
-property_value: IAO:0000117 "Juliette Potier" xsd:string
-
-[Term]
-id: PROMOT:4000008
-name: Achieved qualification statement
-def: "A statement regarding the qualification achieved by a patient" []
-is_a: PROMOT:4000001 ! Patient statement
-property_value: IAO:0000117 "Juliette Potier" xsd:string
-
-[Term]
-id: PROMOT:4000009
-name: Duration of formal education statement
-def: "A statement regarding the duration of formal education followed by a patient" []
-is_a: PROMOT:4000001 ! Patient statement
-property_value: IAO:0000117 "Juliette Potier" xsd:string
-
-[Term]
-id: PROMOT:4000010
-name: Handedness statement
-def: "A statement regarding the handedness of a patient" []
-is_a: PROMOT:4000001 ! Patient statement
-property_value: IAO:0000117 "Juliette Potier" xsd:string
-
-[Term]
-id: PROMOT:4000011
-name: First language statement
-def: "A statement regarding the first language spoken by a patient" []
-is_a: PROMOT:4000001 ! Patient statement
-property_value: IAO:0000117 "Juliette Potier" xsd:string
-
-[Term]
-id: PROMOT:5000001
-name: Patient identifier
-def: "An information content entity that is used to refer to one instance of a patient." []
-is_a: PROMOT:0000000 ! root node
-property_value: IAO:0000117 "Juliette Potier" xsd:string
-
-[Term]
-id: PROMOT:6000002
-name: absent
-def: "A qualifier for an instance of a phenotype which is absent." []
-is_a: PROMOT:0000000 ! root node
-property_value: IAO:0000117 "Juliette Potier" xsd:string
-
-[Term]
-id: PROMOT:6000003
-name: present
-def: "Qualifies an instance of a phenotype as present." []
-is_a: PROMOT:0000000 ! root node
-property_value: IAO:0000117 "Juliette Potier" xsd:string
-
-[Term]
-id: PROMOT:6000004
-name: unsure
-def: "Qualifies an instance of a phenotype as unsure." []
-is_a: PROMOT:0000000 ! root node
-property_value: IAO:0000117 "Juliette Potier" xsd:string
-
-[Term]
-id: PROMOT:7000001
-name: Phenotypically related anatomical entity
-def: "An anatomical entity related to a phenotype such that the anatomical entity is the location of the phenotype." []
-is_a: PROMOT:0000000 ! root node
-property_value: IAO:0000117 "Juliette Potier" xsd:string
-
-[Term]
-id: PROMOT:7000002
-name: Phenotypically related body structure
-def: "A body structure related to a phenotype such that the body structure is the location of the phenotype." []
+id: PROMOT:0000016
+name: Phenotypically related body structure {def="A body structure related to a phenotype such that the body structure is the location of the phenotype.", name="Structure anatomique liée à un phénotype", name="estructura corporala relacionada con un fenotipo"}
 comment: (JP: unsure about definition)
-is_a: PROMOT:0000000 ! root node
-property_value: IAO:0000117 "Juliette Potier" xsd:string
+property_value: IAO:0000117 "Paul Fabry, https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
-id: PROMOT:7000003
-name: Phenotypically related body function
-def: "A body function related to a phenotype such that the body function is impacted by the phenotype existence." []
+id: PROMOT:0000017
+name: Phenotypically related body function {def="A body function related to a phenotype such that the body function is impacted by the phenotype existence.", name="función corporala relacionada con un fenotipo", name="Fonction organique liée à un phénotype"}
 comment: (JP: unsure about definition)
-is_a: PROMOT:0000000 ! root node
-property_value: IAO:0000117 "Juliette Potier" xsd:string
+property_value: IAO:0000117 "Paul Fabry, https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
-id: PROMOT:8000001
-name: Onset statement
-def: "A statement regarding the date of onset of a phenotype" []
-is_a: PROMOT:0000000 ! root node
-property_value: IAO:0000117 "Juliette Potier" xsd:string
+id: PROMOT:0000018
+name: Activity or participation related body structure {name="Structure anatomique liée à une activité ou une participation", name="estructura corporala relacionada con una actividad o una participación", def="Une structure anatomique qui est impliquée dans une activité ou participation.", def="Body structure that affects an activity or a participation."}
+property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
-id: PROMOT:9000001
-name: Risk of fall
-def: "The patient is at risk of fall" []
-comment: (JP: unsure, OPMD)
-property_value: IAO:0000117 "Juliette Potier" xsd:string
+id: PROMOT:0000019
+name: Activity or participation related body function {def="Body function that affects an activity or a participation.", def="Une fonction organique qui est impliquée dans une activité ou participation.", name="función corporala relacionada con una actividad o una participación", name="Fonction organique liée à une activité ou une participation"}
+property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
-id: PROMOT:9000002
-name: Decreased walking speed
-def: "Walking speed decreased in comparison to a normal walking speed" []
-comment: (JP: unsure, OPMD)
-property_value: IAO:0000117 "Juliette Potier" xsd:string
+id: PROMOT:0000020
+name: Phenotypically related procedure {def="Une procédure qui diagnostique un phénotype", name="Procédure liée à un phénotype"}
+relationship: PROMOT:2000002 PROMOT:0000025 ! assesses patient
+property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
-id: PROMOT:9000003
-name: Difficulty rising from a chair
-def: "Difficulty rising from a chair, difficulty to move from a sitting position to a standing position" []
-comment: (JP: unsure, OPMD)
-property_value: IAO:0000117 "Juliette Potier" xsd:string
+id: PROMOT:0000021
+name: Body function related procedure {def="Une procédure qui évalue une fonction organique", name="Procédure liée à une fonction organique"}
+relationship: PROMOT:2000002 PROMOT:0000025 ! assesses patient
+property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
-id: PROMOT:9000004
-name: Blockage sensation in the throat / food entrapment
-def: "OPMD" []
-comment: (JP: unsure, OPMD)
-property_value: IAO:0000117 "Juliette Potier" xsd:string
+id: PROMOT:0000022
+name: Body structure related procedure {name="Procédure liée à un structure anatomique", def="Une procédure qui évalue une structure anatomique"}
+relationship: PROMOT:2000002 PROMOT:0000025 ! assesses patient
+property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
-id: PROMOT:9000005
-name: Multiple swallowing per bolus
-def: "OPMD" []
-comment: (JP: unsure, OPMD)
-property_value: IAO:0000117 "Juliette Potier" xsd:string
+id: PROMOT:0000023
+name: Activity or participation related procedure {def="Une procédure qui évalue une activité ou participation", name="Procédure liée à une activité ou une participation"}
+relationship: PROMOT:2000002 PROMOT:0000025 ! assesses patient
+property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
-id: PROMOT:9000006
-name: Needing to spit out food or liquids
-def: "OPMD" []
-comment: (JP: unsure, OPMD)
-property_value: IAO:0000117 "Juliette Potier" xsd:string
+id: PROMOT:0000024
+name: Body structure related anatomical entity {name="Entité anatomique liée à une structure anatomique"}
+property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
-id: PROMOT:9000007
-name: Pharyngo-nasal and pharyngo-oral regurgitation
-def: "OPMD" []
-comment: (JP: unsure, OPMD)
-property_value: IAO:0000117 "Juliette Potier" xsd:string
+id: PROMOT:0000025
+name: patient {name="patient", def="Un patient", def="Un paciente", def="A patient.", name="Paciente"}
+comment: JP: Translated to spanish using Bing Translator
+relationship: PROMOT:2000004 PROMOT:0000001 ! has genetic mutation genetic mutation
+property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
-id: PROMOT:9000008
-name: Presence of secretions
-def: "OPMD" []
-comment: (JP: unsure, OPMD)
-property_value: IAO:0000117 "Juliette Potier" xsd:string
+id: PROMOT:0000026
+name: abnormal disposition {name="disposición anormal", name="disposition anormale", def="A disposition that differs from the norm, such as a disease or a phenotypic abnormality", def="Une disposition qui dévie de la norme, comme une maladie ou une anormalité phénotypique,"}
+comment: (to validate)
+property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
-id: PROMOT:9000009
-name: Generalized fatigability of muscles
-def: "CM" []
-comment: (JP: unsure, CM)
-property_value: IAO:0000117 "Juliette Potier" xsd:string
+id: PROMOT:0000027
+name: statement {def="Una declaración sobre una entidad como una persona o un proceso que brinda información sobre ellos.", def="Un énoncé au sujet d’une entité telle qu’une personne ou un processus qui apporte des informations à leur sujet.", def="A statement about an entity such as a person or an process to state details about them.", name="declaración sobre una entidad", name="énoncé au sujet d’une entité"}
+comment: JP: Translated to spanish using Bing Translator
+property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
-id: PROMOT:9000010
-name: Arthrogryposis during neonatal period
-def: "Joint stiffness or joint contractures during neonatal period" []
-comment: (JP: unsure, CM)
-property_value: IAO:0000117 "Juliette Potier" xsd:string
+id: PROMOT:0000028
+name: statement about a human {name="Énoncé concernant un être humain", def="A statement that describe a human.", name="Declaración sobre un ser humano", def="Un énoncé au sujet d’un être humain qui apporte des informations à son sujet."}
+is_a: PROMOT:0000027 ! statement
+relationship: RO:0002351 PROMOT:0000038 ! has member Year of birth
+relationship: RO:0002351 PROMOT:0000040 ! has member Year of death
+relationship: RO:0002351 PROMOT:0000041 ! has member Age
+relationship: RO:0002351 PROMOT:0000042 ! has member Age at death
+relationship: RO:0002351 PROMOT:0000043 ! has member Age Category
+relationship: RO:0002351 PROMOT:0000066 ! has member Sex at birth
+property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
+
+[Term]
+id: PROMOT:0000029
+name: statement about a patient {def="Una declaración sobre un paciente que aporta información sobre él.", def="Un énoncé au sujet d’un patient qui apporte des informations à son sujet.", name="declaración sobre un paciente", def="A statement regarding a patient to state details about them.", name="énoncé concernant un patient"}
+comment: JP: Translated to spanish using Bing Translator
+is_a: PROMOT:0000028 ! statement about a human
+relationship: RO:0002351 PROMOT:0000025 ! has member patient
+relationship: RO:0002351 PROMOT:0000039 ! has member Year of diagnosis
+relationship: RO:0002351 PROMOT:0000077 ! has member Nb of previous pregnancies
+relationship: RO:0002351 PROMOT:0000078 ! has member Patient at risk of fall
+property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
+
+[Term]
+id: PROMOT:0000030
+name: statement about a phenotype {def="Una declaración sobre un fenotipo que aporta información sobre él.", def="A statement regarding a phenotype to state details about it.", name="declaración sobre un fenotipo", def="Un énoncé au sujet d’un phénotype qui apporte des informations à son sujet.", name="énoncé concernant un phénotype"}
+comment: BIH-CEI rd-cdm: Repo for the ontology-based rare disease common data model harmonising international registry use, FHIR, and Phenopackets 
+is_a: PROMOT:0000027 ! statement
+relationship: RO:0002351 PROMOT:0000035 ! has member Date of assessment
+relationship: RO:0002351 PROMOT:0000036 ! has member Date of resolution
+relationship: RO:0002351 PROMOT:0000037 ! has member Year of onset
+relationship: RO:0002351 PROMOT:0000108 ! has member Year of resolution
+relationship: RO:0002351 PROMOT:0000111 ! has member Assessment using Berg Balance Scale
+property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
+
+[Term]
+id: PROMOT:0000031
+name: statement about a procedure {def="A statement regarding a procedure to describe it.", def="Un énoncé au sujet d’un processus qui apporte des informations à son sujet.", name="énoncé au sujet d’une procédure", def="Una declaración sobre un proceso que aporta información sobre él."}
+comment: JP: Translated to spanish using Bing Translator
+is_a: PROMOT:0000027 ! statement
+relationship: RO:0002351 PROMOT:0000033 ! has member result of procedure
+property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
+
+[Term]
+id: PROMOT:0000032
+name: statement about a consent
+is_a: PROMOT:0000027 ! statement
+relationship: RO:0002351 PROMOT:0000089 ! has member Consent status
+relationship: RO:0002351 PROMOT:0000096 ! has member Date of consent
+relationship: RO:0002351 PROMOT:0000097 ! has member Agreement to be contacted for research purpose
+relationship: RO:0002351 PROMOT:0000098 ! has member Consent to the reuse of data
+
+[Term]
+id: PROMOT:0000033
+name: result of procedure {def="A statement regarding the result of procedure.", name="résultat d’une procédure"}
+property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
+
+[Term]
+id: PROMOT:0000034
+name: Date {def="Une indication de temps qui réfère à un jour spécifique et qui comprend habituellement la mention du mois et de l’année en fonction d’un système calendaire donné.", name="fecha", name="Date", def="Time indication that refers to a specific day and usually includes mention of the month and/or the year according to a specific calendar system."}
+property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
+
+[Term]
+id: PROMOT:0000035
+name: Date of assessment
+is_a: PROMOT:0000034 ! Date
+
+[Term]
+id: PROMOT:0000036
+name: Date of resolution {name="Fecha de resolución", name="date de résolution", def="Une date à laquelle une disposition anormale, telle qu’une maladie ou un phénotype, cesse d’exister.", def="The date when an abnormal disposition disapears such as a disease or a phenotypic abnormality.", def="Une date à laquelle une disposition anormale, telle qu’une maladie ou un phénotype, cesse d’exister."}
+comment: JP: Translated to spanish using Bing Translator
+is_a: PROMOT:0000034 ! Date
+property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
+
+[Term]
+id: PROMOT:0000037
+name: Year of onset
+
+[Term]
+id: PROMOT:0000038
+name: Year of birth {def="Time indication that refers to a specific year according to a specific calendar system.", def="Une indication de temps qui réfère à une année spécifique selon un système calendaire donné.", name="Année de naissance", name="año de nacimiento"}
+property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
+
+[Term]
+id: PROMOT:0000039
+name: Year of diagnosis
+
+[Term]
+id: PROMOT:0000040
+name: Year of death
+
+[Term]
+id: PROMOT:0000041
+name: Age
+
+[Term]
+id: PROMOT:0000042
+name: Age at death
+
+[Term]
+id: PROMOT:0000043
+name: Age Category {name="tranche d’âge", name="grupo de edad"}
+comment: Graefe, A.S.L., Hübner, M.R., Rehburg, F. et al. An ontology-based rare disease common data model harmonising international registries, FHIR, and Phenopackets. Sci Data 12, 234 (2025). https://doi.org/10.1038/s41597-025-04558-z
+property_value: seeAlso HP:0003674
+
+[Term]
+id: PROMOT:0000044
+name: Adulthood {def="Une tranche d’âge incluant les personnes de 16 ans et plus.", name="edad adulta", def="Age category including people of 16 years old and above.", def="Un grupo de edad que incluye a las personas de 16 años y más.", name="âge adulte"}
+comment: JP: Translated to spanish using Bing Translator
+is_a: PROMOT:0000043 ! Age Category
+property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
+property_value: seeAlso HP:0003674
+
+[Term]
+id: PROMOT:0000045
+name: Late adulthood {def="Une tranche d’âge incluant les personnes de 60 ans et plus.", name="edad avanzada", def="Age category including people of 60 years old and above.", def="Un grupo de edad que incluye a las personas de 60 años y más.", name="âge avancé"}
+comment: JP: Translated to spanish using Bing Translator
+is_a: PROMOT:0000044 ! Adulthood
+property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
+property_value: seeAlso HP:0003674
+
+[Term]
+id: PROMOT:0000046
+name: Middle adulthood {def="Un grupo de edad que incluye a las personas de 40 a 59 años incluidos.", name="edad media", name="âge moyen", def="Une tranche d’âge incluant les personnes de 40 à 59 ans inclus.", def="Age category including people between 40 and 59 years old (inclusive)."}
+comment: JP: Translated to spanish using Bing Translator
+is_a: PROMOT:0000044 ! Adulthood
+property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
+property_value: seeAlso HP:0003674
+
+[Term]
+id: PROMOT:0000047
+name: Young adulthood {def="Une tranche d’âge incluant les personnes entre 16 et 39 ans inclus.", def="Un grupo de edad que incluye a las personas de 16 a 39 años incluidos.", name="jeune adulte", def="Age category including people between 16 and 39 years old (inclusive).", name="joven adulto"}
+comment: JP: Translated to spanish using Bing Translator
+is_a: PROMOT:0000044 ! Adulthood
+property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
+property_value: seeAlso HP:0003674
+
+[Term]
+id: PROMOT:0000048
+name: Early young adulthood {def="Une tranche d’âge incluant les personnes entre 16 et 18 ans inclus.", def="Un grupo de edad que incluye a las personas de 16 a 18 años incluidos.", name="début de l’âge adulte", def="Age category including people between 16 and 18 years old (inclusive)."}
+comment: JP: Translated to spanish using Bing Translator
+is_a: PROMOT:0000047 ! Young adulthood
+property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
+property_value: seeAlso HP:0003674
+
+[Term]
+id: PROMOT:0000049
+name: Intermediate young adulthood {name="edad intermedia", def="Age category including people between 19 and 24 years old (inclusive).", def="Une tranche d’âge incluant les personnes entre 19 et 24 ans inclus.", name="âge intermédiaire", def="Un grupo de edad que incluye a las personas de 19 a 24 años incluidos."}
+comment: JP: Translated to spanish using Bing Translator
+is_a: PROMOT:0000047 ! Young adulthood
+property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
+property_value: seeAlso HP:0003674
+
+[Term]
+id: PROMOT:0000050
+name: Late young adulthood {def="Age category including people between 25 and 39 years old (inclusive).", name="fin du début de l’âge adulte", def="Une tranche d’âge incluant les personnes entre 25 et 39 ans inclus.", def="Un grupo de edad que incluye a las personas de 25 a 39 años incluidos."}
+comment: JP: Translated to spanish using Bing Translator
+is_a: PROMOT:0000047 ! Young adulthood
+property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
+property_value: seeAlso HP:0003674
+
+[Term]
+id: PROMOT:0000051
+name: Antenatal age {def="Une tranche d’âge", name="âge anténatal", def="Age category prior to birth"}
+comment: This term includes the full 25th year of age up to the completed 40th year of age (i.e., less than the 40th birthday). [from: HP:0025710] {IAO:0000119="HP:0025710"}
+is_a: PROMOT:0000043 ! Age Category
+property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
+property_value: seeAlso HP:0003674
+
+[Term]
+id: PROMOT:0000052
+name: Embryonal {def="Category up to 8 weeks following fertilization (corresponding to 10 weeks of gestation).", name="âge embryonnaire"}
+is_a: PROMOT:0000051 ! Antenatal age
+property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
+property_value: seeAlso HP:0003674
+
+[Term]
+id: PROMOT:0000053
+name: Fetal {name="âge foetal", def="Age prior to birth but after 8 weeks of embryonic development (corresponding to a gestational age of 10 weeks)."}
+is_a: PROMOT:0000051 ! Antenatal age
+property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
+property_value: seeAlso HP:0003674
+
+[Term]
+id: PROMOT:0000054
+name: Late first trimester {def="Category prior to birth in the first trimester during the early fetal period, which is defined as 11 0/7 to 13 6/7 weeks of gestation (inclusive).", name="âge vers la fin du premier trimestre de grossesse"}
+is_a: PROMOT:0000053 ! Fetal
+property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
+property_value: seeAlso HP:0003674
+
+[Term]
+id: PROMOT:0000055
+name: Second trimester {def="Category prior to birth during the second trimester, which comprises the range of gestational ages from 14 0/7 weeks to 27 6/7 (inclusive).", name="âge compris dans le second trimestre de grossesse"}
+is_a: PROMOT:0000053 ! Fetal
+property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
+property_value: seeAlso HP:0003674
+
+[Term]
+id: PROMOT:0000056
+name: Third trimester {def="Category prior to birth during the third trimester, which is defined as 28 weeks and zero days (28+0) of gestation and beyond.", name="âge compris dans le troisième trimestre de grossesse"}
+is_a: PROMOT:0000053 ! Fetal
+property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
+property_value: seeAlso HP:0003674
+
+[Term]
+id: PROMOT:0000057
+name: Congenital {name="âge correspondant à la naissance", def="Time of birth"}
+is_a: PROMOT:0000043 ! Age Category
+property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
+property_value: seeAlso HP:0003674
+
+[Term]
+id: PROMOT:0000058
+name: Neonatal age {def="Age within the first 28 days of life.", name="âge néonatal"}
+is_a: PROMOT:0000043 ! Age Category
+property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
+property_value: seeAlso HP:0003674
+
+[Term]
+id: PROMOT:0000059
+name: Pediatric age {name="âge pédiatrique", def="Age category before adulthood, defined here as before the age of 16 years, but excluding neonatal or congenital onset. It includes people from the age of"}
+is_a: PROMOT:0000043 ! Age Category
+property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
+property_value: seeAlso HP:0003674
+
+[Term]
+id: PROMOT:0000060
+name: Childhood {def="Age category including people from 1 to 4 years old (inclusive).", def="Une tranche d’âge incluant les personnes de 1 à 4 ans inclus.", name="Âge compris dans l’enfance", name="infancia", def="Un grupo de edad que incluye a las personas de 1 a 4 años incluidos."}
+comment: JP: Translated to spanish using Bing Translator
+is_a: PROMOT:0000059 ! Pediatric age
+property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
+property_value: seeAlso HP:0003674
+
+[Term]
+id: PROMOT:0000061
+name: Infantile age {name="âge infantile", def="Age category including people from 28 days to 1 year old.", name="edad infantil", def="Une tranche d’âge incluant les personnes de 28 jours à 1 an inclus."}
+is_a: PROMOT:0000059 ! Pediatric age
+property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
+property_value: seeAlso HP:0003674
+
+[Term]
+id: PROMOT:0000062
+name: Juvenile age {name="âge juvénile", def="Age category including people between 5 and 15 years old (inclusive).", def="Un grupo de edad que incluye a las personas de 5 a 15 años incluidos.", def="Une tranche d’âge incluant les personnes entre 5 et 15 ans inclus.", name="edad juvenil"}
+comment: JP: Translated to spanish using Bing Translator
+is_a: PROMOT:0000059 ! Pediatric age
+property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
+property_value: seeAlso HP:0003674
+
+[Term]
+id: PROMOT:0000063
+name: Perimenopausal age {name="edad perimenopáusica", def="Age category including people undergoing perimenopause.", def="Une tranche d’âge contenant tous les âges associés à la périménopause.", name="âge périménopausal"}
+is_a: PROMOT:0000043 ! Age Category
+property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
+property_value: seeAlso HP:0003674
+
+[Term]
+id: PROMOT:0000064
+name: Postmenopausal age {def="Age category including people undergoing postmenopause.", name="edad posmenopáusica", def="Une tranche d’âge contenant tous les âges associés à la postménopause.", name="âge postménopausal"}
+is_a: PROMOT:0000043 ! Age Category
+property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
+property_value: seeAlso HP:0003674
+
+[Term]
+id: PROMOT:0000065
+name: Puerpural age {name="âge puerpéral", def="Une tranche d’âge contenant tous les âges qui se rapportent à l’accouchement ou à la période qui suit.", def="Age category including ages refering to childbirth or period after childbirth.", name="edad puerperal"}
+is_a: PROMOT:0000043 ! Age Category
+property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
+property_value: seeAlso HP:0003674
+
+[Term]
+id: PROMOT:0000066
+name: Sex at birth {def="Asigned anatomical sex at birth.", def="Le sexe anatomique à la naissance", name="sexe à la naissance"}
+property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
+
+[Term]
+id: PROMOT:0000067
+name: Female sex at birth {def="Anatomical sex stated as female at birth.", name="sexe à la naissance féminin", def="Un sexe anatomique déclaré féminin à la naissance"}
+is_a: PROMOT:0000066 ! Sex at birth
+property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
+
+[Term]
+id: PROMOT:0000068
+name: Intersex at birth {name="intersexe à la naissance", def="Un sexe anatomique déclaré intersexe à la naissance", def="Anatomical sex stated as intersex at birth."}
+is_a: PROMOT:0000066 ! Sex at birth
+property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
+
+[Term]
+id: PROMOT:0000069
+name: Male sex at birth {def="Un sexe anatomique déclaré masculin à la naissance", name="sexe à la naissance masculin", def="Anatomical sex stated as male at birth."}
+is_a: PROMOT:0000066 ! Sex at birth
+property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
+
+[Term]
+id: PROMOT:0000070
+name: Patient sex at birth unknown {name="sexo al nacer desconocido", name="sexe à la naissance inconnu", def="Anatomical sex at birth unkown."}
+is_a: PROMOT:0000066 ! Sex at birth
+property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
+
+[Term]
+id: PROMOT:0000071
+name: Sex at birth not recorded {def="Sex not recorded at birth.", name="sexe à la naissance non renseigné"}
+comment: UNSURE : not really a class
+is_a: PROMOT:0000070 ! Patient sex at birth unknown
+property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
+
+[Term]
+id: PROMOT:0000072
+name: Female gender identity {def="Une identité de genre féminin", def="Gender identity of a person that identify as a girl or as a woman."}
+property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
+
+[Term]
+id: PROMOT:0000073
+name: Identifies as nonbinary gender {def="Gender identity of a person that identify nor as a male nor as a female."}
+property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
+
+[Term]
+id: PROMOT:0000074
+name: Male gender identity {def="Une identité de genre masculin", def="Gender identity of a person that identify as a boy or as a man."}
+property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
+
+[Term]
+id: PROMOT:0000075
+name: Gender identity unknown
+
+[Term]
+id: PROMOT:0000076
+name: Gender identity not recorded
+is_a: PROMOT:0000075 ! Gender identity unknown
+
+[Term]
+id: PROMOT:0000077
+name: Nb of previous pregnancies {def="Number of precious pregnancies of an individual that includes pregancies that did not reach their end.", def="Le nombre de grossesses d’un individu qui inclut les grossesses qui ne se sont pas terminées.", name="nombre de grossesses"}
+property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
+
+[Term]
+id: PROMOT:0000078
+name: Patient at risk of fall
+
+[Term]
+id: PROMOT:0000079
+name: unkown life status {name="estado vital desconocido", def="Un état vital inconnu.", name="état vital inconnu", def="A life status that is unkown."}
+property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
+
+[Term]
+id: PROMOT:0000080
+name: unrecorded life status
+is_a: PROMOT:0000079 ! unkown life status
+
+[Term]
+id: PROMOT:0000081
+name: unknown transmission {name="desconocido", def="UNSURE : TO CHANGE INTO QUALIFIERS", name="Transmission inconnue"}
+relationship: SIO:000218 PROMOT:0000001 ! is quality of genetic mutation
+
+[Term]
+id: PROMOT:0000082
+name: unrecorded transmission
+is_a: PROMOT:0000081 ! unknown transmission
+
+[Term]
+id: PROMOT:0000083
+name: Unrecorded health status
+
+[Term]
+id: PROMOT:0000084
+name: presence qualifier {def="A qualifier for stating the presence, absence or uncertainty of a phenotype instance.", def="Un qualité qui statue de la présence, de l’absence ou de l’incertitude de l’existence d’un phénotype.", name="Qualité qualifiant l’existance d’une entité"}
+property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
+
+[Term]
+id: PROMOT:0000085
+name: absent {def="Une qualité qui statue de l’absence d’un phénotype.", name="absent", def="A qualifier for an instance of a phenotype which is absent."}
+is_a: PROMOT:0000084 ! presence qualifier
+property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
+
+[Term]
+id: PROMOT:0000086
+name: present {name="présent", def="Une qualité qui statue de la présence d’un phénotype.", def="Qualifies an instance of a phenotype as present."}
+is_a: PROMOT:0000084 ! presence qualifier
+property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
+
+[Term]
+id: PROMOT:0000087
+name: presence unsure {def="Qualifies an instance of a phenotype as unsure.", name="incertain", def="Une qualité qui statue de l’incertitude de la présence ou non d’un phénotype."}
+is_a: PROMOT:0000084 ! presence qualifier
+property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
+
+[Term]
+id: PROMOT:0000088
+name: presence unrecorded
+is_a: PROMOT:0000087 ! presence unsure
+property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
+
+[Term]
+id: PROMOT:0000089
+name: Consent status {def="An information about the consent status of a patient", name="Status du consentement", name="estado del consentimiento"}
+comment: Graefe, A.S.L., Hübner, M.R., Rehburg, F. et al. An ontology-based rare disease common data model harmonising international registries, FHIR, and Phenopackets. Sci Data 12, 234 (2025). https://doi.org/10.1038/s41597-025-04558-z
+
+[Term]
+id: PROMOT:0000090
+name: Pending {name="En attente"}
+comment: Graefe, A.S.L., Hübner, M.R., Rehburg, F. et al. An ontology-based rare disease common data model harmonising international registries, FHIR, and Phenopackets. Sci Data 12, 234 (2025). https://doi.org/10.1038/s41597-025-04558-z
+is_a: PROMOT:0000089 ! Consent status
+
+[Term]
+id: PROMOT:0000091
+name: Proposed {name="Proposé"}
+comment: Graefe, A.S.L., Hübner, M.R., Rehburg, F. et al. An ontology-based rare disease common data model harmonising international registries, FHIR, and Phenopackets. Sci Data 12, 234 (2025). https://doi.org/10.1038/s41597-025-04558-z
+is_a: PROMOT:0000089 ! Consent status
+
+[Term]
+id: PROMOT:0000092
+name: Active {name="Actif"}
+comment: Graefe, A.S.L., Hübner, M.R., Rehburg, F. et al. An ontology-based rare disease common data model harmonising international registries, FHIR, and Phenopackets. Sci Data 12, 234 (2025). https://doi.org/10.1038/s41597-025-04558-z
+is_a: PROMOT:0000089 ! Consent status
+
+[Term]
+id: PROMOT:0000093
+name: Rejected {name="Rejeté"}
+comment: Graefe, A.S.L., Hübner, M.R., Rehburg, F. et al. An ontology-based rare disease common data model harmonising international registries, FHIR, and Phenopackets. Sci Data 12, 234 (2025). https://doi.org/10.1038/s41597-025-04558-z
+is_a: PROMOT:0000089 ! Consent status
+
+[Term]
+id: PROMOT:0000094
+name: Inactive {name="Inactif"}
+comment: Graefe, A.S.L., Hübner, M.R., Rehburg, F. et al. An ontology-based rare disease common data model harmonising international registries, FHIR, and Phenopackets. Sci Data 12, 234 (2025). https://doi.org/10.1038/s41597-025-04558-z
+is_a: PROMOT:0000089 ! Consent status
+
+[Term]
+id: PROMOT:0000095
+name: Entered in Error {name="Entré par erreur"}
+comment: Graefe, A.S.L., Hübner, M.R., Rehburg, F. et al. An ontology-based rare disease common data model harmonising international registries, FHIR, and Phenopackets. Sci Data 12, 234 (2025). https://doi.org/10.1038/s41597-025-04558-z
+is_a: PROMOT:0000089 ! Consent status
+
+[Term]
+id: PROMOT:0000096
+name: Date of consent {name="Date du consentement"}
+comment: Graefe, A.S.L., Hübner, M.R., Rehburg, F. et al. An ontology-based rare disease common data model harmonising international registries, FHIR, and Phenopackets. Sci Data 12, 234 (2025). https://doi.org/10.1038/s41597-025-04558-z
+
+[Term]
+id: PROMOT:0000097
+name: Agreement to be contacted for research purpose {name="Accord pour être contacté à des fins de recherche", name="Acuerdo para ser contactado con fines de investigación"}
+comment: Graefe, A.S.L., Hübner, M.R., Rehburg, F. et al. An ontology-based rare disease common data model harmonising international registries, FHIR, and Phenopackets. Sci Data 12, 234 (2025). https://doi.org/10.1038/s41597-025-04558-z
+
+[Term]
+id: PROMOT:0000098
+name: Consent to the reuse of data {name="Consentimiento para la reutilización de datos", name="Consentement à la réutilisation des données"}
+comment: Graefe, A.S.L., Hübner, M.R., Rehburg, F. et al. An ontology-based rare disease common data model harmonising international registries, FHIR, and Phenopackets. Sci Data 12, 234 (2025). https://doi.org/10.1038/s41597-025-04558-z
+
+[Term]
+id: PROMOT:0000099
+name: Pourcentage de la valeur attendue
+
+[Term]
+id: PROMOT:0000100
+name: Assessment using Debimeter {name="Débimètre expiratoire Peak Flow"}
+is_a: PROMOT:0000020 ! Phenotypically related procedure
+
+[Term]
+id: PROMOT:0000101
+name: Quantative muscle weakness {name="Quantative muscle weakness"}
+is_a: PROMOT:0000020 ! Phenotypically related procedure
+
+[Term]
+id: PROMOT:0000102
+name: Assessment using Dysphagyameter {name="Dysphagiemètre, 80 ml, SSQ"}
+is_a: PROMOT:0000020 ! Phenotypically related procedure
+
+[Term]
+id: PROMOT:0000103
+name: Assessment using B&L gauge {def="An evaluation procedure that uses a B&L gauge to assess pinch strengh.", name="B&L gauge"}
+is_a: PROMOT:0000020 ! Phenotypically related procedure
+
+[Term]
+id: PROMOT:0000104
+name: Bilan dynamométrique avec MedUP {name="Bilan dynamométrique avec MedUP"}
+is_a: PROMOT:0000020 ! Phenotypically related procedure
+
+[Term]
+id: PROMOT:0000105
+name: Assessment using Iowa Oral Performance Instrument {name="IOPI"}
+is_a: PROMOT:0000020 ! Phenotypically related procedure
+
+[Term]
+id: PROMOT:0000106
+name: Double compound motor action potential abnormality {name="Double anomalie du CMAP", name="Doble anomalía del potencial de acción motora compuesta", def="Two abnormal findings in a compound motor action potential measurement in EMG."}
+comment: (JP : to validate) {IAO:0000119="https://pmc.ncbi.nlm.nih.gov/articles/PMC11131082/"}
+is_a: PROMOT:0000026 ! abnormal disposition
+relationship: SIO:000217 PROMOT:0000084 ! has quality presence qualifier
+property_value: PROMOT:1000001 "CMS Scoping review" xsd:string
+
+[Term]
+id: PROMOT:0000107
+name: Year of assessment
+
+[Term]
+id: PROMOT:0000108
+name: Year of resolution
+
+[Term]
+id: PROMOT:0000109
+name: lost in follow up
+is_a: PROMOT:0000080 ! unrecorded life status
+
+[Term]
+id: PROMOT:0000110
+name: opt out
+is_a: PROMOT:0000080 ! unrecorded life status
+
+[Term]
+id: PROMOT:0000111
+name: Assessment using Berg Balance Scale
+is_a: PROMOT:0000020 ! Phenotypically related procedure
 
 [Typedef]
 id: PROMOT:2000001
-name: is location of
-def: "A relation between a phenotypically related anatomical entity and a phenotype, where the phenotype is located in the phenotypically related anatomical entity." []
-property_value: IAO:0000117 "Juliette Potier" xsd:string
-domain: PROMOT:7000001 ! Phenotypically related anatomical entity
+name: is used by {def="A relation between an assistive device and a patient, where the patient uses the device in order to move or to accomplish something, such as a task or an activity.", def="Una relación entre un dispositivo y un paciente donde el paciente utiliza el dispositivo para moverse, realizar una acción o una actividad.", def="Une relation entre un appareil et un patient où le patient utilise l’appareil pour se déplacer, effectuer une action ou une activité.", name="es utilizado por", name="est utilisé par"}
+comment: JP: Translated to spanish using Bing Translator
+property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
+range: PROMOT:0000025 ! patient
 
 [Typedef]
 id: PROMOT:2000002
-name: is used by
-def: "A relation between a device and a patient, where the patient uses an assistive equipment in order to move or to accomplish something, such as a task or an activity." []
-property_value: IAO:0000117 "Juliette Potier" xsd:string
-range: PROMOT:3000001 ! Patient
+name: assesses {def="A relation between an evaluation procedure and a patient, where the patient is assessed by an evaluation procedure, such as a test, a questionnaire or a scale.", name="evalúa", def="Une relation entre une procédure et un patient où la procédure évalue le patient au moyen, par exemple, d’un test, d’un questionnaire ou d’une échelle.", def="Una relación entre un procedimiento y un paciente donde el procedimiento evalúa al paciente mediante, por ejemplo, una prueba, un cuestionario o una escala.", name="évalue"}
+comment: JP: Translated to spanish using Bing Translator
+property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Typedef]
 id: PROMOT:2000003
-name: assesses
-def: "A relation between an evaluation procedure and a patient, where the patient is assessed by an evaluation procedure, such as a test, a questionnaire or a scale." []
-property_value: IAO:0000117 "Juliette Potier" xsd:string
-range: PROMOT:3000001 ! Patient
+name: measures {def="A relation between an evaluation procedure and the entity measured by the procedure, such as a structure, a function, an activity or a participation.", name="mesure"}
 
 [Typedef]
-id: RO:0000080
-name: quality of
-def: "a relation between a quality and an independent continuant (the bearer), in which the quality specifically depends on the bearer for its existence" []
-comment: This relation is modeled after the BFO relation of the same name which was in BFO2, but is used in a more restricted sense - specifically, we model this relation as functional (inherited from characteristic-of). Note that this relation is now removed from BFO2020.
-property_value: IAO:0000112 "this red color is a quality of this apple" xsd:string
-property_value: IAO:0000116 "A quality inheres in its bearer at all times for which the quality exists." xsd:string
-property_value: IAO:0000118 "is quality of" xsd:string
-property_value: IAO:0000118 "quality_of" xsd:string
+id: PROMOT:2000004
+name: has genetic mutation {def="A relation between an organism and a specific gene mutation existing in the organism genome."}
+range: PROMOT:0000001 ! genetic mutation
+
+[Typedef]
+id: PROMOT:2000005
+name: affects {def="A relation between two entity where the first entity affects the state of the second entity."}
+
+[Typedef]
+id: PROMOT:2000006
+name: is unique identifier for
+comment: Xref SIO:000674
+
+[Typedef]
+id: PROMOT:2000007
+name: has output
+comment: Xref SIO:000229
 
 [Typedef]
 id: RO:0002200
@@ -382,51 +785,92 @@ property_value: IAO:0000117 https://orcid.org/0000-0002-6601-2165
 is_functional: true
 
 [Typedef]
+id: RO:0002331
+name: involved in
+def: "c involved_in p if and only if c enables some process p', and p' is part of p" []
+property_value: IAO:0000117 https://orcid.org/0000-0002-6601-2165
+property_value: IAO:0000118 "actively involved in" xsd:string
+property_value: IAO:0000118 "enables part of" xsd:string
+property_value: seeAlso "https://wiki.geneontology.org/Involved_in" xsd:anyURI
+
+[Typedef]
 id: RO:0002351
 name: has member
 def: "has member is a mereological relation between a collection and an item." []
 property_value: IAO:0000119 "SIO" xsd:string
 property_value: RO:0001900 RO:0001901
-domain: PROMOT:4000001 ! Patient statement
+
+[Typedef]
+id: RO:0004003
+name: has material basis in germline mutation in
+property_value: seeAlso Orphanet:317343
+inverse_of: RO:0004013 ! is causal germline mutation in
+created_by: https://orcid.org/0000-0002-6601-2165
+creation_date: 2017-11-05T02:45:54Z
+
+[Typedef]
+id: RO:0004013
+name: is causal germline mutation in
+def: "Relates a gene to condition, such that a mutation in this gene is sufficient to produce the condition and that can be passed on to offspring[modified from orphanet]." []
+property_value: seeAlso Orphanet:317343
+domain: PROMOT:0000001 ! genetic mutation
+created_by: https://orcid.org/0000-0002-6601-2165
+creation_date: 2017-11-05T02:56:40Z
+
+[Typedef]
+id: RO:0004029
+name: disease has feature
+def: "A relationship between a disease and some feature of that disease, where the feature is either a phenotype or an isolated disease." []
+created_by: https://orcid.org/0000-0002-6601-2165
+creation_date: 2017-12-26T19:50:53Z
+
+[Typedef]
+id: SIO:000001
+name: is related to
+property_value: dc11:identifier "SIO_000001" xsd:string
+property_value: isDefinedBy http://semanticscience.org/ontology/sio.owl
+property_value: resource:subset "core" xsd:string
+property_value: resource:subset "relations+" xsd:string
+property_value: schema:comment "'is related to' is the top level relation in SIO" xsd:string
+property_value: terms:description "A is related to B iff there is some relation between A and B." xsd:string
+is_symmetric: true
+
+[Typedef]
+id: SIO:000061
+name: is located in
+property_value: dc11:identifier "SIO_000061" xsd:string
+property_value: isDefinedBy http://semanticscience.org/ontology/sio.owl
+property_value: resource:equivalentTo "OBO_REL:located_in" xsd:string
+property_value: resource:subset "core" xsd:string
+property_value: skos:example "A parasite in the interior of a person's intestine is located in their intestinal lumen." xsd:string
+property_value: terms:description "A is located in B iff the spatialtemporial region occupied by A is part of the spatialtemporal region occupied by B. [T][R]" xsd:string
+is_transitive: true
+is_a: SIO:000001 ! is related to
+
+[Typedef]
+id: SIO:000217
+name: has quality
+property_value: dc11:identifier "SIO_000217" xsd:string
+property_value: isDefinedBy http://semanticscience.org/ontology/sio.owl
+property_value: terms:description "has quality is a relation between an entity and the quality that it bears." xsd:string
+is_inverse_functional: true
+is_a: SIO:000001 ! is related to
+inverse_of: SIO:000218 ! is quality of
 
 [Typedef]
 id: SIO:000218
 name: is quality of
-property_value: dc:identifier "SIO_000218" xsd:string
+property_value: dc11:identifier "SIO_000218" xsd:string
 property_value: isDefinedBy http://semanticscience.org/ontology/sio.owl
 property_value: terms:description "is quality of is a relation between a quality and the entity that it is a property of." xsd:string
+is_a: SIO:000001 ! is related to
 
 [Typedef]
-id: SIO:000671
-name: has identifier
-property_value: dc:identifier "SIO_000671" xsd:string
+id: SIO:000235
+name: has disposition
+property_value: dc11:identifier "SIO_000235" xsd:string
 property_value: isDefinedBy http://semanticscience.org/ontology/sio.owl
-property_value: terms:description "a relation between an entity and an identifier." xsd:string
-
-[Typedef]
-id: VO:0001039
-name: has gene mutation
-def: "An object property that represents an organism has a mutation of a specific gene from the organism genome." []
-property_value: IAO:0000117 "Oliver He" xsd:string
-
-[Typedef]
-id: affected:by
-name: affected by
-def: "Describes an entity of which the state or quality is affected by another existing entity." []
-comment: https://bioportal.bioontology.org/ontologies/BIOLINK
-property_value: seeAlso https://biolink.github.io/biolink-model/
-
-[Typedef]
-id: https://w3id.org/biolink/vocab/affects
-name: affects
-def: "Describes an entity that has an effect on the state or quality of another existing entity." []
-comment: https://bioportal.bioontology.org/ontologies/BIOLINK
-property_value: seeAlso https://biolink.github.io/biolink-model/
-
-[Typedef]
-id: related:to
-name: related to
-def: "A relationship that is asserted between two named things" []
-comment: https://bioportal.bioontology.org/ontologies/BIOLINK
-property_value: seeAlso https://biolink.github.io/biolink-model/
+property_value: terms:description "has disposition is the relation between an entity and a disposition that it bears." xsd:string
+is_inverse_functional: true
+is_a: SIO:000001 ! is related to
 

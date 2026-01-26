@@ -3,71 +3,47 @@
     "id" : "http://purl.obolibrary.org/obo/promot/promot-simple.json",
     "meta" : {
       "basicPropertyValues" : [ {
-        "pred" : "http://purl.org/dc/elements/1.1/contributor",
-        "val" : "Anita Burgun MD, PhD\nhttps://orcid.org/0000-0001-6855-4366"
-      }, {
-        "pred" : "http://purl.org/dc/elements/1.1/contributor",
-        "val" : "Carole Faviez PhD\nhttps://orcid.org/0000-0002-1500-0236"
-      }, {
-        "pred" : "http://purl.org/dc/elements/1.1/contributor",
-        "val" : "Cynthia Gagnon PhD\nhttps://orcid.org/0000-0003-2829-8470"
-      }, {
-        "pred" : "http://purl.org/dc/elements/1.1/contributor",
-        "val" : "Daniel Natera De Benito MD, PhD\nhttps://orcid.org/0000-0001-7764-2085"
-      }, {
-        "pred" : "http://purl.org/dc/elements/1.1/contributor",
-        "val" : "Elizabeth Angelevski PhD"
-      }, {
-        "pred" : "http://purl.org/dc/elements/1.1/contributor",
-        "val" : "European Rare Diseases Research Alliance (ERDERA)\n\nWebsite: https://erdera.org"
-      }, {
-        "pred" : "http://purl.org/dc/elements/1.1/contributor",
-        "val" : "Hanns Lochmuller MD, PhD\nhttps://orcid.org/0000-0003-2324-8001"
-      }, {
-        "pred" : "http://purl.org/dc/elements/1.1/contributor",
-        "val" : "Mansoore Gholizade MD"
-      }, {
-        "pred" : "http://purl.org/dc/elements/1.1/creator",
-        "val" : "Juliette Potier MSc\nhttps://orcid.org/0009-0000-5160-7927"
-      }, {
-        "pred" : "http://purl.org/dc/elements/1.1/creator",
-        "val" : "Paul Fabry MD, PhD student\nhttps://orcid.org/0000-0002-3336-2476"
-      }, {
         "pred" : "http://purl.org/dc/terms/description",
-        "val" : "Ontology for building the database of the PROMOT project\n\nSee also: https://www.promotinitiative.com"
+        "val" : "Ontology for modeling the three following neuromuscular diseases : OPMD, Congenital myopathies and Congenital myastenic syndroms. It aims to be also an ontology for building the PROMOT project relational database."
+      }, {
+        "pred" : "http://purl.org/dc/terms/license",
+        "val" : "https://creativecommons.org/licenses/by-nc-sa/4.0/"
       }, {
         "pred" : "http://purl.org/dc/terms/title",
-        "val" : "PROMOT Common Data Model ontology"
+        "val" : "PROMOT ontology"
       }, {
         "pred" : "http://www.geneontology.org/formats/oboInOwl#date",
-        "val" : "14:08:2025 12:20"
-      }, {
-        "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
-        "val" : "Also contributor for the gathering ??\nThomas Bongivault, MSc\nMarc Vincent, PhD\n\n???"
-      }, {
-        "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
-        "val" : "The 'Performing a Rare Disease-Oriented Master Observational Trial' (PROMOT) project aims to generate a learning and knowledge mobilization platform allowing the development of a precision medicine approach for rare neuromuscular diseases.\n\nSee also: https://www.promotinitiative.com/project"
+        "val" : "20:01:2026 16:30"
       }, {
         "pred" : "http://www.w3.org/2002/07/owl#versionInfo",
-        "val" : "2025-08-14"
+        "val" : "2026-01-20"
       } ],
-      "version" : "http://purl.obolibrary.org/obo/promot/releases/2025-08-14/promot-simple.json"
+      "version" : "http://purl.obolibrary.org/obo/promot/releases/2026-01-20/promot-simple.json"
     },
     "nodes" : [ {
       "id" : "http://purl.obolibrary.org/obo/PROMOT_0000000",
       "lbl" : "root node",
       "type" : "CLASS"
     }, {
+      "id" : "http://purl.obolibrary.org/obo/PROMOT_0000001",
+      "lbl" : "genetic mutation",
+      "type" : "CLASS",
+      "meta" : {
+        "comments" : [ "Gene Ontology Resource ", "JP: Translated to spanish using Bing Translator" ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
+          "val" : "https://orcid.org/0009-0000-5160-7927"
+        } ]
+      }
+    }, {
       "id" : "http://purl.obolibrary.org/obo/PROMOT_0000002",
       "lbl" : "PABPN1 mutation",
       "type" : "CLASS",
       "meta" : {
-        "definition" : {
-          "val" : "Mutation located within the PABPN1 gene"
-        },
+        "comments" : [ "JP: Translated to spanish using Bing Translator", "Related to oculopharyngeal muscular dystrophy" ],
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
-          "val" : "Juliette Potier"
+          "val" : "https://orcid.org/0009-0000-5160-7927"
         } ]
       }
     }, {
@@ -75,12 +51,10 @@
       "lbl" : "RYR1 mutation",
       "type" : "CLASS",
       "meta" : {
-        "definition" : {
-          "val" : "Mutation located within the RYR1 gene"
-        },
+        "comments" : [ "JP: Translated to spanish using Bing Translator", "Related to congenital myopathies" ],
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
-          "val" : "Juliette Potier"
+          "val" : "https://orcid.org/0009-0000-5160-7927"
         } ]
       }
     }, {
@@ -88,12 +62,10 @@
       "lbl" : "TTN mutation",
       "type" : "CLASS",
       "meta" : {
-        "definition" : {
-          "val" : "Mutation located within the TTN gene"
-        },
+        "comments" : [ "JP: Translated to spanish using Bing Translator", "Related to congenital myopathies" ],
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
-          "val" : "Juliette Potier"
+          "val" : "https://orcid.org/0009-0000-5160-7927"
         } ]
       }
     }, {
@@ -101,12 +73,10 @@
       "lbl" : "NEB mutation",
       "type" : "CLASS",
       "meta" : {
-        "definition" : {
-          "val" : "Mutation located within the NEB gene"
-        },
+        "comments" : [ "JP: Translated to spanish using Bing Translator", "Related to congenital myopathies" ],
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
-          "val" : "Juliette Potier"
+          "val" : "https://orcid.org/0009-0000-5160-7927"
         } ]
       }
     }, {
@@ -114,12 +84,10 @@
       "lbl" : "MTM1 mutation",
       "type" : "CLASS",
       "meta" : {
-        "definition" : {
-          "val" : "Mutation located within the MTM1 gene"
-        },
+        "comments" : [ "JP: Translated to spanish using Bing Translator", "Related to congenital myopathies" ],
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
-          "val" : "Juliette Potier"
+          "val" : "https://orcid.org/0009-0000-5160-7927"
         } ]
       }
     }, {
@@ -127,12 +95,10 @@
       "lbl" : "ACTA1 mutation",
       "type" : "CLASS",
       "meta" : {
-        "definition" : {
-          "val" : "Mutation located within the ACTA1 gene"
-        },
+        "comments" : [ "JP: Translated to spanish using Bing Translator", "Related to congenital myopathies" ],
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
-          "val" : "Juliette Potier"
+          "val" : "https://orcid.org/0009-0000-5160-7927"
         } ]
       }
     }, {
@@ -140,12 +106,10 @@
       "lbl" : "SELENON mutation",
       "type" : "CLASS",
       "meta" : {
-        "definition" : {
-          "val" : "Mutation located within the SELENON gene"
-        },
+        "comments" : [ "JP: Translated to spanish using Bing Translator", "Related to congenital myopathies" ],
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
-          "val" : "Juliette Potier"
+          "val" : "https://orcid.org/0009-0000-5160-7927"
         } ]
       }
     }, {
@@ -153,12 +117,10 @@
       "lbl" : "CHRNE mutation",
       "type" : "CLASS",
       "meta" : {
-        "definition" : {
-          "val" : "Mutation located within the CHRNE gene"
-        },
+        "comments" : [ "JP: Translated to spanish using Bing Translator", "Related to congenital myasthenic syndromes" ],
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
-          "val" : "Juliette Potier"
+          "val" : "https://orcid.org/0009-0000-5160-7927"
         } ]
       }
     }, {
@@ -166,12 +128,10 @@
       "lbl" : "DOK7 mutation",
       "type" : "CLASS",
       "meta" : {
-        "definition" : {
-          "val" : "Mutation located within the DOK7 gene"
-        },
+        "comments" : [ "JP: Translated to spanish using Bing Translator", "Related to congenital myasthenic syndromes" ],
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
-          "val" : "Juliette Potier"
+          "val" : "https://orcid.org/0009-0000-5160-7927"
         } ]
       }
     }, {
@@ -179,12 +139,10 @@
       "lbl" : "COLQ mutation",
       "type" : "CLASS",
       "meta" : {
-        "definition" : {
-          "val" : "Mutation located within the COLQ gene"
-        },
+        "comments" : [ "JP: Translated to spanish using Bing Translator", "Related to congenital myasthenic syndromes" ],
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
-          "val" : "Juliette Potier"
+          "val" : "https://orcid.org/0009-0000-5160-7927"
         } ]
       }
     }, {
@@ -192,12 +150,10 @@
       "lbl" : "RAPSN mutation",
       "type" : "CLASS",
       "meta" : {
-        "definition" : {
-          "val" : "Mutation located within the RAPSN gene"
-        },
+        "comments" : [ "JP: Translated to spanish using Bing Translator", "Related to congenital myasthenic syndromes" ],
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
-          "val" : "Juliette Potier"
+          "val" : "https://orcid.org/0009-0000-5160-7927"
         } ]
       }
     }, {
@@ -205,12 +161,10 @@
       "lbl" : "GFPT1 mutation",
       "type" : "CLASS",
       "meta" : {
-        "definition" : {
-          "val" : "Mutation located within the GFPT1 gene"
-        },
+        "comments" : [ "JP: Translated to spanish using Bing Translator", "Related to congenital myasthenic syndromes" ],
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
-          "val" : "Juliette Potier"
+          "val" : "https://orcid.org/0009-0000-5160-7927"
         } ]
       }
     }, {
@@ -218,477 +172,939 @@
       "lbl" : "GMPPB mutation",
       "type" : "CLASS",
       "meta" : {
-        "definition" : {
-          "val" : "Mutation located within the GMPPB gene"
-        },
+        "comments" : [ "JP: Translated to spanish using Bing Translator", "Related to congenital myasthenic syndromes" ],
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
-          "val" : "Juliette Potier"
+          "val" : "https://orcid.org/0009-0000-5160-7927"
         } ]
       }
     }, {
-      "id" : "http://purl.obolibrary.org/obo/PROMOT_3000001",
-      "lbl" : "Patient",
-      "type" : "CLASS",
-      "meta" : {
-        "definition" : {
-          "val" : "Participant of PROMOT"
-        }
-      }
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/PROMOT_4000001",
-      "lbl" : "Patient statement",
-      "type" : "CLASS",
-      "meta" : {
-        "definition" : {
-          "val" : "A statement regarding a patient"
-        },
-        "basicPropertyValues" : [ {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
-          "val" : "Juliette Potier"
-        } ]
-      }
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/PROMOT_4000002",
-      "lbl" : "Biological sex statement",
-      "type" : "CLASS",
-      "meta" : {
-        "definition" : {
-          "val" : "A statement regarding the biological sex of a patient"
-        },
-        "basicPropertyValues" : [ {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
-          "val" : "Juliette Potier"
-        } ]
-      }
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/PROMOT_4000003",
-      "lbl" : "Marital status statement",
-      "type" : "CLASS",
-      "meta" : {
-        "definition" : {
-          "val" : "A statement regarding the marital status of a patient"
-        },
-        "basicPropertyValues" : [ {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
-          "val" : "Juliette Potier"
-        } ]
-      }
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/PROMOT_4000004",
-      "lbl" : "Occupation statement",
-      "type" : "CLASS",
-      "meta" : {
-        "definition" : {
-          "val" : "A statement regarding the occupation of a patient, such as work"
-        },
-        "basicPropertyValues" : [ {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
-          "val" : "Juliette Potier"
-        } ]
-      }
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/PROMOT_4000005",
-      "lbl" : "Ethnicity statement",
-      "type" : "CLASS",
-      "meta" : {
-        "definition" : {
-          "val" : "A statement regarding the ethnicity of a patient"
-        },
-        "basicPropertyValues" : [ {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
-          "val" : "Juliette Potier"
-        } ]
-      }
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/PROMOT_4000006",
-      "lbl" : "Date of birth statement",
-      "type" : "CLASS",
-      "meta" : {
-        "definition" : {
-          "val" : "A statement regarding the date of birth of a patient"
-        },
-        "basicPropertyValues" : [ {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
-          "val" : "Juliette Potier"
-        } ]
-      }
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/PROMOT_4000007",
-      "lbl" : "Date of death statement",
-      "type" : "CLASS",
-      "meta" : {
-        "definition" : {
-          "val" : "A statement regarding the date of death of a patient"
-        },
-        "basicPropertyValues" : [ {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
-          "val" : "Juliette Potier"
-        } ]
-      }
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/PROMOT_4000008",
-      "lbl" : "Achieved qualification statement",
-      "type" : "CLASS",
-      "meta" : {
-        "definition" : {
-          "val" : "A statement regarding the qualification achieved by a patient"
-        },
-        "basicPropertyValues" : [ {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
-          "val" : "Juliette Potier"
-        } ]
-      }
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/PROMOT_4000009",
-      "lbl" : "Duration of formal education statement",
-      "type" : "CLASS",
-      "meta" : {
-        "definition" : {
-          "val" : "A statement regarding the duration of formal education followed by a patient"
-        },
-        "basicPropertyValues" : [ {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
-          "val" : "Juliette Potier"
-        } ]
-      }
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/PROMOT_4000010",
-      "lbl" : "Handedness statement",
-      "type" : "CLASS",
-      "meta" : {
-        "definition" : {
-          "val" : "A statement regarding the handedness of a patient"
-        },
-        "basicPropertyValues" : [ {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
-          "val" : "Juliette Potier"
-        } ]
-      }
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/PROMOT_4000011",
-      "lbl" : "First language statement",
-      "type" : "CLASS",
-      "meta" : {
-        "definition" : {
-          "val" : "A statement regarding the first language spoken by a patient"
-        },
-        "basicPropertyValues" : [ {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
-          "val" : "Juliette Potier"
-        } ]
-      }
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/PROMOT_5000001",
-      "lbl" : "Patient identifier",
-      "type" : "CLASS",
-      "meta" : {
-        "definition" : {
-          "val" : "An information content entity that is used to refer to one instance of a patient."
-        },
-        "basicPropertyValues" : [ {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
-          "val" : "Juliette Potier"
-        } ]
-      }
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/PROMOT_6000002",
-      "lbl" : "absent",
-      "type" : "CLASS",
-      "meta" : {
-        "definition" : {
-          "val" : "A qualifier for an instance of a phenotype which is absent."
-        },
-        "basicPropertyValues" : [ {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
-          "val" : "Juliette Potier"
-        } ]
-      }
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/PROMOT_6000003",
-      "lbl" : "present",
-      "type" : "CLASS",
-      "meta" : {
-        "definition" : {
-          "val" : "Qualifies an instance of a phenotype as present."
-        },
-        "basicPropertyValues" : [ {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
-          "val" : "Juliette Potier"
-        } ]
-      }
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/PROMOT_6000004",
-      "lbl" : "unsure",
-      "type" : "CLASS",
-      "meta" : {
-        "definition" : {
-          "val" : "Qualifies an instance of a phenotype as unsure."
-        },
-        "basicPropertyValues" : [ {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
-          "val" : "Juliette Potier"
-        } ]
-      }
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/PROMOT_7000001",
+      "id" : "http://purl.obolibrary.org/obo/PROMOT_0000015",
       "lbl" : "Phenotypically related anatomical entity",
       "type" : "CLASS",
       "meta" : {
-        "definition" : {
-          "val" : "An anatomical entity related to a phenotype such that the anatomical entity is the location of the phenotype."
-        },
+        "comments" : [ "(JP : unsure, attention au lien avec les body structures)" ],
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
-          "val" : "Juliette Potier"
+          "val" : "Paul Fabry, https://orcid.org/0009-0000-5160-7927"
         } ]
       }
     }, {
-      "id" : "http://purl.obolibrary.org/obo/PROMOT_7000002",
+      "id" : "http://purl.obolibrary.org/obo/PROMOT_0000016",
       "lbl" : "Phenotypically related body structure",
       "type" : "CLASS",
       "meta" : {
-        "definition" : {
-          "val" : "A body structure related to a phenotype such that the body structure is the location of the phenotype."
-        },
         "comments" : [ "(JP: unsure about definition)" ],
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
-          "val" : "Juliette Potier"
+          "val" : "Paul Fabry, https://orcid.org/0009-0000-5160-7927"
         } ]
       }
     }, {
-      "id" : "http://purl.obolibrary.org/obo/PROMOT_7000003",
+      "id" : "http://purl.obolibrary.org/obo/PROMOT_0000017",
       "lbl" : "Phenotypically related body function",
       "type" : "CLASS",
       "meta" : {
-        "definition" : {
-          "val" : "A body function related to a phenotype such that the body function is impacted by the phenotype existence."
-        },
         "comments" : [ "(JP: unsure about definition)" ],
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
-          "val" : "Juliette Potier"
+          "val" : "Paul Fabry, https://orcid.org/0009-0000-5160-7927"
         } ]
       }
     }, {
-      "id" : "http://purl.obolibrary.org/obo/PROMOT_8000001",
-      "lbl" : "Onset statement",
+      "id" : "http://purl.obolibrary.org/obo/PROMOT_0000018",
+      "lbl" : "Activity or participation related body structure",
       "type" : "CLASS",
       "meta" : {
-        "definition" : {
-          "val" : "A statement regarding the date of onset of a phenotype"
-        },
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
-          "val" : "Juliette Potier"
+          "val" : "https://orcid.org/0009-0000-5160-7927"
         } ]
       }
     }, {
-      "id" : "http://purl.obolibrary.org/obo/PROMOT_9000001",
-      "lbl" : "Risk of fall",
+      "id" : "http://purl.obolibrary.org/obo/PROMOT_0000019",
+      "lbl" : "Activity or participation related body function",
       "type" : "CLASS",
       "meta" : {
-        "definition" : {
-          "val" : "The patient is at risk of fall"
-        },
-        "comments" : [ "(JP: unsure, OPMD)" ],
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
-          "val" : "Juliette Potier"
+          "val" : "https://orcid.org/0009-0000-5160-7927"
         } ]
       }
     }, {
-      "id" : "http://purl.obolibrary.org/obo/PROMOT_9000002",
-      "lbl" : "Decreased walking speed",
+      "id" : "http://purl.obolibrary.org/obo/PROMOT_0000020",
+      "lbl" : "Phenotypically related procedure",
       "type" : "CLASS",
       "meta" : {
-        "definition" : {
-          "val" : "Walking speed decreased in comparison to a normal walking speed"
-        },
-        "comments" : [ "(JP: unsure, OPMD)" ],
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
-          "val" : "Juliette Potier"
+          "val" : "https://orcid.org/0009-0000-5160-7927"
         } ]
       }
     }, {
-      "id" : "http://purl.obolibrary.org/obo/PROMOT_9000003",
-      "lbl" : "Difficulty rising from a chair",
+      "id" : "http://purl.obolibrary.org/obo/PROMOT_0000021",
+      "lbl" : "Body function related procedure",
       "type" : "CLASS",
       "meta" : {
-        "definition" : {
-          "val" : "Difficulty rising from a chair, difficulty to move from a sitting position to a standing position"
-        },
-        "comments" : [ "(JP: unsure, OPMD)" ],
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
-          "val" : "Juliette Potier"
+          "val" : "https://orcid.org/0009-0000-5160-7927"
         } ]
       }
     }, {
-      "id" : "http://purl.obolibrary.org/obo/PROMOT_9000004",
-      "lbl" : "Blockage sensation in the throat / food entrapment",
+      "id" : "http://purl.obolibrary.org/obo/PROMOT_0000022",
+      "lbl" : "Body structure related procedure",
       "type" : "CLASS",
       "meta" : {
-        "definition" : {
-          "val" : "OPMD"
-        },
-        "comments" : [ "(JP: unsure, OPMD)" ],
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
-          "val" : "Juliette Potier"
+          "val" : "https://orcid.org/0009-0000-5160-7927"
         } ]
       }
     }, {
-      "id" : "http://purl.obolibrary.org/obo/PROMOT_9000005",
-      "lbl" : "Multiple swallowing per bolus",
+      "id" : "http://purl.obolibrary.org/obo/PROMOT_0000023",
+      "lbl" : "Activity or participation related procedure",
       "type" : "CLASS",
       "meta" : {
-        "definition" : {
-          "val" : "OPMD"
-        },
-        "comments" : [ "(JP: unsure, OPMD)" ],
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
-          "val" : "Juliette Potier"
+          "val" : "https://orcid.org/0009-0000-5160-7927"
         } ]
       }
     }, {
-      "id" : "http://purl.obolibrary.org/obo/PROMOT_9000006",
-      "lbl" : "Needing to spit out food or liquids",
+      "id" : "http://purl.obolibrary.org/obo/PROMOT_0000024",
+      "lbl" : "Body structure related anatomical entity",
       "type" : "CLASS",
       "meta" : {
-        "definition" : {
-          "val" : "OPMD"
-        },
-        "comments" : [ "(JP: unsure, OPMD)" ],
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
-          "val" : "Juliette Potier"
+          "val" : "https://orcid.org/0009-0000-5160-7927"
         } ]
       }
     }, {
-      "id" : "http://purl.obolibrary.org/obo/PROMOT_9000007",
-      "lbl" : "Pharyngo-nasal and pharyngo-oral regurgitation",
+      "id" : "http://purl.obolibrary.org/obo/PROMOT_0000025",
+      "lbl" : "patient",
       "type" : "CLASS",
       "meta" : {
-        "definition" : {
-          "val" : "OPMD"
-        },
-        "comments" : [ "(JP: unsure, OPMD)" ],
+        "comments" : [ "JP: Translated to spanish using Bing Translator" ],
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
-          "val" : "Juliette Potier"
+          "val" : "https://orcid.org/0009-0000-5160-7927"
         } ]
       }
     }, {
-      "id" : "http://purl.obolibrary.org/obo/PROMOT_9000008",
-      "lbl" : "Presence of secretions",
+      "id" : "http://purl.obolibrary.org/obo/PROMOT_0000026",
+      "lbl" : "abnormal disposition",
       "type" : "CLASS",
       "meta" : {
-        "definition" : {
-          "val" : "OPMD"
-        },
-        "comments" : [ "(JP: unsure, OPMD)" ],
+        "comments" : [ "(to validate)" ],
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
-          "val" : "Juliette Potier"
+          "val" : "https://orcid.org/0009-0000-5160-7927"
         } ]
       }
     }, {
-      "id" : "http://purl.obolibrary.org/obo/PROMOT_9000009",
-      "lbl" : "Generalized fatigability of muscles",
+      "id" : "http://purl.obolibrary.org/obo/PROMOT_0000027",
+      "lbl" : "statement",
       "type" : "CLASS",
       "meta" : {
-        "definition" : {
-          "val" : "CM"
-        },
-        "comments" : [ "(JP: unsure, CM)" ],
+        "comments" : [ "JP: Translated to spanish using Bing Translator" ],
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
-          "val" : "Juliette Potier"
+          "val" : "https://orcid.org/0009-0000-5160-7927"
         } ]
       }
     }, {
-      "id" : "http://purl.obolibrary.org/obo/PROMOT_9000010",
-      "lbl" : "Arthrogryposis during neonatal period",
+      "id" : "http://purl.obolibrary.org/obo/PROMOT_0000028",
+      "lbl" : "statement about a human",
       "type" : "CLASS",
       "meta" : {
-        "definition" : {
-          "val" : "Joint stiffness or joint contractures during neonatal period"
-        },
-        "comments" : [ "(JP: unsure, CM)" ],
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
-          "val" : "Juliette Potier"
+          "val" : "https://orcid.org/0009-0000-5160-7927"
         } ]
       }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PROMOT_0000029",
+      "lbl" : "statement about a patient",
+      "type" : "CLASS",
+      "meta" : {
+        "comments" : [ "JP: Translated to spanish using Bing Translator" ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
+          "val" : "https://orcid.org/0009-0000-5160-7927"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PROMOT_0000030",
+      "lbl" : "statement about a phenotype",
+      "type" : "CLASS",
+      "meta" : {
+        "comments" : [ "BIH-CEI rd-cdm: Repo for the ontology-based rare disease common data model harmonising international registry use, FHIR, and Phenopackets ", "JP: Translated to spanish using Bing Translator" ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
+          "val" : "https://orcid.org/0009-0000-5160-7927"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PROMOT_0000031",
+      "lbl" : "statement about a procedure",
+      "type" : "CLASS",
+      "meta" : {
+        "comments" : [ "JP: Translated to spanish using Bing Translator" ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
+          "val" : "https://orcid.org/0009-0000-5160-7927"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PROMOT_0000032",
+      "lbl" : "statement about a consent",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PROMOT_0000033",
+      "lbl" : "result of procedure",
+      "type" : "CLASS",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
+          "val" : "https://orcid.org/0009-0000-5160-7927"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PROMOT_0000034",
+      "lbl" : "Date",
+      "type" : "CLASS",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
+          "val" : "https://orcid.org/0009-0000-5160-7927"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PROMOT_0000035",
+      "lbl" : "Date of assessment",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PROMOT_0000036",
+      "lbl" : "Date of resolution",
+      "type" : "CLASS",
+      "meta" : {
+        "comments" : [ "JP: Translated to spanish using Bing Translator" ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
+          "val" : "https://orcid.org/0009-0000-5160-7927"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PROMOT_0000037",
+      "lbl" : "Year of onset",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PROMOT_0000038",
+      "lbl" : "Year of birth",
+      "type" : "CLASS",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
+          "val" : "https://orcid.org/0009-0000-5160-7927"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PROMOT_0000039",
+      "lbl" : "Year of diagnosis",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PROMOT_0000040",
+      "lbl" : "Year of death",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PROMOT_0000041",
+      "lbl" : "Age",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PROMOT_0000042",
+      "lbl" : "Age at death",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PROMOT_0000043",
+      "lbl" : "Age Category",
+      "type" : "CLASS",
+      "meta" : {
+        "comments" : [ "Graefe, A.S.L., Hübner, M.R., Rehburg, F. et al. An ontology-based rare disease common data model harmonising international registries, FHIR, and Phenopackets. Sci Data 12, 234 (2025). https://doi.org/10.1038/s41597-025-04558-z" ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.w3.org/2000/01/rdf-schema#seeAlso",
+          "val" : "http://purl.obolibrary.org/obo/HP_0003674"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PROMOT_0000044",
+      "lbl" : "Adulthood",
+      "type" : "CLASS",
+      "meta" : {
+        "comments" : [ "JP: Translated to spanish using Bing Translator" ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
+          "val" : "https://orcid.org/0009-0000-5160-7927"
+        }, {
+          "pred" : "http://www.w3.org/2000/01/rdf-schema#seeAlso",
+          "val" : "http://purl.obolibrary.org/obo/HP_0003674"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PROMOT_0000045",
+      "lbl" : "Late adulthood",
+      "type" : "CLASS",
+      "meta" : {
+        "comments" : [ "JP: Translated to spanish using Bing Translator" ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
+          "val" : "https://orcid.org/0009-0000-5160-7927"
+        }, {
+          "pred" : "http://www.w3.org/2000/01/rdf-schema#seeAlso",
+          "val" : "http://purl.obolibrary.org/obo/HP_0003674"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PROMOT_0000046",
+      "lbl" : "Middle adulthood",
+      "type" : "CLASS",
+      "meta" : {
+        "comments" : [ "JP: Translated to spanish using Bing Translator" ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
+          "val" : "https://orcid.org/0009-0000-5160-7927"
+        }, {
+          "pred" : "http://www.w3.org/2000/01/rdf-schema#seeAlso",
+          "val" : "http://purl.obolibrary.org/obo/HP_0003674"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PROMOT_0000047",
+      "lbl" : "Young adulthood",
+      "type" : "CLASS",
+      "meta" : {
+        "comments" : [ "JP: Translated to spanish using Bing Translator" ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
+          "val" : "https://orcid.org/0009-0000-5160-7927"
+        }, {
+          "pred" : "http://www.w3.org/2000/01/rdf-schema#seeAlso",
+          "val" : "http://purl.obolibrary.org/obo/HP_0003674"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PROMOT_0000048",
+      "lbl" : "Early young adulthood",
+      "type" : "CLASS",
+      "meta" : {
+        "comments" : [ "JP: Translated to spanish using Bing Translator" ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
+          "val" : "https://orcid.org/0009-0000-5160-7927"
+        }, {
+          "pred" : "http://www.w3.org/2000/01/rdf-schema#seeAlso",
+          "val" : "http://purl.obolibrary.org/obo/HP_0003674"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PROMOT_0000049",
+      "lbl" : "Intermediate young adulthood",
+      "type" : "CLASS",
+      "meta" : {
+        "comments" : [ "JP: Translated to spanish using Bing Translator" ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
+          "val" : "https://orcid.org/0009-0000-5160-7927"
+        }, {
+          "pred" : "http://www.w3.org/2000/01/rdf-schema#seeAlso",
+          "val" : "http://purl.obolibrary.org/obo/HP_0003674"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PROMOT_0000050",
+      "lbl" : "Late young adulthood",
+      "type" : "CLASS",
+      "meta" : {
+        "comments" : [ "JP: Translated to spanish using Bing Translator", "This term includes the full 19th year of age up to the completed 25th year of age (i.e., less than the 25th birthday). [from: HP:0025709]" ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
+          "val" : "https://orcid.org/0009-0000-5160-7927"
+        }, {
+          "pred" : "http://www.w3.org/2000/01/rdf-schema#seeAlso",
+          "val" : "http://purl.obolibrary.org/obo/HP_0003674"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PROMOT_0000051",
+      "lbl" : "Antenatal age",
+      "type" : "CLASS",
+      "meta" : {
+        "comments" : [ "This term includes the full 25th year of age up to the completed 40th year of age (i.e., less than the 40th birthday). [from: HP:0025710]" ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
+          "val" : "https://orcid.org/0009-0000-5160-7927"
+        }, {
+          "pred" : "http://www.w3.org/2000/01/rdf-schema#seeAlso",
+          "val" : "http://purl.obolibrary.org/obo/HP_0003674"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PROMOT_0000052",
+      "lbl" : "Embryonal",
+      "type" : "CLASS",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
+          "val" : "https://orcid.org/0009-0000-5160-7927"
+        }, {
+          "pred" : "http://www.w3.org/2000/01/rdf-schema#seeAlso",
+          "val" : "http://purl.obolibrary.org/obo/HP_0003674"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PROMOT_0000053",
+      "lbl" : "Fetal",
+      "type" : "CLASS",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
+          "val" : "https://orcid.org/0009-0000-5160-7927"
+        }, {
+          "pred" : "http://www.w3.org/2000/01/rdf-schema#seeAlso",
+          "val" : "http://purl.obolibrary.org/obo/HP_0003674"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PROMOT_0000054",
+      "lbl" : "Late first trimester",
+      "type" : "CLASS",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
+          "val" : "https://orcid.org/0009-0000-5160-7927"
+        }, {
+          "pred" : "http://www.w3.org/2000/01/rdf-schema#seeAlso",
+          "val" : "http://purl.obolibrary.org/obo/HP_0003674"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PROMOT_0000055",
+      "lbl" : "Second trimester",
+      "type" : "CLASS",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
+          "val" : "https://orcid.org/0009-0000-5160-7927"
+        }, {
+          "pred" : "http://www.w3.org/2000/01/rdf-schema#seeAlso",
+          "val" : "http://purl.obolibrary.org/obo/HP_0003674"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PROMOT_0000056",
+      "lbl" : "Third trimester",
+      "type" : "CLASS",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
+          "val" : "https://orcid.org/0009-0000-5160-7927"
+        }, {
+          "pred" : "http://www.w3.org/2000/01/rdf-schema#seeAlso",
+          "val" : "http://purl.obolibrary.org/obo/HP_0003674"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PROMOT_0000057",
+      "lbl" : "Congenital",
+      "type" : "CLASS",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
+          "val" : "https://orcid.org/0009-0000-5160-7927"
+        }, {
+          "pred" : "http://www.w3.org/2000/01/rdf-schema#seeAlso",
+          "val" : "http://purl.obolibrary.org/obo/HP_0003674"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PROMOT_0000058",
+      "lbl" : "Neonatal age",
+      "type" : "CLASS",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
+          "val" : "https://orcid.org/0009-0000-5160-7927"
+        }, {
+          "pred" : "http://www.w3.org/2000/01/rdf-schema#seeAlso",
+          "val" : "http://purl.obolibrary.org/obo/HP_0003674"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PROMOT_0000059",
+      "lbl" : "Pediatric age",
+      "type" : "CLASS",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
+          "val" : "https://orcid.org/0009-0000-5160-7927"
+        }, {
+          "pred" : "http://www.w3.org/2000/01/rdf-schema#seeAlso",
+          "val" : "http://purl.obolibrary.org/obo/HP_0003674"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PROMOT_0000060",
+      "lbl" : "Childhood",
+      "type" : "CLASS",
+      "meta" : {
+        "comments" : [ "JP: Translated to spanish using Bing Translator", "This term refers to ages up to but not including the fifth birthday (see Juvenile onset). [from: HP:0011463]" ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
+          "val" : "https://orcid.org/0009-0000-5160-7927"
+        }, {
+          "pred" : "http://www.w3.org/2000/01/rdf-schema#seeAlso",
+          "val" : "http://purl.obolibrary.org/obo/HP_0003674"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PROMOT_0000061",
+      "lbl" : "Infantile age",
+      "type" : "CLASS",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
+          "val" : "https://orcid.org/0009-0000-5160-7927"
+        }, {
+          "pred" : "http://www.w3.org/2000/01/rdf-schema#seeAlso",
+          "val" : "http://purl.obolibrary.org/obo/HP_0003674"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PROMOT_0000062",
+      "lbl" : "Juvenile age",
+      "type" : "CLASS",
+      "meta" : {
+        "comments" : [ "JP: Translated to spanish using Bing Translator" ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
+          "val" : "https://orcid.org/0009-0000-5160-7927"
+        }, {
+          "pred" : "http://www.w3.org/2000/01/rdf-schema#seeAlso",
+          "val" : "http://purl.obolibrary.org/obo/HP_0003674"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PROMOT_0000063",
+      "lbl" : "Perimenopausal age",
+      "type" : "CLASS",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
+          "val" : "https://orcid.org/0009-0000-5160-7927"
+        }, {
+          "pred" : "http://www.w3.org/2000/01/rdf-schema#seeAlso",
+          "val" : "http://purl.obolibrary.org/obo/HP_0003674"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PROMOT_0000064",
+      "lbl" : "Postmenopausal age",
+      "type" : "CLASS",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
+          "val" : "https://orcid.org/0009-0000-5160-7927"
+        }, {
+          "pred" : "http://www.w3.org/2000/01/rdf-schema#seeAlso",
+          "val" : "http://purl.obolibrary.org/obo/HP_0003674"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PROMOT_0000065",
+      "lbl" : "Puerpural age",
+      "type" : "CLASS",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
+          "val" : "https://orcid.org/0009-0000-5160-7927"
+        }, {
+          "pred" : "http://www.w3.org/2000/01/rdf-schema#seeAlso",
+          "val" : "http://purl.obolibrary.org/obo/HP_0003674"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PROMOT_0000066",
+      "lbl" : "Sex at birth",
+      "type" : "CLASS",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
+          "val" : "https://orcid.org/0009-0000-5160-7927"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PROMOT_0000067",
+      "lbl" : "Female sex at birth",
+      "type" : "CLASS",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
+          "val" : "https://orcid.org/0009-0000-5160-7927"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PROMOT_0000068",
+      "lbl" : "Intersex at birth",
+      "type" : "CLASS",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
+          "val" : "https://orcid.org/0009-0000-5160-7927"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PROMOT_0000069",
+      "lbl" : "Male sex at birth",
+      "type" : "CLASS",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
+          "val" : "https://orcid.org/0009-0000-5160-7927"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PROMOT_0000070",
+      "lbl" : "Patient sex at birth unknown",
+      "type" : "CLASS",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
+          "val" : "https://orcid.org/0009-0000-5160-7927"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PROMOT_0000071",
+      "lbl" : "Sex at birth not recorded",
+      "type" : "CLASS",
+      "meta" : {
+        "comments" : [ "UNSURE : not really a class" ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
+          "val" : "https://orcid.org/0009-0000-5160-7927"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PROMOT_0000072",
+      "lbl" : "Female gender identity",
+      "type" : "CLASS",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
+          "val" : "https://orcid.org/0009-0000-5160-7927"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PROMOT_0000073",
+      "lbl" : "Identifies as nonbinary gender",
+      "type" : "CLASS",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
+          "val" : "https://orcid.org/0009-0000-5160-7927"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PROMOT_0000074",
+      "lbl" : "Male gender identity",
+      "type" : "CLASS",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
+          "val" : "https://orcid.org/0009-0000-5160-7927"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PROMOT_0000075",
+      "lbl" : "Gender identity unknown",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PROMOT_0000076",
+      "lbl" : "Gender identity not recorded",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PROMOT_0000077",
+      "lbl" : "Nb of previous pregnancies",
+      "type" : "CLASS",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
+          "val" : "https://orcid.org/0009-0000-5160-7927"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PROMOT_0000078",
+      "lbl" : "Patient at risk of fall",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PROMOT_0000079",
+      "lbl" : "unkown life status",
+      "type" : "CLASS",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
+          "val" : "https://orcid.org/0009-0000-5160-7927"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PROMOT_0000080",
+      "lbl" : "unrecorded life status",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PROMOT_0000081",
+      "lbl" : "unknown transmission",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PROMOT_0000082",
+      "lbl" : "unrecorded transmission",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PROMOT_0000083",
+      "lbl" : "Unrecorded health status",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PROMOT_0000084",
+      "lbl" : "presence qualifier",
+      "type" : "CLASS",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
+          "val" : "https://orcid.org/0009-0000-5160-7927"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PROMOT_0000085",
+      "lbl" : "absent",
+      "type" : "CLASS",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
+          "val" : "https://orcid.org/0009-0000-5160-7927"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PROMOT_0000086",
+      "lbl" : "present",
+      "type" : "CLASS",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
+          "val" : "https://orcid.org/0009-0000-5160-7927"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PROMOT_0000087",
+      "lbl" : "presence unsure",
+      "type" : "CLASS",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
+          "val" : "https://orcid.org/0009-0000-5160-7927"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PROMOT_0000088",
+      "lbl" : "presence unrecorded",
+      "type" : "CLASS",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
+          "val" : "https://orcid.org/0009-0000-5160-7927"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PROMOT_0000089",
+      "lbl" : "Consent status",
+      "type" : "CLASS",
+      "meta" : {
+        "comments" : [ "Graefe, A.S.L., Hübner, M.R., Rehburg, F. et al. An ontology-based rare disease common data model harmonising international registries, FHIR, and Phenopackets. Sci Data 12, 234 (2025). https://doi.org/10.1038/s41597-025-04558-z", "RD-CDM" ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PROMOT_0000090",
+      "lbl" : "Pending",
+      "type" : "CLASS",
+      "meta" : {
+        "comments" : [ "Graefe, A.S.L., Hübner, M.R., Rehburg, F. et al. An ontology-based rare disease common data model harmonising international registries, FHIR, and Phenopackets. Sci Data 12, 234 (2025). https://doi.org/10.1038/s41597-025-04558-z", "RD-CDM" ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PROMOT_0000091",
+      "lbl" : "Proposed",
+      "type" : "CLASS",
+      "meta" : {
+        "comments" : [ "Graefe, A.S.L., Hübner, M.R., Rehburg, F. et al. An ontology-based rare disease common data model harmonising international registries, FHIR, and Phenopackets. Sci Data 12, 234 (2025). https://doi.org/10.1038/s41597-025-04558-z", "RD-CDM" ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PROMOT_0000092",
+      "lbl" : "Active",
+      "type" : "CLASS",
+      "meta" : {
+        "comments" : [ "Graefe, A.S.L., Hübner, M.R., Rehburg, F. et al. An ontology-based rare disease common data model harmonising international registries, FHIR, and Phenopackets. Sci Data 12, 234 (2025). https://doi.org/10.1038/s41597-025-04558-z", "RD-CDM" ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PROMOT_0000093",
+      "lbl" : "Rejected",
+      "type" : "CLASS",
+      "meta" : {
+        "comments" : [ "Graefe, A.S.L., Hübner, M.R., Rehburg, F. et al. An ontology-based rare disease common data model harmonising international registries, FHIR, and Phenopackets. Sci Data 12, 234 (2025). https://doi.org/10.1038/s41597-025-04558-z", "RD-CDM" ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PROMOT_0000094",
+      "lbl" : "Inactive",
+      "type" : "CLASS",
+      "meta" : {
+        "comments" : [ "Graefe, A.S.L., Hübner, M.R., Rehburg, F. et al. An ontology-based rare disease common data model harmonising international registries, FHIR, and Phenopackets. Sci Data 12, 234 (2025). https://doi.org/10.1038/s41597-025-04558-z", "RD-CDM" ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PROMOT_0000095",
+      "lbl" : "Entered in Error",
+      "type" : "CLASS",
+      "meta" : {
+        "comments" : [ "Graefe, A.S.L., Hübner, M.R., Rehburg, F. et al. An ontology-based rare disease common data model harmonising international registries, FHIR, and Phenopackets. Sci Data 12, 234 (2025). https://doi.org/10.1038/s41597-025-04558-z", "RD-CDM" ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PROMOT_0000096",
+      "lbl" : "Date of consent",
+      "type" : "CLASS",
+      "meta" : {
+        "comments" : [ "Graefe, A.S.L., Hübner, M.R., Rehburg, F. et al. An ontology-based rare disease common data model harmonising international registries, FHIR, and Phenopackets. Sci Data 12, 234 (2025). https://doi.org/10.1038/s41597-025-04558-z", "RD-CDM" ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PROMOT_0000097",
+      "lbl" : "Agreement to be contacted for research purpose",
+      "type" : "CLASS",
+      "meta" : {
+        "comments" : [ "Graefe, A.S.L., Hübner, M.R., Rehburg, F. et al. An ontology-based rare disease common data model harmonising international registries, FHIR, and Phenopackets. Sci Data 12, 234 (2025). https://doi.org/10.1038/s41597-025-04558-z", "RD-CDM" ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PROMOT_0000098",
+      "lbl" : "Consent to the reuse of data",
+      "type" : "CLASS",
+      "meta" : {
+        "comments" : [ "Graefe, A.S.L., Hübner, M.R., Rehburg, F. et al. An ontology-based rare disease common data model harmonising international registries, FHIR, and Phenopackets. Sci Data 12, 234 (2025). https://doi.org/10.1038/s41597-025-04558-z", "RD-CDM" ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PROMOT_0000099",
+      "lbl" : "Pourcentage de la valeur attendue",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PROMOT_0000100",
+      "lbl" : "Assessment using Debimeter",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PROMOT_0000101",
+      "lbl" : "Quantative muscle weakness",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PROMOT_0000102",
+      "lbl" : "Assessment using Dysphagyameter",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PROMOT_0000103",
+      "lbl" : "Assessment using B&L gauge",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PROMOT_0000104",
+      "lbl" : "Bilan dynamométrique avec MedUP",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PROMOT_0000105",
+      "lbl" : "Assessment using Iowa Oral Performance Instrument",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PROMOT_0000106",
+      "lbl" : "Double compound motor action potential abnormality",
+      "type" : "CLASS",
+      "meta" : {
+        "comments" : [ "(JP : to validate)" ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/PROMOT_1000001",
+          "val" : "CMS Scoping review"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PROMOT_0000107",
+      "lbl" : "Year of assessment",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PROMOT_0000108",
+      "lbl" : "Year of resolution",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PROMOT_0000109",
+      "lbl" : "lost in follow up",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PROMOT_0000110",
+      "lbl" : "opt out",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PROMOT_0000111",
+      "lbl" : "Assessment using Berg Balance Scale",
+      "type" : "CLASS"
     }, {
       "id" : "http://purl.obolibrary.org/obo/PROMOT_2000001",
-      "lbl" : "is location of",
-      "type" : "PROPERTY",
-      "propertyType" : "OBJECT",
-      "meta" : {
-        "definition" : {
-          "val" : "A relation between a phenotypically related anatomical entity and a phenotype, where the phenotype is located in the phenotypically related anatomical entity."
-        },
-        "basicPropertyValues" : [ {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
-          "val" : "Juliette Potier"
-        } ]
-      }
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/PROMOT_2000002",
       "lbl" : "is used by",
       "type" : "PROPERTY",
       "propertyType" : "OBJECT",
       "meta" : {
-        "definition" : {
-          "val" : "A relation between a device and a patient, where the patient uses an assistive equipment in order to move or to accomplish something, such as a task or an activity."
-        },
+        "comments" : [ "JP: Translated to spanish using Bing Translator" ],
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
-          "val" : "Juliette Potier"
+          "val" : "https://orcid.org/0009-0000-5160-7927"
         } ]
       }
     }, {
-      "id" : "http://purl.obolibrary.org/obo/PROMOT_2000003",
+      "id" : "http://purl.obolibrary.org/obo/PROMOT_2000002",
       "lbl" : "assesses",
       "type" : "PROPERTY",
       "propertyType" : "OBJECT",
       "meta" : {
-        "definition" : {
-          "val" : "A relation between an evaluation procedure and a patient, where the patient is assessed by an evaluation procedure, such as a test, a questionnaire or a scale."
-        },
+        "comments" : [ "JP: Translated to spanish using Bing Translator" ],
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
-          "val" : "Juliette Potier"
+          "val" : "https://orcid.org/0009-0000-5160-7927"
         } ]
       }
     }, {
-      "id" : "http://purl.obolibrary.org/obo/RO_0000080",
-      "lbl" : "quality of",
+      "id" : "http://purl.obolibrary.org/obo/PROMOT_2000003",
+      "lbl" : "measures",
+      "type" : "PROPERTY",
+      "propertyType" : "OBJECT"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PROMOT_2000004",
+      "lbl" : "has genetic mutation",
+      "type" : "PROPERTY",
+      "propertyType" : "OBJECT"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PROMOT_2000005",
+      "lbl" : "affects",
+      "type" : "PROPERTY",
+      "propertyType" : "OBJECT"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PROMOT_2000006",
+      "lbl" : "is unique identifier for",
       "type" : "PROPERTY",
       "propertyType" : "OBJECT",
       "meta" : {
-        "definition" : {
-          "val" : "a relation between a quality and an independent continuant (the bearer), in which the quality specifically depends on the bearer for its existence"
-        },
-        "comments" : [ "This relation is modeled after the BFO relation of the same name which was in BFO2, but is used in a more restricted sense - specifically, we model this relation as functional (inherited from characteristic-of). Note that this relation is now removed from BFO2020." ],
-        "basicPropertyValues" : [ {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000112",
-          "val" : "this red color is a quality of this apple"
-        }, {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000116",
-          "val" : "A quality inheres in its bearer at all times for which the quality exists."
-        }, {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000118",
-          "val" : "is quality of"
-        }, {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000118",
-          "val" : "quality_of"
-        } ]
+        "comments" : [ "Xref SIO:000674" ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PROMOT_2000007",
+      "lbl" : "has output",
+      "type" : "PROPERTY",
+      "propertyType" : "OBJECT",
+      "meta" : {
+        "comments" : [ "Xref SIO:000229" ]
       }
     }, {
       "id" : "http://purl.obolibrary.org/obo/RO_0002200",
@@ -727,6 +1143,29 @@
         } ]
       }
     }, {
+      "id" : "http://purl.obolibrary.org/obo/RO_0002331",
+      "lbl" : "involved in",
+      "type" : "PROPERTY",
+      "propertyType" : "OBJECT",
+      "meta" : {
+        "definition" : {
+          "val" : "c involved_in p if and only if c enables some process p', and p' is part of p"
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
+          "val" : "https://orcid.org/0000-0002-6601-2165"
+        }, {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000118",
+          "val" : "actively involved in"
+        }, {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000118",
+          "val" : "enables part of"
+        }, {
+          "pred" : "http://www.w3.org/2000/01/rdf-schema#seeAlso",
+          "val" : "https://wiki.geneontology.org/Involved_in"
+        } ]
+      }
+    }, {
       "id" : "http://purl.obolibrary.org/obo/RO_0002351",
       "lbl" : "has member",
       "type" : "PROPERTY",
@@ -744,17 +1183,126 @@
         } ]
       }
     }, {
-      "id" : "http://purl.obolibrary.org/obo/VO_0001039",
-      "lbl" : "has gene mutation",
+      "id" : "http://purl.obolibrary.org/obo/RO_0004003",
+      "lbl" : "has material basis in germline mutation in",
+      "type" : "PROPERTY",
+      "propertyType" : "OBJECT",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
+          "val" : "https://orcid.org/0000-0002-6601-2165"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
+          "val" : "2017-11-05T02:45:54Z"
+        }, {
+          "pred" : "http://www.w3.org/2000/01/rdf-schema#seeAlso",
+          "val" : "http://www.orpha.net/ORDO/Orphanet_317343"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/RO_0004013",
+      "lbl" : "is causal germline mutation in",
       "type" : "PROPERTY",
       "propertyType" : "OBJECT",
       "meta" : {
         "definition" : {
-          "val" : "An object property that represents an organism has a mutation of a specific gene from the organism genome."
+          "val" : "Relates a gene to condition, such that a mutation in this gene is sufficient to produce the condition and that can be passed on to offspring[modified from orphanet]."
         },
         "basicPropertyValues" : [ {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
-          "val" : "Oliver He"
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
+          "val" : "https://orcid.org/0000-0002-6601-2165"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
+          "val" : "2017-11-05T02:56:40Z"
+        }, {
+          "pred" : "http://www.w3.org/2000/01/rdf-schema#seeAlso",
+          "val" : "http://www.orpha.net/ORDO/Orphanet_317343"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/RO_0004029",
+      "lbl" : "disease has feature",
+      "type" : "PROPERTY",
+      "propertyType" : "OBJECT",
+      "meta" : {
+        "definition" : {
+          "val" : "A relationship between a disease and some feature of that disease, where the feature is either a phenotype or an isolated disease."
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
+          "val" : "https://orcid.org/0000-0002-6601-2165"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
+          "val" : "2017-12-26T19:50:53Z"
+        } ]
+      }
+    }, {
+      "id" : "http://semanticscience.org/resource/SIO_000001",
+      "lbl" : "is related to",
+      "type" : "PROPERTY",
+      "propertyType" : "OBJECT",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.org/dc/elements/1.1/identifier",
+          "val" : "SIO_000001"
+        }, {
+          "pred" : "http://purl.org/dc/terms/description",
+          "val" : "A is related to B iff there is some relation between A and B."
+        }, {
+          "pred" : "http://schema.org/comment",
+          "val" : "'is related to' is the top level relation in SIO"
+        }, {
+          "pred" : "http://semanticscience.org/resource/subset",
+          "val" : "core"
+        }, {
+          "pred" : "http://semanticscience.org/resource/subset",
+          "val" : "relations+"
+        }, {
+          "pred" : "http://www.w3.org/2000/01/rdf-schema#isDefinedBy",
+          "val" : "http://semanticscience.org/ontology/sio.owl"
+        } ]
+      }
+    }, {
+      "id" : "http://semanticscience.org/resource/SIO_000061",
+      "lbl" : "is located in",
+      "type" : "PROPERTY",
+      "propertyType" : "OBJECT",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.org/dc/elements/1.1/identifier",
+          "val" : "SIO_000061"
+        }, {
+          "pred" : "http://purl.org/dc/terms/description",
+          "val" : "A is located in B iff the spatialtemporial region occupied by A is part of the spatialtemporal region occupied by B. [T][R]"
+        }, {
+          "pred" : "http://semanticscience.org/resource/equivalentTo",
+          "val" : "OBO_REL:located_in"
+        }, {
+          "pred" : "http://semanticscience.org/resource/subset",
+          "val" : "core"
+        }, {
+          "pred" : "http://www.w3.org/2000/01/rdf-schema#isDefinedBy",
+          "val" : "http://semanticscience.org/ontology/sio.owl"
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#example",
+          "val" : "A parasite in the interior of a person's intestine is located in their intestinal lumen."
+        } ]
+      }
+    }, {
+      "id" : "http://semanticscience.org/resource/SIO_000217",
+      "lbl" : "has quality",
+      "type" : "PROPERTY",
+      "propertyType" : "OBJECT",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.org/dc/elements/1.1/identifier",
+          "val" : "SIO_000217"
+        }, {
+          "pred" : "http://purl.org/dc/terms/description",
+          "val" : "has quality is a relation between an entity and the quality that it bears."
+        }, {
+          "pred" : "http://www.w3.org/2000/01/rdf-schema#isDefinedBy",
+          "val" : "http://semanticscience.org/ontology/sio.owl"
         } ]
       }
     }, {
@@ -775,75 +1323,22 @@
         } ]
       }
     }, {
-      "id" : "http://semanticscience.org/resource/SIO_000671",
-      "lbl" : "has identifier",
+      "id" : "http://semanticscience.org/resource/SIO_000235",
+      "lbl" : "has disposition",
       "type" : "PROPERTY",
       "propertyType" : "OBJECT",
       "meta" : {
         "basicPropertyValues" : [ {
           "pred" : "http://purl.org/dc/elements/1.1/identifier",
-          "val" : "SIO_000671"
+          "val" : "SIO_000235"
         }, {
           "pred" : "http://purl.org/dc/terms/description",
-          "val" : "a relation between an entity and an identifier."
+          "val" : "has disposition is the relation between an entity and a disposition that it bears."
         }, {
           "pred" : "http://www.w3.org/2000/01/rdf-schema#isDefinedBy",
           "val" : "http://semanticscience.org/ontology/sio.owl"
         } ]
       }
-    }, {
-      "id" : "https://w3id.org/biolink/vocab/affected_by",
-      "lbl" : "affected by",
-      "type" : "PROPERTY",
-      "propertyType" : "OBJECT",
-      "meta" : {
-        "definition" : {
-          "val" : "Describes an entity of which the state or quality is affected by another existing entity."
-        },
-        "comments" : [ "https://bioportal.bioontology.org/ontologies/BIOLINK" ],
-        "basicPropertyValues" : [ {
-          "pred" : "http://www.w3.org/2000/01/rdf-schema#seeAlso",
-          "val" : "https://biolink.github.io/biolink-model/"
-        } ]
-      }
-    }, {
-      "id" : "https://w3id.org/biolink/vocab/affects",
-      "lbl" : "affects",
-      "type" : "PROPERTY",
-      "propertyType" : "OBJECT",
-      "meta" : {
-        "definition" : {
-          "val" : "Describes an entity that has an effect on the state or quality of another existing entity."
-        },
-        "comments" : [ "https://bioportal.bioontology.org/ontologies/BIOLINK" ],
-        "basicPropertyValues" : [ {
-          "pred" : "http://www.w3.org/2000/01/rdf-schema#seeAlso",
-          "val" : "https://biolink.github.io/biolink-model/"
-        } ]
-      }
-    }, {
-      "id" : "https://w3id.org/biolink/vocab/related_to",
-      "lbl" : "related to",
-      "type" : "PROPERTY",
-      "propertyType" : "OBJECT",
-      "meta" : {
-        "definition" : {
-          "val" : "A relationship that is asserted between two named things"
-        },
-        "comments" : [ "https://bioportal.bioontology.org/ontologies/BIOLINK" ],
-        "basicPropertyValues" : [ {
-          "pred" : "http://www.w3.org/2000/01/rdf-schema#seeAlso",
-          "val" : "https://biolink.github.io/biolink-model/"
-        } ]
-      }
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/IAO_0000111",
-      "type" : "PROPERTY",
-      "propertyType" : "ANNOTATION"
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/IAO_0000112",
-      "type" : "PROPERTY",
-      "propertyType" : "ANNOTATION"
     }, {
       "id" : "http://purl.obolibrary.org/obo/IAO_0000114",
       "type" : "PROPERTY",
@@ -858,9 +1353,6 @@
           "val" : "The official definition, explaining the meaning of a class or property. Shall be Aristotelian, formalized and normalized. Can be augmented with colloquial definitions."
         },
         "basicPropertyValues" : [ {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000111",
-          "val" : "definition"
-        }, {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000116",
           "val" : "2012-04-05: \nBarry Smith\n\nThe official OBI definition, explaining the meaning of a class or property: 'Shall be Aristotelian, formalized and normalized. Can be augmented with colloquial definitions'  is terrible.\n\nCan you fix to something like:\n\nA statement of necessary and sufficient conditions explaining the meaning of an expression referring to a class or property.\n\nAlan Ruttenberg\n\nYour proposed definition is a reasonable candidate, except that it is very common that necessary and sufficient conditions are not given. Mostly they are necessary, occasionally they are necessary and sufficient or just sufficient. Often they use terms that are not themselves defined and so they effectively can't be evaluated by those criteria. \n\nOn the specifics of the proposed definition:\n\nWe don't have definitions of 'meaning' or 'expression' or 'property'. For 'reference' in the intended sense I think we use the term 'denotation'. For 'expression', I think we you mean symbol, or identifier. For 'meaning' it differs for class and property. For class we want documentation that let's the intended reader determine whether an entity is instance of the class, or not. For property we want documentation that let's the intended reader determine, given a pair of potential relata, whether the assertion that the relation holds is true. The 'intended reader' part suggests that we also specify who, we expect, would be able to understand the definition, and also generalizes over human and computer reader to include textual and logical definition. \n\nPersonally, I am more comfortable weakening definition to documentation, with instructions as to what is desirable. \n\nWe also have the outstanding issue of how to aim different definitions to different audiences. A clinical audience reading chebi wants a different sort of definition documentation/definition from a chemistry trained audience, and similarly there is a need for a definition that is adequate for an ontologist to work with.  "
         }, {
@@ -869,9 +1361,6 @@
         }, {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000119",
           "val" : "GROUP:OBI:<http://purl.obolibrary.org/obo/obi>"
-        }, {
-          "pred" : "http://www.w3.org/2000/01/rdf-schema#isDefinedBy",
-          "val" : "http://purl.obolibrary.org/obo/iao.owl"
         } ]
       }
     }, {
@@ -888,9 +1377,6 @@
           "val" : "Name of editor entering the term in the file. The term editor is a point of contact for information regarding the term. The term editor may be, but is not always, the author of the definition, which may have been worked upon by several people"
         },
         "basicPropertyValues" : [ {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000111",
-          "val" : "term editor"
-        }, {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000116",
           "val" : "20110707, MC: label update to term editor and definition modified accordingly. See https://github.com/information-artifact-ontology/IAO/issues/115."
         }, {
@@ -899,9 +1385,6 @@
         }, {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000119",
           "val" : "GROUP:OBI:<http://purl.obolibrary.org/obo/obi>"
-        }, {
-          "pred" : "http://www.w3.org/2000/01/rdf-schema#isDefinedBy",
-          "val" : "http://purl.obolibrary.org/obo/iao.owl"
         } ]
       }
     }, {
@@ -910,20 +1393,34 @@
       "propertyType" : "ANNOTATION"
     }, {
       "id" : "http://purl.obolibrary.org/obo/IAO_0000119",
+      "lbl" : "definition source",
       "type" : "PROPERTY",
-      "propertyType" : "ANNOTATION"
+      "propertyType" : "ANNOTATION",
+      "meta" : {
+        "definition" : {
+          "val" : "Formal citation, e.g. identifier in external database to indicate / attribute source(s) for the definition. Free text indicate / attribute source(s) for the definition. EXAMPLE: Author Name, URI, MeSH Term C04, PUBMED ID, Wiki uri on 31.01.2007"
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
+          "val" : "PERSON:Daniel Schober"
+        }, {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000119",
+          "val" : "Discussion on obo-discuss mailing-list, see http://bit.ly/hgm99w"
+        }, {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000119",
+          "val" : "GROUP:OBI:<http://purl.obolibrary.org/obo/obi>"
+        } ]
+      }
     }, {
       "id" : "http://purl.obolibrary.org/obo/PROMOT_1000001",
       "lbl" : "found in",
       "type" : "PROPERTY",
       "propertyType" : "ANNOTATION",
       "meta" : {
-        "definition" : {
-          "val" : "Indicates the source of the class."
-        },
+        "comments" : [ "JP: Translated to spanish using Bing Translator" ],
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
-          "val" : "Juliette Potier"
+          "val" : "https://orcid.org/0009-0000-5160-7927"
         } ]
       }
     }, {
@@ -936,14 +1433,6 @@
       "propertyType" : "ANNOTATION"
     }, {
       "id" : "http://purl.obolibrary.org/obo/ro/subsets#ro-eco",
-      "type" : "PROPERTY",
-      "propertyType" : "ANNOTATION"
-    }, {
-      "id" : "http://purl.org/dc/elements/1.1/contributor",
-      "type" : "PROPERTY",
-      "propertyType" : "ANNOTATION"
-    }, {
-      "id" : "http://purl.org/dc/elements/1.1/creator",
       "type" : "PROPERTY",
       "propertyType" : "ANNOTATION"
     }, {
@@ -966,7 +1455,27 @@
       "type" : "PROPERTY",
       "propertyType" : "ANNOTATION"
     }, {
+      "id" : "http://schema.org/comment",
+      "type" : "PROPERTY",
+      "propertyType" : "ANNOTATION"
+    }, {
+      "id" : "http://semanticscience.org/resource/equivalentTo",
+      "type" : "PROPERTY",
+      "propertyType" : "ANNOTATION"
+    }, {
+      "id" : "http://semanticscience.org/resource/subset",
+      "type" : "PROPERTY",
+      "propertyType" : "ANNOTATION"
+    }, {
       "id" : "http://www.geneontology.org/formats/oboInOwl#SubsetProperty",
+      "type" : "PROPERTY",
+      "propertyType" : "ANNOTATION"
+    }, {
+      "id" : "http://www.geneontology.org/formats/oboInOwl#created_by",
+      "type" : "PROPERTY",
+      "propertyType" : "ANNOTATION"
+    }, {
+      "id" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
       "type" : "PROPERTY",
       "propertyType" : "ANNOTATION"
     }, {
@@ -977,164 +1486,437 @@
       "id" : "http://www.geneontology.org/formats/oboInOwl#inSubset",
       "type" : "PROPERTY",
       "propertyType" : "ANNOTATION"
+    }, {
+      "id" : "http://www.w3.org/2004/02/skos/core#example",
+      "type" : "PROPERTY",
+      "propertyType" : "ANNOTATION"
     } ],
     "edges" : [ {
       "sub" : "http://purl.obolibrary.org/obo/PROMOT_0000002",
       "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000000"
+      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000001"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PROMOT_0000003",
       "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000000"
+      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000001"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PROMOT_0000004",
       "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000000"
+      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000001"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PROMOT_0000005",
       "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000000"
+      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000001"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PROMOT_0000006",
       "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000000"
+      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000001"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PROMOT_0000007",
       "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000000"
+      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000001"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PROMOT_0000008",
       "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000000"
+      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000001"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PROMOT_0000009",
       "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000000"
+      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000001"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PROMOT_0000010",
       "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000000"
+      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000001"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PROMOT_0000011",
       "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000000"
+      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000001"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PROMOT_0000012",
       "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000000"
+      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000001"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PROMOT_0000013",
       "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000000"
+      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000001"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PROMOT_0000014",
       "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000000"
+      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000001"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/PROMOT_3000001",
+      "sub" : "http://purl.obolibrary.org/obo/PROMOT_0000020",
+      "pred" : "http://purl.obolibrary.org/obo/PROMOT_2000002",
+      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000025"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PROMOT_0000021",
+      "pred" : "http://purl.obolibrary.org/obo/PROMOT_2000002",
+      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000025"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PROMOT_0000022",
+      "pred" : "http://purl.obolibrary.org/obo/PROMOT_2000002",
+      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000025"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PROMOT_0000023",
+      "pred" : "http://purl.obolibrary.org/obo/PROMOT_2000002",
+      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000025"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PROMOT_0000025",
+      "pred" : "http://purl.obolibrary.org/obo/PROMOT_2000004",
+      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000001"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PROMOT_0000028",
       "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000000"
+      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000027"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/PROMOT_4000001",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000000"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/PROMOT_4000001",
+      "sub" : "http://purl.obolibrary.org/obo/PROMOT_0000028",
       "pred" : "http://purl.obolibrary.org/obo/RO_0002351",
-      "obj" : "http://purl.obolibrary.org/obo/PROMOT_3000001"
+      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000038"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/PROMOT_4000001",
+      "sub" : "http://purl.obolibrary.org/obo/PROMOT_0000028",
       "pred" : "http://purl.obolibrary.org/obo/RO_0002351",
-      "obj" : "http://purl.obolibrary.org/obo/PROMOT_5000001"
+      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000040"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/PROMOT_4000002",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PROMOT_4000001"
+      "sub" : "http://purl.obolibrary.org/obo/PROMOT_0000028",
+      "pred" : "http://purl.obolibrary.org/obo/RO_0002351",
+      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000041"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/PROMOT_4000003",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PROMOT_4000001"
+      "sub" : "http://purl.obolibrary.org/obo/PROMOT_0000028",
+      "pred" : "http://purl.obolibrary.org/obo/RO_0002351",
+      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000042"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/PROMOT_4000004",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PROMOT_4000001"
+      "sub" : "http://purl.obolibrary.org/obo/PROMOT_0000028",
+      "pred" : "http://purl.obolibrary.org/obo/RO_0002351",
+      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000043"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/PROMOT_4000005",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PROMOT_4000001"
+      "sub" : "http://purl.obolibrary.org/obo/PROMOT_0000028",
+      "pred" : "http://purl.obolibrary.org/obo/RO_0002351",
+      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000066"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/PROMOT_4000006",
+      "sub" : "http://purl.obolibrary.org/obo/PROMOT_0000029",
       "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PROMOT_4000001"
+      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000028"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/PROMOT_4000007",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PROMOT_4000001"
+      "sub" : "http://purl.obolibrary.org/obo/PROMOT_0000029",
+      "pred" : "http://purl.obolibrary.org/obo/RO_0002351",
+      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000025"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/PROMOT_4000008",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PROMOT_4000001"
+      "sub" : "http://purl.obolibrary.org/obo/PROMOT_0000029",
+      "pred" : "http://purl.obolibrary.org/obo/RO_0002351",
+      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000039"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/PROMOT_4000009",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PROMOT_4000001"
+      "sub" : "http://purl.obolibrary.org/obo/PROMOT_0000029",
+      "pred" : "http://purl.obolibrary.org/obo/RO_0002351",
+      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000077"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/PROMOT_4000010",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PROMOT_4000001"
+      "sub" : "http://purl.obolibrary.org/obo/PROMOT_0000029",
+      "pred" : "http://purl.obolibrary.org/obo/RO_0002351",
+      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000078"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/PROMOT_4000011",
+      "sub" : "http://purl.obolibrary.org/obo/PROMOT_0000030",
       "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PROMOT_4000001"
+      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000027"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/PROMOT_5000001",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000000"
+      "sub" : "http://purl.obolibrary.org/obo/PROMOT_0000030",
+      "pred" : "http://purl.obolibrary.org/obo/RO_0002351",
+      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000035"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/PROMOT_6000002",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000000"
+      "sub" : "http://purl.obolibrary.org/obo/PROMOT_0000030",
+      "pred" : "http://purl.obolibrary.org/obo/RO_0002351",
+      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000036"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/PROMOT_6000003",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000000"
+      "sub" : "http://purl.obolibrary.org/obo/PROMOT_0000030",
+      "pred" : "http://purl.obolibrary.org/obo/RO_0002351",
+      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000037"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/PROMOT_6000004",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000000"
+      "sub" : "http://purl.obolibrary.org/obo/PROMOT_0000030",
+      "pred" : "http://purl.obolibrary.org/obo/RO_0002351",
+      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000108"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/PROMOT_7000001",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000000"
+      "sub" : "http://purl.obolibrary.org/obo/PROMOT_0000030",
+      "pred" : "http://purl.obolibrary.org/obo/RO_0002351",
+      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000111"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/PROMOT_7000002",
+      "sub" : "http://purl.obolibrary.org/obo/PROMOT_0000031",
       "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000000"
+      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000027"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/PROMOT_7000003",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000000"
+      "sub" : "http://purl.obolibrary.org/obo/PROMOT_0000031",
+      "pred" : "http://purl.obolibrary.org/obo/RO_0002351",
+      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000033"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/PROMOT_8000001",
+      "sub" : "http://purl.obolibrary.org/obo/PROMOT_0000032",
       "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000000"
+      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000027"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PROMOT_0000032",
+      "pred" : "http://purl.obolibrary.org/obo/RO_0002351",
+      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000089"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PROMOT_0000032",
+      "pred" : "http://purl.obolibrary.org/obo/RO_0002351",
+      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000096"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PROMOT_0000032",
+      "pred" : "http://purl.obolibrary.org/obo/RO_0002351",
+      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000097"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PROMOT_0000032",
+      "pred" : "http://purl.obolibrary.org/obo/RO_0002351",
+      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000098"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PROMOT_0000035",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000034"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PROMOT_0000036",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000034"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PROMOT_0000044",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000043"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PROMOT_0000045",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000044"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PROMOT_0000046",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000044"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PROMOT_0000047",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000044"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PROMOT_0000048",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000047"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PROMOT_0000049",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000047"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PROMOT_0000050",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000047"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PROMOT_0000051",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000043"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PROMOT_0000052",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000051"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PROMOT_0000053",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000051"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PROMOT_0000054",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000053"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PROMOT_0000055",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000053"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PROMOT_0000056",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000053"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PROMOT_0000057",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000043"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PROMOT_0000058",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000043"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PROMOT_0000059",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000043"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PROMOT_0000060",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000059"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PROMOT_0000061",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000059"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PROMOT_0000062",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000059"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PROMOT_0000063",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000043"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PROMOT_0000064",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000043"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PROMOT_0000065",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000043"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PROMOT_0000067",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000066"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PROMOT_0000068",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000066"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PROMOT_0000069",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000066"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PROMOT_0000070",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000066"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PROMOT_0000071",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000070"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PROMOT_0000076",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000075"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PROMOT_0000080",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000079"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PROMOT_0000081",
+      "pred" : "http://semanticscience.org/resource/SIO_000218",
+      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000001"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PROMOT_0000082",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000081"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PROMOT_0000085",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000084"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PROMOT_0000086",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000084"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PROMOT_0000087",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000084"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PROMOT_0000088",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000087"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PROMOT_0000090",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000089"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PROMOT_0000091",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000089"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PROMOT_0000092",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000089"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PROMOT_0000093",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000089"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PROMOT_0000094",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000089"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PROMOT_0000095",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000089"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PROMOT_0000100",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000020"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PROMOT_0000101",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000020"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PROMOT_0000102",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000020"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PROMOT_0000103",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000020"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PROMOT_0000104",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000020"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PROMOT_0000105",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000020"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PROMOT_0000106",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000026"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PROMOT_0000106",
+      "pred" : "http://semanticscience.org/resource/SIO_000217",
+      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000084"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PROMOT_0000109",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000080"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PROMOT_0000110",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000080"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PROMOT_0000111",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000020"
+    }, {
+      "sub" : "http://semanticscience.org/resource/SIO_000061",
+      "pred" : "subPropertyOf",
+      "obj" : "http://semanticscience.org/resource/SIO_000001"
+    }, {
+      "sub" : "http://semanticscience.org/resource/SIO_000217",
+      "pred" : "subPropertyOf",
+      "obj" : "http://semanticscience.org/resource/SIO_000001"
+    }, {
+      "sub" : "http://semanticscience.org/resource/SIO_000218",
+      "pred" : "subPropertyOf",
+      "obj" : "http://semanticscience.org/resource/SIO_000001"
+    }, {
+      "sub" : "http://semanticscience.org/resource/SIO_000235",
+      "pred" : "subPropertyOf",
+      "obj" : "http://semanticscience.org/resource/SIO_000001"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/RO_0002200",
       "pred" : "inverseOf",
       "obj" : "http://purl.obolibrary.org/obo/RO_0002201"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/RO_0004003",
+      "pred" : "inverseOf",
+      "obj" : "http://purl.obolibrary.org/obo/RO_0004013"
+    }, {
+      "sub" : "http://semanticscience.org/resource/SIO_000217",
+      "pred" : "inverseOf",
+      "obj" : "http://semanticscience.org/resource/SIO_000218"
     } ],
     "domainRangeAxioms" : [ {
+      "predicateId" : "http://purl.obolibrary.org/obo/RO_0004013",
+      "domainClassIds" : [ "http://purl.obolibrary.org/obo/PROMOT_0000001" ]
+    }, {
       "predicateId" : "http://purl.obolibrary.org/obo/PROMOT_2000001",
-      "domainClassIds" : [ "http://purl.obolibrary.org/obo/PROMOT_7000001" ]
+      "rangeClassIds" : [ "http://purl.obolibrary.org/obo/PROMOT_0000025" ]
     }, {
-      "predicateId" : "http://purl.obolibrary.org/obo/RO_0002351",
-      "domainClassIds" : [ "http://purl.obolibrary.org/obo/PROMOT_4000001" ]
-    }, {
-      "predicateId" : "http://purl.obolibrary.org/obo/PROMOT_2000002",
-      "rangeClassIds" : [ "http://purl.obolibrary.org/obo/PROMOT_3000001" ]
-    }, {
-      "predicateId" : "http://purl.obolibrary.org/obo/PROMOT_2000003",
-      "rangeClassIds" : [ "http://purl.obolibrary.org/obo/PROMOT_3000001" ]
+      "predicateId" : "http://purl.obolibrary.org/obo/PROMOT_2000004",
+      "rangeClassIds" : [ "http://purl.obolibrary.org/obo/PROMOT_0000001" ]
     } ]
   } ]
 }

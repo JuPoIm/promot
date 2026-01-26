@@ -23,7 +23,6 @@ These are the current imports in PROMOT
 | iao | http://purl.obolibrary.org/obo/iao.owl | filter |
 | icf | https://raw.githubusercontent.com/whoficitc/harmonization/main/ontology/whofic-2025-05-24.owl | custom |
 | ordo | https://www.orphadata.com/data/ontologies/ordo/last_version/ORDO_en_4.8.owl | custom |
-| obi | http://purl.obolibrary.org/obo/obi.owl | custom |
 | ro | http://purl.obolibrary.org/obo/ro.owl | custom |
 | sio | http://purl.obolibrary.org/obo/sio.owl | custom |
 | snomed | http://purl.obolibrary.org/obo/snomed.owl | custom |
