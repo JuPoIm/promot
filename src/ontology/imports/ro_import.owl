@@ -6,6 +6,7 @@
      xmlns:VO="http://purl.obolibrary.org/obo/VO_"
      xmlns:cc="http://creativecommons.org/ns#"
      xmlns:BFO="http://purl.obolibrary.org/obo/BFO_"
+     xmlns:ECO="http://purl.obolibrary.org/obo/ECO_"
      xmlns:FMA="http://purl.obolibrary.org/obo/FMA_"
      xmlns:IAO="http://purl.obolibrary.org/obo/IAO_"
      xmlns:ICF="http://id.who.int/icd/entity/"
@@ -16,8 +17,10 @@
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:GENO="http://purl.obolibrary.org/obo/GENO_"
      xmlns:HGNC="http://identifiers.org/hgnc/"
      xmlns:OMOP="https://athena.ohdsi.org/search-terms/terms/"
+     xmlns:ORDO="http://www.orpha.net/ORDO/Orphanet_"
      xmlns:SCDO="http://purl.obolibrary.org/obo/SCDO_"
      xmlns:dc11="http://purl.org/dc/elements/1.1/"
      xmlns:foaf="http://xmlns.com/foaf/0.1/"
@@ -53,8 +56,8 @@
      xmlns:CPATH_VISIT_OCCURRENCE="https://w3id.org/cpont/visit_occurrence/"
      xmlns:CPATH_CONDITION_OCCURRENCE="https://w3id.org/cpont/condition_occurrence/">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/promot/imports/ro_import.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/promot/releases/2026-01-16/imports/ro_import.owl"/>
-        <owl:versionInfo>2026-01-16</owl:versionInfo>
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/promot/releases/2026-02-03/imports/ro_import.owl"/>
+        <owl:versionInfo>2026-02-03</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -103,6 +106,12 @@
     <!-- http://purl.obolibrary.org/obo/IAO_0000119 -->
 
     <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000119"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000232 -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000232"/>
     
 
 
@@ -190,9 +199,21 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/RO_0002328 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0002328">
+        <obo:IAO_0000115>A grouping relationship for any relationship directly involving a function, or that holds because of a function of one of the related entities.</obo:IAO_0000115>
+        <obo:IAO_0000117 rdf:resource="https://orcid.org/0000-0002-6601-2165"/>
+        <obo:IAO_0000232>This is a grouping relation that collects relations used for the purpose of connecting structure and function</obo:IAO_0000232>
+        <rdfs:label xml:lang="en">functionally related to</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/RO_0002331 -->
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0002331">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/RO_0002328"/>
         <obo:IAO_0000115>c involved_in p if and only if c enables some process p&apos;, and p&apos; is part of p</obo:IAO_0000115>
         <obo:IAO_0000117 rdf:resource="https://orcid.org/0000-0002-6601-2165"/>
         <obo:IAO_0000118>actively involved in</obo:IAO_0000118>

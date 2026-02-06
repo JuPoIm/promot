@@ -3,6 +3,39 @@
     "id" : "http://purl.obolibrary.org/obo/promot/promot-simple.json",
     "meta" : {
       "basicPropertyValues" : [ {
+        "pred" : "http://purl.org/dc/elements/1.1/contributor",
+        "val" : "Anita Burgun MD, PhD\nhttps://orcid.org/0000-0001-6855-4366"
+      }, {
+        "pred" : "http://purl.org/dc/elements/1.1/contributor",
+        "val" : "Carole Faviez PhD\nhttps://orcid.org/0000-0002-1500-0236"
+      }, {
+        "pred" : "http://purl.org/dc/elements/1.1/contributor",
+        "val" : "Claudia Côté MD, PhD\nhttps://orcid.org/0000-0003-2508-2500"
+      }, {
+        "pred" : "http://purl.org/dc/elements/1.1/contributor",
+        "val" : "Cynthia Gagnon PhD\nhttps://orcid.org/0000-0003-2829-8470"
+      }, {
+        "pred" : "http://purl.org/dc/elements/1.1/contributor",
+        "val" : "Daniel Natera De Benito MD, PhD\nhttps://orcid.org/0000-0001-7764-2085"
+      }, {
+        "pred" : "http://purl.org/dc/elements/1.1/contributor",
+        "val" : "Elizabeth Angelevski PhD"
+      }, {
+        "pred" : "http://purl.org/dc/elements/1.1/contributor",
+        "val" : "European Rare Diseases Research Alliance (ERDERA)\n\nWebsite: https://erdera.org"
+      }, {
+        "pred" : "http://purl.org/dc/elements/1.1/contributor",
+        "val" : "Hanns Lochmuller MD, PhD\nhttps://orcid.org/0000-0003-2324-8001"
+      }, {
+        "pred" : "http://purl.org/dc/elements/1.1/contributor",
+        "val" : "Mansoore Gholizade MD"
+      }, {
+        "pred" : "http://purl.org/dc/elements/1.1/creator",
+        "val" : "Juliette Potier MSc\nhttps://orcid.org/0009-0000-5160-7927"
+      }, {
+        "pred" : "http://purl.org/dc/elements/1.1/creator",
+        "val" : "Paul Fabry MD, PhD student\nhttps://orcid.org/0000-0002-3336-2476"
+      }, {
         "pred" : "http://purl.org/dc/terms/description",
         "val" : "Ontology for modeling the three following neuromuscular diseases : OPMD, Congenital myopathies and Congenital myastenic syndroms. It aims to be also an ontology for building the PROMOT project relational database."
       }, {
@@ -13,12 +46,15 @@
         "val" : "PROMOT ontology"
       }, {
         "pred" : "http://www.geneontology.org/formats/oboInOwl#date",
-        "val" : "20:01:2026 16:30"
+        "val" : "05:02:2026 12:40"
+      }, {
+        "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
+        "val" : "Additional acknnowledements:\nThomas Bongivault, MSc\nMarc Vincent, PhD\n"
       }, {
         "pred" : "http://www.w3.org/2002/07/owl#versionInfo",
-        "val" : "2026-01-20"
+        "val" : "2026-02-05"
       } ],
-      "version" : "http://purl.obolibrary.org/obo/promot/releases/2026-01-20/promot-simple.json"
+      "version" : "http://purl.obolibrary.org/obo/promot/releases/2026-02-05/promot-simple.json"
     },
     "nodes" : [ {
       "id" : "http://purl.obolibrary.org/obo/PROMOT_0000000",
@@ -26,152 +62,242 @@
       "type" : "CLASS"
     }, {
       "id" : "http://purl.obolibrary.org/obo/PROMOT_0000001",
-      "lbl" : "genetic mutation",
+      "lbl" : "mutation génetique",
       "type" : "CLASS",
       "meta" : {
-        "comments" : [ "Gene Ontology Resource ", "JP: Translated to spanish using Bing Translator" ],
+        "definition" : {
+          "val" : "Une altération génétique qui est rare au sein d’une population."
+        },
+        "comments" : [ "JP: Translated to spanish using Bing Translator", "[derived from RD-CDM] Graefe, A.S.L., Hübner, M.R., Rehburg, F. et al. An ontology-based rare disease common data model harmonising international registries, FHIR, and Phenopackets. Sci Data 12, 234 (2025). https://doi.org/10.1038/s41597-025-04558-z" ],
+        "xrefs" : [ {
+          "val" : "GENO:0000492"
+        }, {
+          "val" : "http://purl.obolibrary.org/obo/NCIT_C18093"
+        }, {
+          "val" : "http://snomed.info/id/106221001"
+        }, {
+          "val" : "http://snomed.info/id/55446002"
+        } ],
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
           "val" : "https://orcid.org/0009-0000-5160-7927"
+        }, {
+          "pred" : "http://www.w3.org/2000/01/rdf-schema#seeAlso",
+          "val" : "http://purl.obolibrary.org/obo/GENO_0000492"
         } ]
       }
     }, {
       "id" : "http://purl.obolibrary.org/obo/PROMOT_0000002",
-      "lbl" : "PABPN1 mutation",
+      "lbl" : "mutation du gène PABPN1",
       "type" : "CLASS",
       "meta" : {
+        "definition" : {
+          "val" : "Une altération génétique située au niveau du gène PABPN1."
+        },
         "comments" : [ "JP: Translated to spanish using Bing Translator", "Related to oculopharyngeal muscular dystrophy" ],
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
           "val" : "https://orcid.org/0009-0000-5160-7927"
+        }, {
+          "pred" : "http://www.w3.org/2000/01/rdf-schema#seeAlso",
+          "val" : "http://purl.obolibrary.org/obo/NCIT_C204162"
         } ]
       }
     }, {
       "id" : "http://purl.obolibrary.org/obo/PROMOT_0000003",
-      "lbl" : "RYR1 mutation",
+      "lbl" : "mutation du gène RYR1",
       "type" : "CLASS",
       "meta" : {
+        "definition" : {
+          "val" : "Une altération génétique située au niveau du gène RYR1."
+        },
         "comments" : [ "JP: Translated to spanish using Bing Translator", "Related to congenital myopathies" ],
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
           "val" : "https://orcid.org/0009-0000-5160-7927"
+        }, {
+          "pred" : "http://www.w3.org/2000/01/rdf-schema#seeAlso",
+          "val" : "http://purl.obolibrary.org/obo/NCIT_C150311"
         } ]
       }
     }, {
       "id" : "http://purl.obolibrary.org/obo/PROMOT_0000004",
-      "lbl" : "TTN mutation",
+      "lbl" : "mutation du gène TTN",
       "type" : "CLASS",
       "meta" : {
+        "definition" : {
+          "val" : "Une altération génétique située au niveau du gène TTN."
+        },
         "comments" : [ "JP: Translated to spanish using Bing Translator", "Related to congenital myopathies" ],
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
           "val" : "https://orcid.org/0009-0000-5160-7927"
+        }, {
+          "pred" : "http://www.w3.org/2000/01/rdf-schema#seeAlso",
+          "val" : "http://purl.obolibrary.org/obo/NCIT_C101756"
         } ]
       }
     }, {
       "id" : "http://purl.obolibrary.org/obo/PROMOT_0000005",
-      "lbl" : "NEB mutation",
+      "lbl" : "mutation du gène NEB",
       "type" : "CLASS",
       "meta" : {
+        "definition" : {
+          "val" : "Une altération génétique située au niveau du gène NEB."
+        },
         "comments" : [ "JP: Translated to spanish using Bing Translator", "Related to congenital myopathies" ],
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
           "val" : "https://orcid.org/0009-0000-5160-7927"
+        }, {
+          "pred" : "http://www.w3.org/2000/01/rdf-schema#seeAlso",
+          "val" : "http://purl.obolibrary.org/obo/NCIT_C203906"
         } ]
       }
     }, {
       "id" : "http://purl.obolibrary.org/obo/PROMOT_0000006",
-      "lbl" : "MTM1 mutation",
+      "lbl" : "mutation du gène NMTM1",
       "type" : "CLASS",
       "meta" : {
+        "definition" : {
+          "val" : "Une altération génétique située au niveau du gène MTM1."
+        },
         "comments" : [ "JP: Translated to spanish using Bing Translator", "Related to congenital myopathies" ],
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
           "val" : "https://orcid.org/0009-0000-5160-7927"
+        }, {
+          "pred" : "http://www.w3.org/2000/01/rdf-schema#seeAlso",
+          "val" : "http://purl.obolibrary.org/obo/NCIT_C203822"
         } ]
       }
     }, {
       "id" : "http://purl.obolibrary.org/obo/PROMOT_0000007",
-      "lbl" : "ACTA1 mutation",
+      "lbl" : "mutation du gène ACTA1",
       "type" : "CLASS",
       "meta" : {
+        "definition" : {
+          "val" : "Une altération génétique située au niveau du gène ACTA1."
+        },
         "comments" : [ "JP: Translated to spanish using Bing Translator", "Related to congenital myopathies" ],
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
           "val" : "https://orcid.org/0009-0000-5160-7927"
+        }, {
+          "pred" : "http://www.w3.org/2000/01/rdf-schema#seeAlso",
+          "val" : "http://purl.obolibrary.org/obo/NCIT_C191893"
         } ]
       }
     }, {
       "id" : "http://purl.obolibrary.org/obo/PROMOT_0000008",
-      "lbl" : "SELENON mutation",
+      "lbl" : "mutation du gène SELENON",
       "type" : "CLASS",
       "meta" : {
+        "definition" : {
+          "val" : "Une altération génétique située au niveau du gène SELENON."
+        },
         "comments" : [ "JP: Translated to spanish using Bing Translator", "Related to congenital myopathies" ],
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
           "val" : "https://orcid.org/0009-0000-5160-7927"
+        }, {
+          "pred" : "http://www.w3.org/2000/01/rdf-schema#seeAlso",
+          "val" : "http://purl.obolibrary.org/obo/NCIT_C205071"
         } ]
       }
     }, {
       "id" : "http://purl.obolibrary.org/obo/PROMOT_0000009",
-      "lbl" : "CHRNE mutation",
+      "lbl" : "mutation du gène CHRNE",
       "type" : "CLASS",
       "meta" : {
+        "definition" : {
+          "val" : "Une altération génétique située au niveau du gène CHRNE."
+        },
         "comments" : [ "JP: Translated to spanish using Bing Translator", "Related to congenital myasthenic syndromes" ],
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
           "val" : "https://orcid.org/0009-0000-5160-7927"
+        }, {
+          "pred" : "http://www.w3.org/2000/01/rdf-schema#seeAlso",
+          "val" : "http://purl.obolibrary.org/obo/NCIT_C198628"
         } ]
       }
     }, {
       "id" : "http://purl.obolibrary.org/obo/PROMOT_0000010",
-      "lbl" : "DOK7 mutation",
+      "lbl" : "mutation du gène DOK7",
       "type" : "CLASS",
       "meta" : {
+        "definition" : {
+          "val" : "Une altération génétique située au niveau du gène DOK7."
+        },
         "comments" : [ "JP: Translated to spanish using Bing Translator", "Related to congenital myasthenic syndromes" ],
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
           "val" : "https://orcid.org/0009-0000-5160-7927"
+        }, {
+          "pred" : "http://www.w3.org/2000/01/rdf-schema#seeAlso",
+          "val" : "http://purl.obolibrary.org/obo/NCIT_C216062"
         } ]
       }
     }, {
       "id" : "http://purl.obolibrary.org/obo/PROMOT_0000011",
-      "lbl" : "COLQ mutation",
+      "lbl" : "mutation du gène COLQ",
       "type" : "CLASS",
       "meta" : {
+        "definition" : {
+          "val" : "Une altération génétique située au niveau du gène COLQ."
+        },
         "comments" : [ "JP: Translated to spanish using Bing Translator", "Related to congenital myasthenic syndromes" ],
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
           "val" : "https://orcid.org/0009-0000-5160-7927"
+        }, {
+          "pred" : "http://www.w3.org/2000/01/rdf-schema#seeAlso",
+          "val" : "http://purl.obolibrary.org/obo/NCIT_C200235"
         } ]
       }
     }, {
       "id" : "http://purl.obolibrary.org/obo/PROMOT_0000012",
-      "lbl" : "RAPSN mutation",
+      "lbl" : "mutation du gène RAPSN",
       "type" : "CLASS",
       "meta" : {
+        "definition" : {
+          "val" : "Une altération génétique située au niveau du gène RAPSN."
+        },
         "comments" : [ "JP: Translated to spanish using Bing Translator", "Related to congenital myasthenic syndromes" ],
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
           "val" : "https://orcid.org/0009-0000-5160-7927"
+        }, {
+          "pred" : "http://www.w3.org/2000/01/rdf-schema#seeAlso",
+          "val" : "http://purl.obolibrary.org/obo/NCIT_C177668"
         } ]
       }
     }, {
       "id" : "http://purl.obolibrary.org/obo/PROMOT_0000013",
-      "lbl" : "GFPT1 mutation",
+      "lbl" : "mutation du gène GFPT1",
       "type" : "CLASS",
       "meta" : {
+        "definition" : {
+          "val" : "Une altération génétique située au niveau du gène GFPT1."
+        },
         "comments" : [ "JP: Translated to spanish using Bing Translator", "Related to congenital myasthenic syndromes" ],
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
           "val" : "https://orcid.org/0009-0000-5160-7927"
+        }, {
+          "pred" : "http://www.w3.org/2000/01/rdf-schema#seeAlso",
+          "val" : "http://purl.obolibrary.org/obo/NCIT_C201657"
         } ]
       }
     }, {
       "id" : "http://purl.obolibrary.org/obo/PROMOT_0000014",
-      "lbl" : "GMPPB mutation",
+      "lbl" : "mutation du gène GMPPB",
       "type" : "CLASS",
       "meta" : {
+        "definition" : {
+          "val" : "Une altération génétique située au niveau du gène GMPPB."
+        },
         "comments" : [ "JP: Translated to spanish using Bing Translator", "Related to congenital myasthenic syndromes" ],
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
@@ -180,9 +306,12 @@
       }
     }, {
       "id" : "http://purl.obolibrary.org/obo/PROMOT_0000015",
-      "lbl" : "Phenotypically related anatomical entity",
+      "lbl" : "entidad anatómica relacionada con un fenotipo",
       "type" : "CLASS",
       "meta" : {
+        "definition" : {
+          "val" : "Une entité anatomique qui peut avoir pour disposition un phénotype. L’entité anatomique est la localisation du phénotype."
+        },
         "comments" : [ "(JP : unsure, attention au lien avec les body structures)" ],
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
@@ -191,9 +320,12 @@
       }
     }, {
       "id" : "http://purl.obolibrary.org/obo/PROMOT_0000016",
-      "lbl" : "Phenotypically related body structure",
+      "lbl" : "estructura corporala relacionada con un fenotipo",
       "type" : "CLASS",
       "meta" : {
+        "definition" : {
+          "val" : "Une structure anatomique qui est la localisation d’un phénotype."
+        },
         "comments" : [ "(JP: unsure about definition)" ],
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
@@ -202,9 +334,12 @@
       }
     }, {
       "id" : "http://purl.obolibrary.org/obo/PROMOT_0000017",
-      "lbl" : "Phenotypically related body function",
+      "lbl" : "función corporala relacionada con un fenotipo",
       "type" : "CLASS",
       "meta" : {
+        "definition" : {
+          "val" : "Une fonction organique qui peut être affectée par un phénotype."
+        },
         "comments" : [ "(JP: unsure about definition)" ],
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
@@ -213,9 +348,12 @@
       }
     }, {
       "id" : "http://purl.obolibrary.org/obo/PROMOT_0000018",
-      "lbl" : "Activity or participation related body structure",
+      "lbl" : "estructura corporala relacionada con una actividad o una participación",
       "type" : "CLASS",
       "meta" : {
+        "definition" : {
+          "val" : "Une structure anatomique qui est impliquée dans une activité ou participation. Elle est nécessaire pour que l’activité ou la participation ait lieu."
+        },
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
           "val" : "https://orcid.org/0009-0000-5160-7927"
@@ -223,9 +361,12 @@
       }
     }, {
       "id" : "http://purl.obolibrary.org/obo/PROMOT_0000019",
-      "lbl" : "Activity or participation related body function",
+      "lbl" : "función corporala relacionada con una actividad o una participación",
       "type" : "CLASS",
       "meta" : {
+        "definition" : {
+          "val" : "Une fonction organique qui est impliquée dans une activité ou participation. Elle est nécessaire pour que l’activité ou la participation ait lieu."
+        },
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
           "val" : "https://orcid.org/0009-0000-5160-7927"
@@ -233,9 +374,12 @@
       }
     }, {
       "id" : "http://purl.obolibrary.org/obo/PROMOT_0000020",
-      "lbl" : "Phenotypically related procedure",
+      "lbl" : "Procédure liée à un phénotype",
       "type" : "CLASS",
       "meta" : {
+        "definition" : {
+          "val" : "Une procédure qui évalue un phénotype."
+        },
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
           "val" : "https://orcid.org/0009-0000-5160-7927"
@@ -243,9 +387,12 @@
       }
     }, {
       "id" : "http://purl.obolibrary.org/obo/PROMOT_0000021",
-      "lbl" : "Body function related procedure",
+      "lbl" : "Procédure liée à une fonction organique",
       "type" : "CLASS",
       "meta" : {
+        "definition" : {
+          "val" : "Une procédure qui évalue une fonction organique."
+        },
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
           "val" : "https://orcid.org/0009-0000-5160-7927"
@@ -253,9 +400,12 @@
       }
     }, {
       "id" : "http://purl.obolibrary.org/obo/PROMOT_0000022",
-      "lbl" : "Body structure related procedure",
+      "lbl" : "Procédure liée à un structure anatomique",
       "type" : "CLASS",
       "meta" : {
+        "definition" : {
+          "val" : "Une procédure qui évalue une structure anatomique."
+        },
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
           "val" : "https://orcid.org/0009-0000-5160-7927"
@@ -263,9 +413,12 @@
       }
     }, {
       "id" : "http://purl.obolibrary.org/obo/PROMOT_0000023",
-      "lbl" : "Activity or participation related procedure",
+      "lbl" : "Procédure liée à une activité ou une participation",
       "type" : "CLASS",
       "meta" : {
+        "definition" : {
+          "val" : "Une procédure qui évalue une activité ou une participation."
+        },
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
           "val" : "https://orcid.org/0009-0000-5160-7927"
@@ -273,9 +426,12 @@
       }
     }, {
       "id" : "http://purl.obolibrary.org/obo/PROMOT_0000024",
-      "lbl" : "Body structure related anatomical entity",
+      "lbl" : "Entité anatomique liée à une structure anatomique",
       "type" : "CLASS",
       "meta" : {
+        "definition" : {
+          "val" : "Une entité anatomique qui est localisée dans une structure anatomique."
+        },
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
           "val" : "https://orcid.org/0009-0000-5160-7927"
@@ -286,7 +442,13 @@
       "lbl" : "patient",
       "type" : "CLASS",
       "meta" : {
+        "definition" : {
+          "val" : "Un patient avec un diagnostique de mutation génétique confirmé qui participe à la collecte des données pour l’étude de l’histoire naturelle de sa maladie."
+        },
         "comments" : [ "JP: Translated to spanish using Bing Translator" ],
+        "xrefs" : [ {
+          "val" : "http://purl.obolibrary.org/obo/NCIT_C16960"
+        } ],
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
           "val" : "https://orcid.org/0009-0000-5160-7927"
@@ -294,10 +456,12 @@
       }
     }, {
       "id" : "http://purl.obolibrary.org/obo/PROMOT_0000026",
-      "lbl" : "abnormal disposition",
+      "lbl" : "disposition anormale",
       "type" : "CLASS",
       "meta" : {
-        "comments" : [ "(to validate)" ],
+        "definition" : {
+          "val" : "Une disposition qui dévie de la norme, comme une maladie ou une anormalité phénotypique."
+        },
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
           "val" : "https://orcid.org/0009-0000-5160-7927"
@@ -305,10 +469,16 @@
       }
     }, {
       "id" : "http://purl.obolibrary.org/obo/PROMOT_0000027",
-      "lbl" : "statement",
+      "lbl" : "énoncé",
       "type" : "CLASS",
       "meta" : {
+        "definition" : {
+          "val" : "Una declaración sobre una entidad como una persona o un proceso que brinda información sobre ellos."
+        },
         "comments" : [ "JP: Translated to spanish using Bing Translator" ],
+        "xrefs" : [ {
+          "val" : "http://purl.obolibrary.org/obo/NCIT_C49154"
+        } ],
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
           "val" : "https://orcid.org/0009-0000-5160-7927"
@@ -316,9 +486,12 @@
       }
     }, {
       "id" : "http://purl.obolibrary.org/obo/PROMOT_0000028",
-      "lbl" : "statement about a human",
+      "lbl" : "Énoncé concernant un être humain",
       "type" : "CLASS",
       "meta" : {
+        "definition" : {
+          "val" : "Un énoncé au sujet d’un être humain qui apporte des informations à son sujet."
+        },
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
           "val" : "https://orcid.org/0009-0000-5160-7927"
@@ -326,9 +499,12 @@
       }
     }, {
       "id" : "http://purl.obolibrary.org/obo/PROMOT_0000029",
-      "lbl" : "statement about a patient",
+      "lbl" : "énoncé concernant un patient",
       "type" : "CLASS",
       "meta" : {
+        "definition" : {
+          "val" : "Una declaración sobre un paciente que aporta información sobre él."
+        },
         "comments" : [ "JP: Translated to spanish using Bing Translator" ],
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
@@ -337,9 +513,12 @@
       }
     }, {
       "id" : "http://purl.obolibrary.org/obo/PROMOT_0000030",
-      "lbl" : "statement about a phenotype",
+      "lbl" : "énoncé concernant un phénotype",
       "type" : "CLASS",
       "meta" : {
+        "definition" : {
+          "val" : "Una declaración sobre un fenotipo que aporta información sobre él."
+        },
         "comments" : [ "BIH-CEI rd-cdm: Repo for the ontology-based rare disease common data model harmonising international registry use, FHIR, and Phenopackets ", "JP: Translated to spanish using Bing Translator" ],
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
@@ -348,9 +527,12 @@
       }
     }, {
       "id" : "http://purl.obolibrary.org/obo/PROMOT_0000031",
-      "lbl" : "statement about a procedure",
+      "lbl" : "énoncé au sujet d’une procédure",
       "type" : "CLASS",
       "meta" : {
+        "definition" : {
+          "val" : "Una declaración sobre un proceso que aporta información sobre él."
+        },
         "comments" : [ "JP: Translated to spanish using Bing Translator" ],
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
@@ -359,13 +541,28 @@
       }
     }, {
       "id" : "http://purl.obolibrary.org/obo/PROMOT_0000032",
-      "lbl" : "statement about a consent",
-      "type" : "CLASS"
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/PROMOT_0000033",
-      "lbl" : "result of procedure",
+      "lbl" : "énoncé concernant un consentement",
       "type" : "CLASS",
       "meta" : {
+        "definition" : {
+          "val" : "Un énoncé au sujet d’un consentement qui apporte des informations à son sujet."
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
+          "val" : "https://orcid.org/0009-0000-5160-7927"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PROMOT_0000033",
+      "lbl" : "fecha",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Une indication de temps qui réfère à un jour spécifique et qui comprend habituellement la mention du mois et de l’année en fonction d’un système calendaire donné."
+        },
+        "xrefs" : [ {
+          "val" : "http://purl.obolibrary.org/obo/NCIT_C25164"
+        } ],
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
           "val" : "https://orcid.org/0009-0000-5160-7927"
@@ -373,24 +570,55 @@
       }
     }, {
       "id" : "http://purl.obolibrary.org/obo/PROMOT_0000034",
-      "lbl" : "Date",
+      "lbl" : "date d’identification",
       "type" : "CLASS",
       "meta" : {
+        "definition" : {
+          "val" : "The date when an entity is assessed."
+        },
+        "comments" : [ "[derived from EURO-NMD] Atalia A et al., EURO-NMD registry: federated FAIR infrastructure, innovative technologies and concepts of a patient-centred registry for rare neuromuscular disorders. Orphanet J Rare Dis. 2024 Feb 14;19(1):66. doi: 10.1186/s13023-024-03059-3. PMID: 38355534; PMCID: PMC10865673." ],
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
           "val" : "https://orcid.org/0009-0000-5160-7927"
+        }, {
+          "pred" : "http://www.w3.org/2000/01/rdf-schema#seeAlso",
+          "val" : "http://snomed.info/id/363778006"
+        }, {
+          "pred" : "http://www.w3.org/2000/01/rdf-schema#seeAlso",
+          "val" : "http://snomed.info/id/439272007"
+        }, {
+          "pred" : "http://www.w3.org/2000/01/rdf-schema#seeAlso",
+          "val" : "http://snomed.info/id/704321009"
         } ]
       }
     }, {
       "id" : "http://purl.obolibrary.org/obo/PROMOT_0000035",
-      "lbl" : "Date of assessment",
-      "type" : "CLASS"
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/PROMOT_0000036",
-      "lbl" : "Date of resolution",
+      "lbl" : "date de résolution",
       "type" : "CLASS",
       "meta" : {
-        "comments" : [ "JP: Translated to spanish using Bing Translator" ],
+        "definition" : {
+          "val" : "Une date à laquelle une disposition anormale, telle qu’une maladie ou un phénotype, cesse d’exister."
+        },
+        "comments" : [ "[derived from RD-CDM] Graefe, A.S.L., Hübner, M.R., Rehburg, F. et al. An ontology-based rare disease common data model harmonising international registries, FHIR, and Phenopackets. Sci Data 12, 234 (2025). https://doi.org/10.1038/s41597-025-04558-z" ],
+        "xrefs" : [ {
+          "val" : "http://purl.obolibrary.org/obo/NCIT_C178992"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
+          "val" : "https://orcid.org/0009-0000-5160-7927"
+        }, {
+          "pred" : "http://www.w3.org/2000/01/rdf-schema#seeAlso",
+          "val" : "http://purl.obolibrary.org/obo/HP_0034382"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PROMOT_0000036",
+      "lbl" : "Year of onset",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "The year in which an entity appears."
+        },
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
           "val" : "https://orcid.org/0009-0000-5160-7927"
@@ -398,13 +626,31 @@
       }
     }, {
       "id" : "http://purl.obolibrary.org/obo/PROMOT_0000037",
-      "lbl" : "Year of onset",
-      "type" : "CLASS"
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/PROMOT_0000038",
-      "lbl" : "Year of birth",
+      "lbl" : "año de nacimiento",
       "type" : "CLASS",
       "meta" : {
+        "definition" : {
+          "val" : "Une indication de temps qui réfère à une année spécifique à laquelle un organisme naît."
+        },
+        "xrefs" : [ {
+          "val" : "http://purl.obolibrary.org/obo/NCIT_C83164"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
+          "val" : "https://orcid.org/0009-0000-5160-7927"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PROMOT_0000038",
+      "lbl" : "Year of diagnosis",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Une année à laquelle un diagnostique est posé."
+        },
+        "xrefs" : [ {
+          "val" : "http://purl.obolibrary.org/obo/NCIT_C210821"
+        } ],
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
           "val" : "https://orcid.org/0009-0000-5160-7927"
@@ -412,37 +658,93 @@
       }
     }, {
       "id" : "http://purl.obolibrary.org/obo/PROMOT_0000039",
-      "lbl" : "Year of diagnosis",
-      "type" : "CLASS"
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/PROMOT_0000040",
-      "lbl" : "Year of death",
-      "type" : "CLASS"
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/PROMOT_0000041",
-      "lbl" : "Age",
-      "type" : "CLASS"
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/PROMOT_0000042",
-      "lbl" : "Age at death",
-      "type" : "CLASS"
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/PROMOT_0000043",
-      "lbl" : "Age Category",
+      "lbl" : "Year of assessment",
       "type" : "CLASS",
       "meta" : {
-        "comments" : [ "Graefe, A.S.L., Hübner, M.R., Rehburg, F. et al. An ontology-based rare disease common data model harmonising international registries, FHIR, and Phenopackets. Sci Data 12, 234 (2025). https://doi.org/10.1038/s41597-025-04558-z" ],
+        "definition" : {
+          "val" : "The year of the assessment of an entity, e.g. the year when a phenotype is assessed by medical evidence."
+        },
         "basicPropertyValues" : [ {
-          "pred" : "http://www.w3.org/2000/01/rdf-schema#seeAlso",
-          "val" : "http://purl.obolibrary.org/obo/HP_0003674"
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
+          "val" : "https://orcid.org/0009-0000-5160-7927"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PROMOT_0000040",
+      "lbl" : "Year of resolution",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "The year of the resolution of an abnormal disposition, e.g. the year when a phenotype ceases existing."
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
+          "val" : "https://orcid.org/0009-0000-5160-7927"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PROMOT_0000041",
+      "lbl" : "Year of death",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "The year in which the death occurs."
+        },
+        "xrefs" : [ {
+          "val" : "http://purl.obolibrary.org/obo/NCIT_C156426"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
+          "val" : "https://orcid.org/0009-0000-5160-7927"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PROMOT_0000042",
+      "lbl" : "Age",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Il s’agit du nombre d’années écoulées depuis la naissance d’une personne."
+        },
+        "comments" : [ "[derived from RD-CDM] Graefe, A.S.L., Hübner, M.R., Rehburg, F. et al. An ontology-based rare disease common data model harmonising international registries, FHIR, and Phenopackets. Sci Data 12, 234 (2025). https://doi.org/10.1038/s41597-025-04558-z" ],
+        "xrefs" : [ {
+          "val" : "http://purl.obolibrary.org/obo/NCIT_C25150"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
+          "val" : "https://orcid.org/0009-0000-5160-7927"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PROMOT_0000043",
+      "lbl" : "Age au moment du décès",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Elapsed time between birth and death expressed in years."
+        },
+        "xrefs" : [ {
+          "val" : "http://purl.obolibrary.org/obo/NCIT_C135383"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
+          "val" : "https://orcid.org/0009-0000-5160-7927"
         } ]
       }
     }, {
       "id" : "http://purl.obolibrary.org/obo/PROMOT_0000044",
-      "lbl" : "Adulthood",
+      "lbl" : "grupo de edad",
       "type" : "CLASS",
       "meta" : {
-        "comments" : [ "JP: Translated to spanish using Bing Translator" ],
+        "definition" : {
+          "val" : "Un interval arbitraire pour diviser une population en sous-groupes en fonction de l’âge."
+        },
+        "comments" : [ "[derived from RD-CDM] Graefe, A.S.L., Hübner, M.R., Rehburg, F. et al. An ontology-based rare disease common data model harmonising international registries, FHIR, and Phenopackets. Sci Data 12, 234 (2025). https://doi.org/10.1038/s41597-025-04558-z" ],
+        "xrefs" : [ {
+          "val" : "http://purl.obolibrary.org/obo/NCIT_C20587"
+        }, {
+          "val" : "http://snomed.info/id/105727008"
+        } ],
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
           "val" : "https://orcid.org/0009-0000-5160-7927"
@@ -453,301 +755,385 @@
       }
     }, {
       "id" : "http://purl.obolibrary.org/obo/PROMOT_0000045",
-      "lbl" : "Late adulthood",
+      "lbl" : "âge adulte",
       "type" : "CLASS",
       "meta" : {
-        "comments" : [ "JP: Translated to spanish using Bing Translator" ],
+        "definition" : {
+          "val" : "Une tranche d’âge incluant les personnes de 16 ans et plus."
+        },
+        "comments" : [ "[derived from RD-CDM] Graefe, A.S.L., Hübner, M.R., Rehburg, F. et al. An ontology-based rare disease common data model harmonising international registries, FHIR, and Phenopackets. Sci Data 12, 234 (2025). https://doi.org/10.1038/s41597-025-04558-z" ],
+        "xrefs" : [ {
+          "val" : "http://snomed.info/id/41847000"
+        } ],
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
           "val" : "https://orcid.org/0009-0000-5160-7927"
         }, {
           "pred" : "http://www.w3.org/2000/01/rdf-schema#seeAlso",
-          "val" : "http://purl.obolibrary.org/obo/HP_0003674"
+          "val" : "http://purl.obolibrary.org/obo/HP_0003581"
         } ]
       }
     }, {
       "id" : "http://purl.obolibrary.org/obo/PROMOT_0000046",
-      "lbl" : "Middle adulthood",
+      "lbl" : "âge avancé",
       "type" : "CLASS",
       "meta" : {
-        "comments" : [ "JP: Translated to spanish using Bing Translator" ],
+        "definition" : {
+          "val" : "Une tranche d’âge incluant les personnes de 60 ans et plus."
+        },
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
           "val" : "https://orcid.org/0009-0000-5160-7927"
         }, {
           "pred" : "http://www.w3.org/2000/01/rdf-schema#seeAlso",
-          "val" : "http://purl.obolibrary.org/obo/HP_0003674"
+          "val" : "http://purl.obolibrary.org/obo/HP_0003584"
         } ]
       }
     }, {
       "id" : "http://purl.obolibrary.org/obo/PROMOT_0000047",
-      "lbl" : "Young adulthood",
+      "lbl" : "âge moyen",
       "type" : "CLASS",
       "meta" : {
-        "comments" : [ "JP: Translated to spanish using Bing Translator" ],
+        "definition" : {
+          "val" : "Une tranche d’âge incluant les personnes de 40 à 59 ans inclus."
+        },
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
           "val" : "https://orcid.org/0009-0000-5160-7927"
         }, {
           "pred" : "http://www.w3.org/2000/01/rdf-schema#seeAlso",
-          "val" : "http://purl.obolibrary.org/obo/HP_0003674"
+          "val" : "http://purl.obolibrary.org/obo/HP_0003596"
         } ]
       }
     }, {
       "id" : "http://purl.obolibrary.org/obo/PROMOT_0000048",
-      "lbl" : "Early young adulthood",
+      "lbl" : "joven adulto",
       "type" : "CLASS",
       "meta" : {
-        "comments" : [ "JP: Translated to spanish using Bing Translator" ],
+        "definition" : {
+          "val" : "Une tranche d’âge incluant les personnes entre 16 et 39 ans inclus."
+        },
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
           "val" : "https://orcid.org/0009-0000-5160-7927"
         }, {
           "pred" : "http://www.w3.org/2000/01/rdf-schema#seeAlso",
-          "val" : "http://purl.obolibrary.org/obo/HP_0003674"
+          "val" : "http://purl.obolibrary.org/obo/HP_0011462"
         } ]
       }
     }, {
       "id" : "http://purl.obolibrary.org/obo/PROMOT_0000049",
-      "lbl" : "Intermediate young adulthood",
+      "lbl" : "début de l’âge adulte",
       "type" : "CLASS",
       "meta" : {
-        "comments" : [ "JP: Translated to spanish using Bing Translator" ],
+        "definition" : {
+          "val" : "Une tranche d’âge incluant les personnes entre 16 et 18 ans inclus."
+        },
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
           "val" : "https://orcid.org/0009-0000-5160-7927"
         }, {
           "pred" : "http://www.w3.org/2000/01/rdf-schema#seeAlso",
-          "val" : "http://purl.obolibrary.org/obo/HP_0003674"
+          "val" : "http://purl.obolibrary.org/obo/HP_0025708"
         } ]
       }
     }, {
       "id" : "http://purl.obolibrary.org/obo/PROMOT_0000050",
-      "lbl" : "Late young adulthood",
+      "lbl" : "âge intermédiaire",
       "type" : "CLASS",
       "meta" : {
-        "comments" : [ "JP: Translated to spanish using Bing Translator", "This term includes the full 19th year of age up to the completed 25th year of age (i.e., less than the 25th birthday). [from: HP:0025709]" ],
+        "definition" : {
+          "val" : "Une tranche d’âge incluant les personnes entre 19 et 24 ans inclus."
+        },
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
           "val" : "https://orcid.org/0009-0000-5160-7927"
         }, {
           "pred" : "http://www.w3.org/2000/01/rdf-schema#seeAlso",
-          "val" : "http://purl.obolibrary.org/obo/HP_0003674"
+          "val" : "http://purl.obolibrary.org/obo/HP_0025709"
         } ]
       }
     }, {
       "id" : "http://purl.obolibrary.org/obo/PROMOT_0000051",
-      "lbl" : "Antenatal age",
+      "lbl" : "fin du début de l’âge adulte",
       "type" : "CLASS",
       "meta" : {
+        "definition" : {
+          "val" : "Une tranche d’âge incluant les personnes entre 25 et 39 ans inclus."
+        },
+        "comments" : [ "This term includes the full 19th year of age up to the completed 25th year of age (i.e., less than the 25th birthday). [from: HP:0025709]" ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
+          "val" : "https://orcid.org/0009-0000-5160-7927"
+        }, {
+          "pred" : "http://www.w3.org/2000/01/rdf-schema#seeAlso",
+          "val" : "http://purl.obolibrary.org/obo/HP_0025710"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PROMOT_0000052",
+      "lbl" : "Période anténatale",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Une tranche d’âge inclus avant la naissance."
+        },
         "comments" : [ "This term includes the full 25th year of age up to the completed 40th year of age (i.e., less than the 40th birthday). [from: HP:0025710]" ],
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
           "val" : "https://orcid.org/0009-0000-5160-7927"
         }, {
           "pred" : "http://www.w3.org/2000/01/rdf-schema#seeAlso",
-          "val" : "http://purl.obolibrary.org/obo/HP_0003674"
-        } ]
-      }
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/PROMOT_0000052",
-      "lbl" : "Embryonal",
-      "type" : "CLASS",
-      "meta" : {
-        "basicPropertyValues" : [ {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
-          "val" : "https://orcid.org/0009-0000-5160-7927"
-        }, {
-          "pred" : "http://www.w3.org/2000/01/rdf-schema#seeAlso",
-          "val" : "http://purl.obolibrary.org/obo/HP_0003674"
+          "val" : "http://purl.obolibrary.org/obo/HP_0025710"
         } ]
       }
     }, {
       "id" : "http://purl.obolibrary.org/obo/PROMOT_0000053",
-      "lbl" : "Fetal",
+      "lbl" : "Période embryonnaire",
       "type" : "CLASS",
       "meta" : {
+        "definition" : {
+          "val" : "Une tranche d’âge jusqu’à 8 semaines après la conception, correspondant au maximum à 10 semaines de gestation."
+        },
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
           "val" : "https://orcid.org/0009-0000-5160-7927"
         }, {
           "pred" : "http://www.w3.org/2000/01/rdf-schema#seeAlso",
-          "val" : "http://purl.obolibrary.org/obo/HP_0003674"
+          "val" : "http://purl.obolibrary.org/obo/HP_0011460"
         } ]
       }
     }, {
       "id" : "http://purl.obolibrary.org/obo/PROMOT_0000054",
-      "lbl" : "Late first trimester",
+      "lbl" : "période foetale",
       "type" : "CLASS",
       "meta" : {
+        "definition" : {
+          "val" : "Une catégorie regroupant les âges d’un fœtus à partir de 8 semaines après la conception (soit 10 semaines de gestation) jusqu’à la naissance."
+        },
+        "comments" : [ "[derived from RD-CDM] Graefe, A.S.L., Hübner, M.R., Rehburg, F. et al. An ontology-based rare disease common data model harmonising international registries, FHIR, and Phenopackets. Sci Data 12, 234 (2025). https://doi.org/10.1038/s41597-025-04558-z" ],
+        "xrefs" : [ {
+          "val" : "http://snomed.info/id/303112003"
+        } ],
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
           "val" : "https://orcid.org/0009-0000-5160-7927"
         }, {
           "pred" : "http://www.w3.org/2000/01/rdf-schema#seeAlso",
-          "val" : "http://purl.obolibrary.org/obo/HP_0003674"
+          "val" : "http://purl.obolibrary.org/obo/HP_0011461"
         } ]
       }
     }, {
       "id" : "http://purl.obolibrary.org/obo/PROMOT_0000055",
-      "lbl" : "Second trimester",
+      "lbl" : "âge vers la fin du premier trimestre de grossesse",
       "type" : "CLASS",
       "meta" : {
+        "definition" : {
+          "val" : "Une catégorie d’âges regroupant les âges d’un fœtus à partir de 8 semaines après la conception (soit 10 semaines de gestation) jusqu’à la fin du premier trimestre de grossesse."
+        },
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
           "val" : "https://orcid.org/0009-0000-5160-7927"
         }, {
           "pred" : "http://www.w3.org/2000/01/rdf-schema#seeAlso",
-          "val" : "http://purl.obolibrary.org/obo/HP_0003674"
+          "val" : "http://purl.obolibrary.org/obo/HP_0034199"
         } ]
       }
     }, {
       "id" : "http://purl.obolibrary.org/obo/PROMOT_0000056",
-      "lbl" : "Third trimester",
+      "lbl" : "âge compris dans le second trimestre de grossesse",
       "type" : "CLASS",
       "meta" : {
+        "definition" : {
+          "val" : "Une catégorie d’âges regroupant les âges d’un fœtus entre 14 et 27 semaines de grossesse (incluses), ce qui correspond au deuxième trimestre de grossesse."
+        },
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
           "val" : "https://orcid.org/0009-0000-5160-7927"
         }, {
           "pred" : "http://www.w3.org/2000/01/rdf-schema#seeAlso",
-          "val" : "http://purl.obolibrary.org/obo/HP_0003674"
+          "val" : "http://purl.obolibrary.org/obo/HP_0034198"
         } ]
       }
     }, {
       "id" : "http://purl.obolibrary.org/obo/PROMOT_0000057",
-      "lbl" : "Congenital",
+      "lbl" : "âge compris dans le troisième trimestre de grossesse",
       "type" : "CLASS",
       "meta" : {
+        "definition" : {
+          "val" : "Une catégorie regroupant les âges d’un fœtus à partir de 28 semaines de grossesse (incluse) jusqu’à la naissance, ce qui correspond au troisième trimestre de grossesse."
+        },
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
           "val" : "https://orcid.org/0009-0000-5160-7927"
         }, {
           "pred" : "http://www.w3.org/2000/01/rdf-schema#seeAlso",
-          "val" : "http://purl.obolibrary.org/obo/HP_0003674"
+          "val" : "http://purl.obolibrary.org/obo/HP_0034197"
         } ]
       }
     }, {
       "id" : "http://purl.obolibrary.org/obo/PROMOT_0000058",
-      "lbl" : "Neonatal age",
+      "lbl" : "âge correspondant à la naissance",
       "type" : "CLASS",
       "meta" : {
+        "definition" : {
+          "val" : "Une catégorie d’âge correspondant à la naissance."
+        },
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
           "val" : "https://orcid.org/0009-0000-5160-7927"
         }, {
           "pred" : "http://www.w3.org/2000/01/rdf-schema#seeAlso",
-          "val" : "http://purl.obolibrary.org/obo/HP_0003674"
+          "val" : "http://purl.obolibrary.org/obo/HP_0003577"
         } ]
       }
     }, {
       "id" : "http://purl.obolibrary.org/obo/PROMOT_0000059",
-      "lbl" : "Pediatric age",
+      "lbl" : "âge néonatal",
       "type" : "CLASS",
       "meta" : {
+        "definition" : {
+          "val" : "Une tranche d’âge comprenant les nouveaux-nés jusqu’à leur 28e jour."
+        },
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
           "val" : "https://orcid.org/0009-0000-5160-7927"
         }, {
           "pred" : "http://www.w3.org/2000/01/rdf-schema#seeAlso",
-          "val" : "http://purl.obolibrary.org/obo/HP_0003674"
+          "val" : "http://purl.obolibrary.org/obo/HP_0003623"
         } ]
       }
     }, {
       "id" : "http://purl.obolibrary.org/obo/PROMOT_0000060",
-      "lbl" : "Childhood",
+      "lbl" : "âge pédiatrique",
       "type" : "CLASS",
       "meta" : {
-        "comments" : [ "JP: Translated to spanish using Bing Translator", "This term refers to ages up to but not including the fifth birthday (see Juvenile onset). [from: HP:0011463]" ],
+        "definition" : {
+          "val" : "Une tranche d’âge située avant l’âge adulte,"
+        },
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
           "val" : "https://orcid.org/0009-0000-5160-7927"
         }, {
           "pred" : "http://www.w3.org/2000/01/rdf-schema#seeAlso",
-          "val" : "http://purl.obolibrary.org/obo/HP_0003674"
+          "val" : "http://purl.obolibrary.org/obo/HP_0410280"
         } ]
       }
     }, {
       "id" : "http://purl.obolibrary.org/obo/PROMOT_0000061",
-      "lbl" : "Infantile age",
+      "lbl" : "Âge compris dans l’enfance",
       "type" : "CLASS",
       "meta" : {
+        "definition" : {
+          "val" : "Une tranche d’âge incluant les personnes de 1 à 4 ans inclus."
+        },
+        "comments" : [ "JP: Translated to spanish using Bing Translator", "[derived from RD-CDM] Graefe, A.S.L., Hübner, M.R., Rehburg, F. et al. An ontology-based rare disease common data model harmonising international registries, FHIR, and Phenopackets. Sci Data 12, 234 (2025). https://doi.org/10.1038/s41597-025-04558-z" ],
+        "xrefs" : [ {
+          "val" : "http://snomed.info/id/255398004"
+        } ],
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
           "val" : "https://orcid.org/0009-0000-5160-7927"
         }, {
           "pred" : "http://www.w3.org/2000/01/rdf-schema#seeAlso",
-          "val" : "http://purl.obolibrary.org/obo/HP_0003674"
+          "val" : "http://purl.obolibrary.org/obo/HP_0011463"
         } ]
       }
     }, {
       "id" : "http://purl.obolibrary.org/obo/PROMOT_0000062",
-      "lbl" : "Juvenile age",
+      "lbl" : "âge infantile",
       "type" : "CLASS",
       "meta" : {
+        "definition" : {
+          "val" : "Une tranche d’âge incluant les nourrissons de 28 jours à 1 an inclus."
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
+          "val" : "https://orcid.org/0009-0000-5160-7927"
+        }, {
+          "pred" : "http://www.w3.org/2000/01/rdf-schema#seeAlso",
+          "val" : "http://purl.obolibrary.org/obo/HP_0003593"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PROMOT_0000063",
+      "lbl" : "âge juvénile",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Une tranche d’âge incluant les personnes entre 5 et 15 ans inclus."
+        },
         "comments" : [ "JP: Translated to spanish using Bing Translator" ],
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
           "val" : "https://orcid.org/0009-0000-5160-7927"
         }, {
           "pred" : "http://www.w3.org/2000/01/rdf-schema#seeAlso",
-          "val" : "http://purl.obolibrary.org/obo/HP_0003674"
-        } ]
-      }
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/PROMOT_0000063",
-      "lbl" : "Perimenopausal age",
-      "type" : "CLASS",
-      "meta" : {
-        "basicPropertyValues" : [ {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
-          "val" : "https://orcid.org/0009-0000-5160-7927"
-        }, {
-          "pred" : "http://www.w3.org/2000/01/rdf-schema#seeAlso",
-          "val" : "http://purl.obolibrary.org/obo/HP_0003674"
+          "val" : "http://purl.obolibrary.org/obo/HP_0003621"
         } ]
       }
     }, {
       "id" : "http://purl.obolibrary.org/obo/PROMOT_0000064",
-      "lbl" : "Postmenopausal age",
+      "lbl" : "âge périménopausal",
       "type" : "CLASS",
       "meta" : {
+        "definition" : {
+          "val" : "Une tranche d’âge contenant tous les âges associés à la périménopause."
+        },
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
           "val" : "https://orcid.org/0009-0000-5160-7927"
         }, {
           "pred" : "http://www.w3.org/2000/01/rdf-schema#seeAlso",
-          "val" : "http://purl.obolibrary.org/obo/HP_0003674"
+          "val" : "http://purl.obolibrary.org/obo/HP_6000314"
         } ]
       }
     }, {
       "id" : "http://purl.obolibrary.org/obo/PROMOT_0000065",
-      "lbl" : "Puerpural age",
+      "lbl" : "âge postménopausal",
       "type" : "CLASS",
       "meta" : {
+        "definition" : {
+          "val" : "Une tranche d’âge contenant tous les âges associés à la postménopause."
+        },
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
           "val" : "https://orcid.org/0009-0000-5160-7927"
         }, {
           "pred" : "http://www.w3.org/2000/01/rdf-schema#seeAlso",
-          "val" : "http://purl.obolibrary.org/obo/HP_0003674"
+          "val" : "http://purl.obolibrary.org/obo/HP_6000315"
         } ]
       }
     }, {
       "id" : "http://purl.obolibrary.org/obo/PROMOT_0000066",
-      "lbl" : "Sex at birth",
+      "lbl" : "âge puerpéral",
       "type" : "CLASS",
       "meta" : {
+        "definition" : {
+          "val" : "Une tranche d’âge contenant tous les âges qui se rapportent aux nouveaux-nés au moment de l’accouchement ou à la période juste après."
+        },
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
           "val" : "https://orcid.org/0009-0000-5160-7927"
+        }, {
+          "pred" : "http://www.w3.org/2000/01/rdf-schema#seeAlso",
+          "val" : "http://purl.obolibrary.org/obo/HP_4000040"
         } ]
       }
     }, {
       "id" : "http://purl.obolibrary.org/obo/PROMOT_0000067",
-      "lbl" : "Female sex at birth",
+      "lbl" : "sexe à la naissance",
       "type" : "CLASS",
       "meta" : {
+        "definition" : {
+          "val" : "The physical sexual characteristiscs at birth."
+        },
+        "comments" : [ "[derived from EURO-NMD] Atalia A et al., EURO-NMD registry: federated FAIR infrastructure, innovative technologies and concepts of a patient-centred registry for rare neuromuscular disorders. Orphanet J Rare Dis. 2024 Feb 14;19(1):66. doi: 10.1186/s13023-024-03059-3. PMID: 38355534; PMCID: PMC10865673.", "[derived from RD-CDM] Graefe, A.S.L., Hübner, M.R., Rehburg, F. et al. An ontology-based rare disease common data model harmonising international registries, FHIR, and Phenopackets. Sci Data 12, 234 (2025). https://doi.org/10.1038/s41597-025-04558-z" ],
+        "xrefs" : [ {
+          "val" : "http://purl.obolibrary.org/obo/NCIT_C124436"
+        }, {
+          "val" : "http://snomed.info/id/281053000"
+        } ],
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
           "val" : "https://orcid.org/0009-0000-5160-7927"
@@ -755,9 +1141,16 @@
       }
     }, {
       "id" : "http://purl.obolibrary.org/obo/PROMOT_0000068",
-      "lbl" : "Intersex at birth",
+      "lbl" : "sexe à la naissance féminin",
       "type" : "CLASS",
       "meta" : {
+        "definition" : {
+          "val" : "Un ensemble de caractéristiques sexuelles à la naissance considérées comme féminines."
+        },
+        "comments" : [ "[derived from EURO-NMD] Atalia A et al., EURO-NMD registry: federated FAIR infrastructure, innovative technologies and concepts of a patient-centred registry for rare neuromuscular disorders. Orphanet J Rare Dis. 2024 Feb 14;19(1):66. doi: 10.1186/s13023-024-03059-3. PMID: 38355534; PMCID: PMC10865673.", "[derived from RD-CDM] Graefe, A.S.L., Hübner, M.R., Rehburg, F. et al. An ontology-based rare disease common data model harmonising international registries, FHIR, and Phenopackets. Sci Data 12, 234 (2025). https://doi.org/10.1038/s41597-025-04558-z" ],
+        "xrefs" : [ {
+          "val" : "http://snomed.info/id/248152002"
+        } ],
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
           "val" : "https://orcid.org/0009-0000-5160-7927"
@@ -765,9 +1158,16 @@
       }
     }, {
       "id" : "http://purl.obolibrary.org/obo/PROMOT_0000069",
-      "lbl" : "Male sex at birth",
+      "lbl" : "intersexe à la naissance",
       "type" : "CLASS",
       "meta" : {
+        "definition" : {
+          "val" : "Un ensemble de caractéristiques sexuelles à la naissance considérées comme intersexes."
+        },
+        "comments" : [ "[derived from RD-CDM] Graefe, A.S.L., Hübner, M.R., Rehburg, F. et al. An ontology-based rare disease common data model harmonising international registries, FHIR, and Phenopackets. Sci Data 12, 234 (2025). https://doi.org/10.1038/s41597-025-04558-z" ],
+        "xrefs" : [ {
+          "val" : "http://snomed.info/id/32570691000036100"
+        } ],
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
           "val" : "https://orcid.org/0009-0000-5160-7927"
@@ -775,9 +1175,16 @@
       }
     }, {
       "id" : "http://purl.obolibrary.org/obo/PROMOT_0000070",
-      "lbl" : "Patient sex at birth unknown",
+      "lbl" : "sexe à la naissance masculin",
       "type" : "CLASS",
       "meta" : {
+        "definition" : {
+          "val" : "Un ensemble de caractéristiques sexuelles à la naissance considérées comme masculines."
+        },
+        "comments" : [ "[derived from EURO-NMD] Atalia A et al., EURO-NMD registry: federated FAIR infrastructure, innovative technologies and concepts of a patient-centred registry for rare neuromuscular disorders. Orphanet J Rare Dis. 2024 Feb 14;19(1):66. doi: 10.1186/s13023-024-03059-3. PMID: 38355534; PMCID: PMC10865673.", "[derived from RD-CDM] Graefe, A.S.L., Hübner, M.R., Rehburg, F. et al. An ontology-based rare disease common data model harmonising international registries, FHIR, and Phenopackets. Sci Data 12, 234 (2025). https://doi.org/10.1038/s41597-025-04558-z" ],
+        "xrefs" : [ {
+          "val" : "http://snomed.info/id/248153007"
+        } ],
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
           "val" : "https://orcid.org/0009-0000-5160-7927"
@@ -785,10 +1192,16 @@
       }
     }, {
       "id" : "http://purl.obolibrary.org/obo/PROMOT_0000071",
-      "lbl" : "Sex at birth not recorded",
+      "lbl" : "sexo al nacer desconocido",
       "type" : "CLASS",
       "meta" : {
-        "comments" : [ "UNSURE : not really a class" ],
+        "definition" : {
+          "val" : "Un ensemble de caractéristiques sexuelles à la naissance qui est inconnu."
+        },
+        "comments" : [ "[derived from EURO-NMD] Atalia A et al., EURO-NMD registry: federated FAIR infrastructure, innovative technologies and concepts of a patient-centred registry for rare neuromuscular disorders. Orphanet J Rare Dis. 2024 Feb 14;19(1):66. doi: 10.1186/s13023-024-03059-3. PMID: 38355534; PMCID: PMC10865673.", "[derived from RD-CDM] Graefe, A.S.L., Hübner, M.R., Rehburg, F. et al. An ontology-based rare disease common data model harmonising international registries, FHIR, and Phenopackets. Sci Data 12, 234 (2025). https://doi.org/10.1038/s41597-025-04558-z" ],
+        "xrefs" : [ {
+          "val" : "http://snomed.info/id/184115007"
+        } ],
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
           "val" : "https://orcid.org/0009-0000-5160-7927"
@@ -796,9 +1209,16 @@
       }
     }, {
       "id" : "http://purl.obolibrary.org/obo/PROMOT_0000072",
-      "lbl" : "Female gender identity",
+      "lbl" : "Sexe à la naissance non renseigné",
       "type" : "CLASS",
       "meta" : {
+        "definition" : {
+          "val" : "Un ensemble de caractéristiques sexuelles à la naissance non renseigné."
+        },
+        "comments" : [ "[derived from RD-CDM] Graefe, A.S.L., Hübner, M.R., Rehburg, F. et al. An ontology-based rare disease common data model harmonising international registries, FHIR, and Phenopackets. Sci Data 12, 234 (2025). https://doi.org/10.1038/s41597-025-04558-z" ],
+        "xrefs" : [ {
+          "val" : "http://snomed.info/id/1220561009"
+        } ],
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
           "val" : "https://orcid.org/0009-0000-5160-7927"
@@ -806,9 +1226,16 @@
       }
     }, {
       "id" : "http://purl.obolibrary.org/obo/PROMOT_0000073",
-      "lbl" : "Identifies as nonbinary gender",
+      "lbl" : "Identité de genre féminine",
       "type" : "CLASS",
       "meta" : {
+        "definition" : {
+          "val" : "L’identité de genre d’une personne qui s’identifie en tant que fille, adolescente ou femme."
+        },
+        "comments" : [ "[derived from RD-CDM] Graefe, A.S.L., Hübner, M.R., Rehburg, F. et al. An ontology-based rare disease common data model harmonising international registries, FHIR, and Phenopackets. Sci Data 12, 234 (2025). https://doi.org/10.1038/s41597-025-04558-z" ],
+        "xrefs" : [ {
+          "val" : "http://snomed.info/id/446141000124107"
+        } ],
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
           "val" : "https://orcid.org/0009-0000-5160-7927"
@@ -816,9 +1243,16 @@
       }
     }, {
       "id" : "http://purl.obolibrary.org/obo/PROMOT_0000074",
-      "lbl" : "Male gender identity",
+      "lbl" : "Identité de genre non-binaire",
       "type" : "CLASS",
       "meta" : {
+        "definition" : {
+          "val" : "L‘identité de genre d’une personne qui ne s’identifie pas au genre féminin, ni masculin."
+        },
+        "comments" : [ "[derived from RD-CDM] Graefe, A.S.L., Hübner, M.R., Rehburg, F. et al. An ontology-based rare disease common data model harmonising international registries, FHIR, and Phenopackets. Sci Data 12, 234 (2025). https://doi.org/10.1038/s41597-025-04558-z" ],
+        "xrefs" : [ {
+          "val" : "http://snomed.info/id/33791000087105"
+        } ],
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
           "val" : "https://orcid.org/0009-0000-5160-7927"
@@ -826,17 +1260,50 @@
       }
     }, {
       "id" : "http://purl.obolibrary.org/obo/PROMOT_0000075",
-      "lbl" : "Gender identity unknown",
-      "type" : "CLASS"
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/PROMOT_0000076",
-      "lbl" : "Gender identity not recorded",
-      "type" : "CLASS"
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/PROMOT_0000077",
-      "lbl" : "Nb of previous pregnancies",
+      "lbl" : "Male gender identity",
       "type" : "CLASS",
       "meta" : {
+        "definition" : {
+          "val" : "L’identité de genre d’une personne qui s’identifie en tant que garçon, adolescent ou homme."
+        },
+        "comments" : [ "[derived from RD-CDM] Graefe, A.S.L., Hübner, M.R., Rehburg, F. et al. An ontology-based rare disease common data model harmonising international registries, FHIR, and Phenopackets. Sci Data 12, 234 (2025). https://doi.org/10.1038/s41597-025-04558-z" ],
+        "xrefs" : [ {
+          "val" : "http://snomed.info/id/446151000124109"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
+          "val" : "https://orcid.org/0009-0000-5160-7927"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PROMOT_0000076",
+      "lbl" : "Identité de genre inconnue",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Une identité de genre inconnue."
+        },
+        "comments" : [ "[derived from RD-CDM] Graefe, A.S.L., Hübner, M.R., Rehburg, F. et al. An ontology-based rare disease common data model harmonising international registries, FHIR, and Phenopackets. Sci Data 12, 234 (2025). https://doi.org/10.1038/s41597-025-04558-z" ],
+        "xrefs" : [ {
+          "val" : "http://snomed.info/id/394743007"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
+          "val" : "https://orcid.org/0009-0000-5160-7927"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PROMOT_0000077",
+      "lbl" : "Identité de genre non renseignée",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Une identité de genre non renseignée."
+        },
+        "comments" : [ "[derived from RD-CDM] Graefe, A.S.L., Hübner, M.R., Rehburg, F. et al. An ontology-based rare disease common data model harmonising international registries, FHIR, and Phenopackets. Sci Data 12, 234 (2025). https://doi.org/10.1038/s41597-025-04558-z" ],
+        "xrefs" : [ {
+          "val" : "http://snomed.info/id/1220561009"
+        } ],
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
           "val" : "https://orcid.org/0009-0000-5160-7927"
@@ -844,13 +1311,26 @@
       }
     }, {
       "id" : "http://purl.obolibrary.org/obo/PROMOT_0000078",
-      "lbl" : "Patient at risk of fall",
-      "type" : "CLASS"
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/PROMOT_0000079",
-      "lbl" : "unkown life status",
+      "lbl" : "nombre de grossesses",
       "type" : "CLASS",
       "meta" : {
+        "definition" : {
+          "val" : "Number of precious pregnancies of an individual that includes pregancies that did not reach their end."
+        },
+        "comments" : [ "[derived from EURO-NMD] Atalia A et al., EURO-NMD registry: federated FAIR infrastructure, innovative technologies and concepts of a patient-centred registry for rare neuromuscular disorders. Orphanet J Rare Dis. 2024 Feb 14;19(1):66. doi: 10.1186/s13023-024-03059-3. PMID: 38355534; PMCID: PMC10865673." ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
+          "val" : "https://orcid.org/0009-0000-5160-7927"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PROMOT_0000079",
+      "lbl" : "Patient à risque de chute",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Patient ayant des caractéristiques permettant d’affirmer qu’il risque de faire des chutes."
+        },
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
           "val" : "https://orcid.org/0009-0000-5160-7927"
@@ -858,25 +1338,64 @@
       }
     }, {
       "id" : "http://purl.obolibrary.org/obo/PROMOT_0000080",
-      "lbl" : "unrecorded life status",
-      "type" : "CLASS"
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/PROMOT_0000081",
-      "lbl" : "unknown transmission",
-      "type" : "CLASS"
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/PROMOT_0000082",
-      "lbl" : "unrecorded transmission",
-      "type" : "CLASS"
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/PROMOT_0000083",
-      "lbl" : "Unrecorded health status",
-      "type" : "CLASS"
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/PROMOT_0000084",
-      "lbl" : "presence qualifier",
+      "lbl" : "état vital inconnu",
       "type" : "CLASS",
       "meta" : {
+        "definition" : {
+          "val" : "Un état vital inconnu."
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
+          "val" : "https://orcid.org/0009-0000-5160-7927"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PROMOT_0000081",
+      "lbl" : "état vital non renseigné",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Un état vital inconnu en raison de l’absence de renseignement à son sujet."
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
+          "val" : "https://orcid.org/0009-0000-5160-7927"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PROMOT_0000082",
+      "lbl" : "perdu·e de vue",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Un état vital inconnu en raison de la perte de vue de la personne."
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
+          "val" : "https://orcid.org/0009-0000-5160-7927"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PROMOT_0000083",
+      "lbl" : "retiré·e",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Un état vital en connu en raison du retrait du patient de l’étude."
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
+          "val" : "https://orcid.org/0009-0000-5160-7927"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PROMOT_0000084",
+      "lbl" : "unknown transmission",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Une transmission inconnue."
+        },
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
           "val" : "https://orcid.org/0009-0000-5160-7927"
@@ -884,9 +1403,12 @@
       }
     }, {
       "id" : "http://purl.obolibrary.org/obo/PROMOT_0000085",
-      "lbl" : "absent",
+      "lbl" : "unrecorded transmission",
       "type" : "CLASS",
       "meta" : {
+        "definition" : {
+          "val" : "Une transmission inconnue en raison de l’absence de renseignement à son sujet."
+        },
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
           "val" : "https://orcid.org/0009-0000-5160-7927"
@@ -894,9 +1416,12 @@
       }
     }, {
       "id" : "http://purl.obolibrary.org/obo/PROMOT_0000086",
-      "lbl" : "present",
+      "lbl" : "état de santé non renseigné",
       "type" : "CLASS",
       "meta" : {
+        "definition" : {
+          "val" : "Un état de santé inconnu en raison de l’absence de renseignement à son sujet."
+        },
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
           "val" : "https://orcid.org/0009-0000-5160-7927"
@@ -904,9 +1429,16 @@
       }
     }, {
       "id" : "http://purl.obolibrary.org/obo/PROMOT_0000087",
-      "lbl" : "presence unsure",
+      "lbl" : "presence qualifier",
       "type" : "CLASS",
       "meta" : {
+        "definition" : {
+          "val" : "Un qualité qui statue de la présence, de l’absence ou de l’incertitude de l’existence d’un phénotype."
+        },
+        "comments" : [ "[PROMOT NOTE: derived from RD-CDM] Graefe, A.S.L., Hübner, M.R., Rehburg, F. et al. An ontology-based rare disease common data model harmonising international registries, FHIR, and Phenopackets. Sci Data 12, 234 (2025). https://doi.org/10.1038/s41597-025-04558-z" ],
+        "xrefs" : [ {
+          "val" : "http://snomed.info/id/363778006"
+        } ],
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
           "val" : "https://orcid.org/0009-0000-5160-7927"
@@ -914,9 +1446,15 @@
       }
     }, {
       "id" : "http://purl.obolibrary.org/obo/PROMOT_0000088",
-      "lbl" : "presence unrecorded",
+      "lbl" : "absent",
       "type" : "CLASS",
       "meta" : {
+        "definition" : {
+          "val" : "Une qualité qui statue de l’absence d’un phénotype."
+        },
+        "xrefs" : [ {
+          "val" : "http://purl.obolibrary.org/obo/NCIT_C48190"
+        } ],
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
           "val" : "https://orcid.org/0009-0000-5160-7927"
@@ -924,139 +1462,349 @@
       }
     }, {
       "id" : "http://purl.obolibrary.org/obo/PROMOT_0000089",
-      "lbl" : "Consent status",
+      "lbl" : "présent",
       "type" : "CLASS",
       "meta" : {
-        "comments" : [ "Graefe, A.S.L., Hübner, M.R., Rehburg, F. et al. An ontology-based rare disease common data model harmonising international registries, FHIR, and Phenopackets. Sci Data 12, 234 (2025). https://doi.org/10.1038/s41597-025-04558-z", "RD-CDM" ]
-      }
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/PROMOT_0000090",
-      "lbl" : "Pending",
-      "type" : "CLASS",
-      "meta" : {
-        "comments" : [ "Graefe, A.S.L., Hübner, M.R., Rehburg, F. et al. An ontology-based rare disease common data model harmonising international registries, FHIR, and Phenopackets. Sci Data 12, 234 (2025). https://doi.org/10.1038/s41597-025-04558-z", "RD-CDM" ]
-      }
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/PROMOT_0000091",
-      "lbl" : "Proposed",
-      "type" : "CLASS",
-      "meta" : {
-        "comments" : [ "Graefe, A.S.L., Hübner, M.R., Rehburg, F. et al. An ontology-based rare disease common data model harmonising international registries, FHIR, and Phenopackets. Sci Data 12, 234 (2025). https://doi.org/10.1038/s41597-025-04558-z", "RD-CDM" ]
-      }
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/PROMOT_0000092",
-      "lbl" : "Active",
-      "type" : "CLASS",
-      "meta" : {
-        "comments" : [ "Graefe, A.S.L., Hübner, M.R., Rehburg, F. et al. An ontology-based rare disease common data model harmonising international registries, FHIR, and Phenopackets. Sci Data 12, 234 (2025). https://doi.org/10.1038/s41597-025-04558-z", "RD-CDM" ]
-      }
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/PROMOT_0000093",
-      "lbl" : "Rejected",
-      "type" : "CLASS",
-      "meta" : {
-        "comments" : [ "Graefe, A.S.L., Hübner, M.R., Rehburg, F. et al. An ontology-based rare disease common data model harmonising international registries, FHIR, and Phenopackets. Sci Data 12, 234 (2025). https://doi.org/10.1038/s41597-025-04558-z", "RD-CDM" ]
-      }
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/PROMOT_0000094",
-      "lbl" : "Inactive",
-      "type" : "CLASS",
-      "meta" : {
-        "comments" : [ "Graefe, A.S.L., Hübner, M.R., Rehburg, F. et al. An ontology-based rare disease common data model harmonising international registries, FHIR, and Phenopackets. Sci Data 12, 234 (2025). https://doi.org/10.1038/s41597-025-04558-z", "RD-CDM" ]
-      }
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/PROMOT_0000095",
-      "lbl" : "Entered in Error",
-      "type" : "CLASS",
-      "meta" : {
-        "comments" : [ "Graefe, A.S.L., Hübner, M.R., Rehburg, F. et al. An ontology-based rare disease common data model harmonising international registries, FHIR, and Phenopackets. Sci Data 12, 234 (2025). https://doi.org/10.1038/s41597-025-04558-z", "RD-CDM" ]
-      }
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/PROMOT_0000096",
-      "lbl" : "Date of consent",
-      "type" : "CLASS",
-      "meta" : {
-        "comments" : [ "Graefe, A.S.L., Hübner, M.R., Rehburg, F. et al. An ontology-based rare disease common data model harmonising international registries, FHIR, and Phenopackets. Sci Data 12, 234 (2025). https://doi.org/10.1038/s41597-025-04558-z", "RD-CDM" ]
-      }
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/PROMOT_0000097",
-      "lbl" : "Agreement to be contacted for research purpose",
-      "type" : "CLASS",
-      "meta" : {
-        "comments" : [ "Graefe, A.S.L., Hübner, M.R., Rehburg, F. et al. An ontology-based rare disease common data model harmonising international registries, FHIR, and Phenopackets. Sci Data 12, 234 (2025). https://doi.org/10.1038/s41597-025-04558-z", "RD-CDM" ]
-      }
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/PROMOT_0000098",
-      "lbl" : "Consent to the reuse of data",
-      "type" : "CLASS",
-      "meta" : {
-        "comments" : [ "Graefe, A.S.L., Hübner, M.R., Rehburg, F. et al. An ontology-based rare disease common data model harmonising international registries, FHIR, and Phenopackets. Sci Data 12, 234 (2025). https://doi.org/10.1038/s41597-025-04558-z", "RD-CDM" ]
-      }
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/PROMOT_0000099",
-      "lbl" : "Pourcentage de la valeur attendue",
-      "type" : "CLASS"
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/PROMOT_0000100",
-      "lbl" : "Assessment using Debimeter",
-      "type" : "CLASS"
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/PROMOT_0000101",
-      "lbl" : "Quantative muscle weakness",
-      "type" : "CLASS"
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/PROMOT_0000102",
-      "lbl" : "Assessment using Dysphagyameter",
-      "type" : "CLASS"
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/PROMOT_0000103",
-      "lbl" : "Assessment using B&L gauge",
-      "type" : "CLASS"
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/PROMOT_0000104",
-      "lbl" : "Bilan dynamométrique avec MedUP",
-      "type" : "CLASS"
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/PROMOT_0000105",
-      "lbl" : "Assessment using Iowa Oral Performance Instrument",
-      "type" : "CLASS"
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/PROMOT_0000106",
-      "lbl" : "Double compound motor action potential abnormality",
-      "type" : "CLASS",
-      "meta" : {
-        "comments" : [ "(JP : to validate)" ],
+        "definition" : {
+          "val" : "Une qualité qui statue de la présence d’un phénotype."
+        },
+        "xrefs" : [ {
+          "val" : "http://purl.obolibrary.org/obo/NCIT_C25626"
+        } ],
         "basicPropertyValues" : [ {
-          "pred" : "http://purl.obolibrary.org/obo/PROMOT_1000001",
-          "val" : "CMS Scoping review"
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
+          "val" : "https://orcid.org/0009-0000-5160-7927"
         } ]
       }
     }, {
-      "id" : "http://purl.obolibrary.org/obo/PROMOT_0000107",
-      "lbl" : "Year of assessment",
+      "id" : "http://purl.obolibrary.org/obo/PROMOT_0000090",
+      "lbl" : "presence unsure",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Une qualité qui statue de l’incertitude de la présence ou non d’un phénotype."
+        },
+        "xrefs" : [ {
+          "val" : "http://purl.obolibrary.org/obo/NCIT_C47944"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
+          "val" : "https://orcid.org/0009-0000-5160-7927"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PROMOT_0000091",
+      "lbl" : "présence non renseignée",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Une qualité qui statue de l’incertitude de la présence ou non d’un phénotype en raison de l’absence de renseignements à son sujet."
+        },
+        "xrefs" : [ {
+          "val" : "http://purl.obolibrary.org/obo/NCIT_C185193"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
+          "val" : "https://orcid.org/0009-0000-5160-7927"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PROMOT_0000092",
+      "lbl" : "estado del consentimiento",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Le status d’un consentement, qu’il soit accepté, refusé ou autre."
+        },
+        "comments" : [ "[derived from RD-CDM] Graefe, A.S.L., Hübner, M.R., Rehburg, F. et al. An ontology-based rare disease common data model harmonising international registries, FHIR, and Phenopackets. Sci Data 12, 234 (2025). https://doi.org/10.1038/s41597-025-04558-z" ],
+        "xrefs" : [ {
+          "val" : "http://snomed.info/id/309370004"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
+          "val" : "https://orcid.org/0009-0000-5160-7927"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PROMOT_0000093",
+      "lbl" : "Pending",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Le statut d’un consentement qui est en attente de définition."
+        },
+        "comments" : [ "HL7 FHIR", "[derived from RD-CDM] Graefe, A.S.L., Hübner, M.R., Rehburg, F. et al. An ontology-based rare disease common data model harmonising international registries, FHIR, and Phenopackets. Sci Data 12, 234 (2025). https://doi.org/10.1038/s41597-025-04558-z" ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
+          "val" : "https://orcid.org/0009-0000-5160-7927"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PROMOT_0000094",
+      "lbl" : "Proposé",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Le statut d’un consentement qui a été proposé à une personne pour son accord ou son refus."
+        },
+        "comments" : [ "HL7 FHIR", "[derived from RD-CDM] Graefe, A.S.L., Hübner, M.R., Rehburg, F. et al. An ontology-based rare disease common data model harmonising international registries, FHIR, and Phenopackets. Sci Data 12, 234 (2025). https://doi.org/10.1038/s41597-025-04558-z" ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
+          "val" : "https://orcid.org/0009-0000-5160-7927"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PROMOT_0000095",
+      "lbl" : "Active",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Le statut d’un consentement qui a été accepté par la personne concernée."
+        },
+        "comments" : [ "HL7 FHIR", "[derived from RD-CDM] Graefe, A.S.L., Hübner, M.R., Rehburg, F. et al. An ontology-based rare disease common data model harmonising international registries, FHIR, and Phenopackets. Sci Data 12, 234 (2025). https://doi.org/10.1038/s41597-025-04558-z" ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
+          "val" : "https://orcid.org/0009-0000-5160-7927"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PROMOT_0000096",
+      "lbl" : "Rejeté",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Le statut d’un consentement qui a été refusé par la personne concernée."
+        },
+        "comments" : [ "HL7 FHIR", "[derived from RD-CDM] Graefe, A.S.L., Hübner, M.R., Rehburg, F. et al. An ontology-based rare disease common data model harmonising international registries, FHIR, and Phenopackets. Sci Data 12, 234 (2025). https://doi.org/10.1038/s41597-025-04558-z" ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
+          "val" : "https://orcid.org/0009-0000-5160-7927"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PROMOT_0000097",
+      "lbl" : "Inactive",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Le statut d’un consentement qui est inactif."
+        },
+        "comments" : [ "HL7 FHIR", "[derived from RD-CDM] Graefe, A.S.L., Hübner, M.R., Rehburg, F. et al. An ontology-based rare disease common data model harmonising international registries, FHIR, and Phenopackets. Sci Data 12, 234 (2025). https://doi.org/10.1038/s41597-025-04558-z" ],
+        "xrefs" : [ {
+          "val" : "http://snomed.info/id/73425007"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
+          "val" : "https://orcid.org/0009-0000-5160-7927"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PROMOT_0000098",
+      "lbl" : "Entré par erreur",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Le statut d’un consentement qui a été entré par erreur."
+        },
+        "comments" : [ "HL7 FHIR", "[derived from RD-CDM] Graefe, A.S.L., Hübner, M.R., Rehburg, F. et al. An ontology-based rare disease common data model harmonising international registries, FHIR, and Phenopackets. Sci Data 12, 234 (2025). https://doi.org/10.1038/s41597-025-04558-z" ],
+        "xrefs" : [ {
+          "val" : "http://snomed.info/id/723510000"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
+          "val" : "https://orcid.org/0009-0000-5160-7927"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PROMOT_0000099",
+      "lbl" : "Date of consent",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "The date when the consent status has been updated."
+        },
+        "comments" : [ "[derived from EURO-NMD] Atalia A et al., EURO-NMD registry: federated FAIR infrastructure, innovative technologies and concepts of a patient-centred registry for rare neuromuscular disorders. Orphanet J Rare Dis. 2024 Feb 14;19(1):66. doi: 10.1186/s13023-024-03059-3. PMID: 38355534; PMCID: PMC10865673.", "[derived from RD-CDM] Graefe, A.S.L., Hübner, M.R., Rehburg, F. et al. An ontology-based rare disease common data model harmonising international registries, FHIR, and Phenopackets. Sci Data 12, 234 (2025). https://doi.org/10.1038/s41597-025-04558-z" ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
+          "val" : "https://orcid.org/0009-0000-5160-7927"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PROMOT_0000100",
+      "lbl" : "Agreement to be contacted for research purpose",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "L’accord donné par un patient pour être contacté à des fins de recherche."
+        },
+        "comments" : [ "[derived from EURO-NMD] Atalia A et al., EURO-NMD registry: federated FAIR infrastructure, innovative technologies and concepts of a patient-centred registry for rare neuromuscular disorders. Orphanet J Rare Dis. 2024 Feb 14;19(1):66. doi: 10.1186/s13023-024-03059-3. PMID: 38355534; PMCID: PMC10865673.", "[derived from RD-CDM] Graefe, A.S.L., Hübner, M.R., Rehburg, F. et al. An ontology-based rare disease common data model harmonising international registries, FHIR, and Phenopackets. Sci Data 12, 234 (2025). https://doi.org/10.1038/s41597-025-04558-z" ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
+          "val" : "https://orcid.org/0009-0000-5160-7927"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PROMOT_0000101",
+      "lbl" : "Consentimiento para la reutilización de datos",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Un consentement donné par une personne à ce que les données la concernant soient utlilisées à d’autres fins que celles initialement prévues."
+        },
+        "comments" : [ "[derived from RD-CDM] Graefe, A.S.L., Hübner, M.R., Rehburg, F. et al. An ontology-based rare disease common data model harmonising international registries, FHIR, and Phenopackets. Sci Data 12, 234 (2025). https://doi.org/10.1038/s41597-025-04558-z" ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
+          "val" : "https://orcid.org/0009-0000-5160-7927"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PROMOT_0000102",
+      "lbl" : "Double compound motor action potential abnormality",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Two abnormal findings in a compound motor action potential measurement in EMG."
+        },
+        "comments" : [ "(JP : to validate)" ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
+          "val" : "https://orcid.org/0009-0000-5160-7927"
+        }, {
+          "pred" : "http://purl.obolibrary.org/obo/PROMOT_1000001",
+          "val" : "Congenital myasthenic syndrom Scoping review"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PROMOT_0000103",
+      "lbl" : "Évaluation des débits expiratoires de pointe à l’expiration et à la toux",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Un test de débit expiratoire de pointe à l’expiration (DEP) et à la toux (DEP toux) permet de calculer l’efficacité de la glotte (capacité de dégager les voies aériennes). Le test s’effectue avec un débitmètre expiratoire."
+        }
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PROMOT_0000104",
+      "lbl" : "Quantative muscle weakness",
       "type" : "CLASS"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PROMOT_0000105",
+      "lbl" : "Évaluation avec le Dysphagimètre",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Une évaluation de la dysphagie utilisant le Dysphagimètre qui est un questionnaire autorapporté mesurant la capacité à avaler des aliments de différentes textures et l’impact de la dysphagie sur les activités et la participation. Ce questionnaire comporte trois parties. La partie A comprend 24 items concernant les aliments solides, la partie B comprend 3 items sur les liquides et la partie C comprend 8 items, soit 6 items sur l’impact de la dysphagie au moment des repas et 2 items sur l’inconfort lié à la salive épaisse. Chaque item propose 5 choix de réponses descriptifs. Les parties A et B incluent également une option « Je ne peux pas répondre ». Le participant doit lire attentivement les instructions et cocher la réponse qui correspond le mieux à sa situation pour chaque item."
+        }
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PROMOT_0000106",
+      "lbl" : "Évaluation de la force des pinces latérales de la main avec un manomètre B & L",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "L’évaluation utilise un manomètre B & L pour mesurer la force des pinces latérales, soit entre le pouce et l’index, et permettre de quantiﬁer la force maximale volontaire des muscles de la main et de l’avant-bras lors d’une action de pincement. Il s’agit d’un indicateur du niveau de fonction de la main."
+        }
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PROMOT_0000107",
+      "lbl" : "Évaluation de la force musculaire isométrique maximale avec le dynanomètre manuel MedUP",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Une évaluation de la force musculaire isométrique maximale par dynamométrie manuelle utilisant le dynanomètre MedUP. Cette procédure permet d’évaluer la force musculaire maximale des muscles fléchisseurs et extenseurs des membres inférieurs et supérieurs."
+        }
+      }
     }, {
       "id" : "http://purl.obolibrary.org/obo/PROMOT_0000108",
-      "lbl" : "Year of resolution",
-      "type" : "CLASS"
+      "lbl" : "Évaluation de la force de la langue avec l’IOPI",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Ce test permet d’évaluer la force musculaire de la langue à l’aide de l’appareil IOPI."
+        }
+      }
     }, {
       "id" : "http://purl.obolibrary.org/obo/PROMOT_0000109",
-      "lbl" : "lost in follow up",
-      "type" : "CLASS"
+      "lbl" : "Évaluation avec l’échelle de Berg",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Une évaluation avec l’échelle de Berg évalue l’équilibre et identifie le niveau de risque de chute. Cette échelle ordinale à cinq niveaux (0 à 4) contient 14 items et le résultat total maximal varie de 0 (atteinte maximale) à 56 (aucune atteinte détectée). Cette échelle générique évalue diverses dimensions de l’équilibre, dont les suivantes : maintenir plusieurs positions, avoir des réponses posturales automatiques lors des changements de posture ou de mouvements volontaires des membres, et produire des réactions d’équilibre et de protection efficaces."
+        }
+      }
     }, {
       "id" : "http://purl.obolibrary.org/obo/PROMOT_0000110",
-      "lbl" : "opt out",
-      "type" : "CLASS"
+      "lbl" : "Test de vitesse de marche sur 10 mètres",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "The 10mwt is a capacity test that evaluates the subject’s walking speed over a short distance for two different conditions, first at comfortable speed and then at maximum speed."
+        },
+        "xrefs" : [ {
+          "val" : "http://snomed.info/id/431527001"
+        } ]
+      }
     }, {
       "id" : "http://purl.obolibrary.org/obo/PROMOT_0000111",
-      "lbl" : "Assessment using Berg Balance Scale",
-      "type" : "CLASS"
+      "lbl" : "Évaluation au moyen du questionnaire sur la déglutition de Sydney",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "The Sydney swallowing questionnaire is a self-reported questionnaire that aims to assess the severity of swallowing problems. It contains 17 questions. The participant answers questions 1 to 11 and 13 to 17 by drawing an X on a line (analogue visual scale questions) and question 12 by checking the answer of their choice among 6 options. A validated French-Canadian version has been created."
+        }
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PROMOT_0000112",
+      "lbl" : "Test de déglutition de 80 ml d’eau ",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "The goal of the 80 ml water swallowing test is to swallow the quickliest possible water without choking."
+        }
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PROMOT_0000113",
+      "lbl" : "Évaluation avec l’échelle de sévérité de la fatigue",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Une évaluation de la fatigue qui utilise l’échelle de sévérité de la fatigue dévelopée par Krupp et al."
+        },
+        "comments" : [ "Krupp, L. B., LaRocca, N. G., Muir-Nash, J., & Steinberg, A. D. (1989). The fatigue severity scale. Application to patients with multiple sclerosis and systemic lupus erythematosus. Archives of Neurology, 46(10), 1121–1123. " ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PROMOT_0000114",
+      "lbl" : "Évaluation de la force de préhension",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Test measuring the grip force allows quantifying the maximum voluntary force of the muscles of the hand and forearm, during a finger flexion action. This is an indicator of the level of hand function."
+        },
+        "xrefs" : [ {
+          "val" : "http://snomed.info/id/445993006"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PROMOT_0000115",
+      "lbl" : "Test de 10 marches",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "The Stair Climb Test evaluates a subject’s ability to climb and descend a 10 steps stair following two different conditions, at comfortable speed and at maximum speed. This test is intended for participants who have the ability to use stairs."
+        },
+        "xrefs" : [ {
+          "val" : "http://snomed.info/id/252482003"
+        } ]
+      }
     }, {
       "id" : "http://purl.obolibrary.org/obo/PROMOT_2000001",
       "lbl" : "is used by",
       "type" : "PROPERTY",
       "propertyType" : "OBJECT",
       "meta" : {
+        "definition" : {
+          "val" : "Une relation entre un appareil et un patient où le patient utilise l’appareil pour effectuer une action ou une activité, comme, par exemple, pour se déplacer ou pour lire."
+        },
         "comments" : [ "JP: Translated to spanish using Bing Translator" ],
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
@@ -1065,10 +1813,13 @@
       }
     }, {
       "id" : "http://purl.obolibrary.org/obo/PROMOT_2000002",
-      "lbl" : "assesses",
+      "lbl" : "évalue",
       "type" : "PROPERTY",
       "propertyType" : "OBJECT",
       "meta" : {
+        "definition" : {
+          "val" : "Une relation entre une procédure d’évaluation et une entité, telle qu’un patient ou un phénotype, où la procédure évalue l’entité. La procédure peut par exemple évaluer un patient au moyen d’un test encadré par un ou une professionnelle de santé ou d’un questionnaire autorapporté."
+        },
         "comments" : [ "JP: Translated to spanish using Bing Translator" ],
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
@@ -1077,26 +1828,73 @@
       }
     }, {
       "id" : "http://purl.obolibrary.org/obo/PROMOT_2000003",
-      "lbl" : "measures",
+      "lbl" : "mesure",
       "type" : "PROPERTY",
-      "propertyType" : "OBJECT"
+      "propertyType" : "OBJECT",
+      "meta" : {
+        "definition" : {
+          "val" : "Une relation entre une procédure d’évaluation et l’entité qu’elle mesure, comme, par exemple, une structure organique, une fonction biologique ou une activité ou une participation."
+        },
+        "xrefs" : [ {
+          "val" : "SCDO:1000194"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
+          "val" : "https://orcid.org/0009-0000-5160-7927"
+        } ]
+      }
     }, {
       "id" : "http://purl.obolibrary.org/obo/PROMOT_2000004",
       "lbl" : "has genetic mutation",
       "type" : "PROPERTY",
-      "propertyType" : "OBJECT"
+      "propertyType" : "OBJECT",
+      "meta" : {
+        "definition" : {
+          "val" : "Une relation entre un organisme et une mutation génétique présente dans le génome de cet organisme."
+        },
+        "xrefs" : [ {
+          "val" : "VO:0001039"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
+          "val" : "https://orcid.org/0009-0000-5160-7927"
+        } ]
+      }
     }, {
       "id" : "http://purl.obolibrary.org/obo/PROMOT_2000005",
       "lbl" : "affects",
       "type" : "PROPERTY",
-      "propertyType" : "OBJECT"
+      "propertyType" : "OBJECT",
+      "meta" : {
+        "definition" : {
+          "val" : "Une relation entre deux entités ou l’existence de la première affecte l’état de la seconde."
+        },
+        "xrefs" : [ {
+          "val" : "BIOLINK:affects"
+        }, {
+          "val" : "SIO:001158"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
+          "val" : "https://orcid.org/0009-0000-5160-7927"
+        } ]
+      }
     }, {
       "id" : "http://purl.obolibrary.org/obo/PROMOT_2000006",
       "lbl" : "is unique identifier for",
       "type" : "PROPERTY",
       "propertyType" : "OBJECT",
       "meta" : {
-        "comments" : [ "Xref SIO:000674" ]
+        "definition" : {
+          "val" : "Une relation entre un identifiant et l’entité qu’il identifie. L’identifiant est le seul à identifier l’entité en question."
+        },
+        "xrefs" : [ {
+          "val" : "SIO:000674"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
+          "val" : "https://orcid.org/0009-0000-5160-7927"
+        } ]
       }
     }, {
       "id" : "http://purl.obolibrary.org/obo/PROMOT_2000007",
@@ -1104,7 +1902,65 @@
       "type" : "PROPERTY",
       "propertyType" : "OBJECT",
       "meta" : {
-        "comments" : [ "Xref SIO:000229" ]
+        "definition" : {
+          "val" : "Une relation entre un processus et une entité qui a été produite par celui-ci."
+        },
+        "xrefs" : [ {
+          "val" : "SIO:000229"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
+          "val" : "https://orcid.org/0009-0000-5160-7927"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PROMOT_2000008",
+      "lbl" : "has disposition",
+      "type" : "PROPERTY",
+      "propertyType" : "OBJECT",
+      "meta" : {
+        "definition" : {
+          "val" : "Une relation entre un indépendant continuant et une disposition, où la disposition dépend spécifiquement de l’indépendant continuant pour exister."
+        },
+        "xrefs" : [ {
+          "val" : "RO:0000091 "
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
+          "val" : "https://orcid.org/0009-0000-5160-7927"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PROMOT_2000009",
+      "lbl" : "located in",
+      "type" : "PROPERTY",
+      "propertyType" : "OBJECT",
+      "meta" : {
+        "definition" : {
+          "val" : "Une relation entre deux indépendants continuant dans laquelle l’un est la localisation de l’autre."
+        },
+        "xrefs" : [ {
+          "val" : "RO:0001025"
+        }, {
+          "val" : "SIO:000061"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
+          "val" : "https://orcid.org/0009-0000-5160-7927"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PROMOT_2000010",
+      "lbl" : "functionally related to",
+      "type" : "PROPERTY",
+      "propertyType" : "OBJECT",
+      "meta" : {
+        "definition" : {
+          "val" : "une relation générique entre une entité et une fonction, où l’entité est nécessaire à la réalisation de la fonction. Par exemple les muscles extraoculaires sont liés fonctionnellement aux fonctions des muscles extérieurs de l’oeil."
+        },
+        "xrefs" : [ {
+          "val" : "RO:0002328"
+        } ]
       }
     }, {
       "id" : "http://purl.obolibrary.org/obo/RO_0002200",
@@ -1263,32 +2119,6 @@
         } ]
       }
     }, {
-      "id" : "http://semanticscience.org/resource/SIO_000061",
-      "lbl" : "is located in",
-      "type" : "PROPERTY",
-      "propertyType" : "OBJECT",
-      "meta" : {
-        "basicPropertyValues" : [ {
-          "pred" : "http://purl.org/dc/elements/1.1/identifier",
-          "val" : "SIO_000061"
-        }, {
-          "pred" : "http://purl.org/dc/terms/description",
-          "val" : "A is located in B iff the spatialtemporial region occupied by A is part of the spatialtemporal region occupied by B. [T][R]"
-        }, {
-          "pred" : "http://semanticscience.org/resource/equivalentTo",
-          "val" : "OBO_REL:located_in"
-        }, {
-          "pred" : "http://semanticscience.org/resource/subset",
-          "val" : "core"
-        }, {
-          "pred" : "http://www.w3.org/2000/01/rdf-schema#isDefinedBy",
-          "val" : "http://semanticscience.org/ontology/sio.owl"
-        }, {
-          "pred" : "http://www.w3.org/2004/02/skos/core#example",
-          "val" : "A parasite in the interior of a person's intestine is located in their intestinal lumen."
-        } ]
-      }
-    }, {
       "id" : "http://semanticscience.org/resource/SIO_000217",
       "lbl" : "has quality",
       "type" : "PROPERTY",
@@ -1317,23 +2147,6 @@
         }, {
           "pred" : "http://purl.org/dc/terms/description",
           "val" : "is quality of is a relation between a quality and the entity that it is a property of."
-        }, {
-          "pred" : "http://www.w3.org/2000/01/rdf-schema#isDefinedBy",
-          "val" : "http://semanticscience.org/ontology/sio.owl"
-        } ]
-      }
-    }, {
-      "id" : "http://semanticscience.org/resource/SIO_000235",
-      "lbl" : "has disposition",
-      "type" : "PROPERTY",
-      "propertyType" : "OBJECT",
-      "meta" : {
-        "basicPropertyValues" : [ {
-          "pred" : "http://purl.org/dc/elements/1.1/identifier",
-          "val" : "SIO_000235"
-        }, {
-          "pred" : "http://purl.org/dc/terms/description",
-          "val" : "has disposition is the relation between an entity and a disposition that it bears."
         }, {
           "pred" : "http://www.w3.org/2000/01/rdf-schema#isDefinedBy",
           "val" : "http://semanticscience.org/ontology/sio.owl"
@@ -1417,6 +2230,9 @@
       "type" : "PROPERTY",
       "propertyType" : "ANNOTATION",
       "meta" : {
+        "definition" : {
+          "val" : "Une annotation qui indique la source justifiant la présence de la classe dans le modèle."
+        },
         "comments" : [ "JP: Translated to spanish using Bing Translator" ],
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
@@ -1433,6 +2249,14 @@
       "propertyType" : "ANNOTATION"
     }, {
       "id" : "http://purl.obolibrary.org/obo/ro/subsets#ro-eco",
+      "type" : "PROPERTY",
+      "propertyType" : "ANNOTATION"
+    }, {
+      "id" : "http://purl.org/dc/elements/1.1/contributor",
+      "type" : "PROPERTY",
+      "propertyType" : "ANNOTATION"
+    }, {
+      "id" : "http://purl.org/dc/elements/1.1/creator",
       "type" : "PROPERTY",
       "propertyType" : "ANNOTATION"
     }, {
@@ -1459,10 +2283,6 @@
       "type" : "PROPERTY",
       "propertyType" : "ANNOTATION"
     }, {
-      "id" : "http://semanticscience.org/resource/equivalentTo",
-      "type" : "PROPERTY",
-      "propertyType" : "ANNOTATION"
-    }, {
       "id" : "http://semanticscience.org/resource/subset",
       "type" : "PROPERTY",
       "propertyType" : "ANNOTATION"
@@ -1483,11 +2303,11 @@
       "type" : "PROPERTY",
       "propertyType" : "ANNOTATION"
     }, {
-      "id" : "http://www.geneontology.org/formats/oboInOwl#inSubset",
+      "id" : "http://www.geneontology.org/formats/oboInOwl#hasDbXref",
       "type" : "PROPERTY",
       "propertyType" : "ANNOTATION"
     }, {
-      "id" : "http://www.w3.org/2004/02/skos/core#example",
+      "id" : "http://www.geneontology.org/formats/oboInOwl#inSubset",
       "type" : "PROPERTY",
       "propertyType" : "ANNOTATION"
     } ],
@@ -1544,22 +2364,6 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000001"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/PROMOT_0000020",
-      "pred" : "http://purl.obolibrary.org/obo/PROMOT_2000002",
-      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000025"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/PROMOT_0000021",
-      "pred" : "http://purl.obolibrary.org/obo/PROMOT_2000002",
-      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000025"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/PROMOT_0000022",
-      "pred" : "http://purl.obolibrary.org/obo/PROMOT_2000002",
-      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000025"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/PROMOT_0000023",
-      "pred" : "http://purl.obolibrary.org/obo/PROMOT_2000002",
-      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000025"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/PROMOT_0000025",
       "pred" : "http://purl.obolibrary.org/obo/PROMOT_2000004",
       "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000001"
@@ -1570,11 +2374,7 @@
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PROMOT_0000028",
       "pred" : "http://purl.obolibrary.org/obo/RO_0002351",
-      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000038"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/PROMOT_0000028",
-      "pred" : "http://purl.obolibrary.org/obo/RO_0002351",
-      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000040"
+      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000037"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PROMOT_0000028",
       "pred" : "http://purl.obolibrary.org/obo/RO_0002351",
@@ -1590,7 +2390,11 @@
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PROMOT_0000028",
       "pred" : "http://purl.obolibrary.org/obo/RO_0002351",
-      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000066"
+      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000044"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PROMOT_0000028",
+      "pred" : "http://purl.obolibrary.org/obo/RO_0002351",
+      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000067"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PROMOT_0000029",
       "pred" : "is_a",
@@ -1602,19 +2406,23 @@
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PROMOT_0000029",
       "pred" : "http://purl.obolibrary.org/obo/RO_0002351",
-      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000039"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/PROMOT_0000029",
-      "pred" : "http://purl.obolibrary.org/obo/RO_0002351",
-      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000077"
+      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000038"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PROMOT_0000029",
       "pred" : "http://purl.obolibrary.org/obo/RO_0002351",
       "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000078"
     }, {
+      "sub" : "http://purl.obolibrary.org/obo/PROMOT_0000029",
+      "pred" : "http://purl.obolibrary.org/obo/RO_0002351",
+      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000079"
+    }, {
       "sub" : "http://purl.obolibrary.org/obo/PROMOT_0000030",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000027"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PROMOT_0000030",
+      "pred" : "http://purl.obolibrary.org/obo/RO_0002351",
+      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000034"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PROMOT_0000030",
       "pred" : "http://purl.obolibrary.org/obo/RO_0002351",
@@ -1626,55 +2434,39 @@
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PROMOT_0000030",
       "pred" : "http://purl.obolibrary.org/obo/RO_0002351",
-      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000037"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/PROMOT_0000030",
-      "pred" : "http://purl.obolibrary.org/obo/RO_0002351",
-      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000108"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/PROMOT_0000030",
-      "pred" : "http://purl.obolibrary.org/obo/RO_0002351",
-      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000111"
+      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000039"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PROMOT_0000031",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000027"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/PROMOT_0000031",
+      "sub" : "http://purl.obolibrary.org/obo/PROMOT_0000032",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000027"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PROMOT_0000032",
       "pred" : "http://purl.obolibrary.org/obo/RO_0002351",
+      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000092"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PROMOT_0000032",
+      "pred" : "http://purl.obolibrary.org/obo/RO_0002351",
+      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000099"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PROMOT_0000032",
+      "pred" : "http://purl.obolibrary.org/obo/RO_0002351",
+      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000100"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PROMOT_0000032",
+      "pred" : "http://purl.obolibrary.org/obo/RO_0002351",
+      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000101"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PROMOT_0000034",
+      "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000033"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/PROMOT_0000032",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000027"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/PROMOT_0000032",
-      "pred" : "http://purl.obolibrary.org/obo/RO_0002351",
-      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000089"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/PROMOT_0000032",
-      "pred" : "http://purl.obolibrary.org/obo/RO_0002351",
-      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000096"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/PROMOT_0000032",
-      "pred" : "http://purl.obolibrary.org/obo/RO_0002351",
-      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000097"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/PROMOT_0000032",
-      "pred" : "http://purl.obolibrary.org/obo/RO_0002351",
-      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000098"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PROMOT_0000035",
       "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000034"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/PROMOT_0000036",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000034"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/PROMOT_0000044",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000043"
+      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000033"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PROMOT_0000045",
       "pred" : "is_a",
@@ -1682,129 +2474,129 @@
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PROMOT_0000046",
       "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000044"
+      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000045"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PROMOT_0000047",
       "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000044"
+      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000045"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PROMOT_0000048",
       "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000047"
+      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000045"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PROMOT_0000049",
       "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000047"
+      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000048"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PROMOT_0000050",
       "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000047"
+      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000048"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PROMOT_0000051",
       "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000043"
+      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000048"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PROMOT_0000052",
       "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000051"
+      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000044"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PROMOT_0000053",
       "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000051"
+      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000052"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PROMOT_0000054",
       "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000053"
+      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000052"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PROMOT_0000055",
       "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000053"
+      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000054"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PROMOT_0000056",
       "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000053"
+      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000054"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PROMOT_0000057",
       "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000043"
+      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000054"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PROMOT_0000058",
       "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000043"
+      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000044"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PROMOT_0000059",
       "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000043"
+      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000044"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PROMOT_0000060",
       "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000059"
+      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000044"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PROMOT_0000061",
       "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000059"
+      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000060"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PROMOT_0000062",
       "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000059"
+      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000060"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PROMOT_0000063",
       "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000043"
+      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000060"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PROMOT_0000064",
       "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000043"
+      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000044"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PROMOT_0000065",
       "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000043"
+      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000044"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/PROMOT_0000067",
+      "sub" : "http://purl.obolibrary.org/obo/PROMOT_0000066",
       "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000066"
+      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000044"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PROMOT_0000068",
       "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000066"
+      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000067"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PROMOT_0000069",
       "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000066"
+      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000067"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PROMOT_0000070",
       "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000066"
+      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000067"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PROMOT_0000071",
       "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000070"
+      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000067"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/PROMOT_0000076",
+      "sub" : "http://purl.obolibrary.org/obo/PROMOT_0000072",
       "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000075"
+      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000071"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/PROMOT_0000080",
+      "sub" : "http://purl.obolibrary.org/obo/PROMOT_0000077",
       "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000079"
+      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000076"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PROMOT_0000081",
-      "pred" : "http://semanticscience.org/resource/SIO_000218",
-      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000001"
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000080"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PROMOT_0000082",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000081"
     }, {
+      "sub" : "http://purl.obolibrary.org/obo/PROMOT_0000083",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000081"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PROMOT_0000084",
+      "pred" : "http://semanticscience.org/resource/SIO_000218",
+      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000001"
+    }, {
       "sub" : "http://purl.obolibrary.org/obo/PROMOT_0000085",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000084"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/PROMOT_0000086",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000084"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/PROMOT_0000087",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000084"
     }, {
@@ -1812,87 +2604,59 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000087"
     }, {
+      "sub" : "http://purl.obolibrary.org/obo/PROMOT_0000089",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000087"
+    }, {
       "sub" : "http://purl.obolibrary.org/obo/PROMOT_0000090",
       "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000089"
+      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000087"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PROMOT_0000091",
       "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000089"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/PROMOT_0000092",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000089"
+      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000090"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PROMOT_0000093",
       "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000089"
+      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000092"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PROMOT_0000094",
       "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000089"
+      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000092"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PROMOT_0000095",
       "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000089"
+      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000092"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/PROMOT_0000100",
+      "sub" : "http://purl.obolibrary.org/obo/PROMOT_0000096",
       "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000020"
+      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000092"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/PROMOT_0000101",
+      "sub" : "http://purl.obolibrary.org/obo/PROMOT_0000097",
       "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000020"
+      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000092"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PROMOT_0000098",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000092"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PROMOT_0000102",
       "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000020"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/PROMOT_0000103",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000020"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/PROMOT_0000104",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000020"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/PROMOT_0000105",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000020"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/PROMOT_0000106",
-      "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000026"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/PROMOT_0000106",
+      "sub" : "http://purl.obolibrary.org/obo/PROMOT_0000102",
       "pred" : "http://semanticscience.org/resource/SIO_000217",
       "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000084"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PROMOT_0000109",
       "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000080"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/PROMOT_0000110",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000080"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/PROMOT_0000111",
-      "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000020"
-    }, {
-      "sub" : "http://semanticscience.org/resource/SIO_000061",
-      "pred" : "subPropertyOf",
-      "obj" : "http://semanticscience.org/resource/SIO_000001"
     }, {
       "sub" : "http://semanticscience.org/resource/SIO_000217",
       "pred" : "subPropertyOf",
       "obj" : "http://semanticscience.org/resource/SIO_000001"
     }, {
       "sub" : "http://semanticscience.org/resource/SIO_000218",
-      "pred" : "subPropertyOf",
-      "obj" : "http://semanticscience.org/resource/SIO_000001"
-    }, {
-      "sub" : "http://semanticscience.org/resource/SIO_000235",
       "pred" : "subPropertyOf",
       "obj" : "http://semanticscience.org/resource/SIO_000001"
     }, {

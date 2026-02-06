@@ -1,5 +1,25 @@
 # Directory for downloaded data used in the workflow 
 # Dossier pour les données téléchargées
+# 
+
+### STRUCTURE ###
+# 1. imports
+Données téléchargées pour la personalisation des imports
+# 2. promot
+Données pour la génération du template ROBOT PROMOT (éditées à la main)
+# 3. script
+Données pour les scripts python (en développement)
+
+### ARCHITECTURE ###
+# 1. imports
+Downloaded data for custom imports
+# 2. promot
+Data for creating the PROMOT ROBOT template (hand edited)
+# 3. script
+Data for python scripts (w.i.p.)
+
+
+### 1. imports ###
 
 # SNOMED CT translations and imports
 # Import des traductions de SNOMED CT
@@ -24,8 +44,8 @@ Note that you can also merge the terminologie-snomed-ct-fr/dat/SnomedCT-National
 Il est aussi possible de fusionner terminologie-snomed-ct-fr/dat/SnomedCT-NationalFR_OWL_asserted_20250621.owl avec une fusion de la version internationale et espagnole
 # --------------------------------------------
 
-# WHOFIC translations and imports
-# Import des traductions pour WHOFIC
+# ICF translations and imports
+# Import des traductions pour ICF
 ALREADY IMPLEMENTED IN PROMOT.MAKEFILE (cf. translation-mapping-ICF)
 # ------------------ FR ----------------------
 1. téléchargement de CIF-ASIP 2020
@@ -42,3 +62,12 @@ ALREADY IMPLEMENTED IN PROMOT.MAKEFILE (cf. translation-mapping-ICF)
 5. python script that creates 2 files : one with the overall ICF-CIF mapping and a second with ICF URIs used in PROMOT only
 6. creates two SSSOM files for the two herebefore files
 # ----------------------------------------
+
+
+### 2. promot ###
+
+RELATIONS.tsv
+hand edited file with relations to be implemented in PROMOT
+
+
+### 3. scripts ###

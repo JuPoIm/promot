@@ -10,7 +10,7 @@
 # More information: https://github.com/INCATools/ontology-development-kit/
 
 # Fingerprint of the configuration file when this Makefile was last generated
-CONFIG_HASH=                1882452c454e248c23d1276b8608b5057e0ceb965c9fb13546f6bf2d4055d0ea
+CONFIG_HASH=                fd2606d90b38d9c9fc0040d4c808dc1ea0d582da3823fb8e10e688735ee2a6df
 
 
 # ----------------------------------------
@@ -507,9 +507,9 @@ $(TMPDIR)/stamp-component-%.owl: | $(TMPDIR)
 	touch $@
 .PRECIOUS: $(TMPDIR)/stamp-component-%.owl
 
-$(COMPONENTSDIR)/promot-component.owl: $(TEMPLATEDIR)/promot-component-test.tsv $(TMPDIR)/stamp-component-promot-component.owl
+$(COMPONENTSDIR)/promot-component.owl: $(TEMPLATEDIR)/promot-component-auto.tsv $(TMPDIR)/stamp-component-promot-component.owl
 	$(ROBOT) template --add-prefixes config/context.json \
-		 --template $(TEMPLATEDIR)/promot-component-test.tsv \
+		 --template $(TEMPLATEDIR)/promot-component-auto.tsv \
 		 $(ANNOTATE_CONVERT_FILE)
 .PRECIOUS: $(COMPONENTSDIR)/promot-component.owl
 
@@ -541,7 +541,7 @@ mirror-eco: | $(TMPDIR)
 .PHONY: mirror-fma
 .PRECIOUS: $(MIRRORDIR)/fma.owl
 mirror-fma: | $(TMPDIR)
-	$(ROBOT) convert -I http://purl.org/sig/ont/fma.owl -o $(TMPDIR)/$@.owl
+	$(ROBOT) convert -I https://data.bioontology.org/ontologies/FMA/submissions/29/download?apikey=8b5b7825-538d-40e0-9e9e-5ab9274a9aeb -o $(TMPDIR)/$@.owl
 
 
 ## ONTOLOGY: hp
@@ -561,10 +561,7 @@ mirror-iao: | $(TMPDIR)
 
 
 ## ONTOLOGY: icf
-.PHONY: mirror-icf
-.PRECIOUS: $(MIRRORDIR)/icf.owl
-mirror-icf: | $(TMPDIR)
-	$(ROBOT) convert -I https://raw.githubusercontent.com/whoficitc/harmonization/main/ontology/whofic-2025-05-24.owl -o $(TMPDIR)/$@.owl
+## You have configured your default mirror type to no_mirror.
 
 
 ## ONTOLOGY: ordo
