@@ -13,10 +13,9 @@
 
 ## Creator name: J. POTIER
 ## Creator orcid: 0009-0000-5160-7927
-## Spanish translation: 
 
 ## ---------------------------------------------------------
-## FILE STRUCTURE - structure du fichier -
+## FILE STRUCTURE - structure du fichier
 ## ---------------------------------------------------------
 # 1 - CUSTOM VARIABLES - variables personnalisées
 # 2 - CUSTOM IMPORTS - imports personalisés
@@ -31,6 +30,7 @@ PROMOTDATADIR = ../data/promot
 SCRIPTSDATADIR = ../data/scripts
 METADATADIR = ../metadata
 PYTHONTMPDIR = ../scripts/python/tmp
+ICF = true
 
 ## -------------------------------------------------------------------------------
 ## 2 - CUSTOM IMPORTS - imports personalisés
@@ -70,7 +70,7 @@ $(IMPORTDIR)/fma_import.owl: $(MIRRORDIR)/fma.owl $(IMPORTDIR)/fma_terms_ancesto
 # Module HP (EN-FR-ES) : classes
 # ----------------------------------------
 # Downloading of the French and Spanish translation from github (hp-es.synonyms.owl empty on 08/12/25)
-# Merging of the data babelon and synonyms with mirror hp.owl
+# Merging of the data babelon and synonyms with mirror hp.owl into mirror/hp-merged.owl
 # Import of self descendants annotations
 # Import of self annotations
 # Import of self ancestors annotations
@@ -173,7 +173,7 @@ $(IMPORTDIR)/snomed_import.owl: $(IMPORTSDATADIR)/ontology-2025-11-14_EN-ES.owl 
 		merge -i $@.tmp.owl --output $@.tmp.owl && mv $@.tmp.owl $@ ; fi
 
 # ----------------------------------------
-# Module ICF EN :
+# Module ICF (EN) :
 # ----------------------------------------
 # WHAT'S DONE 
 # 1. Download file from https://github.com/whoficitc/harmonization/blob/main/ontology/whofic-2025-05-24.owl
@@ -183,7 +183,7 @@ $(IMPORTDIR)/snomed_import.owl: $(IMPORTSDATADIR)/ontology-2025-11-14_EN-ES.owl 
 # C. merge des fichiers
 # D. rename des préfixes skos pour passer les tests de la release
 $(IMPORTDIR)/icf_import.owl: $(IMPORTSDATADIR)/whofic-2025-05-24.owl $(IMPORTDIR)/icf_terms_descendants.txt $(IMPORTDIR)/icf_terms.txt $(IMPORTDIR)/icf_exclude_terms.txt
-	if [ $(IMP) = true ]; then $(ROBOT) query -i $< --update $(SPARQLDIR)/preprocess-module.ru \
+	if [ $(IMP) = true && $(ICF) = true ]; then $(ROBOT) query -i $< --update $(SPARQLDIR)/preprocess-module.ru \
 		filter -T $(IMPORTDIR)/icf_terms_descendants.txt \
         --select "self descendants annotations" \
 		--exclude-term http://id.who.int/icd/entity/721275161 \
@@ -202,13 +202,13 @@ $(IMPORTDIR)/icf_import.owl: $(IMPORTSDATADIR)/whofic-2025-05-24.owl $(IMPORTDIR
 		--output $@.tmp.owl && mv $@.tmp.owl $@; fi
 
 
-## -------------------------------------------------------------------------------
-## 2 - CUSTOM COMMANDS & SCRIPTS EXECUTION 
-## -------------------------------------------------------------------------------
+## -------------------------------------------------------------------------------------------------
+## 2 - CUSTOM COMMANDS & SCRIPTS EXECUTION - commandes personalisées et exécution des scripts python
+## -------------------------------------------------------------------------------------------------
 
-## -----------------------
+## -------------------
 ## BY EXECUTION ORDER
-## -----------------------
+## -------------------
 
 # ----------------------------------------
 # UNDER DEVELOPMENT
@@ -222,9 +222,9 @@ extract-pheno:
 	python3.12 $(SCRIPTSDIR)/python/Stat_GeneToPheno.py
 
 
-# ----------------------------------------
-# Translations - Traductions - Traducciones
-# ----------------------------------------
+# ---------------------------------------------
+# ICF Translations - Traductions - Traducciones
+# ---------------------------------------------
 # process 'CIF - ASIP' ontology and 2025 ICF translations to map it to ICF by creating an SSSOM file
 # mapping automatiques des URIs ICF 2025 et CIF-ASIP 2020 via code ICF, création du fichier SSSOM
 # ------------------ FR ----------------------
@@ -244,23 +244,31 @@ extract-pheno:
 # ----------------------------------------
 .PHONY: translation-icf
 translation-icf: refresh-icf $(IMPORTDIR)/icf_import.owl
-	curl -L https://data.bioportal.lirmm.fr/ontologies/ICF/submissions/2/download?apikey=1de0a270-29c5-4dda-b043-7c3580628cd5 -o $(IMPORTSDATADIR)/cif-asip.ttl
-	$(ROBOT) --prefix "skos: http://www.w3.org/2004/02/skos/core#" --prefix "rdfs: http://www.w3.org/2000/01/rdf-schema#" -vvv export -i $(IMPORTSDATADIR)/cif-asip.ttl --header "IRI|skos:notation|skos:altLabel" --export $(PYTHONTMPDIR)/CIF-ASIP.tsv
-	curl -L "https://icdcdn.who.int/static/releasefiles/2025-01/SimpleTabulation-ICF-fr.zip" -o $(IMPORTSDATADIR)/SimpleTabulation-ICF-fr.zip
-	unzip -q $(IMPORTSDATADIR)/SimpleTabulation-ICF-fr.zip -d $(IMPORTSDATADIR)/SimpleTabulation-ICF-fr/
-	mv $(IMPORTSDATADIR)/SimpleTabulation-ICF-fr/SimpleTabulation-ICF-fr.txt $(IMPORTSDATADIR)/SimpleTabulation-ICF-fr.txt
-	rm $(IMPORTSDATADIR)/SimpleTabulation-ICF-fr.zip
-	rm -r $(IMPORTSDATADIR)/SimpleTabulation-ICF-fr/
-	curl -L "https://icdcdn.who.int/static/releasefiles/2025-01/SimpleTabulation-ICF-es.zip" -o $(IMPORTSDATADIR)/SimpleTabulation-ICF-es.zip
-	unzip -q $(IMPORTSDATADIR)/SimpleTabulation-ICF-es.zip -d $(IMPORTSDATADIR)/SimpleTabulation-ICF-es/
-	mv $(IMPORTSDATADIR)/SimpleTabulation-ICF-es/SimpleTabulation-ICF-es.txt $(IMPORTSDATADIR)/SimpleTabulation-ICF-es.txt
-	rm $(IMPORTSDATADIR)/SimpleTabulation-ICF-es.zip
-	rm -r $(IMPORTSDATADIR)/SimpleTabulation-ICF-es/
-	$(ROBOT) export -i $(IMPORTDIR)/icf_import.owl --header "IRI" --export $(PYTHONTMPDIR)/icf_import_iri.tsv
-	python3.12 $(SCRIPTSDIR)/python/CIFASIP-ICF_mapping.py $(VERSION)
-	python3.12 $(SCRIPTSDIR)/python/ICF_labels-es-fr.py
-	$(SSSOMPY) parse -m $(METADATADIR)/mapping-all.yml -o $(MAPPINGDIR)/icf-to-cif_all-mappings.sssom.tsv $(PYTHONTMPDIR)/icf-to-cifasip_all.tsv
-	$(SSSOMPY) parse -m $(METADATADIR)/mapping-promot.yml -o $(MAPPINGDIR)/icf-to-cif_promot-mappings.sssom.tsv $(PYTHONTMPDIR)/icf-to-cifasip_promot.tsv
+	if [ $(ICF) = true ]; then \
+	curl -L https://data.bioportal.lirmm.fr/ontologies/ICF/submissions/2/download?apikey=1de0a270-29c5-4dda-b043-7c3580628cd5 -o $(IMPORTSDATADIR)/cif-asip.ttl ; \
+	$(ROBOT) --prefix "skos: http://www.w3.org/2004/02/skos/core#" --prefix "rdfs: http://www.w3.org/2000/01/rdf-schema#" -vvv export -i $(IMPORTSDATADIR)/cif-asip.ttl --header "IRI|skos:notation|skos:altLabel" --export $(PYTHONTMPDIR)/CIF-ASIP.tsv ; \
+	$(ROBOT) convert --input $(IMPORTSDATADIR)/cif-asip.ttl --output $(MIRRORDIR)/cif-asip.owl ; \
+	curl -L "https://icdcdn.who.int/static/releasefiles/2025-01/SimpleTabulation-ICF-fr.zip" -o $(IMPORTSDATADIR)/SimpleTabulation-ICF-fr.zip ; \
+	unzip -q $(IMPORTSDATADIR)/SimpleTabulation-ICF-fr.zip -d $(IMPORTSDATADIR)/SimpleTabulation-ICF-fr/ ; \
+	mv $(IMPORTSDATADIR)/SimpleTabulation-ICF-fr/SimpleTabulation-ICF-fr.txt $(IMPORTSDATADIR)/SimpleTabulation-ICF-fr.txt ; \
+	rm $(IMPORTSDATADIR)/SimpleTabulation-ICF-fr.zip ; \
+	rm -r $(IMPORTSDATADIR)/SimpleTabulation-ICF-fr/ ; \
+	curl -L "https://icdcdn.who.int/static/releasefiles/2025-01/SimpleTabulation-ICF-es.zip" -o $(IMPORTSDATADIR)/SimpleTabulation-ICF-es.zip ; \
+	unzip -q $(IMPORTSDATADIR)/SimpleTabulation-ICF-es.zip -d $(IMPORTSDATADIR)/SimpleTabulation-ICF-es/ ; \
+	mv $(IMPORTSDATADIR)/SimpleTabulation-ICF-es/SimpleTabulation-ICF-es.txt $(IMPORTSDATADIR)/SimpleTabulation-ICF-es.txt ; \
+	rm $(IMPORTSDATADIR)/SimpleTabulation-ICF-es.zip ; \
+	rm -r $(IMPORTSDATADIR)/SimpleTabulation-ICF-es/ ; \
+	$(ROBOT) export -i $(IMPORTDIR)/icf_import.owl --header "IRI" --export $(PYTHONTMPDIR)/icf_import_iri.tsv ; \
+	python3.12 $(SCRIPTSDIR)/python/CIFASIP-ICF_mapping.py $(VERSION) ; \
+	python3.12 $(SCRIPTSDIR)/python/ICF_labels-es-fr.py ; \
+	$(SSSOMPY) parse -m $(METADATADIR)/mapping-all.yml -o $(MAPPINGDIR)/icf-to-cif_all-mappings.sssom.tsv $(PYTHONTMPDIR)/icf-to-cifasip_all.tsv ; \
+	$(SSSOMPY) parse -m $(METADATADIR)/mapping-promot.yml -o $(MAPPINGDIR)/icf-to-cif_promot-mappings.sssom.tsv $(PYTHONTMPDIR)/icf-to-cifasip_promot.tsv \
+	$(ROBOT) -vvv query -i $(MIRRORDIR)/cif-asip.owl --update $(SPARQLDIR)/preprocess-module.ru filter -T $(IMPORTDIR)/cifasip_terms.txt \
+	--select "self annotations" --signature true --output $(IMPORTDIR)/cif-asip_import.owl; \
+	$(ROBOT) query -i $(IMPORTDIR)/cif-asip_import.owl --update $(SPARQLDIR)/preprocess-module.ru \
+    query --update $(SPARQLDIR)/inject-subset-declaration.ru --update $(SPARQLDIR)/postprocess-module.ru \
+	annotate --ontology-iri $(IMPORTDIR)/cif-asip_import.owl $(ANNOTATE_ONTOLOGY_VERSION) \
+	merge -i $(IMPORTDIR)/cif-asip_import.owl --output $(IMPORTDIR)/cif-asip_import.owl && mv $(IMPORTDIR)/cif-asip_import.owl $@; fi
 
 
 # ----------------------------------------
@@ -279,14 +287,15 @@ create-template: translation-icf $(TEMPLATEDIR)/promot-component-base.tsv $(PROM
 # ----------------------------------------
 # CREDITS
 # ----------------------------------------
+# add credits to promot-edit.owl and delete root node
 credits:
 	$(ROBOT) annotate --input $(ONT)-edit.owl --annotation-file credits.ttl --output $(ONT)-edit.owl
+	$(ROBOT) remove --input $(ONT)-edit.owl --term PROMOT:0000000 --signature true --output $(ONT)-edit.owl
 
 # ----------------------------------------
 # CUSTOM RECREATE-COMPONENT
 # ----------------------------------------
-
-$(COMPONENTSDIR)/promot-component.owl: create-template $(TEMPLATEDIR)/promot-component-auto.tsv $(TMPDIR)/stamp-component-promot-component.owl
+$(COMPONENTSDIR)/promot-component.owl: credits create-template $(TEMPLATEDIR)/promot-component-auto.tsv $(TMPDIR)/stamp-component-promot-component.owl
 	$(ROBOT) template --add-prefixes config/context.json \
 		 --template $(TEMPLATEDIR)/promot-component-auto.tsv \
 		 $(ANNOTATE_CONVERT_FILE)
@@ -297,12 +306,3 @@ $(COMPONENTSDIR)/promot-component.owl: create-template $(TEMPLATEDIR)/promot-com
 # ----------------------------------------
 documentation:
   documentation_system: mkdocs
-
-
-# ----------------------------------------
-# Merge the imports, components and patterns into promot-edit-merged.owl for control purpose 
-# ----------------------------------------
-#merge-edit:
-#	$(ROBOT) merge -i promot-edit.owl -i imports/bfo_import.owl -i imports/fma_import.owl -i imports/eco_import.owl -i imports/icf_import.owl -i imports/iao_import.owl \
-#	-i imports/hp_import.owl -i imports/snomed_import.owl -i imports/ordo_import.owl -i imports/ro_import.owl \
-#	-i imports/sio_import.owl -i patterns/definitions.owl -i components/promot-component.owl -o promot-edit.owl
