@@ -6,7 +6,7 @@
 [![DOI](https://zenodo.org/badge/48047921.svg)](https://zenodo.org/badge/latestdoi/48047921)
 -->
 # PROMOT Common Data Model ontology
-<img src="https://github.com/JuPoIm/promot/blob/test/site/cite/logo_promot.png" />
+<img src="https://github.com/JuPoIm/promot/blob/test/site/cite/logo_promot.png" width="200%" height="200%"/>
 
 Description: Ontology for building the relational database of the PROMOT initiative
 
@@ -56,7 +56,7 @@ advice and infrastructure. We are very grateful for all your contributions - thi
 [Website](https://erdera.org/)
 
 ### IMAGINE INSTITUTE
-[![Imagine institute official logo](https://github.com/JuPoIm/promot/blob/test/site/cite/logo_imagine.png)](https://www.institutimagine.org/)
+[![Imagine institute official logo](https://github.com/JuPoIm/promot/blob/test/site/cite/logo_imagine.png){width="50%" height="50%"}](https://www.institutimagine.org/)
 
 [Website](https://www.institutimagine.org/)
 
