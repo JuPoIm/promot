@@ -56,7 +56,7 @@ advice and infrastructure. We are very grateful for all your contributions - thi
 [Website](https://erdera.org/)
 
 ### IMAGINE INSTITUTE
-[![Imagine institute official logo](https://github.com/JuPoIm/promot/blob/test/site/cite/logo_imagine.png){width="50%" height="50%"}](https://www.institutimagine.org/)
+[![Imagine institute official logo](https://github.com/JuPoIm/promot/blob/test/site/cite/logo_imagine.png){ width="50%" height="50%" }](https://www.institutimagine.org/)
 
 [Website](https://www.institutimagine.org/)
 
