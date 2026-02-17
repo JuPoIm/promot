@@ -6,7 +6,7 @@
 [![DOI](https://zenodo.org/badge/48047921.svg)](https://zenodo.org/badge/latestdoi/48047921)
 -->
 # PROMOT Common Data Model ontology
-<img src="https://github.com/JuPoIm/promot/tree/test/site/cite/logo_promot.png" />
+<img src="https://github.com/JuPoIm/promot/blob/test/site/cite/logo_promot.png" />
 
 Description: Ontology for building the relational database of the PROMOT initiative
 
@@ -73,4 +73,4 @@ advice and infrastructure. We are very grateful for all your contributions - thi
 ## Acknowledgements
 
 This ontology repository was created using the [Ontology Development Kit (ODK)](https://github.com/INCATools/ontology-development-kit).
-<img src="https://github.com/JuPoIm/promot/tree/test/site/cite/odk-logo_black-banner.png" />
+<img src="https://github.com/JuPoIm/promot/blob/test/site/cite/odk-logo_black-banner.png" />
