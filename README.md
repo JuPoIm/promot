@@ -73,4 +73,4 @@ advice and infrastructure. We are very grateful for all your contributions - thi
 ## Acknowledgements
 
 This ontology repository was created using the [Ontology Development Kit (ODK)](https://github.com/INCATools/ontology-development-kit).
-<img src="https://github.com/JuPoIm/promot/blob/test/site/cite/odk-logo_black-banner.png" />
+<img src="https://github.com/JuPoIm/promot/blob/test/site/cite/odk-logo_black-banner.png" width="50%" height="50%"/>
