@@ -46,27 +46,27 @@ Outstanding contributors are groups and institutions that have helped with build
 advice and infrastructure. We are very grateful for all your contributions - this project would not exist without you!
 
 ### PROMOT INITIATIVE
-[![PROMOT initiative official logo](https://github.com/JuPoIm/promot/tree/test/site/cite/logo_promot.png)](https://www.promotinitiative.com/)
+[![PROMOT initiative official logo](https://github.com/JuPoIm/promot/blob/test/site/cite/logo_promot.png)](https://www.promotinitiative.com/)
 
 [Website](https://www.promotinitiative.com/)
 
 ### ERDERA
-[![ERDERA official logo](https://github.com/JuPoIm/promot/tree/test/site/cite/ERDERA-logo2.svg)](https://erdera.org/)
+[![ERDERA official logo](https://github.com/JuPoIm/promot/blob/test/site/cite/ERDERA-logo2.svg)](https://erdera.org/)
 
 [Website](https://erdera.org/)
 
 ### IMAGINE INSTITUTE
-[![Imagine institute official logo](https://github.com/JuPoIm/promot/tree/test/site/cite/logo_imagine.png)](https://www.institutimagine.org/)
+[![Imagine institute official logo](https://github.com/JuPoIm/promot/blob/test/site/cite/logo_imagine.png)](https://www.institutimagine.org/)
 
 [Website](https://www.institutimagine.org/)
 
 ### UNIVERSITY OF SHERBROOKE
-[![University of Sherbrooke official logo](https://github.com/JuPoIm/promot/tree/test/site/cite/logo_sherbrooke.png)](https://www.usherbrooke.ca/)
+[![University of Sherbrooke official logo](https://github.com/JuPoIm/promot/blob/test/site/cite/logo_sherbrooke.png)](https://www.usherbrooke.ca/)
 
 [Website](https://www.usherbrooke.ca/)
 
 ### AP-HP
-[![AP-HP official logo](https://github.com/JuPoIm/promot/tree/test/site/cite/logo_aphp.png)](https://www.aphp.fr/)
+[![AP-HP official logo](https://github.com/JuPoIm/promot/blob/test/site/cite/logo_aphp.png)](https://www.aphp.fr/)
 
 [Website](https://www.aphp.fr/)
 
