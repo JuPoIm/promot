@@ -6,7 +6,7 @@
 [![DOI](https://zenodo.org/badge/48047921.svg)](https://zenodo.org/badge/latestdoi/48047921)
 -->
 # PROMOT Common Data Model ontology
-<img src="https://github.com/JuPoIm/promot/blob/test/site/cite/logo_promot.png" width="200" height="100"/>
+<img src="https://github.com/JuPoIm/promot/blob/test/site/cite/logo_promot.png" width="600" height="300"/>
 
 Description: Ontology for building the relational database of the PROMOT initiative
 
