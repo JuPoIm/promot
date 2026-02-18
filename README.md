@@ -6,7 +6,7 @@
 [![DOI](https://zenodo.org/badge/48047921.svg)](https://zenodo.org/badge/latestdoi/48047921)
 -->
 # PROMOT Common Data Model ontology
-<img src="https://github.com/JuPoIm/promot/blob/test/site/cite/logo_promot.png" width="200%" height="200%"/>
+<img src="https://github.com/JuPoIm/promot/blob/test/site/cite/logo_promot.png" width="200" height="100"/>
 
 Description: Ontology for building the relational database of the PROMOT initiative
 
@@ -28,7 +28,7 @@ http://purl.obolibrary.org/obo/promot.owl
 Editors of this ontology should use the edit version, [src/ontology/promot-edit.owl](src/ontology/promot-edit.owl)
 
 ## Core team
-* Juliette Potier (Imagine institut)
+* Juliette Potier (Imagine Institut)
 * Cynthia Gagnon (University of Sherbrooke)
 * Paul Fabry (University of Sherbrooke)
 * Anita Burgun (AP-HP Assistance publique - Hôpitaux de Paris)

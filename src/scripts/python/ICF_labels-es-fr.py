@@ -64,11 +64,11 @@ with open ('../scripts/python/tmp/icf_import_iri.tsv', encoding='utf-8') as tsvf
         data = df[df['ID'] == iri]
         template_df = pd.concat([template_df, data], ignore_index = True)
 
-with open ('../scripts/python/tmp/icf-to-cifasip_promot.tsv', encoding='utf-8') as xref_file:
-    reader = csv.reader(xref_file, delimiter = '\t', quotechar = '"', quoting = csv.QUOTE_MINIMAL)
-    for row in reader:
-        iri = row[0]
-        xref = row[2]
-        template_df.loc[template_df['ID'] == iri, 'CrossRef'] = xref
+# with open ('../scripts/python/tmp/icf-to-cifasip_promot.tsv', encoding='utf-8') as xref_file:
+#     reader = csv.reader(xref_file, delimiter = '\t', quotechar = '"', quoting = csv.QUOTE_MINIMAL)
+#     for row in reader:
+#         iri = row[0]
+#         xref = row[2]
+#         template_df.loc[template_df['ID'] == iri, 'CrossRef'] = xref
 
 template_df.to_csv('../templates/icf_labels_es-fr.tsv', sep='\t', index=False)

@@ -18,7 +18,7 @@ These are the current imports in PROMOT
 | ------ | --- | ---- |
 | bfo | http://purl.obolibrary.org/obo/bfo.owl | custom |
 | eco | http://purl.obolibrary.org/obo/eco.owl | custom |
-| fma | https://data.bioontology.org/ontologies/FMA/submissions/29/download?apikey=8b5b7825-538d-40e0-9e9e-5ab9274a9aeb | custom |
+| fma | http://purl.org/sig/ont/fma.owl | custom |
 | hp | http://purl.obolibrary.org/obo/hp.owl | custom |
 | iao | http://purl.obolibrary.org/obo/iao.owl | filter |
 | icf | http://purl.obolibrary.org/obo/icf.owl | custom |

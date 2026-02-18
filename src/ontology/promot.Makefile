@@ -262,13 +262,13 @@ translation-icf: refresh-icf $(IMPORTDIR)/icf_import.owl
 	python3.12 $(SCRIPTSDIR)/python/CIFASIP-ICF_mapping.py $(VERSION) ; \
 	python3.12 $(SCRIPTSDIR)/python/ICF_labels-es-fr.py ; \
 	$(SSSOMPY) parse -m $(METADATADIR)/mapping-all.yml -o $(MAPPINGDIR)/icf-to-cif_all-mappings.sssom.tsv $(PYTHONTMPDIR)/icf-to-cifasip_all.tsv ; \
-	$(SSSOMPY) parse -m $(METADATADIR)/mapping-promot.yml -o $(MAPPINGDIR)/icf-to-cif_promot-mappings.sssom.tsv $(PYTHONTMPDIR)/icf-to-cifasip_promot.tsv \
-	$(ROBOT) -vvv query -i $(MIRRORDIR)/cif-asip.owl --update $(SPARQLDIR)/preprocess-module.ru filter -T $(IMPORTDIR)/cifasip_terms.txt \
-	--select "self annotations" --signature true --output $(IMPORTDIR)/cif-asip_import.owl; \
-	$(ROBOT) query -i $(IMPORTDIR)/cif-asip_import.owl --update $(SPARQLDIR)/preprocess-module.ru \
-    query --update $(SPARQLDIR)/inject-subset-declaration.ru --update $(SPARQLDIR)/postprocess-module.ru \
-	annotate --ontology-iri $(IMPORTDIR)/cif-asip_import.owl $(ANNOTATE_ONTOLOGY_VERSION) \
-	merge -i $(IMPORTDIR)/cif-asip_import.owl --output $(IMPORTDIR)/cif-asip_import.owl && mv $(IMPORTDIR)/cif-asip_import.owl $@; fi
+	$(SSSOMPY) parse -m $(METADATADIR)/mapping-promot.yml -o $(MAPPINGDIR)/icf-to-cif_promot-mappings.sssom.tsv $(PYTHONTMPDIR)/icf-to-cifasip_promot.tsv ; fi
+#	$(ROBOT) -vvv query -i $(MIRRORDIR)/cif-asip.owl --update $(SPARQLDIR)/preprocess-module.ru filter -T $(IMPORTDIR)/cifasip_terms.txt \
+#	--select "self annotations" --signature true --output $(IMPORTDIR)/cif-asip_import.owl; \
+#	$(ROBOT) query -i $(IMPORTDIR)/cif-asip_import.owl --update $(SPARQLDIR)/preprocess-module.ru \
+#    query --update $(SPARQLDIR)/inject-subset-declaration.ru --update $(SPARQLDIR)/postprocess-module.ru \
+#	annotate --ontology-iri $(IMPORTDIR)/cif-asip_import.owl $(ANNOTATE_ONTOLOGY_VERSION) \
+#	merge -i $(IMPORTDIR)/cif-asip_import.owl --output $(IMPORTDIR)/cif-asip_import.owl && mv $(IMPORTDIR)/cif-asip_import.owl $@; fi
 
 
 # ----------------------------------------
