@@ -9,65 +9,22 @@ Prefix(dcterms:=<http://purl.org/dc/terms/>)
 
 
 Ontology(<http://purl.obolibrary.org/obo/promot.owl>
-Import(<http://purl.obolibrary.org/obo/promot/components/promot_onto.owl>)
+Import(<http://purl.obolibrary.org/obo/promot/components/promot-component.owl>)
 Import(<http://purl.obolibrary.org/obo/promot/imports/bfo_import.owl>)
+Import(<http://purl.obolibrary.org/obo/promot/imports/eco_import.owl>)
 Import(<http://purl.obolibrary.org/obo/promot/imports/fma_import.owl>)
 Import(<http://purl.obolibrary.org/obo/promot/imports/hp_import.owl>)
 Import(<http://purl.obolibrary.org/obo/promot/imports/iao_import.owl>)
-Import(<http://purl.obolibrary.org/obo/promot/imports/mondo_import.owl>)
+Import(<http://purl.obolibrary.org/obo/promot/imports/icf_import.owl>)
 Import(<http://purl.obolibrary.org/obo/promot/imports/obi_import.owl>)
+Import(<http://purl.obolibrary.org/obo/promot/imports/ordo_import.owl>)
 Import(<http://purl.obolibrary.org/obo/promot/imports/ro_import.owl>)
-Import(<http://purl.obolibrary.org/obo/promot/imports/scdo_import.owl>)
 Import(<http://purl.obolibrary.org/obo/promot/imports/sio_import.owl>)
 Import(<http://purl.obolibrary.org/obo/promot/imports/snomed_import.owl>)
-Import(<http://purl.obolibrary.org/obo/promot/imports/vo_import.owl>)
-Import(<http://purl.obolibrary.org/obo/promot/imports/whofic_import.owl>)
 Import(<http://purl.obolibrary.org/obo/promot/patterns/definitions.owl>)
-Import(<http://purl.obolibrary.org/obo/promot/releases/2025-06-18/imports/bfo_import.owl>)
-Import(<http://purl.obolibrary.org/obo/promot/releases/2025-06-18/imports/iao_import.owl>)
-Import(<http://purl.obolibrary.org/obo/promot/releases/2025-06-18/imports/scdo_import.owl>)
-Import(<http://purl.obolibrary.org/obo/promot/releases/2025-07-03/imports/whofic_import.owl>)
-Import(<http://purl.obolibrary.org/obo/promot/releases/2025-07-30/imports/sio_import.owl>)
-Import(<http://purl.obolibrary.org/obo/promot/releases/2025-08-04/imports/snomed_import.owl>)
-Import(<http://purl.obolibrary.org/obo/promot/releases/2025-08-05/imports/fma_import.owl>)
-Import(<http://purl.obolibrary.org/obo/promot/releases/2025-08-12/imports/hp_import.owl>)
-Import(<http://purl.obolibrary.org/obo/promot/releases/2025-08-07/imports/mondo_import.owl>)
-Import(<http://purl.obolibrary.org/obo/promot/releases/2025-08-07/imports/obi_import.owl>)
-Import(<http://purl.obolibrary.org/obo/promot/releases/2025-08-07/imports/ro_import.owl>)
-Import(<http://purl.obolibrary.org/obo/promot/releases/2025-08-08/imports/vo_import.owl>)
-Import(<http://purl.obolibrary.org/obo/promot/releases/2025-08-12/components/promot_onto.owl>)
-Import(<http://purl.obolibrary.org/obo/promot/releases/2025-08-12/patterns/definitions.owl>)
-Annotation(dce:contributor "Anita Burgun MD, PhD
-https://orcid.org/0000-0001-6855-4366")
-Annotation(dce:contributor "Carole Faviez PhD
-https://orcid.org/0000-0002-1500-0236")
-Annotation(dce:contributor "Cynthia Gagnon PhD
-https://orcid.org/0000-0003-2829-8470")
-Annotation(dce:contributor "Daniel Natera De Benito MD, PhD
-https://orcid.org/0000-0001-7764-2085")
-Annotation(dce:contributor "European Rare Diseases Research Alliance (ERDERA)
-
-Website: https://erdera.org")
-Annotation(dce:contributor "Hanns Lochmuller MD, PhD
-https://orcid.org/0000-0003-2324-8001")
-Annotation(dce:contributor "Mansoore Gholizade MD")
-Annotation(dce:contributor "Elizabeth Angelevski PhD")
-Annotation(dce:creator "Juliette Potier MSc
-https://orcid.org/0009-0000-5160-7927")
-Annotation(dce:creator "Paul Fabry MD, PhD student
-https://orcid.org/0000-0002-3336-2476")
-Annotation(dcterms:description "Ontology for building the database of the PROMOT project
-
-See also: https://www.promotinitiative.com")
-Annotation(dcterms:title "PROMOT Common Data Model ontology")
-Annotation(rdfs:comment "Also contributor for the gathering ??
-Thomas Bongivault, MSc
-Marc Vincent, PhD
-
-???")
-Annotation(rdfs:comment "The 'Performing a Rare Disease-Oriented Master Observational Trial' (PROMOT) project aims to generate a learning and knowledge mobilization platform allowing the development of a precision medicine approach for rare neuromuscular diseases.
-
-See also: https://www.promotinitiative.com/project")
+Annotation(dcterms:description "Ontology for modeling the three following neuromuscular diseases : OPMD, Congenital myopathies and Congenital myastenic syndroms. It aims to be also an ontology for building the PROMOT project relational database.")
+Annotation(dcterms:license <https://creativecommons.org/licenses/by-nc-sa/4.0/>)
+Annotation(dcterms:title "PROMOT ontology")
 
 Declaration(Class(<http://purl.obolibrary.org/obo/PROMOT_0000000>))
 Declaration(AnnotationProperty(dcterms:description))
@@ -95,69 +52,9 @@ AnnotationAssertion(rdfs:label dcterms:title "title")
 #   Classes
 ############################
 
-# Class: <http://purl.obolibrary.org/obo/FMA_5022> (Muscle organ)
-
-SubClassOf(<http://purl.obolibrary.org/obo/FMA_5022> <http://purl.obolibrary.org/obo/FMA_62955>)
-
-# Class: <http://purl.obolibrary.org/obo/FMA_7490> (Joint)
-
-SubClassOf(<http://purl.obolibrary.org/obo/FMA_7490> <http://purl.obolibrary.org/obo/FMA_62955>)
-
-# Class: <http://purl.obolibrary.org/obo/HP_0000006> (Autosomal dominant inheritance)
-
-SubClassOf(<http://purl.obolibrary.org/obo/HP_0000006> <http://purl.obolibrary.org/obo/BFO_0000001>)
-
-# Class: <http://purl.obolibrary.org/obo/HP_0031797> (Clinical course)
-
-SubClassOf(<http://purl.obolibrary.org/obo/HP_0031797> <http://purl.obolibrary.org/obo/BFO_0000001>)
-
 # Class: <http://purl.obolibrary.org/obo/PROMOT_0000000> (root node)
 
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/PROMOT_0000000> "root node"@en)
-
-# Class: <http://snomed.info/id/12239004> (Throat clearing (observable entity))
-
-SubClassOf(<http://snomed.info/id/12239004> <http://purl.obolibrary.org/obo/BFO_0000016>)
-
-# Class: <http://snomed.info/id/125680007> (Marital status (observable entity))
-
-SubClassOf(<http://snomed.info/id/125680007> <http://snomed.info/id/302147001>)
-
-# Class: <http://snomed.info/id/12894003> (Functional assessment (procedure))
-
-SubClassOf(<http://snomed.info/id/12894003> <http://snomed.info/id/386053000>)
-
-# Class: <http://snomed.info/id/183135000> (Mobility aid (physical object))
-
-SubClassOf(<http://snomed.info/id/183135000> <http://purl.obolibrary.org/obo/BFO_0000030>)
-
-# Class: <http://snomed.info/id/184099003> (Date of birth (observable entity))
-
-SubClassOf(<http://snomed.info/id/184099003> <http://snomed.info/id/302147001>)
-
-# Class: <http://snomed.info/id/224899006> (Walking aid (physical object))
-
-SubClassOf(<http://snomed.info/id/224899006> <http://snomed.info/id/360296002>)
-
-# Class: <http://snomed.info/id/252478000> (6-minute walk test (procedure))
-
-SubClassOf(<http://snomed.info/id/252478000> <http://snomed.info/id/386053000>)
-
-# Class: <http://snomed.info/id/252482003> (Stair-climbing test (procedure))
-
-SubClassOf(<http://snomed.info/id/252482003> <http://snomed.info/id/386053000>)
-
-# Class: <http://snomed.info/id/360296002> (Assistive equipment (physical object))
-
-SubClassOf(<http://snomed.info/id/360296002> <http://purl.obolibrary.org/obo/BFO_0000030>)
-
-# Class: <http://snomed.info/id/364578004> (Observable feature of walking (observable entity))
-
-SubClassOf(<http://snomed.info/id/364578004> <http://purl.obolibrary.org/obo/IAO_0000030>)
-
-# Class: <http://snomed.info/id/450737006> (Assessment using thirty second chair stand test (procedure))
-
-SubClassOf(<http://snomed.info/id/450737006> <http://snomed.info/id/386053000>)
 
 
 )

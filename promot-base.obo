@@ -1,6 +1,6 @@
 format-version: 1.2
-data-version: promot/releases/2025-08-12/promot-base.owl
-date: 12:08:2025 13:36
+data-version: promot/releases/2025-08-14/promot-base.owl
+date: 14:08:2025 12:20
 idspace: dce http://purl.org/dc/elements/1.1/ 
 idspace: dcterms http://purl.org/dc/terms/ 
 idspace: oboInOwl http://www.geneontology.org/formats/oboInOwl# 
@@ -20,11 +20,7 @@ property_value: dce:creator "Paul Fabry MD, PhD student\nhttps://orcid.org/0000-
 property_value: dce:type IAO:8000001
 property_value: dcterms:description "Ontology for building the database of the PROMOT project\n\nSee also: https://www.promotinitiative.com" xsd:string
 property_value: dcterms:title "PROMOT Common Data Model ontology" xsd:string
-property_value: owl:versionInfo "2025-08-12" xsd:string
-
-[Term]
-id: FMA:62955
-equivalent_to: PROMOT:7000001 ! Phenotypically related anatomical entity
+property_value: owl:versionInfo "2025-08-14" xsd:string
 
 [Term]
 id: PROMOT:0000000
@@ -34,6 +30,7 @@ name: root node
 id: PROMOT:0000001
 name: mutation
 is_a: BFO:0000002
+relationship: RO:0004013 PROMOT:1100001 ! Abnormal disposition
 property_value: IAO:0000117 "Juliette Potier" xsd:string
 
 [Term]
@@ -41,7 +38,6 @@ id: PROMOT:0000002
 name: PABPN1 mutation
 def: "Mutation located within the PABPN1 gene" []
 is_a: PROMOT:0000001 ! mutation
-relationship: RO:0004013 MONDO:0008116
 property_value: IAO:0000117 "Juliette Potier" xsd:string
 
 [Term]
@@ -49,7 +45,6 @@ id: PROMOT:0000003
 name: RYR1 mutation
 def: "Mutation located within the RYR1 gene" []
 is_a: PROMOT:0000001 ! mutation
-relationship: RO:0004013 MONDO:0019952
 property_value: IAO:0000117 "Juliette Potier" xsd:string
 
 [Term]
@@ -57,7 +52,6 @@ id: PROMOT:0000004
 name: TTN mutation
 def: "Mutation located within the TTN gene" []
 is_a: PROMOT:0000001 ! mutation
-relationship: RO:0004013 MONDO:0019952
 property_value: IAO:0000117 "Juliette Potier" xsd:string
 
 [Term]
@@ -65,7 +59,6 @@ id: PROMOT:0000005
 name: NEB mutation
 def: "Mutation located within the NEB gene" []
 is_a: PROMOT:0000001 ! mutation
-relationship: RO:0004013 MONDO:0019952
 property_value: IAO:0000117 "Juliette Potier" xsd:string
 
 [Term]
@@ -73,7 +66,6 @@ id: PROMOT:0000006
 name: MTM1 mutation
 def: "Mutation located within the MTM1 gene" []
 is_a: PROMOT:0000001 ! mutation
-relationship: RO:0004013 MONDO:0019952
 property_value: IAO:0000117 "Juliette Potier" xsd:string
 
 [Term]
@@ -81,7 +73,6 @@ id: PROMOT:0000007
 name: ACTA1 mutation
 def: "Mutation located within the ACTA1 gene" []
 is_a: PROMOT:0000001 ! mutation
-relationship: RO:0004013 MONDO:0019952
 property_value: IAO:0000117 "Juliette Potier" xsd:string
 
 [Term]
@@ -89,7 +80,6 @@ id: PROMOT:0000008
 name: SELENON mutation
 def: "Mutation located within the SELENON gene" []
 is_a: PROMOT:0000001 ! mutation
-relationship: RO:0004013 MONDO:0019952
 property_value: IAO:0000117 "Juliette Potier" xsd:string
 
 [Term]
@@ -97,7 +87,6 @@ id: PROMOT:0000009
 name: CHRNE mutation
 def: "Mutation located within the CHRNE gene" []
 is_a: PROMOT:0000001 ! mutation
-relationship: RO:0004013 MONDO:0018940
 property_value: IAO:0000117 "Juliette Potier" xsd:string
 
 [Term]
@@ -105,7 +94,6 @@ id: PROMOT:0000010
 name: DOK7 mutation
 def: "Mutation located within the DOK7 gene" []
 is_a: PROMOT:0000001 ! mutation
-relationship: RO:0004013 MONDO:0018940
 property_value: IAO:0000117 "Juliette Potier" xsd:string
 
 [Term]
@@ -113,7 +101,6 @@ id: PROMOT:0000011
 name: COLQ mutation
 def: "Mutation located within the COLQ gene" []
 is_a: PROMOT:0000001 ! mutation
-relationship: RO:0004013 MONDO:0018940
 property_value: IAO:0000117 "Juliette Potier" xsd:string
 
 [Term]
@@ -121,7 +108,6 @@ id: PROMOT:0000012
 name: RAPSN mutation
 def: "Mutation located within the RAPSN gene" []
 is_a: PROMOT:0000001 ! mutation
-relationship: RO:0004013 MONDO:0018940
 property_value: IAO:0000117 "Juliette Potier" xsd:string
 
 [Term]
@@ -129,7 +115,6 @@ id: PROMOT:0000013
 name: GFPT1 mutation
 def: "Mutation located within the GFPT1 gene" []
 is_a: PROMOT:0000001 ! mutation
-relationship: RO:0004013 MONDO:0018940
 property_value: IAO:0000117 "Juliette Potier" xsd:string
 
 [Term]
@@ -137,7 +122,14 @@ id: PROMOT:0000014
 name: GMPPB mutation
 def: "Mutation located within the GMPPB gene" []
 is_a: PROMOT:0000001 ! mutation
-relationship: RO:0004013 MONDO:0018940
+property_value: IAO:0000117 "Juliette Potier" xsd:string
+
+[Term]
+id: PROMOT:1100001
+name: Abnormal disposition
+def: "A disposition that differs from the norm, such as a disease or a phenotypic abnormality" []
+comment: (to validate)
+is_a: BFO:0000016
 property_value: IAO:0000117 "Juliette Potier" xsd:string
 
 [Term]
@@ -275,7 +267,9 @@ property_value: IAO:0000117 "Juliette Potier" xsd:string
 id: PROMOT:7000001
 name: Phenotypically related anatomical entity
 def: "An anatomical entity related to a phenotype such that the anatomical entity is the location of the phenotype." []
-is_a: BFO:0000040
+is_a: FMA:62955
+intersection_of: FMA:62955
+intersection_of: PROMOT:2000001 HP:0000118 ! is location of
 relationship: PROMOT:2000001 HP:0000118 ! is location of
 relationship: related:to http://id.who.int/icd/entity/1626363729
 property_value: IAO:0000117 "Juliette Potier" xsd:string
@@ -285,7 +279,9 @@ id: PROMOT:7000002
 name: Phenotypically related body structure
 def: "A body structure related to a phenotype such that the body structure is the location of the phenotype." []
 comment: (JP: unsure about definition)
-is_a: BFO:0000028
+is_a: http://id.who.int/icd/entity/1626363729
+intersection_of: http://id.who.int/icd/entity/1626363729
+intersection_of: related:to HP:0000118
 relationship: related:to HP:0000118
 property_value: IAO:0000117 "Juliette Potier" xsd:string
 
@@ -294,7 +290,9 @@ id: PROMOT:7000003
 name: Phenotypically related body function
 def: "A body function related to a phenotype such that the body function is impacted by the phenotype existence." []
 comment: (JP: unsure about definition)
-is_a: BFO:0000034
+is_a: http://id.who.int/icd/entity/567313968
+intersection_of: http://id.who.int/icd/entity/567313968
+intersection_of: related:to HP:0000118
 relationship: related:to HP:0000118
 property_value: IAO:0000117 "Juliette Potier" xsd:string
 
@@ -306,12 +304,74 @@ is_a: IAO:0000030
 property_value: IAO:0000117 "Juliette Potier" xsd:string
 
 [Term]
-id: http://id.who.int/icd/entity/1626363729
-equivalent_to: PROMOT:7000002 ! Phenotypically related body structure
+id: PROMOT:9000001
+name: Risk of fall
+def: "The patient is at risk of fall" []
+comment: (JP: unsure, OPMD)
+property_value: IAO:0000117 "Juliette Potier" xsd:string
 
 [Term]
-id: http://id.who.int/icd/entity/567313968
-equivalent_to: PROMOT:7000003 ! Phenotypically related body function
+id: PROMOT:9000002
+name: Decreased walking speed
+def: "Walking speed decreased in comparison to a normal walking speed" []
+comment: (JP: unsure, OPMD)
+property_value: IAO:0000117 "Juliette Potier" xsd:string
+
+[Term]
+id: PROMOT:9000003
+name: Difficulty rising from a chair
+def: "Difficulty rising from a chair, difficulty to move from a sitting position to a standing position" []
+comment: (JP: unsure, OPMD)
+property_value: IAO:0000117 "Juliette Potier" xsd:string
+
+[Term]
+id: PROMOT:9000004
+name: Blockage sensation in the throat / food entrapment
+def: "OPMD" []
+comment: (JP: unsure, OPMD)
+property_value: IAO:0000117 "Juliette Potier" xsd:string
+
+[Term]
+id: PROMOT:9000005
+name: Multiple swallowing per bolus
+def: "OPMD" []
+comment: (JP: unsure, OPMD)
+property_value: IAO:0000117 "Juliette Potier" xsd:string
+
+[Term]
+id: PROMOT:9000006
+name: Needing to spit out food or liquids
+def: "OPMD" []
+comment: (JP: unsure, OPMD)
+property_value: IAO:0000117 "Juliette Potier" xsd:string
+
+[Term]
+id: PROMOT:9000007
+name: Pharyngo-nasal and pharyngo-oral regurgitation
+def: "OPMD" []
+comment: (JP: unsure, OPMD)
+property_value: IAO:0000117 "Juliette Potier" xsd:string
+
+[Term]
+id: PROMOT:9000008
+name: Presence of secretions
+def: "OPMD" []
+comment: (JP: unsure, OPMD)
+property_value: IAO:0000117 "Juliette Potier" xsd:string
+
+[Term]
+id: PROMOT:9000009
+name: Generalized fatigability of muscles
+def: "CM" []
+comment: (JP: unsure, CM)
+property_value: IAO:0000117 "Juliette Potier" xsd:string
+
+[Term]
+id: PROMOT:9000010
+name: Arthrogryposis during neonatal period
+def: "Joint stiffness or joint contractures during neonatal period" []
+comment: (JP: unsure, CM)
+property_value: IAO:0000117 "Juliette Potier" xsd:string
 
 [Typedef]
 id: PROMOT:2000001

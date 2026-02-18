@@ -2,13 +2,18 @@ pattern_name: phenotypes_pattern
 
 pattern_iri: phenotypes_pattern.yaml
 
-description: "Use this template to link the phenotypes to the relevant sources."
+description: "Use this template to link the phenotypes to the relevant sources that support that the phenotype is a feature for a certain disease."
 
 contributors:
   - https://orcid.org/0009-0000-5160-7927 # J. Potier
 
 classes:
   phenotypic_abnormality: HP:0000118
+  activities_participation: http://id.who.int/icd/entity/1394728112
+  body_function: http://id.who.int/icd/entity/567313968
+
+relations:
+  affects: PROMOT:2000005
 
 annotationProperties:
   found_in: PROMOT:1000001
@@ -17,10 +22,25 @@ data_vars:
   source: xsd:string
 
 vars:
-  source: "source"
+  source: "'source'"
+  activity: "'activities_participation'"
+  function: "'body_function'"
+  phenotype: "'phenotypic_abnormality'"
 
 annotations:
   - annotationProperty: found_in
     text: "%s"
     vars:
       - source
+
+logical_axioms:
+
+  - axiom_type: subClassOf
+    text: "'affects' some %s"
+    vars:
+      - activity
+
+  - axiom_type: subClassOf
+    text: "'affects' some %s"
+    vars:
+      - function
