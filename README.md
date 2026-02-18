@@ -5,13 +5,19 @@
 
 [![DOI](https://zenodo.org/badge/48047921.svg)](https://zenodo.org/badge/latestdoi/48047921)
 -->
-# PROMOT Common Data Model ontology
-<img src="https://github.com/JuPoIm/promot/blob/test/site/cite/logo_promot.png" width="600" height="300"/>
+# PROMOT ontology
+<img src="https://github.com/JuPoIm/promot/blob/test/site/cite/logo_promot.png" width="500" height="250"/>
 
-Description: Ontology for building the relational database of the PROMOT initiative
+PROMOT ontology aims to represent the 3 groups of neuromuscular diseases the PROMOT Master Observational Trial focuses on :
+* Oculopharyngeal Muscular Dystrophy
+* Congenital Myasthenic Syndromes
+* Congenital Myopathies
 
-More information can be found at http://obofoundry.org/ontology/promot
-About PROMOT initiative : https://www.promotinitiative.com/project
+PROMOT ontology aims to build the common data model the PROMOT initiative will use to collect patient data scattered between 3 different sites.
+
+Informations about the ontology can also be found at http://obofoundry.org/ontology/promot
+
+More about PROMOT initiative can be found at https://www.promotinitiative.com/project
 
 ## Versions
 
@@ -28,14 +34,16 @@ http://purl.obolibrary.org/obo/promot.owl
 Editors of this ontology should use the edit version, [src/ontology/promot-edit.owl](src/ontology/promot-edit.owl)
 
 ## Core team
-* Juliette Potier (Imagine Institut)
-* Cynthia Gagnon (University of Sherbrooke)
-* Paul Fabry (University of Sherbrooke)
-* Anita Burgun (AP-HP Assistance publique - Hôpitaux de Paris)
-* Carole Faviez (Imagine Institute)
-* Elizabeth Angelevski (University of Sherbrooke)
+* Juliette Potier MSc (Imagine Institut)
+* Cynthia Gagnon MD, PhD (University of Sherbrooke)
+* Paul Fabry MD, PhD student (University of Sherbrooke)
+* Anita Burgun MD, PhD (AP-HP Assistance publique - Hôpitaux de Paris)
+* Carole Faviez PhD (Imagine Institute)
+* Elizabeth Angelevski DC (University of Sherbrooke)
 
 ## How to cite
+
+FAVIEZ Carole, et al. Designing an ontology for rare neuromuscular diseases to support federated Master Observational Trials 
 
 ## Contact
 
@@ -46,7 +54,7 @@ Outstanding contributors are groups and institutions that have helped with build
 advice and infrastructure. We are very grateful for all your contributions - this project would not exist without you!
 
 ### PROMOT INITIATIVE
-[![PROMOT initiative official logo](https://github.com/JuPoIm/promot/blob/test/site/cite/logo_promot.png)](https://www.promotinitiative.com/)
+[![PROMOT initiative official logo](https://github.com/JuPoIm/promot/blob/test/site/cite/logo_promot.png =200x100)](https://www.promotinitiative.com/)
 
 [Website](https://www.promotinitiative.com/)
 
