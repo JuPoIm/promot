@@ -6,7 +6,7 @@
 [![DOI](https://zenodo.org/badge/48047921.svg)](https://zenodo.org/badge/latestdoi/48047921)
 -->
 # PROMOT ontology
-<img src="https://github.com/JuPoIm/promot/blob/test/site/cite/Promot_Logo_Colours_Vertical.png" width="500" height="250"/>
+<img src="https://github.com/JuPoIm/promot/blob/test/site/cite/Promot_Logo_Colours_Vertical.png"/>
 
 The PROMOT ontology represents the 3 groups of neuromuscular diseases the PROMOT Master Observational Trial focuses on :
 * Oculopharyngeal Muscular Dystrophy
