@@ -57,8 +57,8 @@ Prefix(CPATH_CONDITION_OCCURRENCE:=<https://w3id.org/cpont/condition_occurrence/
 
 
 Ontology(<http://purl.obolibrary.org/obo/promot/components/promot-component.owl>
-<http://purl.obolibrary.org/obo/promot/releases/2026-02-17/components/promot-component.owl>
-Annotation(owl:versionInfo "2026-02-17")
+<http://purl.obolibrary.org/obo/promot/releases/2026-02-19/components/promot-component.owl>
+Annotation(owl:versionInfo "2026-02-19")
 
 Declaration(Class(<http://id.who.int/icd/entity/1014916094>))
 Declaration(Class(<http://id.who.int/icd/entity/1019379329>))
@@ -746,11 +746,13 @@ Declaration(ObjectProperty(obo:PROMOT_2000002))
 Declaration(ObjectProperty(obo:PROMOT_2000003))
 Declaration(ObjectProperty(obo:PROMOT_2000004))
 Declaration(ObjectProperty(obo:PROMOT_2000005))
+Declaration(ObjectProperty(obo:PROMOT_2000006))
 Declaration(ObjectProperty(obo:PROMOT_2000007))
 Declaration(ObjectProperty(obo:PROMOT_2000008))
 Declaration(ObjectProperty(obo:PROMOT_2000009))
 Declaration(ObjectProperty(obo:PROMOT_2000010))
 Declaration(ObjectProperty(obo:PROMOT_2000011))
+Declaration(ObjectProperty(obo:PROMOT_2000012))
 Declaration(ObjectProperty(obo:RO_0002200))
 Declaration(ObjectProperty(obo:RO_0002201))
 Declaration(ObjectProperty(obo:RO_0002331))
@@ -761,11 +763,7 @@ Declaration(ObjectProperty(obo:RO_0004029))
 Declaration(ObjectProperty(<http://semanticscience.org/resource/SIO_000001>))
 Declaration(ObjectProperty(<http://semanticscience.org/resource/SIO_000217>))
 Declaration(ObjectProperty(<http://semanticscience.org/resource/SIO_000218>))
-Declaration(DataProperty(obo:PROMOT_2000006))
-Declaration(DataProperty(obo:PROMOT_2000012))
 Declaration(DataProperty(obo:RO_0002614))
-Declaration(NamedIndividual(obo:PROMOT_2000006))
-Declaration(NamedIndividual(obo:PROMOT_2000012))
 Declaration(NamedIndividual(<http://snomed.info/id/128927009>))
 Declaration(AnnotationProperty(obo:IAO_0000115))
 Declaration(AnnotationProperty(obo:IAO_0000117))
@@ -849,6 +847,14 @@ AnnotationAssertion(rdfs:label obo:PROMOT_2000005 "affecte"@fr)
 AnnotationAssertion(rdfs:label obo:PROMOT_2000005 "affects"@en)
 ObjectPropertyDomain(obo:PROMOT_2000005 obo:HP_0000118)
 
+# Object Property: obo:PROMOT_2000006 (is affected by)
+
+AnnotationAssertion(obo:IAO_0000115 obo:PROMOT_2000006 "A relation between two entity where the state of the first entity is affected by the existence of the second entity."@en)
+AnnotationAssertion(obo:IAO_0000115 obo:PROMOT_2000006 "Une relation entre deux entités où l’état de la première entité est affecté par l’existence de la seconde."@fr)
+AnnotationAssertion(obo:IAO_0000117 obo:PROMOT_2000006 "https://orcid.org/0009-0000-5160-7927")
+AnnotationAssertion(rdfs:label obo:PROMOT_2000006 "est affecté par"@fr)
+AnnotationAssertion(rdfs:label obo:PROMOT_2000006 "is affected by"@en)
+
 # Object Property: obo:PROMOT_2000007 (est l’identifiant unique pour)
 
 AnnotationAssertion(obo:IAO_0000115 obo:PROMOT_2000007 "A relation between an identifier and the entity that the identifier is the only one to identify."@en)
@@ -892,9 +898,15 @@ AnnotationAssertion(rdfs:label obo:PROMOT_2000010 "located in"@en)
 
 AnnotationAssertion(obo:IAO_0000115 obo:PROMOT_2000011 "A generic relation between an entity and a function, where the entity is needed to realize the function."@en)
 AnnotationAssertion(obo:IAO_0000115 obo:PROMOT_2000011 "une relation générique entre une entité et une fonction, où l’entité est nécessaire à la réalisation de la fonction. Par exemple les muscles extraoculaires sont liés fonctionnellement aux fonctions des muscles extérieurs de l’oeil."@fr)
+AnnotationAssertion(obo:IAO_0000117 obo:PROMOT_2000011 "https://orcid.org/0009-0000-5160-7927")
 AnnotationAssertion(oboInOwl:hasDbXref obo:PROMOT_2000011 "RO:0002328")
 AnnotationAssertion(rdfs:label obo:PROMOT_2000011 "est fonctionnellement lié à"@fr)
 AnnotationAssertion(rdfs:label obo:PROMOT_2000011 "functionally related to"@en)
+
+# Object Property: obo:PROMOT_2000012 (uses)
+
+AnnotationAssertion(obo:IAO_0000117 obo:PROMOT_2000012 "https://orcid.org/0009-0000-5160-7927")
+AnnotationAssertion(rdfs:label obo:PROMOT_2000012 "uses"@en)
 
 # Object Property: obo:RO_0002200 (has phenotype)
 
@@ -940,32 +952,10 @@ AnnotationAssertion(rdfs:label <http://semanticscience.org/resource/SIO_000218> 
 ObjectPropertyDomain(<http://semanticscience.org/resource/SIO_000218> obo:BFO_0000019)
 
 
-############################
-#   Data Properties
-############################
-
-# Data Property: obo:PROMOT_2000006 (is affected by)
-
-AnnotationAssertion(obo:IAO_0000115 obo:PROMOT_2000006 "A relation between two entity where the state of the first entity is affected by the existence of the second entity."@en)
-AnnotationAssertion(obo:IAO_0000115 obo:PROMOT_2000006 "Une relation entre deux entités où l’état de la première entité est affecté par l’existence de la seconde."@fr)
-AnnotationAssertion(rdfs:label obo:PROMOT_2000006 "est affecté par"@fr)
-AnnotationAssertion(rdfs:label obo:PROMOT_2000006 "is affected by"@en)
-
-# Data Property: obo:PROMOT_2000012 (uses)
-
-AnnotationAssertion(rdfs:label obo:PROMOT_2000012 "uses"@en)
-
 
 ############################
 #   Datatypes
 ############################
-
-# Datatype: obo:HP_0000118 (Phenotypic abnormality)
-
-AnnotationAssertion(obo:PROMOT_1000001 obo:HP_0000118 "RD-CDM")
-AnnotationAssertion(oboInOwl:hasDbXref obo:HP_0000118 "http://snomed.info/id/8116006")
-AnnotationAssertion(rdfs:comment obo:HP_0000118 "[PROMOT NOTE: derived from RD-CDM] Graefe, A.S.L., Hübner, M.R., Rehburg, F. et al. An ontology-based rare disease common data model harmonising international registries, FHIR, and Phenopackets. Sci Data 12, 234 (2025). https://doi.org/10.1038/s41597-025-04558-z")
-AnnotationAssertion(rdfs:label obo:HP_0000118 "Phenotypic abnormality"@en)
 
 # Datatype: obo:IAO_0000027 (data item)
 
@@ -973,14 +963,6 @@ AnnotationAssertion(obo:PROMOT_1000001 obo:IAO_0000027 "RD-CDM")
 AnnotationAssertion(oboInOwl:hasDbXref obo:IAO_0000027 "NCIT:C25712")
 AnnotationAssertion(rdfs:comment obo:IAO_0000027 "[derived from RD-CDM] Graefe, A.S.L., Hübner, M.R., Rehburg, F. et al. An ontology-based rare disease common data model harmonising international registries, FHIR, and Phenopackets. Sci Data 12, 234 (2025). https://doi.org/10.1038/s41597-025-04558-z")
 AnnotationAssertion(rdfs:label obo:IAO_0000027 "data item"@en)
-
-# Datatype: <http://snomed.info/id/257192006> (Aid to vision (physical object))
-
-AnnotationAssertion(rdfs:label <http://snomed.info/id/257192006> "Aid to vision (physical object)"@en)
-
-# Datatype: <http://snomed.info/id/360296002> (Assitive equipment (physical object))
-
-AnnotationAssertion(rdfs:label <http://snomed.info/id/360296002> "Assitive equipment (physical object)"@en)
 
 
 ############################
@@ -1056,7 +1038,7 @@ AnnotationAssertion(rdfs:label <http://id.who.int/icd/entity/1104062484> "Foncti
 AnnotationAssertion(rdfs:label <http://id.who.int/icd/entity/1104062484> "Funciones puberales"@es)
 AnnotationAssertion(rdfs:label <http://id.who.int/icd/entity/1104062484> "Pubertal functions"@en)
 
-# Class: <http://id.who.int/icd/entity/1108927576> (Estructura de la región del hombro)
+# Class: <http://id.who.int/icd/entity/1108927576> (Structure de la région des épaules)
 
 AnnotationAssertion(rdfs:comment <http://id.who.int/icd/entity/1108927576> "Source for French and Spanish labels: https://icd.who.int/browse/2025-01/icf/ > Info > Spreadsheet files (on French and Spanish browser version)")
 AnnotationAssertion(rdfs:label <http://id.who.int/icd/entity/1108927576> "Estructura de la región del hombro"@es)
@@ -1152,7 +1134,7 @@ AnnotationAssertion(rdfs:label <http://id.who.int/icd/entity/1228414013> "Genera
 AnnotationAssertion(rdfs:label <http://id.who.int/icd/entity/1228414013> "Tareas y demandas generales"@es)
 AnnotationAssertion(rdfs:label <http://id.who.int/icd/entity/1228414013> "Tâches et exigences générales"@fr)
 
-# Class: <http://id.who.int/icd/entity/1233939003> (Músculos de la mano)
+# Class: <http://id.who.int/icd/entity/1233939003> (Muscles de la main)
 
 AnnotationAssertion(rdfs:comment <http://id.who.int/icd/entity/1233939003> "Source for French and Spanish labels: https://icd.who.int/browse/2025-01/icf/ > Info > Spreadsheet files (on French and Spanish browser version)")
 AnnotationAssertion(rdfs:label <http://id.who.int/icd/entity/1233939003> "Muscles de la main"@fr)
@@ -1168,7 +1150,7 @@ SubClassOf(<http://id.who.int/icd/entity/1233939003> ObjectSomeValuesFrom(obo:PR
 SubClassOf(<http://id.who.int/icd/entity/1233939003> ObjectSomeValuesFrom(obo:PROMOT_2000008 obo:HP_0033466))
 SubClassOf(<http://id.who.int/icd/entity/1233939003> ObjectSomeValuesFrom(obo:PROMOT_2000010 <http://id.who.int/icd/entity/1789365017>))
 
-# Class: <http://id.who.int/icd/entity/1255154286> (Funciones auditivas y vestibulares)
+# Class: <http://id.who.int/icd/entity/1255154286> (Hearing and vestibular functions)
 
 AnnotationAssertion(rdfs:comment <http://id.who.int/icd/entity/1255154286> "Source for French and Spanish labels: https://icd.who.int/browse/2025-01/icf/ > Info > Spreadsheet files (on French and Spanish browser version)")
 AnnotationAssertion(rdfs:label <http://id.who.int/icd/entity/1255154286> "Fonctions de l'audition et fonctions vestibulaires"@fr)
@@ -1189,14 +1171,14 @@ AnnotationAssertion(rdfs:label <http://id.who.int/icd/entity/126518990> "Resolve
 AnnotationAssertion(rdfs:label <http://id.who.int/icd/entity/126518990> "Résoudre des problèmes"@fr)
 AnnotationAssertion(rdfs:label <http://id.who.int/icd/entity/126518990> "Solving problems"@en)
 
-# Class: <http://id.who.int/icd/entity/1266389839> (Changer et maintenir la position du corps)
+# Class: <http://id.who.int/icd/entity/1266389839> (Cambiar y mantener la posición del cuerpo)
 
 AnnotationAssertion(rdfs:comment <http://id.who.int/icd/entity/1266389839> "Source for French and Spanish labels: https://icd.who.int/browse/2025-01/icf/ > Info > Spreadsheet files (on French and Spanish browser version)")
 AnnotationAssertion(rdfs:label <http://id.who.int/icd/entity/1266389839> "Cambiar y mantener la posición del cuerpo"@es)
 AnnotationAssertion(rdfs:label <http://id.who.int/icd/entity/1266389839> "Changer et maintenir la position du corps"@fr)
 AnnotationAssertion(rdfs:label <http://id.who.int/icd/entity/1266389839> "Changing and maintaining body position"@en)
 
-# Class: <http://id.who.int/icd/entity/1278239861> (Muscles de la cheville et du pied)
+# Class: <http://id.who.int/icd/entity/1278239861> (Músculos del tobillo y del pie)
 
 AnnotationAssertion(rdfs:comment <http://id.who.int/icd/entity/1278239861> "Source for French and Spanish labels: https://icd.who.int/browse/2025-01/icf/ > Info > Spreadsheet files (on French and Spanish browser version)")
 AnnotationAssertion(rdfs:label <http://id.who.int/icd/entity/1278239861> "Muscles de la cheville et du pied"@fr)
@@ -1408,14 +1390,14 @@ AnnotationAssertion(rdfs:label <http://id.who.int/icd/entity/1426641453> "Mélod
 SubClassOf(<http://id.who.int/icd/entity/1426641453> ObjectSomeValuesFrom(obo:PROMOT_2000010 obo:HP_0001618))
 SubClassOf(<http://id.who.int/icd/entity/1426641453> ObjectSomeValuesFrom(obo:RO_0002331 <http://id.who.int/icd/entity/151046878>))
 
-# Class: <http://id.who.int/icd/entity/1432017555> (Fonctions de la pression artérielle)
+# Class: <http://id.who.int/icd/entity/1432017555> (Blood pressure functions)
 
 AnnotationAssertion(rdfs:comment <http://id.who.int/icd/entity/1432017555> "Source for French and Spanish labels: https://icd.who.int/browse/2025-01/icf/ > Info > Spreadsheet files (on French and Spanish browser version)")
 AnnotationAssertion(rdfs:label <http://id.who.int/icd/entity/1432017555> "Blood pressure functions"@en)
 AnnotationAssertion(rdfs:label <http://id.who.int/icd/entity/1432017555> "Fonctions de la pression artérielle"@fr)
 AnnotationAssertion(rdfs:label <http://id.who.int/icd/entity/1432017555> "Funciones de la presión arterial"@es)
 
-# Class: <http://id.who.int/icd/entity/1434015402> (Stretch motor reflex)
+# Class: <http://id.who.int/icd/entity/1434015402> (Reflejo de extensión motora)
 
 AnnotationAssertion(rdfs:comment <http://id.who.int/icd/entity/1434015402> "Source for French and Spanish labels: https://icd.who.int/browse/2025-01/icf/ > Info > Spreadsheet files (on French and Spanish browser version)")
 AnnotationAssertion(rdfs:label <http://id.who.int/icd/entity/1434015402> "Reflejo de extensión motora"@es)
@@ -1442,7 +1424,7 @@ AnnotationAssertion(rdfs:label <http://id.who.int/icd/entity/1438965984> "Additi
 AnnotationAssertion(rdfs:label <http://id.who.int/icd/entity/1438965984> "Estructuras musculoesqueléticas adicionales relacionadas con el movimiento"@es)
 AnnotationAssertion(rdfs:label <http://id.who.int/icd/entity/1438965984> "Structures supplémentaires de l'appareil locomoteur liées au mouvement"@fr)
 
-# Class: <http://id.who.int/icd/entity/1452836727> (Tâches domestiques)
+# Class: <http://id.who.int/icd/entity/1452836727> (Tareas del hogar)
 
 AnnotationAssertion(rdfs:comment <http://id.who.int/icd/entity/1452836727> "Source for French and Spanish labels: https://icd.who.int/browse/2025-01/icf/ > Info > Spreadsheet files (on French and Spanish browser version)")
 AnnotationAssertion(rdfs:label <http://id.who.int/icd/entity/1452836727> "Household tasks"@en)
@@ -1509,7 +1491,7 @@ AnnotationAssertion(rdfs:label <http://id.who.int/icd/entity/1515853559> "Pain i
 SubClassOf(<http://id.who.int/icd/entity/1515853559> ObjectMinCardinality(0 obo:PROMOT_2000010 obo:HP_0003326))
 SubClassOf(<http://id.who.int/icd/entity/1515853559> ObjectMinCardinality(0 obo:PROMOT_2000010 obo:HP_0012531))
 
-# Class: <http://id.who.int/icd/entity/1521707777> (Endurance of muscle groups)
+# Class: <http://id.who.int/icd/entity/1521707777> (Resistencia de grupos de músculos)
 
 AnnotationAssertion(rdfs:comment <http://id.who.int/icd/entity/1521707777> "Source for French and Spanish labels: https://icd.who.int/browse/2025-01/icf/ > Info > Spreadsheet files (on French and Spanish browser version)")
 AnnotationAssertion(rdfs:label <http://id.who.int/icd/entity/1521707777> "Endurance des groupes de muscles"@fr)
@@ -1958,7 +1940,7 @@ SubClassOf(<http://id.who.int/icd/entity/1874889854> ObjectSomeValuesFrom(obo:PR
 SubClassOf(<http://id.who.int/icd/entity/1874889854> ObjectSomeValuesFrom(obo:PROMOT_2000010 <http://id.who.int/icd/entity/841397411>))
 SubClassOf(<http://id.who.int/icd/entity/1874889854> ObjectSomeValuesFrom(obo:PROMOT_2000010 <http://id.who.int/icd/entity/923782542>))
 
-# Class: <http://id.who.int/icd/entity/1889260887> (Increased blood pressure)
+# Class: <http://id.who.int/icd/entity/1889260887> (Augmentation de la pression artérielle)
 
 AnnotationAssertion(rdfs:comment <http://id.who.int/icd/entity/1889260887> "Source for French and Spanish labels: https://icd.who.int/browse/2025-01/icf/ > Info > Spreadsheet files (on French and Spanish browser version)")
 AnnotationAssertion(rdfs:label <http://id.who.int/icd/entity/1889260887> "Augmentation de la pression artérielle"@fr)
@@ -1986,7 +1968,7 @@ AnnotationAssertion(rdfs:label <http://id.who.int/icd/entity/1916167881> "Foncti
 AnnotationAssertion(rdfs:label <http://id.who.int/icd/entity/1916167881> "Funciones sensoriales y dolor"@es)
 AnnotationAssertion(rdfs:label <http://id.who.int/icd/entity/1916167881> "Sensory functions and pain"@en)
 
-# Class: <http://id.who.int/icd/entity/1919311435> (Articulation functions)
+# Class: <http://id.who.int/icd/entity/1919311435> (Fonctions d'articulation)
 
 AnnotationAssertion(rdfs:comment <http://id.who.int/icd/entity/1919311435> "Source for French and Spanish labels: https://icd.who.int/browse/2025-01/icf/ > Info > Spreadsheet files (on French and Spanish browser version)")
 AnnotationAssertion(rdfs:label <http://id.who.int/icd/entity/1919311435> "Articulation functions"@en)
@@ -2283,7 +2265,7 @@ AnnotationAssertion(rdfs:label <http://id.who.int/icd/entity/294830867> "Múscul
 SubClassOf(<http://id.who.int/icd/entity/294830867> ObjectSomeValuesFrom(obo:PROMOT_2000008 obo:HP_0008959))
 SubClassOf(<http://id.who.int/icd/entity/294830867> ObjectSomeValuesFrom(obo:PROMOT_2000010 <http://id.who.int/icd/entity/1789365017>))
 
-# Class: <http://id.who.int/icd/entity/299098423> (Dolor en la cabeza y el cuello)
+# Class: <http://id.who.int/icd/entity/299098423> (Douleur à la tête et au cou)
 
 AnnotationAssertion(rdfs:comment <http://id.who.int/icd/entity/299098423> "Source for French and Spanish labels: https://icd.who.int/browse/2025-01/icf/ > Info > Spreadsheet files (on French and Spanish browser version)")
 AnnotationAssertion(rdfs:label <http://id.who.int/icd/entity/299098423> "Dolor en la cabeza y el cuello"@es)
@@ -2413,7 +2395,7 @@ AnnotationAssertion(rdfs:label <http://id.who.int/icd/entity/412494151> "Courir"
 AnnotationAssertion(rdfs:label <http://id.who.int/icd/entity/412494151> "Running"@en)
 SubClassOf(<http://id.who.int/icd/entity/412494151> ObjectSomeValuesFrom(obo:PROMOT_2000010 obo:HP_0009046))
 
-# Class: <http://id.who.int/icd/entity/426292658> (Estructura del oído interno)
+# Class: <http://id.who.int/icd/entity/426292658> (Structure of inner ear)
 
 AnnotationAssertion(rdfs:comment <http://id.who.int/icd/entity/426292658> "Source for French and Spanish labels: https://icd.who.int/browse/2025-01/icf/ > Info > Spreadsheet files (on French and Spanish browser version)")
 AnnotationAssertion(rdfs:label <http://id.who.int/icd/entity/426292658> "Estructura del oído interno"@es)
@@ -2515,7 +2497,7 @@ SubClassOf(<http://id.who.int/icd/entity/495844982> ObjectSomeValuesFrom(obo:PRO
 SubClassOf(<http://id.who.int/icd/entity/495844982> ObjectSomeValuesFrom(obo:PROMOT_2000010 <http://id.who.int/icd/entity/446199613>))
 SubClassOf(<http://id.who.int/icd/entity/495844982> ObjectSomeValuesFrom(obo:PROMOT_2000010 <http://id.who.int/icd/entity/744367503>))
 
-# Class: <http://id.who.int/icd/entity/521411479> (Structures des systèmes cardio-vasculaire, immunitaire et respiratoire)
+# Class: <http://id.who.int/icd/entity/521411479> (Structures of cardiovascular, immunological and respiratory systems)
 
 AnnotationAssertion(rdfs:comment <http://id.who.int/icd/entity/521411479> "Source for French and Spanish labels: https://icd.who.int/browse/2025-01/icf/ > Info > Spreadsheet files (on French and Spanish browser version)")
 AnnotationAssertion(rdfs:label <http://id.who.int/icd/entity/521411479> "Capítulo 4 estructuras de los sistemas cardiovascular, inmunológico y respiratorio"@es)
@@ -2652,7 +2634,7 @@ AnnotationAssertion(rdfs:label <http://id.who.int/icd/entity/621727843> "Sensati
 AnnotationAssertion(rdfs:label <http://id.who.int/icd/entity/621727843> "Sensation of muscle spasm"@en)
 SubClassOf(<http://id.who.int/icd/entity/621727843> ObjectSomeValuesFrom(obo:PROMOT_2000010 obo:HP_0003394))
 
-# Class: <http://id.who.int/icd/entity/623565657> (Maintaining a sitting position)
+# Class: <http://id.who.int/icd/entity/623565657> (Permanecer sentado)
 
 AnnotationAssertion(rdfs:comment <http://id.who.int/icd/entity/623565657> "Source for French and Spanish labels: https://icd.who.int/browse/2025-01/icf/ > Info > Spreadsheet files (on French and Spanish browser version)")
 AnnotationAssertion(rdfs:label <http://id.who.int/icd/entity/623565657> "Maintaining a sitting position"@en)
@@ -2780,7 +2762,7 @@ AnnotationAssertion(rdfs:label <http://id.who.int/icd/entity/735194884> "Experie
 AnnotationAssertion(rdfs:label <http://id.who.int/icd/entity/735194884> "Perceptions sensorielles intentionnelles"@fr)
 AnnotationAssertion(rdfs:label <http://id.who.int/icd/entity/735194884> "Purposeful sensory experiences"@en)
 
-# Class: <http://id.who.int/icd/entity/744367503> (Funciones del sistema respiratorio)
+# Class: <http://id.who.int/icd/entity/744367503> (Fonctions du système respiratoire)
 
 AnnotationAssertion(rdfs:comment <http://id.who.int/icd/entity/744367503> "Source for French and Spanish labels: https://icd.who.int/browse/2025-01/icf/ > Info > Spreadsheet files (on French and Spanish browser version)")
 AnnotationAssertion(rdfs:label <http://id.who.int/icd/entity/744367503> "Fonctions du système respiratoire"@fr)
@@ -2873,7 +2855,7 @@ AnnotationAssertion(rdfs:label <http://id.who.int/icd/entity/848997900> "Fonctio
 AnnotationAssertion(rdfs:label <http://id.who.int/icd/entity/848997900> "Funciones visuales"@es)
 AnnotationAssertion(rdfs:label <http://id.who.int/icd/entity/848997900> "Seeing functions"@en)
 
-# Class: <http://id.who.int/icd/entity/850289698> (Fonctions des systèmes digestif, métabolique et endocrinien)
+# Class: <http://id.who.int/icd/entity/850289698> (Funciones de los sistemas digestivo, metabólico y endocrino)
 
 AnnotationAssertion(rdfs:comment <http://id.who.int/icd/entity/850289698> "Source for French and Spanish labels: https://icd.who.int/browse/2025-01/icf/ > Info > Spreadsheet files (on French and Spanish browser version)")
 AnnotationAssertion(rdfs:label <http://id.who.int/icd/entity/850289698> "Fonctions des systèmes digestif, métabolique et endocrinien"@fr)
@@ -2927,7 +2909,7 @@ AnnotationAssertion(rdfs:label <http://id.who.int/icd/entity/862066979> "Weight 
 SubClassOf(<http://id.who.int/icd/entity/862066979> ObjectSomeValuesFrom(obo:PROMOT_2000010 obo:HP_0004325))
 SubClassOf(<http://id.who.int/icd/entity/862066979> ObjectSomeValuesFrom(obo:RO_0002331 <http://id.who.int/icd/entity/583874291>))
 
-# Class: <http://id.who.int/icd/entity/870135798> (Poumons)
+# Class: <http://id.who.int/icd/entity/870135798> (Pulmones)
 
 AnnotationAssertion(rdfs:comment <http://id.who.int/icd/entity/870135798> "Source for French and Spanish labels: https://icd.who.int/browse/2025-01/icf/ > Info > Spreadsheet files (on French and Spanish browser version)")
 AnnotationAssertion(rdfs:label <http://id.who.int/icd/entity/870135798> "Lungs"@en)
@@ -3257,7 +3239,6 @@ SubClassOf(obo:FMA_58274 ObjectExactCardinality(1 obo:PROMOT_2000009 <http://id.
 
 AnnotationAssertion(rdfs:label obo:FMA_62955 "Anatomical entity"@en)
 SubClassOf(obo:FMA_62955 obo:BFO_0000040)
-SubClassOf(obo:FMA_62955 ObjectSomeValuesFrom(<http://semanticscience.org/resource/SIO_000001> <http://id.who.int/icd/entity/1626363729>))
 
 # Class: obo:FMA_64916 (Thenar muscle)
 
@@ -3305,14 +3286,18 @@ SubClassOf(obo:HP_0000005 obo:BFO_0000019)
 
 AnnotationAssertion(obo:PROMOT_1000001 obo:HP_0000006 "Congenital myasthenic syndrom HPO DB associations")
 AnnotationAssertion(obo:PROMOT_1000001 obo:HP_0000006 "Congenital myopathy HPO KB associations")
+AnnotationAssertion(obo:PROMOT_1000001 obo:HP_0000006 "EURO-NMD")
 AnnotationAssertion(obo:PROMOT_1000001 obo:HP_0000006 "Oculopharyngeal muscular dystrophy HPO KB associations")
+AnnotationAssertion(rdfs:comment obo:HP_0000006 "[PROMOT NOTE: derived from EURO-NMD] Atalia A et al., EURO-NMD registry: federated FAIR infrastructure, innovative technologies and concepts of a patient-centred registry for rare neuromuscular disorders. Orphanet J Rare Dis. 2024 Feb 14;19(1):66. doi: 10.1186/s13023-024-03059-3. PMID: 38355534; PMCID: PMC10865673.")
 AnnotationAssertion(rdfs:label obo:HP_0000006 "Autosomal dominant inheritance"@en)
 
 # Class: obo:HP_0000007 (Autosomal recessive inheritance)
 
 AnnotationAssertion(obo:PROMOT_1000001 obo:HP_0000007 "Congenital myasthenic syndrom HPO DB associations")
 AnnotationAssertion(obo:PROMOT_1000001 obo:HP_0000007 "Congenital myopathy HPO KB associations")
+AnnotationAssertion(obo:PROMOT_1000001 obo:HP_0000007 "EURO-NMD")
 AnnotationAssertion(obo:PROMOT_1000001 obo:HP_0000007 "Oculopharyngeal muscular dystrophy Medical expert")
+AnnotationAssertion(rdfs:comment obo:HP_0000007 "[PROMOT NOTE: derived from EURO-NMD] Atalia A et al., EURO-NMD registry: federated FAIR infrastructure, innovative technologies and concepts of a patient-centred registry for rare neuromuscular disorders. Orphanet J Rare Dis. 2024 Feb 14;19(1):66. doi: 10.1186/s13023-024-03059-3. PMID: 38355534; PMCID: PMC10865673.")
 AnnotationAssertion(rdfs:label obo:HP_0000007 "Autosomal recessive inheritance"@en)
 
 # Class: obo:HP_0000028 (Cryptorchidism)
@@ -3324,6 +3309,10 @@ SubClassOf(obo:HP_0000028 ObjectSomeValuesFrom(obo:PROMOT_2000005 <http://id.who
 
 # Class: obo:HP_0000118 (Phenotypic abnormality)
 
+AnnotationAssertion(obo:PROMOT_1000001 obo:HP_0000118 "RD-CDM")
+AnnotationAssertion(oboInOwl:hasDbXref obo:HP_0000118 "http://snomed.info/id/8116006")
+AnnotationAssertion(rdfs:comment obo:HP_0000118 "[PROMOT NOTE: derived from RD-CDM] Graefe, A.S.L., Hübner, M.R., Rehburg, F. et al. An ontology-based rare disease common data model harmonising international registries, FHIR, and Phenopackets. Sci Data 12, 234 (2025). https://doi.org/10.1038/s41597-025-04558-z")
+AnnotationAssertion(rdfs:label obo:HP_0000118 "Phenotypic abnormality"@en)
 SubClassOf(obo:HP_0000118 obo:PROMOT_0000026)
 SubClassOf(obo:HP_0000118 ObjectSomeValuesFrom(<http://semanticscience.org/resource/SIO_000217> obo:PROMOT_0000084))
 
@@ -3331,10 +3320,10 @@ SubClassOf(obo:HP_0000118 ObjectSomeValuesFrom(<http://semanticscience.org/resou
 
 AnnotationAssertion(obo:PROMOT_1000001 obo:HP_0000183 "Oculopharyngeal muscular dystrophy Survey")
 AnnotationAssertion(rdfs:label obo:HP_0000183 "Tongue muscle weakness"@en)
-SubClassOf(obo:HP_0000183 ObjectSomeValuesFrom(obo:PROMOT_2000005 <http://id.who.int/icd/entity/1328675264>))
-SubClassOf(obo:HP_0000183 ObjectSomeValuesFrom(obo:PROMOT_2000005 <http://id.who.int/icd/entity/151046878>))
 SubClassOf(obo:HP_0000183 ObjectSomeValuesFrom(obo:PROMOT_2000005 <http://id.who.int/icd/entity/1789365017>))
-SubClassOf(obo:HP_0000183 ObjectSomeValuesFrom(obo:PROMOT_2000005 <http://id.who.int/icd/entity/553784299>))
+SubClassOf(obo:HP_0000183 ObjectMinCardinality(0 obo:PROMOT_2000005 <http://id.who.int/icd/entity/1328675264>))
+SubClassOf(obo:HP_0000183 ObjectMinCardinality(0 obo:PROMOT_2000005 <http://id.who.int/icd/entity/151046878>))
+SubClassOf(obo:HP_0000183 ObjectMinCardinality(0 obo:PROMOT_2000005 <http://id.who.int/icd/entity/553784299>))
 
 # Class: obo:HP_0000218 (High palate)
 
@@ -3492,14 +3481,14 @@ AnnotationAssertion(obo:PROMOT_1000001 obo:HP_0001270 "Congenital myasthenic syn
 AnnotationAssertion(obo:PROMOT_1000001 obo:HP_0001270 "Congenital myopathy HPO KB associations")
 AnnotationAssertion(obo:PROMOT_1000001 obo:HP_0001270 "Congenital myopathy Scoping review")
 AnnotationAssertion(rdfs:label obo:HP_0001270 "Motor delay"@en)
-SubClassOf(obo:HP_0001270 ObjectSomeValuesFrom(obo:PROMOT_2000005 <http://id.who.int/icd/entity/1462755743>))
-SubClassOf(obo:HP_0001270 ObjectSomeValuesFrom(obo:PROMOT_2000005 <http://id.who.int/icd/entity/1474003417>))
-SubClassOf(obo:HP_0001270 ObjectSomeValuesFrom(obo:PROMOT_2000005 <http://id.who.int/icd/entity/1550548595>))
-SubClassOf(obo:HP_0001270 ObjectSomeValuesFrom(obo:PROMOT_2000005 <http://id.who.int/icd/entity/1851215071>))
-SubClassOf(obo:HP_0001270 ObjectSomeValuesFrom(obo:PROMOT_2000005 <http://id.who.int/icd/entity/485719194>))
-SubClassOf(obo:HP_0001270 ObjectSomeValuesFrom(obo:PROMOT_2000005 <http://id.who.int/icd/entity/623565657>))
-SubClassOf(obo:HP_0001270 ObjectSomeValuesFrom(obo:PROMOT_2000005 <http://id.who.int/icd/entity/855039967>))
-SubClassOf(obo:HP_0001270 ObjectSomeValuesFrom(obo:PROMOT_2000005 <http://id.who.int/icd/entity/919003335>))
+SubClassOf(obo:HP_0001270 ObjectMinCardinality(0 obo:PROMOT_2000005 <http://id.who.int/icd/entity/1462755743>))
+SubClassOf(obo:HP_0001270 ObjectMinCardinality(0 obo:PROMOT_2000005 <http://id.who.int/icd/entity/1474003417>))
+SubClassOf(obo:HP_0001270 ObjectMinCardinality(0 obo:PROMOT_2000005 <http://id.who.int/icd/entity/1550548595>))
+SubClassOf(obo:HP_0001270 ObjectMinCardinality(0 obo:PROMOT_2000005 <http://id.who.int/icd/entity/1851215071>))
+SubClassOf(obo:HP_0001270 ObjectMinCardinality(0 obo:PROMOT_2000005 <http://id.who.int/icd/entity/485719194>))
+SubClassOf(obo:HP_0001270 ObjectMinCardinality(0 obo:PROMOT_2000005 <http://id.who.int/icd/entity/623565657>))
+SubClassOf(obo:HP_0001270 ObjectMinCardinality(0 obo:PROMOT_2000005 <http://id.who.int/icd/entity/855039967>))
+SubClassOf(obo:HP_0001270 ObjectMinCardinality(0 obo:PROMOT_2000005 <http://id.who.int/icd/entity/919003335>))
 
 # Class: obo:HP_0001284 (Areflexia)
 
@@ -3616,12 +3605,12 @@ AnnotationAssertion(obo:PROMOT_1000001 obo:HP_0001618 "Congenital myopathy Scopi
 AnnotationAssertion(obo:PROMOT_1000001 obo:HP_0001618 "Oculopharyngeal muscular dystrophy HPO KB associations")
 AnnotationAssertion(obo:PROMOT_1000001 obo:HP_0001618 "Oculopharyngeal muscular dystrophy Survey")
 AnnotationAssertion(rdfs:label obo:HP_0001618 "Dysphonia"@en)
-SubClassOf(obo:HP_0001618 ObjectSomeValuesFrom(obo:PROMOT_2000005 <http://id.who.int/icd/entity/1034220517>))
-SubClassOf(obo:HP_0001618 ObjectSomeValuesFrom(obo:PROMOT_2000005 <http://id.who.int/icd/entity/1109440237>))
-SubClassOf(obo:HP_0001618 ObjectSomeValuesFrom(obo:PROMOT_2000005 <http://id.who.int/icd/entity/1426641453>))
 SubClassOf(obo:HP_0001618 ObjectSomeValuesFrom(obo:PROMOT_2000005 <http://id.who.int/icd/entity/151046878>))
-SubClassOf(obo:HP_0001618 ObjectSomeValuesFrom(obo:PROMOT_2000005 <http://id.who.int/icd/entity/2069371821>))
 SubClassOf(obo:HP_0001618 ObjectSomeValuesFrom(obo:PROMOT_2000005 <http://id.who.int/icd/entity/712570723>))
+SubClassOf(obo:HP_0001618 ObjectMinCardinality(0 obo:PROMOT_2000005 <http://id.who.int/icd/entity/1034220517>))
+SubClassOf(obo:HP_0001618 ObjectMinCardinality(0 obo:PROMOT_2000005 <http://id.who.int/icd/entity/1109440237>))
+SubClassOf(obo:HP_0001618 ObjectMinCardinality(0 obo:PROMOT_2000005 <http://id.who.int/icd/entity/1426641453>))
+SubClassOf(obo:HP_0001618 ObjectMinCardinality(0 obo:PROMOT_2000005 <http://id.who.int/icd/entity/2069371821>))
 
 # Class: obo:HP_0001622 (Premature birth)
 
@@ -5124,7 +5113,7 @@ AnnotationAssertion(oboInOwl:hasDbXref obo:IAO_0020000 "http://snomed.info/id/42
 AnnotationAssertion(rdfs:comment obo:IAO_0020000 "[derived from RD-CDM] Graefe, A.S.L., Hübner, M.R., Rehburg, F. et al. An ontology-based rare disease common data model harmonising international registries, FHIR, and Phenopackets. Sci Data 12, 234 (2025). https://doi.org/10.1038/s41597-025-04558-z")
 AnnotationAssertion(rdfs:label obo:IAO_0020000 "identifier"@en)
 
-# Class: obo:PROMOT_0000001 (mutación genética)
+# Class: obo:PROMOT_0000001 (mutation génetique)
 
 AnnotationAssertion(Annotation(obo:IAO_0000119 "GENO:0000492") obo:IAO_0000115 obo:PROMOT_0000001 "A sequence alteration that is very rare allele in a population (typically <1%)."@en)
 AnnotationAssertion(obo:IAO_0000115 obo:PROMOT_0000001 "Una alteración genética que es rara en una población."@es)
@@ -5163,7 +5152,7 @@ AnnotationAssertion(rdfs:label obo:PROMOT_0000002 "mutación del gen PAPBN1"@es)
 AnnotationAssertion(rdfs:label obo:PROMOT_0000002 "mutation du gène PABPN1"@fr)
 AnnotationAssertion(rdfs:seeAlso obo:PROMOT_0000002 obo:NCIT_C204162)
 SubClassOf(obo:PROMOT_0000002 obo:PROMOT_0000001)
-SubClassOf(obo:PROMOT_0000002 ObjectMinCardinality(0 obo:RO_0004013 <http://www.orpha.net/ORDO/Orphanet_270>))
+SubClassOf(obo:PROMOT_0000002 ObjectSomeValuesFrom(obo:RO_0004013 <http://www.orpha.net/ORDO/Orphanet_270>))
 
 # Class: obo:PROMOT_0000003 (mutación del gen RYR1)
 
@@ -5370,29 +5359,29 @@ EquivalentClasses(obo:PROMOT_0000016 ObjectIntersectionOf(<http://id.who.int/icd
 SubClassOf(obo:PROMOT_0000016 <http://id.who.int/icd/entity/1626363729>)
 SubClassOf(obo:PROMOT_0000016 ObjectSomeValuesFrom(obo:PROMOT_2000008 obo:HP_0000118))
 
-# Class: obo:PROMOT_0000017 (Phenotypically related body function)
+# Class: obo:PROMOT_0000017 (Body function related phenotype)
 
-AnnotationAssertion(obo:IAO_0000115 obo:PROMOT_0000017 "A body function related to a phenotype such that the body function is impacted by the phenotype existence."@en)
-AnnotationAssertion(obo:IAO_0000115 obo:PROMOT_0000017 "Une fonction organique qui peut être affectée par un phénotype."@fr)
+AnnotationAssertion(obo:IAO_0000115 obo:PROMOT_0000017 "A phenotype that affects a body function."@en)
+AnnotationAssertion(obo:IAO_0000115 obo:PROMOT_0000017 "Un phénotype qui affecte une fonction organique."@fr)
 AnnotationAssertion(obo:IAO_0000117 obo:PROMOT_0000017 "Paul Fabry, https://orcid.org/0009-0000-5160-7927")
 AnnotationAssertion(rdfs:comment obo:PROMOT_0000017 "(JP: unsure about definition)")
-AnnotationAssertion(rdfs:label obo:PROMOT_0000017 "Fonction organique liée à un phénotype"@fr)
-AnnotationAssertion(rdfs:label obo:PROMOT_0000017 "Phenotypically related body function"@en)
-AnnotationAssertion(rdfs:label obo:PROMOT_0000017 "función corporala relacionada con un fenotipo"@es)
-EquivalentClasses(obo:PROMOT_0000017 ObjectIntersectionOf(<http://id.who.int/icd/entity/567313968> DataSomeValuesFrom(obo:PROMOT_2000006 obo:HP_0000118)))
-SubClassOf(obo:PROMOT_0000017 <http://id.who.int/icd/entity/567313968>)
-SubClassOf(obo:PROMOT_0000017 DataSomeValuesFrom(obo:PROMOT_2000006 obo:HP_0000118))
+AnnotationAssertion(rdfs:label obo:PROMOT_0000017 "Body function related phenotype"@en)
+AnnotationAssertion(rdfs:label obo:PROMOT_0000017 "Phénotype lié à une fonction organique"@fr)
+EquivalentClasses(obo:PROMOT_0000017 ObjectIntersectionOf(obo:HP_0000118 ObjectSomeValuesFrom(obo:PROMOT_2000005 <http://id.who.int/icd/entity/567313968>)))
+SubClassOf(obo:PROMOT_0000017 obo:HP_0000118)
+SubClassOf(obo:PROMOT_0000017 ObjectSomeValuesFrom(obo:PROMOT_2000005 <http://id.who.int/icd/entity/567313968>))
 
-# Class: obo:PROMOT_0000018 (Phenotypically related activity or participation)
+# Class: obo:PROMOT_0000018 (Phénotype lié à une activité ou une participation)
 
-AnnotationAssertion(obo:IAO_0000115 obo:PROMOT_0000018 "An activity or participation related to a phenotype such that the activity or the participation is impacted by the phenotype existence."@en)
+AnnotationAssertion(obo:IAO_0000115 obo:PROMOT_0000018 "A phenotype that affects an activity or a participation."@en)
+AnnotationAssertion(obo:IAO_0000115 obo:PROMOT_0000018 "Un phénotype qui affecte une activité ou une participation."@fr)
 AnnotationAssertion(obo:IAO_0000117 obo:PROMOT_0000018 "Paul Fabry, https://orcid.org/0009-0000-5160-7927")
 AnnotationAssertion(rdfs:comment obo:PROMOT_0000018 "(JP: unsure about definition)")
-AnnotationAssertion(rdfs:label obo:PROMOT_0000018 "Fonction organique liée à un phénotype"@fr)
-AnnotationAssertion(rdfs:label obo:PROMOT_0000018 "Phenotypically related activity or participation"@en)
-EquivalentClasses(obo:PROMOT_0000018 ObjectIntersectionOf(<http://id.who.int/icd/entity/1394728112> DataSomeValuesFrom(obo:PROMOT_2000006 obo:HP_0000118)))
-SubClassOf(obo:PROMOT_0000018 <http://id.who.int/icd/entity/1394728112>)
-SubClassOf(obo:PROMOT_0000018 DataSomeValuesFrom(obo:PROMOT_2000006 obo:HP_0000118))
+AnnotationAssertion(rdfs:label obo:PROMOT_0000018 "Activity or participation related phenotype"@en)
+AnnotationAssertion(rdfs:label obo:PROMOT_0000018 "Phénotype lié à une activité ou une participation"@fr)
+EquivalentClasses(obo:PROMOT_0000018 ObjectIntersectionOf(obo:HP_0000118 ObjectSomeValuesFrom(obo:PROMOT_2000005 <http://id.who.int/icd/entity/1394728112>)))
+SubClassOf(obo:PROMOT_0000018 obo:HP_0000118)
+SubClassOf(obo:PROMOT_0000018 ObjectSomeValuesFrom(obo:PROMOT_2000005 <http://id.who.int/icd/entity/1394728112>))
 
 # Class: obo:PROMOT_0000019 (Fonction organique liée à une activité ou une participation)
 
@@ -5439,7 +5428,7 @@ EquivalentClasses(obo:PROMOT_0000022 ObjectIntersectionOf(<http://snomed.info/id
 SubClassOf(obo:PROMOT_0000022 <http://snomed.info/id/128927009>)
 SubClassOf(obo:PROMOT_0000022 ObjectSomeValuesFrom(obo:PROMOT_2000002 <http://id.who.int/icd/entity/1626363729>))
 
-# Class: obo:PROMOT_0000023 (Activity or participation related procedure)
+# Class: obo:PROMOT_0000023 (Procédure liée à une activité ou une participation)
 
 AnnotationAssertion(obo:IAO_0000115 obo:PROMOT_0000023 "A procedure that can measure an activity or a participation."@en)
 AnnotationAssertion(obo:IAO_0000115 obo:PROMOT_0000023 "Une procédure qui évalue une activité ou une participation."@fr)
@@ -5457,9 +5446,9 @@ AnnotationAssertion(obo:IAO_0000115 obo:PROMOT_0000024 "Une entité anatomique q
 AnnotationAssertion(obo:IAO_0000117 obo:PROMOT_0000024 "https://orcid.org/0009-0000-5160-7927")
 AnnotationAssertion(rdfs:label obo:PROMOT_0000024 "Body structure related anatomical entity"@en)
 AnnotationAssertion(rdfs:label obo:PROMOT_0000024 "Entité anatomique liée à une structure anatomique"@fr)
-EquivalentClasses(obo:PROMOT_0000024 ObjectIntersectionOf(obo:FMA_62955 ObjectSomeValuesFrom(obo:PROMOT_2000009 <http://id.who.int/icd/entity/1626363729>)))
+EquivalentClasses(obo:PROMOT_0000024 ObjectIntersectionOf(obo:FMA_62955 ObjectSomeValuesFrom(obo:PROMOT_2000010 <http://id.who.int/icd/entity/1626363729>)))
 SubClassOf(obo:PROMOT_0000024 obo:FMA_62955)
-SubClassOf(obo:PROMOT_0000024 ObjectSomeValuesFrom(obo:PROMOT_2000009 <http://id.who.int/icd/entity/1626363729>))
+SubClassOf(obo:PROMOT_0000024 ObjectSomeValuesFrom(obo:PROMOT_2000010 <http://id.who.int/icd/entity/1626363729>))
 
 # Class: obo:PROMOT_0000025 (Paciente)
 
@@ -5476,9 +5465,9 @@ SubClassOf(obo:PROMOT_0000025 <http://semanticscience.org/resource/SIO_000485>)
 SubClassOf(obo:PROMOT_0000025 ObjectSomeValuesFrom(obo:PROMOT_2000004 obo:PROMOT_0000001))
 SubClassOf(obo:PROMOT_0000025 ObjectSomeValuesFrom(obo:RO_0002200 obo:HP_0000118))
 SubClassOf(obo:PROMOT_0000025 ObjectSomeValuesFrom(<http://semanticscience.org/resource/SIO_000217> <http://semanticscience.org/resource/SIO_010057>))
+SubClassOf(obo:PROMOT_0000025 ObjectMinCardinality(0 obo:PROMOT_2000012 <http://snomed.info/id/257192006>))
+SubClassOf(obo:PROMOT_0000025 ObjectMinCardinality(0 obo:PROMOT_2000012 <http://snomed.info/id/360296002>))
 SubClassOf(obo:PROMOT_0000025 ObjectMinCardinality(0 <http://semanticscience.org/resource/SIO_000001> <http://snomed.info/id/125679009>))
-SubClassOf(obo:PROMOT_0000025 DataMinCardinality(0 obo:PROMOT_2000012 <http://snomed.info/id/257192006>))
-SubClassOf(obo:PROMOT_0000025 DataMinCardinality(0 obo:PROMOT_2000012 <http://snomed.info/id/360296002>))
 
 # Class: obo:PROMOT_0000026 (abnormal disposition)
 
@@ -5502,6 +5491,7 @@ AnnotationAssertion(rdfs:label obo:PROMOT_0000027 "declaración sobre una entida
 AnnotationAssertion(rdfs:label obo:PROMOT_0000027 "statement"@en)
 AnnotationAssertion(rdfs:label obo:PROMOT_0000027 "énoncé"@fr)
 SubClassOf(obo:PROMOT_0000027 obo:IAO_0000030)
+SubClassOf(obo:PROMOT_0000027 ObjectSomeValuesFrom(obo:RO_0002351 obo:IAO_0000030))
 
 # Class: obo:PROMOT_0000028 (statement about a human)
 
@@ -5515,11 +5505,11 @@ SubClassOf(obo:PROMOT_0000028 obo:PROMOT_0000027)
 SubClassOf(obo:PROMOT_0000028 ObjectSomeValuesFrom(obo:RO_0002351 obo:PROMOT_0000042))
 SubClassOf(obo:PROMOT_0000028 ObjectSomeValuesFrom(obo:RO_0002351 obo:PROMOT_0000044))
 SubClassOf(obo:PROMOT_0000028 ObjectMinCardinality(0 obo:RO_0002351 <http://snomed.info/id/184305005>))
-SubClassOf(obo:PROMOT_0000028 ObjectExactCardinality(1 obo:RO_0002351 obo:PROMOT_0000067))
 SubClassOf(obo:PROMOT_0000028 ObjectExactCardinality(1 obo:RO_0002351 <http://semanticscience.org/resource/SIO_000485>))
 SubClassOf(obo:PROMOT_0000028 ObjectMaxCardinality(1 obo:RO_0002351 obo:PROMOT_0000037))
 SubClassOf(obo:PROMOT_0000028 ObjectMaxCardinality(1 obo:RO_0002351 obo:PROMOT_0000041))
 SubClassOf(obo:PROMOT_0000028 ObjectMaxCardinality(1 obo:RO_0002351 obo:PROMOT_0000043))
+SubClassOf(obo:PROMOT_0000028 ObjectMaxCardinality(1 obo:RO_0002351 obo:PROMOT_0000067))
 SubClassOf(obo:PROMOT_0000028 ObjectMaxCardinality(1 obo:RO_0002351 <http://snomed.info/id/184099003>))
 SubClassOf(obo:PROMOT_0000028 ObjectMaxCardinality(1 obo:RO_0002351 <http://snomed.info/id/399753006>))
 
@@ -5600,8 +5590,8 @@ AnnotationAssertion(rdfs:label obo:PROMOT_0000032 "declaración sobre un consent
 AnnotationAssertion(rdfs:label obo:PROMOT_0000032 "statement about a consent"@en)
 AnnotationAssertion(rdfs:label obo:PROMOT_0000032 "énoncé concernant un consentement"@fr)
 SubClassOf(obo:PROMOT_0000032 obo:PROMOT_0000027)
+SubClassOf(obo:PROMOT_0000032 ObjectSomeValuesFrom(obo:RO_0002351 obo:PROMOT_0000099))
 SubClassOf(obo:PROMOT_0000032 ObjectExactCardinality(1 obo:RO_0002351 obo:PROMOT_0000092))
-SubClassOf(obo:PROMOT_0000032 ObjectExactCardinality(1 obo:RO_0002351 obo:PROMOT_0000099))
 SubClassOf(obo:PROMOT_0000032 ObjectExactCardinality(1 obo:RO_0002351 obo:PROMOT_0000116))
 
 # Class: obo:PROMOT_0000033 (Date)
@@ -5969,7 +5959,7 @@ AnnotationAssertion(rdfs:label obo:PROMOT_0000063 "âge juvénile"@fr)
 AnnotationAssertion(rdfs:seeAlso obo:PROMOT_0000063 obo:HP_0003621)
 SubClassOf(obo:PROMOT_0000063 obo:PROMOT_0000060)
 
-# Class: obo:PROMOT_0000064 (edad perimenopáusica)
+# Class: obo:PROMOT_0000064 (âge périménopausal)
 
 AnnotationAssertion(Annotation(obo:IAO_0000119 "HP:6000314") obo:IAO_0000115 obo:PROMOT_0000064 "Age category including people undergoing perimenopause, i.e. the period of life shortly before the occurence of the menopause."@en)
 AnnotationAssertion(obo:IAO_0000115 obo:PROMOT_0000064 "Une tranche d’âge contenant tous les âges associés à la périménopause."@fr)
@@ -6229,7 +6219,7 @@ AnnotationAssertion(rdfs:label obo:PROMOT_0000086 "Unrecorded handedness"@en)
 AnnotationAssertion(rdfs:label obo:PROMOT_0000086 "état de santé non renseigné"@fr)
 SubClassOf(obo:PROMOT_0000086 <http://snomed.info/id/709880000>)
 
-# Class: obo:PROMOT_0000087 (presence qualifier)
+# Class: obo:PROMOT_0000087 (Qualité qualifiant l’existance d’une entité)
 
 AnnotationAssertion(obo:IAO_0000115 obo:PROMOT_0000087 "A qualifier for stating the presence, absence or uncertainty of a entity instance (e.g. a phenotype instance)."@en)
 AnnotationAssertion(obo:IAO_0000115 obo:PROMOT_0000087 "Un qualité qui statue de la présence, de l’absence ou de l’incertitude de l’existence d’un phénotype."@fr)
@@ -6292,6 +6282,7 @@ AnnotationAssertion(obo:IAO_0000117 obo:PROMOT_0000092 "https://orcid.org/0009-0
 AnnotationAssertion(obo:PROMOT_1000001 obo:PROMOT_0000092 "EURO-NMD")
 AnnotationAssertion(obo:PROMOT_1000001 obo:PROMOT_0000092 "RD-CDM")
 AnnotationAssertion(oboInOwl:hasDbXref obo:PROMOT_0000092 "http://snomed.info/id/309370004")
+AnnotationAssertion(rdfs:comment obo:PROMOT_0000092 "Ongoing discussion")
 AnnotationAssertion(rdfs:comment obo:PROMOT_0000092 "[derived from EURO-NMD] Atalia A et al., EURO-NMD registry: federated FAIR infrastructure, innovative technologies and concepts of a patient-centred registry for rare neuromuscular disorders. Orphanet J Rare Dis. 2024 Feb 14;19(1):66. doi: 10.1186/s13023-024-03059-3. PMID: 38355534; PMCID: PMC10865673.")
 AnnotationAssertion(rdfs:comment obo:PROMOT_0000092 "[derived from RD-CDM] Graefe, A.S.L., Hübner, M.R., Rehburg, F. et al. An ontology-based rare disease common data model harmonising international registries, FHIR, and Phenopackets. Sci Data 12, 234 (2025). https://doi.org/10.1038/s41597-025-04558-z")
 AnnotationAssertion(rdfs:label obo:PROMOT_0000092 "Consent status"@en)
@@ -6305,7 +6296,7 @@ AnnotationAssertion(obo:IAO_0000115 obo:PROMOT_0000093 "A status of a consent th
 AnnotationAssertion(obo:IAO_0000115 obo:PROMOT_0000093 "Le statut d’un consentement qui est en attente de définition."@fr)
 AnnotationAssertion(obo:IAO_0000117 obo:PROMOT_0000093 "https://orcid.org/0009-0000-5160-7927")
 AnnotationAssertion(obo:PROMOT_1000001 obo:PROMOT_0000093 "RD-CDM")
-AnnotationAssertion(rdfs:comment obo:PROMOT_0000093 "HL7 FHIR")
+AnnotationAssertion(rdfs:comment obo:PROMOT_0000093 "Ongoing discussion")
 AnnotationAssertion(rdfs:comment obo:PROMOT_0000093 "[derived from RD-CDM] Graefe, A.S.L., Hübner, M.R., Rehburg, F. et al. An ontology-based rare disease common data model harmonising international registries, FHIR, and Phenopackets. Sci Data 12, 234 (2025). https://doi.org/10.1038/s41597-025-04558-z")
 AnnotationAssertion(rdfs:label obo:PROMOT_0000093 "En attente"@fr)
 AnnotationAssertion(rdfs:label obo:PROMOT_0000093 "Pending"@en)
@@ -6317,7 +6308,7 @@ AnnotationAssertion(obo:IAO_0000115 obo:PROMOT_0000094 "A status of a consent th
 AnnotationAssertion(obo:IAO_0000115 obo:PROMOT_0000094 "Le statut d’un consentement qui a été proposé à une personne pour son accord ou son refus."@fr)
 AnnotationAssertion(obo:IAO_0000117 obo:PROMOT_0000094 "https://orcid.org/0009-0000-5160-7927")
 AnnotationAssertion(obo:PROMOT_1000001 obo:PROMOT_0000094 "RD-CDM")
-AnnotationAssertion(rdfs:comment obo:PROMOT_0000094 "HL7 FHIR")
+AnnotationAssertion(rdfs:comment obo:PROMOT_0000094 "Ongoing discussion")
 AnnotationAssertion(rdfs:comment obo:PROMOT_0000094 "[derived from RD-CDM] Graefe, A.S.L., Hübner, M.R., Rehburg, F. et al. An ontology-based rare disease common data model harmonising international registries, FHIR, and Phenopackets. Sci Data 12, 234 (2025). https://doi.org/10.1038/s41597-025-04558-z")
 AnnotationAssertion(rdfs:label obo:PROMOT_0000094 "Proposed"@en)
 AnnotationAssertion(rdfs:label obo:PROMOT_0000094 "Proposé"@fr)
@@ -6358,7 +6349,7 @@ AnnotationAssertion(obo:IAO_0000115 obo:PROMOT_0000097 "Le statut d’un consent
 AnnotationAssertion(obo:IAO_0000117 obo:PROMOT_0000097 "https://orcid.org/0009-0000-5160-7927")
 AnnotationAssertion(obo:PROMOT_1000001 obo:PROMOT_0000097 "RD-CDM")
 AnnotationAssertion(oboInOwl:hasDbXref obo:PROMOT_0000097 "http://snomed.info/id/73425007")
-AnnotationAssertion(rdfs:comment obo:PROMOT_0000097 "HL7 FHIR")
+AnnotationAssertion(rdfs:comment obo:PROMOT_0000097 "Ongoing discussion")
 AnnotationAssertion(rdfs:comment obo:PROMOT_0000097 "[derived from RD-CDM] Graefe, A.S.L., Hübner, M.R., Rehburg, F. et al. An ontology-based rare disease common data model harmonising international registries, FHIR, and Phenopackets. Sci Data 12, 234 (2025). https://doi.org/10.1038/s41597-025-04558-z")
 AnnotationAssertion(rdfs:label obo:PROMOT_0000097 "Inactif"@fr)
 AnnotationAssertion(rdfs:label obo:PROMOT_0000097 "Inactive"@en)
@@ -6371,7 +6362,7 @@ AnnotationAssertion(obo:IAO_0000115 obo:PROMOT_0000098 "Le statut d’un consent
 AnnotationAssertion(obo:IAO_0000117 obo:PROMOT_0000098 "https://orcid.org/0009-0000-5160-7927")
 AnnotationAssertion(obo:PROMOT_1000001 obo:PROMOT_0000098 "RD-CDM")
 AnnotationAssertion(oboInOwl:hasDbXref obo:PROMOT_0000098 "http://snomed.info/id/723510000")
-AnnotationAssertion(rdfs:comment obo:PROMOT_0000098 "HL7 FHIR")
+AnnotationAssertion(rdfs:comment obo:PROMOT_0000098 "Ongoing discussion")
 AnnotationAssertion(rdfs:comment obo:PROMOT_0000098 "[derived from RD-CDM] Graefe, A.S.L., Hübner, M.R., Rehburg, F. et al. An ontology-based rare disease common data model harmonising international registries, FHIR, and Phenopackets. Sci Data 12, 234 (2025). https://doi.org/10.1038/s41597-025-04558-z")
 AnnotationAssertion(rdfs:label obo:PROMOT_0000098 "Entered in Error"@en)
 AnnotationAssertion(rdfs:label obo:PROMOT_0000098 "Entré par erreur"@fr)
@@ -6719,6 +6710,7 @@ AnnotationAssertion(rdfs:label <http://snomed.info/id/184305005> "Cause of death
 # Class: <http://snomed.info/id/186034007> (Ethnicity / related nationality data (observable entity))
 
 AnnotationAssertion(rdfs:comment <http://snomed.info/id/186034007> "OPMD research clinical form")
+AnnotationAssertion(rdfs:comment <http://snomed.info/id/186034007> "Ongoing discussion")
 AnnotationAssertion(rdfs:label <http://snomed.info/id/186034007> "Ethnicity / related nationality data (observable entity)"@en)
 SubClassOf(<http://snomed.info/id/186034007> <http://snomed.info/id/302147001>)
 
@@ -6753,6 +6745,7 @@ SubClassOf(<http://snomed.info/id/23088002> <http://snomed.info/id/364940007>)
 
 # Class: <http://snomed.info/id/257192006> (Aid to vision (physical object))
 
+AnnotationAssertion(rdfs:label <http://snomed.info/id/257192006> "Aid to vision (physical object)"@en)
 SubClassOf(<http://snomed.info/id/257192006> obo:BFO_0000030)
 SubClassOf(<http://snomed.info/id/257192006> ObjectSomeValuesFrom(obo:PROMOT_2000001 obo:PROMOT_0000025))
 
@@ -6793,6 +6786,7 @@ SubClassOf(<http://snomed.info/id/33821000087103> <http://snomed.info/id/3021470
 
 # Class: <http://snomed.info/id/360296002> (Assitive equipment (physical object))
 
+AnnotationAssertion(rdfs:label <http://snomed.info/id/360296002> "Assitive equipment (physical object)"@en)
 SubClassOf(<http://snomed.info/id/360296002> obo:BFO_0000030)
 SubClassOf(<http://snomed.info/id/360296002> ObjectSomeValuesFrom(obo:PROMOT_2000001 obo:PROMOT_0000025))
 
@@ -7173,7 +7167,7 @@ SubClassOf(<http://snomed.info/id/9947008> <http://snomed.info/id/13646006>)
 # Class: <http://www.orpha.net/ORDO/Orphanet_270> (Oculopharyngeal muscular dystrophy)
 
 AnnotationAssertion(rdfs:label <http://www.orpha.net/ORDO/Orphanet_270> "Oculopharyngeal muscular dystrophy"@en)
-SubClassOf(<http://www.orpha.net/ORDO/Orphanet_270> ObjectMinCardinality(0 obo:RO_0004003 obo:PROMOT_0000002))
+SubClassOf(<http://www.orpha.net/ORDO/Orphanet_270> ObjectMinCardinality(1 obo:RO_0004003 obo:PROMOT_0000002))
 SubClassOf(<http://www.orpha.net/ORDO/Orphanet_270> ObjectMinCardinality(0 obo:RO_0004029 obo:HP_0000183))
 SubClassOf(<http://www.orpha.net/ORDO/Orphanet_270> ObjectMinCardinality(0 obo:RO_0004029 obo:HP_0000467))
 SubClassOf(<http://www.orpha.net/ORDO/Orphanet_270> ObjectMinCardinality(0 obo:RO_0004029 obo:HP_0000508))
@@ -7574,14 +7568,6 @@ SubClassOf(<http://www.orpha.net/ORDO/Orphanet_97245> ObjectMinCardinality(0 obo
 ############################
 #   Named Individuals
 ############################
-
-# Individual: obo:PROMOT_2000006 (is affected by)
-
-ClassAssertion(<http://snomed.info/id/9947008> obo:PROMOT_2000006)
-
-# Individual: obo:PROMOT_2000012 (uses)
-
-ClassAssertion(<http://snomed.info/id/9947008> obo:PROMOT_2000012)
 
 # Individual: <http://snomed.info/id/128927009> (Procedure by method (procedure))
 
