@@ -1,6 +1,6 @@
 format-version: 1.2
-data-version: releases/2026-02-25
-date: 25:02:2026 13:29
+data-version: releases/2026-03-03
+date: 03:03:2026 14:39
 subsetdef: hposlim_core ""
 subsetdef: ro-eco ""
 subsetdef: RO:0002259 ""
@@ -60,7 +60,7 @@ property_value: dc11:creator "Paul Fabry MD, PhD student\nhttps://orcid.org/0000
 property_value: dcterms:description "Ontology for modeling the three following neuromuscular diseases : OPMD, Congenital myopathies and Congenital myastenic syndroms. It aims to be also an ontology for building the PROMOT project relational database." xsd:string
 property_value: dcterms:license https://creativecommons.org/licenses/by-nc-sa/4.0/
 property_value: dcterms:title "PROMOT ontology" xsd:string
-property_value: owl:versionInfo "2026-02-25" xsd:string
+property_value: owl:versionInfo "2026-03-03" xsd:string
 property_value: seeAlso "More about PROMOT initiative at https://www.promotinitiative.com/\n" xsd:string
 
 [Term]
@@ -3229,8 +3229,8 @@ id: HP:0002033
 name: Poor suck
 def: "An inadequate sucking reflex, resulting in the difficult of newborns to be breast-fed." [https://orcid.org/0000-0002-0736-9199]
 synonym: "Poor suck" EXACT layperson []
-synonym: "Poor sucking" EXACT []
 synonym: "Poor sucking" EXACT layperson [https://orcid.org/0000-0002-5316-1399]
+synonym: "Poor sucking" EXACT []
 synonym: "Sucking weakness" EXACT []
 xref: UMLS:C1837142
 is_a: HP:0008872 ! Feeding difficulties in infancy
@@ -3845,6 +3845,7 @@ def: "Recurrent bouts of sudden, severe apnea that may be life-threatening." [ht
 xref: UMLS:C4025671
 is_a: HP:0002104 ! Apnea
 property_value: PROMOT:1000001 "Congenital myasthenic syndrom HPO DB associations" xsd:string
+property_value: PROMOT:1000001 "Congenital myopathy Scoping review" xsd:string
 
 [Term]
 id: HP:0003011
@@ -4200,6 +4201,7 @@ xref: SNOMEDCT_US:274523007
 xref: UMLS:C0476403
 is_a: HP:0011804 ! Abnormal muscle physiology
 property_value: PROMOT:1000001 "Congenital myopathy HPO KB associations" xsd:string
+property_value: PROMOT:1000001 "Congenital myopathy Scoping review" xsd:string
 
 [Term]
 id: HP:0003458
@@ -6251,8 +6253,8 @@ id: HP:0030205
 name: Increased jitter at single fiber EMG
 def: "The variation in the time interval between the two action potentials of the same motor unit is called jitter. This term therefore applies to increased variability in the interval between successive action potentials of the same motor unit, which is measured by electromyography (EMG)." [HPO_CONTRIBUTOR:UK_rheller, PMID:21654930]
 comment: Increased jitter values are not pathogonomic for myasthenia, but indicate disturbed neuromuscular transmission.
-synonym: "Increased jitter at single fibre electromyography" EXACT []
 synonym: "Increased jitter at single fibre electromyography" EXACT uk_spelling []
+synonym: "Increased jitter at single fibre electromyography" EXACT []
 synonym: "Increased jitter at single fibre EMG" EXACT uk_spelling []
 xref: UMLS:C4021045
 is_a: HP:0030006 ! Single fiber EMG abnormality
@@ -6413,6 +6415,7 @@ def: "Difficulty in performing one or more activities normally performed every d
 is_a: HP:0025142 ! Constitutional symptom
 property_value: dcterms:creator https://orcid.org/0000-0002-0736-9199
 property_value: dcterms:date "2017-05-28T22:14:33Z" xsd:dateTime
+property_value: PROMOT:1000001 "Congenital myopathy Scoping review" xsd:string
 property_value: PROMOT:1000001 "Oculopharyngeal muscular dystrophy Survey" xsd:string
 
 [Term]
@@ -7152,12 +7155,6 @@ property_value: PROMOT:1000001 "[RD-CDM] Graefe, A.S.L., Hübner, M.R., Rehburg,
 property_value: PROMOT:1000001 "EU-CDE" xsd:string
 
 [Term]
-id: ICF:1014916094
-name: Aplicación del conocimiento
-is_a: ICF:2011053685 ! Apprentissage et application des connaissances
-property_value: schema:browserUrl https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F1014916094
-
-[Term]
 id: ICF:1019379329
 name: Estructura de la extremidad superior
 is_a: ICF:644658903 ! Capítulo 7 estructuras relacionadas con el movimiento
@@ -7302,6 +7299,13 @@ relationship: PROMOT:2000008 HP:0003307 ! a comme résultat Hyperlordosis
 property_value: schema:browserUrl https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F1182439715
 
 [Term]
+id: ICF:1228414013
+name: General tasks and demands
+def: "This chapter is about general aspects of carrying out single or multiple tasks, organizing routines and handling stress. These items can be used in conjunction with more specific tasks or actions to identify the underlying features of the execution of tasks under different circumstances." []
+is_a: ICF:1394728112 ! Actividades y participación
+property_value: schema:browserUrl https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F1228414013
+
+[Term]
 id: ICF:1233939003
 name: Muscles de la main
 is_a: ICF:142318995 ! Estructura de la mano
@@ -7331,15 +7335,6 @@ property_value: schema:browserUrl https://icd.who.int/dev11/f/en#/http%3A%2F%2Fi
 property_value: schema:exclusion "Mobility of joint functions" xsd:string {schema:foundationReference="ICF:248265067"}
 
 [Term]
-id: ICF:126518990
-name: Resolver problemas
-def: "Finding solutions to questions or situations by identifying and analysing issues, developing options and solutions, evaluating potential effects of solutions, and executing a chosen solution, such as in resolving a dispute between two people." []
-is_a: ICF:1014916094 ! Aplicación del conocimiento
-property_value: schema:browserUrl https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F126518990
-property_value: schema:exclusion "Making decisions" xsd:string {schema:foundationReference="ICF:278208942"}
-property_value: schema:exclusion "Thinking" xsd:string {schema:foundationReference="ICF:854468725"}
-
-[Term]
 id: ICF:1266389839
 name: Cambiar y mantener la posición del cuerpo
 is_a: ICF:2048203604 ! Mobility
@@ -7365,12 +7360,6 @@ is_a: ICF:577558794 ! Dolor en una parte del cuerpo
 relationship: PROMOT:2000010 HP:0003326 {minCardinality="0"} ! est situé dans Myalgia
 relationship: PROMOT:2000010 HP:0012531 {minCardinality="0"} ! est situé dans Pain
 property_value: schema:browserUrl https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F1299345975
-
-[Term]
-id: ICF:1314143106
-name: Apprentissage élémentaire
-is_a: ICF:2011053685 ! Apprentissage et application des connaissances
-property_value: schema:browserUrl https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F1314143106
 
 [Term]
 id: ICF:1328466963
@@ -7501,13 +7490,6 @@ name: Contraction force of ventricular muscles
 def: "Functions related to the amount of blood pumped by the ventricular muscles during every beat." []
 is_a: ICF:222589883 ! Fonctions du cœur
 property_value: schema:browserUrl https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F1399000785
-
-[Term]
-id: ICF:1401433117
-name: Apprendre à calculer
-def: "Developing the competence to manipulate numbers and perform simple and complex mathematical operations, such as using mathematical signs for addition and subtraction and applying the correct mathematical operation to a problem." []
-is_a: ICF:1314143106 ! Apprentissage élémentaire
-property_value: schema:browserUrl https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F1401433117
 
 [Term]
 id: ICF:1401748164
@@ -7689,15 +7671,6 @@ property_value: schema:inclusion "functions of intellectual growth" xsd:string
 property_value: schema:narrowerTerm "functions of intellectual growth" xsd:string
 
 [Term]
-id: ICF:1526093901
-name: Acquiring information
-def: "Obtaining facts about persons, things and events, such as asking why, what, where and how, asking for names." []
-is_a: ICF:1314143106 ! Apprentissage élémentaire
-property_value: schema:browserUrl https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F1526093901
-property_value: schema:exclusion "Acquiring concepts" xsd:string {schema:foundationReference="ICF:2039726067"}
-property_value: schema:exclusion "Acquiring skills" xsd:string {schema:foundationReference="ICF:402775005"}
-
-[Term]
 id: ICF:1528299701
 name: Ligamentos y fascias del tobillo y del pie
 is_a: ICF:933576740 ! Estructura del tobillo y pie
@@ -7826,13 +7799,6 @@ is_a: ICF:436620656 ! Estructura de la cabeza y de la región del cuello
 relationship: PROMOT:2000008 HP:0003306 ! a comme résultat Spinal rigidity
 relationship: PROMOT:2000010 ICF:248265067 ! est situé dans Fonctions relatives à la mobilité des articulations
 property_value: schema:browserUrl https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F169456190
-
-[Term]
-id: ICF:1725645062
-name: Apprendre à écrire
-def: "Developing the competence to produce symbols that represent sounds, words or phrases in order to convey meaning (including Braille writing, and other symbols), such as spelling and effectively using correct grammar." []
-is_a: ICF:1314143106 ! Apprentissage élémentaire
-property_value: schema:browserUrl https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F1725645062
 
 [Term]
 id: ICF:1747603619
@@ -8157,15 +8123,6 @@ is_a: ICF:735194884 ! Experiencias sensoriales intencionadas
 property_value: schema:browserUrl https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F1896301954
 
 [Term]
-id: ICF:191030643
-name: Apprendre par des actions avec des objets
-def: "Learning through simple actions on a single object, two or more objects, relating symbolically to objects, pretending or substituting, such as in banging blocks, playing with dolls or cars, and role playing." []
-is_a: ICF:1314143106 ! Apprentissage élémentaire
-property_value: schema:browserUrl https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F191030643
-property_value: schema:exclusion "Carrying, moving and handling objects" xsd:string {schema:foundationReference="ICF:2086581809"}
-property_value: schema:exclusion "Play" xsd:string {schema:foundationReference="ICF:216760602"}
-
-[Term]
 id: ICF:1916167881
 name: Fonctions sensorielles et douleur
 def: "This chapter is about the functions of the senses, seeing, hearing, tasting and so on, as well as the sensation of pain." []
@@ -8192,21 +8149,6 @@ id: ICF:1929433903
 name: Estructura de la extremidad inferior
 is_a: ICF:644658903 ! Capítulo 7 estructuras relacionadas con el movimiento
 property_value: schema:browserUrl https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F1929433903
-
-[Term]
-id: ICF:194413877
-name: Centrar la atención
-def: "Intentionally focusing on specific stimuli, such as by filtering out distracting noises." []
-is_a: ICF:1014916094 ! Aplicación del conocimiento
-property_value: schema:browserUrl https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F194413877
-
-[Term]
-id: ICF:1967923182
-name: Escribir
-def: "Using or producing symbols or language to convey information, such as producing a written record of events or ideas or drafting a letter." []
-is_a: ICF:1014916094 ! Aplicación del conocimiento
-property_value: schema:browserUrl https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F1967923182
-property_value: schema:exclusion "Learning to write" xsd:string {schema:foundationReference="ICF:1725645062"}
 
 [Term]
 id: ICF:1976873960
@@ -8268,21 +8210,6 @@ id: ICF:203515404
 name: Dolor
 is_a: ICF:1916167881 ! Fonctions sensorielles et douleur
 property_value: schema:browserUrl https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F203515404
-
-[Term]
-id: ICF:2036850613
-name: Leer
-def: "Performing activities involved in the comprehension and interpretation of written language (e.g. books, instructions or newspapers in text or Braille), for the purpose of obtaining general knowledge or specific information." []
-is_a: ICF:1014916094 ! Aplicación del conocimiento
-property_value: schema:browserUrl https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F2036850613
-property_value: schema:exclusion "Learning to read" xsd:string {schema:foundationReference="ICF:760395462"}
-
-[Term]
-id: ICF:2039726067
-name: Acquiring concepts
-def: "Developing competence to understand and use basic and complex concepts related to characteristics, properties and features defining things, persons or events." []
-is_a: ICF:1314143106 ! Apprentissage élémentaire
-property_value: schema:browserUrl https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F2039726067
 
 [Term]
 id: ICF:2048203604
@@ -8471,15 +8398,6 @@ property_value: schema:exclusion "Muscle endurance functions" xsd:string {schema
 property_value: schema:exclusion "Muscle tone functions" xsd:string {schema:foundationReference="ICF:1839310222"}
 
 [Term]
-id: ICF:278208942
-name: Making decisions
-def: "Making a choice among options, implementing the choice, and evaluating the effects of the choice, such as selecting and purchasing a specific item, or deciding to undertake and undertaking one task from among several tasks that need to be done." []
-is_a: ICF:1014916094 ! Aplicación del conocimiento
-property_value: schema:browserUrl https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F278208942
-property_value: schema:exclusion "Solving problems" xsd:string {schema:foundationReference="ICF:126518990"}
-property_value: schema:exclusion "Thinking" xsd:string {schema:foundationReference="ICF:854468725"}
-
-[Term]
 id: ICF:278512890
 name: Muscles de la région des épaules
 is_a: ICF:1108927576 ! Estructura de la región del hombro
@@ -8582,13 +8500,6 @@ property_value: schema:exclusion "Religion and spirituality" xsd:string {schema:
 property_value: schema:exclusion "Riding animals for transportation" xsd:string {schema:foundationReference="ICF:1540367470"}
 property_value: schema:exclusion "Singing" xsd:string {schema:foundationReference="ICF:659555166"}
 property_value: skos:altLabel "Engaging in recreation and leisure" xsd:string
-
-[Term]
-id: ICF:402775005
-name: Acquiring skills
-def: "Developing basic and complex competencies in integrated sets of actions or tasks so as to initiate and follow through with the acquisition of a skill, such as manipulating tools or toys or playing games." []
-is_a: ICF:1314143106 ! Apprentissage élémentaire
-property_value: schema:browserUrl https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F402775005
 
 [Term]
 id: ICF:405925948
@@ -9041,13 +8952,6 @@ property_value: schema:browserUrl https://icd.who.int/dev11/f/en#/http%3A%2F%2Fi
 property_value: skos:altLabel "Functions involved in reception of spoken language" xsd:string
 
 [Term]
-id: ICF:760395462
-name: Apprendre à lire
-def: "Developing the competence to read written material (including Braille and other symbols) with fluency and accuracy, such as recognizing characters and alphabet letters, sounding out written words with correct pronunciation, and understanding written words and phrases." []
-is_a: ICF:1314143106 ! Apprentissage élémentaire
-property_value: schema:browserUrl https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F760395462
-
-[Term]
 id: ICF:773343048
 name: Additional functions and sensations of the cardiovascular and respiratory systems
 is_a: ICF:326705068 ! Fonctions des systèmes cardiovasculaire, hématopoïétique, immunitaire et respiratoire
@@ -9122,15 +9026,6 @@ is_a: ICF:567313968 ! Body functions
 property_value: schema:browserUrl https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F850289698
 
 [Term]
-id: ICF:854468725
-name: Pensar
-def: "Formulating and manipulating ideas, concepts, and images, whether goal-oriented or not, either alone or with others, such as creating fiction, proving a theorem, playing with ideas, brainstorming, meditating, pondering, speculating, or reflecting." []
-is_a: ICF:1014916094 ! Aplicación del conocimiento
-property_value: schema:browserUrl https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F854468725
-property_value: schema:exclusion "Making decisions" xsd:string {schema:foundationReference="ICF:278208942"}
-property_value: schema:exclusion "Solving problems" xsd:string {schema:foundationReference="ICF:126518990"}
-
-[Term]
 id: ICF:855039967
 name: S'asseoir
 def: "Getting into and out of a seated position and changing body position from sitting down to any other position, such as standing up or lying down." []
@@ -9139,13 +9034,6 @@ relationship: PROMOT:2000010 HP:0001270 ! est situé dans Motor delay
 property_value: schema:browserUrl https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F855039967
 property_value: schema:inclusion "getting into a sitting position with bent legs or cross-legged" xsd:string
 property_value: schema:inclusion "getting into a sitting position with feet supported or unsupported" xsd:string
-
-[Term]
-id: ICF:858957383
-name: Using general skills and strategies of the writing process
-def: "Applying words which convey appropriate meaning, employing conventional sentence structure." []
-is_a: ICF:1967923182 ! Escribir
-property_value: schema:browserUrl https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F858957383
 
 [Term]
 id: ICF:859818654
@@ -9411,6 +9299,10 @@ relationship: RO:0004029 HP:0033667 {minCardinality="0"} ! disease has feature D
 relationship: RO:0004029 HP:0033695 {minCardinality="0"} ! disease has feature Occupational disability
 relationship: RO:0004029 HP:0200136 {minCardinality="0"} ! disease has feature Oral-pharyngeal dysphagia
 relationship: RO:0004029 HP:6001011 {minCardinality="0"} ! disease has feature Wet voice
+relationship: RO:0004029 PROMOT:0100002 {minCardinality="0"} ! disease has feature Fatigue corrélée au fait de manger
+relationship: RO:0004029 PROMOT:0100003 {minCardinality="0"} ! disease has feature Difficulty walking short distance
+relationship: RO:0004029 PROMOT:0100004 {minCardinality="0"} ! disease has feature Difficulty changing basic position
+relationship: RO:0004029 PROMOT:0100005 {minCardinality="0"} ! disease has feature Anhédonie légère corrélée au fait de manger
 property_value: efo:alternative_term "OPMD" xsd:string
 property_value: efo:definition "A rare, adult-onset, progressive myopathy characterized by progressive eyelid ptosis, ophthalmoplegia, dysphagia, dysarthria and proximal limb weakness." xsd:string
 property_value: efo:definition_citation "Orphanet" xsd:string
@@ -9610,7 +9502,7 @@ relationship: RO:0004029 HP:0033454 {minCardinality="0"} ! disease has feature T
 relationship: RO:0004029 HP:0033580 {minCardinality="0"} ! disease has feature Compound motor action potential abnormality
 relationship: RO:0004029 HP:0040081 {minCardinality="0"} ! disease has feature Abnormal circulating creatine kinase concentration
 relationship: RO:0004029 HP:0200136 {minCardinality="0"} ! disease has feature Oral-pharyngeal dysphagia
-relationship: RO:0004029 PROMOT:0000102 {minCardinality="0"} ! disease has feature Consent to the reuse of data
+relationship: RO:0004029 PROMOT:0100001 {minCardinality="0"} ! disease has feature Doble anomalía del potencial de acción motora compuesta
 property_value: efo:alternative_term "CMS" xsd:string
 property_value: efo:definition "Congenital myasthenic syndrome (CMS) is a group of genetic disorders of impaired neuromuscular transmission at the motor endplate characterized by fatigable muscle weakness." xsd:string
 property_value: efo:definition_citation "Orphanet" xsd:string
@@ -9712,7 +9604,6 @@ relationship: RO:0004029 HP:0003327 {minCardinality="0"} ! disease has feature A
 relationship: RO:0004029 HP:0003391 {minCardinality="0"} ! disease has feature Gowers sign
 relationship: RO:0004029 HP:0003392 {minCardinality="0"} ! disease has feature First dorsal interossei muscle weakness
 relationship: RO:0004029 HP:0003398 {minCardinality="0"} ! disease has feature Abnormal synaptic transmission at the neuromuscular junction
-relationship: RO:0004029 HP:0003403 {minCardinality="0"} ! disease has feature EMG: decremental response of compound muscle action potential to repetitive nerve stimulation
 relationship: RO:0004029 HP:0003427 {minCardinality="0"} ! disease has feature Thenar muscle weakness
 relationship: RO:0004029 HP:0003445 {minCardinality="0"} ! disease has feature EMG: neuropathic changes
 relationship: RO:0004029 HP:0003457 {minCardinality="0"} ! disease has feature EMG abnormality
@@ -9777,6 +9668,7 @@ relationship: RO:0004029 HP:0030237 {minCardinality="0"} ! disease has feature H
 relationship: RO:0004029 HP:0030319 {minCardinality="0"} ! disease has feature Weakness of facial musculature
 relationship: RO:0004029 HP:0030872 {minCardinality="0"} ! disease has feature Abnormal cardiac ventricular function
 relationship: RO:0004029 HP:0030884 {minCardinality="0"} ! disease has feature Gastrojejunal tube feeding in infancy
+relationship: RO:0004029 HP:0031058 {minCardinality="0"} ! disease has feature Impairment of activities of daily living
 relationship: RO:0004029 HP:0031063 {minCardinality="0"} ! disease has feature Impaired feeding ability
 relationship: RO:0004029 HP:0031108 {minCardinality="0"} ! disease has feature Triceps weakness
 relationship: RO:0004029 HP:0031177 {minCardinality="0"} ! disease has feature Finger flexor weakness
@@ -10160,8 +10052,8 @@ is_a: PROMOT:0000027 ! declaración sobre una entidad
 relationship: RO:0002351 PROMOT:0000092 ! has member Consent status
 relationship: RO:0002351 PROMOT:0000092 {cardinality="1"} ! has member Consent status
 relationship: RO:0002351 PROMOT:0000099 ! has member Date du consentement
-relationship: RO:0002351 PROMOT:0000119 {cardinality="1"} ! has member
-relationship: RO:0002351 PROMOT:0000119 ! has member
+relationship: RO:0002351 PROMOT:0000100 {cardinality="1"} ! has member Consent type
+relationship: RO:0002351 PROMOT:0000100 ! has member Consent type
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
@@ -10827,8 +10719,43 @@ property_value: PROMOT:1000001 "[RD-CDM] Graefe, A.S.L., Hübner, M.R., Rehburg,
 property_value: PROMOT:1000001 "Congenital myasthenic syndrom Scoping review" xsd:string
 
 [Term]
-id: PROMOT:0000103
+id: PROMOT:0100001
+name: Doble anomalía del potencial de acción motora compuesta
+def: "Deux anomalies dans l’EMG mesurant le potentiel d’action global d’un muscle (PAM), aussi appelé potentiel d’action musculaire composé." []
+comment: (JP : to validate)
+is_a: HP:0033580 ! Compound motor action potential abnormality
+property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
+
+[Term]
+id: PROMOT:0100002
+name: Fatigue corrélée au fait de manger
+def: "A fatigue that occurs when the subject is eating" []
+is_a: HP:0012378 ! Fatigue
+
+[Term]
+id: PROMOT:0100003
+name: Difficulty walking short distance
+def: "A difficulty to walk short distance. E.g. a difficulty to  walk inside a building such as a house." []
+is_a: HP:0001288 ! Gait disturbance
+
+[Term]
+id: PROMOT:0100004
+name: Difficulty changing basic position
+def: "A difficulty to change basic position. E.g. a difficulty to go from a sitting position to a standing position." []
+is_a: HP:0100022 ! Abnormality of movement
+
+[Term]
+id: PROMOT:0100005
+name: Anhédonie légère corrélée au fait de manger
+def: "A mild anhedonia that occurs when the subject is eating" []
+is_a: HP:0012154
+
+[Term]
+id: PROMOT:0200001
 name: Assessment of expiratory and cough peak flows using an expiratory flowmeter
+def: "A test assessing the subject’s expiratory peak flow when they expirate and when they cough. It assesses the glottis efficiency to clear out the repiratory tract by using an expiratory flowmeter." []
+is_a: SNOMED:12894003 ! Functional assessment
+relationship: PROMOT:2000002 HP:0012735 {minCardinality="0"} ! assesses Cough
 relationship: PROMOT:2000002 ICF:1083127119 {minCardinality="0"} ! assesses Fonctions de toux
 relationship: PROMOT:2000002 ICF:1360101629 {minCardinality="0"} ! assesses Fonctions des muscles respiratoires
 relationship: PROMOT:2000002 ICF:1470583183 {minCardinality="0"} ! assesses Fonctions liées à la respiration par la bouche
@@ -10836,31 +10763,36 @@ relationship: PROMOT:2000002 ICF:446199613 {minCardinality="0"} ! assesses Fonct
 relationship: PROMOT:2000002 ICF:744367503 {minCardinality="0"} ! assesses Fonctions du système respiratoire
 
 [Term]
-id: PROMOT:0000108
+id: PROMOT:0200002
 name: Quantative muscle testing
+def: "Measurement of maximum isometric force generation from a muscle group; performed with specialized equipment." [] {IAO:0000119="NCIT:C121361"}
+xref: NCIT:C121361
+is_a: SNOMED:12894003 ! Functional assessment
 relationship: PROMOT:2000002 HP:0002460 {minCardinality="0"} ! assesses Distal muscle weakness
 relationship: PROMOT:2000002 HP:0008959 {minCardinality="0"} ! assesses Distal upper limb muscle weakness
 relationship: PROMOT:2000002 HP:0009053 {minCardinality="0"} ! assesses Distal lower limb muscle weakness
 
 [Term]
-id: PROMOT:0000109
-name: Assessment using Berg Balance Scale
+id: PROMOT:0200003
+name: Assessment using Dysphagimeter
+def: "An assessment that uses the Dysphagimeter scale to assess dysphagia or swallowing impairements. The Dysphagimeter is a patient-reported questionnaire that measures the ability to swallow foods of different textures and the impact of dysphagia on activities and participation. This questionnaire has three parts. Part A includes 24 items concerning solid foods, Part B includes 3 items on liquids and Part C includes 8 items, namely 6 items on the impact of dysphagia at meal times and 2 items on discomfort related to thick saliva. Each item offers 5 choices of descriptive answers. Parts A and B also include an option 'I cannot answer'. The participant must carefully read the instructions and check the answer that best corresponds to their situation for each item." [] {IAO:0000119="Definition translated from French to English using Reverso."}
+is_a: SNOMED:12894003 ! Functional assessment
 relationship: PROMOT:2000002 HP:0002015 {minCardinality="0"} ! assesses Dysphagia
 relationship: PROMOT:2000002 HP:0002068 {minCardinality="0"} ! assesses Neuromuscular dysphagia
-relationship: PROMOT:2000002 HP:0002141 {minCardinality="0"} ! assesses Gait imbalance
 relationship: PROMOT:2000002 HP:0200136 {minCardinality="0"} ! assesses Oral-pharyngeal dysphagia
 
 [Term]
-id: PROMOT:0000110
-name: 10 Meter Walk Test (10MWT)
-relationship: PROMOT:2000002 HP:0002317 {minCardinality="0"} ! assesses Unsteady gait
-relationship: PROMOT:2000002 HP:0002505 {minCardinality="0"} ! assesses Loss of ambulation
-relationship: PROMOT:2000002 HP:0002540 {minCardinality="0"} ! assesses Inability to walk
+id: PROMOT:0200004
+name: Assessment of pinch strengh using B & L gauge
+def: "An evaluation procedure that uses a B&L gauge to assess pinch strengh. The test measuring the force of the lateral clamps, between the thumb and the index finger, allows quantifying the maximum voluntary strength of the hand and forearm muscles during a pinching action. This is an indicator of the level of hand function." [] {IAO:0000119="Definition translated from French to English from a Reverso’s suggestion."}
+is_a: SNOMED:12894003 ! Functional assessment
 relationship: PROMOT:2000002 HP:0003392 {minCardinality="0"} ! assesses First dorsal interossei muscle weakness
 
 [Term]
-id: PROMOT:0000111
-name: Assessment of expiratory and cough peak flows using an expiratory flowmeter
+id: PROMOT:0200005
+name: Assessment of the maximum isometric muscle strength using MedUP dynamometer
+def: "Assessment of the maximum isometric muscle strength of flexor and extensor muscles using MedUP dynamometer. It assesses the maximum isometric muscle strength in upper and lower limbs." [] {IAO:0000119="Definititon of the test provided by the Groupe de Recherche Interdisciplinaire sur les Maladies Neuromusculaires (GRIMN)"}
+is_a: SNOMED:12894003 ! Functional assessment
 relationship: PROMOT:2000002 HP:0001324 {minCardinality="0"} ! assesses Muscle weakness
 relationship: PROMOT:2000002 HP:0002015 {minCardinality="0"} ! assesses Dysphagia
 relationship: PROMOT:2000002 HP:0002068 {minCardinality="0"} ! assesses Neuromuscular dysphagia
@@ -10880,106 +10812,21 @@ relationship: PROMOT:2000002 HP:0008997 {minCardinality="0"} ! assesses Proximal
 relationship: PROMOT:2000002 HP:0009063 {minCardinality="0"} ! assesses Progressive distal muscle weakness
 relationship: PROMOT:2000002 HP:0009073 {minCardinality="0"} ! assesses Progressive proximal muscle weakness
 relationship: PROMOT:2000002 HP:0012515 {minCardinality="0"} ! assesses Hip flexor weakness
-relationship: PROMOT:2000002 HP:0012735 {minCardinality="0"} ! assesses Cough
 relationship: PROMOT:2000002 HP:0200136 {minCardinality="0"} ! assesses Oral-pharyngeal dysphagia
-
-[Term]
-id: PROMOT:0000112
-name: 80 ml water swallowing test
-relationship: PROMOT:2000002 HP:0000183 {minCardinality="0"} ! assesses Tongue muscle weakness
-relationship: PROMOT:2000002 HP:0002015 {minCardinality="0"} ! assesses Dysphagia
-relationship: PROMOT:2000002 HP:0002068 {minCardinality="0"} ! assesses Neuromuscular dysphagia
-relationship: PROMOT:2000002 HP:0200136 {minCardinality="0"} ! assesses Oral-pharyngeal dysphagia
-
-[Term]
-id: PROMOT:0000116
-name: Assessment using Fatigue Severity Scale (FSS)
-relationship: PROMOT:2000002 HP:0012378 {minCardinality="0"} ! assesses Fatigue
-
-[Term]
-id: PROMOT:0000117
-name: Assessment using Hand Jamar dynanometer
-relationship: PROMOT:2000002 HP:0009005 {minCardinality="0"} ! assesses Weakness of the intrinsic hand muscles
-relationship: PROMOT:2000002 HP:0030237 {minCardinality="0"} ! assesses Hand muscle weakness
-relationship: PROMOT:2000002 HP:0031177 {minCardinality="0"} ! assesses Finger flexor weakness
-relationship: PROMOT:2000002 HP:0033466 {minCardinality="0"} ! assesses Weak grip
-
-[Term]
-id: PROMOT:0000118
-name: Stair Climb Test
-relationship: PROMOT:2000002 HP:0003551 {minCardinality="0"} ! assesses Difficulty climbing stairs
-relationship: PROMOT:2000002 HP:0033235 {minCardinality="0"} ! assesses Difficulty descending stairs
-
-[Term]
-id: PROMOT:0100001
-name: Doble anomalía del potencial de acción motora compuesta
-def: "Deux anomalies dans l’EMG mesurant le potentiel d’action global d’un muscle (PAM), aussi appelé potentiel d’action musculaire composé." []
-comment: (JP : to validate)
-is_a: HP:0033580 ! Compound motor action potential abnormality
-property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
-
-[Term]
-id: PROMOT:0100002
-name: Fatigue corrélée au fait de manger
-is_a: HP:0012378 ! Fatigue
-
-[Term]
-id: PROMOT:0100003
-name: Difficulty walking short distance
-is_a: HP:0001288 ! Gait disturbance
-
-[Term]
-id: PROMOT:0100004
-name: Difficulty changing basic position
-is_a: HP:0100022 ! Abnormality of movement
-
-[Term]
-id: PROMOT:0100005
-name: Anhédonie légère corrélée au fait de manger
-is_a: HP:0012154
-
-[Term]
-id: PROMOT:0200001
-name: Assessment of expiratory and cough peak flows using an expiratory flowmeter
-def: "A test assessing the subject’s expiratory peak flow when they expirate and when they cough. It assesses the glottis efficiency to clear out the repiratory tract by using an expiratory flowmeter." []
-is_a: SNOMED:12894003 ! Functional assessment
-
-[Term]
-id: PROMOT:0200002
-name: Quantative muscle testing
-def: "Measurement of maximum isometric force generation from a muscle group; performed with specialized equipment." [] {IAO:0000119="NCIT:C121361"}
-xref: NCIT:C121361
-is_a: SNOMED:12894003 ! Functional assessment
-
-[Term]
-id: PROMOT:0200003
-name: Assessment using Dysphagimeter
-def: "An assessment that uses the Dysphagimeter scale to assess dysphagia or swallowing impairements. The Dysphagimeter is a patient-reported questionnaire that measures the ability to swallow foods of different textures and the impact of dysphagia on activities and participation. This questionnaire has three parts. Part A includes 24 items concerning solid foods, Part B includes 3 items on liquids and Part C includes 8 items, namely 6 items on the impact of dysphagia at meal times and 2 items on discomfort related to thick saliva. Each item offers 5 choices of descriptive answers. Parts A and B also include an option 'I cannot answer'. The participant must carefully read the instructions and check the answer that best corresponds to their situation for each item." [] {IAO:0000119="Definition translated from French to English using Reverso."}
-is_a: SNOMED:12894003 ! Functional assessment
-
-[Term]
-id: PROMOT:0200004
-name: Assessment of pinch strengh using B & L gauge
-def: "An evaluation procedure that uses a B&L gauge to assess pinch strengh. The test measuring the force of the lateral clamps, between the thumb and the index finger, allows quantifying the maximum voluntary strength of the hand and forearm muscles during a pinching action. This is an indicator of the level of hand function." [] {IAO:0000119="Definition translated from French to English from a Reverso’s suggestion."}
-is_a: SNOMED:12894003 ! Functional assessment
-
-[Term]
-id: PROMOT:0200005
-name: Assessment of the maximum isometric muscle strength using MedUP dynamometer
-def: "Assessment of the maximum isometric muscle strength of flexor and extensor muscles using MedUP dynamometer. It assesses the maximum isometric muscle strength in upper and lower limbs." [] {IAO:0000119="Definititon of the test provided by the Groupe de Recherche Interdisciplinaire sur les Maladies Neuromusculaires (GRIMN)"}
-is_a: SNOMED:12894003 ! Functional assessment
 
 [Term]
 id: PROMOT:0200006
 name: Assessment of tongue strengh using Iowa Oral Performance Instrument
 def: "Assessment of the strengh of the tongue muscle by using Iowa Oral Performance Instrument." []
 is_a: SNOMED:12894003 ! Functional assessment
+relationship: PROMOT:2000002 HP:0000183 {minCardinality="0"} ! assesses Tongue muscle weakness
 
 [Term]
 id: PROMOT:0200007
 name: Assessment using Berg Balance Scale
 def: "An assessment with the Berg scale assesses balance and identifies the level of fall risk. This five-level ordinal scale (0 to 4) contains 14 items and the maximum total score ranges from 0 (maximum reach) to 56 (no reach detected). This generic scale evaluates various dimensions of balance, including the following: maintaining multiple positions, having automatic postural responses when changing posture or voluntary movements of the limbs, and produce effective balance and protection reactions." [] {IAO:0000119="Automatically translated from French."}
 is_a: SNOMED:840297006 ! Assessment of patient reported outcome measures
+relationship: PROMOT:2000002 HP:0002141 {minCardinality="0"} ! assesses Gait imbalance
 relationship: PROMOT:2000002 HP:0002141 ! assesses Gait imbalance
 
 [Term]
@@ -10988,6 +10835,9 @@ name: 10 Meter Walk Test (10MWT)
 def: "Le 10mwt est un test de capacité qui permet d’évaluer la vitesse de marche sur une courte distance pour deux conditions différentes, soit à la vitesse confortable et à la vitesse maximale. Le temps requis pour parcourir 10 mètres à la marche d’abord à la vitesse confortable, puis à la vitesse maximale, est inscrit." [] {IAO:0000119="Definititon of the test provided by the Groupe de Recherche Interdisciplinaire sur les Maladies Neuromusculaires (GRIMN)."}
 xref: http://snomed.info/id/431527001
 is_a: SNOMED:12894003 ! Functional assessment
+relationship: PROMOT:2000002 HP:0002317 {minCardinality="0"} ! assesses Unsteady gait
+relationship: PROMOT:2000002 HP:0002505 {minCardinality="0"} ! assesses Loss of ambulation
+relationship: PROMOT:2000002 HP:0002540 {minCardinality="0"} ! assesses Inability to walk
 
 [Term]
 id: PROMOT:0200009
@@ -11000,6 +10850,9 @@ id: PROMOT:0200010
 name: 80 ml water swallowing test
 def: "L’objectif de ce test est de boire 80 ml d’eau le plus rapidement possible sans s’étouffer. L’évaluateur déclanche le chronomètre quand les lèvres du participant touchent l’eau et l’arrête quand le participant dit « STOP »." [] {IAO:0000119="Definititon of the test provided by the Groupe de Recherche Interdisciplinaire sur les Maladies Neuromusculaires (GRIMN)."}
 is_a: SNOMED:12894003 ! Functional assessment
+relationship: PROMOT:2000002 HP:0002015 {minCardinality="0"} ! assesses Dysphagia
+relationship: PROMOT:2000002 HP:0002068 {minCardinality="0"} ! assesses Neuromuscular dysphagia
+relationship: PROMOT:2000002 HP:0200136 {minCardinality="0"} ! assesses Oral-pharyngeal dysphagia
 
 [Term]
 id: PROMOT:0200011
@@ -11007,6 +10860,7 @@ name: Assessment using Fatigue Severity Scale (FSS)
 def: "Assessment using Fatigue Severity scale. It follows a 9-item scale which measures the severity of fatigue and its effect on a person's activities and lifestyle in patients with a variety of disorders.  A 9-item questionnaire with questions related to how fatigue interferes with certain activities and rates its severity according to a self-report scale. The items are scored on a 7 point scale with 1 = strongly disagree and 7= strongly agree. The minimum score = 9 and maximum score possible = 63. Higher the score = greater fatigue severity. Another way of scoring: mean of all the scores with minimum score being 1 and maximum score being 7. Lerdal (2011) found that items 1 and 2 in the FSS-9 should not be used in a mean score because the FSS-7 shows better validity and reliability and is likely more sensitive for measuring change in fatigue." [] {IAO:0000119="Source for the definition of the scale: https://www.sralab.org/rehabilitation-measures/fatigue-severity-scale"}
 comment: Krupp, L. B., LaRocca, N. G., Muir-Nash, J., & Steinberg, A. D. (1989). The fatigue severity scale. Application to patients with multiple sclerosis and systemic lupus erythematosus. Archives of Neurology, 46(10), 1121–1123. 
 is_a: SNOMED:840297006 ! Assessment of patient reported outcome measures
+relationship: PROMOT:2000002 HP:0012378 {minCardinality="0"} ! assesses Fatigue
 
 [Term]
 id: PROMOT:0200012
@@ -11014,6 +10868,10 @@ name: Assessment using Hand Jamar dynanometer
 def: "Le test mesurant la force de préhension permet de quantifier la force maximale volontaire des muscles de la main et de l’avant-bras, lors d’une action de flexion des doigts. Il s’agit d’un indicateur du niveau de fonction de la main." [] {IAO:0000119="Definititon of the test provided by the Groupe de Recherche Interdisciplinaire sur les Maladies Neuromusculaires (GRIMN)."}
 xref: http://snomed.info/id/445993006
 is_a: SNOMED:12894003 ! Functional assessment
+relationship: PROMOT:2000002 HP:0009005 {minCardinality="0"} ! assesses Weakness of the intrinsic hand muscles
+relationship: PROMOT:2000002 HP:0030237 {minCardinality="0"} ! assesses Hand muscle weakness
+relationship: PROMOT:2000002 HP:0031177 {minCardinality="0"} ! assesses Finger flexor weakness
+relationship: PROMOT:2000002 HP:0033466 {minCardinality="0"} ! assesses Weak grip
 relationship: PROMOT:2000007 SNOMED:447007003 {cardinality="1"} ! est l’identifiant unique pour Jamar hydraulic hand dynamometer score
 relationship: PROMOT:2000007 SNOMED:447007003 ! est l’identifiant unique pour Jamar hydraulic hand dynamometer score
 
@@ -11023,6 +10881,8 @@ name: Stair Climb Test
 def: "Le test de 10 marches évalue la capacité à monter et descendre un bloc de 10 marches pour deux conditions différentes, soit à la vitesse confortable et à la vitesse maximale. Ce test s’adressent aux participants qui ont la capacité d’utiliser les escaliers." [] {IAO:0000119="Definititon of the test provided by the Groupe de Recherche Interdisciplinaire sur les Maladies Neuromusculaires (GRIMN)."}
 xref: http://snomed.info/id/252482003
 is_a: SNOMED:12894003 ! Functional assessment
+relationship: PROMOT:2000002 HP:0003551 {minCardinality="0"} ! assesses Difficulty climbing stairs
+relationship: PROMOT:2000002 HP:0033235 {minCardinality="0"} ! assesses Difficulty descending stairs
 
 [Term]
 id: SIO:000475
@@ -12300,7 +12160,7 @@ relationship: PROMOT:2000002 HP:0040081 {minCardinality="0"} ! assesses Abnormal
 relationship: PROMOT:2000002 HP:0040288 {minCardinality="0"} ! assesses Nasogastric tube feeding
 relationship: PROMOT:2000002 HP:6000327 {minCardinality="0"} ! assesses Thoracic cage flatness
 relationship: PROMOT:2000002 HP:6001011 {minCardinality="0"} ! assesses Wet voice
-relationship: PROMOT:2000002 PROMOT:0000102 {minCardinality="0"} ! assesses Consent to the reuse of data
+relationship: PROMOT:2000002 PROMOT:0100001 {minCardinality="0"} ! assesses Doble anomalía del potencial de acción motora compuesta
 property_value: dc11:type "procedure" xsd:string
 property_value: sct-ext:definitionStatus "Défini" xsd:string
 property_value: sct-ext:fsn "History taking (procedure)" xsd:string

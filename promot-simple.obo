@@ -1,6 +1,6 @@
 format-version: 1.2
-data-version: promot/releases/2026-02-25/promot-simple.owl
-date: 25:02:2026 13:30
+data-version: promot/releases/2026-03-03/promot-simple.owl
+date: 03:03:2026 14:40
 subsetdef: ro-eco ""
 subsetdef: RO:0002259 ""
 idspace: ace_lexicon http://attempto.ifi.uzh.ch/ace_lexicon# 
@@ -50,7 +50,7 @@ property_value: dc11:contributor "Mansoore Gholizade MD" xsd:string
 property_value: dc11:creator "Cynthia Gagnon MD, PhD\nhttps://orcid.org/0000-0003-2829-8470" xsd:string
 property_value: dc11:creator "Juliette Potier MSc\nhttps://orcid.org/0009-0000-5160-7927" xsd:string
 property_value: dc11:creator "Paul Fabry MD, PhD student\nhttps://orcid.org/0000-0002-3336-2476" xsd:string
-property_value: owl:versionInfo "2026-02-25" xsd:string
+property_value: owl:versionInfo "2026-03-03" xsd:string
 property_value: seeAlso "More about PROMOT initiative at https://www.promotinitiative.com/\n" xsd:string
 property_value: terms:description "Ontology for modeling the three following neuromuscular diseases : OPMD, Congenital myopathies and Congenital myastenic syndroms. It aims to be also an ontology for building the PROMOT project relational database." xsd:string
 property_value: terms:license https://creativecommons.org/licenses/by-nc-sa/4.0/
@@ -342,8 +342,8 @@ is_a: PROMOT:0000027 ! declaración sobre una entidad
 relationship: RO:0002351 PROMOT:0000092 ! has member Consent status
 relationship: RO:0002351 PROMOT:0000092 {cardinality="1"} ! has member Consent status
 relationship: RO:0002351 PROMOT:0000099 ! has member Date du consentement
-relationship: RO:0002351 PROMOT:0000119 ! has member
-relationship: RO:0002351 PROMOT:0000119 {cardinality="1"} ! has member
+relationship: RO:0002351 PROMOT:0000100 {cardinality="1"} ! has member Consent type
+relationship: RO:0002351 PROMOT:0000100 ! has member Consent type
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
@@ -985,42 +985,6 @@ property_value: PROMOT:1000001 "[RD-CDM] Graefe, A.S.L., Hübner, M.R., Rehburg,
 property_value: PROMOT:1000001 "Congenital myasthenic syndrom Scoping review" xsd:string
 
 [Term]
-id: PROMOT:0000103
-name: Assessment of expiratory and cough peak flows using an expiratory flowmeter
-
-[Term]
-id: PROMOT:0000108
-name: Quantative muscle testing
-
-[Term]
-id: PROMOT:0000109
-name: Assessment using Berg Balance Scale
-
-[Term]
-id: PROMOT:0000110
-name: 10 Meter Walk Test (10MWT)
-
-[Term]
-id: PROMOT:0000111
-name: Assessment of expiratory and cough peak flows using an expiratory flowmeter
-
-[Term]
-id: PROMOT:0000112
-name: 80 ml water swallowing test
-
-[Term]
-id: PROMOT:0000116
-name: Assessment using Fatigue Severity Scale (FSS)
-
-[Term]
-id: PROMOT:0000117
-name: Assessment using Hand Jamar dynanometer
-
-[Term]
-id: PROMOT:0000118
-name: Stair Climb Test
-
-[Term]
 id: PROMOT:0100001
 name: Doble anomalía del potencial de acción motora compuesta
 def: "Deux anomalies dans l’EMG mesurant le potentiel d’action global d’un muscle (PAM), aussi appelé potentiel d’action musculaire composé." []
@@ -1032,24 +996,28 @@ property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 [Term]
 id: PROMOT:0100002
 name: Fatigue corrélée au fait de manger
+def: "A fatigue that occurs when the subject is eating" []
 is_a: PROMOT:0000026 ! abnormal disposition
 relationship: SIO:000217 PROMOT:0000084 ! has quality Transmission inconnue
 
 [Term]
 id: PROMOT:0100003
 name: Difficulty walking short distance
+def: "A difficulty to walk short distance. E.g. a difficulty to  walk inside a building such as a house." []
 is_a: PROMOT:0000026 ! abnormal disposition
 relationship: SIO:000217 PROMOT:0000084 ! has quality Transmission inconnue
 
 [Term]
 id: PROMOT:0100004
 name: Difficulty changing basic position
+def: "A difficulty to change basic position. E.g. a difficulty to go from a sitting position to a standing position." []
 is_a: PROMOT:0000026 ! abnormal disposition
 relationship: SIO:000217 PROMOT:0000084 ! has quality Transmission inconnue
 
 [Term]
 id: PROMOT:0100005
 name: Anhédonie légère corrélée au fait de manger
+def: "A mild anhedonia that occurs when the subject is eating" []
 
 [Term]
 id: PROMOT:0200001

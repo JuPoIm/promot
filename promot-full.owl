@@ -64,7 +64,7 @@
      xmlns:CPATH_VISIT_OCCURRENCE="https://w3id.org/cpont/visit_occurrence/"
      xmlns:CPATH_CONDITION_OCCURRENCE="https://w3id.org/cpont/condition_occurrence/">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/promot/promot-full.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/promot/releases/2026-02-25/promot-full.owl"/>
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/promot/releases/2026-03-03/promot-full.owl"/>
         <dc11:contributor>Anita Burgun MD, PhD
 https://orcid.org/0000-0001-6855-4366</dc11:contributor>
         <dc11:contributor>Carole Faviez PhD
@@ -93,14 +93,14 @@ https://orcid.org/0000-0002-3336-2476</dc11:creator>
         <dcterms:description>Ontology for modeling the three following neuromuscular diseases : OPMD, Congenital myopathies and Congenital myastenic syndroms. It aims to be also an ontology for building the PROMOT project relational database.</dcterms:description>
         <dcterms:license rdf:resource="https://creativecommons.org/licenses/by-nc-sa/4.0/"/>
         <dcterms:title>PROMOT ontology</dcterms:title>
-        <oboInOwl:date>25:02:2026 13:29</oboInOwl:date>
+        <oboInOwl:date>03:03:2026 14:39</oboInOwl:date>
         <rdfs:comment>Additional acknowledgements:
 	- Thomas Bongivault, MSc
 	- Marc Vincent, PhD
 </rdfs:comment>
         <rdfs:seeAlso>More about PROMOT initiative at https://www.promotinitiative.com/
 </rdfs:seeAlso>
-        <owl:versionInfo>2026-02-25</owl:versionInfo>
+        <owl:versionInfo>2026-03-03</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -1174,18 +1174,6 @@ We also have the outstanding issue of how to aim different definitions to differ
     
 
 
-    <!-- http://id.who.int/icd/entity/1014916094 -->
-
-    <owl:Class rdf:about="http://id.who.int/icd/entity/1014916094">
-        <rdfs:subClassOf rdf:resource="http://id.who.int/icd/entity/2011053685"/>
-        <schema:browserUrl rdf:resource="https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F1014916094"/>
-        <rdfs:label xml:lang="es">Aplicación del conocimiento</rdfs:label>
-        <rdfs:label xml:lang="fr">Appliquer des connaissances</rdfs:label>
-        <rdfs:label xml:lang="en">Applying knowledge</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- http://id.who.int/icd/entity/1019379329 -->
 
     <owl:Class rdf:about="http://id.who.int/icd/entity/1019379329">
@@ -1566,6 +1554,19 @@ We also have the outstanding issue of how to aim different definitions to differ
     
 
 
+    <!-- http://id.who.int/icd/entity/1228414013 -->
+
+    <owl:Class rdf:about="http://id.who.int/icd/entity/1228414013">
+        <rdfs:subClassOf rdf:resource="http://id.who.int/icd/entity/1394728112"/>
+        <schema:browserUrl rdf:resource="https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F1228414013"/>
+        <obo:IAO_0000115 xml:lang="en">This chapter is about general aspects of carrying out single or multiple tasks, organizing routines and handling stress. These items can be used in conjunction with more specific tasks or actions to identify the underlying features of the execution of tasks under different circumstances.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">General tasks and demands</rdfs:label>
+        <rdfs:label xml:lang="es">Tareas y demandas generales</rdfs:label>
+        <rdfs:label xml:lang="fr">Tâches et exigences générales</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://id.who.int/icd/entity/1233939003 -->
 
     <owl:Class rdf:about="http://id.who.int/icd/entity/1233939003">
@@ -1664,33 +1665,6 @@ We also have the outstanding issue of how to aim different definitions to differ
     
 
 
-    <!-- http://id.who.int/icd/entity/126518990 -->
-
-    <owl:Class rdf:about="http://id.who.int/icd/entity/126518990">
-        <rdfs:subClassOf rdf:resource="http://id.who.int/icd/entity/1014916094"/>
-        <schema:browserUrl rdf:resource="https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F126518990"/>
-        <schema:exclusion xml:lang="en">Making decisions</schema:exclusion>
-        <schema:exclusion xml:lang="en">Thinking</schema:exclusion>
-        <obo:IAO_0000115 xml:lang="en">Finding solutions to questions or situations by identifying and analysing issues, developing options and solutions, evaluating potential effects of solutions, and executing a chosen solution, such as in resolving a dispute between two people.</obo:IAO_0000115>
-        <rdfs:label xml:lang="es">Resolver problemas</rdfs:label>
-        <rdfs:label xml:lang="fr">Résoudre des problèmes</rdfs:label>
-        <rdfs:label xml:lang="en">Solving problems</rdfs:label>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://id.who.int/icd/entity/126518990"/>
-        <owl:annotatedProperty rdf:resource="http://id.who.int/icd/schema/exclusion"/>
-        <owl:annotatedTarget xml:lang="en">Making decisions</owl:annotatedTarget>
-        <schema:foundationReference rdf:resource="http://id.who.int/icd/entity/278208942"/>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://id.who.int/icd/entity/126518990"/>
-        <owl:annotatedProperty rdf:resource="http://id.who.int/icd/schema/exclusion"/>
-        <owl:annotatedTarget xml:lang="en">Thinking</owl:annotatedTarget>
-        <schema:foundationReference rdf:resource="http://id.who.int/icd/entity/854468725"/>
-    </owl:Axiom>
-    
-
-
     <!-- http://id.who.int/icd/entity/1266389839 -->
 
     <owl:Class rdf:about="http://id.who.int/icd/entity/1266389839">
@@ -1774,18 +1748,6 @@ We also have the outstanding issue of how to aim different definitions to differ
         <rdfs:label xml:lang="es">Dolor en una extremidad superior</rdfs:label>
         <rdfs:label xml:lang="fr">Douleur au membre supérieur</rdfs:label>
         <rdfs:label xml:lang="en">Pain in upper limb</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://id.who.int/icd/entity/1314143106 -->
-
-    <owl:Class rdf:about="http://id.who.int/icd/entity/1314143106">
-        <rdfs:subClassOf rdf:resource="http://id.who.int/icd/entity/2011053685"/>
-        <schema:browserUrl rdf:resource="https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F1314143106"/>
-        <rdfs:label xml:lang="fr">Apprentissage élémentaire</rdfs:label>
-        <rdfs:label xml:lang="es">Aprendizaje básico</rdfs:label>
-        <rdfs:label xml:lang="en">Basic learning</rdfs:label>
     </owl:Class>
     
 
@@ -2310,19 +2272,6 @@ Both capacity and performance qualifiers can be used with and without assistive 
     
 
 
-    <!-- http://id.who.int/icd/entity/1401433117 -->
-
-    <owl:Class rdf:about="http://id.who.int/icd/entity/1401433117">
-        <rdfs:subClassOf rdf:resource="http://id.who.int/icd/entity/1314143106"/>
-        <schema:browserUrl rdf:resource="https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F1401433117"/>
-        <obo:IAO_0000115 xml:lang="en">Developing the competence to manipulate numbers and perform simple and complex mathematical operations, such as using mathematical signs for addition and subtraction and applying the correct mathematical operation to a problem.</obo:IAO_0000115>
-        <rdfs:label xml:lang="fr">Apprendre à calculer</rdfs:label>
-        <rdfs:label xml:lang="es">Aprender a calcular</rdfs:label>
-        <rdfs:label xml:lang="en">Learning to calculate</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- http://id.who.int/icd/entity/1401748164 -->
 
     <owl:Class rdf:about="http://id.who.int/icd/entity/1401748164">
@@ -2820,33 +2769,6 @@ Both capacity and performance qualifiers can be used with and without assistive 
     
 
 
-    <!-- http://id.who.int/icd/entity/1526093901 -->
-
-    <owl:Class rdf:about="http://id.who.int/icd/entity/1526093901">
-        <rdfs:subClassOf rdf:resource="http://id.who.int/icd/entity/1314143106"/>
-        <schema:browserUrl rdf:resource="https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F1526093901"/>
-        <schema:exclusion xml:lang="en">Acquiring concepts</schema:exclusion>
-        <schema:exclusion xml:lang="en">Acquiring skills</schema:exclusion>
-        <obo:IAO_0000115 xml:lang="en">Obtaining facts about persons, things and events, such as asking why, what, where and how, asking for names.</obo:IAO_0000115>
-        <rdfs:label xml:lang="en">Acquiring information</rdfs:label>
-        <rdfs:label xml:lang="es">Adquirir información</rdfs:label>
-        <rdfs:label xml:lang="fr">Obtenir des informations</rdfs:label>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://id.who.int/icd/entity/1526093901"/>
-        <owl:annotatedProperty rdf:resource="http://id.who.int/icd/schema/exclusion"/>
-        <owl:annotatedTarget xml:lang="en">Acquiring concepts</owl:annotatedTarget>
-        <schema:foundationReference rdf:resource="http://id.who.int/icd/entity/2039726067"/>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://id.who.int/icd/entity/1526093901"/>
-        <owl:annotatedProperty rdf:resource="http://id.who.int/icd/schema/exclusion"/>
-        <owl:annotatedTarget xml:lang="en">Acquiring skills</owl:annotatedTarget>
-        <schema:foundationReference rdf:resource="http://id.who.int/icd/entity/402775005"/>
-    </owl:Axiom>
-    
-
-
     <!-- http://id.who.int/icd/entity/1528299701 -->
 
     <owl:Class rdf:about="http://id.who.int/icd/entity/1528299701">
@@ -3211,19 +3133,6 @@ Generic qualifier with the negative scale, used to indicate the extent or an imp
         <rdfs:label xml:lang="es">Articulaciones de la cabeza y de la región del cuello</rdfs:label>
         <rdfs:label xml:lang="fr">Articulations de la région de la tête et du cou</rdfs:label>
         <rdfs:label xml:lang="en">Joints of head and neck region</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://id.who.int/icd/entity/1725645062 -->
-
-    <owl:Class rdf:about="http://id.who.int/icd/entity/1725645062">
-        <rdfs:subClassOf rdf:resource="http://id.who.int/icd/entity/1314143106"/>
-        <schema:browserUrl rdf:resource="https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F1725645062"/>
-        <obo:IAO_0000115 xml:lang="en">Developing the competence to produce symbols that represent sounds, words or phrases in order to convey meaning (including Braille writing, and other symbols), such as spelling and effectively using correct grammar.</obo:IAO_0000115>
-        <rdfs:label xml:lang="fr">Apprendre à écrire</rdfs:label>
-        <rdfs:label xml:lang="es">Aprender a escribir</rdfs:label>
-        <rdfs:label xml:lang="en">Learning to write</rdfs:label>
     </owl:Class>
     
 
@@ -4459,33 +4368,6 @@ Generic qualifier with the negative scale, used to indicate the extent or an imp
     
 
 
-    <!-- http://id.who.int/icd/entity/191030643 -->
-
-    <owl:Class rdf:about="http://id.who.int/icd/entity/191030643">
-        <rdfs:subClassOf rdf:resource="http://id.who.int/icd/entity/1314143106"/>
-        <schema:browserUrl rdf:resource="https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F191030643"/>
-        <schema:exclusion xml:lang="en">Carrying, moving and handling objects</schema:exclusion>
-        <schema:exclusion xml:lang="en">Play</schema:exclusion>
-        <obo:IAO_0000115 xml:lang="en">Learning through simple actions on a single object, two or more objects, relating symbolically to objects, pretending or substituting, such as in banging blocks, playing with dolls or cars, and role playing.</obo:IAO_0000115>
-        <rdfs:label xml:lang="fr">Apprendre par des actions avec des objets</rdfs:label>
-        <rdfs:label xml:lang="es">Aprender a través de acciones con objetos y personas</rdfs:label>
-        <rdfs:label xml:lang="en">Learning through actions with objects and persons</rdfs:label>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://id.who.int/icd/entity/191030643"/>
-        <owl:annotatedProperty rdf:resource="http://id.who.int/icd/schema/exclusion"/>
-        <owl:annotatedTarget xml:lang="en">Carrying, moving and handling objects</owl:annotatedTarget>
-        <schema:foundationReference rdf:resource="http://id.who.int/icd/entity/2086581809"/>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://id.who.int/icd/entity/191030643"/>
-        <owl:annotatedProperty rdf:resource="http://id.who.int/icd/schema/exclusion"/>
-        <owl:annotatedTarget xml:lang="en">Play</owl:annotatedTarget>
-        <schema:foundationReference rdf:resource="http://id.who.int/icd/entity/216760602"/>
-    </owl:Axiom>
-    
-
-
     <!-- http://id.who.int/icd/entity/1916167881 -->
 
     <owl:Class rdf:about="http://id.who.int/icd/entity/1916167881">
@@ -4551,39 +4433,6 @@ Generic qualifier with the negative scale, used to indicate the extent or an imp
         <rdfs:label xml:lang="fr">Structure du membre inférieur</rdfs:label>
         <rdfs:label xml:lang="en">Structure of lower extremity</rdfs:label>
     </owl:Class>
-    
-
-
-    <!-- http://id.who.int/icd/entity/194413877 -->
-
-    <owl:Class rdf:about="http://id.who.int/icd/entity/194413877">
-        <rdfs:subClassOf rdf:resource="http://id.who.int/icd/entity/1014916094"/>
-        <schema:browserUrl rdf:resource="https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F194413877"/>
-        <obo:IAO_0000115 xml:lang="en">Intentionally focusing on specific stimuli, such as by filtering out distracting noises.</obo:IAO_0000115>
-        <rdfs:label xml:lang="es">Centrar la atención</rdfs:label>
-        <rdfs:label xml:lang="fr">Fixer son attention</rdfs:label>
-        <rdfs:label xml:lang="en">Focusing attention</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://id.who.int/icd/entity/1967923182 -->
-
-    <owl:Class rdf:about="http://id.who.int/icd/entity/1967923182">
-        <rdfs:subClassOf rdf:resource="http://id.who.int/icd/entity/1014916094"/>
-        <schema:browserUrl rdf:resource="https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F1967923182"/>
-        <schema:exclusion xml:lang="en">Learning to write</schema:exclusion>
-        <obo:IAO_0000115 xml:lang="en">Using or producing symbols or language to convey information, such as producing a written record of events or ideas or drafting a letter.</obo:IAO_0000115>
-        <rdfs:label xml:lang="es">Escribir</rdfs:label>
-        <rdfs:label xml:lang="en">Writing</rdfs:label>
-        <rdfs:label xml:lang="fr">Écrire</rdfs:label>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://id.who.int/icd/entity/1967923182"/>
-        <owl:annotatedProperty rdf:resource="http://id.who.int/icd/schema/exclusion"/>
-        <owl:annotatedTarget xml:lang="en">Learning to write</owl:annotatedTarget>
-        <schema:foundationReference rdf:resource="http://id.who.int/icd/entity/1725645062"/>
-    </owl:Axiom>
     
 
 
@@ -4737,39 +4586,6 @@ Generic qualifier with the negative scale, used to indicate the extent or an imp
         <rdfs:label xml:lang="es">Dolor</rdfs:label>
         <rdfs:label xml:lang="fr">Douleur</rdfs:label>
         <rdfs:label xml:lang="en">Pain</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://id.who.int/icd/entity/2036850613 -->
-
-    <owl:Class rdf:about="http://id.who.int/icd/entity/2036850613">
-        <rdfs:subClassOf rdf:resource="http://id.who.int/icd/entity/1014916094"/>
-        <schema:browserUrl rdf:resource="https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F2036850613"/>
-        <schema:exclusion xml:lang="en">Learning to read</schema:exclusion>
-        <obo:IAO_0000115 xml:lang="en">Performing activities involved in the comprehension and interpretation of written language (e.g. books, instructions or newspapers in text or Braille), for the purpose of obtaining general knowledge or specific information.</obo:IAO_0000115>
-        <rdfs:label xml:lang="es">Leer</rdfs:label>
-        <rdfs:label xml:lang="fr">Lire</rdfs:label>
-        <rdfs:label xml:lang="en">Reading</rdfs:label>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://id.who.int/icd/entity/2036850613"/>
-        <owl:annotatedProperty rdf:resource="http://id.who.int/icd/schema/exclusion"/>
-        <owl:annotatedTarget xml:lang="en">Learning to read</owl:annotatedTarget>
-        <schema:foundationReference rdf:resource="http://id.who.int/icd/entity/760395462"/>
-    </owl:Axiom>
-    
-
-
-    <!-- http://id.who.int/icd/entity/2039726067 -->
-
-    <owl:Class rdf:about="http://id.who.int/icd/entity/2039726067">
-        <rdfs:subClassOf rdf:resource="http://id.who.int/icd/entity/1314143106"/>
-        <schema:browserUrl rdf:resource="https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F2039726067"/>
-        <obo:IAO_0000115 xml:lang="en">Developing competence to understand and use basic and complex concepts related to characteristics, properties and features defining things, persons or events.</obo:IAO_0000115>
-        <rdfs:label xml:lang="en">Acquiring concepts</rdfs:label>
-        <rdfs:label xml:lang="fr">Acquérir des concepts</rdfs:label>
-        <rdfs:label xml:lang="es">Adquirir conceptos</rdfs:label>
     </owl:Class>
     
 
@@ -5338,33 +5154,6 @@ Generic qualifier with the negative scale, used to indicate the extent or an imp
     
 
 
-    <!-- http://id.who.int/icd/entity/278208942 -->
-
-    <owl:Class rdf:about="http://id.who.int/icd/entity/278208942">
-        <rdfs:subClassOf rdf:resource="http://id.who.int/icd/entity/1014916094"/>
-        <schema:browserUrl rdf:resource="https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F278208942"/>
-        <schema:exclusion xml:lang="en">Solving problems</schema:exclusion>
-        <schema:exclusion xml:lang="en">Thinking</schema:exclusion>
-        <obo:IAO_0000115 xml:lang="en">Making a choice among options, implementing the choice, and evaluating the effects of the choice, such as selecting and purchasing a specific item, or deciding to undertake and undertaking one task from among several tasks that need to be done.</obo:IAO_0000115>
-        <rdfs:label xml:lang="en">Making decisions</rdfs:label>
-        <rdfs:label xml:lang="fr">Prendre des décisions</rdfs:label>
-        <rdfs:label xml:lang="es">Tomar decisiones</rdfs:label>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://id.who.int/icd/entity/278208942"/>
-        <owl:annotatedProperty rdf:resource="http://id.who.int/icd/schema/exclusion"/>
-        <owl:annotatedTarget xml:lang="en">Solving problems</owl:annotatedTarget>
-        <schema:foundationReference rdf:resource="http://id.who.int/icd/entity/126518990"/>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://id.who.int/icd/entity/278208942"/>
-        <owl:annotatedProperty rdf:resource="http://id.who.int/icd/schema/exclusion"/>
-        <owl:annotatedTarget xml:lang="en">Thinking</owl:annotatedTarget>
-        <schema:foundationReference rdf:resource="http://id.who.int/icd/entity/854468725"/>
-    </owl:Axiom>
-    
-
-
     <!-- http://id.who.int/icd/entity/278512890 -->
 
     <owl:Class rdf:about="http://id.who.int/icd/entity/278512890">
@@ -5676,19 +5465,6 @@ Generic qualifier with the negative scale, used to indicate the extent or an imp
         <owl:annotatedTarget xml:lang="en">Singing</owl:annotatedTarget>
         <schema:foundationReference rdf:resource="http://id.who.int/icd/entity/659555166"/>
     </owl:Axiom>
-    
-
-
-    <!-- http://id.who.int/icd/entity/402775005 -->
-
-    <owl:Class rdf:about="http://id.who.int/icd/entity/402775005">
-        <rdfs:subClassOf rdf:resource="http://id.who.int/icd/entity/1314143106"/>
-        <schema:browserUrl rdf:resource="https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F402775005"/>
-        <obo:IAO_0000115 xml:lang="en">Developing basic and complex competencies in integrated sets of actions or tasks so as to initiate and follow through with the acquisition of a skill, such as manipulating tools or toys or playing games.</obo:IAO_0000115>
-        <rdfs:label xml:lang="en">Acquiring skills</rdfs:label>
-        <rdfs:label xml:lang="fr">Acquérir un savoir-faire</rdfs:label>
-        <rdfs:label xml:lang="es">Adquisición de habilidades</rdfs:label>
-    </owl:Class>
     
 
 
@@ -7037,19 +6813,6 @@ For a further explanation of coding conventions in ICF, refer to Annex 2.</obo:I
     
 
 
-    <!-- http://id.who.int/icd/entity/760395462 -->
-
-    <owl:Class rdf:about="http://id.who.int/icd/entity/760395462">
-        <rdfs:subClassOf rdf:resource="http://id.who.int/icd/entity/1314143106"/>
-        <schema:browserUrl rdf:resource="https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F760395462"/>
-        <obo:IAO_0000115 xml:lang="en">Developing the competence to read written material (including Braille and other symbols) with fluency and accuracy, such as recognizing characters and alphabet letters, sounding out written words with correct pronunciation, and understanding written words and phrases.</obo:IAO_0000115>
-        <rdfs:label xml:lang="fr">Apprendre à lire</rdfs:label>
-        <rdfs:label xml:lang="es">Aprender a leer</rdfs:label>
-        <rdfs:label xml:lang="en">Learning to read</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- http://id.who.int/icd/entity/773343048 -->
 
     <owl:Class rdf:about="http://id.who.int/icd/entity/773343048">
@@ -7240,33 +7003,6 @@ For a further explanation of coding conventions in ICF, refer to Annex 2.</obo:I
     
 
 
-    <!-- http://id.who.int/icd/entity/854468725 -->
-
-    <owl:Class rdf:about="http://id.who.int/icd/entity/854468725">
-        <rdfs:subClassOf rdf:resource="http://id.who.int/icd/entity/1014916094"/>
-        <schema:browserUrl rdf:resource="https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F854468725"/>
-        <schema:exclusion xml:lang="en">Making decisions</schema:exclusion>
-        <schema:exclusion xml:lang="en">Solving problems</schema:exclusion>
-        <obo:IAO_0000115 xml:lang="en">Formulating and manipulating ideas, concepts, and images, whether goal-oriented or not, either alone or with others, such as creating fiction, proving a theorem, playing with ideas, brainstorming, meditating, pondering, speculating, or reflecting.</obo:IAO_0000115>
-        <rdfs:label xml:lang="es">Pensar</rdfs:label>
-        <rdfs:label xml:lang="fr">Penser</rdfs:label>
-        <rdfs:label xml:lang="en">Thinking</rdfs:label>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://id.who.int/icd/entity/854468725"/>
-        <owl:annotatedProperty rdf:resource="http://id.who.int/icd/schema/exclusion"/>
-        <owl:annotatedTarget xml:lang="en">Making decisions</owl:annotatedTarget>
-        <schema:foundationReference rdf:resource="http://id.who.int/icd/entity/278208942"/>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://id.who.int/icd/entity/854468725"/>
-        <owl:annotatedProperty rdf:resource="http://id.who.int/icd/schema/exclusion"/>
-        <owl:annotatedTarget xml:lang="en">Solving problems</owl:annotatedTarget>
-        <schema:foundationReference rdf:resource="http://id.who.int/icd/entity/126518990"/>
-    </owl:Axiom>
-    
-
-
     <!-- http://id.who.int/icd/entity/855039967 -->
 
     <owl:Class rdf:about="http://id.who.int/icd/entity/855039967">
@@ -7284,19 +7020,6 @@ For a further explanation of coding conventions in ICF, refer to Annex 2.</obo:I
         <rdfs:label xml:lang="fr">S&apos;asseoir</rdfs:label>
         <rdfs:label xml:lang="es">Sentarse</rdfs:label>
         <rdfs:label xml:lang="en">Sitting</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://id.who.int/icd/entity/858957383 -->
-
-    <owl:Class rdf:about="http://id.who.int/icd/entity/858957383">
-        <rdfs:subClassOf rdf:resource="http://id.who.int/icd/entity/1967923182"/>
-        <schema:browserUrl rdf:resource="https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F858957383"/>
-        <obo:IAO_0000115 xml:lang="en">Applying words which convey appropriate meaning, employing conventional sentence structure.</obo:IAO_0000115>
-        <rdfs:label xml:lang="en">Using general skills and strategies of the writing process</rdfs:label>
-        <rdfs:label xml:lang="fr">Utiliser les compétences générales et les stratégies propres au processus d’écriture</rdfs:label>
-        <rdfs:label xml:lang="es">Utilizar habilidades y estrategias generales del proceso de escritura</rdfs:label>
     </owl:Class>
     
 
@@ -13019,6 +12742,38 @@ For a further explanation of coding conventions in ICF, refer to Annex 2.</obo:I
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0001249"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>The term intellectual disability or intellectual developmental disorder is used to describe significantly sub-average intellectual and adaptive functioning based on clinical assessment and as measured by individually administered, appropriately normed, standardized and validated tests of intellectual functioning and adaptive behavior, with onset during the developmental period from infancy through adolescence.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>PMID:31292035</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>PMID:32206581</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>PMID:36975277</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0001249"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget>Intellectual disability</owl:annotatedTarget>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#layperson"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0001249"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget>Mental deficiency</owl:annotatedTarget>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#layperson"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0001249"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget>Mental retardation</owl:annotatedTarget>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#layperson"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0001249"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget>Mental retardation, nonspecific</owl:annotatedTarget>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#layperson"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0001249"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
         <owl:annotatedTarget>Mental-retardation</owl:annotatedTarget>
         <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#layperson"/>
@@ -13053,38 +12808,6 @@ For a further explanation of coding conventions in ICF, refer to Annex 2.</obo:I
         <babelon:source_value>Intellectual disability</babelon:source_value>
         <babelon:translation_language>fr</babelon:translation_language>
         <babelon:translation_status>OFFICIAL</babelon:translation_status>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0001249"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>The term intellectual disability or intellectual developmental disorder is used to describe significantly sub-average intellectual and adaptive functioning based on clinical assessment and as measured by individually administered, appropriately normed, standardized and validated tests of intellectual functioning and adaptive behavior, with onset during the developmental period from infancy through adolescence.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>PMID:31292035</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>PMID:32206581</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>PMID:36975277</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0001249"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>Intellectual disability</owl:annotatedTarget>
-        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#layperson"/>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0001249"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>Mental deficiency</owl:annotatedTarget>
-        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#layperson"/>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0001249"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>Mental retardation</owl:annotatedTarget>
-        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#layperson"/>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0001249"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>Mental retardation, nonspecific</owl:annotatedTarget>
-        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#layperson"/>
     </owl:Axiom>
     
 
@@ -13179,18 +12902,6 @@ For a further explanation of coding conventions in ICF, refer to Annex 2.</obo:I
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0001260"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>Dysarthric speech is a general description referring to a neurological speech disorder characterized by poor articulation. Depending on the involved neurological structures, dysarthria may be further classified as spastic, flaccid, ataxic, hyperkinetic and hypokinetic, or mixed.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0001260"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>Difficulty articulating speech</owl:annotatedTarget>
-        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#layperson"/>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0001260"/>
         <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
         <owl:annotatedTarget xml:lang="es">Disartria</owl:annotatedTarget>
         <babelon:source_language>en</babelon:source_language>
@@ -13207,6 +12918,18 @@ For a further explanation of coding conventions in ICF, refer to Annex 2.</obo:I
         <babelon:source_value>Dysarthria</babelon:source_value>
         <babelon:translation_language>fr</babelon:translation_language>
         <babelon:translation_status>OFFICIAL</babelon:translation_status>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0001260"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>Dysarthric speech is a general description referring to a neurological speech disorder characterized by poor articulation. Depending on the involved neurological structures, dysarthria may be further classified as spastic, flaccid, ataxic, hyperkinetic and hypokinetic, or mixed.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0001260"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget>Difficulty articulating speech</owl:annotatedTarget>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#layperson"/>
     </owl:Axiom>
     
 
@@ -15697,7 +15420,7 @@ For a further explanation of coding conventions in ICF, refer to Annex 2.</obo:I
         <oboInOwl:id>HP:0001638</oboInOwl:id>
         <rdfs:label xml:lang="fr">Cardiomyopathie</rdfs:label>
         <rdfs:label>Cardiomyopathy</rdfs:label>
-        <rdfs:label xml:lang="en">Cardiomyopathy</rdfs:label>
+        <rdfs:label xml:lang="en">Cardiomyopathy </rdfs:label>
         <rdfs:label xml:lang="es">Miocardiopatía</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -18418,6 +18141,7 @@ For a further explanation of coding conventions in ICF, refer to Annex 2.</obo:I
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0002104"/>
         <obo:IAO_0000115>Recurrent bouts of sudden, severe apnea that may be life-threatening.</obo:IAO_0000115>
         <obo:PROMOT_1000001>Congenital myasthenic syndrom HPO DB associations</obo:PROMOT_1000001>
+        <obo:PROMOT_1000001>Congenital myopathy Scoping review</obo:PROMOT_1000001>
         <oboInOwl:hasDbXref>UMLS:C4025671</oboInOwl:hasDbXref>
         <oboInOwl:id>HP:0002882</oboInOwl:id>
         <rdfs:label xml:lang="es">Apnea episódica súbita</rdfs:label>
@@ -19567,6 +19291,7 @@ For a further explanation of coding conventions in ICF, refer to Annex 2.</obo:I
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0011804"/>
         <obo:IAO_0000115>Abnormal results of investigations using electromyography (EMG).</obo:IAO_0000115>
         <obo:PROMOT_1000001>Congenital myopathy HPO KB associations</obo:PROMOT_1000001>
+        <obo:PROMOT_1000001>Congenital myopathy Scoping review</obo:PROMOT_1000001>
         <oboInOwl:hasAlternativeId>HP:0002177</oboInOwl:hasAlternativeId>
         <oboInOwl:hasAlternativeId>HP:0003751</oboInOwl:hasAlternativeId>
         <oboInOwl:hasAlternativeId>HP:0003753</oboInOwl:hasAlternativeId>
@@ -27714,6 +27439,7 @@ For a further explanation of coding conventions in ICF, refer to Annex 2.</obo:I
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0031058">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0025142"/>
         <obo:IAO_0000115>Difficulty in performing one or more activities normally performed every day, such as eating, bathing, dressing, grooming, work, homemaking, and leisure.</obo:IAO_0000115>
+        <obo:PROMOT_1000001>Congenital myopathy Scoping review</obo:PROMOT_1000001>
         <obo:PROMOT_1000001>Oculopharyngeal muscular dystrophy Survey</obo:PROMOT_1000001>
         <dcterms:creator rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
         <dcterms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-05-28T22:14:33Z</dcterms:date>
@@ -31392,7 +31118,7 @@ Previous. An information content entity is a non-realizable information entity t
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002351"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0000119"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0000100"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -31406,7 +31132,7 @@ Previous. An information content entity is a non-realizable information entity t
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002351"/>
                 <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onClass rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0000119"/>
+                <owl:onClass rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0000100"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115 xml:lang="en">A statement regarding a consent to describe it.</obo:IAO_0000115>
@@ -32686,9 +32412,75 @@ Previous. An information content entity is a non-realizable information entity t
     
 
 
-    <!-- http://purl.obolibrary.org/obo/PROMOT_0000103 -->
+    <!-- http://purl.obolibrary.org/obo/PROMOT_0100001 -->
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0000103">
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0100001">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0033580"/>
+        <obo:IAO_0000115 xml:lang="fr">Deux anomalies dans l’EMG mesurant le potentiel d’action global d’un muscle (PAM), aussi appelé potentiel d’action musculaire composé.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">Two abnormal findings in a compound motor action potential measurement in EMG.</obo:IAO_0000115>
+        <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
+        <rdfs:comment>(JP : to validate)</rdfs:comment>
+        <rdfs:label xml:lang="es">Doble anomalía del potencial de acción motora compuesta</rdfs:label>
+        <rdfs:label xml:lang="fr">Double anomalie du potentiel d’action global du muscle (PAM)</rdfs:label>
+        <rdfs:label xml:lang="en">Double compound motor action potential abnormality</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0100001"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget xml:lang="en">Two abnormal findings in a compound motor action potential measurement in EMG.</owl:annotatedTarget>
+        <obo:IAO_0000119>HP:0033580</obo:IAO_0000119>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROMOT_0100002 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0100002">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0012378"/>
+        <obo:IAO_0000115 xml:lang="en">A fatigue that occurs when the subject is eating</obo:IAO_0000115>
+        <rdfs:label xml:lang="fr">Fatigue corrélée au fait de manger</rdfs:label>
+        <rdfs:label xml:lang="en">Fatigue while eating</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROMOT_0100003 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0100003">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0001288"/>
+        <obo:IAO_0000115 xml:lang="en">A difficulty to walk short distance. E.g. a difficulty to  walk inside a building such as a house.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">Difficulty walking short distance</rdfs:label>
+        <rdfs:label xml:lang="fr">Difficulté à marcher sur de courtes distances</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROMOT_0100004 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0100004">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0100022"/>
+        <obo:IAO_0000115 xml:lang="en">A difficulty to change basic position. E.g. a difficulty to go from a sitting position to a standing position.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">Difficulty changing basic position</rdfs:label>
+        <rdfs:label xml:lang="fr">Difficulté à passer d’une position de base à une autre</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROMOT_0100005 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0100005">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0012154"/>
+        <obo:IAO_0000115 xml:lang="en">A mild anhedonia that occurs when the subject is eating</obo:IAO_0000115>
+        <rdfs:label xml:lang="fr">Anhédonie légère corrélée au fait de manger</rdfs:label>
+        <rdfs:label xml:lang="en">Mild anhedonia while eating</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROMOT_0200001 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0200001">
+        <rdfs:subClassOf rdf:resource="http://snomed.info/id/12894003"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROMOT_2000002"/>
@@ -32724,14 +32516,31 @@ Previous. An information content entity is a non-realizable information entity t
                 <owl:onClass rdf:resource="http://id.who.int/icd/entity/744367503"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROMOT_2000002"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://purl.obolibrary.org/obo/HP_0012735"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000115 xml:lang="en">A test assessing the subject’s expiratory peak flow when they expirate and when they cough. It assesses the glottis efficiency to clear out the repiratory tract by using an expiratory flowmeter.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="fr">Un test de débit expiratoire de pointe à l’expiration (DEP) et à la toux (DEP toux) permet de calculer l’efficacité de la glotte (capacité de dégager les voies aériennes). Le test s’effectue avec un débitmètre expiratoire.</obo:IAO_0000115>
         <rdfs:label xml:lang="en">Assessment of expiratory and cough peak flows using an expiratory flowmeter</rdfs:label>
+        <rdfs:label xml:lang="fr">Évaluation des débits expiratoires de pointe à l’expiration et à la toux</rdfs:label>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0200001"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget xml:lang="fr">Un test de débit expiratoire de pointe à l’expiration (DEP) et à la toux (DEP toux) permet de calculer l’efficacité de la glotte (capacité de dégager les voies aériennes). Le test s’effectue avec un débitmètre expiratoire.</owl:annotatedTarget>
+        <obo:IAO_0000119>Definititon of the test provided by the Groupe de Recherche Interdisciplinaire sur les Maladies Neuromusculaires (GRIMN).</obo:IAO_0000119>
+    </owl:Axiom>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/PROMOT_0000108 -->
+    <!-- http://purl.obolibrary.org/obo/PROMOT_0200002 -->
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0000108">
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0200002">
+        <rdfs:subClassOf rdf:resource="http://snomed.info/id/12894003"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROMOT_2000002"/>
@@ -32753,14 +32562,25 @@ Previous. An information content entity is a non-realizable information entity t
                 <owl:onClass rdf:resource="http://purl.obolibrary.org/obo/HP_0009053"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <obo:IAO_0000115 xml:lang="en">Measurement of maximum isometric force generation from a muscle group; performed with specialized equipment.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="fr">Mesure de la force musculaire isométrique maximale pour un groupe musculaire précis; effectuée avec un équipement spécialisé.</obo:IAO_0000115>
+        <oboInOwl:hasDbXref>NCIT:C121361</oboInOwl:hasDbXref>
         <rdfs:label xml:lang="en">Quantative muscle testing</rdfs:label>
+        <rdfs:label xml:lang="fr">Tests musculaires quantitatifs</rdfs:label>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0200002"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget xml:lang="en">Measurement of maximum isometric force generation from a muscle group; performed with specialized equipment.</owl:annotatedTarget>
+        <obo:IAO_0000119>NCIT:C121361</obo:IAO_0000119>
+    </owl:Axiom>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/PROMOT_0000109 -->
+    <!-- http://purl.obolibrary.org/obo/PROMOT_0200003 -->
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0000109">
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0200003">
+        <rdfs:subClassOf rdf:resource="http://snomed.info/id/12894003"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROMOT_2000002"/>
@@ -32779,45 +32599,33 @@ Previous. An information content entity is a non-realizable information entity t
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROMOT_2000002"/>
                 <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
-                <owl:onClass rdf:resource="http://purl.obolibrary.org/obo/HP_0002141"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROMOT_2000002"/>
-                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
                 <owl:onClass rdf:resource="http://purl.obolibrary.org/obo/HP_0200136"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:label xml:lang="en">Assessment using Berg Balance Scale</rdfs:label>
+        <obo:IAO_0000115 xml:lang="en">An assessment that uses the Dysphagimeter scale to assess dysphagia or swallowing impairements. The Dysphagimeter is a patient-reported questionnaire that measures the ability to swallow foods of different textures and the impact of dysphagia on activities and participation. This questionnaire has three parts. Part A includes 24 items concerning solid foods, Part B includes 3 items on liquids and Part C includes 8 items, namely 6 items on the impact of dysphagia at meal times and 2 items on discomfort related to thick saliva. Each item offers 5 choices of descriptive answers. Parts A and B also include an option &apos;I cannot answer&apos;. The participant must carefully read the instructions and check the answer that best corresponds to their situation for each item.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="fr">Une évaluation de la dysphagie utilisant le Dysphagimètre qui est un questionnaire autorapporté mesurant la capacité à avaler des aliments de différentes textures et l’impact de la dysphagie sur les activités et la participation. Ce questionnaire comporte trois parties. La partie A comprend 24 items concernant les aliments solides, la partie B comprend 3 items sur les liquides et la partie C comprend 8 items, soit 6 items sur l’impact de la dysphagie au moment des repas et 2 items sur l’inconfort lié à la salive épaisse. Chaque item propose 5 choix de réponses descriptifs. Les parties A et B incluent également une option « Je ne peux pas répondre ». Le participant doit lire attentivement les instructions et cocher la réponse qui correspond le mieux à sa situation pour chaque item.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">Assessment using Dysphagimeter</rdfs:label>
+        <rdfs:label xml:lang="fr">Évaluation avec le Dysphagimètre</rdfs:label>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0200003"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget xml:lang="en">An assessment that uses the Dysphagimeter scale to assess dysphagia or swallowing impairements. The Dysphagimeter is a patient-reported questionnaire that measures the ability to swallow foods of different textures and the impact of dysphagia on activities and participation. This questionnaire has three parts. Part A includes 24 items concerning solid foods, Part B includes 3 items on liquids and Part C includes 8 items, namely 6 items on the impact of dysphagia at meal times and 2 items on discomfort related to thick saliva. Each item offers 5 choices of descriptive answers. Parts A and B also include an option &apos;I cannot answer&apos;. The participant must carefully read the instructions and check the answer that best corresponds to their situation for each item.</owl:annotatedTarget>
+        <obo:IAO_0000119>Definition translated from French to English using Reverso.</obo:IAO_0000119>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0200003"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget xml:lang="fr">Une évaluation de la dysphagie utilisant le Dysphagimètre qui est un questionnaire autorapporté mesurant la capacité à avaler des aliments de différentes textures et l’impact de la dysphagie sur les activités et la participation. Ce questionnaire comporte trois parties. La partie A comprend 24 items concernant les aliments solides, la partie B comprend 3 items sur les liquides et la partie C comprend 8 items, soit 6 items sur l’impact de la dysphagie au moment des repas et 2 items sur l’inconfort lié à la salive épaisse. Chaque item propose 5 choix de réponses descriptifs. Les parties A et B incluent également une option « Je ne peux pas répondre ». Le participant doit lire attentivement les instructions et cocher la réponse qui correspond le mieux à sa situation pour chaque item.</owl:annotatedTarget>
+        <obo:IAO_0000119>Definititon of the test provided by the Groupe de Recherche Interdisciplinaire sur les Maladies Neuromusculaires (GRIMN).</obo:IAO_0000119>
+    </owl:Axiom>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/PROMOT_0000110 -->
+    <!-- http://purl.obolibrary.org/obo/PROMOT_0200004 -->
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0000110">
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROMOT_2000002"/>
-                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
-                <owl:onClass rdf:resource="http://purl.obolibrary.org/obo/HP_0002317"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROMOT_2000002"/>
-                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
-                <owl:onClass rdf:resource="http://purl.obolibrary.org/obo/HP_0002505"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROMOT_2000002"/>
-                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
-                <owl:onClass rdf:resource="http://purl.obolibrary.org/obo/HP_0002540"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0200004">
+        <rdfs:subClassOf rdf:resource="http://snomed.info/id/12894003"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROMOT_2000002"/>
@@ -32825,14 +32633,31 @@ Previous. An information content entity is a non-realizable information entity t
                 <owl:onClass rdf:resource="http://purl.obolibrary.org/obo/HP_0003392"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:label xml:lang="en">10 Meter Walk Test (10MWT)</rdfs:label>
+        <obo:IAO_0000115 xml:lang="en">An evaluation procedure that uses a B&amp;L gauge to assess pinch strengh. The test measuring the force of the lateral clamps, between the thumb and the index finger, allows quantifying the maximum voluntary strength of the hand and forearm muscles during a pinching action. This is an indicator of the level of hand function.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="fr">L’évaluation utilise un manomètre B &amp; L pour mesurer la force des pinces latérales, soit la force entre le pouce et l’index. Elle permet de quantiﬁer la force maximale volontaire des muscles de la main et de l’avant-bras lors d’une action de pincement. Il s’agit d’un indicateur du niveau de fonction de la main.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">Assessment of pinch strengh using B &amp; L gauge</rdfs:label>
+        <rdfs:label xml:lang="en">Assessment of pinch strengh using B&amp;L gauge</rdfs:label>
+        <rdfs:label xml:lang="fr">Évaluation de la force des pinces latérales de la main avec un manomètre B &amp; L</rdfs:label>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0200004"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget xml:lang="en">An evaluation procedure that uses a B&amp;L gauge to assess pinch strengh. The test measuring the force of the lateral clamps, between the thumb and the index finger, allows quantifying the maximum voluntary strength of the hand and forearm muscles during a pinching action. This is an indicator of the level of hand function.</owl:annotatedTarget>
+        <obo:IAO_0000119>Definition translated from French to English from a Reverso’s suggestion.</obo:IAO_0000119>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0200004"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget xml:lang="fr">L’évaluation utilise un manomètre B &amp; L pour mesurer la force des pinces latérales, soit la force entre le pouce et l’index. Elle permet de quantiﬁer la force maximale volontaire des muscles de la main et de l’avant-bras lors d’une action de pincement. Il s’agit d’un indicateur du niveau de fonction de la main.</owl:annotatedTarget>
+        <obo:IAO_0000119>Definititon of the test provided by the Groupe de Recherche Interdisciplinaire sur les Maladies Neuromusculaires (GRIMN).</obo:IAO_0000119>
+    </owl:Axiom>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/PROMOT_0000111 -->
+    <!-- http://purl.obolibrary.org/obo/PROMOT_0200005 -->
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0000111">
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0200005">
+        <rdfs:subClassOf rdf:resource="http://snomed.info/id/12894003"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROMOT_2000002"/>
@@ -32970,289 +32795,13 @@ Previous. An information content entity is a non-realizable information entity t
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROMOT_2000002"/>
                 <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
-                <owl:onClass rdf:resource="http://purl.obolibrary.org/obo/HP_0012735"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROMOT_2000002"/>
-                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
                 <owl:onClass rdf:resource="http://purl.obolibrary.org/obo/HP_0200136"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:label xml:lang="en">Assessment of expiratory and cough peak flows using an expiratory flowmeter</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/PROMOT_0000112 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0000112">
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROMOT_2000002"/>
-                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
-                <owl:onClass rdf:resource="http://purl.obolibrary.org/obo/HP_0000183"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROMOT_2000002"/>
-                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
-                <owl:onClass rdf:resource="http://purl.obolibrary.org/obo/HP_0002015"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROMOT_2000002"/>
-                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
-                <owl:onClass rdf:resource="http://purl.obolibrary.org/obo/HP_0002068"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROMOT_2000002"/>
-                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
-                <owl:onClass rdf:resource="http://purl.obolibrary.org/obo/HP_0200136"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:label xml:lang="en">80 ml water swallowing test</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/PROMOT_0000116 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0000116">
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROMOT_2000002"/>
-                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
-                <owl:onClass rdf:resource="http://purl.obolibrary.org/obo/HP_0012378"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:label xml:lang="en">Assessment using Fatigue Severity Scale (FSS)</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/PROMOT_0000117 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0000117">
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROMOT_2000002"/>
-                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
-                <owl:onClass rdf:resource="http://purl.obolibrary.org/obo/HP_0009005"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROMOT_2000002"/>
-                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
-                <owl:onClass rdf:resource="http://purl.obolibrary.org/obo/HP_0030237"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROMOT_2000002"/>
-                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
-                <owl:onClass rdf:resource="http://purl.obolibrary.org/obo/HP_0031177"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROMOT_2000002"/>
-                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
-                <owl:onClass rdf:resource="http://purl.obolibrary.org/obo/HP_0033466"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:label xml:lang="en">Assessment using Hand Jamar dynanometer</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/PROMOT_0000118 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0000118">
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROMOT_2000002"/>
-                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
-                <owl:onClass rdf:resource="http://purl.obolibrary.org/obo/HP_0003551"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROMOT_2000002"/>
-                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
-                <owl:onClass rdf:resource="http://purl.obolibrary.org/obo/HP_0033235"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:label xml:lang="en">Stair Climb Test</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/PROMOT_0000119 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0000119"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/PROMOT_0100001 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0100001">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0033580"/>
-        <obo:IAO_0000115 xml:lang="fr">Deux anomalies dans l’EMG mesurant le potentiel d’action global d’un muscle (PAM), aussi appelé potentiel d’action musculaire composé.</obo:IAO_0000115>
-        <obo:IAO_0000115 xml:lang="en">Two abnormal findings in a compound motor action potential measurement in EMG.</obo:IAO_0000115>
-        <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
-        <rdfs:comment>(JP : to validate)</rdfs:comment>
-        <rdfs:label xml:lang="es">Doble anomalía del potencial de acción motora compuesta</rdfs:label>
-        <rdfs:label xml:lang="fr">Double anomalie du potentiel d’action global du muscle (PAM)</rdfs:label>
-        <rdfs:label xml:lang="en">Double compound motor action potential abnormality</rdfs:label>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0100001"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget xml:lang="en">Two abnormal findings in a compound motor action potential measurement in EMG.</owl:annotatedTarget>
-        <obo:IAO_0000119>HP:0033580</obo:IAO_0000119>
-    </owl:Axiom>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/PROMOT_0100002 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0100002">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0012378"/>
-        <rdfs:label xml:lang="fr">Fatigue corrélée au fait de manger</rdfs:label>
-        <rdfs:label xml:lang="en">Fatigue while eating</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/PROMOT_0100003 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0100003">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0001288"/>
-        <rdfs:label xml:lang="en">Difficulty walking short distance</rdfs:label>
-        <rdfs:label xml:lang="fr">Difficulté à marcher sur de courtes distances</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/PROMOT_0100004 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0100004">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0100022"/>
-        <rdfs:label xml:lang="en">Difficulty changing basic position</rdfs:label>
-        <rdfs:label xml:lang="fr">Difficulté à passer d’une position de base à une autre</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/PROMOT_0100005 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0100005">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0012154"/>
-        <rdfs:label xml:lang="fr">Anhédonie légère corrélée au fait de manger</rdfs:label>
-        <rdfs:label xml:lang="en">Mild anhedonia while eating</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/PROMOT_0200001 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0200001">
-        <rdfs:subClassOf rdf:resource="http://snomed.info/id/12894003"/>
-        <obo:IAO_0000115 xml:lang="en">A test assessing the subject’s expiratory peak flow when they expirate and when they cough. It assesses the glottis efficiency to clear out the repiratory tract by using an expiratory flowmeter.</obo:IAO_0000115>
-        <obo:IAO_0000115 xml:lang="fr">Un test de débit expiratoire de pointe à l’expiration (DEP) et à la toux (DEP toux) permet de calculer l’efficacité de la glotte (capacité de dégager les voies aériennes). Le test s’effectue avec un débitmètre expiratoire.</obo:IAO_0000115>
-        <rdfs:label xml:lang="en">Assessment of expiratory and cough peak flows using an expiratory flowmeter</rdfs:label>
-        <rdfs:label xml:lang="fr">Évaluation des débits expiratoires de pointe à l’expiration et à la toux</rdfs:label>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0200001"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget xml:lang="fr">Un test de débit expiratoire de pointe à l’expiration (DEP) et à la toux (DEP toux) permet de calculer l’efficacité de la glotte (capacité de dégager les voies aériennes). Le test s’effectue avec un débitmètre expiratoire.</owl:annotatedTarget>
-        <obo:IAO_0000119>Definititon of the test provided by the Groupe de Recherche Interdisciplinaire sur les Maladies Neuromusculaires (GRIMN).</obo:IAO_0000119>
-    </owl:Axiom>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/PROMOT_0200002 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0200002">
-        <rdfs:subClassOf rdf:resource="http://snomed.info/id/12894003"/>
-        <obo:IAO_0000115 xml:lang="en">Measurement of maximum isometric force generation from a muscle group; performed with specialized equipment.</obo:IAO_0000115>
-        <obo:IAO_0000115 xml:lang="fr">Mesure de la force musculaire isométrique maximale pour un groupe musculaire précis; effectuée avec un équipement spécialisé.</obo:IAO_0000115>
-        <oboInOwl:hasDbXref>NCIT:C121361</oboInOwl:hasDbXref>
-        <rdfs:label xml:lang="en">Quantative muscle testing</rdfs:label>
-        <rdfs:label xml:lang="fr">Tests musculaires quantitatifs</rdfs:label>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0200002"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget xml:lang="en">Measurement of maximum isometric force generation from a muscle group; performed with specialized equipment.</owl:annotatedTarget>
-        <obo:IAO_0000119>NCIT:C121361</obo:IAO_0000119>
-    </owl:Axiom>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/PROMOT_0200003 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0200003">
-        <rdfs:subClassOf rdf:resource="http://snomed.info/id/12894003"/>
-        <obo:IAO_0000115 xml:lang="en">An assessment that uses the Dysphagimeter scale to assess dysphagia or swallowing impairements. The Dysphagimeter is a patient-reported questionnaire that measures the ability to swallow foods of different textures and the impact of dysphagia on activities and participation. This questionnaire has three parts. Part A includes 24 items concerning solid foods, Part B includes 3 items on liquids and Part C includes 8 items, namely 6 items on the impact of dysphagia at meal times and 2 items on discomfort related to thick saliva. Each item offers 5 choices of descriptive answers. Parts A and B also include an option &apos;I cannot answer&apos;. The participant must carefully read the instructions and check the answer that best corresponds to their situation for each item.</obo:IAO_0000115>
-        <obo:IAO_0000115 xml:lang="fr">Une évaluation de la dysphagie utilisant le Dysphagimètre qui est un questionnaire autorapporté mesurant la capacité à avaler des aliments de différentes textures et l’impact de la dysphagie sur les activités et la participation. Ce questionnaire comporte trois parties. La partie A comprend 24 items concernant les aliments solides, la partie B comprend 3 items sur les liquides et la partie C comprend 8 items, soit 6 items sur l’impact de la dysphagie au moment des repas et 2 items sur l’inconfort lié à la salive épaisse. Chaque item propose 5 choix de réponses descriptifs. Les parties A et B incluent également une option « Je ne peux pas répondre ». Le participant doit lire attentivement les instructions et cocher la réponse qui correspond le mieux à sa situation pour chaque item.</obo:IAO_0000115>
-        <rdfs:label xml:lang="en">Assessment using Dysphagimeter</rdfs:label>
-        <rdfs:label xml:lang="fr">Évaluation avec le Dysphagimètre</rdfs:label>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0200003"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget xml:lang="en">An assessment that uses the Dysphagimeter scale to assess dysphagia or swallowing impairements. The Dysphagimeter is a patient-reported questionnaire that measures the ability to swallow foods of different textures and the impact of dysphagia on activities and participation. This questionnaire has three parts. Part A includes 24 items concerning solid foods, Part B includes 3 items on liquids and Part C includes 8 items, namely 6 items on the impact of dysphagia at meal times and 2 items on discomfort related to thick saliva. Each item offers 5 choices of descriptive answers. Parts A and B also include an option &apos;I cannot answer&apos;. The participant must carefully read the instructions and check the answer that best corresponds to their situation for each item.</owl:annotatedTarget>
-        <obo:IAO_0000119>Definition translated from French to English using Reverso.</obo:IAO_0000119>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0200003"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget xml:lang="fr">Une évaluation de la dysphagie utilisant le Dysphagimètre qui est un questionnaire autorapporté mesurant la capacité à avaler des aliments de différentes textures et l’impact de la dysphagie sur les activités et la participation. Ce questionnaire comporte trois parties. La partie A comprend 24 items concernant les aliments solides, la partie B comprend 3 items sur les liquides et la partie C comprend 8 items, soit 6 items sur l’impact de la dysphagie au moment des repas et 2 items sur l’inconfort lié à la salive épaisse. Chaque item propose 5 choix de réponses descriptifs. Les parties A et B incluent également une option « Je ne peux pas répondre ». Le participant doit lire attentivement les instructions et cocher la réponse qui correspond le mieux à sa situation pour chaque item.</owl:annotatedTarget>
-        <obo:IAO_0000119>Definititon of the test provided by the Groupe de Recherche Interdisciplinaire sur les Maladies Neuromusculaires (GRIMN).</obo:IAO_0000119>
-    </owl:Axiom>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/PROMOT_0200004 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0200004">
-        <rdfs:subClassOf rdf:resource="http://snomed.info/id/12894003"/>
-        <obo:IAO_0000115 xml:lang="en">An evaluation procedure that uses a B&amp;L gauge to assess pinch strengh. The test measuring the force of the lateral clamps, between the thumb and the index finger, allows quantifying the maximum voluntary strength of the hand and forearm muscles during a pinching action. This is an indicator of the level of hand function.</obo:IAO_0000115>
-        <obo:IAO_0000115 xml:lang="fr">L’évaluation utilise un manomètre B &amp; L pour mesurer la force des pinces latérales, soit la force entre le pouce et l’index. Elle permet de quantiﬁer la force maximale volontaire des muscles de la main et de l’avant-bras lors d’une action de pincement. Il s’agit d’un indicateur du niveau de fonction de la main.</obo:IAO_0000115>
-        <rdfs:label xml:lang="en">Assessment of pinch strengh using B &amp; L gauge</rdfs:label>
-        <rdfs:label xml:lang="fr">Évaluation de la force des pinces latérales de la main avec un manomètre B &amp; L</rdfs:label>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0200004"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget xml:lang="en">An evaluation procedure that uses a B&amp;L gauge to assess pinch strengh. The test measuring the force of the lateral clamps, between the thumb and the index finger, allows quantifying the maximum voluntary strength of the hand and forearm muscles during a pinching action. This is an indicator of the level of hand function.</owl:annotatedTarget>
-        <obo:IAO_0000119>Definition translated from French to English from a Reverso’s suggestion.</obo:IAO_0000119>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0200004"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget xml:lang="fr">L’évaluation utilise un manomètre B &amp; L pour mesurer la force des pinces latérales, soit la force entre le pouce et l’index. Elle permet de quantiﬁer la force maximale volontaire des muscles de la main et de l’avant-bras lors d’une action de pincement. Il s’agit d’un indicateur du niveau de fonction de la main.</owl:annotatedTarget>
-        <obo:IAO_0000119>Definititon of the test provided by the Groupe de Recherche Interdisciplinaire sur les Maladies Neuromusculaires (GRIMN).</obo:IAO_0000119>
-    </owl:Axiom>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/PROMOT_0200005 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0200005">
-        <rdfs:subClassOf rdf:resource="http://snomed.info/id/12894003"/>
         <obo:IAO_0000115 xml:lang="en">Assessment of the maximum isometric muscle strength of flexor and extensor muscles using MedUP dynamometer. It assesses the maximum isometric muscle strength in upper and lower limbs.</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="fr">Une évaluation de la force musculaire isométrique maximale par dynamométrie manuelle utilisant le dynanomètre MedUP. Cette procédure permet d’évaluer la force musculaire maximale des muscles fléchisseurs et extenseurs des membres inférieurs et supérieurs.</obo:IAO_0000115>
         <rdfs:label xml:lang="en">Assessment of the maximum isometric muscle strength using MedUP dynamometer</rdfs:label>
+        <rdfs:label xml:lang="en">Assessment using Sydney Swallow Questionnaire (SSQ)</rdfs:label>
         <rdfs:label xml:lang="fr">Évaluation de la force musculaire isométrique maximale avec le dynanomètre manuel MedUP</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -33274,6 +32823,13 @@ Previous. An information content entity is a non-realizable information entity t
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0200006">
         <rdfs:subClassOf rdf:resource="http://snomed.info/id/12894003"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROMOT_2000002"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://purl.obolibrary.org/obo/HP_0000183"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <obo:IAO_0000115 xml:lang="en">Assessment of the strengh of the tongue muscle by using Iowa Oral Performance Instrument.</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="fr">Ce test permet d’évaluer la force musculaire de la langue à l’aide de l’appareil IOPI.</obo:IAO_0000115>
         <rdfs:label xml:lang="en">Assessment of tongue strengh using Iowa Oral Performance Instrument</rdfs:label>
@@ -33296,6 +32852,13 @@ Previous. An information content entity is a non-realizable information entity t
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROMOT_2000002"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/HP_0002141"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROMOT_2000002"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://purl.obolibrary.org/obo/HP_0002141"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115 xml:lang="en">An assessment with the Berg scale assesses balance and identifies the level of fall risk. This five-level ordinal scale (0 to 4) contains 14 items and the maximum total score ranges from 0 (maximum reach) to 56 (no reach detected). This generic scale evaluates various dimensions of balance, including the following: maintaining multiple positions, having automatic postural responses when changing posture or voluntary movements of the limbs, and produce effective balance and protection reactions.</obo:IAO_0000115>
@@ -33322,6 +32885,27 @@ Previous. An information content entity is a non-realizable information entity t
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0200008">
         <rdfs:subClassOf rdf:resource="http://snomed.info/id/12894003"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROMOT_2000002"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://purl.obolibrary.org/obo/HP_0002317"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROMOT_2000002"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://purl.obolibrary.org/obo/HP_0002505"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROMOT_2000002"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://purl.obolibrary.org/obo/HP_0002540"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <obo:IAO_0000115 xml:lang="fr">Le 10mwt est un test de capacité qui permet d’évaluer la vitesse de marche sur une courte distance pour deux conditions différentes, soit à la vitesse confortable et à la vitesse maximale. Le temps requis pour parcourir 10 mètres à la marche d’abord à la vitesse confortable, puis à la vitesse maximale, est inscrit.</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="en">The 10mwt is a capacity test that evaluates the subject’s walking speed over a short distance for two different conditions, first at comfortable speed and then at maximum speed.</obo:IAO_0000115>
         <oboInOwl:hasDbXref>http://snomed.info/id/431527001</oboInOwl:hasDbXref>
@@ -33371,6 +32955,27 @@ Previous. An information content entity is a non-realizable information entity t
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0200010">
         <rdfs:subClassOf rdf:resource="http://snomed.info/id/12894003"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROMOT_2000002"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://purl.obolibrary.org/obo/HP_0002015"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROMOT_2000002"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://purl.obolibrary.org/obo/HP_0002068"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROMOT_2000002"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://purl.obolibrary.org/obo/HP_0200136"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <obo:IAO_0000115 xml:lang="fr">L’objectif de ce test est de boire 80 ml d’eau le plus rapidement possible sans s’étouffer. L’évaluateur déclanche le chronomètre quand les lèvres du participant touchent l’eau et l’arrête quand le participant dit « STOP ».</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="en">The goal of the 80 ml water swallowing test is to swallow the quickliest possible water without choking.</obo:IAO_0000115>
         <rdfs:label xml:lang="en">80 ml water swallowing test</rdfs:label>
@@ -33389,6 +32994,13 @@ Previous. An information content entity is a non-realizable information entity t
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0200011">
         <rdfs:subClassOf rdf:resource="http://snomed.info/id/840297006"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROMOT_2000002"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://purl.obolibrary.org/obo/HP_0012378"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <obo:IAO_0000115 xml:lang="en">Assessment using Fatigue Severity scale. It follows a 9-item scale which measures the severity of fatigue and its effect on a person&apos;s activities and lifestyle in patients with a variety of disorders.  A 9-item questionnaire with questions related to how fatigue interferes with certain activities and rates its severity according to a self-report scale. The items are scored on a 7 point scale with 1 = strongly disagree and 7= strongly agree. The minimum score = 9 and maximum score possible = 63. Higher the score = greater fatigue severity. Another way of scoring: mean of all the scores with minimum score being 1 and maximum score being 7. Lerdal (2011) found that items 1 and 2 in the FSS-9 should not be used in a mean score because the FSS-7 shows better validity and reliability and is likely more sensitive for measuring change in fatigue.</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="fr">Une évaluation de la fatigue qui utilise l’échelle de sévérité de la fatigue dévelopée par Krupp et al.</obo:IAO_0000115>
         <rdfs:comment>Krupp, L. B., LaRocca, N. G., Muir-Nash, J., &amp; Steinberg, A. D. (1989). The fatigue severity scale. Application to patients with multiple sclerosis and systemic lupus erythematosus. Archives of Neurology, 46(10), 1121–1123. </rdfs:comment>
@@ -33412,6 +33024,34 @@ Previous. An information content entity is a non-realizable information entity t
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROMOT_2000007"/>
                 <owl:someValuesFrom rdf:resource="http://snomed.info/id/447007003"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROMOT_2000002"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://purl.obolibrary.org/obo/HP_0009005"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROMOT_2000002"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://purl.obolibrary.org/obo/HP_0030237"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROMOT_2000002"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://purl.obolibrary.org/obo/HP_0031177"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROMOT_2000002"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://purl.obolibrary.org/obo/HP_0033466"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -33446,6 +33086,20 @@ Previous. An information content entity is a non-realizable information entity t
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0200013">
         <rdfs:subClassOf rdf:resource="http://snomed.info/id/12894003"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROMOT_2000002"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://purl.obolibrary.org/obo/HP_0003551"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROMOT_2000002"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://purl.obolibrary.org/obo/HP_0033235"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <obo:IAO_0000115 xml:lang="fr">Le test de 10 marches évalue la capacité à monter et descendre un bloc de 10 marches pour deux conditions différentes, soit à la vitesse confortable et à la vitesse maximale. Ce test s’adressent aux participants qui ont la capacité d’utiliser les escaliers.</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="en">The Stair Climb Test evaluates a subject’s ability to climb and descend a 10 steps stair following two different conditions, at comfortable speed and at maximum speed. This test is intended for participants who have the ability to use stairs.</obo:IAO_0000115>
         <oboInOwl:hasDbXref>http://snomed.info/id/252482003</oboInOwl:hasDbXref>
@@ -39976,7 +39630,7 @@ pulmonary arterial and venous trees. Examples: There is only one heart.</rdfs:co
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROMOT_2000002"/>
                 <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
-                <owl:onClass rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0000102"/>
+                <owl:onClass rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0100001"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <sct-ext:definitionStatus>Défini</sct-ext:definitionStatus>
@@ -40650,6 +40304,34 @@ pulmonary arterial and venous trees. Examples: There is only one heart.</rdfs:co
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0004029"/>
                 <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
                 <owl:onClass rdf:resource="http://purl.obolibrary.org/obo/HP_6001011"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0004029"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0100002"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0004029"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0100003"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0004029"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0100004"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0004029"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0100005"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <efo:alternative_term xml:lang="en">OPMD</efo:alternative_term>
@@ -41683,7 +41365,7 @@ pulmonary arterial and venous trees. Examples: There is only one heart.</rdfs:co
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0004029"/>
                 <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
-                <owl:onClass rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0000102"/>
+                <owl:onClass rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0100001"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <efo:alternative_term xml:lang="en">CMS</efo:alternative_term>
@@ -42517,13 +42199,6 @@ pulmonary arterial and venous trees. Examples: There is only one heart.</rdfs:co
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0004029"/>
                 <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
-                <owl:onClass rdf:resource="http://purl.obolibrary.org/obo/HP_0003403"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0004029"/>
-                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
                 <owl:onClass rdf:resource="http://purl.obolibrary.org/obo/HP_0003427"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -42966,6 +42641,13 @@ pulmonary arterial and venous trees. Examples: There is only one heart.</rdfs:co
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0004029"/>
                 <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
                 <owl:onClass rdf:resource="http://purl.obolibrary.org/obo/HP_0030884"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0004029"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://purl.obolibrary.org/obo/HP_0031058"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
