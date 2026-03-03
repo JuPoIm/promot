@@ -5,7 +5,7 @@ github_org: JuPoIm
 git_main_branch: main
 repo: promot_ontology
 contact: juliette.potier@institutimagine.org
-description: "Ontology for modeling the three following neuromuscular diseases : OPMD, Congenital myopathies and Congenital myastenic syndroms. It also aims to be an reference ontology for building the PROMOT initiative relational database."
+description: "Ontology of the PROMOT initiative for modeling three neuromuscular diseases: Oculopharyngeal Muscular Dystrophy, Congenital Myopathies and Congenital Myastenic Syndroms. It also aims to be the conceptual schema for building the PROMOT initiative relational database."
 license: "https://creativecommons.org/licenses/by-nc-sa/4.0/"
 documentation:
   documentation_system: mkdocs
@@ -68,6 +68,8 @@ import_group:
   module_type: custom
   products:
     - id: bfo # high-level classes
+    - id: cif # icf translation
+      mirror_from: https://data.bioportal.lirmm.fr/ontologies/ICF/submissions/2/download?apikey=1de0a270-29c5-4dda-b043-7c3580628cd5
     - id: eco # evidence classes
     - id: fma # anatomy classes
       mirror_from: http://purl.org/sig/ont/fma.owl

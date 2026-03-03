@@ -98,7 +98,9 @@ with open ('../scripts/python/tmp/icf_import_iri.tsv', encoding='utf-8') as tsvf
         promot_df = pd.concat([promot_df, data], ignore_index = True)
 
 promot_df.to_csv('../scripts/python/tmp/icf-to-cifasip_promot.tsv', sep='\t', index=False)
-
+promot_cif_list_df = promot_df.filter("object_id")
+promot_cif_list_df = promot_cif_list_df.rename(columns={"object_id" : "#object_id"})
+promot_cif_list_df.to_csv('../ontology/imports/cif_terms.txt', sep='\t', index=False)
 
 # txt = open('../ontology/imports/cifasip_terms.txt', "w+", encoding='utf-8')
 # for index, row in promot_df.iterrows():

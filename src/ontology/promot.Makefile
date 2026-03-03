@@ -45,6 +45,15 @@ $(IMPORTDIR)/bfo_import.owl: $(MIRRORDIR)/bfo.owl $(IMPORTDIR)/bfo_terms.txt
 		annotate --ontology-iri $(ONTBASE)/$@ $(ANNOTATE_ONTOLOGY_VERSION) --output $@.tmp.owl && mv $@.tmp.owl $@; fi
 
 # ----------------------------------------
+# Module CIF : definitions
+# ----------------------------------------
+$(IMPORTDIR)/cif_import.owl: $(IMPORTDIR)/icf_import.owl $(MIRRORDIR)/CGTS_SEM_ICF_02_06.ttl $(IMPORTDIR)/cif_terms.txt
+	if [ $(IMP) = true ]; then $(ROBOT) query -i $(MIRRORDIR)/CGTS_SEM_ICF_02_06.ttl --update $(SPARQLDIR)/preprocess-module.ru \
+		filter -T $(IMPORTDIR)/cif_terms.txt --term dc:description@fr --signature true \
+        query --update $(SPARQLDIR)/inject-subset-declaration.ru --update $(SPARQLDIR)/postprocess-module.ru \
+		annotate --ontology-iri $(ONTBASE)/$@ $(ANNOTATE_ONTOLOGY_VERSION) --output $@.tmp.owl && mv $@.tmp.owl $@; fi
+
+# ----------------------------------------
 # Module ECO : classes
 # ----------------------------------------
 $(IMPORTDIR)/eco_import.owl: $(MIRRORDIR)/eco.owl $(IMPORTDIR)/eco_terms.txt
@@ -56,15 +65,12 @@ $(IMPORTDIR)/eco_import.owl: $(MIRRORDIR)/eco.owl $(IMPORTDIR)/eco_terms.txt
 # ----------------------------------------
 # Module FMA : classes
 # ----------------------------------------
-$(IMPORTDIR)/fma_import.owl: $(MIRRORDIR)/fma.owl $(IMPORTDIR)/fma_terms_ancestors.txt $(IMPORTDIR)/fma_exclude_terms.txt
+$(IMPORTDIR)/fma_import.owl: $(MIRRORDIR)/fma.owl $(IMPORTDIR)/fma_terms_alone.txt $(IMPORTDIR)/fma_terms_ancestors.txt $(IMPORTDIR)/fma_exclude_terms.txt
 	if [ $(IMP) = true ]; then $(ROBOT) query -i $< --update $(SPARQLDIR)/preprocess-module.ru \
-		filter -T $(IMPORTDIR)/fma_terms_ancestors.txt \
-        --select "self ancestors annotations" \
-		--signature true \
+		filter -T $(IMPORTDIR)/fma_terms_ancestors.txt --select "self ancestors annotations" --signature true \
 		remove -T $(IMPORTDIR)/fma_exclude_terms.txt --select "self annotations" --signature true \
         query --update $(SPARQLDIR)/inject-subset-declaration.ru --update $(SPARQLDIR)/postprocess-module.ru \
-		annotate --ontology-iri $(ONTBASE)/$@ $(ANNOTATE_ONTOLOGY_VERSION) \
-		--output $@.tmp.owl && mv $@.tmp.owl $@; fi
+		annotate --ontology-iri $(ONTBASE)/$@ $(ANNOTATE_ONTOLOGY_VERSION) --output $@.tmp.owl && mv $@.tmp.owl $@; fi
 
 # ----------------------------------------
 # Module HP (EN-FR-ES) : classes
@@ -183,7 +189,7 @@ $(IMPORTDIR)/snomed_import.owl: $(IMPORTSDATADIR)/ontology-2025-11-14_EN-ES.owl 
 # C. merge des fichiers
 # D. rename des préfixes skos pour passer les tests de la release
 $(IMPORTDIR)/icf_import.owl: $(IMPORTSDATADIR)/whofic-2025-05-24.owl $(IMPORTDIR)/icf_terms_descendants.txt $(IMPORTDIR)/icf_terms.txt $(IMPORTDIR)/icf_exclude_terms.txt
-	if [ $(IMP) = true && $(ICF) = true ]; then $(ROBOT) query -i $< --update $(SPARQLDIR)/preprocess-module.ru \
+	if [ $(IMP) = true ]; then $(ROBOT) query -i $< --update $(SPARQLDIR)/preprocess-module.ru \
 		filter -T $(IMPORTDIR)/icf_terms_descendants.txt \
         --select "self descendants annotations" \
 		--exclude-term http://id.who.int/icd/entity/721275161 \
@@ -225,8 +231,8 @@ extract-pheno:
 # ---------------------------------------------
 # ICF Translations - Traductions - Traducciones
 # ---------------------------------------------
-# process 'CIF - ASIP' ontology and 2025 ICF translations to map it to ICF by creating an SSSOM file
-# mapping automatiques des URIs ICF 2025 et CIF-ASIP 2020 via code ICF, création du fichier SSSOM
+# process 'CIF - ASIP' ontology and 2026 ICF translations to map it to ICF by creating an SSSOM file
+# mapping automatiques des URIs ICF 2026 et CIF-ASIP 2020 via code ICF, création du fichier SSSOM
 # ------------------ FR ----------------------
 # 1. téléchargement de CIF-ASIP 2020
 # 2. export des données intéressantes en csv (URIs, codes, labels)
@@ -248,12 +254,12 @@ translation-icf: refresh-icf $(IMPORTDIR)/icf_import.owl
 	curl -L https://data.bioportal.lirmm.fr/ontologies/ICF/submissions/2/download?apikey=1de0a270-29c5-4dda-b043-7c3580628cd5 -o $(IMPORTSDATADIR)/cif-asip.ttl ; \
 	$(ROBOT) --prefix "skos: http://www.w3.org/2004/02/skos/core#" --prefix "rdfs: http://www.w3.org/2000/01/rdf-schema#" -vvv export -i $(IMPORTSDATADIR)/cif-asip.ttl --header "IRI|skos:notation|skos:altLabel" --export $(PYTHONTMPDIR)/CIF-ASIP.tsv ; \
 	$(ROBOT) convert --input $(IMPORTSDATADIR)/cif-asip.ttl --output $(MIRRORDIR)/cif-asip.owl ; \
-	curl -L "https://icdcdn.who.int/static/releasefiles/2025-01/SimpleTabulation-ICF-fr.zip" -o $(IMPORTSDATADIR)/SimpleTabulation-ICF-fr.zip ; \
+	curl -L "https://icdcdn.who.int/static/releasefiles/2026-01/SimpleTabulation-ICF-fr.zip" -o $(IMPORTSDATADIR)/SimpleTabulation-ICF-fr.zip ; \
 	unzip -q $(IMPORTSDATADIR)/SimpleTabulation-ICF-fr.zip -d $(IMPORTSDATADIR)/SimpleTabulation-ICF-fr/ ; \
 	mv $(IMPORTSDATADIR)/SimpleTabulation-ICF-fr/SimpleTabulation-ICF-fr.txt $(IMPORTSDATADIR)/SimpleTabulation-ICF-fr.txt ; \
 	rm $(IMPORTSDATADIR)/SimpleTabulation-ICF-fr.zip ; \
 	rm -r $(IMPORTSDATADIR)/SimpleTabulation-ICF-fr/ ; \
-	curl -L "https://icdcdn.who.int/static/releasefiles/2025-01/SimpleTabulation-ICF-es.zip" -o $(IMPORTSDATADIR)/SimpleTabulation-ICF-es.zip ; \
+	curl -L "https://icdcdn.who.int/static/releasefiles/2026-01/SimpleTabulation-ICF-es.zip" -o $(IMPORTSDATADIR)/SimpleTabulation-ICF-es.zip ; \
 	unzip -q $(IMPORTSDATADIR)/SimpleTabulation-ICF-es.zip -d $(IMPORTSDATADIR)/SimpleTabulation-ICF-es/ ; \
 	mv $(IMPORTSDATADIR)/SimpleTabulation-ICF-es/SimpleTabulation-ICF-es.txt $(IMPORTSDATADIR)/SimpleTabulation-ICF-es.txt ; \
 	rm $(IMPORTSDATADIR)/SimpleTabulation-ICF-es.zip ; \
@@ -281,14 +287,14 @@ translation-icf: refresh-icf $(IMPORTDIR)/icf_import.owl
 # OUTPUT promot-component.tsv in promot/src/templates/ that would be transformed into promot/components/promot-component.owl
 # ----------------------------------------
 .PHONY: create-template
-create-template: translation-icf $(TEMPLATEDIR)/promot-component-base.tsv $(PROMOTDATADIR)/RELATIONS.tsv
+create-template: translation-icf $(TEMPLATEDIR)/promot-component-base.tsv $(PROMOTDATADIR)/*.tsv
 	python3.12 $(SCRIPTSDIR)/python/relations-to-template.py
 
 # ----------------------------------------
 # CREDITS
 # ----------------------------------------
 # add credits to promot-edit.owl and delete root node
-credits:
+credits: credits.ttl
 	$(ROBOT) annotate --input $(ONT)-edit.owl --annotation-file credits.ttl --output $(ONT)-edit.owl
 	$(ROBOT) remove --input $(ONT)-edit.owl --term PROMOT:0000000 --signature true --output $(ONT)-edit.owl
 

@@ -12,7 +12,7 @@ import pandas as pd
 
 # df creation
 # création de la dataframe au format template ROBOT
-columns = ['ID', 'Label EN', 'Label FR', 'Label ES', 'Comment', 'CrossRef']
+columns = ['ID', 'Label EN', 'Label FR', 'Label FR annotation', 'Label ES', 'Label ES annotation', 'CrossRef']
 df = pd.DataFrame(columns=columns)
 
 # Read file with 2025 Fundational URI and french translated labels from https://icdcdn.who.int/static/releasefiles/2025-01/SimpleTabulation-ICF-fr.zip
@@ -28,7 +28,7 @@ with open('../data/imports/SimpleTabulation-ICF-fr.txt', newline='', encoding='u
                 label_fr = re.sub('- ', '', label_fr)  # suppression des '- ' dans les labels
             df.loc[len(df)]=  {'ID': icf_uri,
             'Label FR': label_fr,
-            'Comment': 'Source for French and Spanish labels: https://icd.who.int/browse/2025-01/icf/ > Info > Spreadsheet files (on French and Spanish browser version)'}
+            'Label FR annotation': 'Source for official translation: https://icd.who.int/browse/2026-01/icf/fr > Info > Fichier du tableur'}
 
 # Read file with 2025 Fundational URI and spanish translated labels from https://icdcdn.who.int/static/releasefiles/2025-01/SimpleTabulation-ICF-es.zip
 with open('../data/imports/SimpleTabulation-ICF-es.txt', newline='', encoding='utf-8') as tsvfile:
@@ -45,14 +45,16 @@ with open('../data/imports/SimpleTabulation-ICF-es.txt', newline='', encoding='u
             while '- ' in label_es :
                 label_es = re.sub('- ', '', label_es)  # suppression des '- ' dans les labels 
             df.loc[df['ID'] == icf_uri, 'Label ES'] = label_es
+            df.loc[df['ID'] == icf_uri, 'Label ES annotation'] = 'Source for official translation: https://icd.who.int/browse/2026-01/icf/es > Información > Archivo de hoja de cálculo'
             df.loc[df['ID'] == icf_uri, 'Label EN'] = label_en
 
 template_df = pd.DataFrame(columns=columns)
 template_df.loc[0]= {'ID': 'ID',
             'Label EN': 'AL rdfs:label@en',
-            'Label FR': 'AL rdfs:label@fr',	
+            'Label FR': 'AL rdfs:label@fr',
+            'Label FR annotation': '>A rdfs:comment',
             'Label ES' : 'AL rdfs:label@es',
-            'Comment': 'A rdfs:comment',
+            'Label ES annotation': '>A rdfs:comment',
             'CrossRef': 'A oboInOwl:hasDbXref SPLIT=|'
             }
 

@@ -5,8 +5,9 @@
 <!---
 [![DOI](https://zenodo.org/badge/48047921.svg)](https://zenodo.org/badge/latestdoi/48047921)
 -->
+
 # PROMOT ontology
-<img src="https://github.com/JuPoIm/promot/blob/test/site/cite/Promot_Logo_Colours_Vertical.png"/>
+<img src="https://github.com/JuPoIm/promot/blob/test/site/cite/Promot_Logo_Colours.png"/>
 
 The PROMOT ontology represents the 3 groups of neuromuscular diseases the PROMOT Master Observational Trial focuses on :
 * Oculopharyngeal Muscular Dystrophy
@@ -41,6 +42,11 @@ Editors of this ontology should use the edit version, [src/ontology/promot-edit.
 * Carole Faviez PhD (Imagine Institute)
 * Elizabeth Angelevski DC (University of Sherbrooke)
 
+### Acknowledgements
+* Mansoore Gholizade MD (University of Sherbrooke)
+* Daniel Natera de Benito MD, PhD (Hospital Sant Joan de Deu, Instituto de Salud Carloss III)
+* Claudia Côté MD, PhD (University of Sherbrooke)
+
 ## How to cite
 
 FAVIEZ Carole, et al. Designing an ontology for rare neuromuscular diseases to support federated Master Observational Trials 
@@ -50,18 +56,27 @@ FAVIEZ Carole, et al. Designing an ontology for rare neuromuscular diseases to s
 Please use this GitHub repository's [Issue tracker](https://github.com/JuPoIm/promot_ontology/issues) to request new terms/classes or report errors or specific concerns related to the ontology.
 
 ## Outstanding contributions
+
+This project/workpackage has received funding from **(Name of funding agency)**, **XX** and **XX**, partners of the European Joint Programme on Rare Diseases (EJP RD).
+
+### EUROPEAN JOINT PROGRAMME ON RARE DISEASE
+[![EJP RD official logo](https://github.com/JuPoIm/promot/blob/test/site/cite/EJP-RD-1024x226.png)](https://www.ejprarediseases.org/)
+
+The EJP RD initiative has received funding from the European Union’s Horizon 2020 research and innovation programme under grant agreement N°825575.
+
+More informations about ERDERA can be found on [EJP RD website](https://www.ejprarediseases.org/)
+
+<img src="https://github.com/JuPoIm/promot/blob/test/site/cite/Flag_of_Europe.png" width="45%"/> <img src="https://github.com/JuPoIm/promot/blob/test/site/cite/logo-inserm-300x124.jpg" width="45%"/>
+
+<!---
 Outstanding contributors are groups and institutions that have helped with building the PROMOT ontology, providing funding,
 advice and infrastructure. We are very grateful for all your contributions - this project would not exist without you!
+--->
 
 ### PROMOT INITIATIVE
 [![PROMOT initiative official logo](https://github.com/JuPoIm/promot/blob/test/site/cite/Promot_Logo_Colours.png)](https://www.promotinitiative.com/)
 
 More informations about PROMOT initiative can be found on [PROMOT initiative website](https://www.promotinitiative.com/).
-
-### ERDERA
-[![ERDERA official logo](https://github.com/JuPoIm/promot/blob/test/site/cite/ERDERA-logo2.svg)](https://erdera.org/)
-
-More informations about ERDERA can be found on [ERDERA website](https://erdera.org/)
 
 ### IMAGINE INSTITUTE
 [![Imagine institute official logo](https://github.com/JuPoIm/promot/blob/test/site/cite/logo_imagine.png)](https://www.institutimagine.org/)
@@ -73,10 +88,21 @@ More informations about Imagine Institute can be found on [Imagine Institute web
 
 More informations about the University of Sherbrooke can be found on [University of Sherbrooke website](https://www.usherbrooke.ca/)
 
-### AP-HP
+### ASSISTANCE PUBLIQUE - HÔPITAUX DE PARIS
 [![AP-HP official logo](https://github.com/JuPoIm/promot/blob/test/site/cite/logo_aphp.png)](https://www.aphp.fr/)
 
 More informations about AP-HP can be found on [AP-HP website](https://www.aphp.fr/)
+
+## CANADIAN INSTITUTES OF HEALTH RESEARCH
+
+[![CIHR official logo](https://github.com/JuPoIm/promot/blob/test/site/cite/IRSC_CIHR.avif)](https://cihr-irsc.gc.ca/e/193.html)
+
+More informations about the Canadian Institutes of Health Research can be found on [CIHR website](https://cihr-irsc.gc.ca/e/193.html)
+
+## AGENCE NATIONALE DE LA RECHERCHE
+[![ANR official logo](https://github.com/JuPoIm/promot/blob/test/site/cite/anr-logo-2021.avif)](https://anr.fr/)
+
+More informations about the Agence Nationale de la Recherche can be found on [ANR website](https://anr.fr/)
 
 ## Acknowledgements
 

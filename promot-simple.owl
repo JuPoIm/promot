@@ -7,7 +7,7 @@
      xmlns:cc="http://creativecommons.org/ns#"
      xmlns:BFO="http://purl.obolibrary.org/obo/BFO_"
      xmlns:ECO="http://purl.obolibrary.org/obo/ECO_"
-     xmlns:FMA="http://purl.obolibrary.org/obo/FMA_"
+     xmlns:FMA="http://purl.org/sig/ont/fma/fma"
      xmlns:IAO="http://purl.obolibrary.org/obo/IAO_"
      xmlns:ICF="http://id.who.int/icd/entity/"
      xmlns:OBI="http://purl.obolibrary.org/obo/OBI_"
@@ -57,24 +57,28 @@
      xmlns:CPATH_VISIT_OCCURRENCE="https://w3id.org/cpont/visit_occurrence/"
      xmlns:CPATH_CONDITION_OCCURRENCE="https://w3id.org/cpont/condition_occurrence/">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/promot/promot-simple.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/promot/releases/2026-02-05/promot-simple.owl"/>
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/promot/releases/2026-02-25/promot-simple.owl"/>
         <dc11:contributor>Anita Burgun MD, PhD
 https://orcid.org/0000-0001-6855-4366</dc11:contributor>
         <dc11:contributor>Carole Faviez PhD
 https://orcid.org/0000-0002-1500-0236</dc11:contributor>
         <dc11:contributor>Claudia Côté MD, PhD
 https://orcid.org/0000-0003-2508-2500</dc11:contributor>
-        <dc11:contributor>Cynthia Gagnon PhD
-https://orcid.org/0000-0003-2829-8470</dc11:contributor>
         <dc11:contributor>Daniel Natera De Benito MD, PhD
 https://orcid.org/0000-0001-7764-2085</dc11:contributor>
-        <dc11:contributor>Elizabeth Angelevski PhD</dc11:contributor>
+        <dc11:contributor>Elizabeth Angelevski DC
+ https://orcid.org/0009-0008-3096-582X</dc11:contributor>
+        <dc11:contributor>European Joint Programme on Rare Diseases (EJP RD)
+
+Website: https://www.ejprarediseases.org/</dc11:contributor>
         <dc11:contributor>European Rare Diseases Research Alliance (ERDERA)
 
 Website: https://erdera.org</dc11:contributor>
         <dc11:contributor>Hanns Lochmuller MD, PhD
 https://orcid.org/0000-0003-2324-8001</dc11:contributor>
         <dc11:contributor>Mansoore Gholizade MD</dc11:contributor>
+        <dc11:creator>Cynthia Gagnon MD, PhD
+https://orcid.org/0000-0003-2829-8470</dc11:creator>
         <dc11:creator>Juliette Potier MSc
 https://orcid.org/0009-0000-5160-7927</dc11:creator>
         <dc11:creator>Paul Fabry MD, PhD student
@@ -82,12 +86,14 @@ https://orcid.org/0000-0002-3336-2476</dc11:creator>
         <terms:description>Ontology for modeling the three following neuromuscular diseases : OPMD, Congenital myopathies and Congenital myastenic syndroms. It aims to be also an ontology for building the PROMOT project relational database.</terms:description>
         <terms:license rdf:resource="https://creativecommons.org/licenses/by-nc-sa/4.0/"/>
         <terms:title>PROMOT ontology</terms:title>
-        <oboInOwl:date>05:02:2026 12:40</oboInOwl:date>
-        <rdfs:comment>Additional acknnowledements:
-Thomas Bongivault, MSc
-Marc Vincent, PhD
+        <oboInOwl:date>25:02:2026 13:30</oboInOwl:date>
+        <rdfs:comment>Additional acknowledgements:
+	- Thomas Bongivault, MSc
+	- Marc Vincent, PhD
 </rdfs:comment>
-        <owl:versionInfo>2026-02-05</owl:versionInfo>
+        <rdfs:seeAlso>More about PROMOT initiative at https://www.promotinitiative.com/
+</rdfs:seeAlso>
+        <owl:versionInfo>2026-02-25</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -100,6 +106,12 @@ Marc Vincent, PhD
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000112 -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000112"/>
     
 
 
@@ -377,7 +389,7 @@ We also have the outstanding issue of how to aim different definitions to differ
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/PROMOT_2000005">
         <obo:IAO_0000115 xml:lang="en">A relation between two entity where the first entity affects the state of the second entity.</obo:IAO_0000115>
-        <obo:IAO_0000115 xml:lang="fr">Une relation entre deux entités ou l’existence de la première affecte l’état de la seconde.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="fr">Une relation entre deux entités où l’existence de la première affecte l’état de la seconde.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
         <oboInOwl:hasDbXref>BIOLINK:affects</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>SIO:001158</oboInOwl:hasDbXref>
@@ -390,6 +402,18 @@ We also have the outstanding issue of how to aim different definitions to differ
     <!-- http://purl.obolibrary.org/obo/PROMOT_2000006 -->
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/PROMOT_2000006">
+        <obo:IAO_0000115 xml:lang="en">A relation between two entity where the state of the first entity is affected by the existence of the second entity.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="fr">Une relation entre deux entités où l’état de la première entité est affecté par l’existence de la seconde.</obo:IAO_0000115>
+        <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
+        <rdfs:label xml:lang="fr">est affecté par</rdfs:label>
+        <rdfs:label xml:lang="en">is affected by</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROMOT_2000007 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/PROMOT_2000007">
         <obo:IAO_0000115 xml:lang="en">A relation between an identifier and the entity that the identifier is the only one to identify.</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="fr">Une relation entre un identifiant et l’entité qu’il identifie. L’identifiant est le seul à identifier l’entité en question.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
@@ -400,9 +424,9 @@ We also have the outstanding issue of how to aim different definitions to differ
     
 
 
-    <!-- http://purl.obolibrary.org/obo/PROMOT_2000007 -->
+    <!-- http://purl.obolibrary.org/obo/PROMOT_2000008 -->
 
-    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/PROMOT_2000007">
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/PROMOT_2000008">
         <obo:IAO_0000115 xml:lang="en">A relation between a process and an entity where the process produce the second entity.</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="fr">Une relation entre un processus et une entité qui a été produite par celui-ci.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
@@ -413,9 +437,9 @@ We also have the outstanding issue of how to aim different definitions to differ
     
 
 
-    <!-- http://purl.obolibrary.org/obo/PROMOT_2000008 -->
+    <!-- http://purl.obolibrary.org/obo/PROMOT_2000009 -->
 
-    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/PROMOT_2000008">
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/PROMOT_2000009">
         <obo:IAO_0000115 xml:lang="en">A relation between an independent continuant (the bearer) and a disposition, in which the disposition specifically depends on the bearer for its existence.</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="fr">Une relation entre un indépendant continuant et une disposition, où la disposition dépend spécifiquement de l’indépendant continuant pour exister.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
@@ -424,7 +448,7 @@ We also have the outstanding issue of how to aim different definitions to differ
         <rdfs:label xml:lang="en">has disposition</rdfs:label>
     </owl:ObjectProperty>
     <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_2000008"/>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_2000009"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget xml:lang="en">A relation between an independent continuant (the bearer) and a disposition, in which the disposition specifically depends on the bearer for its existence.</owl:annotatedTarget>
         <obo:IAO_0000119>RO:0000091</obo:IAO_0000119>
@@ -432,9 +456,9 @@ We also have the outstanding issue of how to aim different definitions to differ
     
 
 
-    <!-- http://purl.obolibrary.org/obo/PROMOT_2000009 -->
+    <!-- http://purl.obolibrary.org/obo/PROMOT_2000010 -->
 
-    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/PROMOT_2000009">
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/PROMOT_2000010">
         <obo:IAO_0000115 xml:lang="en">A relation between two independent continuants, the target and the location, in which the target is entirely within the location</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="fr">Une relation entre deux indépendants continuant dans laquelle l’un est la localisation de l’autre.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
@@ -444,7 +468,7 @@ We also have the outstanding issue of how to aim different definitions to differ
         <rdfs:label xml:lang="en">located in</rdfs:label>
     </owl:ObjectProperty>
     <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_2000009"/>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_2000010"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget xml:lang="en">A relation between two independent continuants, the target and the location, in which the target is entirely within the location</owl:annotatedTarget>
         <obo:IAO_0000119>RO:0001025</obo:IAO_0000119>
@@ -452,14 +476,24 @@ We also have the outstanding issue of how to aim different definitions to differ
     
 
 
-    <!-- http://purl.obolibrary.org/obo/PROMOT_2000010 -->
+    <!-- http://purl.obolibrary.org/obo/PROMOT_2000011 -->
 
-    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/PROMOT_2000010">
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/PROMOT_2000011">
         <obo:IAO_0000115 xml:lang="en">A generic relation between an entity and a function, where the entity is needed to realize the function.</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="fr">une relation générique entre une entité et une fonction, où l’entité est nécessaire à la réalisation de la fonction. Par exemple les muscles extraoculaires sont liés fonctionnellement aux fonctions des muscles extérieurs de l’oeil.</obo:IAO_0000115>
+        <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
         <oboInOwl:hasDbXref>RO:0002328</oboInOwl:hasDbXref>
         <rdfs:label xml:lang="fr">est fonctionnellement lié à</rdfs:label>
         <rdfs:label xml:lang="en">functionally related to</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROMOT_2000012 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/PROMOT_2000012">
+        <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
+        <rdfs:label xml:lang="en">uses</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -512,6 +546,18 @@ We also have the outstanding issue of how to aim different definitions to differ
         <obo:IAO_0000119>SIO</obo:IAO_0000119>
         <obo:RO_0001900 rdf:resource="http://purl.obolibrary.org/obo/RO_0001901"/>
         <rdfs:label xml:lang="en">has member</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0002614 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0002614">
+        <obo:IAO_0000112>An instance of a sequence similarity evidence (ECO:0000044) that uses a homologous sequence UniProtKB:P12345 as support.</obo:IAO_0000112>
+        <obo:IAO_0000115>A relationship between a piece of evidence and an entity that plays a role in supporting that evidence.</obo:IAO_0000115>
+        <rdfs:comment>In the Gene Ontology association model, this corresponds to the With/From field</rdfs:comment>
+        <rdfs:label>is evidence with support from</rdfs:label>
+        <rdfs:label xml:lang="en">is evidence with support from</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -599,7 +645,7 @@ We also have the outstanding issue of how to aim different definitions to differ
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
-    // Classes
+    // Data properties
     //
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
@@ -607,11 +653,46 @@ We also have the outstanding issue of how to aim different definitions to differ
     
 
 
-    <!-- http://purl.obolibrary.org/obo/PROMOT_0000000 -->
+    <!-- http://purl.obolibrary.org/obo/PROMOT_3000001 -->
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0000000">
-        <rdfs:label xml:lang="en">root node</rdfs:label>
-    </owl:Class>
+    <owl:DatatypeProperty rdf:about="http://purl.obolibrary.org/obo/PROMOT_3000001">
+        <rdfs:label xml:lang="en">has int value</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROMOT_3000002 -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.obolibrary.org/obo/PROMOT_3000002">
+        <rdfs:label xml:lang="en">has string value</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROMOT_3000003 -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.obolibrary.org/obo/PROMOT_3000003">
+        <rdfs:label xml:lang="en">has float value</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROMOT_3000004 -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.obolibrary.org/obo/PROMOT_3000004">
+        <rdfs:label xml:lang="en">has date value</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
     
 
 
@@ -622,12 +703,16 @@ We also have the outstanding issue of how to aim different definitions to differ
         <obo:IAO_0000115 xml:lang="es">Una alteración genética que es rara en una población.</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="fr">Une altération génétique qui est rare au sein d’une population.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
+        <obo:PROMOT_1000001>EU-CDE</obo:PROMOT_1000001>
+        <obo:PROMOT_1000001>[EURO-NMD] Atalia A et al., EURO-NMD registry: federated FAIR infrastructure, innovative technologies and concepts of a patient-centred registry for rare neuromuscular disorders. Orphanet J Rare Dis. 2024 Feb 14;19(1):66. doi: 10.1186/s13023-024-03059-3. PMID: 38355534; PMCID: PMC10865673.</obo:PROMOT_1000001>
+        <obo:PROMOT_1000001>[RD-CDM] Graefe, A.S.L., Hübner, M.R., Rehburg, F. et al. An ontology-based rare disease common data model harmonising international registries, FHIR, and Phenopackets. Sci Data 12, 234 (2025). https://doi.org/10.1038/s41597-025-04558-z</obo:PROMOT_1000001>
         <oboInOwl:hasDbXref>GENO:0000492</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>http://purl.obolibrary.org/obo/NCIT_C18093</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>http://snomed.info/id/106221001</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>http://snomed.info/id/55446002</oboInOwl:hasDbXref>
         <rdfs:comment>JP: Translated to spanish using Bing Translator</rdfs:comment>
-        <rdfs:comment>[derived from RD-CDM] Graefe, A.S.L., Hübner, M.R., Rehburg, F. et al. An ontology-based rare disease common data model harmonising international registries, FHIR, and Phenopackets. Sci Data 12, 234 (2025). https://doi.org/10.1038/s41597-025-04558-z</rdfs:comment>
+        <rdfs:comment>[PROMOT NOTE: derived from EURO-NMD] </rdfs:comment>
+        <rdfs:comment>[PROMOT note] [Derived from RD-CDM] [6.1.1 Genomic Diagnosis]</rdfs:comment>
         <rdfs:label xml:lang="en">genetic mutation</rdfs:label>
         <rdfs:label xml:lang="es">mutación genética</rdfs:label>
         <rdfs:label xml:lang="fr">mutation génetique</rdfs:label>
@@ -650,8 +735,9 @@ We also have the outstanding issue of how to aim different definitions to differ
         <obo:IAO_0000115 xml:lang="es">Una alteración genética ubicada en el gen PABPN1.</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="fr">Une altération génétique située au niveau du gène PABPN1.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
+        <obo:PROMOT_1000001>[EURO-NMD] Atalia A et al., EURO-NMD registry: federated FAIR infrastructure, innovative technologies and concepts of a patient-centred registry for rare neuromuscular disorders. Orphanet J Rare Dis. 2024 Feb 14;19(1):66. doi: 10.1186/s13023-024-03059-3. PMID: 38355534; PMCID: PMC10865673.</obo:PROMOT_1000001>
         <rdfs:comment>JP: Translated to spanish using Bing Translator</rdfs:comment>
-        <rdfs:comment>Related to oculopharyngeal muscular dystrophy</rdfs:comment>
+        <rdfs:comment>[PROMOT NOTE: derived from EURO-NMD] </rdfs:comment>
         <rdfs:label xml:lang="en">PABPN1 mutation</rdfs:label>
         <rdfs:label xml:lang="es">mutación del gen PAPBN1</rdfs:label>
         <rdfs:label xml:lang="fr">mutation du gène PABPN1</rdfs:label>
@@ -669,7 +755,6 @@ We also have the outstanding issue of how to aim different definitions to differ
         <obo:IAO_0000115 xml:lang="fr">Une altération génétique située au niveau du gène RYR1.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
         <rdfs:comment>JP: Translated to spanish using Bing Translator</rdfs:comment>
-        <rdfs:comment>Related to congenital myopathies</rdfs:comment>
         <rdfs:label xml:lang="en">RYR1 mutation</rdfs:label>
         <rdfs:label xml:lang="es">mutación del gen RYR1</rdfs:label>
         <rdfs:label xml:lang="fr">mutation du gène RYR1</rdfs:label>
@@ -687,7 +772,6 @@ We also have the outstanding issue of how to aim different definitions to differ
         <obo:IAO_0000115 xml:lang="fr">Une altération génétique située au niveau du gène TTN.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
         <rdfs:comment>JP: Translated to spanish using Bing Translator</rdfs:comment>
-        <rdfs:comment>Related to congenital myopathies</rdfs:comment>
         <rdfs:label xml:lang="en">TTN mutation</rdfs:label>
         <rdfs:label xml:lang="es">mutación del gen TTN</rdfs:label>
         <rdfs:label xml:lang="fr">mutation du gène TTN</rdfs:label>
@@ -705,7 +789,6 @@ We also have the outstanding issue of how to aim different definitions to differ
         <obo:IAO_0000115 xml:lang="fr">Une altération génétique située au niveau du gène NEB.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
         <rdfs:comment>JP: Translated to spanish using Bing Translator</rdfs:comment>
-        <rdfs:comment>Related to congenital myopathies</rdfs:comment>
         <rdfs:label xml:lang="en">NEB mutation</rdfs:label>
         <rdfs:label xml:lang="es">mutación del gen NEB</rdfs:label>
         <rdfs:label xml:lang="fr">mutation du gène NEB</rdfs:label>
@@ -723,7 +806,6 @@ We also have the outstanding issue of how to aim different definitions to differ
         <obo:IAO_0000115 xml:lang="fr">Une altération génétique située au niveau du gène MTM1.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
         <rdfs:comment>JP: Translated to spanish using Bing Translator</rdfs:comment>
-        <rdfs:comment>Related to congenital myopathies</rdfs:comment>
         <rdfs:label xml:lang="en">MTM1 mutation</rdfs:label>
         <rdfs:label xml:lang="es">mutación del gen NMTM1</rdfs:label>
         <rdfs:label xml:lang="fr">mutation du gène NMTM1</rdfs:label>
@@ -741,7 +823,6 @@ We also have the outstanding issue of how to aim different definitions to differ
         <obo:IAO_0000115 xml:lang="fr">Une altération génétique située au niveau du gène ACTA1.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
         <rdfs:comment>JP: Translated to spanish using Bing Translator</rdfs:comment>
-        <rdfs:comment>Related to congenital myopathies</rdfs:comment>
         <rdfs:label xml:lang="en">ACTA1 mutation</rdfs:label>
         <rdfs:label xml:lang="es">mutación del gen ACTA1</rdfs:label>
         <rdfs:label xml:lang="fr">mutation du gène ACTA1</rdfs:label>
@@ -759,7 +840,6 @@ We also have the outstanding issue of how to aim different definitions to differ
         <obo:IAO_0000115 xml:lang="fr">Une altération génétique située au niveau du gène SELENON.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
         <rdfs:comment>JP: Translated to spanish using Bing Translator</rdfs:comment>
-        <rdfs:comment>Related to congenital myopathies</rdfs:comment>
         <rdfs:label xml:lang="en">SELENON mutation</rdfs:label>
         <rdfs:label xml:lang="es">mutación del gen SELENON</rdfs:label>
         <rdfs:label xml:lang="fr">mutation du gène SELENON</rdfs:label>
@@ -777,7 +857,6 @@ We also have the outstanding issue of how to aim different definitions to differ
         <obo:IAO_0000115 xml:lang="fr">Une altération génétique située au niveau du gène CHRNE.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
         <rdfs:comment>JP: Translated to spanish using Bing Translator</rdfs:comment>
-        <rdfs:comment>Related to congenital myasthenic syndromes</rdfs:comment>
         <rdfs:label xml:lang="en">CHRNE mutation</rdfs:label>
         <rdfs:label xml:lang="es">mutación del gen CHRNE</rdfs:label>
         <rdfs:label xml:lang="fr">mutation du gène CHRNE</rdfs:label>
@@ -795,7 +874,6 @@ We also have the outstanding issue of how to aim different definitions to differ
         <obo:IAO_0000115 xml:lang="fr">Une altération génétique située au niveau du gène DOK7.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
         <rdfs:comment>JP: Translated to spanish using Bing Translator</rdfs:comment>
-        <rdfs:comment>Related to congenital myasthenic syndromes</rdfs:comment>
         <rdfs:label xml:lang="en">DOK7 mutation</rdfs:label>
         <rdfs:label xml:lang="es">mutación del gen DOK7</rdfs:label>
         <rdfs:label xml:lang="fr">mutation du gène DOK7</rdfs:label>
@@ -813,7 +891,6 @@ We also have the outstanding issue of how to aim different definitions to differ
         <obo:IAO_0000115 xml:lang="fr">Une altération génétique située au niveau du gène COLQ.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
         <rdfs:comment>JP: Translated to spanish using Bing Translator</rdfs:comment>
-        <rdfs:comment>Related to congenital myasthenic syndromes</rdfs:comment>
         <rdfs:label xml:lang="en">COLQ mutation</rdfs:label>
         <rdfs:label xml:lang="es">mutación del gen COLQ</rdfs:label>
         <rdfs:label xml:lang="fr">mutation du gène COLQ</rdfs:label>
@@ -831,7 +908,6 @@ We also have the outstanding issue of how to aim different definitions to differ
         <obo:IAO_0000115 xml:lang="fr">Une altération génétique située au niveau du gène RAPSN.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
         <rdfs:comment>JP: Translated to spanish using Bing Translator</rdfs:comment>
-        <rdfs:comment>Related to congenital myasthenic syndromes</rdfs:comment>
         <rdfs:label xml:lang="en">RAPSN mutation</rdfs:label>
         <rdfs:label xml:lang="es">mutación del gen RAPSN</rdfs:label>
         <rdfs:label xml:lang="fr">mutation du gène RAPSN</rdfs:label>
@@ -849,7 +925,6 @@ We also have the outstanding issue of how to aim different definitions to differ
         <obo:IAO_0000115 xml:lang="fr">Une altération génétique située au niveau du gène GFPT1.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
         <rdfs:comment>JP: Translated to spanish using Bing Translator</rdfs:comment>
-        <rdfs:comment>Related to congenital myasthenic syndromes</rdfs:comment>
         <rdfs:label xml:lang="en">GFPT1 mutation</rdfs:label>
         <rdfs:label xml:lang="es">mutación del gen GFPT1</rdfs:label>
         <rdfs:label xml:lang="fr">mutation du gène GFPT1</rdfs:label>
@@ -867,7 +942,6 @@ We also have the outstanding issue of how to aim different definitions to differ
         <obo:IAO_0000115 xml:lang="fr">Une altération génétique située au niveau du gène GMPPB.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
         <rdfs:comment>JP: Translated to spanish using Bing Translator</rdfs:comment>
-        <rdfs:comment>Related to congenital myasthenic syndromes</rdfs:comment>
         <rdfs:label xml:lang="en">GMPPB mutation</rdfs:label>
         <rdfs:label xml:lang="es">mutación del gen GMPPB</rdfs:label>
         <rdfs:label xml:lang="fr">mutation du gène GMPPB</rdfs:label>
@@ -906,13 +980,19 @@ We also have the outstanding issue of how to aim different definitions to differ
     <!-- http://purl.obolibrary.org/obo/PROMOT_0000017 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0000017">
-        <obo:IAO_0000115 xml:lang="en">A body function related to a phenotype such that the body function is impacted by the phenotype existence.</obo:IAO_0000115>
-        <obo:IAO_0000115 xml:lang="fr">Une fonction organique qui peut être affectée par un phénotype.</obo:IAO_0000115>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0000026"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://semanticscience.org/resource/SIO_000217"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0000084"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000115 xml:lang="en">A phenotype that affects a body function.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="fr">Un phénotype qui affecte une fonction organique.</obo:IAO_0000115>
         <obo:IAO_0000117>Paul Fabry, https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
         <rdfs:comment>(JP: unsure about definition)</rdfs:comment>
-        <rdfs:label xml:lang="fr">Fonction organique liée à un phénotype</rdfs:label>
-        <rdfs:label xml:lang="en">Phenotypically related body function</rdfs:label>
-        <rdfs:label xml:lang="es">función corporala relacionada con un fenotipo</rdfs:label>
+        <rdfs:label xml:lang="en">Body function related phenotype</rdfs:label>
+        <rdfs:label xml:lang="fr">Phénotype lié à une fonction organique</rdfs:label>
     </owl:Class>
     
 
@@ -920,12 +1000,19 @@ We also have the outstanding issue of how to aim different definitions to differ
     <!-- http://purl.obolibrary.org/obo/PROMOT_0000018 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0000018">
-        <obo:IAO_0000115 xml:lang="en">A body structure that is involved in an activity or a participation. The boby structure is needed in order to the activity or participation to occurs.</obo:IAO_0000115>
-        <obo:IAO_0000115 xml:lang="fr">Une structure anatomique qui est impliquée dans une activité ou participation. Elle est nécessaire pour que l’activité ou la participation ait lieu.</obo:IAO_0000115>
-        <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
-        <rdfs:label xml:lang="en">Activity or participation related body structure</rdfs:label>
-        <rdfs:label xml:lang="fr">Structure anatomique liée à une activité ou une participation</rdfs:label>
-        <rdfs:label xml:lang="es">estructura corporala relacionada con una actividad o una participación</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0000026"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://semanticscience.org/resource/SIO_000217"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0000084"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000115 xml:lang="en">A phenotype that affects an activity or a participation.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="fr">Un phénotype qui affecte une activité ou une participation.</obo:IAO_0000115>
+        <obo:IAO_0000117>Paul Fabry, https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
+        <rdfs:comment>(JP: unsure about definition)</rdfs:comment>
+        <rdfs:label xml:lang="en">Activity or participation related phenotype</rdfs:label>
+        <rdfs:label xml:lang="fr">Phénotype lié à une activité ou une participation</rdfs:label>
     </owl:Class>
     
 
@@ -1097,13 +1184,6 @@ We also have the outstanding issue of how to aim different definitions to differ
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002351"/>
-                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onClass rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0000067"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002351"/>
                 <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
                 <owl:onClass rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0000037"/>
             </owl:Restriction>
@@ -1120,6 +1200,13 @@ We also have the outstanding issue of how to aim different definitions to differ
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002351"/>
                 <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
                 <owl:onClass rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0000043"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002351"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0000067"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115 xml:lang="en">A statement that describes a human.</obo:IAO_0000115>
@@ -1157,7 +1244,8 @@ We also have the outstanding issue of how to aim different definitions to differ
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002351"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0000079"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0000079"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -1289,13 +1377,21 @@ We also have the outstanding issue of how to aim different definitions to differ
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002351"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0000100"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0000119"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002351"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0000101"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0000092"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002351"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0000119"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115 xml:lang="en">A statement regarding a consent to describe it.</obo:IAO_0000115>
@@ -1329,7 +1425,8 @@ We also have the outstanding issue of how to aim different definitions to differ
         <obo:IAO_0000115 xml:lang="fr">La date à laquelle une entité a été formellement identifiée, par exemple la date à laquelle un phénotype a été identifié via une procédure médicale.</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="en">The date when an entity is assessed.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
-        <rdfs:comment>[derived from EURO-NMD] Atalia A et al., EURO-NMD registry: federated FAIR infrastructure, innovative technologies and concepts of a patient-centred registry for rare neuromuscular disorders. Orphanet J Rare Dis. 2024 Feb 14;19(1):66. doi: 10.1186/s13023-024-03059-3. PMID: 38355534; PMCID: PMC10865673.</rdfs:comment>
+        <obo:PROMOT_1000001>[EURO-NMD] Atalia A et al., EURO-NMD registry: federated FAIR infrastructure, innovative technologies and concepts of a patient-centred registry for rare neuromuscular disorders. Orphanet J Rare Dis. 2024 Feb 14;19(1):66. doi: 10.1186/s13023-024-03059-3. PMID: 38355534; PMCID: PMC10865673.</obo:PROMOT_1000001>
+        <rdfs:comment>[derived from EURO-NMD] </rdfs:comment>
         <rdfs:label xml:lang="en">Date of assessment</rdfs:label>
         <rdfs:label xml:lang="fr">date d’identification</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://snomed.info/id/363778006"/>
@@ -1347,8 +1444,11 @@ We also have the outstanding issue of how to aim different definitions to differ
         <obo:IAO_0000115 xml:lang="en">The date when an abnormal disposition, such as a disease or a phenotypic abnormality, disapears.</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="es">Une date à laquelle une disposition anormale, telle qu’une maladie ou un phénotype, cesse d’exister.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
+        <obo:PROMOT_1000001>[EURO-NMD] Atalia A et al., EURO-NMD registry: federated FAIR infrastructure, innovative technologies and concepts of a patient-centred registry for rare neuromuscular disorders. Orphanet J Rare Dis. 2024 Feb 14;19(1):66. doi: 10.1186/s13023-024-03059-3. PMID: 38355534; PMCID: PMC10865673.</obo:PROMOT_1000001>
+        <obo:PROMOT_1000001>[RD-CDM] Graefe, A.S.L., Hübner, M.R., Rehburg, F. et al. An ontology-based rare disease common data model harmonising international registries, FHIR, and Phenopackets. Sci Data 12, 234 (2025). https://doi.org/10.1038/s41597-025-04558-z</obo:PROMOT_1000001>
+        <oboInOwl:hasDbXref>HP:0034382</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>http://purl.obolibrary.org/obo/NCIT_C178992</oboInOwl:hasDbXref>
-        <rdfs:comment>[derived from RD-CDM] Graefe, A.S.L., Hübner, M.R., Rehburg, F. et al. An ontology-based rare disease common data model harmonising international registries, FHIR, and Phenopackets. Sci Data 12, 234 (2025). https://doi.org/10.1038/s41597-025-04558-z</rdfs:comment>
+        <rdfs:comment>[PROMOT note] [Derived from RD-CDM] [6.2.4 Resolution Date] </rdfs:comment>
         <rdfs:label xml:lang="en">Date of resolution</rdfs:label>
         <rdfs:label xml:lang="es">Fecha de resolución</rdfs:label>
         <rdfs:label xml:lang="fr">date de résolution</rdfs:label>
@@ -1363,6 +1463,7 @@ We also have the outstanding issue of how to aim different definitions to differ
         <obo:IAO_0000115 xml:lang="fr">L’année à laquelle apparaît une entité.</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="en">The year in which an entity appears.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
+        <rdfs:comment>[PROMOT note] [Derived from RD-CDM] [5.4 Date of Onset]</rdfs:comment>
         <rdfs:label xml:lang="fr">Année d’apparition</rdfs:label>
         <rdfs:label xml:lang="en">Year of onset</rdfs:label>
     </owl:Class>
@@ -1376,6 +1477,7 @@ We also have the outstanding issue of how to aim different definitions to differ
         <obo:IAO_0000115 xml:lang="fr">Une indication de temps qui réfère à une année spécifique à laquelle un organisme naît.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
         <oboInOwl:hasDbXref>http://purl.obolibrary.org/obo/NCIT_C83164</oboInOwl:hasDbXref>
+        <rdfs:comment>[PROMOT note] [Derived from RD-CDM] [2.1 Date of birth]</rdfs:comment>
         <rdfs:label xml:lang="fr">Année de naissance</rdfs:label>
         <rdfs:label xml:lang="en">Year of birth</rdfs:label>
         <rdfs:label xml:lang="es">año de nacimiento</rdfs:label>
@@ -1390,6 +1492,7 @@ We also have the outstanding issue of how to aim different definitions to differ
         <obo:IAO_0000115 xml:lang="fr">Une année à laquelle un diagnostique est posé.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
         <oboInOwl:hasDbXref>http://purl.obolibrary.org/obo/NCIT_C210821</oboInOwl:hasDbXref>
+        <rdfs:comment>[PROMOT note] [Derived from RD-CDM] [5.6 Date of Diagnosis] </rdfs:comment>
         <rdfs:label xml:lang="fr">Année de diagnostic</rdfs:label>
         <rdfs:label xml:lang="en">Year of diagnosis</rdfs:label>
     </owl:Class>
@@ -1414,6 +1517,7 @@ We also have the outstanding issue of how to aim different definitions to differ
         <obo:IAO_0000115 xml:lang="fr">L’année de la disparition d’une entité, par exemple, l’année de disparition d’un phénotype.</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="en">The year of the resolution of an abnormal disposition, e.g. the year when a phenotype ceases existing.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
+        <rdfs:comment>[PROMOT note] [Derived from RD-CDM] [6.2.4 Resolution Date] </rdfs:comment>
         <rdfs:label xml:lang="fr">Année de disparition</rdfs:label>
         <rdfs:label xml:lang="en">Year of resolution</rdfs:label>
     </owl:Class>
@@ -1427,6 +1531,7 @@ We also have the outstanding issue of how to aim different definitions to differ
         <obo:IAO_0000115 xml:lang="en">The year in which the death occurs.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
         <oboInOwl:hasDbXref>http://purl.obolibrary.org/obo/NCIT_C156426</oboInOwl:hasDbXref>
+        <rdfs:comment>[PROMOT note] [Derived from RD-CDM] [3.2 Time of Death] </rdfs:comment>
         <rdfs:label xml:lang="fr">Année de décès</rdfs:label>
         <rdfs:label xml:lang="en">Year of death</rdfs:label>
     </owl:Class>
@@ -1439,8 +1544,9 @@ We also have the outstanding issue of how to aim different definitions to differ
         <obo:IAO_0000115 xml:lang="en">Elapsed time since birth expressed in years.</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="fr">Il s’agit du nombre d’années écoulées depuis la naissance d’une personne.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
+        <obo:PROMOT_1000001>[EURO-NMD] Atalia A et al., EURO-NMD registry: federated FAIR infrastructure, innovative technologies and concepts of a patient-centred registry for rare neuromuscular disorders. Orphanet J Rare Dis. 2024 Feb 14;19(1):66. doi: 10.1186/s13023-024-03059-3. PMID: 38355534; PMCID: PMC10865673.</obo:PROMOT_1000001>
+        <obo:PROMOT_1000001>[RD-CDM] Graefe, A.S.L., Hübner, M.R., Rehburg, F. et al. An ontology-based rare disease common data model harmonising international registries, FHIR, and Phenopackets. Sci Data 12, 234 (2025). https://doi.org/10.1038/s41597-025-04558-z</obo:PROMOT_1000001>
         <oboInOwl:hasDbXref>http://purl.obolibrary.org/obo/NCIT_C25150</oboInOwl:hasDbXref>
-        <rdfs:comment>[derived from RD-CDM] Graefe, A.S.L., Hübner, M.R., Rehburg, F. et al. An ontology-based rare disease common data model harmonising international registries, FHIR, and Phenopackets. Sci Data 12, 234 (2025). https://doi.org/10.1038/s41597-025-04558-z</rdfs:comment>
         <rdfs:label xml:lang="en">Age</rdfs:label>
         <rdfs:label xml:lang="fr">Age</rdfs:label>
     </owl:Class>
@@ -1466,9 +1572,11 @@ We also have the outstanding issue of how to aim different definitions to differ
         <obo:IAO_0000115 xml:lang="en">Arbitrary interval of age to split a population into groups according to their age.</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="fr">Un interval arbitraire pour diviser une population en sous-groupes en fonction de l’âge.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
+        <obo:PROMOT_1000001>[EURO-NMD] Atalia A et al., EURO-NMD registry: federated FAIR infrastructure, innovative technologies and concepts of a patient-centred registry for rare neuromuscular disorders. Orphanet J Rare Dis. 2024 Feb 14;19(1):66. doi: 10.1186/s13023-024-03059-3. PMID: 38355534; PMCID: PMC10865673.</obo:PROMOT_1000001>
+        <obo:PROMOT_1000001>[RD-CDM] Graefe, A.S.L., Hübner, M.R., Rehburg, F. et al. An ontology-based rare disease common data model harmonising international registries, FHIR, and Phenopackets. Sci Data 12, 234 (2025). https://doi.org/10.1038/s41597-025-04558-z</obo:PROMOT_1000001>
         <oboInOwl:hasDbXref>http://purl.obolibrary.org/obo/NCIT_C20587</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>http://snomed.info/id/105727008</oboInOwl:hasDbXref>
-        <rdfs:comment>[derived from RD-CDM] Graefe, A.S.L., Hübner, M.R., Rehburg, F. et al. An ontology-based rare disease common data model harmonising international registries, FHIR, and Phenopackets. Sci Data 12, 234 (2025). https://doi.org/10.1038/s41597-025-04558-z</rdfs:comment>
+        <rdfs:comment>[PROMOT note] [Derived from RD-CDM] [3.4 Age Category] </rdfs:comment>
         <rdfs:label xml:lang="en">Age Category</rdfs:label>
         <rdfs:label xml:lang="fr">Tranche d’âge</rdfs:label>
         <rdfs:label xml:lang="es">grupo de edad</rdfs:label>
@@ -1485,8 +1593,10 @@ We also have the outstanding issue of how to aim different definitions to differ
         <obo:IAO_0000115 xml:lang="es">Un grupo de edad que incluye a las personas de 16 años y más.</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="fr">Une tranche d’âge incluant les personnes de 16 ans et plus.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
+        <obo:PROMOT_1000001>[EURO-NMD] Atalia A et al., EURO-NMD registry: federated FAIR infrastructure, innovative technologies and concepts of a patient-centred registry for rare neuromuscular disorders. Orphanet J Rare Dis. 2024 Feb 14;19(1):66. doi: 10.1186/s13023-024-03059-3. PMID: 38355534; PMCID: PMC10865673.</obo:PROMOT_1000001>
+        <obo:PROMOT_1000001>[RD-CDM] Graefe, A.S.L., Hübner, M.R., Rehburg, F. et al. An ontology-based rare disease common data model harmonising international registries, FHIR, and Phenopackets. Sci Data 12, 234 (2025). https://doi.org/10.1038/s41597-025-04558-z</obo:PROMOT_1000001>
         <oboInOwl:hasDbXref>http://snomed.info/id/41847000</oboInOwl:hasDbXref>
-        <rdfs:comment>[derived from RD-CDM] Graefe, A.S.L., Hübner, M.R., Rehburg, F. et al. An ontology-based rare disease common data model harmonising international registries, FHIR, and Phenopackets. Sci Data 12, 234 (2025). https://doi.org/10.1038/s41597-025-04558-z</rdfs:comment>
+        <rdfs:comment>[PROMOT note] [Derived from RD-CDM] [3.4 Age Category] </rdfs:comment>
         <rdfs:label xml:lang="en">Adulthood</rdfs:label>
         <rdfs:label xml:lang="es">edad adulta</rdfs:label>
         <rdfs:label xml:lang="fr">âge adulte</rdfs:label>
@@ -1575,6 +1685,10 @@ We also have the outstanding issue of how to aim different definitions to differ
         <obo:IAO_0000115 xml:lang="es">Un grupo de edad que incluye a las personas de 16 a 18 años incluidos.</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="fr">Une tranche d’âge incluant les personnes entre 16 et 18 ans inclus.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
+        <obo:PROMOT_1000001>[EURO-NMD] Atalia A et al., EURO-NMD registry: federated FAIR infrastructure, innovative technologies and concepts of a patient-centred registry for rare neuromuscular disorders. Orphanet J Rare Dis. 2024 Feb 14;19(1):66. doi: 10.1186/s13023-024-03059-3. PMID: 38355534; PMCID: PMC10865673.</obo:PROMOT_1000001>
+        <obo:PROMOT_1000001>[RD-CDM] Graefe, A.S.L., Hübner, M.R., Rehburg, F. et al. An ontology-based rare disease common data model harmonising international registries, FHIR, and Phenopackets. Sci Data 12, 234 (2025). https://doi.org/10.1038/s41597-025-04558-z</obo:PROMOT_1000001>
+        <oboInOwl:hasDbXref>Snomed:263659003</oboInOwl:hasDbXref>
+        <rdfs:comment>[PROMOT note] [Derived from RD-CDM] [3.4 Age Category] </rdfs:comment>
         <rdfs:label xml:lang="en">Early young adulthood</rdfs:label>
         <rdfs:label xml:lang="fr">début de l’âge adulte</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://purl.obolibrary.org/obo/HP_0025708"/>
@@ -1680,8 +1794,10 @@ We also have the outstanding issue of how to aim different definitions to differ
         <obo:IAO_0000115 xml:lang="en">Age prior to birth but after 8 weeks of embryonic development (corresponding to a gestational age of 10 weeks).</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="fr">Une catégorie regroupant les âges d’un fœtus à partir de 8 semaines après la conception (soit 10 semaines de gestation) jusqu’à la naissance.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
+        <obo:PROMOT_1000001>[EURO-NMD] Atalia A et al., EURO-NMD registry: federated FAIR infrastructure, innovative technologies and concepts of a patient-centred registry for rare neuromuscular disorders. Orphanet J Rare Dis. 2024 Feb 14;19(1):66. doi: 10.1186/s13023-024-03059-3. PMID: 38355534; PMCID: PMC10865673.</obo:PROMOT_1000001>
+        <obo:PROMOT_1000001>[RD-CDM] Graefe, A.S.L., Hübner, M.R., Rehburg, F. et al. An ontology-based rare disease common data model harmonising international registries, FHIR, and Phenopackets. Sci Data 12, 234 (2025). https://doi.org/10.1038/s41597-025-04558-z</obo:PROMOT_1000001>
         <oboInOwl:hasDbXref>http://snomed.info/id/303112003</oboInOwl:hasDbXref>
-        <rdfs:comment>[derived from RD-CDM] Graefe, A.S.L., Hübner, M.R., Rehburg, F. et al. An ontology-based rare disease common data model harmonising international registries, FHIR, and Phenopackets. Sci Data 12, 234 (2025). https://doi.org/10.1038/s41597-025-04558-z</rdfs:comment>
+        <rdfs:comment>[PROMOT note] [Derived from RD-CDM] [3.4 Age Category] </rdfs:comment>
         <rdfs:label xml:lang="en">Fetal</rdfs:label>
         <rdfs:label xml:lang="fr">période foetale</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://purl.obolibrary.org/obo/HP_0011461"/>
@@ -1823,9 +1939,11 @@ We also have the outstanding issue of how to aim different definitions to differ
         <obo:IAO_0000115 xml:lang="es">Un grupo de edad que incluye a las personas de 1 a 4 años incluidos.</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="fr">Une tranche d’âge incluant les personnes de 1 à 4 ans inclus.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
+        <obo:PROMOT_1000001>[EURO-NMD] Atalia A et al., EURO-NMD registry: federated FAIR infrastructure, innovative technologies and concepts of a patient-centred registry for rare neuromuscular disorders. Orphanet J Rare Dis. 2024 Feb 14;19(1):66. doi: 10.1186/s13023-024-03059-3. PMID: 38355534; PMCID: PMC10865673.</obo:PROMOT_1000001>
+        <obo:PROMOT_1000001>[RD-CDM] Graefe, A.S.L., Hübner, M.R., Rehburg, F. et al. An ontology-based rare disease common data model harmonising international registries, FHIR, and Phenopackets. Sci Data 12, 234 (2025). https://doi.org/10.1038/s41597-025-04558-z</obo:PROMOT_1000001>
         <oboInOwl:hasDbXref>http://snomed.info/id/255398004</oboInOwl:hasDbXref>
         <rdfs:comment>JP: Translated to spanish using Bing Translator</rdfs:comment>
-        <rdfs:comment>[derived from RD-CDM] Graefe, A.S.L., Hübner, M.R., Rehburg, F. et al. An ontology-based rare disease common data model harmonising international registries, FHIR, and Phenopackets. Sci Data 12, 234 (2025). https://doi.org/10.1038/s41597-025-04558-z</rdfs:comment>
+        <rdfs:comment>[PROMOT note] [Derived from RD-CDM] [3.4 Age Category] </rdfs:comment>
         <rdfs:label xml:lang="en">Childhood</rdfs:label>
         <rdfs:label xml:lang="es">infancia</rdfs:label>
         <rdfs:label xml:lang="fr">Âge compris dans l’enfance</rdfs:label>
@@ -1847,6 +1965,10 @@ We also have the outstanding issue of how to aim different definitions to differ
         <obo:IAO_0000115 xml:lang="en">Age category including people from 28 days to under 1 year old.</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="fr">Une tranche d’âge incluant les nourrissons de 28 jours à 1 an inclus.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
+        <obo:PROMOT_1000001>[EURO-NMD] Atalia A et al., EURO-NMD registry: federated FAIR infrastructure, innovative technologies and concepts of a patient-centred registry for rare neuromuscular disorders. Orphanet J Rare Dis. 2024 Feb 14;19(1):66. doi: 10.1186/s13023-024-03059-3. PMID: 38355534; PMCID: PMC10865673.</obo:PROMOT_1000001>
+        <obo:PROMOT_1000001>[RD-CDM] Graefe, A.S.L., Hübner, M.R., Rehburg, F. et al. An ontology-based rare disease common data model harmonising international registries, FHIR, and Phenopackets. Sci Data 12, 234 (2025). https://doi.org/10.1038/s41597-025-04558-z</obo:PROMOT_1000001>
+        <oboInOwl:hasDbXref>SnomED:3658006</oboInOwl:hasDbXref>
+        <rdfs:comment>[PROMOT note] [Derived from RD-CDM] [3.4 Age Category] </rdfs:comment>
         <rdfs:label xml:lang="en">Infantile age</rdfs:label>
         <rdfs:label xml:lang="es">edad infantil</rdfs:label>
         <rdfs:label xml:lang="fr">âge infantile</rdfs:label>
@@ -1869,7 +1991,11 @@ We also have the outstanding issue of how to aim different definitions to differ
         <obo:IAO_0000115 xml:lang="es">Un grupo de edad que incluye a las personas de 5 a 15 años incluidos.</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="fr">Une tranche d’âge incluant les personnes entre 5 et 15 ans inclus.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
+        <obo:PROMOT_1000001>[EURO-NMD] Atalia A et al., EURO-NMD registry: federated FAIR infrastructure, innovative technologies and concepts of a patient-centred registry for rare neuromuscular disorders. Orphanet J Rare Dis. 2024 Feb 14;19(1):66. doi: 10.1186/s13023-024-03059-3. PMID: 38355534; PMCID: PMC10865673.</obo:PROMOT_1000001>
+        <obo:PROMOT_1000001>[RD-CDM] Graefe, A.S.L., Hübner, M.R., Rehburg, F. et al. An ontology-based rare disease common data model harmonising international registries, FHIR, and Phenopackets. Sci Data 12, 234 (2025). https://doi.org/10.1038/s41597-025-04558-z</obo:PROMOT_1000001>
+        <oboInOwl:hasDbXref>SNOMED:713153009</oboInOwl:hasDbXref>
         <rdfs:comment>JP: Translated to spanish using Bing Translator</rdfs:comment>
+        <rdfs:comment>[PROMOT note] [Derived from RD-CDM] [3.4 Age Category] </rdfs:comment>
         <rdfs:label xml:lang="en">Juvenile age</rdfs:label>
         <rdfs:label xml:lang="es">edad juvenil</rdfs:label>
         <rdfs:label xml:lang="fr">âge juvénile</rdfs:label>
@@ -1953,10 +2079,12 @@ We also have the outstanding issue of how to aim different definitions to differ
         <obo:IAO_0000115 xml:lang="fr">Ensemble des caractéristiques sexuelles physiques à la naissance.</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="en">The physical sexual characteristiscs at birth.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
+        <obo:PROMOT_1000001>[EURO-NMD] Atalia A et al., EURO-NMD registry: federated FAIR infrastructure, innovative technologies and concepts of a patient-centred registry for rare neuromuscular disorders. Orphanet J Rare Dis. 2024 Feb 14;19(1):66. doi: 10.1186/s13023-024-03059-3. PMID: 38355534; PMCID: PMC10865673.</obo:PROMOT_1000001>
+        <obo:PROMOT_1000001>[RD-CDM] Graefe, A.S.L., Hübner, M.R., Rehburg, F. et al. An ontology-based rare disease common data model harmonising international registries, FHIR, and Phenopackets. Sci Data 12, 234 (2025). https://doi.org/10.1038/s41597-025-04558-z</obo:PROMOT_1000001>
         <oboInOwl:hasDbXref>http://purl.obolibrary.org/obo/NCIT_C124436</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>http://snomed.info/id/281053000</oboInOwl:hasDbXref>
-        <rdfs:comment>[derived from EURO-NMD] Atalia A et al., EURO-NMD registry: federated FAIR infrastructure, innovative technologies and concepts of a patient-centred registry for rare neuromuscular disorders. Orphanet J Rare Dis. 2024 Feb 14;19(1):66. doi: 10.1186/s13023-024-03059-3. PMID: 38355534; PMCID: PMC10865673.</rdfs:comment>
-        <rdfs:comment>[derived from RD-CDM] Graefe, A.S.L., Hübner, M.R., Rehburg, F. et al. An ontology-based rare disease common data model harmonising international registries, FHIR, and Phenopackets. Sci Data 12, 234 (2025). https://doi.org/10.1038/s41597-025-04558-z</rdfs:comment>
+        <rdfs:comment>[PROMOT note] [Derived from RD-CDM] [2.2 Sex at birth] </rdfs:comment>
+        <rdfs:comment>[derived from EURO-NMD] </rdfs:comment>
         <rdfs:label xml:lang="en">Sex at birth</rdfs:label>
         <rdfs:label xml:lang="fr">sexe à la naissance</rdfs:label>
     </owl:Class>
@@ -1970,9 +2098,11 @@ We also have the outstanding issue of how to aim different definitions to differ
         <obo:IAO_0000115 xml:lang="en">Physical sexual characteristiscs at birth that are stated as female.</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="fr">Un ensemble de caractéristiques sexuelles à la naissance considérées comme féminines.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
+        <obo:PROMOT_1000001>[EURO-NMD] Atalia A et al., EURO-NMD registry: federated FAIR infrastructure, innovative technologies and concepts of a patient-centred registry for rare neuromuscular disorders. Orphanet J Rare Dis. 2024 Feb 14;19(1):66. doi: 10.1186/s13023-024-03059-3. PMID: 38355534; PMCID: PMC10865673.</obo:PROMOT_1000001>
+        <obo:PROMOT_1000001>[RD-CDM] Graefe, A.S.L., Hübner, M.R., Rehburg, F. et al. An ontology-based rare disease common data model harmonising international registries, FHIR, and Phenopackets. Sci Data 12, 234 (2025). https://doi.org/10.1038/s41597-025-04558-z</obo:PROMOT_1000001>
         <oboInOwl:hasDbXref>http://snomed.info/id/248152002</oboInOwl:hasDbXref>
-        <rdfs:comment>[derived from EURO-NMD] Atalia A et al., EURO-NMD registry: federated FAIR infrastructure, innovative technologies and concepts of a patient-centred registry for rare neuromuscular disorders. Orphanet J Rare Dis. 2024 Feb 14;19(1):66. doi: 10.1186/s13023-024-03059-3. PMID: 38355534; PMCID: PMC10865673.</rdfs:comment>
-        <rdfs:comment>[derived from RD-CDM] Graefe, A.S.L., Hübner, M.R., Rehburg, F. et al. An ontology-based rare disease common data model harmonising international registries, FHIR, and Phenopackets. Sci Data 12, 234 (2025). https://doi.org/10.1038/s41597-025-04558-z</rdfs:comment>
+        <rdfs:comment>[PROMOT note] [Derived from RD-CDM] [2.2 Sex at birth] </rdfs:comment>
+        <rdfs:comment>[derived from EURO-NMD] </rdfs:comment>
         <rdfs:label xml:lang="en">Female sex at birth</rdfs:label>
         <rdfs:label xml:lang="fr">sexe à la naissance féminin</rdfs:label>
     </owl:Class>
@@ -1986,8 +2116,10 @@ We also have the outstanding issue of how to aim different definitions to differ
         <obo:IAO_0000115 xml:lang="en">Physical sexual characteristiscs at birth that are stated as intersex.</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="fr">Un ensemble de caractéristiques sexuelles à la naissance considérées comme intersexes.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
+        <obo:PROMOT_1000001>[EURO-NMD] Atalia A et al., EURO-NMD registry: federated FAIR infrastructure, innovative technologies and concepts of a patient-centred registry for rare neuromuscular disorders. Orphanet J Rare Dis. 2024 Feb 14;19(1):66. doi: 10.1186/s13023-024-03059-3. PMID: 38355534; PMCID: PMC10865673.</obo:PROMOT_1000001>
+        <obo:PROMOT_1000001>[RD-CDM] Graefe, A.S.L., Hübner, M.R., Rehburg, F. et al. An ontology-based rare disease common data model harmonising international registries, FHIR, and Phenopackets. Sci Data 12, 234 (2025). https://doi.org/10.1038/s41597-025-04558-z</obo:PROMOT_1000001>
         <oboInOwl:hasDbXref>http://snomed.info/id/32570691000036100</oboInOwl:hasDbXref>
-        <rdfs:comment>[derived from RD-CDM] Graefe, A.S.L., Hübner, M.R., Rehburg, F. et al. An ontology-based rare disease common data model harmonising international registries, FHIR, and Phenopackets. Sci Data 12, 234 (2025). https://doi.org/10.1038/s41597-025-04558-z</rdfs:comment>
+        <rdfs:comment>[PROMOT note] [Derived from RD-CDM] [2.2 Sex at birth] </rdfs:comment>
         <rdfs:label xml:lang="en">Intersex at birth</rdfs:label>
         <rdfs:label xml:lang="fr">intersexe à la naissance</rdfs:label>
     </owl:Class>
@@ -2001,9 +2133,11 @@ We also have the outstanding issue of how to aim different definitions to differ
         <obo:IAO_0000115 xml:lang="en">Physical sexual characteristiscs at birth that are stated as male.</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="fr">Un ensemble de caractéristiques sexuelles à la naissance considérées comme masculines.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
+        <obo:PROMOT_1000001>[EURO-NMD] Atalia A et al., EURO-NMD registry: federated FAIR infrastructure, innovative technologies and concepts of a patient-centred registry for rare neuromuscular disorders. Orphanet J Rare Dis. 2024 Feb 14;19(1):66. doi: 10.1186/s13023-024-03059-3. PMID: 38355534; PMCID: PMC10865673.</obo:PROMOT_1000001>
+        <obo:PROMOT_1000001>[RD-CDM] Graefe, A.S.L., Hübner, M.R., Rehburg, F. et al. An ontology-based rare disease common data model harmonising international registries, FHIR, and Phenopackets. Sci Data 12, 234 (2025). https://doi.org/10.1038/s41597-025-04558-z</obo:PROMOT_1000001>
         <oboInOwl:hasDbXref>http://snomed.info/id/248153007</oboInOwl:hasDbXref>
-        <rdfs:comment>[derived from EURO-NMD] Atalia A et al., EURO-NMD registry: federated FAIR infrastructure, innovative technologies and concepts of a patient-centred registry for rare neuromuscular disorders. Orphanet J Rare Dis. 2024 Feb 14;19(1):66. doi: 10.1186/s13023-024-03059-3. PMID: 38355534; PMCID: PMC10865673.</rdfs:comment>
-        <rdfs:comment>[derived from RD-CDM] Graefe, A.S.L., Hübner, M.R., Rehburg, F. et al. An ontology-based rare disease common data model harmonising international registries, FHIR, and Phenopackets. Sci Data 12, 234 (2025). https://doi.org/10.1038/s41597-025-04558-z</rdfs:comment>
+        <rdfs:comment>[PROMOT note] [Derived from RD-CDM] [2.2 Sex at birth] </rdfs:comment>
+        <rdfs:comment>[derived from EURO-NMD] </rdfs:comment>
         <rdfs:label xml:lang="en">Male sex at birth</rdfs:label>
         <rdfs:label xml:lang="fr">sexe à la naissance masculin</rdfs:label>
     </owl:Class>
@@ -2017,9 +2151,11 @@ We also have the outstanding issue of how to aim different definitions to differ
         <obo:IAO_0000115 xml:lang="en">Physical sexual characteristiscs at birth that are unknown.</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="fr">Un ensemble de caractéristiques sexuelles à la naissance qui est inconnu.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
+        <obo:PROMOT_1000001>[EURO-NMD] Atalia A et al., EURO-NMD registry: federated FAIR infrastructure, innovative technologies and concepts of a patient-centred registry for rare neuromuscular disorders. Orphanet J Rare Dis. 2024 Feb 14;19(1):66. doi: 10.1186/s13023-024-03059-3. PMID: 38355534; PMCID: PMC10865673.</obo:PROMOT_1000001>
+        <obo:PROMOT_1000001>[RD-CDM] Graefe, A.S.L., Hübner, M.R., Rehburg, F. et al. An ontology-based rare disease common data model harmonising international registries, FHIR, and Phenopackets. Sci Data 12, 234 (2025). https://doi.org/10.1038/s41597-025-04558-z</obo:PROMOT_1000001>
         <oboInOwl:hasDbXref>http://snomed.info/id/184115007</oboInOwl:hasDbXref>
-        <rdfs:comment>[derived from EURO-NMD] Atalia A et al., EURO-NMD registry: federated FAIR infrastructure, innovative technologies and concepts of a patient-centred registry for rare neuromuscular disorders. Orphanet J Rare Dis. 2024 Feb 14;19(1):66. doi: 10.1186/s13023-024-03059-3. PMID: 38355534; PMCID: PMC10865673.</rdfs:comment>
-        <rdfs:comment>[derived from RD-CDM] Graefe, A.S.L., Hübner, M.R., Rehburg, F. et al. An ontology-based rare disease common data model harmonising international registries, FHIR, and Phenopackets. Sci Data 12, 234 (2025). https://doi.org/10.1038/s41597-025-04558-z</rdfs:comment>
+        <rdfs:comment>[PROMOT note] [Derived from RD-CDM] [2.2 Sex at birth] </rdfs:comment>
+        <rdfs:comment>[derived from EURO-NMD] </rdfs:comment>
         <rdfs:label xml:lang="en">Patient sex at birth unknown</rdfs:label>
         <rdfs:label xml:lang="fr">sexe à la naissance inconnu</rdfs:label>
         <rdfs:label xml:lang="es">sexo al nacer desconocido</rdfs:label>
@@ -2034,8 +2170,10 @@ We also have the outstanding issue of how to aim different definitions to differ
         <obo:IAO_0000115 xml:lang="en">Physical sexual characteristiscs at birth that are not recorded.</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="fr">Un ensemble de caractéristiques sexuelles à la naissance non renseigné.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
+        <obo:PROMOT_1000001>[EURO-NMD] Atalia A et al., EURO-NMD registry: federated FAIR infrastructure, innovative technologies and concepts of a patient-centred registry for rare neuromuscular disorders. Orphanet J Rare Dis. 2024 Feb 14;19(1):66. doi: 10.1186/s13023-024-03059-3. PMID: 38355534; PMCID: PMC10865673.</obo:PROMOT_1000001>
+        <obo:PROMOT_1000001>[RD-CDM] Graefe, A.S.L., Hübner, M.R., Rehburg, F. et al. An ontology-based rare disease common data model harmonising international registries, FHIR, and Phenopackets. Sci Data 12, 234 (2025). https://doi.org/10.1038/s41597-025-04558-z</obo:PROMOT_1000001>
         <oboInOwl:hasDbXref>http://snomed.info/id/1220561009</oboInOwl:hasDbXref>
-        <rdfs:comment>[derived from RD-CDM] Graefe, A.S.L., Hübner, M.R., Rehburg, F. et al. An ontology-based rare disease common data model harmonising international registries, FHIR, and Phenopackets. Sci Data 12, 234 (2025). https://doi.org/10.1038/s41597-025-04558-z</rdfs:comment>
+        <rdfs:comment>[PROMOT note] [Derived from RD-CDM] [2.2 Sex at birth] </rdfs:comment>
         <rdfs:label xml:lang="en">Sex at birth not recorded</rdfs:label>
         <rdfs:label xml:lang="fr">Sexe à la naissance non renseigné</rdfs:label>
     </owl:Class>
@@ -2048,8 +2186,10 @@ We also have the outstanding issue of how to aim different definitions to differ
         <obo:IAO_0000115 xml:lang="en">Gender identity of a person that identifies as a girl or as a woman.</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="fr">L’identité de genre d’une personne qui s’identifie en tant que fille, adolescente ou femme.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
+        <obo:PROMOT_1000001>[EURO-NMD] Atalia A et al., EURO-NMD registry: federated FAIR infrastructure, innovative technologies and concepts of a patient-centred registry for rare neuromuscular disorders. Orphanet J Rare Dis. 2024 Feb 14;19(1):66. doi: 10.1186/s13023-024-03059-3. PMID: 38355534; PMCID: PMC10865673.</obo:PROMOT_1000001>
+        <obo:PROMOT_1000001>[RD-CDM] Graefe, A.S.L., Hübner, M.R., Rehburg, F. et al. An ontology-based rare disease common data model harmonising international registries, FHIR, and Phenopackets. Sci Data 12, 234 (2025). https://doi.org/10.1038/s41597-025-04558-z</obo:PROMOT_1000001>
         <oboInOwl:hasDbXref>http://snomed.info/id/446141000124107</oboInOwl:hasDbXref>
-        <rdfs:comment>[derived from RD-CDM] Graefe, A.S.L., Hübner, M.R., Rehburg, F. et al. An ontology-based rare disease common data model harmonising international registries, FHIR, and Phenopackets. Sci Data 12, 234 (2025). https://doi.org/10.1038/s41597-025-04558-z</rdfs:comment>
+        <rdfs:comment>[PROMOT note] [Derived from RD-CDM] [2.4 Gender Identity] </rdfs:comment>
         <rdfs:label xml:lang="en">Female gender identity</rdfs:label>
         <rdfs:label xml:lang="fr">Identité de genre féminine</rdfs:label>
     </owl:Class>
@@ -2062,8 +2202,10 @@ We also have the outstanding issue of how to aim different definitions to differ
         <obo:IAO_0000115 xml:lang="en">Gender identity of a person that identifies nor as a male nor as a female gender.</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="fr">L‘identité de genre d’une personne qui ne s’identifie pas au genre féminin, ni masculin.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
+        <obo:PROMOT_1000001>[EURO-NMD] Atalia A et al., EURO-NMD registry: federated FAIR infrastructure, innovative technologies and concepts of a patient-centred registry for rare neuromuscular disorders. Orphanet J Rare Dis. 2024 Feb 14;19(1):66. doi: 10.1186/s13023-024-03059-3. PMID: 38355534; PMCID: PMC10865673.</obo:PROMOT_1000001>
+        <obo:PROMOT_1000001>[RD-CDM] Graefe, A.S.L., Hübner, M.R., Rehburg, F. et al. An ontology-based rare disease common data model harmonising international registries, FHIR, and Phenopackets. Sci Data 12, 234 (2025). https://doi.org/10.1038/s41597-025-04558-z</obo:PROMOT_1000001>
         <oboInOwl:hasDbXref>http://snomed.info/id/33791000087105</oboInOwl:hasDbXref>
-        <rdfs:comment>[derived from RD-CDM] Graefe, A.S.L., Hübner, M.R., Rehburg, F. et al. An ontology-based rare disease common data model harmonising international registries, FHIR, and Phenopackets. Sci Data 12, 234 (2025). https://doi.org/10.1038/s41597-025-04558-z</rdfs:comment>
+        <rdfs:comment>[PROMOT note] [Derived from RD-CDM] [2.4 Gender Identity] </rdfs:comment>
         <rdfs:label xml:lang="en">Identifies as nonbinary gender</rdfs:label>
         <rdfs:label xml:lang="fr">Identité de genre non-binaire</rdfs:label>
     </owl:Class>
@@ -2076,8 +2218,10 @@ We also have the outstanding issue of how to aim different definitions to differ
         <obo:IAO_0000115 xml:lang="en">Gender identity of a person that identifies as a boy or as a man.</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="fr">L’identité de genre d’une personne qui s’identifie en tant que garçon, adolescent ou homme.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
+        <obo:PROMOT_1000001>[EURO-NMD] Atalia A et al., EURO-NMD registry: federated FAIR infrastructure, innovative technologies and concepts of a patient-centred registry for rare neuromuscular disorders. Orphanet J Rare Dis. 2024 Feb 14;19(1):66. doi: 10.1186/s13023-024-03059-3. PMID: 38355534; PMCID: PMC10865673.</obo:PROMOT_1000001>
+        <obo:PROMOT_1000001>[RD-CDM] Graefe, A.S.L., Hübner, M.R., Rehburg, F. et al. An ontology-based rare disease common data model harmonising international registries, FHIR, and Phenopackets. Sci Data 12, 234 (2025). https://doi.org/10.1038/s41597-025-04558-z</obo:PROMOT_1000001>
         <oboInOwl:hasDbXref>http://snomed.info/id/446151000124109</oboInOwl:hasDbXref>
-        <rdfs:comment>[derived from RD-CDM] Graefe, A.S.L., Hübner, M.R., Rehburg, F. et al. An ontology-based rare disease common data model harmonising international registries, FHIR, and Phenopackets. Sci Data 12, 234 (2025). https://doi.org/10.1038/s41597-025-04558-z</rdfs:comment>
+        <rdfs:comment>[PROMOT note] [Derived from RD-CDM] [2.4 Gender Identity] </rdfs:comment>
         <rdfs:label xml:lang="fr">Identité de genre masculine</rdfs:label>
         <rdfs:label xml:lang="en">Male gender identity</rdfs:label>
     </owl:Class>
@@ -2090,8 +2234,10 @@ We also have the outstanding issue of how to aim different definitions to differ
         <obo:IAO_0000115 xml:lang="en">Gender identity of a person that is unknown.</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="fr">Une identité de genre inconnue.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
+        <obo:PROMOT_1000001>[EURO-NMD] Atalia A et al., EURO-NMD registry: federated FAIR infrastructure, innovative technologies and concepts of a patient-centred registry for rare neuromuscular disorders. Orphanet J Rare Dis. 2024 Feb 14;19(1):66. doi: 10.1186/s13023-024-03059-3. PMID: 38355534; PMCID: PMC10865673.</obo:PROMOT_1000001>
+        <obo:PROMOT_1000001>[RD-CDM] Graefe, A.S.L., Hübner, M.R., Rehburg, F. et al. An ontology-based rare disease common data model harmonising international registries, FHIR, and Phenopackets. Sci Data 12, 234 (2025). https://doi.org/10.1038/s41597-025-04558-z</obo:PROMOT_1000001>
         <oboInOwl:hasDbXref>http://snomed.info/id/394743007</oboInOwl:hasDbXref>
-        <rdfs:comment>[derived from RD-CDM] Graefe, A.S.L., Hübner, M.R., Rehburg, F. et al. An ontology-based rare disease common data model harmonising international registries, FHIR, and Phenopackets. Sci Data 12, 234 (2025). https://doi.org/10.1038/s41597-025-04558-z</rdfs:comment>
+        <rdfs:comment>[PROMOT note] [Derived from RD-CDM] [2.4 Gender Identity] </rdfs:comment>
         <rdfs:label xml:lang="en">Gender identity unknown</rdfs:label>
         <rdfs:label xml:lang="fr">Identité de genre inconnue</rdfs:label>
     </owl:Class>
@@ -2105,8 +2251,10 @@ We also have the outstanding issue of how to aim different definitions to differ
         <obo:IAO_0000115 xml:lang="en">Gender identity of a person that is unknown because unrecorded.</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="fr">Une identité de genre non renseignée.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
+        <obo:PROMOT_1000001>[EURO-NMD] Atalia A et al., EURO-NMD registry: federated FAIR infrastructure, innovative technologies and concepts of a patient-centred registry for rare neuromuscular disorders. Orphanet J Rare Dis. 2024 Feb 14;19(1):66. doi: 10.1186/s13023-024-03059-3. PMID: 38355534; PMCID: PMC10865673.</obo:PROMOT_1000001>
+        <obo:PROMOT_1000001>[RD-CDM] Graefe, A.S.L., Hübner, M.R., Rehburg, F. et al. An ontology-based rare disease common data model harmonising international registries, FHIR, and Phenopackets. Sci Data 12, 234 (2025). https://doi.org/10.1038/s41597-025-04558-z</obo:PROMOT_1000001>
         <oboInOwl:hasDbXref>http://snomed.info/id/1220561009</oboInOwl:hasDbXref>
-        <rdfs:comment>[derived from RD-CDM] Graefe, A.S.L., Hübner, M.R., Rehburg, F. et al. An ontology-based rare disease common data model harmonising international registries, FHIR, and Phenopackets. Sci Data 12, 234 (2025). https://doi.org/10.1038/s41597-025-04558-z</rdfs:comment>
+        <rdfs:comment>[PROMOT note] [Derived from RD-CDM] [2.4 Gender Identity] </rdfs:comment>
         <rdfs:label xml:lang="en">Gender identity not recorded</rdfs:label>
         <rdfs:label xml:lang="fr">Identité de genre non renseignée</rdfs:label>
     </owl:Class>
@@ -2119,7 +2267,8 @@ We also have the outstanding issue of how to aim different definitions to differ
         <obo:IAO_0000115 xml:lang="fr">Le nombre de grossesses d’un individu qui inclut les grossesses qui ne se sont pas terminées.</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="en">Number of precious pregnancies of an individual that includes pregancies that did not reach their end.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
-        <rdfs:comment>[derived from EURO-NMD] Atalia A et al., EURO-NMD registry: federated FAIR infrastructure, innovative technologies and concepts of a patient-centred registry for rare neuromuscular disorders. Orphanet J Rare Dis. 2024 Feb 14;19(1):66. doi: 10.1186/s13023-024-03059-3. PMID: 38355534; PMCID: PMC10865673.</rdfs:comment>
+        <obo:PROMOT_1000001>[EURO-NMD] Atalia A et al., EURO-NMD registry: federated FAIR infrastructure, innovative technologies and concepts of a patient-centred registry for rare neuromuscular disorders. Orphanet J Rare Dis. 2024 Feb 14;19(1):66. doi: 10.1186/s13023-024-03059-3. PMID: 38355534; PMCID: PMC10865673.</obo:PROMOT_1000001>
+        <rdfs:comment>[derived from EURO-NMD] </rdfs:comment>
         <rdfs:label xml:lang="en">Nb of previous pregnancies</rdfs:label>
         <rdfs:label xml:lang="fr">nombre de grossesses</rdfs:label>
     </owl:Class>
@@ -2132,8 +2281,8 @@ We also have the outstanding issue of how to aim different definitions to differ
         <obo:IAO_0000115 xml:lang="en">A patient with phenotypes that allow to assess the patient undergo a risk of fall. (quality?)</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="fr">Patient ayant des caractéristiques permettant d’affirmer qu’il risque de faire des chutes.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
-        <rdfs:label xml:lang="en">Patient at risk of fall</rdfs:label>
         <rdfs:label xml:lang="fr">Patient à risque de chute</rdfs:label>
+        <rdfs:label xml:lang="en">Risk of fall assessed</rdfs:label>
     </owl:Class>
     
 
@@ -2225,10 +2374,10 @@ We also have the outstanding issue of how to aim different definitions to differ
     <!-- http://purl.obolibrary.org/obo/PROMOT_0000086 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0000086">
-        <obo:IAO_0000115 xml:lang="en">A health status that is unrecorded.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">An handedness that is unrecorded.</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="fr">Un état de santé inconnu en raison de l’absence de renseignement à son sujet.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
-        <rdfs:label xml:lang="en">Unrecorded health status</rdfs:label>
+        <rdfs:label xml:lang="en">Unrecorded handedness</rdfs:label>
         <rdfs:label xml:lang="fr">état de santé non renseigné</rdfs:label>
     </owl:Class>
     
@@ -2240,8 +2389,10 @@ We also have the outstanding issue of how to aim different definitions to differ
         <obo:IAO_0000115 xml:lang="en">A qualifier for stating the presence, absence or uncertainty of a entity instance (e.g. a phenotype instance).</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="fr">Un qualité qui statue de la présence, de l’absence ou de l’incertitude de l’existence d’un phénotype.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
+        <obo:PROMOT_1000001>[EURO-NMD] Atalia A et al., EURO-NMD registry: federated FAIR infrastructure, innovative technologies and concepts of a patient-centred registry for rare neuromuscular disorders. Orphanet J Rare Dis. 2024 Feb 14;19(1):66. doi: 10.1186/s13023-024-03059-3. PMID: 38355534; PMCID: PMC10865673.</obo:PROMOT_1000001>
+        <obo:PROMOT_1000001>[RD-CDM] Graefe, A.S.L., Hübner, M.R., Rehburg, F. et al. An ontology-based rare disease common data model harmonising international registries, FHIR, and Phenopackets. Sci Data 12, 234 (2025). https://doi.org/10.1038/s41597-025-04558-z</obo:PROMOT_1000001>
         <oboInOwl:hasDbXref>http://snomed.info/id/363778006</oboInOwl:hasDbXref>
-        <rdfs:comment>[PROMOT NOTE: derived from RD-CDM] Graefe, A.S.L., Hübner, M.R., Rehburg, F. et al. An ontology-based rare disease common data model harmonising international registries, FHIR, and Phenopackets. Sci Data 12, 234 (2025). https://doi.org/10.1038/s41597-025-04558-z</rdfs:comment>
+        <rdfs:comment>[PROMOT note] [Derived from RD-CDM] [6.2.2 Status] </rdfs:comment>
         <rdfs:label xml:lang="fr">Qualité qualifiant l’existance d’une entité</rdfs:label>
         <rdfs:label xml:lang="en">presence qualifier</rdfs:label>
     </owl:Class>
@@ -2255,7 +2406,10 @@ We also have the outstanding issue of how to aim different definitions to differ
         <obo:IAO_0000115 xml:lang="en">A qualifier for an instance of a entity which is absent.</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="fr">Une qualité qui statue de l’absence d’un phénotype.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
-        <oboInOwl:hasDbXref>http://purl.obolibrary.org/obo/NCIT_C48190</oboInOwl:hasDbXref>
+        <obo:PROMOT_1000001>[EURO-NMD] Atalia A et al., EURO-NMD registry: federated FAIR infrastructure, innovative technologies and concepts of a patient-centred registry for rare neuromuscular disorders. Orphanet J Rare Dis. 2024 Feb 14;19(1):66. doi: 10.1186/s13023-024-03059-3. PMID: 38355534; PMCID: PMC10865673.</obo:PROMOT_1000001>
+        <obo:PROMOT_1000001>[RD-CDM] Graefe, A.S.L., Hübner, M.R., Rehburg, F. et al. An ontology-based rare disease common data model harmonising international registries, FHIR, and Phenopackets. Sci Data 12, 234 (2025). https://doi.org/10.1038/s41597-025-04558-z</obo:PROMOT_1000001>
+        <oboInOwl:hasDbXref>SNOMED:723511001</oboInOwl:hasDbXref>
+        <rdfs:comment>[PROMOT note] [Derived from RD-CDM] [6.2.2 Status] </rdfs:comment>
         <rdfs:label xml:lang="en">absent</rdfs:label>
         <rdfs:label xml:lang="fr">absent</rdfs:label>
     </owl:Class>
@@ -2269,7 +2423,10 @@ We also have the outstanding issue of how to aim different definitions to differ
         <obo:IAO_0000115 xml:lang="en">Qualifies an instance of an entity as present.</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="fr">Une qualité qui statue de la présence d’un phénotype.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
-        <oboInOwl:hasDbXref>http://purl.obolibrary.org/obo/NCIT_C25626</oboInOwl:hasDbXref>
+        <obo:PROMOT_1000001>[EURO-NMD] Atalia A et al., EURO-NMD registry: federated FAIR infrastructure, innovative technologies and concepts of a patient-centred registry for rare neuromuscular disorders. Orphanet J Rare Dis. 2024 Feb 14;19(1):66. doi: 10.1186/s13023-024-03059-3. PMID: 38355534; PMCID: PMC10865673.</obo:PROMOT_1000001>
+        <obo:PROMOT_1000001>[RD-CDM] Graefe, A.S.L., Hübner, M.R., Rehburg, F. et al. An ontology-based rare disease common data model harmonising international registries, FHIR, and Phenopackets. Sci Data 12, 234 (2025). https://doi.org/10.1038/s41597-025-04558-z</obo:PROMOT_1000001>
+        <oboInOwl:hasDbXref>SNOMED:410605003</oboInOwl:hasDbXref>
+        <rdfs:comment>[PROMOT note] [Derived from RD-CDM] [6.2.2 Status] </rdfs:comment>
         <rdfs:label xml:lang="en">present</rdfs:label>
         <rdfs:label xml:lang="fr">présent</rdfs:label>
     </owl:Class>
@@ -2283,7 +2440,6 @@ We also have the outstanding issue of how to aim different definitions to differ
         <obo:IAO_0000115 xml:lang="en">Qualifies an instance of an entity as unsure.</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="fr">Une qualité qui statue de l’incertitude de la présence ou non d’un phénotype.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
-        <oboInOwl:hasDbXref>http://purl.obolibrary.org/obo/NCIT_C47944</oboInOwl:hasDbXref>
         <rdfs:label xml:lang="fr">incertain</rdfs:label>
         <rdfs:label xml:lang="en">presence unsure</rdfs:label>
     </owl:Class>
@@ -2297,7 +2453,6 @@ We also have the outstanding issue of how to aim different definitions to differ
         <obo:IAO_0000115 xml:lang="en">A presence or absence that is unrecorded</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="fr">Une qualité qui statue de l’incertitude de la présence ou non d’un phénotype en raison de l’absence de renseignements à son sujet.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
-        <oboInOwl:hasDbXref>http://purl.obolibrary.org/obo/NCIT_C185193</oboInOwl:hasDbXref>
         <rdfs:label xml:lang="en">presence unrecorded</rdfs:label>
         <rdfs:label xml:lang="fr">présence non renseignée</rdfs:label>
     </owl:Class>
@@ -2310,8 +2465,12 @@ We also have the outstanding issue of how to aim different definitions to differ
         <obo:IAO_0000115 xml:lang="en">A status of the consent of a person.</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="fr">Le status d’un consentement, qu’il soit accepté, refusé ou autre.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
+        <obo:PROMOT_1000001>[EURO-NMD] Atalia A et al., EURO-NMD registry: federated FAIR infrastructure, innovative technologies and concepts of a patient-centred registry for rare neuromuscular disorders. Orphanet J Rare Dis. 2024 Feb 14;19(1):66. doi: 10.1186/s13023-024-03059-3. PMID: 38355534; PMCID: PMC10865673.</obo:PROMOT_1000001>
+        <obo:PROMOT_1000001>[RD-CDM] Graefe, A.S.L., Hübner, M.R., Rehburg, F. et al. An ontology-based rare disease common data model harmonising international registries, FHIR, and Phenopackets. Sci Data 12, 234 (2025). https://doi.org/10.1038/s41597-025-04558-z</obo:PROMOT_1000001>
         <oboInOwl:hasDbXref>http://snomed.info/id/309370004</oboInOwl:hasDbXref>
-        <rdfs:comment>[derived from RD-CDM] Graefe, A.S.L., Hübner, M.R., Rehburg, F. et al. An ontology-based rare disease common data model harmonising international registries, FHIR, and Phenopackets. Sci Data 12, 234 (2025). https://doi.org/10.1038/s41597-025-04558-z</rdfs:comment>
+        <rdfs:comment>Ongoing discussion</rdfs:comment>
+        <rdfs:comment>[PROMOT note] [Derived from RD-CDM] [7.1 Consent Status] </rdfs:comment>
+        <rdfs:comment>[derived from EURO-NMD] </rdfs:comment>
         <rdfs:label xml:lang="en">Consent status</rdfs:label>
         <rdfs:label xml:lang="fr">Status du consentement</rdfs:label>
         <rdfs:label xml:lang="es">estado del consentimiento</rdfs:label>
@@ -2326,8 +2485,10 @@ We also have the outstanding issue of how to aim different definitions to differ
         <obo:IAO_0000115 xml:lang="en">A status of a consent that is waiting to be defined.</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="fr">Le statut d’un consentement qui est en attente de définition.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
-        <rdfs:comment>HL7 FHIR</rdfs:comment>
-        <rdfs:comment>[derived from RD-CDM] Graefe, A.S.L., Hübner, M.R., Rehburg, F. et al. An ontology-based rare disease common data model harmonising international registries, FHIR, and Phenopackets. Sci Data 12, 234 (2025). https://doi.org/10.1038/s41597-025-04558-z</rdfs:comment>
+        <obo:PROMOT_1000001>[EURO-NMD] Atalia A et al., EURO-NMD registry: federated FAIR infrastructure, innovative technologies and concepts of a patient-centred registry for rare neuromuscular disorders. Orphanet J Rare Dis. 2024 Feb 14;19(1):66. doi: 10.1186/s13023-024-03059-3. PMID: 38355534; PMCID: PMC10865673.</obo:PROMOT_1000001>
+        <obo:PROMOT_1000001>[RD-CDM] Graefe, A.S.L., Hübner, M.R., Rehburg, F. et al. An ontology-based rare disease common data model harmonising international registries, FHIR, and Phenopackets. Sci Data 12, 234 (2025). https://doi.org/10.1038/s41597-025-04558-z</obo:PROMOT_1000001>
+        <rdfs:comment>Ongoing discussion</rdfs:comment>
+        <rdfs:comment>[PROMOT note] [Derived from RD-CDM] [7.1 Consent Status] </rdfs:comment>
         <rdfs:label xml:lang="fr">En attente</rdfs:label>
         <rdfs:label xml:lang="en">Pending</rdfs:label>
     </owl:Class>
@@ -2341,8 +2502,10 @@ We also have the outstanding issue of how to aim different definitions to differ
         <obo:IAO_0000115 xml:lang="en">A status of a consent that has been proposed to a person for them to decide.</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="fr">Le statut d’un consentement qui a été proposé à une personne pour son accord ou son refus.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
-        <rdfs:comment>HL7 FHIR</rdfs:comment>
-        <rdfs:comment>[derived from RD-CDM] Graefe, A.S.L., Hübner, M.R., Rehburg, F. et al. An ontology-based rare disease common data model harmonising international registries, FHIR, and Phenopackets. Sci Data 12, 234 (2025). https://doi.org/10.1038/s41597-025-04558-z</rdfs:comment>
+        <obo:PROMOT_1000001>[EURO-NMD] Atalia A et al., EURO-NMD registry: federated FAIR infrastructure, innovative technologies and concepts of a patient-centred registry for rare neuromuscular disorders. Orphanet J Rare Dis. 2024 Feb 14;19(1):66. doi: 10.1186/s13023-024-03059-3. PMID: 38355534; PMCID: PMC10865673.</obo:PROMOT_1000001>
+        <obo:PROMOT_1000001>[RD-CDM] Graefe, A.S.L., Hübner, M.R., Rehburg, F. et al. An ontology-based rare disease common data model harmonising international registries, FHIR, and Phenopackets. Sci Data 12, 234 (2025). https://doi.org/10.1038/s41597-025-04558-z</obo:PROMOT_1000001>
+        <rdfs:comment>Ongoing discussion</rdfs:comment>
+        <rdfs:comment>[PROMOT note] [Derived from RD-CDM] [7.1 Consent Status] </rdfs:comment>
         <rdfs:label xml:lang="en">Proposed</rdfs:label>
         <rdfs:label xml:lang="fr">Proposé</rdfs:label>
     </owl:Class>
@@ -2356,8 +2519,11 @@ We also have the outstanding issue of how to aim different definitions to differ
         <obo:IAO_0000115 xml:lang="en">A status of a consent that has been approved by the concerned person.</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="fr">Le statut d’un consentement qui a été accepté par la personne concernée.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
+        <obo:PROMOT_1000001>[EURO-NMD] Atalia A et al., EURO-NMD registry: federated FAIR infrastructure, innovative technologies and concepts of a patient-centred registry for rare neuromuscular disorders. Orphanet J Rare Dis. 2024 Feb 14;19(1):66. doi: 10.1186/s13023-024-03059-3. PMID: 38355534; PMCID: PMC10865673.</obo:PROMOT_1000001>
+        <obo:PROMOT_1000001>[RD-CDM] Graefe, A.S.L., Hübner, M.R., Rehburg, F. et al. An ontology-based rare disease common data model harmonising international registries, FHIR, and Phenopackets. Sci Data 12, 234 (2025). https://doi.org/10.1038/s41597-025-04558-z</obo:PROMOT_1000001>
         <rdfs:comment>HL7 FHIR</rdfs:comment>
-        <rdfs:comment>[derived from RD-CDM] Graefe, A.S.L., Hübner, M.R., Rehburg, F. et al. An ontology-based rare disease common data model harmonising international registries, FHIR, and Phenopackets. Sci Data 12, 234 (2025). https://doi.org/10.1038/s41597-025-04558-z</rdfs:comment>
+        <rdfs:comment>[PROMOT note] [Derived from RD-CDM] [7.1 Consent Status] </rdfs:comment>
+        <rdfs:comment>[derived from EURO-NMD] </rdfs:comment>
         <rdfs:label xml:lang="fr">Actif</rdfs:label>
         <rdfs:label xml:lang="en">Active</rdfs:label>
     </owl:Class>
@@ -2371,8 +2537,11 @@ We also have the outstanding issue of how to aim different definitions to differ
         <obo:IAO_0000115 xml:lang="en">A status of a consent that has been rejected by the concerned person.</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="fr">Le statut d’un consentement qui a été refusé par la personne concernée.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
+        <obo:PROMOT_1000001>[EURO-NMD] Atalia A et al., EURO-NMD registry: federated FAIR infrastructure, innovative technologies and concepts of a patient-centred registry for rare neuromuscular disorders. Orphanet J Rare Dis. 2024 Feb 14;19(1):66. doi: 10.1186/s13023-024-03059-3. PMID: 38355534; PMCID: PMC10865673.</obo:PROMOT_1000001>
+        <obo:PROMOT_1000001>[RD-CDM] Graefe, A.S.L., Hübner, M.R., Rehburg, F. et al. An ontology-based rare disease common data model harmonising international registries, FHIR, and Phenopackets. Sci Data 12, 234 (2025). https://doi.org/10.1038/s41597-025-04558-z</obo:PROMOT_1000001>
         <rdfs:comment>HL7 FHIR</rdfs:comment>
-        <rdfs:comment>[derived from RD-CDM] Graefe, A.S.L., Hübner, M.R., Rehburg, F. et al. An ontology-based rare disease common data model harmonising international registries, FHIR, and Phenopackets. Sci Data 12, 234 (2025). https://doi.org/10.1038/s41597-025-04558-z</rdfs:comment>
+        <rdfs:comment>[PROMOT note] [Derived from RD-CDM] [7.1 Consent Status] </rdfs:comment>
+        <rdfs:comment>[derived from EURO-NMD] </rdfs:comment>
         <rdfs:label xml:lang="en">Rejected</rdfs:label>
         <rdfs:label xml:lang="fr">Rejeté</rdfs:label>
     </owl:Class>
@@ -2386,9 +2555,11 @@ We also have the outstanding issue of how to aim different definitions to differ
         <obo:IAO_0000115 xml:lang="en">A status of a consent that is inactive.</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="fr">Le statut d’un consentement qui est inactif.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
+        <obo:PROMOT_1000001>[EURO-NMD] Atalia A et al., EURO-NMD registry: federated FAIR infrastructure, innovative technologies and concepts of a patient-centred registry for rare neuromuscular disorders. Orphanet J Rare Dis. 2024 Feb 14;19(1):66. doi: 10.1186/s13023-024-03059-3. PMID: 38355534; PMCID: PMC10865673.</obo:PROMOT_1000001>
+        <obo:PROMOT_1000001>[RD-CDM] Graefe, A.S.L., Hübner, M.R., Rehburg, F. et al. An ontology-based rare disease common data model harmonising international registries, FHIR, and Phenopackets. Sci Data 12, 234 (2025). https://doi.org/10.1038/s41597-025-04558-z</obo:PROMOT_1000001>
         <oboInOwl:hasDbXref>http://snomed.info/id/73425007</oboInOwl:hasDbXref>
-        <rdfs:comment>HL7 FHIR</rdfs:comment>
-        <rdfs:comment>[derived from RD-CDM] Graefe, A.S.L., Hübner, M.R., Rehburg, F. et al. An ontology-based rare disease common data model harmonising international registries, FHIR, and Phenopackets. Sci Data 12, 234 (2025). https://doi.org/10.1038/s41597-025-04558-z</rdfs:comment>
+        <rdfs:comment>Ongoing discussion</rdfs:comment>
+        <rdfs:comment>[PROMOT note] [Derived from RD-CDM] [7.1 Consent Status] </rdfs:comment>
         <rdfs:label xml:lang="fr">Inactif</rdfs:label>
         <rdfs:label xml:lang="en">Inactive</rdfs:label>
     </owl:Class>
@@ -2402,9 +2573,11 @@ We also have the outstanding issue of how to aim different definitions to differ
         <obo:IAO_0000115 xml:lang="en">A status of a consent that has been entered by error.</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="fr">Le statut d’un consentement qui a été entré par erreur.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
+        <obo:PROMOT_1000001>[EURO-NMD] Atalia A et al., EURO-NMD registry: federated FAIR infrastructure, innovative technologies and concepts of a patient-centred registry for rare neuromuscular disorders. Orphanet J Rare Dis. 2024 Feb 14;19(1):66. doi: 10.1186/s13023-024-03059-3. PMID: 38355534; PMCID: PMC10865673.</obo:PROMOT_1000001>
+        <obo:PROMOT_1000001>[RD-CDM] Graefe, A.S.L., Hübner, M.R., Rehburg, F. et al. An ontology-based rare disease common data model harmonising international registries, FHIR, and Phenopackets. Sci Data 12, 234 (2025). https://doi.org/10.1038/s41597-025-04558-z</obo:PROMOT_1000001>
         <oboInOwl:hasDbXref>http://snomed.info/id/723510000</oboInOwl:hasDbXref>
-        <rdfs:comment>HL7 FHIR</rdfs:comment>
-        <rdfs:comment>[derived from RD-CDM] Graefe, A.S.L., Hübner, M.R., Rehburg, F. et al. An ontology-based rare disease common data model harmonising international registries, FHIR, and Phenopackets. Sci Data 12, 234 (2025). https://doi.org/10.1038/s41597-025-04558-z</rdfs:comment>
+        <rdfs:comment>Ongoing discussion</rdfs:comment>
+        <rdfs:comment>[PROMOT note] [Derived from RD-CDM] [7.1 Consent Status] </rdfs:comment>
         <rdfs:label xml:lang="en">Entered in Error</rdfs:label>
         <rdfs:label xml:lang="fr">Entré par erreur</rdfs:label>
     </owl:Class>
@@ -2417,8 +2590,11 @@ We also have the outstanding issue of how to aim different definitions to differ
         <obo:IAO_0000115 xml:lang="fr">La date à laquelle le status du consentement a été définit.</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="en">The date when the consent status has been updated.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
-        <rdfs:comment>[derived from EURO-NMD] Atalia A et al., EURO-NMD registry: federated FAIR infrastructure, innovative technologies and concepts of a patient-centred registry for rare neuromuscular disorders. Orphanet J Rare Dis. 2024 Feb 14;19(1):66. doi: 10.1186/s13023-024-03059-3. PMID: 38355534; PMCID: PMC10865673.</rdfs:comment>
-        <rdfs:comment>[derived from RD-CDM] Graefe, A.S.L., Hübner, M.R., Rehburg, F. et al. An ontology-based rare disease common data model harmonising international registries, FHIR, and Phenopackets. Sci Data 12, 234 (2025). https://doi.org/10.1038/s41597-025-04558-z</rdfs:comment>
+        <obo:PROMOT_1000001>[EURO-NMD] Atalia A et al., EURO-NMD registry: federated FAIR infrastructure, innovative technologies and concepts of a patient-centred registry for rare neuromuscular disorders. Orphanet J Rare Dis. 2024 Feb 14;19(1):66. doi: 10.1186/s13023-024-03059-3. PMID: 38355534; PMCID: PMC10865673.</obo:PROMOT_1000001>
+        <obo:PROMOT_1000001>[RD-CDM] Graefe, A.S.L., Hübner, M.R., Rehburg, F. et al. An ontology-based rare disease common data model harmonising international registries, FHIR, and Phenopackets. Sci Data 12, 234 (2025). https://doi.org/10.1038/s41597-025-04558-z</obo:PROMOT_1000001>
+        <oboInOwl:hasDbXref>http://purl.obolibrary.org/obo/NCIT_C93579</oboInOwl:hasDbXref>
+        <rdfs:comment>[PROMOT note] [Derived from RD-CDM] [7.2 Consent Date] </rdfs:comment>
+        <rdfs:comment>[derived from EURO-NMD] </rdfs:comment>
         <rdfs:label xml:lang="fr">Date du consentement</rdfs:label>
         <rdfs:label xml:lang="en">Date of consent</rdfs:label>
     </owl:Class>
@@ -2428,14 +2604,8 @@ We also have the outstanding issue of how to aim different definitions to differ
     <!-- http://purl.obolibrary.org/obo/PROMOT_0000100 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0000100">
-        <obo:IAO_0000115 xml:lang="en">An agreement given by a patient to be contacted by research teams for research purposes.</obo:IAO_0000115>
-        <obo:IAO_0000115 xml:lang="fr">L’accord donné par un patient pour être contacté à des fins de recherche.</obo:IAO_0000115>
-        <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
-        <rdfs:comment>[derived from EURO-NMD] Atalia A et al., EURO-NMD registry: federated FAIR infrastructure, innovative technologies and concepts of a patient-centred registry for rare neuromuscular disorders. Orphanet J Rare Dis. 2024 Feb 14;19(1):66. doi: 10.1186/s13023-024-03059-3. PMID: 38355534; PMCID: PMC10865673.</rdfs:comment>
-        <rdfs:comment>[derived from RD-CDM] Graefe, A.S.L., Hübner, M.R., Rehburg, F. et al. An ontology-based rare disease common data model harmonising international registries, FHIR, and Phenopackets. Sci Data 12, 234 (2025). https://doi.org/10.1038/s41597-025-04558-z</rdfs:comment>
-        <rdfs:label xml:lang="fr">Accord pour être contacté à des fins de recherche</rdfs:label>
-        <rdfs:label xml:lang="es">Acuerdo para ser contactado con fines de investigación</rdfs:label>
-        <rdfs:label xml:lang="en">Agreement to be contacted for research purpose</rdfs:label>
+        <obo:IAO_0000115 xml:lang="en">The type of consent given by a person that precises the details of what is consented</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">Consent type</rdfs:label>
     </owl:Class>
     
 
@@ -2443,13 +2613,17 @@ We also have the outstanding issue of how to aim different definitions to differ
     <!-- http://purl.obolibrary.org/obo/PROMOT_0000101 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0000101">
-        <obo:IAO_0000115 xml:lang="en">A consent given by a person to the reuse of their data.</obo:IAO_0000115>
-        <obo:IAO_0000115 xml:lang="fr">Un consentement donné par une personne à ce que les données la concernant soient utlilisées à d’autres fins que celles initialement prévues.</obo:IAO_0000115>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0000100"/>
+        <obo:IAO_0000115 xml:lang="en">An agreement given by a patient to be contacted by research teams for research purposes.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="fr">L’accord donné par un patient pour être contacté à des fins de recherche.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
-        <rdfs:comment>[derived from RD-CDM] Graefe, A.S.L., Hübner, M.R., Rehburg, F. et al. An ontology-based rare disease common data model harmonising international registries, FHIR, and Phenopackets. Sci Data 12, 234 (2025). https://doi.org/10.1038/s41597-025-04558-z</rdfs:comment>
-        <rdfs:label xml:lang="en">Consent to the reuse of data</rdfs:label>
-        <rdfs:label xml:lang="fr">Consentement à la réutilisation des données</rdfs:label>
-        <rdfs:label xml:lang="es">Consentimiento para la reutilización de datos</rdfs:label>
+        <obo:PROMOT_1000001>[EURO-NMD] Atalia A et al., EURO-NMD registry: federated FAIR infrastructure, innovative technologies and concepts of a patient-centred registry for rare neuromuscular disorders. Orphanet J Rare Dis. 2024 Feb 14;19(1):66. doi: 10.1186/s13023-024-03059-3. PMID: 38355534; PMCID: PMC10865673.</obo:PROMOT_1000001>
+        <obo:PROMOT_1000001>[RD-CDM] Graefe, A.S.L., Hübner, M.R., Rehburg, F. et al. An ontology-based rare disease common data model harmonising international registries, FHIR, and Phenopackets. Sci Data 12, 234 (2025). https://doi.org/10.1038/s41597-025-04558-z</obo:PROMOT_1000001>
+        <rdfs:comment>[PROMOT note] [Derived from RD-CDM] [7.4 Agreement to be contacted for research purposes] </rdfs:comment>
+        <rdfs:comment>[derived from EURO-NMD] </rdfs:comment>
+        <rdfs:label xml:lang="fr">Accord pour être contacté à des fins de recherche</rdfs:label>
+        <rdfs:label xml:lang="es">Acuerdo para ser contactado con fines de investigación</rdfs:label>
+        <rdfs:label xml:lang="en">Agreement to be contacted for research purpose</rdfs:label>
     </owl:Class>
     
 
@@ -2457,6 +2631,103 @@ We also have the outstanding issue of how to aim different definitions to differ
     <!-- http://purl.obolibrary.org/obo/PROMOT_0000102 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0000102">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0000100"/>
+        <obo:IAO_0000115 xml:lang="en">A consent given by a person to the reuse of their data.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="fr">Un consentement donné par une personne à ce que les données la concernant soient utlilisées à d’autres fins que celles initialement prévues.</obo:IAO_0000115>
+        <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
+        <obo:PROMOT_1000001>Congenital myasthenic syndrom Scoping review</obo:PROMOT_1000001>
+        <obo:PROMOT_1000001>[EURO-NMD] Atalia A et al., EURO-NMD registry: federated FAIR infrastructure, innovative technologies and concepts of a patient-centred registry for rare neuromuscular disorders. Orphanet J Rare Dis. 2024 Feb 14;19(1):66. doi: 10.1186/s13023-024-03059-3. PMID: 38355534; PMCID: PMC10865673.</obo:PROMOT_1000001>
+        <obo:PROMOT_1000001>[RD-CDM] Graefe, A.S.L., Hübner, M.R., Rehburg, F. et al. An ontology-based rare disease common data model harmonising international registries, FHIR, and Phenopackets. Sci Data 12, 234 (2025). https://doi.org/10.1038/s41597-025-04558-z</obo:PROMOT_1000001>
+        <rdfs:comment>[PROMOT note] [Derived from RD-CDM] [7.5 Consent to the reuse of data] </rdfs:comment>
+        <rdfs:label xml:lang="en">Consent to the reuse of data</rdfs:label>
+        <rdfs:label xml:lang="fr">Consentement à la réutilisation des données</rdfs:label>
+        <rdfs:label xml:lang="es">Consentimiento para la reutilización de datos</rdfs:label>
+        <rdfs:label xml:lang="en">Double compound motor action potential abnormality</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROMOT_0000103 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0000103">
+        <rdfs:label xml:lang="en">Assessment of expiratory and cough peak flows using an expiratory flowmeter</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROMOT_0000108 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0000108">
+        <rdfs:label xml:lang="en">Quantative muscle testing</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROMOT_0000109 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0000109">
+        <rdfs:label xml:lang="en">Assessment using Berg Balance Scale</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROMOT_0000110 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0000110">
+        <rdfs:label xml:lang="en">10 Meter Walk Test (10MWT)</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROMOT_0000111 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0000111">
+        <rdfs:label xml:lang="en">Assessment of expiratory and cough peak flows using an expiratory flowmeter</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROMOT_0000112 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0000112">
+        <rdfs:label xml:lang="en">80 ml water swallowing test</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROMOT_0000116 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0000116">
+        <rdfs:label xml:lang="en">Assessment using Fatigue Severity Scale (FSS)</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROMOT_0000117 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0000117">
+        <rdfs:label xml:lang="en">Assessment using Hand Jamar dynanometer</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROMOT_0000118 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0000118">
+        <rdfs:label xml:lang="en">Stair Climb Test</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROMOT_0000119 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0000119"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROMOT_0100001 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0100001">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0000026"/>
         <rdfs:subClassOf>
             <owl:Restriction>
@@ -2467,14 +2738,13 @@ We also have the outstanding issue of how to aim different definitions to differ
         <obo:IAO_0000115 xml:lang="fr">Deux anomalies dans l’EMG mesurant le potentiel d’action global d’un muscle (PAM), aussi appelé potentiel d’action musculaire composé.</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="en">Two abnormal findings in a compound motor action potential measurement in EMG.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
-        <obo:PROMOT_1000001>Congenital myasthenic syndrom Scoping review</obo:PROMOT_1000001>
         <rdfs:comment>(JP : to validate)</rdfs:comment>
         <rdfs:label xml:lang="es">Doble anomalía del potencial de acción motora compuesta</rdfs:label>
         <rdfs:label xml:lang="fr">Double anomalie du potentiel d’action global du muscle (PAM)</rdfs:label>
         <rdfs:label xml:lang="en">Double compound motor action potential abnormality</rdfs:label>
     </owl:Class>
     <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0000102"/>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0100001"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget xml:lang="en">Two abnormal findings in a compound motor action potential measurement in EMG.</owl:annotatedTarget>
         <obo:IAO_0000119>HP:0033580</obo:IAO_0000119>
@@ -2482,16 +2752,73 @@ We also have the outstanding issue of how to aim different definitions to differ
     
 
 
-    <!-- http://purl.obolibrary.org/obo/PROMOT_0000103 -->
+    <!-- http://purl.obolibrary.org/obo/PROMOT_0100002 -->
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0000103">
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0100002">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0000026"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://semanticscience.org/resource/SIO_000217"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0000084"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="fr">Fatigue corrélée au fait de manger</rdfs:label>
+        <rdfs:label xml:lang="en">Fatigue while eating</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROMOT_0100003 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0100003">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0000026"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://semanticscience.org/resource/SIO_000217"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0000084"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">Difficulty walking short distance</rdfs:label>
+        <rdfs:label xml:lang="fr">Difficulté à marcher sur de courtes distances</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROMOT_0100004 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0100004">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0000026"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://semanticscience.org/resource/SIO_000217"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0000084"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">Difficulty changing basic position</rdfs:label>
+        <rdfs:label xml:lang="fr">Difficulté à passer d’une position de base à une autre</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROMOT_0100005 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0100005">
+        <rdfs:label xml:lang="fr">Anhédonie légère corrélée au fait de manger</rdfs:label>
+        <rdfs:label xml:lang="en">Mild anhedonia while eating</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROMOT_0200001 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0200001">
         <obo:IAO_0000115 xml:lang="en">A test assessing the subject’s expiratory peak flow when they expirate and when they cough. It assesses the glottis efficiency to clear out the repiratory tract by using an expiratory flowmeter.</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="fr">Un test de débit expiratoire de pointe à l’expiration (DEP) et à la toux (DEP toux) permet de calculer l’efficacité de la glotte (capacité de dégager les voies aériennes). Le test s’effectue avec un débitmètre expiratoire.</obo:IAO_0000115>
         <rdfs:label xml:lang="en">Assessment of expiratory and cough peak flows using an expiratory flowmeter</rdfs:label>
         <rdfs:label xml:lang="fr">Évaluation des débits expiratoires de pointe à l’expiration et à la toux</rdfs:label>
     </owl:Class>
     <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0000103"/>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0200001"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget xml:lang="fr">Un test de débit expiratoire de pointe à l’expiration (DEP) et à la toux (DEP toux) permet de calculer l’efficacité de la glotte (capacité de dégager les voies aériennes). Le test s’effectue avec un débitmètre expiratoire.</owl:annotatedTarget>
         <obo:IAO_0000119>Definititon of the test provided by the Groupe de Recherche Interdisciplinaire sur les Maladies Neuromusculaires (GRIMN).</obo:IAO_0000119>
@@ -2499,30 +2826,40 @@ We also have the outstanding issue of how to aim different definitions to differ
     
 
 
-    <!-- http://purl.obolibrary.org/obo/PROMOT_0000104 -->
+    <!-- http://purl.obolibrary.org/obo/PROMOT_0200002 -->
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0000104">
-        <rdfs:label xml:lang="en">Quantative muscle weakness</rdfs:label>
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0200002">
+        <obo:IAO_0000115 xml:lang="en">Measurement of maximum isometric force generation from a muscle group; performed with specialized equipment.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="fr">Mesure de la force musculaire isométrique maximale pour un groupe musculaire précis; effectuée avec un équipement spécialisé.</obo:IAO_0000115>
+        <oboInOwl:hasDbXref>NCIT:C121361</oboInOwl:hasDbXref>
+        <rdfs:label xml:lang="en">Quantative muscle testing</rdfs:label>
+        <rdfs:label xml:lang="fr">Tests musculaires quantitatifs</rdfs:label>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0200002"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget xml:lang="en">Measurement of maximum isometric force generation from a muscle group; performed with specialized equipment.</owl:annotatedTarget>
+        <obo:IAO_0000119>NCIT:C121361</obo:IAO_0000119>
+    </owl:Axiom>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/PROMOT_0000105 -->
+    <!-- http://purl.obolibrary.org/obo/PROMOT_0200003 -->
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0000105">
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0200003">
         <obo:IAO_0000115 xml:lang="en">An assessment that uses the Dysphagimeter scale to assess dysphagia or swallowing impairements. The Dysphagimeter is a patient-reported questionnaire that measures the ability to swallow foods of different textures and the impact of dysphagia on activities and participation. This questionnaire has three parts. Part A includes 24 items concerning solid foods, Part B includes 3 items on liquids and Part C includes 8 items, namely 6 items on the impact of dysphagia at meal times and 2 items on discomfort related to thick saliva. Each item offers 5 choices of descriptive answers. Parts A and B also include an option &apos;I cannot answer&apos;. The participant must carefully read the instructions and check the answer that best corresponds to their situation for each item.</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="fr">Une évaluation de la dysphagie utilisant le Dysphagimètre qui est un questionnaire autorapporté mesurant la capacité à avaler des aliments de différentes textures et l’impact de la dysphagie sur les activités et la participation. Ce questionnaire comporte trois parties. La partie A comprend 24 items concernant les aliments solides, la partie B comprend 3 items sur les liquides et la partie C comprend 8 items, soit 6 items sur l’impact de la dysphagie au moment des repas et 2 items sur l’inconfort lié à la salive épaisse. Chaque item propose 5 choix de réponses descriptifs. Les parties A et B incluent également une option « Je ne peux pas répondre ». Le participant doit lire attentivement les instructions et cocher la réponse qui correspond le mieux à sa situation pour chaque item.</obo:IAO_0000115>
         <rdfs:label xml:lang="en">Assessment using Dysphagimeter</rdfs:label>
         <rdfs:label xml:lang="fr">Évaluation avec le Dysphagimètre</rdfs:label>
     </owl:Class>
     <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0000105"/>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0200003"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget xml:lang="en">An assessment that uses the Dysphagimeter scale to assess dysphagia or swallowing impairements. The Dysphagimeter is a patient-reported questionnaire that measures the ability to swallow foods of different textures and the impact of dysphagia on activities and participation. This questionnaire has three parts. Part A includes 24 items concerning solid foods, Part B includes 3 items on liquids and Part C includes 8 items, namely 6 items on the impact of dysphagia at meal times and 2 items on discomfort related to thick saliva. Each item offers 5 choices of descriptive answers. Parts A and B also include an option &apos;I cannot answer&apos;. The participant must carefully read the instructions and check the answer that best corresponds to their situation for each item.</owl:annotatedTarget>
         <obo:IAO_0000119>Definition translated from French to English using Reverso.</obo:IAO_0000119>
     </owl:Axiom>
     <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0000105"/>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0200003"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget xml:lang="fr">Une évaluation de la dysphagie utilisant le Dysphagimètre qui est un questionnaire autorapporté mesurant la capacité à avaler des aliments de différentes textures et l’impact de la dysphagie sur les activités et la participation. Ce questionnaire comporte trois parties. La partie A comprend 24 items concernant les aliments solides, la partie B comprend 3 items sur les liquides et la partie C comprend 8 items, soit 6 items sur l’impact de la dysphagie au moment des repas et 2 items sur l’inconfort lié à la salive épaisse. Chaque item propose 5 choix de réponses descriptifs. Les parties A et B incluent également une option « Je ne peux pas répondre ». Le participant doit lire attentivement les instructions et cocher la réponse qui correspond le mieux à sa situation pour chaque item.</owl:annotatedTarget>
         <obo:IAO_0000119>Definititon of the test provided by the Groupe de Recherche Interdisciplinaire sur les Maladies Neuromusculaires (GRIMN).</obo:IAO_0000119>
@@ -2530,47 +2867,45 @@ We also have the outstanding issue of how to aim different definitions to differ
     
 
 
-    <!-- http://purl.obolibrary.org/obo/PROMOT_0000106 -->
+    <!-- http://purl.obolibrary.org/obo/PROMOT_0200004 -->
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0000106">
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0200004">
         <obo:IAO_0000115 xml:lang="en">An evaluation procedure that uses a B&amp;L gauge to assess pinch strengh. The test measuring the force of the lateral clamps, between the thumb and the index finger, allows quantifying the maximum voluntary strength of the hand and forearm muscles during a pinching action. This is an indicator of the level of hand function.</obo:IAO_0000115>
-        <obo:IAO_0000115 xml:lang="fr">L’évaluation utilise un manomètre B &amp; L pour mesurer la force des pinces latérales, soit entre le pouce et l’index, et permettre de quantiﬁer la force maximale volontaire des muscles de la main et de l’avant-bras lors d’une action de pincement. Il s’agit d’un indicateur du niveau de fonction de la main.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="fr">L’évaluation utilise un manomètre B &amp; L pour mesurer la force des pinces latérales, soit la force entre le pouce et l’index. Elle permet de quantiﬁer la force maximale volontaire des muscles de la main et de l’avant-bras lors d’une action de pincement. Il s’agit d’un indicateur du niveau de fonction de la main.</obo:IAO_0000115>
         <rdfs:label xml:lang="en">Assessment of pinch strengh using B &amp; L gauge</rdfs:label>
-        <rdfs:label xml:lang="en">Assessment of pinch strengh using B&amp;L gauge</rdfs:label>
         <rdfs:label xml:lang="fr">Évaluation de la force des pinces latérales de la main avec un manomètre B &amp; L</rdfs:label>
     </owl:Class>
     <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0000106"/>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0200004"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget xml:lang="en">An evaluation procedure that uses a B&amp;L gauge to assess pinch strengh. The test measuring the force of the lateral clamps, between the thumb and the index finger, allows quantifying the maximum voluntary strength of the hand and forearm muscles during a pinching action. This is an indicator of the level of hand function.</owl:annotatedTarget>
         <obo:IAO_0000119>Definition translated from French to English from a Reverso’s suggestion.</obo:IAO_0000119>
     </owl:Axiom>
     <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0000106"/>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0200004"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget xml:lang="fr">L’évaluation utilise un manomètre B &amp; L pour mesurer la force des pinces latérales, soit entre le pouce et l’index, et permettre de quantiﬁer la force maximale volontaire des muscles de la main et de l’avant-bras lors d’une action de pincement. Il s’agit d’un indicateur du niveau de fonction de la main.</owl:annotatedTarget>
+        <owl:annotatedTarget xml:lang="fr">L’évaluation utilise un manomètre B &amp; L pour mesurer la force des pinces latérales, soit la force entre le pouce et l’index. Elle permet de quantiﬁer la force maximale volontaire des muscles de la main et de l’avant-bras lors d’une action de pincement. Il s’agit d’un indicateur du niveau de fonction de la main.</owl:annotatedTarget>
         <obo:IAO_0000119>Definititon of the test provided by the Groupe de Recherche Interdisciplinaire sur les Maladies Neuromusculaires (GRIMN).</obo:IAO_0000119>
     </owl:Axiom>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/PROMOT_0000107 -->
+    <!-- http://purl.obolibrary.org/obo/PROMOT_0200005 -->
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0000107">
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0200005">
         <obo:IAO_0000115 xml:lang="en">Assessment of the maximum isometric muscle strength of flexor and extensor muscles using MedUP dynamometer. It assesses the maximum isometric muscle strength in upper and lower limbs.</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="fr">Une évaluation de la force musculaire isométrique maximale par dynamométrie manuelle utilisant le dynanomètre MedUP. Cette procédure permet d’évaluer la force musculaire maximale des muscles fléchisseurs et extenseurs des membres inférieurs et supérieurs.</obo:IAO_0000115>
         <rdfs:label xml:lang="en">Assessment of the maximum isometric muscle strength using MedUP dynamometer</rdfs:label>
-        <rdfs:label xml:lang="en">Evaluation of the maximum isometric muscle strength by manual dynamometry</rdfs:label>
         <rdfs:label xml:lang="fr">Évaluation de la force musculaire isométrique maximale avec le dynanomètre manuel MedUP</rdfs:label>
     </owl:Class>
     <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0000107"/>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0200005"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget xml:lang="en">Assessment of the maximum isometric muscle strength of flexor and extensor muscles using MedUP dynamometer. It assesses the maximum isometric muscle strength in upper and lower limbs.</owl:annotatedTarget>
         <obo:IAO_0000119>Definititon of the test provided by the Groupe de Recherche Interdisciplinaire sur les Maladies Neuromusculaires (GRIMN)</obo:IAO_0000119>
     </owl:Axiom>
     <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0000107"/>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0200005"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget xml:lang="fr">Une évaluation de la force musculaire isométrique maximale par dynamométrie manuelle utilisant le dynanomètre MedUP. Cette procédure permet d’évaluer la force musculaire maximale des muscles fléchisseurs et extenseurs des membres inférieurs et supérieurs.</owl:annotatedTarget>
         <obo:IAO_0000119>Definititon of the test provided by the Groupe de Recherche Interdisciplinaire sur les Maladies Neuromusculaires (GRIMN). Procedure by Luc J. Hébert, PhD</obo:IAO_0000119>
@@ -2578,16 +2913,16 @@ We also have the outstanding issue of how to aim different definitions to differ
     
 
 
-    <!-- http://purl.obolibrary.org/obo/PROMOT_0000108 -->
+    <!-- http://purl.obolibrary.org/obo/PROMOT_0200006 -->
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0000108">
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0200006">
         <obo:IAO_0000115 xml:lang="en">Assessment of the strengh of the tongue muscle by using Iowa Oral Performance Instrument.</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="fr">Ce test permet d’évaluer la force musculaire de la langue à l’aide de l’appareil IOPI.</obo:IAO_0000115>
         <rdfs:label xml:lang="en">Assessment of tongue strengh using Iowa Oral Performance Instrument</rdfs:label>
         <rdfs:label xml:lang="fr">Évaluation de la force de la langue avec l’IOPI</rdfs:label>
     </owl:Class>
     <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0000108"/>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0200006"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget xml:lang="fr">Ce test permet d’évaluer la force musculaire de la langue à l’aide de l’appareil IOPI.</owl:annotatedTarget>
         <obo:IAO_0000119>Definititon of the test provided by the Groupe de Recherche Interdisciplinaire sur les Maladies Neuromusculaires (GRIMN).</obo:IAO_0000119>
@@ -2595,23 +2930,22 @@ We also have the outstanding issue of how to aim different definitions to differ
     
 
 
-    <!-- http://purl.obolibrary.org/obo/PROMOT_0000109 -->
+    <!-- http://purl.obolibrary.org/obo/PROMOT_0200007 -->
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0000109">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0000020"/>
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0200007">
         <obo:IAO_0000115 xml:lang="en">An assessment with the Berg scale assesses balance and identifies the level of fall risk. This five-level ordinal scale (0 to 4) contains 14 items and the maximum total score ranges from 0 (maximum reach) to 56 (no reach detected). This generic scale evaluates various dimensions of balance, including the following: maintaining multiple positions, having automatic postural responses when changing posture or voluntary movements of the limbs, and produce effective balance and protection reactions.</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="fr">Une évaluation avec l’échelle de Berg évalue l’équilibre et identifie le niveau de risque de chute. Cette échelle ordinale à cinq niveaux (0 à 4) contient 14 items et le résultat total maximal varie de 0 (atteinte maximale) à 56 (aucune atteinte détectée). Cette échelle générique évalue diverses dimensions de l’équilibre, dont les suivantes : maintenir plusieurs positions, avoir des réponses posturales automatiques lors des changements de posture ou de mouvements volontaires des membres, et produire des réactions d’équilibre et de protection efficaces.</obo:IAO_0000115>
         <rdfs:label xml:lang="en">Assessment using Berg Balance Scale</rdfs:label>
         <rdfs:label xml:lang="fr">Évaluation avec l’échelle de Berg</rdfs:label>
     </owl:Class>
     <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0000109"/>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0200007"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget xml:lang="en">An assessment with the Berg scale assesses balance and identifies the level of fall risk. This five-level ordinal scale (0 to 4) contains 14 items and the maximum total score ranges from 0 (maximum reach) to 56 (no reach detected). This generic scale evaluates various dimensions of balance, including the following: maintaining multiple positions, having automatic postural responses when changing posture or voluntary movements of the limbs, and produce effective balance and protection reactions.</owl:annotatedTarget>
         <obo:IAO_0000119>Automatically translated from French.</obo:IAO_0000119>
     </owl:Axiom>
     <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0000109"/>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0200007"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget xml:lang="fr">Une évaluation avec l’échelle de Berg évalue l’équilibre et identifie le niveau de risque de chute. Cette échelle ordinale à cinq niveaux (0 à 4) contient 14 items et le résultat total maximal varie de 0 (atteinte maximale) à 56 (aucune atteinte détectée). Cette échelle générique évalue diverses dimensions de l’équilibre, dont les suivantes : maintenir plusieurs positions, avoir des réponses posturales automatiques lors des changements de posture ou de mouvements volontaires des membres, et produire des réactions d’équilibre et de protection efficaces.</owl:annotatedTarget>
         <obo:IAO_0000119>Definititon provided by the Groupe de Recherche Interdisciplinaire sur les Maladies Neuromusculaires (GRIMN).</obo:IAO_0000119>
@@ -2619,9 +2953,9 @@ We also have the outstanding issue of how to aim different definitions to differ
     
 
 
-    <!-- http://purl.obolibrary.org/obo/PROMOT_0000110 -->
+    <!-- http://purl.obolibrary.org/obo/PROMOT_0200008 -->
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0000110">
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0200008">
         <obo:IAO_0000115 xml:lang="fr">Le 10mwt est un test de capacité qui permet d’évaluer la vitesse de marche sur une courte distance pour deux conditions différentes, soit à la vitesse confortable et à la vitesse maximale. Le temps requis pour parcourir 10 mètres à la marche d’abord à la vitesse confortable, puis à la vitesse maximale, est inscrit.</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="en">The 10mwt is a capacity test that evaluates the subject’s walking speed over a short distance for two different conditions, first at comfortable speed and then at maximum speed.</obo:IAO_0000115>
         <oboInOwl:hasDbXref>http://snomed.info/id/431527001</oboInOwl:hasDbXref>
@@ -2629,13 +2963,13 @@ We also have the outstanding issue of how to aim different definitions to differ
         <rdfs:label xml:lang="fr">Test de vitesse de marche sur 10 mètres</rdfs:label>
     </owl:Class>
     <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0000110"/>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0200008"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget xml:lang="fr">Le 10mwt est un test de capacité qui permet d’évaluer la vitesse de marche sur une courte distance pour deux conditions différentes, soit à la vitesse confortable et à la vitesse maximale. Le temps requis pour parcourir 10 mètres à la marche d’abord à la vitesse confortable, puis à la vitesse maximale, est inscrit.</owl:annotatedTarget>
         <obo:IAO_0000119>Definititon of the test provided by the Groupe de Recherche Interdisciplinaire sur les Maladies Neuromusculaires (GRIMN).</obo:IAO_0000119>
     </owl:Axiom>
     <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0000110"/>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0200008"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget xml:lang="en">The 10mwt is a capacity test that evaluates the subject’s walking speed over a short distance for two different conditions, first at comfortable speed and then at maximum speed.</owl:annotatedTarget>
         <obo:IAO_0000119>Definition translated from French to English from a Reverso’s suggestion.</obo:IAO_0000119>
@@ -2643,22 +2977,22 @@ We also have the outstanding issue of how to aim different definitions to differ
     
 
 
-    <!-- http://purl.obolibrary.org/obo/PROMOT_0000111 -->
+    <!-- http://purl.obolibrary.org/obo/PROMOT_0200009 -->
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0000111">
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0200009">
         <obo:IAO_0000115 xml:lang="fr">Le questionnaire sur la déglutition de Sydney est un questionnaire auto-rapporté qui a pour but d’évaluer la gravité des problèmes de déglutition. Il comporte 17 questions. Le participant répond aux questions 1 à 11 et 13 à 17 en traçant un X sur une ligne (questions de type échelle visuelle analogue) et à la question 12 en cochant la réponse de son choix parmi 6 options. Une version canadienne-française validée a été créée.</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="en">The Sydney swallowing questionnaire is a self-reported questionnaire that aims to assess the severity of swallowing problems. It contains 17 questions. The participant answers questions 1 to 11 and 13 to 17 by drawing an X on a line (analogue visual scale questions) and question 12 by checking the answer of their choice among 6 options. A validated French-Canadian version has been created.</obo:IAO_0000115>
         <rdfs:label xml:lang="en">Assessment using Sydney Swallow Questionnaire (SSQ)</rdfs:label>
         <rdfs:label xml:lang="fr">Évaluation au moyen du questionnaire sur la déglutition de Sydney</rdfs:label>
     </owl:Class>
     <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0000111"/>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0200009"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget xml:lang="fr">Le questionnaire sur la déglutition de Sydney est un questionnaire auto-rapporté qui a pour but d’évaluer la gravité des problèmes de déglutition. Il comporte 17 questions. Le participant répond aux questions 1 à 11 et 13 à 17 en traçant un X sur une ligne (questions de type échelle visuelle analogue) et à la question 12 en cochant la réponse de son choix parmi 6 options. Une version canadienne-française validée a été créée.</owl:annotatedTarget>
         <obo:IAO_0000119>Definititon of the test provided by the Groupe de Recherche Interdisciplinaire sur les Maladies Neuromusculaires (GRIMN).</obo:IAO_0000119>
     </owl:Axiom>
     <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0000111"/>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0200009"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget xml:lang="en">The Sydney swallowing questionnaire is a self-reported questionnaire that aims to assess the severity of swallowing problems. It contains 17 questions. The participant answers questions 1 to 11 and 13 to 17 by drawing an X on a line (analogue visual scale questions) and question 12 by checking the answer of their choice among 6 options. A validated French-Canadian version has been created.</owl:annotatedTarget>
         <obo:IAO_0000119>Definition translated from French to English using Reverso.</obo:IAO_0000119>
@@ -2666,16 +3000,16 @@ We also have the outstanding issue of how to aim different definitions to differ
     
 
 
-    <!-- http://purl.obolibrary.org/obo/PROMOT_0000112 -->
+    <!-- http://purl.obolibrary.org/obo/PROMOT_0200010 -->
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0000112">
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0200010">
         <obo:IAO_0000115 xml:lang="fr">L’objectif de ce test est de boire 80 ml d’eau le plus rapidement possible sans s’étouffer. L’évaluateur déclanche le chronomètre quand les lèvres du participant touchent l’eau et l’arrête quand le participant dit « STOP ».</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="en">The goal of the 80 ml water swallowing test is to swallow the quickliest possible water without choking.</obo:IAO_0000115>
         <rdfs:label xml:lang="en">80 ml water swallowing test</rdfs:label>
         <rdfs:label xml:lang="fr">Test de déglutition de 80 ml d’eau </rdfs:label>
     </owl:Class>
     <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0000112"/>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0200010"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget xml:lang="fr">L’objectif de ce test est de boire 80 ml d’eau le plus rapidement possible sans s’étouffer. L’évaluateur déclanche le chronomètre quand les lèvres du participant touchent l’eau et l’arrête quand le participant dit « STOP ».</owl:annotatedTarget>
         <obo:IAO_0000119>Definititon of the test provided by the Groupe de Recherche Interdisciplinaire sur les Maladies Neuromusculaires (GRIMN).</obo:IAO_0000119>
@@ -2683,9 +3017,9 @@ We also have the outstanding issue of how to aim different definitions to differ
     
 
 
-    <!-- http://purl.obolibrary.org/obo/PROMOT_0000113 -->
+    <!-- http://purl.obolibrary.org/obo/PROMOT_0200011 -->
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0000113">
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0200011">
         <obo:IAO_0000115 xml:lang="en">Assessment using Fatigue Severity scale. It follows a 9-item scale which measures the severity of fatigue and its effect on a person&apos;s activities and lifestyle in patients with a variety of disorders.  A 9-item questionnaire with questions related to how fatigue interferes with certain activities and rates its severity according to a self-report scale. The items are scored on a 7 point scale with 1 = strongly disagree and 7= strongly agree. The minimum score = 9 and maximum score possible = 63. Higher the score = greater fatigue severity. Another way of scoring: mean of all the scores with minimum score being 1 and maximum score being 7. Lerdal (2011) found that items 1 and 2 in the FSS-9 should not be used in a mean score because the FSS-7 shows better validity and reliability and is likely more sensitive for measuring change in fatigue.</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="fr">Une évaluation de la fatigue qui utilise l’échelle de sévérité de la fatigue dévelopée par Krupp et al.</obo:IAO_0000115>
         <rdfs:comment>Krupp, L. B., LaRocca, N. G., Muir-Nash, J., &amp; Steinberg, A. D. (1989). The fatigue severity scale. Application to patients with multiple sclerosis and systemic lupus erythematosus. Archives of Neurology, 46(10), 1121–1123. </rdfs:comment>
@@ -2693,7 +3027,7 @@ We also have the outstanding issue of how to aim different definitions to differ
         <rdfs:label xml:lang="fr">Évaluation avec l’échelle de sévérité de la fatigue</rdfs:label>
     </owl:Class>
     <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0000113"/>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0200011"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget xml:lang="en">Assessment using Fatigue Severity scale. It follows a 9-item scale which measures the severity of fatigue and its effect on a person&apos;s activities and lifestyle in patients with a variety of disorders.  A 9-item questionnaire with questions related to how fatigue interferes with certain activities and rates its severity according to a self-report scale. The items are scored on a 7 point scale with 1 = strongly disagree and 7= strongly agree. The minimum score = 9 and maximum score possible = 63. Higher the score = greater fatigue severity. Another way of scoring: mean of all the scores with minimum score being 1 and maximum score being 7. Lerdal (2011) found that items 1 and 2 in the FSS-9 should not be used in a mean score because the FSS-7 shows better validity and reliability and is likely more sensitive for measuring change in fatigue.</owl:annotatedTarget>
         <obo:IAO_0000119>Source for the definition of the scale: https://www.sralab.org/rehabilitation-measures/fatigue-severity-scale</obo:IAO_0000119>
@@ -2701,9 +3035,9 @@ We also have the outstanding issue of how to aim different definitions to differ
     
 
 
-    <!-- http://purl.obolibrary.org/obo/PROMOT_0000114 -->
+    <!-- http://purl.obolibrary.org/obo/PROMOT_0200012 -->
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0000114">
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0200012">
         <obo:IAO_0000115 xml:lang="fr">Le test mesurant la force de préhension permet de quantifier la force maximale volontaire des muscles de la main et de l’avant-bras, lors d’une action de flexion des doigts. Il s’agit d’un indicateur du niveau de fonction de la main.</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="en">Test measuring the grip force allows quantifying the maximum voluntary force of the muscles of the hand and forearm, during a finger flexion action. This is an indicator of the level of hand function.</obo:IAO_0000115>
         <oboInOwl:hasDbXref>http://snomed.info/id/445993006</oboInOwl:hasDbXref>
@@ -2711,13 +3045,13 @@ We also have the outstanding issue of how to aim different definitions to differ
         <rdfs:label xml:lang="fr">Évaluation de la force de préhension</rdfs:label>
     </owl:Class>
     <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0000114"/>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0200012"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget xml:lang="fr">Le test mesurant la force de préhension permet de quantifier la force maximale volontaire des muscles de la main et de l’avant-bras, lors d’une action de flexion des doigts. Il s’agit d’un indicateur du niveau de fonction de la main.</owl:annotatedTarget>
         <obo:IAO_0000119>Definititon of the test provided by the Groupe de Recherche Interdisciplinaire sur les Maladies Neuromusculaires (GRIMN).</obo:IAO_0000119>
     </owl:Axiom>
     <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0000114"/>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0200012"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget xml:lang="en">Test measuring the grip force allows quantifying the maximum voluntary force of the muscles of the hand and forearm, during a finger flexion action. This is an indicator of the level of hand function.</owl:annotatedTarget>
         <obo:IAO_0000119>Definition translated from French to English using automatic translation.</obo:IAO_0000119>
@@ -2725,9 +3059,9 @@ We also have the outstanding issue of how to aim different definitions to differ
     
 
 
-    <!-- http://purl.obolibrary.org/obo/PROMOT_0000115 -->
+    <!-- http://purl.obolibrary.org/obo/PROMOT_0200013 -->
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0000115">
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0200013">
         <obo:IAO_0000115 xml:lang="fr">Le test de 10 marches évalue la capacité à monter et descendre un bloc de 10 marches pour deux conditions différentes, soit à la vitesse confortable et à la vitesse maximale. Ce test s’adressent aux participants qui ont la capacité d’utiliser les escaliers.</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="en">The Stair Climb Test evaluates a subject’s ability to climb and descend a 10 steps stair following two different conditions, at comfortable speed and at maximum speed. This test is intended for participants who have the ability to use stairs.</obo:IAO_0000115>
         <oboInOwl:hasDbXref>http://snomed.info/id/252482003</oboInOwl:hasDbXref>
@@ -2735,13 +3069,13 @@ We also have the outstanding issue of how to aim different definitions to differ
         <rdfs:label xml:lang="fr">Test de 10 marches</rdfs:label>
     </owl:Class>
     <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0000115"/>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0200013"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget xml:lang="fr">Le test de 10 marches évalue la capacité à monter et descendre un bloc de 10 marches pour deux conditions différentes, soit à la vitesse confortable et à la vitesse maximale. Ce test s’adressent aux participants qui ont la capacité d’utiliser les escaliers.</owl:annotatedTarget>
         <obo:IAO_0000119>Definititon of the test provided by the Groupe de Recherche Interdisciplinaire sur les Maladies Neuromusculaires (GRIMN).</obo:IAO_0000119>
     </owl:Axiom>
     <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0000115"/>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0200013"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget xml:lang="en">The Stair Climb Test evaluates a subject’s ability to climb and descend a 10 steps stair following two different conditions, at comfortable speed and at maximum speed. This test is intended for participants who have the ability to use stairs.</owl:annotatedTarget>
         <obo:IAO_0000119>Definition translated from French to English from a Reverso’s suggestion.</obo:IAO_0000119>
