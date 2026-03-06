@@ -44,14 +44,6 @@ $(IMPORTDIR)/bfo_import.owl: $(MIRRORDIR)/bfo.owl $(IMPORTDIR)/bfo_terms.txt
         query --update $(SPARQLDIR)/inject-subset-declaration.ru --update $(SPARQLDIR)/postprocess-module.ru \
 		annotate --ontology-iri $(ONTBASE)/$@ $(ANNOTATE_ONTOLOGY_VERSION) --output $@.tmp.owl && mv $@.tmp.owl $@; fi
 
-# ----------------------------------------
-# Module CIF : definitions
-# ----------------------------------------
-$(IMPORTDIR)/cif_import.owl: $(IMPORTDIR)/icf_import.owl $(MIRRORDIR)/CGTS_SEM_ICF_02_06.ttl $(IMPORTDIR)/cif_terms.txt
-	if [ $(IMP) = true ]; then $(ROBOT) query -i $(MIRRORDIR)/CGTS_SEM_ICF_02_06.ttl --update $(SPARQLDIR)/preprocess-module.ru \
-		filter -T $(IMPORTDIR)/cif_terms.txt --term dc:description@fr --signature true \
-        query --update $(SPARQLDIR)/inject-subset-declaration.ru --update $(SPARQLDIR)/postprocess-module.ru \
-		annotate --ontology-iri $(ONTBASE)/$@ $(ANNOTATE_ONTOLOGY_VERSION) --output $@.tmp.owl && mv $@.tmp.owl $@; fi
 
 # ----------------------------------------
 # Module ECO : classes
@@ -189,7 +181,7 @@ $(IMPORTDIR)/snomed_import.owl: $(IMPORTSDATADIR)/ontology-2025-11-14_EN-ES.owl 
 # C. merge des fichiers
 # D. rename des préfixes skos pour passer les tests de la release
 $(IMPORTDIR)/icf_import.owl: $(IMPORTSDATADIR)/whofic-2025-05-24.owl $(IMPORTDIR)/icf_terms_descendants.txt $(IMPORTDIR)/icf_terms.txt $(IMPORTDIR)/icf_exclude_terms.txt
-	if [ $(IMP) = true ]; then $(ROBOT) query -i $< --update $(SPARQLDIR)/preprocess-module.ru \
+	if [ $(IMP) = true && $(ICF) = true ]; then $(ROBOT) query -i $< --update $(SPARQLDIR)/preprocess-module.ru \
 		filter -T $(IMPORTDIR)/icf_terms_descendants.txt \
         --select "self descendants annotations" \
 		--exclude-term http://id.who.int/icd/entity/721275161 \
@@ -287,7 +279,7 @@ translation-icf: refresh-icf $(IMPORTDIR)/icf_import.owl
 # OUTPUT promot-component.tsv in promot/src/templates/ that would be transformed into promot/components/promot-component.owl
 # ----------------------------------------
 .PHONY: create-template
-create-template: translation-icf $(TEMPLATEDIR)/promot-component-base.tsv $(PROMOTDATADIR)/*.tsv
+create-template: translation-icf $(TEMPLATEDIR)/promot-component-base.tsv $(TEMPLATEDIR)/icf_labels_es-fr.tsv $(PROMOTDATADIR)/*.tsv
 	python3.12 $(SCRIPTSDIR)/python/relations-to-template.py
 
 # ----------------------------------------
@@ -306,6 +298,16 @@ $(COMPONENTSDIR)/promot-component.owl: credits create-template $(TEMPLATEDIR)/pr
 		 --template $(TEMPLATEDIR)/promot-component-auto.tsv \
 		 $(ANNOTATE_CONVERT_FILE)
 .PRECIOUS: $(COMPONENTSDIR)/promot-component.owl
+
+# ----------------------------------------
+# CUSTOM SRCMERGED
+# ----------------------------------------
+#$(SRCMERGED): $(EDIT_PREPROCESSED) $(OTHER_SRC)
+#	$(ROBOT) convert -i $(IMPORTDIR)/ro_import.owl -f ofn -o $(TMPDIR)/ro_import.ofn ; \
+#	$(ROBOT) remove --input $< --select imports --trim false \
+#		 merge $(foreach src, $(OTHER_SRC), --input $(src)) \
+#		 remove -T $(IMPORTDIR)/ro_terms.txt --select "self annotations" --signature true \
+#		 merge --input $(TMPDIR)/ro_import.ofn --output $@
 
 # ----------------------------------------
 # Documentation - Documentación

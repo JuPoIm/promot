@@ -1,6 +1,7 @@
 format-version: 1.2
-data-version: promot/releases/2026-03-03/promot-simple.owl
-date: 03:03:2026 14:40
+data-version: promot/releases/2026-03-06/promot-simple.owl
+date: 06:03:2026 18:01
+subsetdef: http://purl.obolibrary.org/obo/valid_for_go_gp2term ""
 subsetdef: ro-eco ""
 subsetdef: RO:0002259 ""
 idspace: ace_lexicon http://attempto.ifi.uzh.ch/ace_lexicon# 
@@ -50,7 +51,7 @@ property_value: dc11:contributor "Mansoore Gholizade MD" xsd:string
 property_value: dc11:creator "Cynthia Gagnon MD, PhD\nhttps://orcid.org/0000-0003-2829-8470" xsd:string
 property_value: dc11:creator "Juliette Potier MSc\nhttps://orcid.org/0009-0000-5160-7927" xsd:string
 property_value: dc11:creator "Paul Fabry MD, PhD student\nhttps://orcid.org/0000-0002-3336-2476" xsd:string
-property_value: owl:versionInfo "2026-03-03" xsd:string
+property_value: owl:versionInfo "2026-03-06" xsd:string
 property_value: seeAlso "More about PROMOT initiative at https://www.promotinitiative.com/\n" xsd:string
 property_value: terms:description "Ontology for modeling the three following neuromuscular diseases : OPMD, Congenital myopathies and Congenital myastenic syndroms. It aims to be also an ontology for building the PROMOT project relational database." xsd:string
 property_value: terms:license https://creativecommons.org/licenses/by-nc-sa/4.0/
@@ -60,15 +61,12 @@ property_value: terms:title "PROMOT ontology" xsd:string
 id: PROMOT:0000001
 name: genetic mutation
 def: "A sequence alteration that is very rare allele in a population (typically <1%)." [] {IAO:0000119="GENO:0000492"}
-comment: JP: Translated to spanish using Bing Translator
+comment: EU-CDE
 xref: GENO:0000492
-xref: http://purl.obolibrary.org/obo/NCIT_C18093
 xref: http://snomed.info/id/106221001
 xref: http://snomed.info/id/55446002
+xref: NCIT:C18093
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
-property_value: PROMOT:1000001 "[EURO-NMD] Atalia A et al., EURO-NMD registry: federated FAIR infrastructure, innovative technologies and concepts of a patient-centred registry for rare neuromuscular disorders. Orphanet J Rare Dis. 2024 Feb 14;19(1):66. doi: 10.1186/s13023-024-03059-3. PMID: 38355534; PMCID: PMC10865673." xsd:string
-property_value: PROMOT:1000001 "[RD-CDM] Graefe, A.S.L., Hübner, M.R., Rehburg, F. et al. An ontology-based rare disease common data model harmonising international registries, FHIR, and Phenopackets. Sci Data 12, 234 (2025). https://doi.org/10.1038/s41597-025-04558-z" xsd:string
-property_value: PROMOT:1000001 "EU-CDE" xsd:string
 property_value: seeAlso GENO:0000492
 
 [Term]
@@ -78,7 +76,6 @@ def: "A sequence alteration located within the PABPN1 gene." []
 comment: JP: Translated to spanish using Bing Translator
 is_a: PROMOT:0000001 ! genetic mutation
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
-property_value: PROMOT:1000001 "[EURO-NMD] Atalia A et al., EURO-NMD registry: federated FAIR infrastructure, innovative technologies and concepts of a patient-centred registry for rare neuromuscular disorders. Orphanet J Rare Dis. 2024 Feb 14;19(1):66. doi: 10.1186/s13023-024-03059-3. PMID: 38355534; PMCID: PMC10865673." xsd:string
 property_value: seeAlso NCIT:C204162
 
 [Term]
@@ -189,905 +186,898 @@ is_a: PROMOT:0000001 ! genetic mutation
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
-id: PROMOT:0000015
-name: Entité anatomique liée à un phénotype
-def: "An anatomical entity related to a phenotype such that the anatomical entity is the location of the phenotype. In other words, the phenotype is a disposition of the anatomical entity." []
-comment: (JP : unsure, attention au lien avec les body structures)
-property_value: IAO:0000117 "Paul Fabry, https://orcid.org/0009-0000-5160-7927" xsd:string
-
-[Term]
-id: PROMOT:0000016
-name: Phenotypically related body structure
-def: "A body structure related to a phenotype such that the body structure is the location of the phenotype." []
-comment: (JP: unsure about definition)
-property_value: IAO:0000117 "Paul Fabry, https://orcid.org/0009-0000-5160-7927" xsd:string
-
-[Term]
-id: PROMOT:0000017
-name: Body function related phenotype
-def: "A phenotype that affects a body function." []
-comment: (JP: unsure about definition)
-is_a: PROMOT:0000026 ! abnormal disposition
-relationship: SIO:000217 PROMOT:0000084 ! has quality Transmission inconnue
-property_value: IAO:0000117 "Paul Fabry, https://orcid.org/0009-0000-5160-7927" xsd:string
-
-[Term]
-id: PROMOT:0000018
-name: Activity or participation related phenotype
-def: "A phenotype that affects an activity or a participation." []
-comment: (JP: unsure about definition)
-is_a: PROMOT:0000026 ! abnormal disposition
-relationship: SIO:000217 PROMOT:0000084 ! has quality Transmission inconnue
-property_value: IAO:0000117 "Paul Fabry, https://orcid.org/0009-0000-5160-7927" xsd:string
-
-[Term]
-id: PROMOT:0000019
-name: Activity or participation related body function
-def: "A body function that is involved in an activity or a participation. The boby function is needed in order to the activity or participation to occurs." []
-property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
-
-[Term]
-id: PROMOT:0000020
-name: Phenotypically related procedure
-def: "A procedure that can assess a phenotype." []
-property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
-
-[Term]
-id: PROMOT:0000021
-name: Body function related procedure
-def: "A procedure that can measure a body function." []
-property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
-
-[Term]
-id: PROMOT:0000022
-name: Body structure related procedure
-def: "A procedure that can measure a body structure." []
-property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
-
-[Term]
-id: PROMOT:0000023
-name: Activity or participation related procedure
-def: "A procedure that can measure an activity or a participation." []
-property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
-
-[Term]
-id: PROMOT:0000024
-name: Body structure related anatomical entity
-def: "An anatomical entity that is located in a body structure." []
-property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
-
-[Term]
-id: PROMOT:0000025
-name: Paciente
-def: "A patient that had received a confirmed diagnostic of genetic mutation and that is involved in the data collection for natural history study of their disease." []
-comment: JP: Translated to spanish using Bing Translator
-xref: http://purl.obolibrary.org/obo/NCIT_C16960
-relationship: PROMOT:2000004 PROMOT:0000001 ! est porteur de la mutation genetic mutation
-property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
-
-[Term]
-id: PROMOT:0000026
-name: abnormal disposition
-def: "A disposition that differs from the norm, such as a disease or a phenotypic abnormality." []
-property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
-
-[Term]
-id: PROMOT:0000027
+id: PROMOT:0010001
 name: declaración sobre una entidad
 def: "A statement about an entity, such as a person or a process, to state details about it." []
 comment: JP: Translated to spanish using Bing Translator
-xref: http://purl.obolibrary.org/obo/NCIT_C49154
+xref: NCIT:C49154
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
-id: PROMOT:0000028
+id: PROMOT:0010002
 name: Declaración sobre un ser humano
 def: "A statement that describes a human." []
-is_a: PROMOT:0000027 ! declaración sobre una entidad
-relationship: RO:0002351 PROMOT:0000037 {maxCardinality="1"} ! has member Année de naissance
-relationship: RO:0002351 PROMOT:0000037 ! has member Année de naissance
-relationship: RO:0002351 PROMOT:0000041 {maxCardinality="1"} ! has member Année de décès
-relationship: RO:0002351 PROMOT:0000041 ! has member Année de décès
-relationship: RO:0002351 PROMOT:0000042 ! has member Age
-relationship: RO:0002351 PROMOT:0000043 {maxCardinality="1"} ! has member Age at death
-relationship: RO:0002351 PROMOT:0000043 ! has member Age at death
-relationship: RO:0002351 PROMOT:0000044 ! has member Age Category
-relationship: RO:0002351 PROMOT:0000067 {maxCardinality="1"} ! has member Sex at birth
-relationship: RO:0002351 PROMOT:0000067 ! has member Sex at birth
+is_a: PROMOT:0010001 ! declaración sobre una entidad
+relationship: RO:0002351 PROMOT:0010011 ! has member Année de naissance
+relationship: RO:0002351 PROMOT:0010011 {maxCardinality="1"} ! has member Année de naissance
+relationship: RO:0002351 PROMOT:0010015 ! has member Année de décès
+relationship: RO:0002351 PROMOT:0010015 {maxCardinality="1"} ! has member Année de décès
+relationship: RO:0002351 PROMOT:0010016 ! has member Age
+relationship: RO:0002351 PROMOT:0010017 ! has member Age at death
+relationship: RO:0002351 PROMOT:0010017 {maxCardinality="1"} ! has member Age at death
+relationship: RO:0002351 PROMOT:0010018 ! has member Age Category
+relationship: RO:0002351 PROMOT:0010041 {maxCardinality="1"} ! has member Sex at birth
+relationship: RO:0002351 PROMOT:0010041 ! has member Sex at birth
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
-id: PROMOT:0000029
+id: PROMOT:0010003
 name: declaración sobre un paciente
 def: "A statement regarding a patient to state details about them." []
 comment: JP: Translated to spanish using Bing Translator
-is_a: PROMOT:0000028 ! Declaración sobre un ser humano
-relationship: RO:0002351 PROMOT:0000025 ! has member Paciente
-relationship: RO:0002351 PROMOT:0000025 {cardinality="1"} ! has member Paciente
-relationship: RO:0002351 PROMOT:0000038 ! has member Année de diagnostic
-relationship: RO:0002351 PROMOT:0000078 ! has member Nb of previous pregnancies
-relationship: RO:0002351 PROMOT:0000079 {minCardinality="0"} ! has member Patient à risque de chute
+is_a: PROMOT:0010002 ! Declaración sobre un ser humano
+relationship: RO:0002351 PROMOT:0010012 ! has member Année de diagnostic
+relationship: RO:0002351 PROMOT:0010052 ! has member Nb of previous pregnancies
+relationship: RO:0002351 PROMOT:0010065 ! has member Patient à risque de chute
+relationship: RO:0002351 PROMOT:0020004 ! has member Paciente
+relationship: RO:0002351 PROMOT:0020004 {cardinality="1"} ! has member Paciente
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
-id: PROMOT:0000030
+id: PROMOT:0010004
 name: declaración sobre un fenotipo
 def: "A statement regarding a phenotype to state details about it." []
 comment: BIH-CEI rd-cdm: Repo for the ontology-based rare disease common data model harmonising international registry use, FHIR, and Phenopackets 
-is_a: PROMOT:0000027 ! declaración sobre una entidad
-relationship: RO:0002351 PROMOT:0000034 {cardinality="1"} ! has member Date of assessment
-relationship: RO:0002351 PROMOT:0000034 ! has member Date of assessment
-relationship: RO:0002351 PROMOT:0000035 {cardinality="1"} ! has member Date of resolution
-relationship: RO:0002351 PROMOT:0000035 ! has member Date of resolution
-relationship: RO:0002351 PROMOT:0000036 {cardinality="1"} ! has member Année d’apparition
-relationship: RO:0002351 PROMOT:0000036 ! has member Année d’apparition
-relationship: RO:0002351 PROMOT:0000039 ! has member Année d’identification
-relationship: RO:0002351 PROMOT:0000039 {cardinality="1"} ! has member Année d’identification
-relationship: RO:0002351 PROMOT:0000040 {minCardinality="0"} ! has member Année de disparition
+is_a: PROMOT:0010001 ! declaración sobre una entidad
+relationship: RO:0002351 PROMOT:0010008 ! has member Date of assessment
+relationship: RO:0002351 PROMOT:0010008 {cardinality="1"} ! has member Date of assessment
+relationship: RO:0002351 PROMOT:0010009 {cardinality="1"} ! has member Date of resolution
+relationship: RO:0002351 PROMOT:0010009 ! has member Date of resolution
+relationship: RO:0002351 PROMOT:0010010 ! has member Année d’apparition
+relationship: RO:0002351 PROMOT:0010010 {cardinality="1"} ! has member Année d’apparition
+relationship: RO:0002351 PROMOT:0010013 {cardinality="1"} ! has member Année d’identification
+relationship: RO:0002351 PROMOT:0010013 ! has member Année d’identification
+relationship: RO:0002351 PROMOT:0010014 ! has member Année de disparition
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
-id: PROMOT:0000031
+id: PROMOT:0010005
 name: statement about a procedure
 def: "A statement regarding a procedure to describe it." []
 comment: JP: Translated to spanish using Bing Translator
-is_a: PROMOT:0000027 ! declaración sobre una entidad
+is_a: PROMOT:0010001 ! declaración sobre una entidad
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
-id: PROMOT:0000032
+id: PROMOT:0010006
 name: declaración sobre un consentimiento 
 def: "A statement regarding a consent to describe it." []
-is_a: PROMOT:0000027 ! declaración sobre una entidad
-relationship: RO:0002351 PROMOT:0000092 ! has member Consent status
-relationship: RO:0002351 PROMOT:0000092 {cardinality="1"} ! has member Consent status
-relationship: RO:0002351 PROMOT:0000099 ! has member Date du consentement
-relationship: RO:0002351 PROMOT:0000100 {cardinality="1"} ! has member Consent type
-relationship: RO:0002351 PROMOT:0000100 ! has member Consent type
+is_a: PROMOT:0010001 ! declaración sobre una entidad
+relationship: RO:0002351 PROMOT:0010053 {cardinality="1"} ! has member Consent status
+relationship: RO:0002351 PROMOT:0010053 ! has member Consent status
+relationship: RO:0002351 PROMOT:0010060 ! has member Date du consentement
+relationship: RO:0002351 PROMOT:0010061 {cardinality="1"} ! has member Consent type
+relationship: RO:0002351 PROMOT:0010061 ! has member Consent type
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
-id: PROMOT:0000033
-name: Date
-def: "Time indication that refers to a specific day and usually includes mention of the month and/or the year according to a specific calendar system." []
-xref: http://purl.obolibrary.org/obo/NCIT_C25164
-property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
-
-[Term]
-id: PROMOT:0000034
+id: PROMOT:0010008
 name: Date of assessment
 def: "La date à laquelle une entité a été formellement identifiée, par exemple la date à laquelle un phénotype a été identifié via une procédure médicale." []
-comment: [derived from EURO-NMD] 
-is_a: PROMOT:0000033 ! Date
+comment: [EURO-NMD] Atalia A et al., EURO-NMD registry: federated FAIR infrastructure, innovative technologies and concepts of a patient-centred registry for rare neuromuscular disorders. Orphanet J Rare Dis. 2024 Feb 14;19(1):66. doi: 10.1186/s13023-024-03059-3. PMID: 38355534; PMCID: PMC10865673.
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
-property_value: PROMOT:1000001 "[EURO-NMD] Atalia A et al., EURO-NMD registry: federated FAIR infrastructure, innovative technologies and concepts of a patient-centred registry for rare neuromuscular disorders. Orphanet J Rare Dis. 2024 Feb 14;19(1):66. doi: 10.1186/s13023-024-03059-3. PMID: 38355534; PMCID: PMC10865673." xsd:string
 property_value: seeAlso SNOMED:363778006
 property_value: seeAlso SNOMED:439272007
 property_value: seeAlso SNOMED:704321009
 
 [Term]
-id: PROMOT:0000035
+id: PROMOT:0010009
 name: Date of resolution
 def: "La date à laquelle une disposition anormale, telle qu’une maladie ou un phénotype, cesse d’exister." []
-comment: [PROMOT note] [Derived from RD-CDM] [6.2.4 Resolution Date] 
+comment: [EURO-NMD] Atalia A et al., EURO-NMD registry: federated FAIR infrastructure, innovative technologies and concepts of a patient-centred registry for rare neuromuscular disorders. Orphanet J Rare Dis. 2024 Feb 14;19(1):66. doi: 10.1186/s13023-024-03059-3. PMID: 38355534; PMCID: PMC10865673.
 xref: HP:0034382
-xref: http://purl.obolibrary.org/obo/NCIT_C178992
-is_a: PROMOT:0000033 ! Date
+xref: NCIT:C178992
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
-property_value: PROMOT:1000001 "[EURO-NMD] Atalia A et al., EURO-NMD registry: federated FAIR infrastructure, innovative technologies and concepts of a patient-centred registry for rare neuromuscular disorders. Orphanet J Rare Dis. 2024 Feb 14;19(1):66. doi: 10.1186/s13023-024-03059-3. PMID: 38355534; PMCID: PMC10865673." xsd:string
-property_value: PROMOT:1000001 "[RD-CDM] Graefe, A.S.L., Hübner, M.R., Rehburg, F. et al. An ontology-based rare disease common data model harmonising international registries, FHIR, and Phenopackets. Sci Data 12, 234 (2025). https://doi.org/10.1038/s41597-025-04558-z" xsd:string
 property_value: seeAlso HP:0034382
 
 [Term]
-id: PROMOT:0000036
+id: PROMOT:0010010
 name: Année d’apparition
 def: "L’année à laquelle apparaît une entité." []
 comment: [PROMOT note] [Derived from RD-CDM] [5.4 Date of Onset]
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
-id: PROMOT:0000037
+id: PROMOT:0010011
 name: Année de naissance
 def: "The year in which the birth occurs." []
 comment: [PROMOT note] [Derived from RD-CDM] [2.1 Date of birth]
-xref: http://purl.obolibrary.org/obo/NCIT_C83164
+xref: NCIT:C83164
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
-id: PROMOT:0000038
+id: PROMOT:0010012
 name: Année de diagnostic
 def: "The year in which the diagnosis is made." []
 comment: [PROMOT note] [Derived from RD-CDM] [5.6 Date of Diagnosis] 
-xref: http://purl.obolibrary.org/obo/NCIT_C210821
+xref: NCIT:C210821
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
-id: PROMOT:0000039
+id: PROMOT:0010013
 name: Année d’identification
 def: "L’année d’identification d’une entité, par exemple, l’année d’identification d’un phénotype via une procédure médicale." []
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
-id: PROMOT:0000040
+id: PROMOT:0010014
 name: Année de disparition
 def: "L’année de la disparition d’une entité, par exemple, l’année de disparition d’un phénotype." []
 comment: [PROMOT note] [Derived from RD-CDM] [6.2.4 Resolution Date] 
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
-id: PROMOT:0000041
+id: PROMOT:0010015
 name: Année de décès
 def: "L’année à laquelle un organisme cesse de vivre." []
 comment: [PROMOT note] [Derived from RD-CDM] [3.2 Time of Death] 
-xref: http://purl.obolibrary.org/obo/NCIT_C156426
+xref: NCIT:C156426
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
-id: PROMOT:0000042
+id: PROMOT:0010016
 name: Age
 def: "Elapsed time since birth expressed in years." []
-xref: http://purl.obolibrary.org/obo/NCIT_C25150
+comment: [EURO-NMD] Atalia A et al., EURO-NMD registry: federated FAIR infrastructure, innovative technologies and concepts of a patient-centred registry for rare neuromuscular disorders. Orphanet J Rare Dis. 2024 Feb 14;19(1):66. doi: 10.1186/s13023-024-03059-3. PMID: 38355534; PMCID: PMC10865673.
+xref: NCIT:C25150
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
-property_value: PROMOT:1000001 "[EURO-NMD] Atalia A et al., EURO-NMD registry: federated FAIR infrastructure, innovative technologies and concepts of a patient-centred registry for rare neuromuscular disorders. Orphanet J Rare Dis. 2024 Feb 14;19(1):66. doi: 10.1186/s13023-024-03059-3. PMID: 38355534; PMCID: PMC10865673." xsd:string
-property_value: PROMOT:1000001 "[RD-CDM] Graefe, A.S.L., Hübner, M.R., Rehburg, F. et al. An ontology-based rare disease common data model harmonising international registries, FHIR, and Phenopackets. Sci Data 12, 234 (2025). https://doi.org/10.1038/s41597-025-04558-z" xsd:string
 
 [Term]
-id: PROMOT:0000043
+id: PROMOT:0010017
 name: Age at death
 def: "Age à laquelle une personne est décédée. Nombre d’années complètes écoulées depuis la naissance jusqu’à la mort d’une personne." []
-xref: http://purl.obolibrary.org/obo/NCIT_C135383
+xref: NCIT:C135383
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
-id: PROMOT:0000044
+id: PROMOT:0010018
 name: Age Category
 def: "Arbitrary interval of age to split a population into groups according to their age." []
-comment: [PROMOT note] [Derived from RD-CDM] [3.4 Age Category] 
-xref: http://purl.obolibrary.org/obo/NCIT_C20587
+comment: [EURO-NMD] Atalia A et al., EURO-NMD registry: federated FAIR infrastructure, innovative technologies and concepts of a patient-centred registry for rare neuromuscular disorders. Orphanet J Rare Dis. 2024 Feb 14;19(1):66. doi: 10.1186/s13023-024-03059-3. PMID: 38355534; PMCID: PMC10865673.
 xref: http://snomed.info/id/105727008
+xref: NCIT:C20587
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
-property_value: PROMOT:1000001 "[EURO-NMD] Atalia A et al., EURO-NMD registry: federated FAIR infrastructure, innovative technologies and concepts of a patient-centred registry for rare neuromuscular disorders. Orphanet J Rare Dis. 2024 Feb 14;19(1):66. doi: 10.1186/s13023-024-03059-3. PMID: 38355534; PMCID: PMC10865673." xsd:string
-property_value: PROMOT:1000001 "[RD-CDM] Graefe, A.S.L., Hübner, M.R., Rehburg, F. et al. An ontology-based rare disease common data model harmonising international registries, FHIR, and Phenopackets. Sci Data 12, 234 (2025). https://doi.org/10.1038/s41597-025-04558-z" xsd:string
 property_value: seeAlso HP:0003674
 
 [Term]
-id: PROMOT:0000045
+id: PROMOT:0010019
 name: Adulthood
 def: "Age category including people of 16 years old and above." [] {IAO:0000119="HP:0003581"}
-comment: [PROMOT note] [Derived from RD-CDM] [3.4 Age Category] 
+comment: [EURO-NMD] Atalia A et al., EURO-NMD registry: federated FAIR infrastructure, innovative technologies and concepts of a patient-centred registry for rare neuromuscular disorders. Orphanet J Rare Dis. 2024 Feb 14;19(1):66. doi: 10.1186/s13023-024-03059-3. PMID: 38355534; PMCID: PMC10865673.
 xref: http://snomed.info/id/41847000
-is_a: PROMOT:0000044 ! Age Category
+is_a: PROMOT:0010018 ! Age Category
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
-property_value: PROMOT:1000001 "[EURO-NMD] Atalia A et al., EURO-NMD registry: federated FAIR infrastructure, innovative technologies and concepts of a patient-centred registry for rare neuromuscular disorders. Orphanet J Rare Dis. 2024 Feb 14;19(1):66. doi: 10.1186/s13023-024-03059-3. PMID: 38355534; PMCID: PMC10865673." xsd:string
-property_value: PROMOT:1000001 "[RD-CDM] Graefe, A.S.L., Hübner, M.R., Rehburg, F. et al. An ontology-based rare disease common data model harmonising international registries, FHIR, and Phenopackets. Sci Data 12, 234 (2025). https://doi.org/10.1038/s41597-025-04558-z" xsd:string
 property_value: seeAlso HP:0003581
 
 [Term]
-id: PROMOT:0000046
+id: PROMOT:0010020
 name: Late adulthood
 def: "Age category including people of 60 years old and above." [] {IAO:0000119="HP:0003584"}
-is_a: PROMOT:0000045 ! Adulthood
+is_a: PROMOT:0010019 ! Adulthood
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 property_value: seeAlso HP:0003584
 
 [Term]
-id: PROMOT:0000047
+id: PROMOT:0010021
 name: Middle adulthood
 def: "Age category including people between 40 and 59 years old (inclusive)." [] {IAO:0000119="HP:0003596"}
-is_a: PROMOT:0000045 ! Adulthood
+is_a: PROMOT:0010019 ! Adulthood
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 property_value: seeAlso HP:0003596
 
 [Term]
-id: PROMOT:0000048
+id: PROMOT:0010022
 name: Young adulthood
 def: "Age category including people between 16 and 39 years old (inclusive)." [] {IAO:0000119="HP:0011462"}
-is_a: PROMOT:0000045 ! Adulthood
+is_a: PROMOT:0010019 ! Adulthood
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 property_value: seeAlso HP:0011462
 
 [Term]
-id: PROMOT:0000049
+id: PROMOT:0010023
 name: Early young adulthood
 def: "Age category including people between 16 and 18 years old (inclusive)." [] {IAO:0000119="HP:0025708"}
-comment: [PROMOT note] [Derived from RD-CDM] [3.4 Age Category] 
-xref: Snomed:263659003
-is_a: PROMOT:0000048 ! Young adulthood
+comment: [EURO-NMD] Atalia A et al., EURO-NMD registry: federated FAIR infrastructure, innovative technologies and concepts of a patient-centred registry for rare neuromuscular disorders. Orphanet J Rare Dis. 2024 Feb 14;19(1):66. doi: 10.1186/s13023-024-03059-3. PMID: 38355534; PMCID: PMC10865673.
+xref: http://snomed.info/id/263659003
+is_a: PROMOT:0010022 ! Young adulthood
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
-property_value: PROMOT:1000001 "[EURO-NMD] Atalia A et al., EURO-NMD registry: federated FAIR infrastructure, innovative technologies and concepts of a patient-centred registry for rare neuromuscular disorders. Orphanet J Rare Dis. 2024 Feb 14;19(1):66. doi: 10.1186/s13023-024-03059-3. PMID: 38355534; PMCID: PMC10865673." xsd:string
-property_value: PROMOT:1000001 "[RD-CDM] Graefe, A.S.L., Hübner, M.R., Rehburg, F. et al. An ontology-based rare disease common data model harmonising international registries, FHIR, and Phenopackets. Sci Data 12, 234 (2025). https://doi.org/10.1038/s41597-025-04558-z" xsd:string
 property_value: seeAlso HP:0025708
 
 [Term]
-id: PROMOT:0000050
+id: PROMOT:0010024
 name: Intermediate young adulthood
 def: "Age category including people between 19 and 24 years old (inclusive)." [] {IAO:0000119="HP:0025709"}
-is_a: PROMOT:0000048 ! Young adulthood
+is_a: PROMOT:0010022 ! Young adulthood
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 property_value: seeAlso HP:0025709
 
 [Term]
-id: PROMOT:0000051
+id: PROMOT:0010025
 name: Late young adulthood
 def: "Age category including people between 25 and 39 years old (inclusive)." [] {IAO:0000119="HP:0025710"}
 comment: This term includes the full 19th year of age up to the completed 25th year of age (i.e., less than the 25th birthday). [from: HP:0025709]
-is_a: PROMOT:0000048 ! Young adulthood
+is_a: PROMOT:0010022 ! Young adulthood
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 property_value: seeAlso HP:0025710
 
 [Term]
-id: PROMOT:0000052
+id: PROMOT:0010026
 name: Antenatal age
 def: "Age category prior to birth." [] {IAO:0000119="HP:0025710"}
 comment: This term includes the full 25th year of age up to the completed 40th year of age (i.e., less than the 40th birthday). [from: HP:0025710]
-is_a: PROMOT:0000044 ! Age Category
+is_a: PROMOT:0010018 ! Age Category
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 property_value: seeAlso HP:0025710
 
 [Term]
-id: PROMOT:0000053
+id: PROMOT:0010027
 name: Embryonal
 def: "Age category up to 8 weeks following fertilization, corresponding to 10 weeks of gestation (inclusive)." [] {IAO:0000119="HP:0011460"}
-is_a: PROMOT:0000052 ! Antenatal age
+is_a: PROMOT:0010026 ! Antenatal age
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 property_value: seeAlso HP:0011460
 
 [Term]
-id: PROMOT:0000054
+id: PROMOT:0010028
 name: Fetal
 def: "Age prior to birth but after 8 weeks of embryonic development (corresponding to a gestational age of 10 weeks)." [] {IAO:0000119="HP:0011461"}
-comment: [PROMOT note] [Derived from RD-CDM] [3.4 Age Category] 
+comment: [EURO-NMD] Atalia A et al., EURO-NMD registry: federated FAIR infrastructure, innovative technologies and concepts of a patient-centred registry for rare neuromuscular disorders. Orphanet J Rare Dis. 2024 Feb 14;19(1):66. doi: 10.1186/s13023-024-03059-3. PMID: 38355534; PMCID: PMC10865673.
 xref: http://snomed.info/id/303112003
-is_a: PROMOT:0000052 ! Antenatal age
+is_a: PROMOT:0010026 ! Antenatal age
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
-property_value: PROMOT:1000001 "[EURO-NMD] Atalia A et al., EURO-NMD registry: federated FAIR infrastructure, innovative technologies and concepts of a patient-centred registry for rare neuromuscular disorders. Orphanet J Rare Dis. 2024 Feb 14;19(1):66. doi: 10.1186/s13023-024-03059-3. PMID: 38355534; PMCID: PMC10865673." xsd:string
-property_value: PROMOT:1000001 "[RD-CDM] Graefe, A.S.L., Hübner, M.R., Rehburg, F. et al. An ontology-based rare disease common data model harmonising international registries, FHIR, and Phenopackets. Sci Data 12, 234 (2025). https://doi.org/10.1038/s41597-025-04558-z" xsd:string
 property_value: seeAlso HP:0011461
 
 [Term]
-id: PROMOT:0000055
+id: PROMOT:0010029
 name: Late first trimester
 def: "Category prior to birth in the first trimester during the early fetal period, which is defined as 11 to 13 weeks of gestation (inclusive)." [] {IAO:0000119="HP:0034199"}
-is_a: PROMOT:0000054 ! Fetal
+is_a: PROMOT:0010028 ! Fetal
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 property_value: seeAlso HP:0034199
 
 [Term]
-id: PROMOT:0000056
+id: PROMOT:0010030
 name: Second trimester
 def: "Category prior to birth during the second trimester, which comprises the range of gestational ages from 14 to 27 weeks of gestation (inclusive)." [] {IAO:0000119="HP:0034198"}
-is_a: PROMOT:0000054 ! Fetal
+is_a: PROMOT:0010028 ! Fetal
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 property_value: seeAlso HP:0034198
 
 [Term]
-id: PROMOT:0000057
+id: PROMOT:0010031
 name: Third trimester
 def: "Category prior to birth during the third trimester, which is defined as 28 weeks and zero days (28+0) of gestation and beyond." [] {IAO:0000119="HP:0034197"}
-is_a: PROMOT:0000054 ! Fetal
+is_a: PROMOT:0010028 ! Fetal
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 property_value: seeAlso HP:0034197
 
 [Term]
-id: PROMOT:0000058
+id: PROMOT:0010032
 name: Congenital
 def: "Age catefory corresponding to birth." [] {IAO:0000119="HP:0003577"}
-is_a: PROMOT:0000044 ! Age Category
+is_a: PROMOT:0010018 ! Age Category
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 property_value: seeAlso HP:0003577
 
 [Term]
-id: PROMOT:0000059
+id: PROMOT:0010033
 name: Neonatal age
 def: "Age within the first 28 days of life." [] {IAO:0000119="HP:0003623"}
-is_a: PROMOT:0000044 ! Age Category
+is_a: PROMOT:0010018 ! Age Category
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 property_value: seeAlso HP:0003623
 
 [Term]
-id: PROMOT:0000060
+id: PROMOT:0010034
 name: Pediatric age
 def: "Age category before adulthood, defined here as before the age of 16 years, but excluding neonatal or congenital onset. It includes people from the age of 28 days to 15 years old (included)." [] {IAO:0000119="HP:0410280"}
-is_a: PROMOT:0000044 ! Age Category
+is_a: PROMOT:0010018 ! Age Category
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 property_value: seeAlso HP:0410280
 
 [Term]
-id: PROMOT:0000061
+id: PROMOT:0010035
 name: Childhood
 def: "Age category including people from 1 to 4 years old (inclusive)." [] {IAO:0000119="HP:0011463"}
 comment: JP: Translated to spanish using Bing Translator
 xref: http://snomed.info/id/255398004
-is_a: PROMOT:0000060 ! Pediatric age
+is_a: PROMOT:0010034 ! Pediatric age
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
-property_value: PROMOT:1000001 "[EURO-NMD] Atalia A et al., EURO-NMD registry: federated FAIR infrastructure, innovative technologies and concepts of a patient-centred registry for rare neuromuscular disorders. Orphanet J Rare Dis. 2024 Feb 14;19(1):66. doi: 10.1186/s13023-024-03059-3. PMID: 38355534; PMCID: PMC10865673." xsd:string
-property_value: PROMOT:1000001 "[RD-CDM] Graefe, A.S.L., Hübner, M.R., Rehburg, F. et al. An ontology-based rare disease common data model harmonising international registries, FHIR, and Phenopackets. Sci Data 12, 234 (2025). https://doi.org/10.1038/s41597-025-04558-z" xsd:string
 property_value: seeAlso HP:0011463
 
 [Term]
-id: PROMOT:0000062
+id: PROMOT:0010036
 name: Infantile age
 def: "Age category including people from 28 days to under 1 year old." [] {IAO:0000119="HP:0003593"}
-comment: [PROMOT note] [Derived from RD-CDM] [3.4 Age Category] 
-xref: SnomED:3658006
-is_a: PROMOT:0000060 ! Pediatric age
+comment: [EURO-NMD] Atalia A et al., EURO-NMD registry: federated FAIR infrastructure, innovative technologies and concepts of a patient-centred registry for rare neuromuscular disorders. Orphanet J Rare Dis. 2024 Feb 14;19(1):66. doi: 10.1186/s13023-024-03059-3. PMID: 38355534; PMCID: PMC10865673.
+xref: http://snomed.info/id/3658006
+is_a: PROMOT:0010034 ! Pediatric age
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
-property_value: PROMOT:1000001 "[EURO-NMD] Atalia A et al., EURO-NMD registry: federated FAIR infrastructure, innovative technologies and concepts of a patient-centred registry for rare neuromuscular disorders. Orphanet J Rare Dis. 2024 Feb 14;19(1):66. doi: 10.1186/s13023-024-03059-3. PMID: 38355534; PMCID: PMC10865673." xsd:string
-property_value: PROMOT:1000001 "[RD-CDM] Graefe, A.S.L., Hübner, M.R., Rehburg, F. et al. An ontology-based rare disease common data model harmonising international registries, FHIR, and Phenopackets. Sci Data 12, 234 (2025). https://doi.org/10.1038/s41597-025-04558-z" xsd:string
 property_value: seeAlso HP:0003593
 
 [Term]
-id: PROMOT:0000063
+id: PROMOT:0010037
 name: Juvenile age
 def: "Age category including people between 5 and 15 years old (inclusive)." [] {IAO:0000119="HP:0003621"}
 comment: JP: Translated to spanish using Bing Translator
-xref: SNOMED:713153009
-is_a: PROMOT:0000060 ! Pediatric age
+xref: http://snomed.info/id/713153009
+is_a: PROMOT:0010034 ! Pediatric age
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
-property_value: PROMOT:1000001 "[EURO-NMD] Atalia A et al., EURO-NMD registry: federated FAIR infrastructure, innovative technologies and concepts of a patient-centred registry for rare neuromuscular disorders. Orphanet J Rare Dis. 2024 Feb 14;19(1):66. doi: 10.1186/s13023-024-03059-3. PMID: 38355534; PMCID: PMC10865673." xsd:string
-property_value: PROMOT:1000001 "[RD-CDM] Graefe, A.S.L., Hübner, M.R., Rehburg, F. et al. An ontology-based rare disease common data model harmonising international registries, FHIR, and Phenopackets. Sci Data 12, 234 (2025). https://doi.org/10.1038/s41597-025-04558-z" xsd:string
 property_value: seeAlso HP:0003621
 
 [Term]
-id: PROMOT:0000064
+id: PROMOT:0010038
 name: Perimenopausal age
 def: "Age category including people undergoing perimenopause, i.e. the period of life shortly before the occurence of the menopause." [] {IAO:0000119="HP:6000314"}
-is_a: PROMOT:0000044 ! Age Category
+is_a: PROMOT:0010018 ! Age Category
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 property_value: seeAlso HP:6000314
 
 [Term]
-id: PROMOT:0000065
+id: PROMOT:0010039
 name: Postmenopausal age
 def: "Age category including people undergoing postmenopause, i.e. the period of life after the occurrence of the menopause." [] {IAO:0000119="HP:6000315"}
-is_a: PROMOT:0000044 ! Age Category
+is_a: PROMOT:0010018 ! Age Category
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 property_value: seeAlso HP:6000315
 
 [Term]
-id: PROMOT:0000066
+id: PROMOT:0010040
 name: Puerpural age
 def: "Age category including ages refering to childbirth or period after immediately following." [] {IAO:0000119="HP:4000040"}
-is_a: PROMOT:0000044 ! Age Category
+is_a: PROMOT:0010018 ! Age Category
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 property_value: seeAlso HP:4000040
 
 [Term]
-id: PROMOT:0000067
+id: PROMOT:0010041
 name: Sex at birth
 def: "Ensemble des caractéristiques sexuelles physiques à la naissance." []
-comment: [PROMOT note] [Derived from RD-CDM] [2.2 Sex at birth] 
-xref: http://purl.obolibrary.org/obo/NCIT_C124436
+comment: [EURO-NMD] Atalia A et al., EURO-NMD registry: federated FAIR infrastructure, innovative technologies and concepts of a patient-centred registry for rare neuromuscular disorders. Orphanet J Rare Dis. 2024 Feb 14;19(1):66. doi: 10.1186/s13023-024-03059-3. PMID: 38355534; PMCID: PMC10865673.
 xref: http://snomed.info/id/281053000
+xref: NCIT:C124436
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
-property_value: PROMOT:1000001 "[EURO-NMD] Atalia A et al., EURO-NMD registry: federated FAIR infrastructure, innovative technologies and concepts of a patient-centred registry for rare neuromuscular disorders. Orphanet J Rare Dis. 2024 Feb 14;19(1):66. doi: 10.1186/s13023-024-03059-3. PMID: 38355534; PMCID: PMC10865673." xsd:string
-property_value: PROMOT:1000001 "[RD-CDM] Graefe, A.S.L., Hübner, M.R., Rehburg, F. et al. An ontology-based rare disease common data model harmonising international registries, FHIR, and Phenopackets. Sci Data 12, 234 (2025). https://doi.org/10.1038/s41597-025-04558-z" xsd:string
 
 [Term]
-id: PROMOT:0000068
+id: PROMOT:0010042
 name: Female sex at birth
 def: "Physical sexual characteristiscs at birth that are stated as female." []
-comment: [PROMOT note] [Derived from RD-CDM] [2.2 Sex at birth] 
+comment: [EURO-NMD] Atalia A et al., EURO-NMD registry: federated FAIR infrastructure, innovative technologies and concepts of a patient-centred registry for rare neuromuscular disorders. Orphanet J Rare Dis. 2024 Feb 14;19(1):66. doi: 10.1186/s13023-024-03059-3. PMID: 38355534; PMCID: PMC10865673.
 xref: http://snomed.info/id/248152002
-is_a: PROMOT:0000067 ! Sex at birth
+is_a: PROMOT:0010041 ! Sex at birth
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
-property_value: PROMOT:1000001 "[EURO-NMD] Atalia A et al., EURO-NMD registry: federated FAIR infrastructure, innovative technologies and concepts of a patient-centred registry for rare neuromuscular disorders. Orphanet J Rare Dis. 2024 Feb 14;19(1):66. doi: 10.1186/s13023-024-03059-3. PMID: 38355534; PMCID: PMC10865673." xsd:string
-property_value: PROMOT:1000001 "[RD-CDM] Graefe, A.S.L., Hübner, M.R., Rehburg, F. et al. An ontology-based rare disease common data model harmonising international registries, FHIR, and Phenopackets. Sci Data 12, 234 (2025). https://doi.org/10.1038/s41597-025-04558-z" xsd:string
 
 [Term]
-id: PROMOT:0000069
+id: PROMOT:0010043
 name: Intersex at birth
 def: "Physical sexual characteristiscs at birth that are stated as intersex." []
-comment: [PROMOT note] [Derived from RD-CDM] [2.2 Sex at birth] 
+comment: [EURO-NMD] Atalia A et al., EURO-NMD registry: federated FAIR infrastructure, innovative technologies and concepts of a patient-centred registry for rare neuromuscular disorders. Orphanet J Rare Dis. 2024 Feb 14;19(1):66. doi: 10.1186/s13023-024-03059-3. PMID: 38355534; PMCID: PMC10865673.
 xref: http://snomed.info/id/32570691000036100
-is_a: PROMOT:0000067 ! Sex at birth
+is_a: PROMOT:0010041 ! Sex at birth
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
-property_value: PROMOT:1000001 "[EURO-NMD] Atalia A et al., EURO-NMD registry: federated FAIR infrastructure, innovative technologies and concepts of a patient-centred registry for rare neuromuscular disorders. Orphanet J Rare Dis. 2024 Feb 14;19(1):66. doi: 10.1186/s13023-024-03059-3. PMID: 38355534; PMCID: PMC10865673." xsd:string
-property_value: PROMOT:1000001 "[RD-CDM] Graefe, A.S.L., Hübner, M.R., Rehburg, F. et al. An ontology-based rare disease common data model harmonising international registries, FHIR, and Phenopackets. Sci Data 12, 234 (2025). https://doi.org/10.1038/s41597-025-04558-z" xsd:string
 
 [Term]
-id: PROMOT:0000070
+id: PROMOT:0010044
 name: Male sex at birth
 def: "Physical sexual characteristiscs at birth that are stated as male." []
-comment: [PROMOT note] [Derived from RD-CDM] [2.2 Sex at birth] 
+comment: [EURO-NMD] Atalia A et al., EURO-NMD registry: federated FAIR infrastructure, innovative technologies and concepts of a patient-centred registry for rare neuromuscular disorders. Orphanet J Rare Dis. 2024 Feb 14;19(1):66. doi: 10.1186/s13023-024-03059-3. PMID: 38355534; PMCID: PMC10865673.
 xref: http://snomed.info/id/248153007
-is_a: PROMOT:0000067 ! Sex at birth
+is_a: PROMOT:0010041 ! Sex at birth
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
-property_value: PROMOT:1000001 "[EURO-NMD] Atalia A et al., EURO-NMD registry: federated FAIR infrastructure, innovative technologies and concepts of a patient-centred registry for rare neuromuscular disorders. Orphanet J Rare Dis. 2024 Feb 14;19(1):66. doi: 10.1186/s13023-024-03059-3. PMID: 38355534; PMCID: PMC10865673." xsd:string
-property_value: PROMOT:1000001 "[RD-CDM] Graefe, A.S.L., Hübner, M.R., Rehburg, F. et al. An ontology-based rare disease common data model harmonising international registries, FHIR, and Phenopackets. Sci Data 12, 234 (2025). https://doi.org/10.1038/s41597-025-04558-z" xsd:string
 
 [Term]
-id: PROMOT:0000071
+id: PROMOT:0010045
 name: Patient sex at birth unknown
 def: "Physical sexual characteristiscs at birth that are unknown." []
-comment: [PROMOT note] [Derived from RD-CDM] [2.2 Sex at birth] 
+comment: [EURO-NMD] Atalia A et al., EURO-NMD registry: federated FAIR infrastructure, innovative technologies and concepts of a patient-centred registry for rare neuromuscular disorders. Orphanet J Rare Dis. 2024 Feb 14;19(1):66. doi: 10.1186/s13023-024-03059-3. PMID: 38355534; PMCID: PMC10865673.
 xref: http://snomed.info/id/184115007
-is_a: PROMOT:0000067 ! Sex at birth
+is_a: PROMOT:0010041 ! Sex at birth
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
-property_value: PROMOT:1000001 "[EURO-NMD] Atalia A et al., EURO-NMD registry: federated FAIR infrastructure, innovative technologies and concepts of a patient-centred registry for rare neuromuscular disorders. Orphanet J Rare Dis. 2024 Feb 14;19(1):66. doi: 10.1186/s13023-024-03059-3. PMID: 38355534; PMCID: PMC10865673." xsd:string
-property_value: PROMOT:1000001 "[RD-CDM] Graefe, A.S.L., Hübner, M.R., Rehburg, F. et al. An ontology-based rare disease common data model harmonising international registries, FHIR, and Phenopackets. Sci Data 12, 234 (2025). https://doi.org/10.1038/s41597-025-04558-z" xsd:string
 
 [Term]
-id: PROMOT:0000072
+id: PROMOT:0010046
 name: Sex at birth not recorded
 def: "Physical sexual characteristiscs at birth that are not recorded." []
-comment: [PROMOT note] [Derived from RD-CDM] [2.2 Sex at birth] 
+comment: [EURO-NMD] Atalia A et al., EURO-NMD registry: federated FAIR infrastructure, innovative technologies and concepts of a patient-centred registry for rare neuromuscular disorders. Orphanet J Rare Dis. 2024 Feb 14;19(1):66. doi: 10.1186/s13023-024-03059-3. PMID: 38355534; PMCID: PMC10865673.
 xref: http://snomed.info/id/1220561009
-is_a: PROMOT:0000071 ! Patient sex at birth unknown
+is_a: PROMOT:0010045 ! Patient sex at birth unknown
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
-property_value: PROMOT:1000001 "[EURO-NMD] Atalia A et al., EURO-NMD registry: federated FAIR infrastructure, innovative technologies and concepts of a patient-centred registry for rare neuromuscular disorders. Orphanet J Rare Dis. 2024 Feb 14;19(1):66. doi: 10.1186/s13023-024-03059-3. PMID: 38355534; PMCID: PMC10865673." xsd:string
-property_value: PROMOT:1000001 "[RD-CDM] Graefe, A.S.L., Hübner, M.R., Rehburg, F. et al. An ontology-based rare disease common data model harmonising international registries, FHIR, and Phenopackets. Sci Data 12, 234 (2025). https://doi.org/10.1038/s41597-025-04558-z" xsd:string
 
 [Term]
-id: PROMOT:0000073
+id: PROMOT:0010047
 name: Female gender identity
 def: "Gender identity of a person that identifies as a girl or as a woman." []
-comment: [PROMOT note] [Derived from RD-CDM] [2.4 Gender Identity] 
+comment: [EURO-NMD] Atalia A et al., EURO-NMD registry: federated FAIR infrastructure, innovative technologies and concepts of a patient-centred registry for rare neuromuscular disorders. Orphanet J Rare Dis. 2024 Feb 14;19(1):66. doi: 10.1186/s13023-024-03059-3. PMID: 38355534; PMCID: PMC10865673.
 xref: http://snomed.info/id/446141000124107
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
-property_value: PROMOT:1000001 "[EURO-NMD] Atalia A et al., EURO-NMD registry: federated FAIR infrastructure, innovative technologies and concepts of a patient-centred registry for rare neuromuscular disorders. Orphanet J Rare Dis. 2024 Feb 14;19(1):66. doi: 10.1186/s13023-024-03059-3. PMID: 38355534; PMCID: PMC10865673." xsd:string
-property_value: PROMOT:1000001 "[RD-CDM] Graefe, A.S.L., Hübner, M.R., Rehburg, F. et al. An ontology-based rare disease common data model harmonising international registries, FHIR, and Phenopackets. Sci Data 12, 234 (2025). https://doi.org/10.1038/s41597-025-04558-z" xsd:string
 
 [Term]
-id: PROMOT:0000074
+id: PROMOT:0010048
 name: Identifies as nonbinary gender
 def: "Gender identity of a person that identifies nor as a male nor as a female gender." []
-comment: [PROMOT note] [Derived from RD-CDM] [2.4 Gender Identity] 
+comment: [EURO-NMD] Atalia A et al., EURO-NMD registry: federated FAIR infrastructure, innovative technologies and concepts of a patient-centred registry for rare neuromuscular disorders. Orphanet J Rare Dis. 2024 Feb 14;19(1):66. doi: 10.1186/s13023-024-03059-3. PMID: 38355534; PMCID: PMC10865673.
 xref: http://snomed.info/id/33791000087105
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
-property_value: PROMOT:1000001 "[EURO-NMD] Atalia A et al., EURO-NMD registry: federated FAIR infrastructure, innovative technologies and concepts of a patient-centred registry for rare neuromuscular disorders. Orphanet J Rare Dis. 2024 Feb 14;19(1):66. doi: 10.1186/s13023-024-03059-3. PMID: 38355534; PMCID: PMC10865673." xsd:string
-property_value: PROMOT:1000001 "[RD-CDM] Graefe, A.S.L., Hübner, M.R., Rehburg, F. et al. An ontology-based rare disease common data model harmonising international registries, FHIR, and Phenopackets. Sci Data 12, 234 (2025). https://doi.org/10.1038/s41597-025-04558-z" xsd:string
 
 [Term]
-id: PROMOT:0000075
+id: PROMOT:0010049
 name: Identité de genre masculine
 def: "Gender identity of a person that identifies as a boy or as a man." []
-comment: [PROMOT note] [Derived from RD-CDM] [2.4 Gender Identity] 
+comment: [EURO-NMD] Atalia A et al., EURO-NMD registry: federated FAIR infrastructure, innovative technologies and concepts of a patient-centred registry for rare neuromuscular disorders. Orphanet J Rare Dis. 2024 Feb 14;19(1):66. doi: 10.1186/s13023-024-03059-3. PMID: 38355534; PMCID: PMC10865673.
 xref: http://snomed.info/id/446151000124109
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
-property_value: PROMOT:1000001 "[EURO-NMD] Atalia A et al., EURO-NMD registry: federated FAIR infrastructure, innovative technologies and concepts of a patient-centred registry for rare neuromuscular disorders. Orphanet J Rare Dis. 2024 Feb 14;19(1):66. doi: 10.1186/s13023-024-03059-3. PMID: 38355534; PMCID: PMC10865673." xsd:string
-property_value: PROMOT:1000001 "[RD-CDM] Graefe, A.S.L., Hübner, M.R., Rehburg, F. et al. An ontology-based rare disease common data model harmonising international registries, FHIR, and Phenopackets. Sci Data 12, 234 (2025). https://doi.org/10.1038/s41597-025-04558-z" xsd:string
 
 [Term]
-id: PROMOT:0000076
+id: PROMOT:0010050
 name: Gender identity unknown
 def: "Gender identity of a person that is unknown." []
-comment: [PROMOT note] [Derived from RD-CDM] [2.4 Gender Identity] 
+comment: [EURO-NMD] Atalia A et al., EURO-NMD registry: federated FAIR infrastructure, innovative technologies and concepts of a patient-centred registry for rare neuromuscular disorders. Orphanet J Rare Dis. 2024 Feb 14;19(1):66. doi: 10.1186/s13023-024-03059-3. PMID: 38355534; PMCID: PMC10865673.
 xref: http://snomed.info/id/394743007
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
-property_value: PROMOT:1000001 "[EURO-NMD] Atalia A et al., EURO-NMD registry: federated FAIR infrastructure, innovative technologies and concepts of a patient-centred registry for rare neuromuscular disorders. Orphanet J Rare Dis. 2024 Feb 14;19(1):66. doi: 10.1186/s13023-024-03059-3. PMID: 38355534; PMCID: PMC10865673." xsd:string
-property_value: PROMOT:1000001 "[RD-CDM] Graefe, A.S.L., Hübner, M.R., Rehburg, F. et al. An ontology-based rare disease common data model harmonising international registries, FHIR, and Phenopackets. Sci Data 12, 234 (2025). https://doi.org/10.1038/s41597-025-04558-z" xsd:string
 
 [Term]
-id: PROMOT:0000077
+id: PROMOT:0010051
 name: Gender identity not recorded
 def: "Gender identity of a person that is unknown because unrecorded." []
-comment: [PROMOT note] [Derived from RD-CDM] [2.4 Gender Identity] 
+comment: [EURO-NMD] Atalia A et al., EURO-NMD registry: federated FAIR infrastructure, innovative technologies and concepts of a patient-centred registry for rare neuromuscular disorders. Orphanet J Rare Dis. 2024 Feb 14;19(1):66. doi: 10.1186/s13023-024-03059-3. PMID: 38355534; PMCID: PMC10865673.
 xref: http://snomed.info/id/1220561009
-is_a: PROMOT:0000076 ! Gender identity unknown
+is_a: PROMOT:0010050 ! Gender identity unknown
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
-property_value: PROMOT:1000001 "[EURO-NMD] Atalia A et al., EURO-NMD registry: federated FAIR infrastructure, innovative technologies and concepts of a patient-centred registry for rare neuromuscular disorders. Orphanet J Rare Dis. 2024 Feb 14;19(1):66. doi: 10.1186/s13023-024-03059-3. PMID: 38355534; PMCID: PMC10865673." xsd:string
-property_value: PROMOT:1000001 "[RD-CDM] Graefe, A.S.L., Hübner, M.R., Rehburg, F. et al. An ontology-based rare disease common data model harmonising international registries, FHIR, and Phenopackets. Sci Data 12, 234 (2025). https://doi.org/10.1038/s41597-025-04558-z" xsd:string
 
 [Term]
-id: PROMOT:0000078
+id: PROMOT:0010052
 name: Nb of previous pregnancies
 def: "Le nombre de grossesses d’un individu qui inclut les grossesses qui ne se sont pas terminées." []
-comment: [derived from EURO-NMD] 
+comment: [EURO-NMD] Atalia A et al., EURO-NMD registry: federated FAIR infrastructure, innovative technologies and concepts of a patient-centred registry for rare neuromuscular disorders. Orphanet J Rare Dis. 2024 Feb 14;19(1):66. doi: 10.1186/s13023-024-03059-3. PMID: 38355534; PMCID: PMC10865673.
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
-property_value: PROMOT:1000001 "[EURO-NMD] Atalia A et al., EURO-NMD registry: federated FAIR infrastructure, innovative technologies and concepts of a patient-centred registry for rare neuromuscular disorders. Orphanet J Rare Dis. 2024 Feb 14;19(1):66. doi: 10.1186/s13023-024-03059-3. PMID: 38355534; PMCID: PMC10865673." xsd:string
 
 [Term]
-id: PROMOT:0000079
+id: PROMOT:0010053
+name: Consent status
+def: "A status of the consent of a person." []
+comment: Ongoing discussion
+xref: http://snomed.info/id/309370004
+property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
+
+[Term]
+id: PROMOT:0010054
+name: En attente
+def: "A status of a consent that is waiting to be defined." []
+comment: Ongoing discussion
+is_a: PROMOT:0010053 ! Consent status
+property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
+
+[Term]
+id: PROMOT:0010055
+name: Proposed
+def: "A status of a consent that has been proposed to a person for them to decide." []
+comment: Ongoing discussion
+is_a: PROMOT:0010053 ! Consent status
+property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
+
+[Term]
+id: PROMOT:0010056
+name: Actif
+def: "A status of a consent that has been approved by the concerned person." []
+comment: HL7 FHIR
+is_a: PROMOT:0010053 ! Consent status
+property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
+
+[Term]
+id: PROMOT:0010057
+name: Rejected
+def: "A status of a consent that has been rejected by the concerned person." []
+comment: HL7 FHIR
+is_a: PROMOT:0010053 ! Consent status
+property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
+
+[Term]
+id: PROMOT:0010058
+name: Inactif
+def: "A status of a consent that is inactive." []
+comment: Ongoing discussion
+xref: http://snomed.info/id/73425007
+is_a: PROMOT:0010053 ! Consent status
+property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
+
+[Term]
+id: PROMOT:0010059
+name: Entered in Error
+def: "A status of a consent that has been entered by error." []
+comment: Ongoing discussion
+xref: http://snomed.info/id/723510000
+is_a: PROMOT:0010053 ! Consent status
+property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
+
+[Term]
+id: PROMOT:0010060
+name: Date du consentement
+def: "La date à laquelle le status du consentement a été définit." []
+comment: [EURO-NMD] Atalia A et al., EURO-NMD registry: federated FAIR infrastructure, innovative technologies and concepts of a patient-centred registry for rare neuromuscular disorders. Orphanet J Rare Dis. 2024 Feb 14;19(1):66. doi: 10.1186/s13023-024-03059-3. PMID: 38355534; PMCID: PMC10865673.
+xref: NCIT:C93579
+property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
+
+[Term]
+id: PROMOT:0010061
+name: Consent type
+def: "The type of consent given by a person that precises the details of what is consented" []
+
+[Term]
+id: PROMOT:0010062
+name: Accord pour être contacté à des fins de recherche
+def: "An agreement given by a patient to be contacted by research teams for research purposes." []
+comment: [EURO-NMD] Atalia A et al., EURO-NMD registry: federated FAIR infrastructure, innovative technologies and concepts of a patient-centred registry for rare neuromuscular disorders. Orphanet J Rare Dis. 2024 Feb 14;19(1):66. doi: 10.1186/s13023-024-03059-3. PMID: 38355534; PMCID: PMC10865673.
+is_a: PROMOT:0010061 ! Consent type
+property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
+
+[Term]
+id: PROMOT:0010063
+name: Consent to the reuse of data
+def: "A consent given by a person to the reuse of their data." []
+comment: [EURO-NMD] Atalia A et al., EURO-NMD registry: federated FAIR infrastructure, innovative technologies and concepts of a patient-centred registry for rare neuromuscular disorders. Orphanet J Rare Dis. 2024 Feb 14;19(1):66. doi: 10.1186/s13023-024-03059-3. PMID: 38355534; PMCID: PMC10865673.
+is_a: PROMOT:0010061 ! Consent type
+property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
+
+[Term]
+id: PROMOT:0010064
+name: Unrecorded handedness
+def: "An handedness that is unrecorded." []
+property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
+
+[Term]
+id: PROMOT:0010065
 name: Patient à risque de chute
 def: "A patient with phenotypes that allow to assess the patient undergo a risk of fall. (quality?)" []
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
-id: PROMOT:0000080
+id: PROMOT:0020001
+name: Phenotypically related body structure
+def: "A body structure related to a phenotype such that the body structure is the location of the phenotype." []
+comment: (JP: unsure about definition)
+property_value: IAO:0000117 "Paul Fabry, https://orcid.org/0009-0000-5160-7927" xsd:string
+
+[Term]
+id: PROMOT:0020002
+name: Entité anatomique liée à un phénotype
+def: "An anatomical entity related to a phenotype such that the anatomical entity is the location of the phenotype. In other words, the phenotype is a disposition of the anatomical entity." []
+comment: (JP : unsure, attention au lien avec les body structures)
+property_value: IAO:0000117 "Paul Fabry, https://orcid.org/0009-0000-5160-7927" xsd:string
+
+[Term]
+id: PROMOT:0020003
+name: Body structure related anatomical entity
+def: "An anatomical entity that is located in a body structure." []
+property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
+
+[Term]
+id: PROMOT:0020004
+name: Paciente
+def: "A patient that had received a confirmed diagnostic of genetic mutation and that is involved in the data collection for natural history study of their disease." []
+comment: JP: Translated to spanish using Bing Translator
+xref: NCIT:C16960
+relationship: PROMOT:2000004 PROMOT:0000001 ! est porteur de la mutation genetic mutation
+property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
+
+[Term]
+id: PROMOT:0031001
 name: estado vital desconocido
 def: "A life status that is unkown." []
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
-id: PROMOT:0000081
+id: PROMOT:0031002
 name: unrecorded life status
 def: "A life status that is unkown because unrecorded." []
-is_a: PROMOT:0000080 ! estado vital desconocido
+is_a: PROMOT:0031001 ! estado vital desconocido
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
-id: PROMOT:0000082
+id: PROMOT:0031003
 name: lost in follow up
 def: "A unkown life status because of the patient being lost in follow up." []
-is_a: PROMOT:0000081 ! unrecorded life status
+is_a: PROMOT:0031002 ! unrecorded life status
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
-id: PROMOT:0000083
+id: PROMOT:0031004
 name: opt out
 def: "A unkown life status because of the patient being opted out from the study." []
-is_a: PROMOT:0000081 ! unrecorded life status
+is_a: PROMOT:0031002 ! unrecorded life status
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
-id: PROMOT:0000084
+id: PROMOT:0031005
 name: Transmission inconnue
 def: "A transmission that is unknown." []
 relationship: SIO:000218 PROMOT:0000001 ! is quality of genetic mutation
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
-id: PROMOT:0000085
+id: PROMOT:0031006
 name: Transmission non renseignée
 def: "A transmission that is unknown because unrecorded." []
-is_a: PROMOT:0000084 ! Transmission inconnue
+is_a: PROMOT:0031005 ! Transmission inconnue
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
-id: PROMOT:0000086
-name: Unrecorded handedness
-def: "An handedness that is unrecorded." []
-property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
-
-[Term]
-id: PROMOT:0000087
+id: PROMOT:0031007
 name: Qualité qualifiant l’existance d’une entité
 def: "A qualifier for stating the presence, absence or uncertainty of a entity instance (e.g. a phenotype instance)." []
-comment: [PROMOT note] [Derived from RD-CDM] [6.2.2 Status] 
+comment: [EURO-NMD] Atalia A et al., EURO-NMD registry: federated FAIR infrastructure, innovative technologies and concepts of a patient-centred registry for rare neuromuscular disorders. Orphanet J Rare Dis. 2024 Feb 14;19(1):66. doi: 10.1186/s13023-024-03059-3. PMID: 38355534; PMCID: PMC10865673.
 xref: http://snomed.info/id/363778006
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
-property_value: PROMOT:1000001 "[EURO-NMD] Atalia A et al., EURO-NMD registry: federated FAIR infrastructure, innovative technologies and concepts of a patient-centred registry for rare neuromuscular disorders. Orphanet J Rare Dis. 2024 Feb 14;19(1):66. doi: 10.1186/s13023-024-03059-3. PMID: 38355534; PMCID: PMC10865673." xsd:string
-property_value: PROMOT:1000001 "[RD-CDM] Graefe, A.S.L., Hübner, M.R., Rehburg, F. et al. An ontology-based rare disease common data model harmonising international registries, FHIR, and Phenopackets. Sci Data 12, 234 (2025). https://doi.org/10.1038/s41597-025-04558-z" xsd:string
 
 [Term]
-id: PROMOT:0000088
+id: PROMOT:0031008
 name: absent
 def: "A qualifier for an instance of a entity which is absent." []
-comment: [PROMOT note] [Derived from RD-CDM] [6.2.2 Status] 
-xref: SNOMED:723511001
-is_a: PROMOT:0000087 ! Qualité qualifiant l’existance d’une entité
+comment: [EURO-NMD] Atalia A et al., EURO-NMD registry: federated FAIR infrastructure, innovative technologies and concepts of a patient-centred registry for rare neuromuscular disorders. Orphanet J Rare Dis. 2024 Feb 14;19(1):66. doi: 10.1186/s13023-024-03059-3. PMID: 38355534; PMCID: PMC10865673.
+xref: http://snomed.info/id/723511001
+is_a: PROMOT:0031007 ! Qualité qualifiant l’existance d’une entité
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
-property_value: PROMOT:1000001 "[EURO-NMD] Atalia A et al., EURO-NMD registry: federated FAIR infrastructure, innovative technologies and concepts of a patient-centred registry for rare neuromuscular disorders. Orphanet J Rare Dis. 2024 Feb 14;19(1):66. doi: 10.1186/s13023-024-03059-3. PMID: 38355534; PMCID: PMC10865673." xsd:string
-property_value: PROMOT:1000001 "[RD-CDM] Graefe, A.S.L., Hübner, M.R., Rehburg, F. et al. An ontology-based rare disease common data model harmonising international registries, FHIR, and Phenopackets. Sci Data 12, 234 (2025). https://doi.org/10.1038/s41597-025-04558-z" xsd:string
 
 [Term]
-id: PROMOT:0000089
+id: PROMOT:0031009
 name: present
 def: "Qualifies an instance of an entity as present." []
-comment: [PROMOT note] [Derived from RD-CDM] [6.2.2 Status] 
-xref: SNOMED:410605003
-is_a: PROMOT:0000087 ! Qualité qualifiant l’existance d’une entité
+comment: [EURO-NMD] Atalia A et al., EURO-NMD registry: federated FAIR infrastructure, innovative technologies and concepts of a patient-centred registry for rare neuromuscular disorders. Orphanet J Rare Dis. 2024 Feb 14;19(1):66. doi: 10.1186/s13023-024-03059-3. PMID: 38355534; PMCID: PMC10865673.
+xref: http://snomed.info/id/410605003
+is_a: PROMOT:0031007 ! Qualité qualifiant l’existance d’une entité
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
-property_value: PROMOT:1000001 "[EURO-NMD] Atalia A et al., EURO-NMD registry: federated FAIR infrastructure, innovative technologies and concepts of a patient-centred registry for rare neuromuscular disorders. Orphanet J Rare Dis. 2024 Feb 14;19(1):66. doi: 10.1186/s13023-024-03059-3. PMID: 38355534; PMCID: PMC10865673." xsd:string
-property_value: PROMOT:1000001 "[RD-CDM] Graefe, A.S.L., Hübner, M.R., Rehburg, F. et al. An ontology-based rare disease common data model harmonising international registries, FHIR, and Phenopackets. Sci Data 12, 234 (2025). https://doi.org/10.1038/s41597-025-04558-z" xsd:string
 
 [Term]
-id: PROMOT:0000090
+id: PROMOT:0031010
 name: incertain
 def: "Qualifies an instance of an entity as unsure." []
-is_a: PROMOT:0000087 ! Qualité qualifiant l’existance d’une entité
+is_a: PROMOT:0031007 ! Qualité qualifiant l’existance d’une entité
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
-id: PROMOT:0000091
+id: PROMOT:0031011
 name: presence unrecorded
 def: "A presence or absence that is unrecorded" []
-is_a: PROMOT:0000090 ! incertain
+is_a: PROMOT:0031010 ! incertain
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
-id: PROMOT:0000092
-name: Consent status
-def: "A status of the consent of a person." []
-comment: Ongoing discussion
-xref: http://snomed.info/id/309370004
+id: PROMOT:0032001
+name: abnormal disposition
+def: "A disposition that differs from the norm, such as a disease or a phenotypic abnormality." []
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
-property_value: PROMOT:1000001 "[EURO-NMD] Atalia A et al., EURO-NMD registry: federated FAIR infrastructure, innovative technologies and concepts of a patient-centred registry for rare neuromuscular disorders. Orphanet J Rare Dis. 2024 Feb 14;19(1):66. doi: 10.1186/s13023-024-03059-3. PMID: 38355534; PMCID: PMC10865673." xsd:string
-property_value: PROMOT:1000001 "[RD-CDM] Graefe, A.S.L., Hübner, M.R., Rehburg, F. et al. An ontology-based rare disease common data model harmonising international registries, FHIR, and Phenopackets. Sci Data 12, 234 (2025). https://doi.org/10.1038/s41597-025-04558-z" xsd:string
 
 [Term]
-id: PROMOT:0000093
-name: En attente
-def: "A status of a consent that is waiting to be defined." []
-comment: Ongoing discussion
-is_a: PROMOT:0000092 ! Consent status
+id: PROMOT:0032002
+name: Activity related body function
+def: "A body function that is involved in an activity. The boby function is needed in order to fullfill the activity." []
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
-property_value: PROMOT:1000001 "[EURO-NMD] Atalia A et al., EURO-NMD registry: federated FAIR infrastructure, innovative technologies and concepts of a patient-centred registry for rare neuromuscular disorders. Orphanet J Rare Dis. 2024 Feb 14;19(1):66. doi: 10.1186/s13023-024-03059-3. PMID: 38355534; PMCID: PMC10865673." xsd:string
-property_value: PROMOT:1000001 "[RD-CDM] Graefe, A.S.L., Hübner, M.R., Rehburg, F. et al. An ontology-based rare disease common data model harmonising international registries, FHIR, and Phenopackets. Sci Data 12, 234 (2025). https://doi.org/10.1038/s41597-025-04558-z" xsd:string
 
 [Term]
-id: PROMOT:0000094
-name: Proposed
-def: "A status of a consent that has been proposed to a person for them to decide." []
-comment: Ongoing discussion
-is_a: PROMOT:0000092 ! Consent status
-property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
-property_value: PROMOT:1000001 "[EURO-NMD] Atalia A et al., EURO-NMD registry: federated FAIR infrastructure, innovative technologies and concepts of a patient-centred registry for rare neuromuscular disorders. Orphanet J Rare Dis. 2024 Feb 14;19(1):66. doi: 10.1186/s13023-024-03059-3. PMID: 38355534; PMCID: PMC10865673." xsd:string
-property_value: PROMOT:1000001 "[RD-CDM] Graefe, A.S.L., Hübner, M.R., Rehburg, F. et al. An ontology-based rare disease common data model harmonising international registries, FHIR, and Phenopackets. Sci Data 12, 234 (2025). https://doi.org/10.1038/s41597-025-04558-z" xsd:string
+id: PROMOT:0032003
+name: Body function related phenotype
+def: "A phenotype that affects a body function." []
+comment: (JP: unsure about definition)
+is_a: PROMOT:0032001 ! abnormal disposition
+relationship: SIO:000217 PROMOT:0031007 ! has quality Qualité qualifiant l’existance d’une entité
+property_value: IAO:0000117 "Paul Fabry, https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
-id: PROMOT:0000095
-name: Actif
-def: "A status of a consent that has been approved by the concerned person." []
-comment: HL7 FHIR
-is_a: PROMOT:0000092 ! Consent status
-property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
-property_value: PROMOT:1000001 "[EURO-NMD] Atalia A et al., EURO-NMD registry: federated FAIR infrastructure, innovative technologies and concepts of a patient-centred registry for rare neuromuscular disorders. Orphanet J Rare Dis. 2024 Feb 14;19(1):66. doi: 10.1186/s13023-024-03059-3. PMID: 38355534; PMCID: PMC10865673." xsd:string
-property_value: PROMOT:1000001 "[RD-CDM] Graefe, A.S.L., Hübner, M.R., Rehburg, F. et al. An ontology-based rare disease common data model harmonising international registries, FHIR, and Phenopackets. Sci Data 12, 234 (2025). https://doi.org/10.1038/s41597-025-04558-z" xsd:string
+id: PROMOT:0032004
+name: Activity related phenotype
+def: "A phenotype that affects an activity." []
+comment: (JP: unsure about definition)
+is_a: PROMOT:0032001 ! abnormal disposition
+relationship: SIO:000217 PROMOT:0031007 ! has quality Qualité qualifiant l’existance d’une entité
+property_value: IAO:0000117 "Paul Fabry, https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
-id: PROMOT:0000096
-name: Rejected
-def: "A status of a consent that has been rejected by the concerned person." []
-comment: HL7 FHIR
-is_a: PROMOT:0000092 ! Consent status
-property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
-property_value: PROMOT:1000001 "[EURO-NMD] Atalia A et al., EURO-NMD registry: federated FAIR infrastructure, innovative technologies and concepts of a patient-centred registry for rare neuromuscular disorders. Orphanet J Rare Dis. 2024 Feb 14;19(1):66. doi: 10.1186/s13023-024-03059-3. PMID: 38355534; PMCID: PMC10865673." xsd:string
-property_value: PROMOT:1000001 "[RD-CDM] Graefe, A.S.L., Hübner, M.R., Rehburg, F. et al. An ontology-based rare disease common data model harmonising international registries, FHIR, and Phenopackets. Sci Data 12, 234 (2025). https://doi.org/10.1038/s41597-025-04558-z" xsd:string
-
-[Term]
-id: PROMOT:0000097
-name: Inactif
-def: "A status of a consent that is inactive." []
-comment: Ongoing discussion
-xref: http://snomed.info/id/73425007
-is_a: PROMOT:0000092 ! Consent status
-property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
-property_value: PROMOT:1000001 "[EURO-NMD] Atalia A et al., EURO-NMD registry: federated FAIR infrastructure, innovative technologies and concepts of a patient-centred registry for rare neuromuscular disorders. Orphanet J Rare Dis. 2024 Feb 14;19(1):66. doi: 10.1186/s13023-024-03059-3. PMID: 38355534; PMCID: PMC10865673." xsd:string
-property_value: PROMOT:1000001 "[RD-CDM] Graefe, A.S.L., Hübner, M.R., Rehburg, F. et al. An ontology-based rare disease common data model harmonising international registries, FHIR, and Phenopackets. Sci Data 12, 234 (2025). https://doi.org/10.1038/s41597-025-04558-z" xsd:string
-
-[Term]
-id: PROMOT:0000098
-name: Entered in Error
-def: "A status of a consent that has been entered by error." []
-comment: Ongoing discussion
-xref: http://snomed.info/id/723510000
-is_a: PROMOT:0000092 ! Consent status
-property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
-property_value: PROMOT:1000001 "[EURO-NMD] Atalia A et al., EURO-NMD registry: federated FAIR infrastructure, innovative technologies and concepts of a patient-centred registry for rare neuromuscular disorders. Orphanet J Rare Dis. 2024 Feb 14;19(1):66. doi: 10.1186/s13023-024-03059-3. PMID: 38355534; PMCID: PMC10865673." xsd:string
-property_value: PROMOT:1000001 "[RD-CDM] Graefe, A.S.L., Hübner, M.R., Rehburg, F. et al. An ontology-based rare disease common data model harmonising international registries, FHIR, and Phenopackets. Sci Data 12, 234 (2025). https://doi.org/10.1038/s41597-025-04558-z" xsd:string
-
-[Term]
-id: PROMOT:0000099
-name: Date du consentement
-def: "La date à laquelle le status du consentement a été définit." []
-comment: [PROMOT note] [Derived from RD-CDM] [7.2 Consent Date] 
-xref: http://purl.obolibrary.org/obo/NCIT_C93579
-property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
-property_value: PROMOT:1000001 "[EURO-NMD] Atalia A et al., EURO-NMD registry: federated FAIR infrastructure, innovative technologies and concepts of a patient-centred registry for rare neuromuscular disorders. Orphanet J Rare Dis. 2024 Feb 14;19(1):66. doi: 10.1186/s13023-024-03059-3. PMID: 38355534; PMCID: PMC10865673." xsd:string
-property_value: PROMOT:1000001 "[RD-CDM] Graefe, A.S.L., Hübner, M.R., Rehburg, F. et al. An ontology-based rare disease common data model harmonising international registries, FHIR, and Phenopackets. Sci Data 12, 234 (2025). https://doi.org/10.1038/s41597-025-04558-z" xsd:string
-
-[Term]
-id: PROMOT:0000100
-name: Consent type
-def: "The type of consent given by a person that precises the details of what is consented" []
-
-[Term]
-id: PROMOT:0000101
-name: Accord pour être contacté à des fins de recherche
-def: "An agreement given by a patient to be contacted by research teams for research purposes." []
-comment: [PROMOT note] [Derived from RD-CDM] [7.4 Agreement to be contacted for research purposes] 
-is_a: PROMOT:0000100 ! Consent type
-property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
-property_value: PROMOT:1000001 "[EURO-NMD] Atalia A et al., EURO-NMD registry: federated FAIR infrastructure, innovative technologies and concepts of a patient-centred registry for rare neuromuscular disorders. Orphanet J Rare Dis. 2024 Feb 14;19(1):66. doi: 10.1186/s13023-024-03059-3. PMID: 38355534; PMCID: PMC10865673." xsd:string
-property_value: PROMOT:1000001 "[RD-CDM] Graefe, A.S.L., Hübner, M.R., Rehburg, F. et al. An ontology-based rare disease common data model harmonising international registries, FHIR, and Phenopackets. Sci Data 12, 234 (2025). https://doi.org/10.1038/s41597-025-04558-z" xsd:string
-
-[Term]
-id: PROMOT:0000102
-name: Consent to the reuse of data
-def: "A consent given by a person to the reuse of their data." []
-comment: [PROMOT note] [Derived from RD-CDM] [7.5 Consent to the reuse of data] 
-is_a: PROMOT:0000100 ! Consent type
-property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
-property_value: PROMOT:1000001 "[EURO-NMD] Atalia A et al., EURO-NMD registry: federated FAIR infrastructure, innovative technologies and concepts of a patient-centred registry for rare neuromuscular disorders. Orphanet J Rare Dis. 2024 Feb 14;19(1):66. doi: 10.1186/s13023-024-03059-3. PMID: 38355534; PMCID: PMC10865673." xsd:string
-property_value: PROMOT:1000001 "[RD-CDM] Graefe, A.S.L., Hübner, M.R., Rehburg, F. et al. An ontology-based rare disease common data model harmonising international registries, FHIR, and Phenopackets. Sci Data 12, 234 (2025). https://doi.org/10.1038/s41597-025-04558-z" xsd:string
-property_value: PROMOT:1000001 "Congenital myasthenic syndrom Scoping review" xsd:string
-
-[Term]
-id: PROMOT:0100001
+id: PROMOT:0032005
 name: Doble anomalía del potencial de acción motora compuesta
 def: "Deux anomalies dans l’EMG mesurant le potentiel d’action global d’un muscle (PAM), aussi appelé potentiel d’action musculaire composé." []
 comment: (JP : to validate)
-is_a: PROMOT:0000026 ! abnormal disposition
-relationship: SIO:000217 PROMOT:0000084 ! has quality Transmission inconnue
+is_a: PROMOT:0032001 ! abnormal disposition
+relationship: SIO:000217 PROMOT:0031007 ! has quality Qualité qualifiant l’existance d’une entité
+property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
+
+[Term]
+id: PROMOT:0032006
+name: Fatigue corrélée au fait de manger
+def: "A fatigue that occurs when the subject is eating" []
+comment: Oculopharyngeal muscular dystrophy Article
+is_a: PROMOT:0032001 ! abnormal disposition
+relationship: SIO:000217 PROMOT:0031007 ! has quality Qualité qualifiant l’existance d’une entité
+
+[Term]
+id: PROMOT:0032007
+name: Difficulty walking short distance
+def: "A difficulty to walk short distance. E.g. a difficulty to  walk inside a building such as a house." []
+comment: [OPMD Scoping review] Bélair N, Gagnon C, Duchesne E. What is known about muscle weakness, balance impairments and indoor mobility limitations in oculopharyngeal muscular dystrophy? A scoping review. J Neuromuscul Dis. 2025 Dec 30:22143602251397052. doi: 10.1177/22143602251397052. Epub ahead of print. PMID: 41467981. 
+is_a: PROMOT:0032001 ! abnormal disposition
+relationship: SIO:000217 PROMOT:0031007 ! has quality Qualité qualifiant l’existance d’une entité
+
+[Term]
+id: PROMOT:0032008
+name: Difficulty changing basic position
+def: "A difficulty to change basic position. E.g. a difficulty to go from a sitting position to a standing position." []
+comment: [OPMD Scoping review] Bélair N, Gagnon C, Duchesne E. What is known about muscle weakness, balance impairments and indoor mobility limitations in oculopharyngeal muscular dystrophy? A scoping review. J Neuromuscul Dis. 2025 Dec 30:22143602251397052. doi: 10.1177/22143602251397052. Epub ahead of print. PMID: 41467981. 
+is_a: PROMOT:0032001 ! abnormal disposition
+relationship: SIO:000217 PROMOT:0031007 ! has quality Qualité qualifiant l’existance d’une entité
+
+[Term]
+id: PROMOT:0032009
+name: Anhedonia while eating
+def: "An anhedonia that occurs when the subject is eating" []
+comment: Oculopharyngeal muscular dystrophy Article
+is_a: PROMOT:0032001 ! abnormal disposition
+relationship: SIO:000217 PROMOT:0031007 ! has quality Qualité qualifiant l’existance d’une entité
+
+[Term]
+id: PROMOT:0032010
+name: Fatiguable weakness of facial musculature
+comment: Congenital myasthenic syndrom Scoping review
+is_a: PROMOT:0032001 ! abnormal disposition
+relationship: SIO:000217 PROMOT:0031007 ! has quality Qualité qualifiant l’existance d’une entité
+
+[Term]
+id: PROMOT:0032011
+name: Fatiguable weakness of the ocular muscles
+comment: Congenital myasthenic syndrom Scoping review
+is_a: PROMOT:0032001 ! abnormal disposition
+relationship: SIO:000217 PROMOT:0031007 ! has quality Qualité qualifiant l’existance d’une entité
+
+[Term]
+id: PROMOT:0032012
+name: Fatiguable weakness of axial muscles
+comment: Congenital myasthenic syndrom Scoping review
+is_a: PROMOT:0032001 ! abnormal disposition
+relationship: SIO:000217 PROMOT:0031007 ! has quality Qualité qualifiant l’existance d’une entité
+
+[Term]
+id: PROMOT:0032013
+name: Dysphagia for solid
+comment: Oculopharyngeal muscular dystrophy Survey
+is_a: PROMOT:0032001 ! abnormal disposition
+relationship: SIO:000217 PROMOT:0031007 ! has quality Qualité qualifiant l’existance d’une entité
+
+[Term]
+id: PROMOT:0032014
+name: Dysphagia for liquid
+def: "distinct from hydrophobia" []
+comment: Oculopharyngeal muscular dystrophy Survey
+is_a: PROMOT:0032001 ! abnormal disposition
+relationship: SIO:000217 PROMOT:0031007 ! has quality Qualité qualifiant l’existance d’une entité
+
+[Term]
+id: PROMOT:0100001
+name: Phenotypically related procedure
+def: "A procedure that can assess a phenotype." []
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
 id: PROMOT:0100002
-name: Fatigue corrélée au fait de manger
-def: "A fatigue that occurs when the subject is eating" []
-is_a: PROMOT:0000026 ! abnormal disposition
-relationship: SIO:000217 PROMOT:0000084 ! has quality Transmission inconnue
+name: Body function related procedure
+def: "A procedure that can measure a body function." []
+property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
 id: PROMOT:0100003
-name: Difficulty walking short distance
-def: "A difficulty to walk short distance. E.g. a difficulty to  walk inside a building such as a house." []
-is_a: PROMOT:0000026 ! abnormal disposition
-relationship: SIO:000217 PROMOT:0000084 ! has quality Transmission inconnue
+name: Body structure related procedure
+def: "A procedure that can measure a body structure." []
+property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
 id: PROMOT:0100004
-name: Difficulty changing basic position
-def: "A difficulty to change basic position. E.g. a difficulty to go from a sitting position to a standing position." []
-is_a: PROMOT:0000026 ! abnormal disposition
-relationship: SIO:000217 PROMOT:0000084 ! has quality Transmission inconnue
+name: Activity related procedure
+def: "A procedure that can measure an activity." []
+property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
 id: PROMOT:0100005
-name: Anhédonie légère corrélée au fait de manger
-def: "A mild anhedonia that occurs when the subject is eating" []
-
-[Term]
-id: PROMOT:0200001
 name: Assessment of expiratory and cough peak flows using an expiratory flowmeter
 def: "A test assessing the subject’s expiratory peak flow when they expirate and when they cough. It assesses the glottis efficiency to clear out the repiratory tract by using an expiratory flowmeter." []
+is_a: PROMOT:0100001 ! Phenotypically related procedure
+is_a: PROMOT:0100002 ! Body function related procedure
 
 [Term]
-id: PROMOT:0200002
+id: PROMOT:0100006
 name: Quantative muscle testing
 def: "Measurement of maximum isometric force generation from a muscle group; performed with specialized equipment." [] {IAO:0000119="NCIT:C121361"}
 xref: NCIT:C121361
+is_a: PROMOT:0100001 ! Phenotypically related procedure
 
 [Term]
-id: PROMOT:0200003
+id: PROMOT:0100007
 name: Assessment using Dysphagimeter
 def: "An assessment that uses the Dysphagimeter scale to assess dysphagia or swallowing impairements. The Dysphagimeter is a patient-reported questionnaire that measures the ability to swallow foods of different textures and the impact of dysphagia on activities and participation. This questionnaire has three parts. Part A includes 24 items concerning solid foods, Part B includes 3 items on liquids and Part C includes 8 items, namely 6 items on the impact of dysphagia at meal times and 2 items on discomfort related to thick saliva. Each item offers 5 choices of descriptive answers. Parts A and B also include an option 'I cannot answer'. The participant must carefully read the instructions and check the answer that best corresponds to their situation for each item." [] {IAO:0000119="Definition translated from French to English using Reverso."}
+is_a: PROMOT:0100001 ! Phenotypically related procedure
 
 [Term]
-id: PROMOT:0200004
+id: PROMOT:0100008
 name: Assessment of pinch strengh using B & L gauge
 def: "An evaluation procedure that uses a B&L gauge to assess pinch strengh. The test measuring the force of the lateral clamps, between the thumb and the index finger, allows quantifying the maximum voluntary strength of the hand and forearm muscles during a pinching action. This is an indicator of the level of hand function." [] {IAO:0000119="Definition translated from French to English from a Reverso’s suggestion."}
+is_a: PROMOT:0100001 ! Phenotypically related procedure
 
 [Term]
-id: PROMOT:0200005
+id: PROMOT:0100009
 name: Assessment of the maximum isometric muscle strength using MedUP dynamometer
 def: "Assessment of the maximum isometric muscle strength of flexor and extensor muscles using MedUP dynamometer. It assesses the maximum isometric muscle strength in upper and lower limbs." [] {IAO:0000119="Definititon of the test provided by the Groupe de Recherche Interdisciplinaire sur les Maladies Neuromusculaires (GRIMN)"}
+is_a: PROMOT:0100001 ! Phenotypically related procedure
 
 [Term]
-id: PROMOT:0200006
+id: PROMOT:0100010
 name: Assessment of tongue strengh using Iowa Oral Performance Instrument
 def: "Assessment of the strengh of the tongue muscle by using Iowa Oral Performance Instrument." []
+is_a: PROMOT:0100001 ! Phenotypically related procedure
 
 [Term]
-id: PROMOT:0200007
+id: PROMOT:0100011
 name: Assessment using Berg Balance Scale
 def: "An assessment with the Berg scale assesses balance and identifies the level of fall risk. This five-level ordinal scale (0 to 4) contains 14 items and the maximum total score ranges from 0 (maximum reach) to 56 (no reach detected). This generic scale evaluates various dimensions of balance, including the following: maintaining multiple positions, having automatic postural responses when changing posture or voluntary movements of the limbs, and produce effective balance and protection reactions." [] {IAO:0000119="Automatically translated from French."}
+is_a: PROMOT:0100001 ! Phenotypically related procedure
 
 [Term]
-id: PROMOT:0200008
+id: PROMOT:0100012
 name: 10 Meter Walk Test (10MWT)
 def: "Le 10mwt est un test de capacité qui permet d’évaluer la vitesse de marche sur une courte distance pour deux conditions différentes, soit à la vitesse confortable et à la vitesse maximale. Le temps requis pour parcourir 10 mètres à la marche d’abord à la vitesse confortable, puis à la vitesse maximale, est inscrit." [] {IAO:0000119="Definititon of the test provided by the Groupe de Recherche Interdisciplinaire sur les Maladies Neuromusculaires (GRIMN)."}
 xref: http://snomed.info/id/431527001
+is_a: PROMOT:0100001 ! Phenotypically related procedure
 
 [Term]
-id: PROMOT:0200009
+id: PROMOT:0100013
 name: Assessment using Sydney Swallow Questionnaire (SSQ)
 def: "Le questionnaire sur la déglutition de Sydney est un questionnaire auto-rapporté qui a pour but d’évaluer la gravité des problèmes de déglutition. Il comporte 17 questions. Le participant répond aux questions 1 à 11 et 13 à 17 en traçant un X sur une ligne (questions de type échelle visuelle analogue) et à la question 12 en cochant la réponse de son choix parmi 6 options. Une version canadienne-française validée a été créée." [] {IAO:0000119="Definititon of the test provided by the Groupe de Recherche Interdisciplinaire sur les Maladies Neuromusculaires (GRIMN)."}
+is_a: PROMOT:0100001 ! Phenotypically related procedure
 
 [Term]
-id: PROMOT:0200010
+id: PROMOT:0100014
 name: 80 ml water swallowing test
 def: "L’objectif de ce test est de boire 80 ml d’eau le plus rapidement possible sans s’étouffer. L’évaluateur déclanche le chronomètre quand les lèvres du participant touchent l’eau et l’arrête quand le participant dit « STOP »." [] {IAO:0000119="Definititon of the test provided by the Groupe de Recherche Interdisciplinaire sur les Maladies Neuromusculaires (GRIMN)."}
+is_a: PROMOT:0100001 ! Phenotypically related procedure
 
 [Term]
-id: PROMOT:0200011
+id: PROMOT:0100015
 name: Assessment using Fatigue Severity Scale (FSS)
 def: "Assessment using Fatigue Severity scale. It follows a 9-item scale which measures the severity of fatigue and its effect on a person's activities and lifestyle in patients with a variety of disorders.  A 9-item questionnaire with questions related to how fatigue interferes with certain activities and rates its severity according to a self-report scale. The items are scored on a 7 point scale with 1 = strongly disagree and 7= strongly agree. The minimum score = 9 and maximum score possible = 63. Higher the score = greater fatigue severity. Another way of scoring: mean of all the scores with minimum score being 1 and maximum score being 7. Lerdal (2011) found that items 1 and 2 in the FSS-9 should not be used in a mean score because the FSS-7 shows better validity and reliability and is likely more sensitive for measuring change in fatigue." [] {IAO:0000119="Source for the definition of the scale: https://www.sralab.org/rehabilitation-measures/fatigue-severity-scale"}
 comment: Krupp, L. B., LaRocca, N. G., Muir-Nash, J., & Steinberg, A. D. (1989). The fatigue severity scale. Application to patients with multiple sclerosis and systemic lupus erythematosus. Archives of Neurology, 46(10), 1121–1123. 
+is_a: PROMOT:0100001 ! Phenotypically related procedure
 
 [Term]
-id: PROMOT:0200012
+id: PROMOT:0100016
 name: Assessment using Hand Jamar dynanometer
 def: "Le test mesurant la force de préhension permet de quantifier la force maximale volontaire des muscles de la main et de l’avant-bras, lors d’une action de flexion des doigts. Il s’agit d’un indicateur du niveau de fonction de la main." [] {IAO:0000119="Definititon of the test provided by the Groupe de Recherche Interdisciplinaire sur les Maladies Neuromusculaires (GRIMN)."}
 xref: http://snomed.info/id/445993006
+is_a: PROMOT:0100001 ! Phenotypically related procedure
 
 [Term]
-id: PROMOT:0200013
+id: PROMOT:0100017
 name: Stair Climb Test
 def: "Le test de 10 marches évalue la capacité à monter et descendre un bloc de 10 marches pour deux conditions différentes, soit à la vitesse confortable et à la vitesse maximale. Ce test s’adressent aux participants qui ont la capacité d’utiliser les escaliers." [] {IAO:0000119="Definititon of the test provided by the Groupe de Recherche Interdisciplinaire sur les Maladies Neuromusculaires (GRIMN)."}
 xref: http://snomed.info/id/252482003
+is_a: PROMOT:0100001 ! Phenotypically related procedure
+
+[Term]
+id: PROMOT:0110001
+name: Activity
+def: "An activity is the execution of a task or action by an individual. Activity limitations are difficulties an individual may have in executing activities." [] {IAO:0000119="International Classification of Functioning, Disability and Health"}
+property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
+property_value: seeAlso ICF:1394728112
+
+[Term]
+id: PROMOT:0120002
+name: Participation
+def: "A participation is an involvement in a life situation. Participation restrictions are problems an individual may experience in involvement in life situations" [] {IAO:0000119="International Classification of Functioning, Disability and Health"}
+property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
+property_value: seeAlso ICF:1394728112
 
 [Typedef]
 id: PROMOT:2000001
@@ -1095,7 +1085,7 @@ name: es utilizado por
 def: "A relation between an assistive device and a patient, where the patient uses the device in order to accomplish something, such as a task or an activity (e.g. moving, reading)." []
 comment: JP: Translated to spanish using Bing Translator
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
-range: PROMOT:0000025 ! Paciente
+range: PROMOT:0020004 ! Paciente
 
 [Typedef]
 id: PROMOT:2000002
@@ -1135,44 +1125,29 @@ property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Typedef]
 id: PROMOT:2000007
-name: est l’identifiant unique pour
-def: "A relation between an identifier and the entity that the identifier is the only one to identify." []
-xref: SIO:000674
-property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
-
-[Typedef]
-id: PROMOT:2000008
-name: a comme résultat
-def: "A relation between a process and an entity where the process produce the second entity." []
-xref: SIO:000229
-property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
-
-[Typedef]
-id: PROMOT:2000009
-name: a comme disposition
-def: "A relation between an independent continuant (the bearer) and a disposition, in which the disposition specifically depends on the bearer for its existence." [] {IAO:0000119="RO:0000091"}
-xref: RO:0000091
-property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
-
-[Typedef]
-id: PROMOT:2000010
-name: est situé dans
-def: "A relation between two independent continuants, the target and the location, in which the target is entirely within the location" [] {IAO:0000119="RO:0001025"}
-xref: RO:0001025
-xref: SIO:000061
-property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
-
-[Typedef]
-id: PROMOT:2000011
-name: est fonctionnellement lié à
-def: "A generic relation between an entity and a function, where the entity is needed to realize the function." []
-xref: RO:0002328
-property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
-
-[Typedef]
-id: PROMOT:2000012
 name: uses
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
+
+[Typedef]
+id: RO:0000091
+name: has disposition
+def: "a relation between an independent continuant (the bearer) and a disposition, in which the disposition specifically depends on the bearer for its existence" []
+
+[Typedef]
+id: RO:0001025
+name: located in
+def: "a relation between two independent continuants, the target and the location, in which the target is entirely within the location" []
+subset: http://purl.obolibrary.org/obo/valid_for_go_gp2term
+property_value: IAO:0000111 "located in" xsd:string
+property_value: IAO:0000112 "my brain is located in my head" xsd:string
+property_value: IAO:0000112 "this rat is located in this cage" xsd:string
+property_value: IAO:0000116 "Location as a relation between instances: The primitive instance-level relation c located_in r at t reflects the fact that each continuant is at any given time associated with exactly one spatial region, namely its exact location. Following we can use this relation to define a further instance-level location relation - not between a continuant and the region which it exactly occupies, but rather between one continuant and another. c is located in c1, in this sense, whenever the spatial region occupied by c is part_of the spatial region occupied by c1.    Note that this relation comprehends both the relation of exact location between one continuant and another which obtains when r and r1 are identical (for example, when a portion of fluid exactly fills a cavity), as well as those sorts of inexact location relations which obtain, for example, between brain and head or between ovum and uterus" xsd:string
+property_value: IAO:0000116 "Most location relations will only hold at certain times, but this is difficult to specify in OWL. See http://purl.obolibrary.org/obo/ro/docs/temporal-semantics/" xsd:string
+property_value: IAO:0000118 "located_in" xsd:string
+property_value: RO:0001900 RO:0001901
+property_value: seeAlso "https://wiki.geneontology.org/Located_in" xsd:anyURI
+property_value: terms:source "http://www.obofoundry.org/ro/#OBO_REL:located_in" xsd:string
+is_transitive: true
 
 [Typedef]
 id: RO:0002200
@@ -1194,6 +1169,13 @@ property_value: IAO:0000117 https://orcid.org/0000-0002-6601-2165
 is_functional: true
 
 [Typedef]
+id: RO:0002328
+name: functionally related to
+def: "A grouping relationship for any relationship directly involving a function, or that holds because of a function of one of the related entities." []
+property_value: IAO:0000117 https://orcid.org/0000-0002-6601-2165
+property_value: IAO:0000232 "This is a grouping relation that collects relations used for the purpose of connecting structure and function" xsd:string
+
+[Typedef]
 id: RO:0002331
 name: involved in
 def: "c involved_in p if and only if c enables some process p', and p' is part of p" []
@@ -1201,6 +1183,7 @@ property_value: IAO:0000117 https://orcid.org/0000-0002-6601-2165
 property_value: IAO:0000118 "actively involved in" xsd:string
 property_value: IAO:0000118 "enables part of" xsd:string
 property_value: seeAlso "https://wiki.geneontology.org/Involved_in" xsd:anyURI
+is_a: RO:0002328 ! functionally related to
 
 [Typedef]
 id: RO:0002351
