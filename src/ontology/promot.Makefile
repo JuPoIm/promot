@@ -188,8 +188,10 @@ $(IMPORTDIR)/icf_import.owl: $(IMPORTSDATADIR)/whofic-2025-05-24.owl $(IMPORTDIR
 		--signature true \
 		--output $@.tmp.owl; \
 		$(ROBOT) query -i $< --update $(SPARQLDIR)/preprocess-module.ru \
-		filter -T $(IMPORTDIR)/icf_terms.txt --select "self ancestors annotations" --signature true \
-		remove -T $(IMPORTDIR)/icf_exclude_terms.txt --select "self annotations" --signature true \
+		filter -T $(IMPORTDIR)/icf_terms.txt \
+		--select "self ancestors annotations" \
+		--exclude-terms $(IMPORTDIR)/icf_exclude_terms.txt\
+		--signature true \
         query --update $(SPARQLDIR)/inject-subset-declaration.ru --update $(SPARQLDIR)/postprocess-module.ru \
 		annotate --ontology-iri $(ONTBASE)/$@ $(ANNOTATE_ONTOLOGY_VERSION) \
 		merge -i $@.tmp.owl \

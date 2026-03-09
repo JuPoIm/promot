@@ -63,7 +63,7 @@
      xmlns:CPATH_VISIT_OCCURRENCE="https://w3id.org/cpont/visit_occurrence/"
      xmlns:CPATH_CONDITION_OCCURRENCE="https://w3id.org/cpont/condition_occurrence/">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/promot/promot-base.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/promot/releases/2026-03-06/promot-base.owl"/>
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/promot/releases/2026-03-09/promot-base.owl"/>
         <dc11:contributor>Anita Burgun MD, PhD
 https://orcid.org/0000-0001-6855-4366</dc11:contributor>
         <dc11:contributor>Carole Faviez PhD
@@ -93,14 +93,14 @@ https://orcid.org/0000-0002-3336-2476</dc11:creator>
         <dcterms:description>Ontology for modeling the three following neuromuscular diseases : OPMD, Congenital myopathies and Congenital myastenic syndroms. It aims to be also an ontology for building the PROMOT project relational database.</dcterms:description>
         <dcterms:license rdf:resource="https://creativecommons.org/licenses/by-nc-sa/4.0/"/>
         <dcterms:title>PROMOT ontology</dcterms:title>
-        <oboInOwl:date>06:03:2026 18:01</oboInOwl:date>
+        <oboInOwl:date>09:03:2026 17:09</oboInOwl:date>
         <rdfs:comment>Additional acknowledgements:
 	- Thomas Bongivault, MSc
 	- Marc Vincent, PhD
 </rdfs:comment>
         <rdfs:seeAlso>More about PROMOT initiative at https://www.promotinitiative.com/
 </rdfs:seeAlso>
-        <owl:versionInfo>2026-03-06</owl:versionInfo>
+        <owl:versionInfo>2026-03-09</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -447,12 +447,6 @@ https://orcid.org/0000-0002-3336-2476</dc11:creator>
     
 
 
-    <!-- http://id.who.int/icd/entity/1394728112 -->
-
-    <owl:Class rdf:about="http://id.who.int/icd/entity/1394728112"/>
-    
-
-
     <!-- http://id.who.int/icd/entity/1470583183 -->
 
     <owl:Class rdf:about="http://id.who.int/icd/entity/1470583183"/>
@@ -528,6 +522,12 @@ https://orcid.org/0000-0002-3336-2476</dc11:creator>
     <!-- http://purl.obolibrary.org/obo/HP_0001288 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0001288"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/HP_0001324 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0001324"/>
     
 
 
@@ -2958,7 +2958,7 @@ https://orcid.org/0000-0002-3336-2476</dc11:creator>
                     <rdf:Description rdf:about="http://id.who.int/icd/entity/567313968"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002331"/>
-                        <owl:someValuesFrom rdf:resource="http://id.who.int/icd/entity/1394728112"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0110001"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
@@ -2967,7 +2967,7 @@ https://orcid.org/0000-0002-3336-2476</dc11:creator>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002331"/>
-                <owl:someValuesFrom rdf:resource="http://id.who.int/icd/entity/1394728112"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0110001"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115 xml:lang="en">A body function that is involved in an activity. The boby function is needed in order to fullfill the activity.</obo:IAO_0000115>
@@ -3020,7 +3020,7 @@ https://orcid.org/0000-0002-3336-2476</dc11:creator>
                     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/HP_0000118"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROMOT_2000005"/>
-                        <owl:someValuesFrom rdf:resource="http://id.who.int/icd/entity/1394728112"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0110001"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
@@ -3029,7 +3029,7 @@ https://orcid.org/0000-0002-3336-2476</dc11:creator>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROMOT_2000005"/>
-                <owl:someValuesFrom rdf:resource="http://id.who.int/icd/entity/1394728112"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0110001"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115 xml:lang="en">A phenotype that affects an activity.</obo:IAO_0000115>
@@ -3069,6 +3069,7 @@ https://orcid.org/0000-0002-3336-2476</dc11:creator>
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0032006">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0012378"/>
         <obo:IAO_0000115 xml:lang="en">A fatigue that occurs when the subject is eating</obo:IAO_0000115>
+        <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
         <rdfs:comment>Oculopharyngeal muscular dystrophy Article</rdfs:comment>
         <rdfs:label xml:lang="fr">Fatigue corrélée au fait de manger</rdfs:label>
         <rdfs:label xml:lang="en">Fatigue while eating</rdfs:label>
@@ -3081,6 +3082,7 @@ https://orcid.org/0000-0002-3336-2476</dc11:creator>
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0032007">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0001288"/>
         <obo:IAO_0000115 xml:lang="en">A difficulty to walk short distance. E.g. a difficulty to  walk inside a building such as a house.</obo:IAO_0000115>
+        <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
         <rdfs:comment>[OPMD Scoping review] Bélair N, Gagnon C, Duchesne E. What is known about muscle weakness, balance impairments and indoor mobility limitations in oculopharyngeal muscular dystrophy? A scoping review. J Neuromuscul Dis. 2025 Dec 30:22143602251397052. doi: 10.1177/22143602251397052. Epub ahead of print. PMID: 41467981. </rdfs:comment>
         <rdfs:label xml:lang="en">Difficulty walking short distance</rdfs:label>
         <rdfs:label xml:lang="fr">Difficulté à marcher sur de courtes distances</rdfs:label>
@@ -3093,6 +3095,7 @@ https://orcid.org/0000-0002-3336-2476</dc11:creator>
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0032008">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0100022"/>
         <obo:IAO_0000115 xml:lang="en">A difficulty to change basic position. E.g. a difficulty to go from a sitting position to a standing position.</obo:IAO_0000115>
+        <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
         <rdfs:comment>[OPMD Scoping review] Bélair N, Gagnon C, Duchesne E. What is known about muscle weakness, balance impairments and indoor mobility limitations in oculopharyngeal muscular dystrophy? A scoping review. J Neuromuscul Dis. 2025 Dec 30:22143602251397052. doi: 10.1177/22143602251397052. Epub ahead of print. PMID: 41467981. </rdfs:comment>
         <rdfs:label xml:lang="en">Difficulty changing basic position</rdfs:label>
         <rdfs:label xml:lang="fr">Difficulté à passer d’une position de base à une autre</rdfs:label>
@@ -3105,6 +3108,7 @@ https://orcid.org/0000-0002-3336-2476</dc11:creator>
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0032009">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0012154"/>
         <obo:IAO_0000115 xml:lang="en">An anhedonia that occurs when the subject is eating</obo:IAO_0000115>
+        <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
         <rdfs:comment>Oculopharyngeal muscular dystrophy Article</rdfs:comment>
         <rdfs:label xml:lang="en">Anhedonia while eating</rdfs:label>
         <rdfs:label xml:lang="fr">Anhédonie légère corrélée au fait de manger</rdfs:label>
@@ -3115,10 +3119,13 @@ https://orcid.org/0000-0002-3336-2476</dc11:creator>
     <!-- http://purl.obolibrary.org/obo/PROMOT_0032010 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0032010">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0003473"/>
-        <rdfs:comment>Congenital myasthenic syndrom Scoping review</rdfs:comment>
-        <rdfs:comment>Congenital myopathy Scoping review</rdfs:comment>
-        <rdfs:label xml:lang="en">Fatiguable weakness of facial musculature</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0002015"/>
+        <obo:IAO_0000115 xml:lang="en">Difficulty in swallowing solid food.</obo:IAO_0000115>
+        <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
+        <rdfs:comment>Oculopharyngeal muscular dystrophy Article</rdfs:comment>
+        <rdfs:comment>Oculopharyngeal muscular dystrophy Survey</rdfs:comment>
+        <rdfs:label xml:lang="en">Dysphagia for solid</rdfs:label>
+        <rdfs:label xml:lang="fr">Dysphagie avec de la nourriture solide</rdfs:label>
     </owl:Class>
     
 
@@ -3126,10 +3133,13 @@ https://orcid.org/0000-0002-3336-2476</dc11:creator>
     <!-- http://purl.obolibrary.org/obo/PROMOT_0032011 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0032011">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0003473"/>
-        <rdfs:comment>Congenital myasthenic syndrom Scoping review</rdfs:comment>
-        <rdfs:comment>Congenital myopathy Scoping review</rdfs:comment>
-        <rdfs:label xml:lang="en">Fatiguable weakness of the ocular muscles</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0002015"/>
+        <obo:IAO_0000115 xml:lang="en">Difficulty in swallowing liquid food. This is distinct from hydrophobia.</obo:IAO_0000115>
+        <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
+        <rdfs:comment>Oculopharyngeal muscular dystrophy Article</rdfs:comment>
+        <rdfs:comment>Oculopharyngeal muscular dystrophy Survey</rdfs:comment>
+        <rdfs:label xml:lang="en">Dysphagia for liquid</rdfs:label>
+        <rdfs:label xml:lang="fr">Dysphagie avec de la nourriture liquide</rdfs:label>
     </owl:Class>
     
 
@@ -3138,30 +3148,75 @@ https://orcid.org/0000-0002-3336-2476</dc11:creator>
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0032012">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0003473"/>
+        <obo:IAO_0000115 xml:lang="en">A type of weakness of the facial musculature (i.e. one or more muscles innervated by the seventh cranial nerve) that occurs after a muscle group is used and lessens if the muscle group has some rest. That is, there is diminution of the strength of the facial musculature with repetitive muscle actions.</obo:IAO_0000115>
+        <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
         <rdfs:comment>Congenital myasthenic syndrom Scoping review</rdfs:comment>
         <rdfs:comment>Congenital myopathy Scoping review</rdfs:comment>
-        <rdfs:label xml:lang="en">Fatiguable weakness of axial muscles</rdfs:label>
+        <rdfs:label xml:lang="es">Debilidad fatigable de la musculatura facial </rdfs:label>
+        <rdfs:label xml:lang="fr">Fatigabilité de la musculature faciale</rdfs:label>
+        <rdfs:label xml:lang="en">Fatiguable weakness of facial musculature</rdfs:label>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0032012"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget xml:lang="en">A type of weakness of the facial musculature (i.e. one or more muscles innervated by the seventh cranial nerve) that occurs after a muscle group is used and lessens if the muscle group has some rest. That is, there is diminution of the strength of the facial musculature with repetitive muscle actions.</owl:annotatedTarget>
+        <obo:IAO_0000119>HP:0003473</obo:IAO_0000119>
+    </owl:Axiom>
     
 
 
     <!-- http://purl.obolibrary.org/obo/PROMOT_0032013 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0032013">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0002015"/>
-        <rdfs:comment>Oculopharyngeal muscular dystrophy Survey</rdfs:comment>
-        <rdfs:label xml:lang="en">Dysphagia for solid</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0003473"/>
+        <obo:IAO_0000115 xml:lang="en">A type of weakness of the ocular muscles that occurs after a muscle group is used and lessens if the muscle group has some rest. That is, there is diminution of the strength of the ocular muscles with repetitive muscle actions.</obo:IAO_0000115>
+        <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
+        <rdfs:comment>Congenital myasthenic syndrom Scoping review</rdfs:comment>
+        <rdfs:comment>Congenital myopathy Scoping review</rdfs:comment>
+        <rdfs:label xml:lang="es">Debilidad fatigable de la musculatura facial </rdfs:label>
+        <rdfs:label xml:lang="fr">Fatigabilité des muscles occulaires</rdfs:label>
+        <rdfs:label xml:lang="en">Fatiguable weakness of the ocular muscles</rdfs:label>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0032013"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget xml:lang="en">A type of weakness of the ocular muscles that occurs after a muscle group is used and lessens if the muscle group has some rest. That is, there is diminution of the strength of the ocular muscles with repetitive muscle actions.</owl:annotatedTarget>
+        <obo:IAO_0000119>HP:0003473</obo:IAO_0000119>
+    </owl:Axiom>
     
 
 
     <!-- http://purl.obolibrary.org/obo/PROMOT_0032014 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0032014">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0002015"/>
-        <obo:IAO_0000115 xml:lang="en">distinct from hydrophobia</obo:IAO_0000115>
-        <rdfs:comment>Oculopharyngeal muscular dystrophy Survey</rdfs:comment>
-        <rdfs:label xml:lang="en">Dysphagia for liquid</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0003473"/>
+        <obo:IAO_0000115 xml:lang="en">A type of weakness of the axial muscles (i.e., of the muscles of the head and neck, spine, and ribs) that occurs after a muscle group is used and lessens if the muscle group has some rest. That is, there is diminution of the strength of the axial muscles with repetitive muscle actions.</obo:IAO_0000115>
+        <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
+        <rdfs:comment>Congenital myasthenic syndrom Scoping review</rdfs:comment>
+        <rdfs:comment>Congenital myopathy Scoping review</rdfs:comment>
+        <rdfs:label xml:lang="es">Debilidad fatigable muscular axial</rdfs:label>
+        <rdfs:label xml:lang="fr">Fatigabilité des muscles axiaux</rdfs:label>
+        <rdfs:label xml:lang="en">Fatiguable weakness of axial muscles</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0032014"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget xml:lang="en">A type of weakness of the axial muscles (i.e., of the muscles of the head and neck, spine, and ribs) that occurs after a muscle group is used and lessens if the muscle group has some rest. That is, there is diminution of the strength of the axial muscles with repetitive muscle actions.</owl:annotatedTarget>
+        <obo:IAO_0000119>HP:0003473</obo:IAO_0000119>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROMOT_0032015 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0032015">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0001324"/>
+        <obo:IAO_0000115 xml:lang="en">A lack of strength in the muscles involved in chewing.</obo:IAO_0000115>
+        <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
+        <rdfs:comment>Congenital myasthenic syndrom Scoping review</rdfs:comment>
+        <rdfs:comment>Congenital myopathy Scoping review</rdfs:comment>
+        <rdfs:label xml:lang="fr">Faiblesse musculaire des muscles de la mastication</rdfs:label>
+        <rdfs:label xml:lang="en">Weakness of chewing muscles</rdfs:label>
     </owl:Class>
     
 
@@ -3265,7 +3320,7 @@ https://orcid.org/0000-0002-3336-2476</dc11:creator>
                     <rdf:Description rdf:about="http://snomed.info/id/128927009"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROMOT_2000002"/>
-                        <owl:someValuesFrom rdf:resource="http://id.who.int/icd/entity/1394728112"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0110001"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
@@ -3274,7 +3329,7 @@ https://orcid.org/0000-0002-3336-2476</dc11:creator>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROMOT_2000002"/>
-                <owl:someValuesFrom rdf:resource="http://id.who.int/icd/entity/1394728112"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0110001"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115 xml:lang="en">A procedure that can measure an activity.</obo:IAO_0000115>
@@ -3772,12 +3827,6 @@ https://orcid.org/0000-0002-3336-2476</dc11:creator>
         <owl:annotatedTarget xml:lang="en">An activity is the execution of a task or action by an individual. Activity limitations are difficulties an individual may have in executing activities.</owl:annotatedTarget>
         <obo:IAO_0000119>International Classification of Functioning, Disability and Health</obo:IAO_0000119>
     </owl:Axiom>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/PROMOT_0110002 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0110002"/>
     
 
 

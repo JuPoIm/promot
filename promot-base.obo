@@ -1,6 +1,6 @@
 format-version: 1.2
-data-version: promot/releases/2026-03-06/promot-base.owl
-date: 06:03:2026 18:01
+data-version: promot/releases/2026-03-09/promot-base.owl
+date: 09:03:2026 17:09
 idspace: ace_lexicon http://attempto.ifi.uzh.ch/ace_lexicon# 
 idspace: babelon https://w3id.org/babelon/ 
 idspace: BIOLINK https://w3id.org/biolink/vocab/ 
@@ -57,7 +57,7 @@ property_value: dc11:type IAO:8000001
 property_value: dcterms:description "Ontology for modeling the three following neuromuscular diseases : OPMD, Congenital myopathies and Congenital myastenic syndroms. It aims to be also an ontology for building the PROMOT project relational database." xsd:string
 property_value: dcterms:license https://creativecommons.org/licenses/by-nc-sa/4.0/
 property_value: dcterms:title "PROMOT ontology" xsd:string
-property_value: owl:versionInfo "2026-03-06" xsd:string
+property_value: owl:versionInfo "2026-03-09" xsd:string
 property_value: seeAlso "More about PROMOT initiative at https://www.promotinitiative.com/\n" xsd:string
 
 [Term]
@@ -960,8 +960,8 @@ name: Activity related body function
 def: "A body function that is involved in an activity. The boby function is needed in order to fullfill the activity." []
 is_a: ICF:567313968
 intersection_of: ICF:567313968
-intersection_of: RO:0002331 ICF:1394728112
-relationship: RO:0002331 ICF:1394728112
+intersection_of: RO:0002331 PROMOT:0110001 ! Activity
+relationship: RO:0002331 PROMOT:0110001 ! Activity
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
@@ -982,8 +982,8 @@ def: "A phenotype that affects an activity." []
 comment: (JP: unsure about definition)
 is_a: HP:0000118
 intersection_of: HP:0000118
-intersection_of: PROMOT:2000005 ICF:1394728112 ! affecte
-relationship: PROMOT:2000005 ICF:1394728112 ! affecte
+intersection_of: PROMOT:2000005 PROMOT:0110001 ! affecte Activity
+relationship: PROMOT:2000005 PROMOT:0110001 ! affecte Activity
 property_value: IAO:0000117 "Paul Fabry, https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
@@ -1000,6 +1000,7 @@ name: Fatigue corrélée au fait de manger
 def: "A fatigue that occurs when the subject is eating" []
 comment: Oculopharyngeal muscular dystrophy Article
 is_a: HP:0012378
+property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
 id: PROMOT:0032007
@@ -1007,6 +1008,7 @@ name: Difficulty walking short distance
 def: "A difficulty to walk short distance. E.g. a difficulty to  walk inside a building such as a house." []
 comment: [OPMD Scoping review] Bélair N, Gagnon C, Duchesne E. What is known about muscle weakness, balance impairments and indoor mobility limitations in oculopharyngeal muscular dystrophy? A scoping review. J Neuromuscul Dis. 2025 Dec 30:22143602251397052. doi: 10.1177/22143602251397052. Epub ahead of print. PMID: 41467981. 
 is_a: HP:0001288
+property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
 id: PROMOT:0032008
@@ -1014,6 +1016,7 @@ name: Difficulty changing basic position
 def: "A difficulty to change basic position. E.g. a difficulty to go from a sitting position to a standing position." []
 comment: [OPMD Scoping review] Bélair N, Gagnon C, Duchesne E. What is known about muscle weakness, balance impairments and indoor mobility limitations in oculopharyngeal muscular dystrophy? A scoping review. J Neuromuscul Dis. 2025 Dec 30:22143602251397052. doi: 10.1177/22143602251397052. Epub ahead of print. PMID: 41467981. 
 is_a: HP:0100022
+property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
 id: PROMOT:0032009
@@ -1021,37 +1024,55 @@ name: Anhedonia while eating
 def: "An anhedonia that occurs when the subject is eating" []
 comment: Oculopharyngeal muscular dystrophy Article
 is_a: HP:0012154
+property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
 id: PROMOT:0032010
-name: Fatiguable weakness of facial musculature
-comment: Congenital myasthenic syndrom Scoping review
-is_a: HP:0003473
+name: Dysphagia for solid
+def: "Difficulty in swallowing solid food." []
+comment: Oculopharyngeal muscular dystrophy Article
+is_a: HP:0002015
+property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
 id: PROMOT:0032011
-name: Fatiguable weakness of the ocular muscles
-comment: Congenital myasthenic syndrom Scoping review
-is_a: HP:0003473
+name: Dysphagia for liquid
+def: "Difficulty in swallowing liquid food. This is distinct from hydrophobia." []
+comment: Oculopharyngeal muscular dystrophy Article
+is_a: HP:0002015
+property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
 id: PROMOT:0032012
-name: Fatiguable weakness of axial muscles
+name: Debilidad fatigable de la musculatura facial 
+def: "A type of weakness of the facial musculature (i.e. one or more muscles innervated by the seventh cranial nerve) that occurs after a muscle group is used and lessens if the muscle group has some rest. That is, there is diminution of the strength of the facial musculature with repetitive muscle actions." [] {IAO:0000119="HP:0003473"}
 comment: Congenital myasthenic syndrom Scoping review
 is_a: HP:0003473
+property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
 id: PROMOT:0032013
-name: Dysphagia for solid
-comment: Oculopharyngeal muscular dystrophy Survey
-is_a: HP:0002015
+name: Debilidad fatigable de la musculatura facial 
+def: "A type of weakness of the ocular muscles that occurs after a muscle group is used and lessens if the muscle group has some rest. That is, there is diminution of the strength of the ocular muscles with repetitive muscle actions." [] {IAO:0000119="HP:0003473"}
+comment: Congenital myasthenic syndrom Scoping review
+is_a: HP:0003473
+property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
 id: PROMOT:0032014
-name: Dysphagia for liquid
-def: "distinct from hydrophobia" []
-comment: Oculopharyngeal muscular dystrophy Survey
-is_a: HP:0002015
+name: Debilidad fatigable muscular axial
+def: "A type of weakness of the axial muscles (i.e., of the muscles of the head and neck, spine, and ribs) that occurs after a muscle group is used and lessens if the muscle group has some rest. That is, there is diminution of the strength of the axial muscles with repetitive muscle actions." [] {IAO:0000119="HP:0003473"}
+comment: Congenital myasthenic syndrom Scoping review
+is_a: HP:0003473
+property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
+
+[Term]
+id: PROMOT:0032015
+name: Faiblesse musculaire des muscles de la mastication
+def: "A lack of strength in the muscles involved in chewing." []
+comment: Congenital myasthenic syndrom Scoping review
+is_a: HP:0001324
+property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
 id: PROMOT:0100001
@@ -1089,8 +1110,8 @@ name: Activity related procedure
 def: "A procedure that can measure an activity." []
 is_a: SNOMED:128927009
 intersection_of: SNOMED:128927009
-intersection_of: PROMOT:2000002 ICF:1394728112 ! assesses
-relationship: PROMOT:2000002 ICF:1394728112 ! assesses
+intersection_of: PROMOT:2000002 PROMOT:0110001 ! assesses Activity
+relationship: PROMOT:2000002 PROMOT:0110001 ! assesses Activity
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]

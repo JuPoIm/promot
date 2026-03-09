@@ -1,6 +1,6 @@
 format-version: 1.2
-data-version: promot/releases/2026-03-06/promot-simple.owl
-date: 06:03:2026 18:01
+data-version: promot/releases/2026-03-09/promot-simple.owl
+date: 09:03:2026 17:09
 subsetdef: http://purl.obolibrary.org/obo/valid_for_go_gp2term ""
 subsetdef: ro-eco ""
 subsetdef: RO:0002259 ""
@@ -51,7 +51,7 @@ property_value: dc11:contributor "Mansoore Gholizade MD" xsd:string
 property_value: dc11:creator "Cynthia Gagnon MD, PhD\nhttps://orcid.org/0000-0003-2829-8470" xsd:string
 property_value: dc11:creator "Juliette Potier MSc\nhttps://orcid.org/0009-0000-5160-7927" xsd:string
 property_value: dc11:creator "Paul Fabry MD, PhD student\nhttps://orcid.org/0000-0002-3336-2476" xsd:string
-property_value: owl:versionInfo "2026-03-06" xsd:string
+property_value: owl:versionInfo "2026-03-09" xsd:string
 property_value: seeAlso "More about PROMOT initiative at https://www.promotinitiative.com/\n" xsd:string
 property_value: terms:description "Ontology for modeling the three following neuromuscular diseases : OPMD, Congenital myopathies and Congenital myastenic syndroms. It aims to be also an ontology for building the PROMOT project relational database." xsd:string
 property_value: terms:license https://creativecommons.org/licenses/by-nc-sa/4.0/
@@ -860,6 +860,7 @@ property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 id: PROMOT:0032002
 name: Activity related body function
 def: "A body function that is involved in an activity. The boby function is needed in order to fullfill the activity." []
+relationship: RO:0002331 PROMOT:0110001 ! involved in Activity
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
@@ -877,6 +878,7 @@ name: Activity related phenotype
 def: "A phenotype that affects an activity." []
 comment: (JP: unsure about definition)
 is_a: PROMOT:0032001 ! abnormal disposition
+relationship: PROMOT:2000005 PROMOT:0110001 ! affecte Activity
 relationship: SIO:000217 PROMOT:0031007 ! has quality Qualité qualifiant l’existance d’une entité
 property_value: IAO:0000117 "Paul Fabry, https://orcid.org/0009-0000-5160-7927" xsd:string
 
@@ -896,6 +898,7 @@ def: "A fatigue that occurs when the subject is eating" []
 comment: Oculopharyngeal muscular dystrophy Article
 is_a: PROMOT:0032001 ! abnormal disposition
 relationship: SIO:000217 PROMOT:0031007 ! has quality Qualité qualifiant l’existance d’une entité
+property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
 id: PROMOT:0032007
@@ -904,6 +907,7 @@ def: "A difficulty to walk short distance. E.g. a difficulty to  walk inside a b
 comment: [OPMD Scoping review] Bélair N, Gagnon C, Duchesne E. What is known about muscle weakness, balance impairments and indoor mobility limitations in oculopharyngeal muscular dystrophy? A scoping review. J Neuromuscul Dis. 2025 Dec 30:22143602251397052. doi: 10.1177/22143602251397052. Epub ahead of print. PMID: 41467981. 
 is_a: PROMOT:0032001 ! abnormal disposition
 relationship: SIO:000217 PROMOT:0031007 ! has quality Qualité qualifiant l’existance d’une entité
+property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
 id: PROMOT:0032008
@@ -912,6 +916,7 @@ def: "A difficulty to change basic position. E.g. a difficulty to go from a sitt
 comment: [OPMD Scoping review] Bélair N, Gagnon C, Duchesne E. What is known about muscle weakness, balance impairments and indoor mobility limitations in oculopharyngeal muscular dystrophy? A scoping review. J Neuromuscul Dis. 2025 Dec 30:22143602251397052. doi: 10.1177/22143602251397052. Epub ahead of print. PMID: 41467981. 
 is_a: PROMOT:0032001 ! abnormal disposition
 relationship: SIO:000217 PROMOT:0031007 ! has quality Qualité qualifiant l’existance d’une entité
+property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
 id: PROMOT:0032009
@@ -920,65 +925,89 @@ def: "An anhedonia that occurs when the subject is eating" []
 comment: Oculopharyngeal muscular dystrophy Article
 is_a: PROMOT:0032001 ! abnormal disposition
 relationship: SIO:000217 PROMOT:0031007 ! has quality Qualité qualifiant l’existance d’une entité
+property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
 id: PROMOT:0032010
-name: Fatiguable weakness of facial musculature
-comment: Congenital myasthenic syndrom Scoping review
+name: Dysphagia for solid
+def: "Difficulty in swallowing solid food." []
+comment: Oculopharyngeal muscular dystrophy Article
 is_a: PROMOT:0032001 ! abnormal disposition
 relationship: SIO:000217 PROMOT:0031007 ! has quality Qualité qualifiant l’existance d’une entité
+property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
 id: PROMOT:0032011
-name: Fatiguable weakness of the ocular muscles
-comment: Congenital myasthenic syndrom Scoping review
+name: Dysphagia for liquid
+def: "Difficulty in swallowing liquid food. This is distinct from hydrophobia." []
+comment: Oculopharyngeal muscular dystrophy Article
 is_a: PROMOT:0032001 ! abnormal disposition
 relationship: SIO:000217 PROMOT:0031007 ! has quality Qualité qualifiant l’existance d’une entité
+property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
 id: PROMOT:0032012
-name: Fatiguable weakness of axial muscles
+name: Debilidad fatigable de la musculatura facial 
+def: "A type of weakness of the facial musculature (i.e. one or more muscles innervated by the seventh cranial nerve) that occurs after a muscle group is used and lessens if the muscle group has some rest. That is, there is diminution of the strength of the facial musculature with repetitive muscle actions." [] {IAO:0000119="HP:0003473"}
 comment: Congenital myasthenic syndrom Scoping review
 is_a: PROMOT:0032001 ! abnormal disposition
 relationship: SIO:000217 PROMOT:0031007 ! has quality Qualité qualifiant l’existance d’une entité
+property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
 id: PROMOT:0032013
-name: Dysphagia for solid
-comment: Oculopharyngeal muscular dystrophy Survey
+name: Debilidad fatigable de la musculatura facial 
+def: "A type of weakness of the ocular muscles that occurs after a muscle group is used and lessens if the muscle group has some rest. That is, there is diminution of the strength of the ocular muscles with repetitive muscle actions." [] {IAO:0000119="HP:0003473"}
+comment: Congenital myasthenic syndrom Scoping review
 is_a: PROMOT:0032001 ! abnormal disposition
 relationship: SIO:000217 PROMOT:0031007 ! has quality Qualité qualifiant l’existance d’une entité
+property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
 id: PROMOT:0032014
-name: Dysphagia for liquid
-def: "distinct from hydrophobia" []
-comment: Oculopharyngeal muscular dystrophy Survey
+name: Debilidad fatigable muscular axial
+def: "A type of weakness of the axial muscles (i.e., of the muscles of the head and neck, spine, and ribs) that occurs after a muscle group is used and lessens if the muscle group has some rest. That is, there is diminution of the strength of the axial muscles with repetitive muscle actions." [] {IAO:0000119="HP:0003473"}
+comment: Congenital myasthenic syndrom Scoping review
 is_a: PROMOT:0032001 ! abnormal disposition
 relationship: SIO:000217 PROMOT:0031007 ! has quality Qualité qualifiant l’existance d’une entité
+property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
+
+[Term]
+id: PROMOT:0032015
+name: Faiblesse musculaire des muscles de la mastication
+def: "A lack of strength in the muscles involved in chewing." []
+comment: Congenital myasthenic syndrom Scoping review
+is_a: PROMOT:0032001 ! abnormal disposition
+relationship: SIO:000217 PROMOT:0031007 ! has quality Qualité qualifiant l’existance d’une entité
+property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
 id: PROMOT:0100001
 name: Phenotypically related procedure
 def: "A procedure that can assess a phenotype." []
+relationship: PROMOT:2000002 PROMOT:0020004 ! assesses Paciente
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
 id: PROMOT:0100002
 name: Body function related procedure
 def: "A procedure that can measure a body function." []
+relationship: PROMOT:2000002 PROMOT:0020004 ! assesses Paciente
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
 id: PROMOT:0100003
 name: Body structure related procedure
 def: "A procedure that can measure a body structure." []
+relationship: PROMOT:2000002 PROMOT:0020004 ! assesses Paciente
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
 id: PROMOT:0100004
 name: Activity related procedure
 def: "A procedure that can measure an activity." []
+relationship: PROMOT:2000002 PROMOT:0020004 ! assesses Paciente
+relationship: PROMOT:2000002 PROMOT:0110001 ! assesses Activity
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
