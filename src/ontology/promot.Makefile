@@ -61,7 +61,7 @@ $(IMPORTDIR)/fma_import.owl: $(MIRRORDIR)/fma.owl $(IMPORTDIR)/fma_terms_alone.t
 	if [ $(IMP) = true ]; then $(ROBOT) query -i $< --update $(SPARQLDIR)/preprocess-module.ru \
 		filter -T $(IMPORTDIR)/fma_terms_ancestors.txt --select "self ancestors annotations" --signature true \
 		remove -T $(IMPORTDIR)/fma_exclude_terms.txt --select "self annotations" --signature true \
-        query --update $(SPARQLDIR)/inject-subset-declaration.ru --update $(SPARQLDIR)/postprocess-module.ru \
+		query --update $(SPARQLDIR)/inject-subset-declaration.ru --update $(SPARQLDIR)/postprocess-module.ru \
 		annotate --ontology-iri $(ONTBASE)/$@ $(ANNOTATE_ONTOLOGY_VERSION) --output $@.tmp.owl && mv $@.tmp.owl $@; fi
 
 # ----------------------------------------
@@ -88,15 +88,15 @@ $(IMPORTDIR)/hp_import.owl: $(MIRRORDIR)/hp.owl $(IMPORTDIR)/hp_terms_descendant
 		--output $(MIRRORDIR)/hp-merged.owl; \
 		$(ROBOT) query -i $(MIRRORDIR)/hp-merged.owl --update $(SPARQLDIR)/preprocess-module.ru \
 		filter -T $(IMPORTDIR)/hp_terms_descendants.txt \
-        --select "self descendants annotations" --signature true \
+		--select "self descendants annotations" --signature true \
 		--output $@.tmp.owl ; \
 		$(ROBOT) filter -i $(MIRRORDIR)/hp-merged.owl -T $(IMPORTDIR)/hp_terms_alone.txt \
-        --select "self annotations" --signature true \
+		--select "self annotations" --signature true \
 		merge -i $@.tmp.owl --output $@.tmp.owl ; \
 		$(ROBOT) filter -i $(MIRRORDIR)/hp-merged.owl -T $(IMPORTDIR)/hp_terms_ancestors.txt \
 		--select "self ancestors annotations" --signature true \
 		remove -T $(IMPORTDIR)/hp_exclude_terms.txt --select "self annotations" --signature true \
-        query --update $(SPARQLDIR)/inject-subset-declaration.ru --update $(SPARQLDIR)/postprocess-module.ru \
+		query --update $(SPARQLDIR)/inject-subset-declaration.ru --update $(SPARQLDIR)/postprocess-module.ru \
 		annotate --ontology-iri $(ONTBASE)/$@ $(ANNOTATE_ONTOLOGY_VERSION) \
 		merge -i $@.tmp.owl --output $@.tmp.owl && mv $@.tmp.owl $@; fi
 
@@ -106,7 +106,7 @@ $(IMPORTDIR)/hp_import.owl: $(MIRRORDIR)/hp.owl $(IMPORTDIR)/hp_terms_descendant
 imports/ordo_import.owl: $(MIRRORDIR)/ordo.owl $(IMPORTDIR)/ordo_terms.txt
 	if [ $(IMP) = true ]; then $(ROBOT) query -i $< --update $(SPARQLDIR)/preprocess-module.ru \
 		filter -T $(IMPORTDIR)/ordo_terms.txt --select "self annotations" --exclude-terms $(IMPORTDIR)/hp_terms.txt --signature true \
-        query --update $(SPARQLDIR)/inject-subset-declaration.ru --update $(SPARQLDIR)/postprocess-module.ru \
+		query --update $(SPARQLDIR)/inject-subset-declaration.ru --update $(SPARQLDIR)/postprocess-module.ru \
 		annotate --ontology-iri $(ONTBASE)/$@ $(ANNOTATE_ONTOLOGY_VERSION) --output $@.tmp.owl && mv $@.tmp.owl $@; fi
 
 # ----------------------------------------
@@ -115,7 +115,7 @@ imports/ordo_import.owl: $(MIRRORDIR)/ordo.owl $(IMPORTDIR)/ordo_terms.txt
 $(IMPORTDIR)/ro_import.owl: $(MIRRORDIR)/ro.owl $(IMPORTDIR)/ro_terms.txt
 	if [ $(IMP) = true ]; then $(ROBOT) query -i $< --update $(SPARQLDIR)/preprocess-module.ru \
 		filter -T $(IMPORTDIR)/ro_terms.txt --select "self annotations" --signature true \
-        query --update $(SPARQLDIR)/inject-subset-declaration.ru --update $(SPARQLDIR)/postprocess-module.ru \
+		query --update $(SPARQLDIR)/inject-subset-declaration.ru --update $(SPARQLDIR)/postprocess-module.ru \
 		annotate --ontology-iri $(ONTBASE)/$@ $(ANNOTATE_ONTOLOGY_VERSION) --output $@.tmp.owl && mv $@.tmp.owl $@; fi
 
 # ----------------------------------------
@@ -126,11 +126,11 @@ $(IMPORTDIR)/sio_import.owl: $(IMPORTDIR)/sio_terms_alone.txt $(IMPORTDIR)/sio_t
 		-o $(IMPORTSDATADIR)/sio-release.owl; \
 		$(ROBOT) query -i $(IMPORTSDATADIR)/sio-release.owl --update $(SPARQLDIR)/preprocess-module.ru \
 		filter -T $(IMPORTDIR)/sio_terms_alone.txt \
-        --select "self annotations" --signature true \
+		--select "self annotations" --signature true \
 		--output $@.tmp.owl; \
 		$(ROBOT) query -i $(IMPORTSDATADIR)/sio-release.owl --update $(SPARQLDIR)/preprocess-module.ru \
 		filter -T $(IMPORTDIR)/sio_terms.txt --select "self descendants annotations" --signature true \
-        query --update $(SPARQLDIR)/inject-subset-declaration.ru --update $(SPARQLDIR)/postprocess-module.ru \
+		query --update $(SPARQLDIR)/inject-subset-declaration.ru --update $(SPARQLDIR)/postprocess-module.ru \
 		annotate --ontology-iri $(ONTBASE)/$@ $(ANNOTATE_ONTOLOGY_VERSION) \
 		merge -i $@.tmp.owl \
 		--output $@.tmp.owl && mv $@.tmp.owl $@; fi
@@ -181,18 +181,18 @@ $(IMPORTDIR)/snomed_import.owl: $(IMPORTSDATADIR)/ontology-2025-11-14_EN-ES.owl 
 # C. merge des fichiers
 # D. rename des préfixes skos pour passer les tests de la release
 $(IMPORTDIR)/icf_import.owl: $(IMPORTSDATADIR)/whofic-2025-05-24.owl $(IMPORTDIR)/icf_terms_descendants.txt $(IMPORTDIR)/icf_terms.txt $(IMPORTDIR)/icf_exclude_terms.txt
-	if [ $(IMP) = true && $(ICF) = true ]; then $(ROBOT) query -i $< --update $(SPARQLDIR)/preprocess-module.ru \
+	if [ $(IMP) = true ] && [ $(ICF) = true ]; then $(ROBOT) query -i $< --update $(SPARQLDIR)/preprocess-module.ru \
 		filter -T $(IMPORTDIR)/icf_terms_descendants.txt \
-        --select "self descendants annotations" \
+		--select "self descendants annotations" \
 		--exclude-term http://id.who.int/icd/entity/721275161 \
 		--signature true \
 		--output $@.tmp.owl; \
 		$(ROBOT) query -i $< --update $(SPARQLDIR)/preprocess-module.ru \
 		filter -T $(IMPORTDIR)/icf_terms.txt \
 		--select "self ancestors annotations" \
-		--exclude-terms $(IMPORTDIR)/icf_exclude_terms.txt\
+		--exclude-terms $(IMPORTDIR)/icf_exclude_terms.txt \
 		--signature true \
-        query --update $(SPARQLDIR)/inject-subset-declaration.ru --update $(SPARQLDIR)/postprocess-module.ru \
+		query --update $(SPARQLDIR)/inject-subset-declaration.ru --update $(SPARQLDIR)/postprocess-module.ru \
 		annotate --ontology-iri $(ONTBASE)/$@ $(ANNOTATE_ONTOLOGY_VERSION) \
 		merge -i $@.tmp.owl \
 		rename --add-prefix "rdfs: http://www.w3.org/2000/01/rdf-schema#" \
@@ -300,16 +300,6 @@ $(COMPONENTSDIR)/promot-component.owl: credits create-template $(TEMPLATEDIR)/pr
 		 --template $(TEMPLATEDIR)/promot-component-auto.tsv \
 		 $(ANNOTATE_CONVERT_FILE)
 .PRECIOUS: $(COMPONENTSDIR)/promot-component.owl
-
-# ----------------------------------------
-# CUSTOM SRCMERGED
-# ----------------------------------------
-#$(SRCMERGED): $(EDIT_PREPROCESSED) $(OTHER_SRC)
-#	$(ROBOT) convert -i $(IMPORTDIR)/ro_import.owl -f ofn -o $(TMPDIR)/ro_import.ofn ; \
-#	$(ROBOT) remove --input $< --select imports --trim false \
-#		 merge $(foreach src, $(OTHER_SRC), --input $(src)) \
-#		 remove -T $(IMPORTDIR)/ro_terms.txt --select "self annotations" --signature true \
-#		 merge --input $(TMPDIR)/ro_import.ofn --output $@
 
 # ----------------------------------------
 # Documentation - Documentación

@@ -64,7 +64,7 @@
      xmlns:CPATH_VISIT_OCCURRENCE="https://w3id.org/cpont/visit_occurrence/"
      xmlns:CPATH_CONDITION_OCCURRENCE="https://w3id.org/cpont/condition_occurrence/">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/promot.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/promot/releases/2026-03-09/promot.owl"/>
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/promot/releases/2026-03-12/promot.owl"/>
         <dc11:contributor>Anita Burgun MD, PhD
 https://orcid.org/0000-0001-6855-4366</dc11:contributor>
         <dc11:contributor>Carole Faviez PhD
@@ -93,14 +93,19 @@ https://orcid.org/0000-0002-3336-2476</dc11:creator>
         <dcterms:description>Ontology for modeling the three following neuromuscular diseases : OPMD, Congenital myopathies and Congenital myastenic syndroms. It aims to be also an ontology for building the PROMOT project relational database.</dcterms:description>
         <dcterms:license rdf:resource="https://creativecommons.org/licenses/by-nc-sa/4.0/"/>
         <dcterms:title>PROMOT ontology</dcterms:title>
-        <oboInOwl:date>09:03:2026 17:08</oboInOwl:date>
+        <oboInOwl:date>12:03:2026 17:19</oboInOwl:date>
+        <rdfs:comment>Additional acknowledgements:
+	- Rachel Thompson
+	- Thomas Bongivault, MSc
+	- Marc Vincent, PhD
+</rdfs:comment>
         <rdfs:comment>Additional acknowledgements:
 	- Thomas Bongivault, MSc
 	- Marc Vincent, PhD
 </rdfs:comment>
         <rdfs:seeAlso>More about PROMOT initiative at https://www.promotinitiative.com/
 </rdfs:seeAlso>
-        <owl:versionInfo>2026-03-09</owl:versionInfo>
+        <owl:versionInfo>2026-03-12</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -227,7 +232,12 @@ We also have the outstanding issue of how to aim different definitions to differ
 
     <!-- http://purl.obolibrary.org/obo/IAO_0000116 -->
 
-    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000116"/>
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000116">
+        <obo:IAO_0000115 xml:lang="en">An administrative note intended for its editor. It may not be included in the publication version of the ontology, so it should contain nothing necessary for end users to understand the ontology.</obo:IAO_0000115>
+        <obo:IAO_0000117 xml:lang="en">PERSON:Daniel Schober</obo:IAO_0000117>
+        <obo:IAO_0000119 xml:lang="en">GROUP:OBI:&lt;http://purl.obofoundry.org/obo/obi&gt;</obo:IAO_0000119>
+        <rdfs:label xml:lang="en">editor note</rdfs:label>
+    </owl:AnnotationProperty>
     
 
 
@@ -322,14 +332,6 @@ We also have the outstanding issue of how to aim different definitions to differ
     <!-- http://purl.obolibrary.org/obo/RO_0001900 -->
 
     <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/RO_0001900"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/RO_0002259 -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/RO_0002259">
-        <rdfs:subPropertyOf rdf:resource="http://www.geneontology.org/formats/oboInOwl#SubsetProperty"/>
-    </owl:AnnotationProperty>
     
 
 
@@ -732,23 +734,6 @@ We also have the outstanding issue of how to aim different definitions to differ
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
-    // Datatypes
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    
-
-
-    <!-- http://www.w3.org/2001/XMLSchema#date -->
-
-    <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#date"/>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
     // Object Properties
     //
     ///////////////////////////////////////////////////////////////////////////////////////
@@ -807,7 +792,7 @@ We also have the outstanding issue of how to aim different definitions to differ
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/PROMOT_2000004">
         <rdfs:domain rdf:resource="http://semanticscience.org/resource/SIO_010000"/>
-        <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0000001"/>
+        <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/SO_0001060"/>
         <obo:IAO_0000115 xml:lang="en">A relation between an organism and a specific gene mutation that exists in the genome of that organism.</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="fr">Une relation entre un organisme et une mutation génétique présente dans le génome de cet organisme.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
@@ -845,15 +830,6 @@ We also have the outstanding issue of how to aim different definitions to differ
     
 
 
-    <!-- http://purl.obolibrary.org/obo/PROMOT_2000007 -->
-
-    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/PROMOT_2000007">
-        <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
-        <rdfs:label xml:lang="en">uses</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
     <!-- http://purl.obolibrary.org/obo/RO_0000091 -->
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0000091">
@@ -886,7 +862,6 @@ We also have the outstanding issue of how to aim different definitions to differ
     <!-- http://purl.obolibrary.org/obo/RO_0002200 -->
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0002200">
-        <owl:inverseOf rdf:resource="http://purl.obolibrary.org/obo/RO_0002201"/>
         <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000125"/>
         <obo:IAO_0000115>A relationship that holds between a biological entity and a phenotype. Here a phenotype is construed broadly as any kind of quality of an organism part, a collection of these qualities, or a change in quality or qualities (e.g. abnormally increased temperature). The subject of this relationship can be an organism (where the organism has the phenotype, i.e. the qualities inhere in parts of this organism), a genomic entity such as a gene or genotype (if modifications of the gene or the genotype causes the phenotype), or a condition such as a disease (such that if the condition inheres in an organism, then the organism has the phenotype).</obo:IAO_0000115>
         <obo:IAO_0000117 rdf:resource="https://orcid.org/0000-0002-6601-2165"/>
@@ -899,12 +874,6 @@ We also have the outstanding issue of how to aim different definitions to differ
     <!-- http://purl.obolibrary.org/obo/RO_0002201 -->
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0002201">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000125"/>
-        <obo:IAO_0000115>inverse of has phenotype</obo:IAO_0000115>
-        <obo:IAO_0000117 rdf:resource="https://orcid.org/0000-0002-6601-2165"/>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/RO_0002259"/>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/ro/subsets#ro-eco"/>
         <rdfs:label xml:lang="en">phenotype of</rdfs:label>
     </owl:ObjectProperty>
     
@@ -975,7 +944,7 @@ We also have the outstanding issue of how to aim different definitions to differ
     <!-- http://purl.obolibrary.org/obo/RO_0004013 -->
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0004013">
-        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0000001"/>
+        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/SO_0001060"/>
         <obo:IAO_0000115>Relates a gene to condition, such that a mutation in this gene is sufficient to produce the condition and that can be passed on to offspring[modified from orphanet].</obo:IAO_0000115>
         <oboInOwl:created_by rdf:resource="https://orcid.org/0000-0002-6601-2165"/>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-11-05T02:56:40Z</oboInOwl:creation_date>
@@ -1044,12 +1013,11 @@ We also have the outstanding issue of how to aim different definitions to differ
     <!-- http://semanticscience.org/resource/SIO_000229 -->
 
     <owl:ObjectProperty rdf:about="http://semanticscience.org/resource/SIO_000229">
-        <rdfs:subPropertyOf rdf:resource="http://semanticscience.org/resource/SIO_000001"/>
-        <dc11:identifier>SIO_000229</dc11:identifier>
-        <dcterms:description xml:lang="en">has output is a relation between an process and an entity, where the entity is present at the end of the process.</dcterms:description>
-        <resource:subset>core</resource:subset>
-        <resource:subset xml:lang="en">sadi</resource:subset>
-        <rdfs:isDefinedBy rdf:resource="http://semanticscience.org/ontology/sio.owl"/>
+        <obo:IAO_0000115 xml:lang="en">A relation between a process and an entity where the process produce the second entity.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="fr">Une relation entre un processus et une entité qui a été produite par celui-ci.</obo:IAO_0000115>
+        <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
+        <oboInOwl:hasDbXref>SIO:000229</oboInOwl:hasDbXref>
+        <rdfs:label xml:lang="fr">a comme résultat</rdfs:label>
         <rdfs:label xml:lang="en">has output</rdfs:label>
     </owl:ObjectProperty>
     
@@ -1076,43 +1044,6 @@ We also have the outstanding issue of how to aim different definitions to differ
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/PROMOT_3000001 -->
-
-    <owl:DatatypeProperty rdf:about="http://purl.obolibrary.org/obo/PROMOT_3000001">
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
-        <rdfs:label xml:lang="en">has int value</rdfs:label>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/PROMOT_3000002 -->
-
-    <owl:DatatypeProperty rdf:about="http://purl.obolibrary.org/obo/PROMOT_3000002">
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:label xml:lang="en">has string value</rdfs:label>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/PROMOT_3000003 -->
-
-    <owl:DatatypeProperty rdf:about="http://purl.obolibrary.org/obo/PROMOT_3000003">
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
-        <rdfs:label xml:lang="en">has float value</rdfs:label>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/PROMOT_3000004 -->
-
-    <owl:DatatypeProperty rdf:about="http://purl.obolibrary.org/obo/PROMOT_3000004">
-        <rdfs:domain rdf:resource="http://snomed.info/id/298059007"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
-        <rdfs:label xml:lang="en">has date value</rdfs:label>
-    </owl:DatatypeProperty>
     
 
 
@@ -1484,7 +1415,6 @@ We also have the outstanding issue of how to aim different definitions to differ
     <!-- http://id.who.int/icd/entity/1228414013 -->
 
     <owl:Class rdf:about="http://id.who.int/icd/entity/1228414013">
-        <rdfs:subClassOf rdf:resource="http://id.who.int/icd/entity/1394728112"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0120002"/>
         <schema:browserUrl rdf:resource="https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F1228414013"/>
         <obo:IAO_0000115 xml:lang="en">This chapter is about general aspects of carrying out single or multiple tasks, organizing routines and handling stress. These items can be used in conjunction with more specific tasks or actions to identify the underlying features of the execution of tasks under different circumstances.</obo:IAO_0000115>
@@ -2037,25 +1967,6 @@ We also have the outstanding issue of how to aim different definitions to differ
     
 
 
-    <!-- http://id.who.int/icd/entity/1394728112 -->
-
-    <owl:Class rdf:about="http://id.who.int/icd/entity/1394728112">
-        <schema:browserUrl rdf:resource="https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F1394728112"/>
-        <obo:IAO_0000115 xml:lang="en">Activity is the execution of a task or action by an individual.
-Participation is involvement in a life situation.
-Activity limitations are difficulties an individual may have in executing activities.
-Participation restrictions are problems an individual may experience in involvement in life situations.
-The domains for the Activities and Participation component are given in a single list that covers the full range of life areas (from basic learning and watching to composite areas such as social tasks). This component can be used to dedefinition activities (a) or participation (p) or both.
-The two qualifiers for the Activities and Participation component are the performance qualifier and the capacity qualifier. The performance qualifier describes what an individual does in his or her current environment. Because the current environment brings in a societal context, performance as recorded by this qualifier can also be understood as &quot;involvement in a life situation&quot; or &quot;the lived experience&quot; of people in the actual context in which they live. This context includes the environmental factors - all aspects of the physical, social and attitudinal world, which can be coded using the Environmental Factors component.
-The capacity qualifier describes an individual&apos;s ability to execute a task or an action. This qualifier identifies the highest probable level of functioning that a person may reach in a given domain at a given moment. Capacity is measured in a uniform or standard environment, and thus reflects the environmentally adjusted ability of the individual. The Environmental Factors component can be used to describe the features of this uniform or standard environment.
-Both capacity and performance qualifiers can be used with and without assistive devices or personal assistance, and in accordance with the following scale:</obo:IAO_0000115>
-        <rdfs:label xml:lang="es">Actividades y participación</rdfs:label>
-        <rdfs:label xml:lang="en">Activities and participation</rdfs:label>
-        <rdfs:label xml:lang="fr">Activités et participation</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- http://id.who.int/icd/entity/1398348540 -->
 
     <owl:Class rdf:about="http://id.who.int/icd/entity/1398348540">
@@ -2231,7 +2142,6 @@ Both capacity and performance qualifiers can be used with and without assistive 
     <!-- http://id.who.int/icd/entity/1436113794 -->
 
     <owl:Class rdf:about="http://id.who.int/icd/entity/1436113794">
-        <rdfs:subClassOf rdf:resource="http://id.who.int/icd/entity/1394728112"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0120002"/>
         <schema:browserUrl rdf:resource="https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F1436113794"/>
         <obo:IAO_0000115 xml:lang="en">This chapter is about the actions and tasks required to engage in organized social life outside the family, in community, social and civic areas of life.</obo:IAO_0000115>
@@ -2538,7 +2448,6 @@ Both capacity and performance qualifiers can be used with and without assistive 
     <!-- http://id.who.int/icd/entity/1535125568 -->
 
     <owl:Class rdf:about="http://id.who.int/icd/entity/1535125568">
-        <rdfs:subClassOf rdf:resource="http://id.who.int/icd/entity/1394728112"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0120002"/>
         <schema:browserUrl rdf:resource="https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F1535125568"/>
         <obo:IAO_0000115 xml:lang="en">This chapter is about carrying out domestic and everyday actions and tasks. Areas of domestic life include caring for one&apos;s belongings and space, acquiring food, clothing and other necessities, household cleaning and repairing, caring for personal and other household objects, and assisting others.</obo:IAO_0000115>
@@ -2694,7 +2603,6 @@ Both capacity and performance qualifiers can be used with and without assistive 
     <!-- http://id.who.int/icd/entity/1608009360 -->
 
     <owl:Class rdf:about="http://id.who.int/icd/entity/1608009360">
-        <rdfs:subClassOf rdf:resource="http://id.who.int/icd/entity/1394728112"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0120002"/>
         <schema:browserUrl rdf:resource="https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F1608009360"/>
         <obo:IAO_0000115 xml:lang="en">This chapter is about caring for oneself, washing and drying oneself, caring for one&apos;s body and body parts, dressing, eating and drinking, and looking after one&apos;s health.</obo:IAO_0000115>
@@ -3317,6 +3225,18 @@ Generic qualifier with the negative scale, used to indicate the extent or an imp
     
 
 
+    <!-- http://id.who.int/icd/entity/1794398084 -->
+
+    <owl:Class rdf:about="http://id.who.int/icd/entity/1794398084">
+        <rdfs:subClassOf rdf:resource="http://id.who.int/icd/entity/435521956"/>
+        <schema:browserUrl rdf:resource="https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F1794398084"/>
+        <rdfs:label xml:lang="fr">Muscles de la cuisse</rdfs:label>
+        <rdfs:label xml:lang="en">Muscles of thigh</rdfs:label>
+        <rdfs:label xml:lang="es">Músculos del muslo</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://id.who.int/icd/entity/1806589582 -->
 
     <owl:Class rdf:about="http://id.who.int/icd/entity/1806589582">
@@ -3445,7 +3365,6 @@ Generic qualifier with the negative scale, used to indicate the extent or an imp
     <!-- http://id.who.int/icd/entity/1828012543 -->
 
     <owl:Class rdf:about="http://id.who.int/icd/entity/1828012543">
-        <rdfs:subClassOf rdf:resource="http://id.who.int/icd/entity/1394728112"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0110001"/>
         <schema:browserUrl rdf:resource="https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F1828012543"/>
         <obo:IAO_0000115 xml:lang="en">This chapter is about general and specific features of communicating by language, signs and symbols, including receiving and producing messages, carrying on conversations, and using communication devices and techniques.</obo:IAO_0000115>
@@ -3987,7 +3906,6 @@ Generic qualifier with the negative scale, used to indicate the extent or an imp
     <!-- http://id.who.int/icd/entity/2011053685 -->
 
     <owl:Class rdf:about="http://id.who.int/icd/entity/2011053685">
-        <rdfs:subClassOf rdf:resource="http://id.who.int/icd/entity/1394728112"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0110001"/>
         <schema:browserUrl rdf:resource="https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F2011053685"/>
         <obo:IAO_0000115 xml:lang="en">This chapter is about learning, applying the knowledge that is learned, thinking, solving problems, and making decisions.</obo:IAO_0000115>
@@ -4071,7 +3989,6 @@ Generic qualifier with the negative scale, used to indicate the extent or an imp
     <!-- http://id.who.int/icd/entity/2048203604 -->
 
     <owl:Class rdf:about="http://id.who.int/icd/entity/2048203604">
-        <rdfs:subClassOf rdf:resource="http://id.who.int/icd/entity/1394728112"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0110001"/>
         <rdfs:subClassOf>
             <owl:Restriction>
@@ -5308,7 +5225,6 @@ Generic qualifier with the negative scale, used to indicate the extent or an imp
     <!-- http://id.who.int/icd/entity/524305529 -->
 
     <owl:Class rdf:about="http://id.who.int/icd/entity/524305529">
-        <rdfs:subClassOf rdf:resource="http://id.who.int/icd/entity/1394728112"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0120002"/>
         <schema:browserUrl rdf:resource="https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F524305529"/>
         <obo:IAO_0000115 xml:lang="en">This chapter is about carrying out the tasks and actions required to engage in education, work and employment and to conduct economic transactions.</obo:IAO_0000115>
@@ -6799,7 +6715,6 @@ For a further explanation of coding conventions in ICF, refer to Annex 2.</obo:I
     <!-- http://id.who.int/icd/entity/982325691 -->
 
     <owl:Class rdf:about="http://id.who.int/icd/entity/982325691">
-        <rdfs:subClassOf rdf:resource="http://id.who.int/icd/entity/1394728112"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0120002"/>
         <schema:browserUrl rdf:resource="https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F982325691"/>
         <obo:IAO_0000115 xml:lang="en">This chapter is about carrying out the actions and tasks required for basic and complex interactions with people (strangers, friends, relatives, family members and lovers) in a contextually and socially appropriate manner.</obo:IAO_0000115>
@@ -29314,6 +29229,7 @@ For a further explanation of coding conventions in ICF, refer to Annex 2.</obo:I
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/IAO_0000027">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
+        <obo:IAO_0000112 xml:lang="en">Data items include counts of things, analyte concentrations, and statistical summaries.</obo:IAO_0000112>
         <obo:IAO_0000115 xml:lang="en">An information content entity that is intended to be a truthful statement about something (modulo, e.g., measurement precision or other systematic errors) and is constructed/acquired by a method which reliably tends to produce (approximately) truthful statements.</obo:IAO_0000115>
         <obo:IAO_0000116 xml:lang="en">2/2/2009 Alan and Bjoern discussing FACS run output data. This is a data item because it is about the cell population. Each element records an event and is typically further composed a set of measurment data items that record the fluorescent intensity stimulated by one of the lasers.</obo:IAO_0000116>
         <obo:IAO_0000116 xml:lang="en">2009-03-16: data item deliberatly ambiguous: we merged data set and datum to be one entity, not knowing how to define singular versus plural. So data item is more general than datum.</obo:IAO_0000116>
@@ -29329,6 +29245,10 @@ JAR: A data item is an approximately justified approximately true approximate be
         <obo:IAO_0000117 xml:lang="en">PERSON: Alan Ruttenberg</obo:IAO_0000117>
         <obo:IAO_0000117 xml:lang="en">PERSON: Chris Stoeckert</obo:IAO_0000117>
         <obo:IAO_0000117 xml:lang="en">PERSON: Jonathan Rees</obo:IAO_0000117>
+        <oboInOwl:hasDbXref>NCIT:C25712</oboInOwl:hasDbXref>
+        <rdfs:comment>[EURO-NMD] Atalia A et al., EURO-NMD registry: federated FAIR infrastructure, innovative technologies and concepts of a patient-centred registry for rare neuromuscular disorders. Orphanet J Rare Dis. 2024 Feb 14;19(1):66. doi: 10.1186/s13023-024-03059-3. PMID: 38355534; PMCID: PMC10865673.</rdfs:comment>
+        <rdfs:comment>[PROMOT note] [Derived from RD-CDM] [6.3.2 Value] </rdfs:comment>
+        <rdfs:comment>[RD-CDM] Graefe, A.S.L., Hübner, M.R., Rehburg, F. et al. An ontology-based rare disease common data model harmonising international registries, FHIR, and Phenopackets. Sci Data 12, 234 (2025). https://doi.org/10.1038/s41597-025-04558-z</rdfs:comment>
         <rdfs:label xml:lang="en">data item</rdfs:label>
     </owl:Class>
     
@@ -29338,6 +29258,7 @@ JAR: A data item is an approximately justified approximately true approximate be
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/IAO_0000030">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000031"/>
+        <obo:IAO_0000112 xml:lang="en">Examples of information content entites include journal articles, data, graphical layouts, and graphs.</obo:IAO_0000112>
         <obo:IAO_0000115 xml:lang="en">A generically dependent continuant that is about some thing.</obo:IAO_0000115>
         <obo:IAO_0000116 xml:lang="en">2014-03-10: The use of &quot;thing&quot; is intended to be general enough to include universals and configurations (see https://groups.google.com/d/msg/information-ontology/GBxvYZCk1oc/-L6B5fSBBTQJ).</obo:IAO_0000116>
         <obo:IAO_0000116 xml:lang="en">information_content_entity &apos;is_encoded_in&apos; some digital_entity in obi before split (040907). information_content_entity &apos;is_encoded_in&apos; some physical_document in obi before split (040907).
@@ -29371,63 +29292,55 @@ Previous. An information content entity is a non-realizable information entity t
     <!-- http://purl.obolibrary.org/obo/PROMOT_0000001 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0000001">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000002"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0004013"/>
-                <owl:someValuesFrom rdf:resource="http://www.orpha.net/ORDO/Orphanet_377788"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://semanticscience.org/resource/SIO_000217"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/HP_0000005"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://semanticscience.org/resource/SIO_000217"/>
-                <owl:someValuesFrom rdf:resource="http://semanticscience.org/resource/SIO_001268"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <obo:IAO_0000115 xml:lang="en">A sequence alteration that is very rare allele in a population (typically &lt;1%).</obo:IAO_0000115>
-        <obo:IAO_0000115 xml:lang="es">Una alteración genética que es rara en una población.</obo:IAO_0000115>
-        <obo:IAO_0000115 xml:lang="fr">Une altération génétique qui est rare au sein d’une population.</obo:IAO_0000115>
-        <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
-        <oboInOwl:hasDbXref>GENO:0000492</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>NCIT:C18093</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>http://snomed.info/id/106221001</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>http://snomed.info/id/55446002</oboInOwl:hasDbXref>
-        <rdfs:comment>EU-CDE</rdfs:comment>
-        <rdfs:comment>JP: Translated to spanish using Bing Translator</rdfs:comment>
-        <rdfs:comment>[EURO-NMD] Atalia A et al., EURO-NMD registry: federated FAIR infrastructure, innovative technologies and concepts of a patient-centred registry for rare neuromuscular disorders. Orphanet J Rare Dis. 2024 Feb 14;19(1):66. doi: 10.1186/s13023-024-03059-3. PMID: 38355534; PMCID: PMC10865673.</rdfs:comment>
-        <rdfs:comment>[PROMOT NOTE: derived from EURO-NMD] </rdfs:comment>
-        <rdfs:comment>[PROMOT note] [Derived from RD-CDM] [6.1.1 Genomic Diagnosis]</rdfs:comment>
-        <rdfs:comment>[RD-CDM] Graefe, A.S.L., Hübner, M.R., Rehburg, F. et al. An ontology-based rare disease common data model harmonising international registries, FHIR, and Phenopackets. Sci Data 12, 234 (2025). https://doi.org/10.1038/s41597-025-04558-z</rdfs:comment>
-        <rdfs:label xml:lang="en">genetic mutation</rdfs:label>
-        <rdfs:label xml:lang="es">mutación genética</rdfs:label>
-        <rdfs:label xml:lang="fr">mutation génetique</rdfs:label>
-        <rdfs:seeAlso rdf:resource="http://purl.obolibrary.org/obo/GENO_0000492"/>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0000001"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget xml:lang="en">A sequence alteration that is very rare allele in a population (typically &lt;1%).</owl:annotatedTarget>
-        <obo:IAO_0000119>GENO:0000492</obo:IAO_0000119>
-    </owl:Axiom>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/PROMOT_0000002 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0000002">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0000001"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0001060"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0004013"/>
                 <owl:someValuesFrom rdf:resource="http://www.orpha.net/ORDO/Orphanet_270"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <obo:IAO_0000115 xml:lang="en">A sequence alteration that is causal germline mutation in Oculopharyngeal Muscular Dystrophy.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">OPMD related mutation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROMOT_0000002 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0000002">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0001060"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0004013"/>
+                <owl:someValuesFrom rdf:resource="http://www.orpha.net/ORDO/Orphanet_590"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000115 xml:lang="en">A sequence alteration that is causal germline mutation in Congenital Myasthenic Syndrom.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">CMS related mutation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROMOT_0000003 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0000003">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0001060"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0004013"/>
+                <owl:someValuesFrom rdf:resource="http://www.orpha.net/ORDO/Orphanet_97245"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000115 xml:lang="en">A sequence alteration that is causal germline mutation in Congenital Myopathy.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">CMYO related mutation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROMOT_0000004 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0000004">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0000001"/>
         <obo:IAO_0000115 xml:lang="en">A sequence alteration located within the PABPN1 gene.</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="es">Una alteración genética ubicada en el gen PABPN1.</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="fr">Une altération génétique située au niveau du gène PABPN1.</obo:IAO_0000115>
@@ -29443,17 +29356,10 @@ Previous. An information content entity is a non-realizable information entity t
     
 
 
-    <!-- http://purl.obolibrary.org/obo/PROMOT_0000003 -->
+    <!-- http://purl.obolibrary.org/obo/PROMOT_0000005 -->
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0000003">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0000001"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0004013"/>
-                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
-                <owl:onClass rdf:resource="http://www.orpha.net/ORDO/Orphanet_97245"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0000005">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0000003"/>
         <obo:IAO_0000115 xml:lang="en">A sequence alteration located within the RYR1 gene.</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="es">Una alteración genética ubicada en el gen RYR1.</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="fr">Une altération génétique située au niveau du gène RYR1.</obo:IAO_0000115>
@@ -29467,17 +29373,10 @@ Previous. An information content entity is a non-realizable information entity t
     
 
 
-    <!-- http://purl.obolibrary.org/obo/PROMOT_0000004 -->
+    <!-- http://purl.obolibrary.org/obo/PROMOT_0000006 -->
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0000004">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0000001"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0004013"/>
-                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
-                <owl:onClass rdf:resource="http://www.orpha.net/ORDO/Orphanet_97245"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0000006">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0000003"/>
         <obo:IAO_0000115 xml:lang="en">A sequence alteration located within the TTN gene.</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="es">Una alteración genética ubicada en el gen TTN.</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="fr">Une altération génétique située au niveau du gène TTN.</obo:IAO_0000115>
@@ -29491,17 +29390,10 @@ Previous. An information content entity is a non-realizable information entity t
     
 
 
-    <!-- http://purl.obolibrary.org/obo/PROMOT_0000005 -->
+    <!-- http://purl.obolibrary.org/obo/PROMOT_0000007 -->
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0000005">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0000001"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0004013"/>
-                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
-                <owl:onClass rdf:resource="http://www.orpha.net/ORDO/Orphanet_97245"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0000007">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0000003"/>
         <obo:IAO_0000115 xml:lang="en">A sequence alteration located within the NEB gene.</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="es">Una alteración genética ubicada en el gen NEB.</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="fr">Une altération génétique située au niveau du gène NEB.</obo:IAO_0000115>
@@ -29515,17 +29407,10 @@ Previous. An information content entity is a non-realizable information entity t
     
 
 
-    <!-- http://purl.obolibrary.org/obo/PROMOT_0000006 -->
+    <!-- http://purl.obolibrary.org/obo/PROMOT_0000008 -->
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0000006">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0000001"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0004013"/>
-                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
-                <owl:onClass rdf:resource="http://www.orpha.net/ORDO/Orphanet_97245"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0000008">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0000003"/>
         <obo:IAO_0000115 xml:lang="en">A sequence alteration located within the MTM1 gene.</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="es">Una alteración genética ubicada en el gen MTM1.</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="fr">Une altération génétique située au niveau du gène MTM1.</obo:IAO_0000115>
@@ -29539,17 +29424,10 @@ Previous. An information content entity is a non-realizable information entity t
     
 
 
-    <!-- http://purl.obolibrary.org/obo/PROMOT_0000007 -->
+    <!-- http://purl.obolibrary.org/obo/PROMOT_0000009 -->
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0000007">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0000001"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0004013"/>
-                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
-                <owl:onClass rdf:resource="http://www.orpha.net/ORDO/Orphanet_97245"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0000009">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0000003"/>
         <obo:IAO_0000115 xml:lang="en">A sequence alteration located within the ACTA1 gene.</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="es">Una alteración genética ubicada en el gen ACTA1.</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="fr">Une altération génétique située au niveau du gène ACTA1.</obo:IAO_0000115>
@@ -29563,17 +29441,10 @@ Previous. An information content entity is a non-realizable information entity t
     
 
 
-    <!-- http://purl.obolibrary.org/obo/PROMOT_0000008 -->
+    <!-- http://purl.obolibrary.org/obo/PROMOT_0000010 -->
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0000008">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0000001"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0004013"/>
-                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
-                <owl:onClass rdf:resource="http://www.orpha.net/ORDO/Orphanet_97245"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0000010">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0000003"/>
         <obo:IAO_0000115 xml:lang="en">A sequence alteration located within the SELENON gene.</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="es">Una alteración genética ubicada en el gen SELENON.</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="fr">Une altération génétique située au niveau du gène SELENON.</obo:IAO_0000115>
@@ -29587,17 +29458,10 @@ Previous. An information content entity is a non-realizable information entity t
     
 
 
-    <!-- http://purl.obolibrary.org/obo/PROMOT_0000009 -->
+    <!-- http://purl.obolibrary.org/obo/PROMOT_0000011 -->
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0000009">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0000001"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0004013"/>
-                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
-                <owl:onClass rdf:resource="http://www.orpha.net/ORDO/Orphanet_590"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0000011">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0000002"/>
         <obo:IAO_0000115 xml:lang="en">A sequence alteration located within the CHRNE gene.</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="es">Una alteración genética ubicada en el gen CHRNE.</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="fr">Une altération génétique située au niveau du gène CHRNE.</obo:IAO_0000115>
@@ -29611,17 +29475,10 @@ Previous. An information content entity is a non-realizable information entity t
     
 
 
-    <!-- http://purl.obolibrary.org/obo/PROMOT_0000010 -->
+    <!-- http://purl.obolibrary.org/obo/PROMOT_0000012 -->
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0000010">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0000001"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0004013"/>
-                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
-                <owl:onClass rdf:resource="http://www.orpha.net/ORDO/Orphanet_590"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0000012">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0000002"/>
         <obo:IAO_0000115 xml:lang="en">A sequence alteration located within the DOK7 gene.</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="es">Una alteración genética ubicada en el gen DOK7.</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="fr">Une altération génétique située au niveau du gène DOK7.</obo:IAO_0000115>
@@ -29635,17 +29492,10 @@ Previous. An information content entity is a non-realizable information entity t
     
 
 
-    <!-- http://purl.obolibrary.org/obo/PROMOT_0000011 -->
+    <!-- http://purl.obolibrary.org/obo/PROMOT_0000013 -->
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0000011">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0000001"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0004013"/>
-                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
-                <owl:onClass rdf:resource="http://www.orpha.net/ORDO/Orphanet_590"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0000013">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0000002"/>
         <obo:IAO_0000115 xml:lang="en">A sequence alteration located within the COLQ gene.</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="es">Una alteración genética ubicada en el gen COLQ.</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="fr">Une altération génétique située au niveau du gène COLQ.</obo:IAO_0000115>
@@ -29659,17 +29509,10 @@ Previous. An information content entity is a non-realizable information entity t
     
 
 
-    <!-- http://purl.obolibrary.org/obo/PROMOT_0000012 -->
+    <!-- http://purl.obolibrary.org/obo/PROMOT_0000014 -->
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0000012">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0000001"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0004013"/>
-                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
-                <owl:onClass rdf:resource="http://www.orpha.net/ORDO/Orphanet_590"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0000014">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0000002"/>
         <obo:IAO_0000115 xml:lang="en">A sequence alteration located within the RAPSN gene.</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="es">Una alteración genética ubicada en el gen RAPSN.</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="fr">Une altération génétique située au niveau du gène RAPSN.</obo:IAO_0000115>
@@ -29683,17 +29526,10 @@ Previous. An information content entity is a non-realizable information entity t
     
 
 
-    <!-- http://purl.obolibrary.org/obo/PROMOT_0000013 -->
+    <!-- http://purl.obolibrary.org/obo/PROMOT_0000015 -->
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0000013">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0000001"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0004013"/>
-                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
-                <owl:onClass rdf:resource="http://www.orpha.net/ORDO/Orphanet_590"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0000015">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0000002"/>
         <obo:IAO_0000115 xml:lang="en">A sequence alteration located within the GFPT1 gene.</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="es">Una alteración genética ubicada en el gen GFPT1.</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="fr">Une altération génétique située au niveau du gène GFPT1.</obo:IAO_0000115>
@@ -29707,17 +29543,10 @@ Previous. An information content entity is a non-realizable information entity t
     
 
 
-    <!-- http://purl.obolibrary.org/obo/PROMOT_0000014 -->
+    <!-- http://purl.obolibrary.org/obo/PROMOT_0000016 -->
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0000014">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0000001"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0004013"/>
-                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
-                <owl:onClass rdf:resource="http://www.orpha.net/ORDO/Orphanet_590"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0000016">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0000002"/>
         <obo:IAO_0000115 xml:lang="en">A sequence alteration located within the GMPPB gene.</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="es">Una alteración genética ubicada en el gen GMPPB.</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="fr">Une altération génétique située au niveau du gène GMPPB.</obo:IAO_0000115>
@@ -31407,19 +31236,7 @@ Previous. An information content entity is a non-realizable information entity t
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROMOT_2000004"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0000001"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROMOT_2000007"/>
-                <owl:someValuesFrom rdf:resource="http://snomed.info/id/257192006"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROMOT_2000007"/>
-                <owl:someValuesFrom rdf:resource="http://snomed.info/id/360296002"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/SO_0001060"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -32416,19 +32233,6 @@ Previous. An information content entity is a non-realizable information entity t
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/HP_0033466"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000091"/>
-                <owl:someValuesFrom rdf:resource="http://snomed.info/id/447007003"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000091"/>
-                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onClass rdf:resource="http://snomed.info/id/447007003"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <obo:IAO_0000115 xml:lang="fr">Le test mesurant la force de préhension permet de quantifier la force maximale volontaire des muscles de la main et de l’avant-bras, lors d’une action de flexion des doigts. Il s’agit d’un indicateur du niveau de fonction de la main.</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="en">Test measuring the grip force allows quantifying the maximum voluntary force of the muscles of the hand and forearm, during a finger flexion action. This is an indicator of the level of hand function.</obo:IAO_0000115>
         <oboInOwl:hasDbXref>http://snomed.info/id/445993006</oboInOwl:hasDbXref>
@@ -32491,16 +32295,26 @@ Previous. An information content entity is a non-realizable information entity t
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0110001">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000015"/>
+        <obo:IAO_0000115 xml:lang="es">Actividad es la realización de una tarea o acción por parte de una persona. Las limitaciones en la actividad son dificultades que una persona puede tener para realizar una tarea o acción.</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="en">An activity is the execution of a task or action by an individual. Activity limitations are difficulties an individual may have in executing activities.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="fr">Classification internationale du fonctionnement, du handicap et de la santé</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
+        <rdfs:label xml:lang="es">Actividad</rdfs:label>
         <rdfs:label xml:lang="en">Activity</rdfs:label>
+        <rdfs:label xml:lang="fr">Activité</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://id.who.int/icd/entity/1394728112"/>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0110001"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget xml:lang="es">Actividad es la realización de una tarea o acción por parte de una persona. Las limitaciones en la actividad son dificultades que una persona puede tener para realizar una tarea o acción.</owl:annotatedTarget>
+        <obo:IAO_0000119>Clasificación Internacional del Funcionamiento, de la Discapacidad y de la Salud</obo:IAO_0000119>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0110001"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget xml:lang="en">An activity is the execution of a task or action by an individual. Activity limitations are difficulties an individual may have in executing activities.</owl:annotatedTarget>
-        <obo:IAO_0000119>International Classification of Functioning, Disability and Health</obo:IAO_0000119>
+        <obo:IAO_0000119>International Classification of Functioning, Disability and Health (ICF)</obo:IAO_0000119>
     </owl:Axiom>
     
 
@@ -32510,16 +32324,110 @@ Previous. An information content entity is a non-realizable information entity t
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0120002">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000015"/>
         <obo:IAO_0000115 xml:lang="en">A participation is an involvement in a life situation. Participation restrictions are problems an individual may experience in involvement in life situations</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="fr">Classification internationale du fonctionnement, du handicap et de la santé</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="es">Participación es involucrarse en una situación de la vida cotidiana. Las restricciones en la participación son problemas que una persona puede experimentar al involucrarse en situaciones de la vida cotidiana.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
+        <rdfs:label xml:lang="es">Participación</rdfs:label>
         <rdfs:label xml:lang="en">Participation</rdfs:label>
+        <rdfs:label xml:lang="fr">Participation</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://id.who.int/icd/entity/1394728112"/>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0120002"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget xml:lang="en">A participation is an involvement in a life situation. Participation restrictions are problems an individual may experience in involvement in life situations</owl:annotatedTarget>
-        <obo:IAO_0000119>International Classification of Functioning, Disability and Health</obo:IAO_0000119>
+        <obo:IAO_0000119>International Classification of Functioning, Disability and Health (ICF)</obo:IAO_0000119>
     </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0120002"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget xml:lang="es">Participación es involucrarse en una situación de la vida cotidiana. Las restricciones en la participación son problemas que una persona puede experimentar al involucrarse en situaciones de la vida cotidiana.</owl:annotatedTarget>
+        <obo:IAO_0000119>Clasificación Internacional del Funcionamiento, de la Discapacidad y de la Salud</obo:IAO_0000119>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SO_0001060 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SO_0001060">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000002"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0004013"/>
+                <owl:someValuesFrom rdf:resource="http://www.orpha.net/ORDO/Orphanet_377788"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://semanticscience.org/resource/SIO_000217"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/SO_0001762"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000115>A sequence_variant is a non exact copy of a sequence_feature or genome exhibiting one or more sequence_alteration.</obo:IAO_0000115>
+        <oboInOwl:hasDbXref>GENO:0000492</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>NCIT:C18093</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>http://snomed.info/id/106221001</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>http://snomed.info/id/55446002</oboInOwl:hasDbXref>
+        <rdfs:comment>EU-CDE</rdfs:comment>
+        <rdfs:comment>[EURO-NMD] Atalia A et al., EURO-NMD registry: federated FAIR infrastructure, innovative technologies and concepts of a patient-centred registry for rare neuromuscular disorders. Orphanet J Rare Dis. 2024 Feb 14;19(1):66. doi: 10.1186/s13023-024-03059-3. PMID: 38355534; PMCID: PMC10865673.</rdfs:comment>
+        <rdfs:comment>[PROMOT NOTE: derived from EURO-NMD] </rdfs:comment>
+        <rdfs:comment>[PROMOT note] [Derived from RD-CDM] [6.1.1 Genomic Diagnosis]</rdfs:comment>
+        <rdfs:comment>[RD-CDM] Graefe, A.S.L., Hübner, M.R., Rehburg, F. et al. An ontology-based rare disease common data model harmonising international registries, FHIR, and Phenopackets. Sci Data 12, 234 (2025). https://doi.org/10.1038/s41597-025-04558-z</rdfs:comment>
+        <rdfs:label>sequence_variant</rdfs:label>
+        <rdfs:label xml:lang="en">sequence_variant</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/SO_0001060"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A sequence_variant is a non exact copy of a sequence_feature or genome exhibiting one or more sequence_alteration.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>SO:ke</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SO_0001762 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SO_0001762">
+        <obo:IAO_0000115>A quality inhering in a variant by virtue of its origin.</obo:IAO_0000115>
+        <rdfs:label>variant_origin</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/SO_0001762"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A quality inhering in a variant by virtue of its origin.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>PMID:17597783</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>SO:ke</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SO_0001775 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SO_0001775">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0001762"/>
+        <obo:IAO_0000115>A variant in the genetic material inherited from the mother.</obo:IAO_0000115>
+        <rdfs:label>maternal_variant</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SO_0001776 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SO_0001776">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0001762"/>
+        <obo:IAO_0000115>A variant in the genetic material inherited from the father.</obo:IAO_0000115>
+        <rdfs:label>paternal_variant</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SO_0001781 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SO_0001781">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0001762"/>
+        <obo:IAO_0000115>A variant arising in the offspring that is not found in either of the parents.</obo:IAO_0000115>
+        <rdfs:label>de_novo_variant</rdfs:label>
+    </owl:Class>
     
 
 
@@ -36312,7 +36220,7 @@ pulmonary arterial and venous trees. Examples: There is only one heart.</rdfs:co
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://semanticscience.org/resource/SIO_000218"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0000001"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/SO_0001060"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <dc11:identifier>SIO_001268</dc11:identifier>
@@ -37454,23 +37362,6 @@ pulmonary arterial and venous trees. Examples: There is only one heart.</rdfs:co
         <skos:notation>439272007</skos:notation>
         <skos:prefLabel xml:lang="en">Date of procedure</skos:prefLabel>
         <skos:prefLabel xml:lang="es">fecha del procedimiento</skos:prefLabel>
-    </owl:Class>
-    
-
-
-    <!-- http://snomed.info/id/447007003 -->
-
-    <owl:Class rdf:about="http://snomed.info/id/447007003">
-        <rdfs:subClassOf rdf:resource="http://snomed.info/id/363787002"/>
-        <sct-ext:definitionStatus>Primitif</sct-ext:definitionStatus>
-        <sct-ext:fsn xml:lang="en">Jamar hydraulic hand dynamometer score (observable entity)</sct-ext:fsn>
-        <dc11:type>observable entity</dc11:type>
-        <rdfs:label xml:lang="en">Jamar hydraulic hand dynamometer score</rdfs:label>
-        <rdfs:label xml:lang="en">Jamar hydraulic hand dynamometer score (observable entity)</rdfs:label>
-        <rdfs:label xml:lang="es">puntaje de dinamómetro manual hidráulico de Jamar (entidad observable)</rdfs:label>
-        <skos:notation>447007003</skos:notation>
-        <skos:prefLabel xml:lang="en">Jamar hydraulic hand dynamometer score</skos:prefLabel>
-        <skos:prefLabel xml:lang="es">puntaje de dinamómetro manual hidráulico de Jamar</skos:prefLabel>
     </owl:Class>
     
 
@@ -38798,7 +38689,7 @@ pulmonary arterial and venous trees. Examples: There is only one heart.</rdfs:co
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0004003"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0000002"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0000001"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -39191,13 +39082,6 @@ pulmonary arterial and venous trees. Examples: There is only one heart.</rdfs:co
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0032011"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0004003"/>
-                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
-                <owl:onClass rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0000002"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <efo:alternative_term xml:lang="en">OPMD</efo:alternative_term>
         <efo:definition xml:lang="en">A rare, adult-onset, progressive myopathy characterized by progressive eyelid ptosis, ophthalmoplegia, dysphagia, dysarthria and proximal limb weakness.</efo:definition>
         <efo:definition_citation xml:lang="en">Orphanet</efo:definition_citation>
@@ -39276,13 +39160,19 @@ pulmonary arterial and venous trees. Examples: There is only one heart.</rdfs:co
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0004003"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0000001"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/SO_0001060"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0004029"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/HP_0000118"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://semanticscience.org/resource/SIO_000217"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/HP_0000005"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <efo:definition xml:lang="en">A disorder with homogeneous therapeutic possibilities and an identified pathophysiological mechanism. Developmental anomalies are excluded.</efo:definition>
@@ -39301,6 +39191,12 @@ pulmonary arterial and venous trees. Examples: There is only one heart.</rdfs:co
 
     <owl:Class rdf:about="http://www.orpha.net/ORDO/Orphanet_590">
         <rdfs:subClassOf rdf:resource="http://www.orpha.net/ORDO/Orphanet_377788"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0004003"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0000002"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0004029"/>
@@ -39823,48 +39719,6 @@ pulmonary arterial and venous trees. Examples: There is only one heart.</rdfs:co
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0032015"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0004003"/>
-                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
-                <owl:onClass rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0000009"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0004003"/>
-                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
-                <owl:onClass rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0000010"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0004003"/>
-                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
-                <owl:onClass rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0000011"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0004003"/>
-                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
-                <owl:onClass rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0000012"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0004003"/>
-                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
-                <owl:onClass rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0000013"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0004003"/>
-                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
-                <owl:onClass rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0000014"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <efo:alternative_term xml:lang="en">CMS</efo:alternative_term>
         <efo:definition xml:lang="en">Congenital myasthenic syndrome (CMS) is a group of genetic disorders of impaired neuromuscular transmission at the motor endplate characterized by fatigable muscle weakness.</efo:definition>
         <efo:definition_citation xml:lang="en">Orphanet</efo:definition_citation>
@@ -40144,7 +39998,7 @@ pulmonary arterial and venous trees. Examples: There is only one heart.</rdfs:co
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0004003"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0000001"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/SO_0001060"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -40773,44 +40627,15 @@ pulmonary arterial and venous trees. Examples: There is only one heart.</rdfs:co
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="http://semanticscience.org/resource/SIO_000217"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/HP_0000005"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0004003"/>
                 <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
                 <owl:onClass rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0000003"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0004003"/>
-                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
-                <owl:onClass rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0000004"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0004003"/>
-                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
-                <owl:onClass rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0000005"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0004003"/>
-                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
-                <owl:onClass rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0000006"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0004003"/>
-                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
-                <owl:onClass rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0000007"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0004003"/>
-                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
-                <owl:onClass rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0000008"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <oboInOwl:hasDbXref>ICD-10:G71.2</oboInOwl:hasDbXref>

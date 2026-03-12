@@ -1,10 +1,9 @@
 format-version: 1.2
-data-version: releases/2026-03-09
-date: 09:03:2026 17:08
+data-version: releases/2026-03-12
+date: 12:03:2026 17:19
 subsetdef: hposlim_core ""
 subsetdef: http://purl.obolibrary.org/obo/valid_for_go_gp2term ""
 subsetdef: ro-eco ""
-subsetdef: RO:0002259 ""
 idspace: ace_lexicon http://attempto.ifi.uzh.ch/ace_lexicon# 
 idspace: babelon https://w3id.org/babelon/ 
 idspace: BIOLINK https://w3id.org/biolink/vocab/ 
@@ -44,6 +43,7 @@ idspace: swrl http://www.w3.org/2003/11/swrl#
 idspace: swrla http://swrl.stanford.edu/ontologies/3.3/swrla.owl# 
 idspace: swrlb http://www.w3.org/2003/11/swrlb# 
 idspace: void http://rdfs.org/ns/void# 
+remark: Additional acknowledgements:\n	- Rachel Thompson\n	- Thomas Bongivault, MSc\n	- Marc Vincent, PhD\n
 remark: Additional acknowledgements:\n	- Thomas Bongivault, MSc\n	- Marc Vincent, PhD\n
 ontology: promot
 property_value: dc11:contributor "Anita Burgun MD, PhD\nhttps://orcid.org/0000-0001-6855-4366" xsd:string
@@ -61,7 +61,7 @@ property_value: dc11:creator "Paul Fabry MD, PhD student\nhttps://orcid.org/0000
 property_value: dcterms:description "Ontology for modeling the three following neuromuscular diseases : OPMD, Congenital myopathies and Congenital myastenic syndroms. It aims to be also an ontology for building the PROMOT project relational database." xsd:string
 property_value: dcterms:license https://creativecommons.org/licenses/by-nc-sa/4.0/
 property_value: dcterms:title "PROMOT ontology" xsd:string
-property_value: owl:versionInfo "2026-03-09" xsd:string
+property_value: owl:versionInfo "2026-03-12" xsd:string
 property_value: seeAlso "More about PROMOT initiative at https://www.promotinitiative.com/\n" xsd:string
 
 [Term]
@@ -3169,8 +3169,8 @@ name: Poor suck
 def: "An inadequate sucking reflex, resulting in the difficult of newborns to be breast-fed." [https://orcid.org/0000-0002-0736-9199]
 comment: Congenital myasthenic syndrom HPO DB associations
 synonym: "Poor suck" EXACT layperson []
-synonym: "Poor sucking" EXACT []
 synonym: "Poor sucking" EXACT layperson [https://orcid.org/0000-0002-5316-1399]
+synonym: "Poor sucking" EXACT []
 synonym: "Sucking weakness" EXACT []
 xref: UMLS:C1837142
 is_a: HP:0008872 ! Feeding difficulties in infancy
@@ -5874,8 +5874,8 @@ id: HP:0030205
 name: Increased jitter at single fiber EMG
 def: "The variation in the time interval between the two action potentials of the same motor unit is called jitter. This term therefore applies to increased variability in the interval between successive action potentials of the same motor unit, which is measured by electromyography (EMG)." [HPO_CONTRIBUTOR:UK_rheller, PMID:21654930]
 comment: Congenital myasthenic syndrom HPO DB associations
-synonym: "Increased jitter at single fibre electromyography" EXACT uk_spelling []
 synonym: "Increased jitter at single fibre electromyography" EXACT []
+synonym: "Increased jitter at single fibre electromyography" EXACT uk_spelling []
 synonym: "Increased jitter at single fibre EMG" EXACT uk_spelling []
 xref: UMLS:C4021045
 is_a: HP:0030006 ! Single fiber EMG abnormality
@@ -6731,7 +6731,10 @@ property_value: IAO:0000233 https://github.com/obophenotype/human-phenotype-onto
 id: IAO:0000027
 name: data item
 def: "An information content entity that is intended to be a truthful statement about something (modulo, e.g., measurement precision or other systematic errors) and is constructed/acquired by a method which reliably tends to produce (approximately) truthful statements." []
+comment: [EURO-NMD] Atalia A et al., EURO-NMD registry: federated FAIR infrastructure, innovative technologies and concepts of a patient-centred registry for rare neuromuscular disorders. Orphanet J Rare Dis. 2024 Feb 14;19(1):66. doi: 10.1186/s13023-024-03059-3. PMID: 38355534; PMCID: PMC10865673.
+xref: NCIT:C25712
 is_a: IAO:0000030 ! information content entity
+property_value: IAO:0000112 "Data items include counts of things, analyte concentrations, and statistical summaries." xsd:string
 property_value: IAO:0000116 "2/2/2009 Alan and Bjoern discussing FACS run output data. This is a data item because it is about the cell population. Each element records an event and is typically further composed a set of measurment data items that record the fluorescent intensity stimulated by one of the lasers." xsd:string
 property_value: IAO:0000116 "2009-03-16: data item deliberatly ambiguous: we merged data set and datum to be one entity, not knowing how to define singular versus plural. So data item is more general than datum." xsd:string
 property_value: IAO:0000116 "2009-03-16: removed datum as alternative term as datum specifically refers to singular form, and is thus not an exact synonym." xsd:string
@@ -6746,6 +6749,7 @@ id: IAO:0000030
 name: information content entity
 def: "A generically dependent continuant that is about some thing." []
 is_a: BFO:0000031 ! generically dependent continuant
+property_value: IAO:0000112 "Examples of information content entites include journal articles, data, graphical layouts, and graphs." xsd:string
 property_value: IAO:0000116 "2014-03-10: The use of \"thing\" is intended to be general enough to include universals and configurations (see https://groups.google.com/d/msg/information-ontology/GBxvYZCk1oc/-L6B5fSBBTQJ)." xsd:string
 property_value: IAO:0000116 "information_content_entity 'is_encoded_in' some digital_entity in obi before split (040907). information_content_entity 'is_encoded_in' some physical_document in obi before split (040907).\n\nPrevious. An information content entity is a non-realizable information entity that 'is encoded in' some digital or physical entity." xsd:string
 property_value: IAO:0000117 "PERSON: Chris Stoeckert" xsd:string
@@ -6906,8 +6910,7 @@ property_value: schema:browserUrl https://icd.who.int/dev11/f/en#/http%3A%2F%2Fi
 id: ICF:1228414013
 name: General tasks and demands
 def: "This chapter is about general aspects of carrying out single or multiple tasks, organizing routines and handling stress. These items can be used in conjunction with more specific tasks or actions to identify the underlying features of the execution of tasks under different circumstances." []
-is_a: ICF:1394728112 ! Actividades y participación
-is_a: PROMOT:0120002 ! Participation
+is_a: PROMOT:0120002 ! Participación
 property_value: schema:browserUrl https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F1228414013
 
 [Term]
@@ -7064,12 +7067,6 @@ relationship: RO:0002331 ICF:1328675264 ! involved in Comer
 property_value: schema:browserUrl https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F1389818830
 
 [Term]
-id: ICF:1394728112
-name: Actividades y participación
-def: "Activity is the execution of a task or action by an individual.\nParticipation is involvement in a life situation.\nActivity limitations are difficulties an individual may have in executing activities.\nParticipation restrictions are problems an individual may experience in involvement in life situations.\nThe domains for the Activities and Participation component are given in a single list that covers the full range of life areas (from basic learning and watching to composite areas such as social tasks). This component can be used to dedefinition activities (a) or participation (p) or both.\nThe two qualifiers for the Activities and Participation component are the performance qualifier and the capacity qualifier. The performance qualifier describes what an individual does in his or her current environment. Because the current environment brings in a societal context, performance as recorded by this qualifier can also be understood as \"involvement in a life situation\" or \"the lived experience\" of people in the actual context in which they live. This context includes the environmental factors - all aspects of the physical, social and attitudinal world, which can be coded using the Environmental Factors component.\nThe capacity qualifier describes an individual's ability to execute a task or an action. This qualifier identifies the highest probable level of functioning that a person may reach in a given domain at a given moment. Capacity is measured in a uniform or standard environment, and thus reflects the environmentally adjusted ability of the individual. The Environmental Factors component can be used to describe the features of this uniform or standard environment.\nBoth capacity and performance qualifiers can be used with and without assistive devices or personal assistance, and in accordance with the following scale:" []
-property_value: schema:browserUrl https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F1394728112
-
-[Term]
 id: ICF:1398348540
 name: Cuidado de la propia salud
 def: "Ensuring physical comfort, health and physical and mental well-being, such as by maintaining a balanced diet, and an appropriate level of physical activity, keeping warm or cool, avoiding harms to health, following safe sex practices, such as using condoms, getting immunizations and regular physical examinations." []
@@ -7157,8 +7154,7 @@ property_value: skos:altLabel "Functions involved in stretch motor reflex" xsd:s
 id: ICF:1436113794
 name: Community, social and civic life
 def: "This chapter is about the actions and tasks required to engage in organized social life outside the family, in community, social and civic areas of life." []
-is_a: ICF:1394728112 ! Actividades y participación
-is_a: PROMOT:0120002 ! Participation
+is_a: PROMOT:0120002 ! Participación
 property_value: schema:browserUrl https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F1436113794
 
 [Term]
@@ -7268,8 +7264,7 @@ property_value: schema:browserUrl https://icd.who.int/dev11/f/en#/http%3A%2F%2Fi
 id: ICF:1535125568
 name: Domestic life
 def: "This chapter is about carrying out domestic and everyday actions and tasks. Areas of domestic life include caring for one's belongings and space, acquiring food, clothing and other necessities, household cleaning and repairing, caring for personal and other household objects, and assisting others." []
-is_a: ICF:1394728112 ! Actividades y participación
-is_a: PROMOT:0120002 ! Participation
+is_a: PROMOT:0120002 ! Participación
 property_value: schema:browserUrl https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F1535125568
 
 [Term]
@@ -7317,8 +7312,7 @@ property_value: schema:exclusion "Sensations associated with hearing and vestibu
 id: ICF:1608009360
 name: Autocuidado
 def: "This chapter is about caring for oneself, washing and drying oneself, caring for one's body and body parts, dressing, eating and drinking, and looking after one's health." []
-is_a: ICF:1394728112 ! Actividades y participación
-is_a: PROMOT:0120002 ! Participation
+is_a: PROMOT:0120002 ! Participación
 property_value: schema:browserUrl https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F1608009360
 
 [Term]
@@ -7508,6 +7502,12 @@ property_value: schema:browserUrl https://icd.who.int/dev11/f/en#/http%3A%2F%2Fi
 property_value: skos:altLabel " Functions involved in power of isolated muscles and muscle groups" xsd:string
 
 [Term]
+id: ICF:1794398084
+name: Muscles de la cuisse
+is_a: ICF:435521956 ! Estructura del muslo
+property_value: schema:browserUrl https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F1794398084
+
+[Term]
 id: ICF:1806589582
 name: Biting
 def: "Functions of cutting into, piercing or tearing off food with the front teeth." []
@@ -7550,8 +7550,7 @@ property_value: schema:browserUrl https://icd.who.int/dev11/f/en#/http%3A%2F%2Fi
 id: ICF:1828012543
 name: Communication
 def: "This chapter is about general and specific features of communicating by language, signs and symbols, including receiving and producing messages, carrying on conversations, and using communication devices and techniques." []
-is_a: ICF:1394728112 ! Actividades y participación
-is_a: PROMOT:0110001 ! Activity
+is_a: PROMOT:0110001 ! Actividad
 property_value: schema:browserUrl https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F1828012543
 
 [Term]
@@ -7735,8 +7734,7 @@ property_value: schema:exclusion "Walking" xsd:string {schema:foundationReferenc
 id: ICF:2011053685
 name: Apprentissage et application des connaissances
 def: "This chapter is about learning, applying the knowledge that is learned, thinking, solving problems, and making decisions." []
-is_a: ICF:1394728112 ! Actividades y participación
-is_a: PROMOT:0110001 ! Activity
+is_a: PROMOT:0110001 ! Actividad
 property_value: schema:browserUrl https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F2011053685
 
 [Term]
@@ -7773,8 +7771,7 @@ property_value: schema:browserUrl https://icd.who.int/dev11/f/en#/http%3A%2F%2Fi
 id: ICF:2048203604
 name: Mobility
 def: "This chapter is about moving by changing body position or location or by transferring from one place to another, by carrying, moving or manipulating objects, by walking, running or climbing, and by using various forms of transportation." []
-is_a: ICF:1394728112 ! Actividades y participación
-is_a: PROMOT:0110001 ! Activity
+is_a: PROMOT:0110001 ! Actividad
 relationship: PROMOT:2000006 HP:0000467 ! est affecté par Neck muscle weakness
 relationship: PROMOT:2000006 HP:0001761 ! est affecté par Pes cavus
 relationship: PROMOT:2000006 HP:0002172 ! est affecté par Postural instability
@@ -8201,8 +8198,7 @@ property_value: schema:browserUrl https://icd.who.int/dev11/f/en#/http%3A%2F%2Fi
 id: ICF:524305529
 name: Grands domaines de la vie
 def: "This chapter is about carrying out the tasks and actions required to engage in education, work and employment and to conduct economic transactions." []
-is_a: ICF:1394728112 ! Actividades y participación
-is_a: PROMOT:0120002 ! Participation
+is_a: PROMOT:0120002 ! Participación
 property_value: schema:browserUrl https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F524305529
 
 [Term]
@@ -8747,8 +8743,7 @@ property_value: schema:browserUrl https://icd.who.int/dev11/f/en#/http%3A%2F%2Fi
 id: ICF:982325691
 name: Interacciones y relaciones interpersonales
 def: "This chapter is about carrying out the actions and tasks required for basic and complex interactions with people (strangers, friends, relatives, family members and lovers) in a contextually and socially appropriate manner." []
-is_a: ICF:1394728112 ! Actividades y participación
-is_a: PROMOT:0120002 ! Participation
+is_a: PROMOT:0120002 ! Participación
 property_value: schema:browserUrl https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F982325691
 
 [Term]
@@ -8762,8 +8757,7 @@ xref: MONDO:0008116 {ECO:0000218="E (Exact mapping: the two concepts are equival
 xref: OMIM:164300 {ECO:0000218="E (Exact mapping: the two concepts are equivalent)"}
 xref: UMLS:C0270952 {ECO:0000218="E (Exact mapping: the two concepts are equivalent)"}
 is_a: ORDO:377788 ! Disease
-relationship: RO:0004003 PROMOT:0000002 {minCardinality="1"} ! has material basis in germline mutation in PABPN1 mutation
-relationship: RO:0004003 PROMOT:0000002 ! has material basis in germline mutation in PABPN1 mutation
+relationship: RO:0004003 PROMOT:0000001 ! has material basis in germline mutation in OPMD related mutation
 relationship: RO:0004029 HP:0000183 ! disease has feature Tongue muscle weakness
 relationship: RO:0004029 HP:0000544 ! disease has feature External ophthalmoplegia
 relationship: RO:0004029 HP:0000651 ! disease has feature Diplopia
@@ -8850,8 +8844,9 @@ name: Disease
 comment: [EURO-NMD] Atalia A et al., EURO-NMD registry: federated FAIR infrastructure, innovative technologies and concepts of a patient-centred registry for rare neuromuscular disorders. Orphanet J Rare Dis. 2024 Feb 14;19(1):66. doi: 10.1186/s13023-024-03059-3. PMID: 38355534; PMCID: PMC10865673.
 xref: http://snomed.info/id/64572001
 is_a: PROMOT:0032001 ! abnormal disposition
-relationship: RO:0004003 PROMOT:0000001 ! has material basis in germline mutation in genetic mutation
+relationship: RO:0004003 SO:0001060 ! has material basis in germline mutation in sequence_variant
 relationship: RO:0004029 HP:0000118 ! disease has feature Phenotypic abnormality
+relationship: SIO:000217 HP:0000005 ! has quality Mode of inheritance
 property_value: efo:definition "A disorder with homogeneous therapeutic possibilities and an identified pathophysiological mechanism. Developmental anomalies are excluded." xsd:string
 
 [Term]
@@ -8894,12 +8889,7 @@ xref: OMIM:617239 {ECO:0000218="BTNT (ORPHAcode is broader than the targeted cod
 xref: OMIM:619461 {ECO:0000218="BTNT (ORPHAcode is broader than the targeted code used to represent it)"}
 xref: UMLS:C0751882 {ECO:0000218="E (Exact mapping: the two concepts are equivalent)"}
 is_a: ORDO:377788 ! Disease
-relationship: RO:0004003 PROMOT:0000009 {minCardinality="0"} ! has material basis in germline mutation in CHRNE mutation
-relationship: RO:0004003 PROMOT:0000010 {minCardinality="0"} ! has material basis in germline mutation in DOK7 mutation
-relationship: RO:0004003 PROMOT:0000011 {minCardinality="0"} ! has material basis in germline mutation in COLQ mutation
-relationship: RO:0004003 PROMOT:0000012 {minCardinality="0"} ! has material basis in germline mutation in RAPSN mutation
-relationship: RO:0004003 PROMOT:0000013 {minCardinality="0"} ! has material basis in germline mutation in GFPT1 mutation
-relationship: RO:0004003 PROMOT:0000014 {minCardinality="0"} ! has material basis in germline mutation in GMPPB mutation
+relationship: RO:0004003 PROMOT:0000002 ! has material basis in germline mutation in CMS related mutation
 relationship: RO:0004029 HP:0000218 ! disease has feature High palate
 relationship: RO:0004029 HP:0000508 ! disease has feature Ptosis
 relationship: RO:0004029 HP:0000544 ! disease has feature External ophthalmoplegia
@@ -9009,13 +8999,8 @@ xref: MedDRA:10062547 {ECO:0000218="E (Exact mapping: the two concepts are equiv
 xref: MONDO:0019952 {ECO:0000218="E (Exact mapping: the two concepts are equivalent)"}
 xref: UMLS:C0270960 {ECO:0000218="E (Exact mapping: the two concepts are equivalent)"}
 is_a: PROMOT:0032001 ! abnormal disposition
-relationship: RO:0004003 PROMOT:0000001 ! has material basis in germline mutation in genetic mutation
-relationship: RO:0004003 PROMOT:0000003 {minCardinality="0"} ! has material basis in germline mutation in RYR1 mutation
-relationship: RO:0004003 PROMOT:0000004 {minCardinality="0"} ! has material basis in germline mutation in TTN mutation
-relationship: RO:0004003 PROMOT:0000005 {minCardinality="0"} ! has material basis in germline mutation in NEB mutation
-relationship: RO:0004003 PROMOT:0000006 {minCardinality="0"} ! has material basis in germline mutation in MTM1 mutation
-relationship: RO:0004003 PROMOT:0000007 {minCardinality="0"} ! has material basis in germline mutation in ACTA1 mutation
-relationship: RO:0004003 PROMOT:0000008 {minCardinality="0"} ! has material basis in germline mutation in SELENON mutation
+relationship: RO:0004003 PROMOT:0000003 {minCardinality="0"} ! has material basis in germline mutation in CMYO related mutation
+relationship: RO:0004003 SO:0001060 ! has material basis in germline mutation in sequence_variant
 relationship: RO:0004029 HP:0000028 ! disease has feature Cryptorchidism
 relationship: RO:0004029 HP:0000276 ! disease has feature Long face
 relationship: RO:0004029 HP:0000486 ! disease has feature Strabismus
@@ -9120,6 +9105,7 @@ relationship: RO:0004029 PROMOT:0032012 ! disease has feature Debilidad fatigabl
 relationship: RO:0004029 PROMOT:0032013 ! disease has feature Debilidad fatigable de la musculatura facial 
 relationship: RO:0004029 PROMOT:0032014 ! disease has feature Debilidad fatigable muscular axial
 relationship: RO:0004029 PROMOT:0032015 ! disease has feature Faiblesse musculaire des muscles de la mastication
+relationship: SIO:000217 HP:0000005 ! has quality Mode of inheritance
 property_value: ORDO:C022 "United States AND has_point_prevalence_average_value : 3.8 AND has_point_prevalence_range : 1-9 / 100 000" xsd:string
 property_value: ORDO:C055 "https://www.orpha.net/consor/cgi-bin/OC_Exp.php?Lng=en&Expert=97245" xsd:string
 property_value: ORDO:C059 "https://www.orpha.net/en/disease/detail/97245" xsd:string
@@ -9128,147 +9114,139 @@ property_value: skos:notation "ORPHA:97245" xsd:string
 
 [Term]
 id: PROMOT:0000001
-name: genetic mutation
-def: "A sequence alteration that is very rare allele in a population (typically <1%)." [] {IAO:0000119="GENO:0000492"}
-comment: EU-CDE
-xref: GENO:0000492
-xref: http://snomed.info/id/106221001
-xref: http://snomed.info/id/55446002
-xref: NCIT:C18093
-is_a: BFO:0000002 ! continuant
-relationship: RO:0004013 ORDO:377788 ! is causal germline mutation in Disease
-relationship: SIO:000217 HP:0000005 ! has quality Mode of inheritance
-relationship: SIO:000217 SIO:001268 ! has quality parental transmission
-property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
-property_value: seeAlso GENO:0000492
+name: OPMD related mutation
+def: "A sequence alteration that is causal germline mutation in Oculopharyngeal Muscular Dystrophy." []
+is_a: SO:0001060 ! sequence_variant
+relationship: RO:0004013 ORDO:270 ! is causal germline mutation in Oculopharyngeal muscular dystrophy
 
 [Term]
 id: PROMOT:0000002
+name: CMS related mutation
+def: "A sequence alteration that is causal germline mutation in Congenital Myasthenic Syndrom." []
+is_a: SO:0001060 ! sequence_variant
+relationship: RO:0004013 ORDO:590 ! is causal germline mutation in Congenital myasthenic syndrome
+
+[Term]
+id: PROMOT:0000003
+name: CMYO related mutation
+def: "A sequence alteration that is causal germline mutation in Congenital Myopathy." []
+is_a: SO:0001060 ! sequence_variant
+relationship: RO:0004013 ORDO:97245 ! is causal germline mutation in Congenital myopathy
+
+[Term]
+id: PROMOT:0000004
 name: PABPN1 mutation
 def: "A sequence alteration located within the PABPN1 gene." []
 comment: JP: Translated to spanish using Bing Translator
-is_a: PROMOT:0000001 ! genetic mutation
-relationship: RO:0004013 ORDO:270 ! is causal germline mutation in Oculopharyngeal muscular dystrophy
+is_a: PROMOT:0000001 ! OPMD related mutation
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 property_value: seeAlso NCIT:C204162
 
 [Term]
-id: PROMOT:0000003
+id: PROMOT:0000005
 name: RYR1 mutation
 def: "A sequence alteration located within the RYR1 gene." []
 comment: JP: Translated to spanish using Bing Translator
-is_a: PROMOT:0000001 ! genetic mutation
-relationship: RO:0004013 ORDO:97245 {minCardinality="0"} ! is causal germline mutation in Congenital myopathy
+is_a: PROMOT:0000003 ! CMYO related mutation
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 property_value: seeAlso NCIT:C150311
 
 [Term]
-id: PROMOT:0000004
+id: PROMOT:0000006
 name: TTN mutation
 def: "A sequence alteration located within the TTN gene." []
 comment: JP: Translated to spanish using Bing Translator
-is_a: PROMOT:0000001 ! genetic mutation
-relationship: RO:0004013 ORDO:97245 {minCardinality="0"} ! is causal germline mutation in Congenital myopathy
+is_a: PROMOT:0000003 ! CMYO related mutation
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 property_value: seeAlso NCIT:C101756
 
 [Term]
-id: PROMOT:0000005
+id: PROMOT:0000007
 name: NEB mutation
 def: "A sequence alteration located within the NEB gene." []
 comment: JP: Translated to spanish using Bing Translator
-is_a: PROMOT:0000001 ! genetic mutation
-relationship: RO:0004013 ORDO:97245 {minCardinality="0"} ! is causal germline mutation in Congenital myopathy
+is_a: PROMOT:0000003 ! CMYO related mutation
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 property_value: seeAlso NCIT:C203906
 
 [Term]
-id: PROMOT:0000006
+id: PROMOT:0000008
 name: MTM1 mutation
 def: "A sequence alteration located within the MTM1 gene." []
 comment: JP: Translated to spanish using Bing Translator
-is_a: PROMOT:0000001 ! genetic mutation
-relationship: RO:0004013 ORDO:97245 {minCardinality="0"} ! is causal germline mutation in Congenital myopathy
+is_a: PROMOT:0000003 ! CMYO related mutation
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 property_value: seeAlso NCIT:C203822
 
 [Term]
-id: PROMOT:0000007
+id: PROMOT:0000009
 name: ACTA1 mutation
 def: "A sequence alteration located within the ACTA1 gene." []
 comment: JP: Translated to spanish using Bing Translator
-is_a: PROMOT:0000001 ! genetic mutation
-relationship: RO:0004013 ORDO:97245 {minCardinality="0"} ! is causal germline mutation in Congenital myopathy
+is_a: PROMOT:0000003 ! CMYO related mutation
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 property_value: seeAlso NCIT:C191893
 
 [Term]
-id: PROMOT:0000008
+id: PROMOT:0000010
 name: SELENON mutation
 def: "A sequence alteration located within the SELENON gene." []
 comment: JP: Translated to spanish using Bing Translator
-is_a: PROMOT:0000001 ! genetic mutation
-relationship: RO:0004013 ORDO:97245 {minCardinality="0"} ! is causal germline mutation in Congenital myopathy
+is_a: PROMOT:0000003 ! CMYO related mutation
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 property_value: seeAlso NCIT:C205071
 
 [Term]
-id: PROMOT:0000009
+id: PROMOT:0000011
 name: CHRNE mutation
 def: "A sequence alteration located within the CHRNE gene." []
 comment: JP: Translated to spanish using Bing Translator
-is_a: PROMOT:0000001 ! genetic mutation
-relationship: RO:0004013 ORDO:590 {minCardinality="0"} ! is causal germline mutation in Congenital myasthenic syndrome
+is_a: PROMOT:0000002 ! CMS related mutation
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 property_value: seeAlso NCIT:C198628
 
 [Term]
-id: PROMOT:0000010
+id: PROMOT:0000012
 name: DOK7 mutation
 def: "A sequence alteration located within the DOK7 gene." []
 comment: JP: Translated to spanish using Bing Translator
-is_a: PROMOT:0000001 ! genetic mutation
-relationship: RO:0004013 ORDO:590 {minCardinality="0"} ! is causal germline mutation in Congenital myasthenic syndrome
+is_a: PROMOT:0000002 ! CMS related mutation
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 property_value: seeAlso NCIT:C216062
 
 [Term]
-id: PROMOT:0000011
+id: PROMOT:0000013
 name: COLQ mutation
 def: "A sequence alteration located within the COLQ gene." []
 comment: JP: Translated to spanish using Bing Translator
-is_a: PROMOT:0000001 ! genetic mutation
-relationship: RO:0004013 ORDO:590 {minCardinality="0"} ! is causal germline mutation in Congenital myasthenic syndrome
+is_a: PROMOT:0000002 ! CMS related mutation
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 property_value: seeAlso NCIT:C200235
 
 [Term]
-id: PROMOT:0000012
+id: PROMOT:0000014
 name: RAPSN mutation
 def: "A sequence alteration located within the RAPSN gene." []
 comment: JP: Translated to spanish using Bing Translator
-is_a: PROMOT:0000001 ! genetic mutation
-relationship: RO:0004013 ORDO:590 {minCardinality="0"} ! is causal germline mutation in Congenital myasthenic syndrome
+is_a: PROMOT:0000002 ! CMS related mutation
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 property_value: seeAlso NCIT:C177668
 
 [Term]
-id: PROMOT:0000013
+id: PROMOT:0000015
 name: GFPT1 mutation
 def: "A sequence alteration located within the GFPT1 gene." []
 comment: JP: Translated to spanish using Bing Translator
-is_a: PROMOT:0000001 ! genetic mutation
-relationship: RO:0004013 ORDO:590 {minCardinality="0"} ! is causal germline mutation in Congenital myasthenic syndrome
+is_a: PROMOT:0000002 ! CMS related mutation
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 property_value: seeAlso NCIT:C201657
 
 [Term]
-id: PROMOT:0000014
+id: PROMOT:0000016
 name: GMPPB mutation
 def: "A sequence alteration located within the GMPPB gene." []
 comment: JP: Translated to spanish using Bing Translator
-is_a: PROMOT:0000001 ! genetic mutation
-relationship: RO:0004013 ORDO:590 {minCardinality="0"} ! is causal germline mutation in Congenital myasthenic syndrome
+is_a: PROMOT:0000002 ! CMS related mutation
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
@@ -9922,9 +9900,7 @@ def: "A patient that had received a confirmed diagnostic of genetic mutation and
 comment: JP: Translated to spanish using Bing Translator
 xref: NCIT:C16960
 is_a: SIO:000485 ! human
-relationship: PROMOT:2000004 PROMOT:0000001 ! est porteur de la mutation genetic mutation
-relationship: PROMOT:2000007 SNOMED:257192006 ! uses Aid to vision
-relationship: PROMOT:2000007 SNOMED:360296002 ! uses Assistive equipment
+relationship: PROMOT:2000004 SO:0001060 ! est porteur de la mutation sequence_variant
 relationship: RO:0002200 HP:0000118 ! has phenotype Phenotypic abnormality
 relationship: SIO:000001 SNOMED:125679009 ! is related to Blood relative
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
@@ -10026,8 +10002,8 @@ name: Activity related body function
 def: "A body function that is involved in an activity. The boby function is needed in order to fullfill the activity." []
 is_a: ICF:567313968 ! Body functions
 intersection_of: ICF:567313968 ! Body functions
-intersection_of: RO:0002331 PROMOT:0110001 ! involved in Activity
-relationship: RO:0002331 PROMOT:0110001 ! involved in Activity
+intersection_of: RO:0002331 PROMOT:0110001 ! involved in Actividad
+relationship: RO:0002331 PROMOT:0110001 ! involved in Actividad
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
@@ -10048,8 +10024,8 @@ def: "A phenotype that affects an activity." []
 comment: (JP: unsure about definition)
 is_a: HP:0000118 ! Phenotypic abnormality
 intersection_of: HP:0000118 ! Phenotypic abnormality
-intersection_of: PROMOT:2000005 PROMOT:0110001 ! affecte Activity
-relationship: PROMOT:2000005 PROMOT:0110001 ! affecte Activity
+intersection_of: PROMOT:2000005 PROMOT:0110001 ! affecte Actividad
+relationship: PROMOT:2000005 PROMOT:0110001 ! affecte Actividad
 property_value: IAO:0000117 "Paul Fabry, https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
@@ -10176,8 +10152,8 @@ name: Activity related procedure
 def: "A procedure that can measure an activity." []
 is_a: SNOMED:128927009 ! Procedure by method
 intersection_of: SNOMED:128927009 ! Procedure by method
-intersection_of: PROMOT:2000002 PROMOT:0110001 ! assesses Activity
-relationship: PROMOT:2000002 PROMOT:0110001 ! assesses Activity
+intersection_of: PROMOT:2000002 PROMOT:0110001 ! assesses Actividad
+relationship: PROMOT:2000002 PROMOT:0110001 ! assesses Actividad
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
@@ -10282,8 +10258,6 @@ is_a: SNOMED:12894003 ! Functional assessment
 relationship: PROMOT:2000002 HP:0009005 ! assesses Weakness of the intrinsic hand muscles
 relationship: PROMOT:2000002 HP:0031177 ! assesses Finger flexor weakness
 relationship: PROMOT:2000002 HP:0033466 ! assesses Weak grip
-relationship: RO:0000091 SNOMED:447007003 ! has disposition Jamar hydraulic hand dynamometer score
-relationship: RO:0000091 SNOMED:447007003 {cardinality="1"} ! has disposition Jamar hydraulic hand dynamometer score
 
 [Term]
 id: PROMOT:0100017
@@ -10296,16 +10270,16 @@ relationship: PROMOT:2000002 HP:0033235 ! assesses Difficulty descending stairs
 
 [Term]
 id: PROMOT:0110001
-name: Activity
-def: "An activity is the execution of a task or action by an individual. Activity limitations are difficulties an individual may have in executing activities." [] {IAO:0000119="International Classification of Functioning, Disability and Health"}
+name: Actividad
+def: "Actividad es la realización de una tarea o acción por parte de una persona. Las limitaciones en la actividad son dificultades que una persona puede tener para realizar una tarea o acción." [] {IAO:0000119="Clasificación Internacional del Funcionamiento, de la Discapacidad y de la Salud"}
 is_a: BFO:0000015 ! process
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 property_value: seeAlso ICF:1394728112
 
 [Term]
 id: PROMOT:0120002
-name: Participation
-def: "A participation is an involvement in a life situation. Participation restrictions are problems an individual may experience in involvement in life situations" [] {IAO:0000119="International Classification of Functioning, Disability and Health"}
+name: Participación
+def: "A participation is an involvement in a life situation. Participation restrictions are problems an individual may experience in involvement in life situations" [] {IAO:0000119="International Classification of Functioning, Disability and Health (ICF)"}
 is_a: BFO:0000015 ! process
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 property_value: seeAlso ICF:1394728112
@@ -10347,7 +10321,7 @@ property_value: isDefinedBy http://semanticscience.org/ontology/sio.owl
 id: SIO:001268
 name: parental transmission
 is_a: SIO:000475 ! biological quality
-relationship: SIO:000218 PROMOT:0000001 ! is quality of genetic mutation
+relationship: SIO:000218 SO:0001060 ! is quality of sequence_variant
 property_value: dc11:identifier "SIO_001268" xsd:string
 property_value: dcterms:description "parental transmition is the quality of a biological organism in which the (genetic) material is transmitted from a parental unit." xsd:string
 property_value: isDefinedBy http://semanticscience.org/ontology/sio.owl
@@ -11032,17 +11006,6 @@ property_value: skos:prefLabel "Date of procedure" xsd:string
 property_value: skos:prefLabel "fecha del procedimiento" xsd:string
 
 [Term]
-id: SNOMED:447007003
-name: Jamar hydraulic hand dynamometer score
-is_a: SNOMED:363787002 ! Observable entity
-property_value: dc11:type "observable entity" xsd:string
-property_value: sct-ext:definitionStatus "Primitif" xsd:string
-property_value: sct-ext:fsn "Jamar hydraulic hand dynamometer score (observable entity)" xsd:string
-property_value: skos:notation "447007003" xsd:string
-property_value: skos:prefLabel "Jamar hydraulic hand dynamometer score" xsd:string
-property_value: skos:prefLabel "puntaje de dinamómetro manual hidráulico de Jamar" xsd:string
-
-[Term]
 id: SNOMED:45929001
 name: Half-brother
 comment: [EURO-NMD] Atalia A et al., EURO-NMD registry: federated FAIR infrastructure, innovative technologies and concepts of a patient-centred registry for rare neuromuscular disorders. Orphanet J Rare Dis. 2024 Feb 14;19(1):66. doi: 10.1186/s13023-024-03059-3. PMID: 38355534; PMCID: PMC10865673.
@@ -11539,6 +11502,42 @@ property_value: skos:notation "9947008" xsd:string
 property_value: skos:prefLabel "Natural father" xsd:string
 property_value: skos:prefLabel "padre natural" xsd:string
 
+[Term]
+id: SO:0001060
+name: sequence_variant
+def: "A sequence_variant is a non exact copy of a sequence_feature or genome exhibiting one or more sequence_alteration." [SO:ke]
+comment: EU-CDE
+xref: GENO:0000492
+xref: http://snomed.info/id/106221001
+xref: http://snomed.info/id/55446002
+xref: NCIT:C18093
+is_a: BFO:0000002 ! continuant
+relationship: RO:0004013 ORDO:377788 ! is causal germline mutation in Disease
+relationship: SIO:000217 SO:0001762 ! has quality variant_origin
+
+[Term]
+id: SO:0001762
+name: variant_origin
+def: "A quality inhering in a variant by virtue of its origin." [PMID:17597783, SO:ke]
+
+[Term]
+id: SO:0001775
+name: maternal_variant
+def: "A variant in the genetic material inherited from the mother." []
+is_a: SO:0001762 ! variant_origin
+
+[Term]
+id: SO:0001776
+name: paternal_variant
+def: "A variant in the genetic material inherited from the father." []
+is_a: SO:0001762 ! variant_origin
+
+[Term]
+id: SO:0001781
+name: de_novo_variant
+def: "A variant arising in the offspring that is not found in either of the parents." []
+is_a: SO:0001762 ! variant_origin
+
 [Typedef]
 id: PROMOT:2000001
 name: es utilizado por
@@ -11570,7 +11569,7 @@ def: "A relation between an organism and a specific gene mutation that exists in
 xref: VO:0001039
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 domain: SIO:010000 ! organism
-range: PROMOT:0000001 ! genetic mutation
+range: SO:0001060 ! sequence_variant
 
 [Typedef]
 id: PROMOT:2000005
@@ -11585,11 +11584,6 @@ domain: HP:0000118 ! Phenotypic abnormality
 id: PROMOT:2000006
 name: est affecté par
 def: "A relation between two entity where the state of the first entity is affected by the existence of the second entity." []
-property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
-
-[Typedef]
-id: PROMOT:2000007
-name: uses
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Typedef]
@@ -11620,17 +11614,10 @@ def: "A relationship that holds between a biological entity and a phenotype. Her
 subset: ro-eco
 property_value: IAO:0000114 IAO:0000125
 property_value: IAO:0000117 https://orcid.org/0000-0002-6601-2165
-inverse_of: RO:0002201 ! phenotype of
 
 [Typedef]
 id: RO:0002201
 name: phenotype of
-def: "inverse of has phenotype" []
-subset: ro-eco
-subset: RO:0002259
-property_value: IAO:0000114 IAO:0000125
-property_value: IAO:0000117 https://orcid.org/0000-0002-6601-2165
-is_functional: true
 
 [Typedef]
 id: RO:0002328
@@ -11676,7 +11663,7 @@ id: RO:0004013
 name: is causal germline mutation in
 def: "Relates a gene to condition, such that a mutation in this gene is sufficient to produce the condition and that can be passed on to offspring[modified from orphanet]." []
 property_value: seeAlso ORDO:317343
-domain: PROMOT:0000001 ! genetic mutation
+domain: SO:0001060 ! sequence_variant
 created_by: https://orcid.org/0000-0002-6601-2165
 creation_date: 2017-11-05T02:56:40Z
 
@@ -11720,13 +11707,10 @@ is_a: SIO:000001 ! is related to
 
 [Typedef]
 id: SIO:000229
-name: has output
-property_value: dc11:identifier "SIO_000229" xsd:string
-property_value: dcterms:description "has output is a relation between an process and an entity, where the entity is present at the end of the process." xsd:string
-property_value: isDefinedBy http://semanticscience.org/ontology/sio.owl
-property_value: resource:subset "core" xsd:string
-property_value: resource:subset "sadi" xsd:string
-is_a: SIO:000001 ! is related to
+name: a comme résultat
+def: "A relation between a process and an entity where the process produce the second entity." []
+xref: SIO:000229
+property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Typedef]
 id: SIO:000674

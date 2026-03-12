@@ -10,7 +10,7 @@
 # More information: https://github.com/INCATools/ontology-development-kit/
 
 # Fingerprint of the configuration file when this Makefile was last generated
-CONFIG_HASH=                09070caef2e3138052d94c1432401721f4682628ae52c4f7c42bc2115c998db9
+CONFIG_HASH=                af5a08ec1776b8b9d46f9b6ee1360879c8d268c9a4c92a109047886184719651
 
 
 # ----------------------------------------
@@ -194,7 +194,7 @@ all_main: $(MAIN_FILES)
 # ----------------------------------------
 
 
-IMPORTS =  bfo eco fma hp iao icf ordo ro sio snomed
+IMPORTS =  bfo eco fma hp iao icf ordo ro sio snomed so
 
 IMPORT_ROOTS = $(patsubst %, $(IMPORTDIR)/%_import, $(IMPORTS))
 IMPORT_OWL_FILES = $(foreach n,$(IMPORT_ROOTS), $(n).owl)
@@ -444,6 +444,25 @@ $(IMPORTDIR)/snomed_import.owl:
 	@false
 endif # IMP_LARGE=true
 
+## Module for ontology: so (filter)
+$(IMPORTDIR)/so_import.owl: $(MIRRORDIR)/so.owl $(IMPORTDIR)/so_terms.txt $(IMPORTSEED) | all_robot_plugins
+	$(ROBOT) annotate --input $< --remove-annotations \
+		 odk:normalize --add-source true \
+		 extract --term-file $(IMPORTDIR)/so_terms.txt $(T_IMPORTSEED) \
+		         --copy-ontology-annotations true --force true --method BOT \
+		 remove --axioms external --preserve-structure false --trim false \
+		        --base-iri http://purl.obolibrary.org/obo/SO \
+		 remove $(foreach p, $(ANNOTATION_PROPERTIES), --term $(p)) \
+		        --term rdfs:label \
+		        --term IAO:0000115 \
+		        --term OMO:0002000 \
+		        --term-file $(IMPORTDIR)/so_terms.txt $(T_IMPORTSEED) \
+		        --select complement \
+		 odk:normalize --base-iri http://purl.obolibrary.org/obo \
+		               --subset-decls true --synonym-decls true \
+		 repair --merge-axiom-annotations true \
+		 $(ANNOTATE_CONVERT_FILE)
+
 endif # IMP=true
 
 .PHONY: refresh-imports
@@ -587,6 +606,14 @@ mirror-ro: | $(TMPDIR)
 
 ifeq ($(IMP_LARGE),true)## You have configured your default mirror type to no_mirror.
 endif
+
+
+## ONTOLOGY: so
+.PHONY: mirror-so
+.PRECIOUS: $(MIRRORDIR)/so.owl
+mirror-so: | $(TMPDIR)
+	curl -L $(OBOBASE)/so.owl --create-dirs -o $(TMPDIR)/so-download.owl --retry 4 --max-time 200 && \
+	$(ROBOT) convert -i $(TMPDIR)/so-download.owl -o $(TMPDIR)/$@.owl
 
 
 $(MIRRORDIR)/%.owl: mirror-% | $(MIRRORDIR)

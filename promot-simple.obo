@@ -1,9 +1,8 @@
 format-version: 1.2
-data-version: promot/releases/2026-03-09/promot-simple.owl
-date: 09:03:2026 17:09
+data-version: promot/releases/2026-03-12/promot-simple.owl
+date: 12:03:2026 17:20
 subsetdef: http://purl.obolibrary.org/obo/valid_for_go_gp2term ""
 subsetdef: ro-eco ""
-subsetdef: RO:0002259 ""
 idspace: ace_lexicon http://attempto.ifi.uzh.ch/ace_lexicon# 
 idspace: BIOLINK https://w3id.org/biolink/vocab/ 
 idspace: cc http://creativecommons.org/ns# 
@@ -37,6 +36,7 @@ idspace: swrla http://swrl.stanford.edu/ontologies/3.3/swrla.owl#
 idspace: swrlb http://www.w3.org/2003/11/swrlb# 
 idspace: terms http://purl.org/dc/terms/ 
 idspace: void http://rdfs.org/ns/void# 
+remark: Additional acknowledgements:\n	- Rachel Thompson\n	- Thomas Bongivault, MSc\n	- Marc Vincent, PhD\n
 remark: Additional acknowledgements:\n	- Thomas Bongivault, MSc\n	- Marc Vincent, PhD\n
 ontology: promot/promot-simple
 property_value: dc11:contributor "Anita Burgun MD, PhD\nhttps://orcid.org/0000-0001-6855-4366" xsd:string
@@ -51,7 +51,7 @@ property_value: dc11:contributor "Mansoore Gholizade MD" xsd:string
 property_value: dc11:creator "Cynthia Gagnon MD, PhD\nhttps://orcid.org/0000-0003-2829-8470" xsd:string
 property_value: dc11:creator "Juliette Potier MSc\nhttps://orcid.org/0009-0000-5160-7927" xsd:string
 property_value: dc11:creator "Paul Fabry MD, PhD student\nhttps://orcid.org/0000-0002-3336-2476" xsd:string
-property_value: owl:versionInfo "2026-03-09" xsd:string
+property_value: owl:versionInfo "2026-03-12" xsd:string
 property_value: seeAlso "More about PROMOT initiative at https://www.promotinitiative.com/\n" xsd:string
 property_value: terms:description "Ontology for modeling the three following neuromuscular diseases : OPMD, Congenital myopathies and Congenital myastenic syndroms. It aims to be also an ontology for building the PROMOT project relational database." xsd:string
 property_value: terms:license https://creativecommons.org/licenses/by-nc-sa/4.0/
@@ -59,130 +59,133 @@ property_value: terms:title "PROMOT ontology" xsd:string
 
 [Term]
 id: PROMOT:0000001
-name: genetic mutation
-def: "A sequence alteration that is very rare allele in a population (typically <1%)." [] {IAO:0000119="GENO:0000492"}
-comment: EU-CDE
-xref: GENO:0000492
-xref: http://snomed.info/id/106221001
-xref: http://snomed.info/id/55446002
-xref: NCIT:C18093
-property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
-property_value: seeAlso GENO:0000492
+name: OPMD related mutation
+def: "A sequence alteration that is causal germline mutation in Oculopharyngeal Muscular Dystrophy." []
 
 [Term]
 id: PROMOT:0000002
+name: CMS related mutation
+def: "A sequence alteration that is causal germline mutation in Congenital Myasthenic Syndrom." []
+
+[Term]
+id: PROMOT:0000003
+name: CMYO related mutation
+def: "A sequence alteration that is causal germline mutation in Congenital Myopathy." []
+
+[Term]
+id: PROMOT:0000004
 name: PABPN1 mutation
 def: "A sequence alteration located within the PABPN1 gene." []
 comment: JP: Translated to spanish using Bing Translator
-is_a: PROMOT:0000001 ! genetic mutation
+is_a: PROMOT:0000001 ! OPMD related mutation
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 property_value: seeAlso NCIT:C204162
 
 [Term]
-id: PROMOT:0000003
+id: PROMOT:0000005
 name: RYR1 mutation
 def: "A sequence alteration located within the RYR1 gene." []
 comment: JP: Translated to spanish using Bing Translator
-is_a: PROMOT:0000001 ! genetic mutation
+is_a: PROMOT:0000003 ! CMYO related mutation
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 property_value: seeAlso NCIT:C150311
 
 [Term]
-id: PROMOT:0000004
+id: PROMOT:0000006
 name: TTN mutation
 def: "A sequence alteration located within the TTN gene." []
 comment: JP: Translated to spanish using Bing Translator
-is_a: PROMOT:0000001 ! genetic mutation
+is_a: PROMOT:0000003 ! CMYO related mutation
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 property_value: seeAlso NCIT:C101756
 
 [Term]
-id: PROMOT:0000005
+id: PROMOT:0000007
 name: NEB mutation
 def: "A sequence alteration located within the NEB gene." []
 comment: JP: Translated to spanish using Bing Translator
-is_a: PROMOT:0000001 ! genetic mutation
+is_a: PROMOT:0000003 ! CMYO related mutation
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 property_value: seeAlso NCIT:C203906
 
 [Term]
-id: PROMOT:0000006
+id: PROMOT:0000008
 name: MTM1 mutation
 def: "A sequence alteration located within the MTM1 gene." []
 comment: JP: Translated to spanish using Bing Translator
-is_a: PROMOT:0000001 ! genetic mutation
+is_a: PROMOT:0000003 ! CMYO related mutation
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 property_value: seeAlso NCIT:C203822
 
 [Term]
-id: PROMOT:0000007
+id: PROMOT:0000009
 name: ACTA1 mutation
 def: "A sequence alteration located within the ACTA1 gene." []
 comment: JP: Translated to spanish using Bing Translator
-is_a: PROMOT:0000001 ! genetic mutation
+is_a: PROMOT:0000003 ! CMYO related mutation
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 property_value: seeAlso NCIT:C191893
 
 [Term]
-id: PROMOT:0000008
+id: PROMOT:0000010
 name: SELENON mutation
 def: "A sequence alteration located within the SELENON gene." []
 comment: JP: Translated to spanish using Bing Translator
-is_a: PROMOT:0000001 ! genetic mutation
+is_a: PROMOT:0000003 ! CMYO related mutation
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 property_value: seeAlso NCIT:C205071
 
 [Term]
-id: PROMOT:0000009
+id: PROMOT:0000011
 name: CHRNE mutation
 def: "A sequence alteration located within the CHRNE gene." []
 comment: JP: Translated to spanish using Bing Translator
-is_a: PROMOT:0000001 ! genetic mutation
+is_a: PROMOT:0000002 ! CMS related mutation
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 property_value: seeAlso NCIT:C198628
 
 [Term]
-id: PROMOT:0000010
+id: PROMOT:0000012
 name: DOK7 mutation
 def: "A sequence alteration located within the DOK7 gene." []
 comment: JP: Translated to spanish using Bing Translator
-is_a: PROMOT:0000001 ! genetic mutation
+is_a: PROMOT:0000002 ! CMS related mutation
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 property_value: seeAlso NCIT:C216062
 
 [Term]
-id: PROMOT:0000011
+id: PROMOT:0000013
 name: COLQ mutation
 def: "A sequence alteration located within the COLQ gene." []
 comment: JP: Translated to spanish using Bing Translator
-is_a: PROMOT:0000001 ! genetic mutation
+is_a: PROMOT:0000002 ! CMS related mutation
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 property_value: seeAlso NCIT:C200235
 
 [Term]
-id: PROMOT:0000012
+id: PROMOT:0000014
 name: RAPSN mutation
 def: "A sequence alteration located within the RAPSN gene." []
 comment: JP: Translated to spanish using Bing Translator
-is_a: PROMOT:0000001 ! genetic mutation
+is_a: PROMOT:0000002 ! CMS related mutation
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 property_value: seeAlso NCIT:C177668
 
 [Term]
-id: PROMOT:0000013
+id: PROMOT:0000015
 name: GFPT1 mutation
 def: "A sequence alteration located within the GFPT1 gene." []
 comment: JP: Translated to spanish using Bing Translator
-is_a: PROMOT:0000001 ! genetic mutation
+is_a: PROMOT:0000002 ! CMS related mutation
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 property_value: seeAlso NCIT:C201657
 
 [Term]
-id: PROMOT:0000014
+id: PROMOT:0000016
 name: GMPPB mutation
 def: "A sequence alteration located within the GMPPB gene." []
 comment: JP: Translated to spanish using Bing Translator
-is_a: PROMOT:0000001 ! genetic mutation
+is_a: PROMOT:0000002 ! CMS related mutation
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
@@ -766,7 +769,6 @@ name: Paciente
 def: "A patient that had received a confirmed diagnostic of genetic mutation and that is involved in the data collection for natural history study of their disease." []
 comment: JP: Translated to spanish using Bing Translator
 xref: NCIT:C16960
-relationship: PROMOT:2000004 PROMOT:0000001 ! est porteur de la mutation genetic mutation
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
@@ -800,7 +802,6 @@ property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 id: PROMOT:0031005
 name: Transmission inconnue
 def: "A transmission that is unknown." []
-relationship: SIO:000218 PROMOT:0000001 ! is quality of genetic mutation
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
@@ -860,7 +861,7 @@ property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 id: PROMOT:0032002
 name: Activity related body function
 def: "A body function that is involved in an activity. The boby function is needed in order to fullfill the activity." []
-relationship: RO:0002331 PROMOT:0110001 ! involved in Activity
+relationship: RO:0002331 PROMOT:0110001 ! involved in Actividad
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
@@ -878,7 +879,7 @@ name: Activity related phenotype
 def: "A phenotype that affects an activity." []
 comment: (JP: unsure about definition)
 is_a: PROMOT:0032001 ! abnormal disposition
-relationship: PROMOT:2000005 PROMOT:0110001 ! affecte Activity
+relationship: PROMOT:2000005 PROMOT:0110001 ! affecte Actividad
 relationship: SIO:000217 PROMOT:0031007 ! has quality Qualité qualifiant l’existance d’une entité
 property_value: IAO:0000117 "Paul Fabry, https://orcid.org/0009-0000-5160-7927" xsd:string
 
@@ -1007,7 +1008,7 @@ id: PROMOT:0100004
 name: Activity related procedure
 def: "A procedure that can measure an activity." []
 relationship: PROMOT:2000002 PROMOT:0020004 ! assesses Paciente
-relationship: PROMOT:2000002 PROMOT:0110001 ! assesses Activity
+relationship: PROMOT:2000002 PROMOT:0110001 ! assesses Actividad
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
@@ -1096,15 +1097,15 @@ is_a: PROMOT:0100001 ! Phenotypically related procedure
 
 [Term]
 id: PROMOT:0110001
-name: Activity
-def: "An activity is the execution of a task or action by an individual. Activity limitations are difficulties an individual may have in executing activities." [] {IAO:0000119="International Classification of Functioning, Disability and Health"}
+name: Actividad
+def: "Actividad es la realización de una tarea o acción por parte de una persona. Las limitaciones en la actividad son dificultades que una persona puede tener para realizar una tarea o acción." [] {IAO:0000119="Clasificación Internacional del Funcionamiento, de la Discapacidad y de la Salud"}
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 property_value: seeAlso ICF:1394728112
 
 [Term]
 id: PROMOT:0120002
-name: Participation
-def: "A participation is an involvement in a life situation. Participation restrictions are problems an individual may experience in involvement in life situations" [] {IAO:0000119="International Classification of Functioning, Disability and Health"}
+name: Participación
+def: "A participation is an involvement in a life situation. Participation restrictions are problems an individual may experience in involvement in life situations" [] {IAO:0000119="International Classification of Functioning, Disability and Health (ICF)"}
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 property_value: seeAlso ICF:1394728112
 
@@ -1136,7 +1137,6 @@ name: est porteur de la mutation
 def: "A relation between an organism and a specific gene mutation that exists in the genome of that organism." []
 xref: VO:0001039
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
-range: PROMOT:0000001 ! genetic mutation
 
 [Typedef]
 id: PROMOT:2000005
@@ -1150,11 +1150,6 @@ property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 id: PROMOT:2000006
 name: est affecté par
 def: "A relation between two entity where the state of the first entity is affected by the existence of the second entity." []
-property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
-
-[Typedef]
-id: PROMOT:2000007
-name: uses
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Typedef]
@@ -1185,17 +1180,10 @@ def: "A relationship that holds between a biological entity and a phenotype. Her
 subset: ro-eco
 property_value: IAO:0000114 IAO:0000125
 property_value: IAO:0000117 https://orcid.org/0000-0002-6601-2165
-inverse_of: RO:0002201 ! phenotype of
 
 [Typedef]
 id: RO:0002201
 name: phenotype of
-def: "inverse of has phenotype" []
-subset: ro-eco
-subset: RO:0002259
-property_value: IAO:0000114 IAO:0000125
-property_value: IAO:0000117 https://orcid.org/0000-0002-6601-2165
-is_functional: true
 
 [Typedef]
 id: RO:0002328
@@ -1241,7 +1229,6 @@ id: RO:0004013
 name: is causal germline mutation in
 def: "Relates a gene to condition, such that a mutation in this gene is sufficient to produce the condition and that can be passed on to offspring[modified from orphanet]." []
 property_value: seeAlso ORDO:317343
-domain: PROMOT:0000001 ! genetic mutation
 created_by: https://orcid.org/0000-0002-6601-2165
 creation_date: 2017-11-05T02:56:40Z
 
@@ -1280,4 +1267,11 @@ property_value: dc11:identifier "SIO_000218" xsd:string
 property_value: isDefinedBy http://semanticscience.org/ontology/sio.owl
 property_value: terms:description "is quality of is a relation between a quality and the entity that it is a property of." xsd:string
 is_a: SIO:000001 ! is related to
+
+[Typedef]
+id: SIO:000229
+name: a comme résultat
+def: "A relation between a process and an entity where the process produce the second entity." []
+xref: SIO:000229
+property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 

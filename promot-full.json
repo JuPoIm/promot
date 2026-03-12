@@ -49,7 +49,10 @@
         "val" : "PROMOT ontology"
       }, {
         "pred" : "http://www.geneontology.org/formats/oboInOwl#date",
-        "val" : "09:03:2026 17:08"
+        "val" : "12:03:2026 17:19"
+      }, {
+        "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
+        "val" : "Additional acknowledgements:\n\t- Rachel Thompson\n\t- Thomas Bongivault, MSc\n\t- Marc Vincent, PhD\n"
       }, {
         "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
         "val" : "Additional acknowledgements:\n\t- Thomas Bongivault, MSc\n\t- Marc Vincent, PhD\n"
@@ -58,9 +61,9 @@
         "val" : "More about PROMOT initiative at https://www.promotinitiative.com/\n"
       }, {
         "pred" : "http://www.w3.org/2002/07/owl#versionInfo",
-        "val" : "2026-03-09"
+        "val" : "2026-03-12"
       } ],
-      "version" : "http://purl.obolibrary.org/obo/promot/releases/2026-03-09/promot-full.json"
+      "version" : "http://purl.obolibrary.org/obo/promot/releases/2026-03-12/promot-full.json"
     },
     "nodes" : [ {
       "id" : "http://id.who.int/icd/entity/1019379329",
@@ -511,19 +514,6 @@
         "basicPropertyValues" : [ {
           "pred" : "http://id.who.int/icd/schema/browserUrl",
           "val" : "https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F1389818830"
-        } ]
-      }
-    }, {
-      "id" : "http://id.who.int/icd/entity/1394728112",
-      "lbl" : "Activités et participation",
-      "type" : "CLASS",
-      "meta" : {
-        "definition" : {
-          "val" : "Activity is the execution of a task or action by an individual.\nParticipation is involvement in a life situation.\nActivity limitations are difficulties an individual may have in executing activities.\nParticipation restrictions are problems an individual may experience in involvement in life situations.\nThe domains for the Activities and Participation component are given in a single list that covers the full range of life areas (from basic learning and watching to composite areas such as social tasks). This component can be used to dedefinition activities (a) or participation (p) or both.\nThe two qualifiers for the Activities and Participation component are the performance qualifier and the capacity qualifier. The performance qualifier describes what an individual does in his or her current environment. Because the current environment brings in a societal context, performance as recorded by this qualifier can also be understood as \"involvement in a life situation\" or \"the lived experience\" of people in the actual context in which they live. This context includes the environmental factors - all aspects of the physical, social and attitudinal world, which can be coded using the Environmental Factors component.\nThe capacity qualifier describes an individual's ability to execute a task or an action. This qualifier identifies the highest probable level of functioning that a person may reach in a given domain at a given moment. Capacity is measured in a uniform or standard environment, and thus reflects the environmentally adjusted ability of the individual. The Environmental Factors component can be used to describe the features of this uniform or standard environment.\nBoth capacity and performance qualifiers can be used with and without assistive devices or personal assistance, and in accordance with the following scale:"
-        },
-        "basicPropertyValues" : [ {
-          "pred" : "http://id.who.int/icd/schema/browserUrl",
-          "val" : "https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F1394728112"
         } ]
       }
     }, {
@@ -1180,6 +1170,16 @@
         }, {
           "pred" : "http://www.w3.org/2004/02/skos/core#altLabel",
           "val" : " Functions involved in power of isolated muscles and muscle groups"
+        } ]
+      }
+    }, {
+      "id" : "http://id.who.int/icd/entity/1794398084",
+      "lbl" : "Músculos del muslo",
+      "type" : "CLASS",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://id.who.int/icd/schema/browserUrl",
+          "val" : "https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F1794398084"
         } ]
       }
     }, {
@@ -17398,7 +17398,14 @@
         "definition" : {
           "val" : "An information content entity that is intended to be a truthful statement about something (modulo, e.g., measurement precision or other systematic errors) and is constructed/acquired by a method which reliably tends to produce (approximately) truthful statements."
         },
+        "comments" : [ "[EURO-NMD] Atalia A et al., EURO-NMD registry: federated FAIR infrastructure, innovative technologies and concepts of a patient-centred registry for rare neuromuscular disorders. Orphanet J Rare Dis. 2024 Feb 14;19(1):66. doi: 10.1186/s13023-024-03059-3. PMID: 38355534; PMCID: PMC10865673.", "[PROMOT note] [Derived from RD-CDM] [6.3.2 Value] ", "[RD-CDM] Graefe, A.S.L., Hübner, M.R., Rehburg, F. et al. An ontology-based rare disease common data model harmonising international registries, FHIR, and Phenopackets. Sci Data 12, 234 (2025). https://doi.org/10.1038/s41597-025-04558-z" ],
+        "xrefs" : [ {
+          "val" : "NCIT:C25712"
+        } ],
         "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000112",
+          "val" : "Data items include counts of things, analyte concentrations, and statistical summaries."
+        }, {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000116",
           "val" : "2/2/2009 Alan and Bjoern discussing FACS run output data. This is a data item because it is about the cell population. Each element records an event and is typically further composed a set of measurment data items that record the fluorescent intensity stimulated by one of the lasers."
         }, {
@@ -17433,6 +17440,9 @@
           "val" : "A generically dependent continuant that is about some thing."
         },
         "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000112",
+          "val" : "Examples of information content entites include journal articles, data, graphical layouts, and graphs."
+        }, {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000116",
           "val" : "2014-03-10: The use of \"thing\" is intended to be general enough to include universals and configurations (see https://groups.google.com/d/msg/information-ontology/GBxvYZCk1oc/-L6B5fSBBTQJ)."
         }, {
@@ -17471,32 +17481,33 @@
       }
     }, {
       "id" : "http://purl.obolibrary.org/obo/PROMOT_0000001",
-      "lbl" : "mutation génetique",
+      "lbl" : "OPMD related mutation",
       "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "Une altération génétique qui est rare au sein d’une population."
-        },
-        "comments" : [ "EU-CDE", "JP: Translated to spanish using Bing Translator", "[EURO-NMD] Atalia A et al., EURO-NMD registry: federated FAIR infrastructure, innovative technologies and concepts of a patient-centred registry for rare neuromuscular disorders. Orphanet J Rare Dis. 2024 Feb 14;19(1):66. doi: 10.1186/s13023-024-03059-3. PMID: 38355534; PMCID: PMC10865673.", "[PROMOT NOTE: derived from EURO-NMD] ", "[PROMOT note] [Derived from RD-CDM] [6.1.1 Genomic Diagnosis]", "[RD-CDM] Graefe, A.S.L., Hübner, M.R., Rehburg, F. et al. An ontology-based rare disease common data model harmonising international registries, FHIR, and Phenopackets. Sci Data 12, 234 (2025). https://doi.org/10.1038/s41597-025-04558-z" ],
-        "xrefs" : [ {
-          "val" : "GENO:0000492"
-        }, {
-          "val" : "NCIT:C18093"
-        }, {
-          "val" : "http://snomed.info/id/106221001"
-        }, {
-          "val" : "http://snomed.info/id/55446002"
-        } ],
-        "basicPropertyValues" : [ {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
-          "val" : "https://orcid.org/0009-0000-5160-7927"
-        }, {
-          "pred" : "http://www.w3.org/2000/01/rdf-schema#seeAlso",
-          "val" : "http://purl.obolibrary.org/obo/GENO_0000492"
-        } ]
+          "val" : "A sequence alteration that is causal germline mutation in Oculopharyngeal Muscular Dystrophy."
+        }
       }
     }, {
       "id" : "http://purl.obolibrary.org/obo/PROMOT_0000002",
+      "lbl" : "CMS related mutation",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "A sequence alteration that is causal germline mutation in Congenital Myasthenic Syndrom."
+        }
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PROMOT_0000003",
+      "lbl" : "CMYO related mutation",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "A sequence alteration that is causal germline mutation in Congenital Myopathy."
+        }
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PROMOT_0000004",
       "lbl" : "mutation du gène PABPN1",
       "type" : "CLASS",
       "meta" : {
@@ -17513,7 +17524,7 @@
         } ]
       }
     }, {
-      "id" : "http://purl.obolibrary.org/obo/PROMOT_0000003",
+      "id" : "http://purl.obolibrary.org/obo/PROMOT_0000005",
       "lbl" : "mutation du gène RYR1",
       "type" : "CLASS",
       "meta" : {
@@ -17530,7 +17541,7 @@
         } ]
       }
     }, {
-      "id" : "http://purl.obolibrary.org/obo/PROMOT_0000004",
+      "id" : "http://purl.obolibrary.org/obo/PROMOT_0000006",
       "lbl" : "mutation du gène TTN",
       "type" : "CLASS",
       "meta" : {
@@ -17547,7 +17558,7 @@
         } ]
       }
     }, {
-      "id" : "http://purl.obolibrary.org/obo/PROMOT_0000005",
+      "id" : "http://purl.obolibrary.org/obo/PROMOT_0000007",
       "lbl" : "mutation du gène NEB",
       "type" : "CLASS",
       "meta" : {
@@ -17564,7 +17575,7 @@
         } ]
       }
     }, {
-      "id" : "http://purl.obolibrary.org/obo/PROMOT_0000006",
+      "id" : "http://purl.obolibrary.org/obo/PROMOT_0000008",
       "lbl" : "mutation du gène NMTM1",
       "type" : "CLASS",
       "meta" : {
@@ -17581,7 +17592,7 @@
         } ]
       }
     }, {
-      "id" : "http://purl.obolibrary.org/obo/PROMOT_0000007",
+      "id" : "http://purl.obolibrary.org/obo/PROMOT_0000009",
       "lbl" : "mutation du gène ACTA1",
       "type" : "CLASS",
       "meta" : {
@@ -17598,7 +17609,7 @@
         } ]
       }
     }, {
-      "id" : "http://purl.obolibrary.org/obo/PROMOT_0000008",
+      "id" : "http://purl.obolibrary.org/obo/PROMOT_0000010",
       "lbl" : "mutation du gène SELENON",
       "type" : "CLASS",
       "meta" : {
@@ -17615,7 +17626,7 @@
         } ]
       }
     }, {
-      "id" : "http://purl.obolibrary.org/obo/PROMOT_0000009",
+      "id" : "http://purl.obolibrary.org/obo/PROMOT_0000011",
       "lbl" : "mutation du gène CHRNE",
       "type" : "CLASS",
       "meta" : {
@@ -17632,7 +17643,7 @@
         } ]
       }
     }, {
-      "id" : "http://purl.obolibrary.org/obo/PROMOT_0000010",
+      "id" : "http://purl.obolibrary.org/obo/PROMOT_0000012",
       "lbl" : "mutation du gène DOK7",
       "type" : "CLASS",
       "meta" : {
@@ -17649,7 +17660,7 @@
         } ]
       }
     }, {
-      "id" : "http://purl.obolibrary.org/obo/PROMOT_0000011",
+      "id" : "http://purl.obolibrary.org/obo/PROMOT_0000013",
       "lbl" : "mutation du gène COLQ",
       "type" : "CLASS",
       "meta" : {
@@ -17666,7 +17677,7 @@
         } ]
       }
     }, {
-      "id" : "http://purl.obolibrary.org/obo/PROMOT_0000012",
+      "id" : "http://purl.obolibrary.org/obo/PROMOT_0000014",
       "lbl" : "mutation du gène RAPSN",
       "type" : "CLASS",
       "meta" : {
@@ -17683,7 +17694,7 @@
         } ]
       }
     }, {
-      "id" : "http://purl.obolibrary.org/obo/PROMOT_0000013",
+      "id" : "http://purl.obolibrary.org/obo/PROMOT_0000015",
       "lbl" : "mutation du gène GFPT1",
       "type" : "CLASS",
       "meta" : {
@@ -17700,7 +17711,7 @@
         } ]
       }
     }, {
-      "id" : "http://purl.obolibrary.org/obo/PROMOT_0000014",
+      "id" : "http://purl.obolibrary.org/obo/PROMOT_0000016",
       "lbl" : "mutation du gène GMPPB",
       "type" : "CLASS",
       "meta" : {
@@ -19363,11 +19374,11 @@
       }
     }, {
       "id" : "http://purl.obolibrary.org/obo/PROMOT_0110001",
-      "lbl" : "Activity",
+      "lbl" : "Activité",
       "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "An activity is the execution of a task or action by an individual. Activity limitations are difficulties an individual may have in executing activities."
+          "val" : "Classification internationale du fonctionnement, du handicap et de la santé"
         },
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
@@ -19383,7 +19394,7 @@
       "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "A participation is an involvement in a life situation. Participation restrictions are problems an individual may experience in involvement in life situations"
+          "val" : "Participación es involucrarse en una situación de la vida cotidiana. Las restricciones en la participación son problemas que una persona puede experimentar al involucrarse en situaciones de la vida cotidiana."
         },
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
@@ -19392,6 +19403,63 @@
           "pred" : "http://www.w3.org/2000/01/rdf-schema#seeAlso",
           "val" : "http://id.who.int/icd/entity/1394728112"
         } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/SO_0001060",
+      "lbl" : "sequence_variant",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "A sequence_variant is a non exact copy of a sequence_feature or genome exhibiting one or more sequence_alteration.",
+          "xrefs" : [ "SO:ke" ]
+        },
+        "comments" : [ "EU-CDE", "[EURO-NMD] Atalia A et al., EURO-NMD registry: federated FAIR infrastructure, innovative technologies and concepts of a patient-centred registry for rare neuromuscular disorders. Orphanet J Rare Dis. 2024 Feb 14;19(1):66. doi: 10.1186/s13023-024-03059-3. PMID: 38355534; PMCID: PMC10865673.", "[PROMOT NOTE: derived from EURO-NMD] ", "[PROMOT note] [Derived from RD-CDM] [6.1.1 Genomic Diagnosis]", "[RD-CDM] Graefe, A.S.L., Hübner, M.R., Rehburg, F. et al. An ontology-based rare disease common data model harmonising international registries, FHIR, and Phenopackets. Sci Data 12, 234 (2025). https://doi.org/10.1038/s41597-025-04558-z" ],
+        "xrefs" : [ {
+          "val" : "GENO:0000492"
+        }, {
+          "val" : "NCIT:C18093"
+        }, {
+          "val" : "http://snomed.info/id/106221001"
+        }, {
+          "val" : "http://snomed.info/id/55446002"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/SO_0001762",
+      "lbl" : "variant_origin",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "A quality inhering in a variant by virtue of its origin.",
+          "xrefs" : [ "PMID:17597783", "SO:ke" ]
+        }
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/SO_0001775",
+      "lbl" : "maternal_variant",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "A variant in the genetic material inherited from the mother."
+        }
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/SO_0001776",
+      "lbl" : "paternal_variant",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "A variant in the genetic material inherited from the father."
+        }
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/SO_0001781",
+      "lbl" : "de_novo_variant",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "A variant arising in the offspring that is not found in either of the parents."
+        }
       }
     }, {
       "id" : "http://purl.org/sig/ont/fma/fma0328100",
@@ -22468,31 +22536,6 @@
         } ]
       }
     }, {
-      "id" : "http://snomed.info/id/447007003",
-      "lbl" : "puntaje de dinamómetro manual hidráulico de Jamar (entidad observable)",
-      "type" : "CLASS",
-      "meta" : {
-        "basicPropertyValues" : [ {
-          "pred" : "http://data.esante.gouv.fr/NRC-France/sct-ext#definitionStatus",
-          "val" : "Primitif"
-        }, {
-          "pred" : "http://data.esante.gouv.fr/NRC-France/sct-ext#fsn",
-          "val" : "Jamar hydraulic hand dynamometer score (observable entity)"
-        }, {
-          "pred" : "http://purl.org/dc/elements/1.1/type",
-          "val" : "observable entity"
-        }, {
-          "pred" : "http://www.w3.org/2004/02/skos/core#notation",
-          "val" : "447007003"
-        }, {
-          "pred" : "http://www.w3.org/2004/02/skos/core#prefLabel",
-          "val" : "Jamar hydraulic hand dynamometer score"
-        }, {
-          "pred" : "http://www.w3.org/2004/02/skos/core#prefLabel",
-          "val" : "puntaje de dinamómetro manual hidráulico de Jamar"
-        } ]
-      }
-    }, {
       "id" : "http://snomed.info/id/45929001",
       "lbl" : "medio hermano (persona)",
       "type" : "CLASS",
@@ -23707,17 +23750,6 @@
         } ]
       }
     }, {
-      "id" : "http://purl.obolibrary.org/obo/PROMOT_2000007",
-      "lbl" : "uses",
-      "type" : "PROPERTY",
-      "propertyType" : "OBJECT",
-      "meta" : {
-        "basicPropertyValues" : [ {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
-          "val" : "https://orcid.org/0009-0000-5160-7927"
-        } ]
-      }
-    }, {
       "id" : "http://purl.obolibrary.org/obo/RO_0000091",
       "lbl" : "has disposition",
       "type" : "PROPERTY",
@@ -23788,20 +23820,7 @@
       "id" : "http://purl.obolibrary.org/obo/RO_0002201",
       "lbl" : "phenotype of",
       "type" : "PROPERTY",
-      "propertyType" : "OBJECT",
-      "meta" : {
-        "definition" : {
-          "val" : "inverse of has phenotype"
-        },
-        "subsets" : [ "http://purl.obolibrary.org/obo/RO_0002259", "http://purl.obolibrary.org/obo/ro/subsets#ro-eco" ],
-        "basicPropertyValues" : [ {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000114",
-          "val" : "http://purl.obolibrary.org/obo/IAO_0000125"
-        }, {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
-          "val" : "https://orcid.org/0000-0002-6601-2165"
-        } ]
-      }
+      "propertyType" : "OBJECT"
     }, {
       "id" : "http://purl.obolibrary.org/obo/RO_0002328",
       "lbl" : "functionally related to",
@@ -23994,21 +24013,15 @@
       "type" : "PROPERTY",
       "propertyType" : "OBJECT",
       "meta" : {
+        "definition" : {
+          "val" : "Une relation entre un processus et une entité qui a été produite par celui-ci."
+        },
+        "xrefs" : [ {
+          "val" : "SIO:000229"
+        } ],
         "basicPropertyValues" : [ {
-          "pred" : "http://purl.org/dc/elements/1.1/identifier",
-          "val" : "SIO_000229"
-        }, {
-          "pred" : "http://purl.org/dc/terms/description",
-          "val" : "has output is a relation between an process and an entity, where the entity is present at the end of the process."
-        }, {
-          "pred" : "http://semanticscience.org/resource/subset",
-          "val" : "core"
-        }, {
-          "pred" : "http://semanticscience.org/resource/subset",
-          "val" : "sadi"
-        }, {
-          "pred" : "http://www.w3.org/2000/01/rdf-schema#isDefinedBy",
-          "val" : "http://semanticscience.org/ontology/sio.owl"
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
+          "val" : "https://orcid.org/0009-0000-5160-7927"
         } ]
       }
     }, {
@@ -24028,26 +24041,6 @@
           "val" : "http://semanticscience.org/ontology/sio.owl"
         } ]
       }
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/PROMOT_3000001",
-      "lbl" : "has int value",
-      "type" : "PROPERTY",
-      "propertyType" : "DATA"
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/PROMOT_3000002",
-      "lbl" : "has string value",
-      "type" : "PROPERTY",
-      "propertyType" : "DATA"
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/PROMOT_3000003",
-      "lbl" : "has float value",
-      "type" : "PROPERTY",
-      "propertyType" : "DATA"
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/PROMOT_3000004",
-      "lbl" : "has date value",
-      "type" : "PROPERTY",
-      "propertyType" : "DATA"
     }, {
       "id" : "http://semanticscience.org/resource/SIO_000300",
       "lbl" : "has value",
@@ -24151,8 +24144,21 @@
       }
     }, {
       "id" : "http://purl.obolibrary.org/obo/IAO_0000116",
+      "lbl" : "editor note",
       "type" : "PROPERTY",
-      "propertyType" : "ANNOTATION"
+      "propertyType" : "ANNOTATION",
+      "meta" : {
+        "definition" : {
+          "val" : "An administrative note intended for its editor. It may not be included in the publication version of the ontology, so it should contain nothing necessary for end users to understand the ontology."
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
+          "val" : "PERSON:Daniel Schober"
+        }, {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000119",
+          "val" : "GROUP:OBI:<http://purl.obofoundry.org/obo/obi>"
+        } ]
+      }
     }, {
       "id" : "http://purl.obolibrary.org/obo/IAO_0000117",
       "lbl" : "term editor",
@@ -24242,10 +24248,6 @@
       }
     }, {
       "id" : "http://purl.obolibrary.org/obo/RO_0001900",
-      "type" : "PROPERTY",
-      "propertyType" : "ANNOTATION"
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/RO_0002259",
       "type" : "PROPERTY",
       "propertyType" : "ANNOTATION"
     }, {
@@ -24643,10 +24645,6 @@
     }, {
       "sub" : "http://id.who.int/icd/entity/1228414013",
       "pred" : "is_a",
-      "obj" : "http://id.who.int/icd/entity/1394728112"
-    }, {
-      "sub" : "http://id.who.int/icd/entity/1228414013",
-      "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PROMOT_0120002"
     }, {
       "sub" : "http://id.who.int/icd/entity/1233939003",
@@ -24967,10 +24965,6 @@
     }, {
       "sub" : "http://id.who.int/icd/entity/1436113794",
       "pred" : "is_a",
-      "obj" : "http://id.who.int/icd/entity/1394728112"
-    }, {
-      "sub" : "http://id.who.int/icd/entity/1436113794",
-      "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PROMOT_0120002"
     }, {
       "sub" : "http://id.who.int/icd/entity/1438965984",
@@ -25103,10 +25097,6 @@
     }, {
       "sub" : "http://id.who.int/icd/entity/1535125568",
       "pred" : "is_a",
-      "obj" : "http://id.who.int/icd/entity/1394728112"
-    }, {
-      "sub" : "http://id.who.int/icd/entity/1535125568",
-      "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PROMOT_0120002"
     }, {
       "sub" : "http://id.who.int/icd/entity/1550548595",
@@ -25152,10 +25142,6 @@
       "sub" : "http://id.who.int/icd/entity/1607952955",
       "pred" : "is_a",
       "obj" : "http://id.who.int/icd/entity/1255154286"
-    }, {
-      "sub" : "http://id.who.int/icd/entity/1608009360",
-      "pred" : "is_a",
-      "obj" : "http://id.who.int/icd/entity/1394728112"
     }, {
       "sub" : "http://id.who.int/icd/entity/1608009360",
       "pred" : "is_a",
@@ -25493,6 +25479,10 @@
       "pred" : "http://purl.obolibrary.org/obo/RO_0002331",
       "obj" : "http://id.who.int/icd/entity/553784299"
     }, {
+      "sub" : "http://id.who.int/icd/entity/1794398084",
+      "pred" : "is_a",
+      "obj" : "http://id.who.int/icd/entity/435521956"
+    }, {
       "sub" : "http://id.who.int/icd/entity/1806589582",
       "pred" : "is_a",
       "obj" : "http://id.who.int/icd/entity/363211474"
@@ -25516,10 +25506,6 @@
       "sub" : "http://id.who.int/icd/entity/1820174762",
       "pred" : "is_a",
       "obj" : "http://id.who.int/icd/entity/437219407"
-    }, {
-      "sub" : "http://id.who.int/icd/entity/1828012543",
-      "pred" : "is_a",
-      "obj" : "http://id.who.int/icd/entity/1394728112"
     }, {
       "sub" : "http://id.who.int/icd/entity/1828012543",
       "pred" : "is_a",
@@ -25755,10 +25741,6 @@
     }, {
       "sub" : "http://id.who.int/icd/entity/2011053685",
       "pred" : "is_a",
-      "obj" : "http://id.who.int/icd/entity/1394728112"
-    }, {
-      "sub" : "http://id.who.int/icd/entity/2011053685",
-      "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PROMOT_0110001"
     }, {
       "sub" : "http://id.who.int/icd/entity/2021370201",
@@ -25784,10 +25766,6 @@
       "sub" : "http://id.who.int/icd/entity/203515404",
       "pred" : "is_a",
       "obj" : "http://id.who.int/icd/entity/1916167881"
-    }, {
-      "sub" : "http://id.who.int/icd/entity/2048203604",
-      "pred" : "is_a",
-      "obj" : "http://id.who.int/icd/entity/1394728112"
     }, {
       "sub" : "http://id.who.int/icd/entity/2048203604",
       "pred" : "is_a",
@@ -26288,10 +26266,6 @@
       "sub" : "http://id.who.int/icd/entity/521411479",
       "pred" : "http://purl.obolibrary.org/obo/RO_0002328",
       "obj" : "http://id.who.int/icd/entity/1789365017"
-    }, {
-      "sub" : "http://id.who.int/icd/entity/524305529",
-      "pred" : "is_a",
-      "obj" : "http://id.who.int/icd/entity/1394728112"
     }, {
       "sub" : "http://id.who.int/icd/entity/524305529",
       "pred" : "is_a",
@@ -26888,10 +26862,6 @@
       "sub" : "http://id.who.int/icd/entity/933576740",
       "pred" : "is_a",
       "obj" : "http://id.who.int/icd/entity/1929433903"
-    }, {
-      "sub" : "http://id.who.int/icd/entity/982325691",
-      "pred" : "is_a",
-      "obj" : "http://id.who.int/icd/entity/1394728112"
     }, {
       "sub" : "http://id.who.int/icd/entity/982325691",
       "pred" : "is_a",
@@ -28791,31 +28761,27 @@
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PROMOT_0000001",
       "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/BFO_0000002"
+      "obj" : "http://purl.obolibrary.org/obo/SO_0001060"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PROMOT_0000001",
-      "pred" : "http://purl.obolibrary.org/obo/RO_0004013",
-      "obj" : "http://www.orpha.net/ORDO/Orphanet_377788"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/PROMOT_0000001",
-      "pred" : "http://semanticscience.org/resource/SIO_000217",
-      "obj" : "http://purl.obolibrary.org/obo/HP_0000005"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/PROMOT_0000001",
-      "pred" : "http://semanticscience.org/resource/SIO_000217",
-      "obj" : "http://semanticscience.org/resource/SIO_001268"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/PROMOT_0000002",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000001"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/PROMOT_0000002",
       "pred" : "http://purl.obolibrary.org/obo/RO_0004013",
       "obj" : "http://www.orpha.net/ORDO/Orphanet_270"
     }, {
+      "sub" : "http://purl.obolibrary.org/obo/PROMOT_0000002",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/SO_0001060"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PROMOT_0000002",
+      "pred" : "http://purl.obolibrary.org/obo/RO_0004013",
+      "obj" : "http://www.orpha.net/ORDO/Orphanet_590"
+    }, {
       "sub" : "http://purl.obolibrary.org/obo/PROMOT_0000003",
       "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000001"
+      "obj" : "http://purl.obolibrary.org/obo/SO_0001060"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PROMOT_0000003",
+      "pred" : "http://purl.obolibrary.org/obo/RO_0004013",
+      "obj" : "http://www.orpha.net/ORDO/Orphanet_97245"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PROMOT_0000004",
       "pred" : "is_a",
@@ -28823,43 +28789,51 @@
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PROMOT_0000005",
       "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000001"
+      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000003"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PROMOT_0000006",
       "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000001"
+      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000003"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PROMOT_0000007",
       "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000001"
+      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000003"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PROMOT_0000008",
       "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000001"
+      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000003"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PROMOT_0000009",
       "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000001"
+      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000003"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PROMOT_0000010",
       "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000001"
+      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000003"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PROMOT_0000011",
       "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000001"
+      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000002"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PROMOT_0000012",
       "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000001"
+      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000002"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PROMOT_0000013",
       "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000001"
+      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000002"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PROMOT_0000014",
       "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000001"
+      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000002"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PROMOT_0000015",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000002"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PROMOT_0000016",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000002"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PROMOT_0010001",
       "pred" : "is_a",
@@ -29327,15 +29301,7 @@
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PROMOT_0020004",
       "pred" : "http://purl.obolibrary.org/obo/PROMOT_2000004",
-      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000001"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/PROMOT_0020004",
-      "pred" : "http://purl.obolibrary.org/obo/PROMOT_2000007",
-      "obj" : "http://snomed.info/id/257192006"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/PROMOT_0020004",
-      "pred" : "http://purl.obolibrary.org/obo/PROMOT_2000007",
-      "obj" : "http://snomed.info/id/360296002"
+      "obj" : "http://purl.obolibrary.org/obo/SO_0001060"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PROMOT_0020004",
       "pred" : "http://purl.obolibrary.org/obo/RO_0002200",
@@ -29653,10 +29619,6 @@
       "pred" : "http://purl.obolibrary.org/obo/PROMOT_2000002",
       "obj" : "http://purl.obolibrary.org/obo/HP_0033466"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/PROMOT_0100016",
-      "pred" : "http://purl.obolibrary.org/obo/RO_0000091",
-      "obj" : "http://snomed.info/id/447007003"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/PROMOT_0100017",
       "pred" : "is_a",
       "obj" : "http://snomed.info/id/12894003"
@@ -29676,6 +29638,30 @@
       "sub" : "http://purl.obolibrary.org/obo/PROMOT_0120002",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/BFO_0000015"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/SO_0001060",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/BFO_0000002"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/SO_0001060",
+      "pred" : "http://purl.obolibrary.org/obo/RO_0004013",
+      "obj" : "http://www.orpha.net/ORDO/Orphanet_377788"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/SO_0001060",
+      "pred" : "http://semanticscience.org/resource/SIO_000217",
+      "obj" : "http://purl.obolibrary.org/obo/SO_0001762"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/SO_0001775",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/SO_0001762"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/SO_0001776",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/SO_0001762"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/SO_0001781",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/SO_0001762"
     }, {
       "sub" : "http://purl.org/sig/ont/fma/fma0328100",
       "pred" : "is_a",
@@ -30563,7 +30549,7 @@
     }, {
       "sub" : "http://semanticscience.org/resource/SIO_001268",
       "pred" : "http://semanticscience.org/resource/SIO_000218",
-      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000001"
+      "obj" : "http://purl.obolibrary.org/obo/SO_0001060"
     }, {
       "sub" : "http://semanticscience.org/resource/SIO_001269",
       "pred" : "is_a",
@@ -30810,10 +30796,6 @@
       "obj" : "http://snomed.info/id/363787002"
     }, {
       "sub" : "http://snomed.info/id/439272007",
-      "pred" : "is_a",
-      "obj" : "http://snomed.info/id/363787002"
-    }, {
-      "sub" : "http://snomed.info/id/447007003",
       "pred" : "is_a",
       "obj" : "http://snomed.info/id/363787002"
     }, {
@@ -31423,7 +31405,7 @@
     }, {
       "sub" : "http://www.orpha.net/ORDO/Orphanet_270",
       "pred" : "http://purl.obolibrary.org/obo/RO_0004003",
-      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000002"
+      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000001"
     }, {
       "sub" : "http://www.orpha.net/ORDO/Orphanet_270",
       "pred" : "http://purl.obolibrary.org/obo/RO_0004029",
@@ -31691,15 +31673,23 @@
     }, {
       "sub" : "http://www.orpha.net/ORDO/Orphanet_377788",
       "pred" : "http://purl.obolibrary.org/obo/RO_0004003",
-      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000001"
+      "obj" : "http://purl.obolibrary.org/obo/SO_0001060"
     }, {
       "sub" : "http://www.orpha.net/ORDO/Orphanet_377788",
       "pred" : "http://purl.obolibrary.org/obo/RO_0004029",
       "obj" : "http://purl.obolibrary.org/obo/HP_0000118"
     }, {
+      "sub" : "http://www.orpha.net/ORDO/Orphanet_377788",
+      "pred" : "http://semanticscience.org/resource/SIO_000217",
+      "obj" : "http://purl.obolibrary.org/obo/HP_0000005"
+    }, {
       "sub" : "http://www.orpha.net/ORDO/Orphanet_590",
       "pred" : "is_a",
       "obj" : "http://www.orpha.net/ORDO/Orphanet_377788"
+    }, {
+      "sub" : "http://www.orpha.net/ORDO/Orphanet_590",
+      "pred" : "http://purl.obolibrary.org/obo/RO_0004003",
+      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000002"
     }, {
       "sub" : "http://www.orpha.net/ORDO/Orphanet_590",
       "pred" : "http://purl.obolibrary.org/obo/RO_0004029",
@@ -32055,7 +32045,7 @@
     }, {
       "sub" : "http://www.orpha.net/ORDO/Orphanet_97245",
       "pred" : "http://purl.obolibrary.org/obo/RO_0004003",
-      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0000001"
+      "obj" : "http://purl.obolibrary.org/obo/SO_0001060"
     }, {
       "sub" : "http://www.orpha.net/ORDO/Orphanet_97245",
       "pred" : "http://purl.obolibrary.org/obo/RO_0004029",
@@ -32473,6 +32463,10 @@
       "pred" : "http://purl.obolibrary.org/obo/RO_0004029",
       "obj" : "http://purl.obolibrary.org/obo/PROMOT_0032015"
     }, {
+      "sub" : "http://www.orpha.net/ORDO/Orphanet_97245",
+      "pred" : "http://semanticscience.org/resource/SIO_000217",
+      "obj" : "http://purl.obolibrary.org/obo/HP_0000005"
+    }, {
       "sub" : "http://purl.obolibrary.org/obo/RO_0002331",
       "pred" : "subPropertyOf",
       "obj" : "http://purl.obolibrary.org/obo/RO_0002328"
@@ -32485,17 +32479,9 @@
       "pred" : "subPropertyOf",
       "obj" : "http://semanticscience.org/resource/SIO_000001"
     }, {
-      "sub" : "http://semanticscience.org/resource/SIO_000229",
-      "pred" : "subPropertyOf",
-      "obj" : "http://semanticscience.org/resource/SIO_000001"
-    }, {
       "sub" : "http://semanticscience.org/resource/SIO_000674",
       "pred" : "subPropertyOf",
       "obj" : "http://semanticscience.org/resource/SIO_000001"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/RO_0002200",
-      "pred" : "inverseOf",
-      "obj" : "http://purl.obolibrary.org/obo/RO_0002201"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/RO_0004003",
       "pred" : "inverseOf",
@@ -32585,13 +32571,13 @@
     }, {
       "predicateId" : "http://purl.obolibrary.org/obo/PROMOT_2000004",
       "domainClassIds" : [ "http://semanticscience.org/resource/SIO_010000" ],
-      "rangeClassIds" : [ "http://purl.obolibrary.org/obo/PROMOT_0000001" ]
+      "rangeClassIds" : [ "http://purl.obolibrary.org/obo/SO_0001060" ]
     }, {
       "predicateId" : "http://purl.obolibrary.org/obo/PROMOT_2000005",
       "domainClassIds" : [ "http://purl.obolibrary.org/obo/HP_0000118" ]
     }, {
       "predicateId" : "http://purl.obolibrary.org/obo/RO_0004013",
-      "domainClassIds" : [ "http://purl.obolibrary.org/obo/PROMOT_0000001" ]
+      "domainClassIds" : [ "http://purl.obolibrary.org/obo/SO_0001060" ]
     }, {
       "predicateId" : "http://semanticscience.org/resource/SIO_000218",
       "domainClassIds" : [ "http://purl.obolibrary.org/obo/BFO_0000019" ]

@@ -32,8 +32,8 @@ dico_axioms = {}
 dico_annotations = {}
 # creation of the lists of property IRIs
 # création des listes avec les IRI des properties
-list_objectprop = []
-list_annotationprop = []
+list_OP = []
+list_AP = []
 
 
 # Get all files in /src/data/promot/
@@ -41,49 +41,48 @@ list_annotationprop = []
 files = os.listdir("../data/promot/")
 
 for f in files:
-    print (f'Ouverture de {f}')
-    print (f'Openning of {f}')
     # Read csv file with relations and fill dictionnary with relations
     with open(f"../data/promot/{f}", newline='', encoding='utf-8') as tsvfile:
+        print (f'Ouverture de {f}')
+        print (f'\tOpenning of {f}')
         reader = csv.reader(tsvfile, delimiter = '\t', quotechar = '"', quoting = csv.QUOTE_MINIMAL)
-        #print ('ouverture fichier')
         for row in reader:
-            subject_class = ''
+            subject_iri = ''
             subject_label = ''
             predicate = ''
-            object_class = ''
-            #print ('-- lecture ligne')
+            object_iri = ''
+            data = ''
             if row[0] == 'Subject_iri': # pass the first line
                 pass
             elif row[2] == 'PROMOT:1000001': # s'il s'agit d'une annotation property | if it is the PROMOT annotation property
-                subject_class = row[0]
+                subject_iri = row[0]
                 subject_label = row[1]
                 predicate = row[2]
                 data = row[6]
-                if predicate in list_annotationprop : # si l'annotation property a déjà été rencontrée | if the annotation property is already known
+                if predicate in list_AP : # si l'annotation property a déjà été rencontrée | if the annotation property is already known
                     pass
-                else :
-                    list_annotationprop.append(predicate)
-                if subject_class in dico_annotations.keys(): # if there already is a relation using the class as a subject
-                    dico_annotations[subject_class][0] = f'{dico_annotations[subject_class][0]}|{data}'
+                else : # sinon la lister dans la liste des annotation properties
+                    list_AP.append(predicate)
+                if subject_iri in dico_annotations.keys(): # if there already is a relation using the class as a subject
+                    dico_annotations[subject_iri][0] = f'{dico_annotations[subject_iri][0]}|{data}'
                 else: # if no relation using the class as a subject already exists
                     list = [f'{data}', subject_label]
-                    dico_annotations[subject_class] = list
+                    dico_annotations[subject_iri] = list
             else: # add the relation to the template-to-be column
-                subject_class = row[0]
+                subject_iri = row[0]
                 subject_label = row[1]
                 predicate = row[2]
                 expression = row[4]
-                object_class = row[5]
-                if predicate in list_objectprop :
+                object_iri = row[5]
+                if predicate in list_OP : # si l'object property a déjà été rencontrée | if the object property is already known
                     pass
-                else :
-                    list_objectprop.append(predicate)
-                if subject_class in dico_axioms.keys(): # if there already is a relation using the class as a subject
-                    dico_axioms[subject_class][0] = f'{dico_axioms[subject_class][0]}|({predicate} {expression} {object_class})'
+                else : # sinon la lister dans la liste des OP
+                    list_OP.append(predicate)
+                if subject_iri in dico_axioms.keys(): # if there already is a relation using the class as a subject
+                    dico_axioms[subject_iri][0] = f'{dico_axioms[subject_iri][0]}|({predicate} {expression} {object_iri})'
                 else: # if no relation using the class as a subject already exists
-                    list = [f'({predicate} {expression} {object_class})', subject_label]
-                    dico_axioms[subject_class] = list
+                    list = [f'({predicate} {expression} {object_iri})', subject_label]
+                    dico_axioms[subject_iri] = list
 
 
 # remplissage de la dataframe axioms | filling of the axioms dataframe
@@ -100,22 +99,26 @@ print(axioms_df)
 
 # merge of the base template with the axioms template
 output_df = pd.merge(component_df, axioms_df, how='outer')
-print("output_df")
-print(output_df)
+print("output_df pour structure of palate")
+print(output_df[output_df['ID'] == 'ICF:374222990']['Parent Class'])
+output_df.to_csv('../templates/promot-test.tsv', sep='\t', index=False)
 # merge of the output_df with the translations
 template_df = pd.merge(output_df, translation_df, how='outer')
+print("template_df pour structure of palate")
 print("template_df")
-print(template_df)
-template_df.to_csv('../templates/promot-test.tsv', sep='\t', index=False)
+print(template_df[template_df['ID'] == 'ICF:374222990']['Parent Class'])
+#template_df.to_csv('../templates/promot-test.tsv', sep='\t', index=False)
+
 idx = template_df[template_df['ID'] == 'ID']
-print(idx)
+#print(idx)
 idx = template_df[template_df['ID'] == 'ID'].index.item()
 
 # # Move target row to first element of list.
 new_index = [idx] + [i for i in range(len(template_df)) if i != idx]
 #print(new_index)
 template_df = template_df.reindex(new_index).reset_index(drop=True)
-print(template_df)
+print("template_df v2 pour structure of palate")
+print(template_df[template_df['ID'] == 'ICF:374222990']['Parent Class'])
 
 print ('Creation of PROMOT template file')
 # Conversion de la dataframe en un template ROBOT | Convert of the dataframe into a ROBOT template
