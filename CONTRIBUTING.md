@@ -72,7 +72,7 @@ If you have never editted this ontology before, first follow a [general tutorial
 
 **Process**:
 
-1. Clone the repository (In case you are not an offical team member, create a fork first)
+1. Clone the repository (In case you are not an offical team member, create a fork from the _dev_ fork first)
 1. Create new branch in git, for example `git checkout -b issue123`
 1. Open src/ontology/promot-edit.owl in your favourite editor, i.e. [Protege](https://protege.stanford.edu/). **Careful:** double check you are editing the correct file. There are many ontology files in this repository, but only one _editors file_!
 1. Perform your edit and save your changes

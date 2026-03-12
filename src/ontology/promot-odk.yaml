@@ -5,7 +5,7 @@ github_org: JuPoIm
 git_main_branch: main
 repo: promot_ontology
 contact: juliette.potier@institutimagine.org
-description: "Ontology for modeling the three following neuromuscular diseases : OPMD, Congenital myopathies and Congenital myastenic syndroms. It aims to be also an ontology for building the PROMOT project relational database."
+description: "Ontology of the PROMOT initiative for modeling three neuromuscular diseases: Oculopharyngeal Muscular Dystrophy, Congenital Myopathies and Congenital Myastenic Syndroms. It also aims to be the conceptual schema for building the PROMOT initiative relational database."
 license: "https://creativecommons.org/licenses/by-nc-sa/4.0/"
 documentation:
   documentation_system: mkdocs
@@ -22,27 +22,20 @@ export_formats:
   - json
 #### USE CONFIG
 use_context: TRUE # uses context.json file for prefixes
-use_dosdps: TRUE # uses Dead Simple Owl Design Patterns for creating PROMOT axioms
-use_template: TRUE # uses ROBOT templates for creating PROMOT classes, properties and axioms
-use_mappings: TRUE # uses SSSOM mapping files
-#### HOMEMADE SSSOM MODULE
+use_template: TRUE # uses ROBOT templates for creating PROMOT specific classes, properties and axioms
+use_mappings: TRUE # uses SSSOM mapping files to map entities used in PROMOT to already existing equivalents
+#### SSSOM CONFIG
 sssom_mappingset_group:
   products:
     - id: promot-mappings
-    - id: ICF_to_CIF_promot-mappings
-    - id: ICF_to_CIF_all-mappings
+    - id: icf-to-cif_promot-mappings
+    - id: icf-to-cif_all-mappings
   release_mappings: TRUE
-bridge_group:
-  products:
-    - id: promot-bridge
-      sources:
-        - promot-mappings
-    - id: icf-cif-fr-bridge
-      sources:
-        - ICF_to_CIF_all-mappings
-  release_bridges: TRUE
-#  http://purl.obolibrary.org/obo/ro/bridge/sio-ro-bridge.owl
-#### HOMEMADE MODULE
+#### BRIDGE CONFIG
+# bridge_group:
+#   products:
+#     - id: promot-bridge
+#### COMPONENTS CONFIG
 components:
   release_components: TRUE
   products:
@@ -50,13 +43,12 @@ components:
       use_template: TRUE
       template_options: --add-prefixes config/context.json
       templates:
-        - promot-component.csv
-        - ICF_labels_es-fr.tsv
+        - promot-component-auto.tsv
       use_mappings: TRUE
       mappings:
         - promot-mappings.sssom.tsv
-        - ICF_to_CIF_promot-mappings.sssom.tsv
-#### IMPORTED MODULES
+        - icf-to-cif_promot-mappings.sssom.tsv
+#### IMPORTS CONFIG
 import_group:
   annotation_properties:
     - rdfs:label
@@ -66,6 +58,7 @@ import_group:
     - dc:date
     - dcterms:creator
     - oboInOwl:hasDbXref
+    - IAO:0000112 # exemple of usage
     - IAO:0000115 # definition
     - IAO:0000116 # editor note
     - IAO:0000117 # term editor
@@ -81,17 +74,16 @@ import_group:
     - id: hp # phenotypic abnormality classes
     - id: iao # information content entity classes
       module_type: filter
-    - id: icf # body structures, functions, activities classes
-      mirror_from: https://raw.githubusercontent.com/whoficitc/harmonization/main/ontology/whofic-2025-05-24.owl
+    - id: icf # body structures/functions, activities and participation classes
+      mirror_type: no_mirror # manual download required from https://raw.githubusercontent.com/whoficitc/harmonization/main/ontology/whofic-2025-05-24.owl (or later version)
     - id: ordo # diseases classes ORDO
       mirror_from: https://www.orphadata.com/data/ontologies/ordo/last_version/ORDO_en_4.8.owl
-    - id: obi # 'Organism' and 'Homo sapiens' classes
-    - id: ro # object properties
-    - id: sio # life status, parental transmission, object properties
-      mirror_type: no_mirror
-    - id: snomed # See promot.Makefile for details
+    - id: ro # OP
+    - id: sio # life status, parental transmission, object properties | see promot.Makefile for details
+      mirror_type: no_mirror # curl -L command included in custom import, update the url to the later version if needed in promot.Makefile
+    - id: snomed # See promot.Makefile and src/data/README.md for details
       is_large: TRUE
-      mirror_type: no_mirror
+      mirror_type: no_mirror # manual downloads required from https://www.nlm.nih.gov/healthit/snomedct/international.html & https://smt.esante.gouv.fr/terminologie-snomed-ct-fr/
 #### ROBOT CONFIG
 robot_java_args: '-Xmx25G'
 robot_report:
