@@ -7,7 +7,6 @@
 
 # PROMOT ontology
 <img src="https://github.com/JuPoIm/promot/blob/test/site/cite/Promot_Logo_Colours.png"/>
-
 The PROMOT ontology represents the 3 groups of neuromuscular diseases the PROMOT Master Observational Trial focuses on :
 * Oculopharyngeal Muscular Dystrophy
 * Congenital Myasthenic Syndromes
@@ -31,7 +30,7 @@ The latest version of the ontology can always be found at:
 
 * [PROMOT initiative website](https://www.promotinitiative.com/project/ontology)
 
-* Bioportal
+* [Bioportal link]()
 
 ### Editors' version
 
@@ -67,7 +66,7 @@ This project has received funding from **(Name of funding agency)**, **XX** and 
 
 The EJP RD initiative has received funding from the European Union’s Horizon 2020 research and innovation programme under grant agreement N°825575.
 
-More informations about ERDERA can be found on [EJP RD website](https://www.ejprarediseases.org/)
+More informations about EJP RD can be found on [EJP RD website](https://www.ejprarediseases.org/)
 
 <img src="https://github.com/JuPoIm/promot/blob/test/site/cite/Flag_of_Europe.png" width="25%"/> <img src="https://github.com/JuPoIm/promot/blob/test/site/cite/logo-inserm-300x124.jpg" width="25%"/>
 
@@ -82,7 +81,7 @@ advice and infrastructure. We are very grateful for all your contributions - thi
 More informations about PROMOT initiative can be found on [PROMOT initiative website](https://www.promotinitiative.com/).
 
 ### IMAGINE INSTITUTE
-<img width="25%"/>[![Imagine institute official logo](https://github.com/JuPoIm/promot/blob/test/site/cite/logo_imagine.png)](https://www.institutimagine.org/)</img>
+<img src="https://github.com/JuPoIm/promot/blob/test/site/cite/logo_imagine.png" height=100 width=200/>
 
 More informations about Imagine Institute can be found on [Imagine Institute website](https://www.institutimagine.org/)
 
