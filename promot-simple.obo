@@ -1,7 +1,10 @@
 format-version: 1.2
-data-version: promot/releases/2026-03-12/promot-simple.owl
-date: 12:03:2026 17:20
+data-version: promot/releases/2026-03-13/promot-simple.owl
+date: 13:03:2026 17:22
+subsetdef: http://purl.obolibrary.org/obo/valid_for_go_annotation_extension ""
 subsetdef: http://purl.obolibrary.org/obo/valid_for_go_gp2term ""
+subsetdef: http://purl.obolibrary.org/obo/valid_for_go_ontology ""
+subsetdef: http://purl.obolibrary.org/obo/valid_for_gocam ""
 subsetdef: ro-eco ""
 idspace: ace_lexicon http://attempto.ifi.uzh.ch/ace_lexicon# 
 idspace: BIOLINK https://w3id.org/biolink/vocab/ 
@@ -25,7 +28,6 @@ idspace: omoptype https://w3id.org/cpont/omop/types/
 idspace: ORDO http://www.orpha.net/ORDO/Orphanet_ 
 idspace: prov http://www.w3.org/ns/prov# 
 idspace: rdfa http://www.w3.org/ns/rdfa# 
-idspace: resource http://semanticscience.org/resource/ 
 idspace: schema http://schema.org/ 
 idspace: SIO http://semanticscience.org/resource/SIO_ 
 idspace: skos http://www.w3.org/2004/02/skos/core# 
@@ -51,7 +53,7 @@ property_value: dc11:contributor "Mansoore Gholizade MD" xsd:string
 property_value: dc11:creator "Cynthia Gagnon MD, PhD\nhttps://orcid.org/0000-0003-2829-8470" xsd:string
 property_value: dc11:creator "Juliette Potier MSc\nhttps://orcid.org/0009-0000-5160-7927" xsd:string
 property_value: dc11:creator "Paul Fabry MD, PhD student\nhttps://orcid.org/0000-0002-3336-2476" xsd:string
-property_value: owl:versionInfo "2026-03-12" xsd:string
+property_value: owl:versionInfo "2026-03-13" xsd:string
 property_value: seeAlso "More about PROMOT initiative at https://www.promotinitiative.com/\n" xsd:string
 property_value: terms:description "Ontology for modeling the three following neuromuscular diseases : OPMD, Congenital myopathies and Congenital myastenic syndroms. It aims to be also an ontology for building the PROMOT project relational database." xsd:string
 property_value: terms:license https://creativecommons.org/licenses/by-nc-sa/4.0/
@@ -74,7 +76,7 @@ def: "A sequence alteration that is causal germline mutation in Congenital Myopa
 
 [Term]
 id: PROMOT:0000004
-name: PABPN1 mutation
+name: PABPN1 variant
 def: "A sequence alteration located within the PABPN1 gene." []
 comment: JP: Translated to spanish using Bing Translator
 is_a: PROMOT:0000001 ! OPMD related mutation
@@ -83,7 +85,7 @@ property_value: seeAlso NCIT:C204162
 
 [Term]
 id: PROMOT:0000005
-name: RYR1 mutation
+name: RYR1 variant
 def: "A sequence alteration located within the RYR1 gene." []
 comment: JP: Translated to spanish using Bing Translator
 is_a: PROMOT:0000003 ! CMYO related mutation
@@ -92,7 +94,7 @@ property_value: seeAlso NCIT:C150311
 
 [Term]
 id: PROMOT:0000006
-name: TTN mutation
+name: TTN variant
 def: "A sequence alteration located within the TTN gene." []
 comment: JP: Translated to spanish using Bing Translator
 is_a: PROMOT:0000003 ! CMYO related mutation
@@ -101,7 +103,7 @@ property_value: seeAlso NCIT:C101756
 
 [Term]
 id: PROMOT:0000007
-name: NEB mutation
+name: NEB variant
 def: "A sequence alteration located within the NEB gene." []
 comment: JP: Translated to spanish using Bing Translator
 is_a: PROMOT:0000003 ! CMYO related mutation
@@ -110,7 +112,7 @@ property_value: seeAlso NCIT:C203906
 
 [Term]
 id: PROMOT:0000008
-name: MTM1 mutation
+name: MTM1 variant
 def: "A sequence alteration located within the MTM1 gene." []
 comment: JP: Translated to spanish using Bing Translator
 is_a: PROMOT:0000003 ! CMYO related mutation
@@ -119,7 +121,7 @@ property_value: seeAlso NCIT:C203822
 
 [Term]
 id: PROMOT:0000009
-name: ACTA1 mutation
+name: ACTA1 variant
 def: "A sequence alteration located within the ACTA1 gene." []
 comment: JP: Translated to spanish using Bing Translator
 is_a: PROMOT:0000003 ! CMYO related mutation
@@ -128,7 +130,7 @@ property_value: seeAlso NCIT:C191893
 
 [Term]
 id: PROMOT:0000010
-name: SELENON mutation
+name: SELENON variant
 def: "A sequence alteration located within the SELENON gene." []
 comment: JP: Translated to spanish using Bing Translator
 is_a: PROMOT:0000003 ! CMYO related mutation
@@ -137,7 +139,7 @@ property_value: seeAlso NCIT:C205071
 
 [Term]
 id: PROMOT:0000011
-name: CHRNE mutation
+name: CHRNE variant
 def: "A sequence alteration located within the CHRNE gene." []
 comment: JP: Translated to spanish using Bing Translator
 is_a: PROMOT:0000002 ! CMS related mutation
@@ -146,7 +148,7 @@ property_value: seeAlso NCIT:C198628
 
 [Term]
 id: PROMOT:0000012
-name: DOK7 mutation
+name: DOK7 variant
 def: "A sequence alteration located within the DOK7 gene." []
 comment: JP: Translated to spanish using Bing Translator
 is_a: PROMOT:0000002 ! CMS related mutation
@@ -155,7 +157,7 @@ property_value: seeAlso NCIT:C216062
 
 [Term]
 id: PROMOT:0000013
-name: COLQ mutation
+name: COLQ variant
 def: "A sequence alteration located within the COLQ gene." []
 comment: JP: Translated to spanish using Bing Translator
 is_a: PROMOT:0000002 ! CMS related mutation
@@ -164,7 +166,7 @@ property_value: seeAlso NCIT:C200235
 
 [Term]
 id: PROMOT:0000014
-name: RAPSN mutation
+name: RAPSN variant
 def: "A sequence alteration located within the RAPSN gene." []
 comment: JP: Translated to spanish using Bing Translator
 is_a: PROMOT:0000002 ! CMS related mutation
@@ -173,7 +175,7 @@ property_value: seeAlso NCIT:C177668
 
 [Term]
 id: PROMOT:0000015
-name: GFPT1 mutation
+name: GFPT1 variant
 def: "A sequence alteration located within the GFPT1 gene." []
 comment: JP: Translated to spanish using Bing Translator
 is_a: PROMOT:0000002 ! CMS related mutation
@@ -182,7 +184,7 @@ property_value: seeAlso NCIT:C201657
 
 [Term]
 id: PROMOT:0000016
-name: GMPPB mutation
+name: GMPPB variant
 def: "A sequence alteration located within the GMPPB gene." []
 comment: JP: Translated to spanish using Bing Translator
 is_a: PROMOT:0000002 ! CMS related mutation
@@ -800,15 +802,15 @@ property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
 id: PROMOT:0031005
-name: Transmission inconnue
-def: "A transmission that is unknown." []
+name: Origine du variant inconnue
+def: "A variant origin that is unknown." []
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
 id: PROMOT:0031006
-name: Transmission non renseignée
-def: "A transmission that is unknown because unrecorded." []
-is_a: PROMOT:0031005 ! Transmission inconnue
+name: Origine du variant non renseignée
+def: "A variant origin that is unknown because unrecorded." []
+is_a: PROMOT:0031005 ! Origine du variant inconnue
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
@@ -870,7 +872,7 @@ name: Body function related phenotype
 def: "A phenotype that affects a body function." []
 comment: (JP: unsure about definition)
 is_a: PROMOT:0032001 ! abnormal disposition
-relationship: SIO:000217 PROMOT:0031007 ! has quality Qualité qualifiant l’existance d’une entité
+relationship: RO:0000086 PROMOT:0031007 ! has quality Qualité qualifiant l’existance d’une entité
 property_value: IAO:0000117 "Paul Fabry, https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
@@ -880,7 +882,7 @@ def: "A phenotype that affects an activity." []
 comment: (JP: unsure about definition)
 is_a: PROMOT:0032001 ! abnormal disposition
 relationship: PROMOT:2000005 PROMOT:0110001 ! affecte Actividad
-relationship: SIO:000217 PROMOT:0031007 ! has quality Qualité qualifiant l’existance d’une entité
+relationship: RO:0000086 PROMOT:0031007 ! has quality Qualité qualifiant l’existance d’une entité
 property_value: IAO:0000117 "Paul Fabry, https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
@@ -889,98 +891,105 @@ name: Doble anomalía del potencial de acción motora compuesta
 def: "Deux anomalies dans l’EMG mesurant le potentiel d’action global d’un muscle (PAM), aussi appelé potentiel d’action musculaire composé." []
 comment: (JP : to validate)
 is_a: PROMOT:0032001 ! abnormal disposition
-relationship: SIO:000217 PROMOT:0031007 ! has quality Qualité qualifiant l’existance d’une entité
+relationship: RO:0000086 PROMOT:0031007 ! has quality Qualité qualifiant l’existance d’une entité
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
+property_value: PROMOT:1000001 "Congenital myasthenic syndrom Scoping review" xsd:string
 
 [Term]
 id: PROMOT:0032006
 name: Fatigue corrélée au fait de manger
 def: "A fatigue that occurs when the subject is eating" []
-comment: Oculopharyngeal muscular dystrophy Article
 is_a: PROMOT:0032001 ! abnormal disposition
-relationship: SIO:000217 PROMOT:0031007 ! has quality Qualité qualifiant l’existance d’une entité
+relationship: RO:0000086 PROMOT:0031007 ! has quality Qualité qualifiant l’existance d’une entité
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
+property_value: PROMOT:1000001 "Oculopharyngeal muscular dystrophy Article" xsd:string
 
 [Term]
 id: PROMOT:0032007
 name: Difficulty walking short distance
 def: "A difficulty to walk short distance. E.g. a difficulty to  walk inside a building such as a house." []
-comment: [OPMD Scoping review] Bélair N, Gagnon C, Duchesne E. What is known about muscle weakness, balance impairments and indoor mobility limitations in oculopharyngeal muscular dystrophy? A scoping review. J Neuromuscul Dis. 2025 Dec 30:22143602251397052. doi: 10.1177/22143602251397052. Epub ahead of print. PMID: 41467981. 
 is_a: PROMOT:0032001 ! abnormal disposition
-relationship: SIO:000217 PROMOT:0031007 ! has quality Qualité qualifiant l’existance d’une entité
+relationship: RO:0000086 PROMOT:0031007 ! has quality Qualité qualifiant l’existance d’une entité
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
+property_value: PROMOT:1000001 "[OPMD Scoping review] Bélair N, Gagnon C, Duchesne E. What is known about muscle weakness, balance impairments and indoor mobility limitations in oculopharyngeal muscular dystrophy? A scoping review. J Neuromuscul Dis. 2025 Dec 30:22143602251397052. doi: 10.1177/22143602251397052. Epub ahead of print. PMID: 41467981. " xsd:string
 
 [Term]
 id: PROMOT:0032008
 name: Difficulty changing basic position
 def: "A difficulty to change basic position. E.g. a difficulty to go from a sitting position to a standing position." []
-comment: [OPMD Scoping review] Bélair N, Gagnon C, Duchesne E. What is known about muscle weakness, balance impairments and indoor mobility limitations in oculopharyngeal muscular dystrophy? A scoping review. J Neuromuscul Dis. 2025 Dec 30:22143602251397052. doi: 10.1177/22143602251397052. Epub ahead of print. PMID: 41467981. 
 is_a: PROMOT:0032001 ! abnormal disposition
-relationship: SIO:000217 PROMOT:0031007 ! has quality Qualité qualifiant l’existance d’une entité
+relationship: RO:0000086 PROMOT:0031007 ! has quality Qualité qualifiant l’existance d’une entité
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
+property_value: PROMOT:1000001 "[OPMD Scoping review] Bélair N, Gagnon C, Duchesne E. What is known about muscle weakness, balance impairments and indoor mobility limitations in oculopharyngeal muscular dystrophy? A scoping review. J Neuromuscul Dis. 2025 Dec 30:22143602251397052. doi: 10.1177/22143602251397052. Epub ahead of print. PMID: 41467981. " xsd:string
 
 [Term]
 id: PROMOT:0032009
 name: Anhedonia while eating
 def: "An anhedonia that occurs when the subject is eating" []
-comment: Oculopharyngeal muscular dystrophy Article
 is_a: PROMOT:0032001 ! abnormal disposition
-relationship: SIO:000217 PROMOT:0031007 ! has quality Qualité qualifiant l’existance d’une entité
+relationship: RO:0000086 PROMOT:0031007 ! has quality Qualité qualifiant l’existance d’une entité
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
+property_value: PROMOT:1000001 "Oculopharyngeal muscular dystrophy Article" xsd:string
 
 [Term]
 id: PROMOT:0032010
 name: Dysphagia for solid
 def: "Difficulty in swallowing solid food." []
-comment: Oculopharyngeal muscular dystrophy Article
 is_a: PROMOT:0032001 ! abnormal disposition
-relationship: SIO:000217 PROMOT:0031007 ! has quality Qualité qualifiant l’existance d’une entité
+relationship: RO:0000086 PROMOT:0031007 ! has quality Qualité qualifiant l’existance d’une entité
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
+property_value: PROMOT:1000001 "Oculopharyngeal muscular dystrophy Article" xsd:string
+property_value: PROMOT:1000001 "Oculopharyngeal muscular dystrophy Clinical Registry Form" xsd:string
 
 [Term]
 id: PROMOT:0032011
 name: Dysphagia for liquid
 def: "Difficulty in swallowing liquid food. This is distinct from hydrophobia." []
-comment: Oculopharyngeal muscular dystrophy Article
 is_a: PROMOT:0032001 ! abnormal disposition
-relationship: SIO:000217 PROMOT:0031007 ! has quality Qualité qualifiant l’existance d’une entité
+relationship: RO:0000086 PROMOT:0031007 ! has quality Qualité qualifiant l’existance d’une entité
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
+property_value: PROMOT:1000001 "Oculopharyngeal muscular dystrophy Article" xsd:string
+property_value: PROMOT:1000001 "Oculopharyngeal muscular dystrophy Clinical Registry Form" xsd:string
 
 [Term]
 id: PROMOT:0032012
 name: Debilidad fatigable de la musculatura facial 
 def: "A type of weakness of the facial musculature (i.e. one or more muscles innervated by the seventh cranial nerve) that occurs after a muscle group is used and lessens if the muscle group has some rest. That is, there is diminution of the strength of the facial musculature with repetitive muscle actions." [] {IAO:0000119="HP:0003473"}
-comment: Congenital myasthenic syndrom Scoping review
 is_a: PROMOT:0032001 ! abnormal disposition
-relationship: SIO:000217 PROMOT:0031007 ! has quality Qualité qualifiant l’existance d’une entité
+relationship: RO:0000086 PROMOT:0031007 ! has quality Qualité qualifiant l’existance d’une entité
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
+property_value: PROMOT:1000001 "Congenital myasthenic syndrom Scoping review" xsd:string
+property_value: PROMOT:1000001 "Congenital myopathy Scoping review" xsd:string
 
 [Term]
 id: PROMOT:0032013
 name: Debilidad fatigable de la musculatura facial 
 def: "A type of weakness of the ocular muscles that occurs after a muscle group is used and lessens if the muscle group has some rest. That is, there is diminution of the strength of the ocular muscles with repetitive muscle actions." [] {IAO:0000119="HP:0003473"}
-comment: Congenital myasthenic syndrom Scoping review
 is_a: PROMOT:0032001 ! abnormal disposition
-relationship: SIO:000217 PROMOT:0031007 ! has quality Qualité qualifiant l’existance d’une entité
+relationship: RO:0000086 PROMOT:0031007 ! has quality Qualité qualifiant l’existance d’une entité
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
+property_value: PROMOT:1000001 "Congenital myasthenic syndrom Scoping review" xsd:string
+property_value: PROMOT:1000001 "Congenital myopathy Scoping review" xsd:string
 
 [Term]
 id: PROMOT:0032014
 name: Debilidad fatigable muscular axial
 def: "A type of weakness of the axial muscles (i.e., of the muscles of the head and neck, spine, and ribs) that occurs after a muscle group is used and lessens if the muscle group has some rest. That is, there is diminution of the strength of the axial muscles with repetitive muscle actions." [] {IAO:0000119="HP:0003473"}
-comment: Congenital myasthenic syndrom Scoping review
 is_a: PROMOT:0032001 ! abnormal disposition
-relationship: SIO:000217 PROMOT:0031007 ! has quality Qualité qualifiant l’existance d’une entité
+relationship: RO:0000086 PROMOT:0031007 ! has quality Qualité qualifiant l’existance d’une entité
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
+property_value: PROMOT:1000001 "Congenital myasthenic syndrom Scoping review" xsd:string
+property_value: PROMOT:1000001 "Congenital myopathy Scoping review" xsd:string
 
 [Term]
 id: PROMOT:0032015
 name: Faiblesse musculaire des muscles de la mastication
 def: "A lack of strength in the muscles involved in chewing." []
-comment: Congenital myasthenic syndrom Scoping review
 is_a: PROMOT:0032001 ! abnormal disposition
-relationship: SIO:000217 PROMOT:0031007 ! has quality Qualité qualifiant l’existance d’une entité
+relationship: RO:0000086 PROMOT:0031007 ! has quality Qualité qualifiant l’existance d’une entité
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
+property_value: PROMOT:1000001 "Congenital myasthenic syndrom Scoping review" xsd:string
+property_value: PROMOT:1000001 "Congenital myopathy Scoping review" xsd:string
 
 [Term]
 id: PROMOT:0100001
@@ -1148,9 +1157,32 @@ property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Typedef]
 id: PROMOT:2000006
-name: est affecté par
-def: "A relation between two entity where the state of the first entity is affected by the existence of the second entity." []
+name: is related to
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
+
+[Typedef]
+id: PROMOT:2000007
+name: has identifier
+property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
+
+[Typedef]
+id: RO:0000080
+name: quality of
+def: "a relation between a quality and an independent continuant (the bearer), in which the quality specifically depends on the bearer for its existence" []
+comment: This relation is modeled after the BFO relation of the same name which was in BFO2, but is used in a more restricted sense - specifically, we model this relation as functional (inherited from characteristic-of). Note that this relation is now removed from BFO2020.
+property_value: IAO:0000112 "this red color is a quality of this apple" xsd:string
+property_value: IAO:0000116 "A quality inheres in its bearer at all times for which the quality exists." xsd:string
+property_value: IAO:0000118 "is quality of" xsd:string
+property_value: IAO:0000118 "quality_of" xsd:string
+inverse_of: RO:0000086 ! has quality
+
+[Typedef]
+id: RO:0000086
+name: has quality
+def: "a relation between an independent continuant (the bearer) and a quality, in which the quality specifically depends on the bearer for its existence" []
+property_value: IAO:0000112 "this apple has quality this red color" xsd:string
+property_value: IAO:0000116 "A bearer can have many qualities, and its qualities can exist for different periods of time, but none of its qualities can exist when the bearer does not exist." xsd:string
+property_value: IAO:0000118 "has_quality" xsd:string
 
 [Typedef]
 id: RO:0000091
@@ -1182,8 +1214,17 @@ property_value: IAO:0000114 IAO:0000125
 property_value: IAO:0000117 https://orcid.org/0000-0002-6601-2165
 
 [Typedef]
-id: RO:0002201
-name: phenotype of
+id: RO:0002234
+name: has output
+def: "p has output c iff c is a participant in p, c is present at the end of p, and c is not present in the same state at the beginning of p." []
+subset: http://purl.obolibrary.org/obo/valid_for_go_annotation_extension
+subset: http://purl.obolibrary.org/obo/valid_for_go_ontology
+subset: http://purl.obolibrary.org/obo/valid_for_gocam
+subset: ro-eco
+property_value: IAO:0000114 IAO:0000125
+property_value: IAO:0000117 https://orcid.org/0000-0002-6601-2165
+property_value: IAO:0000118 "produces" xsd:string
+property_value: seeAlso "https://wiki.geneontology.org/Has_output" xsd:anyURI
 
 [Typedef]
 id: RO:0002328
@@ -1238,40 +1279,4 @@ name: disease has feature
 def: "A relationship between a disease and some feature of that disease, where the feature is either a phenotype or an isolated disease." []
 created_by: https://orcid.org/0000-0002-6601-2165
 creation_date: 2017-12-26T19:50:53Z
-
-[Typedef]
-id: SIO:000001
-name: is related to
-property_value: dc11:identifier "SIO_000001" xsd:string
-property_value: isDefinedBy http://semanticscience.org/ontology/sio.owl
-property_value: resource:subset "core" xsd:string
-property_value: resource:subset "relations+" xsd:string
-property_value: schema:comment "'is related to' is the top level relation in SIO" xsd:string
-property_value: terms:description "A is related to B iff there is some relation between A and B." xsd:string
-is_symmetric: true
-
-[Typedef]
-id: SIO:000217
-name: has quality
-property_value: dc11:identifier "SIO_000217" xsd:string
-property_value: isDefinedBy http://semanticscience.org/ontology/sio.owl
-property_value: terms:description "has quality is a relation between an entity and the quality that it bears." xsd:string
-is_inverse_functional: true
-is_a: SIO:000001 ! is related to
-inverse_of: SIO:000218 ! is quality of
-
-[Typedef]
-id: SIO:000218
-name: is quality of
-property_value: dc11:identifier "SIO_000218" xsd:string
-property_value: isDefinedBy http://semanticscience.org/ontology/sio.owl
-property_value: terms:description "is quality of is a relation between a quality and the entity that it is a property of." xsd:string
-is_a: SIO:000001 ! is related to
-
-[Typedef]
-id: SIO:000229
-name: a comme résultat
-def: "A relation between a process and an entity where the process produce the second entity." []
-xref: SIO:000229
-property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 

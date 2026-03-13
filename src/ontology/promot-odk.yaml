@@ -13,6 +13,7 @@ documentation:
 release_artefacts:
   - base
   - full
+  - non-classified
   - simple
 primary_release: full
 release_date: TRUE
@@ -20,6 +21,8 @@ export_formats:
   - owl
   - obo
   - json
+### REASONER
+reasoner: ELK
 #### USE CONFIG
 use_context: TRUE # uses context.json file for prefixes
 use_template: TRUE # uses ROBOT templates for creating PROMOT specific classes, properties and axioms
@@ -76,11 +79,11 @@ import_group:
       module_type: filter
     - id: icf # body structures/functions, activities and participation classes
       mirror_type: no_mirror # manual download required from https://raw.githubusercontent.com/whoficitc/harmonization/main/ontology/whofic-2025-05-24.owl (or later version)
+    - id: ncit
+      is_large: TRUE
     - id: ordo # diseases classes ORDO
       mirror_from: https://www.orphadata.com/data/ontologies/ordo/last_version/ORDO_en_4.8.owl
     - id: ro # OP
-    - id: sio # life status, parental transmission, object properties | see promot.Makefile for details
-      mirror_type: no_mirror # curl -L command included in custom import, update the url to the later version if needed in promot.Makefile
     - id: snomed # See promot.Makefile and src/data/README.md for details
       is_large: TRUE
       mirror_type: no_mirror # manual downloads required from https://www.nlm.nih.gov/healthit/snomedct/international.html & https://smt.esante.gouv.fr/terminologie-snomed-ct-fr/

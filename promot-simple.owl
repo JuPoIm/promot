@@ -45,7 +45,6 @@
      xmlns:subsets="http://purl.obolibrary.org/obo/ro/subsets#"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#"
      xmlns:omoptype="https://w3id.org/cpont/omop/types/"
-     xmlns:resource="http://semanticscience.org/resource/"
      xmlns:NCBITaxon="http://purl.obolibrary.org/obo/NCBITaxon_"
      xmlns:ncbitaxon="http://purl.obolibrary.org/obo/ncbitaxon#"
      xmlns:omopclass="https://w3id.org/cpont/omop/classes/"
@@ -57,7 +56,7 @@
      xmlns:CPATH_VISIT_OCCURRENCE="https://w3id.org/cpont/visit_occurrence/"
      xmlns:CPATH_CONDITION_OCCURRENCE="https://w3id.org/cpont/condition_occurrence/">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/promot/promot-simple.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/promot/releases/2026-03-12/promot-simple.owl"/>
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/promot/releases/2026-03-13/promot-simple.owl"/>
         <dc11:contributor>Anita Burgun MD, PhD
 https://orcid.org/0000-0001-6855-4366</dc11:contributor>
         <dc11:contributor>Carole Faviez PhD
@@ -86,7 +85,7 @@ https://orcid.org/0000-0002-3336-2476</dc11:creator>
         <terms:description>Ontology for modeling the three following neuromuscular diseases : OPMD, Congenital myopathies and Congenital myastenic syndroms. It aims to be also an ontology for building the PROMOT project relational database.</terms:description>
         <terms:license rdf:resource="https://creativecommons.org/licenses/by-nc-sa/4.0/"/>
         <terms:title>PROMOT ontology</terms:title>
-        <oboInOwl:date>12:03:2026 17:20</oboInOwl:date>
+        <oboInOwl:date>13:03:2026 17:22</oboInOwl:date>
         <rdfs:comment>Additional acknowledgements:
 	- Rachel Thompson
 	- Thomas Bongivault, MSc
@@ -98,7 +97,7 @@ https://orcid.org/0000-0002-3336-2476</dc11:creator>
 </rdfs:comment>
         <rdfs:seeAlso>More about PROMOT initiative at https://www.promotinitiative.com/
 </rdfs:seeAlso>
-        <owl:versionInfo>2026-03-12</owl:versionInfo>
+        <owl:versionInfo>2026-03-13</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -227,9 +226,33 @@ We also have the outstanding issue of how to aim different definitions to differ
     
 
 
+    <!-- http://purl.obolibrary.org/obo/valid_for_go_annotation_extension -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/valid_for_go_annotation_extension">
+        <rdfs:subPropertyOf rdf:resource="http://www.geneontology.org/formats/oboInOwl#SubsetProperty"/>
+    </owl:AnnotationProperty>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/valid_for_go_gp2term -->
 
     <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/valid_for_go_gp2term">
+        <rdfs:subPropertyOf rdf:resource="http://www.geneontology.org/formats/oboInOwl#SubsetProperty"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/valid_for_go_ontology -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/valid_for_go_ontology">
+        <rdfs:subPropertyOf rdf:resource="http://www.geneontology.org/formats/oboInOwl#SubsetProperty"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/valid_for_gocam -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/valid_for_gocam">
         <rdfs:subPropertyOf rdf:resource="http://www.geneontology.org/formats/oboInOwl#SubsetProperty"/>
     </owl:AnnotationProperty>
     
@@ -252,12 +275,6 @@ We also have the outstanding issue of how to aim different definitions to differ
     <!-- http://purl.org/dc/elements/1.1/creator -->
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/creator"/>
-    
-
-
-    <!-- http://purl.org/dc/elements/1.1/identifier -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/identifier"/>
     
 
 
@@ -288,18 +305,6 @@ We also have the outstanding issue of how to aim different definitions to differ
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/title">
         <rdfs:label>title</rdfs:label>
     </owl:AnnotationProperty>
-    
-
-
-    <!-- http://schema.org/comment -->
-
-    <owl:AnnotationProperty rdf:about="http://schema.org/comment"/>
-    
-
-
-    <!-- http://semanticscience.org/resource/subset -->
-
-    <owl:AnnotationProperty rdf:about="http://semanticscience.org/resource/subset"/>
     
 
 
@@ -424,11 +429,44 @@ We also have the outstanding issue of how to aim different definitions to differ
     <!-- http://purl.obolibrary.org/obo/PROMOT_2000006 -->
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/PROMOT_2000006">
-        <obo:IAO_0000115 xml:lang="en">A relation between two entity where the state of the first entity is affected by the existence of the second entity.</obo:IAO_0000115>
-        <obo:IAO_0000115 xml:lang="fr">Une relation entre deux entités où l’état de la première entité est affecté par l’existence de la seconde.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
-        <rdfs:label xml:lang="fr">est affecté par</rdfs:label>
-        <rdfs:label xml:lang="en">is affected by</rdfs:label>
+        <rdfs:label xml:lang="en">is related to</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROMOT_2000007 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/PROMOT_2000007">
+        <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
+        <rdfs:label xml:lang="en">has identifier</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0000080 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0000080">
+        <owl:inverseOf rdf:resource="http://purl.obolibrary.org/obo/RO_0000086"/>
+        <obo:IAO_0000112 xml:lang="en">this red color is a quality of this apple</obo:IAO_0000112>
+        <obo:IAO_0000115 xml:lang="en">a relation between a quality and an independent continuant (the bearer), in which the quality specifically depends on the bearer for its existence</obo:IAO_0000115>
+        <obo:IAO_0000116 xml:lang="en">A quality inheres in its bearer at all times for which the quality exists.</obo:IAO_0000116>
+        <obo:IAO_0000118 xml:lang="en">is quality of</obo:IAO_0000118>
+        <obo:IAO_0000118 xml:lang="en">quality_of</obo:IAO_0000118>
+        <rdfs:comment>This relation is modeled after the BFO relation of the same name which was in BFO2, but is used in a more restricted sense - specifically, we model this relation as functional (inherited from characteristic-of). Note that this relation is now removed from BFO2020.</rdfs:comment>
+        <rdfs:label xml:lang="en">quality of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0000086 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0000086">
+        <obo:IAO_0000112 xml:lang="en">this apple has quality this red color</obo:IAO_0000112>
+        <obo:IAO_0000115 xml:lang="en">a relation between an independent continuant (the bearer) and a quality, in which the quality specifically depends on the bearer for its existence</obo:IAO_0000115>
+        <obo:IAO_0000116 xml:lang="en">A bearer can have many qualities, and its qualities can exist for different periods of time, but none of its qualities can exist when the bearer does not exist.</obo:IAO_0000116>
+        <obo:IAO_0000118 xml:lang="en">has_quality</obo:IAO_0000118>
+        <rdfs:label xml:lang="en">has quality</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -474,10 +512,19 @@ We also have the outstanding issue of how to aim different definitions to differ
     
 
 
-    <!-- http://purl.obolibrary.org/obo/RO_0002201 -->
+    <!-- http://purl.obolibrary.org/obo/RO_0002234 -->
 
-    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0002201">
-        <rdfs:label xml:lang="en">phenotype of</rdfs:label>
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0002234">
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000125"/>
+        <obo:IAO_0000115>p has output c iff c is a participant in p, c is present at the end of p, and c is not present in the same state at the beginning of p.</obo:IAO_0000115>
+        <obo:IAO_0000117 rdf:resource="https://orcid.org/0000-0002-6601-2165"/>
+        <obo:IAO_0000118>produces</obo:IAO_0000118>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/valid_for_go_annotation_extension"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/valid_for_go_ontology"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/valid_for_gocam"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/ro/subsets#ro-eco"/>
+        <rdfs:label xml:lang="en">has output</rdfs:label>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://wiki.geneontology.org/Has_output</rdfs:seeAlso>
     </owl:ObjectProperty>
     
 
@@ -569,60 +616,6 @@ We also have the outstanding issue of how to aim different definitions to differ
     
 
 
-    <!-- http://semanticscience.org/resource/SIO_000001 -->
-
-    <owl:ObjectProperty rdf:about="http://semanticscience.org/resource/SIO_000001">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
-        <dc11:identifier>SIO_000001</dc11:identifier>
-        <terms:description xml:lang="en">A is related to B iff there is some relation between A and B.</terms:description>
-        <schema:comment>&apos;is related to&apos; is the top level relation in SIO</schema:comment>
-        <resource:subset>core</resource:subset>
-        <resource:subset>relations+</resource:subset>
-        <rdfs:isDefinedBy rdf:resource="http://semanticscience.org/ontology/sio.owl"/>
-        <rdfs:label xml:lang="en">is related to</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://semanticscience.org/resource/SIO_000217 -->
-
-    <owl:ObjectProperty rdf:about="http://semanticscience.org/resource/SIO_000217">
-        <rdfs:subPropertyOf rdf:resource="http://semanticscience.org/resource/SIO_000001"/>
-        <owl:inverseOf rdf:resource="http://semanticscience.org/resource/SIO_000218"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
-        <dc11:identifier>SIO_000217</dc11:identifier>
-        <terms:description xml:lang="en">has quality is a relation between an entity and the quality that it bears.</terms:description>
-        <rdfs:isDefinedBy rdf:resource="http://semanticscience.org/ontology/sio.owl"/>
-        <rdfs:label xml:lang="en">has quality</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://semanticscience.org/resource/SIO_000218 -->
-
-    <owl:ObjectProperty rdf:about="http://semanticscience.org/resource/SIO_000218">
-        <rdfs:subPropertyOf rdf:resource="http://semanticscience.org/resource/SIO_000001"/>
-        <dc11:identifier>SIO_000218</dc11:identifier>
-        <terms:description xml:lang="en">is quality of is a relation between a quality and the entity that it is a property of.</terms:description>
-        <rdfs:isDefinedBy rdf:resource="http://semanticscience.org/ontology/sio.owl"/>
-        <rdfs:label xml:lang="en">is quality of</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://semanticscience.org/resource/SIO_000229 -->
-
-    <owl:ObjectProperty rdf:about="http://semanticscience.org/resource/SIO_000229">
-        <obo:IAO_0000115 xml:lang="en">A relation between a process and an entity where the process produce the second entity.</obo:IAO_0000115>
-        <obo:IAO_0000115 xml:lang="fr">Une relation entre un processus et une entité qui a été produite par celui-ci.</obo:IAO_0000115>
-        <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
-        <oboInOwl:hasDbXref>SIO:000229</oboInOwl:hasDbXref>
-        <rdfs:label xml:lang="fr">a comme résultat</rdfs:label>
-        <rdfs:label xml:lang="en">has output</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -639,6 +632,7 @@ We also have the outstanding issue of how to aim different definitions to differ
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0000001">
         <obo:IAO_0000115 xml:lang="en">A sequence alteration that is causal germline mutation in Oculopharyngeal Muscular Dystrophy.</obo:IAO_0000115>
         <rdfs:label xml:lang="en">OPMD related mutation</rdfs:label>
+        <rdfs:label xml:lang="en">OPMD related variant</rdfs:label>
     </owl:Class>
     
 
@@ -648,6 +642,7 @@ We also have the outstanding issue of how to aim different definitions to differ
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0000002">
         <obo:IAO_0000115 xml:lang="en">A sequence alteration that is causal germline mutation in Congenital Myasthenic Syndrom.</obo:IAO_0000115>
         <rdfs:label xml:lang="en">CMS related mutation</rdfs:label>
+        <rdfs:label xml:lang="en">CMS related variant</rdfs:label>
     </owl:Class>
     
 
@@ -657,6 +652,7 @@ We also have the outstanding issue of how to aim different definitions to differ
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0000003">
         <obo:IAO_0000115 xml:lang="en">A sequence alteration that is causal germline mutation in Congenital Myopathy.</obo:IAO_0000115>
         <rdfs:label xml:lang="en">CMYO related mutation</rdfs:label>
+        <rdfs:label xml:lang="en">CMYO related variant</rdfs:label>
     </owl:Class>
     
 
@@ -672,7 +668,7 @@ We also have the outstanding issue of how to aim different definitions to differ
         <rdfs:comment>JP: Translated to spanish using Bing Translator</rdfs:comment>
         <rdfs:comment>[EURO-NMD] Atalia A et al., EURO-NMD registry: federated FAIR infrastructure, innovative technologies and concepts of a patient-centred registry for rare neuromuscular disorders. Orphanet J Rare Dis. 2024 Feb 14;19(1):66. doi: 10.1186/s13023-024-03059-3. PMID: 38355534; PMCID: PMC10865673.</rdfs:comment>
         <rdfs:comment>[PROMOT NOTE: derived from EURO-NMD] </rdfs:comment>
-        <rdfs:label xml:lang="en">PABPN1 mutation</rdfs:label>
+        <rdfs:label xml:lang="en">PABPN1 variant</rdfs:label>
         <rdfs:label xml:lang="es">mutación del gen PAPBN1</rdfs:label>
         <rdfs:label xml:lang="fr">mutation du gène PABPN1</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://purl.obolibrary.org/obo/NCIT_C204162"/>
@@ -689,7 +685,7 @@ We also have the outstanding issue of how to aim different definitions to differ
         <obo:IAO_0000115 xml:lang="fr">Une altération génétique située au niveau du gène RYR1.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
         <rdfs:comment>JP: Translated to spanish using Bing Translator</rdfs:comment>
-        <rdfs:label xml:lang="en">RYR1 mutation</rdfs:label>
+        <rdfs:label xml:lang="en">RYR1 variant</rdfs:label>
         <rdfs:label xml:lang="es">mutación del gen RYR1</rdfs:label>
         <rdfs:label xml:lang="fr">mutation du gène RYR1</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://purl.obolibrary.org/obo/NCIT_C150311"/>
@@ -706,7 +702,7 @@ We also have the outstanding issue of how to aim different definitions to differ
         <obo:IAO_0000115 xml:lang="fr">Une altération génétique située au niveau du gène TTN.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
         <rdfs:comment>JP: Translated to spanish using Bing Translator</rdfs:comment>
-        <rdfs:label xml:lang="en">TTN mutation</rdfs:label>
+        <rdfs:label xml:lang="en">TTN variant</rdfs:label>
         <rdfs:label xml:lang="es">mutación del gen TTN</rdfs:label>
         <rdfs:label xml:lang="fr">mutation du gène TTN</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://purl.obolibrary.org/obo/NCIT_C101756"/>
@@ -723,7 +719,7 @@ We also have the outstanding issue of how to aim different definitions to differ
         <obo:IAO_0000115 xml:lang="fr">Une altération génétique située au niveau du gène NEB.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
         <rdfs:comment>JP: Translated to spanish using Bing Translator</rdfs:comment>
-        <rdfs:label xml:lang="en">NEB mutation</rdfs:label>
+        <rdfs:label xml:lang="en">NEB variant</rdfs:label>
         <rdfs:label xml:lang="es">mutación del gen NEB</rdfs:label>
         <rdfs:label xml:lang="fr">mutation du gène NEB</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://purl.obolibrary.org/obo/NCIT_C203906"/>
@@ -740,7 +736,7 @@ We also have the outstanding issue of how to aim different definitions to differ
         <obo:IAO_0000115 xml:lang="fr">Une altération génétique située au niveau du gène MTM1.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
         <rdfs:comment>JP: Translated to spanish using Bing Translator</rdfs:comment>
-        <rdfs:label xml:lang="en">MTM1 mutation</rdfs:label>
+        <rdfs:label xml:lang="en">MTM1 variant</rdfs:label>
         <rdfs:label xml:lang="es">mutación del gen NMTM1</rdfs:label>
         <rdfs:label xml:lang="fr">mutation du gène NMTM1</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://purl.obolibrary.org/obo/NCIT_C203822"/>
@@ -757,7 +753,7 @@ We also have the outstanding issue of how to aim different definitions to differ
         <obo:IAO_0000115 xml:lang="fr">Une altération génétique située au niveau du gène ACTA1.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
         <rdfs:comment>JP: Translated to spanish using Bing Translator</rdfs:comment>
-        <rdfs:label xml:lang="en">ACTA1 mutation</rdfs:label>
+        <rdfs:label xml:lang="en">ACTA1 variant</rdfs:label>
         <rdfs:label xml:lang="es">mutación del gen ACTA1</rdfs:label>
         <rdfs:label xml:lang="fr">mutation du gène ACTA1</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://purl.obolibrary.org/obo/NCIT_C191893"/>
@@ -774,7 +770,7 @@ We also have the outstanding issue of how to aim different definitions to differ
         <obo:IAO_0000115 xml:lang="fr">Une altération génétique située au niveau du gène SELENON.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
         <rdfs:comment>JP: Translated to spanish using Bing Translator</rdfs:comment>
-        <rdfs:label xml:lang="en">SELENON mutation</rdfs:label>
+        <rdfs:label xml:lang="en">SELENON variant</rdfs:label>
         <rdfs:label xml:lang="es">mutación del gen SELENON</rdfs:label>
         <rdfs:label xml:lang="fr">mutation du gène SELENON</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://purl.obolibrary.org/obo/NCIT_C205071"/>
@@ -791,7 +787,7 @@ We also have the outstanding issue of how to aim different definitions to differ
         <obo:IAO_0000115 xml:lang="fr">Une altération génétique située au niveau du gène CHRNE.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
         <rdfs:comment>JP: Translated to spanish using Bing Translator</rdfs:comment>
-        <rdfs:label xml:lang="en">CHRNE mutation</rdfs:label>
+        <rdfs:label xml:lang="en">CHRNE variant</rdfs:label>
         <rdfs:label xml:lang="es">mutación del gen CHRNE</rdfs:label>
         <rdfs:label xml:lang="fr">mutation du gène CHRNE</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://purl.obolibrary.org/obo/NCIT_C198628"/>
@@ -808,7 +804,7 @@ We also have the outstanding issue of how to aim different definitions to differ
         <obo:IAO_0000115 xml:lang="fr">Une altération génétique située au niveau du gène DOK7.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
         <rdfs:comment>JP: Translated to spanish using Bing Translator</rdfs:comment>
-        <rdfs:label xml:lang="en">DOK7 mutation</rdfs:label>
+        <rdfs:label xml:lang="en">DOK7 variant</rdfs:label>
         <rdfs:label xml:lang="es">mutación del gen DOK7</rdfs:label>
         <rdfs:label xml:lang="fr">mutation du gène DOK7</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://purl.obolibrary.org/obo/NCIT_C216062"/>
@@ -825,7 +821,7 @@ We also have the outstanding issue of how to aim different definitions to differ
         <obo:IAO_0000115 xml:lang="fr">Une altération génétique située au niveau du gène COLQ.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
         <rdfs:comment>JP: Translated to spanish using Bing Translator</rdfs:comment>
-        <rdfs:label xml:lang="en">COLQ mutation</rdfs:label>
+        <rdfs:label xml:lang="en">COLQ variant</rdfs:label>
         <rdfs:label xml:lang="es">mutación del gen COLQ</rdfs:label>
         <rdfs:label xml:lang="fr">mutation du gène COLQ</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://purl.obolibrary.org/obo/NCIT_C200235"/>
@@ -842,7 +838,7 @@ We also have the outstanding issue of how to aim different definitions to differ
         <obo:IAO_0000115 xml:lang="fr">Une altération génétique située au niveau du gène RAPSN.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
         <rdfs:comment>JP: Translated to spanish using Bing Translator</rdfs:comment>
-        <rdfs:label xml:lang="en">RAPSN mutation</rdfs:label>
+        <rdfs:label xml:lang="en">RAPSN variant</rdfs:label>
         <rdfs:label xml:lang="es">mutación del gen RAPSN</rdfs:label>
         <rdfs:label xml:lang="fr">mutation du gène RAPSN</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://purl.obolibrary.org/obo/NCIT_C177668"/>
@@ -859,7 +855,7 @@ We also have the outstanding issue of how to aim different definitions to differ
         <obo:IAO_0000115 xml:lang="fr">Une altération génétique située au niveau du gène GFPT1.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
         <rdfs:comment>JP: Translated to spanish using Bing Translator</rdfs:comment>
-        <rdfs:label xml:lang="en">GFPT1 mutation</rdfs:label>
+        <rdfs:label xml:lang="en">GFPT1 variant</rdfs:label>
         <rdfs:label xml:lang="es">mutación del gen GFPT1</rdfs:label>
         <rdfs:label xml:lang="fr">mutation du gène GFPT1</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://purl.obolibrary.org/obo/NCIT_C201657"/>
@@ -876,7 +872,7 @@ We also have the outstanding issue of how to aim different definitions to differ
         <obo:IAO_0000115 xml:lang="fr">Une altération génétique située au niveau du gène GMPPB.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
         <rdfs:comment>JP: Translated to spanish using Bing Translator</rdfs:comment>
-        <rdfs:label xml:lang="en">GMPPB mutation</rdfs:label>
+        <rdfs:label xml:lang="en">GMPPB variant</rdfs:label>
         <rdfs:label xml:lang="es">mutación del gen GMPPB</rdfs:label>
         <rdfs:label xml:lang="fr">mutation du gène GMPPB</rdfs:label>
     </owl:Class>
@@ -2336,12 +2332,12 @@ We also have the outstanding issue of how to aim different definitions to differ
     <!-- http://purl.obolibrary.org/obo/PROMOT_0031005 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0031005">
-        <obo:IAO_0000115 xml:lang="en">A transmission that is unknown.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">A variant origin that is unknown.</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="fr">Une transmission inconnue.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
-        <rdfs:label xml:lang="fr">Transmission inconnue</rdfs:label>
+        <rdfs:label xml:lang="fr">Origine du variant inconnue</rdfs:label>
         <rdfs:label xml:lang="es">desconocido</rdfs:label>
-        <rdfs:label xml:lang="en">unknown transmission</rdfs:label>
+        <rdfs:label xml:lang="en">variant origin unknown</rdfs:label>
     </owl:Class>
     
 
@@ -2350,11 +2346,11 @@ We also have the outstanding issue of how to aim different definitions to differ
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0031006">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0031005"/>
-        <obo:IAO_0000115 xml:lang="en">A transmission that is unknown because unrecorded.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">A variant origin that is unknown because unrecorded.</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="fr">Une transmission inconnue en raison de l’absence de renseignement à son sujet.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
-        <rdfs:label xml:lang="fr">Transmission non renseignée</rdfs:label>
-        <rdfs:label xml:lang="en">unrecorded transmission</rdfs:label>
+        <rdfs:label xml:lang="fr">Origine du variant non renseignée</rdfs:label>
+        <rdfs:label xml:lang="en">variant origin unrecorded</rdfs:label>
     </owl:Class>
     
 
@@ -2473,7 +2469,7 @@ We also have the outstanding issue of how to aim different definitions to differ
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0032001"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://semanticscience.org/resource/SIO_000217"/>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000086"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0031007"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -2499,7 +2495,7 @@ We also have the outstanding issue of how to aim different definitions to differ
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://semanticscience.org/resource/SIO_000217"/>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000086"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0031007"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -2519,15 +2515,15 @@ We also have the outstanding issue of how to aim different definitions to differ
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0032001"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://semanticscience.org/resource/SIO_000217"/>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000086"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0031007"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115 xml:lang="fr">Deux anomalies dans l’EMG mesurant le potentiel d’action global d’un muscle (PAM), aussi appelé potentiel d’action musculaire composé.</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="en">Two abnormal findings in a compound motor action potential measurement in EMG.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
+        <obo:PROMOT_1000001>Congenital myasthenic syndrom Scoping review</obo:PROMOT_1000001>
         <rdfs:comment>(JP : to validate)</rdfs:comment>
-        <rdfs:comment>Congenital myasthenic syndrom Scoping review</rdfs:comment>
         <rdfs:label xml:lang="es">Doble anomalía del potencial de acción motora compuesta</rdfs:label>
         <rdfs:label xml:lang="fr">Double anomalie du potentiel d’action global du muscle (PAM)</rdfs:label>
         <rdfs:label xml:lang="en">Double compound motor action potential abnormality</rdfs:label>
@@ -2547,13 +2543,13 @@ We also have the outstanding issue of how to aim different definitions to differ
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0032001"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://semanticscience.org/resource/SIO_000217"/>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000086"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0031007"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115 xml:lang="en">A fatigue that occurs when the subject is eating</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
-        <rdfs:comment>Oculopharyngeal muscular dystrophy Article</rdfs:comment>
+        <obo:PROMOT_1000001>Oculopharyngeal muscular dystrophy Article</obo:PROMOT_1000001>
         <rdfs:label xml:lang="fr">Fatigue corrélée au fait de manger</rdfs:label>
         <rdfs:label xml:lang="en">Fatigue while eating</rdfs:label>
     </owl:Class>
@@ -2566,13 +2562,13 @@ We also have the outstanding issue of how to aim different definitions to differ
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0032001"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://semanticscience.org/resource/SIO_000217"/>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000086"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0031007"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115 xml:lang="en">A difficulty to walk short distance. E.g. a difficulty to  walk inside a building such as a house.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
-        <rdfs:comment>[OPMD Scoping review] Bélair N, Gagnon C, Duchesne E. What is known about muscle weakness, balance impairments and indoor mobility limitations in oculopharyngeal muscular dystrophy? A scoping review. J Neuromuscul Dis. 2025 Dec 30:22143602251397052. doi: 10.1177/22143602251397052. Epub ahead of print. PMID: 41467981. </rdfs:comment>
+        <obo:PROMOT_1000001>[OPMD Scoping review] Bélair N, Gagnon C, Duchesne E. What is known about muscle weakness, balance impairments and indoor mobility limitations in oculopharyngeal muscular dystrophy? A scoping review. J Neuromuscul Dis. 2025 Dec 30:22143602251397052. doi: 10.1177/22143602251397052. Epub ahead of print. PMID: 41467981. </obo:PROMOT_1000001>
         <rdfs:label xml:lang="en">Difficulty walking short distance</rdfs:label>
         <rdfs:label xml:lang="fr">Difficulté à marcher sur de courtes distances</rdfs:label>
     </owl:Class>
@@ -2585,13 +2581,13 @@ We also have the outstanding issue of how to aim different definitions to differ
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0032001"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://semanticscience.org/resource/SIO_000217"/>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000086"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0031007"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115 xml:lang="en">A difficulty to change basic position. E.g. a difficulty to go from a sitting position to a standing position.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
-        <rdfs:comment>[OPMD Scoping review] Bélair N, Gagnon C, Duchesne E. What is known about muscle weakness, balance impairments and indoor mobility limitations in oculopharyngeal muscular dystrophy? A scoping review. J Neuromuscul Dis. 2025 Dec 30:22143602251397052. doi: 10.1177/22143602251397052. Epub ahead of print. PMID: 41467981. </rdfs:comment>
+        <obo:PROMOT_1000001>[OPMD Scoping review] Bélair N, Gagnon C, Duchesne E. What is known about muscle weakness, balance impairments and indoor mobility limitations in oculopharyngeal muscular dystrophy? A scoping review. J Neuromuscul Dis. 2025 Dec 30:22143602251397052. doi: 10.1177/22143602251397052. Epub ahead of print. PMID: 41467981. </obo:PROMOT_1000001>
         <rdfs:label xml:lang="en">Difficulty changing basic position</rdfs:label>
         <rdfs:label xml:lang="fr">Difficulté à passer d’une position de base à une autre</rdfs:label>
     </owl:Class>
@@ -2604,13 +2600,13 @@ We also have the outstanding issue of how to aim different definitions to differ
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0032001"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://semanticscience.org/resource/SIO_000217"/>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000086"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0031007"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115 xml:lang="en">An anhedonia that occurs when the subject is eating</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
-        <rdfs:comment>Oculopharyngeal muscular dystrophy Article</rdfs:comment>
+        <obo:PROMOT_1000001>Oculopharyngeal muscular dystrophy Article</obo:PROMOT_1000001>
         <rdfs:label xml:lang="en">Anhedonia while eating</rdfs:label>
         <rdfs:label xml:lang="fr">Anhédonie légère corrélée au fait de manger</rdfs:label>
     </owl:Class>
@@ -2623,14 +2619,14 @@ We also have the outstanding issue of how to aim different definitions to differ
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0032001"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://semanticscience.org/resource/SIO_000217"/>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000086"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0031007"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115 xml:lang="en">Difficulty in swallowing solid food.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
-        <rdfs:comment>Oculopharyngeal muscular dystrophy Article</rdfs:comment>
-        <rdfs:comment>Oculopharyngeal muscular dystrophy Survey</rdfs:comment>
+        <obo:PROMOT_1000001>Oculopharyngeal muscular dystrophy Article</obo:PROMOT_1000001>
+        <obo:PROMOT_1000001>Oculopharyngeal muscular dystrophy Clinical Registry Form</obo:PROMOT_1000001>
         <rdfs:label xml:lang="en">Dysphagia for solid</rdfs:label>
         <rdfs:label xml:lang="fr">Dysphagie avec de la nourriture solide</rdfs:label>
     </owl:Class>
@@ -2643,14 +2639,14 @@ We also have the outstanding issue of how to aim different definitions to differ
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0032001"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://semanticscience.org/resource/SIO_000217"/>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000086"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0031007"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115 xml:lang="en">Difficulty in swallowing liquid food. This is distinct from hydrophobia.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
-        <rdfs:comment>Oculopharyngeal muscular dystrophy Article</rdfs:comment>
-        <rdfs:comment>Oculopharyngeal muscular dystrophy Survey</rdfs:comment>
+        <obo:PROMOT_1000001>Oculopharyngeal muscular dystrophy Article</obo:PROMOT_1000001>
+        <obo:PROMOT_1000001>Oculopharyngeal muscular dystrophy Clinical Registry Form</obo:PROMOT_1000001>
         <rdfs:label xml:lang="en">Dysphagia for liquid</rdfs:label>
         <rdfs:label xml:lang="fr">Dysphagie avec de la nourriture liquide</rdfs:label>
     </owl:Class>
@@ -2663,14 +2659,14 @@ We also have the outstanding issue of how to aim different definitions to differ
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0032001"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://semanticscience.org/resource/SIO_000217"/>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000086"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0031007"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115 xml:lang="en">A type of weakness of the facial musculature (i.e. one or more muscles innervated by the seventh cranial nerve) that occurs after a muscle group is used and lessens if the muscle group has some rest. That is, there is diminution of the strength of the facial musculature with repetitive muscle actions.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
-        <rdfs:comment>Congenital myasthenic syndrom Scoping review</rdfs:comment>
-        <rdfs:comment>Congenital myopathy Scoping review</rdfs:comment>
+        <obo:PROMOT_1000001>Congenital myasthenic syndrom Scoping review</obo:PROMOT_1000001>
+        <obo:PROMOT_1000001>Congenital myopathy Scoping review</obo:PROMOT_1000001>
         <rdfs:label xml:lang="es">Debilidad fatigable de la musculatura facial </rdfs:label>
         <rdfs:label xml:lang="fr">Fatigabilité de la musculature faciale</rdfs:label>
         <rdfs:label xml:lang="en">Fatiguable weakness of facial musculature</rdfs:label>
@@ -2690,14 +2686,14 @@ We also have the outstanding issue of how to aim different definitions to differ
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0032001"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://semanticscience.org/resource/SIO_000217"/>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000086"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0031007"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115 xml:lang="en">A type of weakness of the ocular muscles that occurs after a muscle group is used and lessens if the muscle group has some rest. That is, there is diminution of the strength of the ocular muscles with repetitive muscle actions.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
-        <rdfs:comment>Congenital myasthenic syndrom Scoping review</rdfs:comment>
-        <rdfs:comment>Congenital myopathy Scoping review</rdfs:comment>
+        <obo:PROMOT_1000001>Congenital myasthenic syndrom Scoping review</obo:PROMOT_1000001>
+        <obo:PROMOT_1000001>Congenital myopathy Scoping review</obo:PROMOT_1000001>
         <rdfs:label xml:lang="es">Debilidad fatigable de la musculatura facial </rdfs:label>
         <rdfs:label xml:lang="fr">Fatigabilité des muscles occulaires</rdfs:label>
         <rdfs:label xml:lang="en">Fatiguable weakness of the ocular muscles</rdfs:label>
@@ -2717,14 +2713,14 @@ We also have the outstanding issue of how to aim different definitions to differ
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0032001"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://semanticscience.org/resource/SIO_000217"/>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000086"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0031007"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115 xml:lang="en">A type of weakness of the axial muscles (i.e., of the muscles of the head and neck, spine, and ribs) that occurs after a muscle group is used and lessens if the muscle group has some rest. That is, there is diminution of the strength of the axial muscles with repetitive muscle actions.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
-        <rdfs:comment>Congenital myasthenic syndrom Scoping review</rdfs:comment>
-        <rdfs:comment>Congenital myopathy Scoping review</rdfs:comment>
+        <obo:PROMOT_1000001>Congenital myasthenic syndrom Scoping review</obo:PROMOT_1000001>
+        <obo:PROMOT_1000001>Congenital myopathy Scoping review</obo:PROMOT_1000001>
         <rdfs:label xml:lang="es">Debilidad fatigable muscular axial</rdfs:label>
         <rdfs:label xml:lang="fr">Fatigabilité des muscles axiaux</rdfs:label>
         <rdfs:label xml:lang="en">Fatiguable weakness of axial muscles</rdfs:label>
@@ -2744,14 +2740,14 @@ We also have the outstanding issue of how to aim different definitions to differ
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0032001"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://semanticscience.org/resource/SIO_000217"/>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000086"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0031007"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115 xml:lang="en">A lack of strength in the muscles involved in chewing.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
-        <rdfs:comment>Congenital myasthenic syndrom Scoping review</rdfs:comment>
-        <rdfs:comment>Congenital myopathy Scoping review</rdfs:comment>
+        <obo:PROMOT_1000001>Congenital myasthenic syndrom Scoping review</obo:PROMOT_1000001>
+        <obo:PROMOT_1000001>Congenital myopathy Scoping review</obo:PROMOT_1000001>
         <rdfs:label xml:lang="fr">Faiblesse musculaire des muscles de la mastication</rdfs:label>
         <rdfs:label xml:lang="en">Weakness of chewing muscles</rdfs:label>
     </owl:Class>

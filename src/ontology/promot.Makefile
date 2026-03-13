@@ -121,19 +121,19 @@ $(IMPORTDIR)/ro_import.owl: $(MIRRORDIR)/ro.owl $(IMPORTDIR)/ro_terms.txt
 # ----------------------------------------
 # Module SIO : classes and object & data properties
 # ----------------------------------------
-$(IMPORTDIR)/sio_import.owl: $(IMPORTDIR)/sio_terms_alone.txt $(IMPORTDIR)/sio_terms.txt
-	if [ $(IMP) = true ]; then curl -L https://data.bioontology.org/ontologies/SIO/submissions/94/download?apikey=8b5b7825-538d-40e0-9e9e-5ab9274a9aeb \
-		-o $(IMPORTSDATADIR)/sio-release.owl; \
-		$(ROBOT) query -i $(IMPORTSDATADIR)/sio-release.owl --update $(SPARQLDIR)/preprocess-module.ru \
-		filter -T $(IMPORTDIR)/sio_terms_alone.txt \
-		--select "self annotations" --signature true \
-		--output $@.tmp.owl; \
-		$(ROBOT) query -i $(IMPORTSDATADIR)/sio-release.owl --update $(SPARQLDIR)/preprocess-module.ru \
-		filter -T $(IMPORTDIR)/sio_terms.txt --select "self descendants annotations" --signature true \
-		query --update $(SPARQLDIR)/inject-subset-declaration.ru --update $(SPARQLDIR)/postprocess-module.ru \
-		annotate --ontology-iri $(ONTBASE)/$@ $(ANNOTATE_ONTOLOGY_VERSION) \
-		merge -i $@.tmp.owl \
-		--output $@.tmp.owl && mv $@.tmp.owl $@; fi
+#$(IMPORTDIR)/sio_import.owl: $(IMPORTDIR)/sio_terms_alone.txt $(IMPORTDIR)/sio_terms.txt
+#	if [ $(IMP) = true ]; then curl -L https://data.bioontology.org/ontologies/SIO/submissions/94/download?apikey=8b5b7825-538d-40e0-9e9e-5ab9274a9aeb \
+#		-o $(IMPORTSDATADIR)/sio-release.owl; \
+#		$(ROBOT) query -i $(IMPORTSDATADIR)/sio-release.owl --update $(SPARQLDIR)/preprocess-module.ru \
+#		filter -T $(IMPORTDIR)/sio_terms_alone.txt \
+#		--select "self annotations" --signature true \
+#		--output $@.tmp.owl; \
+#		$(ROBOT) query -i $(IMPORTSDATADIR)/sio-release.owl --update $(SPARQLDIR)/preprocess-module.ru \
+#		filter -T $(IMPORTDIR)/sio_terms.txt --select "self descendants annotations" --signature true \
+#		query --update $(SPARQLDIR)/inject-subset-declaration.ru --update $(SPARQLDIR)/postprocess-module.ru \
+#		annotate --ontology-iri $(ONTBASE)/$@ $(ANNOTATE_ONTOLOGY_VERSION) \
+#		merge -i $@.tmp.owl \
+#		--output $@.tmp.owl && mv $@.tmp.owl $@; fi
 
 # ----------------------------------------
 # Module SNOMED : classes

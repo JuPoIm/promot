@@ -1,6 +1,6 @@
 format-version: 1.2
-data-version: promot/releases/2026-03-13/promot-full.owl
-date: 13:03:2026 17:21
+data-version: promot/releases/2026-03-13/promot-non-classified.owl
+date: 13:03:2026 17:22
 subsetdef: hposlim_core ""
 subsetdef: http://purl.obolibrary.org/obo/valid_for_go_annotation_extension ""
 subsetdef: http://purl.obolibrary.org/obo/valid_for_go_gp2term ""
@@ -48,7 +48,7 @@ idspace: swrlb http://www.w3.org/2003/11/swrlb#
 idspace: void http://rdfs.org/ns/void# 
 remark: Additional acknowledgements:\n	- Rachel Thompson\n	- Thomas Bongivault, MSc\n	- Marc Vincent, PhD\n
 remark: Additional acknowledgements:\n	- Thomas Bongivault, MSc\n	- Marc Vincent, PhD\n
-ontology: promot/promot-full
+ontology: promot/promot-non-classified
 property_value: dc11:contributor "Anita Burgun MD, PhD\nhttps://orcid.org/0000-0001-6855-4366" xsd:string
 property_value: dc11:contributor "Carole Faviez PhD\nhttps://orcid.org/0000-0002-1500-0236" xsd:string
 property_value: dc11:contributor "Claudia Côté MD, PhD\nhttps://orcid.org/0000-0003-2508-2500" xsd:string
@@ -738,6 +738,8 @@ property_value: fma:preferred_name "Intercostal muscle" xsd:string {fma:Date_ent
 id: FMA:13379
 name: Rhomboid major
 is_a: FMA:32518 ! Deep extrinsic muscle of shoulder
+relationship: RO:0000091 HP:0003691 ! has disposition Scapular winging
+relationship: RO:0001025 ICF:278512890 ! located in Muscles de la région des épaules
 property_value: fma:FMAID "13379" xsd:integer
 property_value: fma:non-English_equivalent "Muscle grand rhomboïde" xsd:string {fma:Date_entered_modified="Thu May 12 14:24:40 GMT-08:00 2005", fma:author="JOSE MEJINO, MD", fma:authority="Robert Baud, PhD", fma:authority="Rosse MD", fma:language="French"}
 property_value: fma:non-English_equivalent "Musculus rhomboideus major" xsd:string {fma:Date_entered_modified="Thu May 12 14:26:32 GMT-08:00 2005", fma:English_equivalent="Rhomboid major", fma:TA_ID="A04.3.01.007", fma:author="JOSE MEJINO, MD", fma:authority="Rosse MD", fma:authority="Terminologia Anatomica 1998", fma:language="Latin"}
@@ -750,6 +752,8 @@ property_value: fma:synonym "Rhomboideus major muscle" xsd:string {fma:author="o
 id: FMA:13380
 name: Rhomboid minor
 is_a: FMA:32518 ! Deep extrinsic muscle of shoulder
+relationship: RO:0000091 HP:0003691 ! has disposition Scapular winging
+relationship: RO:0001025 ICF:278512890 ! located in Muscles de la région des épaules
 property_value: fma:FMAID "13380" xsd:integer
 property_value: fma:non-English_equivalent "Muscle petit rhomboïde" xsd:string {fma:Date_entered_modified="Thu May 12 14:24:40 GMT-08:00 2005", fma:author="JOSE MEJINO, MD", fma:authority="Robert Baud, PhD", fma:authority="Rosse MD", fma:language="French"}
 property_value: fma:non-English_equivalent "Musculus rhomboideus minor" xsd:string {fma:Date_entered_modified="Thu May 12 14:26:32 GMT-08:00 2005", fma:English_equivalent="Rhomboid minor", fma:TA_ID="A04.3.01.008", fma:author="JOSE MEJINO, MD", fma:authority="Rosse MD", fma:authority="Terminologia Anatomica 1998", fma:language="Latin"}
@@ -762,6 +766,8 @@ property_value: fma:synonym "Rhomboideus minor muscle" xsd:string {fma:author="o
 id: FMA:13397
 name: Serratus anterior
 is_a: FMA:32518 ! Deep extrinsic muscle of shoulder
+relationship: RO:0000091 HP:0003691 ! has disposition Scapular winging
+relationship: RO:0001025 ICF:278512890 ! located in Muscles de la région des épaules
 property_value: fma:FMAID "13397" xsd:integer
 property_value: fma:non-English_equivalent "Muscle dentelé antérieur" xsd:string {fma:Date_entered_modified="Thu May 12 14:24:40 GMT-08:00 2005", fma:author="JOSE MEJINO, MD", fma:authority="Robert Baud, PhD", fma:authority="Rosse MD", fma:language="French"}
 property_value: fma:non-English_equivalent "Musculus serratus anterior" xsd:string {fma:Date_entered_modified="Thu May 12 14:33:23 GMT-08:00 2005", fma:English_equivalent="Serratus anterior", fma:TA_ID="A04.4.01.008", fma:author="JOSE MEJINO, MD", fma:authority="Nomina Anatomica", fma:authority="Terminologia Anatomica 1998", fma:language="Latin", fma:modification="Mar 10 1997  1:25:25:190PM"}
@@ -773,8 +779,6 @@ property_value: fma:synonym "Serratus anterior muscle" xsd:string {fma:Date_ente
 id: FMA:22428
 name: Quadriceps femoris
 is_a: FMA:32406 ! Organ cluster
-is_a: PROMOT:0020002 ! Entité anatomique liée à un phénotype
-is_a: PROMOT:0020003 ! Body structure related anatomical entity
 relationship: RO:0000091 HP:0003731 ! has disposition Quadriceps muscle weakness
 relationship: RO:0001025 ICF:521411479 ! located in Capítulo 4 estructuras de los sistemas cardiovascular, inmunológico y respiratorio
 property_value: fma:definition "Organ cluster of muscle organs in the anterior compartment of thigh." xsd:string
@@ -789,9 +793,8 @@ property_value: fma:synonym "Quadriceps femoris muscle" xsd:string {fma:author="
 id: FMA:22471
 name: Muscle of leg
 is_a: FMA:37368 ! Muscle of free lower limb
-is_a: PROMOT:0020002 ! Entité anatomique liée à un phénotype
-is_a: PROMOT:0020003 ! Body structure related anatomical entity
 relationship: RO:0000091 HP:0009028 ! has disposition Generalized weakness of limb muscles
+relationship: RO:0000091 HP:0009053 ! has disposition Distal lower limb muscle weakness
 relationship: RO:0000091 HP:0011727 ! has disposition Peroneal muscle weakness
 relationship: RO:0000091 HP:0030198 ! has disposition Fatigable weakness of distal limb muscles
 relationship: RO:0000091 HP:0031374 ! has disposition Ankle weakness
@@ -822,6 +825,7 @@ id: FMA:22532
 name: Tibialis anterior
 is_a: FMA:22472 ! Muscle of anterior compartment of leg
 relationship: RO:0000091 HP:0008963 ! has disposition Tibialis muscle weakness
+relationship: RO:0001025 ICF:338611549 ! located in Muscles de la jambe
 property_value: fma:FMAID "22532" xsd:integer
 property_value: fma:non-English_equivalent "Muscle tibial antérieur" xsd:string {fma:Date_entered_modified="Thu May 12 14:24:39 GMT-08:00 2005", fma:author="JOSE MEJINO, MD", fma:authority="Robert Baud, PhD", fma:authority="Rosse MD", fma:language="French"}
 property_value: fma:non-English_equivalent "Musculus tibialis anterior" xsd:string {fma:Date_entered_modified="Thu May 12 14:32:35 GMT-08:00 2005", fma:English_equivalent="Tibialis anterior", fma:TA_ID="A04.7.02.037", fma:author="JOSE MEJINO, MD", fma:authority="Nomina Anatomica", fma:authority="Terminologia Anatomica 1998", fma:language="Latin", fma:modification="Tue Feb 02 11:40:11 PST 1999"}
@@ -848,6 +852,7 @@ name: Pterygoid muscle
 is_a: FMA:46751 ! Muscle of face
 relationship: RO:0000091 HP:0005216 ! has disposition Impaired mastication
 relationship: RO:0000091 HP:0030193 ! has disposition Fatigable weakness of chewing muscles
+relationship: RO:0001025 ICF:1874889854 ! located in Muscles de la région de la tête et du cou
 property_value: fma:FMAID "323229" xsd:integer
 
 [Term]
@@ -897,8 +902,7 @@ property_value: fma:synonym "Set of skeletal muscles" xsd:string {fma:Date_enter
 id: FMA:33531
 name: Muscle of shoulder
 is_a: FMA:37347 ! Muscle of pectoral girdle
-is_a: PROMOT:0020002 ! Entité anatomique liée à un phénotype
-is_a: PROMOT:0020003 ! Body structure related anatomical entity
+relationship: RO:0000091 HP:0003325 ! has disposition Limb-girdle muscle weakness
 relationship: RO:0000091 HP:0003547 ! has disposition Shoulder girdle muscle weakness
 relationship: RO:0000091 HP:0003691 ! has disposition Scapular winging
 relationship: RO:0000091 HP:0008997 ! has disposition Proximal upper limb muscle weakness
@@ -952,9 +956,8 @@ property_value: fma:synonym "Free upper limb muscle" xsd:string {fma:Date_entere
 id: FMA:37367
 name: Muscle of pelvic girdle
 is_a: FMA:9622 ! Muscle of lower limb
-is_a: PROMOT:0020002 ! Entité anatomique liée à un phénotype
-is_a: PROMOT:0020003 ! Body structure related anatomical entity
 disjoint_from: FMA:37368 ! Muscle of free lower limb
+relationship: RO:0000091 HP:0003325 ! has disposition Limb-girdle muscle weakness
 relationship: RO:0000091 HP:0003749 ! has disposition Pelvic girdle muscle weakness
 relationship: RO:0000091 HP:0008988 ! has disposition Pelvic girdle muscle atrophy
 relationship: RO:0000091 HP:0008994 ! has disposition Proximal lower limb muscle weakness
@@ -977,8 +980,6 @@ property_value: fma:synonym "Free lower limb muscle" xsd:string {fma:Date_entere
 id: FMA:37369
 name: Muscle of foot
 is_a: FMA:37368 ! Muscle of free lower limb
-is_a: PROMOT:0020002 ! Entité anatomique liée à un phénotype
-is_a: PROMOT:0020003 ! Body structure related anatomical entity
 relationship: RO:0000091 HP:0009027 ! has disposition Foot dorsiflexor weakness
 relationship: RO:0000091 HP:0009028 ! has disposition Generalized weakness of limb muscles
 relationship: RO:0000091 HP:0009053 ! has disposition Distal lower limb muscle weakness
@@ -992,8 +993,6 @@ property_value: fma:synonym "Foot muscle" xsd:string {fma:Date_entered_modified=
 id: FMA:37370
 name: Muscle of arm
 is_a: FMA:37348 ! Muscle of free upper limb
-is_a: PROMOT:0020002 ! Entité anatomique liée à un phénotype
-is_a: PROMOT:0020003 ! Body structure related anatomical entity
 disjoint_from: FMA:37371 ! Muscle of forearm
 relationship: RO:0000091 HP:0008997 ! has disposition Proximal upper limb muscle weakness
 relationship: RO:0000091 HP:0009028 ! has disposition Generalized weakness of limb muscles
@@ -1007,8 +1006,6 @@ property_value: fma:synonym "Arm muscle" xsd:string {fma:Date_entered_modified="
 id: FMA:37371
 name: Muscle of forearm
 is_a: FMA:37348 ! Muscle of free upper limb
-is_a: PROMOT:0020002 ! Entité anatomique liée à un phénotype
-is_a: PROMOT:0020003 ! Body structure related anatomical entity
 relationship: RO:0000091 HP:0008959 ! has disposition Distal upper limb muscle weakness
 relationship: RO:0000091 HP:0009028 ! has disposition Generalized weakness of limb muscles
 relationship: RO:0000091 HP:0030198 ! has disposition Fatigable weakness of distal limb muscles
@@ -1021,11 +1018,10 @@ property_value: fma:synonym "Forearm muscle" xsd:string {fma:Date_entered_modifi
 id: FMA:37372
 name: Muscle of hand
 is_a: FMA:37348 ! Muscle of free upper limb
-is_a: PROMOT:0020002 ! Entité anatomique liée à un phénotype
-is_a: PROMOT:0020003 ! Body structure related anatomical entity
 relationship: RO:0000091 HP:0008959 ! has disposition Distal upper limb muscle weakness
 relationship: RO:0000091 HP:0009028 ! has disposition Generalized weakness of limb muscles
 relationship: RO:0000091 HP:0030198 ! has disposition Fatigable weakness of distal limb muscles
+relationship: RO:0000091 HP:0030237 ! has disposition Hand muscle weakness
 relationship: RO:0000091 HP:0031177 ! has disposition Finger flexor weakness
 relationship: RO:0000091 HP:0033466 ! has disposition Weak grip
 relationship: RO:0001025 ICF:1233939003 ! located in Muscles de la main
@@ -1053,6 +1049,7 @@ id: FMA:37424
 name: First dorsal interosseous of hand
 is_a: FMA:37418 ! Dorsal interosseous of hand
 relationship: RO:0000091 HP:0003392 ! has disposition First dorsal interossei muscle weakness
+relationship: RO:0001025 ICF:1233939003 ! located in Muscles de la main
 property_value: fma:FMAID "37424" xsd:integer
 property_value: fma:preferred_name "First dorsal interosseous of hand" xsd:string {fma:Date_entered_modified="Thu May 12 14:31:15 GMT-08:00 2005", fma:author="JOSE MEJINO, MD", fma:authority="Rosse MD", fma:modification="Fri Jul 16 15:40:33 PDT 1999"}
 property_value: fma:synonym "Abductor indicis" xsd:string {fma:Date_entered_modified="Thu Jan 04 18:47:32 PST 2001", fma:author="JOSE MEJINO, MD", fma:authority="Gray's 1989", fma:modification="Fri Jul 16 15:41:35 PDT 1999"}
@@ -1063,6 +1060,7 @@ id: FMA:37688
 name: Triceps brachii
 is_a: FMA:37712 ! Muscle of posterior compartment of arm
 relationship: RO:0000091 HP:0031108 ! has disposition Triceps weakness
+relationship: RO:0001025 ICF:1867012554 ! located in Muscles du bras
 property_value: fma:FMAID "37688" xsd:integer
 property_value: fma:non-English_equivalent "Muscle triceps brachial" xsd:string {fma:Date_entered_modified="Thu May 12 14:24:39 GMT-08:00 2005", fma:author="JOSE MEJINO, MD", fma:authority="Robert Baud, PhD", fma:authority="Rosse MD", fma:language="French"}
 property_value: fma:non-English_equivalent "Musculus triceps brachii" xsd:string {fma:Date_entered_modified="Thu May 12 14:26:32 GMT-08:00 2005", fma:English_equivalent="Triceps brachii", fma:TA_ID="A04.6.02.019", fma:author="JOSE MEJINO, MD", fma:authority="Rosse MD", fma:authority="Terminologia Anatomica 1998", fma:language="Latin"}
@@ -1106,6 +1104,7 @@ id: FMA:42380
 name: Intrinsic muscle of hand
 is_a: FMA:37372 ! Muscle of hand
 relationship: RO:0000091 HP:0009005 ! has disposition Weakness of the intrinsic hand muscles
+relationship: RO:0001025 ICF:1233939003 ! located in Muscles de la main
 property_value: fma:FMAID "42380" xsd:integer
 property_value: fma:preferred_name "Intrinsic muscle of hand" xsd:string {fma:Date_entered_modified="Wed Jan 03 11:13:08 PST 2001", fma:author="AUGUSTO V. AGONCILLO, MD", fma:authority="Rosse MD", fma:modification="Thu Aug 19 10:33:34 PDT 1999"}
 
@@ -1114,7 +1113,9 @@ id: FMA:46619
 name: Muscle of pharynx
 is_a: FMA:9617 ! Muscle of neck
 relationship: RO:0000091 HP:0002483 ! has disposition Bulbar signs
+relationship: RO:0000091 HP:0030192 ! has disposition Fatigable weakness of bulbar muscles
 relationship: RO:0000091 HP:0030195 ! has disposition Fatigable weakness of swallowing muscles
+relationship: RO:0001025 ICF:1874889854 ! located in Muscles de la région de la tête et du cou
 property_value: fma:FMAID "46619" xsd:integer
 property_value: fma:preferred_name "Muscle of pharynx" xsd:string {fma:Date_entered_modified="Thu May 12 14:30:32 GMT-08:00 2005", fma:author="AUGUSTO V. AGONCILLO, MD", fma:authority="Rosse MD", fma:modification="Wed Jan 05 11:34:36 PST 2000"}
 property_value: fma:synonym "Pharyngeal muscle" xsd:string {fma:Date_entered_modified="Thu May 12 14:27:33 GMT-08:00 2005", fma:author="AUGUSTO V. AGONCILLO, MD", fma:authority="Rosse MD"}
@@ -1127,6 +1128,7 @@ relationship: RO:0000091 HP:0000183 ! has disposition Tongue muscle weakness
 relationship: RO:0000091 HP:0005216 ! has disposition Impaired mastication
 relationship: RO:0000091 HP:0012473 ! has disposition Tongue atrophy
 relationship: RO:0000091 HP:0030193 ! has disposition Fatigable weakness of chewing muscles
+relationship: RO:0001025 ICF:1874889854 ! located in Muscles de la région de la tête et du cou
 property_value: fma:FMAID "46689" xsd:integer
 property_value: fma:non-English_equivalent "Músculo de la lengüeta" xsd:string {fma:Date_entered_modified="Fri Apr 29 16:44:57 PDT 2005", fma:author="JOSE MEJINO, MD", fma:authority="Rosse MD", fma:language="Spanish"}
 property_value: fma:preferred_name "Muscle of tongue" xsd:string {fma:Date_entered_modified="Thu May 12 14:30:32 GMT-08:00 2005", fma:author="AUGUSTO V. AGONCILLO, MD", fma:authority="Rosse MD", fma:modification="Fri Jan 07 14:50:10 PST 2000"}
@@ -1136,8 +1138,6 @@ property_value: fma:synonym "Tongue muscle" xsd:string {fma:Date_entered_modifie
 id: FMA:46751
 name: Muscle of face
 is_a: FMA:9616 ! Muscle of head
-is_a: PROMOT:0020002 ! Entité anatomique liée à un phénotype
-is_a: PROMOT:0020003 ! Body structure related anatomical entity
 disjoint_from: FMA:57791 ! Muscle of head proper
 relationship: RO:0000091 HP:0030319 ! has disposition Weakness of facial musculature
 relationship: RO:0001025 ICF:1874889854 ! located in Muscles de la région de la tête et du cou
@@ -1153,6 +1153,7 @@ name: Buccinator
 is_a: FMA:46751 ! Muscle of face
 relationship: RO:0000091 HP:0005216 ! has disposition Impaired mastication
 relationship: RO:0000091 HP:0030193 ! has disposition Fatigable weakness of chewing muscles
+relationship: RO:0001025 ICF:1874889854 ! located in Muscles de la région de la tête et du cou
 property_value: fma:FMAID "46834" xsd:integer
 property_value: fma:non-English_equivalent "Muscle buccinateur" xsd:string {fma:Date_entered_modified="Thu May 12 14:24:40 GMT-08:00 2005", fma:author="JOSE MEJINO, MD", fma:authority="Robert Baud, PhD", fma:authority="Rosse MD", fma:language="French"}
 property_value: fma:non-English_equivalent "Musculus buccinator" xsd:string {fma:Date_entered_modified="Thu May 12 14:30:30 GMT-08:00 2005", fma:English_equivalent="Buccinator", fma:TA_ID="A04.1.03.036", fma:author="AUGUSTO V. AGONCILLO, MD", fma:authority="Terminologia Anatomica 1998", fma:language="Latin", fma:modification="Tue Jan 11 14:56:14 PST 2000"}
@@ -1165,6 +1166,7 @@ name: Masseter
 is_a: FMA:46751 ! Muscle of face
 relationship: RO:0000091 HP:0005216 ! has disposition Impaired mastication
 relationship: RO:0000091 HP:0030193 ! has disposition Fatigable weakness of chewing muscles
+relationship: RO:0001025 ICF:1874889854 ! located in Muscles de la région de la tête et du cou
 property_value: fma:FMAID "48996" xsd:integer
 property_value: fma:non-English_equivalent "Muscle masséter" xsd:string {fma:Date_entered_modified="Thu May 12 14:24:40 GMT-08:00 2005", fma:author="JOSE MEJINO, MD", fma:authority="Robert Baud, PhD", fma:authority="Rosse MD", fma:language="French"}
 property_value: fma:non-English_equivalent "Musculus masseter" xsd:string {fma:Date_entered_modified="Thu May 12 14:30:22 GMT-08:00 2005", fma:English_equivalent="Masseter", fma:TA_ID="A04.1.04.002", fma:author="AUGUSTO V. AGONCILLO, MD", fma:authority="Terminologia Anatomica 1998", fma:language="Latin", fma:modification="Wed Jan 12 15:55:55 PST 2000"}
@@ -1175,8 +1177,6 @@ property_value: fma:synonym "Masseter muscle" xsd:string {fma:author="onard", fm
 id: FMA:49006
 name: Temporalis
 is_a: FMA:57791 ! Muscle of head proper
-is_a: PROMOT:0020002 ! Entité anatomique liée à un phénotype
-is_a: PROMOT:0020003 ! Body structure related anatomical entity
 relationship: RO:0000091 HP:0005216 ! has disposition Impaired mastication
 relationship: RO:0000091 HP:0030193 ! has disposition Fatigable weakness of chewing muscles
 relationship: RO:0001025 ICF:1874889854 ! located in Muscles de la région de la tête et du cou
@@ -1192,11 +1192,16 @@ id: FMA:49033
 name: Extra-ocular muscle
 is_a: FMA:46751 ! Muscle of face
 relationship: RO:0000091 HP:0000486 ! has disposition Strabismus
+relationship: RO:0000091 HP:0000496 ! has disposition Abnormality of eye movement
+relationship: RO:0000091 HP:0000508 ! has disposition Ptosis
 relationship: RO:0000091 HP:0000544 ! has disposition External ophthalmoplegia
+relationship: RO:0000091 HP:0000597 ! has disposition Ophthalmoparesis
+relationship: RO:0000091 HP:0000602 ! has disposition Ophthalmoplegia
 relationship: RO:0000091 HP:0000651 ! has disposition Diplopia
 relationship: RO:0000091 HP:0007715 ! has disposition Weak extraocular muscles
 relationship: RO:0000091 HP:0007838 ! has disposition Progressive ptosis
 relationship: RO:0000091 HP:0007941 ! has disposition Limited extraocular movements
+relationship: RO:0001025 ICF:1874889854 ! located in Muscles de la région de la tête et du cou
 relationship: RO:0001025 ICF:405925948 ! located in External ocular muscles
 property_value: fma:FMAID "49033" xsd:integer
 property_value: fma:preferred_name "Extra-ocular muscle" xsd:string {fma:Date_entered_modified="Thu May 12 14:30:22 GMT-08:00 2005", fma:author="AUGUSTO V. AGONCILLO, MD", fma:authority="Rosse MD", fma:modification="Wed Jan 12 17:48:28 PST 2000"}
@@ -1225,8 +1230,6 @@ property_value: fma:synonym "Set of muscles of subdivision of lower limb" xsd:st
 id: FMA:50208
 name: Musculature of thigh
 is_a: FMA:50392 ! Musculature of subdivision of free lower limb
-is_a: PROMOT:0020002 ! Entité anatomique liée à un phénotype
-is_a: PROMOT:0020003 ! Body structure related anatomical entity
 relationship: RO:0000091 HP:0008994 ! has disposition Proximal lower limb muscle weakness
 relationship: RO:0000091 HP:0009028 ! has disposition Generalized weakness of limb muscles
 relationship: RO:0000091 HP:0012515 ! has disposition Hip flexor weakness
@@ -1266,6 +1269,7 @@ id: FMA:51099
 name: Tibialis posterior
 is_a: FMA:65008 ! Deep muscle of posterior compartment of leg
 relationship: RO:0000091 HP:0008963 ! has disposition Tibialis muscle weakness
+relationship: RO:0001025 ICF:338611549 ! located in Muscles de la jambe
 property_value: fma:FMAID "51099" xsd:integer
 property_value: fma:non-English_equivalent "Muscle tibial postérieur" xsd:string {fma:Date_entered_modified="Thu May 12 14:24:39 GMT-08:00 2005", fma:author="JOSE MEJINO, MD", fma:authority="Robert Baud, PhD", fma:authority="Rosse MD", fma:language="French"}
 property_value: fma:non-English_equivalent "Musculus tibialis posterior" xsd:string {fma:Date_entered_modified="Thu May 12 14:30:11 GMT-08:00 2005", fma:English_equivalent="Tibialis posterior", fma:TA_ID="A04.7.02.051", fma:author="JOSE MEJINO, MD", fma:authority="Terminologia Anatomica 1998", fma:language="Latin", fma:modification="Mon Mar 20 17:41:14 PST 2000"}
@@ -1294,8 +1298,6 @@ property_value: fma:synonym "Head proper muscle" xsd:string {fma:Date_entered_mo
 id: FMA:58274
 name: Muscle of trunk
 is_a: FMA:0329044 ! Muscle of body proper
-is_a: PROMOT:0020002 ! Entité anatomique liée à un phénotype
-is_a: PROMOT:0020003 ! Body structure related anatomical entity
 relationship: RO:0000091 HP:0009023 ! has disposition Abdominal wall muscle weakness
 relationship: RO:0001025 ICF:58064740 ! located in Muscles du tronc
 property_value: fma:definition "Muscle organ which is a part of the trunk. Examples: external intercostal muscle, external oblique,  levator ani." xsd:string
@@ -1318,6 +1320,7 @@ id: FMA:64916
 name: Thenar muscle
 is_a: FMA:42380 ! Intrinsic muscle of hand
 relationship: RO:0000091 HP:0003427 ! has disposition Thenar muscle weakness
+relationship: RO:0001025 ICF:1233939003 ! located in Muscles de la main
 property_value: fma:FMAID "64916" xsd:integer
 property_value: fma:preferred_name "Thenar muscle" xsd:string {fma:Date_entered_modified="Fri Jan 05 16:05:39 PST 2001", fma:author="AUGUSTO V. AGONCILLO, MD", fma:authority="Rosse MD"}
 
@@ -1333,9 +1336,8 @@ property_value: fma:synonym "Deep posterior crural muscle" xsd:string
 id: FMA:67169
 name: Set of pharyngeal muscles
 is_a: FMA:32558 ! Musculature
-is_a: PROMOT:0020002 ! Entité anatomique liée à un phénotype
-is_a: PROMOT:0020003 ! Body structure related anatomical entity
 relationship: RO:0000091 HP:0002483 ! has disposition Bulbar signs
+relationship: RO:0000091 HP:0030192 ! has disposition Fatigable weakness of bulbar muscles
 relationship: RO:0000091 HP:0030195 ! has disposition Fatigable weakness of swallowing muscles
 relationship: RO:0001025 ICF:1874889854 ! located in Muscles de la région de la tête et du cou
 property_value: fma:FMAID "67169" xsd:integer
@@ -1364,8 +1366,7 @@ id: FMA:7088
 name: Heart
 comment: Old definition: Organ with cavitated organ parts, which is continuous with the systemic and \npulmonary arterial and venous trees. Examples: There is only one heart.
 is_a: FMA:67498 ! Organ
-is_a: PROMOT:0020002 ! Entité anatomique liée à un phénotype
-is_a: PROMOT:0020003 ! Body structure related anatomical entity
+relationship: RO:0000091 HP:0001627 ! has disposition Abnormal heart morphology
 relationship: RO:0000091 HP:0001638 ! has disposition Cardiomyopathy
 relationship: RO:0000091 HP:0001713 ! has disposition Abnormal cardiac ventricle morphology
 relationship: RO:0000091 HP:0030872 ! has disposition Abnormal cardiac ventricular function
@@ -1384,8 +1385,6 @@ property_value: fma:preferred_name "Heart" xsd:string {fma:Date_entered_modified
 id: FMA:71437
 name: Set of masticatory muscle
 is_a: FMA:55600 ! Musculature of subdivision of face
-is_a: PROMOT:0020002 ! Entité anatomique liée à un phénotype
-is_a: PROMOT:0020003 ! Body structure related anatomical entity
 relationship: RO:0000091 HP:0005216 ! has disposition Impaired mastication
 relationship: RO:0000091 HP:0030193 ! has disposition Fatigable weakness of chewing muscles
 relationship: RO:0001025 ICF:1874889854 ! located in Muscles de la région de la tête et du cou
@@ -1400,8 +1399,6 @@ property_value: fma:synonym "Masticatory muscles set" xsd:string {fma:Date_enter
 id: FMA:74081
 name: Set of intercostal muscles
 is_a: FMA:74779 ! Musculature of chest
-is_a: PROMOT:0020002 ! Entité anatomique liée à un phénotype
-is_a: PROMOT:0020003 ! Body structure related anatomical entity
 relationship: RO:0000091 HP:0030196 ! has disposition Fatigable weakness of respiratory muscles
 relationship: RO:0001025 ICF:495844982 ! located in Muscles of respiration
 property_value: fma:FMAID "74081" xsd:integer
@@ -1421,8 +1418,6 @@ property_value: fma:synonym "Set of muscles of chest" xsd:string {fma:Date_enter
 id: FMA:7490
 name: Joint
 is_a: FMA:305751 ! Anatomical structure
-is_a: PROMOT:0020002 ! Entité anatomique liée à un phénotype
-is_a: PROMOT:0020003 ! Body structure related anatomical entity
 relationship: RO:0000091 HP:0001387 ! has disposition Joint stiffness
 relationship: RO:0000091 HP:0002804 ! has disposition Arthrogryposis multiplex congenita
 relationship: RO:0000091 HP:0002828 ! has disposition Multiple joint contractures
@@ -1462,8 +1457,7 @@ property_value: fma:synonym "Musculus caput" xsd:string {fma:Date_entered_modifi
 id: FMA:9617
 name: Muscle of neck
 is_a: FMA:0329044 ! Muscle of body proper
-is_a: PROMOT:0020002 ! Entité anatomique liée à un phénotype
-is_a: PROMOT:0020003 ! Body structure related anatomical entity
+relationship: RO:0000091 HP:0000467 ! has disposition Neck muscle weakness
 relationship: RO:0000091 HP:0003722 ! has disposition Neck flexor weakness
 relationship: RO:0000091 HP:0030199 ! has disposition Fatigable weakness of neck muscles
 relationship: RO:0001025 ICF:1874889854 ! located in Muscles de la région de la tête et du cou
@@ -1488,6 +1482,8 @@ property_value: fma:synonym "Thoracic muscle" xsd:string {fma:Date_entered_modif
 id: FMA:9620
 name: Muscle of abdomen
 is_a: FMA:0329099 ! Muscle of abdominal part of trunk
+relationship: RO:0000091 HP:0009023 ! has disposition Abdominal wall muscle weakness
+relationship: RO:0001025 ICF:58064740 ! located in Muscles du tronc
 property_value: fma:definition "Muscle (organ) which is a part of the abdomen. Examples: external oblique, rectus abdominis." xsd:string
 property_value: fma:FMAID "9620" xsd:integer
 property_value: fma:preferred_name "Muscle of abdomen" xsd:string {fma:Date_entered_modified="Thu May 12 14:33:44 GMT-08:00 2005", fma:author="JOSE MEJINO, MD", fma:authority="Cornelius Rosse", fma:modification="Jul 29 1996  4:37:00:786PM"}
@@ -1517,6 +1513,8 @@ property_value: fma:synonym "Lower limb muscle" xsd:string {fma:Date_entered_mod
 id: FMA:9626
 name: Trapezius
 is_a: FMA:32517 ! Superficial extrinsic muscle of shoulder
+relationship: RO:0000091 HP:0003691 ! has disposition Scapular winging
+relationship: RO:0001025 ICF:278512890 ! located in Muscles de la région des épaules
 property_value: fma:FMAID "9626" xsd:integer
 property_value: fma:non-English_equivalent "Muscle trapèze" xsd:string {fma:Date_entered_modified="Thu May 12 14:24:40 GMT-08:00 2005", fma:author="JOSE MEJINO, MD", fma:authority="Robert Baud, PhD", fma:authority="Rosse MD", fma:language="French"}
 property_value: fma:non-English_equivalent "Musculus trapezius" xsd:string {fma:Date_entered_modified="Thu May 12 14:26:32 GMT-08:00 2005", fma:English_equivalent="Trapezius", fma:TA_ID="A04.3.01.001", fma:author="JOSE MEJINO, MD", fma:authority="Rosse MD", fma:authority="Terminologia Anatomica 1998", fma:language="Latin"}
@@ -3275,8 +3273,8 @@ id: HP:0002033
 name: Poor suck
 def: "An inadequate sucking reflex, resulting in the difficult of newborns to be breast-fed." [https://orcid.org/0000-0002-0736-9199]
 synonym: "Poor suck" EXACT layperson []
-synonym: "Poor sucking" EXACT layperson [https://orcid.org/0000-0002-5316-1399]
 synonym: "Poor sucking" EXACT []
+synonym: "Poor sucking" EXACT layperson [https://orcid.org/0000-0002-5316-1399]
 synonym: "Sucking weakness" EXACT []
 xref: UMLS:C1837142
 is_a: HP:0008872 ! Feeding difficulties in infancy
@@ -4156,8 +4154,8 @@ alt_id: HP:0009018
 alt_id: HP:0031988
 def: "Sudden and involuntary contractions of one or more muscles." [https://orcid.org/0000-0002-0736-9199]
 synonym: "crampe musculaire" EXACT []
-synonym: "Muscle cramps" EXACT []
 synonym: "Muscle cramps" EXACT plural_form []
+synonym: "Muscle cramps" EXACT []
 synonym: "Muscle spasms" EXACT plural_form []
 synonym: "Nocturnal hand and foot cramps" NARROW []
 synonym: "Nocturnal leg cramp" NARROW []
@@ -7245,7 +7243,6 @@ id: ICF:1034220517
 name: Alternative vocalization functions
 def: "Functions of the production of other manners of vocalization." []
 is_a: ICF:388067588 ! Fonctions de la voix et de la parole
-is_a: PROMOT:0032002 ! Activity related body function
 relationship: PROMOT:2000006 HP:0001612 ! is related to Weak cry
 relationship: PROMOT:2000006 HP:0001618 ! is related to Dysphonia
 relationship: RO:0002331 ICF:151046878 ! involved in Hablar
@@ -7261,6 +7258,8 @@ name: Deglución oral
 def: "Function of clearing substances through the oral cavity at an appropriate rate and speed." []
 is_a: ICF:923782542 ! Déglutir
 relationship: PROMOT:2000006 HP:0031162 ! is related to Impaired oropharyngeal swallow response
+relationship: RO:0002331 ICF:1328675264 ! involved in Comer
+relationship: RO:0002331 ICF:553784299 ! involved in Beber
 property_value: schema:browserUrl https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F1041382491
 property_value: schema:inclusion "drooling" xsd:string
 property_value: schema:narrowerTerm "drooling" xsd:string
@@ -7272,6 +7271,7 @@ name: Dolor en el estómago o en el abdomen
 def: "Sensation of unpleasant feeling indicating potential or actual damage to some body structure felt in the stomach or abdomen." []
 is_a: ICF:577558794 ! Dolor en una parte del cuerpo
 relationship: PROMOT:2000006 HP:0003326 ! is related to Myalgia
+relationship: PROMOT:2000006 HP:0012531 ! is related to Pain
 property_value: schema:browserUrl https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F1065560247
 property_value: schema:inclusion "pain in the pelvic region" xsd:string
 property_value: schema:narrowerTerm "pain in the pelvic region" xsd:string
@@ -7289,6 +7289,8 @@ name: Fonctions des muscles externes de l'œil
 def: "Functions of the muscles that are used to look in different directions, to follow an object as it moves across the visual field, to produce saccadic jumps to catch up with a moving target, and to fix the eye." []
 is_a: ICF:2031311308 ! Fonctions des annexes de l'œil
 relationship: PROMOT:2000006 HP:0000544 ! is related to External ophthalmoplegia
+relationship: PROMOT:2000006 HP:0000597 ! is related to Ophthalmoparesis
+relationship: PROMOT:2000006 HP:0000602 ! is related to Ophthalmoplegia
 relationship: PROMOT:2000006 HP:0007941 ! is related to Limited extraocular movements
 property_value: schema:browserUrl https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F1090716697
 property_value: schema:inclusion "cooperation of both eyes" xsd:string
@@ -7319,6 +7321,7 @@ name: Speed of speech
 def: "Functions of the rate of speech production." []
 is_a: ICF:213697684 ! Fluency and rhythm of speech functions
 relationship: PROMOT:2000006 HP:0001618 ! is related to Dysphonia
+relationship: RO:0002331 ICF:151046878 ! involved in Hablar
 property_value: schema:browserUrl https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F1109440237
 property_value: skos:altLabel "Functions involved in speed of speech" xsd:string
 
@@ -7353,6 +7356,7 @@ name: Dolor en el pecho
 def: "Sensation of unpleasant feeling indicating potential or actual damage to some body structure felt in the chest." []
 is_a: ICF:577558794 ! Dolor en una parte del cuerpo
 relationship: PROMOT:2000006 HP:0003326 ! is related to Myalgia
+relationship: PROMOT:2000006 HP:0012531 ! is related to Pain
 property_value: schema:browserUrl https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F117147127
 
 [Term]
@@ -7360,8 +7364,8 @@ id: ICF:1174312718
 name: Manipulación de la comida en la boca
 def: "Functions of moving food around the mouth with the teeth and tongue." []
 is_a: ICF:363211474 ! Fonctions d'ingestion
-is_a: PROMOT:0032002 ! Activity related body function
 relationship: PROMOT:2000006 HP:0008872 ! is related to Feeding difficulties in infancy
+relationship: PROMOT:2000006 HP:0011968 ! is related to Feeding difficulties
 relationship: PROMOT:2000006 HP:0031146 ! is related to Impaired oral bolus formation
 relationship: RO:0002331 ICF:1328675264 ! involved in Comer
 property_value: schema:browserUrl https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F1174312718
@@ -7371,6 +7375,7 @@ id: ICF:1182439715
 name: Cervical vertebral column
 is_a: ICF:341679012 ! Estructura de la columna vertebral
 relationship: RO:0000091 HP:0002751 ! has disposition Kyphoscoliosis
+relationship: RO:0000091 HP:0002808 ! has disposition Kyphosis
 relationship: RO:0000091 HP:0003306 ! has disposition Spinal rigidity
 relationship: RO:0000091 HP:0003307 ! has disposition Hyperlordosis
 property_value: schema:browserUrl https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F1182439715
@@ -7391,6 +7396,7 @@ relationship: RO:0000091 HP:0003427 ! has disposition Thenar muscle weakness
 relationship: RO:0000091 HP:0008959 ! has disposition Distal upper limb muscle weakness
 relationship: RO:0000091 HP:0009005 ! has disposition Weakness of the intrinsic hand muscles
 relationship: RO:0000091 HP:0009077 ! has disposition Weakness of long finger extensor muscles
+relationship: RO:0000091 HP:0030237 ! has disposition Hand muscle weakness
 relationship: RO:0000091 HP:0031177 ! has disposition Finger flexor weakness
 relationship: RO:0000091 HP:0033466 ! has disposition Weak grip
 relationship: RO:0002328 ICF:1521707777 ! functionally related to Endurance des groupes de muscles
@@ -7435,6 +7441,7 @@ name: Dolor en una extremidad superior
 def: "Sensation of unpleasant feeling indicating potential or actual damage to some body structure felt in either one or both upper limbs, including hands." []
 is_a: ICF:577558794 ! Dolor en una parte del cuerpo
 relationship: PROMOT:2000006 HP:0003326 ! is related to Myalgia
+relationship: PROMOT:2000006 HP:0012531 ! is related to Pain
 property_value: schema:browserUrl https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F1299345975
 
 [Term]
@@ -7442,11 +7449,13 @@ id: ICF:1328466963
 name: Fonctions relatives au type de démarche
 def: "Functions of movement patterns associated with walking, running or other whole body movements." []
 is_a: ICF:627064928 ! Fonctions liées au mouvement
-is_a: PROMOT:0032002 ! Activity related body function
+relationship: PROMOT:2000006 HP:0001288 ! is related to Gait disturbance
 relationship: PROMOT:2000006 HP:0002505 ! is related to Loss of ambulation
 relationship: PROMOT:2000006 HP:0002515 ! is related to Waddling gait
+relationship: PROMOT:2000006 HP:0002540 ! is related to Inability to walk
 relationship: PROMOT:2000006 HP:0009046 ! is related to Difficulty running
 relationship: RO:0002331 ICF:1550548595 ! involved in Andar
+relationship: RO:0002331 ICF:2048203604 ! involved in Mobility
 relationship: RO:0002331 ICF:412494151 ! involved in Correr
 property_value: schema:browserUrl https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F1328466963
 property_value: schema:exclusion "Control of voluntary movement functions" xsd:string {schema:foundationReference="ICF:838096586"}
@@ -7463,11 +7472,14 @@ def: "Carrying out the coordinated tasks and actions of eating food that has bee
 is_a: ICF:1608009360 ! Autocuidado
 is_a: PROMOT:0110001 ! Actividad
 relationship: PROMOT:2000006 HP:0000183 ! is related to Tongue muscle weakness
+relationship: PROMOT:2000006 HP:0002015 ! is related to Dysphagia
 relationship: PROMOT:2000006 HP:0002033 ! is related to Poor suck
 relationship: PROMOT:2000006 HP:0002068 ! is related to Neuromuscular dysphagia
 relationship: PROMOT:2000006 HP:0005216 ! is related to Impaired mastication
+relationship: PROMOT:2000006 HP:0008872 ! is related to Feeding difficulties in infancy
 relationship: PROMOT:2000006 HP:0011470 ! is related to Nasogastric tube feeding in infancy
 relationship: PROMOT:2000006 HP:0011471 ! is related to Gastrostomy tube feeding in infancy
+relationship: PROMOT:2000006 HP:0011968 ! is related to Feeding difficulties
 relationship: PROMOT:2000006 HP:0012473 ! is related to Tongue atrophy
 relationship: PROMOT:2000006 HP:0025156 ! is related to Dependency on intravenous nutrition
 relationship: PROMOT:2000006 HP:0030193 ! is related to Fatigable weakness of chewing muscles
@@ -7478,6 +7490,7 @@ relationship: PROMOT:2000006 HP:0031063 ! is related to Impaired feeding ability
 relationship: PROMOT:2000006 HP:0031146 ! is related to Impaired oral bolus formation
 relationship: PROMOT:2000006 HP:0031162 ! is related to Impaired oropharyngeal swallow response
 relationship: PROMOT:2000006 HP:0032043 ! is related to Odynophagia
+relationship: PROMOT:2000006 HP:0033454 ! is related to Tube feeding
 relationship: PROMOT:2000006 HP:0033994 ! is related to Dependency on parenteral nutrition
 relationship: PROMOT:2000006 HP:0040288 ! is related to Nasogastric tube feeding
 relationship: PROMOT:2000006 HP:0200136 ! is related to Oral-pharyngeal dysphagia
@@ -7503,6 +7516,11 @@ id: ICF:1360101629
 name: Fonctions des muscles respiratoires
 def: "Functions of the muscles involved in breathing." []
 is_a: ICF:744367503 ! Fonctions du système respiratoire
+relationship: PROMOT:2000006 HP:0002093 ! is related to Respiratory insufficiency
+relationship: PROMOT:2000006 HP:0002094 ! is related to Dyspnea
+relationship: PROMOT:2000006 HP:0002098 ! is related to Respiratory distress
+relationship: PROMOT:2000006 HP:0002747 ! is related to Respiratory insufficiency due to muscle weakness
+relationship: PROMOT:2000006 HP:0004347 ! is related to Weakness of muscles of respiration
 relationship: PROMOT:2000006 HP:0032341 ! is related to Reduced forced vital capacity
 property_value: schema:browserUrl https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F1360101629
 property_value: schema:exclusion "Additional functions of the respiratory system" xsd:string {schema:foundationReference="ICF:1682107878"}
@@ -7513,7 +7531,7 @@ property_value: schema:exclusion "Respiration functions" xsd:string {schema:foun
 id: ICF:1363559646
 name: Fonctions mentales
 def: "This chapter is about the functions of the brain: both global mental functions, such as consciousness, energy and drive, and specific mental functions, such as memory, language and calculation mental functions." []
-is_a: PROMOT:0032002 ! Activity related body function
+is_a: ICF:567313968 ! Body functions
 relationship: PROMOT:2000006 HP:0001249 ! is related to Intellectual disability
 relationship: RO:0002331 ICF:2011053685 ! involved in Apprentissage et application des connaissances
 property_value: schema:browserUrl https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F1363559646
@@ -7522,6 +7540,7 @@ property_value: schema:browserUrl https://icd.who.int/dev11/f/en#/http%3A%2F%2Fi
 id: ICF:1364393443
 name: Colonne thoracique
 is_a: ICF:341679012 ! Estructura de la columna vertebral
+relationship: RO:0000091 HP:0002650 ! has disposition Scoliosis
 relationship: RO:0000091 HP:0002751 ! has disposition Kyphoscoliosis
 relationship: RO:0000091 HP:0003306 ! has disposition Spinal rigidity
 property_value: schema:browserUrl https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F1364393443
@@ -7531,9 +7550,9 @@ id: ICF:1389818830
 name: Chewing
 def: "Functions of crushing, grinding and masticating food with the back teeth (e.g. molars)." []
 is_a: ICF:363211474 ! Fonctions d'ingestion
-is_a: PROMOT:0032002 ! Activity related body function
 relationship: PROMOT:2000006 HP:0005216 ! is related to Impaired mastication
 relationship: PROMOT:2000006 HP:0008872 ! is related to Feeding difficulties in infancy
+relationship: PROMOT:2000006 HP:0011968 ! is related to Feeding difficulties
 relationship: PROMOT:2000006 HP:0030193 ! is related to Fatigable weakness of chewing muscles
 relationship: RO:0002331 ICF:1328675264 ! involved in Comer
 property_value: schema:browserUrl https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F1389818830
@@ -7595,6 +7614,7 @@ name: Melody of speech
 def: "Functions of modulation of pitch patterns in speech." []
 is_a: ICF:213697684 ! Fluency and rhythm of speech functions
 relationship: PROMOT:2000006 HP:0001618 ! is related to Dysphonia
+relationship: RO:0002331 ICF:151046878 ! involved in Hablar
 property_value: schema:browserUrl https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F1426641453
 property_value: schema:inclusion "intonation" xsd:string
 property_value: schema:inclusion "prosody of speech" xsd:string
@@ -7607,8 +7627,12 @@ id: ICF:1434015402
 name: Reflejo de extensión motora
 def: "Functions of involuntary contractions of muscles automatically induced by stretching." []
 is_a: ICF:1777008610 ! Fonctions relatives aux réflexes moteurs
+relationship: PROMOT:2000006 HP:0001265 ! is related to Hyporeflexia
+relationship: PROMOT:2000006 HP:0001284 ! is related to Areflexia
+relationship: PROMOT:2000006 HP:0001315 ! is related to Reduced tendon reflexes
 relationship: PROMOT:2000006 HP:0002522 ! is related to Areflexia of lower limbs
 relationship: PROMOT:2000006 HP:0002600 ! is related to Hyporeflexia of lower limbs
+relationship: PROMOT:2000006 HP:0031826 ! is related to Abnormal reflex
 property_value: schema:browserUrl https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F1434015402
 property_value: schema:inclusion "ankle reflex" xsd:string
 property_value: schema:inclusion "biceps reflex" xsd:string
@@ -7653,8 +7677,10 @@ property_value: schema:browserUrl https://icd.who.int/dev11/f/en#/http%3A%2F%2Fi
 id: ICF:1470583183
 name: Fonctions liées à la respiration par la bouche
 is_a: ICF:1682107878 ! Additional functions of the respiratory system
+relationship: PROMOT:2000006 HP:0002104 ! is related to Apnea
 relationship: PROMOT:2000006 HP:0002643 ! is related to Neonatal respiratory distress
 relationship: PROMOT:2000006 HP:0002878 ! is related to Respiratory failure
+relationship: PROMOT:2000006 HP:0004347 ! is related to Weakness of muscles of respiration
 relationship: PROMOT:2000006 HP:0004885 ! is related to Episodic respiratory distress
 relationship: PROMOT:2000006 HP:0004887 ! is related to Respiratory failure requiring assisted ventilation
 relationship: PROMOT:2000006 HP:0004889 ! is related to Intermittent episodes of respiratory insufficiency due to muscle weakness
@@ -7698,6 +7724,7 @@ name: Dolor en una extremidad inferior
 def: "Sensation of unpleasant feeling indicating potential or actual damage to some body structure felt in either one or both lower limbs, including feet." []
 is_a: ICF:577558794 ! Dolor en una parte del cuerpo
 relationship: PROMOT:2000006 HP:0003326 ! is related to Myalgia
+relationship: PROMOT:2000006 HP:0012531 ! is related to Pain
 property_value: schema:browserUrl https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F1515853559
 
 [Term]
@@ -7705,7 +7732,6 @@ id: ICF:1521707777
 name: Endurance des groupes de muscles
 def: "Functions related to sustaining muscle contraction of isolated muscle groups for the required period of time." []
 is_a: ICF:389047611 ! Fonctions relatives à l'endurance musculaire
-is_a: PROMOT:0032002 ! Activity related body function
 relationship: PROMOT:2000006 HP:0003473 ! is related to Fatigable weakness
 relationship: RO:0002331 ICF:1328675264 ! involved in Comer
 relationship: RO:0002331 ICF:151046878 ! involved in Hablar
@@ -7718,6 +7744,8 @@ id: ICF:1525383756
 name: Fonctions intellectuelles
 def: "General mental functions, required to understand and constructively integrate the various mental functions including all cognitive functions and their development over the life span." []
 is_a: ICF:882590883 ! Fonctions mentales globales
+relationship: PROMOT:2000006 HP:0001249 ! is related to Intellectual disability
+relationship: RO:0002331 ICF:2011053685 ! involved in Apprentissage et application des connaissances
 property_value: schema:browserUrl https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F1525383756
 property_value: schema:exclusion "Higher-level cognitive functions" xsd:string {schema:foundationReference="ICF:1384847483"}
 property_value: schema:exclusion "Memory functions" xsd:string {schema:foundationReference="ICF:1920216617"}
@@ -7744,10 +7772,13 @@ id: ICF:1550548595
 name: Andar
 def: "Moving along a surface on foot, step by step, so that one foot is always on the ground, such as when strolling, sauntering, walking forwards, backwards, or sideways." []
 is_a: ICF:1334556216 ! Andar y moverse
+relationship: PROMOT:2000006 HP:0001270 ! is related to Motor delay
+relationship: PROMOT:2000006 HP:0001288 ! is related to Gait disturbance
 relationship: PROMOT:2000006 HP:0002141 ! is related to Gait imbalance
 relationship: PROMOT:2000006 HP:0002359 ! is related to Frequent falls
 relationship: PROMOT:2000006 HP:0002505 ! is related to Loss of ambulation
 relationship: PROMOT:2000006 HP:0002515 ! is related to Waddling gait
+relationship: PROMOT:2000006 HP:0002540 ! is related to Inability to walk
 relationship: PROMOT:2000006 HP:0031936 ! is related to Delayed ability to walk
 property_value: schema:browserUrl https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F1550548595
 property_value: schema:exclusion "Moving around" xsd:string {schema:foundationReference="ICF:712447084"}
@@ -7853,7 +7884,9 @@ property_value: schema:browserUrl https://icd.who.int/dev11/f/en#/http%3A%2F%2Fi
 id: ICF:1747603619
 name: Colonne lombaire
 is_a: ICF:341679012 ! Estructura de la columna vertebral
+relationship: RO:0000091 HP:0002650 ! has disposition Scoliosis
 relationship: RO:0000091 HP:0002751 ! has disposition Kyphoscoliosis
+relationship: RO:0000091 HP:0002808 ! has disposition Kyphosis
 relationship: RO:0000091 HP:0003306 ! has disposition Spinal rigidity
 relationship: RO:0000091 HP:0003307 ! has disposition Hyperlordosis
 property_value: schema:browserUrl https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F1747603619
@@ -7913,6 +7946,7 @@ relationship: RO:0000091 HP:0000767 ! has disposition Pectus excavatum
 relationship: RO:0000091 HP:0000768 ! has disposition Pectus carinatum
 relationship: RO:0000091 HP:0000774 ! has disposition Narrow chest
 relationship: RO:0000091 HP:0000886 ! has disposition Deformed rib cage
+relationship: RO:0000091 HP:0001547 ! has disposition Abnormal rib cage morphology
 relationship: RO:0000091 HP:6000327 ! has disposition Thoracic cage flatness
 property_value: schema:browserUrl https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F178625206
 
@@ -7921,34 +7955,52 @@ id: ICF:1789365017
 name: Fuerza de músculos aislados o de grupos de músculos
 def: "Functions related to the force generated by the contraction of specific and isolated muscles and muscle groups." []
 is_a: ICF:274570113 ! Fonctions relatives à la puissance musculaire
-is_a: PROMOT:0032002 ! Activity related body function
 relationship: PROMOT:2000006 HP:0000183 ! is related to Tongue muscle weakness
+relationship: PROMOT:2000006 HP:0000467 ! is related to Neck muscle weakness
 relationship: PROMOT:2000006 HP:0000486 ! is related to Strabismus
+relationship: PROMOT:2000006 HP:0000496 ! is related to Abnormality of eye movement
+relationship: PROMOT:2000006 HP:0000508 ! is related to Ptosis
 relationship: PROMOT:2000006 HP:0000544 ! is related to External ophthalmoplegia
+relationship: PROMOT:2000006 HP:0000597 ! is related to Ophthalmoparesis
+relationship: PROMOT:2000006 HP:0000602 ! is related to Ophthalmoplegia
 relationship: PROMOT:2000006 HP:0001761 ! is related to Pes cavus
 relationship: PROMOT:2000006 HP:0002058 ! is related to Myopathic facies
+relationship: PROMOT:2000006 HP:0002460 ! is related to Distal muscle weakness
+relationship: PROMOT:2000006 HP:0003325 ! is related to Limb-girdle muscle weakness
 relationship: PROMOT:2000006 HP:0003327 ! is related to Axial muscle weakness
 relationship: PROMOT:2000006 HP:0003392 ! is related to First dorsal interossei muscle weakness
+relationship: PROMOT:2000006 HP:0003398 ! is related to Abnormal synaptic transmission at the neuromuscular junction
 relationship: PROMOT:2000006 HP:0003403 ! is related to EMG: decremental response of compound muscle action potential to repetitive nerve stimulation
 relationship: PROMOT:2000006 HP:0003427 ! is related to Thenar muscle weakness
 relationship: PROMOT:2000006 HP:0003445 ! is related to EMG: neuropathic changes
+relationship: PROMOT:2000006 HP:0003457 ! is related to EMG abnormality
 relationship: PROMOT:2000006 HP:0003458 ! is related to EMG: myopathic abnormalities
+relationship: PROMOT:2000006 HP:0003473 ! is related to Fatigable weakness
+relationship: PROMOT:2000006 HP:0003484 ! is related to Upper limb muscle weakness
 relationship: PROMOT:2000006 HP:0003547 ! is related to Shoulder girdle muscle weakness
+relationship: PROMOT:2000006 HP:0003690 ! is related to Limb muscle weakness
 relationship: PROMOT:2000006 HP:0003694 ! is related to Late-onset proximal muscle weakness
+relationship: PROMOT:2000006 HP:0003701 ! is related to Proximal muscle weakness
 relationship: PROMOT:2000006 HP:0003722 ! is related to Neck flexor weakness
 relationship: PROMOT:2000006 HP:0003731 ! is related to Quadriceps muscle weakness
+relationship: PROMOT:2000006 HP:0003749 ! is related to Pelvic girdle muscle weakness
 relationship: PROMOT:2000006 HP:0003810 ! is related to Late-onset distal muscle weakness
+relationship: PROMOT:2000006 HP:0004347 ! is related to Weakness of muscles of respiration
 relationship: PROMOT:2000006 HP:0005216 ! is related to Impaired mastication
+relationship: PROMOT:2000006 HP:0007340 ! is related to Lower limb muscle weakness
 relationship: PROMOT:2000006 HP:0007715 ! is related to Weak extraocular muscles
 relationship: PROMOT:2000006 HP:0007838 ! is related to Progressive ptosis
 relationship: PROMOT:2000006 HP:0007941 ! is related to Limited extraocular movements
 relationship: PROMOT:2000006 HP:0008959 ! is related to Distal upper limb muscle weakness
 relationship: PROMOT:2000006 HP:0008963 ! is related to Tibialis muscle weakness
 relationship: PROMOT:2000006 HP:0008988 ! is related to Pelvic girdle muscle atrophy
+relationship: PROMOT:2000006 HP:0008994 ! is related to Proximal lower limb muscle weakness
+relationship: PROMOT:2000006 HP:0008997 ! is related to Proximal upper limb muscle weakness
 relationship: PROMOT:2000006 HP:0009005 ! is related to Weakness of the intrinsic hand muscles
 relationship: PROMOT:2000006 HP:0009023 ! is related to Abdominal wall muscle weakness
 relationship: PROMOT:2000006 HP:0009027 ! is related to Foot dorsiflexor weakness
 relationship: PROMOT:2000006 HP:0009028 ! is related to Generalized weakness of limb muscles
+relationship: PROMOT:2000006 HP:0009053 ! is related to Distal lower limb muscle weakness
 relationship: PROMOT:2000006 HP:0009063 ! is related to Progressive distal muscle weakness
 relationship: PROMOT:2000006 HP:0009073 ! is related to Progressive proximal muscle weakness
 relationship: PROMOT:2000006 HP:0009077 ! is related to Weakness of long finger extensor muscles
@@ -7957,8 +8009,10 @@ relationship: PROMOT:2000006 HP:0012473 ! is related to Tongue atrophy
 relationship: PROMOT:2000006 HP:0012497 ! is related to Reduced maximal expiratory pressure
 relationship: PROMOT:2000006 HP:0012515 ! is related to Hip flexor weakness
 relationship: PROMOT:2000006 HP:0030000 ! is related to EMG: repetitive nerve stimulation abnormality
+relationship: PROMOT:2000006 HP:0030006 ! is related to Single fiber EMG abnormality
 relationship: PROMOT:2000006 HP:0030193 ! is related to Fatigable weakness of chewing muscles
 relationship: PROMOT:2000006 HP:0030205 ! is related to Increased jitter at single fiber EMG
+relationship: PROMOT:2000006 HP:0030237 ! is related to Hand muscle weakness
 relationship: PROMOT:2000006 HP:0030319 ! is related to Weakness of facial musculature
 relationship: PROMOT:2000006 HP:0031108 ! is related to Triceps weakness
 relationship: PROMOT:2000006 HP:0031146 ! is related to Impaired oral bolus formation
@@ -7984,8 +8038,8 @@ id: ICF:1806589582
 name: Biting
 def: "Functions of cutting into, piercing or tearing off food with the front teeth." []
 is_a: ICF:363211474 ! Fonctions d'ingestion
-is_a: PROMOT:0032002 ! Activity related body function
 relationship: PROMOT:2000006 HP:0008872 ! is related to Feeding difficulties in infancy
+relationship: PROMOT:2000006 HP:0011968 ! is related to Feeding difficulties
 relationship: RO:0002331 ICF:1328675264 ! involved in Comer
 property_value: schema:browserUrl https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F1806589582
 
@@ -8032,7 +8086,6 @@ id: ICF:1831985718
 name: Fonction vestibulaire de l'équilibre
 def: "Sensory functions of the inner ear related to determining the balance of the body." []
 is_a: ICF:1607952955 ! Fonctions vestibulaires
-is_a: PROMOT:0032002 ! Activity related body function
 relationship: PROMOT:2000006 HP:0002141 ! is related to Gait imbalance
 relationship: RO:0002331 ICF:2048203604 ! involved in Mobility
 property_value: schema:browserUrl https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F1831985718
@@ -8066,6 +8119,7 @@ def: "Functions of the production of characteristics of voice including pitch, r
 is_a: ICF:712570723 ! Fonctions de la voix
 relationship: PROMOT:2000006 HP:0001611 ! is related to Hypernasal speech
 relationship: PROMOT:2000006 HP:6001011 ! is related to Wet voice
+relationship: RO:0002331 ICF:151046878 ! involved in Hablar
 property_value: schema:browserUrl https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F1846694084
 property_value: schema:inclusion "functions of high or low pitch" xsd:string
 property_value: schema:narrowerTerm "functions of high or low pitch" xsd:string
@@ -8098,6 +8152,7 @@ property_value: skos:altLabel "Functions involved in energy level" xsd:string
 id: ICF:1867012554
 name: Muscles du bras
 is_a: ICF:640373779 ! Estructura del brazo
+relationship: RO:0000091 HP:0008997 ! has disposition Proximal upper limb muscle weakness
 relationship: RO:0000091 HP:0031108 ! has disposition Triceps weakness
 relationship: RO:0002328 ICF:1521707777 ! functionally related to Endurance des groupes de muscles
 relationship: RO:0002328 ICF:1789365017 ! functionally related to Fuerza de músculos aislados o de grupos de músculos
@@ -8120,6 +8175,9 @@ id: ICF:1874889854
 name: Muscles de la région de la tête et du cou
 is_a: ICF:436620656 ! Estructura de la cabeza y de la región del cuello
 relationship: RO:0000091 HP:0000183 ! has disposition Tongue muscle weakness
+relationship: RO:0000091 HP:0000467 ! has disposition Neck muscle weakness
+relationship: RO:0000091 HP:0000508 ! has disposition Ptosis
+relationship: RO:0000091 HP:0002015 ! has disposition Dysphagia
 relationship: RO:0000091 HP:0002033 ! has disposition Poor suck
 relationship: RO:0000091 HP:0002058 ! has disposition Myopathic facies
 relationship: RO:0000091 HP:0002068 ! has disposition Neuromuscular dysphagia
@@ -8143,6 +8201,7 @@ relationship: RO:0002328 ICF:2089171534 ! functionally related to Succión
 relationship: RO:0002328 ICF:691689627 ! functionally related to Deglución faríngea
 relationship: RO:0002328 ICF:712570723 ! functionally related to Fonctions de la voix
 relationship: RO:0002328 ICF:841397411 ! functionally related to Sensación de rigidez muscular
+relationship: RO:0002328 ICF:923782542 ! functionally related to Déglutir
 property_value: schema:browserUrl https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F1874889854
 
 [Term]
@@ -8164,7 +8223,6 @@ id: ICF:1919311435
 name: Articulation functions
 def: "Functions of the production of speech sounds." []
 is_a: ICF:388067588 ! Fonctions de la voix et de la parole
-is_a: PROMOT:0032002 ! Activity related body function
 relationship: PROMOT:2000006 HP:0001260 ! is related to Dysarthria
 relationship: RO:0002331 ICF:151046878 ! involved in Hablar
 property_value: schema:browserUrl https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F1919311435
@@ -8217,6 +8275,7 @@ id: ICF:2021370201
 name: Fonctions de la paupière
 def: "Functions of the eyelid, such as the protective reflex." []
 is_a: ICF:2031311308 ! Fonctions des annexes de l'œil
+relationship: PROMOT:2000006 HP:0000508 ! is related to Ptosis
 relationship: PROMOT:2000006 HP:0007838 ! is related to Progressive ptosis
 property_value: schema:browserUrl https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F2021370201
 
@@ -8253,8 +8312,11 @@ relationship: PROMOT:2000006 HP:0002172 ! is related to Postural instability
 relationship: PROMOT:2000006 HP:0002317 ! is related to Unsteady gait
 relationship: PROMOT:2000006 HP:0003327 ! is related to Axial muscle weakness
 relationship: PROMOT:2000006 HP:0003731 ! is related to Quadriceps muscle weakness
+relationship: PROMOT:2000006 HP:0003749 ! is related to Pelvic girdle muscle weakness
+relationship: PROMOT:2000006 HP:0007340 ! is related to Lower limb muscle weakness
 relationship: PROMOT:2000006 HP:0008963 ! is related to Tibialis muscle weakness
 relationship: PROMOT:2000006 HP:0008988 ! is related to Pelvic girdle muscle atrophy
+relationship: PROMOT:2000006 HP:0008994 ! is related to Proximal lower limb muscle weakness
 relationship: PROMOT:2000006 HP:0009027 ! is related to Foot dorsiflexor weakness
 relationship: PROMOT:2000006 HP:0011727 ! is related to Peroneal muscle weakness
 relationship: PROMOT:2000006 HP:0012515 ! is related to Hip flexor weakness
@@ -8281,7 +8343,6 @@ property_value: schema:browserUrl https://icd.who.int/dev11/f/en#/http%3A%2F%2Fi
 id: ICF:2067741200
 name: Testes and scrotum
 is_a: ICF:606087144 ! Estructura del sistema reproductor
-is_a: PROMOT:0020001 ! Phenotypically related body structure
 relationship: RO:0000091 HP:0000028 ! has disposition Cryptorchidism
 relationship: RO:0002328 ICF:859818654 ! functionally related to Desarrollo del pene, los testículos y el escroto
 property_value: schema:browserUrl https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F2067741200
@@ -8298,6 +8359,7 @@ name: Rhythm of speech
 def: "Functions of the modulated, tempo and stress patterns in speech." []
 is_a: ICF:213697684 ! Fluency and rhythm of speech functions
 relationship: PROMOT:2000006 HP:0001618 ! is related to Dysphonia
+relationship: RO:0002331 ICF:151046878 ! involved in Hablar
 property_value: schema:browserUrl https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F2069371821
 property_value: skos:altLabel "Functions involved in rhythm of speech" xsd:string
 
@@ -8314,8 +8376,9 @@ id: ICF:2089171534
 name: Succión
 def: "Functions of drawing food or liquids into the mouth by a suction force produced by movements of the cheeks, lips and tongue." []
 is_a: ICF:363211474 ! Fonctions d'ingestion
-is_a: PROMOT:0032002 ! Activity related body function
 relationship: PROMOT:2000006 HP:0002033 ! is related to Poor suck
+relationship: PROMOT:2000006 HP:0008872 ! is related to Feeding difficulties in infancy
+relationship: PROMOT:2000006 HP:0011968 ! is related to Feeding difficulties
 relationship: RO:0002331 ICF:1328675264 ! involved in Comer
 relationship: RO:0002331 ICF:553784299 ! involved in Beber
 property_value: schema:browserUrl https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F2089171534
@@ -8342,7 +8405,6 @@ id: ICF:213697684
 name: Fluency and rhythm of speech functions
 def: "Functions of the production of flow and tempo of speech." []
 is_a: ICF:388067588 ! Fonctions de la voix et de la parole
-is_a: PROMOT:0032002 ! Activity related body function
 relationship: RO:0002331 ICF:151046878 ! involved in Hablar
 property_value: schema:browserUrl https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F213697684
 property_value: schema:exclusion "Articulation functions" xsd:string {schema:foundationReference="ICF:1919311435"}
@@ -8411,6 +8473,7 @@ id: ICF:260756767
 name: Tone of all muscles of the body
 def: "Functions related to the tension present in the resting muscles and muscle groups of the whole body and the resistance offered when trying to move those muscles passively." []
 is_a: ICF:1839310222 ! Fonctions relatives au tonus musculaire
+relationship: PROMOT:2000006 HP:0001252 ! is related to Hypotonia
 relationship: PROMOT:2000006 HP:0001319 ! is related to Neonatal hypotonia
 property_value: schema:browserUrl https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F260756767
 property_value: skos:altLabel "Functions involved in tone of all muscles of the body" xsd:string
@@ -8429,6 +8492,7 @@ property_value: schema:exclusion "Muscle tone functions" xsd:string {schema:foun
 id: ICF:278512890
 name: Muscles de la région des épaules
 is_a: ICF:1108927576 ! Estructura de la región del hombro
+relationship: RO:0000091 HP:0003325 ! has disposition Limb-girdle muscle weakness
 relationship: RO:0000091 HP:0003547 ! has disposition Shoulder girdle muscle weakness
 relationship: RO:0000091 HP:0008997 ! has disposition Proximal upper limb muscle weakness
 relationship: RO:0002328 ICF:1521707777 ! functionally related to Endurance des groupes de muscles
@@ -8450,6 +8514,7 @@ name: Dolor en la cabeza y el cuello
 def: "Sensation of unpleasant feeling indicating potential or actual damage to some body structure felt in the head and neck." []
 is_a: ICF:577558794 ! Dolor en una parte del cuerpo
 relationship: PROMOT:2000006 HP:0003326 ! is related to Myalgia
+relationship: PROMOT:2000006 HP:0012531 ! is related to Pain
 relationship: PROMOT:2000006 HP:0032043 ! is related to Odynophagia
 property_value: schema:browserUrl https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F299098423
 
@@ -8465,6 +8530,7 @@ id: ICF:338611549
 name: Muscles de la jambe
 is_a: ICF:249425252 ! Estructura de la pierna
 relationship: RO:0000091 HP:0008963 ! has disposition Tibialis muscle weakness
+relationship: RO:0000091 HP:0009053 ! has disposition Distal lower limb muscle weakness
 relationship: RO:0000091 HP:0011727 ! has disposition Peroneal muscle weakness
 relationship: RO:0002328 ICF:1521707777 ! functionally related to Endurance des groupes de muscles
 relationship: RO:0002328 ICF:1789365017 ! functionally related to Fuerza de músculos aislados o de grupos de músculos
@@ -8488,7 +8554,7 @@ property_value: schema:exclusion "Sensations associated with the digestive syste
 id: ICF:374222990
 name: Estructura del paladar
 is_a: ICF:1754034822 ! Estructura de la boca
-is_a: PROMOT:0020001 ! Phenotypically related body structure
+relationship: RO:0000091 HP:0000218 ! has disposition High palate
 relationship: RO:0000091 HP:0002705 ! has disposition High, narrow palate
 property_value: schema:browserUrl https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F374222990
 
@@ -8533,9 +8599,12 @@ property_value: skos:altLabel "Engaging in recreation and leisure" xsd:string
 id: ICF:405925948
 name: External ocular muscles
 is_a: ICF:246722870 ! Estructuras periféricas oculares
-is_a: PROMOT:0020001 ! Phenotypically related body structure
 relationship: RO:0000091 HP:0000486 ! has disposition Strabismus
+relationship: RO:0000091 HP:0000496 ! has disposition Abnormality of eye movement
+relationship: RO:0000091 HP:0000508 ! has disposition Ptosis
 relationship: RO:0000091 HP:0000544 ! has disposition External ophthalmoplegia
+relationship: RO:0000091 HP:0000597 ! has disposition Ophthalmoparesis
+relationship: RO:0000091 HP:0000602 ! has disposition Ophthalmoplegia
 relationship: RO:0000091 HP:0000651 ! has disposition Diplopia
 relationship: RO:0000091 HP:0007715 ! has disposition Weak extraocular muscles
 relationship: RO:0000091 HP:0007838 ! has disposition Progressive ptosis
@@ -8551,6 +8620,7 @@ id: ICF:409094401
 name: Andar sorteando obstáculos
 def: "Walking in ways required to avoid moving and immobile objects, people, animals, and vehicles, such as walking around a marketplace or shop, around or through traffic or other crowded areas." []
 is_a: ICF:1550548595 ! Andar
+relationship: PROMOT:2000006 HP:0002141 ! is related to Gait imbalance
 property_value: schema:browserUrl https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F409094401
 
 [Term]
@@ -8592,6 +8662,11 @@ id: ICF:446199613
 name: Fonctions respiratoires
 def: "Functions of inhaling air into the lungs, the exchange of gases between air and blood, and exhaling air." []
 is_a: ICF:744367503 ! Fonctions du système respiratoire
+relationship: PROMOT:2000006 HP:0002093 ! is related to Respiratory insufficiency
+relationship: PROMOT:2000006 HP:0002094 ! is related to Dyspnea
+relationship: PROMOT:2000006 HP:0002098 ! is related to Respiratory distress
+relationship: PROMOT:2000006 HP:0002747 ! is related to Respiratory insufficiency due to muscle weakness
+relationship: PROMOT:2000006 HP:0004347 ! is related to Weakness of muscles of respiration
 relationship: PROMOT:2000006 HP:0032341 ! is related to Reduced forced vital capacity
 property_value: schema:browserUrl https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F446199613
 property_value: schema:exclusion "Additional functions of the respiratory system" xsd:string {schema:foundationReference="ICF:1682107878"}
@@ -8641,8 +8716,14 @@ property_value: schema:browserUrl https://icd.who.int/dev11/f/en#/http%3A%2F%2Fi
 id: ICF:495844982
 name: Muscles of respiration
 is_a: ICF:829058183 ! Estructura del sistema respiratorio
+relationship: RO:0000091 HP:0002093 ! has disposition Respiratory insufficiency
+relationship: RO:0000091 HP:0002094 ! has disposition Dyspnea
+relationship: RO:0000091 HP:0002098 ! has disposition Respiratory distress
+relationship: RO:0000091 HP:0002104 ! has disposition Apnea
 relationship: RO:0000091 HP:0002643 ! has disposition Neonatal respiratory distress
+relationship: RO:0000091 HP:0002747 ! has disposition Respiratory insufficiency due to muscle weakness
 relationship: RO:0000091 HP:0002878 ! has disposition Respiratory failure
+relationship: RO:0000091 HP:0004347 ! has disposition Weakness of muscles of respiration
 relationship: RO:0000091 HP:0004885 ! has disposition Episodic respiratory distress
 relationship: RO:0000091 HP:0004887 ! has disposition Respiratory failure requiring assisted ventilation
 relationship: RO:0000091 HP:0004889 ! has disposition Intermittent episodes of respiratory insufficiency due to muscle weakness
@@ -8650,7 +8731,10 @@ relationship: RO:0000091 HP:0005949 ! has disposition Apneic episodes in infancy
 relationship: RO:0000091 HP:0012497 ! has disposition Reduced maximal expiratory pressure
 relationship: RO:0000091 HP:0032341 ! has disposition Reduced forced vital capacity
 relationship: RO:0002328 ICF:1360101629 ! functionally related to Fonctions des muscles respiratoires
+relationship: RO:0002328 ICF:1521707777 ! functionally related to Endurance des groupes de muscles
+relationship: RO:0002328 ICF:1789365017 ! functionally related to Fuerza de músculos aislados o de grupos de músculos
 relationship: RO:0002328 ICF:446199613 ! functionally related to Fonctions respiratoires
+relationship: RO:0002328 ICF:744367503 ! functionally related to Fonctions du système respiratoire
 property_value: schema:browserUrl https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F495844982
 
 [Term]
@@ -8662,8 +8746,9 @@ property_value: schema:browserUrl https://icd.who.int/dev11/f/en#/http%3A%2F%2Fi
 [Term]
 id: ICF:521411479
 name: Capítulo 4 estructuras de los sistemas cardiovascular, inmunológico y respiratorio
-is_a: PROMOT:0020001 ! Phenotypically related body structure
+is_a: ICF:1626363729 ! Body structures
 relationship: RO:0000091 HP:0003731 ! has disposition Quadriceps muscle weakness
+relationship: RO:0000091 HP:0008994 ! has disposition Proximal lower limb muscle weakness
 relationship: RO:0000091 HP:0012515 ! has disposition Hip flexor weakness
 relationship: RO:0000091 HP:0033416 ! has disposition Hip adductor weakness
 relationship: RO:0002328 ICF:1521707777 ! functionally related to Endurance des groupes de muscles
@@ -8683,6 +8768,7 @@ name: Salivación
 def: "Function of the production of saliva within the mouth." []
 is_a: ICF:363211474 ! Fonctions d'ingestion
 relationship: PROMOT:2000006 HP:0008872 ! is related to Feeding difficulties in infancy
+relationship: PROMOT:2000006 HP:0011968 ! is related to Feeding difficulties
 property_value: schema:browserUrl https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F539470158
 
 [Term]
@@ -8698,10 +8784,13 @@ def: "Taking hold of a drink, bringing it to the mouth, and consuming the drink 
 is_a: ICF:1608009360 ! Autocuidado
 is_a: PROMOT:0110001 ! Actividad
 relationship: PROMOT:2000006 HP:0000183 ! is related to Tongue muscle weakness
+relationship: PROMOT:2000006 HP:0002015 ! is related to Dysphagia
 relationship: PROMOT:2000006 HP:0002033 ! is related to Poor suck
 relationship: PROMOT:2000006 HP:0002068 ! is related to Neuromuscular dysphagia
+relationship: PROMOT:2000006 HP:0008872 ! is related to Feeding difficulties in infancy
 relationship: PROMOT:2000006 HP:0011470 ! is related to Nasogastric tube feeding in infancy
 relationship: PROMOT:2000006 HP:0011471 ! is related to Gastrostomy tube feeding in infancy
+relationship: PROMOT:2000006 HP:0011968 ! is related to Feeding difficulties
 relationship: PROMOT:2000006 HP:0012473 ! is related to Tongue atrophy
 relationship: PROMOT:2000006 HP:0025156 ! is related to Dependency on intravenous nutrition
 relationship: PROMOT:2000006 HP:0030884 ! is related to Gastrojejunal tube feeding in infancy
@@ -8709,6 +8798,7 @@ relationship: PROMOT:2000006 HP:0031063 ! is related to Impaired feeding ability
 relationship: PROMOT:2000006 HP:0031146 ! is related to Impaired oral bolus formation
 relationship: PROMOT:2000006 HP:0031162 ! is related to Impaired oropharyngeal swallow response
 relationship: PROMOT:2000006 HP:0032043 ! is related to Odynophagia
+relationship: PROMOT:2000006 HP:0033454 ! is related to Tube feeding
 relationship: PROMOT:2000006 HP:0033994 ! is related to Dependency on parenteral nutrition
 relationship: PROMOT:2000006 HP:0040288 ! is related to Nasogastric tube feeding
 relationship: PROMOT:2000006 HP:0200136 ! is related to Oral-pharyngeal dysphagia
@@ -8743,7 +8833,6 @@ id: ICF:576915490
 name: Fonctions relatives aux réactions motrices involontaires
 def: "Functions of involuntary contractions of large muscles or the whole body induced by body position, balance and threatening stimuli." []
 is_a: ICF:627064928 ! Fonctions liées au mouvement
-is_a: PROMOT:0032002 ! Activity related body function
 relationship: PROMOT:2000006 HP:0002141 ! is related to Gait imbalance
 relationship: RO:0002331 ICF:2048203604 ! involved in Mobility
 property_value: schema:browserUrl https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F576915490
@@ -8805,6 +8894,7 @@ id: ICF:621727843
 name: Sensación de espasmo muscular
 def: "Sensation of involuntary contraction of a muscle or a group of muscles." []
 is_a: ICF:1405368356 ! Sensaciones relacionadas con los músculos y las funciones del movimiento
+relationship: PROMOT:2000006 HP:0003394 ! is related to Muscle spasm
 property_value: schema:browserUrl https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F621727843
 property_value: schema:inclusion "muscle constriction" xsd:string
 property_value: schema:narrowerTerm "muscle constriction" xsd:string
@@ -8831,7 +8921,6 @@ property_value: schema:browserUrl https://icd.who.int/dev11/f/en#/http%3A%2F%2Fi
 id: ICF:634949825
 name: Estructura del cerebro
 is_a: ICF:1419635799 ! Capítulo 1 estructuras del sistema nervioso
-is_a: PROMOT:0020001 ! Phenotypically related body structure
 relationship: RO:0000091 HP:0001249 ! has disposition Intellectual disability
 relationship: RO:0002328 ICF:1525383756 ! functionally related to Fonctions intellectuelles
 property_value: schema:browserUrl https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F634949825
@@ -8845,7 +8934,7 @@ property_value: schema:browserUrl https://icd.who.int/dev11/f/en#/http%3A%2F%2Fi
 [Term]
 id: ICF:644658903
 name: Capítulo 7 estructuras relacionadas con el movimiento
-is_a: PROMOT:0020001 ! Phenotypically related body structure
+is_a: ICF:1626363729 ! Body structures
 relationship: RO:0000091 HP:0002141 ! has disposition Gait imbalance
 relationship: RO:0002328 ICF:1328466963 ! functionally related to Fonctions relatives au type de démarche
 relationship: RO:0002328 ICF:576915490 ! functionally related to Fonctions relatives aux réactions motrices involontaires
@@ -8863,6 +8952,7 @@ name: Dolor en la espalda
 def: "Sensation of unpleasant feeling indicating potential or actual damage to some body structure felt in the back." []
 is_a: ICF:577558794 ! Dolor en una parte del cuerpo
 relationship: PROMOT:2000006 HP:0003326 ! is related to Myalgia
+relationship: PROMOT:2000006 HP:0012531 ! is related to Pain
 property_value: schema:browserUrl https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F682314871
 property_value: schema:inclusion "low backache" xsd:string
 property_value: schema:inclusion "pain in the trunk" xsd:string
@@ -8873,7 +8963,6 @@ property_value: schema:narrowerTerm "pain in the trunk" xsd:string
 id: ICF:68679181
 name: Laberinto vestibular
 is_a: ICF:426292658 ! Estructura del oído interno
-is_a: PROMOT:0020001 ! Phenotypically related body structure
 relationship: RO:0000091 HP:0002141 ! has disposition Gait imbalance
 relationship: RO:0002328 ICF:1831985718 ! functionally related to Fonction vestibulaire de l'équilibre
 property_value: schema:browserUrl https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F68679181
@@ -8884,6 +8973,8 @@ name: Deglución faríngea
 def: "Function of clearing substances through the pharynx at an appropriate rate and speed." []
 is_a: ICF:923782542 ! Déglutir
 relationship: PROMOT:2000006 HP:0031162 ! is related to Impaired oropharyngeal swallow response
+relationship: RO:0002331 ICF:1328675264 ! involved in Comer
+relationship: RO:0002331 ICF:553784299 ! involved in Beber
 property_value: schema:browserUrl https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F691689627
 property_value: skos:altLabel "Functions involved in pharyngeal swallowing" xsd:string
 
@@ -8901,7 +8992,6 @@ id: ICF:712570723
 name: Fonctions de la voix
 def: "Functions of the production of various sounds by the passage of air through the larynx." []
 is_a: ICF:388067588 ! Fonctions de la voix et de la parole
-is_a: PROMOT:0032002 ! Activity related body function
 relationship: PROMOT:2000006 HP:0001609 ! is related to Hoarse voice
 relationship: PROMOT:2000006 HP:0001618 ! is related to Dysphonia
 relationship: RO:0002331 ICF:151046878 ! involved in Hablar
@@ -8924,6 +9014,7 @@ relationship: RO:0000091 HP:0000767 ! has disposition Pectus excavatum
 relationship: RO:0000091 HP:0000768 ! has disposition Pectus carinatum
 relationship: RO:0000091 HP:0000774 ! has disposition Narrow chest
 relationship: RO:0000091 HP:0000886 ! has disposition Deformed rib cage
+relationship: RO:0000091 HP:0001547 ! has disposition Abnormal rib cage morphology
 relationship: RO:0000091 HP:6000327 ! has disposition Thoracic cage flatness
 property_value: schema:browserUrl https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F723417607
 
@@ -8956,8 +9047,10 @@ property_value: skos:altLabel " Having other purposeful sensing sensory experien
 id: ICF:744367503
 name: Fonctions du système respiratoire
 is_a: ICF:326705068 ! Fonctions des systèmes cardiovasculaire, hématopoïétique, immunitaire et respiratoire
+relationship: PROMOT:2000006 HP:0002104 ! is related to Apnea
 relationship: PROMOT:2000006 HP:0002643 ! is related to Neonatal respiratory distress
 relationship: PROMOT:2000006 HP:0002878 ! is related to Respiratory failure
+relationship: PROMOT:2000006 HP:0004347 ! is related to Weakness of muscles of respiration
 relationship: PROMOT:2000006 HP:0004885 ! is related to Episodic respiratory distress
 relationship: PROMOT:2000006 HP:0004887 ! is related to Respiratory failure requiring assisted ventilation
 relationship: PROMOT:2000006 HP:0004889 ! is related to Intermittent episodes of respiratory insufficiency due to muscle weakness
@@ -8983,6 +9076,7 @@ property_value: schema:browserUrl https://icd.who.int/dev11/f/en#/http%3A%2F%2Fi
 id: ICF:793188683
 name: Muscles de la région pelvienne
 is_a: ICF:232409592 ! Estructura de la región pélvica
+relationship: RO:0000091 HP:0003325 ! has disposition Limb-girdle muscle weakness
 relationship: RO:0000091 HP:0003749 ! has disposition Pelvic girdle muscle weakness
 relationship: RO:0000091 HP:0008988 ! has disposition Pelvic girdle muscle atrophy
 relationship: RO:0000091 HP:0008994 ! has disposition Proximal lower limb muscle weakness
@@ -9094,8 +9188,14 @@ property_value: schema:narrowerTerm "maintenance of acceptable Body Mass Index (
 id: ICF:870135798
 name: Lungs
 is_a: ICF:829058183 ! Estructura del sistema respiratorio
+relationship: RO:0000091 HP:0002093 ! has disposition Respiratory insufficiency
+relationship: RO:0000091 HP:0002094 ! has disposition Dyspnea
+relationship: RO:0000091 HP:0002098 ! has disposition Respiratory distress
+relationship: RO:0000091 HP:0002104 ! has disposition Apnea
 relationship: RO:0000091 HP:0002643 ! has disposition Neonatal respiratory distress
+relationship: RO:0000091 HP:0002747 ! has disposition Respiratory insufficiency due to muscle weakness
 relationship: RO:0000091 HP:0002878 ! has disposition Respiratory failure
+relationship: RO:0000091 HP:0004347 ! has disposition Weakness of muscles of respiration
 relationship: RO:0000091 HP:0004885 ! has disposition Episodic respiratory distress
 relationship: RO:0000091 HP:0004887 ! has disposition Respiratory failure requiring assisted ventilation
 relationship: RO:0000091 HP:0004889 ! has disposition Intermittent episodes of respiratory insufficiency due to muscle weakness
@@ -9136,6 +9236,7 @@ name: Dolor generalizado
 def: "Sensation of unpleasant feeling indicating potential or actual damage to some body structure felt all over, or throughout the body." []
 is_a: ICF:894218497 ! Sensación de dolor
 relationship: PROMOT:2000006 HP:0003326 ! is related to Myalgia
+relationship: PROMOT:2000006 HP:0012531 ! is related to Pain
 property_value: schema:browserUrl https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F893697482
 property_value: skos:altLabel "Sensation of generalized pain" xsd:string
 
@@ -9164,6 +9265,7 @@ relationship: RO:0000091 HP:0000767 ! has disposition Pectus excavatum
 relationship: RO:0000091 HP:0000768 ! has disposition Pectus carinatum
 relationship: RO:0000091 HP:0000774 ! has disposition Narrow chest
 relationship: RO:0000091 HP:0000886 ! has disposition Deformed rib cage
+relationship: RO:0000091 HP:0001547 ! has disposition Abnormal rib cage morphology
 relationship: RO:0000091 HP:6000327 ! has disposition Thoracic cage flatness
 property_value: schema:browserUrl https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F902262669
 
@@ -9186,9 +9288,10 @@ id: ICF:923782542
 name: Déglutir
 def: "Functions of clearing substances, such as food, drink and saliva through the oral cavity, pharynx and oesophagus into the stomach at an appropriate rate and speed." []
 is_a: ICF:363211474 ! Fonctions d'ingestion
-is_a: PROMOT:0032002 ! Activity related body function
+relationship: PROMOT:2000006 HP:0002015 ! is related to Dysphagia
 relationship: PROMOT:2000006 HP:0002068 ! is related to Neuromuscular dysphagia
 relationship: PROMOT:2000006 HP:0008872 ! is related to Feeding difficulties in infancy
+relationship: PROMOT:2000006 HP:0011968 ! is related to Feeding difficulties
 relationship: PROMOT:2000006 HP:0032043 ! is related to Odynophagia
 relationship: PROMOT:2000006 HP:0200136 ! is related to Oral-pharyngeal dysphagia
 relationship: RO:0002331 ICF:1328675264 ! involved in Comer
@@ -9237,47 +9340,70 @@ xref: UMLS:C0270952 {ECO:0000218="E (Exact mapping: the two concepts are equival
 is_a: ORDO:377788 ! Disease
 relationship: RO:0004003 PROMOT:0000001 ! has material basis in germline mutation in OPMD related mutation
 relationship: RO:0004029 HP:0000183 ! disease has feature Tongue muscle weakness
+relationship: RO:0004029 HP:0000467 ! disease has feature Neck muscle weakness
+relationship: RO:0004029 HP:0000508 ! disease has feature Ptosis
 relationship: RO:0004029 HP:0000544 ! disease has feature External ophthalmoplegia
+relationship: RO:0004029 HP:0000597 ! disease has feature Ophthalmoparesis
+relationship: RO:0004029 HP:0000602 ! disease has feature Ophthalmoplegia
 relationship: RO:0004029 HP:0000651 ! disease has feature Diplopia
 relationship: RO:0004029 HP:0001260 ! disease has feature Dysarthria
+relationship: RO:0004029 HP:0001288 ! disease has feature Gait disturbance
+relationship: RO:0004029 HP:0001324 ! disease has feature Muscle weakness
 relationship: RO:0004029 HP:0001609 ! disease has feature Hoarse voice
 relationship: RO:0004029 HP:0001611 ! disease has feature Hypernasal speech
 relationship: RO:0004029 HP:0001618 ! disease has feature Dysphonia
+relationship: RO:0004029 HP:0002015 ! disease has feature Dysphagia
 relationship: RO:0004029 HP:0002068 ! disease has feature Neuromuscular dysphagia
+relationship: RO:0004029 HP:0002093 ! disease has feature Respiratory insufficiency
+relationship: RO:0004029 HP:0002094 ! disease has feature Dyspnea
 relationship: RO:0004029 HP:0002098 ! disease has feature Respiratory distress
 relationship: RO:0004029 HP:0002141 ! disease has feature Gait imbalance
 relationship: RO:0004029 HP:0002172 ! disease has feature Postural instability
 relationship: RO:0004029 HP:0002317 ! disease has feature Unsteady gait
+relationship: RO:0004029 HP:0002460 ! disease has feature Distal muscle weakness
 relationship: RO:0004029 HP:0002747 ! disease has feature Respiratory insufficiency due to muscle weakness
 relationship: RO:0004029 HP:0003236 ! disease has feature Elevated circulating creatine kinase concentration
+relationship: RO:0004029 HP:0003323 ! disease has feature Progressive muscle weakness
+relationship: RO:0004029 HP:0003325 ! disease has feature Limb-girdle muscle weakness
 relationship: RO:0004029 HP:0003327 ! disease has feature Axial muscle weakness
 relationship: RO:0004029 HP:0003392 ! disease has feature First dorsal interossei muscle weakness
 relationship: RO:0004029 HP:0003427 ! disease has feature Thenar muscle weakness
 relationship: RO:0004029 HP:0003458 ! disease has feature EMG: myopathic abnormalities
+relationship: RO:0004029 HP:0003484 ! disease has feature Upper limb muscle weakness
 relationship: RO:0004029 HP:0003547 ! disease has feature Shoulder girdle muscle weakness
 relationship: RO:0004029 HP:0003551 ! disease has feature Difficulty climbing stairs
+relationship: RO:0004029 HP:0003690 ! disease has feature Limb muscle weakness
+relationship: RO:0004029 HP:0003701 ! disease has feature Proximal muscle weakness
 relationship: RO:0004029 HP:0003722 ! disease has feature Neck flexor weakness
 relationship: RO:0004029 HP:0003731 ! disease has feature Quadriceps muscle weakness
+relationship: RO:0004029 HP:0003749 ! disease has feature Pelvic girdle muscle weakness
+relationship: RO:0004029 HP:0004347 ! disease has feature Weakness of muscles of respiration
 relationship: RO:0004029 HP:0004878 ! disease has feature Intercostal muscle weakness
 relationship: RO:0004029 HP:0005216 ! disease has feature Impaired mastication
+relationship: RO:0004029 HP:0007340 ! disease has feature Lower limb muscle weakness
 relationship: RO:0004029 HP:0007715 ! disease has feature Weak extraocular muscles
 relationship: RO:0004029 HP:0007838 ! disease has feature Progressive ptosis
 relationship: RO:0004029 HP:0008959 ! disease has feature Distal upper limb muscle weakness
 relationship: RO:0004029 HP:0008963 ! disease has feature Tibialis muscle weakness
 relationship: RO:0004029 HP:0008988 ! disease has feature Pelvic girdle muscle atrophy
+relationship: RO:0004029 HP:0008994 ! disease has feature Proximal lower limb muscle weakness
+relationship: RO:0004029 HP:0008997 ! disease has feature Proximal upper limb muscle weakness
 relationship: RO:0004029 HP:0009005 ! disease has feature Weakness of the intrinsic hand muscles
 relationship: RO:0004029 HP:0009023 ! disease has feature Abdominal wall muscle weakness
 relationship: RO:0004029 HP:0009027 ! disease has feature Foot dorsiflexor weakness
+relationship: RO:0004029 HP:0009053 ! disease has feature Distal lower limb muscle weakness
 relationship: RO:0004029 HP:0009063 ! disease has feature Progressive distal muscle weakness
 relationship: RO:0004029 HP:0009073 ! disease has feature Progressive proximal muscle weakness
 relationship: RO:0004029 HP:0009077 ! disease has feature Weakness of long finger extensor muscles
 relationship: RO:0004029 HP:0011727 ! disease has feature Peroneal muscle weakness
 relationship: RO:0004029 HP:0011968 ! disease has feature Feeding difficulties
+relationship: RO:0004029 HP:0012378 ! disease has feature Fatigue
 relationship: RO:0004029 HP:0012473 ! disease has feature Tongue atrophy
 relationship: RO:0004029 HP:0012497 ! disease has feature Reduced maximal expiratory pressure
 relationship: RO:0004029 HP:0012515 ! disease has feature Hip flexor weakness
 relationship: RO:0004029 HP:0012531 ! disease has feature Pain
 relationship: RO:0004029 HP:0012735 ! disease has feature Cough
+relationship: RO:0004029 HP:0030237 ! disease has feature Hand muscle weakness
 relationship: RO:0004029 HP:0030319 ! disease has feature Weakness of facial musculature
 relationship: RO:0004029 HP:0030842 ! disease has feature Choking episodes
 relationship: RO:0004029 HP:0031058 ! disease has feature Impairment of activities of daily living
@@ -9369,70 +9495,110 @@ xref: UMLS:C0751882 {ECO:0000218="E (Exact mapping: the two concepts are equival
 is_a: ORDO:377788 ! Disease
 relationship: RO:0004003 PROMOT:0000002 ! has material basis in germline mutation in CMS related mutation
 relationship: RO:0004029 HP:0000218 ! disease has feature High palate
+relationship: RO:0004029 HP:0000467 ! disease has feature Neck muscle weakness
+relationship: RO:0004029 HP:0000496 ! disease has feature Abnormality of eye movement
 relationship: RO:0004029 HP:0000508 ! disease has feature Ptosis
 relationship: RO:0004029 HP:0000544 ! disease has feature External ophthalmoplegia
+relationship: RO:0004029 HP:0000597 ! disease has feature Ophthalmoparesis
+relationship: RO:0004029 HP:0000602 ! disease has feature Ophthalmoplegia
 relationship: RO:0004029 HP:0000651 ! disease has feature Diplopia
 relationship: RO:0004029 HP:0001249 ! disease has feature Intellectual disability
+relationship: RO:0004029 HP:0001252 ! disease has feature Hypotonia
+relationship: RO:0004029 HP:0001265 ! disease has feature Hyporeflexia
+relationship: RO:0004029 HP:0001270 ! disease has feature Motor delay
+relationship: RO:0004029 HP:0001284 ! disease has feature Areflexia
+relationship: RO:0004029 HP:0001288 ! disease has feature Gait disturbance
+relationship: RO:0004029 HP:0001315 ! disease has feature Reduced tendon reflexes
 relationship: RO:0004029 HP:0001319 ! disease has feature Neonatal hypotonia
+relationship: RO:0004029 HP:0001324 ! disease has feature Muscle weakness
 relationship: RO:0004029 HP:0001558 ! disease has feature Decreased fetal movement
 relationship: RO:0004029 HP:0001609 ! disease has feature Hoarse voice
 relationship: RO:0004029 HP:0001612 ! disease has feature Weak cry
 relationship: RO:0004029 HP:0001618 ! disease has feature Dysphonia
+relationship: RO:0004029 HP:0002015 ! disease has feature Dysphagia
 relationship: RO:0004029 HP:0002033 ! disease has feature Poor suck
 relationship: RO:0004029 HP:0002068 ! disease has feature Neuromuscular dysphagia
+relationship: RO:0004029 HP:0002093 ! disease has feature Respiratory insufficiency
+relationship: RO:0004029 HP:0002098 ! disease has feature Respiratory distress
+relationship: RO:0004029 HP:0002104 ! disease has feature Apnea
 relationship: RO:0004029 HP:0002359 ! disease has feature Frequent falls
+relationship: RO:0004029 HP:0002460 ! disease has feature Distal muscle weakness
 relationship: RO:0004029 HP:0002483 ! disease has feature Bulbar signs
 relationship: RO:0004029 HP:0002505 ! disease has feature Loss of ambulation
 relationship: RO:0004029 HP:0002515 ! disease has feature Waddling gait
 relationship: RO:0004029 HP:0002522 ! disease has feature Areflexia of lower limbs
+relationship: RO:0004029 HP:0002540 ! disease has feature Inability to walk
 relationship: RO:0004029 HP:0002600 ! disease has feature Hyporeflexia of lower limbs
 relationship: RO:0004029 HP:0002643 ! disease has feature Neonatal respiratory distress
+relationship: RO:0004029 HP:0002650 ! disease has feature Scoliosis
+relationship: RO:0004029 HP:0002747 ! disease has feature Respiratory insufficiency due to muscle weakness
 relationship: RO:0004029 HP:0002751 ! disease has feature Kyphoscoliosis
 relationship: RO:0004029 HP:0002804 ! disease has feature Arthrogryposis multiplex congenita
 relationship: RO:0004029 HP:0002828 ! disease has feature Multiple joint contractures
 relationship: RO:0004029 HP:0002878 ! disease has feature Respiratory failure
 relationship: RO:0004029 HP:0002882 ! disease has feature Sudden episodic apnea
+relationship: RO:0004029 HP:0003236 ! disease has feature Elevated circulating creatine kinase concentration
 relationship: RO:0004029 HP:0003307 ! disease has feature Hyperlordosis
+relationship: RO:0004029 HP:0003323 ! disease has feature Progressive muscle weakness
+relationship: RO:0004029 HP:0003325 ! disease has feature Limb-girdle muscle weakness
 relationship: RO:0004029 HP:0003326 ! disease has feature Myalgia
 relationship: RO:0004029 HP:0003327 ! disease has feature Axial muscle weakness
 relationship: RO:0004029 HP:0003391 ! disease has feature Gowers sign
 relationship: RO:0004029 HP:0003392 ! disease has feature First dorsal interossei muscle weakness
 relationship: RO:0004029 HP:0003394 ! disease has feature Muscle spasm
+relationship: RO:0004029 HP:0003398 ! disease has feature Abnormal synaptic transmission at the neuromuscular junction
 relationship: RO:0004029 HP:0003403 ! disease has feature EMG: decremental response of compound muscle action potential to repetitive nerve stimulation
 relationship: RO:0004029 HP:0003427 ! disease has feature Thenar muscle weakness
 relationship: RO:0004029 HP:0003445 ! disease has feature EMG: neuropathic changes
 relationship: RO:0004029 HP:0003458 ! disease has feature EMG: myopathic abnormalities
+relationship: RO:0004029 HP:0003473 ! disease has feature Fatigable weakness
+relationship: RO:0004029 HP:0003484 ! disease has feature Upper limb muscle weakness
 relationship: RO:0004029 HP:0003547 ! disease has feature Shoulder girdle muscle weakness
+relationship: RO:0004029 HP:0003690 ! disease has feature Limb muscle weakness
 relationship: RO:0004029 HP:0003694 ! disease has feature Late-onset proximal muscle weakness
+relationship: RO:0004029 HP:0003701 ! disease has feature Proximal muscle weakness
 relationship: RO:0004029 HP:0003722 ! disease has feature Neck flexor weakness
 relationship: RO:0004029 HP:0003731 ! disease has feature Quadriceps muscle weakness
+relationship: RO:0004029 HP:0003749 ! disease has feature Pelvic girdle muscle weakness
 relationship: RO:0004029 HP:0003810 ! disease has feature Late-onset distal muscle weakness
+relationship: RO:0004029 HP:0004347 ! disease has feature Weakness of muscles of respiration
 relationship: RO:0004029 HP:0004878 ! disease has feature Intercostal muscle weakness
 relationship: RO:0004029 HP:0004885 ! disease has feature Episodic respiratory distress
 relationship: RO:0004029 HP:0004887 ! disease has feature Respiratory failure requiring assisted ventilation
 relationship: RO:0004029 HP:0004889 ! disease has feature Intermittent episodes of respiratory insufficiency due to muscle weakness
 relationship: RO:0004029 HP:0005216 ! disease has feature Impaired mastication
 relationship: RO:0004029 HP:0005949 ! disease has feature Apneic episodes in infancy
+relationship: RO:0004029 HP:0007340 ! disease has feature Lower limb muscle weakness
+relationship: RO:0004029 HP:0007695 ! disease has feature Abnormal pupillary light reflex
 relationship: RO:0004029 HP:0007715 ! disease has feature Weak extraocular muscles
 relationship: RO:0004029 HP:0007941 ! disease has feature Limited extraocular movements
 relationship: RO:0004029 HP:0008180 ! disease has feature Mildly elevated creatine kinase
+relationship: RO:0004029 HP:0008872 ! disease has feature Feeding difficulties in infancy
 relationship: RO:0004029 HP:0008959 ! disease has feature Distal upper limb muscle weakness
 relationship: RO:0004029 HP:0008963 ! disease has feature Tibialis muscle weakness
+relationship: RO:0004029 HP:0008994 ! disease has feature Proximal lower limb muscle weakness
+relationship: RO:0004029 HP:0008997 ! disease has feature Proximal upper limb muscle weakness
 relationship: RO:0004029 HP:0009005 ! disease has feature Weakness of the intrinsic hand muscles
 relationship: RO:0004029 HP:0009023 ! disease has feature Abdominal wall muscle weakness
 relationship: RO:0004029 HP:0009027 ! disease has feature Foot dorsiflexor weakness
 relationship: RO:0004029 HP:0009028 ! disease has feature Generalized weakness of limb muscles
 relationship: RO:0004029 HP:0009046 ! disease has feature Difficulty running
+relationship: RO:0004029 HP:0009053 ! disease has feature Distal lower limb muscle weakness
 relationship: RO:0004029 HP:0009063 ! disease has feature Progressive distal muscle weakness
 relationship: RO:0004029 HP:0009073 ! disease has feature Progressive proximal muscle weakness
 relationship: RO:0004029 HP:0009077 ! disease has feature Weakness of long finger extensor muscles
 relationship: RO:0004029 HP:0011727 ! disease has feature Peroneal muscle weakness
+relationship: RO:0004029 HP:0011968 ! disease has feature Feeding difficulties
 relationship: RO:0004029 HP:0012515 ! disease has feature Hip flexor weakness
+relationship: RO:0004029 HP:0012531 ! disease has feature Pain
 relationship: RO:0004029 HP:0030000 ! disease has feature EMG: repetitive nerve stimulation abnormality
+relationship: RO:0004029 HP:0030006 ! disease has feature Single fiber EMG abnormality
+relationship: RO:0004029 HP:0030192 ! disease has feature Fatigable weakness of bulbar muscles
 relationship: RO:0004029 HP:0030193 ! disease has feature Fatigable weakness of chewing muscles
 relationship: RO:0004029 HP:0030194 ! disease has feature Fatigable weakness of speech muscles
 relationship: RO:0004029 HP:0030195 ! disease has feature Fatigable weakness of swallowing muscles
 relationship: RO:0004029 HP:0030196 ! disease has feature Fatigable weakness of respiratory muscles
+relationship: RO:0004029 HP:0030197 ! disease has feature Fatigable weakness of skeletal muscles
 relationship: RO:0004029 HP:0030198 ! disease has feature Fatigable weakness of distal limb muscles
 relationship: RO:0004029 HP:0030199 ! disease has feature Fatigable weakness of neck muscles
 relationship: RO:0004029 HP:0030200 ! disease has feature Fatiguable weakness of proximal limb muscles
@@ -9440,15 +9606,19 @@ relationship: RO:0004029 HP:0030202 ! disease has feature Favorable response of 
 relationship: RO:0004029 HP:0030203 ! disease has feature Unfavorable response of muscle weakness to acetylcholine esterase inhibitors
 relationship: RO:0004029 HP:0030205 ! disease has feature Increased jitter at single fiber EMG
 relationship: RO:0004029 HP:0030211 ! disease has feature Slow pupillary light response
+relationship: RO:0004029 HP:0030237 ! disease has feature Hand muscle weakness
 relationship: RO:0004029 HP:0030319 ! disease has feature Weakness of facial musculature
 relationship: RO:0004029 HP:0031108 ! disease has feature Triceps weakness
 relationship: RO:0004029 HP:0031177 ! disease has feature Finger flexor weakness
 relationship: RO:0004029 HP:0031374 ! disease has feature Ankle weakness
+relationship: RO:0004029 HP:0031826 ! disease has feature Abnormal reflex
 relationship: RO:0004029 HP:0031914 ! disease has feature Fluctuating
 relationship: RO:0004029 HP:0031936 ! disease has feature Delayed ability to walk
 relationship: RO:0004029 HP:0032341 ! disease has feature Reduced forced vital capacity
 relationship: RO:0004029 HP:0033416 ! disease has feature Hip adductor weakness
 relationship: RO:0004029 HP:0033454 ! disease has feature Tube feeding
+relationship: RO:0004029 HP:0033580 ! disease has feature Compound motor action potential abnormality
+relationship: RO:0004029 HP:0040081 ! disease has feature Abnormal circulating creatine kinase concentration
 relationship: RO:0004029 HP:0200136 ! disease has feature Oral-pharyngeal dysphagia
 relationship: RO:0004029 PROMOT:0032005 ! disease has feature Doble anomalía del potencial de acción motora compuesta
 relationship: RO:0004029 PROMOT:0032012 ! disease has feature Debilidad fatigable de la musculatura facial 
@@ -9481,102 +9651,154 @@ relationship: RO:0000086 HP:0000005 ! has quality Mode of inheritance
 relationship: RO:0004003 PROMOT:0000003 {minCardinality="0"} ! has material basis in germline mutation in CMYO related mutation
 relationship: RO:0004003 SO:0001060 ! has material basis in germline mutation in sequence_variant
 relationship: RO:0004029 HP:0000028 ! disease has feature Cryptorchidism
+relationship: RO:0004029 HP:0000118 ! disease has feature Phenotypic abnormality
+relationship: RO:0004029 HP:0000218 ! disease has feature High palate
 relationship: RO:0004029 HP:0000276 ! disease has feature Long face
+relationship: RO:0004029 HP:0000467 ! disease has feature Neck muscle weakness
 relationship: RO:0004029 HP:0000486 ! disease has feature Strabismus
+relationship: RO:0004029 HP:0000496 ! disease has feature Abnormality of eye movement
 relationship: RO:0004029 HP:0000508 ! disease has feature Ptosis
 relationship: RO:0004029 HP:0000544 ! disease has feature External ophthalmoplegia
+relationship: RO:0004029 HP:0000597 ! disease has feature Ophthalmoparesis
+relationship: RO:0004029 HP:0000602 ! disease has feature Ophthalmoplegia
 relationship: RO:0004029 HP:0000767 ! disease has feature Pectus excavatum
 relationship: RO:0004029 HP:0000768 ! disease has feature Pectus carinatum
 relationship: RO:0004029 HP:0000774 ! disease has feature Narrow chest
 relationship: RO:0004029 HP:0000886 ! disease has feature Deformed rib cage
 relationship: RO:0004029 HP:0001249 ! disease has feature Intellectual disability
+relationship: RO:0004029 HP:0001252 ! disease has feature Hypotonia
+relationship: RO:0004029 HP:0001265 ! disease has feature Hyporeflexia
+relationship: RO:0004029 HP:0001270 ! disease has feature Motor delay
+relationship: RO:0004029 HP:0001284 ! disease has feature Areflexia
+relationship: RO:0004029 HP:0001288 ! disease has feature Gait disturbance
+relationship: RO:0004029 HP:0001315 ! disease has feature Reduced tendon reflexes
 relationship: RO:0004029 HP:0001319 ! disease has feature Neonatal hypotonia
+relationship: RO:0004029 HP:0001324 ! disease has feature Muscle weakness
 relationship: RO:0004029 HP:0001374 ! disease has feature Congenital hip dislocation
 relationship: RO:0004029 HP:0001387 ! disease has feature Joint stiffness
+relationship: RO:0004029 HP:0001508 ! disease has feature Failure to thrive
 relationship: RO:0004029 HP:0001531 ! disease has feature Failure to thrive in infancy
+relationship: RO:0004029 HP:0001547 ! disease has feature Abnormal rib cage morphology
+relationship: RO:0004029 HP:0001558 ! disease has feature Decreased fetal movement
 relationship: RO:0004029 HP:0001609 ! disease has feature Hoarse voice
 relationship: RO:0004029 HP:0001618 ! disease has feature Dysphonia
 relationship: RO:0004029 HP:0001622 ! disease has feature Premature birth
+relationship: RO:0004029 HP:0001627 ! disease has feature Abnormal heart morphology
 relationship: RO:0004029 HP:0001638 ! disease has feature Cardiomyopathy
 relationship: RO:0004029 HP:0001713 ! disease has feature Abnormal cardiac ventricle morphology
 relationship: RO:0004029 HP:0001761 ! disease has feature Pes cavus
 relationship: RO:0004029 HP:0001989 ! disease has feature Fetal akinesia sequence
+relationship: RO:0004029 HP:0002015 ! disease has feature Dysphagia
 relationship: RO:0004029 HP:0002033 ! disease has feature Poor suck
 relationship: RO:0004029 HP:0002047 ! disease has feature Malignant hyperthermia
 relationship: RO:0004029 HP:0002058 ! disease has feature Myopathic facies
 relationship: RO:0004029 HP:0002068 ! disease has feature Neuromuscular dysphagia
+relationship: RO:0004029 HP:0002093 ! disease has feature Respiratory insufficiency
+relationship: RO:0004029 HP:0002098 ! disease has feature Respiratory distress
+relationship: RO:0004029 HP:0002104 ! disease has feature Apnea
 relationship: RO:0004029 HP:0002359 ! disease has feature Frequent falls
+relationship: RO:0004029 HP:0002460 ! disease has feature Distal muscle weakness
 relationship: RO:0004029 HP:0002483 ! disease has feature Bulbar signs
 relationship: RO:0004029 HP:0002505 ! disease has feature Loss of ambulation
 relationship: RO:0004029 HP:0002515 ! disease has feature Waddling gait
 relationship: RO:0004029 HP:0002522 ! disease has feature Areflexia of lower limbs
+relationship: RO:0004029 HP:0002540 ! disease has feature Inability to walk
 relationship: RO:0004029 HP:0002600 ! disease has feature Hyporeflexia of lower limbs
+relationship: RO:0004029 HP:0002643 ! disease has feature Neonatal respiratory distress
+relationship: RO:0004029 HP:0002650 ! disease has feature Scoliosis
 relationship: RO:0004029 HP:0002705 ! disease has feature High, narrow palate
+relationship: RO:0004029 HP:0002747 ! disease has feature Respiratory insufficiency due to muscle weakness
 relationship: RO:0004029 HP:0002751 ! disease has feature Kyphoscoliosis
 relationship: RO:0004029 HP:0002804 ! disease has feature Arthrogryposis multiplex congenita
+relationship: RO:0004029 HP:0002808 ! disease has feature Kyphosis
 relationship: RO:0004029 HP:0002828 ! disease has feature Multiple joint contractures
 relationship: RO:0004029 HP:0002878 ! disease has feature Respiratory failure
+relationship: RO:0004029 HP:0003236 ! disease has feature Elevated circulating creatine kinase concentration
 relationship: RO:0004029 HP:0003306 ! disease has feature Spinal rigidity
 relationship: RO:0004029 HP:0003307 ! disease has feature Hyperlordosis
+relationship: RO:0004029 HP:0003323 ! disease has feature Progressive muscle weakness
+relationship: RO:0004029 HP:0003325 ! disease has feature Limb-girdle muscle weakness
 relationship: RO:0004029 HP:0003327 ! disease has feature Axial muscle weakness
 relationship: RO:0004029 HP:0003391 ! disease has feature Gowers sign
 relationship: RO:0004029 HP:0003392 ! disease has feature First dorsal interossei muscle weakness
+relationship: RO:0004029 HP:0003398 ! disease has feature Abnormal synaptic transmission at the neuromuscular junction
 relationship: RO:0004029 HP:0003427 ! disease has feature Thenar muscle weakness
 relationship: RO:0004029 HP:0003445 ! disease has feature EMG: neuropathic changes
+relationship: RO:0004029 HP:0003457 ! disease has feature EMG abnormality
 relationship: RO:0004029 HP:0003458 ! disease has feature EMG: myopathic abnormalities
+relationship: RO:0004029 HP:0003473 ! disease has feature Fatigable weakness
+relationship: RO:0004029 HP:0003484 ! disease has feature Upper limb muscle weakness
 relationship: RO:0004029 HP:0003547 ! disease has feature Shoulder girdle muscle weakness
 relationship: RO:0004029 HP:0003552 ! disease has feature Muscle stiffness
+relationship: RO:0004029 HP:0003690 ! disease has feature Limb muscle weakness
 relationship: RO:0004029 HP:0003691 ! disease has feature Scapular winging
 relationship: RO:0004029 HP:0003694 ! disease has feature Late-onset proximal muscle weakness
+relationship: RO:0004029 HP:0003701 ! disease has feature Proximal muscle weakness
 relationship: RO:0004029 HP:0003722 ! disease has feature Neck flexor weakness
 relationship: RO:0004029 HP:0003731 ! disease has feature Quadriceps muscle weakness
+relationship: RO:0004029 HP:0003749 ! disease has feature Pelvic girdle muscle weakness
 relationship: RO:0004029 HP:0003810 ! disease has feature Late-onset distal muscle weakness
 relationship: RO:0004029 HP:0004322 ! disease has feature Short stature
+relationship: RO:0004029 HP:0004325 ! disease has feature Decreased body weight
+relationship: RO:0004029 HP:0004347 ! disease has feature Weakness of muscles of respiration
 relationship: RO:0004029 HP:0004878 ! disease has feature Intercostal muscle weakness
 relationship: RO:0004029 HP:0004885 ! disease has feature Episodic respiratory distress
 relationship: RO:0004029 HP:0004887 ! disease has feature Respiratory failure requiring assisted ventilation
 relationship: RO:0004029 HP:0004889 ! disease has feature Intermittent episodes of respiratory insufficiency due to muscle weakness
 relationship: RO:0004029 HP:0005216 ! disease has feature Impaired mastication
 relationship: RO:0004029 HP:0005949 ! disease has feature Apneic episodes in infancy
+relationship: RO:0004029 HP:0007340 ! disease has feature Lower limb muscle weakness
 relationship: RO:0004029 HP:0007715 ! disease has feature Weak extraocular muscles
 relationship: RO:0004029 HP:0007941 ! disease has feature Limited extraocular movements
 relationship: RO:0004029 HP:0008180 ! disease has feature Mildly elevated creatine kinase
+relationship: RO:0004029 HP:0008872 ! disease has feature Feeding difficulties in infancy
 relationship: RO:0004029 HP:0008959 ! disease has feature Distal upper limb muscle weakness
 relationship: RO:0004029 HP:0008963 ! disease has feature Tibialis muscle weakness
+relationship: RO:0004029 HP:0008994 ! disease has feature Proximal lower limb muscle weakness
+relationship: RO:0004029 HP:0008997 ! disease has feature Proximal upper limb muscle weakness
 relationship: RO:0004029 HP:0009005 ! disease has feature Weakness of the intrinsic hand muscles
 relationship: RO:0004029 HP:0009023 ! disease has feature Abdominal wall muscle weakness
 relationship: RO:0004029 HP:0009027 ! disease has feature Foot dorsiflexor weakness
 relationship: RO:0004029 HP:0009028 ! disease has feature Generalized weakness of limb muscles
 relationship: RO:0004029 HP:0009046 ! disease has feature Difficulty running
+relationship: RO:0004029 HP:0009053 ! disease has feature Distal lower limb muscle weakness
 relationship: RO:0004029 HP:0009063 ! disease has feature Progressive distal muscle weakness
 relationship: RO:0004029 HP:0009073 ! disease has feature Progressive proximal muscle weakness
 relationship: RO:0004029 HP:0009077 ! disease has feature Weakness of long finger extensor muscles
 relationship: RO:0004029 HP:0011470 ! disease has feature Nasogastric tube feeding in infancy
 relationship: RO:0004029 HP:0011471 ! disease has feature Gastrostomy tube feeding in infancy
 relationship: RO:0004029 HP:0011727 ! disease has feature Peroneal muscle weakness
+relationship: RO:0004029 HP:0011968 ! disease has feature Feeding difficulties
 relationship: RO:0004029 HP:0012515 ! disease has feature Hip flexor weakness
 relationship: RO:0004029 HP:0012768 ! disease has feature Neonatal asphyxia
 relationship: RO:0004029 HP:0025156 ! disease has feature Dependency on intravenous nutrition
 relationship: RO:0004029 HP:0030000 ! disease has feature EMG: repetitive nerve stimulation abnormality
+relationship: RO:0004029 HP:0030192 ! disease has feature Fatigable weakness of bulbar muscles
 relationship: RO:0004029 HP:0030193 ! disease has feature Fatigable weakness of chewing muscles
 relationship: RO:0004029 HP:0030194 ! disease has feature Fatigable weakness of speech muscles
 relationship: RO:0004029 HP:0030195 ! disease has feature Fatigable weakness of swallowing muscles
 relationship: RO:0004029 HP:0030196 ! disease has feature Fatigable weakness of respiratory muscles
+relationship: RO:0004029 HP:0030197 ! disease has feature Fatigable weakness of skeletal muscles
 relationship: RO:0004029 HP:0030198 ! disease has feature Fatigable weakness of distal limb muscles
 relationship: RO:0004029 HP:0030199 ! disease has feature Fatigable weakness of neck muscles
 relationship: RO:0004029 HP:0030200 ! disease has feature Fatiguable weakness of proximal limb muscles
+relationship: RO:0004029 HP:0030237 ! disease has feature Hand muscle weakness
 relationship: RO:0004029 HP:0030319 ! disease has feature Weakness of facial musculature
 relationship: RO:0004029 HP:0030872 ! disease has feature Abnormal cardiac ventricular function
 relationship: RO:0004029 HP:0030884 ! disease has feature Gastrojejunal tube feeding in infancy
+relationship: RO:0004029 HP:0031058 ! disease has feature Impairment of activities of daily living
 relationship: RO:0004029 HP:0031063 ! disease has feature Impaired feeding ability
 relationship: RO:0004029 HP:0031108 ! disease has feature Triceps weakness
 relationship: RO:0004029 HP:0031177 ! disease has feature Finger flexor weakness
 relationship: RO:0004029 HP:0031374 ! disease has feature Ankle weakness
+relationship: RO:0004029 HP:0031826 ! disease has feature Abnormal reflex
 relationship: RO:0004029 HP:0031914 ! disease has feature Fluctuating
 relationship: RO:0004029 HP:0031936 ! disease has feature Delayed ability to walk
 relationship: RO:0004029 HP:0032341 ! disease has feature Reduced forced vital capacity
 relationship: RO:0004029 HP:0033416 ! disease has feature Hip adductor weakness
+relationship: RO:0004029 HP:0033454 ! disease has feature Tube feeding
 relationship: RO:0004029 HP:0033994 ! disease has feature Dependency on parenteral nutrition
+relationship: RO:0004029 HP:0040081 ! disease has feature Abnormal circulating creatine kinase concentration
 relationship: RO:0004029 HP:0040288 ! disease has feature Nasogastric tube feeding
 relationship: RO:0004029 HP:0200136 ! disease has feature Oral-pharyngeal dysphagia
 relationship: RO:0004029 HP:6000327 ! disease has feature Thoracic cage flatness
@@ -9742,22 +9964,15 @@ id: PROMOT:0010002
 name: Declaración sobre un ser humano
 def: "A statement that describes a human." []
 is_a: PROMOT:0010001 ! declaración sobre una entidad
-relationship: RO:0002351 PROMOT:0010011 ! has member Année de naissance
 relationship: RO:0002351 PROMOT:0010011 {maxCardinality="1"} ! has member Année de naissance
-relationship: RO:0002351 PROMOT:0010015 ! has member Année de décès
 relationship: RO:0002351 PROMOT:0010015 {maxCardinality="1"} ! has member Année de décès
 relationship: RO:0002351 PROMOT:0010016 ! has member Age
 relationship: RO:0002351 PROMOT:0010017 {maxCardinality="1"} ! has member Age at death
-relationship: RO:0002351 PROMOT:0010017 ! has member Age at death
 relationship: RO:0002351 PROMOT:0010018 ! has member Age Category
 relationship: RO:0002351 PROMOT:0010041 {maxCardinality="1"} ! has member Sex at birth
-relationship: RO:0002351 PROMOT:0010041 ! has member Sex at birth
-relationship: RO:0002351 SIO:000485 ! has member human
 relationship: RO:0002351 SIO:000485 {cardinality="1"} ! has member human
-relationship: RO:0002351 SNOMED:184099003 ! has member Date of Birth (observable entity)
 relationship: RO:0002351 SNOMED:184099003 {maxCardinality="1"} ! has member Date of Birth (observable entity)
 relationship: RO:0002351 SNOMED:184305005 ! has member Cause of death
-relationship: RO:0002351 SNOMED:399753006 ! has member Date of death
 relationship: RO:0002351 SNOMED:399753006 {maxCardinality="1"} ! has member Date of death
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
@@ -9771,7 +9986,6 @@ relationship: RO:0002351 PROMOT:0010012 ! has member Année de diagnostic
 relationship: RO:0002351 PROMOT:0010052 ! has member Nb of previous pregnancies
 relationship: RO:0002351 PROMOT:0010065 ! has member Patient à risque de chute
 relationship: RO:0002351 PROMOT:0020004 {cardinality="1"} ! has member Paciente
-relationship: RO:0002351 PROMOT:0020004 ! has member Paciente
 relationship: RO:0002351 SNOMED:1153637007 ! has member Body height
 relationship: RO:0002351 SNOMED:125680007 ! has member Marital status
 relationship: RO:0002351 SNOMED:184104002 ! has member Patient occupation
@@ -9780,11 +9994,9 @@ relationship: RO:0002351 SNOMED:224118004 ! has member NB of offspring (observab
 relationship: RO:0002351 SNOMED:224288002 ! has member Duration of formal education
 relationship: RO:0002351 SNOMED:27113001 ! has member Body weight
 relationship: RO:0002351 SNOMED:315354004 {cardinality="1"} ! has member Country of Birth (observable entity)
-relationship: RO:0002351 SNOMED:315354004 ! has member Country of Birth (observable entity)
 relationship: RO:0002351 SNOMED:33821000087103 ! has member Gender identity
 relationship: RO:0002351 SNOMED:364940007 ! has member Handedness finding
 relationship: RO:0002351 SNOMED:398192003 ! has member Co-morbid conditions
-relationship: RO:0002351 SNOMED:399423000 ! has member Date of admission
 relationship: RO:0002351 SNOMED:399423000 {cardinality="1"} ! has member Date of admission
 relationship: RO:0002351 SNOMED:406543005 ! has member Date of visit
 relationship: RO:0002351 SNOMED:423493009 ! has member Age at diagnosis
@@ -9800,19 +10012,13 @@ def: "A statement regarding a phenotype to state details about it." []
 comment: BIH-CEI rd-cdm: Repo for the ontology-based rare disease common data model harmonising international registry use, FHIR, and Phenopackets 
 is_a: PROMOT:0010001 ! declaración sobre una entidad
 relationship: RO:0002351 ECO:0006151 ! has member documented statement evidence
-relationship: RO:0002351 HP:0000118 ! has member Phenotypic abnormality
 relationship: RO:0002351 HP:0000118 {cardinality="1"} ! has member Phenotypic abnormality
-relationship: RO:0002351 PROMOT:0010008 ! has member Date of assessment
 relationship: RO:0002351 PROMOT:0010008 {cardinality="1"} ! has member Date of assessment
-relationship: RO:0002351 PROMOT:0010009 ! has member Date of resolution
 relationship: RO:0002351 PROMOT:0010009 {cardinality="1"} ! has member Date of resolution
 relationship: RO:0002351 PROMOT:0010010 {cardinality="1"} ! has member Année d’apparition
-relationship: RO:0002351 PROMOT:0010010 ! has member Année d’apparition
 relationship: RO:0002351 PROMOT:0010013 {cardinality="1"} ! has member Année d’identification
-relationship: RO:0002351 PROMOT:0010013 ! has member Année d’identification
 relationship: RO:0002351 PROMOT:0010014 ! has member Année de disparition
 relationship: RO:0002351 SNOMED:298059007 {cardinality="1"} ! has member Date of onset
-relationship: RO:0002351 SNOMED:298059007 ! has member Date of onset
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
@@ -9830,11 +10036,9 @@ id: PROMOT:0010006
 name: declaración sobre un consentimiento 
 def: "A statement regarding a consent to describe it." []
 is_a: PROMOT:0010001 ! declaración sobre una entidad
-relationship: RO:0002351 PROMOT:0010053 ! has member Consent status
 relationship: RO:0002351 PROMOT:0010053 {cardinality="1"} ! has member Consent status
 relationship: RO:0002351 PROMOT:0010060 ! has member Date du consentement
 relationship: RO:0002351 PROMOT:0010061 {cardinality="1"} ! has member Consent type
-relationship: RO:0002351 PROMOT:0010061 ! has member Consent type
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
@@ -10381,7 +10585,7 @@ is_a: SIO:000485 ! human
 relationship: PROMOT:2000004 SO:0001060 ! est porteur de la mutation sequence_variant
 relationship: PROMOT:2000006 SNOMED:125679009 ! is related to Blood relative
 relationship: PROMOT:2000007 IAO:0020000 {cardinality="1"} ! has identifier identifier
-relationship: PROMOT:2000007 IAO:0020000 ! has identifier identifier
+relationship: RO:0000086 SIO:010057 ! has quality life status
 relationship: RO:0002200 HP:0000118 ! has phenotype Phenotypic abnormality
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
@@ -10647,13 +10851,13 @@ property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 id: PROMOT:0100005
 name: Assessment of expiratory and cough peak flows using an expiratory flowmeter
 def: "A test assessing the subject’s expiratory peak flow when they expirate and when they cough. It assesses the glottis efficiency to clear out the repiratory tract by using an expiratory flowmeter." []
-is_a: PROMOT:0100002 ! Body function related procedure
 is_a: SNOMED:12894003 ! Functional assessment
 relationship: PROMOT:2000002 HP:0012735 ! assesses Cough
 relationship: PROMOT:2000002 ICF:1083127119 ! assesses Fonctions de toux
 relationship: PROMOT:2000002 ICF:1360101629 ! assesses Fonctions des muscles respiratoires
 relationship: PROMOT:2000002 ICF:1470583183 ! assesses Fonctions liées à la respiration par la bouche
 relationship: PROMOT:2000002 ICF:446199613 ! assesses Fonctions respiratoires
+relationship: PROMOT:2000002 ICF:744367503 ! assesses Fonctions du système respiratoire
 
 [Term]
 id: PROMOT:0100006
@@ -10661,12 +10865,16 @@ name: Quantative muscle testing
 def: "Measurement of maximum isometric force generation from a muscle group; performed with specialized equipment." [] {IAO:0000119="NCIT:C121361"}
 xref: NCIT:C121361
 is_a: SNOMED:12894003 ! Functional assessment
+relationship: PROMOT:2000002 HP:0002460 ! assesses Distal muscle weakness
+relationship: PROMOT:2000002 HP:0008959 ! assesses Distal upper limb muscle weakness
+relationship: PROMOT:2000002 HP:0009053 ! assesses Distal lower limb muscle weakness
 
 [Term]
 id: PROMOT:0100007
 name: Assessment using Dysphagimeter
 def: "An assessment that uses the Dysphagimeter scale to assess dysphagia or swallowing impairements. The Dysphagimeter is a patient-reported questionnaire that measures the ability to swallow foods of different textures and the impact of dysphagia on activities and participation. This questionnaire has three parts. Part A includes 24 items concerning solid foods, Part B includes 3 items on liquids and Part C includes 8 items, namely 6 items on the impact of dysphagia at meal times and 2 items on discomfort related to thick saliva. Each item offers 5 choices of descriptive answers. Parts A and B also include an option 'I cannot answer'. The participant must carefully read the instructions and check the answer that best corresponds to their situation for each item." [] {IAO:0000119="Definition translated from French to English using Reverso."}
 is_a: SNOMED:12894003 ! Functional assessment
+relationship: PROMOT:2000002 HP:0002015 ! assesses Dysphagia
 relationship: PROMOT:2000002 HP:0002068 ! assesses Neuromuscular dysphagia
 relationship: PROMOT:2000002 HP:0200136 ! assesses Oral-pharyngeal dysphagia
 
@@ -10682,10 +10890,19 @@ id: PROMOT:0100009
 name: Assessment of the maximum isometric muscle strength using MedUP dynamometer
 def: "Assessment of the maximum isometric muscle strength of flexor and extensor muscles using MedUP dynamometer. It assesses the maximum isometric muscle strength in upper and lower limbs." [] {IAO:0000119="Definititon of the test provided by the Groupe de Recherche Interdisciplinaire sur les Maladies Neuromusculaires (GRIMN)"}
 is_a: SNOMED:12894003 ! Functional assessment
+relationship: PROMOT:2000002 HP:0001324 ! assesses Muscle weakness
+relationship: PROMOT:2000002 HP:0003323 ! assesses Progressive muscle weakness
+relationship: PROMOT:2000002 HP:0003325 ! assesses Limb-girdle muscle weakness
+relationship: PROMOT:2000002 HP:0003484 ! assesses Upper limb muscle weakness
 relationship: PROMOT:2000002 HP:0003547 ! assesses Shoulder girdle muscle weakness
+relationship: PROMOT:2000002 HP:0003690 ! assesses Limb muscle weakness
 relationship: PROMOT:2000002 HP:0003694 ! assesses Late-onset proximal muscle weakness
+relationship: PROMOT:2000002 HP:0003701 ! assesses Proximal muscle weakness
 relationship: PROMOT:2000002 HP:0003731 ! assesses Quadriceps muscle weakness
+relationship: PROMOT:2000002 HP:0003749 ! assesses Pelvic girdle muscle weakness
 relationship: PROMOT:2000002 HP:0003810 ! assesses Late-onset distal muscle weakness
+relationship: PROMOT:2000002 HP:0007340 ! assesses Lower limb muscle weakness
+relationship: PROMOT:2000002 HP:0008994 ! assesses Proximal lower limb muscle weakness
 relationship: PROMOT:2000002 HP:0008997 ! assesses Proximal upper limb muscle weakness
 relationship: PROMOT:2000002 HP:0009063 ! assesses Progressive distal muscle weakness
 relationship: PROMOT:2000002 HP:0009073 ! assesses Progressive proximal muscle weakness
@@ -10713,18 +10930,23 @@ xref: http://snomed.info/id/431527001
 is_a: SNOMED:12894003 ! Functional assessment
 relationship: PROMOT:2000002 HP:0002317 ! assesses Unsteady gait
 relationship: PROMOT:2000002 HP:0002505 ! assesses Loss of ambulation
+relationship: PROMOT:2000002 HP:0002540 ! assesses Inability to walk
 
 [Term]
 id: PROMOT:0100013
 name: Assessment using Sydney Swallow Questionnaire (SSQ)
 def: "Le questionnaire sur la déglutition de Sydney est un questionnaire auto-rapporté qui a pour but d’évaluer la gravité des problèmes de déglutition. Il comporte 17 questions. Le participant répond aux questions 1 à 11 et 13 à 17 en traçant un X sur une ligne (questions de type échelle visuelle analogue) et à la question 12 en cochant la réponse de son choix parmi 6 options. Une version canadienne-française validée a été créée." [] {IAO:0000119="Definititon of the test provided by the Groupe de Recherche Interdisciplinaire sur les Maladies Neuromusculaires (GRIMN)."}
 is_a: SNOMED:840297006 ! Assessment of patient reported outcome measures
+relationship: PROMOT:2000002 HP:0002015 ! assesses Dysphagia
+relationship: PROMOT:2000002 HP:0002068 ! assesses Neuromuscular dysphagia
+relationship: PROMOT:2000002 HP:0200136 ! assesses Oral-pharyngeal dysphagia
 
 [Term]
 id: PROMOT:0100014
 name: 80 ml water swallowing test
 def: "L’objectif de ce test est de boire 80 ml d’eau le plus rapidement possible sans s’étouffer. L’évaluateur déclanche le chronomètre quand les lèvres du participant touchent l’eau et l’arrête quand le participant dit « STOP »." [] {IAO:0000119="Definititon of the test provided by the Groupe de Recherche Interdisciplinaire sur les Maladies Neuromusculaires (GRIMN)."}
 is_a: SNOMED:12894003 ! Functional assessment
+relationship: PROMOT:2000002 HP:0002015 ! assesses Dysphagia
 relationship: PROMOT:2000002 HP:0002068 ! assesses Neuromuscular dysphagia
 relationship: PROMOT:2000002 HP:0200136 ! assesses Oral-pharyngeal dysphagia
 
@@ -10743,6 +10965,7 @@ def: "Le test mesurant la force de préhension permet de quantifier la force max
 xref: http://snomed.info/id/445993006
 is_a: SNOMED:12894003 ! Functional assessment
 relationship: PROMOT:2000002 HP:0009005 ! assesses Weakness of the intrinsic hand muscles
+relationship: PROMOT:2000002 HP:0030237 ! assesses Hand muscle weakness
 relationship: PROMOT:2000002 HP:0031177 ! assesses Finger flexor weakness
 relationship: PROMOT:2000002 HP:0033466 ! assesses Weak grip
 
@@ -10873,6 +11096,7 @@ name: Blood relative
 comment: [EURO-NMD] Atalia A et al., EURO-NMD registry: federated FAIR infrastructure, innovative technologies and concepts of a patient-centred registry for rare neuromuscular disorders. Orphanet J Rare Dis. 2024 Feb 14;19(1):66. doi: 10.1186/s13023-024-03059-3. PMID: 38355534; PMCID: PMC10865673.
 is_a: SIO:000485 ! human
 relationship: PROMOT:2000006 PROMOT:0020004 ! is related to Paciente
+relationship: RO:0000086 SIO:010057 ! has quality life status
 property_value: dc11:type "person" xsd:string
 property_value: sct-ext:definitionStatus "Primitif" xsd:string
 property_value: sct-ext:fsn "Blood relative (person)" xsd:string
@@ -10914,8 +11138,8 @@ property_value: skos:prefLabel "Procedure by method" xsd:string
 [Term]
 id: SNOMED:12894003
 name: Functional assessment
-is_a: PROMOT:0100001 ! Phenotypically related procedure
 is_a: SNOMED:315306007 ! Examination by method
+relationship: PROMOT:2000002 HP:0002460 ! assesses Distal muscle weakness
 relationship: PROMOT:2000002 HP:0003327 ! assesses Axial muscle weakness
 relationship: PROMOT:2000002 HP:0008959 ! assesses Distal upper limb muscle weakness
 relationship: PROMOT:2000002 HP:0009053 ! assesses Distal lower limb muscle weakness
@@ -11728,8 +11952,8 @@ property_value: skos:prefLabel "Natural daughter" xsd:string
 [Term]
 id: SNOMED:840297006
 name: Assessment of patient reported outcome measures
-is_a: PROMOT:0100001 ! Phenotypically related procedure
 is_a: SNOMED:315306007 ! Examination by method
+relationship: PROMOT:2000002 HP:0002015 ! assesses Dysphagia
 relationship: PROMOT:2000002 HP:0002068 ! assesses Neuromuscular dysphagia
 relationship: PROMOT:2000002 HP:0033667 ! assesses Diminished mental health
 relationship: PROMOT:2000002 HP:0200136 ! assesses Oral-pharyngeal dysphagia
@@ -11744,51 +11968,80 @@ property_value: skos:prefLabel "evaluación de indicadores de resultados informa
 [Term]
 id: SNOMED:84100007
 name: History taking
-is_a: PROMOT:0100001 ! Phenotypically related procedure
+is_a: SNOMED:128927009 ! Procedure by method
 relationship: PROMOT:2000002 HP:0000028 ! assesses Cryptorchidism
 relationship: PROMOT:2000002 HP:0000183 ! assesses Tongue muscle weakness
+relationship: PROMOT:2000002 HP:0000218 ! assesses High palate
 relationship: PROMOT:2000002 HP:0000276 ! assesses Long face
+relationship: PROMOT:2000002 HP:0000467 ! assesses Neck muscle weakness
 relationship: PROMOT:2000002 HP:0000486 ! assesses Strabismus
+relationship: PROMOT:2000002 HP:0000496 ! assesses Abnormality of eye movement
+relationship: PROMOT:2000002 HP:0000508 ! assesses Ptosis
 relationship: PROMOT:2000002 HP:0000544 ! assesses External ophthalmoplegia
+relationship: PROMOT:2000002 HP:0000597 ! assesses Ophthalmoparesis
+relationship: PROMOT:2000002 HP:0000602 ! assesses Ophthalmoplegia
 relationship: PROMOT:2000002 HP:0000651 ! assesses Diplopia
 relationship: PROMOT:2000002 HP:0000767 ! assesses Pectus excavatum
 relationship: PROMOT:2000002 HP:0000768 ! assesses Pectus carinatum
 relationship: PROMOT:2000002 HP:0000774 ! assesses Narrow chest
 relationship: PROMOT:2000002 HP:0000886 ! assesses Deformed rib cage
 relationship: PROMOT:2000002 HP:0001249 ! assesses Intellectual disability
+relationship: PROMOT:2000002 HP:0001252 ! assesses Hypotonia
 relationship: PROMOT:2000002 HP:0001260 ! assesses Dysarthria
+relationship: PROMOT:2000002 HP:0001265 ! assesses Hyporeflexia
 relationship: PROMOT:2000002 HP:0001270 ! assesses Motor delay
+relationship: PROMOT:2000002 HP:0001284 ! assesses Areflexia
+relationship: PROMOT:2000002 HP:0001288 ! assesses Gait disturbance
+relationship: PROMOT:2000002 HP:0001315 ! assesses Reduced tendon reflexes
 relationship: PROMOT:2000002 HP:0001319 ! assesses Neonatal hypotonia
+relationship: PROMOT:2000002 HP:0001324 ! assesses Muscle weakness
 relationship: PROMOT:2000002 HP:0001374 ! assesses Congenital hip dislocation
 relationship: PROMOT:2000002 HP:0001387 ! assesses Joint stiffness
+relationship: PROMOT:2000002 HP:0001508 ! assesses Failure to thrive
 relationship: PROMOT:2000002 HP:0001531 ! assesses Failure to thrive in infancy
+relationship: PROMOT:2000002 HP:0001547 ! assesses Abnormal rib cage morphology
+relationship: PROMOT:2000002 HP:0001558 ! assesses Decreased fetal movement
 relationship: PROMOT:2000002 HP:0001609 ! assesses Hoarse voice
 relationship: PROMOT:2000002 HP:0001611 ! assesses Hypernasal speech
 relationship: PROMOT:2000002 HP:0001612 ! assesses Weak cry
 relationship: PROMOT:2000002 HP:0001618 ! assesses Dysphonia
 relationship: PROMOT:2000002 HP:0001622 ! assesses Premature birth
+relationship: PROMOT:2000002 HP:0001627 ! assesses Abnormal heart morphology
 relationship: PROMOT:2000002 HP:0001713 ! assesses Abnormal cardiac ventricle morphology
 relationship: PROMOT:2000002 HP:0001761 ! assesses Pes cavus
 relationship: PROMOT:2000002 HP:0001989 ! assesses Fetal akinesia sequence
 relationship: PROMOT:2000002 HP:0002033 ! assesses Poor suck
 relationship: PROMOT:2000002 HP:0002047 ! assesses Malignant hyperthermia
 relationship: PROMOT:2000002 HP:0002058 ! assesses Myopathic facies
+relationship: PROMOT:2000002 HP:0002093 ! assesses Respiratory insufficiency
+relationship: PROMOT:2000002 HP:0002094 ! assesses Dyspnea
+relationship: PROMOT:2000002 HP:0002098 ! assesses Respiratory distress
+relationship: PROMOT:2000002 HP:0002104 ! assesses Apnea
 relationship: PROMOT:2000002 HP:0002172 ! assesses Postural instability
 relationship: PROMOT:2000002 HP:0002317 ! assesses Unsteady gait
 relationship: PROMOT:2000002 HP:0002359 ! assesses Frequent falls
+relationship: PROMOT:2000002 HP:0002460 ! assesses Distal muscle weakness
 relationship: PROMOT:2000002 HP:0002483 ! assesses Bulbar signs
 relationship: PROMOT:2000002 HP:0002505 ! assesses Loss of ambulation
 relationship: PROMOT:2000002 HP:0002515 ! assesses Waddling gait
 relationship: PROMOT:2000002 HP:0002522 ! assesses Areflexia of lower limbs
+relationship: PROMOT:2000002 HP:0002540 ! assesses Inability to walk
 relationship: PROMOT:2000002 HP:0002600 ! assesses Hyporeflexia of lower limbs
+relationship: PROMOT:2000002 HP:0002643 ! assesses Neonatal respiratory distress
+relationship: PROMOT:2000002 HP:0002650 ! assesses Scoliosis
 relationship: PROMOT:2000002 HP:0002705 ! assesses High, narrow palate
+relationship: PROMOT:2000002 HP:0002747 ! assesses Respiratory insufficiency due to muscle weakness
 relationship: PROMOT:2000002 HP:0002751 ! assesses Kyphoscoliosis
 relationship: PROMOT:2000002 HP:0002804 ! assesses Arthrogryposis multiplex congenita
+relationship: PROMOT:2000002 HP:0002808 ! assesses Kyphosis
 relationship: PROMOT:2000002 HP:0002828 ! assesses Multiple joint contractures
 relationship: PROMOT:2000002 HP:0002878 ! assesses Respiratory failure
 relationship: PROMOT:2000002 HP:0002882 ! assesses Sudden episodic apnea
+relationship: PROMOT:2000002 HP:0003236 ! assesses Elevated circulating creatine kinase concentration
 relationship: PROMOT:2000002 HP:0003306 ! assesses Spinal rigidity
 relationship: PROMOT:2000002 HP:0003307 ! assesses Hyperlordosis
+relationship: PROMOT:2000002 HP:0003323 ! assesses Progressive muscle weakness
+relationship: PROMOT:2000002 HP:0003325 ! assesses Limb-girdle muscle weakness
 relationship: PROMOT:2000002 HP:0003326 ! assesses Myalgia
 relationship: PROMOT:2000002 HP:0003327 ! assesses Axial muscle weakness
 relationship: PROMOT:2000002 HP:0003391 ! assesses Gowers sign
@@ -11797,38 +12050,51 @@ relationship: PROMOT:2000002 HP:0003394 ! assesses Muscle spasm
 relationship: PROMOT:2000002 HP:0003403 ! assesses EMG: decremental response of compound muscle action potential to repetitive nerve stimulation
 relationship: PROMOT:2000002 HP:0003427 ! assesses Thenar muscle weakness
 relationship: PROMOT:2000002 HP:0003445 ! assesses EMG: neuropathic changes
+relationship: PROMOT:2000002 HP:0003457 ! assesses EMG abnormality
 relationship: PROMOT:2000002 HP:0003458 ! assesses EMG: myopathic abnormalities
+relationship: PROMOT:2000002 HP:0003484 ! assesses Upper limb muscle weakness
 relationship: PROMOT:2000002 HP:0003547 ! assesses Shoulder girdle muscle weakness
 relationship: PROMOT:2000002 HP:0003552 ! assesses Muscle stiffness
+relationship: PROMOT:2000002 HP:0003690 ! assesses Limb muscle weakness
 relationship: PROMOT:2000002 HP:0003691 ! assesses Scapular winging
 relationship: PROMOT:2000002 HP:0003694 ! assesses Late-onset proximal muscle weakness
+relationship: PROMOT:2000002 HP:0003701 ! assesses Proximal muscle weakness
 relationship: PROMOT:2000002 HP:0003722 ! assesses Neck flexor weakness
 relationship: PROMOT:2000002 HP:0003731 ! assesses Quadriceps muscle weakness
+relationship: PROMOT:2000002 HP:0003749 ! assesses Pelvic girdle muscle weakness
 relationship: PROMOT:2000002 HP:0003810 ! assesses Late-onset distal muscle weakness
+relationship: PROMOT:2000002 HP:0004347 ! assesses Weakness of muscles of respiration
 relationship: PROMOT:2000002 HP:0004878 ! assesses Intercostal muscle weakness
 relationship: PROMOT:2000002 HP:0004885 ! assesses Episodic respiratory distress
 relationship: PROMOT:2000002 HP:0004887 ! assesses Respiratory failure requiring assisted ventilation
 relationship: PROMOT:2000002 HP:0004889 ! assesses Intermittent episodes of respiratory insufficiency due to muscle weakness
 relationship: PROMOT:2000002 HP:0005216 ! assesses Impaired mastication
 relationship: PROMOT:2000002 HP:0005949 ! assesses Apneic episodes in infancy
+relationship: PROMOT:2000002 HP:0007340 ! assesses Lower limb muscle weakness
+relationship: PROMOT:2000002 HP:0007695 ! assesses Abnormal pupillary light reflex
 relationship: PROMOT:2000002 HP:0007715 ! assesses Weak extraocular muscles
 relationship: PROMOT:2000002 HP:0007838 ! assesses Progressive ptosis
 relationship: PROMOT:2000002 HP:0007941 ! assesses Limited extraocular movements
 relationship: PROMOT:2000002 HP:0008180 ! assesses Mildly elevated creatine kinase
+relationship: PROMOT:2000002 HP:0008872 ! assesses Feeding difficulties in infancy
 relationship: PROMOT:2000002 HP:0008959 ! assesses Distal upper limb muscle weakness
 relationship: PROMOT:2000002 HP:0008963 ! assesses Tibialis muscle weakness
 relationship: PROMOT:2000002 HP:0008988 ! assesses Pelvic girdle muscle atrophy
+relationship: PROMOT:2000002 HP:0008994 ! assesses Proximal lower limb muscle weakness
+relationship: PROMOT:2000002 HP:0008997 ! assesses Proximal upper limb muscle weakness
 relationship: PROMOT:2000002 HP:0009005 ! assesses Weakness of the intrinsic hand muscles
 relationship: PROMOT:2000002 HP:0009023 ! assesses Abdominal wall muscle weakness
 relationship: PROMOT:2000002 HP:0009027 ! assesses Foot dorsiflexor weakness
 relationship: PROMOT:2000002 HP:0009028 ! assesses Generalized weakness of limb muscles
 relationship: PROMOT:2000002 HP:0009046 ! assesses Difficulty running
+relationship: PROMOT:2000002 HP:0009053 ! assesses Distal lower limb muscle weakness
 relationship: PROMOT:2000002 HP:0009063 ! assesses Progressive distal muscle weakness
 relationship: PROMOT:2000002 HP:0009073 ! assesses Progressive proximal muscle weakness
 relationship: PROMOT:2000002 HP:0009077 ! assesses Weakness of long finger extensor muscles
 relationship: PROMOT:2000002 HP:0011470 ! assesses Nasogastric tube feeding in infancy
 relationship: PROMOT:2000002 HP:0011471 ! assesses Gastrostomy tube feeding in infancy
 relationship: PROMOT:2000002 HP:0011727 ! assesses Peroneal muscle weakness
+relationship: PROMOT:2000002 HP:0011968 ! assesses Feeding difficulties
 relationship: PROMOT:2000002 HP:0012473 ! assesses Tongue atrophy
 relationship: PROMOT:2000002 HP:0012497 ! assesses Reduced maximal expiratory pressure
 relationship: PROMOT:2000002 HP:0012515 ! assesses Hip flexor weakness
@@ -11836,16 +12102,19 @@ relationship: PROMOT:2000002 HP:0012768 ! assesses Neonatal asphyxia
 relationship: PROMOT:2000002 HP:0025156 ! assesses Dependency on intravenous nutrition
 relationship: PROMOT:2000002 HP:0030000 ! assesses EMG: repetitive nerve stimulation abnormality
 relationship: PROMOT:2000002 HP:0030006 ! assesses Single fiber EMG abnormality
+relationship: PROMOT:2000002 HP:0030192 ! assesses Fatigable weakness of bulbar muscles
 relationship: PROMOT:2000002 HP:0030193 ! assesses Fatigable weakness of chewing muscles
 relationship: PROMOT:2000002 HP:0030194 ! assesses Fatigable weakness of speech muscles
 relationship: PROMOT:2000002 HP:0030195 ! assesses Fatigable weakness of swallowing muscles
 relationship: PROMOT:2000002 HP:0030196 ! assesses Fatigable weakness of respiratory muscles
+relationship: PROMOT:2000002 HP:0030197 ! assesses Fatigable weakness of skeletal muscles
 relationship: PROMOT:2000002 HP:0030198 ! assesses Fatigable weakness of distal limb muscles
 relationship: PROMOT:2000002 HP:0030199 ! assesses Fatigable weakness of neck muscles
 relationship: PROMOT:2000002 HP:0030200 ! assesses Fatiguable weakness of proximal limb muscles
 relationship: PROMOT:2000002 HP:0030202 ! assesses Favorable response of weakness to acetylcholine esterase inhibitors
 relationship: PROMOT:2000002 HP:0030203 ! assesses Unfavorable response of muscle weakness to acetylcholine esterase inhibitors
 relationship: PROMOT:2000002 HP:0030211 ! assesses Slow pupillary light response
+relationship: PROMOT:2000002 HP:0030237 ! assesses Hand muscle weakness
 relationship: PROMOT:2000002 HP:0030319 ! assesses Weakness of facial musculature
 relationship: PROMOT:2000002 HP:0030842 ! assesses Choking episodes
 relationship: PROMOT:2000002 HP:0030872 ! assesses Abnormal cardiac ventricular function
@@ -11856,11 +12125,14 @@ relationship: PROMOT:2000002 HP:0031146 ! assesses Impaired oral bolus formation
 relationship: PROMOT:2000002 HP:0031162 ! assesses Impaired oropharyngeal swallow response
 relationship: PROMOT:2000002 HP:0031177 ! assesses Finger flexor weakness
 relationship: PROMOT:2000002 HP:0031374 ! assesses Ankle weakness
+relationship: PROMOT:2000002 HP:0031826 ! assesses Abnormal reflex
 relationship: PROMOT:2000002 HP:0032043 ! assesses Odynophagia
 relationship: PROMOT:2000002 HP:0032341 ! assesses Reduced forced vital capacity
 relationship: PROMOT:2000002 HP:0033416 ! assesses Hip adductor weakness
+relationship: PROMOT:2000002 HP:0033454 ! assesses Tube feeding
 relationship: PROMOT:2000002 HP:0033466 ! assesses Weak grip
 relationship: PROMOT:2000002 HP:0033994 ! assesses Dependency on parenteral nutrition
+relationship: PROMOT:2000002 HP:0040081 ! assesses Abnormal circulating creatine kinase concentration
 relationship: PROMOT:2000002 HP:0040288 ! assesses Nasogastric tube feeding
 relationship: PROMOT:2000002 HP:6000327 ! assesses Thoracic cage flatness
 relationship: PROMOT:2000002 HP:6001011 ! assesses Wet voice

@@ -63,7 +63,7 @@
      xmlns:CPATH_VISIT_OCCURRENCE="https://w3id.org/cpont/visit_occurrence/"
      xmlns:CPATH_CONDITION_OCCURRENCE="https://w3id.org/cpont/condition_occurrence/">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/promot/promot-base.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/promot/releases/2026-03-12/promot-base.owl"/>
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/promot/releases/2026-03-13/promot-base.owl"/>
         <dc11:contributor>Anita Burgun MD, PhD
 https://orcid.org/0000-0001-6855-4366</dc11:contributor>
         <dc11:contributor>Carole Faviez PhD
@@ -93,7 +93,7 @@ https://orcid.org/0000-0002-3336-2476</dc11:creator>
         <dcterms:description>Ontology for modeling the three following neuromuscular diseases : OPMD, Congenital myopathies and Congenital myastenic syndroms. It aims to be also an ontology for building the PROMOT project relational database.</dcterms:description>
         <dcterms:license rdf:resource="https://creativecommons.org/licenses/by-nc-sa/4.0/"/>
         <dcterms:title>PROMOT ontology</dcterms:title>
-        <oboInOwl:date>12:03:2026 17:20</oboInOwl:date>
+        <oboInOwl:date>13:03:2026 17:22</oboInOwl:date>
         <rdfs:comment>Additional acknowledgements:
 	- Rachel Thompson
 	- Thomas Bongivault, MSc
@@ -105,7 +105,7 @@ https://orcid.org/0000-0002-3336-2476</dc11:creator>
 </rdfs:comment>
         <rdfs:seeAlso>More about PROMOT initiative at https://www.promotinitiative.com/
 </rdfs:seeAlso>
-        <owl:versionInfo>2026-03-12</owl:versionInfo>
+        <owl:versionInfo>2026-03-13</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -292,12 +292,24 @@ https://orcid.org/0000-0002-3336-2476</dc11:creator>
     <!-- http://purl.obolibrary.org/obo/PROMOT_2000006 -->
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/PROMOT_2000006">
-        <obo:IAO_0000115 xml:lang="en">A relation between two entity where the state of the first entity is affected by the existence of the second entity.</obo:IAO_0000115>
-        <obo:IAO_0000115 xml:lang="fr">Une relation entre deux entités où l’état de la première entité est affecté par l’existence de la seconde.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
-        <rdfs:label xml:lang="fr">est affecté par</rdfs:label>
-        <rdfs:label xml:lang="en">is affected by</rdfs:label>
+        <rdfs:label xml:lang="en">is related to</rdfs:label>
     </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROMOT_2000007 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/PROMOT_2000007">
+        <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
+        <rdfs:label xml:lang="en">has identifier</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0000080 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0000080"/>
     
 
 
@@ -334,18 +346,6 @@ https://orcid.org/0000-0002-3336-2476</dc11:creator>
     <!-- http://purl.obolibrary.org/obo/RO_0004013 -->
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0004013"/>
-    
-
-
-    <!-- http://semanticscience.org/resource/SIO_000001 -->
-
-    <owl:ObjectProperty rdf:about="http://semanticscience.org/resource/SIO_000001"/>
-    
-
-
-    <!-- http://semanticscience.org/resource/SIO_000218 -->
-
-    <owl:ObjectProperty rdf:about="http://semanticscience.org/resource/SIO_000218"/>
     
 
 
@@ -606,6 +606,12 @@ https://orcid.org/0000-0002-3336-2476</dc11:creator>
     
 
 
+    <!-- http://purl.obolibrary.org/obo/IAO_0020000 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IAO_0020000"/>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/PROMOT_0000001 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0000001">
@@ -618,6 +624,7 @@ https://orcid.org/0000-0002-3336-2476</dc11:creator>
         </rdfs:subClassOf>
         <obo:IAO_0000115 xml:lang="en">A sequence alteration that is causal germline mutation in Oculopharyngeal Muscular Dystrophy.</obo:IAO_0000115>
         <rdfs:label xml:lang="en">OPMD related mutation</rdfs:label>
+        <rdfs:label xml:lang="en">OPMD related variant</rdfs:label>
     </owl:Class>
     
 
@@ -634,6 +641,7 @@ https://orcid.org/0000-0002-3336-2476</dc11:creator>
         </rdfs:subClassOf>
         <obo:IAO_0000115 xml:lang="en">A sequence alteration that is causal germline mutation in Congenital Myasthenic Syndrom.</obo:IAO_0000115>
         <rdfs:label xml:lang="en">CMS related mutation</rdfs:label>
+        <rdfs:label xml:lang="en">CMS related variant</rdfs:label>
     </owl:Class>
     
 
@@ -650,6 +658,7 @@ https://orcid.org/0000-0002-3336-2476</dc11:creator>
         </rdfs:subClassOf>
         <obo:IAO_0000115 xml:lang="en">A sequence alteration that is causal germline mutation in Congenital Myopathy.</obo:IAO_0000115>
         <rdfs:label xml:lang="en">CMYO related mutation</rdfs:label>
+        <rdfs:label xml:lang="en">CMYO related variant</rdfs:label>
     </owl:Class>
     
 
@@ -665,7 +674,7 @@ https://orcid.org/0000-0002-3336-2476</dc11:creator>
         <rdfs:comment>JP: Translated to spanish using Bing Translator</rdfs:comment>
         <rdfs:comment>[EURO-NMD] Atalia A et al., EURO-NMD registry: federated FAIR infrastructure, innovative technologies and concepts of a patient-centred registry for rare neuromuscular disorders. Orphanet J Rare Dis. 2024 Feb 14;19(1):66. doi: 10.1186/s13023-024-03059-3. PMID: 38355534; PMCID: PMC10865673.</rdfs:comment>
         <rdfs:comment>[PROMOT NOTE: derived from EURO-NMD] </rdfs:comment>
-        <rdfs:label xml:lang="en">PABPN1 mutation</rdfs:label>
+        <rdfs:label xml:lang="en">PABPN1 variant</rdfs:label>
         <rdfs:label xml:lang="es">mutación del gen PAPBN1</rdfs:label>
         <rdfs:label xml:lang="fr">mutation du gène PABPN1</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://purl.obolibrary.org/obo/NCIT_C204162"/>
@@ -682,7 +691,7 @@ https://orcid.org/0000-0002-3336-2476</dc11:creator>
         <obo:IAO_0000115 xml:lang="fr">Une altération génétique située au niveau du gène RYR1.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
         <rdfs:comment>JP: Translated to spanish using Bing Translator</rdfs:comment>
-        <rdfs:label xml:lang="en">RYR1 mutation</rdfs:label>
+        <rdfs:label xml:lang="en">RYR1 variant</rdfs:label>
         <rdfs:label xml:lang="es">mutación del gen RYR1</rdfs:label>
         <rdfs:label xml:lang="fr">mutation du gène RYR1</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://purl.obolibrary.org/obo/NCIT_C150311"/>
@@ -699,7 +708,7 @@ https://orcid.org/0000-0002-3336-2476</dc11:creator>
         <obo:IAO_0000115 xml:lang="fr">Une altération génétique située au niveau du gène TTN.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
         <rdfs:comment>JP: Translated to spanish using Bing Translator</rdfs:comment>
-        <rdfs:label xml:lang="en">TTN mutation</rdfs:label>
+        <rdfs:label xml:lang="en">TTN variant</rdfs:label>
         <rdfs:label xml:lang="es">mutación del gen TTN</rdfs:label>
         <rdfs:label xml:lang="fr">mutation du gène TTN</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://purl.obolibrary.org/obo/NCIT_C101756"/>
@@ -716,7 +725,7 @@ https://orcid.org/0000-0002-3336-2476</dc11:creator>
         <obo:IAO_0000115 xml:lang="fr">Une altération génétique située au niveau du gène NEB.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
         <rdfs:comment>JP: Translated to spanish using Bing Translator</rdfs:comment>
-        <rdfs:label xml:lang="en">NEB mutation</rdfs:label>
+        <rdfs:label xml:lang="en">NEB variant</rdfs:label>
         <rdfs:label xml:lang="es">mutación del gen NEB</rdfs:label>
         <rdfs:label xml:lang="fr">mutation du gène NEB</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://purl.obolibrary.org/obo/NCIT_C203906"/>
@@ -733,7 +742,7 @@ https://orcid.org/0000-0002-3336-2476</dc11:creator>
         <obo:IAO_0000115 xml:lang="fr">Une altération génétique située au niveau du gène MTM1.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
         <rdfs:comment>JP: Translated to spanish using Bing Translator</rdfs:comment>
-        <rdfs:label xml:lang="en">MTM1 mutation</rdfs:label>
+        <rdfs:label xml:lang="en">MTM1 variant</rdfs:label>
         <rdfs:label xml:lang="es">mutación del gen NMTM1</rdfs:label>
         <rdfs:label xml:lang="fr">mutation du gène NMTM1</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://purl.obolibrary.org/obo/NCIT_C203822"/>
@@ -750,7 +759,7 @@ https://orcid.org/0000-0002-3336-2476</dc11:creator>
         <obo:IAO_0000115 xml:lang="fr">Une altération génétique située au niveau du gène ACTA1.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
         <rdfs:comment>JP: Translated to spanish using Bing Translator</rdfs:comment>
-        <rdfs:label xml:lang="en">ACTA1 mutation</rdfs:label>
+        <rdfs:label xml:lang="en">ACTA1 variant</rdfs:label>
         <rdfs:label xml:lang="es">mutación del gen ACTA1</rdfs:label>
         <rdfs:label xml:lang="fr">mutation du gène ACTA1</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://purl.obolibrary.org/obo/NCIT_C191893"/>
@@ -767,7 +776,7 @@ https://orcid.org/0000-0002-3336-2476</dc11:creator>
         <obo:IAO_0000115 xml:lang="fr">Une altération génétique située au niveau du gène SELENON.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
         <rdfs:comment>JP: Translated to spanish using Bing Translator</rdfs:comment>
-        <rdfs:label xml:lang="en">SELENON mutation</rdfs:label>
+        <rdfs:label xml:lang="en">SELENON variant</rdfs:label>
         <rdfs:label xml:lang="es">mutación del gen SELENON</rdfs:label>
         <rdfs:label xml:lang="fr">mutation du gène SELENON</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://purl.obolibrary.org/obo/NCIT_C205071"/>
@@ -784,7 +793,7 @@ https://orcid.org/0000-0002-3336-2476</dc11:creator>
         <obo:IAO_0000115 xml:lang="fr">Une altération génétique située au niveau du gène CHRNE.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
         <rdfs:comment>JP: Translated to spanish using Bing Translator</rdfs:comment>
-        <rdfs:label xml:lang="en">CHRNE mutation</rdfs:label>
+        <rdfs:label xml:lang="en">CHRNE variant</rdfs:label>
         <rdfs:label xml:lang="es">mutación del gen CHRNE</rdfs:label>
         <rdfs:label xml:lang="fr">mutation du gène CHRNE</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://purl.obolibrary.org/obo/NCIT_C198628"/>
@@ -801,7 +810,7 @@ https://orcid.org/0000-0002-3336-2476</dc11:creator>
         <obo:IAO_0000115 xml:lang="fr">Une altération génétique située au niveau du gène DOK7.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
         <rdfs:comment>JP: Translated to spanish using Bing Translator</rdfs:comment>
-        <rdfs:label xml:lang="en">DOK7 mutation</rdfs:label>
+        <rdfs:label xml:lang="en">DOK7 variant</rdfs:label>
         <rdfs:label xml:lang="es">mutación del gen DOK7</rdfs:label>
         <rdfs:label xml:lang="fr">mutation du gène DOK7</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://purl.obolibrary.org/obo/NCIT_C216062"/>
@@ -818,7 +827,7 @@ https://orcid.org/0000-0002-3336-2476</dc11:creator>
         <obo:IAO_0000115 xml:lang="fr">Une altération génétique située au niveau du gène COLQ.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
         <rdfs:comment>JP: Translated to spanish using Bing Translator</rdfs:comment>
-        <rdfs:label xml:lang="en">COLQ mutation</rdfs:label>
+        <rdfs:label xml:lang="en">COLQ variant</rdfs:label>
         <rdfs:label xml:lang="es">mutación del gen COLQ</rdfs:label>
         <rdfs:label xml:lang="fr">mutation du gène COLQ</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://purl.obolibrary.org/obo/NCIT_C200235"/>
@@ -835,7 +844,7 @@ https://orcid.org/0000-0002-3336-2476</dc11:creator>
         <obo:IAO_0000115 xml:lang="fr">Une altération génétique située au niveau du gène RAPSN.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
         <rdfs:comment>JP: Translated to spanish using Bing Translator</rdfs:comment>
-        <rdfs:label xml:lang="en">RAPSN mutation</rdfs:label>
+        <rdfs:label xml:lang="en">RAPSN variant</rdfs:label>
         <rdfs:label xml:lang="es">mutación del gen RAPSN</rdfs:label>
         <rdfs:label xml:lang="fr">mutation du gène RAPSN</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://purl.obolibrary.org/obo/NCIT_C177668"/>
@@ -852,7 +861,7 @@ https://orcid.org/0000-0002-3336-2476</dc11:creator>
         <obo:IAO_0000115 xml:lang="fr">Une altération génétique située au niveau du gène GFPT1.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
         <rdfs:comment>JP: Translated to spanish using Bing Translator</rdfs:comment>
-        <rdfs:label xml:lang="en">GFPT1 mutation</rdfs:label>
+        <rdfs:label xml:lang="en">GFPT1 variant</rdfs:label>
         <rdfs:label xml:lang="es">mutación del gen GFPT1</rdfs:label>
         <rdfs:label xml:lang="fr">mutation du gène GFPT1</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://purl.obolibrary.org/obo/NCIT_C201657"/>
@@ -869,7 +878,7 @@ https://orcid.org/0000-0002-3336-2476</dc11:creator>
         <obo:IAO_0000115 xml:lang="fr">Une altération génétique située au niveau du gène GMPPB.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
         <rdfs:comment>JP: Translated to spanish using Bing Translator</rdfs:comment>
-        <rdfs:label xml:lang="en">GMPPB mutation</rdfs:label>
+        <rdfs:label xml:lang="en">GMPPB variant</rdfs:label>
         <rdfs:label xml:lang="es">mutación del gen GMPPB</rdfs:label>
         <rdfs:label xml:lang="fr">mutation du gène GMPPB</rdfs:label>
     </owl:Class>
@@ -2558,14 +2567,27 @@ https://orcid.org/0000-0002-3336-2476</dc11:creator>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROMOT_2000006"/>
+                <owl:someValuesFrom rdf:resource="http://snomed.info/id/125679009"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROMOT_2000007"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/IAO_0020000"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002200"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/HP_0000118"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://semanticscience.org/resource/SIO_000001"/>
-                <owl:someValuesFrom rdf:resource="http://snomed.info/id/125679009"/>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROMOT_2000007"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://purl.obolibrary.org/obo/IAO_0020000"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115 xml:lang="en">A patient that had received a confirmed diagnostic of genetic mutation and that is involved in the data collection for natural history study of their disease.</obo:IAO_0000115>
@@ -2637,13 +2659,13 @@ https://orcid.org/0000-0002-3336-2476</dc11:creator>
     <!-- http://purl.obolibrary.org/obo/PROMOT_0031005 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0031005">
-        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/SIO_001268"/>
-        <obo:IAO_0000115 xml:lang="en">A transmission that is unknown.</obo:IAO_0000115>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0001762"/>
+        <obo:IAO_0000115 xml:lang="en">A variant origin that is unknown.</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="fr">Une transmission inconnue.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
-        <rdfs:label xml:lang="fr">Transmission inconnue</rdfs:label>
+        <rdfs:label xml:lang="fr">Origine du variant inconnue</rdfs:label>
         <rdfs:label xml:lang="es">desconocido</rdfs:label>
-        <rdfs:label xml:lang="en">unknown transmission</rdfs:label>
+        <rdfs:label xml:lang="en">variant origin unknown</rdfs:label>
     </owl:Class>
     
 
@@ -2652,11 +2674,11 @@ https://orcid.org/0000-0002-3336-2476</dc11:creator>
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0031006">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0031005"/>
-        <obo:IAO_0000115 xml:lang="en">A transmission that is unknown because unrecorded.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">A variant origin that is unknown because unrecorded.</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="fr">Une transmission inconnue en raison de l’absence de renseignement à son sujet.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
-        <rdfs:label xml:lang="fr">Transmission non renseignée</rdfs:label>
-        <rdfs:label xml:lang="en">unrecorded transmission</rdfs:label>
+        <rdfs:label xml:lang="fr">Origine du variant non renseignée</rdfs:label>
+        <rdfs:label xml:lang="en">variant origin unrecorded</rdfs:label>
     </owl:Class>
     
 
@@ -2667,7 +2689,7 @@ https://orcid.org/0000-0002-3336-2476</dc11:creator>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000019"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://semanticscience.org/resource/SIO_000218"/>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000080"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/HP_0000118"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -2858,8 +2880,8 @@ https://orcid.org/0000-0002-3336-2476</dc11:creator>
         <obo:IAO_0000115 xml:lang="fr">Deux anomalies dans l’EMG mesurant le potentiel d’action global d’un muscle (PAM), aussi appelé potentiel d’action musculaire composé.</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="en">Two abnormal findings in a compound motor action potential measurement in EMG.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
+        <obo:PROMOT_1000001>Congenital myasthenic syndrom Scoping review</obo:PROMOT_1000001>
         <rdfs:comment>(JP : to validate)</rdfs:comment>
-        <rdfs:comment>Congenital myasthenic syndrom Scoping review</rdfs:comment>
         <rdfs:label xml:lang="es">Doble anomalía del potencial de acción motora compuesta</rdfs:label>
         <rdfs:label xml:lang="fr">Double anomalie du potentiel d’action global du muscle (PAM)</rdfs:label>
         <rdfs:label xml:lang="en">Double compound motor action potential abnormality</rdfs:label>
@@ -2879,7 +2901,7 @@ https://orcid.org/0000-0002-3336-2476</dc11:creator>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0012378"/>
         <obo:IAO_0000115 xml:lang="en">A fatigue that occurs when the subject is eating</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
-        <rdfs:comment>Oculopharyngeal muscular dystrophy Article</rdfs:comment>
+        <obo:PROMOT_1000001>Oculopharyngeal muscular dystrophy Article</obo:PROMOT_1000001>
         <rdfs:label xml:lang="fr">Fatigue corrélée au fait de manger</rdfs:label>
         <rdfs:label xml:lang="en">Fatigue while eating</rdfs:label>
     </owl:Class>
@@ -2892,7 +2914,7 @@ https://orcid.org/0000-0002-3336-2476</dc11:creator>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0001288"/>
         <obo:IAO_0000115 xml:lang="en">A difficulty to walk short distance. E.g. a difficulty to  walk inside a building such as a house.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
-        <rdfs:comment>[OPMD Scoping review] Bélair N, Gagnon C, Duchesne E. What is known about muscle weakness, balance impairments and indoor mobility limitations in oculopharyngeal muscular dystrophy? A scoping review. J Neuromuscul Dis. 2025 Dec 30:22143602251397052. doi: 10.1177/22143602251397052. Epub ahead of print. PMID: 41467981. </rdfs:comment>
+        <obo:PROMOT_1000001>[OPMD Scoping review] Bélair N, Gagnon C, Duchesne E. What is known about muscle weakness, balance impairments and indoor mobility limitations in oculopharyngeal muscular dystrophy? A scoping review. J Neuromuscul Dis. 2025 Dec 30:22143602251397052. doi: 10.1177/22143602251397052. Epub ahead of print. PMID: 41467981. </obo:PROMOT_1000001>
         <rdfs:label xml:lang="en">Difficulty walking short distance</rdfs:label>
         <rdfs:label xml:lang="fr">Difficulté à marcher sur de courtes distances</rdfs:label>
     </owl:Class>
@@ -2905,7 +2927,7 @@ https://orcid.org/0000-0002-3336-2476</dc11:creator>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0100022"/>
         <obo:IAO_0000115 xml:lang="en">A difficulty to change basic position. E.g. a difficulty to go from a sitting position to a standing position.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
-        <rdfs:comment>[OPMD Scoping review] Bélair N, Gagnon C, Duchesne E. What is known about muscle weakness, balance impairments and indoor mobility limitations in oculopharyngeal muscular dystrophy? A scoping review. J Neuromuscul Dis. 2025 Dec 30:22143602251397052. doi: 10.1177/22143602251397052. Epub ahead of print. PMID: 41467981. </rdfs:comment>
+        <obo:PROMOT_1000001>[OPMD Scoping review] Bélair N, Gagnon C, Duchesne E. What is known about muscle weakness, balance impairments and indoor mobility limitations in oculopharyngeal muscular dystrophy? A scoping review. J Neuromuscul Dis. 2025 Dec 30:22143602251397052. doi: 10.1177/22143602251397052. Epub ahead of print. PMID: 41467981. </obo:PROMOT_1000001>
         <rdfs:label xml:lang="en">Difficulty changing basic position</rdfs:label>
         <rdfs:label xml:lang="fr">Difficulté à passer d’une position de base à une autre</rdfs:label>
     </owl:Class>
@@ -2918,7 +2940,7 @@ https://orcid.org/0000-0002-3336-2476</dc11:creator>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0012154"/>
         <obo:IAO_0000115 xml:lang="en">An anhedonia that occurs when the subject is eating</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
-        <rdfs:comment>Oculopharyngeal muscular dystrophy Article</rdfs:comment>
+        <obo:PROMOT_1000001>Oculopharyngeal muscular dystrophy Article</obo:PROMOT_1000001>
         <rdfs:label xml:lang="en">Anhedonia while eating</rdfs:label>
         <rdfs:label xml:lang="fr">Anhédonie légère corrélée au fait de manger</rdfs:label>
     </owl:Class>
@@ -2931,8 +2953,8 @@ https://orcid.org/0000-0002-3336-2476</dc11:creator>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0002015"/>
         <obo:IAO_0000115 xml:lang="en">Difficulty in swallowing solid food.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
-        <rdfs:comment>Oculopharyngeal muscular dystrophy Article</rdfs:comment>
-        <rdfs:comment>Oculopharyngeal muscular dystrophy Survey</rdfs:comment>
+        <obo:PROMOT_1000001>Oculopharyngeal muscular dystrophy Article</obo:PROMOT_1000001>
+        <obo:PROMOT_1000001>Oculopharyngeal muscular dystrophy Clinical Registry Form</obo:PROMOT_1000001>
         <rdfs:label xml:lang="en">Dysphagia for solid</rdfs:label>
         <rdfs:label xml:lang="fr">Dysphagie avec de la nourriture solide</rdfs:label>
     </owl:Class>
@@ -2945,8 +2967,8 @@ https://orcid.org/0000-0002-3336-2476</dc11:creator>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0002015"/>
         <obo:IAO_0000115 xml:lang="en">Difficulty in swallowing liquid food. This is distinct from hydrophobia.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
-        <rdfs:comment>Oculopharyngeal muscular dystrophy Article</rdfs:comment>
-        <rdfs:comment>Oculopharyngeal muscular dystrophy Survey</rdfs:comment>
+        <obo:PROMOT_1000001>Oculopharyngeal muscular dystrophy Article</obo:PROMOT_1000001>
+        <obo:PROMOT_1000001>Oculopharyngeal muscular dystrophy Clinical Registry Form</obo:PROMOT_1000001>
         <rdfs:label xml:lang="en">Dysphagia for liquid</rdfs:label>
         <rdfs:label xml:lang="fr">Dysphagie avec de la nourriture liquide</rdfs:label>
     </owl:Class>
@@ -2959,8 +2981,8 @@ https://orcid.org/0000-0002-3336-2476</dc11:creator>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0003473"/>
         <obo:IAO_0000115 xml:lang="en">A type of weakness of the facial musculature (i.e. one or more muscles innervated by the seventh cranial nerve) that occurs after a muscle group is used and lessens if the muscle group has some rest. That is, there is diminution of the strength of the facial musculature with repetitive muscle actions.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
-        <rdfs:comment>Congenital myasthenic syndrom Scoping review</rdfs:comment>
-        <rdfs:comment>Congenital myopathy Scoping review</rdfs:comment>
+        <obo:PROMOT_1000001>Congenital myasthenic syndrom Scoping review</obo:PROMOT_1000001>
+        <obo:PROMOT_1000001>Congenital myopathy Scoping review</obo:PROMOT_1000001>
         <rdfs:label xml:lang="es">Debilidad fatigable de la musculatura facial </rdfs:label>
         <rdfs:label xml:lang="fr">Fatigabilité de la musculature faciale</rdfs:label>
         <rdfs:label xml:lang="en">Fatiguable weakness of facial musculature</rdfs:label>
@@ -2980,8 +3002,8 @@ https://orcid.org/0000-0002-3336-2476</dc11:creator>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0003473"/>
         <obo:IAO_0000115 xml:lang="en">A type of weakness of the ocular muscles that occurs after a muscle group is used and lessens if the muscle group has some rest. That is, there is diminution of the strength of the ocular muscles with repetitive muscle actions.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
-        <rdfs:comment>Congenital myasthenic syndrom Scoping review</rdfs:comment>
-        <rdfs:comment>Congenital myopathy Scoping review</rdfs:comment>
+        <obo:PROMOT_1000001>Congenital myasthenic syndrom Scoping review</obo:PROMOT_1000001>
+        <obo:PROMOT_1000001>Congenital myopathy Scoping review</obo:PROMOT_1000001>
         <rdfs:label xml:lang="es">Debilidad fatigable de la musculatura facial </rdfs:label>
         <rdfs:label xml:lang="fr">Fatigabilité des muscles occulaires</rdfs:label>
         <rdfs:label xml:lang="en">Fatiguable weakness of the ocular muscles</rdfs:label>
@@ -3001,8 +3023,8 @@ https://orcid.org/0000-0002-3336-2476</dc11:creator>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0003473"/>
         <obo:IAO_0000115 xml:lang="en">A type of weakness of the axial muscles (i.e., of the muscles of the head and neck, spine, and ribs) that occurs after a muscle group is used and lessens if the muscle group has some rest. That is, there is diminution of the strength of the axial muscles with repetitive muscle actions.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
-        <rdfs:comment>Congenital myasthenic syndrom Scoping review</rdfs:comment>
-        <rdfs:comment>Congenital myopathy Scoping review</rdfs:comment>
+        <obo:PROMOT_1000001>Congenital myasthenic syndrom Scoping review</obo:PROMOT_1000001>
+        <obo:PROMOT_1000001>Congenital myopathy Scoping review</obo:PROMOT_1000001>
         <rdfs:label xml:lang="es">Debilidad fatigable muscular axial</rdfs:label>
         <rdfs:label xml:lang="fr">Fatigabilité des muscles axiaux</rdfs:label>
         <rdfs:label xml:lang="en">Fatiguable weakness of axial muscles</rdfs:label>
@@ -3022,8 +3044,8 @@ https://orcid.org/0000-0002-3336-2476</dc11:creator>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0001324"/>
         <obo:IAO_0000115 xml:lang="en">A lack of strength in the muscles involved in chewing.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
-        <rdfs:comment>Congenital myasthenic syndrom Scoping review</rdfs:comment>
-        <rdfs:comment>Congenital myopathy Scoping review</rdfs:comment>
+        <obo:PROMOT_1000001>Congenital myasthenic syndrom Scoping review</obo:PROMOT_1000001>
+        <obo:PROMOT_1000001>Congenital myopathy Scoping review</obo:PROMOT_1000001>
         <rdfs:label xml:lang="fr">Faiblesse musculaire des muscles de la mastication</rdfs:label>
         <rdfs:label xml:lang="en">Weakness of chewing muscles</rdfs:label>
     </owl:Class>
@@ -3670,6 +3692,12 @@ https://orcid.org/0000-0002-3336-2476</dc11:creator>
     
 
 
+    <!-- http://purl.obolibrary.org/obo/SO_0001762 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SO_0001762"/>
+    
+
+
     <!-- http://purl.org/sig/ont/fma/fma62955 -->
 
     <owl:Class rdf:about="http://purl.org/sig/ont/fma/fma62955"/>
@@ -3679,12 +3707,6 @@ https://orcid.org/0000-0002-3336-2476</dc11:creator>
     <!-- http://semanticscience.org/resource/SIO_000485 -->
 
     <owl:Class rdf:about="http://semanticscience.org/resource/SIO_000485"/>
-    
-
-
-    <!-- http://semanticscience.org/resource/SIO_001268 -->
-
-    <owl:Class rdf:about="http://semanticscience.org/resource/SIO_001268"/>
     
 
 

@@ -24,7 +24,7 @@ translation_df = pd.read_csv("../templates/icf_labels_es-fr.tsv", sep="\t")
 # création de la dataframe des axioms au format template
 print ('Creation axioms dataframe')
 axioms_df = pd.DataFrame(columns = ['ID', 'Label EN', 'Annotation', 'Type', 'Parent Class'])
-axioms_df.loc[0] = {'ID': 'ID', 'Label EN': 'AL rdfs:label@en', 'Annotation' : 'A rdfs:comment SPLIT=|', 'Type': 'TYPE', 'Parent Class': 'SC % SPLIT=|'}
+axioms_df.loc[0] = {'ID': 'ID', 'Label EN': 'AL rdfs:label@en', 'Annotation' : 'A PROMOT:1000001 SPLIT=|', 'Type': 'TYPE', 'Parent Class': 'SC % SPLIT=|'}
 
 # creation of the dictionnary IRI : Parent class expression
 # création des dictionnaires IRI : Parent class
