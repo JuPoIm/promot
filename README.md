@@ -7,6 +7,7 @@
 
 # PROMOT ontology
 <img src="https://github.com/JuPoIm/promot/blob/test/site/cite/Promot_Logo_Colours.png"/>
+
 The PROMOT ontology represents the 3 groups of neuromuscular diseases the PROMOT Master Observational Trial focuses on :
 * Oculopharyngeal Muscular Dystrophy
 * Congenital Myasthenic Syndromes
@@ -76,12 +77,12 @@ advice and infrastructure. We are very grateful for all your contributions - thi
 --->
 
 ### PROMOT INITIATIVE
-[![PROMOT initiative official logo](https://github.com/JuPoIm/promot/blob/test/site/cite/Promot_Logo_Colours.png)](https://www.promotinitiative.com/)
+<img src="https://github.com/JuPoIm/promot/blob/test/site/cite/Promot_Logo_Colours.png" height=150 width=250/>
 
 More informations about PROMOT initiative can be found on [PROMOT initiative website](https://www.promotinitiative.com/).
 
 ### IMAGINE INSTITUTE
-<img src="https://github.com/JuPoIm/promot/blob/test/site/cite/logo_imagine.png" height=100 width=200/>
+<img src="https://github.com/JuPoIm/promot/blob/test/site/cite/logo_imagine.png" height=150 width=250/>
 
 More informations about Imagine Institute can be found on [Imagine Institute website](https://www.institutimagine.org/)
 
