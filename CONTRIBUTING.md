@@ -1,4 +1,4 @@
-# Contributing to PROMOT Common Data Model ontology
+# Contributing to PROMOT Ontology
 
 :+1: First of all: Thank you for taking the time to contribute!
 
@@ -21,7 +21,7 @@ changes to this document in a pull request.
 
 ## Code of Conduct
 
-The PROMOT Common Data Model ontology team strives to create a
+The PROMOT Ontology team strives to create a
 welcoming environment for editors, users and other contributors.
 Please carefully read our [Code of Conduct](CODE_OF_CONDUCT.md).
 

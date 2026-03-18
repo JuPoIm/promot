@@ -1,7 +1,7 @@
 # python3.12.3
 # utf-8
 # Autrice / Author : juliette.potier@institutimagine.org
-# GOAL : script to create the template ROBOT with the relations files in /data/promot/*.tsv and the base and translation template
+# GOAL : create the template ROBOT with the files containing the relations in /data/promot/*.tsv, the base template and the translation template
 # BUT : créer le template ROBOT avec les fichiers /data/promot/*.tsv et les templates base et traductions
 # date de création / Creation date : 22/12/2025
 # date de version / Version date : 24/02/2026
@@ -99,14 +99,14 @@ print(axioms_df)
 
 # merge of the base template with the axioms template
 output_df = pd.merge(component_df, axioms_df, how='outer')
-print("output_df pour structure of palate")
-print(output_df[output_df['ID'] == 'ICF:374222990']['Parent Class'])
-output_df.to_csv('../templates/promot-test.tsv', sep='\t', index=False)
+print("output_df")
+print(output_df)
+#output_df.to_csv('../templates/promot-test.tsv', sep='\t', index=False)
+
 # merge of the output_df with the translations
 template_df = pd.merge(output_df, translation_df, how='outer')
-print("template_df pour structure of palate")
 print("template_df")
-print(template_df[template_df['ID'] == 'ICF:374222990']['Parent Class'])
+print(template_df)
 #template_df.to_csv('../templates/promot-test.tsv', sep='\t', index=False)
 
 idx = template_df[template_df['ID'] == 'ID']
@@ -117,8 +117,8 @@ idx = template_df[template_df['ID'] == 'ID'].index.item()
 new_index = [idx] + [i for i in range(len(template_df)) if i != idx]
 #print(new_index)
 template_df = template_df.reindex(new_index).reset_index(drop=True)
-print("template_df v2 pour structure of palate")
-print(template_df[template_df['ID'] == 'ICF:374222990']['Parent Class'])
+print("template_df v2")
+print(template_df)
 
 print ('Creation of PROMOT template file')
 # Conversion de la dataframe en un template ROBOT | Convert of the dataframe into a ROBOT template

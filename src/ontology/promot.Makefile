@@ -44,7 +44,6 @@ $(IMPORTDIR)/bfo_import.owl: $(MIRRORDIR)/bfo.owl $(IMPORTDIR)/bfo_terms.txt
         query --update $(SPARQLDIR)/inject-subset-declaration.ru --update $(SPARQLDIR)/postprocess-module.ru \
 		annotate --ontology-iri $(ONTBASE)/$@ $(ANNOTATE_ONTOLOGY_VERSION) --output $@.tmp.owl && mv $@.tmp.owl $@; fi
 
-
 # ----------------------------------------
 # Module ECO : classes
 # ----------------------------------------
@@ -101,11 +100,20 @@ $(IMPORTDIR)/hp_import.owl: $(MIRRORDIR)/hp.owl $(IMPORTDIR)/hp_terms_descendant
 		merge -i $@.tmp.owl --output $@.tmp.owl && mv $@.tmp.owl $@; fi
 
 # ----------------------------------------
+# Module NCIT : classes
+# ----------------------------------------
+imports/ncit_import.owl: $(IMPORTSDATADIR)/ThesaurusInferred.owl $(IMPORTDIR)/ncit_terms.txt
+	if [ $(IMP) = true ]; then $(ROBOT) query -i $< --update $(SPARQLDIR)/preprocess-module.ru \
+		filter -T $(IMPORTDIR)/ncit_terms.txt --select "self annotations" --signature true \
+		query --update $(SPARQLDIR)/inject-subset-declaration.ru --update $(SPARQLDIR)/postprocess-module.ru \
+		annotate --ontology-iri $(ONTBASE)/$@ $(ANNOTATE_ONTOLOGY_VERSION) --output $@.tmp.owl && mv $@.tmp.owl $@; fi
+
+# ----------------------------------------
 # Module ORDO : classes
 # ----------------------------------------
 imports/ordo_import.owl: $(MIRRORDIR)/ordo.owl $(IMPORTDIR)/ordo_terms.txt
 	if [ $(IMP) = true ]; then $(ROBOT) query -i $< --update $(SPARQLDIR)/preprocess-module.ru \
-		filter -T $(IMPORTDIR)/ordo_terms.txt --select "self annotations" --exclude-terms $(IMPORTDIR)/hp_terms.txt --signature true \
+		filter -T $(IMPORTDIR)/ordo_terms.txt --select "self annotations" --signature true \
 		query --update $(SPARQLDIR)/inject-subset-declaration.ru --update $(SPARQLDIR)/postprocess-module.ru \
 		annotate --ontology-iri $(ONTBASE)/$@ $(ANNOTATE_ONTOLOGY_VERSION) --output $@.tmp.owl && mv $@.tmp.owl $@; fi
 
@@ -218,8 +226,8 @@ $(IMPORTDIR)/icf_import.owl: $(IMPORTSDATADIR)/whofic-2025-05-24.owl $(IMPORTDIR
 .PHONY: extract-pheno
 extract-pheno:
 	curl -L https://github.com/obophenotype/human-phenotype-ontology/releases/download/v2025-10-22/genes_to_phenotype.txt \
-	-o $(SOURCESDIR)/genes_to_phenotype.txt
-	python3.12 $(SCRIPTSDIR)/python/Stat_GeneToPheno.py
+	-o $(SCRIPTSDATADIR)/genes_to_phenotype.txt
+	python3.12 $(SCRIPTSDIR)/python/GenesToPhenos.py
 
 
 # ---------------------------------------------

@@ -25,12 +25,12 @@ import pandas as pd
 # dico_gen_OPMD = {}
 
 # DISEASE GROUP	| GENE NAME
-genes_df = pd.read_csv("../data/genes_names.tsv")
+genes_df = pd.read_csv("../../data/scripts/genes_names.tsv")
 # DISEASE GROUP	| DISEASE NAME	| ORPHA CODE | OMIM CODE
-diseases_df = pd.read_csv("../data/diseases_codes.tsv")
+diseases_df = pd.read_csv("../../data/scripts/diseases_codes.tsv")
 
 # ncbi_gene_id	| gene_symbol	| hpo_id	| hpo_name	| frequency	| disease_id
-data_df = pd.read_csv("genes_to_phenotype.txt")
+data_df = pd.read_csv("../../data/scripts/genes_to_phenotype.txt")
 
 ### creation de df de travail
 columns = ['Disease group', 'Gene name', 'HPO id', 'HPO name' 'Disease id', 'Disease name']

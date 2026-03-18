@@ -6,7 +6,7 @@
 -->
 
 # PROMOT ontology
-<img src="https://github.com/JuPoIm/promot/blob/test/site/cite/Promot_Logo_Colours.png"/>
+<img src="https://github.com/JuPoIm/promot/blob/test/site/assets/images/Promot_Logo_Colours.png"/>
 
 The PROMOT ontology represents the 3 groups of neuromuscular diseases the PROMOT Master Observational Trial focuses on :
 * Oculopharyngeal Muscular Dystrophy
@@ -63,13 +63,13 @@ Please use this GitHub repository's [Issue tracker](https://github.com/JuPoIm/pr
 This project has received funding from **(Name of funding agency)**, **XX** and **XX**, partners of the European Joint Programme on Rare Diseases (EJP RD).
 
 ### EUROPEAN JOINT PROGRAMME ON RARE DISEASE
-[![EJP RD official logo](https://github.com/JuPoIm/promot/blob/test/site/cite/EJP-RD-1024x226.png)](https://www.ejprarediseases.org/)
+[![EJP RD official logo](https://github.com/JuPoIm/promot/blob/test/site/assets/images/EJP-RD-1024x226.png)](https://www.ejprarediseases.org/)
 
 The EJP RD initiative has received funding from the European Union’s Horizon 2020 research and innovation programme under grant agreement N°825575.
 
 More informations about EJP RD can be found on [EJP RD website](https://www.ejprarediseases.org/)
 
-<img src="https://github.com/JuPoIm/promot/blob/test/site/cite/Flag_of_Europe.png" width="25%"/> <img src="https://github.com/JuPoIm/promot/blob/test/site/cite/logo-inserm-300x124.jpg" width="25%"/>
+<img src="https://github.com/JuPoIm/promot/blob/test/site/assets/images/Flag_of_Europe.png" width="25%"/> <img src="https://github.com/JuPoIm/promot/blob/test/site/assets/images/logo-inserm-300x124.jpg" width="25%"/>
 
 <!---
 Outstanding contributors are groups and institutions that have helped with building the PROMOT ontology, providing funding,
@@ -77,37 +77,37 @@ advice and infrastructure. We are very grateful for all your contributions - thi
 --->
 
 ### PROMOT INITIATIVE
-<img src="https://github.com/JuPoIm/promot/blob/test/site/cite/Promot_Logo_Colours.png" height=150 width=250/>
+<img src="https://github.com/JuPoIm/promot/blob/test/site/assets/images/Promot_Logo_Colours.png" height=150 width=250/>
 
 More informations about PROMOT initiative can be found on [PROMOT initiative website](https://www.promotinitiative.com/).
 
 ### IMAGINE INSTITUTE
-<img src="https://github.com/JuPoIm/promot/blob/test/site/cite/logo_imagine.png" height=150 width=250/>
+<img src="https://github.com/JuPoIm/promot/blob/test/site/assets/images/logo_imagine.png" height=150 width=250/>
 
 More informations about Imagine Institute can be found on [Imagine Institute website](https://www.institutimagine.org/)
 
 ### UNIVERSITY OF SHERBROOKE
-[![University of Sherbrooke official logo](https://github.com/JuPoIm/promot/blob/test/site/cite/logo_sherbrooke.png)](https://www.usherbrooke.ca/)
+[![University of Sherbrooke official logo](https://github.com/JuPoIm/promot/blob/test/site/assets/images/logo_sherbrooke.png)](https://www.usherbrooke.ca/)
 
 More informations about the University of Sherbrooke can be found on [University of Sherbrooke website](https://www.usherbrooke.ca/)
 
 ### ASSISTANCE PUBLIQUE - HÔPITAUX DE PARIS
-[![AP-HP official logo](https://github.com/JuPoIm/promot/blob/test/site/cite/logo_aphp.png)](https://www.aphp.fr/)
+[![AP-HP official logo](https://github.com/JuPoIm/promot/blob/test/site/assets/images/logo_aphp.png)](https://www.aphp.fr/)
 
 More informations about AP-HP can be found on [AP-HP website](https://www.aphp.fr/)
 
 ## CANADIAN INSTITUTES OF HEALTH RESEARCH
 
-[![CIHR official logo](https://github.com/JuPoIm/promot/blob/test/site/cite/IRSC_CIHR.avif)](https://cihr-irsc.gc.ca/e/193.html)
+[![CIHR official logo](https://github.com/JuPoIm/promot/blob/test/site/assets/images/IRSC_CIHR.avif)](https://cihr-irsc.gc.ca/e/193.html)
 
 More informations about the Canadian Institutes of Health Research can be found on [CIHR website](https://cihr-irsc.gc.ca/e/193.html)
 
 ## AGENCE NATIONALE DE LA RECHERCHE
-[![ANR official logo](https://github.com/JuPoIm/promot/blob/test/site/cite/anr-logo-2021.avif)](https://anr.fr/)
+[![ANR official logo](https://github.com/JuPoIm/promot/blob/test/site/assets/images/anr-logo-2021.avif)](https://anr.fr/)
 
 More informations about the Agence Nationale de la Recherche can be found on [ANR website](https://anr.fr/)
 
 ## Acknowledgements
 
 This ontology repository was created using the [Ontology Development Kit (ODK)](https://github.com/INCATools/ontology-development-kit).
-<img src="https://github.com/JuPoIm/promot/blob/test/site/cite/odk-logo_black-banner.png" width="50%" height="50%"/>
+<img src="https://github.com/JuPoIm/promot/blob/test/site/assets/images/odk-logo_black-banner.png" width="50%" height="50%"/>
