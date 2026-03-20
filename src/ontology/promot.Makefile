@@ -109,6 +109,16 @@ imports/ncit_import.owl: $(IMPORTSDATADIR)/ThesaurusInferred.owl $(IMPORTDIR)/nc
 		annotate --ontology-iri $(ONTBASE)/$@ $(ANNOTATE_ONTOLOGY_VERSION) --output $@.tmp.owl && mv $@.tmp.owl $@; fi
 
 # ----------------------------------------
+# Module NCBITAXON : classe
+# ----------------------------------------
+imports/ncbitaxon_import.owl: $(IMPORTSDATADIR)/NCBITAXON.ttl $(IMPORTDIR)/ncbitaxon_terms.txt
+	if [ $(IMP) = true ]; then $(ROBOT) convert -i $< -f owl -o $(IMPORTSDATADIR)/NCBITAXON.owl \
+		query --update $(SPARQLDIR)/preprocess-module.ru \
+		filter -T $(IMPORTDIR)/ncbitaxon_terms.txt --select "self annotations" --signature true \
+		query --update $(SPARQLDIR)/inject-subset-declaration.ru --update $(SPARQLDIR)/postprocess-module.ru \
+		annotate --ontology-iri $(ONTBASE)/$@ $(ANNOTATE_ONTOLOGY_VERSION) --output $@.tmp.owl && mv $@.tmp.owl $@; fi
+
+# ----------------------------------------
 # Module ORDO : classes
 # ----------------------------------------
 imports/ordo_import.owl: $(MIRRORDIR)/ordo.owl $(IMPORTDIR)/ordo_terms.txt

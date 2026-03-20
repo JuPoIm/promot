@@ -1,143 +1,173 @@
-Prefix(:=<http://purl.obolibrary.org/obo/promot.owl#>)
-Prefix(HP:=<http://purl.obolibrary.org/obo/HP_>)
-Prefix(RO:=<http://purl.obolibrary.org/obo/RO_>)
-Prefix(VO:=<http://purl.obolibrary.org/obo/VO_>)
-Prefix(cc:=<http://creativecommons.org/ns#>)
-Prefix(hp:=<http://purl.obolibrary.org/obo/hp#>)
-Prefix(BFO:=<http://purl.obolibrary.org/obo/BFO_>)
-Prefix(ECO:=<http://purl.obolibrary.org/obo/ECO_>)
-Prefix(FMA:=<http://purl.org/sig/ont/fma/fma>)
-Prefix(IAO:=<http://purl.obolibrary.org/obo/IAO_>)
-Prefix(ICF:=<http://id.who.int/icd/entity/>)
-Prefix(OBI:=<http://purl.obolibrary.org/obo/OBI_>)
-Prefix(SIO:=<http://semanticscience.org/resource/SIO_>)
-Prefix(efo:=<http://www.ebi.ac.uk/efo/>)
-Prefix(fma:=<http://purl.org/sig/ont/fma/>)
-Prefix(obo:=<http://purl.obolibrary.org/obo/>)
-Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
-Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
-Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
-Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
-Prefix(GENO:=<http://purl.obolibrary.org/obo/GENO_>)
-Prefix(HGNC:=<http://identifiers.org/hgnc/>)
-Prefix(OMOP:=<https://athena.ohdsi.org/search-terms/terms/>)
-Prefix(ORDO:=<http://www.orpha.net/ORDO/Orphanet_>)
-Prefix(SCDO:=<http://purl.obolibrary.org/obo/SCDO_>)
-Prefix(dc11:=<http://purl.org/dc/elements/1.1/>)
-Prefix(foaf:=<http://xmlns.com/foaf/0.1/>)
-Prefix(prov:=<http://www.w3.org/ns/prov#>)
-Prefix(rdfa:=<http://www.w3.org/ns/rdfa#>)
-Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
-Prefix(skos:=<http://www.w3.org/2004/02/skos/core#>)
-Prefix(swrl:=<http://www.w3.org/2003/11/swrl#>)
-Prefix(void:=<http://rdfs.org/ns/void#>)
-Prefix(CPONT:=<https://w3id.org/cpont/vocab/CPONT_>)
-Prefix(MONDO:=<http://purl.obolibrary.org/obo/MONDO_>)
-Prefix(ORDO1:=<http://www.orpha.net/ORDO/>)
-Prefix(chebi:=<http://purl.obolibrary.org/obo/chebi/>)
-Prefix(sssom:=<https://w3id.org/sssom/>)
-Prefix(swrla:=<http://swrl.stanford.edu/ontologies/3.3/swrla.owl#>)
-Prefix(swrlb:=<http://www.w3.org/2003/11/swrlb#>)
-Prefix(PROMOT:=<http://purl.obolibrary.org/obo/PROMOT_>)
-Prefix(SNOMED:=<http://snomed.info/id/>)
-Prefix(schema:=<http://id.who.int/icd/schema/>)
-Prefix(BIOLINK:=<https://w3id.org/biolink/vocab/>)
-Prefix(babelon:=<https://w3id.org/babelon/>)
-Prefix(dcterms:=<http://purl.org/dc/terms/>)
-Prefix(omoprel:=<https://w3id.org/cpont/omop/relations/>)
-Prefix(schema1:=<http://schema.org/>)
-Prefix(sct-ext:=<http://data.esante.gouv.fr/NRC-France/sct-ext#>)
-Prefix(subsets:=<http://purl.obolibrary.org/obo/ro/subsets#>)
-Prefix(oboInOwl:=<http://www.geneontology.org/formats/oboInOwl#>)
-Prefix(omoptype:=<https://w3id.org/cpont/omop/types/>)
-Prefix(resource:=<http://semanticscience.org/resource/>)
-Prefix(NCBITaxon:=<http://purl.obolibrary.org/obo/NCBITaxon_>)
-Prefix(ncbitaxon:=<http://purl.obolibrary.org/obo/ncbitaxon#>)
-Prefix(omopclass:=<https://w3id.org/cpont/omop/classes/>)
-Prefix(ace_lexicon:=<http://attempto.ifi.uzh.ch/ace_lexicon#>)
-Prefix(uberon_core:=<http://purl.obolibrary.org/obo/uberon/core#>)
-Prefix(CPATH_PERSON:=<https://w3id.org/cpont/person/>)
-Prefix(CPATH_CARE_SITE:=<https://w3id.org/cpont/care_site/>)
-Prefix(CPATH_MEASUREMENT:=<https://w3id.org/cpont/measurement/>)
-Prefix(CPATH_VISIT_OCCURRENCE:=<https://w3id.org/cpont/visit_occurrence/>)
-Prefix(CPATH_CONDITION_OCCURRENCE:=<https://w3id.org/cpont/condition_occurrence/>)
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://purl.obolibrary.org/obo/promot.owl#"
+     xml:base="http://purl.obolibrary.org/obo/promot.owl"
+     xmlns:HP="http://purl.obolibrary.org/obo/HP_"
+     xmlns:RO="http://purl.obolibrary.org/obo/RO_"
+     xmlns:VO="http://purl.obolibrary.org/obo/VO_"
+     xmlns:cc="http://creativecommons.org/ns#"
+     xmlns:hp="http://purl.obolibrary.org/obo/hp#"
+     xmlns:BFO="http://purl.obolibrary.org/obo/BFO_"
+     xmlns:ECO="http://purl.obolibrary.org/obo/ECO_"
+     xmlns:FMA="http://purl.org/sig/ont/fma/fma"
+     xmlns:IAO="http://purl.obolibrary.org/obo/IAO_"
+     xmlns:ICF="http://id.who.int/icd/entity/"
+     xmlns:OBI="http://purl.obolibrary.org/obo/OBI_"
+     xmlns:SIO="http://semanticscience.org/resource/SIO_"
+     xmlns:efo="http://www.ebi.ac.uk/efo/"
+     xmlns:fma="http://purl.org/sig/ont/fma/"
+     xmlns:obo="http://purl.obolibrary.org/obo/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:GENO="http://purl.obolibrary.org/obo/GENO_"
+     xmlns:HGNC="http://identifiers.org/hgnc/"
+     xmlns:NCIT="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#"
+     xmlns:OMOP="https://athena.ohdsi.org/search-terms/terms/"
+     xmlns:ORDO="http://www.orpha.net/ORDO/Orphanet_"
+     xmlns:SCDO="http://purl.obolibrary.org/obo/SCDO_"
+     xmlns:dc11="http://purl.org/dc/elements/1.1/"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
+     xmlns:prov="http://www.w3.org/ns/prov#"
+     xmlns:rdfa="http://www.w3.org/ns/rdfa#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+     xmlns:void="http://rdfs.org/ns/void#"
+     xmlns:CPONT="https://w3id.org/cpont/vocab/CPONT_"
+     xmlns:MONDO="http://purl.obolibrary.org/obo/MONDO_"
+     xmlns:ORDO1="http://www.orpha.net/ORDO/"
+     xmlns:chebi="http://purl.obolibrary.org/obo/chebi/"
+     xmlns:sssom="https://w3id.org/sssom/"
+     xmlns:swrla="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#"
+     xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+     xmlns:PROMOT="http://purl.obolibrary.org/obo/PROMOT_"
+     xmlns:SNOMED="http://snomed.info/id/"
+     xmlns:schema="http://id.who.int/icd/schema/"
+     xmlns:BIOLINK="https://w3id.org/biolink/vocab/"
+     xmlns:babelon="https://w3id.org/babelon/"
+     xmlns:dcterms="http://purl.org/dc/terms/"
+     xmlns:omoprel="https://w3id.org/cpont/omop/relations/"
+     xmlns:schema1="http://schema.org/"
+     xmlns:sct-ext="http://data.esante.gouv.fr/NRC-France/sct-ext#"
+     xmlns:subsets="http://purl.obolibrary.org/obo/ro/subsets#"
+     xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#"
+     xmlns:omoptype="https://w3id.org/cpont/omop/types/"
+     xmlns:resource="http://semanticscience.org/resource/"
+     xmlns:NCBITaxon="http://purl.obolibrary.org/obo/NCBITaxon_"
+     xmlns:ncbitaxon="http://purl.obolibrary.org/obo/ncbitaxon#"
+     xmlns:omopclass="https://w3id.org/cpont/omop/classes/"
+     xmlns:ace_lexicon="http://attempto.ifi.uzh.ch/ace_lexicon#"
+     xmlns:uberon_core="http://purl.obolibrary.org/obo/uberon/core#"
+     xmlns:CPATH_PERSON="https://w3id.org/cpont/person/"
+     xmlns:CPATH_CARE_SITE="https://w3id.org/cpont/care_site/"
+     xmlns:CPATH_MEASUREMENT="https://w3id.org/cpont/measurement/"
+     xmlns:CPATH_VISIT_OCCURRENCE="https://w3id.org/cpont/visit_occurrence/"
+     xmlns:CPATH_CONDITION_OCCURRENCE="https://w3id.org/cpont/condition_occurrence/">
+    <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/promot.owl">
+        <owl:imports rdf:resource="http://purl.obolibrary.org/obo/promot/components/promot-component.owl"/>
+        <owl:imports rdf:resource="http://purl.obolibrary.org/obo/promot/imports/bfo_import.owl"/>
+        <owl:imports rdf:resource="http://purl.obolibrary.org/obo/promot/imports/eco_import.owl"/>
+        <owl:imports rdf:resource="http://purl.obolibrary.org/obo/promot/imports/fma_import.owl"/>
+        <owl:imports rdf:resource="http://purl.obolibrary.org/obo/promot/imports/hp_import.owl"/>
+        <owl:imports rdf:resource="http://purl.obolibrary.org/obo/promot/imports/iao_import.owl"/>
+        <owl:imports rdf:resource="http://purl.obolibrary.org/obo/promot/imports/icf_import.owl"/>
+        <owl:imports rdf:resource="http://purl.obolibrary.org/obo/promot/imports/ncbitaxon_import.owl"/>
+        <owl:imports rdf:resource="http://purl.obolibrary.org/obo/promot/imports/ncit_import.owl"/>
+        <owl:imports rdf:resource="http://purl.obolibrary.org/obo/promot/imports/ordo_import.owl"/>
+        <owl:imports rdf:resource="http://purl.obolibrary.org/obo/promot/imports/ro_import.owl"/>
+        <owl:imports rdf:resource="http://purl.obolibrary.org/obo/promot/imports/snomed_import.owl"/>
+        <owl:imports rdf:resource="http://purl.obolibrary.org/obo/promot/imports/so_import.owl"/>
+        <dc11:contributor>Anita Burgun MD, PhD
+https://orcid.org/0000-0001-6855-4366</dc11:contributor>
+        <dc11:contributor>Carole Faviez PhD
+https://orcid.org/0000-0002-1500-0236</dc11:contributor>
+        <dc11:contributor>Claudia Côté MD, PhD
+https://orcid.org/0000-0003-2508-2500</dc11:contributor>
+        <dc11:contributor>Daniel Natera De Benito MD, PhD
+https://orcid.org/0000-0001-7764-2085</dc11:contributor>
+        <dc11:contributor>Elizabeth Angelevski DC
+ https://orcid.org/0009-0008-3096-582X</dc11:contributor>
+        <dc11:contributor>European Joint Programme on Rare Diseases (EJP RD)
 
+Website: https://www.ejprarediseases.org/</dc11:contributor>
+        <dc11:contributor>European Rare Diseases Research Alliance (ERDERA)
 
-Ontology(<http://purl.obolibrary.org/obo/promot.owl>
-Import(<http://purl.obolibrary.org/obo/promot/components/promot-component.owl>)
-Import(<http://purl.obolibrary.org/obo/promot/imports/bfo_import.owl>)
-Import(<http://purl.obolibrary.org/obo/promot/imports/eco_import.owl>)
-Import(<http://purl.obolibrary.org/obo/promot/imports/fma_import.owl>)
-Import(<http://purl.obolibrary.org/obo/promot/imports/hp_import.owl>)
-Import(<http://purl.obolibrary.org/obo/promot/imports/iao_import.owl>)
-Import(<http://purl.obolibrary.org/obo/promot/imports/icf_import.owl>)
-Import(<http://purl.obolibrary.org/obo/promot/imports/ncbitaxon_import.owl>)
-Import(<http://purl.obolibrary.org/obo/promot/imports/ncit_import.owl>)
-Import(<http://purl.obolibrary.org/obo/promot/imports/ordo_import.owl>)
-Import(<http://purl.obolibrary.org/obo/promot/imports/ro_import.owl>)
-Import(<http://purl.obolibrary.org/obo/promot/imports/snomed_import.owl>)
-Import(<http://purl.obolibrary.org/obo/promot/imports/so_import.owl>)
-Annotation(dc11:contributor "Anita Burgun MD, PhD
-https://orcid.org/0000-0001-6855-4366")
-Annotation(dc11:contributor "Carole Faviez PhD
-https://orcid.org/0000-0002-1500-0236")
-Annotation(dc11:contributor "Claudia Côté MD, PhD
-https://orcid.org/0000-0003-2508-2500")
-Annotation(dc11:contributor "Daniel Natera De Benito MD, PhD
-https://orcid.org/0000-0001-7764-2085")
-Annotation(dc11:contributor "Elizabeth Angelevski DC
- https://orcid.org/0009-0008-3096-582X")
-Annotation(dc11:contributor "European Joint Programme on Rare Diseases (EJP RD)
-
-Website: https://www.ejprarediseases.org/")
-Annotation(dc11:contributor "European Rare Diseases Research Alliance (ERDERA)
-
-Website: https://erdera.org")
-Annotation(dc11:contributor "Hanns Lochmuller MD, PhD
-https://orcid.org/0000-0003-2324-8001")
-Annotation(dc11:contributor "Mansoore Gholizade MD")
-Annotation(dc11:creator "Cynthia Gagnon MD, PhD
-https://orcid.org/0000-0003-2829-8470")
-Annotation(dc11:creator "Juliette Potier MSc
-https://orcid.org/0009-0000-5160-7927")
-Annotation(dc11:creator "Paul Fabry MD, PhD student
-https://orcid.org/0000-0002-3336-2476")
-Annotation(dcterms:description "Ontology for modeling the three following neuromuscular diseases : OPMD, Congenital myopathies and Congenital myastenic syndroms. It aims to be also an ontology for building the PROMOT project relational database.")
-Annotation(dcterms:license <https://creativecommons.org/licenses/by-nc-sa/4.0/>)
-Annotation(dcterms:title "PROMOT ontology")
-Annotation(rdfs:comment "Additional acknowledgements:
+Website: https://erdera.org</dc11:contributor>
+        <dc11:contributor>Hanns Lochmuller MD, PhD
+https://orcid.org/0000-0003-2324-8001</dc11:contributor>
+        <dc11:contributor>Mansoore Gholizade MD</dc11:contributor>
+        <dc11:creator>Cynthia Gagnon MD, PhD
+https://orcid.org/0000-0003-2829-8470</dc11:creator>
+        <dc11:creator>Juliette Potier MSc
+https://orcid.org/0009-0000-5160-7927</dc11:creator>
+        <dc11:creator>Paul Fabry MD, PhD student
+https://orcid.org/0000-0002-3336-2476</dc11:creator>
+        <dcterms:description>Ontology for modeling the three following neuromuscular diseases : OPMD, Congenital myopathies and Congenital myastenic syndroms. It aims to be also an ontology for building the PROMOT project relational database.</dcterms:description>
+        <dcterms:license rdf:resource="https://creativecommons.org/licenses/by-nc-sa/4.0/"/>
+        <dcterms:title>PROMOT ontology</dcterms:title>
+        <rdfs:comment>Additional acknowledgements:
 	- Rachel Thompson
 	- Thomas Bongivault, MSc
 	- Marc Vincent, PhD
-")
-Annotation(rdfs:comment "Additional acknowledgements:
+</rdfs:comment>
+        <rdfs:comment>Additional acknowledgements:
 	- Thomas Bongivault, MSc
 	- Marc Vincent, PhD
-")
-Annotation(rdfs:seeAlso "More about PROMOT initiative at https://www.promotinitiative.com/
-")
-
-Declaration(AnnotationProperty(dc11:contributor))
-Declaration(AnnotationProperty(dc11:creator))
-Declaration(AnnotationProperty(dcterms:description))
-Declaration(AnnotationProperty(dcterms:license))
-Declaration(AnnotationProperty(dcterms:title))
-############################
-#   Annotation Properties
-############################
-
-# Annotation Property: dcterms:description (description)
-
-AnnotationAssertion(rdfs:label dcterms:description "description")
-
-# Annotation Property: dcterms:license (license)
-
-AnnotationAssertion(rdfs:label dcterms:license "license")
-
-# Annotation Property: dcterms:title (title)
-
-AnnotationAssertion(rdfs:label dcterms:title "title")
+</rdfs:comment>
+        <rdfs:seeAlso>More about PROMOT initiative at https://www.promotinitiative.com/
+</rdfs:seeAlso>
+    </owl:Ontology>
+    
 
 
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
 
-)
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/contributor -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/contributor"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/creator -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/creator"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/description -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/description">
+        <rdfs:label>description</rdfs:label>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/license -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/license">
+        <rdfs:label>license</rdfs:label>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/title -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/title">
+        <rdfs:label>title</rdfs:label>
+    </owl:AnnotationProperty>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29) https://github.com/owlcs/owlapi -->
+

@@ -10,7 +10,7 @@
 # More information: https://github.com/INCATools/ontology-development-kit/
 
 # Fingerprint of the configuration file when this Makefile was last generated
-CONFIG_HASH=                c61e9edd0d687c034b72a8a063654347b59b7240471c0b3b49167150160fb8a3
+CONFIG_HASH=                79cd762a3d6b8687d5c29d51da9bdf4f66e41204dcd0f3e0404fe20e7924dfe3
 
 
 # ----------------------------------------
@@ -444,25 +444,12 @@ $(IMPORTDIR)/ncit_import.owl:
 	@false
 endif # IMP_LARGE=true
 
-## Module for ontology: ncbitaxon (filter)
+## Module for ontology: ncbitaxon (custom)
 ifeq ($(IMP_LARGE),true)
-$(IMPORTDIR)/ncbitaxon_import.owl: $(MIRRORDIR)/ncbitaxon.owl $(IMPORTDIR)/ncbitaxon_terms.txt $(IMPORTSEED) | all_robot_plugins
-	$(ROBOT) annotate --input $< --remove-annotations \
-		 odk:normalize --add-source true \
-		 extract --term-file $(IMPORTDIR)/ncbitaxon_terms.txt $(T_IMPORTSEED) \
-		         --copy-ontology-annotations true --force true --method BOT \
-		 remove --axioms external --preserve-structure false --trim false \
-		        --base-iri http://purl.obolibrary.org/obo/NCBITAXON \
-		 remove $(foreach p, $(ANNOTATION_PROPERTIES), --term $(p)) \
-		        --term rdfs:label \
-		        --term IAO:0000115 \
-		        --term OMO:0002000 \
-		        --term-file $(IMPORTDIR)/ncbitaxon_terms.txt $(T_IMPORTSEED) \
-		        --select complement \
-		 odk:normalize --base-iri http://purl.obolibrary.org/obo \
-		               --subset-decls true --synonym-decls true \
-		 repair --merge-axiom-annotations true \
-		 $(ANNOTATE_CONVERT_FILE)
+$(IMPORTDIR)/ncbitaxon_import.owl: 
+	@echo "ERROR: You have configured ncbitaxon as a custom module;"
+	@echo "       This rule needs to be overwritten in promot.Makefile!"
+	@false
 endif # IMP_LARGE=true
 
 ## Module for ontology: snomed (custom)

@@ -1,6 +1,6 @@
 format-version: 1.2
-data-version: promot/releases/2026-03-13/promot-base.owl
-date: 13:03:2026 17:22
+data-version: promot/releases/2026-03-20/promot-base.owl
+date: 20:03:2026 17:56
 idspace: ace_lexicon http://attempto.ifi.uzh.ch/ace_lexicon# 
 idspace: babelon https://w3id.org/babelon/ 
 idspace: BIOLINK https://w3id.org/biolink/vocab/ 
@@ -19,6 +19,7 @@ idspace: fma http://purl.org/sig/ont/fma/
 idspace: foaf http://xmlns.com/foaf/0.1/ 
 idspace: HGNC http://identifiers.org/hgnc/ 
 idspace: ICF http://id.who.int/icd/entity/ 
+idspace: NCIT http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl# 
 idspace: oboInOwl http://www.geneontology.org/formats/oboInOwl# 
 idspace: OMOP https://athena.ohdsi.org/search-terms/terms/ 
 idspace: omopclass https://w3id.org/cpont/omop/classes/ 
@@ -58,7 +59,7 @@ property_value: dc11:type IAO:8000001
 property_value: dcterms:description "Ontology for modeling the three following neuromuscular diseases : OPMD, Congenital myopathies and Congenital myastenic syndroms. It aims to be also an ontology for building the PROMOT project relational database." xsd:string
 property_value: dcterms:license https://creativecommons.org/licenses/by-nc-sa/4.0/
 property_value: dcterms:title "PROMOT ontology" xsd:string
-property_value: owl:versionInfo "2026-03-13" xsd:string
+property_value: owl:versionInfo "2026-03-20" xsd:string
 property_value: seeAlso "More about PROMOT initiative at https://www.promotinitiative.com/\n" xsd:string
 
 [Term]
@@ -199,32 +200,21 @@ is_a: PROMOT:0000002 ! CMS related mutation
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
-id: PROMOT:0010001
-name: declaración sobre una entidad
-def: "A statement about an entity, such as a person or a process, to state details about it." []
-comment: JP: Translated to spanish using Bing Translator
-xref: NCIT:C49154
-is_a: IAO:0000030
-relationship: RO:0002351 IAO:0000030
-property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
-
-[Term]
 id: PROMOT:0010002
 name: Declaración sobre un ser humano
 def: "A statement that describes a human." []
-is_a: PROMOT:0010001 ! declaración sobre una entidad
-relationship: RO:0002351 PROMOT:0010011 ! Année de naissance
-relationship: RO:0002351 PROMOT:0010011 {maxCardinality="1"} ! Année de naissance
-relationship: RO:0002351 PROMOT:0010015 ! Année de décès
-relationship: RO:0002351 PROMOT:0010015 {maxCardinality="1"} ! Année de décès
-relationship: RO:0002351 PROMOT:0010016 ! Age
-relationship: RO:0002351 PROMOT:0010017 ! Age at death
-relationship: RO:0002351 PROMOT:0010017 {maxCardinality="1"} ! Age at death
-relationship: RO:0002351 PROMOT:0010018 ! Age Category
-relationship: RO:0002351 PROMOT:0010041 {maxCardinality="1"} ! Sex at birth
-relationship: RO:0002351 PROMOT:0010041 ! Sex at birth
-relationship: RO:0002351 SIO:000485 {cardinality="1"}
-relationship: RO:0002351 SIO:000485
+is_a: NCIT:C49154
+relationship: RO:0002351 NCBITaxon:9606
+relationship: RO:0002351 NCBITaxon:9606 {cardinality="1"}
+relationship: RO:0002351 NCIT:C124436 {maxCardinality="1"}
+relationship: RO:0002351 NCIT:C124436
+relationship: RO:0002351 NCIT:C135383 {maxCardinality="1"}
+relationship: RO:0002351 NCIT:C135383
+relationship: RO:0002351 NCIT:C156426 {maxCardinality="1"}
+relationship: RO:0002351 NCIT:C156426
+relationship: RO:0002351 NCIT:C20587
+relationship: RO:0002351 NCIT:C83164
+relationship: RO:0002351 NCIT:C83164 {maxCardinality="1"}
 relationship: RO:0002351 SNOMED:184099003 {maxCardinality="1"}
 relationship: RO:0002351 SNOMED:184099003
 relationship: RO:0002351 SNOMED:184305005
@@ -238,11 +228,11 @@ name: declaración sobre un paciente
 def: "A statement regarding a patient to state details about them." []
 comment: JP: Translated to spanish using Bing Translator
 is_a: PROMOT:0010002 ! Declaración sobre un ser humano
-relationship: RO:0002351 PROMOT:0010012 ! Année de diagnostic
-relationship: RO:0002351 PROMOT:0010052 ! Nb of previous pregnancies
+relationship: RO:0002351 NCIT:C106551
+relationship: RO:0002351 NCIT:C16960
+relationship: RO:0002351 NCIT:C16960 {cardinality="1"}
+relationship: RO:0002351 NCIT:C210821
 relationship: RO:0002351 PROMOT:0010065 ! Patient à risque de chute
-relationship: RO:0002351 PROMOT:0020004 ! Paciente
-relationship: RO:0002351 PROMOT:0020004 {cardinality="1"} ! Paciente
 relationship: RO:0002351 SNOMED:1153637007
 relationship: RO:0002351 SNOMED:125680007
 relationship: RO:0002351 SNOMED:184104002
@@ -269,16 +259,16 @@ id: PROMOT:0010004
 name: declaración sobre un fenotipo
 def: "A statement regarding a phenotype to state details about it." []
 comment: BIH-CEI rd-cdm: Repo for the ontology-based rare disease common data model harmonising international registry use, FHIR, and Phenopackets 
-is_a: PROMOT:0010001 ! declaración sobre una entidad
+is_a: NCIT:C49154
 relationship: RO:0002351 ECO:0006151
 relationship: RO:0002351 HP:0000118 {cardinality="1"}
 relationship: RO:0002351 HP:0000118
-relationship: RO:0002351 PROMOT:0010008 ! Date of assessment
-relationship: RO:0002351 PROMOT:0010008 {cardinality="1"} ! Date of assessment
-relationship: RO:0002351 PROMOT:0010009 {cardinality="1"} ! Date of resolution
-relationship: RO:0002351 PROMOT:0010009 ! Date of resolution
-relationship: RO:0002351 PROMOT:0010010 ! Année d’apparition
-relationship: RO:0002351 PROMOT:0010010 {cardinality="1"} ! Année d’apparition
+relationship: RO:0002351 NCIT:C178992 {cardinality="1"}
+relationship: RO:0002351 NCIT:C178992
+relationship: RO:0002351 NCIT:C93511
+relationship: RO:0002351 NCIT:C93511 {cardinality="1"}
+relationship: RO:0002351 NCIT:C99800 {cardinality="1"}
+relationship: RO:0002351 NCIT:C99800
 relationship: RO:0002351 PROMOT:0010013 {cardinality="1"} ! Année d’identification
 relationship: RO:0002351 PROMOT:0010013 ! Année d’identification
 relationship: RO:0002351 PROMOT:0010014 ! Année de disparition
@@ -291,7 +281,7 @@ id: PROMOT:0010005
 name: statement about a procedure
 def: "A statement regarding a procedure to describe it." []
 comment: JP: Translated to spanish using Bing Translator
-is_a: PROMOT:0010001 ! declaración sobre una entidad
+is_a: NCIT:C49154
 relationship: RO:0002351 SNOMED:128927009
 relationship: RO:0002351 SNOMED:439272007
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
@@ -300,60 +290,12 @@ property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 id: PROMOT:0010006
 name: declaración sobre un consentimiento 
 def: "A statement regarding a consent to describe it." []
-is_a: PROMOT:0010001 ! declaración sobre una entidad
+is_a: NCIT:C49154
+relationship: RO:0002351 NCIT:C93579
 relationship: RO:0002351 PROMOT:0010053 {cardinality="1"} ! Consent status
 relationship: RO:0002351 PROMOT:0010053 ! Consent status
-relationship: RO:0002351 PROMOT:0010060 ! Date du consentement
 relationship: RO:0002351 PROMOT:0010061 {cardinality="1"} ! Consent type
 relationship: RO:0002351 PROMOT:0010061 ! Consent type
-property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
-
-[Term]
-id: PROMOT:0010008
-name: Date of assessment
-def: "La date à laquelle une entité a été formellement identifiée, par exemple la date à laquelle un phénotype a été identifié via une procédure médicale." []
-comment: [EURO-NMD] Atalia A et al., EURO-NMD registry: federated FAIR infrastructure, innovative technologies and concepts of a patient-centred registry for rare neuromuscular disorders. Orphanet J Rare Dis. 2024 Feb 14;19(1):66. doi: 10.1186/s13023-024-03059-3. PMID: 38355534; PMCID: PMC10865673.
-is_a: SNOMED:363787002
-property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
-property_value: seeAlso SNOMED:363778006
-property_value: seeAlso SNOMED:439272007
-property_value: seeAlso SNOMED:704321009
-
-[Term]
-id: PROMOT:0010009
-name: Date of resolution
-def: "La date à laquelle une disposition anormale, telle qu’une maladie ou un phénotype, cesse d’exister." []
-comment: [EURO-NMD] Atalia A et al., EURO-NMD registry: federated FAIR infrastructure, innovative technologies and concepts of a patient-centred registry for rare neuromuscular disorders. Orphanet J Rare Dis. 2024 Feb 14;19(1):66. doi: 10.1186/s13023-024-03059-3. PMID: 38355534; PMCID: PMC10865673.
-xref: HP:0034382
-xref: NCIT:C178992
-is_a: SNOMED:363787002
-property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
-property_value: seeAlso HP:0034382
-
-[Term]
-id: PROMOT:0010010
-name: Année d’apparition
-def: "L’année à laquelle apparaît une entité." []
-comment: [PROMOT note] [Derived from RD-CDM] [5.4 Date of Onset]
-is_a: SNOMED:363787002
-property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
-
-[Term]
-id: PROMOT:0010011
-name: Année de naissance
-def: "The year in which the birth occurs." []
-comment: [PROMOT note] [Derived from RD-CDM] [2.1 Date of birth]
-xref: NCIT:C83164
-is_a: SNOMED:363787002
-property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
-
-[Term]
-id: PROMOT:0010012
-name: Année de diagnostic
-def: "The year in which the diagnosis is made." []
-comment: [PROMOT note] [Derived from RD-CDM] [5.6 Date of Diagnosis] 
-xref: NCIT:C210821
-is_a: SNOMED:363787002
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
@@ -372,49 +314,12 @@ is_a: SNOMED:363787002
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
-id: PROMOT:0010015
-name: Année de décès
-def: "L’année à laquelle un organisme cesse de vivre." []
-comment: [PROMOT note] [Derived from RD-CDM] [3.2 Time of Death] 
-xref: NCIT:C156426
-is_a: SNOMED:363787002
-property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
-
-[Term]
-id: PROMOT:0010016
-name: Age
-def: "Elapsed time since birth expressed in years." []
-comment: [EURO-NMD] Atalia A et al., EURO-NMD registry: federated FAIR infrastructure, innovative technologies and concepts of a patient-centred registry for rare neuromuscular disorders. Orphanet J Rare Dis. 2024 Feb 14;19(1):66. doi: 10.1186/s13023-024-03059-3. PMID: 38355534; PMCID: PMC10865673.
-xref: NCIT:C25150
-is_a: SNOMED:363787002
-property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
-
-[Term]
-id: PROMOT:0010017
-name: Age at death
-def: "Age à laquelle une personne est décédée. Nombre d’années complètes écoulées depuis la naissance jusqu’à la mort d’une personne." []
-xref: NCIT:C135383
-is_a: SNOMED:363787002
-property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
-
-[Term]
-id: PROMOT:0010018
-name: Age Category
-def: "Arbitrary interval of age to split a population into groups according to their age." []
-comment: [EURO-NMD] Atalia A et al., EURO-NMD registry: federated FAIR infrastructure, innovative technologies and concepts of a patient-centred registry for rare neuromuscular disorders. Orphanet J Rare Dis. 2024 Feb 14;19(1):66. doi: 10.1186/s13023-024-03059-3. PMID: 38355534; PMCID: PMC10865673.
-xref: http://snomed.info/id/105727008
-xref: NCIT:C20587
-is_a: SNOMED:363787002
-property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
-property_value: seeAlso HP:0003674
-
-[Term]
 id: PROMOT:0010019
 name: Adulthood
 def: "Age category including people of 16 years old and above." [] {IAO:0000119="HP:0003581"}
 comment: [EURO-NMD] Atalia A et al., EURO-NMD registry: federated FAIR infrastructure, innovative technologies and concepts of a patient-centred registry for rare neuromuscular disorders. Orphanet J Rare Dis. 2024 Feb 14;19(1):66. doi: 10.1186/s13023-024-03059-3. PMID: 38355534; PMCID: PMC10865673.
 xref: http://snomed.info/id/41847000
-is_a: PROMOT:0010018 ! Age Category
+is_a: NCIT:C20587
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 property_value: seeAlso HP:0003581
 
@@ -474,7 +379,7 @@ id: PROMOT:0010026
 name: Antenatal age
 def: "Age category prior to birth." [] {IAO:0000119="HP:0025710"}
 comment: This term includes the full 25th year of age up to the completed 40th year of age (i.e., less than the 40th birthday). [from: HP:0025710]
-is_a: PROMOT:0010018 ! Age Category
+is_a: NCIT:C20587
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 property_value: seeAlso HP:0025710
 
@@ -524,7 +429,7 @@ property_value: seeAlso HP:0034197
 id: PROMOT:0010032
 name: Congenital
 def: "Age catefory corresponding to birth." [] {IAO:0000119="HP:0003577"}
-is_a: PROMOT:0010018 ! Age Category
+is_a: NCIT:C20587
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 property_value: seeAlso HP:0003577
 
@@ -532,7 +437,7 @@ property_value: seeAlso HP:0003577
 id: PROMOT:0010033
 name: Neonatal age
 def: "Age within the first 28 days of life." [] {IAO:0000119="HP:0003623"}
-is_a: PROMOT:0010018 ! Age Category
+is_a: NCIT:C20587
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 property_value: seeAlso HP:0003623
 
@@ -540,7 +445,7 @@ property_value: seeAlso HP:0003623
 id: PROMOT:0010034
 name: Pediatric age
 def: "Age category before adulthood, defined here as before the age of 16 years, but excluding neonatal or congenital onset. It includes people from the age of 28 days to 15 years old (included)." [] {IAO:0000119="HP:0410280"}
-is_a: PROMOT:0010018 ! Age Category
+is_a: NCIT:C20587
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 property_value: seeAlso HP:0410280
 
@@ -578,7 +483,7 @@ property_value: seeAlso HP:0003621
 id: PROMOT:0010038
 name: Perimenopausal age
 def: "Age category including people undergoing perimenopause, i.e. the period of life shortly before the occurence of the menopause." [] {IAO:0000119="HP:6000314"}
-is_a: PROMOT:0010018 ! Age Category
+is_a: NCIT:C20587
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 property_value: seeAlso HP:6000314
 
@@ -586,7 +491,7 @@ property_value: seeAlso HP:6000314
 id: PROMOT:0010039
 name: Postmenopausal age
 def: "Age category including people undergoing postmenopause, i.e. the period of life after the occurrence of the menopause." [] {IAO:0000119="HP:6000315"}
-is_a: PROMOT:0010018 ! Age Category
+is_a: NCIT:C20587
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 property_value: seeAlso HP:6000315
 
@@ -594,19 +499,9 @@ property_value: seeAlso HP:6000315
 id: PROMOT:0010040
 name: Puerpural age
 def: "Age category including ages refering to childbirth or period after immediately following." [] {IAO:0000119="HP:4000040"}
-is_a: PROMOT:0010018 ! Age Category
+is_a: NCIT:C20587
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 property_value: seeAlso HP:4000040
-
-[Term]
-id: PROMOT:0010041
-name: Sex at birth
-def: "Ensemble des caractéristiques sexuelles physiques à la naissance." []
-comment: [EURO-NMD] Atalia A et al., EURO-NMD registry: federated FAIR infrastructure, innovative technologies and concepts of a patient-centred registry for rare neuromuscular disorders. Orphanet J Rare Dis. 2024 Feb 14;19(1):66. doi: 10.1186/s13023-024-03059-3. PMID: 38355534; PMCID: PMC10865673.
-xref: http://snomed.info/id/281053000
-xref: NCIT:C124436
-is_a: SNOMED:363787002
-property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
 id: PROMOT:0010042
@@ -614,7 +509,7 @@ name: Female sex at birth
 def: "Physical sexual characteristiscs at birth that are stated as female." []
 comment: [EURO-NMD] Atalia A et al., EURO-NMD registry: federated FAIR infrastructure, innovative technologies and concepts of a patient-centred registry for rare neuromuscular disorders. Orphanet J Rare Dis. 2024 Feb 14;19(1):66. doi: 10.1186/s13023-024-03059-3. PMID: 38355534; PMCID: PMC10865673.
 xref: http://snomed.info/id/248152002
-is_a: PROMOT:0010041 ! Sex at birth
+is_a: NCIT:C124436
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
@@ -623,7 +518,7 @@ name: Intersex at birth
 def: "Physical sexual characteristiscs at birth that are stated as intersex." []
 comment: [EURO-NMD] Atalia A et al., EURO-NMD registry: federated FAIR infrastructure, innovative technologies and concepts of a patient-centred registry for rare neuromuscular disorders. Orphanet J Rare Dis. 2024 Feb 14;19(1):66. doi: 10.1186/s13023-024-03059-3. PMID: 38355534; PMCID: PMC10865673.
 xref: http://snomed.info/id/32570691000036100
-is_a: PROMOT:0010041 ! Sex at birth
+is_a: NCIT:C124436
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
@@ -632,7 +527,7 @@ name: Male sex at birth
 def: "Physical sexual characteristiscs at birth that are stated as male." []
 comment: [EURO-NMD] Atalia A et al., EURO-NMD registry: federated FAIR infrastructure, innovative technologies and concepts of a patient-centred registry for rare neuromuscular disorders. Orphanet J Rare Dis. 2024 Feb 14;19(1):66. doi: 10.1186/s13023-024-03059-3. PMID: 38355534; PMCID: PMC10865673.
 xref: http://snomed.info/id/248153007
-is_a: PROMOT:0010041 ! Sex at birth
+is_a: NCIT:C124436
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
@@ -641,7 +536,7 @@ name: Patient sex at birth unknown
 def: "Physical sexual characteristiscs at birth that are unknown." []
 comment: [EURO-NMD] Atalia A et al., EURO-NMD registry: federated FAIR infrastructure, innovative technologies and concepts of a patient-centred registry for rare neuromuscular disorders. Orphanet J Rare Dis. 2024 Feb 14;19(1):66. doi: 10.1186/s13023-024-03059-3. PMID: 38355534; PMCID: PMC10865673.
 xref: http://snomed.info/id/184115007
-is_a: PROMOT:0010041 ! Sex at birth
+is_a: NCIT:C124436
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
@@ -696,14 +591,6 @@ def: "Gender identity of a person that is unknown because unrecorded." []
 comment: [EURO-NMD] Atalia A et al., EURO-NMD registry: federated FAIR infrastructure, innovative technologies and concepts of a patient-centred registry for rare neuromuscular disorders. Orphanet J Rare Dis. 2024 Feb 14;19(1):66. doi: 10.1186/s13023-024-03059-3. PMID: 38355534; PMCID: PMC10865673.
 xref: http://snomed.info/id/1220561009
 is_a: PROMOT:0010050 ! Gender identity unknown
-property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
-
-[Term]
-id: PROMOT:0010052
-name: Nb of previous pregnancies
-def: "Le nombre de grossesses d’un individu qui inclut les grossesses qui ne se sont pas terminées." []
-comment: [EURO-NMD] Atalia A et al., EURO-NMD registry: federated FAIR infrastructure, innovative technologies and concepts of a patient-centred registry for rare neuromuscular disorders. Orphanet J Rare Dis. 2024 Feb 14;19(1):66. doi: 10.1186/s13023-024-03059-3. PMID: 38355534; PMCID: PMC10865673.
-is_a: SNOMED:160476009
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
@@ -763,15 +650,6 @@ def: "A status of a consent that has been entered by error." []
 comment: Ongoing discussion
 xref: http://snomed.info/id/723510000
 is_a: PROMOT:0010053 ! Consent status
-property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
-
-[Term]
-id: PROMOT:0010060
-name: Date du consentement
-def: "La date à laquelle le status du consentement a été définit." []
-comment: [EURO-NMD] Atalia A et al., EURO-NMD registry: federated FAIR infrastructure, innovative technologies and concepts of a patient-centred registry for rare neuromuscular disorders. Orphanet J Rare Dis. 2024 Feb 14;19(1):66. doi: 10.1186/s13023-024-03059-3. PMID: 38355534; PMCID: PMC10865673.
-xref: NCIT:C93579
-is_a: SNOMED:363787002
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
@@ -843,45 +721,31 @@ relationship: RO:0001025 ICF:1626363729
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
-id: PROMOT:0020004
-name: Paciente
-def: "A patient that had received a confirmed diagnostic of genetic mutation and that is involved in the data collection for natural history study of their disease." []
-comment: JP: Translated to spanish using Bing Translator
-xref: NCIT:C16960
-is_a: SIO:000485
-relationship: PROMOT:2000004 SO:0001060 ! est porteur de la mutation
-relationship: PROMOT:2000006 SNOMED:125679009 ! is related to
-relationship: PROMOT:2000007 IAO:0020000 {cardinality="1"} ! has identifier
-relationship: PROMOT:2000007 IAO:0020000 ! has identifier
-relationship: RO:0002200 HP:0000118
-property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
-
-[Term]
 id: PROMOT:0031001
 name: estado vital desconocido
-def: "A life status that is unkown." []
-is_a: SIO:010057
+def: "A vital status that is unkown." []
+is_a: NCIT:C25717
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
 id: PROMOT:0031002
-name: unrecorded life status
-def: "A life status that is unkown because unrecorded." []
+name: unrecorded vital status
+def: "A vital status that is unkown because unrecorded." []
 is_a: PROMOT:0031001 ! estado vital desconocido
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
 id: PROMOT:0031003
 name: lost in follow up
-def: "A unkown life status because of the patient being lost in follow up." []
-is_a: PROMOT:0031002 ! unrecorded life status
+def: "A recorded vital status because of the patient being lost in follow up." []
+is_a: PROMOT:0031002 ! unrecorded vital status
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
 id: PROMOT:0031004
 name: opt out
-def: "A unkown life status because of the patient being opted out from the study." []
-is_a: PROMOT:0031002 ! unrecorded life status
+def: "A recorded vital status because of the patient being opted out from the study." []
+is_a: PROMOT:0031002 ! unrecorded vital status
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
@@ -906,38 +770,6 @@ comment: [EURO-NMD] Atalia A et al., EURO-NMD registry: federated FAIR infrastru
 xref: http://snomed.info/id/363778006
 is_a: BFO:0000019
 relationship: RO:0000080 HP:0000118
-property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
-
-[Term]
-id: PROMOT:0031008
-name: absent
-def: "A qualifier for an instance of a entity which is absent." []
-comment: [EURO-NMD] Atalia A et al., EURO-NMD registry: federated FAIR infrastructure, innovative technologies and concepts of a patient-centred registry for rare neuromuscular disorders. Orphanet J Rare Dis. 2024 Feb 14;19(1):66. doi: 10.1186/s13023-024-03059-3. PMID: 38355534; PMCID: PMC10865673.
-xref: http://snomed.info/id/723511001
-is_a: PROMOT:0031007 ! Qualité qualifiant l’existance d’une entité
-property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
-
-[Term]
-id: PROMOT:0031009
-name: present
-def: "Qualifies an instance of an entity as present." []
-comment: [EURO-NMD] Atalia A et al., EURO-NMD registry: federated FAIR infrastructure, innovative technologies and concepts of a patient-centred registry for rare neuromuscular disorders. Orphanet J Rare Dis. 2024 Feb 14;19(1):66. doi: 10.1186/s13023-024-03059-3. PMID: 38355534; PMCID: PMC10865673.
-xref: http://snomed.info/id/410605003
-is_a: PROMOT:0031007 ! Qualité qualifiant l’existance d’une entité
-property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
-
-[Term]
-id: PROMOT:0031010
-name: incertain
-def: "Qualifies an instance of an entity as unsure." []
-is_a: PROMOT:0031007 ! Qualité qualifiant l’existance d’une entité
-property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
-
-[Term]
-id: PROMOT:0031011
-name: presence unrecorded
-def: "A presence or absence that is unrecorded" []
-is_a: PROMOT:0031010 ! incertain
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
@@ -994,7 +826,7 @@ name: Fatigue corrélée au fait de manger
 def: "A fatigue that occurs when the subject is eating" []
 is_a: HP:0012378
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
-property_value: PROMOT:1000001 "Oculopharyngeal muscular dystrophy Article" xsd:string
+property_value: PROMOT:1000001 "[OPMD Scoping review on dysphagia] Côté C, Gagnon C, Youssof S, et al. The requirement for a disease-specific patient-reported outcome measure of dysphagia in oculopharyngeal muscular dystrophy. Muscle Nerve. 2019;59:445–50. doi: 10.1002/mus.26405" xsd:string
 
 [Term]
 id: PROMOT:0032007
@@ -1002,7 +834,7 @@ name: Difficulty walking short distance
 def: "A difficulty to walk short distance. E.g. a difficulty to  walk inside a building such as a house." []
 is_a: HP:0001288
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
-property_value: PROMOT:1000001 "[OPMD Scoping review] Bélair N, Gagnon C, Duchesne E. What is known about muscle weakness, balance impairments and indoor mobility limitations in oculopharyngeal muscular dystrophy? A scoping review. J Neuromuscul Dis. 2025 Dec 30:22143602251397052. doi: 10.1177/22143602251397052. Epub ahead of print. PMID: 41467981. " xsd:string
+property_value: PROMOT:1000001 "[OPMD Scoping review 2026] Bélair N, Gagnon C, Duchesne E. What is known about muscle weakness, balance impairments and indoor mobility limitations in oculopharyngeal muscular dystrophy? A scoping review. J Neuromuscul Dis. 2025 Dec 30:22143602251397052. doi: 10.1177/22143602251397052. Epub ahead of print. PMID: 41467981." xsd:string
 
 [Term]
 id: PROMOT:0032008
@@ -1010,7 +842,7 @@ name: Difficulty changing basic position
 def: "A difficulty to change basic position. E.g. a difficulty to go from a sitting position to a standing position." []
 is_a: HP:0100022
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
-property_value: PROMOT:1000001 "[OPMD Scoping review] Bélair N, Gagnon C, Duchesne E. What is known about muscle weakness, balance impairments and indoor mobility limitations in oculopharyngeal muscular dystrophy? A scoping review. J Neuromuscul Dis. 2025 Dec 30:22143602251397052. doi: 10.1177/22143602251397052. Epub ahead of print. PMID: 41467981. " xsd:string
+property_value: PROMOT:1000001 "[OPMD Scoping review 2026] Bélair N, Gagnon C, Duchesne E. What is known about muscle weakness, balance impairments and indoor mobility limitations in oculopharyngeal muscular dystrophy? A scoping review. J Neuromuscul Dis. 2025 Dec 30:22143602251397052. doi: 10.1177/22143602251397052. Epub ahead of print. PMID: 41467981." xsd:string
 
 [Term]
 id: PROMOT:0032009
@@ -1018,7 +850,7 @@ name: Anhedonia while eating
 def: "An anhedonia that occurs when the subject is eating" []
 is_a: HP:0012154
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
-property_value: PROMOT:1000001 "Oculopharyngeal muscular dystrophy Article" xsd:string
+property_value: PROMOT:1000001 "[OPMD Scoping review on dysphagia] Côté C, Gagnon C, Youssof S, et al. The requirement for a disease-specific patient-reported outcome measure of dysphagia in oculopharyngeal muscular dystrophy. Muscle Nerve. 2019;59:445–50. doi: 10.1002/mus.26405" xsd:string
 
 [Term]
 id: PROMOT:0032010
@@ -1026,8 +858,8 @@ name: Dysphagia for solid
 def: "Difficulty in swallowing solid food." []
 is_a: HP:0002015
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
-property_value: PROMOT:1000001 "Oculopharyngeal muscular dystrophy Article" xsd:string
-property_value: PROMOT:1000001 "Oculopharyngeal muscular dystrophy Clinical Registry Form" xsd:string
+property_value: PROMOT:1000001 "[OPMD Clinical Registry Form]" xsd:string
+property_value: PROMOT:1000001 "[OPMD Scoping review on dysphagia] Côté C, Gagnon C, Youssof S, et al. The requirement for a disease-specific patient-reported outcome measure of dysphagia in oculopharyngeal muscular dystrophy. Muscle Nerve. 2019;59:445–50. doi: 10.1002/mus.26405" xsd:string
 
 [Term]
 id: PROMOT:0032011
@@ -1035,12 +867,12 @@ name: Dysphagia for liquid
 def: "Difficulty in swallowing liquid food. This is distinct from hydrophobia." []
 is_a: HP:0002015
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
-property_value: PROMOT:1000001 "Oculopharyngeal muscular dystrophy Article" xsd:string
-property_value: PROMOT:1000001 "Oculopharyngeal muscular dystrophy Clinical Registry Form" xsd:string
+property_value: PROMOT:1000001 "[OPMD Clinical Registry Form]" xsd:string
+property_value: PROMOT:1000001 "[OPMD Scoping review on dysphagia] Côté C, Gagnon C, Youssof S, et al. The requirement for a disease-specific patient-reported outcome measure of dysphagia in oculopharyngeal muscular dystrophy. Muscle Nerve. 2019;59:445–50. doi: 10.1002/mus.26405" xsd:string
 
 [Term]
 id: PROMOT:0032012
-name: Debilidad fatigable de la musculatura facial 
+name: Debilidad fatigable de la musculatura facial
 def: "A type of weakness of the facial musculature (i.e. one or more muscles innervated by the seventh cranial nerve) that occurs after a muscle group is used and lessens if the muscle group has some rest. That is, there is diminution of the strength of the facial musculature with repetitive muscle actions." [] {IAO:0000119="HP:0003473"}
 is_a: HP:0003473
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
@@ -1049,7 +881,7 @@ property_value: PROMOT:1000001 "Congenital myopathy Scoping review" xsd:string
 
 [Term]
 id: PROMOT:0032013
-name: Debilidad fatigable de la musculatura facial 
+name: Debilidad fatigable de los músculos oculares
 def: "A type of weakness of the ocular muscles that occurs after a muscle group is used and lessens if the muscle group has some rest. That is, there is diminution of the strength of the ocular muscles with repetitive muscle actions." [] {IAO:0000119="HP:0003473"}
 is_a: HP:0003473
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
@@ -1125,13 +957,6 @@ relationship: PROMOT:2000002 ICF:1083127119 ! assesses
 relationship: PROMOT:2000002 ICF:1360101629 ! assesses
 relationship: PROMOT:2000002 ICF:1470583183 ! assesses
 relationship: PROMOT:2000002 ICF:446199613 ! assesses
-
-[Term]
-id: PROMOT:0100006
-name: Quantative muscle testing
-def: "Measurement of maximum isometric force generation from a muscle group; performed with specialized equipment." [] {IAO:0000119="NCIT:C121361"}
-xref: NCIT:C121361
-is_a: SNOMED:12894003
 
 [Term]
 id: PROMOT:0100007
@@ -1248,7 +1073,7 @@ name: es utilizado por
 def: "A relation between an assistive device and a patient, where the patient uses the device in order to accomplish something, such as a task or an activity (e.g. moving, reading)." []
 comment: JP: Translated to spanish using Bing Translator
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
-range: PROMOT:0020004 ! Paciente
+range: NCIT:C16960
 
 [Typedef]
 id: PROMOT:2000002
@@ -1272,7 +1097,7 @@ name: est porteur de la mutation
 def: "A relation between an organism and a specific gene mutation that exists in the genome of that organism." []
 xref: VO:0001039
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
-domain: SIO:010000
+domain: NCIT:C14250
 range: SO:0001060
 
 [Typedef]

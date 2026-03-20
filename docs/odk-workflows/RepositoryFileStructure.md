@@ -23,7 +23,7 @@ These are the current imports in PROMOT
 | iao | http://purl.obolibrary.org/obo/iao.owl | filter |
 | icf | http://purl.obolibrary.org/obo/icf.owl | custom |
 | ncit | http://purl.obolibrary.org/obo/ncit.owl | custom |
-| ncbitaxon | http://purl.obolibrary.org/obo/ncbitaxon.owl | filter |
+| ncbitaxon | http://purl.obolibrary.org/obo/ncbitaxon.owl | custom |
 | ordo | https://www.orphadata.com/data/ontologies/ordo/last_version/ORDO_en_4.8.owl | custom |
 | ro | http://purl.obolibrary.org/obo/ro.owl | custom |
 | snomed | http://purl.obolibrary.org/obo/snomed.owl | custom |
