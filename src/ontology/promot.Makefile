@@ -102,7 +102,7 @@ $(IMPORTDIR)/hp_import.owl: $(MIRRORDIR)/hp.owl $(IMPORTDIR)/hp_terms_descendant
 # ----------------------------------------
 # Module NCIT : classes
 # ----------------------------------------
-imports/ncit_import.owl: $(IMPORTSDATADIR)/ThesaurusInferred.owl $(IMPORTDIR)/ncit_terms.txt
+imports/ncit_import.owl: $(MIRRORDIR)/ncit.owl $(IMPORTSDATADIR)/ThesaurusInferred.owl $(IMPORTDIR)/ncit_terms.txt
 	if [ $(IMP) = true ]; then $(ROBOT) query -i $< --update $(SPARQLDIR)/preprocess-module.ru \
 		filter -T $(IMPORTDIR)/ncit_terms.txt --select "self annotations" --signature true \
 		query --update $(SPARQLDIR)/inject-subset-declaration.ru --update $(SPARQLDIR)/postprocess-module.ru \
