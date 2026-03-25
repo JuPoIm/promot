@@ -1,6 +1,6 @@
 format-version: 1.2
 data-version: promot/releases/2026-03-25/promot-full.owl
-date: 25:03:2026 18:15
+date: 25:03:2026 18:34
 subsetdef: hposlim_core ""
 subsetdef: http://purl.obolibrary.org/obo/valid_for_go_annotation_extension ""
 subsetdef: http://purl.obolibrary.org/obo/valid_for_go_gp2term ""
@@ -104,6 +104,7 @@ subsetdef: NCIT:C81222 ""
 subsetdef: NCIT:C83187 ""
 subsetdef: NCIT:C83188 ""
 subsetdef: NCIT:C89506 ""
+subsetdef: NCIT:C89968 ""
 subsetdef: NCIT:C90007 ""
 subsetdef: NCIT:C90009 ""
 subsetdef: NCIT:C90259 ""
@@ -4364,8 +4365,8 @@ alt_id: HP:0009018
 alt_id: HP:0031988
 def: "Sudden and involuntary contractions of one or more muscles." [https://orcid.org/0000-0002-0736-9199]
 synonym: "crampe musculaire" EXACT []
-synonym: "Muscle cramps" EXACT []
 synonym: "Muscle cramps" EXACT plural_form []
+synonym: "Muscle cramps" EXACT []
 synonym: "Muscle spasms" EXACT plural_form []
 synonym: "Nocturnal hand and foot cramps" NARROW []
 synonym: "Nocturnal leg cramp" NARROW []
@@ -6587,8 +6588,8 @@ id: HP:0030205
 name: Increased jitter at single fiber EMG
 def: "The variation in the time interval between the two action potentials of the same motor unit is called jitter. This term therefore applies to increased variability in the interval between successive action potentials of the same motor unit, which is measured by electromyography (EMG)." [HPO_CONTRIBUTOR:UK_rheller, PMID:21654930]
 comment: Increased jitter values are not pathogonomic for myasthenia, but indicate disturbed neuromuscular transmission.
-synonym: "Increased jitter at single fibre electromyography" EXACT uk_spelling []
 synonym: "Increased jitter at single fibre electromyography" EXACT []
+synonym: "Increased jitter at single fibre electromyography" EXACT uk_spelling []
 synonym: "Increased jitter at single fibre EMG" EXACT uk_spelling []
 xref: UMLS:C4021045
 is_a: HP:0030006 ! Single fiber EMG abnormality
@@ -9794,8 +9795,8 @@ synonym: "Age" EXACT [] {NCIT:P383="PT", NCIT:P385="SEND-STSPRM", NCIT:P384="CDI
 synonym: "Age" EXACT [] {NCIT:P383="SY", NCIT:P384="caDSR"}
 synonym: "Age" EXACT [] {NCIT:P383="SY", NCIT:P384="CDISC"}
 synonym: "Age" EXACT [] {NCIT:P383="PT", NCIT:P384="NCI"}
-synonym: "age" EXACT [] {NCIT:P383="PT", NCIT:P384="BRIDG 5.3"}
 synonym: "age" EXACT [] {NCIT:P383="PT", NCIT:P384="BRIDG 3.0.3"}
+synonym: "age" EXACT [] {NCIT:P383="PT", NCIT:P384="BRIDG 5.3"}
 synonym: "Aged" EXACT [] {NCIT:P383="AD", NCIT:P384="NCI"}
 synonym: "Chronological Age" EXACT [] {NCIT:P383="SY", NCIT:P384="NCI"}
 synonym: "Chronological Age" EXACT [] {NCIT:P383="PT", NCIT:P384="NICHD"}
@@ -10195,6 +10196,23 @@ property_value: NCIT:P322 "GDC" xsd:string
 property_value: NCIT:P322 "OORO" xsd:string
 property_value: NCIT:P325 "Year of Birth for patient." xsd:string {NCIT:P378="OORO", NCIT:P381="PC"}
 property_value: NCIT:P366 "Birth_Year" xsd:string
+
+[Term]
+id: NCIT:C90387
+name: Found Dead
+def: "An indication that a subject was found in a deceased state." [] {NCIT:P378="NCI"}
+subset: NCIT:C61410
+subset: NCIT:C77526
+subset: NCIT:C89968
+synonym: "FOUND DEAD" EXACT [] {NCIT:P383="PT", NCIT:P384="CDISC"}
+synonym: "Found Dead" EXACT [] {NCIT:P383="PT", NCIT:P384="NCI"}
+is_a: NCIT:C25717 ! Vital Status
+property_value: NCIT:NHC0 "C90387" xsd:string
+property_value: NCIT:P106 "Finding" xsd:string
+property_value: NCIT:P108 "Found Dead" xsd:string
+property_value: NCIT:P207 "C0476463" xsd:string
+property_value: NCIT:P322 "CDISC" xsd:string
+property_value: NCIT:P325 "An indication that a subject was found in a deceased state. (NCI)" xsd:string {NCIT:P378="CDISC"}
 
 [Term]
 id: NCIT:C93511
