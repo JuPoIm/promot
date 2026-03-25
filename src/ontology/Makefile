@@ -10,7 +10,7 @@
 # More information: https://github.com/INCATools/ontology-development-kit/
 
 # Fingerprint of the configuration file when this Makefile was last generated
-CONFIG_HASH=                52e1fbfafbc21f87f549dbf10ca499de602ee0d7737feeae032f6efe67ab5b5f
+CONFIG_HASH=                6386cc49cbde76f8a0b03ce0cb39d24342ac7f19bcbbcf5de8685d69450e4f2d
 
 
 # ----------------------------------------
@@ -446,7 +446,7 @@ endif # IMP_LARGE=true
 
 ## Module for ontology: ncbitaxon (custom)
 ifeq ($(IMP_LARGE),true)
-$(IMPORTDIR)/ncbitaxon_import.owl: 
+$(IMPORTDIR)/ncbitaxon_import.owl: $(MIRRORDIR)/ncbitaxon.owl
 	@echo "ERROR: You have configured ncbitaxon as a custom module;"
 	@echo "       This rule needs to be overwritten in promot.Makefile!"
 	@false
@@ -610,8 +610,12 @@ endif
 
 
 ## ONTOLOGY: ncbitaxon
-
-ifeq ($(IMP_LARGE),true)## You have configured your default mirror type to no_mirror.
+.PHONY: mirror-ncbitaxon
+.PRECIOUS: $(MIRRORDIR)/ncbitaxon.owl
+ifeq ($(IMP_LARGE),true)
+mirror-ncbitaxon: | $(TMPDIR)
+	curl -L $(OBOBASE)/ncbitaxon.owl --create-dirs -o $(TMPDIR)/ncbitaxon-download.owl --retry 4 --max-time 200 && \
+	$(ROBOT) convert -i $(TMPDIR)/ncbitaxon-download.owl -o $(TMPDIR)/$@.owl
 endif
 
 

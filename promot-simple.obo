@@ -1,6 +1,6 @@
 format-version: 1.2
-data-version: promot/releases/2026-03-24/promot-simple.owl
-date: 24:03:2026 13:50
+data-version: promot/releases/2026-03-25/promot-simple.owl
+date: 25:03:2026 17:43
 subsetdef: http://purl.obolibrary.org/obo/valid_for_go_annotation_extension ""
 subsetdef: http://purl.obolibrary.org/obo/valid_for_go_gp2term ""
 subsetdef: http://purl.obolibrary.org/obo/valid_for_go_ontology ""
@@ -54,7 +54,7 @@ property_value: dc11:contributor "Mansoore Gholizade MD" xsd:string
 property_value: dc11:creator "Cynthia Gagnon MD, PhD\nhttps://orcid.org/0000-0003-2829-8470" xsd:string
 property_value: dc11:creator "Juliette Potier MSc\nhttps://orcid.org/0009-0000-5160-7927" xsd:string
 property_value: dc11:creator "Paul Fabry MD, PhD student\nhttps://orcid.org/0000-0002-3336-2476" xsd:string
-property_value: owl:versionInfo "2026-03-24" xsd:string
+property_value: owl:versionInfo "2026-03-25" xsd:string
 property_value: seeAlso "More about PROMOT initiative at https://www.promotinitiative.com/\n" xsd:string
 property_value: terms:description "Ontology for modeling the three following neuromuscular diseases : OPMD, Congenital myopathies and Congenital myastenic syndroms. It aims to be also an ontology for building the PROMOT project relational database." xsd:string
 property_value: terms:license https://creativecommons.org/licenses/by-nc-sa/4.0/
@@ -192,122 +192,130 @@ is_a: PROMOT:0000002 ! CMS related mutation
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
-id: PROMOT:0010002
+id: PROMOT:0010001
 name: Declaración sobre un ser humano
 def: "A statement that describes a human." []
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
-id: PROMOT:0010003
+id: PROMOT:0010002
 name: declaración sobre un paciente
 def: "A statement regarding a patient to state details about them." []
 comment: JP: Translated to spanish using Bing Translator
-is_a: PROMOT:0010002 ! Declaración sobre un ser humano
-relationship: RO:0002351 PROMOT:0010065 ! has member Patient à risque de chute
+is_a: PROMOT:0010001 ! Declaración sobre un ser humano
+relationship: RO:0002351 PROMOT:0010045 ! has member Patient à risque de chute
+property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
+
+[Term]
+id: PROMOT:0010003
+name: declaración sobre un fenotipo
+def: "A statement regarding a phenotype to state details about it." []
+comment: BIH-CEI rd-cdm: Repo for the ontology-based rare disease common data model harmonising international registry use, FHIR, and Phenopackets 
+relationship: RO:0002351 PROMOT:0010006 ! has member Année d’identification
+relationship: RO:0002351 PROMOT:0010006 {cardinality="1"} ! has member Année d’identification
+relationship: RO:0002351 PROMOT:0010007 ! has member Année de disparition
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
 id: PROMOT:0010004
-name: declaración sobre un fenotipo
-def: "A statement regarding a phenotype to state details about it." []
-comment: BIH-CEI rd-cdm: Repo for the ontology-based rare disease common data model harmonising international registry use, FHIR, and Phenopackets 
-relationship: RO:0002351 PROMOT:0010013 {cardinality="1"} ! has member Année d’identification
-relationship: RO:0002351 PROMOT:0010013 ! has member Année d’identification
-relationship: RO:0002351 PROMOT:0010014 ! has member Année de disparition
-property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
-
-[Term]
-id: PROMOT:0010005
 name: statement about a procedure
 def: "A statement regarding a procedure to describe it." []
 comment: JP: Translated to spanish using Bing Translator
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
-id: PROMOT:0010006
+id: PROMOT:0010005
 name: declaración sobre un consentimiento 
 def: "A statement regarding a consent to describe it." []
-relationship: RO:0002351 PROMOT:0010053 {cardinality="1"} ! has member Consent status
-relationship: RO:0002351 PROMOT:0010053 ! has member Consent status
-relationship: RO:0002351 PROMOT:0010061 {cardinality="1"} ! has member Consent type
-relationship: RO:0002351 PROMOT:0010061 ! has member Consent type
+relationship: RO:0002351 PROMOT:0010034 ! has member Consent status
+relationship: RO:0002351 PROMOT:0010034 {cardinality="1"} ! has member Consent status
+relationship: RO:0002351 PROMOT:0010041 ! has member Consent type
+relationship: RO:0002351 PROMOT:0010041 {cardinality="1"} ! has member Consent type
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
-id: PROMOT:0010013
+id: PROMOT:0010006
 name: Année d’identification
 def: "L’année d’identification d’une entité, par exemple, l’année d’identification d’un phénotype via une procédure médicale." []
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
-id: PROMOT:0010014
+id: PROMOT:0010007
 name: Année de disparition
 def: "L’année de la disparition d’une entité, par exemple, l’année de disparition d’un phénotype." []
 comment: [PROMOT note] [Derived from RD-CDM] [6.2.4 Resolution Date] 
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
-id: PROMOT:0010019
+id: PROMOT:0010008
 name: Adulthood
 def: "Age category including people of 16 years old and above." [] {IAO:0000119="HP:0003581"}
 comment: [EURO-NMD] Atalia A et al., EURO-NMD registry: federated FAIR infrastructure, innovative technologies and concepts of a patient-centred registry for rare neuromuscular disorders. Orphanet J Rare Dis. 2024 Feb 14;19(1):66. doi: 10.1186/s13023-024-03059-3. PMID: 38355534; PMCID: PMC10865673.
 xref: http://snomed.info/id/41847000
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 property_value: seeAlso HP:0003581
+property_value: skos:closeMatch "http://purl.obolibrary.org/obo/NCIT_C17600" xsd:string
+property_value: skos:closeMatch "http://purl.obolibrary.org/obo/NCIT_C199314" xsd:string
 
 [Term]
-id: PROMOT:0010020
+id: PROMOT:0010009
 name: Late adulthood
 def: "Age category including people of 60 years old and above." [] {IAO:0000119="HP:0003584"}
-is_a: PROMOT:0010019 ! Adulthood
+is_a: PROMOT:0010008 ! Adulthood
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 property_value: seeAlso HP:0003584
+property_value: skos:closeMatch "http://purl.obolibrary.org/obo/NCIT_C16268" xsd:string
+property_value: skos:closeMatch "http://purl.obolibrary.org/obo/NCIT_C18908" xsd:string
 
 [Term]
-id: PROMOT:0010021
+id: PROMOT:0010010
 name: Middle adulthood
 def: "Age category including people between 40 and 59 years old (inclusive)." [] {IAO:0000119="HP:0003596"}
-is_a: PROMOT:0010019 ! Adulthood
+is_a: PROMOT:0010008 ! Adulthood
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 property_value: seeAlso HP:0003596
+property_value: skos:closeMatch "http://purl.obolibrary.org/obo/NCIT_C91108" xsd:string
 
 [Term]
-id: PROMOT:0010022
+id: PROMOT:0010011
 name: Young adulthood
 def: "Age category including people between 16 and 39 years old (inclusive)." [] {IAO:0000119="HP:0011462"}
-is_a: PROMOT:0010019 ! Adulthood
+is_a: PROMOT:0010008 ! Adulthood
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 property_value: seeAlso HP:0011462
+property_value: skos:closeMatch "http://purl.obolibrary.org/obo/NCIT_C216187" xsd:string
+property_value: skos:closeMatch "http://purl.obolibrary.org/obo/NCIT_C91107" xsd:string
 
 [Term]
-id: PROMOT:0010023
+id: PROMOT:0010012
 name: Early young adulthood
 def: "Age category including people between 16 and 18 years old (inclusive)." [] {IAO:0000119="HP:0025708"}
 comment: [EURO-NMD] Atalia A et al., EURO-NMD registry: federated FAIR infrastructure, innovative technologies and concepts of a patient-centred registry for rare neuromuscular disorders. Orphanet J Rare Dis. 2024 Feb 14;19(1):66. doi: 10.1186/s13023-024-03059-3. PMID: 38355534; PMCID: PMC10865673.
 xref: http://snomed.info/id/263659003
-is_a: PROMOT:0010022 ! Young adulthood
+is_a: PROMOT:0010011 ! Young adulthood
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 property_value: seeAlso HP:0025708
+property_value: skos:closeMatch "http://purl.obolibrary.org/obo/NCIT_C27954" xsd:string
 
 [Term]
-id: PROMOT:0010024
+id: PROMOT:0010013
 name: Intermediate young adulthood
 def: "Age category including people between 19 and 24 years old (inclusive)." [] {IAO:0000119="HP:0025709"}
-is_a: PROMOT:0010022 ! Young adulthood
+is_a: PROMOT:0010011 ! Young adulthood
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 property_value: seeAlso HP:0025709
 
 [Term]
-id: PROMOT:0010025
+id: PROMOT:0010014
 name: Late young adulthood
 def: "Age category including people between 25 and 39 years old (inclusive)." [] {IAO:0000119="HP:0025710"}
 comment: This term includes the full 19th year of age up to the completed 25th year of age (i.e., less than the 25th birthday). [from: HP:0025709]
-is_a: PROMOT:0010022 ! Young adulthood
+is_a: PROMOT:0010011 ! Young adulthood
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 property_value: seeAlso HP:0025710
 
 [Term]
-id: PROMOT:0010026
+id: PROMOT:0010015
 name: Antenatal age
 def: "Age category prior to birth." [] {IAO:0000119="HP:0025710"}
 comment: This term includes the full 25th year of age up to the completed 40th year of age (i.e., less than the 40th birthday). [from: HP:0025710]
@@ -315,145 +323,128 @@ property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 property_value: seeAlso HP:0025710
 
 [Term]
-id: PROMOT:0010027
+id: PROMOT:0010016
 name: Embryonal
 def: "Age category up to 8 weeks following fertilization, corresponding to 10 weeks of gestation (inclusive)." [] {IAO:0000119="HP:0011460"}
-is_a: PROMOT:0010026 ! Antenatal age
+is_a: PROMOT:0010015 ! Antenatal age
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 property_value: seeAlso HP:0011460
+property_value: skos:closeMatch "http://purl.obolibrary.org/obo/NCIT_C99135" xsd:string
 
 [Term]
-id: PROMOT:0010028
+id: PROMOT:0010017
 name: Fetal
 def: "Age prior to birth but after 8 weeks of embryonic development (corresponding to a gestational age of 10 weeks)." [] {IAO:0000119="HP:0011461"}
 comment: [EURO-NMD] Atalia A et al., EURO-NMD registry: federated FAIR infrastructure, innovative technologies and concepts of a patient-centred registry for rare neuromuscular disorders. Orphanet J Rare Dis. 2024 Feb 14;19(1):66. doi: 10.1186/s13023-024-03059-3. PMID: 38355534; PMCID: PMC10865673.
 xref: http://snomed.info/id/303112003
-is_a: PROMOT:0010026 ! Antenatal age
+is_a: PROMOT:0010015 ! Antenatal age
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 property_value: seeAlso HP:0011461
+property_value: skos:closeMatch "http://purl.obolibrary.org/obo/NCIT_C89885" xsd:string
 
 [Term]
-id: PROMOT:0010029
+id: PROMOT:0010018
 name: Late first trimester
 def: "Category prior to birth in the first trimester during the early fetal period, which is defined as 11 to 13 weeks of gestation (inclusive)." [] {IAO:0000119="HP:0034199"}
-is_a: PROMOT:0010028 ! Fetal
+is_a: PROMOT:0010017 ! Fetal
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 property_value: seeAlso HP:0034199
 
 [Term]
-id: PROMOT:0010030
+id: PROMOT:0010019
 name: Second trimester
 def: "Category prior to birth during the second trimester, which comprises the range of gestational ages from 14 to 27 weeks of gestation (inclusive)." [] {IAO:0000119="HP:0034198"}
-is_a: PROMOT:0010028 ! Fetal
+is_a: PROMOT:0010017 ! Fetal
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 property_value: seeAlso HP:0034198
 
 [Term]
-id: PROMOT:0010031
+id: PROMOT:0010020
 name: Third trimester
 def: "Category prior to birth during the third trimester, which is defined as 28 weeks and zero days (28+0) of gestation and beyond." [] {IAO:0000119="HP:0034197"}
-is_a: PROMOT:0010028 ! Fetal
+is_a: PROMOT:0010017 ! Fetal
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 property_value: seeAlso HP:0034197
 
 [Term]
-id: PROMOT:0010032
+id: PROMOT:0010021
 name: Congenital
 def: "Age catefory corresponding to birth." [] {IAO:0000119="HP:0003577"}
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 property_value: seeAlso HP:0003577
 
 [Term]
-id: PROMOT:0010033
+id: PROMOT:0010022
 name: Neonatal age
 def: "Age within the first 28 days of life." [] {IAO:0000119="HP:0003623"}
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 property_value: seeAlso HP:0003623
+property_value: skos:closeMatch "http://purl.obolibrary.org/obo/NCIT_C16731" xsd:string
 
 [Term]
-id: PROMOT:0010034
+id: PROMOT:0010023
 name: Pediatric age
 def: "Age category before adulthood, defined here as before the age of 16 years, but excluding neonatal or congenital onset. It includes people from the age of 28 days to 15 years old (included)." [] {IAO:0000119="HP:0410280"}
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 property_value: seeAlso HP:0410280
 
 [Term]
-id: PROMOT:0010035
+id: PROMOT:0010024
 name: Childhood
 def: "Age category including people from 1 to 4 years old (inclusive)." [] {IAO:0000119="HP:0011463"}
 comment: JP: Translated to spanish using Bing Translator
 xref: http://snomed.info/id/255398004
-is_a: PROMOT:0010034 ! Pediatric age
+is_a: PROMOT:0010023 ! Pediatric age
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 property_value: seeAlso HP:0011463
+property_value: skos:closeMatch "http://purl.obolibrary.org/obo/NCIT_C89345" xsd:string
 
 [Term]
-id: PROMOT:0010036
+id: PROMOT:0010025
 name: Infantile age
 def: "Age category including people from 28 days to under 1 year old." [] {IAO:0000119="HP:0003593"}
 comment: [EURO-NMD] Atalia A et al., EURO-NMD registry: federated FAIR infrastructure, innovative technologies and concepts of a patient-centred registry for rare neuromuscular disorders. Orphanet J Rare Dis. 2024 Feb 14;19(1):66. doi: 10.1186/s13023-024-03059-3. PMID: 38355534; PMCID: PMC10865673.
 xref: http://snomed.info/id/3658006
-is_a: PROMOT:0010034 ! Pediatric age
+is_a: PROMOT:0010023 ! Pediatric age
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 property_value: seeAlso HP:0003593
+property_value: skos:closeMatch "http://purl.obolibrary.org/obo/NCIT_C27956" xsd:string
+property_value: skos:closeMatch "http://purl.obolibrary.org/obo/NCIT_C49643" xsd:string
 
 [Term]
-id: PROMOT:0010037
+id: PROMOT:0010026
 name: Juvenile age
 def: "Age category including people between 5 and 15 years old (inclusive)." [] {IAO:0000119="HP:0003621"}
 comment: JP: Translated to spanish using Bing Translator
 xref: http://snomed.info/id/713153009
-is_a: PROMOT:0010034 ! Pediatric age
+is_a: PROMOT:0010023 ! Pediatric age
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 property_value: seeAlso HP:0003621
+property_value: skos:closeMatch "http://purl.obolibrary.org/obo/NCIT_C85405" xsd:string
 
 [Term]
-id: PROMOT:0010038
+id: PROMOT:0010027
 name: Perimenopausal age
 def: "Age category including people undergoing perimenopause, i.e. the period of life shortly before the occurence of the menopause." [] {IAO:0000119="HP:6000314"}
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 property_value: seeAlso HP:6000314
 
 [Term]
-id: PROMOT:0010039
+id: PROMOT:0010028
 name: Postmenopausal age
 def: "Age category including people undergoing postmenopause, i.e. the period of life after the occurrence of the menopause." [] {IAO:0000119="HP:6000315"}
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 property_value: seeAlso HP:6000315
 
 [Term]
-id: PROMOT:0010040
+id: PROMOT:0010029
 name: Puerpural age
 def: "Age category including ages refering to childbirth or period after immediately following." [] {IAO:0000119="HP:4000040"}
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 property_value: seeAlso HP:4000040
 
 [Term]
-id: PROMOT:0010042
-name: Female sex at birth
-def: "Physical sexual characteristiscs at birth that are stated as female." []
-comment: [EURO-NMD] Atalia A et al., EURO-NMD registry: federated FAIR infrastructure, innovative technologies and concepts of a patient-centred registry for rare neuromuscular disorders. Orphanet J Rare Dis. 2024 Feb 14;19(1):66. doi: 10.1186/s13023-024-03059-3. PMID: 38355534; PMCID: PMC10865673.
-xref: http://snomed.info/id/248152002
-property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
-
-[Term]
-id: PROMOT:0010043
-name: Intersex at birth
-def: "Physical sexual characteristiscs at birth that are stated as intersex." []
-comment: [EURO-NMD] Atalia A et al., EURO-NMD registry: federated FAIR infrastructure, innovative technologies and concepts of a patient-centred registry for rare neuromuscular disorders. Orphanet J Rare Dis. 2024 Feb 14;19(1):66. doi: 10.1186/s13023-024-03059-3. PMID: 38355534; PMCID: PMC10865673.
-xref: http://snomed.info/id/32570691000036100
-property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
-
-[Term]
-id: PROMOT:0010044
-name: Male sex at birth
-def: "Physical sexual characteristiscs at birth that are stated as male." []
-comment: [EURO-NMD] Atalia A et al., EURO-NMD registry: federated FAIR infrastructure, innovative technologies and concepts of a patient-centred registry for rare neuromuscular disorders. Orphanet J Rare Dis. 2024 Feb 14;19(1):66. doi: 10.1186/s13023-024-03059-3. PMID: 38355534; PMCID: PMC10865673.
-xref: http://snomed.info/id/248153007
-property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
-
-[Term]
-id: PROMOT:0010045
+id: PROMOT:0010030
 name: Patient sex at birth unknown
 def: "Physical sexual characteristiscs at birth that are unknown." []
 comment: [EURO-NMD] Atalia A et al., EURO-NMD registry: federated FAIR infrastructure, innovative technologies and concepts of a patient-centred registry for rare neuromuscular disorders. Orphanet J Rare Dis. 2024 Feb 14;19(1):66. doi: 10.1186/s13023-024-03059-3. PMID: 38355534; PMCID: PMC10865673.
@@ -461,16 +452,16 @@ xref: http://snomed.info/id/184115007
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
-id: PROMOT:0010046
+id: PROMOT:0010031
 name: Sex at birth not recorded
 def: "Physical sexual characteristiscs at birth that are not recorded." []
 comment: [EURO-NMD] Atalia A et al., EURO-NMD registry: federated FAIR infrastructure, innovative technologies and concepts of a patient-centred registry for rare neuromuscular disorders. Orphanet J Rare Dis. 2024 Feb 14;19(1):66. doi: 10.1186/s13023-024-03059-3. PMID: 38355534; PMCID: PMC10865673.
 xref: http://snomed.info/id/1220561009
-is_a: PROMOT:0010045 ! Patient sex at birth unknown
+is_a: PROMOT:0010030 ! Patient sex at birth unknown
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
-id: PROMOT:0010050
+id: PROMOT:0010032
 name: Gender identity unknown
 def: "Gender identity of a person that is unknown." []
 comment: [EURO-NMD] Atalia A et al., EURO-NMD registry: federated FAIR infrastructure, innovative technologies and concepts of a patient-centred registry for rare neuromuscular disorders. Orphanet J Rare Dis. 2024 Feb 14;19(1):66. doi: 10.1186/s13023-024-03059-3. PMID: 38355534; PMCID: PMC10865673.
@@ -478,16 +469,16 @@ xref: http://snomed.info/id/394743007
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
-id: PROMOT:0010051
+id: PROMOT:0010033
 name: Gender identity not recorded
 def: "Gender identity of a person that is unknown because unrecorded." []
 comment: [EURO-NMD] Atalia A et al., EURO-NMD registry: federated FAIR infrastructure, innovative technologies and concepts of a patient-centred registry for rare neuromuscular disorders. Orphanet J Rare Dis. 2024 Feb 14;19(1):66. doi: 10.1186/s13023-024-03059-3. PMID: 38355534; PMCID: PMC10865673.
 xref: http://snomed.info/id/1220561009
-is_a: PROMOT:0010050 ! Gender identity unknown
+is_a: PROMOT:0010032 ! Gender identity unknown
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
-id: PROMOT:0010053
+id: PROMOT:0010034
 name: Consent status
 def: "A status of the consent of a person." []
 comment: Ongoing discussion
@@ -495,84 +486,84 @@ xref: http://snomed.info/id/309370004
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
-id: PROMOT:0010054
+id: PROMOT:0010035
 name: En attente
 def: "A status of a consent that is waiting to be defined." []
 comment: Ongoing discussion
-is_a: PROMOT:0010053 ! Consent status
+is_a: PROMOT:0010034 ! Consent status
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
-id: PROMOT:0010055
+id: PROMOT:0010036
 name: Proposed
 def: "A status of a consent that has been proposed to a person for them to decide." []
 comment: Ongoing discussion
-is_a: PROMOT:0010053 ! Consent status
+is_a: PROMOT:0010034 ! Consent status
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
-id: PROMOT:0010056
+id: PROMOT:0010037
 name: Actif
 def: "A status of a consent that has been approved by the concerned person." []
 comment: HL7 FHIR
-is_a: PROMOT:0010053 ! Consent status
+is_a: PROMOT:0010034 ! Consent status
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
-id: PROMOT:0010057
+id: PROMOT:0010038
 name: Rejected
 def: "A status of a consent that has been rejected by the concerned person." []
 comment: HL7 FHIR
-is_a: PROMOT:0010053 ! Consent status
+is_a: PROMOT:0010034 ! Consent status
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
-id: PROMOT:0010058
+id: PROMOT:0010039
 name: Inactif
 def: "A status of a consent that is inactive." []
 comment: Ongoing discussion
 xref: http://snomed.info/id/73425007
-is_a: PROMOT:0010053 ! Consent status
+is_a: PROMOT:0010034 ! Consent status
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
-id: PROMOT:0010059
+id: PROMOT:0010040
 name: Entered in Error
 def: "A status of a consent that has been entered by error." []
 comment: Ongoing discussion
 xref: http://snomed.info/id/723510000
-is_a: PROMOT:0010053 ! Consent status
+is_a: PROMOT:0010034 ! Consent status
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
-id: PROMOT:0010061
+id: PROMOT:0010041
 name: Consent type
 def: "The type of consent given by a person that precises the details of what is consented" []
 
 [Term]
-id: PROMOT:0010062
+id: PROMOT:0010042
 name: Accord pour être contacté à des fins de recherche
 def: "An agreement given by a patient to be contacted by research teams for research purposes." []
 comment: [EURO-NMD] Atalia A et al., EURO-NMD registry: federated FAIR infrastructure, innovative technologies and concepts of a patient-centred registry for rare neuromuscular disorders. Orphanet J Rare Dis. 2024 Feb 14;19(1):66. doi: 10.1186/s13023-024-03059-3. PMID: 38355534; PMCID: PMC10865673.
-is_a: PROMOT:0010061 ! Consent type
+is_a: PROMOT:0010041 ! Consent type
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
-id: PROMOT:0010063
+id: PROMOT:0010043
 name: Consent to the reuse of data
 def: "A consent given by a person to the reuse of their data." []
 comment: [EURO-NMD] Atalia A et al., EURO-NMD registry: federated FAIR infrastructure, innovative technologies and concepts of a patient-centred registry for rare neuromuscular disorders. Orphanet J Rare Dis. 2024 Feb 14;19(1):66. doi: 10.1186/s13023-024-03059-3. PMID: 38355534; PMCID: PMC10865673.
-is_a: PROMOT:0010061 ! Consent type
+is_a: PROMOT:0010041 ! Consent type
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
-id: PROMOT:0010064
+id: PROMOT:0010044
 name: Unrecorded handedness
 def: "An handedness that is unrecorded." []
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
-id: PROMOT:0010065
+id: PROMOT:0010045
 name: Patient à risque de chute
 def: "A patient with phenotypes that allow to assess the patient undergo a risk of fall. (quality?)" []
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
