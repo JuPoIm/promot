@@ -1,6 +1,6 @@
 format-version: 1.2
 data-version: promot/releases/2026-03-25/promot-non-classified.owl
-date: 25:03:2026 17:43
+date: 25:03:2026 18:16
 subsetdef: hposlim_core ""
 subsetdef: http://purl.obolibrary.org/obo/valid_for_go_annotation_extension ""
 subsetdef: http://purl.obolibrary.org/obo/valid_for_go_gp2term ""
@@ -4363,8 +4363,8 @@ alt_id: HP:0009018
 alt_id: HP:0031988
 def: "Sudden and involuntary contractions of one or more muscles." [https://orcid.org/0000-0002-0736-9199]
 synonym: "crampe musculaire" EXACT []
-synonym: "Muscle cramps" EXACT []
 synonym: "Muscle cramps" EXACT plural_form []
+synonym: "Muscle cramps" EXACT []
 synonym: "Muscle spasms" EXACT plural_form []
 synonym: "Nocturnal hand and foot cramps" NARROW []
 synonym: "Nocturnal leg cramp" NARROW []
@@ -9596,7 +9596,6 @@ synonym: "Year of death" EXACT [] {NCIT:P383="PT", NCIT:P384="CPTAC"}
 synonym: "year of death" EXACT [] {NCIT:P383="SY", NCIT:P385="VAR", NCIT:P384="GDC"}
 synonym: "year_of_death" EXACT [] {NCIT:P383="PT", NCIT:P385="VAR", NCIT:P384="GDC"}
 is_a: NCIT:C25164 ! Date
-is_a: SNOMED:363787002 ! Observable entity
 property_value: NCIT:NHC0 "C156426" xsd:string
 property_value: NCIT:P106 "Temporal Concept" xsd:string
 property_value: NCIT:P108 "Year of Death" xsd:string
@@ -9657,8 +9656,8 @@ synonym: "Patients" EXACT [] {NCIT:P383="SY", NCIT:P384="NCI"}
 synonym: "PT" EXACT [] {NCIT:P383="AB", NCIT:P384="NCI"}
 is_a: NCBITaxon:9606 ! Homo sapiens
 relationship: PROMOT:2000004 SO:0001060 ! est porteur de la mutation sequence_variant
-relationship: PROMOT:2000006 SNOMED:125679009 ! is related to Blood relative
-relationship: PROMOT:2000007 IAO:0020000 {cardinality="1"} ! has identifier identifier
+relationship: PROMOT:2000006 SNOMED:125679009 ! est lié à Blood relative
+relationship: PROMOT:2000007 IAO:0020000 {cardinality="1"} ! a pour identifiant identifier
 relationship: RO:0002200 HP:0000118 ! has phenotype Phenotypic abnormality
 property_value: NCIT:NHC0 "C16960" xsd:string
 property_value: NCIT:P106 "Patient or Disabled Group" xsd:string
@@ -9826,7 +9825,6 @@ synonym: "Diagnosis Year" EXACT [] {NCIT:P383="SY", NCIT:P384="NCI"}
 synonym: "Diagnosis Year" EXACT [] {NCIT:P383="SY", NCIT:P384="caDSR"}
 synonym: "Year of Diagnosis" EXACT [] {NCIT:P383="PT", NCIT:P384="NCI"}
 is_a: NCIT:C25164 ! Date
-is_a: SNOMED:363787002 ! Observable entity
 property_value: NCIT:NHC0 "C210821" xsd:string
 property_value: NCIT:P106 "Temporal Concept" xsd:string
 property_value: NCIT:P108 "Year of Diagnosis" xsd:string
@@ -9859,8 +9857,8 @@ synonym: "Age" EXACT [] {NCIT:P383="PT", NCIT:P385="SEND-STSPRM", NCIT:P384="CDI
 synonym: "Age" EXACT [] {NCIT:P383="SY", NCIT:P384="caDSR"}
 synonym: "Age" EXACT [] {NCIT:P383="SY", NCIT:P384="CDISC"}
 synonym: "Age" EXACT [] {NCIT:P383="PT", NCIT:P384="NCI"}
-synonym: "age" EXACT [] {NCIT:P383="PT", NCIT:P384="BRIDG 3.0.3"}
 synonym: "age" EXACT [] {NCIT:P383="PT", NCIT:P384="BRIDG 5.3"}
+synonym: "age" EXACT [] {NCIT:P383="PT", NCIT:P384="BRIDG 3.0.3"}
 synonym: "Aged" EXACT [] {NCIT:P383="AD", NCIT:P384="NCI"}
 synonym: "Chronological Age" EXACT [] {NCIT:P383="SY", NCIT:P384="NCI"}
 synonym: "Chronological Age" EXACT [] {NCIT:P383="PT", NCIT:P384="NICHD"}
@@ -10251,7 +10249,6 @@ synonym: "Year of Birth" EXACT [] {NCIT:P383="PT", NCIT:P384="OORO", NCIT:P386="
 synonym: "year of birth" EXACT [] {NCIT:P383="SY", NCIT:P385="VAR", NCIT:P384="GDC"}
 synonym: "year_of_birth" EXACT [] {NCIT:P383="PT", NCIT:P385="VAR", NCIT:P384="GDC"}
 is_a: NCIT:C25164 ! Date
-is_a: SNOMED:363787002 ! Observable entity
 property_value: NCIT:A42 NCIT:C38046
 property_value: NCIT:NHC0 "C83164" xsd:string
 property_value: NCIT:P106 "Temporal Concept" xsd:string
@@ -10300,7 +10297,6 @@ property_value: NCIT:P322 "ICDC" xsd:string
 id: NCIT:C99800
 name: Year of onset
 comment: [PROMOT note] [Derived from RD-CDM] [5.4 Date of Onset]
-is_a: SNOMED:363787002 ! Observable entity
 
 [Term]
 id: ORDO:270
@@ -11828,7 +11824,7 @@ id: SNOMED:125679009
 name: Blood relative
 comment: [EURO-NMD] Atalia A et al., EURO-NMD registry: federated FAIR infrastructure, innovative technologies and concepts of a patient-centred registry for rare neuromuscular disorders. Orphanet J Rare Dis. 2024 Feb 14;19(1):66. doi: 10.1186/s13023-024-03059-3. PMID: 38355534; PMCID: PMC10865673.
 is_a: NCBITaxon:9606 ! Homo sapiens
-relationship: PROMOT:2000006 NCIT:C16960 ! is related to Patient
+relationship: PROMOT:2000006 NCIT:C16960 ! est lié à Patient
 property_value: dc11:type "person" xsd:string
 property_value: sct-ext:definitionStatus "Primitif" xsd:string
 property_value: sct-ext:fsn "Blood relative (person)" xsd:string
@@ -12972,12 +12968,15 @@ domain: HP:0000118 ! Phenotypic abnormality
 
 [Typedef]
 id: PROMOT:2000006
-name: is related to
+name: est lié à
+def: "A relation between two organisms where the two organisms share a biological bond." []
+xref: SIO:000709
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Typedef]
 id: PROMOT:2000007
-name: has identifier
+name: a pour identifiant
+def: "A relation between an entity and its identifier where the identifier allows to indentify the first entity." []
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Typedef]
