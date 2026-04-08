@@ -52,7 +52,7 @@
         "val" : "PROMOT ontology"
       }, {
         "pred" : "http://www.geneontology.org/formats/oboInOwl#date",
-        "val" : "25:03:2026 18:34"
+        "val" : "08:04:2026 16:04"
       }, {
         "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
         "val" : "Additional acknowledgements:\n\t- Rachel Thompson\n\t- Thomas Bongivault, MSc\n\t- Marc Vincent, PhD\n"
@@ -64,9 +64,9 @@
         "val" : "More about PROMOT initiative at https://www.promotinitiative.com/\n"
       }, {
         "pred" : "http://www.w3.org/2002/07/owl#versionInfo",
-        "val" : "2026-03-25"
+        "val" : "2026-04-08"
       } ],
-      "version" : "http://purl.obolibrary.org/obo/promot/releases/2026-03-25/promot-base.json"
+      "version" : "http://purl.obolibrary.org/obo/promot/releases/2026-04-08/promot-base.json"
     },
     "nodes" : [ {
       "id" : "http://id.who.int/icd/entity/1083127119",
@@ -169,6 +169,9 @@
       "type" : "CLASS"
     }, {
       "id" : "http://purl.obolibrary.org/obo/HP_0012735",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/HP_0030197",
       "type" : "CLASS"
     }, {
       "id" : "http://purl.obolibrary.org/obo/HP_0031177",
@@ -573,7 +576,7 @@
         "definition" : {
           "val" : "The year of the resolution of an abnormal disposition, e.g. the year when a phenotype ceases existing."
         },
-        "comments" : [ "[PROMOT note] [Derived from RD-CDM] [6.2.4 Resolution Date] " ],
+        "comments" : [ "[EURO-NMD] Atalia A et al., EURO-NMD registry: federated FAIR infrastructure, innovative technologies and concepts of a patient-centred registry for rare neuromuscular disorders. Orphanet J Rare Dis. 2024 Feb 14;19(1):66. doi: 10.1186/s13023-024-03059-3. PMID: 38355534; PMCID: PMC10865673.", "[PROMOT note] [Derived from RD-CDM] [6.2.4 Resolution Date] ", "[RD-CDM] Graefe, A.S.L., Hübner, M.R., Rehburg, F. et al. An ontology-based rare disease common data model harmonising international registries, FHIR, and Phenopackets. Sci Data 12, 234 (2025). https://doi.org/10.1038/s41597-025-04558-z" ],
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
           "val" : "https://orcid.org/0009-0000-5160-7927"
@@ -1441,6 +1444,9 @@
             "basicPropertyValues" : [ {
               "pred" : "http://purl.obolibrary.org/obo/IAO_0000119",
               "val" : "HP:0033580"
+            }, {
+              "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
+              "val" : "[PROMOT project] Mansoore Gholizade (definition reviewer)"
             } ]
           }
         },
@@ -1459,7 +1465,13 @@
       "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "A fatigue that occurs when the subject is eating"
+          "val" : "Fatigue qui survient au moment de manger du fait de la faiblesse musculaire ou de la fatigabilité des muscles impliqués dans la mastication.",
+          "meta" : {
+            "basicPropertyValues" : [ {
+              "pred" : "http://purl.obolibrary.org/obo/IAO_0000119",
+              "val" : "translated from English by https://orcid.org/0009-0000-5160-7927 reviewed by https://orcid.org/0000-0003-2829-847"
+            } ]
+          }
         },
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
@@ -1471,11 +1483,17 @@
       }
     }, {
       "id" : "http://purl.obolibrary.org/obo/PROMOT_0032007",
-      "lbl" : "Difficulté à marcher sur de courtes distances",
+      "lbl" : "Dificultad para andar distancias cortas",
       "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "Difficulté à marcher sur de courtes distances, comme par exemple, difficulté à marcher à l’intérieur d’un bâtiment."
+          "val" : "Dificultad para andar menos de un kilómetro, como caminar por habitaciones y pasillos, dentro de un edificio o pequeñas distancias en el exterior. Es distinta de la dificultad para desplazarse por el entorno",
+          "meta" : {
+            "basicPropertyValues" : [ {
+              "pred" : "http://purl.obolibrary.org/obo/IAO_0000119",
+              "val" : "ICF:555410497"
+            } ]
+          }
         },
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
@@ -1487,11 +1505,17 @@
       }
     }, {
       "id" : "http://purl.obolibrary.org/obo/PROMOT_0032008",
-      "lbl" : "Difficulté à passer d’une position de base à une autre",
+      "lbl" : "Dificultad para cambiar las posturas corporales básicas",
       "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "Difficulté à passer d’une position de base à une autre, comme par exemple, difficulté à passer de la position assise à la position debout."
+          "val" : "Dificultad para adoptar o abandonar una postura, pasar de un lugar a otro, como levantarse de una silla para tumbarse en una cama, y adoptar o abandonar posiciones determinadas, como arrodillarse o sentarse en cuclillas. Es distinta de la dificultad para transferir el propio cuerpo.",
+          "meta" : {
+            "basicPropertyValues" : [ {
+              "pred" : "http://purl.obolibrary.org/obo/IAO_0000119",
+              "val" : "ICF:150502901"
+            } ]
+          }
         },
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
@@ -1507,7 +1531,13 @@
       "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "Perte de la satisfaction ou du plaisir à manger."
+          "val" : "Pérdida de la satisfacción o del placer de comer debida a las dificultades para comer.",
+          "meta" : {
+            "basicPropertyValues" : [ {
+              "pred" : "http://purl.obolibrary.org/obo/IAO_0000119",
+              "val" : "Translated from French using Reverso."
+            } ]
+          }
         },
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
@@ -1523,7 +1553,7 @@
       "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "Difficulté à avaler de la nourriture solide."
+          "val" : "Dificultad para tragar alimentos sólidos."
         },
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
@@ -1542,7 +1572,7 @@
       "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "Difficulté à avaler de la nourriture liquide, disctincte de l’hydrophobie."
+          "val" : "Dificultad para tragar comida líquida. Es distinta de la hidrofobia."
         },
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
@@ -1561,7 +1591,13 @@
       "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "Une faiblesse de la musculature faciale, c.à.d. d’un ou plusieurs muscles inervés par le septième nerf cranial, qui se manifeste quand un groupe musculaire facial est sollicité et qui diminue après que le groupe en question a été mis au repos. En résumé, il s’agit d’une diminution de la force des muscles faciaux à la suite d’une sollicitation répêtée."
+          "val" : "Une faiblesse de la musculature faciale, c.à.d. d’un ou plusieurs muscles inervés par le septième nerf cranial, qui se manifeste quand un groupe musculaire facial est sollicité et qui diminue après que le groupe en question a été mis au repos. En résumé, il s’agit d’une diminution de la force des muscles faciaux à la suite d’une sollicitation répêtée.",
+          "meta" : {
+            "basicPropertyValues" : [ {
+              "pred" : "http://purl.obolibrary.org/obo/IAO_0000119",
+              "val" : "translated from English by https://orcid.org/0009-0000-5160-7927 reviewed by https://orcid.org/0000-0003-2829-847"
+            } ]
+          }
         },
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
@@ -1580,7 +1616,13 @@
       "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "Une faiblesse des muscles occulaires qui se manifeste quand un groupe musculaire occulaire est sollicité et qui diminue après que le groupe en question a été mis au repos. En résumé, il s’agit d’une diminution de la force des muscles occulaires à la suite d’une sollicitation répêtée."
+          "val" : "Une faiblesse des muscles occulaires qui se manifeste quand un groupe musculaire occulaire est sollicité et qui diminue après que le groupe en question a été mis au repos. En résumé, il s’agit d’une diminution de la force des muscles occulaires à la suite d’une sollicitation répêtée.",
+          "meta" : {
+            "basicPropertyValues" : [ {
+              "pred" : "http://purl.obolibrary.org/obo/IAO_0000119",
+              "val" : "translated from English by https://orcid.org/0009-0000-5160-7927 reviewed by https://orcid.org/0000-0003-2829-847"
+            } ]
+          }
         },
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
@@ -1599,7 +1641,13 @@
       "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "Une faiblesse des muscles axiaux, c.à.d. des muscles de la tête et du coup, de la colonne vertébrale et des côtes, qui se manifeste quand un groupe musculaire axial est sollicité et qui diminue après que le groupe en question a été mis au repos. En résumé, il s’agit d’une diminution de la force des muscles axiaux à la suite d’une sollicitation répêtée."
+          "val" : "Une faiblesse des muscles axiaux, c.à.d. des muscles de la tête et du cou, de la colonne vertébrale et des côtes, qui se manifeste quand un groupe musculaire axial est sollicité et qui diminue après que le groupe en question a été mis au repos. En résumé, il s’agit d’une diminution de la force des muscles axiaux à la suite d’une sollicitation répêtée.",
+          "meta" : {
+            "basicPropertyValues" : [ {
+              "pred" : "http://purl.obolibrary.org/obo/IAO_0000119",
+              "val" : "translated from English by https://orcid.org/0009-0000-5160-7927 reviewed by https://orcid.org/0000-0003-2829-847"
+            } ]
+          }
         },
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
@@ -1618,7 +1666,13 @@
       "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "Une faiblesse musculaire des muscles impliqués dans la mastication."
+          "val" : "Une faiblesse musculaire des muscles impliqués dans la mastication.",
+          "meta" : {
+            "basicPropertyValues" : [ {
+              "pred" : "http://purl.obolibrary.org/obo/IAO_0000119",
+              "val" : "translated from English by https://orcid.org/0009-0000-5160-7927 reviewed by https://orcid.org/0000-0003-2829-847"
+            } ]
+          }
         },
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
@@ -1771,7 +1825,10 @@
               "val" : "Definititon provided by the Groupe de Recherche Interdisciplinaire sur les Maladies Neuromusculaires (GRIMN)."
             } ]
           }
-        }
+        },
+        "xrefs" : [ {
+          "val" : "http://snomed.info/id/404933001"
+        } ]
       }
     }, {
       "id" : "http://purl.obolibrary.org/obo/PROMOT_0100012",
@@ -2747,7 +2804,7 @@
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PROMOT_0032014",
       "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/HP_0003473"
+      "obj" : "http://purl.obolibrary.org/obo/HP_0030197"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PROMOT_0032015",
       "pred" : "is_a",

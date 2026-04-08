@@ -109,16 +109,6 @@ imports/ncit_import.owl: $(MIRRORDIR)/ncit.owl $(IMPORTDIR)/ncit_terms.txt
 		annotate --ontology-iri $(ONTBASE)/$@ $(ANNOTATE_ONTOLOGY_VERSION) --output $@.tmp.owl && mv $@.tmp.owl $@; fi
 
 # ----------------------------------------
-# Module NCBITAXON : classe
-# ----------------------------------------
-imports/ncbitaxon_import.owl: $(IMPORTSDATADIR)/NCBITAXON.ttl $(IMPORTDIR)/ncbitaxon_terms.txt
-	if [ $(IMP) = true ]; then $(ROBOT) convert -i $< -f owl -o $(IMPORTSDATADIR)/NCBITAXON.owl \
-		query --update $(SPARQLDIR)/preprocess-module.ru \
-		filter -T $(IMPORTDIR)/ncbitaxon_terms.txt --select "self annotations" --signature true \
-		query --update $(SPARQLDIR)/inject-subset-declaration.ru --update $(SPARQLDIR)/postprocess-module.ru \
-		annotate --ontology-iri $(ONTBASE)/$@ $(ANNOTATE_ONTOLOGY_VERSION) --output $@.tmp.owl && mv $@.tmp.owl $@; fi
-
-# ----------------------------------------
 # Module ORDO : classes
 # ----------------------------------------
 imports/ordo_import.owl: $(MIRRORDIR)/ordo.owl $(IMPORTDIR)/ordo_terms.txt
@@ -135,23 +125,6 @@ $(IMPORTDIR)/ro_import.owl: $(MIRRORDIR)/ro.owl $(IMPORTDIR)/ro_terms.txt
 		filter -T $(IMPORTDIR)/ro_terms.txt --select "self annotations" --signature true \
 		query --update $(SPARQLDIR)/inject-subset-declaration.ru --update $(SPARQLDIR)/postprocess-module.ru \
 		annotate --ontology-iri $(ONTBASE)/$@ $(ANNOTATE_ONTOLOGY_VERSION) --output $@.tmp.owl && mv $@.tmp.owl $@; fi
-
-# ----------------------------------------
-# Module SIO : classes and object & data properties
-# ----------------------------------------
-#$(IMPORTDIR)/sio_import.owl: $(IMPORTDIR)/sio_terms_alone.txt $(IMPORTDIR)/sio_terms.txt
-#	if [ $(IMP) = true ]; then curl -L https://data.bioontology.org/ontologies/SIO/submissions/94/download?apikey=8b5b7825-538d-40e0-9e9e-5ab9274a9aeb \
-#		-o $(IMPORTSDATADIR)/sio-release.owl; \
-#		$(ROBOT) query -i $(IMPORTSDATADIR)/sio-release.owl --update $(SPARQLDIR)/preprocess-module.ru \
-#		filter -T $(IMPORTDIR)/sio_terms_alone.txt \
-#		--select "self annotations" --signature true \
-#		--output $@.tmp.owl; \
-#		$(ROBOT) query -i $(IMPORTSDATADIR)/sio-release.owl --update $(SPARQLDIR)/preprocess-module.ru \
-#		filter -T $(IMPORTDIR)/sio_terms.txt --select "self descendants annotations" --signature true \
-#		query --update $(SPARQLDIR)/inject-subset-declaration.ru --update $(SPARQLDIR)/postprocess-module.ru \
-#		annotate --ontology-iri $(ONTBASE)/$@ $(ANNOTATE_ONTOLOGY_VERSION) \
-#		merge -i $@.tmp.owl \
-#		--output $@.tmp.owl && mv $@.tmp.owl $@; fi
 
 # ----------------------------------------
 # Module SNOMED : classes
@@ -179,6 +152,8 @@ $(IMPORTDIR)/ro_import.owl: $(MIRRORDIR)/ro.owl $(IMPORTDIR)/ro_terms.txt
 $(IMPORTDIR)/snomed_import.owl: $(IMPORTSDATADIR)/ontology-2025-11-14_EN-ES.owl $(IMPORTSDATADIR)/SnomedCT_NationalFR_OWL.owl $(IMPORTDIR)/snomed_terms.txt
 	if [ $(IMP) = true ]; then $(ROBOT) query -i $< --update $(SPARQLDIR)/preprocess-module.ru \
 		filter -T $(IMPORTDIR)/snomed_terms.txt --select "annotations self" --signature true \
+		remove --select complement --drop-axiom-annotations rdfs:label
+		rename --mapping skos:prefLabel rdfs:label \
 		query --update $(SPARQLDIR)/inject-subset-declaration.ru --update $(SPARQLDIR)/postprocess-module.ru \
 		annotate --ontology-iri $(ONTBASE)/$@ $(ANNOTATE_ONTOLOGY_VERSION) \
 		--output $@.tmp.owl ; \
@@ -189,7 +164,7 @@ $(IMPORTDIR)/snomed_import.owl: $(IMPORTSDATADIR)/ontology-2025-11-14_EN-ES.owl 
 		merge -i $@.tmp.owl --output $@.tmp.owl && mv $@.tmp.owl $@ ; fi
 
 # ----------------------------------------
-# Module ICF (EN) :
+# Module ICF (EN):
 # ----------------------------------------
 # WHAT'S DONE 
 # 1. Download file from https://github.com/whoficitc/harmonization/blob/main/ontology/whofic-2025-05-24.owl

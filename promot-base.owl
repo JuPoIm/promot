@@ -64,7 +64,7 @@
      xmlns:CPATH_VISIT_OCCURRENCE="https://w3id.org/cpont/visit_occurrence/"
      xmlns:CPATH_CONDITION_OCCURRENCE="https://w3id.org/cpont/condition_occurrence/">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/promot/promot-base.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/promot/releases/2026-03-25/promot-base.owl"/>
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/promot/releases/2026-04-08/promot-base.owl"/>
         <dc11:contributor>Anita Burgun MD, PhD
 https://orcid.org/0000-0001-6855-4366</dc11:contributor>
         <dc11:contributor>Carole Faviez PhD
@@ -94,7 +94,7 @@ https://orcid.org/0000-0002-3336-2476</dc11:creator>
         <dcterms:description>Ontology for modeling the three following neuromuscular diseases : OPMD, Congenital myopathies and Congenital myastenic syndroms. It aims to be also an ontology for building the PROMOT project relational database.</dcterms:description>
         <dcterms:license rdf:resource="https://creativecommons.org/licenses/by-nc-sa/4.0/"/>
         <dcterms:title>PROMOT ontology</dcterms:title>
-        <oboInOwl:date>25:03:2026 18:34</oboInOwl:date>
+        <oboInOwl:date>08:04:2026 16:04</oboInOwl:date>
         <rdfs:comment>Additional acknowledgements:
 	- Rachel Thompson
 	- Thomas Bongivault, MSc
@@ -106,7 +106,7 @@ https://orcid.org/0000-0002-3336-2476</dc11:creator>
 </rdfs:comment>
         <rdfs:seeAlso>More about PROMOT initiative at https://www.promotinitiative.com/
 </rdfs:seeAlso>
-        <owl:versionInfo>2026-03-25</owl:versionInfo>
+        <owl:versionInfo>2026-04-08</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -569,6 +569,12 @@ https://orcid.org/0000-0002-3336-2476</dc11:creator>
     <!-- http://purl.obolibrary.org/obo/HP_0012735 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0012735"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/HP_0030197 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0030197"/>
     
 
 
@@ -1457,7 +1463,9 @@ https://orcid.org/0000-0002-3336-2476</dc11:creator>
         <obo:IAO_0000115 xml:lang="fr">L’année de la disparition d’une entité, par exemple, l’année de disparition d’un phénotype.</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="en">The year of the resolution of an abnormal disposition, e.g. the year when a phenotype ceases existing.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
+        <rdfs:comment>[EURO-NMD] Atalia A et al., EURO-NMD registry: federated FAIR infrastructure, innovative technologies and concepts of a patient-centred registry for rare neuromuscular disorders. Orphanet J Rare Dis. 2024 Feb 14;19(1):66. doi: 10.1186/s13023-024-03059-3. PMID: 38355534; PMCID: PMC10865673.</rdfs:comment>
         <rdfs:comment>[PROMOT note] [Derived from RD-CDM] [6.2.4 Resolution Date] </rdfs:comment>
+        <rdfs:comment>[RD-CDM] Graefe, A.S.L., Hübner, M.R., Rehburg, F. et al. An ontology-based rare disease common data model harmonising international registries, FHIR, and Phenopackets. Sci Data 12, 234 (2025). https://doi.org/10.1038/s41597-025-04558-z</rdfs:comment>
         <rdfs:label xml:lang="fr">Année de disparition</rdfs:label>
         <rdfs:label xml:lang="en">Year of resolution</rdfs:label>
     </owl:Class>
@@ -2543,6 +2551,7 @@ https://orcid.org/0000-0002-3336-2476</dc11:creator>
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0032005">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0033580"/>
         <obo:IAO_0000115 xml:lang="fr">Deux anomalies dans l’EMG mesurant le potentiel d’action global d’un muscle (PAM), aussi appelé potentiel d’action musculaire composé.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="es">Dos hallazgos anormales en una medición de potencial de acción motora compuesta en EMG.</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="en">Two abnormal findings in a compound motor action potential measurement in EMG.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
         <obo:PROMOT_1000001>Congenital myasthenic syndrom Scoping review</obo:PROMOT_1000001>
@@ -2554,8 +2563,15 @@ https://orcid.org/0000-0002-3336-2476</dc11:creator>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0032005"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget xml:lang="fr">Deux anomalies dans l’EMG mesurant le potentiel d’action global d’un muscle (PAM), aussi appelé potentiel d’action musculaire composé.</owl:annotatedTarget>
+        <obo:IAO_0000119>translated from English by https://orcid.org/0009-0000-5160-7927</obo:IAO_0000119>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0032005"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget xml:lang="en">Two abnormal findings in a compound motor action potential measurement in EMG.</owl:annotatedTarget>
         <obo:IAO_0000119>HP:0033580</obo:IAO_0000119>
+        <rdfs:comment>[PROMOT project] Mansoore Gholizade (definition reviewer)</rdfs:comment>
     </owl:Axiom>
     
 
@@ -2564,12 +2580,28 @@ https://orcid.org/0000-0002-3336-2476</dc11:creator>
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0032006">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0012378"/>
-        <obo:IAO_0000115 xml:lang="en">A fatigue that occurs when the subject is eating</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">A fatigue that occurs when one is eating. It is due to weakness or fatiguable weakness of chewing muscles.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="es">Fatiga que se produce al momento de comer debida a la debilidad muscular o a la fatiga de los músculos involucrados en la masticación.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="fr">Fatigue qui survient au moment de manger du fait de la faiblesse musculaire ou de la fatigabilité des muscles impliqués dans la mastication.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
         <obo:PROMOT_1000001>[OPMD Scoping review on dysphagia] Côté C, Gagnon C, Youssof S, et al. The requirement for a disease-specific patient-reported outcome measure of dysphagia in oculopharyngeal muscular dystrophy. Muscle Nerve. 2019;59:445–50. doi: 10.1002/mus.26405</obo:PROMOT_1000001>
+        <rdfs:label xml:lang="es">Fatiga cuando se come</rdfs:label>
         <rdfs:label xml:lang="fr">Fatigue corrélée au fait de manger</rdfs:label>
         <rdfs:label xml:lang="en">Fatigue while eating</rdfs:label>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0032006"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget xml:lang="en">A fatigue that occurs when one is eating. It is due to weakness or fatiguable weakness of chewing muscles.</owl:annotatedTarget>
+        <obo:IAO_0000119>Medical experts</obo:IAO_0000119>
+        <rdfs:comment>https://orcid.org/0000-0003-2829-8470</rdfs:comment>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0032006"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget xml:lang="fr">Fatigue qui survient au moment de manger du fait de la faiblesse musculaire ou de la fatigabilité des muscles impliqués dans la mastication.</owl:annotatedTarget>
+        <obo:IAO_0000119>translated from English by https://orcid.org/0009-0000-5160-7927 reviewed by https://orcid.org/0000-0003-2829-847</obo:IAO_0000119>
+    </owl:Axiom>
     
 
 
@@ -2577,13 +2609,33 @@ https://orcid.org/0000-0002-3336-2476</dc11:creator>
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0032007">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0001288"/>
-        <obo:IAO_0000115 xml:lang="en">A difficulty to walk short distance. E.g. a difficulty to  walk inside a building such as a house.</obo:IAO_0000115>
-        <obo:IAO_0000115 xml:lang="fr">Difficulté à marcher sur de courtes distances, comme par exemple, difficulté à marcher à l’intérieur d’un bâtiment.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">A difficulty to walk for less than a kilometre, such as walking around rooms or hallways, within a building or for short distances outside. This is distinct from the difficulty of moving around.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="fr">Difficulté à avancer à pied, sur une distance de moins d&apos;un kilomètre, comme marcher dans sa chambre ou dans le couloir, dans un bâtiment ou sur de courtes distances à l&apos;extérieur.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="es">Dificultad para andar menos de un kilómetro, como caminar por habitaciones y pasillos, dentro de un edificio o pequeñas distancias en el exterior. Es distinta de la dificultad para desplazarse por el entorno</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
         <obo:PROMOT_1000001>[OPMD Scoping review 2026] Bélair N, Gagnon C, Duchesne E. What is known about muscle weakness, balance impairments and indoor mobility limitations in oculopharyngeal muscular dystrophy? A scoping review. J Neuromuscul Dis. 2025 Dec 30:22143602251397052. doi: 10.1177/22143602251397052. Epub ahead of print. PMID: 41467981.</obo:PROMOT_1000001>
         <rdfs:label xml:lang="en">Difficulty walking short distance</rdfs:label>
         <rdfs:label xml:lang="fr">Difficulté à marcher sur de courtes distances</rdfs:label>
+        <rdfs:label xml:lang="es">Dificultad para andar distancias cortas</rdfs:label>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0032007"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget xml:lang="en">A difficulty to walk for less than a kilometre, such as walking around rooms or hallways, within a building or for short distances outside. This is distinct from the difficulty of moving around.</owl:annotatedTarget>
+        <obo:IAO_0000119>ICF:555410497</obo:IAO_0000119>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0032007"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget xml:lang="fr">Difficulté à avancer à pied, sur une distance de moins d&apos;un kilomètre, comme marcher dans sa chambre ou dans le couloir, dans un bâtiment ou sur de courtes distances à l&apos;extérieur.</owl:annotatedTarget>
+        <obo:IAO_0000119>ICF:555410497</obo:IAO_0000119>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0032007"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget xml:lang="es">Dificultad para andar menos de un kilómetro, como caminar por habitaciones y pasillos, dentro de un edificio o pequeñas distancias en el exterior. Es distinta de la dificultad para desplazarse por el entorno</owl:annotatedTarget>
+        <obo:IAO_0000119>ICF:555410497</obo:IAO_0000119>
+    </owl:Axiom>
     
 
 
@@ -2591,13 +2643,33 @@ https://orcid.org/0000-0002-3336-2476</dc11:creator>
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0032008">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0100022"/>
-        <obo:IAO_0000115 xml:lang="en">A difficulty to change basic position. E.g. a difficulty to go from a sitting position to a standing position.</obo:IAO_0000115>
-        <obo:IAO_0000115 xml:lang="fr">Difficulté à passer d’une position de base à une autre, comme par exemple, difficulté à passer de la position assise à la position debout.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">A difficulty to change basic position, i.e. a difficulty getting into and out of a body position and moving from one location to another, such as getting up out of a chair to lie down on a bed, and getting into and out of positions of sitting, standing, kneeling or squatting. This is distinct from the difficulty of transferring oneself.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="fr">Difficulté à prendre et quitter une position et/ou à passer d&apos;un endroit à un autre, comme se lever d&apos;un fauteuil pour se coucher sur un lit, et comme prendre et quitter les positions assise, debout, à genoux ou accroupie. Cette difficulté est distincte de la difficulté à se transférrer.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="es">Dificultad para adoptar o abandonar una postura, pasar de un lugar a otro, como levantarse de una silla para tumbarse en una cama, y adoptar o abandonar posiciones determinadas, como arrodillarse o sentarse en cuclillas. Es distinta de la dificultad para transferir el propio cuerpo.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
         <obo:PROMOT_1000001>[OPMD Scoping review 2026] Bélair N, Gagnon C, Duchesne E. What is known about muscle weakness, balance impairments and indoor mobility limitations in oculopharyngeal muscular dystrophy? A scoping review. J Neuromuscul Dis. 2025 Dec 30:22143602251397052. doi: 10.1177/22143602251397052. Epub ahead of print. PMID: 41467981.</obo:PROMOT_1000001>
         <rdfs:label xml:lang="en">Difficulty changing basic position</rdfs:label>
         <rdfs:label xml:lang="fr">Difficulté à passer d’une position de base à une autre</rdfs:label>
+        <rdfs:label xml:lang="es">Dificultad para cambiar las posturas corporales básicas</rdfs:label>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0032008"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget xml:lang="en">A difficulty to change basic position, i.e. a difficulty getting into and out of a body position and moving from one location to another, such as getting up out of a chair to lie down on a bed, and getting into and out of positions of sitting, standing, kneeling or squatting. This is distinct from the difficulty of transferring oneself.</owl:annotatedTarget>
+        <obo:IAO_0000119>ICF:150502901</obo:IAO_0000119>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0032008"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget xml:lang="fr">Difficulté à prendre et quitter une position et/ou à passer d&apos;un endroit à un autre, comme se lever d&apos;un fauteuil pour se coucher sur un lit, et comme prendre et quitter les positions assise, debout, à genoux ou accroupie. Cette difficulté est distincte de la difficulté à se transférrer.</owl:annotatedTarget>
+        <obo:IAO_0000119>ICF:150502901</obo:IAO_0000119>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0032008"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget xml:lang="es">Dificultad para adoptar o abandonar una postura, pasar de un lugar a otro, como levantarse de una silla para tumbarse en una cama, y adoptar o abandonar posiciones determinadas, como arrodillarse o sentarse en cuclillas. Es distinta de la dificultad para transferir el propio cuerpo.</owl:annotatedTarget>
+        <obo:IAO_0000119>ICF:150502901</obo:IAO_0000119>
+    </owl:Axiom>
     
 
 
@@ -2605,13 +2677,34 @@ https://orcid.org/0000-0002-3336-2476</dc11:creator>
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0032009">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0012154"/>
-        <obo:IAO_0000115 xml:lang="en">An anhedonia that occurs when the subject is eating</obo:IAO_0000115>
-        <obo:IAO_0000115 xml:lang="fr">Perte de la satisfaction ou du plaisir à manger.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">A loss of enjoyment of mealtime due to difficulties while eating.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="fr">Perte de la satisfaction ou du plaisir à manger due à des difficultés pour manger.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="es">Pérdida de la satisfacción o del placer de comer debida a las dificultades para comer.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
         <obo:PROMOT_1000001>[OPMD Scoping review on dysphagia] Côté C, Gagnon C, Youssof S, et al. The requirement for a disease-specific patient-reported outcome measure of dysphagia in oculopharyngeal muscular dystrophy. Muscle Nerve. 2019;59:445–50. doi: 10.1002/mus.26405</obo:PROMOT_1000001>
+        <rdfs:label xml:lang="es">Anhedonia cuando se come</rdfs:label>
         <rdfs:label xml:lang="en">Anhedonia while eating</rdfs:label>
         <rdfs:label xml:lang="fr">Anhédonie légère corrélée au fait de manger</rdfs:label>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0032009"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget xml:lang="en">A loss of enjoyment of mealtime due to difficulties while eating.</owl:annotatedTarget>
+        <obo:IAO_0000119>Medical experts</obo:IAO_0000119>
+        <rdfs:comment>https://orcid.org/0000-0003-2829-8470</rdfs:comment>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0032009"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget xml:lang="fr">Perte de la satisfaction ou du plaisir à manger due à des difficultés pour manger.</owl:annotatedTarget>
+        <obo:IAO_0000119>translated from English by https://orcid.org/0009-0000-5160-7927 reviewed by https://orcid.org/0000-0003-2829-847</obo:IAO_0000119>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0032009"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget xml:lang="es">Pérdida de la satisfacción o del placer de comer debida a las dificultades para comer.</owl:annotatedTarget>
+        <obo:IAO_0000119>Translated from French using Reverso.</obo:IAO_0000119>
+    </owl:Axiom>
     
 
 
@@ -2621,12 +2714,27 @@ https://orcid.org/0000-0002-3336-2476</dc11:creator>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0002015"/>
         <obo:IAO_0000115 xml:lang="en">Difficulty in swallowing solid food.</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="fr">Difficulté à avaler de la nourriture solide.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="es">Dificultad para tragar alimentos sólidos.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
         <obo:PROMOT_1000001>[OPMD Clinical Registry Form]</obo:PROMOT_1000001>
         <obo:PROMOT_1000001>[OPMD Scoping review on dysphagia] Côté C, Gagnon C, Youssof S, et al. The requirement for a disease-specific patient-reported outcome measure of dysphagia in oculopharyngeal muscular dystrophy. Muscle Nerve. 2019;59:445–50. doi: 10.1002/mus.26405</obo:PROMOT_1000001>
+        <rdfs:label xml:lang="es">Disfagia con sólidos</rdfs:label>
         <rdfs:label xml:lang="en">Dysphagia for solid</rdfs:label>
         <rdfs:label xml:lang="fr">Dysphagie avec de la nourriture solide</rdfs:label>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0032010"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget xml:lang="en">Difficulty in swallowing solid food.</owl:annotatedTarget>
+        <obo:IAO_0000119>Medical experts</obo:IAO_0000119>
+        <rdfs:comment>https://orcid.org/0000-0003-2829-8470</rdfs:comment>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0032010"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget xml:lang="fr">Difficulté à avaler de la nourriture solide.</owl:annotatedTarget>
+        <obo:IAO_0000119>translated from English by https://orcid.org/0009-0000-5160-7927 reviewed by https://orcid.org/0000-0003-2829-847</obo:IAO_0000119>
+    </owl:Axiom>
     
 
 
@@ -2635,13 +2743,28 @@ https://orcid.org/0000-0002-3336-2476</dc11:creator>
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0032011">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0002015"/>
         <obo:IAO_0000115 xml:lang="en">Difficulty in swallowing liquid food. This is distinct from hydrophobia.</obo:IAO_0000115>
-        <obo:IAO_0000115 xml:lang="fr">Difficulté à avaler de la nourriture liquide, disctincte de l’hydrophobie.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="fr">Difficulté à avaler des aliments liquides, disctincte de l’hydrophobie.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="es">Dificultad para tragar comida líquida. Es distinta de la hidrofobia.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
         <obo:PROMOT_1000001>[OPMD Clinical Registry Form]</obo:PROMOT_1000001>
         <obo:PROMOT_1000001>[OPMD Scoping review on dysphagia] Côté C, Gagnon C, Youssof S, et al. The requirement for a disease-specific patient-reported outcome measure of dysphagia in oculopharyngeal muscular dystrophy. Muscle Nerve. 2019;59:445–50. doi: 10.1002/mus.26405</obo:PROMOT_1000001>
+        <rdfs:label xml:lang="es">Disfagia con líquidos</rdfs:label>
         <rdfs:label xml:lang="en">Dysphagia for liquid</rdfs:label>
         <rdfs:label xml:lang="fr">Dysphagie avec de la nourriture liquide</rdfs:label>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0032011"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget xml:lang="en">Difficulty in swallowing liquid food. This is distinct from hydrophobia.</owl:annotatedTarget>
+        <obo:IAO_0000119>Medical experts</obo:IAO_0000119>
+        <rdfs:comment>https://orcid.org/0000-0003-2829-8470</rdfs:comment>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0032011"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget xml:lang="fr">Difficulté à avaler des aliments liquides, disctincte de l’hydrophobie.</owl:annotatedTarget>
+        <obo:IAO_0000119>translated from English by https://orcid.org/0009-0000-5160-7927 reviewed by https://orcid.org/0000-0003-2829-847</obo:IAO_0000119>
+    </owl:Axiom>
     
 
 
@@ -2650,11 +2773,12 @@ https://orcid.org/0000-0002-3336-2476</dc11:creator>
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0032012">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0003473"/>
         <obo:IAO_0000115 xml:lang="en">A type of weakness of the facial musculature (i.e. one or more muscles innervated by the seventh cranial nerve) that occurs after a muscle group is used and lessens if the muscle group has some rest. That is, there is diminution of the strength of the facial musculature with repetitive muscle actions.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="es">Una debilidad de la musculatura facial, es decir, uno o varios músculos que están inerbidos por el séptimo nervio craneal, que se manifiesta cuando un grupo muscular facial está bajo presión y que disminuye después de que el grupo en cuestión ha sido puesto en reposo. En resumen, se trata de una disminución de la fuerza de los músculos faciales como resultado de una carga repetida.</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="fr">Une faiblesse de la musculature faciale, c.à.d. d’un ou plusieurs muscles inervés par le septième nerf cranial, qui se manifeste quand un groupe musculaire facial est sollicité et qui diminue après que le groupe en question a été mis au repos. En résumé, il s’agit d’une diminution de la force des muscles faciaux à la suite d’une sollicitation répêtée.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
         <obo:PROMOT_1000001>Congenital myasthenic syndrom Scoping review</obo:PROMOT_1000001>
         <obo:PROMOT_1000001>Congenital myopathy Scoping review</obo:PROMOT_1000001>
-        <rdfs:label xml:lang="es">Debilidad fatigable de la musculatura facial</rdfs:label>
+        <rdfs:label xml:lang="es">Debilidad fatigable de la musculatura facial </rdfs:label>
         <rdfs:label xml:lang="fr">Fatigabilité de la musculature faciale</rdfs:label>
         <rdfs:label xml:lang="en">Fatiguable weakness of facial musculature</rdfs:label>
     </owl:Class>
@@ -2663,6 +2787,19 @@ https://orcid.org/0000-0002-3336-2476</dc11:creator>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget xml:lang="en">A type of weakness of the facial musculature (i.e. one or more muscles innervated by the seventh cranial nerve) that occurs after a muscle group is used and lessens if the muscle group has some rest. That is, there is diminution of the strength of the facial musculature with repetitive muscle actions.</owl:annotatedTarget>
         <obo:IAO_0000119>HP:0003473</obo:IAO_0000119>
+        <rdfs:comment>[PROMOT project] Mansoore Gholizade (definition reviewer)</rdfs:comment>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0032012"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget xml:lang="es">Una debilidad de la musculatura facial, es decir, uno o varios músculos que están inerbidos por el séptimo nervio craneal, que se manifiesta cuando un grupo muscular facial está bajo presión y que disminuye después de que el grupo en cuestión ha sido puesto en reposo. En resumen, se trata de una disminución de la fuerza de los músculos faciales como resultado de una carga repetida.</owl:annotatedTarget>
+        <obo:IAO_0000119>Translated from French using Reverso.</obo:IAO_0000119>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0032012"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget xml:lang="fr">Une faiblesse de la musculature faciale, c.à.d. d’un ou plusieurs muscles inervés par le septième nerf cranial, qui se manifeste quand un groupe musculaire facial est sollicité et qui diminue après que le groupe en question a été mis au repos. En résumé, il s’agit d’une diminution de la force des muscles faciaux à la suite d’une sollicitation répêtée.</owl:annotatedTarget>
+        <obo:IAO_0000119>translated from English by https://orcid.org/0009-0000-5160-7927 reviewed by https://orcid.org/0000-0003-2829-847</obo:IAO_0000119>
     </owl:Axiom>
     
 
@@ -2672,6 +2809,7 @@ https://orcid.org/0000-0002-3336-2476</dc11:creator>
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0032013">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0003473"/>
         <obo:IAO_0000115 xml:lang="en">A type of weakness of the ocular muscles that occurs after a muscle group is used and lessens if the muscle group has some rest. That is, there is diminution of the strength of the ocular muscles with repetitive muscle actions.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="es">Una debilidad de los músculos oculares que se manifiesta cuando un grupo muscular ocular está bajo presión y que disminuye después de que el grupo en cuestión ha sido puesto en reposo. En resumen, se trata de una disminución de la fuerza de los músculos oculares como resultado de una carga repetida.</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="fr">Une faiblesse des muscles occulaires qui se manifeste quand un groupe musculaire occulaire est sollicité et qui diminue après que le groupe en question a été mis au repos. En résumé, il s’agit d’une diminution de la force des muscles occulaires à la suite d’une sollicitation répêtée.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
         <obo:PROMOT_1000001>Congenital myasthenic syndrom Scoping review</obo:PROMOT_1000001>
@@ -2685,6 +2823,19 @@ https://orcid.org/0000-0002-3336-2476</dc11:creator>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget xml:lang="en">A type of weakness of the ocular muscles that occurs after a muscle group is used and lessens if the muscle group has some rest. That is, there is diminution of the strength of the ocular muscles with repetitive muscle actions.</owl:annotatedTarget>
         <obo:IAO_0000119>HP:0003473</obo:IAO_0000119>
+        <rdfs:comment>[PROMOT project] Mansoore Gholizade (definition reviewer)</rdfs:comment>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0032013"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget xml:lang="es">Una debilidad de los músculos oculares que se manifiesta cuando un grupo muscular ocular está bajo presión y que disminuye después de que el grupo en cuestión ha sido puesto en reposo. En resumen, se trata de una disminución de la fuerza de los músculos oculares como resultado de una carga repetida.</owl:annotatedTarget>
+        <obo:IAO_0000119>Translated from French using Reverso.</obo:IAO_0000119>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0032013"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget xml:lang="fr">Une faiblesse des muscles occulaires qui se manifeste quand un groupe musculaire occulaire est sollicité et qui diminue après que le groupe en question a été mis au repos. En résumé, il s’agit d’une diminution de la force des muscles occulaires à la suite d’une sollicitation répêtée.</owl:annotatedTarget>
+        <obo:IAO_0000119>translated from English by https://orcid.org/0009-0000-5160-7927 reviewed by https://orcid.org/0000-0003-2829-847</obo:IAO_0000119>
     </owl:Axiom>
     
 
@@ -2692,9 +2843,10 @@ https://orcid.org/0000-0002-3336-2476</dc11:creator>
     <!-- http://purl.obolibrary.org/obo/PROMOT_0032014 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0032014">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0003473"/>
-        <obo:IAO_0000115 xml:lang="en">A type of weakness of the axial muscles (i.e., of the muscles of the head and neck, spine, and ribs) that occurs after a muscle group is used and lessens if the muscle group has some rest. That is, there is diminution of the strength of the axial muscles with repetitive muscle actions.</obo:IAO_0000115>
-        <obo:IAO_0000115 xml:lang="fr">Une faiblesse des muscles axiaux, c.à.d. des muscles de la tête et du coup, de la colonne vertébrale et des côtes, qui se manifeste quand un groupe musculaire axial est sollicité et qui diminue après que le groupe en question a été mis au repos. En résumé, il s’agit d’une diminution de la force des muscles axiaux à la suite d’une sollicitation répêtée.</obo:IAO_0000115>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0030197"/>
+        <obo:IAO_0000115 xml:lang="en">A type of weakness of the axial muscles (i.e., of the muscles of the head and neck, vertebral column, and intercostal muscles) that occurs after a muscle group is used and lessens if the muscle group has some rest. That is, there is diminution of the strength of the axial muscles with repetitive muscle actions.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="es">Una debilidad de los músculos axiales, es decir, los músculos de la cabeza y el cuello, la columna vertebral y las costillas, que se manifiesta cuando un grupo muscular axial está bajo presión y que disminuye después de que el grupo en cuestión ha sido puesto en reposo. En resumen, se trata de una disminución de la fuerza de los músculos axiales como resultado de una carga repetida.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="fr">Une faiblesse des muscles axiaux, c.à.d. des muscles de la tête et du cou, de la colonne vertébrale et des côtes, qui se manifeste quand un groupe musculaire axial est sollicité et qui diminue après que le groupe en question a été mis au repos. En résumé, il s’agit d’une diminution de la force des muscles axiaux à la suite d’une sollicitation répêtée.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
         <obo:PROMOT_1000001>Congenital myasthenic syndrom Scoping review</obo:PROMOT_1000001>
         <obo:PROMOT_1000001>Congenital myopathy Scoping review</obo:PROMOT_1000001>
@@ -2705,8 +2857,21 @@ https://orcid.org/0000-0002-3336-2476</dc11:creator>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0032014"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget xml:lang="en">A type of weakness of the axial muscles (i.e., of the muscles of the head and neck, spine, and ribs) that occurs after a muscle group is used and lessens if the muscle group has some rest. That is, there is diminution of the strength of the axial muscles with repetitive muscle actions.</owl:annotatedTarget>
+        <owl:annotatedTarget xml:lang="en">A type of weakness of the axial muscles (i.e., of the muscles of the head and neck, vertebral column, and intercostal muscles) that occurs after a muscle group is used and lessens if the muscle group has some rest. That is, there is diminution of the strength of the axial muscles with repetitive muscle actions.</owl:annotatedTarget>
         <obo:IAO_0000119>HP:0003473</obo:IAO_0000119>
+        <rdfs:comment>[PROMOT project] Mansoore Gholizade (definition reviewer)</rdfs:comment>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0032014"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget xml:lang="es">Una debilidad de los músculos axiales, es decir, los músculos de la cabeza y el cuello, la columna vertebral y las costillas, que se manifiesta cuando un grupo muscular axial está bajo presión y que disminuye después de que el grupo en cuestión ha sido puesto en reposo. En resumen, se trata de una disminución de la fuerza de los músculos axiales como resultado de una carga repetida.</owl:annotatedTarget>
+        <obo:IAO_0000119>Translated from French using Reverso.</obo:IAO_0000119>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0032014"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget xml:lang="fr">Une faiblesse des muscles axiaux, c.à.d. des muscles de la tête et du cou, de la colonne vertébrale et des côtes, qui se manifeste quand un groupe musculaire axial est sollicité et qui diminue après que le groupe en question a été mis au repos. En résumé, il s’agit d’une diminution de la force des muscles axiaux à la suite d’une sollicitation répêtée.</owl:annotatedTarget>
+        <obo:IAO_0000119>translated from English by https://orcid.org/0009-0000-5160-7927 reviewed by https://orcid.org/0000-0003-2829-847</obo:IAO_0000119>
     </owl:Axiom>
     
 
@@ -2716,13 +2881,34 @@ https://orcid.org/0000-0002-3336-2476</dc11:creator>
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0032015">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0001324"/>
         <obo:IAO_0000115 xml:lang="en">A lack of strength in the muscles involved in chewing.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="es">Debilidad muscular de los músculos involucrados en la masticación.</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="fr">Une faiblesse musculaire des muscles impliqués dans la mastication.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
         <obo:PROMOT_1000001>Congenital myasthenic syndrom Scoping review</obo:PROMOT_1000001>
         <obo:PROMOT_1000001>Congenital myopathy Scoping review</obo:PROMOT_1000001>
+        <rdfs:label xml:lang="es">Debilidad de músculos masticatorios</rdfs:label>
         <rdfs:label xml:lang="fr">Faiblesse musculaire des muscles de la mastication</rdfs:label>
         <rdfs:label xml:lang="en">Weakness of chewing muscles</rdfs:label>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0032015"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget xml:lang="en">A lack of strength in the muscles involved in chewing.</owl:annotatedTarget>
+        <obo:IAO_0000119>HP:0001324</obo:IAO_0000119>
+        <rdfs:comment>[PROMOT project] Mansoore Gholizade (definition reviewer)</rdfs:comment>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0032015"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget xml:lang="es">Debilidad muscular de los músculos involucrados en la masticación.</owl:annotatedTarget>
+        <obo:IAO_0000119>Translated from French using Reverso.</obo:IAO_0000119>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0032015"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget xml:lang="fr">Une faiblesse musculaire des muscles impliqués dans la mastication.</owl:annotatedTarget>
+        <obo:IAO_0000119>translated from English by https://orcid.org/0009-0000-5160-7927 reviewed by https://orcid.org/0000-0003-2829-847</obo:IAO_0000119>
+    </owl:Axiom>
     
 
 
@@ -3071,6 +3257,7 @@ https://orcid.org/0000-0002-3336-2476</dc11:creator>
         </rdfs:subClassOf>
         <obo:IAO_0000115 xml:lang="en">An assessment with the Berg scale assesses balance and identifies the level of fall risk. This five-level ordinal scale (0 to 4) contains 14 items and the maximum total score ranges from 0 (maximum reach) to 56 (no reach detected). This generic scale evaluates various dimensions of balance, including the following: maintaining multiple positions, having automatic postural responses when changing posture or voluntary movements of the limbs, and produce effective balance and protection reactions.</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="fr">Une évaluation avec l’échelle de Berg évalue l’équilibre et identifie le niveau de risque de chute. Cette échelle ordinale à cinq niveaux (0 à 4) contient 14 items et le résultat total maximal varie de 0 (atteinte maximale) à 56 (aucune atteinte détectée). Cette échelle générique évalue diverses dimensions de l’équilibre, dont les suivantes : maintenir plusieurs positions, avoir des réponses posturales automatiques lors des changements de posture ou de mouvements volontaires des membres, et produire des réactions d’équilibre et de protection efficaces.</obo:IAO_0000115>
+        <oboInOwl:hasDbXref>http://snomed.info/id/404933001</oboInOwl:hasDbXref>
         <rdfs:label xml:lang="en">Assessment using Berg Balance Scale</rdfs:label>
         <rdfs:label xml:lang="fr">Évaluation avec l’échelle de Berg</rdfs:label>
     </owl:Class>

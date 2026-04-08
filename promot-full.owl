@@ -65,7 +65,7 @@
      xmlns:CPATH_VISIT_OCCURRENCE="https://w3id.org/cpont/visit_occurrence/"
      xmlns:CPATH_CONDITION_OCCURRENCE="https://w3id.org/cpont/condition_occurrence/">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/promot/promot-full.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/promot/releases/2026-03-25/promot-full.owl"/>
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/promot/releases/2026-04-08/promot-full.owl"/>
         <dc11:contributor>Anita Burgun MD, PhD
 https://orcid.org/0000-0001-6855-4366</dc11:contributor>
         <dc11:contributor>Carole Faviez PhD
@@ -94,7 +94,7 @@ https://orcid.org/0000-0002-3336-2476</dc11:creator>
         <dcterms:description>Ontology for modeling the three following neuromuscular diseases : OPMD, Congenital myopathies and Congenital myastenic syndroms. It aims to be also an ontology for building the PROMOT project relational database.</dcterms:description>
         <dcterms:license rdf:resource="https://creativecommons.org/licenses/by-nc-sa/4.0/"/>
         <dcterms:title>PROMOT ontology</dcterms:title>
-        <oboInOwl:date>25:03:2026 18:34</oboInOwl:date>
+        <oboInOwl:date>08:04:2026 16:03</oboInOwl:date>
         <rdfs:comment>Additional acknowledgements:
 	- Rachel Thompson
 	- Thomas Bongivault, MSc
@@ -106,7 +106,7 @@ https://orcid.org/0000-0002-3336-2476</dc11:creator>
 </rdfs:comment>
         <rdfs:seeAlso>More about PROMOT initiative at https://www.promotinitiative.com/
 </rdfs:seeAlso>
-        <owl:versionInfo>2026-03-25</owl:versionInfo>
+        <owl:versionInfo>2026-04-08</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -1898,6 +1898,7 @@ We also have the outstanding issue of how to aim different definitions to differ
         <obo:IAO_0000117 rdf:resource="https://orcid.org/0000-0002-6601-2165"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/ro/subsets#ro-eco"/>
         <rdfs:label xml:lang="en">has phenotype</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://purl.obolibrary.org/obo/promot/components/promot-component.owl#c"/>
     </owl:ObjectProperty>
     
 
@@ -8677,6 +8678,12 @@ For a further explanation of coding conventions in ICF, refer to Annex 2.</obo:I
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000086"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/HP_0012823"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000086"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0031007"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -13532,8 +13539,6 @@ For a further explanation of coding conventions in ICF, refer to Annex 2.</obo:I
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0001508">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0004325"/>
         <obo:IAO_0000115>Failure to thrive (FTT) refers to a child whose physical growth is substantially below the norm.</obo:IAO_0000115>
-        <obo:PROMOT_1000001>Congenital myopathy HPO KB associations</obo:PROMOT_1000001>
-        <obo:PROMOT_1000001>Congenital myopathy Scoping review</obo:PROMOT_1000001>
         <oboInOwl:hasAlternativeId>HP:0001535</oboInOwl:hasAlternativeId>
         <oboInOwl:hasAlternativeId>HP:0008853</oboInOwl:hasAlternativeId>
         <oboInOwl:hasAlternativeId>HP:0008878</oboInOwl:hasAlternativeId>
@@ -13557,7 +13562,6 @@ For a further explanation of coding conventions in ICF, refer to Annex 2.</obo:I
         <oboInOwl:id>HP:0001508</oboInOwl:id>
         <rdfs:comment>Although there is no clear consensus on the exact definition of FTT, it is usually diagnoses in a child growing below the 3rd percentile or in a child whose decreased growth has cross two major growth percentiles (for example, from above the 75th percentile to below the 25th percentile).</rdfs:comment>
         <rdfs:label>Failure to thrive</rdfs:label>
-        <rdfs:label xml:lang="en">Failure to thrive</rdfs:label>
         <rdfs:label xml:lang="fr">Retard de croissance post-natal</rdfs:label>
         <rdfs:label xml:lang="es">Retraso en el medro</rdfs:label>
     </owl:Class>
@@ -13810,62 +13814,6 @@ For a further explanation of coding conventions in ICF, refer to Annex 2.</obo:I
         <owl:annotatedTarget xml:lang="es">Muerte en la infancia</owl:annotatedTarget>
         <babelon:source_language>en</babelon:source_language>
         <babelon:source_value>Death in infancy</babelon:source_value>
-        <babelon:translation_language>es</babelon:translation_language>
-        <babelon:translation_status>OFFICIAL</babelon:translation_status>
-    </owl:Axiom>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/HP_0001531 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0001531">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0001508"/>
-        <obo:PROMOT_1000001>Congenital myopathy Scoping review</obo:PROMOT_1000001>
-        <oboInOwl:hasAlternativeId>HP:0008863</oboInOwl:hasAlternativeId>
-        <oboInOwl:hasAlternativeId>HP:0008925</oboInOwl:hasAlternativeId>
-        <oboInOwl:hasDbXref>UMLS:C1867873</oboInOwl:hasDbXref>
-        <oboInOwl:hasExactSynonym>Failure to thrive in first year of life</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>Faltering weight in infancy</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym xml:lang="fr">Retard de croissance chez le nourisson</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym xml:lang="fr">Retard de croissance dans la première année de vie</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym xml:lang="fr">Retard de croissance dans la première année de vie|retard de croissance chez les nourrissons mâles</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>Weight faltering in infancy</oboInOwl:hasExactSynonym>
-        <oboInOwl:id>HP:0001531</oboInOwl:id>
-        <rdfs:label>Failure to thrive in infancy</rdfs:label>
-        <rdfs:label xml:lang="en">Failure to thrive in infancy</rdfs:label>
-        <rdfs:label xml:lang="fr">Retard de croissance chez le nourisson</rdfs:label>
-        <rdfs:label xml:lang="es">Retraso en el medro en la primera infancia</rdfs:label>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0001531"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>Faltering weight in infancy</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:resource="https://orcid.org/0000-0001-5208-3432"/>
-        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#layperson"/>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0001531"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>Weight faltering in infancy</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:resource="https://orcid.org/0000-0001-5208-3432"/>
-        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#layperson"/>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0001531"/>
-        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
-        <owl:annotatedTarget xml:lang="fr">Retard de croissance chez le nourisson</owl:annotatedTarget>
-        <babelon:comment>label of HP:0001531 (Failure to thrive in infancy)  ; growth abnormality</babelon:comment>
-        <babelon:source_language>en</babelon:source_language>
-        <babelon:source_value>Failure to thrive in infancy</babelon:source_value>
-        <babelon:translation_language>fr</babelon:translation_language>
-        <babelon:translation_status>OFFICIAL</babelon:translation_status>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0001531"/>
-        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
-        <owl:annotatedTarget xml:lang="es">Retraso en el medro en la primera infancia</owl:annotatedTarget>
-        <babelon:source_language>en</babelon:source_language>
-        <babelon:source_value>Failure to thrive in infancy</babelon:source_value>
         <babelon:translation_language>es</babelon:translation_language>
         <babelon:translation_status>OFFICIAL</babelon:translation_status>
     </owl:Axiom>
@@ -15137,25 +15085,6 @@ For a further explanation of coding conventions in ICF, refer to Annex 2.</obo:I
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0001999"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasBroadSynonym"/>
-        <owl:annotatedTarget>Malformation of face</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:resource="https://orcid.org/0000-0001-5889-4463"/>
-        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#layperson"/>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0001999"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>Abnormal facial shape</owl:annotatedTarget>
-        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#layperson"/>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0001999"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>Abnormal morphology of the face</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:resource="https://orcid.org/0000-0001-5889-4463"/>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0001999"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
         <owl:annotatedTarget>Dysmorphic facies</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:resource="https://orcid.org/0000-0001-5889-4463"/>
@@ -15218,6 +15147,25 @@ For a further explanation of coding conventions in ICF, refer to Annex 2.</obo:I
         <owl:annotatedTarget>Deformity of face</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:resource="https://orcid.org/0000-0001-5889-4463"/>
         <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#layperson"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0001999"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasBroadSynonym"/>
+        <owl:annotatedTarget>Malformation of face</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:resource="https://orcid.org/0000-0001-5889-4463"/>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#layperson"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0001999"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget>Abnormal facial shape</owl:annotatedTarget>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#layperson"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0001999"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget>Abnormal morphology of the face</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:resource="https://orcid.org/0000-0001-5889-4463"/>
     </owl:Axiom>
     
 
@@ -19671,6 +19619,12 @@ For a further explanation of coding conventions in ICF, refer to Annex 2.</obo:I
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0003674">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0031797"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000080"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/HP_0000118"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <obo:IAO_0000115>The age group in which disease manifestations appear.</obo:IAO_0000115>
         <oboInOwl:hasAlternativeId>HP:0003588</oboInOwl:hasAlternativeId>
         <oboInOwl:hasAlternativeId>HP:0003590</oboInOwl:hasAlternativeId>
@@ -19891,6 +19845,12 @@ For a further explanation of coding conventions in ICF, refer to Annex 2.</obo:I
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0003679">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0031797"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000080"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/HP_0000118"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <oboInOwl:hasDbXref>UMLS:C4025580</oboInOwl:hasDbXref>
         <oboInOwl:id>HP:0003679</oboInOwl:id>
         <rdfs:label>Pace of progression</rdfs:label>
@@ -23133,6 +23093,12 @@ For a further explanation of coding conventions in ICF, refer to Annex 2.</obo:I
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0011008">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0031797"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000080"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/HP_0000118"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <obo:IAO_0000115>The speed at which disease manifestations appear and develop.</obo:IAO_0000115>
         <dcterms:creator rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
         <dcterms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2011-02-20T10:22:32Z</dcterms:date>
@@ -25316,12 +25282,6 @@ For a further explanation of coding conventions in ICF, refer to Annex 2.</obo:I
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0012823">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000019"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000080"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/HP_0000118"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <obo:IAO_0000115>This subontology is designed to provide terms to characterize and specify the phenotypic abnormalities defined in the Phenotypic abnormality subontology, with respect to severity, laterality, age of onset, and other aspects.</obo:IAO_0000115>
         <dcterms:creator rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
         <dcterms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2014-06-06T06:34:24Z</dcterms:date>
@@ -25371,6 +25331,12 @@ For a further explanation of coding conventions in ICF, refer to Annex 2.</obo:I
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0012824">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0012823"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000080"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/HP_0000118"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <obo:IAO_0000115>The intensity or degree of a manifestation.</obo:IAO_0000115>
         <dcterms:creator rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
         <dcterms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2014-06-06T06:39:22Z</dcterms:date>
@@ -26046,6 +26012,12 @@ For a further explanation of coding conventions in ICF, refer to Annex 2.</obo:I
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0025820">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000019"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000080"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/NCIT_C16960"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <obo:IAO_0000115>The parents of the index patient are related as second cousins or closer.</obo:IAO_0000115>
         <dcterms:creator rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
         <dcterms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-04-24T16:26:47Z</dcterms:date>
@@ -28211,6 +28183,95 @@ For a further explanation of coding conventions in ICF, refer to Annex 2.</obo:I
     
 
 
+    <!-- http://purl.obolibrary.org/obo/HP_0032319 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0032319">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000019"/>
+        <obo:IAO_0000115>Health status of a family member with respect to the disease being investigated in a proband.</obo:IAO_0000115>
+        <dcterms:creator rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
+        <dcterms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-02-14T11:46:18Z</dcterms:date>
+        <rdfs:label xml:lang="es">Estado de salud</rdfs:label>
+        <rdfs:label>Health status</rdfs:label>
+        <rdfs:label xml:lang="en">Health status</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0032319"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+        <owl:annotatedTarget xml:lang="es">Estado de salud</owl:annotatedTarget>
+        <babelon:source_language>en</babelon:source_language>
+        <babelon:source_value>Health status</babelon:source_value>
+        <babelon:translation_language>es</babelon:translation_language>
+        <babelon:translation_status>OFFICIAL</babelon:translation_status>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/HP_0032320 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0032320">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0032319"/>
+        <obo:IAO_0000115>This term applies to a family member who is diagnosed with the same condition as the individual who is the primary focus of investigation (the proband).</obo:IAO_0000115>
+        <dcterms:creator rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
+        <dcterms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-02-14T11:47:51Z</dcterms:date>
+        <rdfs:label xml:lang="es">Afectado</rdfs:label>
+        <rdfs:label>Affected</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0032320"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+        <owl:annotatedTarget xml:lang="es">Afectado</owl:annotatedTarget>
+        <babelon:source_language>en</babelon:source_language>
+        <babelon:source_value>Affected</babelon:source_value>
+        <babelon:translation_language>es</babelon:translation_language>
+        <babelon:translation_status>OFFICIAL</babelon:translation_status>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/HP_0032321 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0032321">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0032319"/>
+        <obo:IAO_0000115>This term applies to a family member in whom the diagnosis that is the primary focus of investigation is excluded.</obo:IAO_0000115>
+        <dcterms:creator rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
+        <dcterms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-02-14T11:48:40Z</dcterms:date>
+        <rdfs:label xml:lang="es">No afectado</rdfs:label>
+        <rdfs:label>Unaffected</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0032321"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+        <owl:annotatedTarget xml:lang="es">No afectado</owl:annotatedTarget>
+        <babelon:source_language>en</babelon:source_language>
+        <babelon:source_value>Unaffected</babelon:source_value>
+        <babelon:translation_language>es</babelon:translation_language>
+        <babelon:translation_status>OFFICIAL</babelon:translation_status>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/HP_0032322 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0032322">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0032319"/>
+        <obo:IAO_0000115>No history of any serious disease, including the disease being investigated in the proband.</obo:IAO_0000115>
+        <dcterms:creator rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
+        <dcterms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-02-14T11:49:52Z</dcterms:date>
+        <rdfs:label>Healthy</rdfs:label>
+        <rdfs:label xml:lang="es">Saludable</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0032322"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+        <owl:annotatedTarget xml:lang="es">Saludable</owl:annotatedTarget>
+        <babelon:source_language>en</babelon:source_language>
+        <babelon:source_value>Healthy</babelon:source_value>
+        <babelon:translation_language>es</babelon:translation_language>
+        <babelon:translation_status>OFFICIAL</babelon:translation_status>
+    </owl:Axiom>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/HP_0032341 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0032341">
@@ -30233,6 +30294,7 @@ Previous. An information content entity is a non-realizable information entity t
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCIT_C121361">
         <rdfs:subClassOf rdf:resource="http://snomed.info/id/12894003"/>
         <obo:IAO_0000115>Measurement of maximum isometric force generation from a muscle group; performed with specialized equipment.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">Measurement of maximum isometric force generation from a muscle group; performed with specialized equipment.</obo:IAO_0000115>
         <obo:NCIT_NHC0>C121361</obo:NCIT_NHC0>
         <obo:NCIT_P106>Intellectual Product</obo:NCIT_P106>
         <obo:NCIT_P108>Quantitative Muscle Testing</obo:NCIT_P108>
@@ -30245,12 +30307,19 @@ Previous. An information content entity is a non-realizable information entity t
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/NCIT_C90259"/>
         <rdfs:label xml:lang="en">Quantative muscle testing</rdfs:label>
         <rdfs:label>Quantitative Muscle Testing</rdfs:label>
+        <rdfs:label xml:lang="en">Quantitative Muscle Testing</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/NCIT_C121361"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>Measurement of maximum isometric force generation from a muscle group; performed with specialized equipment.</owl:annotatedTarget>
         <obo:NCIT_P378>NCI</obo:NCIT_P378>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/NCIT_C121361"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget xml:lang="en">Measurement of maximum isometric force generation from a muscle group; performed with specialized equipment.</owl:annotatedTarget>
+        <obo:IAO_0000119>NCIT:C121361</obo:IAO_0000119>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/NCIT_C121361"/>
@@ -30561,7 +30630,9 @@ Previous. An information content entity is a non-realizable information entity t
         <oboInOwl:hasExactSynonym>year_of_death</oboInOwl:hasExactSynonym>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/NCIT_C157711"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/NCIT_C177536"/>
+        <rdfs:comment>[EURO-NMD] Atalia A et al., EURO-NMD registry: federated FAIR infrastructure, innovative technologies and concepts of a patient-centred registry for rare neuromuscular disorders. Orphanet J Rare Dis. 2024 Feb 14;19(1):66. doi: 10.1186/s13023-024-03059-3. PMID: 38355534; PMCID: PMC10865673.</rdfs:comment>
         <rdfs:comment>[PROMOT note] [Derived from RD-CDM] [3.2 Time of Death] </rdfs:comment>
+        <rdfs:comment>[RD-CDM] Graefe, A.S.L., Hübner, M.R., Rehburg, F. et al. An ontology-based rare disease common data model harmonising international registries, FHIR, and Phenopackets. Sci Data 12, 234 (2025). https://doi.org/10.1038/s41597-025-04558-z</rdfs:comment>
         <rdfs:label>Year of Death</rdfs:label>
         <rdfs:label xml:lang="en">Year of death</rdfs:label>
     </owl:Class>
@@ -31338,7 +31409,9 @@ Previous. An information content entity is a non-realizable information entity t
         <obo:NCIT_P208>CL1937300</obo:NCIT_P208>
         <oboInOwl:hasExactSynonym>Diagnosis Year</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>Year of Diagnosis</oboInOwl:hasExactSynonym>
+        <rdfs:comment>[EURO-NMD] Atalia A et al., EURO-NMD registry: federated FAIR infrastructure, innovative technologies and concepts of a patient-centred registry for rare neuromuscular disorders. Orphanet J Rare Dis. 2024 Feb 14;19(1):66. doi: 10.1186/s13023-024-03059-3. PMID: 38355534; PMCID: PMC10865673.</rdfs:comment>
         <rdfs:comment>[PROMOT note] [Derived from RD-CDM] [5.6 Date of Diagnosis] </rdfs:comment>
+        <rdfs:comment>[RD-CDM] Graefe, A.S.L., Hübner, M.R., Rehburg, F. et al. An ontology-based rare disease common data model harmonising international registries, FHIR, and Phenopackets. Sci Data 12, 234 (2025). https://doi.org/10.1038/s41597-025-04558-z</rdfs:comment>
         <rdfs:label>Year of Diagnosis</rdfs:label>
         <rdfs:label xml:lang="en">Year of diagnosis</rdfs:label>
     </owl:Class>
@@ -32614,7 +32687,9 @@ Previous. An information content entity is a non-realizable information entity t
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/NCIT_C192234"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/NCIT_C83187"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/NCIT_C83188"/>
+        <rdfs:comment>[EURO-NMD] Atalia A et al., EURO-NMD registry: federated FAIR infrastructure, innovative technologies and concepts of a patient-centred registry for rare neuromuscular disorders. Orphanet J Rare Dis. 2024 Feb 14;19(1):66. doi: 10.1186/s13023-024-03059-3. PMID: 38355534; PMCID: PMC10865673.</rdfs:comment>
         <rdfs:comment>[PROMOT note] [Derived from RD-CDM] [2.1 Date of birth]</rdfs:comment>
+        <rdfs:comment>[RD-CDM] Graefe, A.S.L., Hübner, M.R., Rehburg, F. et al. An ontology-based rare disease common data model harmonising international registries, FHIR, and Phenopackets. Sci Data 12, 234 (2025). https://doi.org/10.1038/s41597-025-04558-z</rdfs:comment>
         <rdfs:label>Birth Year</rdfs:label>
         <rdfs:label xml:lang="en">Birth Year</rdfs:label>
     </owl:Class>
@@ -32839,7 +32914,10 @@ Previous. An information content entity is a non-realizable information entity t
     <!-- http://purl.obolibrary.org/obo/NCIT_C99800 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCIT_C99800">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCIT_C25164"/>
+        <rdfs:comment>[EURO-NMD] Atalia A et al., EURO-NMD registry: federated FAIR infrastructure, innovative technologies and concepts of a patient-centred registry for rare neuromuscular disorders. Orphanet J Rare Dis. 2024 Feb 14;19(1):66. doi: 10.1186/s13023-024-03059-3. PMID: 38355534; PMCID: PMC10865673.</rdfs:comment>
         <rdfs:comment>[PROMOT note] [Derived from RD-CDM] [5.4 Date of Onset]</rdfs:comment>
+        <rdfs:comment>[RD-CDM] Graefe, A.S.L., Hübner, M.R., Rehburg, F. et al. An ontology-based rare disease common data model harmonising international registries, FHIR, and Phenopackets. Sci Data 12, 234 (2025). https://doi.org/10.1038/s41597-025-04558-z</rdfs:comment>
         <rdfs:label xml:lang="en">Year of onset</rdfs:label>
     </owl:Class>
     
@@ -33592,7 +33670,9 @@ Previous. An information content entity is a non-realizable information entity t
         <obo:IAO_0000115 xml:lang="fr">L’année de la disparition d’une entité, par exemple, l’année de disparition d’un phénotype.</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="en">The year of the resolution of an abnormal disposition, e.g. the year when a phenotype ceases existing.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
+        <rdfs:comment>[EURO-NMD] Atalia A et al., EURO-NMD registry: federated FAIR infrastructure, innovative technologies and concepts of a patient-centred registry for rare neuromuscular disorders. Orphanet J Rare Dis. 2024 Feb 14;19(1):66. doi: 10.1186/s13023-024-03059-3. PMID: 38355534; PMCID: PMC10865673.</rdfs:comment>
         <rdfs:comment>[PROMOT note] [Derived from RD-CDM] [6.2.4 Resolution Date] </rdfs:comment>
+        <rdfs:comment>[RD-CDM] Graefe, A.S.L., Hübner, M.R., Rehburg, F. et al. An ontology-based rare disease common data model harmonising international registries, FHIR, and Phenopackets. Sci Data 12, 234 (2025). https://doi.org/10.1038/s41597-025-04558-z</rdfs:comment>
         <rdfs:label xml:lang="fr">Année de disparition</rdfs:label>
         <rdfs:label xml:lang="en">Year of resolution</rdfs:label>
     </owl:Class>
@@ -34678,6 +34758,7 @@ Previous. An information content entity is a non-realizable information entity t
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0032005">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0033580"/>
         <obo:IAO_0000115 xml:lang="fr">Deux anomalies dans l’EMG mesurant le potentiel d’action global d’un muscle (PAM), aussi appelé potentiel d’action musculaire composé.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="es">Dos hallazgos anormales en una medición de potencial de acción motora compuesta en EMG.</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="en">Two abnormal findings in a compound motor action potential measurement in EMG.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
         <obo:PROMOT_1000001>Congenital myasthenic syndrom Scoping review</obo:PROMOT_1000001>
@@ -34689,8 +34770,15 @@ Previous. An information content entity is a non-realizable information entity t
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0032005"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget xml:lang="fr">Deux anomalies dans l’EMG mesurant le potentiel d’action global d’un muscle (PAM), aussi appelé potentiel d’action musculaire composé.</owl:annotatedTarget>
+        <obo:IAO_0000119>translated from English by https://orcid.org/0009-0000-5160-7927</obo:IAO_0000119>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0032005"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget xml:lang="en">Two abnormal findings in a compound motor action potential measurement in EMG.</owl:annotatedTarget>
         <obo:IAO_0000119>HP:0033580</obo:IAO_0000119>
+        <rdfs:comment>[PROMOT project] Mansoore Gholizade (definition reviewer)</rdfs:comment>
     </owl:Axiom>
     
 
@@ -34699,12 +34787,28 @@ Previous. An information content entity is a non-realizable information entity t
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0032006">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0012378"/>
-        <obo:IAO_0000115 xml:lang="en">A fatigue that occurs when the subject is eating</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">A fatigue that occurs when one is eating. It is due to weakness or fatiguable weakness of chewing muscles.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="es">Fatiga que se produce al momento de comer debida a la debilidad muscular o a la fatiga de los músculos involucrados en la masticación.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="fr">Fatigue qui survient au moment de manger du fait de la faiblesse musculaire ou de la fatigabilité des muscles impliqués dans la mastication.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
         <obo:PROMOT_1000001>[OPMD Scoping review on dysphagia] Côté C, Gagnon C, Youssof S, et al. The requirement for a disease-specific patient-reported outcome measure of dysphagia in oculopharyngeal muscular dystrophy. Muscle Nerve. 2019;59:445–50. doi: 10.1002/mus.26405</obo:PROMOT_1000001>
+        <rdfs:label xml:lang="es">Fatiga cuando se come</rdfs:label>
         <rdfs:label xml:lang="fr">Fatigue corrélée au fait de manger</rdfs:label>
         <rdfs:label xml:lang="en">Fatigue while eating</rdfs:label>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0032006"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget xml:lang="en">A fatigue that occurs when one is eating. It is due to weakness or fatiguable weakness of chewing muscles.</owl:annotatedTarget>
+        <obo:IAO_0000119>Medical experts</obo:IAO_0000119>
+        <rdfs:comment>https://orcid.org/0000-0003-2829-8470</rdfs:comment>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0032006"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget xml:lang="fr">Fatigue qui survient au moment de manger du fait de la faiblesse musculaire ou de la fatigabilité des muscles impliqués dans la mastication.</owl:annotatedTarget>
+        <obo:IAO_0000119>translated from English by https://orcid.org/0009-0000-5160-7927 reviewed by https://orcid.org/0000-0003-2829-847</obo:IAO_0000119>
+    </owl:Axiom>
     
 
 
@@ -34712,13 +34816,33 @@ Previous. An information content entity is a non-realizable information entity t
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0032007">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0001288"/>
-        <obo:IAO_0000115 xml:lang="en">A difficulty to walk short distance. E.g. a difficulty to  walk inside a building such as a house.</obo:IAO_0000115>
-        <obo:IAO_0000115 xml:lang="fr">Difficulté à marcher sur de courtes distances, comme par exemple, difficulté à marcher à l’intérieur d’un bâtiment.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">A difficulty to walk for less than a kilometre, such as walking around rooms or hallways, within a building or for short distances outside. This is distinct from the difficulty of moving around.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="fr">Difficulté à avancer à pied, sur une distance de moins d&apos;un kilomètre, comme marcher dans sa chambre ou dans le couloir, dans un bâtiment ou sur de courtes distances à l&apos;extérieur.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="es">Dificultad para andar menos de un kilómetro, como caminar por habitaciones y pasillos, dentro de un edificio o pequeñas distancias en el exterior. Es distinta de la dificultad para desplazarse por el entorno</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
         <obo:PROMOT_1000001>[OPMD Scoping review 2026] Bélair N, Gagnon C, Duchesne E. What is known about muscle weakness, balance impairments and indoor mobility limitations in oculopharyngeal muscular dystrophy? A scoping review. J Neuromuscul Dis. 2025 Dec 30:22143602251397052. doi: 10.1177/22143602251397052. Epub ahead of print. PMID: 41467981.</obo:PROMOT_1000001>
         <rdfs:label xml:lang="en">Difficulty walking short distance</rdfs:label>
         <rdfs:label xml:lang="fr">Difficulté à marcher sur de courtes distances</rdfs:label>
+        <rdfs:label xml:lang="es">Dificultad para andar distancias cortas</rdfs:label>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0032007"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget xml:lang="en">A difficulty to walk for less than a kilometre, such as walking around rooms or hallways, within a building or for short distances outside. This is distinct from the difficulty of moving around.</owl:annotatedTarget>
+        <obo:IAO_0000119>ICF:555410497</obo:IAO_0000119>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0032007"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget xml:lang="fr">Difficulté à avancer à pied, sur une distance de moins d&apos;un kilomètre, comme marcher dans sa chambre ou dans le couloir, dans un bâtiment ou sur de courtes distances à l&apos;extérieur.</owl:annotatedTarget>
+        <obo:IAO_0000119>ICF:555410497</obo:IAO_0000119>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0032007"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget xml:lang="es">Dificultad para andar menos de un kilómetro, como caminar por habitaciones y pasillos, dentro de un edificio o pequeñas distancias en el exterior. Es distinta de la dificultad para desplazarse por el entorno</owl:annotatedTarget>
+        <obo:IAO_0000119>ICF:555410497</obo:IAO_0000119>
+    </owl:Axiom>
     
 
 
@@ -34726,13 +34850,33 @@ Previous. An information content entity is a non-realizable information entity t
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0032008">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0100022"/>
-        <obo:IAO_0000115 xml:lang="en">A difficulty to change basic position. E.g. a difficulty to go from a sitting position to a standing position.</obo:IAO_0000115>
-        <obo:IAO_0000115 xml:lang="fr">Difficulté à passer d’une position de base à une autre, comme par exemple, difficulté à passer de la position assise à la position debout.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">A difficulty to change basic position, i.e. a difficulty getting into and out of a body position and moving from one location to another, such as getting up out of a chair to lie down on a bed, and getting into and out of positions of sitting, standing, kneeling or squatting. This is distinct from the difficulty of transferring oneself.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="fr">Difficulté à prendre et quitter une position et/ou à passer d&apos;un endroit à un autre, comme se lever d&apos;un fauteuil pour se coucher sur un lit, et comme prendre et quitter les positions assise, debout, à genoux ou accroupie. Cette difficulté est distincte de la difficulté à se transférrer.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="es">Dificultad para adoptar o abandonar una postura, pasar de un lugar a otro, como levantarse de una silla para tumbarse en una cama, y adoptar o abandonar posiciones determinadas, como arrodillarse o sentarse en cuclillas. Es distinta de la dificultad para transferir el propio cuerpo.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
         <obo:PROMOT_1000001>[OPMD Scoping review 2026] Bélair N, Gagnon C, Duchesne E. What is known about muscle weakness, balance impairments and indoor mobility limitations in oculopharyngeal muscular dystrophy? A scoping review. J Neuromuscul Dis. 2025 Dec 30:22143602251397052. doi: 10.1177/22143602251397052. Epub ahead of print. PMID: 41467981.</obo:PROMOT_1000001>
         <rdfs:label xml:lang="en">Difficulty changing basic position</rdfs:label>
         <rdfs:label xml:lang="fr">Difficulté à passer d’une position de base à une autre</rdfs:label>
+        <rdfs:label xml:lang="es">Dificultad para cambiar las posturas corporales básicas</rdfs:label>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0032008"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget xml:lang="en">A difficulty to change basic position, i.e. a difficulty getting into and out of a body position and moving from one location to another, such as getting up out of a chair to lie down on a bed, and getting into and out of positions of sitting, standing, kneeling or squatting. This is distinct from the difficulty of transferring oneself.</owl:annotatedTarget>
+        <obo:IAO_0000119>ICF:150502901</obo:IAO_0000119>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0032008"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget xml:lang="fr">Difficulté à prendre et quitter une position et/ou à passer d&apos;un endroit à un autre, comme se lever d&apos;un fauteuil pour se coucher sur un lit, et comme prendre et quitter les positions assise, debout, à genoux ou accroupie. Cette difficulté est distincte de la difficulté à se transférrer.</owl:annotatedTarget>
+        <obo:IAO_0000119>ICF:150502901</obo:IAO_0000119>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0032008"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget xml:lang="es">Dificultad para adoptar o abandonar una postura, pasar de un lugar a otro, como levantarse de una silla para tumbarse en una cama, y adoptar o abandonar posiciones determinadas, como arrodillarse o sentarse en cuclillas. Es distinta de la dificultad para transferir el propio cuerpo.</owl:annotatedTarget>
+        <obo:IAO_0000119>ICF:150502901</obo:IAO_0000119>
+    </owl:Axiom>
     
 
 
@@ -34740,13 +34884,34 @@ Previous. An information content entity is a non-realizable information entity t
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0032009">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0012154"/>
-        <obo:IAO_0000115 xml:lang="en">An anhedonia that occurs when the subject is eating</obo:IAO_0000115>
-        <obo:IAO_0000115 xml:lang="fr">Perte de la satisfaction ou du plaisir à manger.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">A loss of enjoyment of mealtime due to difficulties while eating.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="fr">Perte de la satisfaction ou du plaisir à manger due à des difficultés pour manger.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="es">Pérdida de la satisfacción o del placer de comer debida a las dificultades para comer.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
         <obo:PROMOT_1000001>[OPMD Scoping review on dysphagia] Côté C, Gagnon C, Youssof S, et al. The requirement for a disease-specific patient-reported outcome measure of dysphagia in oculopharyngeal muscular dystrophy. Muscle Nerve. 2019;59:445–50. doi: 10.1002/mus.26405</obo:PROMOT_1000001>
+        <rdfs:label xml:lang="es">Anhedonia cuando se come</rdfs:label>
         <rdfs:label xml:lang="en">Anhedonia while eating</rdfs:label>
         <rdfs:label xml:lang="fr">Anhédonie légère corrélée au fait de manger</rdfs:label>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0032009"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget xml:lang="en">A loss of enjoyment of mealtime due to difficulties while eating.</owl:annotatedTarget>
+        <obo:IAO_0000119>Medical experts</obo:IAO_0000119>
+        <rdfs:comment>https://orcid.org/0000-0003-2829-8470</rdfs:comment>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0032009"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget xml:lang="fr">Perte de la satisfaction ou du plaisir à manger due à des difficultés pour manger.</owl:annotatedTarget>
+        <obo:IAO_0000119>translated from English by https://orcid.org/0009-0000-5160-7927 reviewed by https://orcid.org/0000-0003-2829-847</obo:IAO_0000119>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0032009"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget xml:lang="es">Pérdida de la satisfacción o del placer de comer debida a las dificultades para comer.</owl:annotatedTarget>
+        <obo:IAO_0000119>Translated from French using Reverso.</obo:IAO_0000119>
+    </owl:Axiom>
     
 
 
@@ -34756,12 +34921,27 @@ Previous. An information content entity is a non-realizable information entity t
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0002015"/>
         <obo:IAO_0000115 xml:lang="en">Difficulty in swallowing solid food.</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="fr">Difficulté à avaler de la nourriture solide.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="es">Dificultad para tragar alimentos sólidos.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
         <obo:PROMOT_1000001>[OPMD Clinical Registry Form]</obo:PROMOT_1000001>
         <obo:PROMOT_1000001>[OPMD Scoping review on dysphagia] Côté C, Gagnon C, Youssof S, et al. The requirement for a disease-specific patient-reported outcome measure of dysphagia in oculopharyngeal muscular dystrophy. Muscle Nerve. 2019;59:445–50. doi: 10.1002/mus.26405</obo:PROMOT_1000001>
+        <rdfs:label xml:lang="es">Disfagia con sólidos</rdfs:label>
         <rdfs:label xml:lang="en">Dysphagia for solid</rdfs:label>
         <rdfs:label xml:lang="fr">Dysphagie avec de la nourriture solide</rdfs:label>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0032010"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget xml:lang="en">Difficulty in swallowing solid food.</owl:annotatedTarget>
+        <obo:IAO_0000119>Medical experts</obo:IAO_0000119>
+        <rdfs:comment>https://orcid.org/0000-0003-2829-8470</rdfs:comment>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0032010"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget xml:lang="fr">Difficulté à avaler de la nourriture solide.</owl:annotatedTarget>
+        <obo:IAO_0000119>translated from English by https://orcid.org/0009-0000-5160-7927 reviewed by https://orcid.org/0000-0003-2829-847</obo:IAO_0000119>
+    </owl:Axiom>
     
 
 
@@ -34770,13 +34950,28 @@ Previous. An information content entity is a non-realizable information entity t
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0032011">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0002015"/>
         <obo:IAO_0000115 xml:lang="en">Difficulty in swallowing liquid food. This is distinct from hydrophobia.</obo:IAO_0000115>
-        <obo:IAO_0000115 xml:lang="fr">Difficulté à avaler de la nourriture liquide, disctincte de l’hydrophobie.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="fr">Difficulté à avaler des aliments liquides, disctincte de l’hydrophobie.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="es">Dificultad para tragar comida líquida. Es distinta de la hidrofobia.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
         <obo:PROMOT_1000001>[OPMD Clinical Registry Form]</obo:PROMOT_1000001>
         <obo:PROMOT_1000001>[OPMD Scoping review on dysphagia] Côté C, Gagnon C, Youssof S, et al. The requirement for a disease-specific patient-reported outcome measure of dysphagia in oculopharyngeal muscular dystrophy. Muscle Nerve. 2019;59:445–50. doi: 10.1002/mus.26405</obo:PROMOT_1000001>
+        <rdfs:label xml:lang="es">Disfagia con líquidos</rdfs:label>
         <rdfs:label xml:lang="en">Dysphagia for liquid</rdfs:label>
         <rdfs:label xml:lang="fr">Dysphagie avec de la nourriture liquide</rdfs:label>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0032011"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget xml:lang="en">Difficulty in swallowing liquid food. This is distinct from hydrophobia.</owl:annotatedTarget>
+        <obo:IAO_0000119>Medical experts</obo:IAO_0000119>
+        <rdfs:comment>https://orcid.org/0000-0003-2829-8470</rdfs:comment>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0032011"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget xml:lang="fr">Difficulté à avaler des aliments liquides, disctincte de l’hydrophobie.</owl:annotatedTarget>
+        <obo:IAO_0000119>translated from English by https://orcid.org/0009-0000-5160-7927 reviewed by https://orcid.org/0000-0003-2829-847</obo:IAO_0000119>
+    </owl:Axiom>
     
 
 
@@ -34785,11 +34980,12 @@ Previous. An information content entity is a non-realizable information entity t
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0032012">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0003473"/>
         <obo:IAO_0000115 xml:lang="en">A type of weakness of the facial musculature (i.e. one or more muscles innervated by the seventh cranial nerve) that occurs after a muscle group is used and lessens if the muscle group has some rest. That is, there is diminution of the strength of the facial musculature with repetitive muscle actions.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="es">Una debilidad de la musculatura facial, es decir, uno o varios músculos que están inerbidos por el séptimo nervio craneal, que se manifiesta cuando un grupo muscular facial está bajo presión y que disminuye después de que el grupo en cuestión ha sido puesto en reposo. En resumen, se trata de una disminución de la fuerza de los músculos faciales como resultado de una carga repetida.</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="fr">Une faiblesse de la musculature faciale, c.à.d. d’un ou plusieurs muscles inervés par le septième nerf cranial, qui se manifeste quand un groupe musculaire facial est sollicité et qui diminue après que le groupe en question a été mis au repos. En résumé, il s’agit d’une diminution de la force des muscles faciaux à la suite d’une sollicitation répêtée.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
         <obo:PROMOT_1000001>Congenital myasthenic syndrom Scoping review</obo:PROMOT_1000001>
         <obo:PROMOT_1000001>Congenital myopathy Scoping review</obo:PROMOT_1000001>
-        <rdfs:label xml:lang="es">Debilidad fatigable de la musculatura facial</rdfs:label>
+        <rdfs:label xml:lang="es">Debilidad fatigable de la musculatura facial </rdfs:label>
         <rdfs:label xml:lang="fr">Fatigabilité de la musculature faciale</rdfs:label>
         <rdfs:label xml:lang="en">Fatiguable weakness of facial musculature</rdfs:label>
     </owl:Class>
@@ -34798,6 +34994,19 @@ Previous. An information content entity is a non-realizable information entity t
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget xml:lang="en">A type of weakness of the facial musculature (i.e. one or more muscles innervated by the seventh cranial nerve) that occurs after a muscle group is used and lessens if the muscle group has some rest. That is, there is diminution of the strength of the facial musculature with repetitive muscle actions.</owl:annotatedTarget>
         <obo:IAO_0000119>HP:0003473</obo:IAO_0000119>
+        <rdfs:comment>[PROMOT project] Mansoore Gholizade (definition reviewer)</rdfs:comment>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0032012"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget xml:lang="es">Una debilidad de la musculatura facial, es decir, uno o varios músculos que están inerbidos por el séptimo nervio craneal, que se manifiesta cuando un grupo muscular facial está bajo presión y que disminuye después de que el grupo en cuestión ha sido puesto en reposo. En resumen, se trata de una disminución de la fuerza de los músculos faciales como resultado de una carga repetida.</owl:annotatedTarget>
+        <obo:IAO_0000119>Translated from French using Reverso.</obo:IAO_0000119>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0032012"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget xml:lang="fr">Une faiblesse de la musculature faciale, c.à.d. d’un ou plusieurs muscles inervés par le septième nerf cranial, qui se manifeste quand un groupe musculaire facial est sollicité et qui diminue après que le groupe en question a été mis au repos. En résumé, il s’agit d’une diminution de la force des muscles faciaux à la suite d’une sollicitation répêtée.</owl:annotatedTarget>
+        <obo:IAO_0000119>translated from English by https://orcid.org/0009-0000-5160-7927 reviewed by https://orcid.org/0000-0003-2829-847</obo:IAO_0000119>
     </owl:Axiom>
     
 
@@ -34807,6 +35016,7 @@ Previous. An information content entity is a non-realizable information entity t
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0032013">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0003473"/>
         <obo:IAO_0000115 xml:lang="en">A type of weakness of the ocular muscles that occurs after a muscle group is used and lessens if the muscle group has some rest. That is, there is diminution of the strength of the ocular muscles with repetitive muscle actions.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="es">Una debilidad de los músculos oculares que se manifiesta cuando un grupo muscular ocular está bajo presión y que disminuye después de que el grupo en cuestión ha sido puesto en reposo. En resumen, se trata de una disminución de la fuerza de los músculos oculares como resultado de una carga repetida.</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="fr">Une faiblesse des muscles occulaires qui se manifeste quand un groupe musculaire occulaire est sollicité et qui diminue après que le groupe en question a été mis au repos. En résumé, il s’agit d’une diminution de la force des muscles occulaires à la suite d’une sollicitation répêtée.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
         <obo:PROMOT_1000001>Congenital myasthenic syndrom Scoping review</obo:PROMOT_1000001>
@@ -34820,6 +35030,19 @@ Previous. An information content entity is a non-realizable information entity t
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget xml:lang="en">A type of weakness of the ocular muscles that occurs after a muscle group is used and lessens if the muscle group has some rest. That is, there is diminution of the strength of the ocular muscles with repetitive muscle actions.</owl:annotatedTarget>
         <obo:IAO_0000119>HP:0003473</obo:IAO_0000119>
+        <rdfs:comment>[PROMOT project] Mansoore Gholizade (definition reviewer)</rdfs:comment>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0032013"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget xml:lang="es">Una debilidad de los músculos oculares que se manifiesta cuando un grupo muscular ocular está bajo presión y que disminuye después de que el grupo en cuestión ha sido puesto en reposo. En resumen, se trata de una disminución de la fuerza de los músculos oculares como resultado de una carga repetida.</owl:annotatedTarget>
+        <obo:IAO_0000119>Translated from French using Reverso.</obo:IAO_0000119>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0032013"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget xml:lang="fr">Une faiblesse des muscles occulaires qui se manifeste quand un groupe musculaire occulaire est sollicité et qui diminue après que le groupe en question a été mis au repos. En résumé, il s’agit d’une diminution de la force des muscles occulaires à la suite d’une sollicitation répêtée.</owl:annotatedTarget>
+        <obo:IAO_0000119>translated from English by https://orcid.org/0009-0000-5160-7927 reviewed by https://orcid.org/0000-0003-2829-847</obo:IAO_0000119>
     </owl:Axiom>
     
 
@@ -34827,9 +35050,10 @@ Previous. An information content entity is a non-realizable information entity t
     <!-- http://purl.obolibrary.org/obo/PROMOT_0032014 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0032014">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0003473"/>
-        <obo:IAO_0000115 xml:lang="en">A type of weakness of the axial muscles (i.e., of the muscles of the head and neck, spine, and ribs) that occurs after a muscle group is used and lessens if the muscle group has some rest. That is, there is diminution of the strength of the axial muscles with repetitive muscle actions.</obo:IAO_0000115>
-        <obo:IAO_0000115 xml:lang="fr">Une faiblesse des muscles axiaux, c.à.d. des muscles de la tête et du coup, de la colonne vertébrale et des côtes, qui se manifeste quand un groupe musculaire axial est sollicité et qui diminue après que le groupe en question a été mis au repos. En résumé, il s’agit d’une diminution de la force des muscles axiaux à la suite d’une sollicitation répêtée.</obo:IAO_0000115>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0030197"/>
+        <obo:IAO_0000115 xml:lang="en">A type of weakness of the axial muscles (i.e., of the muscles of the head and neck, vertebral column, and intercostal muscles) that occurs after a muscle group is used and lessens if the muscle group has some rest. That is, there is diminution of the strength of the axial muscles with repetitive muscle actions.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="es">Una debilidad de los músculos axiales, es decir, los músculos de la cabeza y el cuello, la columna vertebral y las costillas, que se manifiesta cuando un grupo muscular axial está bajo presión y que disminuye después de que el grupo en cuestión ha sido puesto en reposo. En resumen, se trata de una disminución de la fuerza de los músculos axiales como resultado de una carga repetida.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="fr">Une faiblesse des muscles axiaux, c.à.d. des muscles de la tête et du cou, de la colonne vertébrale et des côtes, qui se manifeste quand un groupe musculaire axial est sollicité et qui diminue après que le groupe en question a été mis au repos. En résumé, il s’agit d’une diminution de la force des muscles axiaux à la suite d’une sollicitation répêtée.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
         <obo:PROMOT_1000001>Congenital myasthenic syndrom Scoping review</obo:PROMOT_1000001>
         <obo:PROMOT_1000001>Congenital myopathy Scoping review</obo:PROMOT_1000001>
@@ -34840,8 +35064,21 @@ Previous. An information content entity is a non-realizable information entity t
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0032014"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget xml:lang="en">A type of weakness of the axial muscles (i.e., of the muscles of the head and neck, spine, and ribs) that occurs after a muscle group is used and lessens if the muscle group has some rest. That is, there is diminution of the strength of the axial muscles with repetitive muscle actions.</owl:annotatedTarget>
+        <owl:annotatedTarget xml:lang="en">A type of weakness of the axial muscles (i.e., of the muscles of the head and neck, vertebral column, and intercostal muscles) that occurs after a muscle group is used and lessens if the muscle group has some rest. That is, there is diminution of the strength of the axial muscles with repetitive muscle actions.</owl:annotatedTarget>
         <obo:IAO_0000119>HP:0003473</obo:IAO_0000119>
+        <rdfs:comment>[PROMOT project] Mansoore Gholizade (definition reviewer)</rdfs:comment>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0032014"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget xml:lang="es">Una debilidad de los músculos axiales, es decir, los músculos de la cabeza y el cuello, la columna vertebral y las costillas, que se manifiesta cuando un grupo muscular axial está bajo presión y que disminuye después de que el grupo en cuestión ha sido puesto en reposo. En resumen, se trata de una disminución de la fuerza de los músculos axiales como resultado de una carga repetida.</owl:annotatedTarget>
+        <obo:IAO_0000119>Translated from French using Reverso.</obo:IAO_0000119>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0032014"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget xml:lang="fr">Une faiblesse des muscles axiaux, c.à.d. des muscles de la tête et du cou, de la colonne vertébrale et des côtes, qui se manifeste quand un groupe musculaire axial est sollicité et qui diminue après que le groupe en question a été mis au repos. En résumé, il s’agit d’une diminution de la force des muscles axiaux à la suite d’une sollicitation répêtée.</owl:annotatedTarget>
+        <obo:IAO_0000119>translated from English by https://orcid.org/0009-0000-5160-7927 reviewed by https://orcid.org/0000-0003-2829-847</obo:IAO_0000119>
     </owl:Axiom>
     
 
@@ -34851,13 +35088,34 @@ Previous. An information content entity is a non-realizable information entity t
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0032015">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0001324"/>
         <obo:IAO_0000115 xml:lang="en">A lack of strength in the muscles involved in chewing.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="es">Debilidad muscular de los músculos involucrados en la masticación.</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="fr">Une faiblesse musculaire des muscles impliqués dans la mastication.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
         <obo:PROMOT_1000001>Congenital myasthenic syndrom Scoping review</obo:PROMOT_1000001>
         <obo:PROMOT_1000001>Congenital myopathy Scoping review</obo:PROMOT_1000001>
+        <rdfs:label xml:lang="es">Debilidad de músculos masticatorios</rdfs:label>
         <rdfs:label xml:lang="fr">Faiblesse musculaire des muscles de la mastication</rdfs:label>
         <rdfs:label xml:lang="en">Weakness of chewing muscles</rdfs:label>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0032015"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget xml:lang="en">A lack of strength in the muscles involved in chewing.</owl:annotatedTarget>
+        <obo:IAO_0000119>HP:0001324</obo:IAO_0000119>
+        <rdfs:comment>[PROMOT project] Mansoore Gholizade (definition reviewer)</rdfs:comment>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0032015"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget xml:lang="es">Debilidad muscular de los músculos involucrados en la masticación.</owl:annotatedTarget>
+        <obo:IAO_0000119>Translated from French using Reverso.</obo:IAO_0000119>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0032015"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget xml:lang="fr">Une faiblesse musculaire des muscles impliqués dans la mastication.</owl:annotatedTarget>
+        <obo:IAO_0000119>translated from English by https://orcid.org/0009-0000-5160-7927 reviewed by https://orcid.org/0000-0003-2829-847</obo:IAO_0000119>
+    </owl:Axiom>
     
 
 
@@ -35206,6 +35464,7 @@ Previous. An information content entity is a non-realizable information entity t
         </rdfs:subClassOf>
         <obo:IAO_0000115 xml:lang="en">An assessment with the Berg scale assesses balance and identifies the level of fall risk. This five-level ordinal scale (0 to 4) contains 14 items and the maximum total score ranges from 0 (maximum reach) to 56 (no reach detected). This generic scale evaluates various dimensions of balance, including the following: maintaining multiple positions, having automatic postural responses when changing posture or voluntary movements of the limbs, and produce effective balance and protection reactions.</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="fr">Une évaluation avec l’échelle de Berg évalue l’équilibre et identifie le niveau de risque de chute. Cette échelle ordinale à cinq niveaux (0 à 4) contient 14 items et le résultat total maximal varie de 0 (atteinte maximale) à 56 (aucune atteinte détectée). Cette échelle générique évalue diverses dimensions de l’équilibre, dont les suivantes : maintenir plusieurs positions, avoir des réponses posturales automatiques lors des changements de posture ou de mouvements volontaires des membres, et produire des réactions d’équilibre et de protection efficaces.</obo:IAO_0000115>
+        <oboInOwl:hasDbXref>http://snomed.info/id/404933001</oboInOwl:hasDbXref>
         <rdfs:label xml:lang="en">Assessment using Berg Balance Scale</rdfs:label>
         <rdfs:label xml:lang="fr">Évaluation avec l’échelle de Berg</rdfs:label>
     </owl:Class>
@@ -35530,6 +35789,12 @@ Previous. An information content entity is a non-realizable information entity t
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/SO_0001762">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000019"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000080"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/SO_0001060"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <obo:IAO_0000115>A quality inhering in a variant by virtue of its origin.</obo:IAO_0000115>
         <rdfs:label>variant_origin</rdfs:label>
         <rdfs:label xml:lang="en">variant_origin</rdfs:label>
@@ -39421,6 +39686,12 @@ pulmonary arterial and venous trees. Examples: There is only one heart.</rdfs:co
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/NCIT_C16960"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000086"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/HP_0032319"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <sct-ext:definitionStatus>Primitif</sct-ext:definitionStatus>
         <sct-ext:fsn xml:lang="en">Blood relative (person)</sct-ext:fsn>
         <dc11:type>person</dc11:type>
@@ -40898,12 +41169,6 @@ pulmonary arterial and venous trees. Examples: There is only one heart.</rdfs:co
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROMOT_2000002"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/HP_0001387"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROMOT_2000002"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/HP_0001531"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -43012,12 +43277,6 @@ pulmonary arterial and venous trees. Examples: There is only one heart.</rdfs:co
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0004029"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/HP_0001531"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0004029"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/HP_0001609"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -43241,6 +43500,12 @@ pulmonary arterial and venous trees. Examples: There is only one heart.</rdfs:co
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0004029"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/HP_0004322"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0004029"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/HP_0004325"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>

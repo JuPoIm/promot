@@ -6,18 +6,20 @@
 -->
 
 # PROMOT ontology
-<img src="https://github.com/JuPoIm/promot/blob/test/site/assets/images/Promot_Logo_Colours.png"/>
+<img src="https://github.com/JuPoIm/promot/blob/test/site/assets/images/Promot_Logo_Colours.png"/ height=150 width=250/>
 
-The PROMOT ontology represents the 3 groups of neuromuscular diseases the PROMOT Master Observational Trial focuses on :
+The PROMOT ontology represents the 3 groups of neuromuscular diseases and 13 genes the PROMOT Master Observational Trial focuses on :
 * Oculopharyngeal Muscular Dystrophy
 * Congenital Myasthenic Syndromes
 * Congenital Myopathies
 
-The PROMOT ontology aims to build the common data model the PROMOT initiative will use to collect patient data scattered between the different sites involved in PROMOT initiative.
+The PROMOT ontology aims to be the conceptual schema for the common data model the PROMOT initiative will use to collect patient data scattered between the different sites involved in PROMOT initiative.
 
-Informations about the ontology can also be found at http://obofoundry.org/ontology/promot
+Informations about the ontology can also be found at http://obofoundry.org/ontology/promot.
 
-More about PROMOT initiative can be found at https://www.promotinitiative.com/project
+Ontology documentation is available [here](https://JuPoIm.github.io/promot_ontology/).
+
+More about PROMOT initiative can be found at https://www.promotinitiative.com/project.
 
 ## Versions
 

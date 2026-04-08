@@ -10,7 +10,7 @@
 # More information: https://github.com/INCATools/ontology-development-kit/
 
 # Fingerprint of the configuration file when this Makefile was last generated
-CONFIG_HASH=                6386cc49cbde76f8a0b03ce0cb39d24342ac7f19bcbbcf5de8685d69450e4f2d
+CONFIG_HASH=                59aee7494619eb35a6102b3adc46ee578ed86dedafee3bb1dcd46b845c322cf2
 
 
 # ----------------------------------------
@@ -194,7 +194,7 @@ all_main: $(MAIN_FILES)
 # ----------------------------------------
 
 
-IMPORTS =  bfo eco fma hp iao icf ncit ncbitaxon ordo ro snomed so
+IMPORTS =  bfo eco fma hp iao icf ncit obi ordo ro snomed so
 
 IMPORT_ROOTS = $(patsubst %, $(IMPORTDIR)/%_import, $(IMPORTS))
 IMPORT_OWL_FILES = $(foreach n,$(IMPORT_ROOTS), $(n).owl)
@@ -444,13 +444,24 @@ $(IMPORTDIR)/ncit_import.owl: $(MIRRORDIR)/ncit.owl
 	@false
 endif # IMP_LARGE=true
 
-## Module for ontology: ncbitaxon (custom)
-ifeq ($(IMP_LARGE),true)
-$(IMPORTDIR)/ncbitaxon_import.owl: $(MIRRORDIR)/ncbitaxon.owl
-	@echo "ERROR: You have configured ncbitaxon as a custom module;"
-	@echo "       This rule needs to be overwritten in promot.Makefile!"
-	@false
-endif # IMP_LARGE=true
+## Module for ontology: obi (filter)
+$(IMPORTDIR)/obi_import.owl: $(MIRRORDIR)/obi.owl $(IMPORTDIR)/obi_terms.txt $(IMPORTSEED) | all_robot_plugins
+	$(ROBOT) annotate --input $< --remove-annotations \
+		 odk:normalize --add-source true \
+		 extract --term-file $(IMPORTDIR)/obi_terms.txt $(T_IMPORTSEED) \
+		         --copy-ontology-annotations true --force true --method BOT \
+		 remove --axioms external --preserve-structure false --trim false \
+		        --base-iri http://purl.obolibrary.org/obo/OBI \
+		 remove $(foreach p, $(ANNOTATION_PROPERTIES), --term $(p)) \
+		        --term rdfs:label \
+		        --term IAO:0000115 \
+		        --term OMO:0002000 \
+		        --term-file $(IMPORTDIR)/obi_terms.txt $(T_IMPORTSEED) \
+		        --select complement \
+		 odk:normalize --base-iri http://purl.obolibrary.org/obo \
+		               --subset-decls true --synonym-decls true \
+		 repair --merge-axiom-annotations true \
+		 $(ANNOTATE_CONVERT_FILE)
 
 ## Module for ontology: snomed (custom)
 ifeq ($(IMP_LARGE),true)
@@ -609,14 +620,12 @@ mirror-ncit: | $(TMPDIR)
 endif
 
 
-## ONTOLOGY: ncbitaxon
-.PHONY: mirror-ncbitaxon
-.PRECIOUS: $(MIRRORDIR)/ncbitaxon.owl
-ifeq ($(IMP_LARGE),true)
-mirror-ncbitaxon: | $(TMPDIR)
-	curl -L $(OBOBASE)/ncbitaxon.owl --create-dirs -o $(TMPDIR)/ncbitaxon-download.owl --retry 4 --max-time 200 && \
-	$(ROBOT) convert -i $(TMPDIR)/ncbitaxon-download.owl -o $(TMPDIR)/$@.owl
-endif
+## ONTOLOGY: obi
+.PHONY: mirror-obi
+.PRECIOUS: $(MIRRORDIR)/obi.owl
+mirror-obi: | $(TMPDIR)
+	curl -L $(OBOBASE)/obi.owl --create-dirs -o $(TMPDIR)/obi-download.owl --retry 4 --max-time 200 && \
+	$(ROBOT) convert -i $(TMPDIR)/obi-download.owl -o $(TMPDIR)/$@.owl
 
 
 ## ONTOLOGY: ordo

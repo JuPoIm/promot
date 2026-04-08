@@ -23,8 +23,8 @@ translation_df = pd.read_csv("../templates/icf_labels_es-fr.tsv", sep="\t")
 # axioms_df creation with ROBOT template format 
 # création de la dataframe des axioms au format template
 print ('Creation axioms dataframe')
-axioms_df = pd.DataFrame(columns = ['ID', 'Label EN', 'Annotation', 'Type', 'Parent Class'])
-axioms_df.loc[0] = {'ID': 'ID', 'Label EN': 'AL rdfs:label@en', 'Annotation' : 'A PROMOT:1000001 SPLIT=|', 'Type': 'TYPE', 'Parent Class': 'SC % SPLIT=|'}
+axioms_df = pd.DataFrame(columns = ['ID', 'Label EN', 'Annotation', 'Type', 'Parent Class', 'CrossRef'])
+axioms_df.loc[0] = {'ID': 'ID', 'Label EN': 'AL rdfs:label@en', 'Annotation' : 'A PROMOT:1000001 SPLIT=|', 'Type': 'TYPE', 'Parent Class': 'SC % SPLIT=|', 'CrossRef': 'A oboInOwl:hasDbXref SPLIT=|'}
 
 # creation of the dictionnary IRI : Parent class expression
 # création des dictionnaires IRI : Parent class
@@ -94,19 +94,19 @@ for key, value in dico_axioms.items():
 for key, value in dico_annotations.items():
     axioms_df.loc[len(axioms_df)] = {'ID': key,'Label EN': value[1], 'Annotation': value[0]}
 
-print("axioms_df")
-print(axioms_df)
+# print("axioms_df")
+# print(axioms_df)
 
 # merge of the base template with the axioms template
 output_df = pd.merge(component_df, axioms_df, how='outer')
-print("output_df")
-print(output_df)
+# print("output_df")
+# print(output_df)
 #output_df.to_csv('../templates/promot-test.tsv', sep='\t', index=False)
 
 # merge of the output_df with the translations
 template_df = pd.merge(output_df, translation_df, how='outer')
-print("template_df")
-print(template_df)
+# print("template_df")
+# print(template_df)
 #template_df.to_csv('../templates/promot-test.tsv', sep='\t', index=False)
 
 idx = template_df[template_df['ID'] == 'ID']
@@ -117,8 +117,8 @@ idx = template_df[template_df['ID'] == 'ID'].index.item()
 new_index = [idx] + [i for i in range(len(template_df)) if i != idx]
 #print(new_index)
 template_df = template_df.reindex(new_index).reset_index(drop=True)
-print("template_df v2")
-print(template_df)
+# print("template_df v2")
+# print(template_df)
 
 print ('Creation of PROMOT template file')
 # Conversion de la dataframe en un template ROBOT | Convert of the dataframe into a ROBOT template

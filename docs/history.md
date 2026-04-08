@@ -5,13 +5,34 @@
 
 The PROMOT ontology has been developed as part of the [PROMOT initiative](https://www.promotinitiative.com/project).
 
-It aims to represent the 3 groups of neuromuscular diseases the PROMOT Master Observational Trial focuses on :
+It aims to represent the 3 groups of neuromuscular diseases and the 13 genes the PROMOT Master Observational Trial focuses on :
 
-* Oculopharyngeal Muscular Dystrophy
-* Congenital Myasthenic Syndromes
-* Congenital Myopathies
+* Oculopharyngeal Muscular Dystrophy: *PABPN1*
+* Congenital Myasthenic Syndromes: *CHRNE*, *DOK7*, *COLQ*, *RAPSN*, *GFPT1*, *GMPPB*
+* Congenital Myopathies: *RYR1*, *TTN*, *NEB*, *MTM1*, *ACTA1*, *SELENON*
 
-The PROMOT ontology also aims to be the conceptual schema for building the common data model of the PROMOT initiative. It will be used to collect patient data scattered between the different sites involved in PROMOT initiative.
+This ontology also aims to be the conceptual schema for building the common data model of the PROMOT initiative. It will be used to collect patient data scattered between the different sites involved in PROMOT initiative. You will find the ontology description [here](OntologyDescription.md).
+
+## Sources
+
+The PROMOT ontology relies on three sources:
+
+1) scoping reviews:
+    - OPMD: 
+        - [Bélair N, Gagnon C, Duchesne E. What is known about muscle weakness, balance impairments and indoor mobility limitations in oculopharyngeal muscular dystrophy? A scoping review. J Neuromuscul Dis. 2025 Dec 30:22143602251397052. doi: 10.1177/22143602251397052. Epub ahead of print. PMID: 41467981.](https://pubmed.ncbi.nlm.nih.gov/41467981/)
+        - [Côté, C., Gagnon, C., Youssof, S., sKurtz, N. and Brais, B. (2019), The requirement for a disease-specific patient-reported outcome measure of dysphagia in oculopharyngeal muscular dystrophy. Muscle Nerve, 59: 445-450. https://doi.org/10.1002/mus.26405](https://onlinelibrary.wiley.com/doi/10.1002/mus.26405)
+    - CMYO:
+        -
+    - CMS:
+        -
+
+2) research protocol:
+
+    - OPMD: [GRIIS](https://griis.ca/)
+    
+3) [HPO annotations](https://hpo.jax.org/data/annotations)
+
+## Acknowledgements
 
 This project has received funding from (Name of funding agency), XX and XX, partners of the European Joint Programme on Rare Diseases (EJP RD).
 

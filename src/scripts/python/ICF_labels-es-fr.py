@@ -4,7 +4,7 @@
 # GOAL : create a template ROBOT with spanish and french labels for ICF classes
 # BUT : créer un template avec les labels espagnols et français pour les classes ICF
 # date de création / Creation date : 23/09/2025
-# date de version / Version date : 23/10/2025
+# date de version / Version date : 08/04/2026
 
 import csv
 import re
@@ -15,7 +15,8 @@ import pandas as pd
 columns = ['ID', 'Label EN', 'Label FR', 'Label FR annotation', 'Label ES', 'Label ES annotation', 'CrossRef']
 df = pd.DataFrame(columns=columns)
 
-# Read file with 2025 Fundational URI and french translated labels from https://icdcdn.who.int/static/releasefiles/2025-01/SimpleTabulation-ICF-fr.zip
+
+# Read file with 2026 Fundational URI and french translated labels from https://icdcdn.who.int/static/releasefiles/2026-01/SimpleTabulation-ICF-fr.zip
 with open('../data/imports/SimpleTabulation-ICF-fr.txt', newline='', encoding='utf-8') as tsvfile:
     reader = csv.reader(tsvfile, delimiter = '\t', quotechar = '"', quoting = csv.QUOTE_MINIMAL)
     for row in reader:
@@ -26,17 +27,20 @@ with open('../data/imports/SimpleTabulation-ICF-fr.txt', newline='', encoding='u
             label_fr = row[5]
             while '- ' in label_fr :
                 label_fr = re.sub('- ', '', label_fr)  # suppression des '- ' dans les labels
-            df.loc[len(df)]=  {'ID': icf_uri,
+            df.loc[len(df)] =  {'ID': icf_uri,
             'Label FR': label_fr,
             'Label FR annotation': 'Source for official translation: https://icd.who.int/browse/2026-01/icf/fr > Info > Fichier du tableur'}
 
-# Read file with 2025 Fundational URI and spanish translated labels from https://icdcdn.who.int/static/releasefiles/2025-01/SimpleTabulation-ICF-es.zip
+
+# Read file with 2026 Fundational URI and spanish translated labels from https://icdcdn.who.int/static/releasefiles/2026-01/SimpleTabulation-ICF-es.zip
 with open('../data/imports/SimpleTabulation-ICF-es.txt', newline='', encoding='utf-8') as tsvfile:
     reader = csv.reader(tsvfile, delimiter = '\t', quotechar = '"', quoting = csv.QUOTE_MINIMAL)
     for row in reader:
         if 'http://id.who.int/icd/entity/' not in row[0] : # if no Fundational URI pass
             pass
         else:
+            df['Label ES'] = df['Label ES'].astype(object)
+            df['Label ES'] = df['Label ES annotation'].astype(object)
             icf_uri = row[0]
             label_en = row[4]
             while '- ' in label_en :
@@ -58,7 +62,6 @@ template_df.loc[0]= {'ID': 'ID',
             'CrossRef': 'A oboInOwl:hasDbXref SPLIT=|'
             }
 
-
 with open ('../scripts/python/tmp/icf_import_iri.tsv', encoding='utf-8') as tsvfile:
     reader = csv.reader(tsvfile, delimiter = '\t', quotechar = '"', quoting = csv.QUOTE_MINIMAL)
     for row in reader:
@@ -66,11 +69,13 @@ with open ('../scripts/python/tmp/icf_import_iri.tsv', encoding='utf-8') as tsvf
         data = df[df['ID'] == iri]
         template_df = pd.concat([template_df, data], ignore_index = True)
 
-# with open ('../scripts/python/tmp/icf-to-cifasip_promot.tsv', encoding='utf-8') as xref_file:
-#     reader = csv.reader(xref_file, delimiter = '\t', quotechar = '"', quoting = csv.QUOTE_MINIMAL)
-#     for row in reader:
-#         iri = row[0]
-#         xref = row[2]
-#         template_df.loc[template_df['ID'] == iri, 'CrossRef'] = xref
+with open ('../scripts/python/tmp/icf-to-cifasip_promot.tsv', encoding='utf-8') as xref_file:
+    reader = csv.reader(xref_file, delimiter = '\t', quotechar = '"', quoting = csv.QUOTE_MINIMAL)
+    for row in reader:
+        iri = row[0]
+        xref = row[2]
+        template_df.loc[template_df['ID'] == iri, 'CrossRef'] = xref
+        print (template_df[iri]['CrossRef'])
 
+print(template_df)
 template_df.to_csv('../templates/icf_labels_es-fr.tsv', sep='\t', index=False)

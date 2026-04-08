@@ -58,8 +58,8 @@ Prefix(CPATH_CONDITION_OCCURRENCE:=<https://w3id.org/cpont/condition_occurrence/
 
 
 Ontology(<http://purl.obolibrary.org/obo/promot/components/promot-component.owl>
-<http://purl.obolibrary.org/obo/promot/releases/2026-03-25/components/promot-component.owl>
-Annotation(owl:versionInfo "2026-03-25")
+<http://purl.obolibrary.org/obo/promot/releases/2026-04-08/components/promot-component.owl>
+Annotation(owl:versionInfo "2026-04-08")
 
 Declaration(Class(<http://id.who.int/icd/entity/1019379329>))
 Declaration(Class(<http://id.who.int/icd/entity/1034220517>))
@@ -302,8 +302,6 @@ Declaration(Class(obo:HP_0001319))
 Declaration(Class(obo:HP_0001324))
 Declaration(Class(obo:HP_0001374))
 Declaration(Class(obo:HP_0001387))
-Declaration(Class(obo:HP_0001508))
-Declaration(Class(obo:HP_0001531))
 Declaration(Class(obo:HP_0001547))
 Declaration(Class(obo:HP_0001558))
 Declaration(Class(obo:HP_0001609))
@@ -476,6 +474,7 @@ Declaration(Class(obo:HP_0031826))
 Declaration(Class(obo:HP_0031914))
 Declaration(Class(obo:HP_0031936))
 Declaration(Class(obo:HP_0032043))
+Declaration(Class(obo:HP_0032319))
 Declaration(Class(obo:HP_0032341))
 Declaration(Class(obo:HP_0033235))
 Declaration(Class(obo:HP_0033416))
@@ -848,7 +847,7 @@ AnnotationAssertion(oboInOwl:hasDbXref obo:PROMOT_2000006 "SIO:000709 ")
 AnnotationAssertion(rdfs:label obo:PROMOT_2000006 "est lié à"@fr)
 AnnotationAssertion(rdfs:label obo:PROMOT_2000006 "is related to"@en)
 
-# Object Property: obo:PROMOT_2000007 (a pour identifiant)
+# Object Property: obo:PROMOT_2000007 (has identifier)
 
 AnnotationAssertion(obo:IAO_0000115 obo:PROMOT_2000007 "A relation between an entity and its identifier where the identifier allows to indentify the first entity."@en)
 AnnotationAssertion(obo:IAO_0000115 obo:PROMOT_2000007 "Une relation entre une entité et son identifiant, où l’identifiant sert à identifier la première entité."@fr)
@@ -875,6 +874,7 @@ AnnotationAssertion(rdfs:label obo:RO_0001025 "located in"@en)
 # Object Property: obo:RO_0002200 (has phenotype)
 
 AnnotationAssertion(rdfs:label obo:RO_0002200 "has phenotype"@en)
+AnnotationAssertion(rdfs:seeAlso obo:RO_0002200 <c>)
 
 # Object Property: obo:RO_0002234 (has output)
 
@@ -960,7 +960,7 @@ AnnotationAssertion(rdfs:label <http://id.who.int/icd/entity/1104062484> "Foncti
 AnnotationAssertion(rdfs:label <http://id.who.int/icd/entity/1104062484> "Funciones puberales"@es)
 AnnotationAssertion(rdfs:label <http://id.who.int/icd/entity/1104062484> "Pubertal functions"@en)
 
-# Class: <http://id.who.int/icd/entity/1108927576> (Structure de la région des épaules)
+# Class: <http://id.who.int/icd/entity/1108927576> (Estructura de la región del hombro)
 
 AnnotationAssertion(rdfs:label <http://id.who.int/icd/entity/1108927576> "Estructura de la región del hombro"@es)
 AnnotationAssertion(rdfs:label <http://id.who.int/icd/entity/1108927576> "Structure de la région des épaules"@fr)
@@ -1021,7 +1021,7 @@ AnnotationAssertion(rdfs:label <http://id.who.int/icd/entity/1228414013> "Tareas
 AnnotationAssertion(rdfs:label <http://id.who.int/icd/entity/1228414013> "Tâches et exigences générales"@fr)
 SubClassOf(<http://id.who.int/icd/entity/1228414013> obo:PROMOT_0120002)
 
-# Class: <http://id.who.int/icd/entity/1233939003> (Muscles of hand)
+# Class: <http://id.who.int/icd/entity/1233939003> (Músculos de la mano)
 
 AnnotationAssertion(rdfs:label <http://id.who.int/icd/entity/1233939003> "Muscles de la main"@fr)
 AnnotationAssertion(rdfs:label <http://id.who.int/icd/entity/1233939003> "Muscles of hand"@en)
@@ -1037,7 +1037,7 @@ SubClassOf(<http://id.who.int/icd/entity/1233939003> ObjectSomeValuesFrom(obo:RO
 SubClassOf(<http://id.who.int/icd/entity/1233939003> ObjectSomeValuesFrom(obo:RO_0002328 <http://id.who.int/icd/entity/1521707777>))
 SubClassOf(<http://id.who.int/icd/entity/1233939003> ObjectSomeValuesFrom(obo:RO_0002328 <http://id.who.int/icd/entity/1789365017>))
 
-# Class: <http://id.who.int/icd/entity/1255154286> (Hearing and vestibular functions)
+# Class: <http://id.who.int/icd/entity/1255154286> (Funciones auditivas y vestibulares)
 
 AnnotationAssertion(rdfs:label <http://id.who.int/icd/entity/1255154286> "Fonctions de l'audition et fonctions vestibulaires"@fr)
 AnnotationAssertion(rdfs:label <http://id.who.int/icd/entity/1255154286> "Funciones auditivas y vestibulares"@es)
@@ -1049,13 +1049,13 @@ AnnotationAssertion(rdfs:label <http://id.who.int/icd/entity/1264948861> "Foncti
 AnnotationAssertion(rdfs:label <http://id.who.int/icd/entity/1264948861> "Funciones relacionadas con la estabilidad de las articulaciones"@es)
 AnnotationAssertion(rdfs:label <http://id.who.int/icd/entity/1264948861> "Stability of joint functions"@en)
 
-# Class: <http://id.who.int/icd/entity/1266389839> (Cambiar y mantener la posición del cuerpo)
+# Class: <http://id.who.int/icd/entity/1266389839> (Changer et maintenir la position du corps)
 
 AnnotationAssertion(rdfs:label <http://id.who.int/icd/entity/1266389839> "Cambiar y mantener la posición del cuerpo"@es)
 AnnotationAssertion(rdfs:label <http://id.who.int/icd/entity/1266389839> "Changer et maintenir la position du corps"@fr)
 AnnotationAssertion(rdfs:label <http://id.who.int/icd/entity/1266389839> "Changing and maintaining body position"@en)
 
-# Class: <http://id.who.int/icd/entity/1278239861> (Muscles de la cheville et du pied)
+# Class: <http://id.who.int/icd/entity/1278239861> (Músculos del tobillo y del pie)
 
 AnnotationAssertion(rdfs:label <http://id.who.int/icd/entity/1278239861> "Muscles de la cheville et du pied"@fr)
 AnnotationAssertion(rdfs:label <http://id.who.int/icd/entity/1278239861> "Muscles of ankle and foot"@en)
@@ -1132,7 +1132,7 @@ AnnotationAssertion(rdfs:label <http://id.who.int/icd/entity/1389818830> "Mastic
 AnnotationAssertion(rdfs:label <http://id.who.int/icd/entity/1389818830> "Mastiquer"@fr)
 SubClassOf(<http://id.who.int/icd/entity/1389818830> ObjectSomeValuesFrom(obo:RO_0002331 <http://id.who.int/icd/entity/1328675264>))
 
-# Class: <http://id.who.int/icd/entity/1398348540> (Prendre soin de sa santé)
+# Class: <http://id.who.int/icd/entity/1398348540> (Cuidado de la propia salud)
 
 AnnotationAssertion(rdfs:label <http://id.who.int/icd/entity/1398348540> "Cuidado de la propia salud"@es)
 AnnotationAssertion(rdfs:label <http://id.who.int/icd/entity/1398348540> "Looking after one's health"@en)
@@ -1173,7 +1173,7 @@ AnnotationAssertion(rdfs:label <http://id.who.int/icd/entity/142318995> "Estruct
 AnnotationAssertion(rdfs:label <http://id.who.int/icd/entity/142318995> "Structure de la main"@fr)
 AnnotationAssertion(rdfs:label <http://id.who.int/icd/entity/142318995> "Structure of hand"@en)
 
-# Class: <http://id.who.int/icd/entity/1426641453> (Mélodie de la parole)
+# Class: <http://id.who.int/icd/entity/1426641453> (Melody of speech)
 
 AnnotationAssertion(rdfs:label <http://id.who.int/icd/entity/1426641453> "Melody of speech"@en)
 AnnotationAssertion(rdfs:label <http://id.who.int/icd/entity/1426641453> "Melodía del habla"@es)
@@ -1199,7 +1199,7 @@ AnnotationAssertion(rdfs:label <http://id.who.int/icd/entity/1438965984> "Additi
 AnnotationAssertion(rdfs:label <http://id.who.int/icd/entity/1438965984> "Estructuras musculoesqueléticas adicionales relacionadas con el movimiento"@es)
 AnnotationAssertion(rdfs:label <http://id.who.int/icd/entity/1438965984> "Structures supplémentaires de l'appareil locomoteur liées au mouvement"@fr)
 
-# Class: <http://id.who.int/icd/entity/1452836727> (Tareas del hogar)
+# Class: <http://id.who.int/icd/entity/1452836727> (Tâches domestiques)
 
 AnnotationAssertion(rdfs:label <http://id.who.int/icd/entity/1452836727> "Household tasks"@en)
 AnnotationAssertion(rdfs:label <http://id.who.int/icd/entity/1452836727> "Tareas del hogar"@es)
@@ -1241,7 +1241,7 @@ AnnotationAssertion(rdfs:label <http://id.who.int/icd/entity/1515853559> "Dolor 
 AnnotationAssertion(rdfs:label <http://id.who.int/icd/entity/1515853559> "Douleur au membre inférieur"@fr)
 AnnotationAssertion(rdfs:label <http://id.who.int/icd/entity/1515853559> "Pain in lower limb"@en)
 
-# Class: <http://id.who.int/icd/entity/1521707777> (Endurance of muscle groups)
+# Class: <http://id.who.int/icd/entity/1521707777> (Resistencia de grupos de músculos)
 
 AnnotationAssertion(rdfs:label <http://id.who.int/icd/entity/1521707777> "Endurance des groupes de muscles"@fr)
 AnnotationAssertion(rdfs:label <http://id.who.int/icd/entity/1521707777> "Endurance of muscle groups"@en)
@@ -1767,7 +1767,7 @@ SubClassOf(<http://id.who.int/icd/entity/294830867> ObjectSomeValuesFrom(obo:RO_
 SubClassOf(<http://id.who.int/icd/entity/294830867> ObjectSomeValuesFrom(obo:RO_0002328 <http://id.who.int/icd/entity/1521707777>))
 SubClassOf(<http://id.who.int/icd/entity/294830867> ObjectSomeValuesFrom(obo:RO_0002328 <http://id.who.int/icd/entity/1789365017>))
 
-# Class: <http://id.who.int/icd/entity/299098423> (Douleur à la tête et au cou)
+# Class: <http://id.who.int/icd/entity/299098423> (Dolor en la cabeza y el cuello)
 
 AnnotationAssertion(rdfs:label <http://id.who.int/icd/entity/299098423> "Dolor en la cabeza y el cuello"@es)
 AnnotationAssertion(rdfs:label <http://id.who.int/icd/entity/299098423> "Douleur à la tête et au cou"@fr)
@@ -1903,7 +1903,7 @@ AnnotationAssertion(rdfs:label <http://id.who.int/icd/entity/454325322> "Dolor e
 AnnotationAssertion(rdfs:label <http://id.who.int/icd/entity/454325322> "Douleurs à localisations multiples"@fr)
 AnnotationAssertion(rdfs:label <http://id.who.int/icd/entity/454325322> "Pain in multiple body parts"@en)
 
-# Class: <http://id.who.int/icd/entity/462923277> (Joints)
+# Class: <http://id.who.int/icd/entity/462923277> (Articulaciones)
 
 AnnotationAssertion(rdfs:label <http://id.who.int/icd/entity/462923277> "Articulaciones"@es)
 AnnotationAssertion(rdfs:label <http://id.who.int/icd/entity/462923277> "Articulations"@fr)
@@ -1913,7 +1913,7 @@ SubClassOf(<http://id.who.int/icd/entity/462923277> ObjectSomeValuesFrom(obo:RO_
 SubClassOf(<http://id.who.int/icd/entity/462923277> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0002828))
 SubClassOf(<http://id.who.int/icd/entity/462923277> ObjectSomeValuesFrom(obo:RO_0002328 <http://id.who.int/icd/entity/1757783224>))
 
-# Class: <http://id.who.int/icd/entity/485719194> (Rester debout)
+# Class: <http://id.who.int/icd/entity/485719194> (Maintaining a standing position)
 
 AnnotationAssertion(rdfs:label <http://id.who.int/icd/entity/485719194> "Maintaining a standing position"@en)
 AnnotationAssertion(rdfs:label <http://id.who.int/icd/entity/485719194> "Permanecer de pie"@es)
@@ -1950,7 +1950,7 @@ SubClassOf(<http://id.who.int/icd/entity/495844982> ObjectSomeValuesFrom(obo:RO_
 SubClassOf(<http://id.who.int/icd/entity/495844982> ObjectSomeValuesFrom(obo:RO_0002328 <http://id.who.int/icd/entity/446199613>))
 SubClassOf(<http://id.who.int/icd/entity/495844982> ObjectSomeValuesFrom(obo:RO_0002328 <http://id.who.int/icd/entity/744367503>))
 
-# Class: <http://id.who.int/icd/entity/521411479> (Structures of cardiovascular, immunological and respiratory systems)
+# Class: <http://id.who.int/icd/entity/521411479> (Structures des systèmes cardio-vasculaire, immunitaire et respiratoire)
 
 AnnotationAssertion(rdfs:label <http://id.who.int/icd/entity/521411479> "Capítulo 4 estructuras de los sistemas cardiovascular, inmunológico y respiratorio"@es)
 AnnotationAssertion(rdfs:label <http://id.who.int/icd/entity/521411479> "Structures des systèmes cardio-vasculaire, immunitaire et respiratoire"@fr)
@@ -2001,7 +2001,7 @@ AnnotationAssertion(rdfs:label <http://id.who.int/icd/entity/567313968> "Fonctio
 AnnotationAssertion(rdfs:label <http://id.who.int/icd/entity/567313968> "Funciones corporales"@es)
 SubClassOf(<http://id.who.int/icd/entity/567313968> obo:BFO_0000034)
 
-# Class: <http://id.who.int/icd/entity/576915490> (Fonctions relatives aux réactions motrices involontaires)
+# Class: <http://id.who.int/icd/entity/576915490> (Involuntary movement reaction functions)
 
 AnnotationAssertion(rdfs:label <http://id.who.int/icd/entity/576915490> "Fonctions relatives aux réactions motrices involontaires"@fr)
 AnnotationAssertion(rdfs:label <http://id.who.int/icd/entity/576915490> "Funciones relacionadas con los reflejos de movimiento involuntario"@es)
@@ -2050,7 +2050,7 @@ AnnotationAssertion(rdfs:label <http://id.who.int/icd/entity/621727843> "Sensaci
 AnnotationAssertion(rdfs:label <http://id.who.int/icd/entity/621727843> "Sensation de spasme musculaire"@fr)
 AnnotationAssertion(rdfs:label <http://id.who.int/icd/entity/621727843> "Sensation of muscle spasm"@en)
 
-# Class: <http://id.who.int/icd/entity/623565657> (Maintaining a sitting position)
+# Class: <http://id.who.int/icd/entity/623565657> (Permanecer sentado)
 
 AnnotationAssertion(rdfs:label <http://id.who.int/icd/entity/623565657> "Maintaining a sitting position"@en)
 AnnotationAssertion(rdfs:label <http://id.who.int/icd/entity/623565657> "Permanecer sentado"@es)
@@ -2156,7 +2156,7 @@ AnnotationAssertion(rdfs:label <http://id.who.int/icd/entity/735194884> "Experie
 AnnotationAssertion(rdfs:label <http://id.who.int/icd/entity/735194884> "Perceptions sensorielles intentionnelles"@fr)
 AnnotationAssertion(rdfs:label <http://id.who.int/icd/entity/735194884> "Purposeful sensory experiences"@en)
 
-# Class: <http://id.who.int/icd/entity/744367503> (Funciones del sistema respiratorio)
+# Class: <http://id.who.int/icd/entity/744367503> (Fonctions du système respiratoire)
 
 AnnotationAssertion(rdfs:label <http://id.who.int/icd/entity/744367503> "Fonctions du système respiratoire"@fr)
 AnnotationAssertion(rdfs:label <http://id.who.int/icd/entity/744367503> "Funciones del sistema respiratorio"@es)
@@ -2199,7 +2199,7 @@ AnnotationAssertion(rdfs:label <http://id.who.int/icd/entity/826593815> "Capítu
 AnnotationAssertion(rdfs:label <http://id.who.int/icd/entity/826593815> "Structures liées à l'appareil génito-urinaire"@fr)
 AnnotationAssertion(rdfs:label <http://id.who.int/icd/entity/826593815> "Structures related to the genitourinary and reproductive systems"@en)
 
-# Class: <http://id.who.int/icd/entity/829058183> (Structure of respiratory system)
+# Class: <http://id.who.int/icd/entity/829058183> (Structure du système respiratoire)
 
 AnnotationAssertion(rdfs:label <http://id.who.int/icd/entity/829058183> "Estructura del sistema respiratorio"@es)
 AnnotationAssertion(rdfs:label <http://id.who.int/icd/entity/829058183> "Structure du système respiratoire"@fr)
@@ -2412,6 +2412,7 @@ AnnotationAssertion(rdfs:comment obo:HP_0000118 "[PROMOT note] [Derived from RD-
 AnnotationAssertion(rdfs:comment obo:HP_0000118 "[RD-CDM] Graefe, A.S.L., Hübner, M.R., Rehburg, F. et al. An ontology-based rare disease common data model harmonising international registries, FHIR, and Phenopackets. Sci Data 12, 234 (2025). https://doi.org/10.1038/s41597-025-04558-z")
 AnnotationAssertion(rdfs:label obo:HP_0000118 "Phenotypic abnormality"@en)
 SubClassOf(obo:HP_0000118 obo:PROMOT_0032001)
+SubClassOf(obo:HP_0000118 ObjectSomeValuesFrom(obo:RO_0000086 obo:HP_0012823))
 SubClassOf(obo:HP_0000118 ObjectSomeValuesFrom(obo:RO_0000086 obo:PROMOT_0031007))
 
 # Class: obo:HP_0000183 (Tongue muscle weakness)
@@ -2648,17 +2649,6 @@ AnnotationAssertion(rdfs:label obo:HP_0001374 "Congenital hip dislocation"@en)
 AnnotationAssertion(obo:PROMOT_1000001 obo:HP_0001387 "Congenital myopathy HPO KB associations")
 AnnotationAssertion(rdfs:label obo:HP_0001387 "Joint stiffness"@en)
 SubClassOf(obo:HP_0001387 ObjectSomeValuesFrom(obo:PROMOT_2000005 <http://id.who.int/icd/entity/1757783224>))
-
-# Class: obo:HP_0001508 (Failure to thrive)
-
-AnnotationAssertion(obo:PROMOT_1000001 obo:HP_0001508 "Congenital myopathy HPO KB associations")
-AnnotationAssertion(obo:PROMOT_1000001 obo:HP_0001508 "Congenital myopathy Scoping review")
-AnnotationAssertion(rdfs:label obo:HP_0001508 "Failure to thrive"@en)
-
-# Class: obo:HP_0001531 (Failure to thrive in infancy)
-
-AnnotationAssertion(obo:PROMOT_1000001 obo:HP_0001531 "Congenital myopathy Scoping review")
-AnnotationAssertion(rdfs:label obo:HP_0001531 "Failure to thrive in infancy"@en)
 
 # Class: obo:HP_0001547 (Abnormal rib cage morphology )
 
@@ -3283,6 +3273,7 @@ AnnotationAssertion(rdfs:label obo:HP_0003676 "Progressive"@en)
 
 AnnotationAssertion(rdfs:label obo:HP_0003679 "Pace of progression"@en)
 SubClassOf(obo:HP_0003679 obo:HP_0012823)
+SubClassOf(obo:HP_0003679 ObjectSomeValuesFrom(obo:RO_0000080 obo:HP_0000118))
 
 # Class: obo:HP_0003690 (Limb muscle weakness)
 
@@ -3811,7 +3802,6 @@ AnnotationAssertion(rdfs:comment obo:HP_0012823 "[PROMOT note] [Derived from RD-
 AnnotationAssertion(rdfs:comment obo:HP_0012823 "[RD-CDM] Graefe, A.S.L., Hübner, M.R., Rehburg, F. et al. An ontology-based rare disease common data model harmonising international registries, FHIR, and Phenopackets. Sci Data 12, 234 (2025). https://doi.org/10.1038/s41597-025-04558-z")
 AnnotationAssertion(rdfs:label obo:HP_0012823 "Clinical modifier"@en)
 SubClassOf(obo:HP_0012823 obo:BFO_0000019)
-SubClassOf(obo:HP_0012823 ObjectSomeValuesFrom(obo:RO_0000080 obo:HP_0000118))
 
 # Class: obo:HP_0012824 (Severity)
 
@@ -3873,6 +3863,7 @@ AnnotationAssertion(rdfs:comment obo:HP_0025820 "[PROMOT note] [Derived from RD-
 AnnotationAssertion(rdfs:comment obo:HP_0025820 "[RD-CDM] Graefe, A.S.L., Hübner, M.R., Rehburg, F. et al. An ontology-based rare disease common data model harmonising international registries, FHIR, and Phenopackets. Sci Data 12, 234 (2025). https://doi.org/10.1038/s41597-025-04558-z")
 AnnotationAssertion(rdfs:label obo:HP_0025820 "Offspring of consanguineous relationship "@en)
 SubClassOf(obo:HP_0025820 obo:BFO_0000019)
+SubClassOf(obo:HP_0025820 ObjectSomeValuesFrom(obo:RO_0000080 obo:NCIT_C16960))
 
 # Class: obo:HP_0030000 (EMG: repetitive nerve stimulation abnormality)
 
@@ -4122,6 +4113,11 @@ SubClassOf(obo:HP_0032043 ObjectSomeValuesFrom(obo:PROMOT_2000005 <http://id.who
 SubClassOf(obo:HP_0032043 ObjectSomeValuesFrom(obo:PROMOT_2000005 <http://id.who.int/icd/entity/553784299>))
 SubClassOf(obo:HP_0032043 ObjectSomeValuesFrom(obo:PROMOT_2000005 <http://id.who.int/icd/entity/923782542>))
 
+# Class: obo:HP_0032319 (Health status)
+
+AnnotationAssertion(rdfs:label obo:HP_0032319 "Health status"@en)
+SubClassOf(obo:HP_0032319 obo:BFO_0000019)
+
 # Class: obo:HP_0032341 (Reduced forced vital capacity)
 
 AnnotationAssertion(obo:PROMOT_1000001 obo:HP_0032341 "Congenital myasthenic syndrom Scoping review")
@@ -4263,9 +4259,11 @@ AnnotationAssertion(rdfs:comment obo:NCIT_C106551 "[derived from EURO-NMD] ")
 AnnotationAssertion(rdfs:label obo:NCIT_C106551 "Number of pregnancies"@en)
 SubClassOf(obo:NCIT_C106551 <http://snomed.info/id/160476009>)
 
-# Class: obo:NCIT_C121361 (Quantative muscle testing)
+# Class: obo:NCIT_C121361 (Quantitative Muscle Testing)
 
+AnnotationAssertion(Annotation(obo:IAO_0000119 "NCIT:C121361") obo:IAO_0000115 obo:NCIT_C121361 "Measurement of maximum isometric force generation from a muscle group; performed with specialized equipment."@en)
 AnnotationAssertion(rdfs:label obo:NCIT_C121361 "Quantative muscle testing"@en)
+AnnotationAssertion(rdfs:label obo:NCIT_C121361 "Quantitative Muscle Testing"@en)
 SubClassOf(obo:NCIT_C121361 <http://snomed.info/id/12894003>)
 SubClassOf(obo:NCIT_C121361 ObjectSomeValuesFrom(obo:PROMOT_2000002 obo:HP_0002460))
 SubClassOf(obo:NCIT_C121361 ObjectSomeValuesFrom(obo:PROMOT_2000002 obo:HP_0008959))
@@ -4293,7 +4291,9 @@ SubClassOf(obo:NCIT_C14250 obo:BFO_0000040)
 
 # Class: obo:NCIT_C156426 (Year of death)
 
+AnnotationAssertion(rdfs:comment obo:NCIT_C156426 "[EURO-NMD] Atalia A et al., EURO-NMD registry: federated FAIR infrastructure, innovative technologies and concepts of a patient-centred registry for rare neuromuscular disorders. Orphanet J Rare Dis. 2024 Feb 14;19(1):66. doi: 10.1186/s13023-024-03059-3. PMID: 38355534; PMCID: PMC10865673.")
 AnnotationAssertion(rdfs:comment obo:NCIT_C156426 "[PROMOT note] [Derived from RD-CDM] [3.2 Time of Death] ")
+AnnotationAssertion(rdfs:comment obo:NCIT_C156426 "[RD-CDM] Graefe, A.S.L., Hübner, M.R., Rehburg, F. et al. An ontology-based rare disease common data model harmonising international registries, FHIR, and Phenopackets. Sci Data 12, 234 (2025). https://doi.org/10.1038/s41597-025-04558-z")
 AnnotationAssertion(rdfs:label obo:NCIT_C156426 "Year of death"@en)
 
 # Class: obo:NCIT_C158277 (Gender identity)
@@ -4381,7 +4381,9 @@ SubClassOf(obo:NCIT_C20587 <http://snomed.info/id/363787002>)
 
 # Class: obo:NCIT_C210821 (Year of diagnosis)
 
+AnnotationAssertion(rdfs:comment obo:NCIT_C210821 "[EURO-NMD] Atalia A et al., EURO-NMD registry: federated FAIR infrastructure, innovative technologies and concepts of a patient-centred registry for rare neuromuscular disorders. Orphanet J Rare Dis. 2024 Feb 14;19(1):66. doi: 10.1186/s13023-024-03059-3. PMID: 38355534; PMCID: PMC10865673.")
 AnnotationAssertion(rdfs:comment obo:NCIT_C210821 "[PROMOT note] [Derived from RD-CDM] [5.6 Date of Diagnosis] ")
+AnnotationAssertion(rdfs:comment obo:NCIT_C210821 "[RD-CDM] Graefe, A.S.L., Hübner, M.R., Rehburg, F. et al. An ontology-based rare disease common data model harmonising international registries, FHIR, and Phenopackets. Sci Data 12, 234 (2025). https://doi.org/10.1038/s41597-025-04558-z")
 AnnotationAssertion(rdfs:label obo:NCIT_C210821 "Year of diagnosis"@en)
 
 # Class: obo:NCIT_C25150 (Age)
@@ -4449,7 +4451,9 @@ SubClassOf(obo:NCIT_C49154 ObjectSomeValuesFrom(obo:RO_0002351 obo:IAO_0000030))
 
 # Class: obo:NCIT_C83164 (Birth Year)
 
+AnnotationAssertion(rdfs:comment obo:NCIT_C83164 "[EURO-NMD] Atalia A et al., EURO-NMD registry: federated FAIR infrastructure, innovative technologies and concepts of a patient-centred registry for rare neuromuscular disorders. Orphanet J Rare Dis. 2024 Feb 14;19(1):66. doi: 10.1186/s13023-024-03059-3. PMID: 38355534; PMCID: PMC10865673.")
 AnnotationAssertion(rdfs:comment obo:NCIT_C83164 "[PROMOT note] [Derived from RD-CDM] [2.1 Date of birth]")
+AnnotationAssertion(rdfs:comment obo:NCIT_C83164 "[RD-CDM] Graefe, A.S.L., Hübner, M.R., Rehburg, F. et al. An ontology-based rare disease common data model harmonising international registries, FHIR, and Phenopackets. Sci Data 12, 234 (2025). https://doi.org/10.1038/s41597-025-04558-z")
 AnnotationAssertion(rdfs:label obo:NCIT_C83164 "Birth Year"@en)
 
 # Class: obo:NCIT_C93511 (Assessment date)
@@ -4473,8 +4477,11 @@ SubClassOf(obo:NCIT_C93579 obo:NCIT_C25164)
 
 # Class: obo:NCIT_C99800 (Year of onset)
 
+AnnotationAssertion(rdfs:comment obo:NCIT_C99800 "[EURO-NMD] Atalia A et al., EURO-NMD registry: federated FAIR infrastructure, innovative technologies and concepts of a patient-centred registry for rare neuromuscular disorders. Orphanet J Rare Dis. 2024 Feb 14;19(1):66. doi: 10.1186/s13023-024-03059-3. PMID: 38355534; PMCID: PMC10865673.")
 AnnotationAssertion(rdfs:comment obo:NCIT_C99800 "[PROMOT note] [Derived from RD-CDM] [5.4 Date of Onset]")
+AnnotationAssertion(rdfs:comment obo:NCIT_C99800 "[RD-CDM] Graefe, A.S.L., Hübner, M.R., Rehburg, F. et al. An ontology-based rare disease common data model harmonising international registries, FHIR, and Phenopackets. Sci Data 12, 234 (2025). https://doi.org/10.1038/s41597-025-04558-z")
 AnnotationAssertion(rdfs:label obo:NCIT_C99800 "Year of onset"@en)
+SubClassOf(obo:NCIT_C99800 obo:NCIT_C25164)
 
 # Class: obo:PROMOT_0000001 (OPMD related mutation)
 
@@ -4593,7 +4600,7 @@ AnnotationAssertion(rdfs:label obo:PROMOT_0000010 "variant du gène SELENON"@fr)
 AnnotationAssertion(rdfs:seeAlso obo:PROMOT_0000010 obo:NCIT_C205071)
 SubClassOf(obo:PROMOT_0000010 obo:PROMOT_0000003)
 
-# Class: obo:PROMOT_0000011 (CHRNE variant)
+# Class: obo:PROMOT_0000011 (variant du gène CHRNE)
 
 AnnotationAssertion(obo:IAO_0000115 obo:PROMOT_0000011 "A sequence alteration located within the CHRNE gene."@en)
 AnnotationAssertion(obo:IAO_0000115 obo:PROMOT_0000011 "Una alteración genética ubicada en el gen CHRNE."@es)
@@ -4783,7 +4790,9 @@ SubClassOf(obo:PROMOT_0010006 <http://snomed.info/id/363787002>)
 AnnotationAssertion(obo:IAO_0000115 obo:PROMOT_0010007 "L’année de la disparition d’une entité, par exemple, l’année de disparition d’un phénotype."@fr)
 AnnotationAssertion(obo:IAO_0000115 obo:PROMOT_0010007 "The year of the resolution of an abnormal disposition, e.g. the year when a phenotype ceases existing."@en)
 AnnotationAssertion(obo:IAO_0000117 obo:PROMOT_0010007 "https://orcid.org/0009-0000-5160-7927")
+AnnotationAssertion(rdfs:comment obo:PROMOT_0010007 "[EURO-NMD] Atalia A et al., EURO-NMD registry: federated FAIR infrastructure, innovative technologies and concepts of a patient-centred registry for rare neuromuscular disorders. Orphanet J Rare Dis. 2024 Feb 14;19(1):66. doi: 10.1186/s13023-024-03059-3. PMID: 38355534; PMCID: PMC10865673.")
 AnnotationAssertion(rdfs:comment obo:PROMOT_0010007 "[PROMOT note] [Derived from RD-CDM] [6.2.4 Resolution Date] ")
+AnnotationAssertion(rdfs:comment obo:PROMOT_0010007 "[RD-CDM] Graefe, A.S.L., Hübner, M.R., Rehburg, F. et al. An ontology-based rare disease common data model harmonising international registries, FHIR, and Phenopackets. Sci Data 12, 234 (2025). https://doi.org/10.1038/s41597-025-04558-z")
 AnnotationAssertion(rdfs:label obo:PROMOT_0010007 "Année de disparition"@fr)
 AnnotationAssertion(rdfs:label obo:PROMOT_0010007 "Year of resolution"@en)
 SubClassOf(obo:PROMOT_0010007 <http://snomed.info/id/363787002>)
@@ -5429,8 +5438,9 @@ SubClassOf(obo:PROMOT_0032004 ObjectSomeValuesFrom(obo:PROMOT_2000005 obo:PROMOT
 
 # Class: obo:PROMOT_0032005 (Doble anomalía del potencial de acción motora compuesta)
 
-AnnotationAssertion(obo:IAO_0000115 obo:PROMOT_0032005 "Deux anomalies dans l’EMG mesurant le potentiel d’action global d’un muscle (PAM), aussi appelé potentiel d’action musculaire composé."@fr)
-AnnotationAssertion(Annotation(obo:IAO_0000119 "HP:0033580") obo:IAO_0000115 obo:PROMOT_0032005 "Two abnormal findings in a compound motor action potential measurement in EMG."@en)
+AnnotationAssertion(Annotation(obo:IAO_0000119 "translated from English by https://orcid.org/0009-0000-5160-7927") obo:IAO_0000115 obo:PROMOT_0032005 "Deux anomalies dans l’EMG mesurant le potentiel d’action global d’un muscle (PAM), aussi appelé potentiel d’action musculaire composé."@fr)
+AnnotationAssertion(obo:IAO_0000115 obo:PROMOT_0032005 "Dos hallazgos anormales en una medición de potencial de acción motora compuesta en EMG."@es)
+AnnotationAssertion(Annotation(obo:IAO_0000119 "HP:0033580") Annotation(rdfs:comment "[PROMOT project] Mansoore Gholizade (definition reviewer)") obo:IAO_0000115 obo:PROMOT_0032005 "Two abnormal findings in a compound motor action potential measurement in EMG."@en)
 AnnotationAssertion(obo:IAO_0000117 obo:PROMOT_0032005 "https://orcid.org/0009-0000-5160-7927")
 AnnotationAssertion(obo:PROMOT_1000001 obo:PROMOT_0032005 "Congenital myasthenic syndrom Scoping review")
 AnnotationAssertion(rdfs:comment obo:PROMOT_0032005 "(JP : to validate)")
@@ -5439,83 +5449,98 @@ AnnotationAssertion(rdfs:label obo:PROMOT_0032005 "Double anomalie du potentiel 
 AnnotationAssertion(rdfs:label obo:PROMOT_0032005 "Double compound motor action potential abnormality"@en)
 SubClassOf(obo:PROMOT_0032005 obo:HP_0033580)
 
-# Class: obo:PROMOT_0032006 (Fatigue while eating)
+# Class: obo:PROMOT_0032006 (Fatiga cuando se come)
 
-AnnotationAssertion(obo:IAO_0000115 obo:PROMOT_0032006 "A fatigue that occurs when the subject is eating"@en)
+AnnotationAssertion(Annotation(obo:IAO_0000119 "Medical experts") Annotation(rdfs:comment "https://orcid.org/0000-0003-2829-8470") obo:IAO_0000115 obo:PROMOT_0032006 "A fatigue that occurs when one is eating. It is due to weakness or fatiguable weakness of chewing muscles."@en)
+AnnotationAssertion(obo:IAO_0000115 obo:PROMOT_0032006 "Fatiga que se produce al momento de comer debida a la debilidad muscular o a la fatiga de los músculos involucrados en la masticación."@es)
+AnnotationAssertion(Annotation(obo:IAO_0000119 "translated from English by https://orcid.org/0009-0000-5160-7927 reviewed by https://orcid.org/0000-0003-2829-847") obo:IAO_0000115 obo:PROMOT_0032006 "Fatigue qui survient au moment de manger du fait de la faiblesse musculaire ou de la fatigabilité des muscles impliqués dans la mastication."@fr)
 AnnotationAssertion(obo:IAO_0000117 obo:PROMOT_0032006 "https://orcid.org/0009-0000-5160-7927")
 AnnotationAssertion(obo:PROMOT_1000001 obo:PROMOT_0032006 "[OPMD Scoping review on dysphagia] Côté C, Gagnon C, Youssof S, et al. The requirement for a disease-specific patient-reported outcome measure of dysphagia in oculopharyngeal muscular dystrophy. Muscle Nerve. 2019;59:445–50. doi: 10.1002/mus.26405")
+AnnotationAssertion(rdfs:label obo:PROMOT_0032006 "Fatiga cuando se come"@es)
 AnnotationAssertion(rdfs:label obo:PROMOT_0032006 "Fatigue corrélée au fait de manger"@fr)
 AnnotationAssertion(rdfs:label obo:PROMOT_0032006 "Fatigue while eating"@en)
 SubClassOf(obo:PROMOT_0032006 obo:HP_0012378)
 
 # Class: obo:PROMOT_0032007 (Difficulty walking short distance)
 
-AnnotationAssertion(obo:IAO_0000115 obo:PROMOT_0032007 "A difficulty to walk short distance. E.g. a difficulty to  walk inside a building such as a house."@en)
-AnnotationAssertion(obo:IAO_0000115 obo:PROMOT_0032007 "Difficulté à marcher sur de courtes distances, comme par exemple, difficulté à marcher à l’intérieur d’un bâtiment."@fr)
+AnnotationAssertion(Annotation(obo:IAO_0000119 "ICF:555410497") obo:IAO_0000115 obo:PROMOT_0032007 "A difficulty to walk for less than a kilometre, such as walking around rooms or hallways, within a building or for short distances outside. This is distinct from the difficulty of moving around."@en)
+AnnotationAssertion(Annotation(obo:IAO_0000119 "ICF:555410497") obo:IAO_0000115 obo:PROMOT_0032007 "Difficulté à avancer à pied, sur une distance de moins d'un kilomètre, comme marcher dans sa chambre ou dans le couloir, dans un bâtiment ou sur de courtes distances à l'extérieur."@fr)
+AnnotationAssertion(Annotation(obo:IAO_0000119 "ICF:555410497") obo:IAO_0000115 obo:PROMOT_0032007 "Dificultad para andar menos de un kilómetro, como caminar por habitaciones y pasillos, dentro de un edificio o pequeñas distancias en el exterior. Es distinta de la dificultad para desplazarse por el entorno"@es)
 AnnotationAssertion(obo:IAO_0000117 obo:PROMOT_0032007 "https://orcid.org/0009-0000-5160-7927")
 AnnotationAssertion(obo:PROMOT_1000001 obo:PROMOT_0032007 "[OPMD Scoping review 2026] Bélair N, Gagnon C, Duchesne E. What is known about muscle weakness, balance impairments and indoor mobility limitations in oculopharyngeal muscular dystrophy? A scoping review. J Neuromuscul Dis. 2025 Dec 30:22143602251397052. doi: 10.1177/22143602251397052. Epub ahead of print. PMID: 41467981.")
 AnnotationAssertion(rdfs:label obo:PROMOT_0032007 "Difficulty walking short distance"@en)
 AnnotationAssertion(rdfs:label obo:PROMOT_0032007 "Difficulté à marcher sur de courtes distances"@fr)
+AnnotationAssertion(rdfs:label obo:PROMOT_0032007 "Dificultad para andar distancias cortas"@es)
 SubClassOf(obo:PROMOT_0032007 obo:HP_0001288)
 
 # Class: obo:PROMOT_0032008 (Difficulty changing basic position)
 
-AnnotationAssertion(obo:IAO_0000115 obo:PROMOT_0032008 "A difficulty to change basic position. E.g. a difficulty to go from a sitting position to a standing position."@en)
-AnnotationAssertion(obo:IAO_0000115 obo:PROMOT_0032008 "Difficulté à passer d’une position de base à une autre, comme par exemple, difficulté à passer de la position assise à la position debout."@fr)
+AnnotationAssertion(Annotation(obo:IAO_0000119 "ICF:150502901") obo:IAO_0000115 obo:PROMOT_0032008 "A difficulty to change basic position, i.e. a difficulty getting into and out of a body position and moving from one location to another, such as getting up out of a chair to lie down on a bed, and getting into and out of positions of sitting, standing, kneeling or squatting. This is distinct from the difficulty of transferring oneself."@en)
+AnnotationAssertion(Annotation(obo:IAO_0000119 "ICF:150502901") obo:IAO_0000115 obo:PROMOT_0032008 "Difficulté à prendre et quitter une position et/ou à passer d'un endroit à un autre, comme se lever d'un fauteuil pour se coucher sur un lit, et comme prendre et quitter les positions assise, debout, à genoux ou accroupie. Cette difficulté est distincte de la difficulté à se transférrer."@fr)
+AnnotationAssertion(Annotation(obo:IAO_0000119 "ICF:150502901") obo:IAO_0000115 obo:PROMOT_0032008 "Dificultad para adoptar o abandonar una postura, pasar de un lugar a otro, como levantarse de una silla para tumbarse en una cama, y adoptar o abandonar posiciones determinadas, como arrodillarse o sentarse en cuclillas. Es distinta de la dificultad para transferir el propio cuerpo."@es)
 AnnotationAssertion(obo:IAO_0000117 obo:PROMOT_0032008 "https://orcid.org/0009-0000-5160-7927")
 AnnotationAssertion(obo:PROMOT_1000001 obo:PROMOT_0032008 "[OPMD Scoping review 2026] Bélair N, Gagnon C, Duchesne E. What is known about muscle weakness, balance impairments and indoor mobility limitations in oculopharyngeal muscular dystrophy? A scoping review. J Neuromuscul Dis. 2025 Dec 30:22143602251397052. doi: 10.1177/22143602251397052. Epub ahead of print. PMID: 41467981.")
 AnnotationAssertion(rdfs:label obo:PROMOT_0032008 "Difficulty changing basic position"@en)
 AnnotationAssertion(rdfs:label obo:PROMOT_0032008 "Difficulté à passer d’une position de base à une autre"@fr)
+AnnotationAssertion(rdfs:label obo:PROMOT_0032008 "Dificultad para cambiar las posturas corporales básicas"@es)
 SubClassOf(obo:PROMOT_0032008 obo:HP_0100022)
 
 # Class: obo:PROMOT_0032009 (Anhédonie légère corrélée au fait de manger)
 
-AnnotationAssertion(obo:IAO_0000115 obo:PROMOT_0032009 "An anhedonia that occurs when the subject is eating"@en)
-AnnotationAssertion(obo:IAO_0000115 obo:PROMOT_0032009 "Perte de la satisfaction ou du plaisir à manger."@fr)
+AnnotationAssertion(Annotation(obo:IAO_0000119 "Medical experts") Annotation(rdfs:comment "https://orcid.org/0000-0003-2829-8470") obo:IAO_0000115 obo:PROMOT_0032009 "A loss of enjoyment of mealtime due to difficulties while eating."@en)
+AnnotationAssertion(Annotation(obo:IAO_0000119 "translated from English by https://orcid.org/0009-0000-5160-7927 reviewed by https://orcid.org/0000-0003-2829-847") obo:IAO_0000115 obo:PROMOT_0032009 "Perte de la satisfaction ou du plaisir à manger due à des difficultés pour manger."@fr)
+AnnotationAssertion(Annotation(obo:IAO_0000119 "Translated from French using Reverso.") obo:IAO_0000115 obo:PROMOT_0032009 "Pérdida de la satisfacción o del placer de comer debida a las dificultades para comer."@es)
 AnnotationAssertion(obo:IAO_0000117 obo:PROMOT_0032009 "https://orcid.org/0009-0000-5160-7927")
 AnnotationAssertion(obo:PROMOT_1000001 obo:PROMOT_0032009 "[OPMD Scoping review on dysphagia] Côté C, Gagnon C, Youssof S, et al. The requirement for a disease-specific patient-reported outcome measure of dysphagia in oculopharyngeal muscular dystrophy. Muscle Nerve. 2019;59:445–50. doi: 10.1002/mus.26405")
+AnnotationAssertion(rdfs:label obo:PROMOT_0032009 "Anhedonia cuando se come"@es)
 AnnotationAssertion(rdfs:label obo:PROMOT_0032009 "Anhedonia while eating"@en)
 AnnotationAssertion(rdfs:label obo:PROMOT_0032009 "Anhédonie légère corrélée au fait de manger"@fr)
 SubClassOf(obo:PROMOT_0032009 obo:HP_0012154)
 
-# Class: obo:PROMOT_0032010 (Dysphagie avec de la nourriture solide)
+# Class: obo:PROMOT_0032010 (Disfagia con sólidos)
 
-AnnotationAssertion(obo:IAO_0000115 obo:PROMOT_0032010 "Difficulty in swallowing solid food."@en)
-AnnotationAssertion(obo:IAO_0000115 obo:PROMOT_0032010 "Difficulté à avaler de la nourriture solide."@fr)
+AnnotationAssertion(Annotation(obo:IAO_0000119 "Medical experts") Annotation(rdfs:comment "https://orcid.org/0000-0003-2829-8470") obo:IAO_0000115 obo:PROMOT_0032010 "Difficulty in swallowing solid food."@en)
+AnnotationAssertion(Annotation(obo:IAO_0000119 "translated from English by https://orcid.org/0009-0000-5160-7927 reviewed by https://orcid.org/0000-0003-2829-847") obo:IAO_0000115 obo:PROMOT_0032010 "Difficulté à avaler de la nourriture solide."@fr)
+AnnotationAssertion(obo:IAO_0000115 obo:PROMOT_0032010 "Dificultad para tragar alimentos sólidos."@es)
 AnnotationAssertion(obo:IAO_0000117 obo:PROMOT_0032010 "https://orcid.org/0009-0000-5160-7927")
 AnnotationAssertion(obo:PROMOT_1000001 obo:PROMOT_0032010 "[OPMD Clinical Registry Form]")
 AnnotationAssertion(obo:PROMOT_1000001 obo:PROMOT_0032010 "[OPMD Scoping review on dysphagia] Côté C, Gagnon C, Youssof S, et al. The requirement for a disease-specific patient-reported outcome measure of dysphagia in oculopharyngeal muscular dystrophy. Muscle Nerve. 2019;59:445–50. doi: 10.1002/mus.26405")
+AnnotationAssertion(rdfs:label obo:PROMOT_0032010 "Disfagia con sólidos"@es)
 AnnotationAssertion(rdfs:label obo:PROMOT_0032010 "Dysphagia for solid"@en)
 AnnotationAssertion(rdfs:label obo:PROMOT_0032010 "Dysphagie avec de la nourriture solide"@fr)
 SubClassOf(obo:PROMOT_0032010 obo:HP_0002015)
 
 # Class: obo:PROMOT_0032011 (Dysphagie avec de la nourriture liquide)
 
-AnnotationAssertion(obo:IAO_0000115 obo:PROMOT_0032011 "Difficulty in swallowing liquid food. This is distinct from hydrophobia."@en)
-AnnotationAssertion(obo:IAO_0000115 obo:PROMOT_0032011 "Difficulté à avaler de la nourriture liquide, disctincte de l’hydrophobie."@fr)
+AnnotationAssertion(Annotation(obo:IAO_0000119 "Medical experts") Annotation(rdfs:comment "https://orcid.org/0000-0003-2829-8470") obo:IAO_0000115 obo:PROMOT_0032011 "Difficulty in swallowing liquid food. This is distinct from hydrophobia."@en)
+AnnotationAssertion(Annotation(obo:IAO_0000119 "translated from English by https://orcid.org/0009-0000-5160-7927 reviewed by https://orcid.org/0000-0003-2829-847") obo:IAO_0000115 obo:PROMOT_0032011 "Difficulté à avaler des aliments liquides, disctincte de l’hydrophobie."@fr)
+AnnotationAssertion(obo:IAO_0000115 obo:PROMOT_0032011 "Dificultad para tragar comida líquida. Es distinta de la hidrofobia."@es)
 AnnotationAssertion(obo:IAO_0000117 obo:PROMOT_0032011 "https://orcid.org/0009-0000-5160-7927")
 AnnotationAssertion(obo:PROMOT_1000001 obo:PROMOT_0032011 "[OPMD Clinical Registry Form]")
 AnnotationAssertion(obo:PROMOT_1000001 obo:PROMOT_0032011 "[OPMD Scoping review on dysphagia] Côté C, Gagnon C, Youssof S, et al. The requirement for a disease-specific patient-reported outcome measure of dysphagia in oculopharyngeal muscular dystrophy. Muscle Nerve. 2019;59:445–50. doi: 10.1002/mus.26405")
+AnnotationAssertion(rdfs:label obo:PROMOT_0032011 "Disfagia con líquidos"@es)
 AnnotationAssertion(rdfs:label obo:PROMOT_0032011 "Dysphagia for liquid"@en)
 AnnotationAssertion(rdfs:label obo:PROMOT_0032011 "Dysphagie avec de la nourriture liquide"@fr)
 SubClassOf(obo:PROMOT_0032011 obo:HP_0002015)
 
 # Class: obo:PROMOT_0032012 (Fatigabilité de la musculature faciale)
 
-AnnotationAssertion(Annotation(obo:IAO_0000119 "HP:0003473") obo:IAO_0000115 obo:PROMOT_0032012 "A type of weakness of the facial musculature (i.e. one or more muscles innervated by the seventh cranial nerve) that occurs after a muscle group is used and lessens if the muscle group has some rest. That is, there is diminution of the strength of the facial musculature with repetitive muscle actions."@en)
-AnnotationAssertion(obo:IAO_0000115 obo:PROMOT_0032012 "Une faiblesse de la musculature faciale, c.à.d. d’un ou plusieurs muscles inervés par le septième nerf cranial, qui se manifeste quand un groupe musculaire facial est sollicité et qui diminue après que le groupe en question a été mis au repos. En résumé, il s’agit d’une diminution de la force des muscles faciaux à la suite d’une sollicitation répêtée."@fr)
+AnnotationAssertion(Annotation(obo:IAO_0000119 "HP:0003473") Annotation(rdfs:comment "[PROMOT project] Mansoore Gholizade (definition reviewer)") obo:IAO_0000115 obo:PROMOT_0032012 "A type of weakness of the facial musculature (i.e. one or more muscles innervated by the seventh cranial nerve) that occurs after a muscle group is used and lessens if the muscle group has some rest. That is, there is diminution of the strength of the facial musculature with repetitive muscle actions."@en)
+AnnotationAssertion(Annotation(obo:IAO_0000119 "Translated from French using Reverso.") obo:IAO_0000115 obo:PROMOT_0032012 "Una debilidad de la musculatura facial, es decir, uno o varios músculos que están inerbidos por el séptimo nervio craneal, que se manifiesta cuando un grupo muscular facial está bajo presión y que disminuye después de que el grupo en cuestión ha sido puesto en reposo. En resumen, se trata de una disminución de la fuerza de los músculos faciales como resultado de una carga repetida."@es)
+AnnotationAssertion(Annotation(obo:IAO_0000119 "translated from English by https://orcid.org/0009-0000-5160-7927 reviewed by https://orcid.org/0000-0003-2829-847") obo:IAO_0000115 obo:PROMOT_0032012 "Une faiblesse de la musculature faciale, c.à.d. d’un ou plusieurs muscles inervés par le septième nerf cranial, qui se manifeste quand un groupe musculaire facial est sollicité et qui diminue après que le groupe en question a été mis au repos. En résumé, il s’agit d’une diminution de la force des muscles faciaux à la suite d’une sollicitation répêtée."@fr)
 AnnotationAssertion(obo:IAO_0000117 obo:PROMOT_0032012 "https://orcid.org/0009-0000-5160-7927")
 AnnotationAssertion(obo:PROMOT_1000001 obo:PROMOT_0032012 "Congenital myasthenic syndrom Scoping review")
 AnnotationAssertion(obo:PROMOT_1000001 obo:PROMOT_0032012 "Congenital myopathy Scoping review")
-AnnotationAssertion(rdfs:label obo:PROMOT_0032012 "Debilidad fatigable de la musculatura facial"@es)
+AnnotationAssertion(rdfs:label obo:PROMOT_0032012 "Debilidad fatigable de la musculatura facial "@es)
 AnnotationAssertion(rdfs:label obo:PROMOT_0032012 "Fatigabilité de la musculature faciale"@fr)
 AnnotationAssertion(rdfs:label obo:PROMOT_0032012 "Fatiguable weakness of facial musculature"@en)
 SubClassOf(obo:PROMOT_0032012 obo:HP_0003473)
 
 # Class: obo:PROMOT_0032013 (Fatiguable weakness of the ocular muscles)
 
-AnnotationAssertion(Annotation(obo:IAO_0000119 "HP:0003473") obo:IAO_0000115 obo:PROMOT_0032013 "A type of weakness of the ocular muscles that occurs after a muscle group is used and lessens if the muscle group has some rest. That is, there is diminution of the strength of the ocular muscles with repetitive muscle actions."@en)
-AnnotationAssertion(obo:IAO_0000115 obo:PROMOT_0032013 "Une faiblesse des muscles occulaires qui se manifeste quand un groupe musculaire occulaire est sollicité et qui diminue après que le groupe en question a été mis au repos. En résumé, il s’agit d’une diminution de la force des muscles occulaires à la suite d’une sollicitation répêtée."@fr)
+AnnotationAssertion(Annotation(obo:IAO_0000119 "HP:0003473") Annotation(rdfs:comment "[PROMOT project] Mansoore Gholizade (definition reviewer)") obo:IAO_0000115 obo:PROMOT_0032013 "A type of weakness of the ocular muscles that occurs after a muscle group is used and lessens if the muscle group has some rest. That is, there is diminution of the strength of the ocular muscles with repetitive muscle actions."@en)
+AnnotationAssertion(Annotation(obo:IAO_0000119 "Translated from French using Reverso.") obo:IAO_0000115 obo:PROMOT_0032013 "Una debilidad de los músculos oculares que se manifiesta cuando un grupo muscular ocular está bajo presión y que disminuye después de que el grupo en cuestión ha sido puesto en reposo. En resumen, se trata de una disminución de la fuerza de los músculos oculares como resultado de una carga repetida."@es)
+AnnotationAssertion(Annotation(obo:IAO_0000119 "translated from English by https://orcid.org/0009-0000-5160-7927 reviewed by https://orcid.org/0000-0003-2829-847") obo:IAO_0000115 obo:PROMOT_0032013 "Une faiblesse des muscles occulaires qui se manifeste quand un groupe musculaire occulaire est sollicité et qui diminue après que le groupe en question a été mis au repos. En résumé, il s’agit d’une diminution de la force des muscles occulaires à la suite d’une sollicitation répêtée."@fr)
 AnnotationAssertion(obo:IAO_0000117 obo:PROMOT_0032013 "https://orcid.org/0009-0000-5160-7927")
 AnnotationAssertion(obo:PROMOT_1000001 obo:PROMOT_0032013 "Congenital myasthenic syndrom Scoping review")
 AnnotationAssertion(obo:PROMOT_1000001 obo:PROMOT_0032013 "Congenital myopathy Scoping review")
@@ -5526,23 +5551,26 @@ SubClassOf(obo:PROMOT_0032013 obo:HP_0003473)
 
 # Class: obo:PROMOT_0032014 (Fatigabilité des muscles axiaux)
 
-AnnotationAssertion(Annotation(obo:IAO_0000119 "HP:0003473") obo:IAO_0000115 obo:PROMOT_0032014 "A type of weakness of the axial muscles (i.e., of the muscles of the head and neck, spine, and ribs) that occurs after a muscle group is used and lessens if the muscle group has some rest. That is, there is diminution of the strength of the axial muscles with repetitive muscle actions."@en)
-AnnotationAssertion(obo:IAO_0000115 obo:PROMOT_0032014 "Une faiblesse des muscles axiaux, c.à.d. des muscles de la tête et du coup, de la colonne vertébrale et des côtes, qui se manifeste quand un groupe musculaire axial est sollicité et qui diminue après que le groupe en question a été mis au repos. En résumé, il s’agit d’une diminution de la force des muscles axiaux à la suite d’une sollicitation répêtée."@fr)
+AnnotationAssertion(Annotation(obo:IAO_0000119 "HP:0003473") Annotation(rdfs:comment "[PROMOT project] Mansoore Gholizade (definition reviewer)") obo:IAO_0000115 obo:PROMOT_0032014 "A type of weakness of the axial muscles (i.e., of the muscles of the head and neck, vertebral column, and intercostal muscles) that occurs after a muscle group is used and lessens if the muscle group has some rest. That is, there is diminution of the strength of the axial muscles with repetitive muscle actions."@en)
+AnnotationAssertion(Annotation(obo:IAO_0000119 "Translated from French using Reverso.") obo:IAO_0000115 obo:PROMOT_0032014 "Una debilidad de los músculos axiales, es decir, los músculos de la cabeza y el cuello, la columna vertebral y las costillas, que se manifiesta cuando un grupo muscular axial está bajo presión y que disminuye después de que el grupo en cuestión ha sido puesto en reposo. En resumen, se trata de una disminución de la fuerza de los músculos axiales como resultado de una carga repetida."@es)
+AnnotationAssertion(Annotation(obo:IAO_0000119 "translated from English by https://orcid.org/0009-0000-5160-7927 reviewed by https://orcid.org/0000-0003-2829-847") obo:IAO_0000115 obo:PROMOT_0032014 "Une faiblesse des muscles axiaux, c.à.d. des muscles de la tête et du cou, de la colonne vertébrale et des côtes, qui se manifeste quand un groupe musculaire axial est sollicité et qui diminue après que le groupe en question a été mis au repos. En résumé, il s’agit d’une diminution de la force des muscles axiaux à la suite d’une sollicitation répêtée."@fr)
 AnnotationAssertion(obo:IAO_0000117 obo:PROMOT_0032014 "https://orcid.org/0009-0000-5160-7927")
 AnnotationAssertion(obo:PROMOT_1000001 obo:PROMOT_0032014 "Congenital myasthenic syndrom Scoping review")
 AnnotationAssertion(obo:PROMOT_1000001 obo:PROMOT_0032014 "Congenital myopathy Scoping review")
 AnnotationAssertion(rdfs:label obo:PROMOT_0032014 "Debilidad fatigable muscular axial"@es)
 AnnotationAssertion(rdfs:label obo:PROMOT_0032014 "Fatigabilité des muscles axiaux"@fr)
 AnnotationAssertion(rdfs:label obo:PROMOT_0032014 "Fatiguable weakness of axial muscles"@en)
-SubClassOf(obo:PROMOT_0032014 obo:HP_0003473)
+SubClassOf(obo:PROMOT_0032014 obo:HP_0030197)
 
-# Class: obo:PROMOT_0032015 (Weakness of chewing muscles)
+# Class: obo:PROMOT_0032015 (Debilidad de músculos masticatorios)
 
-AnnotationAssertion(obo:IAO_0000115 obo:PROMOT_0032015 "A lack of strength in the muscles involved in chewing."@en)
-AnnotationAssertion(obo:IAO_0000115 obo:PROMOT_0032015 "Une faiblesse musculaire des muscles impliqués dans la mastication."@fr)
+AnnotationAssertion(Annotation(obo:IAO_0000119 "HP:0001324") Annotation(rdfs:comment "[PROMOT project] Mansoore Gholizade (definition reviewer)") obo:IAO_0000115 obo:PROMOT_0032015 "A lack of strength in the muscles involved in chewing."@en)
+AnnotationAssertion(Annotation(obo:IAO_0000119 "Translated from French using Reverso.") obo:IAO_0000115 obo:PROMOT_0032015 "Debilidad muscular de los músculos involucrados en la masticación."@es)
+AnnotationAssertion(Annotation(obo:IAO_0000119 "translated from English by https://orcid.org/0009-0000-5160-7927 reviewed by https://orcid.org/0000-0003-2829-847") obo:IAO_0000115 obo:PROMOT_0032015 "Une faiblesse musculaire des muscles impliqués dans la mastication."@fr)
 AnnotationAssertion(obo:IAO_0000117 obo:PROMOT_0032015 "https://orcid.org/0009-0000-5160-7927")
 AnnotationAssertion(obo:PROMOT_1000001 obo:PROMOT_0032015 "Congenital myasthenic syndrom Scoping review")
 AnnotationAssertion(obo:PROMOT_1000001 obo:PROMOT_0032015 "Congenital myopathy Scoping review")
+AnnotationAssertion(rdfs:label obo:PROMOT_0032015 "Debilidad de músculos masticatorios"@es)
 AnnotationAssertion(rdfs:label obo:PROMOT_0032015 "Faiblesse musculaire des muscles de la mastication"@fr)
 AnnotationAssertion(rdfs:label obo:PROMOT_0032015 "Weakness of chewing muscles"@en)
 SubClassOf(obo:PROMOT_0032015 obo:HP_0001324)
@@ -5665,6 +5693,7 @@ SubClassOf(obo:PROMOT_0100010 ObjectSomeValuesFrom(obo:PROMOT_2000002 obo:HP_000
 
 AnnotationAssertion(Annotation(obo:IAO_0000119 "Automatically translated from French.") obo:IAO_0000115 obo:PROMOT_0100011 "An assessment with the Berg scale assesses balance and identifies the level of fall risk. This five-level ordinal scale (0 to 4) contains 14 items and the maximum total score ranges from 0 (maximum reach) to 56 (no reach detected). This generic scale evaluates various dimensions of balance, including the following: maintaining multiple positions, having automatic postural responses when changing posture or voluntary movements of the limbs, and produce effective balance and protection reactions."@en)
 AnnotationAssertion(Annotation(obo:IAO_0000119 "Definititon provided by the Groupe de Recherche Interdisciplinaire sur les Maladies Neuromusculaires (GRIMN).") obo:IAO_0000115 obo:PROMOT_0100011 "Une évaluation avec l’échelle de Berg évalue l’équilibre et identifie le niveau de risque de chute. Cette échelle ordinale à cinq niveaux (0 à 4) contient 14 items et le résultat total maximal varie de 0 (atteinte maximale) à 56 (aucune atteinte détectée). Cette échelle générique évalue diverses dimensions de l’équilibre, dont les suivantes : maintenir plusieurs positions, avoir des réponses posturales automatiques lors des changements de posture ou de mouvements volontaires des membres, et produire des réactions d’équilibre et de protection efficaces."@fr)
+AnnotationAssertion(oboInOwl:hasDbXref obo:PROMOT_0100011 "http://snomed.info/id/404933001")
 AnnotationAssertion(rdfs:label obo:PROMOT_0100011 "Assessment using Berg Balance Scale"@en)
 AnnotationAssertion(rdfs:label obo:PROMOT_0100011 "Évaluation avec l’échelle de Berg"@fr)
 SubClassOf(obo:PROMOT_0100011 <http://snomed.info/id/840297006>)
@@ -5782,6 +5811,7 @@ SubClassOf(obo:SO_0001060 ObjectSomeValuesFrom(obo:RO_0004013 <http://www.orpha.
 
 AnnotationAssertion(rdfs:label obo:SO_0001762 "variant_origin"@en)
 SubClassOf(obo:SO_0001762 obo:BFO_0000019)
+SubClassOf(obo:SO_0001762 ObjectSomeValuesFrom(obo:RO_0000080 obo:SO_0001060))
 
 # Class: <http://purl.org/sig/ont/fma/fma13295> (Diaphragm)
 
@@ -6118,6 +6148,7 @@ AnnotationAssertion(rdfs:comment <http://snomed.info/id/125679009> "[RD-CDM] Gra
 AnnotationAssertion(rdfs:label <http://snomed.info/id/125679009> "Blood relative (person)"@en)
 SubClassOf(<http://snomed.info/id/125679009> obo:NCBITaxon_9606)
 SubClassOf(<http://snomed.info/id/125679009> ObjectSomeValuesFrom(obo:PROMOT_2000006 obo:NCIT_C16960))
+SubClassOf(<http://snomed.info/id/125679009> ObjectSomeValuesFrom(obo:RO_0000086 obo:HP_0032319))
 
 # Class: <http://snomed.info/id/125680007> (Marital status (observable entity))
 
@@ -6470,8 +6501,6 @@ SubClassOf(<http://snomed.info/id/84100007> ObjectSomeValuesFrom(obo:PROMOT_2000
 SubClassOf(<http://snomed.info/id/84100007> ObjectSomeValuesFrom(obo:PROMOT_2000002 obo:HP_0001324))
 SubClassOf(<http://snomed.info/id/84100007> ObjectSomeValuesFrom(obo:PROMOT_2000002 obo:HP_0001374))
 SubClassOf(<http://snomed.info/id/84100007> ObjectSomeValuesFrom(obo:PROMOT_2000002 obo:HP_0001387))
-SubClassOf(<http://snomed.info/id/84100007> ObjectSomeValuesFrom(obo:PROMOT_2000002 obo:HP_0001508))
-SubClassOf(<http://snomed.info/id/84100007> ObjectSomeValuesFrom(obo:PROMOT_2000002 obo:HP_0001531))
 SubClassOf(<http://snomed.info/id/84100007> ObjectSomeValuesFrom(obo:PROMOT_2000002 obo:HP_0001547))
 SubClassOf(<http://snomed.info/id/84100007> ObjectSomeValuesFrom(obo:PROMOT_2000002 obo:HP_0001558))
 SubClassOf(<http://snomed.info/id/84100007> ObjectSomeValuesFrom(obo:PROMOT_2000002 obo:HP_0001609))
@@ -6904,8 +6933,6 @@ SubClassOf(<http://www.orpha.net/ORDO/Orphanet_97245> ObjectSomeValuesFrom(obo:R
 SubClassOf(<http://www.orpha.net/ORDO/Orphanet_97245> ObjectSomeValuesFrom(obo:RO_0004029 obo:HP_0001324))
 SubClassOf(<http://www.orpha.net/ORDO/Orphanet_97245> ObjectSomeValuesFrom(obo:RO_0004029 obo:HP_0001374))
 SubClassOf(<http://www.orpha.net/ORDO/Orphanet_97245> ObjectSomeValuesFrom(obo:RO_0004029 obo:HP_0001387))
-SubClassOf(<http://www.orpha.net/ORDO/Orphanet_97245> ObjectSomeValuesFrom(obo:RO_0004029 obo:HP_0001508))
-SubClassOf(<http://www.orpha.net/ORDO/Orphanet_97245> ObjectSomeValuesFrom(obo:RO_0004029 obo:HP_0001531))
 SubClassOf(<http://www.orpha.net/ORDO/Orphanet_97245> ObjectSomeValuesFrom(obo:RO_0004029 obo:HP_0001547))
 SubClassOf(<http://www.orpha.net/ORDO/Orphanet_97245> ObjectSomeValuesFrom(obo:RO_0004029 obo:HP_0001558))
 SubClassOf(<http://www.orpha.net/ORDO/Orphanet_97245> ObjectSomeValuesFrom(obo:RO_0004029 obo:HP_0001609))

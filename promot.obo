@@ -1,6 +1,6 @@
 format-version: 1.2
-data-version: releases/2026-03-25
-date: 25:03:2026 18:34
+data-version: releases/2026-04-08
+date: 08:04:2026 16:03
 subsetdef: hposlim_core ""
 subsetdef: http://purl.obolibrary.org/obo/valid_for_go_annotation_extension ""
 subsetdef: http://purl.obolibrary.org/obo/valid_for_go_gp2term ""
@@ -168,7 +168,7 @@ property_value: dc11:creator "Paul Fabry MD, PhD student\nhttps://orcid.org/0000
 property_value: dcterms:description "Ontology for modeling the three following neuromuscular diseases : OPMD, Congenital myopathies and Congenital myastenic syndroms. It aims to be also an ontology for building the PROMOT project relational database." xsd:string
 property_value: dcterms:license https://creativecommons.org/licenses/by-nc-sa/4.0/
 property_value: dcterms:title "PROMOT ontology" xsd:string
-property_value: owl:versionInfo "2026-03-25" xsd:string
+property_value: owl:versionInfo "2026-04-08" xsd:string
 property_value: seeAlso "More about PROMOT initiative at https://www.promotinitiative.com/\n" xsd:string
 
 [Term]
@@ -1767,6 +1767,7 @@ synonym: "Organ abnormality" EXACT []
 xref: http://snomed.info/id/8116006
 xref: UMLS:C4021819
 is_a: PROMOT:0032001 ! abnormal disposition
+relationship: RO:0000086 HP:0012823 ! has quality Clinical modifier
 relationship: RO:0000086 PROMOT:0031007 ! has quality Qualité qualifiant l’existance d’une entité
 
 [Term]
@@ -2978,8 +2979,6 @@ xref: SNOMEDCT_US:432788009
 xref: UMLS:C0231246
 xref: UMLS:C2315100
 is_a: HP:0004325 ! Decreased body weight
-property_value: PROMOT:1000001 "Congenital myopathy HPO KB associations" xsd:string
-property_value: PROMOT:1000001 "Congenital myopathy Scoping review" xsd:string
 
 [Term]
 id: HP:0001510
@@ -3038,21 +3037,6 @@ synonym: "Mortinatalité ou mort chez le nourisson" EXACT []
 xref: UMLS:C1844947
 xref: UMLS:C1858430
 is_a: HP:0011420 ! Age of death
-
-[Term]
-id: HP:0001531
-name: Failure to thrive in infancy
-alt_id: HP:0008863
-alt_id: HP:0008925
-synonym: "Failure to thrive in first year of life" EXACT []
-synonym: "Faltering weight in infancy" EXACT layperson [https://orcid.org/0000-0001-5208-3432]
-synonym: "Retard de croissance chez le nourisson" EXACT []
-synonym: "Retard de croissance dans la première année de vie" EXACT []
-synonym: "Retard de croissance dans la première année de vie|retard de croissance chez les nourrissons mâles" EXACT []
-synonym: "Weight faltering in infancy" EXACT layperson [https://orcid.org/0000-0001-5208-3432]
-xref: UMLS:C1867873
-is_a: HP:0001508 ! Failure to thrive
-property_value: PROMOT:1000001 "Congenital myopathy Scoping review" xsd:string
 
 [Term]
 id: HP:0001547
@@ -3447,8 +3431,8 @@ id: HP:0002033
 name: Poor suck
 def: "An inadequate sucking reflex, resulting in the difficult of newborns to be breast-fed." [https://orcid.org/0000-0002-0736-9199]
 synonym: "Poor suck" EXACT layperson []
-synonym: "Poor sucking" EXACT layperson [https://orcid.org/0000-0002-5316-1399]
 synonym: "Poor sucking" EXACT []
+synonym: "Poor sucking" EXACT layperson [https://orcid.org/0000-0002-5316-1399]
 synonym: "Sucking weakness" EXACT []
 xref: UMLS:C1837142
 is_a: HP:0008872 ! Feeding difficulties in infancy
@@ -4732,6 +4716,7 @@ synonym: "âge de début à l'adolescence" EXACT []
 synonym: "âge de début à l'adolescence|d'apparition d'âge variable|d'appararition à l'enfance ou chez l'adulte jeune|début de|âge de début" EXACT []
 xref: UMLS:C0206132
 is_a: HP:0031797 ! Clinical course
+relationship: RO:0000080 HP:0000118 ! quality of Phenotypic abnormality
 
 [Term]
 id: HP:0003676
@@ -4780,6 +4765,7 @@ id: HP:0003679
 name: Pace of progression
 xref: UMLS:C4025580
 is_a: HP:0031797 ! Clinical course
+relationship: RO:0000080 HP:0000118 ! quality of Phenotypic abnormality
 
 [Term]
 id: HP:0003680
@@ -5687,6 +5673,7 @@ comment: [EURO-NMD] Atalia A et al., EURO-NMD registry: federated FAIR infrastru
 synonym: "Speed of onset" EXACT []
 xref: UMLS:C4021204
 is_a: HP:0031797 ! Clinical course
+relationship: RO:0000080 HP:0000118 ! quality of Phenotypic abnormality
 property_value: dcterms:creator https://orcid.org/0000-0002-0736-9199
 property_value: dcterms:date "2011-02-20T10:22:32Z" xsd:dateTime
 
@@ -6237,7 +6224,6 @@ comment: Note that some of the terms, such as Intellectual disability, have chil
 synonym: "Phenotypic modifier" EXACT []
 xref: UMLS:C4021064
 is_a: BFO:0000019 ! quality
-relationship: RO:0000080 HP:0000118 ! quality of Phenotypic abnormality
 property_value: dcterms:creator https://orcid.org/0000-0002-0736-9199
 property_value: dcterms:date "2014-06-06T06:34:24Z" xsd:dateTime
 
@@ -6251,6 +6237,7 @@ synonym: "Intensité" EXACT []
 xref: SNOMEDCT_US:103370009
 xref: UMLS:C0522510
 is_a: HP:0012823 ! Clinical modifier
+relationship: RO:0000080 HP:0000118 ! quality of Phenotypic abnormality
 property_value: dcterms:creator https://orcid.org/0000-0002-0736-9199
 property_value: dcterms:date "2014-06-06T06:39:22Z" xsd:dateTime
 
@@ -6423,6 +6410,7 @@ comment: Consanguinity has a major role in congenital and genetic diseases.
 synonym: "Consanguineous" EXACT []
 xref: http://snomed.info/id/842009
 is_a: BFO:0000019 ! quality
+relationship: RO:0000080 NCIT:C16960 ! quality of Patient
 property_value: dcterms:creator https://orcid.org/0000-0002-0736-9199
 property_value: dcterms:date "2025-04-24T16:26:47Z" xsd:dateTime
 
@@ -6588,8 +6576,8 @@ id: HP:0030205
 name: Increased jitter at single fiber EMG
 def: "The variation in the time interval between the two action potentials of the same motor unit is called jitter. This term therefore applies to increased variability in the interval between successive action potentials of the same motor unit, which is measured by electromyography (EMG)." [HPO_CONTRIBUTOR:UK_rheller, PMID:21654930]
 comment: Increased jitter values are not pathogonomic for myasthenia, but indicate disturbed neuromuscular transmission.
-synonym: "Increased jitter at single fibre electromyography" EXACT uk_spelling []
 synonym: "Increased jitter at single fibre electromyography" EXACT []
+synonym: "Increased jitter at single fibre electromyography" EXACT uk_spelling []
 synonym: "Increased jitter at single fibre EMG" EXACT uk_spelling []
 xref: UMLS:C4021045
 is_a: HP:0030006 ! Single fiber EMG abnormality
@@ -6960,6 +6948,38 @@ def: "An abnormal level of an analyte measured in the blood." []
 is_a: HP:0001939 ! Abnormality of metabolism/homeostasis
 property_value: dcterms:creator https://orcid.org/0000-0002-0736-9199
 property_value: dcterms:date "2019-01-12T13:45:59Z" xsd:dateTime
+
+[Term]
+id: HP:0032319
+name: Health status
+def: "Health status of a family member with respect to the disease being investigated in a proband." []
+is_a: BFO:0000019 ! quality
+property_value: dcterms:creator https://orcid.org/0000-0002-0736-9199
+property_value: dcterms:date "2019-02-14T11:46:18Z" xsd:dateTime
+
+[Term]
+id: HP:0032320
+name: Affected
+def: "This term applies to a family member who is diagnosed with the same condition as the individual who is the primary focus of investigation (the proband)." []
+is_a: HP:0032319 ! Health status
+property_value: dcterms:creator https://orcid.org/0000-0002-0736-9199
+property_value: dcterms:date "2019-02-14T11:47:51Z" xsd:dateTime
+
+[Term]
+id: HP:0032321
+name: Unaffected
+def: "This term applies to a family member in whom the diagnosis that is the primary focus of investigation is excluded." []
+is_a: HP:0032319 ! Health status
+property_value: dcterms:creator https://orcid.org/0000-0002-0736-9199
+property_value: dcterms:date "2019-02-14T11:48:40Z" xsd:dateTime
+
+[Term]
+id: HP:0032322
+name: Healthy
+def: "No history of any serious disease, including the disease being investigated in the proband." []
+is_a: HP:0032319 ! Health status
+property_value: dcterms:creator https://orcid.org/0000-0002-0736-9199
+property_value: dcterms:date "2019-02-14T11:49:52Z" xsd:dateTime
 
 [Term]
 id: HP:0032341
@@ -9524,7 +9544,7 @@ property_value: NCIT:P366 "Organisms" xsd:string
 id: NCIT:C156426
 name: Year of Death
 def: "The year in which an individual died." [] {NCIT:P378="NCI"}
-comment: [PROMOT note] [Derived from RD-CDM] [3.2 Time of Death] 
+comment: [EURO-NMD] Atalia A et al., EURO-NMD registry: federated FAIR infrastructure, innovative technologies and concepts of a patient-centred registry for rare neuromuscular disorders. Orphanet J Rare Dis. 2024 Feb 14;19(1):66. doi: 10.1186/s13023-024-03059-3. PMID: 38355534; PMCID: PMC10865673.
 subset: NCIT:C157711
 subset: NCIT:C177536
 synonym: "Death Year" EXACT [] {NCIT:P383="SY", NCIT:P384="NCI"}
@@ -9758,7 +9778,7 @@ property_value: seeAlso HP:0003674
 id: NCIT:C210821
 name: Year of Diagnosis
 def: "The year that a diagnosis was made." [] {NCIT:P378="NCI"}
-comment: [PROMOT note] [Derived from RD-CDM] [5.6 Date of Diagnosis] 
+comment: [EURO-NMD] Atalia A et al., EURO-NMD registry: federated FAIR infrastructure, innovative technologies and concepts of a patient-centred registry for rare neuromuscular disorders. Orphanet J Rare Dis. 2024 Feb 14;19(1):66. doi: 10.1186/s13023-024-03059-3. PMID: 38355534; PMCID: PMC10865673.
 synonym: "Diagnosis Year" EXACT [] {NCIT:P383="SY", NCIT:P384="NCI"}
 synonym: "Diagnosis Year" EXACT [] {NCIT:P383="SY", NCIT:P384="caDSR"}
 synonym: "Year of Diagnosis" EXACT [] {NCIT:P383="PT", NCIT:P384="NCI"}
@@ -9795,8 +9815,8 @@ synonym: "Age" EXACT [] {NCIT:P383="PT", NCIT:P385="SEND-STSPRM", NCIT:P384="CDI
 synonym: "Age" EXACT [] {NCIT:P383="SY", NCIT:P384="caDSR"}
 synonym: "Age" EXACT [] {NCIT:P383="SY", NCIT:P384="CDISC"}
 synonym: "Age" EXACT [] {NCIT:P383="PT", NCIT:P384="NCI"}
-synonym: "age" EXACT [] {NCIT:P383="PT", NCIT:P384="BRIDG 5.3"}
 synonym: "age" EXACT [] {NCIT:P383="PT", NCIT:P384="BRIDG 3.0.3"}
+synonym: "age" EXACT [] {NCIT:P383="PT", NCIT:P384="BRIDG 5.3"}
 synonym: "Aged" EXACT [] {NCIT:P383="AD", NCIT:P384="NCI"}
 synonym: "Chronological Age" EXACT [] {NCIT:P383="SY", NCIT:P384="NCI"}
 synonym: "Chronological Age" EXACT [] {NCIT:P383="PT", NCIT:P384="NICHD"}
@@ -10174,7 +10194,7 @@ property_value: NCIT:P366 "Statement" xsd:string
 id: NCIT:C83164
 name: Birth Year
 def: "The year in which a person was born." [] {NCIT:P378="NCI"}
-comment: [PROMOT note] [Derived from RD-CDM] [2.1 Date of birth]
+comment: [EURO-NMD] Atalia A et al., EURO-NMD registry: federated FAIR infrastructure, innovative technologies and concepts of a patient-centred registry for rare neuromuscular disorders. Orphanet J Rare Dis. 2024 Feb 14;19(1):66. doi: 10.1186/s13023-024-03059-3. PMID: 38355534; PMCID: PMC10865673.
 subset: NCIT:C157711
 subset: NCIT:C177536
 subset: NCIT:C192234
@@ -10251,7 +10271,8 @@ property_value: NCIT:P322 "ICDC" xsd:string
 [Term]
 id: NCIT:C99800
 name: Year of onset
-comment: [PROMOT note] [Derived from RD-CDM] [5.4 Date of Onset]
+comment: [EURO-NMD] Atalia A et al., EURO-NMD registry: federated FAIR infrastructure, innovative technologies and concepts of a patient-centred registry for rare neuromuscular disorders. Orphanet J Rare Dis. 2024 Feb 14;19(1):66. doi: 10.1186/s13023-024-03059-3. PMID: 38355534; PMCID: PMC10865673.
+is_a: NCIT:C25164 ! Date
 
 [Term]
 id: ORDO:270
@@ -10324,12 +10345,12 @@ relationship: RO:0004029 HP:0033667 ! disease has feature Diminished mental heal
 relationship: RO:0004029 HP:0033695 ! disease has feature Occupational disability
 relationship: RO:0004029 HP:0200136 ! disease has feature Oral-pharyngeal dysphagia
 relationship: RO:0004029 HP:6001011 ! disease has feature Wet voice
-relationship: RO:0004029 PROMOT:0032006 ! disease has feature Fatigue corrélée au fait de manger
+relationship: RO:0004029 PROMOT:0032006 ! disease has feature Fatiga cuando se come
 relationship: RO:0004029 PROMOT:0032007 ! disease has feature Difficulty walking short distance
 relationship: RO:0004029 PROMOT:0032008 ! disease has feature Difficulty changing basic position
-relationship: RO:0004029 PROMOT:0032009 ! disease has feature Anhedonia while eating
-relationship: RO:0004029 PROMOT:0032010 ! disease has feature Dysphagia for solid
-relationship: RO:0004029 PROMOT:0032011 ! disease has feature Dysphagia for liquid
+relationship: RO:0004029 PROMOT:0032009 ! disease has feature Anhedonia cuando se come
+relationship: RO:0004029 PROMOT:0032010 ! disease has feature Disfagia con sólidos
+relationship: RO:0004029 PROMOT:0032011 ! disease has feature Disfagia con líquidos
 property_value: efo:alternative_term "OPMD" xsd:string
 property_value: efo:definition "A rare, adult-onset, progressive myopathy characterized by progressive eyelid ptosis, ophthalmoplegia, dysphagia, dysarthria and proximal limb weakness." xsd:string
 property_value: efo:definition_citation "Orphanet" xsd:string
@@ -10480,10 +10501,10 @@ relationship: RO:0004029 HP:0033416 ! disease has feature Hip adductor weakness
 relationship: RO:0004029 HP:0033454 ! disease has feature Tube feeding
 relationship: RO:0004029 HP:0200136 ! disease has feature Oral-pharyngeal dysphagia
 relationship: RO:0004029 PROMOT:0032005 ! disease has feature Doble anomalía del potencial de acción motora compuesta
-relationship: RO:0004029 PROMOT:0032012 ! disease has feature Debilidad fatigable de la musculatura facial
+relationship: RO:0004029 PROMOT:0032012 ! disease has feature Debilidad fatigable de la musculatura facial 
 relationship: RO:0004029 PROMOT:0032013 ! disease has feature Debilidad fatigable de los músculos oculares
 relationship: RO:0004029 PROMOT:0032014 ! disease has feature Debilidad fatigable muscular axial
-relationship: RO:0004029 PROMOT:0032015 ! disease has feature Faiblesse musculaire des muscles de la mastication
+relationship: RO:0004029 PROMOT:0032015 ! disease has feature Debilidad de músculos masticatorios
 property_value: efo:alternative_term "CMS" xsd:string
 property_value: efo:definition "Congenital myasthenic syndrome (CMS) is a group of genetic disorders of impaired neuromuscular transmission at the motor endplate characterized by fatigable muscle weakness." xsd:string
 property_value: efo:definition_citation "Orphanet" xsd:string
@@ -10522,7 +10543,6 @@ relationship: RO:0004029 HP:0001249 ! disease has feature Intellectual disabilit
 relationship: RO:0004029 HP:0001319 ! disease has feature Neonatal hypotonia
 relationship: RO:0004029 HP:0001374 ! disease has feature Congenital hip dislocation
 relationship: RO:0004029 HP:0001387 ! disease has feature Joint stiffness
-relationship: RO:0004029 HP:0001531 ! disease has feature Failure to thrive in infancy
 relationship: RO:0004029 HP:0001609 ! disease has feature Hoarse voice
 relationship: RO:0004029 HP:0001618 ! disease has feature Dysphonia
 relationship: RO:0004029 HP:0001622 ! disease has feature Premature birth
@@ -10561,6 +10581,7 @@ relationship: RO:0004029 HP:0003722 ! disease has feature Neck flexor weakness
 relationship: RO:0004029 HP:0003731 ! disease has feature Quadriceps muscle weakness
 relationship: RO:0004029 HP:0003810 ! disease has feature Late-onset distal muscle weakness
 relationship: RO:0004029 HP:0004322 ! disease has feature Short stature
+relationship: RO:0004029 HP:0004325 ! disease has feature Decreased body weight
 relationship: RO:0004029 HP:0004878 ! disease has feature Intercostal muscle weakness
 relationship: RO:0004029 HP:0004885 ! disease has feature Episodic respiratory distress
 relationship: RO:0004029 HP:0004887 ! disease has feature Respiratory failure requiring assisted ventilation
@@ -10609,10 +10630,10 @@ relationship: RO:0004029 HP:0033994 ! disease has feature Dependency on parenter
 relationship: RO:0004029 HP:0040288 ! disease has feature Nasogastric tube feeding
 relationship: RO:0004029 HP:0200136 ! disease has feature Oral-pharyngeal dysphagia
 relationship: RO:0004029 HP:6000327 ! disease has feature Thoracic cage flatness
-relationship: RO:0004029 PROMOT:0032012 ! disease has feature Debilidad fatigable de la musculatura facial
+relationship: RO:0004029 PROMOT:0032012 ! disease has feature Debilidad fatigable de la musculatura facial 
 relationship: RO:0004029 PROMOT:0032013 ! disease has feature Debilidad fatigable de los músculos oculares
 relationship: RO:0004029 PROMOT:0032014 ! disease has feature Debilidad fatigable muscular axial
-relationship: RO:0004029 PROMOT:0032015 ! disease has feature Faiblesse musculaire des muscles de la mastication
+relationship: RO:0004029 PROMOT:0032015 ! disease has feature Debilidad de músculos masticatorios
 property_value: ORDO:C022 "United States AND has_point_prevalence_average_value : 3.8 AND has_point_prevalence_range : 1-9 / 100 000" xsd:string
 property_value: ORDO:C055 "https://www.orpha.net/consor/cgi-bin/OC_Exp.php?Lng=en&Expert=97245" xsd:string
 property_value: ORDO:C059 "https://www.orpha.net/en/disease/detail/97245" xsd:string
@@ -10865,7 +10886,7 @@ property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 id: PROMOT:0010007
 name: Année de disparition
 def: "L’année de la disparition d’une entité, par exemple, l’année de disparition d’un phénotype." []
-comment: [PROMOT note] [Derived from RD-CDM] [6.2.4 Resolution Date] 
+comment: [EURO-NMD] Atalia A et al., EURO-NMD registry: federated FAIR infrastructure, innovative technologies and concepts of a patient-centred registry for rare neuromuscular disorders. Orphanet J Rare Dis. 2024 Feb 14;19(1):66. doi: 10.1186/s13023-024-03059-3. PMID: 38355534; PMCID: PMC10865673.
 is_a: SNOMED:363787002 ! Observable entity
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
@@ -11331,7 +11352,7 @@ property_value: IAO:0000117 "Paul Fabry, https://orcid.org/0009-0000-5160-7927" 
 [Term]
 id: PROMOT:0032005
 name: Doble anomalía del potencial de acción motora compuesta
-def: "Deux anomalies dans l’EMG mesurant le potentiel d’action global d’un muscle (PAM), aussi appelé potentiel d’action musculaire composé." []
+def: "Deux anomalies dans l’EMG mesurant le potentiel d’action global d’un muscle (PAM), aussi appelé potentiel d’action musculaire composé." [] {IAO:0000119="translated from English by https://orcid.org/0009-0000-5160-7927"}
 comment: (JP : to validate)
 is_a: HP:0033580 ! Compound motor action potential abnormality
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
@@ -11339,8 +11360,8 @@ property_value: PROMOT:1000001 "Congenital myasthenic syndrom Scoping review" xs
 
 [Term]
 id: PROMOT:0032006
-name: Fatigue corrélée au fait de manger
-def: "A fatigue that occurs when the subject is eating" []
+name: Fatiga cuando se come
+def: "A fatigue that occurs when one is eating. It is due to weakness or fatiguable weakness of chewing muscles." [] {comment="https://orcid.org/0000-0003-2829-8470", IAO:0000119="Medical experts"}
 is_a: HP:0012378 ! Fatigue
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 property_value: PROMOT:1000001 "[OPMD Scoping review on dysphagia] Côté C, Gagnon C, Youssof S, et al. The requirement for a disease-specific patient-reported outcome measure of dysphagia in oculopharyngeal muscular dystrophy. Muscle Nerve. 2019;59:445–50. doi: 10.1002/mus.26405" xsd:string
@@ -11348,7 +11369,7 @@ property_value: PROMOT:1000001 "[OPMD Scoping review on dysphagia] Côté C, Gag
 [Term]
 id: PROMOT:0032007
 name: Difficulty walking short distance
-def: "A difficulty to walk short distance. E.g. a difficulty to  walk inside a building such as a house." []
+def: "A difficulty to walk for less than a kilometre, such as walking around rooms or hallways, within a building or for short distances outside. This is distinct from the difficulty of moving around." [] {IAO:0000119="ICF:555410497"}
 is_a: HP:0001288 ! Gait disturbance
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 property_value: PROMOT:1000001 "[OPMD Scoping review 2026] Bélair N, Gagnon C, Duchesne E. What is known about muscle weakness, balance impairments and indoor mobility limitations in oculopharyngeal muscular dystrophy? A scoping review. J Neuromuscul Dis. 2025 Dec 30:22143602251397052. doi: 10.1177/22143602251397052. Epub ahead of print. PMID: 41467981." xsd:string
@@ -11356,23 +11377,23 @@ property_value: PROMOT:1000001 "[OPMD Scoping review 2026] Bélair N, Gagnon C, 
 [Term]
 id: PROMOT:0032008
 name: Difficulty changing basic position
-def: "A difficulty to change basic position. E.g. a difficulty to go from a sitting position to a standing position." []
+def: "A difficulty to change basic position, i.e. a difficulty getting into and out of a body position and moving from one location to another, such as getting up out of a chair to lie down on a bed, and getting into and out of positions of sitting, standing, kneeling or squatting. This is distinct from the difficulty of transferring oneself." [] {IAO:0000119="ICF:150502901"}
 is_a: HP:0100022 ! Abnormality of movement
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 property_value: PROMOT:1000001 "[OPMD Scoping review 2026] Bélair N, Gagnon C, Duchesne E. What is known about muscle weakness, balance impairments and indoor mobility limitations in oculopharyngeal muscular dystrophy? A scoping review. J Neuromuscul Dis. 2025 Dec 30:22143602251397052. doi: 10.1177/22143602251397052. Epub ahead of print. PMID: 41467981." xsd:string
 
 [Term]
 id: PROMOT:0032009
-name: Anhedonia while eating
-def: "An anhedonia that occurs when the subject is eating" []
+name: Anhedonia cuando se come
+def: "A loss of enjoyment of mealtime due to difficulties while eating." [] {comment="https://orcid.org/0000-0003-2829-8470", IAO:0000119="Medical experts"}
 is_a: HP:0012154 ! Anhedonia
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 property_value: PROMOT:1000001 "[OPMD Scoping review on dysphagia] Côté C, Gagnon C, Youssof S, et al. The requirement for a disease-specific patient-reported outcome measure of dysphagia in oculopharyngeal muscular dystrophy. Muscle Nerve. 2019;59:445–50. doi: 10.1002/mus.26405" xsd:string
 
 [Term]
 id: PROMOT:0032010
-name: Dysphagia for solid
-def: "Difficulty in swallowing solid food." []
+name: Disfagia con sólidos
+def: "Difficulty in swallowing solid food." [] {comment="https://orcid.org/0000-0003-2829-8470", IAO:0000119="Medical experts"}
 is_a: HP:0002015 ! Dysphagia
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 property_value: PROMOT:1000001 "[OPMD Clinical Registry Form]" xsd:string
@@ -11380,8 +11401,8 @@ property_value: PROMOT:1000001 "[OPMD Scoping review on dysphagia] Côté C, Gag
 
 [Term]
 id: PROMOT:0032011
-name: Dysphagia for liquid
-def: "Difficulty in swallowing liquid food. This is distinct from hydrophobia." []
+name: Disfagia con líquidos
+def: "Difficulty in swallowing liquid food. This is distinct from hydrophobia." [] {comment="https://orcid.org/0000-0003-2829-8470", IAO:0000119="Medical experts"}
 is_a: HP:0002015 ! Dysphagia
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 property_value: PROMOT:1000001 "[OPMD Clinical Registry Form]" xsd:string
@@ -11389,8 +11410,8 @@ property_value: PROMOT:1000001 "[OPMD Scoping review on dysphagia] Côté C, Gag
 
 [Term]
 id: PROMOT:0032012
-name: Debilidad fatigable de la musculatura facial
-def: "A type of weakness of the facial musculature (i.e. one or more muscles innervated by the seventh cranial nerve) that occurs after a muscle group is used and lessens if the muscle group has some rest. That is, there is diminution of the strength of the facial musculature with repetitive muscle actions." [] {IAO:0000119="HP:0003473"}
+name: Debilidad fatigable de la musculatura facial 
+def: "A type of weakness of the facial musculature (i.e. one or more muscles innervated by the seventh cranial nerve) that occurs after a muscle group is used and lessens if the muscle group has some rest. That is, there is diminution of the strength of the facial musculature with repetitive muscle actions." [] {comment="[PROMOT project] Mansoore Gholizade (definition reviewer)", IAO:0000119="HP:0003473"}
 is_a: HP:0003473 ! Fatigable weakness
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 property_value: PROMOT:1000001 "Congenital myasthenic syndrom Scoping review" xsd:string
@@ -11399,7 +11420,7 @@ property_value: PROMOT:1000001 "Congenital myopathy Scoping review" xsd:string
 [Term]
 id: PROMOT:0032013
 name: Debilidad fatigable de los músculos oculares
-def: "A type of weakness of the ocular muscles that occurs after a muscle group is used and lessens if the muscle group has some rest. That is, there is diminution of the strength of the ocular muscles with repetitive muscle actions." [] {IAO:0000119="HP:0003473"}
+def: "A type of weakness of the ocular muscles that occurs after a muscle group is used and lessens if the muscle group has some rest. That is, there is diminution of the strength of the ocular muscles with repetitive muscle actions." [] {comment="[PROMOT project] Mansoore Gholizade (definition reviewer)", IAO:0000119="HP:0003473"}
 is_a: HP:0003473 ! Fatigable weakness
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 property_value: PROMOT:1000001 "Congenital myasthenic syndrom Scoping review" xsd:string
@@ -11408,16 +11429,16 @@ property_value: PROMOT:1000001 "Congenital myopathy Scoping review" xsd:string
 [Term]
 id: PROMOT:0032014
 name: Debilidad fatigable muscular axial
-def: "A type of weakness of the axial muscles (i.e., of the muscles of the head and neck, spine, and ribs) that occurs after a muscle group is used and lessens if the muscle group has some rest. That is, there is diminution of the strength of the axial muscles with repetitive muscle actions." [] {IAO:0000119="HP:0003473"}
-is_a: HP:0003473 ! Fatigable weakness
+def: "A type of weakness of the axial muscles (i.e., of the muscles of the head and neck, vertebral column, and intercostal muscles) that occurs after a muscle group is used and lessens if the muscle group has some rest. That is, there is diminution of the strength of the axial muscles with repetitive muscle actions." [] {comment="[PROMOT project] Mansoore Gholizade (definition reviewer)", IAO:0000119="HP:0003473"}
+is_a: HP:0030197 ! Fatigable weakness of skeletal muscles
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 property_value: PROMOT:1000001 "Congenital myasthenic syndrom Scoping review" xsd:string
 property_value: PROMOT:1000001 "Congenital myopathy Scoping review" xsd:string
 
 [Term]
 id: PROMOT:0032015
-name: Faiblesse musculaire des muscles de la mastication
-def: "A lack of strength in the muscles involved in chewing." []
+name: Debilidad de músculos masticatorios
+def: "A lack of strength in the muscles involved in chewing." [] {comment="[PROMOT project] Mansoore Gholizade (definition reviewer)", IAO:0000119="HP:0001324"}
 is_a: HP:0001324 ! Muscle weakness
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 property_value: PROMOT:1000001 "Congenital myasthenic syndrom Scoping review" xsd:string
@@ -11515,6 +11536,7 @@ relationship: PROMOT:2000002 HP:0000183 ! assesses Tongue muscle weakness
 id: PROMOT:0100011
 name: Assessment using Berg Balance Scale
 def: "An assessment with the Berg scale assesses balance and identifies the level of fall risk. This five-level ordinal scale (0 to 4) contains 14 items and the maximum total score ranges from 0 (maximum reach) to 56 (no reach detected). This generic scale evaluates various dimensions of balance, including the following: maintaining multiple positions, having automatic postural responses when changing posture or voluntary movements of the limbs, and produce effective balance and protection reactions." [] {IAO:0000119="Automatically translated from French."}
+xref: http://snomed.info/id/404933001
 is_a: SNOMED:840297006 ! Assessment of patient reported outcome measures
 relationship: PROMOT:2000002 HP:0002141 ! assesses Gait imbalance
 
@@ -11662,6 +11684,7 @@ name: Blood relative
 comment: [EURO-NMD] Atalia A et al., EURO-NMD registry: federated FAIR infrastructure, innovative technologies and concepts of a patient-centred registry for rare neuromuscular disorders. Orphanet J Rare Dis. 2024 Feb 14;19(1):66. doi: 10.1186/s13023-024-03059-3. PMID: 38355534; PMCID: PMC10865673.
 is_a: NCBITaxon:9606 ! Homo sapiens
 relationship: PROMOT:2000006 NCIT:C16960 ! est lié à Patient
+relationship: RO:0000086 HP:0032319 ! has quality Health status
 property_value: dc11:type "person" xsd:string
 property_value: sct-ext:definitionStatus "Primitif" xsd:string
 property_value: sct-ext:fsn "Blood relative (person)" xsd:string
@@ -12512,7 +12535,6 @@ relationship: PROMOT:2000002 HP:0001270 ! assesses Motor delay
 relationship: PROMOT:2000002 HP:0001319 ! assesses Neonatal hypotonia
 relationship: PROMOT:2000002 HP:0001374 ! assesses Congenital hip dislocation
 relationship: PROMOT:2000002 HP:0001387 ! assesses Joint stiffness
-relationship: PROMOT:2000002 HP:0001531 ! assesses Failure to thrive in infancy
 relationship: PROMOT:2000002 HP:0001609 ! assesses Hoarse voice
 relationship: PROMOT:2000002 HP:0001611 ! assesses Hypernasal speech
 relationship: PROMOT:2000002 HP:0001612 ! assesses Weak cry
@@ -12686,6 +12708,7 @@ id: SO:0001762
 name: variant_origin
 def: "A quality inhering in a variant by virtue of its origin." [PMID:17597783, SO:ke]
 is_a: BFO:0000019 ! quality
+relationship: RO:0000080 SO:0001060 ! quality of sequence_variant
 
 [Term]
 id: SO:0001775
@@ -12807,6 +12830,7 @@ def: "A relationship that holds between a biological entity and a phenotype. Her
 subset: ro-eco
 property_value: IAO:0000114 IAO:0000125
 property_value: IAO:0000117 https://orcid.org/0000-0002-6601-2165
+property_value: seeAlso c
 
 [Typedef]
 id: RO:0002234
