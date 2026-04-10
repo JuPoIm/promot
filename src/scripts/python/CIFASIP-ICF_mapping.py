@@ -62,11 +62,14 @@ with open ('../scripts/python/tmp/CIF-ASIP.tsv', encoding='utf-8') as tsvfile:
             if asip_uri == 'IRI' or icf_code == '' or icf_label_en =='':
                 pass
             else:
+                # si le code est composé | if the code is made of two parts
                 if '-' in icf_code:
                     icf_label_en = re.sub(r' \([a-z][0-9]*-[a-z][0-9]*\)', '', icf_label_en)
                     # insert icf code via en label in df / on ajoute le code ICF via le label en anglais
                     df.loc[df['Label EN'] == icf_label_en, 'Code ICF'] = icf_code
                 # insert CIF-ASIP URIs where ICF code is the same / on ajoute les URI fondamentales via le code ICF 
+                elif len(icf_code) == 2 :
+                    df.loc[df['Label EN'] == icf_label_en, 'URI data.esante'] = asip_uri
                 df.loc[df['Code ICF'] == icf_code, 'URI data.esante'] = asip_uri
 
 # delete now useless columns (that were used for mapping URIs)
