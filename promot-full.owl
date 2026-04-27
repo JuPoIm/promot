@@ -65,7 +65,7 @@
      xmlns:CPATH_VISIT_OCCURRENCE="https://w3id.org/cpont/visit_occurrence/"
      xmlns:CPATH_CONDITION_OCCURRENCE="https://w3id.org/cpont/condition_occurrence/">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/promot/promot-full.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/promot/releases/2026-04-10/promot-full.owl"/>
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/promot/releases/2026-04-27/promot-full.owl"/>
         <dc11:contributor>Anita Burgun MD, PhD
 https://orcid.org/0000-0001-6855-4366</dc11:contributor>
         <dc11:contributor>Carole Faviez PhD
@@ -94,7 +94,7 @@ https://orcid.org/0000-0002-3336-2476</dc11:creator>
         <dcterms:description>Ontology for modeling the three following neuromuscular diseases : OPMD, Congenital myopathies and Congenital myastenic syndroms. It aims to be also an ontology for building the PROMOT project relational database.</dcterms:description>
         <dcterms:license rdf:resource="https://creativecommons.org/licenses/by-nc-sa/4.0/"/>
         <dcterms:title>PROMOT ontology</dcterms:title>
-        <oboInOwl:date>10:04:2026 15:19</oboInOwl:date>
+        <oboInOwl:date>27:04:2026 13:34</oboInOwl:date>
         <rdfs:comment>Additional acknowledgements:
 	- Rachel Thompson
 	- Thomas Bongivault, MSc
@@ -106,7 +106,7 @@ https://orcid.org/0000-0002-3336-2476</dc11:creator>
 </rdfs:comment>
         <rdfs:seeAlso>More about PROMOT initiative at https://www.promotinitiative.com/
 </rdfs:seeAlso>
-        <owl:versionInfo>2026-04-10</owl:versionInfo>
+        <owl:versionInfo>2026-04-27</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -429,14 +429,6 @@ We also have the outstanding issue of how to aim different definitions to differ
     <!-- http://purl.obolibrary.org/obo/NCIT_C118466 -->
 
     <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/NCIT_C118466">
-        <rdfs:subPropertyOf rdf:resource="http://www.geneontology.org/formats/oboInOwl#SubsetProperty"/>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/NCIT_C118468 -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/NCIT_C118468">
         <rdfs:subPropertyOf rdf:resource="http://www.geneontology.org/formats/oboInOwl#SubsetProperty"/>
     </owl:AnnotationProperty>
     
@@ -2548,6 +2540,12 @@ We also have the outstanding issue of how to aim different definitions to differ
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000091"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/HP_0003810"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000091"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/HP_0008959"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -2560,7 +2558,25 @@ We also have the outstanding issue of how to aim different definitions to differ
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000091"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/HP_0009028"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000091"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/HP_0009063"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000091"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/HP_0009077"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000091"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/HP_0030198"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -2708,13 +2724,37 @@ We also have the outstanding issue of how to aim different definitions to differ
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000091"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/HP_0003810"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000091"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/HP_0009027"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000091"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/HP_0009028"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000091"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/HP_0009053"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000091"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/HP_0009063"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000091"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/HP_0030198"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -3001,13 +3041,7 @@ We also have the outstanding issue of how to aim different definitions to differ
     <!-- http://id.who.int/icd/entity/1363559646 -->
 
     <owl:Class rdf:about="http://id.who.int/icd/entity/1363559646">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0032002"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002331"/>
-                <owl:someValuesFrom rdf:resource="http://id.who.int/icd/entity/2011053685"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
+        <rdfs:subClassOf rdf:resource="http://id.who.int/icd/entity/567313968"/>
         <schema:browserUrl rdf:resource="https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F1363559646"/>
         <obo:IAO_0000115 xml:lang="en">This chapter is about the functions of the brain: both global mental functions, such as consciousness, energy and drive, and specific mental functions, such as memory, language and calculation mental functions.</obo:IAO_0000115>
         <oboInOwl:hasDbXref>https://data.esante.gouv.fr/terminologies/icf#51531</oboInOwl:hasDbXref>
@@ -3019,14 +3053,14 @@ We also have the outstanding issue of how to aim different definitions to differ
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://id.who.int/icd/entity/1363559646"/>
         <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
-        <owl:annotatedTarget xml:lang="fr">Fonctions mentales</owl:annotatedTarget>
-        <rdfs:comment>[PROMOT note] Source for official translation: https://icd.who.int/browse/2026-01/icf/fr &gt; Info &gt; Fichier du tableur</rdfs:comment>
+        <owl:annotatedTarget xml:lang="es">Funciones mentales</owl:annotatedTarget>
+        <rdfs:comment>[PROMOT note] Source for official translation: https://icd.who.int/browse/2026-01/icf/es &gt; Información &gt; Archivo de hoja de cálculo</rdfs:comment>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://id.who.int/icd/entity/1363559646"/>
         <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
-        <owl:annotatedTarget xml:lang="es">Funciones mentales</owl:annotatedTarget>
-        <rdfs:comment>[PROMOT note] Source for official translation: https://icd.who.int/browse/2026-01/icf/es &gt; Información &gt; Archivo de hoja de cálculo</rdfs:comment>
+        <owl:annotatedTarget xml:lang="fr">Fonctions mentales</owl:annotatedTarget>
+        <rdfs:comment>[PROMOT note] Source for official translation: https://icd.who.int/browse/2026-01/icf/fr &gt; Info &gt; Fichier du tableur</rdfs:comment>
     </owl:Axiom>
     
 
@@ -3091,14 +3125,14 @@ We also have the outstanding issue of how to aim different definitions to differ
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://id.who.int/icd/entity/1389818830"/>
         <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
-        <owl:annotatedTarget xml:lang="fr">Mastiquer</owl:annotatedTarget>
-        <rdfs:comment>[PROMOT note] Source for official translation: https://icd.who.int/browse/2026-01/icf/fr &gt; Info &gt; Fichier du tableur</rdfs:comment>
+        <owl:annotatedTarget xml:lang="es">Masticación</owl:annotatedTarget>
+        <rdfs:comment>[PROMOT note] Source for official translation: https://icd.who.int/browse/2026-01/icf/es &gt; Información &gt; Archivo de hoja de cálculo</rdfs:comment>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://id.who.int/icd/entity/1389818830"/>
         <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
-        <owl:annotatedTarget xml:lang="es">Masticación</owl:annotatedTarget>
-        <rdfs:comment>[PROMOT note] Source for official translation: https://icd.who.int/browse/2026-01/icf/es &gt; Información &gt; Archivo de hoja de cálculo</rdfs:comment>
+        <owl:annotatedTarget xml:lang="fr">Mastiquer</owl:annotatedTarget>
+        <rdfs:comment>[PROMOT note] Source for official translation: https://icd.who.int/browse/2026-01/icf/fr &gt; Info &gt; Fichier du tableur</rdfs:comment>
     </owl:Axiom>
     
 
@@ -3819,7 +3853,19 @@ We also have the outstanding issue of how to aim different definitions to differ
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000091"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/HP_0003327"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000091"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/HP_0004878"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000091"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0032014"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -4065,12 +4111,6 @@ Generic qualifier with the negative scale, used to indicate the extent or an imp
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000091"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/HP_0001761"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002328"/>
-                <owl:someValuesFrom rdf:resource="http://id.who.int/icd/entity/1789365017"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <schema:browserUrl rdf:resource="https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F1650503157"/>
@@ -4493,13 +4533,43 @@ Generic qualifier with the negative scale, used to indicate the extent or an imp
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000091"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/HP_0003694"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000091"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/HP_0003731"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000091"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/HP_0007340"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000091"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/HP_0009028"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000091"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/HP_0009073"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000091"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/HP_0012515"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000091"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/HP_0030200"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -4978,6 +5048,30 @@ Generic qualifier with the negative scale, used to indicate the extent or an imp
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000091"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/HP_0003694"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000091"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/HP_0009028"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000091"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/HP_0009073"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000091"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/HP_0030200"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000091"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/HP_0031108"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -5084,6 +5178,12 @@ Generic qualifier with the negative scale, used to indicate the extent or an imp
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000091"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/HP_0000508"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000091"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/HP_0002033"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -5097,6 +5197,12 @@ Generic qualifier with the negative scale, used to indicate the extent or an imp
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000091"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/HP_0002068"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000091"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/HP_0002483"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -5120,12 +5226,6 @@ Generic qualifier with the negative scale, used to indicate the extent or an imp
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000091"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/HP_0007838"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000091"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/HP_0012473"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -5133,6 +5233,24 @@ Generic qualifier with the negative scale, used to indicate the extent or an imp
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000091"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/HP_0030193"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000091"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/HP_0030194"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000091"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/HP_0030195"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000091"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/HP_0030199"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -5157,6 +5275,36 @@ Generic qualifier with the negative scale, used to indicate the extent or an imp
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000091"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/HP_0200136"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000091"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0032010"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000091"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0032011"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000091"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0032012"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000091"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0032015"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000091"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0032024"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -5193,6 +5341,12 @@ Generic qualifier with the negative scale, used to indicate the extent or an imp
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002328"/>
                 <owl:someValuesFrom rdf:resource="http://id.who.int/icd/entity/1789365017"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002328"/>
+                <owl:someValuesFrom rdf:resource="http://id.who.int/icd/entity/1806589582"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -5624,6 +5778,7 @@ Generic qualifier with the negative scale, used to indicate the extent or an imp
 
     <owl:Class rdf:about="http://id.who.int/icd/entity/2052957777">
         <rdfs:subClassOf rdf:resource="http://id.who.int/icd/entity/2069698903"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0032002"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002331"/>
@@ -5955,7 +6110,37 @@ Generic qualifier with the negative scale, used to indicate the extent or an imp
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000091"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/HP_0000767"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000091"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/HP_0000768"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000091"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/HP_0000774"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000091"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/HP_0000886"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000091"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/HP_0004322"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000091"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/HP_6000327"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <schema:browserUrl rdf:resource="https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F213893837"/>
@@ -6274,7 +6459,37 @@ Generic qualifier with the negative scale, used to indicate the extent or an imp
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000091"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/HP_0003691"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000091"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/HP_0003694"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000091"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/HP_0008997"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000091"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/HP_0009028"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000091"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/HP_0009073"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000091"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/HP_0030200"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -6318,7 +6533,31 @@ Generic qualifier with the negative scale, used to indicate the extent or an imp
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000091"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/HP_0003810"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000091"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/HP_0008959"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000091"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/HP_0009028"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000091"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/HP_0009063"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000091"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/HP_0030198"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -6416,13 +6655,37 @@ Generic qualifier with the negative scale, used to indicate the extent or an imp
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000091"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/HP_0003810"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000091"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/HP_0008963"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000091"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/HP_0009028"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000091"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/HP_0009063"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000091"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/HP_0011727"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000091"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/HP_0030198"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -6766,8 +7029,26 @@ Generic qualifier with the negative scale, used to indicate the extent or an imp
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000091"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0032013"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000091"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0032016"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002328"/>
                 <owl:someValuesFrom rdf:resource="http://id.who.int/icd/entity/1090716697"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002328"/>
+                <owl:someValuesFrom rdf:resource="http://id.who.int/icd/entity/1521707777"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -7167,6 +7448,12 @@ Generic qualifier with the negative scale, used to indicate the extent or an imp
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000091"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/HP_0002882"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000091"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/HP_0004885"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -7192,6 +7479,12 @@ Generic qualifier with the negative scale, used to indicate the extent or an imp
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000091"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/HP_0012497"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000091"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/HP_0030196"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -7572,13 +7865,37 @@ For a further explanation of coding conventions in ICF, refer to Annex 2.</obo:I
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000091"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/HP_0003327"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000091"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/HP_0009023"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000091"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0032014"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002328"/>
+                <owl:someValuesFrom rdf:resource="http://id.who.int/icd/entity/1521707777"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002328"/>
                 <owl:someValuesFrom rdf:resource="http://id.who.int/icd/entity/1789365017"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002328"/>
+                <owl:someValuesFrom rdf:resource="http://id.who.int/icd/entity/556694745"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -7859,12 +8176,6 @@ For a further explanation of coding conventions in ICF, refer to Annex 2.</obo:I
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000091"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/HP_0002141"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002328"/>
-                <owl:someValuesFrom rdf:resource="http://id.who.int/icd/entity/1328466963"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -8326,6 +8637,7 @@ For a further explanation of coding conventions in ICF, refer to Annex 2.</obo:I
 
     <owl:Class rdf:about="http://id.who.int/icd/entity/75971722">
         <rdfs:subClassOf rdf:resource="http://id.who.int/icd/entity/1819639191"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0032002"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002331"/>
@@ -8389,7 +8701,19 @@ For a further explanation of coding conventions in ICF, refer to Annex 2.</obo:I
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000091"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/HP_0003694"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000091"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/HP_0003749"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000091"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/HP_0007340"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -8402,6 +8726,24 @@ For a further explanation of coding conventions in ICF, refer to Annex 2.</obo:I
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000091"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/HP_0008994"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000091"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/HP_0009028"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000091"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/HP_0009073"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000091"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/HP_0030200"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -8530,6 +8872,25 @@ For a further explanation of coding conventions in ICF, refer to Annex 2.</obo:I
 
     <owl:Class rdf:about="http://id.who.int/icd/entity/834607195">
         <rdfs:subClassOf rdf:resource="http://id.who.int/icd/entity/397303672"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0020001"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000091"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/HP_0001638"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000091"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/HP_0001713"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000091"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/HP_0030872"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002328"/>
@@ -8753,12 +9114,6 @@ For a further explanation of coding conventions in ICF, refer to Annex 2.</obo:I
 
     <owl:Class rdf:about="http://id.who.int/icd/entity/862066979">
         <rdfs:subClassOf rdf:resource="http://id.who.int/icd/entity/1976873960"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002331"/>
-                <owl:someValuesFrom rdf:resource="http://id.who.int/icd/entity/583874291"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <schema:browserUrl rdf:resource="https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F862066979"/>
         <schema:exclusion xml:lang="en">Assimilation functions</schema:exclusion>
         <schema:exclusion xml:lang="en">Endocrine gland functions</schema:exclusion>
@@ -8824,6 +9179,12 @@ For a further explanation of coding conventions in ICF, refer to Annex 2.</obo:I
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000091"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/HP_0002878"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000091"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/HP_0002882"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -12912,6 +13273,12 @@ For a further explanation of coding conventions in ICF, refer to Annex 2.</obo:I
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROMOT_2000005"/>
+                <owl:someValuesFrom rdf:resource="http://id.who.int/icd/entity/1090716697"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROMOT_2000005"/>
                 <owl:someValuesFrom rdf:resource="http://id.who.int/icd/entity/1789365017"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -13048,31 +13415,6 @@ For a further explanation of coding conventions in ICF, refer to Annex 2.</obo:I
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0000504"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>Vision issue</owl:annotatedTarget>
-        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#layperson"/>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0000504"/>
-        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
-        <owl:annotatedTarget xml:lang="es">Alteración de la visión</owl:annotatedTarget>
-        <babelon:source_language>en</babelon:source_language>
-        <babelon:source_value>Abnormality of vision</babelon:source_value>
-        <babelon:translation_language>es</babelon:translation_language>
-        <babelon:translation_status>OFFICIAL</babelon:translation_status>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0000504"/>
-        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
-        <owl:annotatedTarget xml:lang="fr">Anomalie de la vision</owl:annotatedTarget>
-        <babelon:comment>label of HP:0000504 (Abnormality of vision)  ; abnormality of the eye</babelon:comment>
-        <babelon:source_language>en</babelon:source_language>
-        <babelon:source_value>Abnormality of vision</babelon:source_value>
-        <babelon:translation_language>fr</babelon:translation_language>
-        <babelon:translation_status>OFFICIAL</babelon:translation_status>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0000504"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>Abnormality of eyesight (visual perception).</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
@@ -13100,6 +13442,31 @@ For a further explanation of coding conventions in ICF, refer to Annex 2.</obo:I
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
         <owl:annotatedTarget>Abnormality of vision</owl:annotatedTarget>
         <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#layperson"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0000504"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget>Vision issue</owl:annotatedTarget>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#layperson"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0000504"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+        <owl:annotatedTarget xml:lang="es">Alteración de la visión</owl:annotatedTarget>
+        <babelon:source_language>en</babelon:source_language>
+        <babelon:source_value>Abnormality of vision</babelon:source_value>
+        <babelon:translation_language>es</babelon:translation_language>
+        <babelon:translation_status>OFFICIAL</babelon:translation_status>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0000504"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+        <owl:annotatedTarget xml:lang="fr">Anomalie de la vision</owl:annotatedTarget>
+        <babelon:comment>label of HP:0000504 (Abnormality of vision)  ; abnormality of the eye</babelon:comment>
+        <babelon:source_language>en</babelon:source_language>
+        <babelon:source_value>Abnormality of vision</babelon:source_value>
+        <babelon:translation_language>fr</babelon:translation_language>
+        <babelon:translation_status>OFFICIAL</babelon:translation_status>
     </owl:Axiom>
     
 
@@ -13364,12 +13731,6 @@ For a further explanation of coding conventions in ICF, refer to Annex 2.</obo:I
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0000597">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0000496"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROMOT_2000005"/>
-                <owl:someValuesFrom rdf:resource="http://id.who.int/icd/entity/1090716697"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <obo:IAO_0000115 xml:lang="fr">L&apos;ophtalmoplégie est une paralysie ou une faiblesse d&apos;un ou de plusieurs des muscles qui contrôlent le mouvement des yeux.</obo:IAO_0000115>
         <obo:IAO_0000115>Ophthalmoplegia is a paralysis or weakness of one or more of the muscles that control eye movement.</obo:IAO_0000115>
         <obo:PROMOT_1000001>Congenital myasthenic syndrom HPO DB associations</obo:PROMOT_1000001>
@@ -15680,6 +16041,13 @@ For a further explanation of coding conventions in ICF, refer to Annex 2.</obo:I
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0001374">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0001385"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0002827"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0032003"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROMOT_2000005"/>
+                <owl:someValuesFrom rdf:resource="http://id.who.int/icd/entity/1748092144"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <obo:PROMOT_1000001>Congenital myopathy HPO KB associations</obo:PROMOT_1000001>
         <obo:PROMOT_1000001>Congenital myopathy Scoping review</obo:PROMOT_1000001>
         <oboInOwl:hasDbXref>SNOMEDCT_US:48334007</oboInOwl:hasDbXref>
@@ -16301,97 +16669,6 @@ For a further explanation of coding conventions in ICF, refer to Annex 2.</obo:I
     
 
 
-    <!-- http://purl.obolibrary.org/obo/HP_0001508 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0001508">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0004325"/>
-        <obo:IAO_0000115>Failure to thrive (FTT) refers to a child whose physical growth is substantially below the norm.</obo:IAO_0000115>
-        <oboInOwl:hasAlternativeId>HP:0001535</oboInOwl:hasAlternativeId>
-        <oboInOwl:hasAlternativeId>HP:0008853</oboInOwl:hasAlternativeId>
-        <oboInOwl:hasAlternativeId>HP:0008878</oboInOwl:hasAlternativeId>
-        <oboInOwl:hasAlternativeId>HP:0008916</oboInOwl:hasAlternativeId>
-        <oboInOwl:hasBroadSynonym>Undergrowth</oboInOwl:hasBroadSynonym>
-        <oboInOwl:hasDbXref>SNOMEDCT_US:36440009</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>SNOMEDCT_US:432788009</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>UMLS:C0231246</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>UMLS:C2315100</oboInOwl:hasDbXref>
-        <oboInOwl:hasExactSynonym>FTT</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>Faltering weight</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>Postnatal failure to thrive</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym xml:lang="fr">Retard de croissance</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym xml:lang="fr">Retard de croissance staturo-pondérale</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>Weight faltering</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym xml:lang="fr">prise de poids médiocre</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym xml:lang="fr">prise de poids médiocre|retard staturo-pondérale progressif|retard de croissance chez les survivants|Retard de croissance post-natal</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym xml:lang="fr">retard de croissance chez les survivants</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym xml:lang="fr">retard staturo-pondérale progressif</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasRelatedSynonym>Poor weight gain</oboInOwl:hasRelatedSynonym>
-        <oboInOwl:id>HP:0001508</oboInOwl:id>
-        <rdfs:comment>Although there is no clear consensus on the exact definition of FTT, it is usually diagnoses in a child growing below the 3rd percentile or in a child whose decreased growth has cross two major growth percentiles (for example, from above the 75th percentile to below the 25th percentile).</rdfs:comment>
-        <rdfs:label>Failure to thrive</rdfs:label>
-        <rdfs:label xml:lang="fr">Retard de croissance post-natal</rdfs:label>
-        <rdfs:label xml:lang="es">Retraso en el medro</rdfs:label>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0001508"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>Failure to thrive (FTT) refers to a child whose physical growth is substantially below the norm.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0001508"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasBroadSynonym"/>
-        <owl:annotatedTarget>Undergrowth</owl:annotatedTarget>
-        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#layperson"/>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0001508"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>FTT</owl:annotatedTarget>
-        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#abbreviation"/>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0001508"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>Faltering weight</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:resource="https://orcid.org/0000-0001-5208-3432"/>
-        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#layperson"/>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0001508"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>Weight faltering</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:resource="https://orcid.org/0000-0001-5208-3432"/>
-        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#layperson"/>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0001508"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
-        <owl:annotatedTarget>Poor weight gain</owl:annotatedTarget>
-        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#layperson"/>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0001508"/>
-        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
-        <owl:annotatedTarget xml:lang="fr">Retard de croissance post-natal</owl:annotatedTarget>
-        <babelon:comment>label of HP:0001508 (Failure to thrive)  ; growth abnormality</babelon:comment>
-        <babelon:source_language>en</babelon:source_language>
-        <babelon:source_value>Failure to thrive</babelon:source_value>
-        <babelon:translation_language>fr</babelon:translation_language>
-        <babelon:translation_status>OFFICIAL</babelon:translation_status>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0001508"/>
-        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
-        <owl:annotatedTarget xml:lang="es">Retraso en el medro</owl:annotatedTarget>
-        <babelon:source_language>en</babelon:source_language>
-        <babelon:source_value>Failure to thrive</babelon:source_value>
-        <babelon:translation_language>es</babelon:translation_language>
-        <babelon:translation_status>OFFICIAL</babelon:translation_status>
-    </owl:Axiom>
-    
-
-
     <!-- http://purl.obolibrary.org/obo/HP_0001510 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0001510">
@@ -16854,6 +17131,13 @@ For a further explanation of coding conventions in ICF, refer to Annex 2.</obo:I
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0001609">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0001608"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0032003"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0032004"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROMOT_2000005"/>
+                <owl:someValuesFrom rdf:resource="http://id.who.int/icd/entity/151046878"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROMOT_2000005"/>
@@ -17311,6 +17595,25 @@ For a further explanation of coding conventions in ICF, refer to Annex 2.</obo:I
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0001627">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0030680"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0032003"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROMOT_2000005"/>
+                <owl:someValuesFrom rdf:resource="http://id.who.int/icd/entity/1399000785"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROMOT_2000005"/>
+                <owl:someValuesFrom rdf:resource="http://id.who.int/icd/entity/1780196241"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROMOT_2000005"/>
+                <owl:someValuesFrom rdf:resource="http://id.who.int/icd/entity/2100545361"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <obo:IAO_0000115>Any structural anomaly of the heart.</obo:IAO_0000115>
         <obo:PROMOT_1000001>Congenital myopathy HPO KB associations</obo:PROMOT_1000001>
         <obo:PROMOT_1000001>Congenital myopathy Scoping review</obo:PROMOT_1000001>
@@ -18970,10 +19273,17 @@ For a further explanation of coding conventions in ICF, refer to Annex 2.</obo:I
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0002460">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0001324"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0032003"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0032004"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROMOT_2000005"/>
                 <owl:someValuesFrom rdf:resource="http://id.who.int/icd/entity/1789365017"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROMOT_2000005"/>
+                <owl:someValuesFrom rdf:resource="http://id.who.int/icd/entity/2048203604"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115>Reduced strength of the musculature of the distal extremities.</obo:IAO_0000115>
@@ -19054,6 +19364,38 @@ For a further explanation of coding conventions in ICF, refer to Annex 2.</obo:I
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0002483">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0012638"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0032003"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0032004"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROMOT_2000005"/>
+                <owl:someValuesFrom rdf:resource="http://id.who.int/icd/entity/1328675264"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROMOT_2000005"/>
+                <owl:someValuesFrom rdf:resource="http://id.who.int/icd/entity/151046878"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROMOT_2000005"/>
+                <owl:someValuesFrom rdf:resource="http://id.who.int/icd/entity/1789365017"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROMOT_2000005"/>
+                <owl:someValuesFrom rdf:resource="http://id.who.int/icd/entity/712570723"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROMOT_2000005"/>
+                <owl:someValuesFrom rdf:resource="http://id.who.int/icd/entity/923782542"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <obo:PROMOT_1000001>Congenital myasthenic syndrom Scoping review</obo:PROMOT_1000001>
         <obo:PROMOT_1000001>Congenital myopathy HPO KB associations</obo:PROMOT_1000001>
         <obo:PROMOT_1000001>Congenital myopathy Scoping review</obo:PROMOT_1000001>
@@ -20505,6 +20847,20 @@ For a further explanation of coding conventions in ICF, refer to Annex 2.</obo:I
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0003202">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0011805"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0032003"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0032004"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROMOT_2000005"/>
+                <owl:someValuesFrom rdf:resource="http://id.who.int/icd/entity/1789365017"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROMOT_2000005"/>
+                <owl:someValuesFrom rdf:resource="http://id.who.int/icd/entity/2048203604"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <obo:IAO_0000115>The presence of skeletal muscular atrophy (which is also known as amyotrophy).</obo:IAO_0000115>
         <oboInOwl:hasAlternativeId>HP:0001299</oboInOwl:hasAlternativeId>
         <oboInOwl:hasAlternativeId>HP:0003545</oboInOwl:hasAlternativeId>
@@ -20542,6 +20898,7 @@ For a further explanation of coding conventions in ICF, refer to Annex 2.</obo:I
         <rdfs:label xml:lang="es">Amiotrofia</rdfs:label>
         <rdfs:label xml:lang="fr">Atrophie musculaire squelettique</rdfs:label>
         <rdfs:label>Skeletal muscle atrophy</rdfs:label>
+        <rdfs:label xml:lang="en">Skeletal muscle atrophy</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0003202"/>
@@ -20965,10 +21322,17 @@ For a further explanation of coding conventions in ICF, refer to Annex 2.</obo:I
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0001324"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0009127"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0032003"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0032004"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROMOT_2000005"/>
                 <owl:someValuesFrom rdf:resource="http://id.who.int/icd/entity/1789365017"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROMOT_2000005"/>
+                <owl:someValuesFrom rdf:resource="http://id.who.int/icd/entity/2048203604"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115>Weakness of the limb-girdle muscles (also known as the pelvic and shoulder girdles), that is, lack of strength of the muscles around the shoulders and the pelvis.</obo:IAO_0000115>
@@ -21104,6 +21468,12 @@ For a further explanation of coding conventions in ICF, refer to Annex 2.</obo:I
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROMOT_2000005"/>
                 <owl:someValuesFrom rdf:resource="http://id.who.int/icd/entity/2048203604"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROMOT_2000005"/>
+                <owl:someValuesFrom rdf:resource="http://id.who.int/icd/entity/556694745"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115>Reduced strength of the axial musculature (i.e., of the muscles of the head and neck, spine, and ribs).</obo:IAO_0000115>
@@ -22394,7 +22764,7 @@ For a further explanation of coding conventions in ICF, refer to Annex 2.</obo:I
     <!-- http://purl.obolibrary.org/obo/HP_0003674 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0003674">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0031797"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0012823"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000080"/>
@@ -22621,7 +22991,7 @@ For a further explanation of coding conventions in ICF, refer to Annex 2.</obo:I
     <!-- http://purl.obolibrary.org/obo/HP_0003679 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0003679">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0031797"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0012823"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000080"/>
@@ -22745,10 +23115,17 @@ For a further explanation of coding conventions in ICF, refer to Annex 2.</obo:I
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0001324"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0009127"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0032003"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0032004"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROMOT_2000005"/>
                 <owl:someValuesFrom rdf:resource="http://id.who.int/icd/entity/1789365017"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROMOT_2000005"/>
+                <owl:someValuesFrom rdf:resource="http://id.who.int/icd/entity/2048203604"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115>Reduced strength and weakness of the muscles of the arms and legs.</obo:IAO_0000115>
@@ -22818,6 +23195,26 @@ For a further explanation of coding conventions in ICF, refer to Annex 2.</obo:I
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0003691">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0000782"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0001435"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0032003"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0032004"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROMOT_2000005"/>
+                <owl:someValuesFrom rdf:resource="http://id.who.int/icd/entity/1521707777"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROMOT_2000005"/>
+                <owl:someValuesFrom rdf:resource="http://id.who.int/icd/entity/1789365017"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROMOT_2000005"/>
+                <owl:someValuesFrom rdf:resource="http://id.who.int/icd/entity/2048203604"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <obo:IAO_0000115>Abnormal protrusion of the scapula away from the surface of the back.</obo:IAO_0000115>
         <obo:PROMOT_1000001>Congenital myopathy HPO KB associations</obo:PROMOT_1000001>
         <obo:PROMOT_1000001>Congenital myopathy Scoping review</obo:PROMOT_1000001>
@@ -22928,10 +23325,17 @@ For a further explanation of coding conventions in ICF, refer to Annex 2.</obo:I
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0003701">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0001324"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0032003"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0032004"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROMOT_2000005"/>
                 <owl:someValuesFrom rdf:resource="http://id.who.int/icd/entity/1789365017"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROMOT_2000005"/>
+                <owl:someValuesFrom rdf:resource="http://id.who.int/icd/entity/2048203604"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115>A lack of strength of the proximal muscles.</obo:IAO_0000115>
@@ -23120,13 +23524,6 @@ For a further explanation of coding conventions in ICF, refer to Annex 2.</obo:I
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0003749">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0003325"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0032004"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROMOT_2000005"/>
-                <owl:someValuesFrom rdf:resource="http://id.who.int/icd/entity/2048203604"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <obo:IAO_0000115>Weakness of the muscles of the pelvic girdle (also known as the hip girdle), that is, lack of strength of the muscles around the pelvis.</obo:IAO_0000115>
         <obo:PROMOT_1000001>Congenital myasthenic syndrom Scoping review</obo:PROMOT_1000001>
         <obo:PROMOT_1000001>Congenital myopathy HPO KB associations</obo:PROMOT_1000001>
@@ -23732,12 +24129,6 @@ For a further explanation of coding conventions in ICF, refer to Annex 2.</obo:I
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROMOT_2000005"/>
-                <owl:someValuesFrom rdf:resource="http://id.who.int/icd/entity/1470583183"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROMOT_2000005"/>
                 <owl:someValuesFrom rdf:resource="http://id.who.int/icd/entity/1789365017"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -23912,6 +24303,19 @@ For a further explanation of coding conventions in ICF, refer to Annex 2.</obo:I
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0004878">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0001324"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0002093"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0032004"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROMOT_2000005"/>
+                <owl:someValuesFrom rdf:resource="http://id.who.int/icd/entity/1789365017"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROMOT_2000005"/>
+                <owl:someValuesFrom rdf:resource="http://id.who.int/icd/entity/2048203604"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROMOT_2000005"/>
@@ -24078,6 +24482,12 @@ For a further explanation of coding conventions in ICF, refer to Annex 2.</obo:I
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0004889">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0002747"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROMOT_2000005"/>
+                <owl:someValuesFrom rdf:resource="http://id.who.int/icd/entity/1470583183"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <obo:PROMOT_1000001>Congenital myasthenic syndrom Scoping review</obo:PROMOT_1000001>
         <obo:PROMOT_1000001>Congenital myopathy HPO KB associations</obo:PROMOT_1000001>
         <obo:PROMOT_1000001>Congenital myopathy Scoping review</obo:PROMOT_1000001>
@@ -24386,13 +24796,6 @@ For a further explanation of coding conventions in ICF, refer to Annex 2.</obo:I
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0007340">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0003690"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0032004"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROMOT_2000005"/>
-                <owl:someValuesFrom rdf:resource="http://id.who.int/icd/entity/2048203604"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <obo:IAO_0000115>Weakness of the muscles of the legs.</obo:IAO_0000115>
         <obo:PROMOT_1000001>Congenital myasthenic syndrom HPO DB associations</obo:PROMOT_1000001>
         <obo:PROMOT_1000001>Congenital myasthenic syndrom Scoping review</obo:PROMOT_1000001>
@@ -24649,12 +25052,6 @@ For a further explanation of coding conventions in ICF, refer to Annex 2.</obo:I
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0007941">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0000496"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROMOT_2000005"/>
-                <owl:someValuesFrom rdf:resource="http://id.who.int/icd/entity/1090716697"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <obo:IAO_0000115>Limited mobility of the eye within its socket.</obo:IAO_0000115>
         <obo:PROMOT_1000001>Congenital myasthenic syndrom HPO DB associations</obo:PROMOT_1000001>
         <obo:PROMOT_1000001>Congenital myasthenic syndrom Scoping review</obo:PROMOT_1000001>
@@ -24998,13 +25395,6 @@ For a further explanation of coding conventions in ICF, refer to Annex 2.</obo:I
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0008994">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0003690"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0003701"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0032004"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROMOT_2000005"/>
-                <owl:someValuesFrom rdf:resource="http://id.who.int/icd/entity/2048203604"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <obo:IAO_0000115>A lack of strength of the proximal muscles of the legs.</obo:IAO_0000115>
         <obo:PROMOT_1000001>Congenital myasthenic syndrom Scoping review</obo:PROMOT_1000001>
         <obo:PROMOT_1000001>Congenital myopathy Scoping review</obo:PROMOT_1000001>
@@ -25105,10 +25495,17 @@ For a further explanation of coding conventions in ICF, refer to Annex 2.</obo:I
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0009005">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0001421"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0032003"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0032004"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROMOT_2000005"/>
                 <owl:someValuesFrom rdf:resource="http://id.who.int/icd/entity/1789365017"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROMOT_2000005"/>
+                <owl:someValuesFrom rdf:resource="http://id.who.int/icd/entity/2048203604"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:PROMOT_1000001>Congenital myasthenic syndrom HPO DB associations</obo:PROMOT_1000001>
@@ -25153,10 +25550,23 @@ For a further explanation of coding conventions in ICF, refer to Annex 2.</obo:I
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0009023">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0001324"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0032003"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0032004"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROMOT_2000005"/>
                 <owl:someValuesFrom rdf:resource="http://id.who.int/icd/entity/1789365017"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROMOT_2000005"/>
+                <owl:someValuesFrom rdf:resource="http://id.who.int/icd/entity/2048203604"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROMOT_2000005"/>
+                <owl:someValuesFrom rdf:resource="http://id.who.int/icd/entity/556694745"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115>Decreased strength of the abdominal musculature.</obo:IAO_0000115>
@@ -25208,13 +25618,6 @@ For a further explanation of coding conventions in ICF, refer to Annex 2.</obo:I
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0009027">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0003690"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0032004"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROMOT_2000005"/>
-                <owl:someValuesFrom rdf:resource="http://id.who.int/icd/entity/2048203604"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <obo:IAO_0000115>Weakness of the muscles responsible for dorsiflexion of the foot, that is, of the movement of the toes towards the shin. The foot dorsiflexors include the tibialis anterior, the extensor hallucis longus, the extensor digitorum longus, and the peroneus tertius muscles.</obo:IAO_0000115>
         <obo:PROMOT_1000001>Congenital myasthenic syndrom Scoping review</obo:PROMOT_1000001>
         <obo:PROMOT_1000001>Congenital myopathy HPO KB associations</obo:PROMOT_1000001>
@@ -25290,10 +25693,17 @@ For a further explanation of coding conventions in ICF, refer to Annex 2.</obo:I
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0009028">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0009127"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0032003"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0032004"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROMOT_2000005"/>
                 <owl:someValuesFrom rdf:resource="http://id.who.int/icd/entity/1789365017"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROMOT_2000005"/>
+                <owl:someValuesFrom rdf:resource="http://id.who.int/icd/entity/2048203604"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115>Generalized weakness of the muscles of the arms and legs.</obo:IAO_0000115>
@@ -28998,6 +29408,37 @@ For a further explanation of coding conventions in ICF, refer to Annex 2.</obo:I
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0030192">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0003473"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0032004"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROMOT_2000005"/>
+                <owl:someValuesFrom rdf:resource="http://id.who.int/icd/entity/1328675264"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROMOT_2000005"/>
+                <owl:someValuesFrom rdf:resource="http://id.who.int/icd/entity/151046878"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROMOT_2000005"/>
+                <owl:someValuesFrom rdf:resource="http://id.who.int/icd/entity/553784299"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROMOT_2000005"/>
+                <owl:someValuesFrom rdf:resource="http://id.who.int/icd/entity/691689627"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROMOT_2000005"/>
+                <owl:someValuesFrom rdf:resource="http://id.who.int/icd/entity/712570723"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <obo:IAO_0000115>A type of weakness of the bulbar muscles (muscles of the mouth and throat responsible for speech and swallowing) that occurs after a muscle group is used and lessens if the muscle group has some rest. That is, there is diminution of strength with repetitive muscle actions.</obo:IAO_0000115>
         <obo:PROMOT_1000001>Congenital myasthenic syndrom HPO DB associations</obo:PROMOT_1000001>
         <obo:PROMOT_1000001>Congenital myasthenic syndrom Scoping review</obo:PROMOT_1000001>
@@ -29043,13 +29484,6 @@ For a further explanation of coding conventions in ICF, refer to Annex 2.</obo:I
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0030193">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0030192"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0032004"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROMOT_2000005"/>
-                <owl:someValuesFrom rdf:resource="http://id.who.int/icd/entity/1328675264"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROMOT_2000005"/>
@@ -29183,6 +29617,18 @@ For a further explanation of coding conventions in ICF, refer to Annex 2.</obo:I
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0030196">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0003473"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROMOT_2000005"/>
+                <owl:someValuesFrom rdf:resource="http://id.who.int/icd/entity/1360101629"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROMOT_2000005"/>
+                <owl:someValuesFrom rdf:resource="http://id.who.int/icd/entity/446199613"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <obo:IAO_0000115>A type of weakness of the muscles involved in breathing (respiration) that occurs after a muscle group is used and lessens if the muscle group has some rest. That is, there is diminution of strength with repetitive muscle actions.</obo:IAO_0000115>
         <obo:PROMOT_1000001>Congenital myasthenic syndrom HPO DB associations</obo:PROMOT_1000001>
         <obo:PROMOT_1000001>Congenital myasthenic syndrom Scoping review</obo:PROMOT_1000001>
@@ -29226,6 +29672,13 @@ For a further explanation of coding conventions in ICF, refer to Annex 2.</obo:I
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0030197">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0003473"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0032004"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROMOT_2000005"/>
+                <owl:someValuesFrom rdf:resource="http://id.who.int/icd/entity/2048203604"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <obo:IAO_0000115>A type of weakness of skeletal muscle that occurs after a muscle group is used and lessens if the muscle group has some rest. That is, there is diminution of strength with repetitive muscle actions.</obo:IAO_0000115>
         <obo:PROMOT_1000001>Congenital myasthenic syndrom HPO DB associations</obo:PROMOT_1000001>
         <obo:PROMOT_1000001>Congenital myasthenic syndrom Scoping review</obo:PROMOT_1000001>
@@ -29627,10 +30080,17 @@ For a further explanation of coding conventions in ICF, refer to Annex 2.</obo:I
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0030237">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0001421"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0032003"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0032004"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROMOT_2000005"/>
                 <owl:someValuesFrom rdf:resource="http://id.who.int/icd/entity/1789365017"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROMOT_2000005"/>
+                <owl:someValuesFrom rdf:resource="http://id.who.int/icd/entity/2048203604"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115>Reduced strength of the musculature of the hand.</obo:IAO_0000115>
@@ -29739,6 +30199,12 @@ For a further explanation of coding conventions in ICF, refer to Annex 2.</obo:I
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROMOT_2000005"/>
                 <owl:someValuesFrom rdf:resource="http://id.who.int/icd/entity/1328675264"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROMOT_2000005"/>
+                <owl:someValuesFrom rdf:resource="http://id.who.int/icd/entity/1580195090"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -30066,6 +30532,25 @@ For a further explanation of coding conventions in ICF, refer to Annex 2.</obo:I
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0030872">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0011025"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0032003"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROMOT_2000005"/>
+                <owl:someValuesFrom rdf:resource="http://id.who.int/icd/entity/1399000785"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROMOT_2000005"/>
+                <owl:someValuesFrom rdf:resource="http://id.who.int/icd/entity/1780196241"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROMOT_2000005"/>
+                <owl:someValuesFrom rdf:resource="http://id.who.int/icd/entity/2100545361"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <obo:IAO_0000115>An abnormality of the cardiac ventricular function.</obo:IAO_0000115>
         <obo:PROMOT_1000001>Congenital myopathy Scoping review</obo:PROMOT_1000001>
         <dcterms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-06-28T07:54:16Z</dcterms:date>
@@ -31115,6 +31600,50 @@ For a further explanation of coding conventions in ICF, refer to Annex 2.</obo:I
         <owl:annotatedTarget xml:lang="es">Capacidad vital forzada reducida</owl:annotatedTarget>
         <babelon:source_language>en</babelon:source_language>
         <babelon:source_value>Reduced forced vital capacity</babelon:source_value>
+        <babelon:translation_language>es</babelon:translation_language>
+        <babelon:translation_status>OFFICIAL</babelon:translation_status>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/HP_0032355 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0032355">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0030878"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0032003"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROMOT_2000005"/>
+                <owl:someValuesFrom rdf:resource="http://id.who.int/icd/entity/1789365017"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROMOT_2000005"/>
+                <owl:someValuesFrom rdf:resource="http://id.who.int/icd/entity/446199613"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000115>A reduction in the maximum expiratory flow per minute, which can be used to measure how fast a subject can exhale as well as to judge the strength of the expiratory muscles and the condition of the large airways.</obo:IAO_0000115>
+        <obo:PROMOT_1000001>[OPMD Medical Expert] https://orcid.org/0000-0003-2829-8470</obo:PROMOT_1000001>
+        <dcterms:creator rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
+        <dcterms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-02-23T16:59:55Z</dcterms:date>
+        <rdfs:label>Decreased peak expiratory flow</rdfs:label>
+        <rdfs:label xml:lang="en">Decreased peak expiratory flow</rdfs:label>
+        <rdfs:label xml:lang="es">Disminución del flujo espiratorio máximo</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0032355"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A reduction in the maximum expiratory flow per minute, which can be used to measure how fast a subject can exhale as well as to judge the strength of the expiratory muscles and the condition of the large airways.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:resource="https://orcid.org/0000-0002-8169-9049"/>
+        <oboInOwl:hasDbXref>PMID:28005993</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0032355"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+        <owl:annotatedTarget xml:lang="es">Disminución del flujo espiratorio máximo</owl:annotatedTarget>
+        <babelon:source_language>en</babelon:source_language>
+        <babelon:source_value>Decreased peak expiratory flow</babelon:source_value>
         <babelon:translation_language>es</babelon:translation_language>
         <babelon:translation_status>OFFICIAL</babelon:translation_status>
     </owl:Axiom>
@@ -33082,79 +33611,6 @@ Previous. An information content entity is a non-realizable information entity t
         <obo:NCIT_P383>AQS</obo:NCIT_P383>
         <obo:NCIT_P384>GDC</obo:NCIT_P384>
         <obo:NCIT_P385>VAR</obo:NCIT_P385>
-    </owl:Axiom>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/NCIT_C121361 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCIT_C121361">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0100001"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROMOT_2000002"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/HP_0008959"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROMOT_2000002"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/HP_0009053"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <obo:IAO_0000115>Measurement of maximum isometric force generation from a muscle group; performed with specialized equipment.</obo:IAO_0000115>
-        <obo:NCIT_NHC0>C121361</obo:NCIT_NHC0>
-        <obo:NCIT_P106>Intellectual Product</obo:NCIT_P106>
-        <obo:NCIT_P108>Quantitative Muscle Testing</obo:NCIT_P108>
-        <obo:NCIT_P207>C4053513</obo:NCIT_P207>
-        <obo:NCIT_P322>NICHD</obo:NCIT_P322>
-        <obo:NCIT_P325>Measurement of maximum isometric force generation from a muscle group; performed with specialized equipment.</obo:NCIT_P325>
-        <oboInOwl:hasExactSynonym>QMT</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>Quantitative Muscle Testing</oboInOwl:hasExactSynonym>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/NCIT_C118468"/>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/NCIT_C90259"/>
-        <rdfs:label xml:lang="en">Quantative muscle testing</rdfs:label>
-        <rdfs:label>Quantitative Muscle Testing</rdfs:label>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/NCIT_C121361"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>Measurement of maximum isometric force generation from a muscle group; performed with specialized equipment.</owl:annotatedTarget>
-        <obo:NCIT_P378>NCI</obo:NCIT_P378>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/NCIT_C121361"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/NCIT_P325"/>
-        <owl:annotatedTarget>Measurement of maximum isometric force generation from a muscle group; performed with specialized equipment.</owl:annotatedTarget>
-        <obo:NCIT_P378>NICHD</obo:NCIT_P378>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/NCIT_C121361"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>QMT</owl:annotatedTarget>
-        <obo:NCIT_P383>AB</obo:NCIT_P383>
-        <obo:NCIT_P384>NCI</obo:NCIT_P384>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/NCIT_C121361"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>QMT</owl:annotatedTarget>
-        <obo:NCIT_P383>SY</obo:NCIT_P383>
-        <obo:NCIT_P384>NICHD</obo:NCIT_P384>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/NCIT_C121361"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>Quantitative Muscle Testing</owl:annotatedTarget>
-        <obo:NCIT_P383>PT</obo:NCIT_P383>
-        <obo:NCIT_P384>NCI</obo:NCIT_P384>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/NCIT_C121361"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>Quantitative Muscle Testing</owl:annotatedTarget>
-        <obo:NCIT_P383>PT</obo:NCIT_P383>
-        <obo:NCIT_P384>NICHD</obo:NCIT_P384>
     </owl:Axiom>
     
 
@@ -35734,12 +36190,44 @@ Previous. An information content entity is a non-realizable information entity t
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCIT_C99800">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCIT_C25164"/>
+        <obo:IAO_0000115>The year in which an event began.</obo:IAO_0000115>
+        <obo:NCIT_NHC0>C99800</obo:NCIT_NHC0>
+        <obo:NCIT_P106>Temporal Concept</obo:NCIT_P106>
+        <obo:NCIT_P108>Year of Onset</obo:NCIT_P108>
+        <obo:NCIT_P207>C3274945</obo:NCIT_P207>
+        <obo:NCIT_P322>CPTAC</obo:NCIT_P322>
+        <oboInOwl:hasExactSynonym>Year of Onset</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>Year of Onset (YYYY)</oboInOwl:hasExactSynonym>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/NCIT_C156952"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/NCIT_C156953"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/NCIT_C156954"/>
         <rdfs:comment>[PROMOT note] [Derived from RD-CDM] [5.4 Date of Onset]</rdfs:comment>
         <rdfs:comment>[PROMOT note] [EURO-NMD] Atalia A et al., EURO-NMD registry: federated FAIR infrastructure, innovative technologies and concepts of a patient-centred registry for rare neuromuscular disorders. Orphanet J Rare Dis. 2024 Feb 14;19(1):66. doi: 10.1186/s13023-024-03059-3. PMID: 38355534; PMCID: PMC10865673.</rdfs:comment>
         <rdfs:comment>[PROMOT note] [RD-CDM] Graefe, A.S.L., Hübner, M.R., Rehburg, F. et al. An ontology-based rare disease common data model harmonising international registries, FHIR, and Phenopackets. Sci Data 12, 234 (2025). https://doi.org/10.1038/s41597-025-04558-z</rdfs:comment>
+        <rdfs:label>Year of Onset</rdfs:label>
         <rdfs:label xml:lang="en">Year of onset</rdfs:label>
         <skos:changeNote xml:lang="en">[PROMOT note] The PROMOT ontology added a comment to quote the CDM used as a source for this entity.</skos:changeNote>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/NCIT_C99800"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>The year in which an event began.</owl:annotatedTarget>
+        <obo:NCIT_P378>NCI</obo:NCIT_P378>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/NCIT_C99800"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget>Year of Onset</owl:annotatedTarget>
+        <obo:NCIT_P383>PT</obo:NCIT_P383>
+        <obo:NCIT_P384>NCI</obo:NCIT_P384>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/NCIT_C99800"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget>Year of Onset (YYYY)</owl:annotatedTarget>
+        <obo:NCIT_P383>PT</obo:NCIT_P383>
+        <obo:NCIT_P384>CPTAC</obo:NCIT_P384>
+    </owl:Axiom>
     
 
 
@@ -36375,6 +36863,13 @@ Previous. An information content entity is a non-realizable information entity t
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002351"/>
                 <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
                 <owl:onClass rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0010006"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002351"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0010007"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -37608,6 +38103,13 @@ Previous. An information content entity is a non-realizable information entity t
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0032006">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0012378"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0032004"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROMOT_2000005"/>
+                <owl:someValuesFrom rdf:resource="http://id.who.int/icd/entity/1328675264"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <obo:IAO_0000115 xml:lang="en">A fatigue that occurs when one is eating. It is due to weakness or fatiguable weakness of chewing muscles.</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="es">Fatiga que se produce al momento de comer debida a la debilidad muscular o a la fatiga de los músculos involucrados en la masticación.</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="fr">Fatigue qui survient au moment de manger du fait de la faiblesse musculaire ou de la fatigabilité des muscles impliqués dans la mastication.</obo:IAO_0000115>
@@ -37637,6 +38139,12 @@ Previous. An information content entity is a non-realizable information entity t
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0032007">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0001288"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROMOT_2000005"/>
+                <owl:someValuesFrom rdf:resource="http://id.who.int/icd/entity/555410497"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <obo:IAO_0000115 xml:lang="en">A difficulty to walk for less than a kilometre, such as walking around rooms or hallways, within a building or for short distances outside. This is distinct from the difficulty of moving around.</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="fr">Difficulté à avancer à pied, sur une distance de moins d&apos;un kilomètre, comme marcher dans sa chambre ou dans le couloir, dans un bâtiment ou sur de courtes distances à l&apos;extérieur.</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="es">Dificultad para andar menos de un kilómetro, como caminar por habitaciones y pasillos, dentro de un edificio o pequeñas distancias en el exterior. Es distinta de la dificultad para desplazarse por el entorno</obo:IAO_0000115>
@@ -37671,6 +38179,13 @@ Previous. An information content entity is a non-realizable information entity t
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0032008">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0100022"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0032004"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROMOT_2000005"/>
+                <owl:someValuesFrom rdf:resource="http://id.who.int/icd/entity/150502901"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <obo:IAO_0000115 xml:lang="en">A difficulty to change basic position, i.e. a difficulty getting into and out of a body position and moving from one location to another, such as getting up out of a chair to lie down on a bed, and getting into and out of positions of sitting, standing, kneeling or squatting. This is distinct from the difficulty of transferring oneself.</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="fr">Difficulté à prendre et quitter une position et/ou à passer d&apos;un endroit à un autre, comme se lever d&apos;un fauteuil pour se coucher sur un lit, et comme prendre et quitter les positions assise, debout, à genoux ou accroupie. Cette difficulté est distincte de la difficulté à se transférrer.</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="es">Dificultad para adoptar o abandonar una postura, pasar de un lugar a otro, como levantarse de una silla para tumbarse en una cama, y adoptar o abandonar posiciones determinadas, como arrodillarse o sentarse en cuclillas. Es distinta de la dificultad para transferir el propio cuerpo.</obo:IAO_0000115>
@@ -37705,6 +38220,13 @@ Previous. An information content entity is a non-realizable information entity t
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0032009">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0012154"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0032004"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROMOT_2000005"/>
+                <owl:someValuesFrom rdf:resource="http://id.who.int/icd/entity/1328675264"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <obo:IAO_0000115 xml:lang="en">A loss of enjoyment of mealtime due to difficulties while eating.</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="fr">Perte de la satisfaction ou du plaisir à manger due à des difficultés pour manger.</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="es">Pérdida de la satisfacción o del placer de comer debida a las dificultades para comer.</obo:IAO_0000115>
@@ -37800,6 +38322,13 @@ Previous. An information content entity is a non-realizable information entity t
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0032012">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0003473"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0032004"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROMOT_2000005"/>
+                <owl:someValuesFrom rdf:resource="http://id.who.int/icd/entity/1328675264"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <obo:IAO_0000115 xml:lang="en">A type of weakness of the facial musculature (i.e. one or more muscles innervated by the seventh cranial nerve) that occurs after a muscle group is used and lessens if the muscle group has some rest. That is, there is diminution of the strength of the facial musculature with repetitive muscle actions.</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="es">Una debilidad de la musculatura facial, es decir, uno o varios músculos que están inerbidos por el séptimo nervio craneal, que se manifiesta cuando un grupo muscular facial está bajo presión y que disminuye después de que el grupo en cuestión ha sido puesto en reposo. En resumen, se trata de una disminución de la fuerza de los músculos faciales como resultado de una carga repetida.</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="fr">Une faiblesse de la musculature faciale, c.à.d. d’un ou plusieurs muscles inervés par le septième nerf cranial, qui se manifeste quand un groupe musculaire facial est sollicité et qui diminue après que le groupe en question a été mis au repos. En résumé, il s’agit d’une diminution de la force des muscles faciaux à la suite d’une sollicitation répêtée.</obo:IAO_0000115>
@@ -37808,6 +38337,7 @@ Previous. An information content entity is a non-realizable information entity t
         <obo:PROMOT_1000001>Congenital myopathy Scoping review</obo:PROMOT_1000001>
         <rdfs:label xml:lang="es">Debilidad fatigable de la musculatura facial </rdfs:label>
         <rdfs:label xml:lang="fr">Fatigabilité de la musculature faciale</rdfs:label>
+        <rdfs:label xml:lang="en">Fatigable weakness of facial musculature</rdfs:label>
         <rdfs:label xml:lang="en">Fatiguable weakness of facial musculature</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -37844,6 +38374,7 @@ Previous. An information content entity is a non-realizable information entity t
         <obo:PROMOT_1000001>Congenital myopathy Scoping review</obo:PROMOT_1000001>
         <rdfs:label xml:lang="es">Debilidad fatigable de los músculos oculares</rdfs:label>
         <rdfs:label xml:lang="fr">Fatigabilité des muscles occulaires</rdfs:label>
+        <rdfs:label xml:lang="en">Fatigable weakness of the ocular muscles</rdfs:label>
         <rdfs:label xml:lang="en">Fatiguable weakness of the ocular muscles</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -37878,8 +38409,10 @@ Previous. An information content entity is a non-realizable information entity t
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
         <obo:PROMOT_1000001>Congenital myasthenic syndrom Scoping review</obo:PROMOT_1000001>
         <obo:PROMOT_1000001>Congenital myopathy Scoping review</obo:PROMOT_1000001>
+        <rdfs:label xml:lang="en">Axial fatigable weakness</rdfs:label>
         <rdfs:label xml:lang="es">Debilidad fatigable muscular axial</rdfs:label>
         <rdfs:label xml:lang="fr">Fatigabilité des muscles axiaux</rdfs:label>
+        <rdfs:label xml:lang="en">Fatigable weakness of axial muscles</rdfs:label>
         <rdfs:label xml:lang="en">Fatiguable weakness of axial muscles</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -37908,6 +38441,26 @@ Previous. An information content entity is a non-realizable information entity t
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0032015">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0001324"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0032003"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0032004"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROMOT_2000005"/>
+                <owl:someValuesFrom rdf:resource="http://id.who.int/icd/entity/1328675264"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROMOT_2000005"/>
+                <owl:someValuesFrom rdf:resource="http://id.who.int/icd/entity/1389818830"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROMOT_2000005"/>
+                <owl:someValuesFrom rdf:resource="http://id.who.int/icd/entity/1789365017"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <obo:IAO_0000115 xml:lang="en">A lack of strength in the muscles involved in chewing.</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="es">Debilidad muscular de los músculos involucrados en la masticación.</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="fr">Une faiblesse musculaire des muscles impliqués dans la mastication.</obo:IAO_0000115>
@@ -37940,47 +38493,119 @@ Previous. An information content entity is a non-realizable information entity t
     
 
 
-    <!-- http://purl.obolibrary.org/obo/PROMOT_0033000 -->
+    <!-- http://purl.obolibrary.org/obo/PROMOT_0032016 -->
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0033000">
-        <rdfs:subClassOf rdf:resource="http://id.who.int/icd/entity/446199613"/>
-        <rdfs:label xml:lang="en">Function of expiratory peak flow</rdfs:label>
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0032016">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0000508"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROMOT_2000005"/>
+                <owl:someValuesFrom rdf:resource="http://id.who.int/icd/entity/1521707777"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000115 xml:lang="en">A type of ptosis that occurs after the external ocular muscle group is used and lessens if the muscle group has some rest. That is, there is a ptosis apparition with repetitive external ocular muscle actions</obo:IAO_0000115>
+        <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
+        <rdfs:label xml:lang="en">Fatigable ptosis</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/PROMOT_0033001 -->
+    <!-- http://purl.obolibrary.org/obo/PROMOT_0032017 -->
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0033001">
-        <rdfs:subClassOf rdf:resource="http://id.who.int/icd/entity/1083127119"/>
-        <rdfs:label xml:lang="en">Function of cough peak flow</rdfs:label>
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0032017">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0001288"/>
+        <obo:IAO_0000115 xml:lang="en">A walking speed that is below the lower limit of normal according to what is expected.</obo:IAO_0000115>
+        <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
+        <rdfs:label xml:lang="en">Decreased walking speed</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/PROMOT_0033002 -->
+    <!-- http://purl.obolibrary.org/obo/PROMOT_0032018 -->
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0033002">
-        <rdfs:subClassOf rdf:resource="http://id.who.int/icd/entity/274570113"/>
-        <rdfs:label xml:lang="en">Isometric muscle strength</rdfs:label>
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0032018">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0030842"/>
+        <obo:IAO_0000115 xml:lang="en">Incidents in which a piece of food get stuck in the upper airway and provoke coughing.</obo:IAO_0000115>
+        <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
+        <rdfs:label xml:lang="en">Coughing on foods</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/PROMOT_0033003 -->
+    <!-- http://purl.obolibrary.org/obo/PROMOT_0032019 -->
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0033003">
-        <rdfs:subClassOf rdf:resource="http://id.who.int/icd/entity/1789365017"/>
-        <rdfs:label xml:lang="en">Pinch strength</rdfs:label>
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0032019">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0030842"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROMOT_2000005"/>
+                <owl:someValuesFrom rdf:resource="http://id.who.int/icd/entity/553784299"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000115 xml:lang="en">Incidents in which liquids provoke coughing.</obo:IAO_0000115>
+        <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
+        <rdfs:label xml:lang="en">Coughing on liquids</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/PROMOT_0033004 -->
+    <!-- http://purl.obolibrary.org/obo/PROMOT_0032020 -->
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0033004">
-        <rdfs:subClassOf rdf:resource="http://id.who.int/icd/entity/1789365017"/>
-        <rdfs:label xml:lang="en">Tongue strength</rdfs:label>
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0032020">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0032019"/>
+        <obo:IAO_0000115 xml:lang="en">Incidents in which saliva provoke coughing.</obo:IAO_0000115>
+        <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
+        <rdfs:label xml:lang="en">Coughing on saliva</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROMOT_0032021 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0032021">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0030842"/>
+        <obo:IAO_0000115 xml:lang="en">Incidents in which a piece of food get stuck in the upper airway and provoke choking.</obo:IAO_0000115>
+        <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
+        <rdfs:label xml:lang="en">Choking on foods</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROMOT_0032022 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0032022">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0030842"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROMOT_2000005"/>
+                <owl:someValuesFrom rdf:resource="http://id.who.int/icd/entity/553784299"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000115 xml:lang="en">Incidents in which liquids provoke choking.</obo:IAO_0000115>
+        <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
+        <rdfs:label xml:lang="en">Choking on liquids</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROMOT_0032023 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0032023">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0032022"/>
+        <obo:IAO_0000115 xml:lang="en">Incidents in which saliva provoke choking.</obo:IAO_0000115>
+        <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
+        <rdfs:label xml:lang="en">Choking on saliva</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROMOT_0032024 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0032024">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0030192"/>
+        <obo:IAO_0000115 xml:lang="en">A type of weakness of the tongue muscle that occurs after the tongue muscle is used and lessens if the tongue muscle has some rest. That is, there is diminution of the strength of the tongue muscle with repetitive muscle actions.</obo:IAO_0000115>
+        <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
+        <rdfs:label xml:lang="en">Fatigable weakness of tongue muscle</rdfs:label>
     </owl:Class>
     
 
@@ -38054,36 +38679,6 @@ Previous. An information content entity is a non-realizable information entity t
                     <rdf:Description rdf:about="http://snomed.info/id/128927009"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROMOT_2000002"/>
-                        <owl:someValuesFrom rdf:resource="http://id.who.int/icd/entity/1626363729"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://snomed.info/id/128927009"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROMOT_2000002"/>
-                <owl:someValuesFrom rdf:resource="http://id.who.int/icd/entity/1626363729"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <obo:IAO_0000115 xml:lang="en">A procedure that can measure a body structure.</obo:IAO_0000115>
-        <obo:IAO_0000115 xml:lang="fr">Une procédure qui évalue une structure anatomique.</obo:IAO_0000115>
-        <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
-        <rdfs:label xml:lang="en">Body structure related procedure</rdfs:label>
-        <rdfs:label xml:lang="fr">Procédure liée à un structure anatomique</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/PROMOT_0100004 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0100004">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://snomed.info/id/128927009"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROMOT_2000002"/>
                         <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0110001"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
@@ -38101,301 +38696,6 @@ Previous. An information content entity is a non-realizable information entity t
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
         <rdfs:label xml:lang="en">Activity related procedure</rdfs:label>
         <rdfs:label xml:lang="fr">Procédure liée à une activité</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/PROMOT_0100005 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0100005">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0100001"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0100002"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROMOT_2000002"/>
-                <owl:someValuesFrom rdf:resource="http://id.who.int/icd/entity/1083127119"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROMOT_2000002"/>
-                <owl:someValuesFrom rdf:resource="http://id.who.int/icd/entity/1360101629"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROMOT_2000002"/>
-                <owl:someValuesFrom rdf:resource="http://id.who.int/icd/entity/1470583183"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROMOT_2000002"/>
-                <owl:someValuesFrom rdf:resource="http://id.who.int/icd/entity/446199613"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROMOT_2000002"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/HP_0012735"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:label xml:lang="en">Assessment of expiratory and cough peak flows using an expiratory flowmeter</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/PROMOT_0100007 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0100007">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0100001"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROMOT_2000002"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/HP_0002068"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROMOT_2000002"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/HP_0200136"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:label xml:lang="en">Assessment using Dysphagimeter</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/PROMOT_0100008 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0100008">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0100001"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROMOT_2000002"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/HP_0003392"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:label xml:lang="en">Assessment of pinch strengh using B&amp;L gauge</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/PROMOT_0100009 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0100009">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0100001"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROMOT_2000002"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/HP_0003547"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROMOT_2000002"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/HP_0003694"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROMOT_2000002"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/HP_0003731"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROMOT_2000002"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/HP_0003810"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROMOT_2000002"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/HP_0007340"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROMOT_2000002"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/HP_0008997"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROMOT_2000002"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/HP_0009063"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROMOT_2000002"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/HP_0009073"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROMOT_2000002"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/HP_0012515"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:label xml:lang="en">Evaluation of the maximum isometric muscle strength by manual dynamometry</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/PROMOT_0100010 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0100010">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0100001"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROMOT_2000002"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/HP_0000183"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:label xml:lang="en">Assessment of tongue strengh using Iowa Oral Performance Instrument</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/PROMOT_0100011 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0100011">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0100001"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROMOT_2000002"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/HP_0002141"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:label xml:lang="en">Assessment using Berg Balance Scale</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/PROMOT_0100012 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0100012">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0100001"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROMOT_2000002"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/HP_0002317"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROMOT_2000002"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/HP_0002505"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:label xml:lang="en">10 Meter Walk Test (10MWT)</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/PROMOT_0100013 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0100013">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0100001"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROMOT_2000002"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/HP_0002068"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROMOT_2000002"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/HP_0200136"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:label xml:lang="en">Assessment using Sydney Swallow Questionnaire (SSQ)</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/PROMOT_0100014 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0100014">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0100001"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROMOT_2000002"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/HP_0002068"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROMOT_2000002"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/HP_0200136"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:label xml:lang="en">80 ml water swallowing test</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/PROMOT_0100015 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0100015">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0100001"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROMOT_2000002"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/HP_0012378"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:label xml:lang="en">Assessment using Fatigue Severity Scale (FSS)</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/PROMOT_0100016 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0100016">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0100001"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROMOT_2000002"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/HP_0009005"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROMOT_2000002"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/HP_0031177"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROMOT_2000002"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/HP_0033466"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:label xml:lang="en">Assessment using Hand Jamar dynanometer</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/PROMOT_0100017 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0100017">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0100001"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROMOT_2000002"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/HP_0003551"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROMOT_2000002"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/HP_0033235"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:label xml:lang="en">Stair Climb Test</rdfs:label>
     </owl:Class>
     
 
@@ -38947,7 +39247,25 @@ FEBS J. 2013 Sep; 280(17): 10.1111/febs.12274. Published online 2013 May 7. doi:
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000091"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/HP_0003694"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000091"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/HP_0003731"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000091"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/HP_0007340"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000091"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/HP_0009073"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -39027,7 +39345,19 @@ FEBS J. 2013 Sep; 280(17): 10.1111/febs.12274. Published online 2013 May 7. doi:
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000091"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/HP_0003810"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000091"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/HP_0009028"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000091"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/HP_0009063"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -39281,6 +39611,12 @@ FEBS J. 2013 Sep; 280(17): 10.1111/febs.12274. Published online 2013 May 7. doi:
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/HP_0030193"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000091"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0032015"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <fma:FMAID rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">323229</fma:FMAID>
         <rdfs:label xml:lang="en">Pterygoid muscle</rdfs:label>
     </owl:Class>
@@ -39468,6 +39804,12 @@ FEBS J. 2013 Sep; 280(17): 10.1111/febs.12274. Published online 2013 May 7. doi:
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000091"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/HP_0003694"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000091"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/HP_0008997"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -39475,6 +39817,12 @@ FEBS J. 2013 Sep; 280(17): 10.1111/febs.12274. Published online 2013 May 7. doi:
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000091"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/HP_0009028"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000091"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/HP_0009073"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -39702,7 +40050,19 @@ FEBS J. 2013 Sep; 280(17): 10.1111/febs.12274. Published online 2013 May 7. doi:
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000091"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/HP_0003694"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000091"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/HP_0003749"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000091"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/HP_0007340"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -39721,6 +40081,12 @@ FEBS J. 2013 Sep; 280(17): 10.1111/febs.12274. Published online 2013 May 7. doi:
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000091"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/HP_0009028"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000091"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/HP_0009073"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -39802,6 +40168,12 @@ FEBS J. 2013 Sep; 280(17): 10.1111/febs.12274. Published online 2013 May 7. doi:
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000091"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/HP_0003810"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000091"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/HP_0009027"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -39815,6 +40187,12 @@ FEBS J. 2013 Sep; 280(17): 10.1111/febs.12274. Published online 2013 May 7. doi:
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000091"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/HP_0009053"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000091"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/HP_0009063"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -39864,6 +40242,12 @@ FEBS J. 2013 Sep; 280(17): 10.1111/febs.12274. Published online 2013 May 7. doi:
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000091"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/HP_0003694"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000091"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/HP_0008997"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -39871,6 +40255,12 @@ FEBS J. 2013 Sep; 280(17): 10.1111/febs.12274. Published online 2013 May 7. doi:
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000091"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/HP_0009028"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000091"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/HP_0009073"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -39920,6 +40310,12 @@ FEBS J. 2013 Sep; 280(17): 10.1111/febs.12274. Published online 2013 May 7. doi:
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000091"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/HP_0003810"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000091"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/HP_0008959"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -39927,6 +40323,12 @@ FEBS J. 2013 Sep; 280(17): 10.1111/febs.12274. Published online 2013 May 7. doi:
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000091"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/HP_0009028"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000091"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/HP_0009063"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -39976,6 +40378,12 @@ FEBS J. 2013 Sep; 280(17): 10.1111/febs.12274. Published online 2013 May 7. doi:
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000091"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/HP_0003810"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000091"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/HP_0008959"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -39983,6 +40391,12 @@ FEBS J. 2013 Sep; 280(17): 10.1111/febs.12274. Published online 2013 May 7. doi:
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000091"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/HP_0009028"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000091"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/HP_0009063"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -40401,6 +40815,18 @@ FEBS J. 2013 Sep; 280(17): 10.1111/febs.12274. Published online 2013 May 7. doi:
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/HP_0030193"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000091"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0032015"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000091"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0032024"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <fma:FMAID rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">46689</fma:FMAID>
         <fma:non-English_equivalent>Músculo de la lengüeta</fma:non-English_equivalent>
         <fma:preferred_name>Muscle of tongue</fma:preferred_name>
@@ -40447,6 +40873,12 @@ FEBS J. 2013 Sep; 280(17): 10.1111/febs.12274. Published online 2013 May 7. doi:
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000091"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/HP_0030319"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000091"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0032012"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -40518,6 +40950,12 @@ FEBS J. 2013 Sep; 280(17): 10.1111/febs.12274. Published online 2013 May 7. doi:
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/HP_0030193"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000091"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0032015"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <fma:FMAID rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">46834</fma:FMAID>
         <fma:non-English_equivalent>Muscle buccinateur</fma:non-English_equivalent>
         <fma:non-English_equivalent>Musculus buccinator</fma:non-English_equivalent>
@@ -40582,6 +41020,12 @@ FEBS J. 2013 Sep; 280(17): 10.1111/febs.12274. Published online 2013 May 7. doi:
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000091"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/HP_0030193"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000091"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0032015"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <fma:FMAID rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">48996</fma:FMAID>
@@ -40650,6 +41094,12 @@ FEBS J. 2013 Sep; 280(17): 10.1111/febs.12274. Published online 2013 May 7. doi:
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000091"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/HP_0030193"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000091"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0032015"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -40756,6 +41206,18 @@ FEBS J. 2013 Sep; 280(17): 10.1111/febs.12274. Published online 2013 May 7. doi:
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000091"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/HP_0007941"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000091"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0032013"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000091"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0032016"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -40887,6 +41349,18 @@ FEBS J. 2013 Sep; 280(17): 10.1111/febs.12274. Published online 2013 May 7. doi:
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000091"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/HP_0003694"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000091"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/HP_0007340"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000091"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/HP_0008994"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -40894,6 +41368,12 @@ FEBS J. 2013 Sep; 280(17): 10.1111/febs.12274. Published online 2013 May 7. doi:
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000091"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/HP_0009028"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000091"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/HP_0009073"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -41220,7 +41700,19 @@ FEBS J. 2013 Sep; 280(17): 10.1111/febs.12274. Published online 2013 May 7. doi:
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000091"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/HP_0003327"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000091"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/HP_0009023"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000091"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0032014"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -41631,6 +42123,12 @@ pulmonary arterial and venous trees. Examples: There is only one heart.</rdfs:co
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000091"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/HP_0030193"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000091"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0032015"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -43720,26 +44218,7 @@ pulmonary arterial and venous trees. Examples: There is only one heart.</rdfs:co
     <!-- http://snomed.info/id/840297006 -->
 
     <owl:Class rdf:about="http://snomed.info/id/840297006">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0100001"/>
         <rdfs:subClassOf rdf:resource="http://snomed.info/id/315306007"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROMOT_2000002"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/HP_0002068"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROMOT_2000002"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/HP_0033667"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROMOT_2000002"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/HP_0200136"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <sct-ext:definitionStatus>Primitif</sct-ext:definitionStatus>
         <sct-ext:fsn xml:lang="en">Assessment of patient reported outcome measures (procedure)</sct-ext:fsn>
         <dc11:type>procedure</dc11:type>
@@ -44821,12 +45300,6 @@ pulmonary arterial and venous trees. Examples: There is only one heart.</rdfs:co
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0004029"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/HP_0030842"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0004029"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/HP_0031058"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -44875,6 +45348,12 @@ pulmonary arterial and venous trees. Examples: There is only one heart.</rdfs:co
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0004029"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/HP_0032355"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0004029"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/HP_0033235"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -44888,6 +45367,12 @@ pulmonary arterial and venous trees. Examples: There is only one heart.</rdfs:co
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0004029"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/HP_0033466"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0004029"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/HP_0033666"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -44948,6 +45433,42 @@ pulmonary arterial and venous trees. Examples: There is only one heart.</rdfs:co
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0004029"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0032011"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0004029"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0032015"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0004029"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0032017"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0004029"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0032018"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0004029"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0032020"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0004029"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0032021"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0004029"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0032023"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <efo:alternative_term xml:lang="en">OPMD</efo:alternative_term>
@@ -45070,12 +45591,6 @@ pulmonary arterial and venous trees. Examples: There is only one heart.</rdfs:co
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0004029"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/HP_0000218"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0004029"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/HP_0000508"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -45417,6 +45932,12 @@ pulmonary arterial and venous trees. Examples: There is only one heart.</rdfs:co
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0004029"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/HP_0011471"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0004029"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/HP_0011727"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -45507,6 +46028,12 @@ pulmonary arterial and venous trees. Examples: There is only one heart.</rdfs:co
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0004029"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/HP_0031058"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0004029"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/HP_0031108"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -45520,12 +46047,6 @@ pulmonary arterial and venous trees. Examples: There is only one heart.</rdfs:co
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0004029"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/HP_0031374"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0004029"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/HP_0031914"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -45549,7 +46070,7 @@ pulmonary arterial and venous trees. Examples: There is only one heart.</rdfs:co
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0004029"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/HP_0033454"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/HP_0033695"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -45586,6 +46107,18 @@ pulmonary arterial and venous trees. Examples: There is only one heart.</rdfs:co
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0004029"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0032015"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0004029"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0032016"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0004029"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0032024"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <efo:alternative_term xml:lang="en">CMS</efo:alternative_term>
@@ -45879,31 +46412,7 @@ pulmonary arterial and venous trees. Examples: There is only one heart.</rdfs:co
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0004029"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/HP_0000028"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0004029"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/HP_0000276"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0004029"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/HP_0000486"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0004029"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/HP_0000508"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0004029"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/HP_0000544"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/HP_0000602"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -46089,6 +46598,18 @@ pulmonary arterial and venous trees. Examples: There is only one heart.</rdfs:co
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0004029"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/HP_0002882"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0004029"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/HP_0003202"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0004029"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/HP_0003306"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -46114,6 +46635,12 @@ pulmonary arterial and venous trees. Examples: There is only one heart.</rdfs:co
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0004029"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/HP_0003392"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0004029"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/HP_0003403"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -46431,12 +46958,6 @@ pulmonary arterial and venous trees. Examples: There is only one heart.</rdfs:co
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0004029"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/HP_0031914"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0004029"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/HP_0031936"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -46450,6 +46971,12 @@ pulmonary arterial and venous trees. Examples: There is only one heart.</rdfs:co
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0004029"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/HP_0033416"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0004029"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/HP_0033695"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>

@@ -1,6 +1,6 @@
 format-version: 1.2
-data-version: promot/releases/2026-04-10/promot-base.owl
-date: 10:04:2026 15:19
+data-version: promot/releases/2026-04-27/promot-base.owl
+date: 27:04:2026 13:35
 idspace: ace_lexicon http://attempto.ifi.uzh.ch/ace_lexicon# 
 idspace: babelon https://w3id.org/babelon/ 
 idspace: BIOLINK https://w3id.org/biolink/vocab/ 
@@ -61,7 +61,7 @@ property_value: dc11:type IAO:8000001
 property_value: dcterms:description "Ontology for modeling the three following neuromuscular diseases : OPMD, Congenital myopathies and Congenital myastenic syndroms. It aims to be also an ontology for building the PROMOT project relational database." xsd:string
 property_value: dcterms:license https://creativecommons.org/licenses/by-nc-sa/4.0/
 property_value: dcterms:title "PROMOT ontology" xsd:string
-property_value: owl:versionInfo "2026-04-10" xsd:string
+property_value: owl:versionInfo "2026-04-27" xsd:string
 property_value: seeAlso "More about PROMOT initiative at https://www.promotinitiative.com/\n" xsd:string
 
 [Term]
@@ -264,14 +264,15 @@ is_a: NCIT:C49154
 relationship: RO:0002351 ECO:0006151
 relationship: RO:0002351 HP:0000118 {cardinality="1"}
 relationship: RO:0002351 HP:0000118
-relationship: RO:0002351 NCIT:C178992 {cardinality="1"}
 relationship: RO:0002351 NCIT:C178992
+relationship: RO:0002351 NCIT:C178992 {cardinality="1"}
 relationship: RO:0002351 NCIT:C93511 {cardinality="1"}
 relationship: RO:0002351 NCIT:C93511
 relationship: RO:0002351 NCIT:C99800
 relationship: RO:0002351 NCIT:C99800 {cardinality="1"}
 relationship: RO:0002351 PROMOT:0010006 ! Année d’identification
 relationship: RO:0002351 PROMOT:0010006 {cardinality="1"} ! Année d’identification
+relationship: RO:0002351 PROMOT:0010007 {cardinality="1"} ! Année de disparition
 relationship: RO:0002351 PROMOT:0010007 ! Année de disparition
 relationship: RO:0002351 SNOMED:298059007 {cardinality="1"}
 relationship: RO:0002351 SNOMED:298059007
@@ -788,6 +789,8 @@ id: PROMOT:0032006
 name: Fatiga cuando se come
 def: "A fatigue that occurs when one is eating. It is due to weakness or fatiguable weakness of chewing muscles." [] {comment="https://orcid.org/0000-0003-2829-8470", IAO:0000119="Medical experts"}
 is_a: HP:0012378
+is_a: PROMOT:0032004 ! Activity related phenotype
+relationship: PROMOT:2000005 ICF:1328675264 ! affecte
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 property_value: PROMOT:1000001 "[OPMD Scoping review on dysphagia] Côté C, Gagnon C, Youssof S, et al. The requirement for a disease-specific patient-reported outcome measure of dysphagia in oculopharyngeal muscular dystrophy. Muscle Nerve. 2019;59:445–50. doi: 10.1002/mus.26405" xsd:string
 
@@ -796,6 +799,7 @@ id: PROMOT:0032007
 name: Difficulty walking short distance
 def: "A difficulty to walk for less than a kilometre, such as walking around rooms or hallways, within a building or for short distances outside. This is distinct from the difficulty of moving around." [] {IAO:0000119="ICF:555410497"}
 is_a: HP:0001288
+relationship: PROMOT:2000005 ICF:555410497 ! affecte
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 property_value: PROMOT:1000001 "[OPMD Scoping review 2026] Bélair N, Gagnon C, Duchesne E. What is known about muscle weakness, balance impairments and indoor mobility limitations in oculopharyngeal muscular dystrophy? A scoping review. J Neuromuscul Dis. 2025 Dec 30:22143602251397052. doi: 10.1177/22143602251397052. Epub ahead of print. PMID: 41467981." xsd:string
 
@@ -804,6 +808,8 @@ id: PROMOT:0032008
 name: Difficulty changing basic position
 def: "A difficulty to change basic position, i.e. a difficulty getting into and out of a body position and moving from one location to another, such as getting up out of a chair to lie down on a bed, and getting into and out of positions of sitting, standing, kneeling or squatting. This is distinct from the difficulty of transferring oneself." [] {IAO:0000119="ICF:150502901"}
 is_a: HP:0100022
+is_a: PROMOT:0032004 ! Activity related phenotype
+relationship: PROMOT:2000005 ICF:150502901 ! affecte
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 property_value: PROMOT:1000001 "[OPMD Scoping review 2026] Bélair N, Gagnon C, Duchesne E. What is known about muscle weakness, balance impairments and indoor mobility limitations in oculopharyngeal muscular dystrophy? A scoping review. J Neuromuscul Dis. 2025 Dec 30:22143602251397052. doi: 10.1177/22143602251397052. Epub ahead of print. PMID: 41467981." xsd:string
 
@@ -812,6 +818,8 @@ id: PROMOT:0032009
 name: Anhedonia cuando se come
 def: "A loss of enjoyment of mealtime due to difficulties while eating." [] {comment="https://orcid.org/0000-0003-2829-8470", IAO:0000119="Medical experts"}
 is_a: HP:0012154
+is_a: PROMOT:0032004 ! Activity related phenotype
+relationship: PROMOT:2000005 ICF:1328675264 ! affecte
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 property_value: PROMOT:1000001 "[OPMD Scoping review on dysphagia] Côté C, Gagnon C, Youssof S, et al. The requirement for a disease-specific patient-reported outcome measure of dysphagia in oculopharyngeal muscular dystrophy. Muscle Nerve. 2019;59:445–50. doi: 10.1002/mus.26405" xsd:string
 
@@ -838,6 +846,8 @@ id: PROMOT:0032012
 name: Debilidad fatigable de la musculatura facial 
 def: "A type of weakness of the facial musculature (i.e. one or more muscles innervated by the seventh cranial nerve) that occurs after a muscle group is used and lessens if the muscle group has some rest. That is, there is diminution of the strength of the facial musculature with repetitive muscle actions." [] {comment="[PROMOT project] Mansoore Gholizade (definition reviewer)", IAO:0000119="HP:0003473"}
 is_a: HP:0003473
+is_a: PROMOT:0032004 ! Activity related phenotype
+relationship: PROMOT:2000005 ICF:1328675264 ! affecte
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 property_value: PROMOT:1000001 "Congenital myasthenic syndrom Scoping review" xsd:string
 property_value: PROMOT:1000001 "Congenital myopathy Scoping review" xsd:string
@@ -853,7 +863,7 @@ property_value: PROMOT:1000001 "Congenital myopathy Scoping review" xsd:string
 
 [Term]
 id: PROMOT:0032014
-name: Debilidad fatigable muscular axial
+name: Axial fatigable weakness
 def: "A type of weakness of the axial muscles (i.e., of the muscles of the head and neck, vertebral column, and intercostal muscles) that occurs after a muscle group is used and lessens if the muscle group has some rest. That is, there is diminution of the strength of the axial muscles with repetitive muscle actions." [] {comment="[PROMOT project] Mansoore Gholizade (definition reviewer)", IAO:0000119="HP:0003473"}
 is_a: HP:0030197
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
@@ -865,34 +875,80 @@ id: PROMOT:0032015
 name: Debilidad de músculos masticatorios
 def: "A lack of strength in the muscles involved in chewing." [] {comment="[PROMOT project] Mansoore Gholizade (definition reviewer)", IAO:0000119="HP:0001324"}
 is_a: HP:0001324
+is_a: PROMOT:0032003 ! Body function related phenotype
+is_a: PROMOT:0032004 ! Activity related phenotype
+relationship: PROMOT:2000005 ICF:1328675264 ! affecte
+relationship: PROMOT:2000005 ICF:1389818830 ! affecte
+relationship: PROMOT:2000005 ICF:1789365017 ! affecte
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 property_value: PROMOT:1000001 "Congenital myasthenic syndrom Scoping review" xsd:string
 property_value: PROMOT:1000001 "Congenital myopathy Scoping review" xsd:string
 
 [Term]
-id: PROMOT:0033000
-name: Function of expiratory peak flow
-is_a: ICF:446199613
+id: PROMOT:0032016
+name: Fatigable ptosis
+def: "A type of ptosis that occurs after the external ocular muscle group is used and lessens if the muscle group has some rest. That is, there is a ptosis apparition with repetitive external ocular muscle actions" []
+is_a: HP:0000508
+relationship: PROMOT:2000005 ICF:1521707777 ! affecte
+property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
-id: PROMOT:0033001
-name: Function of cough peak flow
-is_a: ICF:1083127119
+id: PROMOT:0032017
+name: Decreased walking speed
+def: "A walking speed that is below the lower limit of normal according to what is expected." []
+is_a: HP:0001288
+property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
-id: PROMOT:0033002
-name: Isometric muscle strength
-is_a: ICF:274570113
+id: PROMOT:0032018
+name: Coughing on foods
+def: "Incidents in which a piece of food get stuck in the upper airway and provoke coughing." []
+is_a: HP:0030842
+property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
-id: PROMOT:0033003
-name: Pinch strength
-is_a: ICF:1789365017
+id: PROMOT:0032019
+name: Coughing on liquids
+def: "Incidents in which liquids provoke coughing." []
+is_a: HP:0030842
+relationship: PROMOT:2000005 ICF:553784299 ! affecte
+property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
-id: PROMOT:0033004
-name: Tongue strength
-is_a: ICF:1789365017
+id: PROMOT:0032020
+name: Coughing on saliva
+def: "Incidents in which saliva provoke coughing." []
+is_a: PROMOT:0032019 ! Coughing on liquids
+property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
+
+[Term]
+id: PROMOT:0032021
+name: Choking on foods
+def: "Incidents in which a piece of food get stuck in the upper airway and provoke choking." []
+is_a: HP:0030842
+property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
+
+[Term]
+id: PROMOT:0032022
+name: Choking on liquids
+def: "Incidents in which liquids provoke choking." []
+is_a: HP:0030842
+relationship: PROMOT:2000005 ICF:553784299 ! affecte
+property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
+
+[Term]
+id: PROMOT:0032023
+name: Choking on saliva
+def: "Incidents in which saliva provoke choking." []
+is_a: PROMOT:0032022 ! Choking on liquids
+property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
+
+[Term]
+id: PROMOT:0032024
+name: Fatigable weakness of tongue muscle
+def: "A type of weakness of the tongue muscle that occurs after the tongue muscle is used and lessens if the tongue muscle has some rest. That is, there is diminution of the strength of the tongue muscle with repetitive muscle actions." []
+is_a: HP:0030192
+property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
 id: PROMOT:0100001
@@ -916,16 +972,6 @@ property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
 id: PROMOT:0100003
-name: Body structure related procedure
-def: "A procedure that can measure a body structure." []
-is_a: SNOMED:128927009
-intersection_of: SNOMED:128927009
-intersection_of: PROMOT:2000002 ICF:1626363729 ! assesses
-relationship: PROMOT:2000002 ICF:1626363729 ! assesses
-property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
-
-[Term]
-id: PROMOT:0100004
 name: Activity related procedure
 def: "A procedure that can measure an activity." []
 is_a: SNOMED:128927009
@@ -933,98 +979,6 @@ intersection_of: SNOMED:128927009
 intersection_of: PROMOT:2000002 PROMOT:0110001 ! assesses Actividad
 relationship: PROMOT:2000002 PROMOT:0110001 ! assesses Actividad
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
-
-[Term]
-id: PROMOT:0100005
-name: Assessment of expiratory and cough peak flows using an expiratory flowmeter
-is_a: PROMOT:0100001 ! Phenotypically related procedure
-is_a: PROMOT:0100002 ! Body function related procedure
-relationship: PROMOT:2000002 HP:0012735 ! assesses
-relationship: PROMOT:2000002 ICF:1083127119 ! assesses
-relationship: PROMOT:2000002 ICF:1360101629 ! assesses
-relationship: PROMOT:2000002 ICF:1470583183 ! assesses
-relationship: PROMOT:2000002 ICF:446199613 ! assesses
-
-[Term]
-id: PROMOT:0100007
-name: Assessment using Dysphagimeter
-is_a: PROMOT:0100001 ! Phenotypically related procedure
-relationship: PROMOT:2000002 HP:0002068 ! assesses
-relationship: PROMOT:2000002 HP:0200136 ! assesses
-
-[Term]
-id: PROMOT:0100008
-name: Assessment of pinch strengh using B&L gauge
-is_a: PROMOT:0100001 ! Phenotypically related procedure
-relationship: PROMOT:2000002 HP:0003392 ! assesses
-
-[Term]
-id: PROMOT:0100009
-name: Evaluation of the maximum isometric muscle strength by manual dynamometry
-is_a: PROMOT:0100001 ! Phenotypically related procedure
-relationship: PROMOT:2000002 HP:0003547 ! assesses
-relationship: PROMOT:2000002 HP:0003694 ! assesses
-relationship: PROMOT:2000002 HP:0003731 ! assesses
-relationship: PROMOT:2000002 HP:0003810 ! assesses
-relationship: PROMOT:2000002 HP:0007340 ! assesses
-relationship: PROMOT:2000002 HP:0008997 ! assesses
-relationship: PROMOT:2000002 HP:0009063 ! assesses
-relationship: PROMOT:2000002 HP:0009073 ! assesses
-relationship: PROMOT:2000002 HP:0012515 ! assesses
-
-[Term]
-id: PROMOT:0100010
-name: Assessment of tongue strengh using Iowa Oral Performance Instrument
-is_a: PROMOT:0100001 ! Phenotypically related procedure
-relationship: PROMOT:2000002 HP:0000183 ! assesses
-
-[Term]
-id: PROMOT:0100011
-name: Assessment using Berg Balance Scale
-is_a: PROMOT:0100001 ! Phenotypically related procedure
-relationship: PROMOT:2000002 HP:0002141 ! assesses
-
-[Term]
-id: PROMOT:0100012
-name: 10 Meter Walk Test (10MWT)
-is_a: PROMOT:0100001 ! Phenotypically related procedure
-relationship: PROMOT:2000002 HP:0002317 ! assesses
-relationship: PROMOT:2000002 HP:0002505 ! assesses
-
-[Term]
-id: PROMOT:0100013
-name: Assessment using Sydney Swallow Questionnaire (SSQ)
-is_a: PROMOT:0100001 ! Phenotypically related procedure
-relationship: PROMOT:2000002 HP:0002068 ! assesses
-relationship: PROMOT:2000002 HP:0200136 ! assesses
-
-[Term]
-id: PROMOT:0100014
-name: 80 ml water swallowing test
-is_a: PROMOT:0100001 ! Phenotypically related procedure
-relationship: PROMOT:2000002 HP:0002068 ! assesses
-relationship: PROMOT:2000002 HP:0200136 ! assesses
-
-[Term]
-id: PROMOT:0100015
-name: Assessment using Fatigue Severity Scale (FSS)
-is_a: PROMOT:0100001 ! Phenotypically related procedure
-relationship: PROMOT:2000002 HP:0012378 ! assesses
-
-[Term]
-id: PROMOT:0100016
-name: Assessment using Hand Jamar dynanometer
-is_a: PROMOT:0100001 ! Phenotypically related procedure
-relationship: PROMOT:2000002 HP:0009005 ! assesses
-relationship: PROMOT:2000002 HP:0031177 ! assesses
-relationship: PROMOT:2000002 HP:0033466 ! assesses
-
-[Term]
-id: PROMOT:0100017
-name: Stair Climb Test
-is_a: PROMOT:0100001 ! Phenotypically related procedure
-relationship: PROMOT:2000002 HP:0003551 ! assesses
-relationship: PROMOT:2000002 HP:0033235 ! assesses
 
 [Term]
 id: PROMOT:0110001

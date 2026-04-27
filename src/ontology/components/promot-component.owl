@@ -58,8 +58,8 @@ Prefix(CPATH_CONDITION_OCCURRENCE:=<https://w3id.org/cpont/condition_occurrence/
 
 
 Ontology(<http://purl.obolibrary.org/obo/promot/components/promot-component.owl>
-<http://purl.obolibrary.org/obo/promot/releases/2026-04-10/components/promot-component.owl>
-Annotation(owl:versionInfo "2026-04-10")
+<http://purl.obolibrary.org/obo/promot/releases/2026-04-27/components/promot-component.owl>
+Annotation(owl:versionInfo "2026-04-27")
 
 Declaration(Class(<http://id.who.int/icd/entity/1019379329>))
 Declaration(Class(<http://id.who.int/icd/entity/1034220517>))
@@ -344,6 +344,7 @@ Declaration(Class(obo:HP_0002808))
 Declaration(Class(obo:HP_0002828))
 Declaration(Class(obo:HP_0002878))
 Declaration(Class(obo:HP_0002882))
+Declaration(Class(obo:HP_0003202))
 Declaration(Class(obo:HP_0003236))
 Declaration(Class(obo:HP_0003306))
 Declaration(Class(obo:HP_0003307))
@@ -476,11 +477,13 @@ Declaration(Class(obo:HP_0031936))
 Declaration(Class(obo:HP_0032043))
 Declaration(Class(obo:HP_0032319))
 Declaration(Class(obo:HP_0032341))
+Declaration(Class(obo:HP_0032355))
 Declaration(Class(obo:HP_0033235))
 Declaration(Class(obo:HP_0033416))
 Declaration(Class(obo:HP_0033454))
 Declaration(Class(obo:HP_0033466))
 Declaration(Class(obo:HP_0033580))
+Declaration(Class(obo:HP_0033666))
 Declaration(Class(obo:HP_0033667))
 Declaration(Class(obo:HP_0033695))
 Declaration(Class(obo:HP_0033994))
@@ -496,7 +499,6 @@ Declaration(Class(obo:IAO_0000030))
 Declaration(Class(obo:IAO_0020000))
 Declaration(Class(obo:NCBITaxon_9606))
 Declaration(Class(obo:NCIT_C106551))
-Declaration(Class(obo:NCIT_C121361))
 Declaration(Class(obo:NCIT_C124436))
 Declaration(Class(obo:NCIT_C135383))
 Declaration(Class(obo:NCIT_C14250))
@@ -611,27 +613,18 @@ Declaration(Class(obo:PROMOT_0032012))
 Declaration(Class(obo:PROMOT_0032013))
 Declaration(Class(obo:PROMOT_0032014))
 Declaration(Class(obo:PROMOT_0032015))
-Declaration(Class(obo:PROMOT_0033000))
-Declaration(Class(obo:PROMOT_0033001))
-Declaration(Class(obo:PROMOT_0033002))
-Declaration(Class(obo:PROMOT_0033003))
-Declaration(Class(obo:PROMOT_0033004))
+Declaration(Class(obo:PROMOT_0032016))
+Declaration(Class(obo:PROMOT_0032017))
+Declaration(Class(obo:PROMOT_0032018))
+Declaration(Class(obo:PROMOT_0032019))
+Declaration(Class(obo:PROMOT_0032020))
+Declaration(Class(obo:PROMOT_0032021))
+Declaration(Class(obo:PROMOT_0032022))
+Declaration(Class(obo:PROMOT_0032023))
+Declaration(Class(obo:PROMOT_0032024))
 Declaration(Class(obo:PROMOT_0100001))
 Declaration(Class(obo:PROMOT_0100002))
 Declaration(Class(obo:PROMOT_0100003))
-Declaration(Class(obo:PROMOT_0100004))
-Declaration(Class(obo:PROMOT_0100005))
-Declaration(Class(obo:PROMOT_0100007))
-Declaration(Class(obo:PROMOT_0100008))
-Declaration(Class(obo:PROMOT_0100009))
-Declaration(Class(obo:PROMOT_0100010))
-Declaration(Class(obo:PROMOT_0100011))
-Declaration(Class(obo:PROMOT_0100012))
-Declaration(Class(obo:PROMOT_0100013))
-Declaration(Class(obo:PROMOT_0100014))
-Declaration(Class(obo:PROMOT_0100015))
-Declaration(Class(obo:PROMOT_0100016))
-Declaration(Class(obo:PROMOT_0100017))
 Declaration(Class(obo:PROMOT_0110001))
 Declaration(Class(obo:PROMOT_0120002))
 Declaration(Class(obo:SO_0001060))
@@ -853,7 +846,7 @@ AnnotationAssertion(oboInOwl:hasDbXref obo:PROMOT_2000006 "SIO:000709 ")
 AnnotationAssertion(rdfs:label obo:PROMOT_2000006 "est lié à"@fr)
 AnnotationAssertion(rdfs:label obo:PROMOT_2000006 "is related to"@en)
 
-# Object Property: obo:PROMOT_2000007 (has identifier)
+# Object Property: obo:PROMOT_2000007 (a pour identifiant)
 
 AnnotationAssertion(obo:IAO_0000115 obo:PROMOT_2000007 "A relation between an entity and its identifier where the identifier allows to indentify the first entity."@en)
 AnnotationAssertion(obo:IAO_0000115 obo:PROMOT_2000007 "Une relation entre une entité et son identifiant, où l’identifiant sert à identifier la première entité."@fr)
@@ -1038,7 +1031,7 @@ AnnotationAssertion(Annotation(rdfs:comment "[PROMOT note] Source for official t
 AnnotationAssertion(skos:changeNote <http://id.who.int/icd/entity/1174312718> "[PROMOT note] The PROMOT ontology added a crossref to the LIRMM version of the ICF (CIF-ASIP 2020). It also added the official French and Spanish translation for labels."@en)
 SubClassOf(<http://id.who.int/icd/entity/1174312718> ObjectSomeValuesFrom(obo:RO_0002331 <http://id.who.int/icd/entity/1328675264>))
 
-# Class: <http://id.who.int/icd/entity/1182439715> (Colonne cervicale)
+# Class: <http://id.who.int/icd/entity/1182439715> (Cervical vertebral column)
 
 AnnotationAssertion(oboInOwl:hasDbXref <http://id.who.int/icd/entity/1182439715> "https://data.esante.gouv.fr/terminologies/icf#99004")
 AnnotationAssertion(rdfs:label <http://id.who.int/icd/entity/1182439715> "Cervical vertebral column"@en)
@@ -1066,11 +1059,18 @@ AnnotationAssertion(Annotation(rdfs:comment "[PROMOT note] Source for official t
 AnnotationAssertion(rdfs:label <http://id.who.int/icd/entity/1233939003> "Muscles of hand"@en)
 AnnotationAssertion(Annotation(rdfs:comment "[PROMOT note] Source for official translation: https://icd.who.int/browse/2026-01/icf/es > Información > Archivo de hoja de cálculo") rdfs:label <http://id.who.int/icd/entity/1233939003> "Músculos de la mano"@es)
 AnnotationAssertion(skos:changeNote <http://id.who.int/icd/entity/1233939003> "[PROMOT note] The PROMOT ontology added a crossref to the LIRMM version of the ICF (CIF-ASIP 2020). It also added the official French and Spanish translation for labels."@en)
+SubClassOf(<http://id.who.int/icd/entity/1233939003> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0002460))
 SubClassOf(<http://id.who.int/icd/entity/1233939003> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0003392))
 SubClassOf(<http://id.who.int/icd/entity/1233939003> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0003427))
+SubClassOf(<http://id.who.int/icd/entity/1233939003> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0003484))
+SubClassOf(<http://id.who.int/icd/entity/1233939003> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0003690))
+SubClassOf(<http://id.who.int/icd/entity/1233939003> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0003810))
 SubClassOf(<http://id.who.int/icd/entity/1233939003> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0008959))
 SubClassOf(<http://id.who.int/icd/entity/1233939003> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0009005))
+SubClassOf(<http://id.who.int/icd/entity/1233939003> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0009028))
+SubClassOf(<http://id.who.int/icd/entity/1233939003> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0009063))
 SubClassOf(<http://id.who.int/icd/entity/1233939003> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0009077))
+SubClassOf(<http://id.who.int/icd/entity/1233939003> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0030198))
 SubClassOf(<http://id.who.int/icd/entity/1233939003> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0030237))
 SubClassOf(<http://id.who.int/icd/entity/1233939003> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0031177))
 SubClassOf(<http://id.who.int/icd/entity/1233939003> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0033466))
@@ -1109,8 +1109,15 @@ AnnotationAssertion(rdfs:label <http://id.who.int/icd/entity/1278239861> "Muscle
 AnnotationAssertion(Annotation(rdfs:comment "[PROMOT note] Source for official translation: https://icd.who.int/browse/2026-01/icf/es > Información > Archivo de hoja de cálculo") rdfs:label <http://id.who.int/icd/entity/1278239861> "Músculos del tobillo y del pie"@es)
 AnnotationAssertion(skos:changeNote <http://id.who.int/icd/entity/1278239861> "[PROMOT note] The PROMOT ontology added a crossref to the LIRMM version of the ICF (CIF-ASIP 2020). It also added the official French and Spanish translation for labels."@en)
 SubClassOf(<http://id.who.int/icd/entity/1278239861> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0001761))
+SubClassOf(<http://id.who.int/icd/entity/1278239861> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0002460))
+SubClassOf(<http://id.who.int/icd/entity/1278239861> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0003690))
+SubClassOf(<http://id.who.int/icd/entity/1278239861> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0003810))
+SubClassOf(<http://id.who.int/icd/entity/1278239861> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0007340))
 SubClassOf(<http://id.who.int/icd/entity/1278239861> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0009027))
+SubClassOf(<http://id.who.int/icd/entity/1278239861> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0009028))
 SubClassOf(<http://id.who.int/icd/entity/1278239861> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0009053))
+SubClassOf(<http://id.who.int/icd/entity/1278239861> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0009063))
+SubClassOf(<http://id.who.int/icd/entity/1278239861> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0030198))
 SubClassOf(<http://id.who.int/icd/entity/1278239861> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0031374))
 SubClassOf(<http://id.who.int/icd/entity/1278239861> ObjectSomeValuesFrom(obo:RO_0002328 <http://id.who.int/icd/entity/1521707777>))
 SubClassOf(<http://id.who.int/icd/entity/1278239861> ObjectSomeValuesFrom(obo:RO_0002328 <http://id.who.int/icd/entity/1789365017>))
@@ -1176,7 +1183,6 @@ AnnotationAssertion(Annotation(rdfs:comment "[PROMOT note] Source for official t
 AnnotationAssertion(Annotation(rdfs:comment "[PROMOT note] Source for official translation: https://icd.who.int/browse/2026-01/icf/es > Información > Archivo de hoja de cálculo") rdfs:label <http://id.who.int/icd/entity/1363559646> "Funciones mentales"@es)
 AnnotationAssertion(rdfs:label <http://id.who.int/icd/entity/1363559646> "Mental functions"@en)
 AnnotationAssertion(skos:changeNote <http://id.who.int/icd/entity/1363559646> "[PROMOT note] The PROMOT ontology added a crossref to the LIRMM version of the ICF (CIF-ASIP 2020). It also added the official French and Spanish translation for labels."@en)
-SubClassOf(<http://id.who.int/icd/entity/1363559646> ObjectSomeValuesFrom(obo:RO_0002331 <http://id.who.int/icd/entity/2011053685>))
 
 # Class: <http://id.who.int/icd/entity/1364393443> (Thoracic vertebral column)
 
@@ -1325,7 +1331,7 @@ AnnotationAssertion(Annotation(rdfs:comment "[PROMOT note] Source for official t
 AnnotationAssertion(rdfs:label <http://id.who.int/icd/entity/150502901> "Changing basic body position"@en)
 AnnotationAssertion(skos:changeNote <http://id.who.int/icd/entity/150502901> "[PROMOT note] The PROMOT ontology added a crossref to the LIRMM version of the ICF (CIF-ASIP 2020). It also added the official French and Spanish translation for labels."@en)
 
-# Class: <http://id.who.int/icd/entity/151046878> (Hablar)
+# Class: <http://id.who.int/icd/entity/151046878> (Speaking)
 
 AnnotationAssertion(oboInOwl:hasDbXref <http://id.who.int/icd/entity/151046878> "https://data.esante.gouv.fr/terminologies/icf#44403")
 AnnotationAssertion(Annotation(rdfs:comment "[PROMOT note] Source for official translation: https://icd.who.int/browse/2026-01/icf/es > Información > Archivo de hoja de cálculo") rdfs:label <http://id.who.int/icd/entity/151046878> "Hablar"@es)
@@ -1359,7 +1365,6 @@ AnnotationAssertion(Annotation(rdfs:comment "[PROMOT note] Source for official t
 AnnotationAssertion(Annotation(rdfs:comment "[PROMOT note] Source for official translation: https://icd.who.int/browse/2026-01/icf/es > Información > Archivo de hoja de cálculo") rdfs:label <http://id.who.int/icd/entity/1525383756> "Funciones intelectuales"@es)
 AnnotationAssertion(rdfs:label <http://id.who.int/icd/entity/1525383756> "Intellectual functions"@en)
 AnnotationAssertion(skos:changeNote <http://id.who.int/icd/entity/1525383756> "[PROMOT note] The PROMOT ontology added a crossref to the LIRMM version of the ICF (CIF-ASIP 2020). It also added the official French and Spanish translation for labels."@en)
-SubClassOf(<http://id.who.int/icd/entity/1525383756> ObjectSomeValuesFrom(obo:RO_0002331 <http://id.who.int/icd/entity/2011053685>))
 
 # Class: <http://id.who.int/icd/entity/1528299701> (Ligaments et fascia de la cheville et du pied)
 
@@ -1394,7 +1399,11 @@ AnnotationAssertion(rdfs:label <http://id.who.int/icd/entity/1571232890> "Interc
 AnnotationAssertion(Annotation(rdfs:comment "[PROMOT note] Source for official translation: https://icd.who.int/browse/2026-01/icf/fr > Info > Fichier du tableur") rdfs:label <http://id.who.int/icd/entity/1571232890> "Muscles intercostaux"@fr)
 AnnotationAssertion(Annotation(rdfs:comment "[PROMOT note] Source for official translation: https://icd.who.int/browse/2026-01/icf/es > Información > Archivo de hoja de cálculo") rdfs:label <http://id.who.int/icd/entity/1571232890> "Músculos intercostales"@es)
 AnnotationAssertion(skos:changeNote <http://id.who.int/icd/entity/1571232890> "[PROMOT note] The PROMOT ontology added a crossref to the LIRMM version of the ICF (CIF-ASIP 2020). It also added the official French and Spanish translation for labels."@en)
+SubClassOf(<http://id.who.int/icd/entity/1571232890> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0003327))
 SubClassOf(<http://id.who.int/icd/entity/1571232890> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0004878))
+SubClassOf(<http://id.who.int/icd/entity/1571232890> ObjectSomeValuesFrom(obo:RO_0000091 obo:PROMOT_0032014))
+SubClassOf(<http://id.who.int/icd/entity/1571232890> ObjectSomeValuesFrom(obo:RO_0002328 <http://id.who.int/icd/entity/1521707777>))
+SubClassOf(<http://id.who.int/icd/entity/1571232890> ObjectSomeValuesFrom(obo:RO_0002328 <http://id.who.int/icd/entity/1789365017>))
 SubClassOf(<http://id.who.int/icd/entity/1571232890> ObjectSomeValuesFrom(obo:RO_0002328 <http://id.who.int/icd/entity/556694745>))
 
 # Class: <http://id.who.int/icd/entity/1580195090> (Fonctions digestives)
@@ -1451,9 +1460,8 @@ AnnotationAssertion(Annotation(rdfs:comment "[PROMOT note] Source for official t
 AnnotationAssertion(Annotation(rdfs:comment "[PROMOT note] Source for official translation: https://icd.who.int/browse/2026-01/icf/fr > Info > Fichier du tableur") rdfs:label <http://id.who.int/icd/entity/1650503157> "Os de la cheville et du pied"@fr)
 AnnotationAssertion(skos:changeNote <http://id.who.int/icd/entity/1650503157> "[PROMOT note] The PROMOT ontology added a crossref to the LIRMM version of the ICF (CIF-ASIP 2020). It also added the official French and Spanish translation for labels."@en)
 SubClassOf(<http://id.who.int/icd/entity/1650503157> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0001761))
-SubClassOf(<http://id.who.int/icd/entity/1650503157> ObjectSomeValuesFrom(obo:RO_0002328 <http://id.who.int/icd/entity/1789365017>))
 
-# Class: <http://id.who.int/icd/entity/1674298945> (Endurance of all muscles of the body)
+# Class: <http://id.who.int/icd/entity/1674298945> (Resistencia de todos los músculos del cuerpo)
 
 AnnotationAssertion(oboInOwl:hasDbXref <http://id.who.int/icd/entity/1674298945> "https://data.esante.gouv.fr/terminologies/icf#90457")
 AnnotationAssertion(Annotation(rdfs:comment "[PROMOT note] Source for official translation: https://icd.who.int/browse/2026-01/icf/fr > Info > Fichier du tableur") rdfs:label <http://id.who.int/icd/entity/1674298945> "Endurance de tous les muscles du corps"@fr)
@@ -1508,7 +1516,7 @@ AnnotationAssertion(Annotation(rdfs:comment "[PROMOT note] Source for official t
 AnnotationAssertion(rdfs:label <http://id.who.int/icd/entity/1754034822> "Structure of mouth"@en)
 AnnotationAssertion(skos:changeNote <http://id.who.int/icd/entity/1754034822> "[PROMOT note] The PROMOT ontology added a crossref to the LIRMM version of the ICF (CIF-ASIP 2020). It also added the official French and Spanish translation for labels."@en)
 
-# Class: <http://id.who.int/icd/entity/1757783224> (Movilidad de varias articulaciones)
+# Class: <http://id.who.int/icd/entity/1757783224> (Mobility of several joints)
 
 AnnotationAssertion(oboInOwl:hasDbXref <http://id.who.int/icd/entity/1757783224> "https://data.esante.gouv.fr/terminologies/icf#69553")
 AnnotationAssertion(rdfs:label <http://id.who.int/icd/entity/1757783224> "Mobility of several joints"@en)
@@ -1565,9 +1573,16 @@ AnnotationAssertion(Annotation(rdfs:comment "[PROMOT note] Source for official t
 AnnotationAssertion(rdfs:label <http://id.who.int/icd/entity/1794398084> "Muscles of thigh"@en)
 AnnotationAssertion(Annotation(rdfs:comment "[PROMOT note] Source for official translation: https://icd.who.int/browse/2026-01/icf/es > Información > Archivo de hoja de cálculo") rdfs:label <http://id.who.int/icd/entity/1794398084> "Músculos del muslo"@es)
 AnnotationAssertion(skos:changeNote <http://id.who.int/icd/entity/1794398084> "[PROMOT note] The PROMOT ontology added a crossref to the LIRMM version of the ICF (CIF-ASIP 2020). It also added the official French and Spanish translation for labels."@en)
+SubClassOf(<http://id.who.int/icd/entity/1794398084> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0003690))
+SubClassOf(<http://id.who.int/icd/entity/1794398084> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0003694))
+SubClassOf(<http://id.who.int/icd/entity/1794398084> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0003701))
 SubClassOf(<http://id.who.int/icd/entity/1794398084> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0003731))
+SubClassOf(<http://id.who.int/icd/entity/1794398084> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0007340))
 SubClassOf(<http://id.who.int/icd/entity/1794398084> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0008994))
+SubClassOf(<http://id.who.int/icd/entity/1794398084> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0009028))
+SubClassOf(<http://id.who.int/icd/entity/1794398084> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0009073))
 SubClassOf(<http://id.who.int/icd/entity/1794398084> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0012515))
+SubClassOf(<http://id.who.int/icd/entity/1794398084> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0030200))
 SubClassOf(<http://id.who.int/icd/entity/1794398084> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0033416))
 SubClassOf(<http://id.who.int/icd/entity/1794398084> ObjectSomeValuesFrom(obo:RO_0002328 <http://id.who.int/icd/entity/1521707777>))
 SubClassOf(<http://id.who.int/icd/entity/1794398084> ObjectSomeValuesFrom(obo:RO_0002328 <http://id.who.int/icd/entity/1789365017>))
@@ -1607,7 +1622,7 @@ AnnotationAssertion(skos:changeNote <http://id.who.int/icd/entity/1828012543> "[
 SubClassOf(<http://id.who.int/icd/entity/1828012543> obo:PROMOT_0110001)
 SubClassOf(<http://id.who.int/icd/entity/1828012543> obo:PROMOT_0120002)
 
-# Class: <http://id.who.int/icd/entity/1831985718> (Vestibular function of balance)
+# Class: <http://id.who.int/icd/entity/1831985718> (Función vestibular relacionada con el equilibrio)
 
 AnnotationAssertion(oboInOwl:hasDbXref <http://id.who.int/icd/entity/1831985718> "https://data.esante.gouv.fr/terminologies/icf#39060")
 AnnotationAssertion(Annotation(rdfs:comment "[PROMOT note] Source for official translation: https://icd.who.int/browse/2026-01/icf/fr > Info > Fichier du tableur") rdfs:label <http://id.who.int/icd/entity/1831985718> "Fonction vestibulaire de l'équilibre"@fr)
@@ -1673,14 +1688,21 @@ AnnotationAssertion(Annotation(rdfs:comment "[PROMOT note] Source for official t
 AnnotationAssertion(Annotation(rdfs:comment "[PROMOT note] Source for official translation: https://icd.who.int/browse/2026-01/icf/es > Información > Archivo de hoja de cálculo") rdfs:label <http://id.who.int/icd/entity/1864074583> "Nivel de energía"@es)
 AnnotationAssertion(skos:changeNote <http://id.who.int/icd/entity/1864074583> "[PROMOT note] The PROMOT ontology added a crossref to the LIRMM version of the ICF (CIF-ASIP 2020). It also added the official French and Spanish translation for labels."@en)
 
-# Class: <http://id.who.int/icd/entity/1867012554> (Muscles du bras)
+# Class: <http://id.who.int/icd/entity/1867012554> (Muscles of upper arm)
 
 AnnotationAssertion(oboInOwl:hasDbXref <http://id.who.int/icd/entity/1867012554> "https://data.esante.gouv.fr/terminologies/icf#2717")
 AnnotationAssertion(Annotation(rdfs:comment "[PROMOT note] Source for official translation: https://icd.who.int/browse/2026-01/icf/fr > Info > Fichier du tableur") rdfs:label <http://id.who.int/icd/entity/1867012554> "Muscles du bras"@fr)
 AnnotationAssertion(rdfs:label <http://id.who.int/icd/entity/1867012554> "Muscles of upper arm"@en)
 AnnotationAssertion(Annotation(rdfs:comment "[PROMOT note] Source for official translation: https://icd.who.int/browse/2026-01/icf/es > Información > Archivo de hoja de cálculo") rdfs:label <http://id.who.int/icd/entity/1867012554> "Músculos del brazo"@es)
 AnnotationAssertion(skos:changeNote <http://id.who.int/icd/entity/1867012554> "[PROMOT note] The PROMOT ontology added a crossref to the LIRMM version of the ICF (CIF-ASIP 2020). It also added the official French and Spanish translation for labels."@en)
+SubClassOf(<http://id.who.int/icd/entity/1867012554> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0003484))
+SubClassOf(<http://id.who.int/icd/entity/1867012554> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0003690))
+SubClassOf(<http://id.who.int/icd/entity/1867012554> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0003694))
+SubClassOf(<http://id.who.int/icd/entity/1867012554> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0003701))
 SubClassOf(<http://id.who.int/icd/entity/1867012554> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0008997))
+SubClassOf(<http://id.who.int/icd/entity/1867012554> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0009028))
+SubClassOf(<http://id.who.int/icd/entity/1867012554> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0009073))
+SubClassOf(<http://id.who.int/icd/entity/1867012554> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0030200))
 SubClassOf(<http://id.who.int/icd/entity/1867012554> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0031108))
 SubClassOf(<http://id.who.int/icd/entity/1867012554> ObjectSomeValuesFrom(obo:RO_0002328 <http://id.who.int/icd/entity/1521707777>))
 SubClassOf(<http://id.who.int/icd/entity/1867012554> ObjectSomeValuesFrom(obo:RO_0002328 <http://id.who.int/icd/entity/1789365017>))
@@ -1707,22 +1729,32 @@ SubClassOf(<http://id.who.int/icd/entity/1874889854> ObjectSomeValuesFrom(obo:RO
 SubClassOf(<http://id.who.int/icd/entity/1874889854> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0002033))
 SubClassOf(<http://id.who.int/icd/entity/1874889854> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0002058))
 SubClassOf(<http://id.who.int/icd/entity/1874889854> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0002068))
+SubClassOf(<http://id.who.int/icd/entity/1874889854> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0002483))
 SubClassOf(<http://id.who.int/icd/entity/1874889854> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0003306))
 SubClassOf(<http://id.who.int/icd/entity/1874889854> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0003722))
 SubClassOf(<http://id.who.int/icd/entity/1874889854> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0005216))
-SubClassOf(<http://id.who.int/icd/entity/1874889854> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0007838))
 SubClassOf(<http://id.who.int/icd/entity/1874889854> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0012473))
+SubClassOf(<http://id.who.int/icd/entity/1874889854> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0030192))
 SubClassOf(<http://id.who.int/icd/entity/1874889854> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0030193))
+SubClassOf(<http://id.who.int/icd/entity/1874889854> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0030194))
+SubClassOf(<http://id.who.int/icd/entity/1874889854> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0030195))
+SubClassOf(<http://id.who.int/icd/entity/1874889854> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0030199))
 SubClassOf(<http://id.who.int/icd/entity/1874889854> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0030319))
 SubClassOf(<http://id.who.int/icd/entity/1874889854> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0031146))
 SubClassOf(<http://id.who.int/icd/entity/1874889854> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0031162))
 SubClassOf(<http://id.who.int/icd/entity/1874889854> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0200136))
+SubClassOf(<http://id.who.int/icd/entity/1874889854> ObjectSomeValuesFrom(obo:RO_0000091 obo:PROMOT_0032010))
+SubClassOf(<http://id.who.int/icd/entity/1874889854> ObjectSomeValuesFrom(obo:RO_0000091 obo:PROMOT_0032011))
+SubClassOf(<http://id.who.int/icd/entity/1874889854> ObjectSomeValuesFrom(obo:RO_0000091 obo:PROMOT_0032012))
+SubClassOf(<http://id.who.int/icd/entity/1874889854> ObjectSomeValuesFrom(obo:RO_0000091 obo:PROMOT_0032015))
+SubClassOf(<http://id.who.int/icd/entity/1874889854> ObjectSomeValuesFrom(obo:RO_0000091 obo:PROMOT_0032024))
 SubClassOf(<http://id.who.int/icd/entity/1874889854> ObjectSomeValuesFrom(obo:RO_0002328 <http://id.who.int/icd/entity/1041382491>))
 SubClassOf(<http://id.who.int/icd/entity/1874889854> ObjectSomeValuesFrom(obo:RO_0002328 <http://id.who.int/icd/entity/1174312718>))
 SubClassOf(<http://id.who.int/icd/entity/1874889854> ObjectSomeValuesFrom(obo:RO_0002328 <http://id.who.int/icd/entity/1389818830>))
 SubClassOf(<http://id.who.int/icd/entity/1874889854> ObjectSomeValuesFrom(obo:RO_0002328 <http://id.who.int/icd/entity/1521707777>))
 SubClassOf(<http://id.who.int/icd/entity/1874889854> ObjectSomeValuesFrom(obo:RO_0002328 <http://id.who.int/icd/entity/1580195090>))
 SubClassOf(<http://id.who.int/icd/entity/1874889854> ObjectSomeValuesFrom(obo:RO_0002328 <http://id.who.int/icd/entity/1789365017>))
+SubClassOf(<http://id.who.int/icd/entity/1874889854> ObjectSomeValuesFrom(obo:RO_0002328 <http://id.who.int/icd/entity/1806589582>))
 SubClassOf(<http://id.who.int/icd/entity/1874889854> ObjectSomeValuesFrom(obo:RO_0002328 <http://id.who.int/icd/entity/2089171534>))
 SubClassOf(<http://id.who.int/icd/entity/1874889854> ObjectSomeValuesFrom(obo:RO_0002328 <http://id.who.int/icd/entity/691689627>))
 SubClassOf(<http://id.who.int/icd/entity/1874889854> ObjectSomeValuesFrom(obo:RO_0002328 <http://id.who.int/icd/entity/712570723>))
@@ -1916,7 +1948,13 @@ AnnotationAssertion(rdfs:label <http://id.who.int/icd/entity/213893837> "Bones"@
 AnnotationAssertion(Annotation(rdfs:comment "[PROMOT note] Source for official translation: https://icd.who.int/browse/2026-01/icf/es > Información > Archivo de hoja de cálculo") rdfs:label <http://id.who.int/icd/entity/213893837> "Huesos"@es)
 AnnotationAssertion(Annotation(rdfs:comment "[PROMOT note] Source for official translation: https://icd.who.int/browse/2026-01/icf/fr > Info > Fichier du tableur") rdfs:label <http://id.who.int/icd/entity/213893837> "Os"@fr)
 AnnotationAssertion(skos:changeNote <http://id.who.int/icd/entity/213893837> "[PROMOT note] The PROMOT ontology added a crossref to the LIRMM version of the ICF (CIF-ASIP 2020). It also added the official French and Spanish translation for labels."@en)
+SubClassOf(<http://id.who.int/icd/entity/213893837> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0000767))
+SubClassOf(<http://id.who.int/icd/entity/213893837> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0000768))
+SubClassOf(<http://id.who.int/icd/entity/213893837> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0000774))
+SubClassOf(<http://id.who.int/icd/entity/213893837> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0000886))
+SubClassOf(<http://id.who.int/icd/entity/213893837> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0001547))
 SubClassOf(<http://id.who.int/icd/entity/213893837> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0004322))
+SubClassOf(<http://id.who.int/icd/entity/213893837> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_6000327))
 
 # Class: <http://id.who.int/icd/entity/222589883> (Funciones del corazón)
 
@@ -1942,7 +1980,7 @@ AnnotationAssertion(rdfs:label <http://id.who.int/icd/entity/242704590> "Functio
 AnnotationAssertion(Annotation(rdfs:comment "[PROMOT note] Source for official translation: https://icd.who.int/browse/2026-01/icf/es > Información > Archivo de hoja de cálculo") rdfs:label <http://id.who.int/icd/entity/242704590> "Regurgitación y vómito"@es)
 AnnotationAssertion(skos:changeNote <http://id.who.int/icd/entity/242704590> "[PROMOT note] The PROMOT ontology added a crossref to the LIRMM version of the ICF (CIF-ASIP 2020). It also added the official French and Spanish translation for labels."@en)
 
-# Class: <http://id.who.int/icd/entity/246722870> (Estructuras periféricas oculares)
+# Class: <http://id.who.int/icd/entity/246722870> (Structures around eye)
 
 AnnotationAssertion(oboInOwl:hasDbXref <http://id.who.int/icd/entity/246722870> "https://data.esante.gouv.fr/terminologies/icf#52807")
 AnnotationAssertion(Annotation(rdfs:comment "[PROMOT note] Source for official translation: https://icd.who.int/browse/2026-01/icf/es > Información > Archivo de hoja de cálculo") rdfs:label <http://id.who.int/icd/entity/246722870> "Estructuras periféricas oculares"@es)
@@ -1990,8 +2028,16 @@ AnnotationAssertion(rdfs:label <http://id.who.int/icd/entity/278512890> "Muscles
 AnnotationAssertion(Annotation(rdfs:comment "[PROMOT note] Source for official translation: https://icd.who.int/browse/2026-01/icf/es > Información > Archivo de hoja de cálculo") rdfs:label <http://id.who.int/icd/entity/278512890> "Músculos de la región del hombro"@es)
 AnnotationAssertion(skos:changeNote <http://id.who.int/icd/entity/278512890> "[PROMOT note] The PROMOT ontology added a crossref to the LIRMM version of the ICF (CIF-ASIP 2020). It also added the official French and Spanish translation for labels."@en)
 SubClassOf(<http://id.who.int/icd/entity/278512890> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0003325))
+SubClassOf(<http://id.who.int/icd/entity/278512890> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0003484))
 SubClassOf(<http://id.who.int/icd/entity/278512890> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0003547))
+SubClassOf(<http://id.who.int/icd/entity/278512890> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0003690))
+SubClassOf(<http://id.who.int/icd/entity/278512890> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0003691))
+SubClassOf(<http://id.who.int/icd/entity/278512890> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0003694))
+SubClassOf(<http://id.who.int/icd/entity/278512890> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0003701))
 SubClassOf(<http://id.who.int/icd/entity/278512890> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0008997))
+SubClassOf(<http://id.who.int/icd/entity/278512890> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0009028))
+SubClassOf(<http://id.who.int/icd/entity/278512890> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0009073))
+SubClassOf(<http://id.who.int/icd/entity/278512890> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0030200))
 SubClassOf(<http://id.who.int/icd/entity/278512890> ObjectSomeValuesFrom(obo:RO_0002328 <http://id.who.int/icd/entity/1521707777>))
 SubClassOf(<http://id.who.int/icd/entity/278512890> ObjectSomeValuesFrom(obo:RO_0002328 <http://id.who.int/icd/entity/1789365017>))
 
@@ -2002,7 +2048,14 @@ AnnotationAssertion(Annotation(rdfs:comment "[PROMOT note] Source for official t
 AnnotationAssertion(rdfs:label <http://id.who.int/icd/entity/294830867> "Muscles of forearm"@en)
 AnnotationAssertion(Annotation(rdfs:comment "[PROMOT note] Source for official translation: https://icd.who.int/browse/2026-01/icf/es > Información > Archivo de hoja de cálculo") rdfs:label <http://id.who.int/icd/entity/294830867> "Músculos del antebrazo"@es)
 AnnotationAssertion(skos:changeNote <http://id.who.int/icd/entity/294830867> "[PROMOT note] The PROMOT ontology added a crossref to the LIRMM version of the ICF (CIF-ASIP 2020). It also added the official French and Spanish translation for labels."@en)
+SubClassOf(<http://id.who.int/icd/entity/294830867> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0002460))
+SubClassOf(<http://id.who.int/icd/entity/294830867> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0003484))
+SubClassOf(<http://id.who.int/icd/entity/294830867> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0003690))
+SubClassOf(<http://id.who.int/icd/entity/294830867> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0003810))
 SubClassOf(<http://id.who.int/icd/entity/294830867> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0008959))
+SubClassOf(<http://id.who.int/icd/entity/294830867> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0009028))
+SubClassOf(<http://id.who.int/icd/entity/294830867> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0009063))
+SubClassOf(<http://id.who.int/icd/entity/294830867> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0030198))
 SubClassOf(<http://id.who.int/icd/entity/294830867> ObjectSomeValuesFrom(obo:RO_0002328 <http://id.who.int/icd/entity/1521707777>))
 SubClassOf(<http://id.who.int/icd/entity/294830867> ObjectSomeValuesFrom(obo:RO_0002328 <http://id.who.int/icd/entity/1789365017>))
 
@@ -2029,9 +2082,16 @@ AnnotationAssertion(Annotation(rdfs:comment "[PROMOT note] Source for official t
 AnnotationAssertion(rdfs:label <http://id.who.int/icd/entity/338611549> "Muscles of lower leg"@en)
 AnnotationAssertion(Annotation(rdfs:comment "[PROMOT note] Source for official translation: https://icd.who.int/browse/2026-01/icf/es > Información > Archivo de hoja de cálculo") rdfs:label <http://id.who.int/icd/entity/338611549> "Músculos de la pierna"@es)
 AnnotationAssertion(skos:changeNote <http://id.who.int/icd/entity/338611549> "[PROMOT note] The PROMOT ontology added a crossref to the LIRMM version of the ICF (CIF-ASIP 2020). It also added the official French and Spanish translation for labels."@en)
+SubClassOf(<http://id.who.int/icd/entity/338611549> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0002460))
+SubClassOf(<http://id.who.int/icd/entity/338611549> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0003690))
+SubClassOf(<http://id.who.int/icd/entity/338611549> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0003810))
+SubClassOf(<http://id.who.int/icd/entity/338611549> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0007340))
 SubClassOf(<http://id.who.int/icd/entity/338611549> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0008963))
+SubClassOf(<http://id.who.int/icd/entity/338611549> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0009028))
 SubClassOf(<http://id.who.int/icd/entity/338611549> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0009053))
+SubClassOf(<http://id.who.int/icd/entity/338611549> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0009063))
 SubClassOf(<http://id.who.int/icd/entity/338611549> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0011727))
+SubClassOf(<http://id.who.int/icd/entity/338611549> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0030198))
 SubClassOf(<http://id.who.int/icd/entity/338611549> ObjectSomeValuesFrom(obo:RO_0002328 <http://id.who.int/icd/entity/1521707777>))
 SubClassOf(<http://id.who.int/icd/entity/338611549> ObjectSomeValuesFrom(obo:RO_0002328 <http://id.who.int/icd/entity/1789365017>))
 
@@ -2108,7 +2168,10 @@ SubClassOf(<http://id.who.int/icd/entity/405925948> ObjectSomeValuesFrom(obo:RO_
 SubClassOf(<http://id.who.int/icd/entity/405925948> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0007715))
 SubClassOf(<http://id.who.int/icd/entity/405925948> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0007838))
 SubClassOf(<http://id.who.int/icd/entity/405925948> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0007941))
+SubClassOf(<http://id.who.int/icd/entity/405925948> ObjectSomeValuesFrom(obo:RO_0000091 obo:PROMOT_0032013))
+SubClassOf(<http://id.who.int/icd/entity/405925948> ObjectSomeValuesFrom(obo:RO_0000091 obo:PROMOT_0032016))
 SubClassOf(<http://id.who.int/icd/entity/405925948> ObjectSomeValuesFrom(obo:RO_0002328 <http://id.who.int/icd/entity/1090716697>))
+SubClassOf(<http://id.who.int/icd/entity/405925948> ObjectSomeValuesFrom(obo:RO_0002328 <http://id.who.int/icd/entity/1521707777>))
 SubClassOf(<http://id.who.int/icd/entity/405925948> ObjectSomeValuesFrom(obo:RO_0002328 <http://id.who.int/icd/entity/1789365017>))
 SubClassOf(<http://id.who.int/icd/entity/405925948> ObjectSomeValuesFrom(obo:RO_0002328 <http://id.who.int/icd/entity/2021370201>))
 SubClassOf(<http://id.who.int/icd/entity/405925948> ObjectSomeValuesFrom(obo:RO_0002328 <http://id.who.int/icd/entity/2022689055>))
@@ -2129,7 +2192,7 @@ AnnotationAssertion(Annotation(rdfs:comment "[PROMOT note] Source for official t
 AnnotationAssertion(rdfs:label <http://id.who.int/icd/entity/412494151> "Running"@en)
 AnnotationAssertion(skos:changeNote <http://id.who.int/icd/entity/412494151> "[PROMOT note] The PROMOT ontology added a crossref to the LIRMM version of the ICF (CIF-ASIP 2020). It also added the official French and Spanish translation for labels."@en)
 
-# Class: <http://id.who.int/icd/entity/426292658> (Structure de l'oreille interne)
+# Class: <http://id.who.int/icd/entity/426292658> (Structure of inner ear)
 
 AnnotationAssertion(oboInOwl:hasDbXref <http://id.who.int/icd/entity/426292658> "https://data.esante.gouv.fr/terminologies/icf#84736")
 AnnotationAssertion(Annotation(rdfs:comment "[PROMOT note] Source for official translation: https://icd.who.int/browse/2026-01/icf/es > Información > Archivo de hoja de cálculo") rdfs:label <http://id.who.int/icd/entity/426292658> "Estructura del oído interno"@es)
@@ -2168,7 +2231,7 @@ AnnotationAssertion(Annotation(rdfs:comment "[PROMOT note] Source for official t
 AnnotationAssertion(rdfs:label <http://id.who.int/icd/entity/446199613> "Respiration functions"@en)
 AnnotationAssertion(skos:changeNote <http://id.who.int/icd/entity/446199613> "[PROMOT note] The PROMOT ontology added a crossref to the LIRMM version of the ICF (CIF-ASIP 2020). It also added the official French and Spanish translation for labels."@en)
 
-# Class: <http://id.who.int/icd/entity/454325322> (Dolor en múltiples partes del cuerpo)
+# Class: <http://id.who.int/icd/entity/454325322> (Douleurs à localisations multiples)
 
 AnnotationAssertion(oboInOwl:hasDbXref <http://id.who.int/icd/entity/454325322> "https://data.esante.gouv.fr/terminologies/icf#63562")
 AnnotationAssertion(Annotation(rdfs:comment "[PROMOT note] Source for official translation: https://icd.who.int/browse/2026-01/icf/es > Información > Archivo de hoja de cálculo") rdfs:label <http://id.who.int/icd/entity/454325322> "Dolor en múltiples partes del cuerpo"@es)
@@ -2218,12 +2281,14 @@ SubClassOf(<http://id.who.int/icd/entity/495844982> ObjectSomeValuesFrom(obo:RO_
 SubClassOf(<http://id.who.int/icd/entity/495844982> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0002643))
 SubClassOf(<http://id.who.int/icd/entity/495844982> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0002747))
 SubClassOf(<http://id.who.int/icd/entity/495844982> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0002878))
+SubClassOf(<http://id.who.int/icd/entity/495844982> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0002882))
 SubClassOf(<http://id.who.int/icd/entity/495844982> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0004347))
 SubClassOf(<http://id.who.int/icd/entity/495844982> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0004885))
 SubClassOf(<http://id.who.int/icd/entity/495844982> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0004887))
 SubClassOf(<http://id.who.int/icd/entity/495844982> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0004889))
 SubClassOf(<http://id.who.int/icd/entity/495844982> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0005949))
 SubClassOf(<http://id.who.int/icd/entity/495844982> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0012497))
+SubClassOf(<http://id.who.int/icd/entity/495844982> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0030196))
 SubClassOf(<http://id.who.int/icd/entity/495844982> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0032341))
 SubClassOf(<http://id.who.int/icd/entity/495844982> ObjectSomeValuesFrom(obo:RO_0002328 <http://id.who.int/icd/entity/1360101629>))
 SubClassOf(<http://id.who.int/icd/entity/495844982> ObjectSomeValuesFrom(obo:RO_0002328 <http://id.who.int/icd/entity/1521707777>))
@@ -2303,7 +2368,7 @@ AnnotationAssertion(rdfs:label <http://id.who.int/icd/entity/576915490> "Involun
 AnnotationAssertion(skos:changeNote <http://id.who.int/icd/entity/576915490> "[PROMOT note] The PROMOT ontology added a crossref to the LIRMM version of the ICF (CIF-ASIP 2020). It also added the official French and Spanish translation for labels."@en)
 SubClassOf(<http://id.who.int/icd/entity/576915490> ObjectSomeValuesFrom(obo:RO_0002331 <http://id.who.int/icd/entity/2048203604>))
 
-# Class: <http://id.who.int/icd/entity/577558794> (Pain in body part)
+# Class: <http://id.who.int/icd/entity/577558794> (Dolor en una parte del cuerpo)
 
 AnnotationAssertion(oboInOwl:hasDbXref <http://id.who.int/icd/entity/577558794> "https://data.esante.gouv.fr/terminologies/icf#14462")
 AnnotationAssertion(Annotation(rdfs:comment "[PROMOT note] Source for official translation: https://icd.who.int/browse/2026-01/icf/es > Información > Archivo de hoja de cálculo") rdfs:label <http://id.who.int/icd/entity/577558794> "Dolor en una parte del cuerpo"@es)
@@ -2319,8 +2384,12 @@ AnnotationAssertion(rdfs:label <http://id.who.int/icd/entity/58064740> "Muscles 
 AnnotationAssertion(Annotation(rdfs:comment "[PROMOT note] Source for official translation: https://icd.who.int/browse/2026-01/icf/es > Información > Archivo de hoja de cálculo") rdfs:label <http://id.who.int/icd/entity/58064740> "Músculos del tronco"@es)
 AnnotationAssertion(skos:changeNote <http://id.who.int/icd/entity/58064740> "[PROMOT note] The PROMOT ontology added a crossref to the LIRMM version of the ICF (CIF-ASIP 2020). It also added the official French and Spanish translation for labels."@en)
 SubClassOf(<http://id.who.int/icd/entity/58064740> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0003306))
+SubClassOf(<http://id.who.int/icd/entity/58064740> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0003327))
 SubClassOf(<http://id.who.int/icd/entity/58064740> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0009023))
+SubClassOf(<http://id.who.int/icd/entity/58064740> ObjectSomeValuesFrom(obo:RO_0000091 obo:PROMOT_0032014))
+SubClassOf(<http://id.who.int/icd/entity/58064740> ObjectSomeValuesFrom(obo:RO_0002328 <http://id.who.int/icd/entity/1521707777>))
 SubClassOf(<http://id.who.int/icd/entity/58064740> ObjectSomeValuesFrom(obo:RO_0002328 <http://id.who.int/icd/entity/1789365017>))
+SubClassOf(<http://id.who.int/icd/entity/58064740> ObjectSomeValuesFrom(obo:RO_0002328 <http://id.who.int/icd/entity/556694745>))
 SubClassOf(<http://id.who.int/icd/entity/58064740> ObjectSomeValuesFrom(obo:RO_0002328 <http://id.who.int/icd/entity/841397411>))
 
 # Class: <http://id.who.int/icd/entity/583874291> (Surveiller son régime alimentaire et sa condition physique)
@@ -2357,7 +2426,7 @@ AnnotationAssertion(Annotation(rdfs:comment "[PROMOT note] Source for official t
 AnnotationAssertion(rdfs:label <http://id.who.int/icd/entity/621727843> "Sensation of muscle spasm"@en)
 AnnotationAssertion(skos:changeNote <http://id.who.int/icd/entity/621727843> "[PROMOT note] The PROMOT ontology added a crossref to the LIRMM version of the ICF (CIF-ASIP 2020). It also added the official French and Spanish translation for labels."@en)
 
-# Class: <http://id.who.int/icd/entity/623565657> (Rester assis)
+# Class: <http://id.who.int/icd/entity/623565657> (Permanecer sentado)
 
 AnnotationAssertion(oboInOwl:hasDbXref <http://id.who.int/icd/entity/623565657> "https://data.esante.gouv.fr/terminologies/icf#1419")
 AnnotationAssertion(rdfs:label <http://id.who.int/icd/entity/623565657> "Maintaining a sitting position"@en)
@@ -2381,6 +2450,7 @@ AnnotationAssertion(Annotation(rdfs:comment "[PROMOT note] Source for official t
 AnnotationAssertion(rdfs:label <http://id.who.int/icd/entity/634949825> "Structure of brain"@en)
 AnnotationAssertion(skos:changeNote <http://id.who.int/icd/entity/634949825> "[PROMOT note] The PROMOT ontology added a crossref to the LIRMM version of the ICF (CIF-ASIP 2020). It also added the official French and Spanish translation for labels."@en)
 SubClassOf(<http://id.who.int/icd/entity/634949825> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0001249))
+SubClassOf(<http://id.who.int/icd/entity/634949825> ObjectSomeValuesFrom(obo:RO_0002328 <http://id.who.int/icd/entity/1363559646>))
 SubClassOf(<http://id.who.int/icd/entity/634949825> ObjectSomeValuesFrom(obo:RO_0002328 <http://id.who.int/icd/entity/1525383756>))
 
 # Class: <http://id.who.int/icd/entity/640373779> (Estructura del brazo)
@@ -2399,7 +2469,6 @@ AnnotationAssertion(Annotation(rdfs:comment "[PROMOT note] Source for official t
 AnnotationAssertion(rdfs:label <http://id.who.int/icd/entity/644658903> "Structures related to movement"@en)
 AnnotationAssertion(skos:changeNote <http://id.who.int/icd/entity/644658903> "[PROMOT note] The PROMOT ontology added a crossref to the LIRMM version of the ICF (CIF-ASIP 2020). It also added the official French and Spanish translation for labels."@en)
 SubClassOf(<http://id.who.int/icd/entity/644658903> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0002141))
-SubClassOf(<http://id.who.int/icd/entity/644658903> ObjectSomeValuesFrom(obo:RO_0002328 <http://id.who.int/icd/entity/1328466963>))
 SubClassOf(<http://id.who.int/icd/entity/644658903> ObjectSomeValuesFrom(obo:RO_0002328 <http://id.who.int/icd/entity/576915490>))
 
 # Class: <http://id.who.int/icd/entity/682314871> (Pain in back)
@@ -2526,9 +2595,16 @@ AnnotationAssertion(rdfs:label <http://id.who.int/icd/entity/793188683> "Muscles
 AnnotationAssertion(Annotation(rdfs:comment "[PROMOT note] Source for official translation: https://icd.who.int/browse/2026-01/icf/es > Información > Archivo de hoja de cálculo") rdfs:label <http://id.who.int/icd/entity/793188683> "Músculos de la región pélvica"@es)
 AnnotationAssertion(skos:changeNote <http://id.who.int/icd/entity/793188683> "[PROMOT note] The PROMOT ontology added a crossref to the LIRMM version of the ICF (CIF-ASIP 2020). It also added the official French and Spanish translation for labels."@en)
 SubClassOf(<http://id.who.int/icd/entity/793188683> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0003325))
+SubClassOf(<http://id.who.int/icd/entity/793188683> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0003690))
+SubClassOf(<http://id.who.int/icd/entity/793188683> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0003694))
+SubClassOf(<http://id.who.int/icd/entity/793188683> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0003701))
 SubClassOf(<http://id.who.int/icd/entity/793188683> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0003749))
+SubClassOf(<http://id.who.int/icd/entity/793188683> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0007340))
 SubClassOf(<http://id.who.int/icd/entity/793188683> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0008988))
 SubClassOf(<http://id.who.int/icd/entity/793188683> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0008994))
+SubClassOf(<http://id.who.int/icd/entity/793188683> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0009028))
+SubClassOf(<http://id.who.int/icd/entity/793188683> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0009073))
+SubClassOf(<http://id.who.int/icd/entity/793188683> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0030200))
 SubClassOf(<http://id.who.int/icd/entity/793188683> ObjectSomeValuesFrom(obo:RO_0002328 <http://id.who.int/icd/entity/1521707777>))
 SubClassOf(<http://id.who.int/icd/entity/793188683> ObjectSomeValuesFrom(obo:RO_0002328 <http://id.who.int/icd/entity/1789365017>))
 
@@ -2566,6 +2642,10 @@ AnnotationAssertion(Annotation(rdfs:comment "[PROMOT note] Source for official t
 AnnotationAssertion(rdfs:label <http://id.who.int/icd/entity/834607195> "Heart"@en)
 AnnotationAssertion(rdfs:label <http://id.who.int/icd/entity/834607195> "Heart (Body structure)"@en)
 AnnotationAssertion(skos:changeNote <http://id.who.int/icd/entity/834607195> "[PROMOT note] The PROMOT ontology added a crossref to the LIRMM version of the ICF (CIF-ASIP 2020). It also added the official French and Spanish translation for labels."@en)
+SubClassOf(<http://id.who.int/icd/entity/834607195> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0001627))
+SubClassOf(<http://id.who.int/icd/entity/834607195> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0001638))
+SubClassOf(<http://id.who.int/icd/entity/834607195> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0001713))
+SubClassOf(<http://id.who.int/icd/entity/834607195> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0030872))
 SubClassOf(<http://id.who.int/icd/entity/834607195> ObjectSomeValuesFrom(obo:RO_0002328 <http://id.who.int/icd/entity/1399000785>))
 SubClassOf(<http://id.who.int/icd/entity/834607195> ObjectSomeValuesFrom(obo:RO_0002328 <http://id.who.int/icd/entity/1780196241>))
 SubClassOf(<http://id.who.int/icd/entity/834607195> ObjectSomeValuesFrom(obo:RO_0002328 <http://id.who.int/icd/entity/2100545361>))
@@ -2626,7 +2706,6 @@ AnnotationAssertion(Annotation(rdfs:comment "[PROMOT note] Source for official t
 AnnotationAssertion(Annotation(rdfs:comment "[PROMOT note] Source for official translation: https://icd.who.int/browse/2026-01/icf/es > Información > Archivo de hoja de cálculo") rdfs:label <http://id.who.int/icd/entity/862066979> "Funciones relacionadas con el mantenimiento del peso"@es)
 AnnotationAssertion(rdfs:label <http://id.who.int/icd/entity/862066979> "Weight maintenance functions"@en)
 AnnotationAssertion(skos:changeNote <http://id.who.int/icd/entity/862066979> "[PROMOT note] The PROMOT ontology added a crossref to the LIRMM version of the ICF (CIF-ASIP 2020). It also added the official French and Spanish translation for labels."@en)
-SubClassOf(<http://id.who.int/icd/entity/862066979> ObjectSomeValuesFrom(obo:RO_0002331 <http://id.who.int/icd/entity/583874291>))
 
 # Class: <http://id.who.int/icd/entity/870135798> (Poumons)
 
@@ -2642,6 +2721,7 @@ SubClassOf(<http://id.who.int/icd/entity/870135798> ObjectSomeValuesFrom(obo:RO_
 SubClassOf(<http://id.who.int/icd/entity/870135798> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0002643))
 SubClassOf(<http://id.who.int/icd/entity/870135798> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0002747))
 SubClassOf(<http://id.who.int/icd/entity/870135798> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0002878))
+SubClassOf(<http://id.who.int/icd/entity/870135798> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0002882))
 SubClassOf(<http://id.who.int/icd/entity/870135798> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0004347))
 SubClassOf(<http://id.who.int/icd/entity/870135798> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0004885))
 SubClassOf(<http://id.who.int/icd/entity/870135798> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0004887))
@@ -2860,6 +2940,7 @@ AnnotationAssertion(obo:PROMOT_1000001 obo:HP_0000496 "Congenital myasthenic syn
 AnnotationAssertion(obo:PROMOT_1000001 obo:HP_0000496 "Congenital myasthenic syndrom Scoping review")
 AnnotationAssertion(obo:PROMOT_1000001 obo:HP_0000496 "Congenital myopathy Scoping review")
 AnnotationAssertion(rdfs:label obo:HP_0000496 "Abnormality of eye movement"@en)
+SubClassOf(obo:HP_0000496 ObjectSomeValuesFrom(obo:PROMOT_2000005 <http://id.who.int/icd/entity/1090716697>))
 SubClassOf(obo:HP_0000496 ObjectSomeValuesFrom(obo:PROMOT_2000005 <http://id.who.int/icd/entity/1789365017>))
 
 # Class: obo:HP_0000508 (Ptosis)
@@ -3040,6 +3121,7 @@ AnnotationAssertion(rdfs:label obo:HP_0001324 "Muscle weakness"@en)
 AnnotationAssertion(obo:PROMOT_1000001 obo:HP_0001374 "Congenital myopathy HPO KB associations")
 AnnotationAssertion(obo:PROMOT_1000001 obo:HP_0001374 "Congenital myopathy Scoping review")
 AnnotationAssertion(rdfs:label obo:HP_0001374 "Congenital hip dislocation"@en)
+SubClassOf(obo:HP_0001374 ObjectSomeValuesFrom(obo:PROMOT_2000005 <http://id.who.int/icd/entity/1748092144>))
 
 # Class: obo:HP_0001387 (Joint stiffness)
 
@@ -3068,6 +3150,7 @@ AnnotationAssertion(obo:PROMOT_1000001 obo:HP_0001609 "Congenital myopathy HPO K
 AnnotationAssertion(obo:PROMOT_1000001 obo:HP_0001609 "Congenital myopathy Scoping review")
 AnnotationAssertion(obo:PROMOT_1000001 obo:HP_0001609 "[OPMD Clinical Registry Form]")
 AnnotationAssertion(rdfs:label obo:HP_0001609 "Hoarse voice"@en)
+SubClassOf(obo:HP_0001609 ObjectSomeValuesFrom(obo:PROMOT_2000005 <http://id.who.int/icd/entity/151046878>))
 SubClassOf(obo:HP_0001609 ObjectSomeValuesFrom(obo:PROMOT_2000005 <http://id.who.int/icd/entity/712570723>))
 
 # Class: obo:HP_0001611 (Hypernasal speech)
@@ -3108,17 +3191,26 @@ AnnotationAssertion(rdfs:label obo:HP_0001622 "Premature birth"@en)
 AnnotationAssertion(obo:PROMOT_1000001 obo:HP_0001627 "Congenital myopathy HPO KB associations")
 AnnotationAssertion(obo:PROMOT_1000001 obo:HP_0001627 "Congenital myopathy Scoping review")
 AnnotationAssertion(rdfs:label obo:HP_0001627 "Abnormal heart morphology"@en)
+SubClassOf(obo:HP_0001627 ObjectSomeValuesFrom(obo:PROMOT_2000005 <http://id.who.int/icd/entity/1399000785>))
+SubClassOf(obo:HP_0001627 ObjectSomeValuesFrom(obo:PROMOT_2000005 <http://id.who.int/icd/entity/1780196241>))
+SubClassOf(obo:HP_0001627 ObjectSomeValuesFrom(obo:PROMOT_2000005 <http://id.who.int/icd/entity/2100545361>))
 
 # Class: obo:HP_0001638 (Cardiomyopathy )
 
 AnnotationAssertion(obo:PROMOT_1000001 obo:HP_0001638 "Congenital myopathy HPO KB associations")
 AnnotationAssertion(obo:PROMOT_1000001 obo:HP_0001638 "Congenital myopathy Scoping review")
 AnnotationAssertion(rdfs:label obo:HP_0001638 "Cardiomyopathy "@en)
+SubClassOf(obo:HP_0001638 ObjectSomeValuesFrom(obo:PROMOT_2000005 <http://id.who.int/icd/entity/1399000785>))
+SubClassOf(obo:HP_0001638 ObjectSomeValuesFrom(obo:PROMOT_2000005 <http://id.who.int/icd/entity/1780196241>))
+SubClassOf(obo:HP_0001638 ObjectSomeValuesFrom(obo:PROMOT_2000005 <http://id.who.int/icd/entity/2100545361>))
 
 # Class: obo:HP_0001713 (Abnormal cardiac ventricle morphology)
 
 AnnotationAssertion(obo:PROMOT_1000001 obo:HP_0001713 "Congenital myopathy Scoping review")
 AnnotationAssertion(rdfs:label obo:HP_0001713 "Abnormal cardiac ventricle morphology"@en)
+SubClassOf(obo:HP_0001713 ObjectSomeValuesFrom(obo:PROMOT_2000005 <http://id.who.int/icd/entity/1399000785>))
+SubClassOf(obo:HP_0001713 ObjectSomeValuesFrom(obo:PROMOT_2000005 <http://id.who.int/icd/entity/1780196241>))
+SubClassOf(obo:HP_0001713 ObjectSomeValuesFrom(obo:PROMOT_2000005 <http://id.who.int/icd/entity/2100545361>))
 
 # Class: obo:HP_0001761 (Pes cavus)
 
@@ -3272,6 +3364,7 @@ AnnotationAssertion(obo:PROMOT_1000001 obo:HP_0002460 "[OPMD HPO KB associations
 AnnotationAssertion(obo:PROMOT_1000001 obo:HP_0002460 "[OPMD Scoping review 2026] Bélair N, Gagnon C, Duchesne E. What is known about muscle weakness, balance impairments and indoor mobility limitations in oculopharyngeal muscular dystrophy? A scoping review. J Neuromuscul Dis. 2025 Dec 30:22143602251397052. doi: 10.1177/22143602251397052. Epub ahead of print. PMID: 41467981.")
 AnnotationAssertion(rdfs:label obo:HP_0002460 "Distal muscle weakness"@en)
 SubClassOf(obo:HP_0002460 ObjectSomeValuesFrom(obo:PROMOT_2000005 <http://id.who.int/icd/entity/1789365017>))
+SubClassOf(obo:HP_0002460 ObjectSomeValuesFrom(obo:PROMOT_2000005 <http://id.who.int/icd/entity/2048203604>))
 
 # Class: obo:HP_0002483 (Bulbar signs)
 
@@ -3279,6 +3372,11 @@ AnnotationAssertion(obo:PROMOT_1000001 obo:HP_0002483 "Congenital myasthenic syn
 AnnotationAssertion(obo:PROMOT_1000001 obo:HP_0002483 "Congenital myopathy HPO KB associations")
 AnnotationAssertion(obo:PROMOT_1000001 obo:HP_0002483 "Congenital myopathy Scoping review")
 AnnotationAssertion(rdfs:label obo:HP_0002483 "Bulbar signs"@en)
+SubClassOf(obo:HP_0002483 ObjectSomeValuesFrom(obo:PROMOT_2000005 <http://id.who.int/icd/entity/1328675264>))
+SubClassOf(obo:HP_0002483 ObjectSomeValuesFrom(obo:PROMOT_2000005 <http://id.who.int/icd/entity/151046878>))
+SubClassOf(obo:HP_0002483 ObjectSomeValuesFrom(obo:PROMOT_2000005 <http://id.who.int/icd/entity/1789365017>))
+SubClassOf(obo:HP_0002483 ObjectSomeValuesFrom(obo:PROMOT_2000005 <http://id.who.int/icd/entity/712570723>))
+SubClassOf(obo:HP_0002483 ObjectSomeValuesFrom(obo:PROMOT_2000005 <http://id.who.int/icd/entity/923782542>))
 
 # Class: obo:HP_0002505 (Loss of ambulation)
 
@@ -3404,6 +3502,14 @@ SubClassOf(obo:HP_0002878 ObjectSomeValuesFrom(obo:PROMOT_2000005 <http://id.who
 AnnotationAssertion(obo:PROMOT_1000001 obo:HP_0002882 "Congenital myasthenic syndrom HPO DB associations")
 AnnotationAssertion(obo:PROMOT_1000001 obo:HP_0002882 "Congenital myopathy Scoping review")
 AnnotationAssertion(rdfs:label obo:HP_0002882 "Sudden episodic apnea"@en)
+SubClassOf(obo:HP_0002882 ObjectSomeValuesFrom(obo:PROMOT_2000005 <http://id.who.int/icd/entity/1470583183>))
+SubClassOf(obo:HP_0002882 ObjectSomeValuesFrom(obo:PROMOT_2000005 <http://id.who.int/icd/entity/744367503>))
+
+# Class: obo:HP_0003202 (Skeletal muscle atrophy)
+
+AnnotationAssertion(rdfs:label obo:HP_0003202 "Skeletal muscle atrophy"@en)
+SubClassOf(obo:HP_0003202 ObjectSomeValuesFrom(obo:PROMOT_2000005 <http://id.who.int/icd/entity/1789365017>))
+SubClassOf(obo:HP_0003202 ObjectSomeValuesFrom(obo:PROMOT_2000005 <http://id.who.int/icd/entity/2048203604>))
 
 # Class: obo:HP_0003236 (Elevated circulating creatine kinase concentration)
 
@@ -3448,6 +3554,7 @@ AnnotationAssertion(obo:PROMOT_1000001 obo:HP_0003325 "[OPMD HPO KB associations
 AnnotationAssertion(obo:PROMOT_1000001 obo:HP_0003325 "[OPMD Scoping review 2026] Bélair N, Gagnon C, Duchesne E. What is known about muscle weakness, balance impairments and indoor mobility limitations in oculopharyngeal muscular dystrophy? A scoping review. J Neuromuscul Dis. 2025 Dec 30:22143602251397052. doi: 10.1177/22143602251397052. Epub ahead of print. PMID: 41467981.")
 AnnotationAssertion(rdfs:label obo:HP_0003325 "Limb-girdle muscle weakness"@en)
 SubClassOf(obo:HP_0003325 ObjectSomeValuesFrom(obo:PROMOT_2000005 <http://id.who.int/icd/entity/1789365017>))
+SubClassOf(obo:HP_0003325 ObjectSomeValuesFrom(obo:PROMOT_2000005 <http://id.who.int/icd/entity/2048203604>))
 
 # Class: obo:HP_0003326 (Myalgia)
 
@@ -3472,6 +3579,7 @@ AnnotationAssertion(obo:PROMOT_1000001 obo:HP_0003327 "[OPMD Scoping review 2026
 AnnotationAssertion(rdfs:label obo:HP_0003327 "Axial muscle weakness"@en)
 SubClassOf(obo:HP_0003327 ObjectSomeValuesFrom(obo:PROMOT_2000005 <http://id.who.int/icd/entity/1789365017>))
 SubClassOf(obo:HP_0003327 ObjectSomeValuesFrom(obo:PROMOT_2000005 <http://id.who.int/icd/entity/2048203604>))
+SubClassOf(obo:HP_0003327 ObjectSomeValuesFrom(obo:PROMOT_2000005 <http://id.who.int/icd/entity/556694745>))
 
 # Class: obo:HP_0003391 (Gowers sign)
 
@@ -3489,6 +3597,7 @@ AnnotationAssertion(obo:PROMOT_1000001 obo:HP_0003392 "[OPMD Clinical Registry F
 AnnotationAssertion(obo:PROMOT_1000001 obo:HP_0003392 "[OPMD Scoping review 2026] Bélair N, Gagnon C, Duchesne E. What is known about muscle weakness, balance impairments and indoor mobility limitations in oculopharyngeal muscular dystrophy? A scoping review. J Neuromuscul Dis. 2025 Dec 30:22143602251397052. doi: 10.1177/22143602251397052. Epub ahead of print. PMID: 41467981.")
 AnnotationAssertion(rdfs:label obo:HP_0003392 "First dorsal interossei muscle weakness"@en)
 SubClassOf(obo:HP_0003392 ObjectSomeValuesFrom(obo:PROMOT_2000005 <http://id.who.int/icd/entity/1789365017>))
+SubClassOf(obo:HP_0003392 ObjectSomeValuesFrom(obo:PROMOT_2000005 <http://id.who.int/icd/entity/2048203604>))
 
 # Class: obo:HP_0003394 (Muscle spasm)
 
@@ -3523,6 +3632,7 @@ AnnotationAssertion(obo:PROMOT_1000001 obo:HP_0003427 "[OPMD Clinical Research F
 AnnotationAssertion(obo:PROMOT_1000001 obo:HP_0003427 "[OPMD Scoping review 2026] Bélair N, Gagnon C, Duchesne E. What is known about muscle weakness, balance impairments and indoor mobility limitations in oculopharyngeal muscular dystrophy? A scoping review. J Neuromuscul Dis. 2025 Dec 30:22143602251397052. doi: 10.1177/22143602251397052. Epub ahead of print. PMID: 41467981.")
 AnnotationAssertion(rdfs:label obo:HP_0003427 "Thenar muscle weakness"@en)
 SubClassOf(obo:HP_0003427 ObjectSomeValuesFrom(obo:PROMOT_2000005 <http://id.who.int/icd/entity/1789365017>))
+SubClassOf(obo:HP_0003427 ObjectSomeValuesFrom(obo:PROMOT_2000005 <http://id.who.int/icd/entity/2048203604>))
 
 # Class: obo:HP_0003445 (EMG: neuropathic changes)
 
@@ -3569,6 +3679,7 @@ AnnotationAssertion(obo:PROMOT_1000001 obo:HP_0003484 "[OPMD Clinical Registry F
 AnnotationAssertion(obo:PROMOT_1000001 obo:HP_0003484 "[OPMD Scoping review 2026] Bélair N, Gagnon C, Duchesne E. What is known about muscle weakness, balance impairments and indoor mobility limitations in oculopharyngeal muscular dystrophy? A scoping review. J Neuromuscul Dis. 2025 Dec 30:22143602251397052. doi: 10.1177/22143602251397052. Epub ahead of print. PMID: 41467981.")
 AnnotationAssertion(rdfs:label obo:HP_0003484 "Upper limb muscle weakness"@en)
 SubClassOf(obo:HP_0003484 ObjectSomeValuesFrom(obo:PROMOT_2000005 <http://id.who.int/icd/entity/1789365017>))
+SubClassOf(obo:HP_0003484 ObjectSomeValuesFrom(obo:PROMOT_2000005 <http://id.who.int/icd/entity/2048203604>))
 
 # Class: obo:HP_0003547 (Shoulder girdle muscle weakness)
 
@@ -3581,6 +3692,7 @@ AnnotationAssertion(obo:PROMOT_1000001 obo:HP_0003547 "[OPMD Clinical Research F
 AnnotationAssertion(obo:PROMOT_1000001 obo:HP_0003547 "[OPMD Scoping review 2026] Bélair N, Gagnon C, Duchesne E. What is known about muscle weakness, balance impairments and indoor mobility limitations in oculopharyngeal muscular dystrophy? A scoping review. J Neuromuscul Dis. 2025 Dec 30:22143602251397052. doi: 10.1177/22143602251397052. Epub ahead of print. PMID: 41467981.")
 AnnotationAssertion(rdfs:label obo:HP_0003547 "Shoulder girdle muscle weakness"@en)
 SubClassOf(obo:HP_0003547 ObjectSomeValuesFrom(obo:PROMOT_2000005 <http://id.who.int/icd/entity/1789365017>))
+SubClassOf(obo:HP_0003547 ObjectSomeValuesFrom(obo:PROMOT_2000005 <http://id.who.int/icd/entity/2048203604>))
 
 # Class: obo:HP_0003551 (Difficulty climbing stairs)
 
@@ -3695,12 +3807,16 @@ AnnotationAssertion(rdfs:comment obo:HP_0003690 "[PROMOT note] [EURO-NMD] Atalia
 AnnotationAssertion(rdfs:label obo:HP_0003690 "Limb muscle weakness"@en)
 AnnotationAssertion(skos:changeNote obo:HP_0003690 "[PROMOT note] The PROMOT ontology added a comment to quote the CDM used as a source for this entity."@en)
 SubClassOf(obo:HP_0003690 ObjectSomeValuesFrom(obo:PROMOT_2000005 <http://id.who.int/icd/entity/1789365017>))
+SubClassOf(obo:HP_0003690 ObjectSomeValuesFrom(obo:PROMOT_2000005 <http://id.who.int/icd/entity/2048203604>))
 
 # Class: obo:HP_0003691 (Scapular winging)
 
 AnnotationAssertion(obo:PROMOT_1000001 obo:HP_0003691 "Congenital myopathy HPO KB associations")
 AnnotationAssertion(obo:PROMOT_1000001 obo:HP_0003691 "Congenital myopathy Scoping review")
 AnnotationAssertion(rdfs:label obo:HP_0003691 "Scapular winging"@en)
+SubClassOf(obo:HP_0003691 ObjectSomeValuesFrom(obo:PROMOT_2000005 <http://id.who.int/icd/entity/1521707777>))
+SubClassOf(obo:HP_0003691 ObjectSomeValuesFrom(obo:PROMOT_2000005 <http://id.who.int/icd/entity/1789365017>))
+SubClassOf(obo:HP_0003691 ObjectSomeValuesFrom(obo:PROMOT_2000005 <http://id.who.int/icd/entity/2048203604>))
 
 # Class: obo:HP_0003694 (Late-onset proximal muscle weakness)
 
@@ -3708,6 +3824,7 @@ AnnotationAssertion(obo:PROMOT_1000001 obo:HP_0003694 "Congenital myasthenic syn
 AnnotationAssertion(obo:PROMOT_1000001 obo:HP_0003694 "Congenital myopathy Scoping review")
 AnnotationAssertion(rdfs:label obo:HP_0003694 "Late-onset proximal muscle weakness"@en)
 SubClassOf(obo:HP_0003694 ObjectSomeValuesFrom(obo:PROMOT_2000005 <http://id.who.int/icd/entity/1789365017>))
+SubClassOf(obo:HP_0003694 ObjectSomeValuesFrom(obo:PROMOT_2000005 <http://id.who.int/icd/entity/2048203604>))
 
 # Class: obo:HP_0003701 (Proximal muscle weakness)
 
@@ -3719,6 +3836,7 @@ AnnotationAssertion(obo:PROMOT_1000001 obo:HP_0003701 "[OPMD HPO KB associations
 AnnotationAssertion(obo:PROMOT_1000001 obo:HP_0003701 "[OPMD Scoping review 2026] Bélair N, Gagnon C, Duchesne E. What is known about muscle weakness, balance impairments and indoor mobility limitations in oculopharyngeal muscular dystrophy? A scoping review. J Neuromuscul Dis. 2025 Dec 30:22143602251397052. doi: 10.1177/22143602251397052. Epub ahead of print. PMID: 41467981.")
 AnnotationAssertion(rdfs:label obo:HP_0003701 "Proximal muscle weakness"@en)
 SubClassOf(obo:HP_0003701 ObjectSomeValuesFrom(obo:PROMOT_2000005 <http://id.who.int/icd/entity/1789365017>))
+SubClassOf(obo:HP_0003701 ObjectSomeValuesFrom(obo:PROMOT_2000005 <http://id.who.int/icd/entity/2048203604>))
 
 # Class: obo:HP_0003722 (Neck flexor weakness)
 
@@ -3729,6 +3847,7 @@ AnnotationAssertion(obo:PROMOT_1000001 obo:HP_0003722 "Congenital myopathy Scopi
 AnnotationAssertion(obo:PROMOT_1000001 obo:HP_0003722 "[OPMD Scoping review 2026] Bélair N, Gagnon C, Duchesne E. What is known about muscle weakness, balance impairments and indoor mobility limitations in oculopharyngeal muscular dystrophy? A scoping review. J Neuromuscul Dis. 2025 Dec 30:22143602251397052. doi: 10.1177/22143602251397052. Epub ahead of print. PMID: 41467981.")
 AnnotationAssertion(rdfs:label obo:HP_0003722 "Neck flexor weakness"@en)
 SubClassOf(obo:HP_0003722 ObjectSomeValuesFrom(obo:PROMOT_2000005 <http://id.who.int/icd/entity/1789365017>))
+SubClassOf(obo:HP_0003722 ObjectSomeValuesFrom(obo:PROMOT_2000005 <http://id.who.int/icd/entity/2048203604>))
 
 # Class: obo:HP_0003731 (Quadriceps muscle weakness)
 
@@ -3759,6 +3878,7 @@ AnnotationAssertion(obo:PROMOT_1000001 obo:HP_0003810 "Congenital myopathy HPO K
 AnnotationAssertion(obo:PROMOT_1000001 obo:HP_0003810 "Congenital myopathy Scoping review")
 AnnotationAssertion(rdfs:label obo:HP_0003810 "Late-onset distal muscle weakness"@en)
 SubClassOf(obo:HP_0003810 ObjectSomeValuesFrom(obo:PROMOT_2000005 <http://id.who.int/icd/entity/1789365017>))
+SubClassOf(obo:HP_0003810 ObjectSomeValuesFrom(obo:PROMOT_2000005 <http://id.who.int/icd/entity/2048203604>))
 
 # Class: obo:HP_0003811 (Neonatal death)
 
@@ -3789,10 +3909,8 @@ AnnotationAssertion(obo:PROMOT_1000001 obo:HP_0004347 "Congenital myopathy Scopi
 AnnotationAssertion(obo:PROMOT_1000001 obo:HP_0004347 "[OPMD Clinical Registry Form]")
 AnnotationAssertion(rdfs:label obo:HP_0004347 "Weakness of muscles of respiration"@en)
 SubClassOf(obo:HP_0004347 ObjectSomeValuesFrom(obo:PROMOT_2000005 <http://id.who.int/icd/entity/1360101629>))
-SubClassOf(obo:HP_0004347 ObjectSomeValuesFrom(obo:PROMOT_2000005 <http://id.who.int/icd/entity/1470583183>))
 SubClassOf(obo:HP_0004347 ObjectSomeValuesFrom(obo:PROMOT_2000005 <http://id.who.int/icd/entity/1789365017>))
 SubClassOf(obo:HP_0004347 ObjectSomeValuesFrom(obo:PROMOT_2000005 <http://id.who.int/icd/entity/446199613>))
-SubClassOf(obo:HP_0004347 ObjectSomeValuesFrom(obo:PROMOT_2000005 <http://id.who.int/icd/entity/744367503>))
 
 # Class: obo:HP_0004878 (Intercostal muscle weakness)
 
@@ -3801,6 +3919,8 @@ AnnotationAssertion(obo:PROMOT_1000001 obo:HP_0004878 "Congenital myopathy HPO K
 AnnotationAssertion(obo:PROMOT_1000001 obo:HP_0004878 "Congenital myopathy Scoping review")
 AnnotationAssertion(obo:PROMOT_1000001 obo:HP_0004878 "[OPMD Scoping review 2026] Bélair N, Gagnon C, Duchesne E. What is known about muscle weakness, balance impairments and indoor mobility limitations in oculopharyngeal muscular dystrophy? A scoping review. J Neuromuscul Dis. 2025 Dec 30:22143602251397052. doi: 10.1177/22143602251397052. Epub ahead of print. PMID: 41467981.")
 AnnotationAssertion(rdfs:label obo:HP_0004878 "Intercostal muscle weakness"@en)
+SubClassOf(obo:HP_0004878 ObjectSomeValuesFrom(obo:PROMOT_2000005 <http://id.who.int/icd/entity/1789365017>))
+SubClassOf(obo:HP_0004878 ObjectSomeValuesFrom(obo:PROMOT_2000005 <http://id.who.int/icd/entity/2048203604>))
 SubClassOf(obo:HP_0004878 ObjectSomeValuesFrom(obo:PROMOT_2000005 <http://id.who.int/icd/entity/556694745>))
 
 # Class: obo:HP_0004885 (Episodic respiratory distress)
@@ -3924,6 +4044,7 @@ AnnotationAssertion(obo:PROMOT_1000001 obo:HP_0008959 "[OPMD Clinical Research F
 AnnotationAssertion(obo:PROMOT_1000001 obo:HP_0008959 "[OPMD Scoping review 2026] Bélair N, Gagnon C, Duchesne E. What is known about muscle weakness, balance impairments and indoor mobility limitations in oculopharyngeal muscular dystrophy? A scoping review. J Neuromuscul Dis. 2025 Dec 30:22143602251397052. doi: 10.1177/22143602251397052. Epub ahead of print. PMID: 41467981.")
 AnnotationAssertion(rdfs:label obo:HP_0008959 "Distal upper limb muscle weakness"@en)
 SubClassOf(obo:HP_0008959 ObjectSomeValuesFrom(obo:PROMOT_2000005 <http://id.who.int/icd/entity/1789365017>))
+SubClassOf(obo:HP_0008959 ObjectSomeValuesFrom(obo:PROMOT_2000005 <http://id.who.int/icd/entity/2048203604>))
 
 # Class: obo:HP_0008963 (Tibialis muscle weakness)
 
@@ -3962,6 +4083,7 @@ AnnotationAssertion(obo:PROMOT_1000001 obo:HP_0008997 "[OPMD Clinical Research F
 AnnotationAssertion(obo:PROMOT_1000001 obo:HP_0008997 "[OPMD Scoping review 2026] Bélair N, Gagnon C, Duchesne E. What is known about muscle weakness, balance impairments and indoor mobility limitations in oculopharyngeal muscular dystrophy? A scoping review. J Neuromuscul Dis. 2025 Dec 30:22143602251397052. doi: 10.1177/22143602251397052. Epub ahead of print. PMID: 41467981.")
 AnnotationAssertion(rdfs:label obo:HP_0008997 "Proximal muscle weakness in upper limbs"@en)
 SubClassOf(obo:HP_0008997 ObjectSomeValuesFrom(obo:PROMOT_2000005 <http://id.who.int/icd/entity/1789365017>))
+SubClassOf(obo:HP_0008997 ObjectSomeValuesFrom(obo:PROMOT_2000005 <http://id.who.int/icd/entity/2048203604>))
 
 # Class: obo:HP_0009005 (Weakness of the intrinsic hand muscles)
 
@@ -3973,6 +4095,7 @@ AnnotationAssertion(obo:PROMOT_1000001 obo:HP_0009005 "[OPMD Clinical Registry F
 AnnotationAssertion(obo:PROMOT_1000001 obo:HP_0009005 "[OPMD Scoping review 2026] Bélair N, Gagnon C, Duchesne E. What is known about muscle weakness, balance impairments and indoor mobility limitations in oculopharyngeal muscular dystrophy? A scoping review. J Neuromuscul Dis. 2025 Dec 30:22143602251397052. doi: 10.1177/22143602251397052. Epub ahead of print. PMID: 41467981.")
 AnnotationAssertion(rdfs:label obo:HP_0009005 "Weakness of the intrinsic hand muscles"@en)
 SubClassOf(obo:HP_0009005 ObjectSomeValuesFrom(obo:PROMOT_2000005 <http://id.who.int/icd/entity/1789365017>))
+SubClassOf(obo:HP_0009005 ObjectSomeValuesFrom(obo:PROMOT_2000005 <http://id.who.int/icd/entity/2048203604>))
 
 # Class: obo:HP_0009023 (Abdominal wall muscle weakness)
 
@@ -3981,6 +4104,8 @@ AnnotationAssertion(obo:PROMOT_1000001 obo:HP_0009023 "Congenital myopathy Scopi
 AnnotationAssertion(obo:PROMOT_1000001 obo:HP_0009023 "[OPMD Scoping review 2026] Bélair N, Gagnon C, Duchesne E. What is known about muscle weakness, balance impairments and indoor mobility limitations in oculopharyngeal muscular dystrophy? A scoping review. J Neuromuscul Dis. 2025 Dec 30:22143602251397052. doi: 10.1177/22143602251397052. Epub ahead of print. PMID: 41467981.")
 AnnotationAssertion(rdfs:label obo:HP_0009023 "Abdominal wall muscle weakness"@en)
 SubClassOf(obo:HP_0009023 ObjectSomeValuesFrom(obo:PROMOT_2000005 <http://id.who.int/icd/entity/1789365017>))
+SubClassOf(obo:HP_0009023 ObjectSomeValuesFrom(obo:PROMOT_2000005 <http://id.who.int/icd/entity/2048203604>))
+SubClassOf(obo:HP_0009023 ObjectSomeValuesFrom(obo:PROMOT_2000005 <http://id.who.int/icd/entity/556694745>))
 
 # Class: obo:HP_0009027 (Foot dorsiflexor weakness)
 
@@ -4001,6 +4126,7 @@ AnnotationAssertion(obo:PROMOT_1000001 obo:HP_0009028 "Congenital myasthenic syn
 AnnotationAssertion(obo:PROMOT_1000001 obo:HP_0009028 "Congenital myopathy Scoping review")
 AnnotationAssertion(rdfs:label obo:HP_0009028 "Generalized weakness of limb muscles"@en)
 SubClassOf(obo:HP_0009028 ObjectSomeValuesFrom(obo:PROMOT_2000005 <http://id.who.int/icd/entity/1789365017>))
+SubClassOf(obo:HP_0009028 ObjectSomeValuesFrom(obo:PROMOT_2000005 <http://id.who.int/icd/entity/2048203604>))
 
 # Class: obo:HP_0009046 (Difficulty running)
 
@@ -4020,6 +4146,7 @@ AnnotationAssertion(obo:PROMOT_1000001 obo:HP_0009053 "[OPMD Clinical Registry F
 AnnotationAssertion(obo:PROMOT_1000001 obo:HP_0009053 "[OPMD Scoping review 2026] Bélair N, Gagnon C, Duchesne E. What is known about muscle weakness, balance impairments and indoor mobility limitations in oculopharyngeal muscular dystrophy? A scoping review. J Neuromuscul Dis. 2025 Dec 30:22143602251397052. doi: 10.1177/22143602251397052. Epub ahead of print. PMID: 41467981.")
 AnnotationAssertion(rdfs:label obo:HP_0009053 "Distal lower limb muscle weakness"@en)
 SubClassOf(obo:HP_0009053 ObjectSomeValuesFrom(obo:PROMOT_2000005 <http://id.who.int/icd/entity/1789365017>))
+SubClassOf(obo:HP_0009053 ObjectSomeValuesFrom(obo:PROMOT_2000005 <http://id.who.int/icd/entity/2048203604>))
 
 # Class: obo:HP_0009063 (Progressive distal muscle weakness)
 
@@ -4029,6 +4156,7 @@ AnnotationAssertion(obo:PROMOT_1000001 obo:HP_0009063 "Congenital myopathy Scopi
 AnnotationAssertion(obo:PROMOT_1000001 obo:HP_0009063 "[OPMD Scoping review 2026] Bélair N, Gagnon C, Duchesne E. What is known about muscle weakness, balance impairments and indoor mobility limitations in oculopharyngeal muscular dystrophy? A scoping review. J Neuromuscul Dis. 2025 Dec 30:22143602251397052. doi: 10.1177/22143602251397052. Epub ahead of print. PMID: 41467981.")
 AnnotationAssertion(rdfs:label obo:HP_0009063 "Progressive distal muscle weakness"@en)
 SubClassOf(obo:HP_0009063 ObjectSomeValuesFrom(obo:PROMOT_2000005 <http://id.who.int/icd/entity/1789365017>))
+SubClassOf(obo:HP_0009063 ObjectSomeValuesFrom(obo:PROMOT_2000005 <http://id.who.int/icd/entity/2048203604>))
 
 # Class: obo:HP_0009073 (Progressive proximal muscle weakness)
 
@@ -4038,6 +4166,7 @@ AnnotationAssertion(obo:PROMOT_1000001 obo:HP_0009073 "Congenital myopathy Scopi
 AnnotationAssertion(obo:PROMOT_1000001 obo:HP_0009073 "[OPMD Scoping review 2026] Bélair N, Gagnon C, Duchesne E. What is known about muscle weakness, balance impairments and indoor mobility limitations in oculopharyngeal muscular dystrophy? A scoping review. J Neuromuscul Dis. 2025 Dec 30:22143602251397052. doi: 10.1177/22143602251397052. Epub ahead of print. PMID: 41467981.")
 AnnotationAssertion(rdfs:label obo:HP_0009073 "Progressive proximal muscle weakness"@en)
 SubClassOf(obo:HP_0009073 ObjectSomeValuesFrom(obo:PROMOT_2000005 <http://id.who.int/icd/entity/1789365017>))
+SubClassOf(obo:HP_0009073 ObjectSomeValuesFrom(obo:PROMOT_2000005 <http://id.who.int/icd/entity/2048203604>))
 
 # Class: obo:HP_0009077 (Weakness of long finger extensor muscles)
 
@@ -4049,6 +4178,7 @@ AnnotationAssertion(obo:PROMOT_1000001 obo:HP_0009077 "[OPMD Clinical Registry F
 AnnotationAssertion(obo:PROMOT_1000001 obo:HP_0009077 "[OPMD Scoping review 2026] Bélair N, Gagnon C, Duchesne E. What is known about muscle weakness, balance impairments and indoor mobility limitations in oculopharyngeal muscular dystrophy? A scoping review. J Neuromuscul Dis. 2025 Dec 30:22143602251397052. doi: 10.1177/22143602251397052. Epub ahead of print. PMID: 41467981.")
 AnnotationAssertion(rdfs:label obo:HP_0009077 "Weakness of long finger extensor muscles"@en)
 SubClassOf(obo:HP_0009077 ObjectSomeValuesFrom(obo:PROMOT_2000005 <http://id.who.int/icd/entity/1789365017>))
+SubClassOf(obo:HP_0009077 ObjectSomeValuesFrom(obo:PROMOT_2000005 <http://id.who.int/icd/entity/2048203604>))
 
 # Class: obo:HP_0011008 (Temporal pattern)
 
@@ -4307,6 +4437,14 @@ AnnotationAssertion(obo:PROMOT_1000001 obo:HP_0030192 "Congenital myasthenic syn
 AnnotationAssertion(obo:PROMOT_1000001 obo:HP_0030192 "Congenital myopathy HPO KB associations")
 AnnotationAssertion(obo:PROMOT_1000001 obo:HP_0030192 "Congenital myopathy Scoping review")
 AnnotationAssertion(rdfs:label obo:HP_0030192 "Fatigable weakness of bulbar muscles "@en)
+SubClassOf(obo:HP_0030192 ObjectSomeValuesFrom(obo:PROMOT_2000005 <http://id.who.int/icd/entity/1328675264>))
+SubClassOf(obo:HP_0030192 ObjectSomeValuesFrom(obo:PROMOT_2000005 <http://id.who.int/icd/entity/151046878>))
+SubClassOf(obo:HP_0030192 ObjectSomeValuesFrom(obo:PROMOT_2000005 <http://id.who.int/icd/entity/1521707777>))
+SubClassOf(obo:HP_0030192 ObjectSomeValuesFrom(obo:PROMOT_2000005 <http://id.who.int/icd/entity/1789365017>))
+SubClassOf(obo:HP_0030192 ObjectSomeValuesFrom(obo:PROMOT_2000005 <http://id.who.int/icd/entity/553784299>))
+SubClassOf(obo:HP_0030192 ObjectSomeValuesFrom(obo:PROMOT_2000005 <http://id.who.int/icd/entity/691689627>))
+SubClassOf(obo:HP_0030192 ObjectSomeValuesFrom(obo:PROMOT_2000005 <http://id.who.int/icd/entity/712570723>))
+SubClassOf(obo:HP_0030192 ObjectSomeValuesFrom(obo:PROMOT_2000005 <http://id.who.int/icd/entity/923782542>))
 
 # Class: obo:HP_0030193 (Fatigable weakness of chewing muscles)
 
@@ -4315,6 +4453,7 @@ AnnotationAssertion(obo:PROMOT_1000001 obo:HP_0030193 "Congenital myopathy Scopi
 AnnotationAssertion(rdfs:label obo:HP_0030193 "Fatigable weakness of chewing muscles"@en)
 SubClassOf(obo:HP_0030193 ObjectSomeValuesFrom(obo:PROMOT_2000005 <http://id.who.int/icd/entity/1328675264>))
 SubClassOf(obo:HP_0030193 ObjectSomeValuesFrom(obo:PROMOT_2000005 <http://id.who.int/icd/entity/1389818830>))
+SubClassOf(obo:HP_0030193 ObjectSomeValuesFrom(obo:PROMOT_2000005 <http://id.who.int/icd/entity/1521707777>))
 SubClassOf(obo:HP_0030193 ObjectSomeValuesFrom(obo:PROMOT_2000005 <http://id.who.int/icd/entity/1789365017>))
 
 # Class: obo:HP_0030194 (Fatigable weakness of speech muscles )
@@ -4322,6 +4461,9 @@ SubClassOf(obo:HP_0030193 ObjectSomeValuesFrom(obo:PROMOT_2000005 <http://id.who
 AnnotationAssertion(obo:PROMOT_1000001 obo:HP_0030194 "Congenital myasthenic syndrom Scoping review")
 AnnotationAssertion(obo:PROMOT_1000001 obo:HP_0030194 "Congenital myopathy Scoping review")
 AnnotationAssertion(rdfs:label obo:HP_0030194 "Fatigable weakness of speech muscles "@en)
+SubClassOf(obo:HP_0030194 ObjectSomeValuesFrom(obo:PROMOT_2000005 <http://id.who.int/icd/entity/151046878>))
+SubClassOf(obo:HP_0030194 ObjectSomeValuesFrom(obo:PROMOT_2000005 <http://id.who.int/icd/entity/1521707777>))
+SubClassOf(obo:HP_0030194 ObjectSomeValuesFrom(obo:PROMOT_2000005 <http://id.who.int/icd/entity/1789365017>))
 
 # Class: obo:HP_0030195 (Fatigable weakness of swallowing muscles )
 
@@ -4329,6 +4471,11 @@ AnnotationAssertion(obo:PROMOT_1000001 obo:HP_0030195 "Congenital myasthenic syn
 AnnotationAssertion(obo:PROMOT_1000001 obo:HP_0030195 "Congenital myopathy HPO KB associations")
 AnnotationAssertion(obo:PROMOT_1000001 obo:HP_0030195 "Congenital myopathy Scoping review")
 AnnotationAssertion(rdfs:label obo:HP_0030195 "Fatigable weakness of swallowing muscles "@en)
+SubClassOf(obo:HP_0030195 ObjectSomeValuesFrom(obo:PROMOT_2000005 <http://id.who.int/icd/entity/1328675264>))
+SubClassOf(obo:HP_0030195 ObjectSomeValuesFrom(obo:PROMOT_2000005 <http://id.who.int/icd/entity/1521707777>))
+SubClassOf(obo:HP_0030195 ObjectSomeValuesFrom(obo:PROMOT_2000005 <http://id.who.int/icd/entity/1789365017>))
+SubClassOf(obo:HP_0030195 ObjectSomeValuesFrom(obo:PROMOT_2000005 <http://id.who.int/icd/entity/553784299>))
+SubClassOf(obo:HP_0030195 ObjectSomeValuesFrom(obo:PROMOT_2000005 <http://id.who.int/icd/entity/923782542>))
 
 # Class: obo:HP_0030196 (Fatigable weakness of respiratory muscles )
 
@@ -4337,6 +4484,10 @@ AnnotationAssertion(obo:PROMOT_1000001 obo:HP_0030196 "Congenital myasthenic syn
 AnnotationAssertion(obo:PROMOT_1000001 obo:HP_0030196 "Congenital myopathy HPO KB associations")
 AnnotationAssertion(obo:PROMOT_1000001 obo:HP_0030196 "Congenital myopathy Scoping review")
 AnnotationAssertion(rdfs:label obo:HP_0030196 "Fatigable weakness of respiratory muscles "@en)
+SubClassOf(obo:HP_0030196 ObjectSomeValuesFrom(obo:PROMOT_2000005 <http://id.who.int/icd/entity/1360101629>))
+SubClassOf(obo:HP_0030196 ObjectSomeValuesFrom(obo:PROMOT_2000005 <http://id.who.int/icd/entity/1521707777>))
+SubClassOf(obo:HP_0030196 ObjectSomeValuesFrom(obo:PROMOT_2000005 <http://id.who.int/icd/entity/1789365017>))
+SubClassOf(obo:HP_0030196 ObjectSomeValuesFrom(obo:PROMOT_2000005 <http://id.who.int/icd/entity/446199613>))
 
 # Class: obo:HP_0030197 (Fatigable weakness of skeletal muscles)
 
@@ -4344,6 +4495,9 @@ AnnotationAssertion(obo:PROMOT_1000001 obo:HP_0030197 "Congenital myasthenic syn
 AnnotationAssertion(obo:PROMOT_1000001 obo:HP_0030197 "Congenital myasthenic syndrom Scoping review")
 AnnotationAssertion(obo:PROMOT_1000001 obo:HP_0030197 "Congenital myopathy Scoping review")
 AnnotationAssertion(rdfs:label obo:HP_0030197 "Fatigable weakness of skeletal muscles"@en)
+SubClassOf(obo:HP_0030197 ObjectSomeValuesFrom(obo:PROMOT_2000005 <http://id.who.int/icd/entity/1521707777>))
+SubClassOf(obo:HP_0030197 ObjectSomeValuesFrom(obo:PROMOT_2000005 <http://id.who.int/icd/entity/1789365017>))
+SubClassOf(obo:HP_0030197 ObjectSomeValuesFrom(obo:PROMOT_2000005 <http://id.who.int/icd/entity/2048203604>))
 
 # Class: obo:HP_0030198 (Fatigable weakness of distal limb muscles)
 
@@ -4351,6 +4505,9 @@ AnnotationAssertion(obo:PROMOT_1000001 obo:HP_0030198 "Congenital myasthenic syn
 AnnotationAssertion(obo:PROMOT_1000001 obo:HP_0030198 "Congenital myopathy HPO KB associations")
 AnnotationAssertion(obo:PROMOT_1000001 obo:HP_0030198 "Congenital myopathy Scoping review")
 AnnotationAssertion(rdfs:label obo:HP_0030198 "Fatigable weakness of distal limb muscles"@en)
+SubClassOf(obo:HP_0030198 ObjectSomeValuesFrom(obo:PROMOT_2000005 <http://id.who.int/icd/entity/1521707777>))
+SubClassOf(obo:HP_0030198 ObjectSomeValuesFrom(obo:PROMOT_2000005 <http://id.who.int/icd/entity/1789365017>))
+SubClassOf(obo:HP_0030198 ObjectSomeValuesFrom(obo:PROMOT_2000005 <http://id.who.int/icd/entity/2048203604>))
 
 # Class: obo:HP_0030199 (Fatigable weakness of neck muscles )
 
@@ -4358,6 +4515,9 @@ AnnotationAssertion(obo:PROMOT_1000001 obo:HP_0030199 "Congenital myasthenic syn
 AnnotationAssertion(obo:PROMOT_1000001 obo:HP_0030199 "Congenital myasthenic syndrom Scoping review")
 AnnotationAssertion(obo:PROMOT_1000001 obo:HP_0030199 "Congenital myopathy Scoping review")
 AnnotationAssertion(rdfs:label obo:HP_0030199 "Fatigable weakness of neck muscles "@en)
+SubClassOf(obo:HP_0030199 ObjectSomeValuesFrom(obo:PROMOT_2000005 <http://id.who.int/icd/entity/1521707777>))
+SubClassOf(obo:HP_0030199 ObjectSomeValuesFrom(obo:PROMOT_2000005 <http://id.who.int/icd/entity/1789365017>))
+SubClassOf(obo:HP_0030199 ObjectSomeValuesFrom(obo:PROMOT_2000005 <http://id.who.int/icd/entity/2048203604>))
 
 # Class: obo:HP_0030200 (Fatiguable weakness of proximal limb muscles )
 
@@ -4365,6 +4525,9 @@ AnnotationAssertion(obo:PROMOT_1000001 obo:HP_0030200 "Congenital myasthenic syn
 AnnotationAssertion(obo:PROMOT_1000001 obo:HP_0030200 "Congenital myopathy HPO KB associations")
 AnnotationAssertion(obo:PROMOT_1000001 obo:HP_0030200 "Congenital myopathy Scoping review")
 AnnotationAssertion(rdfs:label obo:HP_0030200 "Fatiguable weakness of proximal limb muscles "@en)
+SubClassOf(obo:HP_0030200 ObjectSomeValuesFrom(obo:PROMOT_2000005 <http://id.who.int/icd/entity/1521707777>))
+SubClassOf(obo:HP_0030200 ObjectSomeValuesFrom(obo:PROMOT_2000005 <http://id.who.int/icd/entity/1789365017>))
+SubClassOf(obo:HP_0030200 ObjectSomeValuesFrom(obo:PROMOT_2000005 <http://id.who.int/icd/entity/2048203604>))
 
 # Class: obo:HP_0030202 (Favorable response of weakness to acetylcholine esterase inhibitors)
 
@@ -4401,6 +4564,7 @@ AnnotationAssertion(obo:PROMOT_1000001 obo:HP_0030237 "[OPMD Clinical Research F
 AnnotationAssertion(obo:PROMOT_1000001 obo:HP_0030237 "[OPMD Scoping review 2026] Bélair N, Gagnon C, Duchesne E. What is known about muscle weakness, balance impairments and indoor mobility limitations in oculopharyngeal muscular dystrophy? A scoping review. J Neuromuscul Dis. 2025 Dec 30:22143602251397052. doi: 10.1177/22143602251397052. Epub ahead of print. PMID: 41467981.")
 AnnotationAssertion(rdfs:label obo:HP_0030237 "Hand muscle weakness"@en)
 SubClassOf(obo:HP_0030237 ObjectSomeValuesFrom(obo:PROMOT_2000005 <http://id.who.int/icd/entity/1789365017>))
+SubClassOf(obo:HP_0030237 ObjectSomeValuesFrom(obo:PROMOT_2000005 <http://id.who.int/icd/entity/2048203604>))
 
 # Class: obo:HP_0030319 (Weakness of facial musculature)
 
@@ -4415,6 +4579,7 @@ AnnotationAssertion(rdfs:comment obo:HP_0030319 "[PROMOT NOTE: present in EURO-N
 AnnotationAssertion(rdfs:comment obo:HP_0030319 "[PROMOT note] [EURO-NMD] Atalia A et al., EURO-NMD registry: federated FAIR infrastructure, innovative technologies and concepts of a patient-centred registry for rare neuromuscular disorders. Orphanet J Rare Dis. 2024 Feb 14;19(1):66. doi: 10.1186/s13023-024-03059-3. PMID: 38355534; PMCID: PMC10865673.")
 AnnotationAssertion(rdfs:label obo:HP_0030319 "Weakness of facial musculature"@en)
 SubClassOf(obo:HP_0030319 ObjectSomeValuesFrom(obo:PROMOT_2000005 <http://id.who.int/icd/entity/1328675264>))
+SubClassOf(obo:HP_0030319 ObjectSomeValuesFrom(obo:PROMOT_2000005 <http://id.who.int/icd/entity/1580195090>))
 SubClassOf(obo:HP_0030319 ObjectSomeValuesFrom(obo:PROMOT_2000005 <http://id.who.int/icd/entity/1789365017>))
 
 # Class: obo:HP_0030674 (Antenatal onset)
@@ -4434,6 +4599,9 @@ SubClassOf(obo:HP_0030842 ObjectSomeValuesFrom(obo:PROMOT_2000005 <http://id.who
 
 AnnotationAssertion(obo:PROMOT_1000001 obo:HP_0030872 "Congenital myopathy Scoping review")
 AnnotationAssertion(rdfs:label obo:HP_0030872 "Abnormal cardiac ventricular function"@en)
+SubClassOf(obo:HP_0030872 ObjectSomeValuesFrom(obo:PROMOT_2000005 <http://id.who.int/icd/entity/1399000785>))
+SubClassOf(obo:HP_0030872 ObjectSomeValuesFrom(obo:PROMOT_2000005 <http://id.who.int/icd/entity/1780196241>))
+SubClassOf(obo:HP_0030872 ObjectSomeValuesFrom(obo:PROMOT_2000005 <http://id.who.int/icd/entity/2100545361>))
 
 # Class: obo:HP_0030884 (Gastrojejunal tube feeding in infancy)
 
@@ -4464,6 +4632,7 @@ AnnotationAssertion(obo:PROMOT_1000001 obo:HP_0031108 "[OPMD Clinical Registry F
 AnnotationAssertion(obo:PROMOT_1000001 obo:HP_0031108 "[OPMD Scoping review 2026] Bélair N, Gagnon C, Duchesne E. What is known about muscle weakness, balance impairments and indoor mobility limitations in oculopharyngeal muscular dystrophy? A scoping review. J Neuromuscul Dis. 2025 Dec 30:22143602251397052. doi: 10.1177/22143602251397052. Epub ahead of print. PMID: 41467981.")
 AnnotationAssertion(rdfs:label obo:HP_0031108 "Triceps weakness"@en)
 SubClassOf(obo:HP_0031108 ObjectSomeValuesFrom(obo:PROMOT_2000005 <http://id.who.int/icd/entity/1789365017>))
+SubClassOf(obo:HP_0031108 ObjectSomeValuesFrom(obo:PROMOT_2000005 <http://id.who.int/icd/entity/2048203604>))
 
 # Class: obo:HP_0031146 (Impaired oral bolus formation)
 
@@ -4491,6 +4660,7 @@ AnnotationAssertion(obo:PROMOT_1000001 obo:HP_0031177 "[OPMD Clinical Registry F
 AnnotationAssertion(obo:PROMOT_1000001 obo:HP_0031177 "[OPMD Scoping review 2026] Bélair N, Gagnon C, Duchesne E. What is known about muscle weakness, balance impairments and indoor mobility limitations in oculopharyngeal muscular dystrophy? A scoping review. J Neuromuscul Dis. 2025 Dec 30:22143602251397052. doi: 10.1177/22143602251397052. Epub ahead of print. PMID: 41467981.")
 AnnotationAssertion(rdfs:label obo:HP_0031177 "Finger flexor weakness"@en)
 SubClassOf(obo:HP_0031177 ObjectSomeValuesFrom(obo:PROMOT_2000005 <http://id.who.int/icd/entity/1789365017>))
+SubClassOf(obo:HP_0031177 ObjectSomeValuesFrom(obo:PROMOT_2000005 <http://id.who.int/icd/entity/2048203604>))
 
 # Class: obo:HP_0031374 (Ankle weakness)
 
@@ -4550,6 +4720,13 @@ AnnotationAssertion(obo:PROMOT_1000001 obo:HP_0032341 "[OPMD Clinical Registry F
 AnnotationAssertion(rdfs:label obo:HP_0032341 "Reduced forced vital capacity"@en)
 SubClassOf(obo:HP_0032341 ObjectSomeValuesFrom(obo:PROMOT_2000005 <http://id.who.int/icd/entity/1360101629>))
 SubClassOf(obo:HP_0032341 ObjectSomeValuesFrom(obo:PROMOT_2000005 <http://id.who.int/icd/entity/446199613>))
+
+# Class: obo:HP_0032355 (Decreased peak expiratory flow)
+
+AnnotationAssertion(obo:PROMOT_1000001 obo:HP_0032355 "[OPMD Medical Expert] https://orcid.org/0000-0003-2829-8470")
+AnnotationAssertion(rdfs:label obo:HP_0032355 "Decreased peak expiratory flow"@en)
+SubClassOf(obo:HP_0032355 ObjectSomeValuesFrom(obo:PROMOT_2000005 <http://id.who.int/icd/entity/1789365017>))
+SubClassOf(obo:HP_0032355 ObjectSomeValuesFrom(obo:PROMOT_2000005 <http://id.who.int/icd/entity/446199613>))
 
 # Class: obo:HP_0033235 (Difficulty descending stairs)
 
@@ -4685,13 +4862,6 @@ AnnotationAssertion(rdfs:comment obo:NCIT_C106551 "[PROMOT note] [EURO-NMD] Atal
 AnnotationAssertion(rdfs:comment obo:NCIT_C106551 "[derived from EURO-NMD] ")
 AnnotationAssertion(rdfs:label obo:NCIT_C106551 "Number of pregnancies"@en)
 SubClassOf(obo:NCIT_C106551 <http://snomed.info/id/160476009>)
-
-# Class: obo:NCIT_C121361 (Quantative muscle testing)
-
-AnnotationAssertion(rdfs:label obo:NCIT_C121361 "Quantative muscle testing"@en)
-SubClassOf(obo:NCIT_C121361 ObjectSomeValuesFrom(obo:PROMOT_2000002 obo:HP_0002460))
-SubClassOf(obo:NCIT_C121361 ObjectSomeValuesFrom(obo:PROMOT_2000002 obo:HP_0008959))
-SubClassOf(obo:NCIT_C121361 ObjectSomeValuesFrom(obo:PROMOT_2000002 obo:HP_0009053))
 
 # Class: obo:NCIT_C124436 (Sex at birth)
 
@@ -5043,7 +5213,7 @@ AnnotationAssertion(rdfs:label obo:PROMOT_0000010 "variant du gène SELENON"@fr)
 AnnotationAssertion(rdfs:seeAlso obo:PROMOT_0000010 obo:NCIT_C205071)
 SubClassOf(obo:PROMOT_0000010 obo:PROMOT_0000003)
 
-# Class: obo:PROMOT_0000011 (CHRNE variant)
+# Class: obo:PROMOT_0000011 (variant du gène CHRNE)
 
 AnnotationAssertion(obo:IAO_0000115 obo:PROMOT_0000011 "A sequence alteration located within the CHRNE gene."@en)
 AnnotationAssertion(obo:IAO_0000115 obo:PROMOT_0000011 "Una alteración genética ubicada en el gen CHRNE."@es)
@@ -5185,12 +5355,12 @@ AnnotationAssertion(rdfs:label obo:PROMOT_0010003 "statement about a phenotype"@
 AnnotationAssertion(rdfs:label obo:PROMOT_0010003 "énoncé concernant un phénotype"@fr)
 SubClassOf(obo:PROMOT_0010003 obo:NCIT_C49154)
 SubClassOf(obo:PROMOT_0010003 ObjectSomeValuesFrom(obo:RO_0002351 obo:ECO_0006151))
-SubClassOf(obo:PROMOT_0010003 ObjectSomeValuesFrom(obo:RO_0002351 obo:PROMOT_0010007))
 SubClassOf(obo:PROMOT_0010003 ObjectExactCardinality(1 obo:RO_0002351 obo:HP_0000118))
 SubClassOf(obo:PROMOT_0010003 ObjectExactCardinality(1 obo:RO_0002351 obo:NCIT_C178992))
 SubClassOf(obo:PROMOT_0010003 ObjectExactCardinality(1 obo:RO_0002351 obo:NCIT_C93511))
 SubClassOf(obo:PROMOT_0010003 ObjectExactCardinality(1 obo:RO_0002351 obo:NCIT_C99800))
 SubClassOf(obo:PROMOT_0010003 ObjectExactCardinality(1 obo:RO_0002351 obo:PROMOT_0010006))
+SubClassOf(obo:PROMOT_0010003 ObjectExactCardinality(1 obo:RO_0002351 obo:PROMOT_0010007))
 SubClassOf(obo:PROMOT_0010003 ObjectExactCardinality(1 obo:RO_0002351 <http://snomed.info/id/298059007>))
 
 # Class: obo:PROMOT_0010004 (énoncé au sujet d’une procédure)
@@ -5844,7 +6014,7 @@ AnnotationAssertion(rdfs:label obo:PROMOT_0032001 "disposición anormal"@es)
 AnnotationAssertion(rdfs:label obo:PROMOT_0032001 "disposition anormale"@fr)
 SubClassOf(obo:PROMOT_0032001 obo:BFO_0000016)
 
-# Class: obo:PROMOT_0032002 (Activity related body function)
+# Class: obo:PROMOT_0032002 (función corporala relacionada con una actividad)
 
 AnnotationAssertion(obo:IAO_0000115 obo:PROMOT_0032002 "A body function that is involved in an activity. The boby function is needed in order to fullfill the activity."@en)
 AnnotationAssertion(obo:IAO_0000115 obo:PROMOT_0032002 "Une fonction organique qui est impliquée dans une activité. Elle est nécessaire pour que l’activité ait lieu."@fr)
@@ -5904,6 +6074,7 @@ AnnotationAssertion(rdfs:label obo:PROMOT_0032006 "Fatiga cuando se come"@es)
 AnnotationAssertion(rdfs:label obo:PROMOT_0032006 "Fatigue corrélée au fait de manger"@fr)
 AnnotationAssertion(rdfs:label obo:PROMOT_0032006 "Fatigue while eating"@en)
 SubClassOf(obo:PROMOT_0032006 obo:HP_0012378)
+SubClassOf(obo:PROMOT_0032006 ObjectSomeValuesFrom(obo:PROMOT_2000005 <http://id.who.int/icd/entity/1328675264>))
 
 # Class: obo:PROMOT_0032007 (Difficulty walking short distance)
 
@@ -5916,6 +6087,7 @@ AnnotationAssertion(rdfs:label obo:PROMOT_0032007 "Difficulty walking short dist
 AnnotationAssertion(rdfs:label obo:PROMOT_0032007 "Difficulté à marcher sur de courtes distances"@fr)
 AnnotationAssertion(rdfs:label obo:PROMOT_0032007 "Dificultad para andar distancias cortas"@es)
 SubClassOf(obo:PROMOT_0032007 obo:HP_0001288)
+SubClassOf(obo:PROMOT_0032007 ObjectSomeValuesFrom(obo:PROMOT_2000005 <http://id.who.int/icd/entity/555410497>))
 
 # Class: obo:PROMOT_0032008 (Difficulty changing basic position)
 
@@ -5928,6 +6100,7 @@ AnnotationAssertion(rdfs:label obo:PROMOT_0032008 "Difficulty changing basic pos
 AnnotationAssertion(rdfs:label obo:PROMOT_0032008 "Difficulté à passer d’une position de base à une autre"@fr)
 AnnotationAssertion(rdfs:label obo:PROMOT_0032008 "Dificultad para cambiar las posturas corporales básicas"@es)
 SubClassOf(obo:PROMOT_0032008 obo:HP_0100022)
+SubClassOf(obo:PROMOT_0032008 ObjectSomeValuesFrom(obo:PROMOT_2000005 <http://id.who.int/icd/entity/150502901>))
 
 # Class: obo:PROMOT_0032009 (Anhédonie légère corrélée au fait de manger)
 
@@ -5940,6 +6113,7 @@ AnnotationAssertion(rdfs:label obo:PROMOT_0032009 "Anhedonia cuando se come"@es)
 AnnotationAssertion(rdfs:label obo:PROMOT_0032009 "Anhedonia while eating"@en)
 AnnotationAssertion(rdfs:label obo:PROMOT_0032009 "Anhédonie légère corrélée au fait de manger"@fr)
 SubClassOf(obo:PROMOT_0032009 obo:HP_0012154)
+SubClassOf(obo:PROMOT_0032009 ObjectSomeValuesFrom(obo:PROMOT_2000005 <http://id.who.int/icd/entity/1328675264>))
 
 # Class: obo:PROMOT_0032010 (Disfagia con sólidos)
 
@@ -5953,6 +6127,8 @@ AnnotationAssertion(rdfs:label obo:PROMOT_0032010 "Disfagia con sólidos"@es)
 AnnotationAssertion(rdfs:label obo:PROMOT_0032010 "Dysphagia for solid"@en)
 AnnotationAssertion(rdfs:label obo:PROMOT_0032010 "Dysphagie avec de la nourriture solide"@fr)
 SubClassOf(obo:PROMOT_0032010 obo:HP_0002015)
+SubClassOf(obo:PROMOT_0032010 ObjectSomeValuesFrom(obo:PROMOT_2000005 <http://id.who.int/icd/entity/1328675264>))
+SubClassOf(obo:PROMOT_0032010 ObjectSomeValuesFrom(obo:PROMOT_2000005 <http://id.who.int/icd/entity/923782542>))
 
 # Class: obo:PROMOT_0032011 (Dysphagie avec de la nourriture liquide)
 
@@ -5966,8 +6142,10 @@ AnnotationAssertion(rdfs:label obo:PROMOT_0032011 "Disfagia con líquidos"@es)
 AnnotationAssertion(rdfs:label obo:PROMOT_0032011 "Dysphagia for liquid"@en)
 AnnotationAssertion(rdfs:label obo:PROMOT_0032011 "Dysphagie avec de la nourriture liquide"@fr)
 SubClassOf(obo:PROMOT_0032011 obo:HP_0002015)
+SubClassOf(obo:PROMOT_0032011 ObjectSomeValuesFrom(obo:PROMOT_2000005 <http://id.who.int/icd/entity/553784299>))
+SubClassOf(obo:PROMOT_0032011 ObjectSomeValuesFrom(obo:PROMOT_2000005 <http://id.who.int/icd/entity/923782542>))
 
-# Class: obo:PROMOT_0032012 (Fatigabilité de la musculature faciale)
+# Class: obo:PROMOT_0032012 (Fatigable weakness of facial musculature)
 
 AnnotationAssertion(Annotation(obo:IAO_0000119 "HP:0003473") Annotation(rdfs:comment "[PROMOT project] Mansoore Gholizade (definition reviewer)") obo:IAO_0000115 obo:PROMOT_0032012 "A type of weakness of the facial musculature (i.e. one or more muscles innervated by the seventh cranial nerve) that occurs after a muscle group is used and lessens if the muscle group has some rest. That is, there is diminution of the strength of the facial musculature with repetitive muscle actions."@en)
 AnnotationAssertion(Annotation(obo:IAO_0000119 "Translated from French using Reverso.") obo:IAO_0000115 obo:PROMOT_0032012 "Una debilidad de la musculatura facial, es decir, uno o varios músculos que están inerbidos por el séptimo nervio craneal, que se manifiesta cuando un grupo muscular facial está bajo presión y que disminuye después de que el grupo en cuestión ha sido puesto en reposo. En resumen, se trata de una disminución de la fuerza de los músculos faciales como resultado de una carga repetida."@es)
@@ -5977,8 +6155,12 @@ AnnotationAssertion(obo:PROMOT_1000001 obo:PROMOT_0032012 "Congenital myasthenic
 AnnotationAssertion(obo:PROMOT_1000001 obo:PROMOT_0032012 "Congenital myopathy Scoping review")
 AnnotationAssertion(rdfs:label obo:PROMOT_0032012 "Debilidad fatigable de la musculatura facial "@es)
 AnnotationAssertion(rdfs:label obo:PROMOT_0032012 "Fatigabilité de la musculature faciale"@fr)
+AnnotationAssertion(rdfs:label obo:PROMOT_0032012 "Fatigable weakness of facial musculature"@en)
 AnnotationAssertion(rdfs:label obo:PROMOT_0032012 "Fatiguable weakness of facial musculature"@en)
 SubClassOf(obo:PROMOT_0032012 obo:HP_0003473)
+SubClassOf(obo:PROMOT_0032012 ObjectSomeValuesFrom(obo:PROMOT_2000005 <http://id.who.int/icd/entity/1328675264>))
+SubClassOf(obo:PROMOT_0032012 ObjectSomeValuesFrom(obo:PROMOT_2000005 <http://id.who.int/icd/entity/1521707777>))
+SubClassOf(obo:PROMOT_0032012 ObjectSomeValuesFrom(obo:PROMOT_2000005 <http://id.who.int/icd/entity/1789365017>))
 
 # Class: obo:PROMOT_0032013 (Fatiguable weakness of the ocular muscles)
 
@@ -5990,8 +6172,11 @@ AnnotationAssertion(obo:PROMOT_1000001 obo:PROMOT_0032013 "Congenital myasthenic
 AnnotationAssertion(obo:PROMOT_1000001 obo:PROMOT_0032013 "Congenital myopathy Scoping review")
 AnnotationAssertion(rdfs:label obo:PROMOT_0032013 "Debilidad fatigable de los músculos oculares"@es)
 AnnotationAssertion(rdfs:label obo:PROMOT_0032013 "Fatigabilité des muscles occulaires"@fr)
+AnnotationAssertion(rdfs:label obo:PROMOT_0032013 "Fatigable weakness of the ocular muscles"@en)
 AnnotationAssertion(rdfs:label obo:PROMOT_0032013 "Fatiguable weakness of the ocular muscles"@en)
 SubClassOf(obo:PROMOT_0032013 obo:HP_0003473)
+SubClassOf(obo:PROMOT_0032013 ObjectSomeValuesFrom(obo:PROMOT_2000005 <http://id.who.int/icd/entity/1521707777>))
+SubClassOf(obo:PROMOT_0032013 ObjectSomeValuesFrom(obo:PROMOT_2000005 <http://id.who.int/icd/entity/1789365017>))
 
 # Class: obo:PROMOT_0032014 (Fatigabilité des muscles axiaux)
 
@@ -6001,10 +6186,15 @@ AnnotationAssertion(Annotation(obo:IAO_0000119 "translated from English by https
 AnnotationAssertion(obo:IAO_0000117 obo:PROMOT_0032014 "https://orcid.org/0009-0000-5160-7927")
 AnnotationAssertion(obo:PROMOT_1000001 obo:PROMOT_0032014 "Congenital myasthenic syndrom Scoping review")
 AnnotationAssertion(obo:PROMOT_1000001 obo:PROMOT_0032014 "Congenital myopathy Scoping review")
+AnnotationAssertion(rdfs:label obo:PROMOT_0032014 "Axial fatigable weakness"@en)
 AnnotationAssertion(rdfs:label obo:PROMOT_0032014 "Debilidad fatigable muscular axial"@es)
 AnnotationAssertion(rdfs:label obo:PROMOT_0032014 "Fatigabilité des muscles axiaux"@fr)
+AnnotationAssertion(rdfs:label obo:PROMOT_0032014 "Fatigable weakness of axial muscles"@en)
 AnnotationAssertion(rdfs:label obo:PROMOT_0032014 "Fatiguable weakness of axial muscles"@en)
 SubClassOf(obo:PROMOT_0032014 obo:HP_0030197)
+SubClassOf(obo:PROMOT_0032014 ObjectSomeValuesFrom(obo:PROMOT_2000005 <http://id.who.int/icd/entity/1521707777>))
+SubClassOf(obo:PROMOT_0032014 ObjectSomeValuesFrom(obo:PROMOT_2000005 <http://id.who.int/icd/entity/1789365017>))
+SubClassOf(obo:PROMOT_0032014 ObjectSomeValuesFrom(obo:PROMOT_2000005 <http://id.who.int/icd/entity/2048203604>))
 
 # Class: obo:PROMOT_0032015 (Debilidad de músculos masticatorios)
 
@@ -6018,31 +6208,85 @@ AnnotationAssertion(rdfs:label obo:PROMOT_0032015 "Debilidad de músculos mastic
 AnnotationAssertion(rdfs:label obo:PROMOT_0032015 "Faiblesse musculaire des muscles de la mastication"@fr)
 AnnotationAssertion(rdfs:label obo:PROMOT_0032015 "Weakness of chewing muscles"@en)
 SubClassOf(obo:PROMOT_0032015 obo:HP_0001324)
+SubClassOf(obo:PROMOT_0032015 ObjectSomeValuesFrom(obo:PROMOT_2000005 <http://id.who.int/icd/entity/1328675264>))
+SubClassOf(obo:PROMOT_0032015 ObjectSomeValuesFrom(obo:PROMOT_2000005 <http://id.who.int/icd/entity/1389818830>))
+SubClassOf(obo:PROMOT_0032015 ObjectSomeValuesFrom(obo:PROMOT_2000005 <http://id.who.int/icd/entity/1789365017>))
 
-# Class: obo:PROMOT_0033000 (Function of expiratory peak flow)
+# Class: obo:PROMOT_0032016 (Fatigable ptosis)
 
-AnnotationAssertion(rdfs:label obo:PROMOT_0033000 "Function of expiratory peak flow"@en)
-SubClassOf(obo:PROMOT_0033000 <http://id.who.int/icd/entity/446199613>)
+AnnotationAssertion(obo:IAO_0000115 obo:PROMOT_0032016 "A type of ptosis that occurs after the external ocular muscle group is used and lessens if the muscle group has some rest. That is, there is a ptosis apparition with repetitive external ocular muscle actions"@en)
+AnnotationAssertion(obo:IAO_0000117 obo:PROMOT_0032016 "https://orcid.org/0009-0000-5160-7927")
+AnnotationAssertion(rdfs:label obo:PROMOT_0032016 "Fatigable ptosis"@en)
+SubClassOf(obo:PROMOT_0032016 obo:HP_0000508)
+SubClassOf(obo:PROMOT_0032016 ObjectSomeValuesFrom(obo:PROMOT_2000005 <http://id.who.int/icd/entity/1521707777>))
+SubClassOf(obo:PROMOT_0032016 ObjectSomeValuesFrom(obo:PROMOT_2000005 <http://id.who.int/icd/entity/1789365017>))
+SubClassOf(obo:PROMOT_0032016 ObjectSomeValuesFrom(obo:PROMOT_2000005 <http://id.who.int/icd/entity/2021370201>))
 
-# Class: obo:PROMOT_0033001 (Function of cough peak flow)
+# Class: obo:PROMOT_0032017 (Decreased walking speed)
 
-AnnotationAssertion(rdfs:label obo:PROMOT_0033001 "Function of cough peak flow"@en)
-SubClassOf(obo:PROMOT_0033001 <http://id.who.int/icd/entity/1083127119>)
+AnnotationAssertion(obo:IAO_0000115 obo:PROMOT_0032017 "A walking speed that is below the lower limit of normal according to what is expected."@en)
+AnnotationAssertion(obo:IAO_0000117 obo:PROMOT_0032017 "https://orcid.org/0009-0000-5160-7927")
+AnnotationAssertion(rdfs:label obo:PROMOT_0032017 "Decreased walking speed"@en)
+SubClassOf(obo:PROMOT_0032017 obo:HP_0001288)
+SubClassOf(obo:PROMOT_0032017 ObjectSomeValuesFrom(obo:PROMOT_2000005 <http://id.who.int/icd/entity/1550548595>))
 
-# Class: obo:PROMOT_0033002 (Isometric muscle strength)
+# Class: obo:PROMOT_0032018 (Coughing on foods)
 
-AnnotationAssertion(rdfs:label obo:PROMOT_0033002 "Isometric muscle strength"@en)
-SubClassOf(obo:PROMOT_0033002 <http://id.who.int/icd/entity/274570113>)
+AnnotationAssertion(obo:IAO_0000115 obo:PROMOT_0032018 "Incidents in which a piece of food get stuck in the upper airway and provoke coughing."@en)
+AnnotationAssertion(obo:IAO_0000117 obo:PROMOT_0032018 "https://orcid.org/0009-0000-5160-7927")
+AnnotationAssertion(rdfs:label obo:PROMOT_0032018 "Coughing on foods"@en)
+SubClassOf(obo:PROMOT_0032018 obo:HP_0030842)
+SubClassOf(obo:PROMOT_0032018 ObjectSomeValuesFrom(obo:PROMOT_2000005 <http://id.who.int/icd/entity/1328675264>))
 
-# Class: obo:PROMOT_0033003 (Pinch strength)
+# Class: obo:PROMOT_0032019 (Coughing on liquids)
 
-AnnotationAssertion(rdfs:label obo:PROMOT_0033003 "Pinch strength"@en)
-SubClassOf(obo:PROMOT_0033003 <http://id.who.int/icd/entity/1789365017>)
+AnnotationAssertion(obo:IAO_0000115 obo:PROMOT_0032019 "Incidents in which liquids provoke coughing."@en)
+AnnotationAssertion(obo:IAO_0000117 obo:PROMOT_0032019 "https://orcid.org/0009-0000-5160-7927")
+AnnotationAssertion(rdfs:label obo:PROMOT_0032019 "Coughing on liquids"@en)
+SubClassOf(obo:PROMOT_0032019 obo:HP_0030842)
+SubClassOf(obo:PROMOT_0032019 ObjectSomeValuesFrom(obo:PROMOT_2000005 <http://id.who.int/icd/entity/553784299>))
 
-# Class: obo:PROMOT_0033004 (Tongue strength)
+# Class: obo:PROMOT_0032020 (Coughing on saliva)
 
-AnnotationAssertion(rdfs:label obo:PROMOT_0033004 "Tongue strength"@en)
-SubClassOf(obo:PROMOT_0033004 <http://id.who.int/icd/entity/1789365017>)
+AnnotationAssertion(obo:IAO_0000115 obo:PROMOT_0032020 "Incidents in which saliva provoke coughing."@en)
+AnnotationAssertion(obo:IAO_0000117 obo:PROMOT_0032020 "https://orcid.org/0009-0000-5160-7927")
+AnnotationAssertion(rdfs:label obo:PROMOT_0032020 "Coughing on saliva"@en)
+SubClassOf(obo:PROMOT_0032020 obo:PROMOT_0032019)
+
+# Class: obo:PROMOT_0032021 (Choking on foods)
+
+AnnotationAssertion(obo:IAO_0000115 obo:PROMOT_0032021 "Incidents in which a piece of food get stuck in the upper airway and provoke choking."@en)
+AnnotationAssertion(obo:IAO_0000117 obo:PROMOT_0032021 "https://orcid.org/0009-0000-5160-7927")
+AnnotationAssertion(rdfs:label obo:PROMOT_0032021 "Choking on foods"@en)
+SubClassOf(obo:PROMOT_0032021 obo:HP_0030842)
+SubClassOf(obo:PROMOT_0032021 ObjectSomeValuesFrom(obo:PROMOT_2000005 <http://id.who.int/icd/entity/1328675264>))
+
+# Class: obo:PROMOT_0032022 (Choking on liquids)
+
+AnnotationAssertion(obo:IAO_0000115 obo:PROMOT_0032022 "Incidents in which liquids provoke choking."@en)
+AnnotationAssertion(obo:IAO_0000117 obo:PROMOT_0032022 "https://orcid.org/0009-0000-5160-7927")
+AnnotationAssertion(rdfs:label obo:PROMOT_0032022 "Choking on liquids"@en)
+SubClassOf(obo:PROMOT_0032022 obo:HP_0030842)
+SubClassOf(obo:PROMOT_0032022 ObjectSomeValuesFrom(obo:PROMOT_2000005 <http://id.who.int/icd/entity/553784299>))
+
+# Class: obo:PROMOT_0032023 (Choking on saliva)
+
+AnnotationAssertion(obo:IAO_0000115 obo:PROMOT_0032023 "Incidents in which saliva provoke choking."@en)
+AnnotationAssertion(obo:IAO_0000117 obo:PROMOT_0032023 "https://orcid.org/0009-0000-5160-7927")
+AnnotationAssertion(rdfs:label obo:PROMOT_0032023 "Choking on saliva"@en)
+SubClassOf(obo:PROMOT_0032023 obo:PROMOT_0032022)
+
+# Class: obo:PROMOT_0032024 (Fatigable weakness of tongue muscle)
+
+AnnotationAssertion(obo:IAO_0000115 obo:PROMOT_0032024 "A type of weakness of the tongue muscle that occurs after the tongue muscle is used and lessens if the tongue muscle has some rest. That is, there is diminution of the strength of the tongue muscle with repetitive muscle actions."@en)
+AnnotationAssertion(obo:IAO_0000117 obo:PROMOT_0032024 "https://orcid.org/0009-0000-5160-7927")
+AnnotationAssertion(rdfs:label obo:PROMOT_0032024 "Fatigable weakness of tongue muscle"@en)
+SubClassOf(obo:PROMOT_0032024 obo:HP_0030192)
+SubClassOf(obo:PROMOT_0032024 ObjectSomeValuesFrom(obo:PROMOT_2000005 <http://id.who.int/icd/entity/1328675264>))
+SubClassOf(obo:PROMOT_0032024 ObjectSomeValuesFrom(obo:PROMOT_2000005 <http://id.who.int/icd/entity/151046878>))
+SubClassOf(obo:PROMOT_0032024 ObjectSomeValuesFrom(obo:PROMOT_2000005 <http://id.who.int/icd/entity/1521707777>))
+SubClassOf(obo:PROMOT_0032024 ObjectSomeValuesFrom(obo:PROMOT_2000005 <http://id.who.int/icd/entity/1789365017>))
+SubClassOf(obo:PROMOT_0032024 ObjectSomeValuesFrom(obo:PROMOT_2000005 <http://id.who.int/icd/entity/553784299>))
 
 # Class: obo:PROMOT_0100001 (Phenotypically related procedure)
 
@@ -6066,120 +6310,16 @@ EquivalentClasses(obo:PROMOT_0100002 ObjectIntersectionOf(<http://snomed.info/id
 SubClassOf(obo:PROMOT_0100002 <http://snomed.info/id/128927009>)
 SubClassOf(obo:PROMOT_0100002 ObjectSomeValuesFrom(obo:PROMOT_2000002 <http://id.who.int/icd/entity/567313968>))
 
-# Class: obo:PROMOT_0100003 (Body structure related procedure)
+# Class: obo:PROMOT_0100003 (Procédure liée à une activité)
 
-AnnotationAssertion(obo:IAO_0000115 obo:PROMOT_0100003 "A procedure that can measure a body structure."@en)
-AnnotationAssertion(obo:IAO_0000115 obo:PROMOT_0100003 "Une procédure qui évalue une structure anatomique."@fr)
+AnnotationAssertion(obo:IAO_0000115 obo:PROMOT_0100003 "A procedure that can measure an activity."@en)
+AnnotationAssertion(obo:IAO_0000115 obo:PROMOT_0100003 "Une procédure qui évalue une activité."@fr)
 AnnotationAssertion(obo:IAO_0000117 obo:PROMOT_0100003 "https://orcid.org/0009-0000-5160-7927")
-AnnotationAssertion(rdfs:label obo:PROMOT_0100003 "Body structure related procedure"@en)
-AnnotationAssertion(rdfs:label obo:PROMOT_0100003 "Procédure liée à un structure anatomique"@fr)
-EquivalentClasses(obo:PROMOT_0100003 ObjectIntersectionOf(<http://snomed.info/id/128927009> ObjectSomeValuesFrom(obo:PROMOT_2000002 <http://id.who.int/icd/entity/1626363729>)))
+AnnotationAssertion(rdfs:label obo:PROMOT_0100003 "Activity related procedure"@en)
+AnnotationAssertion(rdfs:label obo:PROMOT_0100003 "Procédure liée à une activité"@fr)
+EquivalentClasses(obo:PROMOT_0100003 ObjectIntersectionOf(<http://snomed.info/id/128927009> ObjectSomeValuesFrom(obo:PROMOT_2000002 obo:PROMOT_0110001)))
 SubClassOf(obo:PROMOT_0100003 <http://snomed.info/id/128927009>)
-SubClassOf(obo:PROMOT_0100003 ObjectSomeValuesFrom(obo:PROMOT_2000002 <http://id.who.int/icd/entity/1626363729>))
-
-# Class: obo:PROMOT_0100004 (Procédure liée à une activité)
-
-AnnotationAssertion(obo:IAO_0000115 obo:PROMOT_0100004 "A procedure that can measure an activity."@en)
-AnnotationAssertion(obo:IAO_0000115 obo:PROMOT_0100004 "Une procédure qui évalue une activité."@fr)
-AnnotationAssertion(obo:IAO_0000117 obo:PROMOT_0100004 "https://orcid.org/0009-0000-5160-7927")
-AnnotationAssertion(rdfs:label obo:PROMOT_0100004 "Activity related procedure"@en)
-AnnotationAssertion(rdfs:label obo:PROMOT_0100004 "Procédure liée à une activité"@fr)
-EquivalentClasses(obo:PROMOT_0100004 ObjectIntersectionOf(<http://snomed.info/id/128927009> ObjectSomeValuesFrom(obo:PROMOT_2000002 obo:PROMOT_0110001)))
-SubClassOf(obo:PROMOT_0100004 <http://snomed.info/id/128927009>)
-SubClassOf(obo:PROMOT_0100004 ObjectSomeValuesFrom(obo:PROMOT_2000002 obo:PROMOT_0110001))
-
-# Class: obo:PROMOT_0100005 (Assessment of expiratory and cough peak flows using an expiratory flowmeter)
-
-AnnotationAssertion(rdfs:label obo:PROMOT_0100005 "Assessment of expiratory and cough peak flows using an expiratory flowmeter"@en)
-SubClassOf(obo:PROMOT_0100005 ObjectSomeValuesFrom(obo:PROMOT_2000002 <http://id.who.int/icd/entity/1083127119>))
-SubClassOf(obo:PROMOT_0100005 ObjectSomeValuesFrom(obo:PROMOT_2000002 <http://id.who.int/icd/entity/1360101629>))
-SubClassOf(obo:PROMOT_0100005 ObjectSomeValuesFrom(obo:PROMOT_2000002 <http://id.who.int/icd/entity/1470583183>))
-SubClassOf(obo:PROMOT_0100005 ObjectSomeValuesFrom(obo:PROMOT_2000002 <http://id.who.int/icd/entity/446199613>))
-SubClassOf(obo:PROMOT_0100005 ObjectSomeValuesFrom(obo:PROMOT_2000002 <http://id.who.int/icd/entity/744367503>))
-SubClassOf(obo:PROMOT_0100005 ObjectSomeValuesFrom(obo:PROMOT_2000002 obo:HP_0012735))
-
-# Class: obo:PROMOT_0100007 (Assessment using Dysphagimeter)
-
-AnnotationAssertion(rdfs:label obo:PROMOT_0100007 "Assessment using Dysphagimeter"@en)
-SubClassOf(obo:PROMOT_0100007 ObjectSomeValuesFrom(obo:PROMOT_2000002 obo:HP_0002015))
-SubClassOf(obo:PROMOT_0100007 ObjectSomeValuesFrom(obo:PROMOT_2000002 obo:HP_0002068))
-SubClassOf(obo:PROMOT_0100007 ObjectSomeValuesFrom(obo:PROMOT_2000002 obo:HP_0200136))
-
-# Class: obo:PROMOT_0100008 (Assessment of pinch strengh using B&L gauge)
-
-AnnotationAssertion(rdfs:label obo:PROMOT_0100008 "Assessment of pinch strengh using B&L gauge"@en)
-SubClassOf(obo:PROMOT_0100008 ObjectSomeValuesFrom(obo:PROMOT_2000002 obo:HP_0003392))
-
-# Class: obo:PROMOT_0100009 (Evaluation of the maximum isometric muscle strength by manual dynamometry)
-
-AnnotationAssertion(rdfs:label obo:PROMOT_0100009 "Evaluation of the maximum isometric muscle strength by manual dynamometry"@en)
-SubClassOf(obo:PROMOT_0100009 ObjectSomeValuesFrom(obo:PROMOT_2000002 obo:HP_0001324))
-SubClassOf(obo:PROMOT_0100009 ObjectSomeValuesFrom(obo:PROMOT_2000002 obo:HP_0003323))
-SubClassOf(obo:PROMOT_0100009 ObjectSomeValuesFrom(obo:PROMOT_2000002 obo:HP_0003325))
-SubClassOf(obo:PROMOT_0100009 ObjectSomeValuesFrom(obo:PROMOT_2000002 obo:HP_0003484))
-SubClassOf(obo:PROMOT_0100009 ObjectSomeValuesFrom(obo:PROMOT_2000002 obo:HP_0003547))
-SubClassOf(obo:PROMOT_0100009 ObjectSomeValuesFrom(obo:PROMOT_2000002 obo:HP_0003690))
-SubClassOf(obo:PROMOT_0100009 ObjectSomeValuesFrom(obo:PROMOT_2000002 obo:HP_0003694))
-SubClassOf(obo:PROMOT_0100009 ObjectSomeValuesFrom(obo:PROMOT_2000002 obo:HP_0003701))
-SubClassOf(obo:PROMOT_0100009 ObjectSomeValuesFrom(obo:PROMOT_2000002 obo:HP_0003731))
-SubClassOf(obo:PROMOT_0100009 ObjectSomeValuesFrom(obo:PROMOT_2000002 obo:HP_0003749))
-SubClassOf(obo:PROMOT_0100009 ObjectSomeValuesFrom(obo:PROMOT_2000002 obo:HP_0003810))
-SubClassOf(obo:PROMOT_0100009 ObjectSomeValuesFrom(obo:PROMOT_2000002 obo:HP_0007340))
-SubClassOf(obo:PROMOT_0100009 ObjectSomeValuesFrom(obo:PROMOT_2000002 obo:HP_0008994))
-SubClassOf(obo:PROMOT_0100009 ObjectSomeValuesFrom(obo:PROMOT_2000002 obo:HP_0008997))
-SubClassOf(obo:PROMOT_0100009 ObjectSomeValuesFrom(obo:PROMOT_2000002 obo:HP_0009063))
-SubClassOf(obo:PROMOT_0100009 ObjectSomeValuesFrom(obo:PROMOT_2000002 obo:HP_0009073))
-SubClassOf(obo:PROMOT_0100009 ObjectSomeValuesFrom(obo:PROMOT_2000002 obo:HP_0012515))
-
-# Class: obo:PROMOT_0100010 (Assessment of tongue strengh using Iowa Oral Performance Instrument)
-
-AnnotationAssertion(rdfs:label obo:PROMOT_0100010 "Assessment of tongue strengh using Iowa Oral Performance Instrument"@en)
-SubClassOf(obo:PROMOT_0100010 ObjectSomeValuesFrom(obo:PROMOT_2000002 obo:HP_0000183))
-
-# Class: obo:PROMOT_0100011 (Assessment using Berg Balance Scale)
-
-AnnotationAssertion(rdfs:label obo:PROMOT_0100011 "Assessment using Berg Balance Scale"@en)
-SubClassOf(obo:PROMOT_0100011 ObjectSomeValuesFrom(obo:PROMOT_2000002 obo:HP_0002141))
-
-# Class: obo:PROMOT_0100012 (10 Meter Walk Test (10MWT))
-
-AnnotationAssertion(rdfs:label obo:PROMOT_0100012 "10 Meter Walk Test (10MWT)"@en)
-SubClassOf(obo:PROMOT_0100012 ObjectSomeValuesFrom(obo:PROMOT_2000002 obo:HP_0002317))
-SubClassOf(obo:PROMOT_0100012 ObjectSomeValuesFrom(obo:PROMOT_2000002 obo:HP_0002505))
-SubClassOf(obo:PROMOT_0100012 ObjectSomeValuesFrom(obo:PROMOT_2000002 obo:HP_0002540))
-
-# Class: obo:PROMOT_0100013 (Assessment using Sydney Swallow Questionnaire (SSQ))
-
-AnnotationAssertion(rdfs:label obo:PROMOT_0100013 "Assessment using Sydney Swallow Questionnaire (SSQ)"@en)
-SubClassOf(obo:PROMOT_0100013 ObjectSomeValuesFrom(obo:PROMOT_2000002 obo:HP_0002015))
-SubClassOf(obo:PROMOT_0100013 ObjectSomeValuesFrom(obo:PROMOT_2000002 obo:HP_0002068))
-SubClassOf(obo:PROMOT_0100013 ObjectSomeValuesFrom(obo:PROMOT_2000002 obo:HP_0200136))
-
-# Class: obo:PROMOT_0100014 (80 ml water swallowing test)
-
-AnnotationAssertion(rdfs:label obo:PROMOT_0100014 "80 ml water swallowing test"@en)
-SubClassOf(obo:PROMOT_0100014 ObjectSomeValuesFrom(obo:PROMOT_2000002 obo:HP_0002015))
-SubClassOf(obo:PROMOT_0100014 ObjectSomeValuesFrom(obo:PROMOT_2000002 obo:HP_0002068))
-SubClassOf(obo:PROMOT_0100014 ObjectSomeValuesFrom(obo:PROMOT_2000002 obo:HP_0200136))
-
-# Class: obo:PROMOT_0100015 (Assessment using Fatigue Severity Scale (FSS))
-
-AnnotationAssertion(rdfs:label obo:PROMOT_0100015 "Assessment using Fatigue Severity Scale (FSS)"@en)
-SubClassOf(obo:PROMOT_0100015 ObjectSomeValuesFrom(obo:PROMOT_2000002 obo:HP_0012378))
-
-# Class: obo:PROMOT_0100016 (Assessment using Hand Jamar dynanometer)
-
-AnnotationAssertion(rdfs:label obo:PROMOT_0100016 "Assessment using Hand Jamar dynanometer"@en)
-SubClassOf(obo:PROMOT_0100016 ObjectSomeValuesFrom(obo:PROMOT_2000002 obo:HP_0009005))
-SubClassOf(obo:PROMOT_0100016 ObjectSomeValuesFrom(obo:PROMOT_2000002 obo:HP_0030237))
-SubClassOf(obo:PROMOT_0100016 ObjectSomeValuesFrom(obo:PROMOT_2000002 obo:HP_0031177))
-SubClassOf(obo:PROMOT_0100016 ObjectSomeValuesFrom(obo:PROMOT_2000002 obo:HP_0033466))
-
-# Class: obo:PROMOT_0100017 (Stair Climb Test)
-
-AnnotationAssertion(rdfs:label obo:PROMOT_0100017 "Stair Climb Test"@en)
-SubClassOf(obo:PROMOT_0100017 ObjectSomeValuesFrom(obo:PROMOT_2000002 obo:HP_0003551))
-SubClassOf(obo:PROMOT_0100017 ObjectSomeValuesFrom(obo:PROMOT_2000002 obo:HP_0033235))
+SubClassOf(obo:PROMOT_0100003 ObjectSomeValuesFrom(obo:PROMOT_2000002 obo:PROMOT_0110001))
 
 # Class: obo:PROMOT_0110001 (Actividad)
 
@@ -6237,7 +6377,9 @@ SubClassOf(<http://purl.org/sig/ont/fma/fma13295> ObjectSomeValuesFrom(obo:RO_00
 # Class: <http://purl.org/sig/ont/fma/fma13354> (Intercostal Muscle)
 
 AnnotationAssertion(rdfs:label <http://purl.org/sig/ont/fma/fma13354> "Intercostal Muscle"@en)
+SubClassOf(<http://purl.org/sig/ont/fma/fma13354> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0003327))
 SubClassOf(<http://purl.org/sig/ont/fma/fma13354> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0004878))
+SubClassOf(<http://purl.org/sig/ont/fma/fma13354> ObjectSomeValuesFrom(obo:RO_0000091 obo:PROMOT_0032014))
 SubClassOf(<http://purl.org/sig/ont/fma/fma13354> ObjectSomeValuesFrom(obo:RO_0001025 <http://id.who.int/icd/entity/1571232890>))
 
 # Class: <http://purl.org/sig/ont/fma/fma13379> (Rhomboid major)
@@ -6261,14 +6403,25 @@ SubClassOf(<http://purl.org/sig/ont/fma/fma13397> ObjectSomeValuesFrom(obo:RO_00
 # Class: <http://purl.org/sig/ont/fma/fma22428> (Quatriceps femoris)
 
 AnnotationAssertion(rdfs:label <http://purl.org/sig/ont/fma/fma22428> "Quatriceps femoris"@en)
+SubClassOf(<http://purl.org/sig/ont/fma/fma22428> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0003690))
+SubClassOf(<http://purl.org/sig/ont/fma/fma22428> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0003694))
+SubClassOf(<http://purl.org/sig/ont/fma/fma22428> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0003701))
 SubClassOf(<http://purl.org/sig/ont/fma/fma22428> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0003731))
+SubClassOf(<http://purl.org/sig/ont/fma/fma22428> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0007340))
+SubClassOf(<http://purl.org/sig/ont/fma/fma22428> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0008994))
+SubClassOf(<http://purl.org/sig/ont/fma/fma22428> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0009073))
 SubClassOf(<http://purl.org/sig/ont/fma/fma22428> ObjectSomeValuesFrom(obo:RO_0001025 <http://id.who.int/icd/entity/1794398084>))
 
 # Class: <http://purl.org/sig/ont/fma/fma22471> (Muscle of leg)
 
 AnnotationAssertion(rdfs:label <http://purl.org/sig/ont/fma/fma22471> "Muscle of leg"@en)
+SubClassOf(<http://purl.org/sig/ont/fma/fma22471> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0002460))
+SubClassOf(<http://purl.org/sig/ont/fma/fma22471> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0003690))
+SubClassOf(<http://purl.org/sig/ont/fma/fma22471> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0003810))
+SubClassOf(<http://purl.org/sig/ont/fma/fma22471> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0007340))
 SubClassOf(<http://purl.org/sig/ont/fma/fma22471> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0009028))
 SubClassOf(<http://purl.org/sig/ont/fma/fma22471> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0009053))
+SubClassOf(<http://purl.org/sig/ont/fma/fma22471> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0009063))
 SubClassOf(<http://purl.org/sig/ont/fma/fma22471> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0011727))
 SubClassOf(<http://purl.org/sig/ont/fma/fma22471> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0030198))
 SubClassOf(<http://purl.org/sig/ont/fma/fma22471> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0031374))
@@ -6278,7 +6431,13 @@ SubClassOf(<http://purl.org/sig/ont/fma/fma22471> ObjectSomeValuesFrom(obo:RO_00
 # Class: <http://purl.org/sig/ont/fma/fma22532> (Tibialis anterior)
 
 AnnotationAssertion(rdfs:label <http://purl.org/sig/ont/fma/fma22532> "Tibialis anterior"@en)
+SubClassOf(<http://purl.org/sig/ont/fma/fma22532> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0002460))
+SubClassOf(<http://purl.org/sig/ont/fma/fma22532> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0003690))
+SubClassOf(<http://purl.org/sig/ont/fma/fma22532> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0003810))
+SubClassOf(<http://purl.org/sig/ont/fma/fma22532> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0007340))
 SubClassOf(<http://purl.org/sig/ont/fma/fma22532> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0008963))
+SubClassOf(<http://purl.org/sig/ont/fma/fma22532> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0009053))
+SubClassOf(<http://purl.org/sig/ont/fma/fma22532> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0009063))
 SubClassOf(<http://purl.org/sig/ont/fma/fma22532> ObjectSomeValuesFrom(obo:RO_0001025 <http://id.who.int/icd/entity/338611549>))
 
 # Class: <http://purl.org/sig/ont/fma/fma323229> (Pterygoid muscle)
@@ -6286,16 +6445,22 @@ SubClassOf(<http://purl.org/sig/ont/fma/fma22532> ObjectSomeValuesFrom(obo:RO_00
 AnnotationAssertion(rdfs:label <http://purl.org/sig/ont/fma/fma323229> "Pterygoid muscle"@en)
 SubClassOf(<http://purl.org/sig/ont/fma/fma323229> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0005216))
 SubClassOf(<http://purl.org/sig/ont/fma/fma323229> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0030193))
+SubClassOf(<http://purl.org/sig/ont/fma/fma323229> ObjectSomeValuesFrom(obo:RO_0000091 obo:PROMOT_0032015))
 SubClassOf(<http://purl.org/sig/ont/fma/fma323229> ObjectSomeValuesFrom(obo:RO_0001025 <http://id.who.int/icd/entity/1874889854>))
 
 # Class: <http://purl.org/sig/ont/fma/fma33531> (Muscle of shoulder)
 
 AnnotationAssertion(rdfs:label <http://purl.org/sig/ont/fma/fma33531> "Muscle of shoulder"@en)
 SubClassOf(<http://purl.org/sig/ont/fma/fma33531> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0003325))
+SubClassOf(<http://purl.org/sig/ont/fma/fma33531> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0003484))
 SubClassOf(<http://purl.org/sig/ont/fma/fma33531> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0003547))
+SubClassOf(<http://purl.org/sig/ont/fma/fma33531> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0003690))
 SubClassOf(<http://purl.org/sig/ont/fma/fma33531> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0003691))
+SubClassOf(<http://purl.org/sig/ont/fma/fma33531> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0003694))
+SubClassOf(<http://purl.org/sig/ont/fma/fma33531> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0003701))
 SubClassOf(<http://purl.org/sig/ont/fma/fma33531> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0008997))
 SubClassOf(<http://purl.org/sig/ont/fma/fma33531> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0009028))
+SubClassOf(<http://purl.org/sig/ont/fma/fma33531> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0009073))
 SubClassOf(<http://purl.org/sig/ont/fma/fma33531> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0030200))
 SubClassOf(<http://purl.org/sig/ont/fma/fma33531> ObjectSomeValuesFrom(obo:RO_0001025 <http://id.who.int/icd/entity/278512890>))
 
@@ -6309,43 +6474,68 @@ SubClassOf(<http://purl.org/sig/ont/fma/fma35178> ObjectSomeValuesFrom(obo:RO_00
 
 AnnotationAssertion(rdfs:label <http://purl.org/sig/ont/fma/fma37367> "Muscle of pelvic gridle"@en)
 SubClassOf(<http://purl.org/sig/ont/fma/fma37367> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0003325))
+SubClassOf(<http://purl.org/sig/ont/fma/fma37367> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0003690))
+SubClassOf(<http://purl.org/sig/ont/fma/fma37367> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0003694))
+SubClassOf(<http://purl.org/sig/ont/fma/fma37367> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0003701))
 SubClassOf(<http://purl.org/sig/ont/fma/fma37367> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0003749))
+SubClassOf(<http://purl.org/sig/ont/fma/fma37367> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0007340))
 SubClassOf(<http://purl.org/sig/ont/fma/fma37367> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0008988))
 SubClassOf(<http://purl.org/sig/ont/fma/fma37367> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0008994))
 SubClassOf(<http://purl.org/sig/ont/fma/fma37367> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0009028))
+SubClassOf(<http://purl.org/sig/ont/fma/fma37367> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0009073))
 SubClassOf(<http://purl.org/sig/ont/fma/fma37367> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0030200))
 SubClassOf(<http://purl.org/sig/ont/fma/fma37367> ObjectSomeValuesFrom(obo:RO_0001025 <http://id.who.int/icd/entity/793188683>))
 
 # Class: <http://purl.org/sig/ont/fma/fma37369> (Muscle of foot)
 
 AnnotationAssertion(rdfs:label <http://purl.org/sig/ont/fma/fma37369> "Muscle of foot"@en)
+SubClassOf(<http://purl.org/sig/ont/fma/fma37369> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0002460))
+SubClassOf(<http://purl.org/sig/ont/fma/fma37369> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0003690))
+SubClassOf(<http://purl.org/sig/ont/fma/fma37369> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0003810))
+SubClassOf(<http://purl.org/sig/ont/fma/fma37369> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0007340))
 SubClassOf(<http://purl.org/sig/ont/fma/fma37369> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0009027))
 SubClassOf(<http://purl.org/sig/ont/fma/fma37369> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0009028))
 SubClassOf(<http://purl.org/sig/ont/fma/fma37369> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0009053))
+SubClassOf(<http://purl.org/sig/ont/fma/fma37369> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0009063))
 SubClassOf(<http://purl.org/sig/ont/fma/fma37369> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0030198))
 SubClassOf(<http://purl.org/sig/ont/fma/fma37369> ObjectSomeValuesFrom(obo:RO_0001025 <http://id.who.int/icd/entity/1278239861>))
 
 # Class: <http://purl.org/sig/ont/fma/fma37370> (Muscle of arm)
 
 AnnotationAssertion(rdfs:label <http://purl.org/sig/ont/fma/fma37370> "Muscle of arm"@en)
+SubClassOf(<http://purl.org/sig/ont/fma/fma37370> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0003484))
+SubClassOf(<http://purl.org/sig/ont/fma/fma37370> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0003690))
+SubClassOf(<http://purl.org/sig/ont/fma/fma37370> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0003694))
+SubClassOf(<http://purl.org/sig/ont/fma/fma37370> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0003701))
 SubClassOf(<http://purl.org/sig/ont/fma/fma37370> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0008997))
 SubClassOf(<http://purl.org/sig/ont/fma/fma37370> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0009028))
+SubClassOf(<http://purl.org/sig/ont/fma/fma37370> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0009073))
 SubClassOf(<http://purl.org/sig/ont/fma/fma37370> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0030200))
 SubClassOf(<http://purl.org/sig/ont/fma/fma37370> ObjectSomeValuesFrom(obo:RO_0001025 <http://id.who.int/icd/entity/1867012554>))
 
 # Class: <http://purl.org/sig/ont/fma/fma37371> (Muscle of forearm)
 
 AnnotationAssertion(rdfs:label <http://purl.org/sig/ont/fma/fma37371> "Muscle of forearm"@en)
+SubClassOf(<http://purl.org/sig/ont/fma/fma37371> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0002460))
+SubClassOf(<http://purl.org/sig/ont/fma/fma37371> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0003484))
+SubClassOf(<http://purl.org/sig/ont/fma/fma37371> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0003690))
+SubClassOf(<http://purl.org/sig/ont/fma/fma37371> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0003810))
 SubClassOf(<http://purl.org/sig/ont/fma/fma37371> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0008959))
 SubClassOf(<http://purl.org/sig/ont/fma/fma37371> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0009028))
+SubClassOf(<http://purl.org/sig/ont/fma/fma37371> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0009063))
 SubClassOf(<http://purl.org/sig/ont/fma/fma37371> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0030198))
 SubClassOf(<http://purl.org/sig/ont/fma/fma37371> ObjectSomeValuesFrom(obo:RO_0001025 <http://id.who.int/icd/entity/294830867>))
 
 # Class: <http://purl.org/sig/ont/fma/fma37372> (Muscle of hand)
 
 AnnotationAssertion(rdfs:label <http://purl.org/sig/ont/fma/fma37372> "Muscle of hand"@en)
+SubClassOf(<http://purl.org/sig/ont/fma/fma37372> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0002460))
+SubClassOf(<http://purl.org/sig/ont/fma/fma37372> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0003484))
+SubClassOf(<http://purl.org/sig/ont/fma/fma37372> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0003690))
+SubClassOf(<http://purl.org/sig/ont/fma/fma37372> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0003810))
 SubClassOf(<http://purl.org/sig/ont/fma/fma37372> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0008959))
 SubClassOf(<http://purl.org/sig/ont/fma/fma37372> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0009028))
+SubClassOf(<http://purl.org/sig/ont/fma/fma37372> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0009063))
 SubClassOf(<http://purl.org/sig/ont/fma/fma37372> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0030198))
 SubClassOf(<http://purl.org/sig/ont/fma/fma37372> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0030237))
 SubClassOf(<http://purl.org/sig/ont/fma/fma37372> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0031177))
@@ -6355,25 +6545,49 @@ SubClassOf(<http://purl.org/sig/ont/fma/fma37372> ObjectSomeValuesFrom(obo:RO_00
 # Class: <http://purl.org/sig/ont/fma/fma37424> (First dorsal interosseous of hand)
 
 AnnotationAssertion(rdfs:label <http://purl.org/sig/ont/fma/fma37424> "First dorsal interosseous of hand"@en)
+SubClassOf(<http://purl.org/sig/ont/fma/fma37424> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0002460))
 SubClassOf(<http://purl.org/sig/ont/fma/fma37424> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0003392))
+SubClassOf(<http://purl.org/sig/ont/fma/fma37424> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0003484))
+SubClassOf(<http://purl.org/sig/ont/fma/fma37424> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0003690))
+SubClassOf(<http://purl.org/sig/ont/fma/fma37424> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0003810))
+SubClassOf(<http://purl.org/sig/ont/fma/fma37424> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0008959))
+SubClassOf(<http://purl.org/sig/ont/fma/fma37424> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0009063))
 SubClassOf(<http://purl.org/sig/ont/fma/fma37424> ObjectSomeValuesFrom(obo:RO_0001025 <http://id.who.int/icd/entity/1233939003>))
 
 # Class: <http://purl.org/sig/ont/fma/fma37688> (Triceps brachii)
 
 AnnotationAssertion(rdfs:label <http://purl.org/sig/ont/fma/fma37688> "Triceps brachii"@en)
+SubClassOf(<http://purl.org/sig/ont/fma/fma37688> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0003484))
+SubClassOf(<http://purl.org/sig/ont/fma/fma37688> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0003690))
+SubClassOf(<http://purl.org/sig/ont/fma/fma37688> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0003694))
+SubClassOf(<http://purl.org/sig/ont/fma/fma37688> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0003701))
+SubClassOf(<http://purl.org/sig/ont/fma/fma37688> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0008997))
+SubClassOf(<http://purl.org/sig/ont/fma/fma37688> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0009073))
 SubClassOf(<http://purl.org/sig/ont/fma/fma37688> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0031108))
 SubClassOf(<http://purl.org/sig/ont/fma/fma37688> ObjectSomeValuesFrom(obo:RO_0001025 <http://id.who.int/icd/entity/1867012554>))
 
 # Class: <http://purl.org/sig/ont/fma/fma38500> (Extensor digitorum)
 
 AnnotationAssertion(rdfs:label <http://purl.org/sig/ont/fma/fma38500> "Extensor digitorum"@en)
+SubClassOf(<http://purl.org/sig/ont/fma/fma38500> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0002460))
+SubClassOf(<http://purl.org/sig/ont/fma/fma38500> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0003484))
+SubClassOf(<http://purl.org/sig/ont/fma/fma38500> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0003690))
+SubClassOf(<http://purl.org/sig/ont/fma/fma38500> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0003810))
+SubClassOf(<http://purl.org/sig/ont/fma/fma38500> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0008959))
+SubClassOf(<http://purl.org/sig/ont/fma/fma38500> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0009063))
 SubClassOf(<http://purl.org/sig/ont/fma/fma38500> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0009077))
 SubClassOf(<http://purl.org/sig/ont/fma/fma38500> ObjectSomeValuesFrom(obo:RO_0001025 <http://id.who.int/icd/entity/1233939003>))
 
 # Class: <http://purl.org/sig/ont/fma/fma42380> (Intrinsic muscle of hand)
 
 AnnotationAssertion(rdfs:label <http://purl.org/sig/ont/fma/fma42380> "Intrinsic muscle of hand"@en)
+SubClassOf(<http://purl.org/sig/ont/fma/fma42380> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0002460))
+SubClassOf(<http://purl.org/sig/ont/fma/fma42380> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0003484))
+SubClassOf(<http://purl.org/sig/ont/fma/fma42380> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0003690))
+SubClassOf(<http://purl.org/sig/ont/fma/fma42380> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0003810))
+SubClassOf(<http://purl.org/sig/ont/fma/fma42380> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0008959))
 SubClassOf(<http://purl.org/sig/ont/fma/fma42380> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0009005))
+SubClassOf(<http://purl.org/sig/ont/fma/fma42380> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0009063))
 SubClassOf(<http://purl.org/sig/ont/fma/fma42380> ObjectSomeValuesFrom(obo:RO_0001025 <http://id.who.int/icd/entity/1233939003>))
 
 # Class: <http://purl.org/sig/ont/fma/fma46619> (Muscle of pharynx)
@@ -6391,12 +6605,15 @@ SubClassOf(<http://purl.org/sig/ont/fma/fma46689> ObjectSomeValuesFrom(obo:RO_00
 SubClassOf(<http://purl.org/sig/ont/fma/fma46689> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0005216))
 SubClassOf(<http://purl.org/sig/ont/fma/fma46689> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0012473))
 SubClassOf(<http://purl.org/sig/ont/fma/fma46689> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0030193))
+SubClassOf(<http://purl.org/sig/ont/fma/fma46689> ObjectSomeValuesFrom(obo:RO_0000091 obo:PROMOT_0032015))
+SubClassOf(<http://purl.org/sig/ont/fma/fma46689> ObjectSomeValuesFrom(obo:RO_0000091 obo:PROMOT_0032024))
 SubClassOf(<http://purl.org/sig/ont/fma/fma46689> ObjectSomeValuesFrom(obo:RO_0001025 <http://id.who.int/icd/entity/1874889854>))
 
 # Class: <http://purl.org/sig/ont/fma/fma46751> (Muscle of face)
 
 AnnotationAssertion(rdfs:label <http://purl.org/sig/ont/fma/fma46751> "Muscle of face"@en)
 SubClassOf(<http://purl.org/sig/ont/fma/fma46751> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0030319))
+SubClassOf(<http://purl.org/sig/ont/fma/fma46751> ObjectSomeValuesFrom(obo:RO_0000091 obo:PROMOT_0032012))
 SubClassOf(<http://purl.org/sig/ont/fma/fma46751> ObjectSomeValuesFrom(obo:RO_0001025 <http://id.who.int/icd/entity/1874889854>))
 
 # Class: <http://purl.org/sig/ont/fma/fma46834> (Buccinator)
@@ -6404,6 +6621,7 @@ SubClassOf(<http://purl.org/sig/ont/fma/fma46751> ObjectSomeValuesFrom(obo:RO_00
 AnnotationAssertion(rdfs:label <http://purl.org/sig/ont/fma/fma46834> "Buccinator"@en)
 SubClassOf(<http://purl.org/sig/ont/fma/fma46834> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0005216))
 SubClassOf(<http://purl.org/sig/ont/fma/fma46834> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0030193))
+SubClassOf(<http://purl.org/sig/ont/fma/fma46834> ObjectSomeValuesFrom(obo:RO_0000091 obo:PROMOT_0032015))
 SubClassOf(<http://purl.org/sig/ont/fma/fma46834> ObjectSomeValuesFrom(obo:RO_0001025 <http://id.who.int/icd/entity/1874889854>))
 
 # Class: <http://purl.org/sig/ont/fma/fma48996> (Masseter)
@@ -6411,6 +6629,7 @@ SubClassOf(<http://purl.org/sig/ont/fma/fma46834> ObjectSomeValuesFrom(obo:RO_00
 AnnotationAssertion(rdfs:label <http://purl.org/sig/ont/fma/fma48996> "Masseter"@en)
 SubClassOf(<http://purl.org/sig/ont/fma/fma48996> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0005216))
 SubClassOf(<http://purl.org/sig/ont/fma/fma48996> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0030193))
+SubClassOf(<http://purl.org/sig/ont/fma/fma48996> ObjectSomeValuesFrom(obo:RO_0000091 obo:PROMOT_0032015))
 SubClassOf(<http://purl.org/sig/ont/fma/fma48996> ObjectSomeValuesFrom(obo:RO_0001025 <http://id.who.int/icd/entity/1874889854>))
 
 # Class: <http://purl.org/sig/ont/fma/fma49006> (Temporalis)
@@ -6418,6 +6637,7 @@ SubClassOf(<http://purl.org/sig/ont/fma/fma48996> ObjectSomeValuesFrom(obo:RO_00
 AnnotationAssertion(rdfs:label <http://purl.org/sig/ont/fma/fma49006> "Temporalis"@en)
 SubClassOf(<http://purl.org/sig/ont/fma/fma49006> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0005216))
 SubClassOf(<http://purl.org/sig/ont/fma/fma49006> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0030193))
+SubClassOf(<http://purl.org/sig/ont/fma/fma49006> ObjectSomeValuesFrom(obo:RO_0000091 obo:PROMOT_0032015))
 SubClassOf(<http://purl.org/sig/ont/fma/fma49006> ObjectSomeValuesFrom(obo:RO_0001025 <http://id.who.int/icd/entity/1874889854>))
 
 # Class: <http://purl.org/sig/ont/fma/fma49033> (Extra-ocular muscle)
@@ -6433,14 +6653,21 @@ SubClassOf(<http://purl.org/sig/ont/fma/fma49033> ObjectSomeValuesFrom(obo:RO_00
 SubClassOf(<http://purl.org/sig/ont/fma/fma49033> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0007715))
 SubClassOf(<http://purl.org/sig/ont/fma/fma49033> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0007838))
 SubClassOf(<http://purl.org/sig/ont/fma/fma49033> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0007941))
+SubClassOf(<http://purl.org/sig/ont/fma/fma49033> ObjectSomeValuesFrom(obo:RO_0000091 obo:PROMOT_0032013))
+SubClassOf(<http://purl.org/sig/ont/fma/fma49033> ObjectSomeValuesFrom(obo:RO_0000091 obo:PROMOT_0032016))
 SubClassOf(<http://purl.org/sig/ont/fma/fma49033> ObjectSomeValuesFrom(obo:RO_0001025 <http://id.who.int/icd/entity/1874889854>))
 SubClassOf(<http://purl.org/sig/ont/fma/fma49033> ObjectSomeValuesFrom(obo:RO_0001025 <http://id.who.int/icd/entity/405925948>))
 
 # Class: <http://purl.org/sig/ont/fma/fma50208> (Musculature of thigh)
 
 AnnotationAssertion(rdfs:label <http://purl.org/sig/ont/fma/fma50208> "Musculature of thigh"@en)
+SubClassOf(<http://purl.org/sig/ont/fma/fma50208> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0003690))
+SubClassOf(<http://purl.org/sig/ont/fma/fma50208> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0003694))
+SubClassOf(<http://purl.org/sig/ont/fma/fma50208> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0003701))
+SubClassOf(<http://purl.org/sig/ont/fma/fma50208> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0007340))
 SubClassOf(<http://purl.org/sig/ont/fma/fma50208> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0008994))
 SubClassOf(<http://purl.org/sig/ont/fma/fma50208> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0009028))
+SubClassOf(<http://purl.org/sig/ont/fma/fma50208> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0009073))
 SubClassOf(<http://purl.org/sig/ont/fma/fma50208> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0012515))
 SubClassOf(<http://purl.org/sig/ont/fma/fma50208> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0030200))
 SubClassOf(<http://purl.org/sig/ont/fma/fma50208> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0033416))
@@ -6449,13 +6676,21 @@ SubClassOf(<http://purl.org/sig/ont/fma/fma50208> ObjectSomeValuesFrom(obo:RO_00
 # Class: <http://purl.org/sig/ont/fma/fma51099> (Tibialis posterior)
 
 AnnotationAssertion(rdfs:label <http://purl.org/sig/ont/fma/fma51099> "Tibialis posterior"@en)
+SubClassOf(<http://purl.org/sig/ont/fma/fma51099> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0002460))
+SubClassOf(<http://purl.org/sig/ont/fma/fma51099> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0003690))
+SubClassOf(<http://purl.org/sig/ont/fma/fma51099> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0003810))
+SubClassOf(<http://purl.org/sig/ont/fma/fma51099> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0007340))
 SubClassOf(<http://purl.org/sig/ont/fma/fma51099> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0008963))
+SubClassOf(<http://purl.org/sig/ont/fma/fma51099> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0009053))
+SubClassOf(<http://purl.org/sig/ont/fma/fma51099> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0009063))
 SubClassOf(<http://purl.org/sig/ont/fma/fma51099> ObjectSomeValuesFrom(obo:RO_0001025 <http://id.who.int/icd/entity/338611549>))
 
 # Class: <http://purl.org/sig/ont/fma/fma58274> (Muscle of trunk)
 
 AnnotationAssertion(rdfs:label <http://purl.org/sig/ont/fma/fma58274> "Muscle of trunk"@en)
+SubClassOf(<http://purl.org/sig/ont/fma/fma58274> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0003327))
 SubClassOf(<http://purl.org/sig/ont/fma/fma58274> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0009023))
+SubClassOf(<http://purl.org/sig/ont/fma/fma58274> ObjectSomeValuesFrom(obo:RO_0000091 obo:PROMOT_0032014))
 SubClassOf(<http://purl.org/sig/ont/fma/fma58274> ObjectSomeValuesFrom(obo:RO_0001025 <http://id.who.int/icd/entity/58064740>))
 
 # Class: <http://purl.org/sig/ont/fma/fma62955> (Anatomical entity)
@@ -6466,7 +6701,13 @@ SubClassOf(<http://purl.org/sig/ont/fma/fma62955> obo:BFO_0000040)
 # Class: <http://purl.org/sig/ont/fma/fma64916> (Thenar muscle)
 
 AnnotationAssertion(rdfs:label <http://purl.org/sig/ont/fma/fma64916> "Thenar muscle"@en)
+SubClassOf(<http://purl.org/sig/ont/fma/fma64916> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0002460))
 SubClassOf(<http://purl.org/sig/ont/fma/fma64916> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0003427))
+SubClassOf(<http://purl.org/sig/ont/fma/fma64916> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0003484))
+SubClassOf(<http://purl.org/sig/ont/fma/fma64916> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0003690))
+SubClassOf(<http://purl.org/sig/ont/fma/fma64916> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0003810))
+SubClassOf(<http://purl.org/sig/ont/fma/fma64916> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0008959))
+SubClassOf(<http://purl.org/sig/ont/fma/fma64916> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0009063))
 SubClassOf(<http://purl.org/sig/ont/fma/fma64916> ObjectSomeValuesFrom(obo:RO_0001025 <http://id.who.int/icd/entity/1233939003>))
 
 # Class: <http://purl.org/sig/ont/fma/fma67169> (Set of pharyngeal muscles)
@@ -6491,6 +6732,7 @@ SubClassOf(<http://purl.org/sig/ont/fma/fma7088> ObjectSomeValuesFrom(obo:RO_000
 AnnotationAssertion(rdfs:label <http://purl.org/sig/ont/fma/fma71437> "Set of masticatory muscles"@en)
 SubClassOf(<http://purl.org/sig/ont/fma/fma71437> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0005216))
 SubClassOf(<http://purl.org/sig/ont/fma/fma71437> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0030193))
+SubClassOf(<http://purl.org/sig/ont/fma/fma71437> ObjectSomeValuesFrom(obo:RO_0000091 obo:PROMOT_0032015))
 SubClassOf(<http://purl.org/sig/ont/fma/fma71437> ObjectSomeValuesFrom(obo:RO_0001025 <http://id.who.int/icd/entity/1874889854>))
 
 # Class: <http://purl.org/sig/ont/fma/fma74081> (Set of intercostal muscles)
@@ -6518,7 +6760,9 @@ SubClassOf(<http://purl.org/sig/ont/fma/fma9617> ObjectSomeValuesFrom(obo:RO_000
 # Class: <http://purl.org/sig/ont/fma/fma9620> (Muscle of abdomen)
 
 AnnotationAssertion(rdfs:label <http://purl.org/sig/ont/fma/fma9620> "Muscle of abdomen"@en)
+SubClassOf(<http://purl.org/sig/ont/fma/fma9620> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0003327))
 SubClassOf(<http://purl.org/sig/ont/fma/fma9620> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0009023))
+SubClassOf(<http://purl.org/sig/ont/fma/fma9620> ObjectSomeValuesFrom(obo:RO_0000091 obo:PROMOT_0032014))
 SubClassOf(<http://purl.org/sig/ont/fma/fma9620> ObjectSomeValuesFrom(obo:RO_0001025 <http://id.who.int/icd/entity/58064740>))
 
 # Class: <http://purl.org/sig/ont/fma/fma9626> (Trapezius)
@@ -6907,10 +7151,6 @@ SubClassOf(<http://snomed.info/id/83420006> <http://snomed.info/id/75226009>)
 
 AnnotationAssertion(rdfs:label <http://snomed.info/id/840297006> "Assessment of patient reported outcome measures (procedure)"@en)
 SubClassOf(<http://snomed.info/id/840297006> <http://snomed.info/id/315306007>)
-SubClassOf(<http://snomed.info/id/840297006> ObjectSomeValuesFrom(obo:PROMOT_2000002 obo:HP_0002015))
-SubClassOf(<http://snomed.info/id/840297006> ObjectSomeValuesFrom(obo:PROMOT_2000002 obo:HP_0002068))
-SubClassOf(<http://snomed.info/id/840297006> ObjectSomeValuesFrom(obo:PROMOT_2000002 obo:HP_0033667))
-SubClassOf(<http://snomed.info/id/840297006> ObjectSomeValuesFrom(obo:PROMOT_2000002 obo:HP_0200136))
 
 # Class: <http://snomed.info/id/84100007> (History taking (procedure))
 
@@ -7182,9 +7422,11 @@ SubClassOf(<http://www.orpha.net/ORDO/Orphanet_270> ObjectSomeValuesFrom(obo:RO_
 SubClassOf(<http://www.orpha.net/ORDO/Orphanet_270> ObjectSomeValuesFrom(obo:RO_0004029 obo:HP_0031374))
 SubClassOf(<http://www.orpha.net/ORDO/Orphanet_270> ObjectSomeValuesFrom(obo:RO_0004029 obo:HP_0032043))
 SubClassOf(<http://www.orpha.net/ORDO/Orphanet_270> ObjectSomeValuesFrom(obo:RO_0004029 obo:HP_0032341))
+SubClassOf(<http://www.orpha.net/ORDO/Orphanet_270> ObjectSomeValuesFrom(obo:RO_0004029 obo:HP_0032355))
 SubClassOf(<http://www.orpha.net/ORDO/Orphanet_270> ObjectSomeValuesFrom(obo:RO_0004029 obo:HP_0033235))
 SubClassOf(<http://www.orpha.net/ORDO/Orphanet_270> ObjectSomeValuesFrom(obo:RO_0004029 obo:HP_0033416))
 SubClassOf(<http://www.orpha.net/ORDO/Orphanet_270> ObjectSomeValuesFrom(obo:RO_0004029 obo:HP_0033466))
+SubClassOf(<http://www.orpha.net/ORDO/Orphanet_270> ObjectSomeValuesFrom(obo:RO_0004029 obo:HP_0033666))
 SubClassOf(<http://www.orpha.net/ORDO/Orphanet_270> ObjectSomeValuesFrom(obo:RO_0004029 obo:HP_0033667))
 SubClassOf(<http://www.orpha.net/ORDO/Orphanet_270> ObjectSomeValuesFrom(obo:RO_0004029 obo:HP_0033695))
 SubClassOf(<http://www.orpha.net/ORDO/Orphanet_270> ObjectSomeValuesFrom(obo:RO_0004029 obo:HP_0200136))
@@ -7195,6 +7437,14 @@ SubClassOf(<http://www.orpha.net/ORDO/Orphanet_270> ObjectSomeValuesFrom(obo:RO_
 SubClassOf(<http://www.orpha.net/ORDO/Orphanet_270> ObjectSomeValuesFrom(obo:RO_0004029 obo:PROMOT_0032009))
 SubClassOf(<http://www.orpha.net/ORDO/Orphanet_270> ObjectSomeValuesFrom(obo:RO_0004029 obo:PROMOT_0032010))
 SubClassOf(<http://www.orpha.net/ORDO/Orphanet_270> ObjectSomeValuesFrom(obo:RO_0004029 obo:PROMOT_0032011))
+SubClassOf(<http://www.orpha.net/ORDO/Orphanet_270> ObjectSomeValuesFrom(obo:RO_0004029 obo:PROMOT_0032015))
+SubClassOf(<http://www.orpha.net/ORDO/Orphanet_270> ObjectSomeValuesFrom(obo:RO_0004029 obo:PROMOT_0032017))
+SubClassOf(<http://www.orpha.net/ORDO/Orphanet_270> ObjectSomeValuesFrom(obo:RO_0004029 obo:PROMOT_0032018))
+SubClassOf(<http://www.orpha.net/ORDO/Orphanet_270> ObjectSomeValuesFrom(obo:RO_0004029 obo:PROMOT_0032019))
+SubClassOf(<http://www.orpha.net/ORDO/Orphanet_270> ObjectSomeValuesFrom(obo:RO_0004029 obo:PROMOT_0032020))
+SubClassOf(<http://www.orpha.net/ORDO/Orphanet_270> ObjectSomeValuesFrom(obo:RO_0004029 obo:PROMOT_0032021))
+SubClassOf(<http://www.orpha.net/ORDO/Orphanet_270> ObjectSomeValuesFrom(obo:RO_0004029 obo:PROMOT_0032022))
+SubClassOf(<http://www.orpha.net/ORDO/Orphanet_270> ObjectSomeValuesFrom(obo:RO_0004029 obo:PROMOT_0032023))
 
 # Class: <http://www.orpha.net/ORDO/Orphanet_377788> (Disease)
 
@@ -7307,6 +7557,7 @@ SubClassOf(<http://www.orpha.net/ORDO/Orphanet_590> ObjectSomeValuesFrom(obo:RO_
 SubClassOf(<http://www.orpha.net/ORDO/Orphanet_590> ObjectSomeValuesFrom(obo:RO_0004029 obo:HP_0009063))
 SubClassOf(<http://www.orpha.net/ORDO/Orphanet_590> ObjectSomeValuesFrom(obo:RO_0004029 obo:HP_0009073))
 SubClassOf(<http://www.orpha.net/ORDO/Orphanet_590> ObjectSomeValuesFrom(obo:RO_0004029 obo:HP_0009077))
+SubClassOf(<http://www.orpha.net/ORDO/Orphanet_590> ObjectSomeValuesFrom(obo:RO_0004029 obo:HP_0011471))
 SubClassOf(<http://www.orpha.net/ORDO/Orphanet_590> ObjectSomeValuesFrom(obo:RO_0004029 obo:HP_0011727))
 SubClassOf(<http://www.orpha.net/ORDO/Orphanet_590> ObjectSomeValuesFrom(obo:RO_0004029 obo:HP_0011968))
 SubClassOf(<http://www.orpha.net/ORDO/Orphanet_590> ObjectSomeValuesFrom(obo:RO_0004029 obo:HP_0012515))
@@ -7328,16 +7579,17 @@ SubClassOf(<http://www.orpha.net/ORDO/Orphanet_590> ObjectSomeValuesFrom(obo:RO_
 SubClassOf(<http://www.orpha.net/ORDO/Orphanet_590> ObjectSomeValuesFrom(obo:RO_0004029 obo:HP_0030211))
 SubClassOf(<http://www.orpha.net/ORDO/Orphanet_590> ObjectSomeValuesFrom(obo:RO_0004029 obo:HP_0030237))
 SubClassOf(<http://www.orpha.net/ORDO/Orphanet_590> ObjectSomeValuesFrom(obo:RO_0004029 obo:HP_0030319))
+SubClassOf(<http://www.orpha.net/ORDO/Orphanet_590> ObjectSomeValuesFrom(obo:RO_0004029 obo:HP_0031058))
 SubClassOf(<http://www.orpha.net/ORDO/Orphanet_590> ObjectSomeValuesFrom(obo:RO_0004029 obo:HP_0031108))
 SubClassOf(<http://www.orpha.net/ORDO/Orphanet_590> ObjectSomeValuesFrom(obo:RO_0004029 obo:HP_0031177))
 SubClassOf(<http://www.orpha.net/ORDO/Orphanet_590> ObjectSomeValuesFrom(obo:RO_0004029 obo:HP_0031374))
 SubClassOf(<http://www.orpha.net/ORDO/Orphanet_590> ObjectSomeValuesFrom(obo:RO_0004029 obo:HP_0031826))
-SubClassOf(<http://www.orpha.net/ORDO/Orphanet_590> ObjectSomeValuesFrom(obo:RO_0004029 obo:HP_0031914))
 SubClassOf(<http://www.orpha.net/ORDO/Orphanet_590> ObjectSomeValuesFrom(obo:RO_0004029 obo:HP_0031936))
 SubClassOf(<http://www.orpha.net/ORDO/Orphanet_590> ObjectSomeValuesFrom(obo:RO_0004029 obo:HP_0032341))
 SubClassOf(<http://www.orpha.net/ORDO/Orphanet_590> ObjectSomeValuesFrom(obo:RO_0004029 obo:HP_0033416))
 SubClassOf(<http://www.orpha.net/ORDO/Orphanet_590> ObjectSomeValuesFrom(obo:RO_0004029 obo:HP_0033454))
 SubClassOf(<http://www.orpha.net/ORDO/Orphanet_590> ObjectSomeValuesFrom(obo:RO_0004029 obo:HP_0033580))
+SubClassOf(<http://www.orpha.net/ORDO/Orphanet_590> ObjectSomeValuesFrom(obo:RO_0004029 obo:HP_0033695))
 SubClassOf(<http://www.orpha.net/ORDO/Orphanet_590> ObjectSomeValuesFrom(obo:RO_0004029 obo:HP_0040081))
 SubClassOf(<http://www.orpha.net/ORDO/Orphanet_590> ObjectSomeValuesFrom(obo:RO_0004029 obo:HP_0200136))
 SubClassOf(<http://www.orpha.net/ORDO/Orphanet_590> ObjectSomeValuesFrom(obo:RO_0004029 obo:PROMOT_0032005))
@@ -7345,6 +7597,8 @@ SubClassOf(<http://www.orpha.net/ORDO/Orphanet_590> ObjectSomeValuesFrom(obo:RO_
 SubClassOf(<http://www.orpha.net/ORDO/Orphanet_590> ObjectSomeValuesFrom(obo:RO_0004029 obo:PROMOT_0032013))
 SubClassOf(<http://www.orpha.net/ORDO/Orphanet_590> ObjectSomeValuesFrom(obo:RO_0004029 obo:PROMOT_0032014))
 SubClassOf(<http://www.orpha.net/ORDO/Orphanet_590> ObjectSomeValuesFrom(obo:RO_0004029 obo:PROMOT_0032015))
+SubClassOf(<http://www.orpha.net/ORDO/Orphanet_590> ObjectSomeValuesFrom(obo:RO_0004029 obo:PROMOT_0032016))
+SubClassOf(<http://www.orpha.net/ORDO/Orphanet_590> ObjectSomeValuesFrom(obo:RO_0004029 obo:PROMOT_0032024))
 
 # Class: <http://www.orpha.net/ORDO/Orphanet_97245> (Congenital myopathy)
 
@@ -7352,16 +7606,7 @@ AnnotationAssertion(rdfs:label <http://www.orpha.net/ORDO/Orphanet_97245> "Conge
 SubClassOf(<http://www.orpha.net/ORDO/Orphanet_97245> obo:PROMOT_0032001)
 SubClassOf(<http://www.orpha.net/ORDO/Orphanet_97245> ObjectSomeValuesFrom(obo:RO_0000086 obo:HP_0000005))
 SubClassOf(<http://www.orpha.net/ORDO/Orphanet_97245> ObjectSomeValuesFrom(obo:RO_0004003 obo:SO_0001060))
-SubClassOf(<http://www.orpha.net/ORDO/Orphanet_97245> ObjectSomeValuesFrom(obo:RO_0004029 obo:HP_0000028))
 SubClassOf(<http://www.orpha.net/ORDO/Orphanet_97245> ObjectSomeValuesFrom(obo:RO_0004029 obo:HP_0000118))
-SubClassOf(<http://www.orpha.net/ORDO/Orphanet_97245> ObjectSomeValuesFrom(obo:RO_0004029 obo:HP_0000218))
-SubClassOf(<http://www.orpha.net/ORDO/Orphanet_97245> ObjectSomeValuesFrom(obo:RO_0004029 obo:HP_0000276))
-SubClassOf(<http://www.orpha.net/ORDO/Orphanet_97245> ObjectSomeValuesFrom(obo:RO_0004029 obo:HP_0000467))
-SubClassOf(<http://www.orpha.net/ORDO/Orphanet_97245> ObjectSomeValuesFrom(obo:RO_0004029 obo:HP_0000486))
-SubClassOf(<http://www.orpha.net/ORDO/Orphanet_97245> ObjectSomeValuesFrom(obo:RO_0004029 obo:HP_0000496))
-SubClassOf(<http://www.orpha.net/ORDO/Orphanet_97245> ObjectSomeValuesFrom(obo:RO_0004029 obo:HP_0000508))
-SubClassOf(<http://www.orpha.net/ORDO/Orphanet_97245> ObjectSomeValuesFrom(obo:RO_0004029 obo:HP_0000544))
-SubClassOf(<http://www.orpha.net/ORDO/Orphanet_97245> ObjectSomeValuesFrom(obo:RO_0004029 obo:HP_0000597))
 SubClassOf(<http://www.orpha.net/ORDO/Orphanet_97245> ObjectSomeValuesFrom(obo:RO_0004029 obo:HP_0000602))
 SubClassOf(<http://www.orpha.net/ORDO/Orphanet_97245> ObjectSomeValuesFrom(obo:RO_0004029 obo:HP_0000767))
 SubClassOf(<http://www.orpha.net/ORDO/Orphanet_97245> ObjectSomeValuesFrom(obo:RO_0004029 obo:HP_0000768))
@@ -7413,6 +7658,8 @@ SubClassOf(<http://www.orpha.net/ORDO/Orphanet_97245> ObjectSomeValuesFrom(obo:R
 SubClassOf(<http://www.orpha.net/ORDO/Orphanet_97245> ObjectSomeValuesFrom(obo:RO_0004029 obo:HP_0002808))
 SubClassOf(<http://www.orpha.net/ORDO/Orphanet_97245> ObjectSomeValuesFrom(obo:RO_0004029 obo:HP_0002828))
 SubClassOf(<http://www.orpha.net/ORDO/Orphanet_97245> ObjectSomeValuesFrom(obo:RO_0004029 obo:HP_0002878))
+SubClassOf(<http://www.orpha.net/ORDO/Orphanet_97245> ObjectSomeValuesFrom(obo:RO_0004029 obo:HP_0002882))
+SubClassOf(<http://www.orpha.net/ORDO/Orphanet_97245> ObjectSomeValuesFrom(obo:RO_0004029 obo:HP_0003202))
 SubClassOf(<http://www.orpha.net/ORDO/Orphanet_97245> ObjectSomeValuesFrom(obo:RO_0004029 obo:HP_0003236))
 SubClassOf(<http://www.orpha.net/ORDO/Orphanet_97245> ObjectSomeValuesFrom(obo:RO_0004029 obo:HP_0003306))
 SubClassOf(<http://www.orpha.net/ORDO/Orphanet_97245> ObjectSomeValuesFrom(obo:RO_0004029 obo:HP_0003307))
@@ -7422,6 +7669,7 @@ SubClassOf(<http://www.orpha.net/ORDO/Orphanet_97245> ObjectSomeValuesFrom(obo:R
 SubClassOf(<http://www.orpha.net/ORDO/Orphanet_97245> ObjectSomeValuesFrom(obo:RO_0004029 obo:HP_0003391))
 SubClassOf(<http://www.orpha.net/ORDO/Orphanet_97245> ObjectSomeValuesFrom(obo:RO_0004029 obo:HP_0003392))
 SubClassOf(<http://www.orpha.net/ORDO/Orphanet_97245> ObjectSomeValuesFrom(obo:RO_0004029 obo:HP_0003398))
+SubClassOf(<http://www.orpha.net/ORDO/Orphanet_97245> ObjectSomeValuesFrom(obo:RO_0004029 obo:HP_0003403))
 SubClassOf(<http://www.orpha.net/ORDO/Orphanet_97245> ObjectSomeValuesFrom(obo:RO_0004029 obo:HP_0003427))
 SubClassOf(<http://www.orpha.net/ORDO/Orphanet_97245> ObjectSomeValuesFrom(obo:RO_0004029 obo:HP_0003445))
 SubClassOf(<http://www.orpha.net/ORDO/Orphanet_97245> ObjectSomeValuesFrom(obo:RO_0004029 obo:HP_0003457))
@@ -7492,11 +7740,11 @@ SubClassOf(<http://www.orpha.net/ORDO/Orphanet_97245> ObjectSomeValuesFrom(obo:R
 SubClassOf(<http://www.orpha.net/ORDO/Orphanet_97245> ObjectSomeValuesFrom(obo:RO_0004029 obo:HP_0031177))
 SubClassOf(<http://www.orpha.net/ORDO/Orphanet_97245> ObjectSomeValuesFrom(obo:RO_0004029 obo:HP_0031374))
 SubClassOf(<http://www.orpha.net/ORDO/Orphanet_97245> ObjectSomeValuesFrom(obo:RO_0004029 obo:HP_0031826))
-SubClassOf(<http://www.orpha.net/ORDO/Orphanet_97245> ObjectSomeValuesFrom(obo:RO_0004029 obo:HP_0031914))
 SubClassOf(<http://www.orpha.net/ORDO/Orphanet_97245> ObjectSomeValuesFrom(obo:RO_0004029 obo:HP_0031936))
 SubClassOf(<http://www.orpha.net/ORDO/Orphanet_97245> ObjectSomeValuesFrom(obo:RO_0004029 obo:HP_0032341))
 SubClassOf(<http://www.orpha.net/ORDO/Orphanet_97245> ObjectSomeValuesFrom(obo:RO_0004029 obo:HP_0033416))
 SubClassOf(<http://www.orpha.net/ORDO/Orphanet_97245> ObjectSomeValuesFrom(obo:RO_0004029 obo:HP_0033454))
+SubClassOf(<http://www.orpha.net/ORDO/Orphanet_97245> ObjectSomeValuesFrom(obo:RO_0004029 obo:HP_0033695))
 SubClassOf(<http://www.orpha.net/ORDO/Orphanet_97245> ObjectSomeValuesFrom(obo:RO_0004029 obo:HP_0033994))
 SubClassOf(<http://www.orpha.net/ORDO/Orphanet_97245> ObjectSomeValuesFrom(obo:RO_0004029 obo:HP_0040081))
 SubClassOf(<http://www.orpha.net/ORDO/Orphanet_97245> ObjectSomeValuesFrom(obo:RO_0004029 obo:HP_0040288))

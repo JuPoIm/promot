@@ -62,7 +62,7 @@ Please use this GitHub repository's [Issue tracker](https://github.com/JuPoIm/pr
 
 ## Outstanding contributions
 
-This project has received funding from **(Name of funding agency)**, **XX** and **XX**, partners of the European Joint Programme on Rare Diseases (EJP RD).
+This work has been supported by the PROMOT project. It has received funding from the Canadian Institutes of Health Research (CIHR), and in partnership with L’Agence Nationale de la Recherche (France), Health Research Board (Dublin, Ireland), Instituto de Salud Carloss III (Spain), IRSC–IG, Swedish Research Council (Sweden), and Swiss National Science Foundation (Switzerland), partners of the European Joint Programme on Rare Diseases (EJP RD).
 
 ### EUROPEAN JOINT PROGRAMME ON RARE DISEASE
 [![EJP RD official logo](https://github.com/JuPoIm/promot/blob/test/site/assets/images/EJP-RD-1024x226.png)](https://www.ejprarediseases.org/)

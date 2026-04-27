@@ -27,6 +27,9 @@ If you look for a detailed description of the ontology, please go [here](Ontolog
 This ontology repository was created using the [Ontology Development Kit (ODK)](https://github.com/INCATools/ontology-development-kit).
 <img src="https://github.com/JuPoIm/promot/blob/test/site/assets/images/odk-logo_black-banner.png" width="50%" height="50%"/>
 
+
+This work has been supported by the PROMOT project. It has received funding from the Canadian Institutes of Health Research (CIHR), and in partnership with L’Agence Nationale de la Recherche (France), Health Research Board (Dublin, Ireland), Instituto de Salud Carloss III (Spain), IRSC–IG, Swedish Research Council (Sweden), and Swiss National Science Foundation (Switzerland), partners of the European Joint Programme on Rare Diseases (EJP RD).
+
 It was developed thanks to the support of the [EJP RD initiative](https://www.ejprarediseases.org/) which had received funding from the European Union’s Horizon 2020 research and innovation programme under grant agreement N°825575.
 
 ## Additional useful documentations

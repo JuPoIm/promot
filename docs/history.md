@@ -34,7 +34,7 @@ The PROMOT ontology relies on three sources:
 
 ## Acknowledgements
 
-This project has received funding from (Name of funding agency), XX and XX, partners of the European Joint Programme on Rare Diseases (EJP RD).
+This work has been supported by the PROMOT project. It has received funding from the Canadian Institutes of Health Research (CIHR), and in partnership with L’Agence Nationale de la Recherche (France), Health Research Board (Dublin, Ireland), Instituto de Salud Carloss III (Spain), IRSC–IG, Swedish Research Council (Sweden), and Swiss National Science Foundation (Switzerland), partners of the European Joint Programme on Rare Diseases (EJP RD).
 
 The [EJP RD initiative](https://www.ejprarediseases.org/) has received funding from the European Union’s Horizon 2020 research and innovation programme under grant agreement N°825575.
 

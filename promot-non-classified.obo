@@ -1,6 +1,6 @@
 format-version: 1.2
-data-version: promot/releases/2026-04-10/promot-non-classified.owl
-date: 10:04:2026 15:19
+data-version: promot/releases/2026-04-27/promot-non-classified.owl
+date: 27:04:2026 13:35
 subsetdef: hposlim_core ""
 subsetdef: http://purl.obolibrary.org/obo/valid_for_go_annotation_extension ""
 subsetdef: http://purl.obolibrary.org/obo/valid_for_go_gp2term ""
@@ -15,7 +15,6 @@ subsetdef: NCIT:C114548 ""
 subsetdef: NCIT:C116107 ""
 subsetdef: NCIT:C116108 ""
 subsetdef: NCIT:C118466 ""
-subsetdef: NCIT:C118468 ""
 subsetdef: NCIT:C124304 ""
 subsetdef: NCIT:C124305 ""
 subsetdef: NCIT:C124306 ""
@@ -168,7 +167,7 @@ property_value: dc11:creator "Paul Fabry MD, PhD student\nhttps://orcid.org/0000
 property_value: dcterms:description "Ontology for modeling the three following neuromuscular diseases : OPMD, Congenital myopathies and Congenital myastenic syndroms. It aims to be also an ontology for building the PROMOT project relational database." xsd:string
 property_value: dcterms:license https://creativecommons.org/licenses/by-nc-sa/4.0/
 property_value: dcterms:title "PROMOT ontology" xsd:string
-property_value: owl:versionInfo "2026-04-10" xsd:string
+property_value: owl:versionInfo "2026-04-27" xsd:string
 property_value: seeAlso "More about PROMOT initiative at https://www.promotinitiative.com/\n" xsd:string
 
 [Term]
@@ -833,7 +832,9 @@ property_value: fma:synonym "Thoracic diaphragm" xsd:string {fma:Date_entered_mo
 id: FMA:13354
 name: Intercostal Muscle
 is_a: FMA:9619 ! Muscle of thorax
+relationship: RO:0000091 HP:0003327 ! has disposition Axial muscle weakness
 relationship: RO:0000091 HP:0004878 ! has disposition Intercostal muscle weakness
+relationship: RO:0000091 PROMOT:0032014 ! has disposition Axial fatigable weakness
 relationship: RO:0001025 ICF:1571232890 ! located in Intercostal muscles
 property_value: fma:FMAID "13354" xsd:integer
 property_value: fma:non-English_equivalent "Musculus intercostalis" xsd:string {fma:Date_entered_modified="Thu May 12 14:26:32 GMT-08:00 2005", fma:English_equivalent="Intercostal muscle", fma:author="JOSE MEJINO, MD", fma:authority="Rosse MD", fma:authority="Terminologia Anatomica 1998", fma:language="Latin"}
@@ -884,7 +885,13 @@ property_value: fma:synonym "Serratus anterior muscle" xsd:string {fma:Date_ente
 id: FMA:22428
 name: Quadriceps femoris
 is_a: FMA:32406 ! Organ cluster
+relationship: RO:0000091 HP:0003690 ! has disposition Limb muscle weakness
+relationship: RO:0000091 HP:0003694 ! has disposition Late-onset proximal muscle weakness
+relationship: RO:0000091 HP:0003701 ! has disposition Proximal muscle weakness
 relationship: RO:0000091 HP:0003731 ! has disposition Quadriceps muscle weakness
+relationship: RO:0000091 HP:0007340 ! has disposition Lower limb muscle weakness
+relationship: RO:0000091 HP:0008994 ! has disposition Proximal lower limb muscle weakness
+relationship: RO:0000091 HP:0009073 ! has disposition Progressive proximal muscle weakness
 relationship: RO:0001025 ICF:1794398084 ! located in Muscles de la cuisse
 property_value: fma:definition "Organ cluster of muscle organs in the anterior compartment of thigh." xsd:string
 property_value: fma:FMAID "22428" xsd:integer
@@ -898,8 +905,13 @@ property_value: fma:synonym "Quadriceps femoris muscle" xsd:string {fma:author="
 id: FMA:22471
 name: Muscle of leg
 is_a: FMA:37368 ! Muscle of free lower limb
+relationship: RO:0000091 HP:0002460 ! has disposition Distal muscle weakness
+relationship: RO:0000091 HP:0003690 ! has disposition Limb muscle weakness
+relationship: RO:0000091 HP:0003810 ! has disposition Late-onset distal muscle weakness
+relationship: RO:0000091 HP:0007340 ! has disposition Lower limb muscle weakness
 relationship: RO:0000091 HP:0009028 ! has disposition Generalized weakness of limb muscles
 relationship: RO:0000091 HP:0009053 ! has disposition Distal lower limb muscle weakness
+relationship: RO:0000091 HP:0009063 ! has disposition Progressive distal muscle weakness
 relationship: RO:0000091 HP:0011727 ! has disposition Peroneal muscle weakness
 relationship: RO:0000091 HP:0030198 ! has disposition Fatigable weakness of distal limb muscles
 relationship: RO:0000091 HP:0031374 ! has disposition Ankle weakness
@@ -929,7 +941,13 @@ property_value: fma:synonym "Posterior crural muscle" xsd:string {fma:Date_enter
 id: FMA:22532
 name: Tibialis anterior
 is_a: FMA:22472 ! Muscle of anterior compartment of leg
+relationship: RO:0000091 HP:0002460 ! has disposition Distal muscle weakness
+relationship: RO:0000091 HP:0003690 ! has disposition Limb muscle weakness
+relationship: RO:0000091 HP:0003810 ! has disposition Late-onset distal muscle weakness
+relationship: RO:0000091 HP:0007340 ! has disposition Lower limb muscle weakness
 relationship: RO:0000091 HP:0008963 ! has disposition Tibialis muscle weakness
+relationship: RO:0000091 HP:0009053 ! has disposition Distal lower limb muscle weakness
+relationship: RO:0000091 HP:0009063 ! has disposition Progressive distal muscle weakness
 relationship: RO:0001025 ICF:338611549 ! located in Muscles de la jambe
 property_value: fma:FMAID "22532" xsd:integer
 property_value: fma:non-English_equivalent "Muscle tibial antérieur" xsd:string {fma:Date_entered_modified="Thu May 12 14:24:39 GMT-08:00 2005", fma:author="JOSE MEJINO, MD", fma:authority="Robert Baud, PhD", fma:authority="Rosse MD", fma:language="French"}
@@ -957,6 +975,7 @@ name: Pterygoid muscle
 is_a: FMA:46751 ! Muscle of face
 relationship: RO:0000091 HP:0005216 ! has disposition Impaired mastication
 relationship: RO:0000091 HP:0030193 ! has disposition Fatigable weakness of chewing muscles
+relationship: RO:0000091 PROMOT:0032015 ! has disposition Debilidad de músculos masticatorios
 relationship: RO:0001025 ICF:1874889854 ! located in Muscles de la région de la tête et du cou
 property_value: fma:FMAID "323229" xsd:integer
 
@@ -1008,10 +1027,15 @@ id: FMA:33531
 name: Muscle of shoulder
 is_a: FMA:37347 ! Muscle of pectoral girdle
 relationship: RO:0000091 HP:0003325 ! has disposition Limb-girdle muscle weakness
+relationship: RO:0000091 HP:0003484 ! has disposition Upper limb muscle weakness
 relationship: RO:0000091 HP:0003547 ! has disposition Shoulder girdle muscle weakness
+relationship: RO:0000091 HP:0003690 ! has disposition Limb muscle weakness
 relationship: RO:0000091 HP:0003691 ! has disposition Scapular winging
+relationship: RO:0000091 HP:0003694 ! has disposition Late-onset proximal muscle weakness
+relationship: RO:0000091 HP:0003701 ! has disposition Proximal muscle weakness
 relationship: RO:0000091 HP:0008997 ! has disposition Proximal upper limb muscle weakness
 relationship: RO:0000091 HP:0009028 ! has disposition Generalized weakness of limb muscles
+relationship: RO:0000091 HP:0009073 ! has disposition Progressive proximal muscle weakness
 relationship: RO:0000091 HP:0030200 ! has disposition Fatiguable weakness of proximal limb muscles
 relationship: RO:0001025 ICF:278512890 ! located in Muscles de la région des épaules
 property_value: fma:FMAID "33531" xsd:integer
@@ -1063,10 +1087,15 @@ name: Muscle of pelvic girdle
 is_a: FMA:9622 ! Muscle of lower limb
 disjoint_from: FMA:37368 ! Muscle of free lower limb
 relationship: RO:0000091 HP:0003325 ! has disposition Limb-girdle muscle weakness
+relationship: RO:0000091 HP:0003690 ! has disposition Limb muscle weakness
+relationship: RO:0000091 HP:0003694 ! has disposition Late-onset proximal muscle weakness
+relationship: RO:0000091 HP:0003701 ! has disposition Proximal muscle weakness
 relationship: RO:0000091 HP:0003749 ! has disposition Pelvic girdle muscle weakness
+relationship: RO:0000091 HP:0007340 ! has disposition Lower limb muscle weakness
 relationship: RO:0000091 HP:0008988 ! has disposition Pelvic girdle muscle atrophy
 relationship: RO:0000091 HP:0008994 ! has disposition Proximal lower limb muscle weakness
 relationship: RO:0000091 HP:0009028 ! has disposition Generalized weakness of limb muscles
+relationship: RO:0000091 HP:0009073 ! has disposition Progressive proximal muscle weakness
 relationship: RO:0000091 HP:0030200 ! has disposition Fatiguable weakness of proximal limb muscles
 relationship: RO:0001025 ICF:793188683 ! located in Muscles de la région pelvienne
 property_value: fma:FMAID "37367" xsd:integer
@@ -1085,9 +1114,14 @@ property_value: fma:synonym "Free lower limb muscle" xsd:string {fma:Date_entere
 id: FMA:37369
 name: Muscle of foot
 is_a: FMA:37368 ! Muscle of free lower limb
+relationship: RO:0000091 HP:0002460 ! has disposition Distal muscle weakness
+relationship: RO:0000091 HP:0003690 ! has disposition Limb muscle weakness
+relationship: RO:0000091 HP:0003810 ! has disposition Late-onset distal muscle weakness
+relationship: RO:0000091 HP:0007340 ! has disposition Lower limb muscle weakness
 relationship: RO:0000091 HP:0009027 ! has disposition Foot dorsiflexor weakness
 relationship: RO:0000091 HP:0009028 ! has disposition Generalized weakness of limb muscles
 relationship: RO:0000091 HP:0009053 ! has disposition Distal lower limb muscle weakness
+relationship: RO:0000091 HP:0009063 ! has disposition Progressive distal muscle weakness
 relationship: RO:0000091 HP:0030198 ! has disposition Fatigable weakness of distal limb muscles
 relationship: RO:0001025 ICF:1278239861 ! located in Muscles de la cheville et du pied
 property_value: fma:FMAID "37369" xsd:integer
@@ -1099,8 +1133,13 @@ id: FMA:37370
 name: Muscle of arm
 is_a: FMA:37348 ! Muscle of free upper limb
 disjoint_from: FMA:37371 ! Muscle of forearm
+relationship: RO:0000091 HP:0003484 ! has disposition Upper limb muscle weakness
+relationship: RO:0000091 HP:0003690 ! has disposition Limb muscle weakness
+relationship: RO:0000091 HP:0003694 ! has disposition Late-onset proximal muscle weakness
+relationship: RO:0000091 HP:0003701 ! has disposition Proximal muscle weakness
 relationship: RO:0000091 HP:0008997 ! has disposition Proximal upper limb muscle weakness
 relationship: RO:0000091 HP:0009028 ! has disposition Generalized weakness of limb muscles
+relationship: RO:0000091 HP:0009073 ! has disposition Progressive proximal muscle weakness
 relationship: RO:0000091 HP:0030200 ! has disposition Fatiguable weakness of proximal limb muscles
 relationship: RO:0001025 ICF:1867012554 ! located in Muscles du bras
 property_value: fma:FMAID "37370" xsd:integer
@@ -1111,8 +1150,13 @@ property_value: fma:synonym "Arm muscle" xsd:string {fma:Date_entered_modified="
 id: FMA:37371
 name: Muscle of forearm
 is_a: FMA:37348 ! Muscle of free upper limb
+relationship: RO:0000091 HP:0002460 ! has disposition Distal muscle weakness
+relationship: RO:0000091 HP:0003484 ! has disposition Upper limb muscle weakness
+relationship: RO:0000091 HP:0003690 ! has disposition Limb muscle weakness
+relationship: RO:0000091 HP:0003810 ! has disposition Late-onset distal muscle weakness
 relationship: RO:0000091 HP:0008959 ! has disposition Distal upper limb muscle weakness
 relationship: RO:0000091 HP:0009028 ! has disposition Generalized weakness of limb muscles
+relationship: RO:0000091 HP:0009063 ! has disposition Progressive distal muscle weakness
 relationship: RO:0000091 HP:0030198 ! has disposition Fatigable weakness of distal limb muscles
 relationship: RO:0001025 ICF:294830867 ! located in Muscles de l'avant-bras
 property_value: fma:FMAID "37371" xsd:integer
@@ -1123,8 +1167,13 @@ property_value: fma:synonym "Forearm muscle" xsd:string {fma:Date_entered_modifi
 id: FMA:37372
 name: Muscle of hand
 is_a: FMA:37348 ! Muscle of free upper limb
+relationship: RO:0000091 HP:0002460 ! has disposition Distal muscle weakness
+relationship: RO:0000091 HP:0003484 ! has disposition Upper limb muscle weakness
+relationship: RO:0000091 HP:0003690 ! has disposition Limb muscle weakness
+relationship: RO:0000091 HP:0003810 ! has disposition Late-onset distal muscle weakness
 relationship: RO:0000091 HP:0008959 ! has disposition Distal upper limb muscle weakness
 relationship: RO:0000091 HP:0009028 ! has disposition Generalized weakness of limb muscles
+relationship: RO:0000091 HP:0009063 ! has disposition Progressive distal muscle weakness
 relationship: RO:0000091 HP:0030198 ! has disposition Fatigable weakness of distal limb muscles
 relationship: RO:0000091 HP:0030237 ! has disposition Hand muscle weakness
 relationship: RO:0000091 HP:0031177 ! has disposition Finger flexor weakness
@@ -1153,7 +1202,13 @@ property_value: fma:synonym "Dorsal interosseous muscle of hand" xsd:string {fma
 id: FMA:37424
 name: First dorsal interosseous of hand
 is_a: FMA:37418 ! Dorsal interosseous of hand
+relationship: RO:0000091 HP:0002460 ! has disposition Distal muscle weakness
 relationship: RO:0000091 HP:0003392 ! has disposition First dorsal interossei muscle weakness
+relationship: RO:0000091 HP:0003484 ! has disposition Upper limb muscle weakness
+relationship: RO:0000091 HP:0003690 ! has disposition Limb muscle weakness
+relationship: RO:0000091 HP:0003810 ! has disposition Late-onset distal muscle weakness
+relationship: RO:0000091 HP:0008959 ! has disposition Distal upper limb muscle weakness
+relationship: RO:0000091 HP:0009063 ! has disposition Progressive distal muscle weakness
 relationship: RO:0001025 ICF:1233939003 ! located in Muscles de la main
 property_value: fma:FMAID "37424" xsd:integer
 property_value: fma:preferred_name "First dorsal interosseous of hand" xsd:string {fma:Date_entered_modified="Thu May 12 14:31:15 GMT-08:00 2005", fma:author="JOSE MEJINO, MD", fma:authority="Rosse MD", fma:modification="Fri Jul 16 15:40:33 PDT 1999"}
@@ -1164,6 +1219,12 @@ property_value: fma:synonym "First dorsal interosseous muscle of hand" xsd:strin
 id: FMA:37688
 name: Triceps brachii
 is_a: FMA:37712 ! Muscle of posterior compartment of arm
+relationship: RO:0000091 HP:0003484 ! has disposition Upper limb muscle weakness
+relationship: RO:0000091 HP:0003690 ! has disposition Limb muscle weakness
+relationship: RO:0000091 HP:0003694 ! has disposition Late-onset proximal muscle weakness
+relationship: RO:0000091 HP:0003701 ! has disposition Proximal muscle weakness
+relationship: RO:0000091 HP:0008997 ! has disposition Proximal upper limb muscle weakness
+relationship: RO:0000091 HP:0009073 ! has disposition Progressive proximal muscle weakness
 relationship: RO:0000091 HP:0031108 ! has disposition Triceps weakness
 relationship: RO:0001025 ICF:1867012554 ! located in Muscles du bras
 property_value: fma:FMAID "37688" xsd:integer
@@ -1197,6 +1258,12 @@ property_value: fma:preferred_name "Superficial muscle of posterior compartment 
 id: FMA:38500
 name: Extensor digitorum
 is_a: FMA:38491 ! Superficial muscle of posterior compartment of forearm
+relationship: RO:0000091 HP:0002460 ! has disposition Distal muscle weakness
+relationship: RO:0000091 HP:0003484 ! has disposition Upper limb muscle weakness
+relationship: RO:0000091 HP:0003690 ! has disposition Limb muscle weakness
+relationship: RO:0000091 HP:0003810 ! has disposition Late-onset distal muscle weakness
+relationship: RO:0000091 HP:0008959 ! has disposition Distal upper limb muscle weakness
+relationship: RO:0000091 HP:0009063 ! has disposition Progressive distal muscle weakness
 relationship: RO:0000091 HP:0009077 ! has disposition Weakness of long finger extensor muscles
 relationship: RO:0001025 ICF:1233939003 ! located in Muscles de la main
 property_value: fma:FMAID "38500" xsd:integer
@@ -1208,7 +1275,13 @@ property_value: fma:preferred_name "Extensor digitorum" xsd:string {fma:Date_ent
 id: FMA:42380
 name: Intrinsic muscle of hand
 is_a: FMA:37372 ! Muscle of hand
+relationship: RO:0000091 HP:0002460 ! has disposition Distal muscle weakness
+relationship: RO:0000091 HP:0003484 ! has disposition Upper limb muscle weakness
+relationship: RO:0000091 HP:0003690 ! has disposition Limb muscle weakness
+relationship: RO:0000091 HP:0003810 ! has disposition Late-onset distal muscle weakness
+relationship: RO:0000091 HP:0008959 ! has disposition Distal upper limb muscle weakness
 relationship: RO:0000091 HP:0009005 ! has disposition Weakness of the intrinsic hand muscles
+relationship: RO:0000091 HP:0009063 ! has disposition Progressive distal muscle weakness
 relationship: RO:0001025 ICF:1233939003 ! located in Muscles de la main
 property_value: fma:FMAID "42380" xsd:integer
 property_value: fma:preferred_name "Intrinsic muscle of hand" xsd:string {fma:Date_entered_modified="Wed Jan 03 11:13:08 PST 2001", fma:author="AUGUSTO V. AGONCILLO, MD", fma:authority="Rosse MD", fma:modification="Thu Aug 19 10:33:34 PDT 1999"}
@@ -1233,6 +1306,8 @@ relationship: RO:0000091 HP:0000183 ! has disposition Tongue muscle weakness
 relationship: RO:0000091 HP:0005216 ! has disposition Impaired mastication
 relationship: RO:0000091 HP:0012473 ! has disposition Tongue atrophy
 relationship: RO:0000091 HP:0030193 ! has disposition Fatigable weakness of chewing muscles
+relationship: RO:0000091 PROMOT:0032015 ! has disposition Debilidad de músculos masticatorios
+relationship: RO:0000091 PROMOT:0032024 ! has disposition Fatigable weakness of tongue muscle
 relationship: RO:0001025 ICF:1874889854 ! located in Muscles de la région de la tête et du cou
 property_value: fma:FMAID "46689" xsd:integer
 property_value: fma:non-English_equivalent "Músculo de la lengüeta" xsd:string {fma:Date_entered_modified="Fri Apr 29 16:44:57 PDT 2005", fma:author="JOSE MEJINO, MD", fma:authority="Rosse MD", fma:language="Spanish"}
@@ -1245,6 +1320,7 @@ name: Muscle of face
 is_a: FMA:9616 ! Muscle of head
 disjoint_from: FMA:57791 ! Muscle of head proper
 relationship: RO:0000091 HP:0030319 ! has disposition Weakness of facial musculature
+relationship: RO:0000091 PROMOT:0032012 ! has disposition Debilidad fatigable de la musculatura facial 
 relationship: RO:0001025 ICF:1874889854 ! located in Muscles de la région de la tête et du cou
 property_value: fma:FMAID "46751" xsd:integer
 property_value: fma:non-English_equivalent "Músculo de la cara" xsd:string {fma:Date_entered_modified="Fri Apr 29 16:44:26 PDT 2005", fma:author="JOSE MEJINO, MD", fma:authority="Rosse MD", fma:language="Spanish"}
@@ -1258,6 +1334,7 @@ name: Buccinator
 is_a: FMA:46751 ! Muscle of face
 relationship: RO:0000091 HP:0005216 ! has disposition Impaired mastication
 relationship: RO:0000091 HP:0030193 ! has disposition Fatigable weakness of chewing muscles
+relationship: RO:0000091 PROMOT:0032015 ! has disposition Debilidad de músculos masticatorios
 relationship: RO:0001025 ICF:1874889854 ! located in Muscles de la région de la tête et du cou
 property_value: fma:FMAID "46834" xsd:integer
 property_value: fma:non-English_equivalent "Muscle buccinateur" xsd:string {fma:Date_entered_modified="Thu May 12 14:24:40 GMT-08:00 2005", fma:author="JOSE MEJINO, MD", fma:authority="Robert Baud, PhD", fma:authority="Rosse MD", fma:language="French"}
@@ -1271,6 +1348,7 @@ name: Masseter
 is_a: FMA:46751 ! Muscle of face
 relationship: RO:0000091 HP:0005216 ! has disposition Impaired mastication
 relationship: RO:0000091 HP:0030193 ! has disposition Fatigable weakness of chewing muscles
+relationship: RO:0000091 PROMOT:0032015 ! has disposition Debilidad de músculos masticatorios
 relationship: RO:0001025 ICF:1874889854 ! located in Muscles de la région de la tête et du cou
 property_value: fma:FMAID "48996" xsd:integer
 property_value: fma:non-English_equivalent "Muscle masséter" xsd:string {fma:Date_entered_modified="Thu May 12 14:24:40 GMT-08:00 2005", fma:author="JOSE MEJINO, MD", fma:authority="Robert Baud, PhD", fma:authority="Rosse MD", fma:language="French"}
@@ -1284,6 +1362,7 @@ name: Temporalis
 is_a: FMA:57791 ! Muscle of head proper
 relationship: RO:0000091 HP:0005216 ! has disposition Impaired mastication
 relationship: RO:0000091 HP:0030193 ! has disposition Fatigable weakness of chewing muscles
+relationship: RO:0000091 PROMOT:0032015 ! has disposition Debilidad de músculos masticatorios
 relationship: RO:0001025 ICF:1874889854 ! located in Muscles de la région de la tête et du cou
 property_value: fma:FMAID "49006" xsd:integer
 property_value: fma:non-English_equivalent "Muscle temporal" xsd:string {fma:Date_entered_modified="Thu May 12 14:24:40 GMT-08:00 2005", fma:author="JOSE MEJINO, MD", fma:authority="Robert Baud, PhD", fma:authority="Rosse MD", fma:language="French"}
@@ -1306,6 +1385,8 @@ relationship: RO:0000091 HP:0000651 ! has disposition Diplopia
 relationship: RO:0000091 HP:0007715 ! has disposition Weak extraocular muscles
 relationship: RO:0000091 HP:0007838 ! has disposition Progressive ptosis
 relationship: RO:0000091 HP:0007941 ! has disposition Limited extraocular movements
+relationship: RO:0000091 PROMOT:0032013 ! has disposition Debilidad fatigable de los músculos oculares
+relationship: RO:0000091 PROMOT:0032016 ! has disposition Fatigable ptosis
 relationship: RO:0001025 ICF:1874889854 ! located in Muscles de la région de la tête et du cou
 relationship: RO:0001025 ICF:405925948 ! located in External ocular muscles
 property_value: fma:FMAID "49033" xsd:integer
@@ -1335,8 +1416,13 @@ property_value: fma:synonym "Set of muscles of subdivision of lower limb" xsd:st
 id: FMA:50208
 name: Musculature of thigh
 is_a: FMA:50392 ! Musculature of subdivision of free lower limb
+relationship: RO:0000091 HP:0003690 ! has disposition Limb muscle weakness
+relationship: RO:0000091 HP:0003694 ! has disposition Late-onset proximal muscle weakness
+relationship: RO:0000091 HP:0003701 ! has disposition Proximal muscle weakness
+relationship: RO:0000091 HP:0007340 ! has disposition Lower limb muscle weakness
 relationship: RO:0000091 HP:0008994 ! has disposition Proximal lower limb muscle weakness
 relationship: RO:0000091 HP:0009028 ! has disposition Generalized weakness of limb muscles
+relationship: RO:0000091 HP:0009073 ! has disposition Progressive proximal muscle weakness
 relationship: RO:0000091 HP:0012515 ! has disposition Hip flexor weakness
 relationship: RO:0000091 HP:0030200 ! has disposition Fatiguable weakness of proximal limb muscles
 relationship: RO:0000091 HP:0033416 ! has disposition Hip adductor weakness
@@ -1373,7 +1459,13 @@ property_value: fma:synonym "Set of muscles of subdivision of free lower limb" x
 id: FMA:51099
 name: Tibialis posterior
 is_a: FMA:65008 ! Deep muscle of posterior compartment of leg
+relationship: RO:0000091 HP:0002460 ! has disposition Distal muscle weakness
+relationship: RO:0000091 HP:0003690 ! has disposition Limb muscle weakness
+relationship: RO:0000091 HP:0003810 ! has disposition Late-onset distal muscle weakness
+relationship: RO:0000091 HP:0007340 ! has disposition Lower limb muscle weakness
 relationship: RO:0000091 HP:0008963 ! has disposition Tibialis muscle weakness
+relationship: RO:0000091 HP:0009053 ! has disposition Distal lower limb muscle weakness
+relationship: RO:0000091 HP:0009063 ! has disposition Progressive distal muscle weakness
 relationship: RO:0001025 ICF:338611549 ! located in Muscles de la jambe
 property_value: fma:FMAID "51099" xsd:integer
 property_value: fma:non-English_equivalent "Muscle tibial postérieur" xsd:string {fma:Date_entered_modified="Thu May 12 14:24:39 GMT-08:00 2005", fma:author="JOSE MEJINO, MD", fma:authority="Robert Baud, PhD", fma:authority="Rosse MD", fma:language="French"}
@@ -1403,7 +1495,9 @@ property_value: fma:synonym "Head proper muscle" xsd:string {fma:Date_entered_mo
 id: FMA:58274
 name: Muscle of trunk
 is_a: FMA:0329044 ! Muscle of body proper
+relationship: RO:0000091 HP:0003327 ! has disposition Axial muscle weakness
 relationship: RO:0000091 HP:0009023 ! has disposition Abdominal wall muscle weakness
+relationship: RO:0000091 PROMOT:0032014 ! has disposition Axial fatigable weakness
 relationship: RO:0001025 ICF:58064740 ! located in Muscles du tronc
 property_value: fma:definition "Muscle organ which is a part of the trunk. Examples: external intercostal muscle, external oblique,  levator ani." xsd:string
 property_value: fma:FMAID "58274" xsd:integer
@@ -1424,7 +1518,13 @@ property_value: fma:preferred_name "Anatomical entity" xsd:string {fma:Date_ente
 id: FMA:64916
 name: Thenar muscle
 is_a: FMA:42380 ! Intrinsic muscle of hand
+relationship: RO:0000091 HP:0002460 ! has disposition Distal muscle weakness
 relationship: RO:0000091 HP:0003427 ! has disposition Thenar muscle weakness
+relationship: RO:0000091 HP:0003484 ! has disposition Upper limb muscle weakness
+relationship: RO:0000091 HP:0003690 ! has disposition Limb muscle weakness
+relationship: RO:0000091 HP:0003810 ! has disposition Late-onset distal muscle weakness
+relationship: RO:0000091 HP:0008959 ! has disposition Distal upper limb muscle weakness
+relationship: RO:0000091 HP:0009063 ! has disposition Progressive distal muscle weakness
 relationship: RO:0001025 ICF:1233939003 ! located in Muscles de la main
 property_value: fma:FMAID "64916" xsd:integer
 property_value: fma:preferred_name "Thenar muscle" xsd:string {fma:Date_entered_modified="Fri Jan 05 16:05:39 PST 2001", fma:author="AUGUSTO V. AGONCILLO, MD", fma:authority="Rosse MD"}
@@ -1492,6 +1592,7 @@ name: Set of masticatory muscles
 is_a: FMA:55600 ! Musculature of subdivision of face
 relationship: RO:0000091 HP:0005216 ! has disposition Impaired mastication
 relationship: RO:0000091 HP:0030193 ! has disposition Fatigable weakness of chewing muscles
+relationship: RO:0000091 PROMOT:0032015 ! has disposition Debilidad de músculos masticatorios
 relationship: RO:0001025 ICF:1874889854 ! located in Muscles de la région de la tête et du cou
 property_value: fma:FMAID "71437" xsd:integer
 property_value: fma:non-English_equivalent "Muscles masticateurs" xsd:string {fma:Date_entered_modified="Thu May 12 14:24:40 GMT-08:00 2005", fma:author="JOSE MEJINO, MD", fma:authority="Robert Baud, PhD", fma:authority="Rosse MD", fma:language="French"}
@@ -1587,7 +1688,9 @@ property_value: fma:synonym "Thoracic muscle" xsd:string {fma:Date_entered_modif
 id: FMA:9620
 name: Muscle of abdomen
 is_a: FMA:0329099 ! Muscle of abdominal part of trunk
+relationship: RO:0000091 HP:0003327 ! has disposition Axial muscle weakness
 relationship: RO:0000091 HP:0009023 ! has disposition Abdominal wall muscle weakness
+relationship: RO:0000091 PROMOT:0032014 ! has disposition Axial fatigable weakness
 relationship: RO:0001025 ICF:58064740 ! located in Muscles du tronc
 property_value: fma:definition "Muscle (organ) which is a part of the abdomen. Examples: external oblique, rectus abdominis." xsd:string
 property_value: fma:FMAID "9620" xsd:integer
@@ -2074,6 +2177,7 @@ synonym: "Oculomotor abnormalities" EXACT []
 xref: SNOMEDCT_US:103252009
 xref: UMLS:C0497202
 is_a: HP:0012373 ! Abnormal eye physiology
+relationship: PROMOT:2000005 ICF:1090716697 ! affecte Fonctions des muscles externes de l'œil
 relationship: PROMOT:2000005 ICF:1789365017 ! affecte Fuerza de músculos aislados o de grupos de músculos
 property_value: PROMOT:1000001 "Congenital myasthenic syndrom HPO DB associations" xsd:string
 property_value: PROMOT:1000001 "Congenital myasthenic syndrom Scoping review" xsd:string
@@ -2817,6 +2921,7 @@ xref: SNOMEDCT_US:52781008
 xref: UMLS:C0019555
 is_a: HP:0001385 ! Hip dysplasia
 is_a: HP:0002827 ! Hip dislocation
+relationship: PROMOT:2000005 ICF:1748092144 ! affecte Estabilidad de una sola articulación
 property_value: PROMOT:1000001 "Congenital myopathy HPO KB associations" xsd:string
 property_value: PROMOT:1000001 "Congenital myopathy Scoping review" xsd:string
 
@@ -2951,33 +3056,6 @@ synonym: "Growth issue" EXACT layperson []
 synonym: "Ratio augmenté entre membre supérieur et inférieur" EXACT []
 xref: UMLS:C0262361
 is_a: HP:0000118 ! Phenotypic abnormality
-
-[Term]
-id: HP:0001508
-name: Failure to thrive
-alt_id: HP:0001535
-alt_id: HP:0008853
-alt_id: HP:0008878
-alt_id: HP:0008916
-def: "Failure to thrive (FTT) refers to a child whose physical growth is substantially below the norm." [https://orcid.org/0000-0002-0736-9199]
-comment: Although there is no clear consensus on the exact definition of FTT, it is usually diagnoses in a child growing below the 3rd percentile or in a child whose decreased growth has cross two major growth percentiles (for example, from above the 75th percentile to below the 25th percentile).
-synonym: "Faltering weight" EXACT layperson [https://orcid.org/0000-0001-5208-3432]
-synonym: "FTT" EXACT abbreviation []
-synonym: "Poor weight gain" RELATED layperson []
-synonym: "Postnatal failure to thrive" EXACT []
-synonym: "prise de poids médiocre" EXACT []
-synonym: "prise de poids médiocre|retard staturo-pondérale progressif|retard de croissance chez les survivants|Retard de croissance post-natal" EXACT []
-synonym: "Retard de croissance" EXACT []
-synonym: "retard de croissance chez les survivants" EXACT []
-synonym: "Retard de croissance staturo-pondérale" EXACT []
-synonym: "retard staturo-pondérale progressif" EXACT []
-synonym: "Undergrowth" BROAD layperson []
-synonym: "Weight faltering" EXACT layperson [https://orcid.org/0000-0001-5208-3432]
-xref: SNOMEDCT_US:36440009
-xref: SNOMEDCT_US:432788009
-xref: UMLS:C0231246
-xref: UMLS:C2315100
-is_a: HP:0004325 ! Decreased body weight
 
 [Term]
 id: HP:0001510
@@ -3118,6 +3196,7 @@ xref: SNOMEDCT_US:50219008
 xref: UMLS:C0019825
 xref: UMLS:C1854348
 is_a: HP:0001608 ! Abnormality of the voice
+relationship: PROMOT:2000005 ICF:151046878 ! affecte Hablar
 relationship: PROMOT:2000005 ICF:712570723 ! affecte Fonctions de la voix
 property_value: PROMOT:1000001 "[OPMD Clinical Registry Form]" xsd:string
 property_value: PROMOT:1000001 "Congenital myasthenic syndrom Scoping review" xsd:string
@@ -3240,6 +3319,9 @@ xref: SNOMEDCT_US:13213009
 xref: UMLS:C0018798
 xref: UMLS:C0152021
 is_a: HP:0030680 ! Abnormal cardiovascular system morphology
+relationship: PROMOT:2000005 ICF:1399000785 ! affecte Contraction force of ventricular muscles
+relationship: PROMOT:2000005 ICF:1780196241 ! affecte Heart rhythm
+relationship: PROMOT:2000005 ICF:2100545361 ! affecte Frecuencia cardiaca
 property_value: PROMOT:1000001 "Congenital myopathy HPO KB associations" xsd:string
 property_value: PROMOT:1000001 "Congenital myopathy Scoping review" xsd:string
 
@@ -3263,6 +3345,9 @@ xref: SNOMEDCT_US:57809008
 xref: SNOMEDCT_US:85898001
 xref: UMLS:C0878544
 is_a: HP:0001637 ! Abnormal myocardium morphology
+relationship: PROMOT:2000005 ICF:1399000785 ! affecte Contraction force of ventricular muscles
+relationship: PROMOT:2000005 ICF:1780196241 ! affecte Heart rhythm
+relationship: PROMOT:2000005 ICF:2100545361 ! affecte Frecuencia cardiaca
 property_value: PROMOT:1000001 "Congenital myopathy HPO KB associations" xsd:string
 property_value: PROMOT:1000001 "Congenital myopathy Scoping review" xsd:string
 
@@ -3273,6 +3358,9 @@ def: "An abnormality of a cardiac ventricle." [https://orcid.org/0000-0002-0736-
 synonym: "Abnormality of cardiac ventricle" EXACT []
 xref: UMLS:C4025752
 is_a: HP:0001627 ! Abnormal heart morphology
+relationship: PROMOT:2000005 ICF:1399000785 ! affecte Contraction force of ventricular muscles
+relationship: PROMOT:2000005 ICF:1780196241 ! affecte Heart rhythm
+relationship: PROMOT:2000005 ICF:2100545361 ! affecte Frecuencia cardiaca
 property_value: PROMOT:1000001 "Congenital myopathy Scoping review" xsd:string
 
 [Term]
@@ -3421,8 +3509,8 @@ id: HP:0002033
 name: Poor suck
 def: "An inadequate sucking reflex, resulting in the difficult of newborns to be breast-fed." [https://orcid.org/0000-0002-0736-9199]
 synonym: "Poor suck" EXACT layperson []
-synonym: "Poor sucking" EXACT []
 synonym: "Poor sucking" EXACT layperson [https://orcid.org/0000-0002-5316-1399]
+synonym: "Poor sucking" EXACT []
 synonym: "Sucking weakness" EXACT []
 xref: UMLS:C1837142
 is_a: HP:0008872 ! Feeding difficulties in infancy
@@ -3706,6 +3794,7 @@ xref: UMLS:C0427065
 xref: UMLS:C1864696
 is_a: HP:0001324 ! Muscle weakness
 relationship: PROMOT:2000005 ICF:1789365017 ! affecte Fuerza de músculos aislados o de grupos de músculos
+relationship: PROMOT:2000005 ICF:2048203604 ! affecte Mobility
 property_value: PROMOT:1000001 "[OPMD HPO KB associations]" xsd:string
 property_value: PROMOT:1000001 "[OPMD Scoping review 2026] Bélair N, Gagnon C, Duchesne E. What is known about muscle weakness, balance impairments and indoor mobility limitations in oculopharyngeal muscular dystrophy? A scoping review. J Neuromuscul Dis. 2025 Dec 30:22143602251397052. doi: 10.1177/22143602251397052. Epub ahead of print. PMID: 41467981." xsd:string
 property_value: PROMOT:1000001 "Congenital myasthenic syndrom HPO DB associations" xsd:string
@@ -3718,6 +3807,11 @@ id: HP:0002483
 name: Bulbar signs
 xref: UMLS:C1856507
 is_a: HP:0012638 ! Abnormal nervous system physiology
+relationship: PROMOT:2000005 ICF:1328675264 ! affecte Comer
+relationship: PROMOT:2000005 ICF:151046878 ! affecte Hablar
+relationship: PROMOT:2000005 ICF:1789365017 ! affecte Fuerza de músculos aislados o de grupos de músculos
+relationship: PROMOT:2000005 ICF:712570723 ! affecte Fonctions de la voix
+relationship: PROMOT:2000005 ICF:923782542 ! affecte Déglutir
 property_value: PROMOT:1000001 "Congenital myasthenic syndrom Scoping review" xsd:string
 property_value: PROMOT:1000001 "Congenital myopathy HPO KB associations" xsd:string
 property_value: PROMOT:1000001 "Congenital myopathy Scoping review" xsd:string
@@ -4076,6 +4170,8 @@ name: Sudden episodic apnea
 def: "Recurrent bouts of sudden, severe apnea that may be life-threatening." [https://orcid.org/0000-0002-0736-9199]
 xref: UMLS:C4025671
 is_a: HP:0002104 ! Apnea
+relationship: PROMOT:2000005 ICF:1470583183 ! affecte Fonctions liées à la respiration par la bouche
+relationship: PROMOT:2000005 ICF:744367503 ! affecte Fonctions du système respiratoire
 property_value: PROMOT:1000001 "Congenital myasthenic syndrom HPO DB associations" xsd:string
 property_value: PROMOT:1000001 "Congenital myopathy Scoping review" xsd:string
 
@@ -4164,6 +4260,8 @@ xref: UMLS:C0270948
 xref: UMLS:C0541794
 xref: UMLS:C1843479
 is_a: HP:0011805 ! Abnormal skeletal muscle morphology
+relationship: PROMOT:2000005 ICF:1789365017 ! affecte Fuerza de músculos aislados o de grupos de músculos
+relationship: PROMOT:2000005 ICF:2048203604 ! affecte Mobility
 
 [Term]
 id: HP:0003236
@@ -4275,6 +4373,7 @@ xref: UMLS:C1858127
 is_a: HP:0001324 ! Muscle weakness
 is_a: HP:0009127 ! Abnormality of the musculature of the limbs
 relationship: PROMOT:2000005 ICF:1789365017 ! affecte Fuerza de músculos aislados o de grupos de músculos
+relationship: PROMOT:2000005 ICF:2048203604 ! affecte Mobility
 property_value: PROMOT:1000001 "[OPMD HPO KB associations]" xsd:string
 property_value: PROMOT:1000001 "[OPMD Scoping review 2026] Bélair N, Gagnon C, Duchesne E. What is known about muscle weakness, balance impairments and indoor mobility limitations in oculopharyngeal muscular dystrophy? A scoping review. J Neuromuscul Dis. 2025 Dec 30:22143602251397052. doi: 10.1177/22143602251397052. Epub ahead of print. PMID: 41467981." xsd:string
 property_value: PROMOT:1000001 "Congenital myasthenic syndrom HPO DB associations" xsd:string
@@ -4313,6 +4412,7 @@ xref: UMLS:C1843697
 is_a: HP:0001324 ! Muscle weakness
 relationship: PROMOT:2000005 ICF:1789365017 ! affecte Fuerza de músculos aislados o de grupos de músculos
 relationship: PROMOT:2000005 ICF:2048203604 ! affecte Mobility
+relationship: PROMOT:2000005 ICF:556694745 ! affecte Fuerza de los músculos del tronco
 property_value: PROMOT:1000001 "[OPMD HPO KB associations]" xsd:string
 property_value: PROMOT:1000001 "[OPMD Scoping review 2026] Bélair N, Gagnon C, Duchesne E. What is known about muscle weakness, balance impairments and indoor mobility limitations in oculopharyngeal muscular dystrophy? A scoping review. J Neuromuscul Dis. 2025 Dec 30:22143602251397052. doi: 10.1177/22143602251397052. Epub ahead of print. PMID: 41467981." xsd:string
 property_value: PROMOT:1000001 "Congenital myasthenic syndrom HPO DB associations" xsd:string
@@ -4344,6 +4444,7 @@ name: First dorsal interossei muscle weakness
 xref: UMLS:C1832277
 is_a: HP:0002460 ! Distal muscle weakness
 relationship: PROMOT:2000005 ICF:1789365017 ! affecte Fuerza de músculos aislados o de grupos de músculos
+relationship: PROMOT:2000005 ICF:2048203604 ! affecte Mobility
 property_value: PROMOT:1000001 "[OPMD Clinical Registry Form]" xsd:string
 property_value: PROMOT:1000001 "[OPMD Scoping review 2026] Bélair N, Gagnon C, Duchesne E. What is known about muscle weakness, balance impairments and indoor mobility limitations in oculopharyngeal muscular dystrophy? A scoping review. J Neuromuscul Dis. 2025 Dec 30:22143602251397052. doi: 10.1177/22143602251397052. Epub ahead of print. PMID: 41467981." xsd:string
 property_value: PROMOT:1000001 "Congenital myasthenic syndrom Scoping review" xsd:string
@@ -4356,8 +4457,8 @@ alt_id: HP:0009018
 alt_id: HP:0031988
 def: "Sudden and involuntary contractions of one or more muscles." [https://orcid.org/0000-0002-0736-9199]
 synonym: "crampe musculaire" EXACT []
-synonym: "Muscle cramps" EXACT []
 synonym: "Muscle cramps" EXACT plural_form []
+synonym: "Muscle cramps" EXACT []
 synonym: "Muscle spasms" EXACT plural_form []
 synonym: "Nocturnal hand and foot cramps" NARROW []
 synonym: "Nocturnal leg cramp" NARROW []
@@ -4408,6 +4509,7 @@ name: Thenar muscle weakness
 xref: UMLS:C1832276
 is_a: HP:0030237 ! Hand muscle weakness
 relationship: PROMOT:2000005 ICF:1789365017 ! affecte Fuerza de músculos aislados o de grupos de músculos
+relationship: PROMOT:2000005 ICF:2048203604 ! affecte Mobility
 property_value: PROMOT:1000001 "[OPMD Clinical Registry Form]" xsd:string
 property_value: PROMOT:1000001 "[OPMD Clinical Research Form]" xsd:string
 property_value: PROMOT:1000001 "[OPMD Scoping review 2026] Bélair N, Gagnon C, Duchesne E. What is known about muscle weakness, balance impairments and indoor mobility limitations in oculopharyngeal muscular dystrophy? A scoping review. J Neuromuscul Dis. 2025 Dec 30:22143602251397052. doi: 10.1177/22143602251397052. Epub ahead of print. PMID: 41467981." xsd:string
@@ -4516,6 +4618,7 @@ xref: SNOMEDCT_US:713512009
 xref: UMLS:C1698196
 is_a: HP:0003690 ! Limb muscle weakness
 relationship: PROMOT:2000005 ICF:1789365017 ! affecte Fuerza de músculos aislados o de grupos de músculos
+relationship: PROMOT:2000005 ICF:2048203604 ! affecte Mobility
 property_value: PROMOT:1000001 "[OPMD Clinical Registry Form]" xsd:string
 property_value: PROMOT:1000001 "[OPMD Scoping review 2026] Bélair N, Gagnon C, Duchesne E. What is known about muscle weakness, balance impairments and indoor mobility limitations in oculopharyngeal muscular dystrophy? A scoping review. J Neuromuscul Dis. 2025 Dec 30:22143602251397052. doi: 10.1177/22143602251397052. Epub ahead of print. PMID: 41467981." xsd:string
 property_value: PROMOT:1000001 "Congenital myasthenic syndrom HPO DB associations" xsd:string
@@ -4540,6 +4643,7 @@ xref: UMLS:C0748691
 is_a: HP:0001435 ! Abnormality of the shoulder girdle musculature
 is_a: HP:0003325 ! Limb-girdle muscle weakness
 relationship: PROMOT:2000005 ICF:1789365017 ! affecte Fuerza de músculos aislados o de grupos de músculos
+relationship: PROMOT:2000005 ICF:2048203604 ! affecte Mobility
 property_value: PROMOT:1000001 "[OPMD Clinical Registry Form]" xsd:string
 property_value: PROMOT:1000001 "[OPMD Clinical Research Form]" xsd:string
 property_value: PROMOT:1000001 "[OPMD Scoping review 2026] Bélair N, Gagnon C, Duchesne E. What is known about muscle weakness, balance impairments and indoor mobility limitations in oculopharyngeal muscular dystrophy? A scoping review. J Neuromuscul Dis. 2025 Dec 30:22143602251397052. doi: 10.1177/22143602251397052. Epub ahead of print. PMID: 41467981." xsd:string
@@ -4733,7 +4837,6 @@ synonym: "âge de début à l'adolescence" EXACT []
 synonym: "âge de début à l'adolescence|d'apparition d'âge variable|d'appararition à l'enfance ou chez l'adulte jeune|début de|âge de début" EXACT []
 xref: UMLS:C0206132
 is_a: HP:0012823 ! Clinical modifier
-is_a: HP:0031797 ! Clinical course
 relationship: RO:0000080 HP:0000118 ! quality of Phenotypic abnormality
 property_value: skos:changeNote "[PROMOT note] The PROMOT ontology added a comment to quote the CDM used as a source for this entity." xsd:string
 
@@ -4784,7 +4887,6 @@ id: HP:0003679
 name: Pace of progression
 xref: UMLS:C4025580
 is_a: HP:0012823 ! Clinical modifier
-is_a: HP:0031797 ! Clinical course
 relationship: RO:0000080 HP:0000118 ! quality of Phenotypic abnormality
 
 [Term]
@@ -4824,6 +4926,7 @@ xref: UMLS:C0587246
 is_a: HP:0001324 ! Muscle weakness
 is_a: HP:0009127 ! Abnormality of the musculature of the limbs
 relationship: PROMOT:2000005 ICF:1789365017 ! affecte Fuerza de músculos aislados o de grupos de músculos
+relationship: PROMOT:2000005 ICF:2048203604 ! affecte Mobility
 property_value: PROMOT:1000001 "[OPMD HPO KB associations]" xsd:string
 property_value: PROMOT:1000001 "[OPMD Scoping review 2026] Bélair N, Gagnon C, Duchesne E. What is known about muscle weakness, balance impairments and indoor mobility limitations in oculopharyngeal muscular dystrophy? A scoping review. J Neuromuscul Dis. 2025 Dec 30:22143602251397052. doi: 10.1177/22143602251397052. Epub ahead of print. PMID: 41467981." xsd:string
 property_value: PROMOT:1000001 "Congenital myasthenic syndrom HPO DB associations" xsd:string
@@ -4851,6 +4954,9 @@ xref: UMLS:C0240953
 xref: UMLS:C4072849
 is_a: HP:0000782 ! Abnormal scapula morphology
 is_a: HP:0001435 ! Abnormality of the shoulder girdle musculature
+relationship: PROMOT:2000005 ICF:1521707777 ! affecte Endurance des groupes de muscles
+relationship: PROMOT:2000005 ICF:1789365017 ! affecte Fuerza de músculos aislados o de grupos de músculos
+relationship: PROMOT:2000005 ICF:2048203604 ! affecte Mobility
 property_value: PROMOT:1000001 "Congenital myopathy HPO KB associations" xsd:string
 property_value: PROMOT:1000001 "Congenital myopathy Scoping review" xsd:string
 
@@ -4861,6 +4967,7 @@ def: "Lack of strength of the proximal musculature occurring late in the clinica
 xref: UMLS:C4025578
 is_a: HP:0003701 ! Proximal muscle weakness
 relationship: PROMOT:2000005 ICF:1789365017 ! affecte Fuerza de músculos aislados o de grupos de músculos
+relationship: PROMOT:2000005 ICF:2048203604 ! affecte Mobility
 property_value: PROMOT:1000001 "Congenital myasthenic syndrom Scoping review" xsd:string
 property_value: PROMOT:1000001 "Congenital myopathy Scoping review" xsd:string
 
@@ -4889,6 +4996,7 @@ xref: UMLS:C0221629
 xref: UMLS:C1838869
 is_a: HP:0001324 ! Muscle weakness
 relationship: PROMOT:2000005 ICF:1789365017 ! affecte Fuerza de músculos aislados o de grupos de músculos
+relationship: PROMOT:2000005 ICF:2048203604 ! affecte Mobility
 property_value: PROMOT:1000001 "[OPMD HPO KB associations]" xsd:string
 property_value: PROMOT:1000001 "[OPMD Scoping review 2026] Bélair N, Gagnon C, Duchesne E. What is known about muscle weakness, balance impairments and indoor mobility limitations in oculopharyngeal muscular dystrophy? A scoping review. J Neuromuscul Dis. 2025 Dec 30:22143602251397052. doi: 10.1177/22143602251397052. Epub ahead of print. PMID: 41467981." xsd:string
 property_value: PROMOT:1000001 "Congenital myasthenic syndrom HPO DB associations" xsd:string
@@ -4907,6 +5015,7 @@ synonym: "Neck flexor muscle weakness" EXACT []
 xref: UMLS:C1843637
 is_a: HP:0000467 ! Neck muscle weakness
 relationship: PROMOT:2000005 ICF:1789365017 ! affecte Fuerza de músculos aislados o de grupos de músculos
+relationship: PROMOT:2000005 ICF:2048203604 ! affecte Mobility
 property_value: PROMOT:1000001 "[OPMD Scoping review 2026] Bélair N, Gagnon C, Duchesne E. What is known about muscle weakness, balance impairments and indoor mobility limitations in oculopharyngeal muscular dystrophy? A scoping review. J Neuromuscul Dis. 2025 Dec 30:22143602251397052. doi: 10.1177/22143602251397052. Epub ahead of print. PMID: 41467981." xsd:string
 property_value: PROMOT:1000001 "Congenital myasthenic syndrom HPO DB associations" xsd:string
 property_value: PROMOT:1000001 "Congenital myasthenic syndrom Scoping review" xsd:string
@@ -4968,6 +5077,7 @@ synonym: "faiblesse distale du membre apparaissant plus tard" EXACT []
 xref: UMLS:C4025565
 is_a: HP:0002460 ! Distal muscle weakness
 relationship: PROMOT:2000005 ICF:1789365017 ! affecte Fuerza de músculos aislados o de grupos de músculos
+relationship: PROMOT:2000005 ICF:2048203604 ! affecte Mobility
 property_value: PROMOT:1000001 "Congenital myasthenic syndrom Scoping review" xsd:string
 property_value: PROMOT:1000001 "Congenital myopathy HPO KB associations" xsd:string
 property_value: PROMOT:1000001 "Congenital myopathy Scoping review" xsd:string
@@ -5117,10 +5227,8 @@ xref: UMLS:C4025347
 is_a: HP:0001324 ! Muscle weakness
 is_a: HP:0002795 ! Abnormal respiratory system physiology
 relationship: PROMOT:2000005 ICF:1360101629 ! affecte Fonctions des muscles respiratoires
-relationship: PROMOT:2000005 ICF:1470583183 ! affecte Fonctions liées à la respiration par la bouche
 relationship: PROMOT:2000005 ICF:1789365017 ! affecte Fuerza de músculos aislados o de grupos de músculos
 relationship: PROMOT:2000005 ICF:446199613 ! affecte Fonctions respiratoires
-relationship: PROMOT:2000005 ICF:744367503 ! affecte Fonctions du système respiratoire
 property_value: dcterms:creator https://orcid.org/0000-0002-0736-9199
 property_value: dcterms:date "2008-03-11T08:03:00Z" xsd:dateTime
 property_value: PROMOT:1000001 "[OPMD Clinical Registry Form]" xsd:string
@@ -5168,6 +5276,8 @@ synonym: "Muscle weakness between ribs" EXACT layperson [https://orcid.org/0000-
 xref: UMLS:C0240017
 is_a: HP:0001324 ! Muscle weakness
 is_a: HP:0002093 ! Respiratory insufficiency
+relationship: PROMOT:2000005 ICF:1789365017 ! affecte Fuerza de músculos aislados o de grupos de músculos
+relationship: PROMOT:2000005 ICF:2048203604 ! affecte Mobility
 relationship: PROMOT:2000005 ICF:556694745 ! affecte Fuerza de los músculos del tronco
 property_value: PROMOT:1000001 "[OPMD Scoping review 2026] Bélair N, Gagnon C, Duchesne E. What is known about muscle weakness, balance impairments and indoor mobility limitations in oculopharyngeal muscular dystrophy? A scoping review. J Neuromuscul Dis. 2025 Dec 30:22143602251397052. doi: 10.1177/22143602251397052. Epub ahead of print. PMID: 41467981." xsd:string
 property_value: PROMOT:1000001 "Congenital myasthenic syndrom Scoping review" xsd:string
@@ -5411,6 +5521,7 @@ xref: UMLS:C3150620
 is_a: HP:0002460 ! Distal muscle weakness
 is_a: HP:0003484 ! Upper limb muscle weakness
 relationship: PROMOT:2000005 ICF:1789365017 ! affecte Fuerza de músculos aislados o de grupos de músculos
+relationship: PROMOT:2000005 ICF:2048203604 ! affecte Mobility
 property_value: PROMOT:1000001 "[OPMD Clinical Registry Form]" xsd:string
 property_value: PROMOT:1000001 "[OPMD Clinical Research Form]" xsd:string
 property_value: PROMOT:1000001 "[OPMD Scoping review 2026] Bélair N, Gagnon C, Duchesne E. What is known about muscle weakness, balance impairments and indoor mobility limitations in oculopharyngeal muscular dystrophy? A scoping review. J Neuromuscul Dis. 2025 Dec 30:22143602251397052. doi: 10.1177/22143602251397052. Epub ahead of print. PMID: 41467981." xsd:string
@@ -5476,6 +5587,7 @@ is_a: HP:0001446 ! Abnormality of the musculature of the upper limbs
 is_a: HP:0003484 ! Upper limb muscle weakness
 is_a: HP:0003701 ! Proximal muscle weakness
 relationship: PROMOT:2000005 ICF:1789365017 ! affecte Fuerza de músculos aislados o de grupos de músculos
+relationship: PROMOT:2000005 ICF:2048203604 ! affecte Mobility
 property_value: PROMOT:1000001 "[OPMD Clinical Registry Form]" xsd:string
 property_value: PROMOT:1000001 "[OPMD Clinical Research Form]" xsd:string
 property_value: PROMOT:1000001 "[OPMD Scoping review 2026] Bélair N, Gagnon C, Duchesne E. What is known about muscle weakness, balance impairments and indoor mobility limitations in oculopharyngeal muscular dystrophy? A scoping review. J Neuromuscul Dis. 2025 Dec 30:22143602251397052. doi: 10.1177/22143602251397052. Epub ahead of print. PMID: 41467981." xsd:string
@@ -5491,6 +5603,7 @@ synonym: "Intrinsic hand muscles weakness" EXACT []
 xref: UMLS:C1834536
 is_a: HP:0001421 ! Abnormality of the musculature of the hand
 relationship: PROMOT:2000005 ICF:1789365017 ! affecte Fuerza de músculos aislados o de grupos de músculos
+relationship: PROMOT:2000005 ICF:2048203604 ! affecte Mobility
 property_value: PROMOT:1000001 "[OPMD Clinical Registry Form]" xsd:string
 property_value: PROMOT:1000001 "[OPMD Scoping review 2026] Bélair N, Gagnon C, Duchesne E. What is known about muscle weakness, balance impairments and indoor mobility limitations in oculopharyngeal muscular dystrophy? A scoping review. J Neuromuscul Dis. 2025 Dec 30:22143602251397052. doi: 10.1177/22143602251397052. Epub ahead of print. PMID: 41467981." xsd:string
 property_value: PROMOT:1000001 "Congenital myasthenic syndrom HPO DB associations" xsd:string
@@ -5511,6 +5624,8 @@ synonym: "Lax abdominal musculature" EXACT []
 xref: UMLS:C4021527
 is_a: HP:0001324 ! Muscle weakness
 relationship: PROMOT:2000005 ICF:1789365017 ! affecte Fuerza de músculos aislados o de grupos de músculos
+relationship: PROMOT:2000005 ICF:2048203604 ! affecte Mobility
+relationship: PROMOT:2000005 ICF:556694745 ! affecte Fuerza de los músculos del tronco
 property_value: PROMOT:1000001 "[OPMD Scoping review 2026] Bélair N, Gagnon C, Duchesne E. What is known about muscle weakness, balance impairments and indoor mobility limitations in oculopharyngeal muscular dystrophy? A scoping review. J Neuromuscul Dis. 2025 Dec 30:22143602251397052. doi: 10.1177/22143602251397052. Epub ahead of print. PMID: 41467981." xsd:string
 property_value: PROMOT:1000001 "Congenital myasthenic syndrom Scoping review" xsd:string
 property_value: PROMOT:1000001 "Congenital myopathy Scoping review" xsd:string
@@ -5548,6 +5663,7 @@ synonym: "Generalised weakness of limb muscles" EXACT uk_spelling []
 xref: UMLS:C4024605
 is_a: HP:0009127 ! Abnormality of the musculature of the limbs
 relationship: PROMOT:2000005 ICF:1789365017 ! affecte Fuerza de músculos aislados o de grupos de músculos
+relationship: PROMOT:2000005 ICF:2048203604 ! affecte Mobility
 property_value: PROMOT:1000001 "Congenital myasthenic syndrom HPO DB associations" xsd:string
 property_value: PROMOT:1000001 "Congenital myasthenic syndrom Scoping review" xsd:string
 property_value: PROMOT:1000001 "Congenital myopathy Scoping review" xsd:string
@@ -5581,6 +5697,7 @@ xref: UMLS:C1836450
 is_a: HP:0002460 ! Distal muscle weakness
 is_a: HP:0007340 ! Lower limb muscle weakness
 relationship: PROMOT:2000005 ICF:1789365017 ! affecte Fuerza de músculos aislados o de grupos de músculos
+relationship: PROMOT:2000005 ICF:2048203604 ! affecte Mobility
 property_value: PROMOT:1000001 "[OPMD Clinical Registry Form]" xsd:string
 property_value: PROMOT:1000001 "[OPMD Scoping review 2026] Bélair N, Gagnon C, Duchesne E. What is known about muscle weakness, balance impairments and indoor mobility limitations in oculopharyngeal muscular dystrophy? A scoping review. J Neuromuscul Dis. 2025 Dec 30:22143602251397052. doi: 10.1177/22143602251397052. Epub ahead of print. PMID: 41467981." xsd:string
 property_value: PROMOT:1000001 "Congenital myasthenic syndrom HPO DB associations" xsd:string
@@ -5601,6 +5718,7 @@ synonym: "Muscle weakness, progressive, distal" EXACT []
 xref: UMLS:C1836609
 is_a: HP:0002460 ! Distal muscle weakness
 relationship: PROMOT:2000005 ICF:1789365017 ! affecte Fuerza de músculos aislados o de grupos de músculos
+relationship: PROMOT:2000005 ICF:2048203604 ! affecte Mobility
 property_value: PROMOT:1000001 "[OPMD Scoping review 2026] Bélair N, Gagnon C, Duchesne E. What is known about muscle weakness, balance impairments and indoor mobility limitations in oculopharyngeal muscular dystrophy? A scoping review. J Neuromuscul Dis. 2025 Dec 30:22143602251397052. doi: 10.1177/22143602251397052. Epub ahead of print. PMID: 41467981." xsd:string
 property_value: PROMOT:1000001 "Congenital myasthenic syndrom Scoping review" xsd:string
 property_value: PROMOT:1000001 "Congenital myopathy HPO KB associations" xsd:string
@@ -5619,6 +5737,7 @@ xref: UMLS:C1836156
 is_a: HP:0003323 ! Progressive muscle weakness
 is_a: HP:0003701 ! Proximal muscle weakness
 relationship: PROMOT:2000005 ICF:1789365017 ! affecte Fuerza de músculos aislados o de grupos de músculos
+relationship: PROMOT:2000005 ICF:2048203604 ! affecte Mobility
 property_value: PROMOT:1000001 "[OPMD Scoping review 2026] Bélair N, Gagnon C, Duchesne E. What is known about muscle weakness, balance impairments and indoor mobility limitations in oculopharyngeal muscular dystrophy? A scoping review. J Neuromuscul Dis. 2025 Dec 30:22143602251397052. doi: 10.1177/22143602251397052. Epub ahead of print. PMID: 41467981." xsd:string
 property_value: PROMOT:1000001 "Congenital myasthenic syndrom Scoping review" xsd:string
 property_value: PROMOT:1000001 "Congenital myopathy HPO KB associations" xsd:string
@@ -5630,6 +5749,7 @@ name: Weakness of long finger extensor muscles
 xref: UMLS:C4024601
 is_a: HP:0030237 ! Hand muscle weakness
 relationship: PROMOT:2000005 ICF:1789365017 ! affecte Fuerza de músculos aislados o de grupos de músculos
+relationship: PROMOT:2000005 ICF:2048203604 ! affecte Mobility
 property_value: PROMOT:1000001 "[OPMD Clinical Registry Form]" xsd:string
 property_value: PROMOT:1000001 "[OPMD Scoping review 2026] Bélair N, Gagnon C, Duchesne E. What is known about muscle weakness, balance impairments and indoor mobility limitations in oculopharyngeal muscular dystrophy? A scoping review. J Neuromuscul Dis. 2025 Dec 30:22143602251397052. doi: 10.1177/22143602251397052. Epub ahead of print. PMID: 41467981." xsd:string
 property_value: PROMOT:1000001 "Congenital myasthenic syndrom HPO DB associations" xsd:string
@@ -6513,6 +6633,14 @@ name: Fatigable weakness of bulbar muscles
 def: "A type of weakness of the bulbar muscles (muscles of the mouth and throat responsible for speech and swallowing) that occurs after a muscle group is used and lessens if the muscle group has some rest. That is, there is diminution of strength with repetitive muscle actions." [HPO_CONTRIBUTOR:UNCL_mbertoli, https://orcid.org/0000-0002-0736-9199, PMID:17986328]
 xref: UMLS:C4022591
 is_a: HP:0003473 ! Fatigable weakness
+relationship: PROMOT:2000005 ICF:1328675264 ! affecte Comer
+relationship: PROMOT:2000005 ICF:151046878 ! affecte Hablar
+relationship: PROMOT:2000005 ICF:1521707777 ! affecte Endurance des groupes de muscles
+relationship: PROMOT:2000005 ICF:1789365017 ! affecte Fuerza de músculos aislados o de grupos de músculos
+relationship: PROMOT:2000005 ICF:553784299 ! affecte Beber
+relationship: PROMOT:2000005 ICF:691689627 ! affecte Deglución faríngea
+relationship: PROMOT:2000005 ICF:712570723 ! affecte Fonctions de la voix
+relationship: PROMOT:2000005 ICF:923782542 ! affecte Déglutir
 property_value: PROMOT:1000001 "Congenital myasthenic syndrom HPO DB associations" xsd:string
 property_value: PROMOT:1000001 "Congenital myasthenic syndrom Scoping review" xsd:string
 property_value: PROMOT:1000001 "Congenital myopathy HPO KB associations" xsd:string
@@ -6526,6 +6654,7 @@ xref: UMLS:C4022590
 is_a: HP:0030192 ! Fatigable weakness of bulbar muscles
 relationship: PROMOT:2000005 ICF:1328675264 ! affecte Comer
 relationship: PROMOT:2000005 ICF:1389818830 ! affecte Chewing
+relationship: PROMOT:2000005 ICF:1521707777 ! affecte Endurance des groupes de muscles
 relationship: PROMOT:2000005 ICF:1789365017 ! affecte Fuerza de músculos aislados o de grupos de músculos
 property_value: PROMOT:1000001 "Congenital myasthenic syndrom Scoping review" xsd:string
 property_value: PROMOT:1000001 "Congenital myopathy Scoping review" xsd:string
@@ -6536,6 +6665,9 @@ name: Fatigable weakness of speech muscles
 def: "A type of weakness of the muscles involved in speech that occurs after a muscle group is used and lessens if the muscle group has some rest. That is, there is diminution of strength with repetitive muscle actions." [https://orcid.org/0000-0003-2324-8001, PMID:17986328]
 xref: UMLS:C4022589
 is_a: HP:0030192 ! Fatigable weakness of bulbar muscles
+relationship: PROMOT:2000005 ICF:151046878 ! affecte Hablar
+relationship: PROMOT:2000005 ICF:1521707777 ! affecte Endurance des groupes de muscles
+relationship: PROMOT:2000005 ICF:1789365017 ! affecte Fuerza de músculos aislados o de grupos de músculos
 property_value: PROMOT:1000001 "Congenital myasthenic syndrom Scoping review" xsd:string
 property_value: PROMOT:1000001 "Congenital myopathy Scoping review" xsd:string
 
@@ -6545,6 +6677,11 @@ name: Fatigable weakness of swallowing muscles
 def: "A type of weakness of the muscles involved in swallowing that occurs after a muscle group is used and lessens if the muscle group has some rest. That is, there is diminution of strength with repetitive muscle actions." [HPO_CONTRIBUTOR:UK_rheller, PMID:17986328]
 xref: UMLS:C4022588
 is_a: HP:0030192 ! Fatigable weakness of bulbar muscles
+relationship: PROMOT:2000005 ICF:1328675264 ! affecte Comer
+relationship: PROMOT:2000005 ICF:1521707777 ! affecte Endurance des groupes de muscles
+relationship: PROMOT:2000005 ICF:1789365017 ! affecte Fuerza de músculos aislados o de grupos de músculos
+relationship: PROMOT:2000005 ICF:553784299 ! affecte Beber
+relationship: PROMOT:2000005 ICF:923782542 ! affecte Déglutir
 property_value: PROMOT:1000001 "Congenital myasthenic syndrom Scoping review" xsd:string
 property_value: PROMOT:1000001 "Congenital myopathy HPO KB associations" xsd:string
 property_value: PROMOT:1000001 "Congenital myopathy Scoping review" xsd:string
@@ -6555,6 +6692,10 @@ name: Fatigable weakness of respiratory muscles
 def: "A type of weakness of the muscles involved in breathing (respiration) that occurs after a muscle group is used and lessens if the muscle group has some rest. That is, there is diminution of strength with repetitive muscle actions." [HPO_CONTRIBUTOR:UNCL_mbertoli]
 xref: UMLS:C4022587
 is_a: HP:0003473 ! Fatigable weakness
+relationship: PROMOT:2000005 ICF:1360101629 ! affecte Fonctions des muscles respiratoires
+relationship: PROMOT:2000005 ICF:1521707777 ! affecte Endurance des groupes de muscles
+relationship: PROMOT:2000005 ICF:1789365017 ! affecte Fuerza de músculos aislados o de grupos de músculos
+relationship: PROMOT:2000005 ICF:446199613 ! affecte Fonctions respiratoires
 property_value: PROMOT:1000001 "Congenital myasthenic syndrom HPO DB associations" xsd:string
 property_value: PROMOT:1000001 "Congenital myasthenic syndrom Scoping review" xsd:string
 property_value: PROMOT:1000001 "Congenital myopathy HPO KB associations" xsd:string
@@ -6566,6 +6707,9 @@ name: Fatigable weakness of skeletal muscles
 def: "A type of weakness of skeletal muscle that occurs after a muscle group is used and lessens if the muscle group has some rest. That is, there is diminution of strength with repetitive muscle actions." []
 xref: UMLS:C4022586
 is_a: HP:0003473 ! Fatigable weakness
+relationship: PROMOT:2000005 ICF:1521707777 ! affecte Endurance des groupes de muscles
+relationship: PROMOT:2000005 ICF:1789365017 ! affecte Fuerza de músculos aislados o de grupos de músculos
+relationship: PROMOT:2000005 ICF:2048203604 ! affecte Mobility
 property_value: PROMOT:1000001 "Congenital myasthenic syndrom HPO DB associations" xsd:string
 property_value: PROMOT:1000001 "Congenital myasthenic syndrom Scoping review" xsd:string
 property_value: PROMOT:1000001 "Congenital myopathy Scoping review" xsd:string
@@ -6576,6 +6720,9 @@ name: Fatigable weakness of distal limb muscles
 def: "A type of weakness of a skeletal muscle of distal part of a limb that occurs after a muscle group is used and lessens if the muscle group has some rest. That is, there is diminution of strength with repetitive muscle actions." [HPO_CONTRIBUTOR:UK_rheller]
 xref: UMLS:C4022585
 is_a: HP:0030197 ! Fatigable weakness of skeletal muscles
+relationship: PROMOT:2000005 ICF:1521707777 ! affecte Endurance des groupes de muscles
+relationship: PROMOT:2000005 ICF:1789365017 ! affecte Fuerza de músculos aislados o de grupos de músculos
+relationship: PROMOT:2000005 ICF:2048203604 ! affecte Mobility
 property_value: PROMOT:1000001 "Congenital myasthenic syndrom Scoping review" xsd:string
 property_value: PROMOT:1000001 "Congenital myopathy HPO KB associations" xsd:string
 property_value: PROMOT:1000001 "Congenital myopathy Scoping review" xsd:string
@@ -6586,6 +6733,9 @@ name: Fatigable weakness of neck muscles
 def: "A type of weakness of a skeletal muscle in the neck that occurs after a muscle group is used and lessens if the muscle group has some rest. That is, there is diminution of strength with repetitive muscle actions." [HPO_CONTRIBUTOR:UK_rheller]
 xref: UMLS:C4022584
 is_a: HP:0030197 ! Fatigable weakness of skeletal muscles
+relationship: PROMOT:2000005 ICF:1521707777 ! affecte Endurance des groupes de muscles
+relationship: PROMOT:2000005 ICF:1789365017 ! affecte Fuerza de músculos aislados o de grupos de músculos
+relationship: PROMOT:2000005 ICF:2048203604 ! affecte Mobility
 property_value: PROMOT:1000001 "Congenital myasthenic syndrom HPO DB associations" xsd:string
 property_value: PROMOT:1000001 "Congenital myasthenic syndrom Scoping review" xsd:string
 property_value: PROMOT:1000001 "Congenital myopathy Scoping review" xsd:string
@@ -6596,6 +6746,9 @@ name: Fatiguable weakness of proximal limb muscles
 def: "A type of weakness of a skeletal muscle of proximal part of a limb that occurs after a muscle group is used and lessens if the muscle group has some rest. That is, there is diminution of strength with repetitive muscle actions." [HPO_CONTRIBUTOR:UK_rheller]
 xref: UMLS:C4022583
 is_a: HP:0030197 ! Fatigable weakness of skeletal muscles
+relationship: PROMOT:2000005 ICF:1521707777 ! affecte Endurance des groupes de muscles
+relationship: PROMOT:2000005 ICF:1789365017 ! affecte Fuerza de músculos aislados o de grupos de músculos
+relationship: PROMOT:2000005 ICF:2048203604 ! affecte Mobility
 property_value: PROMOT:1000001 "Congenital myasthenic syndrom Scoping review" xsd:string
 property_value: PROMOT:1000001 "Congenital myopathy HPO KB associations" xsd:string
 property_value: PROMOT:1000001 "Congenital myopathy Scoping review" xsd:string
@@ -6663,6 +6816,7 @@ xref: SNOMEDCT_US:298283006
 xref: UMLS:C0239831
 is_a: HP:0001421 ! Abnormality of the musculature of the hand
 relationship: PROMOT:2000005 ICF:1789365017 ! affecte Fuerza de músculos aislados o de grupos de músculos
+relationship: PROMOT:2000005 ICF:2048203604 ! affecte Mobility
 property_value: PROMOT:1000001 "[OPMD Clinical Registry Form]" xsd:string
 property_value: PROMOT:1000001 "[OPMD Clinical Research Form]" xsd:string
 property_value: PROMOT:1000001 "[OPMD Scoping review 2026] Bélair N, Gagnon C, Duchesne E. What is known about muscle weakness, balance impairments and indoor mobility limitations in oculopharyngeal muscular dystrophy? A scoping review. J Neuromuscul Dis. 2025 Dec 30:22143602251397052. doi: 10.1177/22143602251397052. Epub ahead of print. PMID: 41467981." xsd:string
@@ -6697,6 +6851,7 @@ synonym: "Weakness of facial musculature" EXACT layperson []
 xref: UMLS:C4022514
 is_a: HP:0000301 ! Abnormality of facial musculature
 relationship: PROMOT:2000005 ICF:1328675264 ! affecte Comer
+relationship: PROMOT:2000005 ICF:1580195090 ! affecte Digestive functions
 relationship: PROMOT:2000005 ICF:1789365017 ! affecte Fuerza de músculos aislados o de grupos de músculos
 property_value: PROMOT:1000001 "[OPMD Clinical Registry Form]" xsd:string
 property_value: PROMOT:1000001 "[OPMD HPO KB associations]" xsd:string
@@ -6767,6 +6922,9 @@ name: Abnormal cardiac ventricular function
 def: "An abnormality of the cardiac ventricular function." [https://orcid.org/0000-0003-4546-6667]
 xref: UMLS:C4280733
 is_a: HP:0011025 ! Abnormal cardiovascular system physiology
+relationship: PROMOT:2000005 ICF:1399000785 ! affecte Contraction force of ventricular muscles
+relationship: PROMOT:2000005 ICF:1780196241 ! affecte Heart rhythm
+relationship: PROMOT:2000005 ICF:2100545361 ! affecte Frecuencia cardiaca
 property_value: dcterms:date "2016-06-28T07:54:16Z" xsd:dateTime
 property_value: PROMOT:1000001 "Congenital myopathy Scoping review" xsd:string
 
@@ -6822,6 +6980,7 @@ name: Triceps weakness
 def: "A lack of strength in the triceps muscle, which normally is responsible for extending (straightening) the elbow and mediating certain shoulder movements." []
 is_a: HP:0008997 ! Proximal upper limb muscle weakness
 relationship: PROMOT:2000005 ICF:1789365017 ! affecte Fuerza de músculos aislados o de grupos de músculos
+relationship: PROMOT:2000005 ICF:2048203604 ! affecte Mobility
 property_value: dcterms:creator https://orcid.org/0000-0002-0736-9199
 property_value: dcterms:date "2017-06-09T10:13:45Z" xsd:dateTime
 property_value: PROMOT:1000001 "[OPMD Clinical Registry Form]" xsd:string
@@ -6863,6 +7022,7 @@ name: Finger flexor weakness
 def: "Reduced ability to flex (bend) the fingers. This can manifest as incomplete closure of the hand due to weakness in finger flexion." [PMID:15668452]
 is_a: HP:0030237 ! Hand muscle weakness
 relationship: PROMOT:2000005 ICF:1789365017 ! affecte Fuerza de músculos aislados o de grupos de músculos
+relationship: PROMOT:2000005 ICF:2048203604 ! affecte Mobility
 property_value: dcterms:creator https://orcid.org/0000-0002-0736-9199
 property_value: dcterms:date "2017-06-18T20:25:24Z" xsd:dateTime
 property_value: PROMOT:1000001 "[OPMD Clinical Registry Form]" xsd:string
@@ -7056,6 +7216,17 @@ property_value: dcterms:date "2019-02-21T12:48:52Z" xsd:dateTime
 property_value: PROMOT:1000001 "[OPMD Clinical Registry Form]" xsd:string
 property_value: PROMOT:1000001 "Congenital myasthenic syndrom Scoping review" xsd:string
 property_value: PROMOT:1000001 "Congenital myopathy Scoping review" xsd:string
+
+[Term]
+id: HP:0032355
+name: Decreased peak expiratory flow
+def: "A reduction in the maximum expiratory flow per minute, which can be used to measure how fast a subject can exhale as well as to judge the strength of the expiratory muscles and the condition of the large airways." [https://orcid.org/0000-0002-8169-9049, PMID:28005993]
+is_a: HP:0030878 ! Abnormality on pulmonary function testing
+relationship: PROMOT:2000005 ICF:1789365017 ! affecte Fuerza de músculos aislados o de grupos de músculos
+relationship: PROMOT:2000005 ICF:446199613 ! affecte Fonctions respiratoires
+property_value: dcterms:creator https://orcid.org/0000-0002-0736-9199
+property_value: dcterms:date "2019-02-23T16:59:55Z" xsd:dateTime
+property_value: PROMOT:1000001 "[OPMD Medical Expert] https://orcid.org/0000-0003-2829-8470" xsd:string
 
 [Term]
 id: HP:0033127
@@ -7828,11 +7999,18 @@ id: ICF:1233939003
 name: Muscles de la main {comment="[PROMOT note] Source for official translation: https://icd.who.int/browse/2026-01/icf/fr > Info > Fichier du tableur"}
 xref: https://data.esante.gouv.fr/terminologies/icf#3451
 is_a: ICF:142318995 ! Estructura de la mano
+relationship: RO:0000091 HP:0002460 ! has disposition Distal muscle weakness
 relationship: RO:0000091 HP:0003392 ! has disposition First dorsal interossei muscle weakness
 relationship: RO:0000091 HP:0003427 ! has disposition Thenar muscle weakness
+relationship: RO:0000091 HP:0003484 ! has disposition Upper limb muscle weakness
+relationship: RO:0000091 HP:0003690 ! has disposition Limb muscle weakness
+relationship: RO:0000091 HP:0003810 ! has disposition Late-onset distal muscle weakness
 relationship: RO:0000091 HP:0008959 ! has disposition Distal upper limb muscle weakness
 relationship: RO:0000091 HP:0009005 ! has disposition Weakness of the intrinsic hand muscles
+relationship: RO:0000091 HP:0009028 ! has disposition Generalized weakness of limb muscles
+relationship: RO:0000091 HP:0009063 ! has disposition Progressive distal muscle weakness
 relationship: RO:0000091 HP:0009077 ! has disposition Weakness of long finger extensor muscles
+relationship: RO:0000091 HP:0030198 ! has disposition Fatigable weakness of distal limb muscles
 relationship: RO:0000091 HP:0030237 ! has disposition Hand muscle weakness
 relationship: RO:0000091 HP:0031177 ! has disposition Finger flexor weakness
 relationship: RO:0000091 HP:0033466 ! has disposition Weak grip
@@ -7873,8 +8051,15 @@ name: Muscles de la cheville et du pied {comment="[PROMOT note] Source for offic
 xref: https://data.esante.gouv.fr/terminologies/icf#23289
 is_a: ICF:933576740 ! Estructura del tobillo y pie
 relationship: RO:0000091 HP:0001761 ! has disposition Pes cavus
+relationship: RO:0000091 HP:0002460 ! has disposition Distal muscle weakness
+relationship: RO:0000091 HP:0003690 ! has disposition Limb muscle weakness
+relationship: RO:0000091 HP:0003810 ! has disposition Late-onset distal muscle weakness
+relationship: RO:0000091 HP:0007340 ! has disposition Lower limb muscle weakness
 relationship: RO:0000091 HP:0009027 ! has disposition Foot dorsiflexor weakness
+relationship: RO:0000091 HP:0009028 ! has disposition Generalized weakness of limb muscles
 relationship: RO:0000091 HP:0009053 ! has disposition Distal lower limb muscle weakness
+relationship: RO:0000091 HP:0009063 ! has disposition Progressive distal muscle weakness
+relationship: RO:0000091 HP:0030198 ! has disposition Fatigable weakness of distal limb muscles
 relationship: RO:0000091 HP:0031374 ! has disposition Ankle weakness
 relationship: RO:0002328 ICF:1521707777 ! functionally related to Endurance des groupes de muscles
 relationship: RO:0002328 ICF:1789365017 ! functionally related to Fuerza de músculos aislados o de grupos de músculos
@@ -7955,7 +8140,6 @@ name: Fonctions mentales {comment="[PROMOT note] Source for official translation
 def: "This chapter is about the functions of the brain: both global mental functions, such as consciousness, energy and drive, and specific mental functions, such as memory, language and calculation mental functions." []
 xref: https://data.esante.gouv.fr/terminologies/icf#51531
 is_a: ICF:567313968 ! Body functions
-relationship: RO:0002331 ICF:2011053685 ! involved in Apprentissage et application des connaissances
 property_value: schema:browserUrl https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F1363559646
 property_value: skos:changeNote "[PROMOT note] The PROMOT ontology added a crossref to the LIRMM version of the ICF (CIF-ASIP 2020). It also added the official French and Spanish translation for labels." xsd:string
 
@@ -8177,7 +8361,6 @@ name: Fonctions intellectuelles {comment="[PROMOT note] Source for official tran
 def: "General mental functions, required to understand and constructively integrate the various mental functions including all cognitive functions and their development over the life span." []
 xref: https://data.esante.gouv.fr/terminologies/icf#13932
 is_a: ICF:882590883 ! Fonctions mentales globales
-relationship: RO:0002331 ICF:2011053685 ! involved in Apprentissage et application des connaissances
 property_value: schema:browserUrl https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F1525383756
 property_value: schema:exclusion "Higher-level cognitive functions" xsd:string {schema:foundationReference="ICF:1384847483"}
 property_value: schema:exclusion "Memory functions" xsd:string {schema:foundationReference="ICF:1920216617"}
@@ -8220,7 +8403,11 @@ id: ICF:1571232890
 name: Intercostal muscles
 xref: https://data.esante.gouv.fr/terminologies/icf#75024
 is_a: ICF:495844982 ! Muscles of respiration
+relationship: RO:0000091 HP:0003327 ! has disposition Axial muscle weakness
 relationship: RO:0000091 HP:0004878 ! has disposition Intercostal muscle weakness
+relationship: RO:0000091 PROMOT:0032014 ! has disposition Axial fatigable weakness
+relationship: RO:0002328 ICF:1521707777 ! functionally related to Endurance des groupes de muscles
+relationship: RO:0002328 ICF:1789365017 ! functionally related to Fuerza de músculos aislados o de grupos de músculos
 relationship: RO:0002328 ICF:556694745 ! functionally related to Fuerza de los músculos del tronco
 property_value: schema:browserUrl https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F1571232890
 property_value: skos:changeNote "[PROMOT note] The PROMOT ontology added a crossref to the LIRMM version of the ICF (CIF-ASIP 2020). It also added the official French and Spanish translation for labels." xsd:string
@@ -8296,7 +8483,6 @@ name: Bones of ankle and foot
 xref: https://data.esante.gouv.fr/terminologies/icf#56126
 is_a: ICF:933576740 ! Estructura del tobillo y pie
 relationship: RO:0000091 HP:0001761 ! has disposition Pes cavus
-relationship: RO:0002328 ICF:1789365017 ! functionally related to Fuerza de músculos aislados o de grupos de músculos
 property_value: schema:browserUrl https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F1650503157
 property_value: skos:changeNote "[PROMOT note] The PROMOT ontology added a crossref to the LIRMM version of the ICF (CIF-ASIP 2020). It also added the official French and Spanish translation for labels." xsd:string
 
@@ -8429,9 +8615,16 @@ id: ICF:1794398084
 name: Muscles de la cuisse {comment="[PROMOT note] Source for official translation: https://icd.who.int/browse/2026-01/icf/fr > Info > Fichier du tableur"}
 xref: https://data.esante.gouv.fr/terminologies/icf#92170
 is_a: ICF:435521956 ! Estructura del muslo
+relationship: RO:0000091 HP:0003690 ! has disposition Limb muscle weakness
+relationship: RO:0000091 HP:0003694 ! has disposition Late-onset proximal muscle weakness
+relationship: RO:0000091 HP:0003701 ! has disposition Proximal muscle weakness
 relationship: RO:0000091 HP:0003731 ! has disposition Quadriceps muscle weakness
+relationship: RO:0000091 HP:0007340 ! has disposition Lower limb muscle weakness
 relationship: RO:0000091 HP:0008994 ! has disposition Proximal lower limb muscle weakness
+relationship: RO:0000091 HP:0009028 ! has disposition Generalized weakness of limb muscles
+relationship: RO:0000091 HP:0009073 ! has disposition Progressive proximal muscle weakness
 relationship: RO:0000091 HP:0012515 ! has disposition Hip flexor weakness
+relationship: RO:0000091 HP:0030200 ! has disposition Fatiguable weakness of proximal limb muscles
 relationship: RO:0000091 HP:0033416 ! has disposition Hip adductor weakness
 relationship: RO:0002328 ICF:1521707777 ! functionally related to Endurance des groupes de muscles
 relationship: RO:0002328 ICF:1789365017 ! functionally related to Fuerza de músculos aislados o de grupos de músculos
@@ -8575,7 +8768,14 @@ id: ICF:1867012554
 name: Muscles du bras {comment="[PROMOT note] Source for official translation: https://icd.who.int/browse/2026-01/icf/fr > Info > Fichier du tableur"}
 xref: https://data.esante.gouv.fr/terminologies/icf#2717
 is_a: ICF:640373779 ! Estructura del brazo
+relationship: RO:0000091 HP:0003484 ! has disposition Upper limb muscle weakness
+relationship: RO:0000091 HP:0003690 ! has disposition Limb muscle weakness
+relationship: RO:0000091 HP:0003694 ! has disposition Late-onset proximal muscle weakness
+relationship: RO:0000091 HP:0003701 ! has disposition Proximal muscle weakness
 relationship: RO:0000091 HP:0008997 ! has disposition Proximal upper limb muscle weakness
+relationship: RO:0000091 HP:0009028 ! has disposition Generalized weakness of limb muscles
+relationship: RO:0000091 HP:0009073 ! has disposition Progressive proximal muscle weakness
+relationship: RO:0000091 HP:0030200 ! has disposition Fatiguable weakness of proximal limb muscles
 relationship: RO:0000091 HP:0031108 ! has disposition Triceps weakness
 relationship: RO:0002328 ICF:1521707777 ! functionally related to Endurance des groupes de muscles
 relationship: RO:0002328 ICF:1789365017 ! functionally related to Fuerza de músculos aislados o de grupos de músculos
@@ -8608,22 +8808,32 @@ relationship: RO:0000091 HP:0002015 ! has disposition Dysphagia
 relationship: RO:0000091 HP:0002033 ! has disposition Poor suck
 relationship: RO:0000091 HP:0002058 ! has disposition Myopathic facies
 relationship: RO:0000091 HP:0002068 ! has disposition Neuromuscular dysphagia
+relationship: RO:0000091 HP:0002483 ! has disposition Bulbar signs
 relationship: RO:0000091 HP:0003306 ! has disposition Spinal rigidity
 relationship: RO:0000091 HP:0003722 ! has disposition Neck flexor weakness
 relationship: RO:0000091 HP:0005216 ! has disposition Impaired mastication
-relationship: RO:0000091 HP:0007838 ! has disposition Progressive ptosis
 relationship: RO:0000091 HP:0012473 ! has disposition Tongue atrophy
+relationship: RO:0000091 HP:0030192 ! has disposition Fatigable weakness of bulbar muscles
 relationship: RO:0000091 HP:0030193 ! has disposition Fatigable weakness of chewing muscles
+relationship: RO:0000091 HP:0030194 ! has disposition Fatigable weakness of speech muscles
+relationship: RO:0000091 HP:0030195 ! has disposition Fatigable weakness of swallowing muscles
+relationship: RO:0000091 HP:0030199 ! has disposition Fatigable weakness of neck muscles
 relationship: RO:0000091 HP:0030319 ! has disposition Weakness of facial musculature
 relationship: RO:0000091 HP:0031146 ! has disposition Impaired oral bolus formation
 relationship: RO:0000091 HP:0031162 ! has disposition Impaired oropharyngeal swallow response
 relationship: RO:0000091 HP:0200136 ! has disposition Oral-pharyngeal dysphagia
+relationship: RO:0000091 PROMOT:0032010 ! has disposition Disfagia con sólidos
+relationship: RO:0000091 PROMOT:0032011 ! has disposition Disfagia con líquidos
+relationship: RO:0000091 PROMOT:0032012 ! has disposition Debilidad fatigable de la musculatura facial 
+relationship: RO:0000091 PROMOT:0032015 ! has disposition Debilidad de músculos masticatorios
+relationship: RO:0000091 PROMOT:0032024 ! has disposition Fatigable weakness of tongue muscle
 relationship: RO:0002328 ICF:1041382491 ! functionally related to Deglución oral
 relationship: RO:0002328 ICF:1174312718 ! functionally related to Manipulación de la comida en la boca
 relationship: RO:0002328 ICF:1389818830 ! functionally related to Chewing
 relationship: RO:0002328 ICF:1521707777 ! functionally related to Endurance des groupes de muscles
 relationship: RO:0002328 ICF:1580195090 ! functionally related to Digestive functions
 relationship: RO:0002328 ICF:1789365017 ! functionally related to Fuerza de músculos aislados o de grupos de músculos
+relationship: RO:0002328 ICF:1806589582 ! functionally related to Biting
 relationship: RO:0002328 ICF:2089171534 ! functionally related to Succión
 relationship: RO:0002328 ICF:691689627 ! functionally related to Deglución faríngea
 relationship: RO:0002328 ICF:712570723 ! functionally related to Fonctions de la voix
@@ -8857,7 +9067,13 @@ id: ICF:213893837
 name: Bones
 xref: https://data.esante.gouv.fr/terminologies/icf#7260
 is_a: ICF:1438965984 ! Additional musculoskeletal structures related to movement
+relationship: RO:0000091 HP:0000767 ! has disposition Pectus excavatum
+relationship: RO:0000091 HP:0000768 ! has disposition Pectus carinatum
+relationship: RO:0000091 HP:0000774 ! has disposition Narrow chest
+relationship: RO:0000091 HP:0000886 ! has disposition Deformed rib cage
+relationship: RO:0000091 HP:0001547 ! has disposition Abnormal rib cage morphology
 relationship: RO:0000091 HP:0004322 ! has disposition Short stature
+relationship: RO:0000091 HP:6000327 ! has disposition Thoracic cage flatness
 property_value: schema:browserUrl https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F213893837
 property_value: skos:changeNote "[PROMOT note] The PROMOT ontology added a crossref to the LIRMM version of the ICF (CIF-ASIP 2020). It also added the official French and Spanish translation for labels." xsd:string
 
@@ -8950,8 +9166,16 @@ name: Muscles de la région des épaules {comment="[PROMOT note] Source for offi
 xref: https://data.esante.gouv.fr/terminologies/icf#75122
 is_a: ICF:1108927576 ! Estructura de la región del hombro
 relationship: RO:0000091 HP:0003325 ! has disposition Limb-girdle muscle weakness
+relationship: RO:0000091 HP:0003484 ! has disposition Upper limb muscle weakness
 relationship: RO:0000091 HP:0003547 ! has disposition Shoulder girdle muscle weakness
+relationship: RO:0000091 HP:0003690 ! has disposition Limb muscle weakness
+relationship: RO:0000091 HP:0003691 ! has disposition Scapular winging
+relationship: RO:0000091 HP:0003694 ! has disposition Late-onset proximal muscle weakness
+relationship: RO:0000091 HP:0003701 ! has disposition Proximal muscle weakness
 relationship: RO:0000091 HP:0008997 ! has disposition Proximal upper limb muscle weakness
+relationship: RO:0000091 HP:0009028 ! has disposition Generalized weakness of limb muscles
+relationship: RO:0000091 HP:0009073 ! has disposition Progressive proximal muscle weakness
+relationship: RO:0000091 HP:0030200 ! has disposition Fatiguable weakness of proximal limb muscles
 relationship: RO:0002328 ICF:1521707777 ! functionally related to Endurance des groupes de muscles
 relationship: RO:0002328 ICF:1789365017 ! functionally related to Fuerza de músculos aislados o de grupos de músculos
 property_value: schema:browserUrl https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F278512890
@@ -8962,7 +9186,14 @@ id: ICF:294830867
 name: Muscles de l'avant-bras {comment="[PROMOT note] Source for official translation: https://icd.who.int/browse/2026-01/icf/fr > Info > Fichier du tableur"}
 xref: https://data.esante.gouv.fr/terminologies/icf#44569
 is_a: ICF:822292691 ! Estructura del antebrazo
+relationship: RO:0000091 HP:0002460 ! has disposition Distal muscle weakness
+relationship: RO:0000091 HP:0003484 ! has disposition Upper limb muscle weakness
+relationship: RO:0000091 HP:0003690 ! has disposition Limb muscle weakness
+relationship: RO:0000091 HP:0003810 ! has disposition Late-onset distal muscle weakness
 relationship: RO:0000091 HP:0008959 ! has disposition Distal upper limb muscle weakness
+relationship: RO:0000091 HP:0009028 ! has disposition Generalized weakness of limb muscles
+relationship: RO:0000091 HP:0009063 ! has disposition Progressive distal muscle weakness
+relationship: RO:0000091 HP:0030198 ! has disposition Fatigable weakness of distal limb muscles
 relationship: RO:0002328 ICF:1521707777 ! functionally related to Endurance des groupes de muscles
 relationship: RO:0002328 ICF:1789365017 ! functionally related to Fuerza de músculos aislados o de grupos de músculos
 property_value: schema:browserUrl https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F294830867
@@ -8991,9 +9222,16 @@ id: ICF:338611549
 name: Muscles de la jambe {comment="[PROMOT note] Source for official translation: https://icd.who.int/browse/2026-01/icf/fr > Info > Fichier du tableur"}
 xref: https://data.esante.gouv.fr/terminologies/icf#93403
 is_a: ICF:249425252 ! Estructura de la pierna
+relationship: RO:0000091 HP:0002460 ! has disposition Distal muscle weakness
+relationship: RO:0000091 HP:0003690 ! has disposition Limb muscle weakness
+relationship: RO:0000091 HP:0003810 ! has disposition Late-onset distal muscle weakness
+relationship: RO:0000091 HP:0007340 ! has disposition Lower limb muscle weakness
 relationship: RO:0000091 HP:0008963 ! has disposition Tibialis muscle weakness
+relationship: RO:0000091 HP:0009028 ! has disposition Generalized weakness of limb muscles
 relationship: RO:0000091 HP:0009053 ! has disposition Distal lower limb muscle weakness
+relationship: RO:0000091 HP:0009063 ! has disposition Progressive distal muscle weakness
 relationship: RO:0000091 HP:0011727 ! has disposition Peroneal muscle weakness
+relationship: RO:0000091 HP:0030198 ! has disposition Fatigable weakness of distal limb muscles
 relationship: RO:0002328 ICF:1521707777 ! functionally related to Endurance des groupes de muscles
 relationship: RO:0002328 ICF:1789365017 ! functionally related to Fuerza de músculos aislados o de grupos de músculos
 property_value: schema:browserUrl https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F338611549
@@ -9086,7 +9324,10 @@ relationship: RO:0000091 HP:0000651 ! has disposition Diplopia
 relationship: RO:0000091 HP:0007715 ! has disposition Weak extraocular muscles
 relationship: RO:0000091 HP:0007838 ! has disposition Progressive ptosis
 relationship: RO:0000091 HP:0007941 ! has disposition Limited extraocular movements
+relationship: RO:0000091 PROMOT:0032013 ! has disposition Debilidad fatigable de los músculos oculares
+relationship: RO:0000091 PROMOT:0032016 ! has disposition Fatigable ptosis
 relationship: RO:0002328 ICF:1090716697 ! functionally related to Fonctions des muscles externes de l'œil
+relationship: RO:0002328 ICF:1521707777 ! functionally related to Endurance des groupes de muscles
 relationship: RO:0002328 ICF:1789365017 ! functionally related to Fuerza de músculos aislados o de grupos de músculos
 relationship: RO:0002328 ICF:2021370201 ! functionally related to Fonctions de la paupière
 relationship: RO:0002328 ICF:2022689055 ! functionally related to Fonctions d'acuité visuelle
@@ -9211,12 +9452,14 @@ relationship: RO:0000091 HP:0002104 ! has disposition Apnea
 relationship: RO:0000091 HP:0002643 ! has disposition Neonatal respiratory distress
 relationship: RO:0000091 HP:0002747 ! has disposition Respiratory insufficiency due to muscle weakness
 relationship: RO:0000091 HP:0002878 ! has disposition Respiratory failure
+relationship: RO:0000091 HP:0002882 ! has disposition Sudden episodic apnea
 relationship: RO:0000091 HP:0004347 ! has disposition Weakness of muscles of respiration
 relationship: RO:0000091 HP:0004885 ! has disposition Episodic respiratory distress
 relationship: RO:0000091 HP:0004887 ! has disposition Respiratory failure requiring assisted ventilation
 relationship: RO:0000091 HP:0004889 ! has disposition Intermittent episodes of respiratory insufficiency due to muscle weakness
 relationship: RO:0000091 HP:0005949 ! has disposition Apneic episodes in infancy
 relationship: RO:0000091 HP:0012497 ! has disposition Reduced maximal expiratory pressure
+relationship: RO:0000091 HP:0030196 ! has disposition Fatigable weakness of respiratory muscles
 relationship: RO:0000091 HP:0032341 ! has disposition Reduced forced vital capacity
 relationship: RO:0002328 ICF:1360101629 ! functionally related to Fonctions des muscles respiratoires
 relationship: RO:0002328 ICF:1521707777 ! functionally related to Endurance des groupes de muscles
@@ -9340,8 +9583,12 @@ name: Muscles du tronc {comment="[PROMOT note] Source for official translation: 
 xref: https://data.esante.gouv.fr/terminologies/icf#31001
 is_a: ICF:723417607 ! Estructura del tronco
 relationship: RO:0000091 HP:0003306 ! has disposition Spinal rigidity
+relationship: RO:0000091 HP:0003327 ! has disposition Axial muscle weakness
 relationship: RO:0000091 HP:0009023 ! has disposition Abdominal wall muscle weakness
+relationship: RO:0000091 PROMOT:0032014 ! has disposition Axial fatigable weakness
+relationship: RO:0002328 ICF:1521707777 ! functionally related to Endurance des groupes de muscles
 relationship: RO:0002328 ICF:1789365017 ! functionally related to Fuerza de músculos aislados o de grupos de músculos
+relationship: RO:0002328 ICF:556694745 ! functionally related to Fuerza de los músculos del tronco
 relationship: RO:0002328 ICF:841397411 ! functionally related to Sensación de rigidez muscular
 property_value: schema:browserUrl https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F58064740
 property_value: skos:changeNote "[PROMOT note] The PROMOT ontology added a crossref to the LIRMM version of the ICF (CIF-ASIP 2020). It also added the official French and Spanish translation for labels." xsd:string
@@ -9411,6 +9658,7 @@ name: Estructura del cerebro {comment="[PROMOT note] Source for official transla
 xref: https://data.esante.gouv.fr/terminologies/icf#23804
 is_a: ICF:1419635799 ! Capítulo 1 estructuras del sistema nervioso
 relationship: RO:0000091 HP:0001249 ! has disposition Intellectual disability
+relationship: RO:0002328 ICF:1363559646 ! functionally related to Fonctions mentales
 relationship: RO:0002328 ICF:1525383756 ! functionally related to Fonctions intellectuelles
 property_value: schema:browserUrl https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F634949825
 property_value: skos:changeNote "[PROMOT note] The PROMOT ontology added a crossref to the LIRMM version of the ICF (CIF-ASIP 2020). It also added the official French and Spanish translation for labels." xsd:string
@@ -9429,7 +9677,6 @@ name: Capítulo 7 estructuras relacionadas con el movimiento {comment="[PROMOT n
 xref: https://data.esante.gouv.fr/terminologies/icf#45167
 is_a: ICF:1626363729 ! Body structures
 relationship: RO:0000091 HP:0002141 ! has disposition Gait imbalance
-relationship: RO:0002328 ICF:1328466963 ! functionally related to Fonctions relatives au type de démarche
 relationship: RO:0002328 ICF:576915490 ! functionally related to Fonctions relatives aux réactions motrices involontaires
 property_value: schema:browserUrl https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F644658903
 property_value: skos:changeNote "[PROMOT note] The PROMOT ontology added a crossref to the LIRMM version of the ICF (CIF-ASIP 2020). It also added the official French and Spanish translation for labels." xsd:string
@@ -9585,9 +9832,16 @@ name: Muscles de la région pelvienne {comment="[PROMOT note] Source for officia
 xref: https://data.esante.gouv.fr/terminologies/icf#40000
 is_a: ICF:232409592 ! Estructura de la región pélvica
 relationship: RO:0000091 HP:0003325 ! has disposition Limb-girdle muscle weakness
+relationship: RO:0000091 HP:0003690 ! has disposition Limb muscle weakness
+relationship: RO:0000091 HP:0003694 ! has disposition Late-onset proximal muscle weakness
+relationship: RO:0000091 HP:0003701 ! has disposition Proximal muscle weakness
 relationship: RO:0000091 HP:0003749 ! has disposition Pelvic girdle muscle weakness
+relationship: RO:0000091 HP:0007340 ! has disposition Lower limb muscle weakness
 relationship: RO:0000091 HP:0008988 ! has disposition Pelvic girdle muscle atrophy
 relationship: RO:0000091 HP:0008994 ! has disposition Proximal lower limb muscle weakness
+relationship: RO:0000091 HP:0009028 ! has disposition Generalized weakness of limb muscles
+relationship: RO:0000091 HP:0009073 ! has disposition Progressive proximal muscle weakness
+relationship: RO:0000091 HP:0030200 ! has disposition Fatiguable weakness of proximal limb muscles
 relationship: RO:0002328 ICF:1521707777 ! functionally related to Endurance des groupes de muscles
 relationship: RO:0002328 ICF:1789365017 ! functionally related to Fuerza de músculos aislados o de grupos de músculos
 property_value: schema:browserUrl https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F793188683
@@ -9628,6 +9882,10 @@ id: ICF:834607195
 name: Coeur (Structure anatomique)
 xref: https://data.esante.gouv.fr/terminologies/icf#31079
 is_a: ICF:397303672 ! Estructura del sistema cardiovascular
+relationship: RO:0000091 HP:0001627 ! has disposition Abnormal heart morphology
+relationship: RO:0000091 HP:0001638 ! has disposition Cardiomyopathy
+relationship: RO:0000091 HP:0001713 ! has disposition Abnormal cardiac ventricle morphology
+relationship: RO:0000091 HP:0030872 ! has disposition Abnormal cardiac ventricular function
 relationship: RO:0002328 ICF:1399000785 ! functionally related to Contraction force of ventricular muscles
 relationship: RO:0002328 ICF:1780196241 ! functionally related to Heart rhythm
 relationship: RO:0002328 ICF:2100545361 ! functionally related to Frecuencia cardiaca
@@ -9697,7 +9955,6 @@ name: Fonctions de maintien du poids {comment="[PROMOT note] Source for official
 def: "Functions of maintaining appropriate body weight, including weight gain during the developmental period." []
 xref: https://data.esante.gouv.fr/terminologies/icf#6603
 is_a: ICF:1976873960 ! Fonctions relatives au système digestif
-relationship: RO:0002331 ICF:583874291 ! involved in Control de la dieta y la forma física
 property_value: schema:browserUrl https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F862066979
 property_value: schema:exclusion "Assimilation functions" xsd:string {schema:foundationReference="ICF:1303938042"}
 property_value: schema:exclusion "Endocrine gland functions" xsd:string {schema:foundationReference="ICF:925451085"}
@@ -9722,6 +9979,7 @@ relationship: RO:0000091 HP:0002104 ! has disposition Apnea
 relationship: RO:0000091 HP:0002643 ! has disposition Neonatal respiratory distress
 relationship: RO:0000091 HP:0002747 ! has disposition Respiratory insufficiency due to muscle weakness
 relationship: RO:0000091 HP:0002878 ! has disposition Respiratory failure
+relationship: RO:0000091 HP:0002882 ! has disposition Sudden episodic apnea
 relationship: RO:0000091 HP:0004347 ! has disposition Weakness of muscles of respiration
 relationship: RO:0000091 HP:0004885 ! has disposition Episodic respiratory distress
 relationship: RO:0000091 HP:0004887 ! has disposition Respiratory failure requiring assisted ventilation
@@ -9918,26 +10176,6 @@ property_value: NCIT:P322 "GDC" xsd:string
 property_value: NCIT:P322 "INC" xsd:string
 property_value: NCIT:P325 "A measurement of the total number of pregnancy events experienced by a female." xsd:string {NCIT:P378="CDISC"}
 property_value: NCIT:P325 "A measurement of the total number of pregnancy events experienced by the female subject." xsd:string {NCIT:P378="INC"}
-
-[Term]
-id: NCIT:C121361
-name: Quantitative Muscle Testing
-def: "Measurement of maximum isometric force generation from a muscle group; performed with specialized equipment." [] {NCIT:P378="NCI"}
-subset: NCIT:C118468
-subset: NCIT:C90259
-synonym: "QMT" EXACT [] {NCIT:P383="AB", NCIT:P384="NCI"}
-synonym: "QMT" EXACT [] {NCIT:P383="SY", NCIT:P384="NICHD"}
-synonym: "Quantitative Muscle Testing" EXACT [] {NCIT:P383="PT", NCIT:P384="NICHD"}
-synonym: "Quantitative Muscle Testing" EXACT [] {NCIT:P383="PT", NCIT:P384="NCI"}
-relationship: PROMOT:2000002 HP:0002460 ! assesses Distal muscle weakness
-relationship: PROMOT:2000002 HP:0008959 ! assesses Distal upper limb muscle weakness
-relationship: PROMOT:2000002 HP:0009053 ! assesses Distal lower limb muscle weakness
-property_value: NCIT:NHC0 "C121361" xsd:string
-property_value: NCIT:P106 "Intellectual Product" xsd:string
-property_value: NCIT:P108 "Quantitative Muscle Testing" xsd:string
-property_value: NCIT:P207 "C4053513" xsd:string
-property_value: NCIT:P322 "NICHD" xsd:string
-property_value: NCIT:P325 "Measurement of maximum isometric force generation from a muscle group; performed with specialized equipment." xsd:string {NCIT:P378="NICHD"}
 
 [Term]
 id: NCIT:C124436
@@ -10306,8 +10544,8 @@ synonym: "Age" EXACT [] {NCIT:P383="PT", NCIT:P385="SEND-STSPRM", NCIT:P384="CDI
 synonym: "Age" EXACT [] {NCIT:P383="SY", NCIT:P384="caDSR"}
 synonym: "Age" EXACT [] {NCIT:P383="SY", NCIT:P384="CDISC"}
 synonym: "Age" EXACT [] {NCIT:P383="PT", NCIT:P384="NCI"}
-synonym: "age" EXACT [] {NCIT:P383="PT", NCIT:P384="BRIDG 3.0.3"}
 synonym: "age" EXACT [] {NCIT:P383="PT", NCIT:P384="BRIDG 5.3"}
+synonym: "age" EXACT [] {NCIT:P383="PT", NCIT:P384="BRIDG 3.0.3"}
 synonym: "Aged" EXACT [] {NCIT:P383="AD", NCIT:P384="NCI"}
 synonym: "Chronological Age" EXACT [] {NCIT:P383="SY", NCIT:P384="NCI"}
 synonym: "Chronological Age" EXACT [] {NCIT:P383="PT", NCIT:P384="NICHD"}
@@ -10755,8 +10993,8 @@ synonym: "date of informed consent" EXACT [] {NCIT:P383="SY", NCIT:P386="ICDC", 
 synonym: "date_of_informed_consent" EXACT [] {NCIT:P383="PT", NCIT:P386="ICDC", NCIT:P384="ICDC"}
 synonym: "Demographics Date of Informed Consent" EXACT [] {NCIT:P383="SY", NCIT:P384="caDSR"}
 synonym: "Informed Consent Date" EXACT [] {NCIT:P383="PT", NCIT:P384="NCI"}
-synonym: "informedConsentDate" EXACT [] {NCIT:P383="PT", NCIT:P384="BRIDG 3.0.3"}
 synonym: "informedConsentDate" EXACT [] {NCIT:P383="PT", NCIT:P384="BRIDG 5.3"}
+synonym: "informedConsentDate" EXACT [] {NCIT:P383="PT", NCIT:P384="BRIDG 3.0.3"}
 synonym: "RFICDAT" EXACT [] {NCIT:P383="SY", NCIT:P384="caDSR"}
 is_a: NCIT:C25164 ! Date
 property_value: NCIT:NHC0 "C93579" xsd:string
@@ -10768,9 +11006,20 @@ property_value: NCIT:P322 "ICDC" xsd:string
 
 [Term]
 id: NCIT:C99800
-name: Year of onset
+name: Year of Onset
+def: "The year in which an event began." [] {NCIT:P378="NCI"}
 comment: [PROMOT note] [Derived from RD-CDM] [5.4 Date of Onset]
+subset: NCIT:C156952
+subset: NCIT:C156953
+subset: NCIT:C156954
+synonym: "Year of Onset" EXACT [] {NCIT:P383="PT", NCIT:P384="NCI"}
+synonym: "Year of Onset (YYYY)" EXACT [] {NCIT:P383="PT", NCIT:P384="CPTAC"}
 is_a: NCIT:C25164 ! Date
+property_value: NCIT:NHC0 "C99800" xsd:string
+property_value: NCIT:P106 "Temporal Concept" xsd:string
+property_value: NCIT:P108 "Year of Onset" xsd:string
+property_value: NCIT:P207 "C3274945" xsd:string
+property_value: NCIT:P322 "CPTAC" xsd:string
 property_value: skos:changeNote "[PROMOT note] The PROMOT ontology added a comment to quote the CDM used as a source for this entity." xsd:string
 
 [Term]
@@ -10860,9 +11109,11 @@ relationship: RO:0004029 HP:0031177 ! disease has feature Finger flexor weakness
 relationship: RO:0004029 HP:0031374 ! disease has feature Ankle weakness
 relationship: RO:0004029 HP:0032043 ! disease has feature Odynophagia
 relationship: RO:0004029 HP:0032341 ! disease has feature Reduced forced vital capacity
+relationship: RO:0004029 HP:0032355 ! disease has feature Decreased peak expiratory flow
 relationship: RO:0004029 HP:0033235 ! disease has feature Difficulty descending stairs
 relationship: RO:0004029 HP:0033416 ! disease has feature Hip adductor weakness
 relationship: RO:0004029 HP:0033466 ! disease has feature Weak grip
+relationship: RO:0004029 HP:0033666 ! disease has feature Diminished physical functioning
 relationship: RO:0004029 HP:0033667 ! disease has feature Diminished mental health
 relationship: RO:0004029 HP:0033695 ! disease has feature Occupational disability
 relationship: RO:0004029 HP:0200136 ! disease has feature Oral-pharyngeal dysphagia
@@ -10873,6 +11124,14 @@ relationship: RO:0004029 PROMOT:0032008 ! disease has feature Difficulty changin
 relationship: RO:0004029 PROMOT:0032009 ! disease has feature Anhedonia cuando se come
 relationship: RO:0004029 PROMOT:0032010 ! disease has feature Disfagia con sólidos
 relationship: RO:0004029 PROMOT:0032011 ! disease has feature Disfagia con líquidos
+relationship: RO:0004029 PROMOT:0032015 ! disease has feature Debilidad de músculos masticatorios
+relationship: RO:0004029 PROMOT:0032017 ! disease has feature Decreased walking speed
+relationship: RO:0004029 PROMOT:0032018 ! disease has feature Coughing on foods
+relationship: RO:0004029 PROMOT:0032019 ! disease has feature Coughing on liquids
+relationship: RO:0004029 PROMOT:0032020 ! disease has feature Coughing on saliva
+relationship: RO:0004029 PROMOT:0032021 ! disease has feature Choking on foods
+relationship: RO:0004029 PROMOT:0032022 ! disease has feature Choking on liquids
+relationship: RO:0004029 PROMOT:0032023 ! disease has feature Choking on saliva
 property_value: efo:alternative_term "OPMD" xsd:string
 property_value: efo:definition "A rare, adult-onset, progressive myopathy characterized by progressive eyelid ptosis, ophthalmoplegia, dysphagia, dysarthria and proximal limb weakness." xsd:string
 property_value: efo:definition_citation "Orphanet" xsd:string
@@ -11034,6 +11293,7 @@ relationship: RO:0004029 HP:0009053 ! disease has feature Distal lower limb musc
 relationship: RO:0004029 HP:0009063 ! disease has feature Progressive distal muscle weakness
 relationship: RO:0004029 HP:0009073 ! disease has feature Progressive proximal muscle weakness
 relationship: RO:0004029 HP:0009077 ! disease has feature Weakness of long finger extensor muscles
+relationship: RO:0004029 HP:0011471 ! disease has feature Gastrostomy tube feeding in infancy
 relationship: RO:0004029 HP:0011727 ! disease has feature Peroneal muscle weakness
 relationship: RO:0004029 HP:0011968 ! disease has feature Feeding difficulties
 relationship: RO:0004029 HP:0012515 ! disease has feature Hip flexor weakness
@@ -11055,23 +11315,26 @@ relationship: RO:0004029 HP:0030205 ! disease has feature Increased jitter at si
 relationship: RO:0004029 HP:0030211 ! disease has feature Slow pupillary light response
 relationship: RO:0004029 HP:0030237 ! disease has feature Hand muscle weakness
 relationship: RO:0004029 HP:0030319 ! disease has feature Weakness of facial musculature
+relationship: RO:0004029 HP:0031058 ! disease has feature Impairment of activities of daily living
 relationship: RO:0004029 HP:0031108 ! disease has feature Triceps weakness
 relationship: RO:0004029 HP:0031177 ! disease has feature Finger flexor weakness
 relationship: RO:0004029 HP:0031374 ! disease has feature Ankle weakness
 relationship: RO:0004029 HP:0031826 ! disease has feature Abnormal reflex
-relationship: RO:0004029 HP:0031914 ! disease has feature Fluctuating
 relationship: RO:0004029 HP:0031936 ! disease has feature Delayed ability to walk
 relationship: RO:0004029 HP:0032341 ! disease has feature Reduced forced vital capacity
 relationship: RO:0004029 HP:0033416 ! disease has feature Hip adductor weakness
 relationship: RO:0004029 HP:0033454 ! disease has feature Tube feeding
 relationship: RO:0004029 HP:0033580 ! disease has feature Compound motor action potential abnormality
+relationship: RO:0004029 HP:0033695 ! disease has feature Occupational disability
 relationship: RO:0004029 HP:0040081 ! disease has feature Abnormal circulating creatine kinase concentration
 relationship: RO:0004029 HP:0200136 ! disease has feature Oral-pharyngeal dysphagia
 relationship: RO:0004029 PROMOT:0032005 ! disease has feature Doble anomalía del potencial de acción motora compuesta
 relationship: RO:0004029 PROMOT:0032012 ! disease has feature Debilidad fatigable de la musculatura facial 
 relationship: RO:0004029 PROMOT:0032013 ! disease has feature Debilidad fatigable de los músculos oculares
-relationship: RO:0004029 PROMOT:0032014 ! disease has feature Debilidad fatigable muscular axial
+relationship: RO:0004029 PROMOT:0032014 ! disease has feature Axial fatigable weakness
 relationship: RO:0004029 PROMOT:0032015 ! disease has feature Debilidad de músculos masticatorios
+relationship: RO:0004029 PROMOT:0032016 ! disease has feature Fatigable ptosis
+relationship: RO:0004029 PROMOT:0032024 ! disease has feature Fatigable weakness of tongue muscle
 property_value: efo:alternative_term "CMS" xsd:string
 property_value: efo:definition "Congenital myasthenic syndrome (CMS) is a group of genetic disorders of impaired neuromuscular transmission at the motor endplate characterized by fatigable muscle weakness." xsd:string
 property_value: efo:definition_citation "Orphanet" xsd:string
@@ -11097,16 +11360,7 @@ is_a: PROMOT:0032001 ! abnormal disposition
 relationship: RO:0000086 HP:0000005 ! has quality Mode of inheritance
 relationship: RO:0004003 PROMOT:0000003 {minCardinality="0"} ! has material basis in germline mutation in CMYO related mutation
 relationship: RO:0004003 SO:0001060 ! has material basis in germline mutation in sequence_variant
-relationship: RO:0004029 HP:0000028 ! disease has feature Cryptorchidism
 relationship: RO:0004029 HP:0000118 ! disease has feature Phenotypic abnormality
-relationship: RO:0004029 HP:0000218 ! disease has feature High palate
-relationship: RO:0004029 HP:0000276 ! disease has feature Long face
-relationship: RO:0004029 HP:0000467 ! disease has feature Neck muscle weakness
-relationship: RO:0004029 HP:0000486 ! disease has feature Strabismus
-relationship: RO:0004029 HP:0000496 ! disease has feature Abnormality of eye movement
-relationship: RO:0004029 HP:0000508 ! disease has feature Ptosis
-relationship: RO:0004029 HP:0000544 ! disease has feature External ophthalmoplegia
-relationship: RO:0004029 HP:0000597 ! disease has feature Ophthalmoparesis
 relationship: RO:0004029 HP:0000602 ! disease has feature Ophthalmoplegia
 relationship: RO:0004029 HP:0000767 ! disease has feature Pectus excavatum
 relationship: RO:0004029 HP:0000768 ! disease has feature Pectus carinatum
@@ -11158,6 +11412,8 @@ relationship: RO:0004029 HP:0002804 ! disease has feature Arthrogryposis multipl
 relationship: RO:0004029 HP:0002808 ! disease has feature Kyphosis
 relationship: RO:0004029 HP:0002828 ! disease has feature Multiple joint contractures
 relationship: RO:0004029 HP:0002878 ! disease has feature Respiratory failure
+relationship: RO:0004029 HP:0002882 ! disease has feature Sudden episodic apnea
+relationship: RO:0004029 HP:0003202 ! disease has feature Skeletal muscle atrophy
 relationship: RO:0004029 HP:0003236 ! disease has feature Elevated circulating creatine kinase concentration
 relationship: RO:0004029 HP:0003306 ! disease has feature Spinal rigidity
 relationship: RO:0004029 HP:0003307 ! disease has feature Hyperlordosis
@@ -11167,6 +11423,7 @@ relationship: RO:0004029 HP:0003327 ! disease has feature Axial muscle weakness
 relationship: RO:0004029 HP:0003391 ! disease has feature Gowers sign
 relationship: RO:0004029 HP:0003392 ! disease has feature First dorsal interossei muscle weakness
 relationship: RO:0004029 HP:0003398 ! disease has feature Abnormal synaptic transmission at the neuromuscular junction
+relationship: RO:0004029 HP:0003403 ! disease has feature EMG: decremental response of compound muscle action potential to repetitive nerve stimulation
 relationship: RO:0004029 HP:0003427 ! disease has feature Thenar muscle weakness
 relationship: RO:0004029 HP:0003445 ! disease has feature EMG: neuropathic changes
 relationship: RO:0004029 HP:0003457 ! disease has feature EMG abnormality
@@ -11237,11 +11494,11 @@ relationship: RO:0004029 HP:0031108 ! disease has feature Triceps weakness
 relationship: RO:0004029 HP:0031177 ! disease has feature Finger flexor weakness
 relationship: RO:0004029 HP:0031374 ! disease has feature Ankle weakness
 relationship: RO:0004029 HP:0031826 ! disease has feature Abnormal reflex
-relationship: RO:0004029 HP:0031914 ! disease has feature Fluctuating
 relationship: RO:0004029 HP:0031936 ! disease has feature Delayed ability to walk
 relationship: RO:0004029 HP:0032341 ! disease has feature Reduced forced vital capacity
 relationship: RO:0004029 HP:0033416 ! disease has feature Hip adductor weakness
 relationship: RO:0004029 HP:0033454 ! disease has feature Tube feeding
+relationship: RO:0004029 HP:0033695 ! disease has feature Occupational disability
 relationship: RO:0004029 HP:0033994 ! disease has feature Dependency on parenteral nutrition
 relationship: RO:0004029 HP:0040081 ! disease has feature Abnormal circulating creatine kinase concentration
 relationship: RO:0004029 HP:0040288 ! disease has feature Nasogastric tube feeding
@@ -11249,7 +11506,7 @@ relationship: RO:0004029 HP:0200136 ! disease has feature Oral-pharyngeal dyspha
 relationship: RO:0004029 HP:6000327 ! disease has feature Thoracic cage flatness
 relationship: RO:0004029 PROMOT:0032012 ! disease has feature Debilidad fatigable de la musculatura facial 
 relationship: RO:0004029 PROMOT:0032013 ! disease has feature Debilidad fatigable de los músculos oculares
-relationship: RO:0004029 PROMOT:0032014 ! disease has feature Debilidad fatigable muscular axial
+relationship: RO:0004029 PROMOT:0032014 ! disease has feature Axial fatigable weakness
 relationship: RO:0004029 PROMOT:0032015 ! disease has feature Debilidad de músculos masticatorios
 property_value: ORDO:C022 "United States AND has_point_prevalence_average_value : 3.8 AND has_point_prevalence_range : 1-9 / 100 000" xsd:string
 property_value: ORDO:C055 "https://www.orpha.net/consor/cgi-bin/OC_Exp.php?Lng=en&Expert=97245" xsd:string
@@ -11449,9 +11706,9 @@ relationship: RO:0002351 ECO:0006151 ! has member documented statement evidence
 relationship: RO:0002351 HP:0000118 {cardinality="1"} ! has member Phenotypic abnormality
 relationship: RO:0002351 NCIT:C178992 {cardinality="1"} ! has member Symptom Resolution Date
 relationship: RO:0002351 NCIT:C93511 {cardinality="1"} ! has member Assessment date
-relationship: RO:0002351 NCIT:C99800 {cardinality="1"} ! has member Year of onset
+relationship: RO:0002351 NCIT:C99800 {cardinality="1"} ! has member Year of Onset
 relationship: RO:0002351 PROMOT:0010006 {cardinality="1"} ! has member Année d’identification
-relationship: RO:0002351 PROMOT:0010007 ! has member Année de disparition
+relationship: RO:0002351 PROMOT:0010007 {cardinality="1"} ! has member Année de disparition
 relationship: RO:0002351 SNOMED:298059007 {cardinality="1"} ! has member Date of onset
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
@@ -11964,6 +12221,7 @@ id: PROMOT:0032006
 name: Fatiga cuando se come
 def: "A fatigue that occurs when one is eating. It is due to weakness or fatiguable weakness of chewing muscles." [] {comment="https://orcid.org/0000-0003-2829-8470", IAO:0000119="Medical experts"}
 is_a: HP:0012378 ! Fatigue
+relationship: PROMOT:2000005 ICF:1328675264 ! affecte Comer
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 property_value: PROMOT:1000001 "[OPMD Scoping review on dysphagia] Côté C, Gagnon C, Youssof S, et al. The requirement for a disease-specific patient-reported outcome measure of dysphagia in oculopharyngeal muscular dystrophy. Muscle Nerve. 2019;59:445–50. doi: 10.1002/mus.26405" xsd:string
 
@@ -11972,6 +12230,7 @@ id: PROMOT:0032007
 name: Difficulty walking short distance
 def: "A difficulty to walk for less than a kilometre, such as walking around rooms or hallways, within a building or for short distances outside. This is distinct from the difficulty of moving around." [] {IAO:0000119="ICF:555410497"}
 is_a: HP:0001288 ! Gait disturbance
+relationship: PROMOT:2000005 ICF:555410497 ! affecte Andar distancias cortas
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 property_value: PROMOT:1000001 "[OPMD Scoping review 2026] Bélair N, Gagnon C, Duchesne E. What is known about muscle weakness, balance impairments and indoor mobility limitations in oculopharyngeal muscular dystrophy? A scoping review. J Neuromuscul Dis. 2025 Dec 30:22143602251397052. doi: 10.1177/22143602251397052. Epub ahead of print. PMID: 41467981." xsd:string
 
@@ -11980,6 +12239,7 @@ id: PROMOT:0032008
 name: Difficulty changing basic position
 def: "A difficulty to change basic position, i.e. a difficulty getting into and out of a body position and moving from one location to another, such as getting up out of a chair to lie down on a bed, and getting into and out of positions of sitting, standing, kneeling or squatting. This is distinct from the difficulty of transferring oneself." [] {IAO:0000119="ICF:150502901"}
 is_a: HP:0100022 ! Abnormality of movement
+relationship: PROMOT:2000005 ICF:150502901 ! affecte Cambiar las posturas corporales básicas
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 property_value: PROMOT:1000001 "[OPMD Scoping review 2026] Bélair N, Gagnon C, Duchesne E. What is known about muscle weakness, balance impairments and indoor mobility limitations in oculopharyngeal muscular dystrophy? A scoping review. J Neuromuscul Dis. 2025 Dec 30:22143602251397052. doi: 10.1177/22143602251397052. Epub ahead of print. PMID: 41467981." xsd:string
 
@@ -11988,6 +12248,7 @@ id: PROMOT:0032009
 name: Anhedonia cuando se come
 def: "A loss of enjoyment of mealtime due to difficulties while eating." [] {comment="https://orcid.org/0000-0003-2829-8470", IAO:0000119="Medical experts"}
 is_a: HP:0012154 ! Anhedonia
+relationship: PROMOT:2000005 ICF:1328675264 ! affecte Comer
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 property_value: PROMOT:1000001 "[OPMD Scoping review on dysphagia] Côté C, Gagnon C, Youssof S, et al. The requirement for a disease-specific patient-reported outcome measure of dysphagia in oculopharyngeal muscular dystrophy. Muscle Nerve. 2019;59:445–50. doi: 10.1002/mus.26405" xsd:string
 
@@ -11996,6 +12257,8 @@ id: PROMOT:0032010
 name: Disfagia con sólidos
 def: "Difficulty in swallowing solid food." [] {comment="https://orcid.org/0000-0003-2829-8470", IAO:0000119="Medical experts"}
 is_a: HP:0002015 ! Dysphagia
+relationship: PROMOT:2000005 ICF:1328675264 ! affecte Comer
+relationship: PROMOT:2000005 ICF:923782542 ! affecte Déglutir
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 property_value: PROMOT:1000001 "[OPMD Clinical Registry Form]" xsd:string
 property_value: PROMOT:1000001 "[OPMD Scoping review on dysphagia] Côté C, Gagnon C, Youssof S, et al. The requirement for a disease-specific patient-reported outcome measure of dysphagia in oculopharyngeal muscular dystrophy. Muscle Nerve. 2019;59:445–50. doi: 10.1002/mus.26405" xsd:string
@@ -12005,6 +12268,8 @@ id: PROMOT:0032011
 name: Disfagia con líquidos
 def: "Difficulty in swallowing liquid food. This is distinct from hydrophobia." [] {comment="https://orcid.org/0000-0003-2829-8470", IAO:0000119="Medical experts"}
 is_a: HP:0002015 ! Dysphagia
+relationship: PROMOT:2000005 ICF:553784299 ! affecte Beber
+relationship: PROMOT:2000005 ICF:923782542 ! affecte Déglutir
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 property_value: PROMOT:1000001 "[OPMD Clinical Registry Form]" xsd:string
 property_value: PROMOT:1000001 "[OPMD Scoping review on dysphagia] Côté C, Gagnon C, Youssof S, et al. The requirement for a disease-specific patient-reported outcome measure of dysphagia in oculopharyngeal muscular dystrophy. Muscle Nerve. 2019;59:445–50. doi: 10.1002/mus.26405" xsd:string
@@ -12014,6 +12279,9 @@ id: PROMOT:0032012
 name: Debilidad fatigable de la musculatura facial 
 def: "A type of weakness of the facial musculature (i.e. one or more muscles innervated by the seventh cranial nerve) that occurs after a muscle group is used and lessens if the muscle group has some rest. That is, there is diminution of the strength of the facial musculature with repetitive muscle actions." [] {comment="[PROMOT project] Mansoore Gholizade (definition reviewer)", IAO:0000119="HP:0003473"}
 is_a: HP:0003473 ! Fatigable weakness
+relationship: PROMOT:2000005 ICF:1328675264 ! affecte Comer
+relationship: PROMOT:2000005 ICF:1521707777 ! affecte Endurance des groupes de muscles
+relationship: PROMOT:2000005 ICF:1789365017 ! affecte Fuerza de músculos aislados o de grupos de músculos
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 property_value: PROMOT:1000001 "Congenital myasthenic syndrom Scoping review" xsd:string
 property_value: PROMOT:1000001 "Congenital myopathy Scoping review" xsd:string
@@ -12023,15 +12291,20 @@ id: PROMOT:0032013
 name: Debilidad fatigable de los músculos oculares
 def: "A type of weakness of the ocular muscles that occurs after a muscle group is used and lessens if the muscle group has some rest. That is, there is diminution of the strength of the ocular muscles with repetitive muscle actions." [] {comment="[PROMOT project] Mansoore Gholizade (definition reviewer)", IAO:0000119="HP:0003473"}
 is_a: HP:0003473 ! Fatigable weakness
+relationship: PROMOT:2000005 ICF:1521707777 ! affecte Endurance des groupes de muscles
+relationship: PROMOT:2000005 ICF:1789365017 ! affecte Fuerza de músculos aislados o de grupos de músculos
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 property_value: PROMOT:1000001 "Congenital myasthenic syndrom Scoping review" xsd:string
 property_value: PROMOT:1000001 "Congenital myopathy Scoping review" xsd:string
 
 [Term]
 id: PROMOT:0032014
-name: Debilidad fatigable muscular axial
+name: Axial fatigable weakness
 def: "A type of weakness of the axial muscles (i.e., of the muscles of the head and neck, vertebral column, and intercostal muscles) that occurs after a muscle group is used and lessens if the muscle group has some rest. That is, there is diminution of the strength of the axial muscles with repetitive muscle actions." [] {comment="[PROMOT project] Mansoore Gholizade (definition reviewer)", IAO:0000119="HP:0003473"}
 is_a: HP:0030197 ! Fatigable weakness of skeletal muscles
+relationship: PROMOT:2000005 ICF:1521707777 ! affecte Endurance des groupes de muscles
+relationship: PROMOT:2000005 ICF:1789365017 ! affecte Fuerza de músculos aislados o de grupos de músculos
+relationship: PROMOT:2000005 ICF:2048203604 ! affecte Mobility
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 property_value: PROMOT:1000001 "Congenital myasthenic syndrom Scoping review" xsd:string
 property_value: PROMOT:1000001 "Congenital myopathy Scoping review" xsd:string
@@ -12041,34 +12314,88 @@ id: PROMOT:0032015
 name: Debilidad de músculos masticatorios
 def: "A lack of strength in the muscles involved in chewing." [] {comment="[PROMOT project] Mansoore Gholizade (definition reviewer)", IAO:0000119="HP:0001324"}
 is_a: HP:0001324 ! Muscle weakness
+relationship: PROMOT:2000005 ICF:1328675264 ! affecte Comer
+relationship: PROMOT:2000005 ICF:1389818830 ! affecte Chewing
+relationship: PROMOT:2000005 ICF:1789365017 ! affecte Fuerza de músculos aislados o de grupos de músculos
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 property_value: PROMOT:1000001 "Congenital myasthenic syndrom Scoping review" xsd:string
 property_value: PROMOT:1000001 "Congenital myopathy Scoping review" xsd:string
 
 [Term]
-id: PROMOT:0033000
-name: Function of expiratory peak flow
-is_a: ICF:446199613 ! Fonctions respiratoires
+id: PROMOT:0032016
+name: Fatigable ptosis
+def: "A type of ptosis that occurs after the external ocular muscle group is used and lessens if the muscle group has some rest. That is, there is a ptosis apparition with repetitive external ocular muscle actions" []
+is_a: HP:0000508 ! Ptosis
+relationship: PROMOT:2000005 ICF:1521707777 ! affecte Endurance des groupes de muscles
+relationship: PROMOT:2000005 ICF:1789365017 ! affecte Fuerza de músculos aislados o de grupos de músculos
+relationship: PROMOT:2000005 ICF:2021370201 ! affecte Fonctions de la paupière
+property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
-id: PROMOT:0033001
-name: Function of cough peak flow
-is_a: ICF:1083127119 ! Fonctions de toux
+id: PROMOT:0032017
+name: Decreased walking speed
+def: "A walking speed that is below the lower limit of normal according to what is expected." []
+is_a: HP:0001288 ! Gait disturbance
+relationship: PROMOT:2000005 ICF:1550548595 ! affecte Andar
+property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
-id: PROMOT:0033002
-name: Isometric muscle strength
-is_a: ICF:274570113 ! Fonctions relatives à la puissance musculaire
+id: PROMOT:0032018
+name: Coughing on foods
+def: "Incidents in which a piece of food get stuck in the upper airway and provoke coughing." []
+is_a: HP:0030842 ! Choking episodes
+relationship: PROMOT:2000005 ICF:1328675264 ! affecte Comer
+property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
-id: PROMOT:0033003
-name: Pinch strength
-is_a: ICF:1789365017 ! Fuerza de músculos aislados o de grupos de músculos
+id: PROMOT:0032019
+name: Coughing on liquids
+def: "Incidents in which liquids provoke coughing." []
+is_a: HP:0030842 ! Choking episodes
+relationship: PROMOT:2000005 ICF:553784299 ! affecte Beber
+property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
-id: PROMOT:0033004
-name: Tongue strength
-is_a: ICF:1789365017 ! Fuerza de músculos aislados o de grupos de músculos
+id: PROMOT:0032020
+name: Coughing on saliva
+def: "Incidents in which saliva provoke coughing." []
+is_a: PROMOT:0032019 ! Coughing on liquids
+property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
+
+[Term]
+id: PROMOT:0032021
+name: Choking on foods
+def: "Incidents in which a piece of food get stuck in the upper airway and provoke choking." []
+is_a: HP:0030842 ! Choking episodes
+relationship: PROMOT:2000005 ICF:1328675264 ! affecte Comer
+property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
+
+[Term]
+id: PROMOT:0032022
+name: Choking on liquids
+def: "Incidents in which liquids provoke choking." []
+is_a: HP:0030842 ! Choking episodes
+relationship: PROMOT:2000005 ICF:553784299 ! affecte Beber
+property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
+
+[Term]
+id: PROMOT:0032023
+name: Choking on saliva
+def: "Incidents in which saliva provoke choking." []
+is_a: PROMOT:0032022 ! Choking on liquids
+property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
+
+[Term]
+id: PROMOT:0032024
+name: Fatigable weakness of tongue muscle
+def: "A type of weakness of the tongue muscle that occurs after the tongue muscle is used and lessens if the tongue muscle has some rest. That is, there is diminution of the strength of the tongue muscle with repetitive muscle actions." []
+is_a: HP:0030192 ! Fatigable weakness of bulbar muscles
+relationship: PROMOT:2000005 ICF:1328675264 ! affecte Comer
+relationship: PROMOT:2000005 ICF:151046878 ! affecte Hablar
+relationship: PROMOT:2000005 ICF:1521707777 ! affecte Endurance des groupes de muscles
+relationship: PROMOT:2000005 ICF:1789365017 ! affecte Fuerza de músculos aislados o de grupos de músculos
+relationship: PROMOT:2000005 ICF:553784299 ! affecte Beber
+property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
 id: PROMOT:0100001
@@ -12092,16 +12419,6 @@ property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
 id: PROMOT:0100003
-name: Body structure related procedure
-def: "A procedure that can measure a body structure." []
-is_a: SNOMED:128927009 ! Procedure by method
-intersection_of: SNOMED:128927009 ! Procedure by method
-intersection_of: PROMOT:2000002 ICF:1626363729 ! assesses Body structures
-relationship: PROMOT:2000002 ICF:1626363729 ! assesses Body structures
-property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
-
-[Term]
-id: PROMOT:0100004
 name: Activity related procedure
 def: "A procedure that can measure an activity." []
 is_a: SNOMED:128927009 ! Procedure by method
@@ -12109,99 +12426,6 @@ intersection_of: SNOMED:128927009 ! Procedure by method
 intersection_of: PROMOT:2000002 PROMOT:0110001 ! assesses Actividad
 relationship: PROMOT:2000002 PROMOT:0110001 ! assesses Actividad
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
-
-[Term]
-id: PROMOT:0100005
-name: Assessment of expiratory and cough peak flows using an expiratory flowmeter
-relationship: PROMOT:2000002 HP:0012735 ! assesses Cough
-relationship: PROMOT:2000002 ICF:1083127119 ! assesses Fonctions de toux
-relationship: PROMOT:2000002 ICF:1360101629 ! assesses Fonctions des muscles respiratoires
-relationship: PROMOT:2000002 ICF:1470583183 ! assesses Fonctions liées à la respiration par la bouche
-relationship: PROMOT:2000002 ICF:446199613 ! assesses Fonctions respiratoires
-relationship: PROMOT:2000002 ICF:744367503 ! assesses Fonctions du système respiratoire
-
-[Term]
-id: PROMOT:0100007
-name: Assessment using Dysphagimeter
-relationship: PROMOT:2000002 HP:0002015 ! assesses Dysphagia
-relationship: PROMOT:2000002 HP:0002068 ! assesses Neuromuscular dysphagia
-relationship: PROMOT:2000002 HP:0200136 ! assesses Oral-pharyngeal dysphagia
-
-[Term]
-id: PROMOT:0100008
-name: Assessment of pinch strengh using B&L gauge
-relationship: PROMOT:2000002 HP:0003392 ! assesses First dorsal interossei muscle weakness
-
-[Term]
-id: PROMOT:0100009
-name: Evaluation of the maximum isometric muscle strength by manual dynamometry
-relationship: PROMOT:2000002 HP:0001324 ! assesses Muscle weakness
-relationship: PROMOT:2000002 HP:0003323 ! assesses Progressive muscle weakness
-relationship: PROMOT:2000002 HP:0003325 ! assesses Limb-girdle muscle weakness
-relationship: PROMOT:2000002 HP:0003484 ! assesses Upper limb muscle weakness
-relationship: PROMOT:2000002 HP:0003547 ! assesses Shoulder girdle muscle weakness
-relationship: PROMOT:2000002 HP:0003690 ! assesses Limb muscle weakness
-relationship: PROMOT:2000002 HP:0003694 ! assesses Late-onset proximal muscle weakness
-relationship: PROMOT:2000002 HP:0003701 ! assesses Proximal muscle weakness
-relationship: PROMOT:2000002 HP:0003731 ! assesses Quadriceps muscle weakness
-relationship: PROMOT:2000002 HP:0003749 ! assesses Pelvic girdle muscle weakness
-relationship: PROMOT:2000002 HP:0003810 ! assesses Late-onset distal muscle weakness
-relationship: PROMOT:2000002 HP:0007340 ! assesses Lower limb muscle weakness
-relationship: PROMOT:2000002 HP:0008994 ! assesses Proximal lower limb muscle weakness
-relationship: PROMOT:2000002 HP:0008997 ! assesses Proximal upper limb muscle weakness
-relationship: PROMOT:2000002 HP:0009063 ! assesses Progressive distal muscle weakness
-relationship: PROMOT:2000002 HP:0009073 ! assesses Progressive proximal muscle weakness
-relationship: PROMOT:2000002 HP:0012515 ! assesses Hip flexor weakness
-
-[Term]
-id: PROMOT:0100010
-name: Assessment of tongue strengh using Iowa Oral Performance Instrument
-relationship: PROMOT:2000002 HP:0000183 ! assesses Tongue muscle weakness
-
-[Term]
-id: PROMOT:0100011
-name: Assessment using Berg Balance Scale
-relationship: PROMOT:2000002 HP:0002141 ! assesses Gait imbalance
-
-[Term]
-id: PROMOT:0100012
-name: 10 Meter Walk Test (10MWT)
-relationship: PROMOT:2000002 HP:0002317 ! assesses Unsteady gait
-relationship: PROMOT:2000002 HP:0002505 ! assesses Loss of ambulation
-relationship: PROMOT:2000002 HP:0002540 ! assesses Inability to walk
-
-[Term]
-id: PROMOT:0100013
-name: Assessment using Sydney Swallow Questionnaire (SSQ)
-relationship: PROMOT:2000002 HP:0002015 ! assesses Dysphagia
-relationship: PROMOT:2000002 HP:0002068 ! assesses Neuromuscular dysphagia
-relationship: PROMOT:2000002 HP:0200136 ! assesses Oral-pharyngeal dysphagia
-
-[Term]
-id: PROMOT:0100014
-name: 80 ml water swallowing test
-relationship: PROMOT:2000002 HP:0002015 ! assesses Dysphagia
-relationship: PROMOT:2000002 HP:0002068 ! assesses Neuromuscular dysphagia
-relationship: PROMOT:2000002 HP:0200136 ! assesses Oral-pharyngeal dysphagia
-
-[Term]
-id: PROMOT:0100015
-name: Assessment using Fatigue Severity Scale (FSS)
-relationship: PROMOT:2000002 HP:0012378 ! assesses Fatigue
-
-[Term]
-id: PROMOT:0100016
-name: Assessment using Hand Jamar dynanometer
-relationship: PROMOT:2000002 HP:0009005 ! assesses Weakness of the intrinsic hand muscles
-relationship: PROMOT:2000002 HP:0030237 ! assesses Hand muscle weakness
-relationship: PROMOT:2000002 HP:0031177 ! assesses Finger flexor weakness
-relationship: PROMOT:2000002 HP:0033466 ! assesses Weak grip
-
-[Term]
-id: PROMOT:0100017
-name: Stair Climb Test
-relationship: PROMOT:2000002 HP:0003551 ! assesses Difficulty climbing stairs
-relationship: PROMOT:2000002 HP:0033235 ! assesses Difficulty descending stairs
 
 [Term]
 id: PROMOT:0110001
@@ -13018,10 +13242,6 @@ property_value: skos:notation "83420006" xsd:string
 id: SNOMED:840297006
 name: Assessment of patient reported outcome measures
 is_a: SNOMED:315306007 ! Examination by method
-relationship: PROMOT:2000002 HP:0002015 ! assesses Dysphagia
-relationship: PROMOT:2000002 HP:0002068 ! assesses Neuromuscular dysphagia
-relationship: PROMOT:2000002 HP:0033667 ! assesses Diminished mental health
-relationship: PROMOT:2000002 HP:0200136 ! assesses Oral-pharyngeal dysphagia
 property_value: dc11:type "procedure" xsd:string
 property_value: sct-ext:definitionStatus "Primitif" xsd:string
 property_value: sct-ext:fsn "Assessment of patient reported outcome measures (procedure)" xsd:string
