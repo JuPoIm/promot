@@ -6,7 +6,7 @@
 -->
 
 # PROMOT ontology
-<img src="https://github.com/JuPoIm/promot/blob/test/site/assets/images/Promot_Logo_Colours.png" height=150 width=250/>
+<img src="https://github.com/JuPoIm/promot/blob/test/site/assets/images/Promot_Logo_Colours.png" height=250 width=350/>
 
 The PROMOT ontology represents the 3 groups of neuromuscular diseases and 13 genes the PROMOT Master Observational Trial focuses on :
 * Oculopharyngeal Muscular Dystrophy (PABPN1)
@@ -79,7 +79,7 @@ advice and infrastructure. We are very grateful for all your contributions - thi
 --->
 
 ### PROMOT INITIATIVE
-<img src="https://github.com/JuPoIm/promot/blob/test/site/assets/images/Promot_Logo_Colours.png" height=150 width=250/>
+<img src="https://github.com/JuPoIm/promot/blob/test/site/assets/images/Promot_Logo_Colours.png" height=200 width=300/>
 
 More informations about PROMOT initiative can be found on [PROMOT initiative website](https://www.promotinitiative.com/).
 
