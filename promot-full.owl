@@ -65,7 +65,7 @@
      xmlns:CPATH_VISIT_OCCURRENCE="https://w3id.org/cpont/visit_occurrence/"
      xmlns:CPATH_CONDITION_OCCURRENCE="https://w3id.org/cpont/condition_occurrence/">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/promot/promot-full.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/promot/releases/2026-05-21/promot-full.owl"/>
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/promot/releases/2026-06-01/promot-full.owl"/>
         <dc11:contributor>Anita Burgun MD, PhD
 https://orcid.org/0000-0001-6855-4366</dc11:contributor>
         <dc11:contributor>Carole Faviez PhD
@@ -94,7 +94,7 @@ https://orcid.org/0000-0002-3336-2476</dc11:creator>
         <dcterms:description>Ontology for modeling the three following neuromuscular diseases : OPMD, Congenital myopathies and Congenital myastenic syndroms. It aims to be also an ontology for building the PROMOT project relational database.</dcterms:description>
         <dcterms:license rdf:resource="https://creativecommons.org/licenses/by-nc-sa/4.0/"/>
         <dcterms:title>PROMOT ontology</dcterms:title>
-        <oboInOwl:date>21:05:2026 15:45</oboInOwl:date>
+        <oboInOwl:date>01:06:2026 14:41</oboInOwl:date>
         <rdfs:comment>Additional acknowledgements:
 	- Rachel Thompson
 	- Thomas Bongivault, MSc
@@ -106,7 +106,7 @@ https://orcid.org/0000-0002-3336-2476</dc11:creator>
 </rdfs:comment>
         <rdfs:seeAlso>More about PROMOT initiative at https://www.promotinitiative.com/
 </rdfs:seeAlso>
-        <owl:versionInfo>2026-05-21</owl:versionInfo>
+        <owl:versionInfo>2026-06-01</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -2824,6 +2824,34 @@ We also have the outstanding issue of how to aim different definitions to differ
     
 
 
+    <!-- http://id.who.int/icd/entity/1302007745 -->
+
+    <owl:Class rdf:about="http://id.who.int/icd/entity/1302007745">
+        <rdfs:subClassOf rdf:resource="http://id.who.int/icd/entity/389047611"/>
+        <schema:browserUrl rdf:resource="https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F1302007745"/>
+        <obo:IAO_0000115 xml:lang="en">Functions related to sustaining muscle contraction of isolated muscles for the required period of time.</obo:IAO_0000115>
+        <oboInOwl:hasDbXref>https://data.esante.gouv.fr/terminologies/icf#32210</oboInOwl:hasDbXref>
+        <rdfs:label xml:lang="fr">Endurance de muscles isolés</rdfs:label>
+        <rdfs:label xml:lang="en">Endurance of isolated muscles</rdfs:label>
+        <rdfs:label xml:lang="es">Resistencia de músculos aislados</rdfs:label>
+        <skos:altLabel xml:lang="en">Functions involved in endurance of isolated muscles</skos:altLabel>
+        <skos:changeNote xml:lang="en">[PROMOT note] The PROMOT ontology added a crossref to the LIRMM version of the ICF (CIF-ASIP 2020). It also added the official French and Spanish translation for labels.</skos:changeNote>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://id.who.int/icd/entity/1302007745"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+        <owl:annotatedTarget xml:lang="fr">Endurance de muscles isolés</owl:annotatedTarget>
+        <rdfs:comment>[PROMOT note] Source for official translation: https://icd.who.int/browse/2026-01/icf/fr &gt; Info &gt; Fichier du tableur</rdfs:comment>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://id.who.int/icd/entity/1302007745"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+        <owl:annotatedTarget xml:lang="es">Resistencia de músculos aislados</owl:annotatedTarget>
+        <rdfs:comment>[PROMOT note] Source for official translation: https://icd.who.int/browse/2026-01/icf/es &gt; Información &gt; Archivo de hoja de cálculo</rdfs:comment>
+    </owl:Axiom>
+    
+
+
     <!-- http://id.who.int/icd/entity/1328466963 -->
 
     <owl:Class rdf:about="http://id.who.int/icd/entity/1328466963">
@@ -3007,6 +3035,12 @@ We also have the outstanding issue of how to aim different definitions to differ
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://id.who.int/icd/entity/1360101629"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+        <owl:annotatedTarget xml:lang="es">Funciones de los músculos respiratorios</owl:annotatedTarget>
+        <rdfs:comment>[PROMOT note] Source for official translation: https://icd.who.int/browse/2026-01/icf/es &gt; Información &gt; Archivo de hoja de cálculo</rdfs:comment>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://id.who.int/icd/entity/1360101629"/>
         <owl:annotatedProperty rdf:resource="http://id.who.int/icd/schema/exclusion"/>
         <owl:annotatedTarget xml:lang="en">Additional functions of the respiratory system</owl:annotatedTarget>
         <schema:foundationReference rdf:resource="http://id.who.int/icd/entity/1682107878"/>
@@ -3029,12 +3063,6 @@ We also have the outstanding issue of how to aim different definitions to differ
         <owl:annotatedTarget xml:lang="fr">Fonctions des muscles respiratoires</owl:annotatedTarget>
         <rdfs:comment>[PROMOT note] Source for official translation: https://icd.who.int/browse/2026-01/icf/fr &gt; Info &gt; Fichier du tableur</rdfs:comment>
     </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://id.who.int/icd/entity/1360101629"/>
-        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
-        <owl:annotatedTarget xml:lang="es">Funciones de los músculos respiratorios</owl:annotatedTarget>
-        <rdfs:comment>[PROMOT note] Source for official translation: https://icd.who.int/browse/2026-01/icf/es &gt; Información &gt; Archivo de hoja de cálculo</rdfs:comment>
-    </owl:Axiom>
     
 
 
@@ -3053,14 +3081,14 @@ We also have the outstanding issue of how to aim different definitions to differ
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://id.who.int/icd/entity/1363559646"/>
         <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
-        <owl:annotatedTarget xml:lang="es">Funciones mentales</owl:annotatedTarget>
-        <rdfs:comment>[PROMOT note] Source for official translation: https://icd.who.int/browse/2026-01/icf/es &gt; Información &gt; Archivo de hoja de cálculo</rdfs:comment>
+        <owl:annotatedTarget xml:lang="fr">Fonctions mentales</owl:annotatedTarget>
+        <rdfs:comment>[PROMOT note] Source for official translation: https://icd.who.int/browse/2026-01/icf/fr &gt; Info &gt; Fichier du tableur</rdfs:comment>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://id.who.int/icd/entity/1363559646"/>
         <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
-        <owl:annotatedTarget xml:lang="fr">Fonctions mentales</owl:annotatedTarget>
-        <rdfs:comment>[PROMOT note] Source for official translation: https://icd.who.int/browse/2026-01/icf/fr &gt; Info &gt; Fichier du tableur</rdfs:comment>
+        <owl:annotatedTarget xml:lang="es">Funciones mentales</owl:annotatedTarget>
+        <rdfs:comment>[PROMOT note] Source for official translation: https://icd.who.int/browse/2026-01/icf/es &gt; Información &gt; Archivo de hoja de cálculo</rdfs:comment>
     </owl:Axiom>
     
 
@@ -12680,6 +12708,15 @@ For a further explanation of coding conventions in ICF, refer to Annex 2.</obo:I
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0000271"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+        <owl:annotatedTarget xml:lang="es">Anomalía de la cara</owl:annotatedTarget>
+        <babelon:source_language>en</babelon:source_language>
+        <babelon:source_value>Abnormality of the face</babelon:source_value>
+        <babelon:translation_language>es</babelon:translation_language>
+        <babelon:translation_status>OFFICIAL</babelon:translation_status>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0000271"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>An abnormality of the face.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
@@ -12774,15 +12811,6 @@ For a further explanation of coding conventions in ICF, refer to Annex 2.</obo:I
         <babelon:translation_language>fr</babelon:translation_language>
         <babelon:translation_status>OFFICIAL</babelon:translation_status>
     </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0000271"/>
-        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
-        <owl:annotatedTarget xml:lang="es">Anomalía de la cara</owl:annotatedTarget>
-        <babelon:source_language>en</babelon:source_language>
-        <babelon:source_value>Abnormality of the face</babelon:source_value>
-        <babelon:translation_language>es</babelon:translation_language>
-        <babelon:translation_status>OFFICIAL</babelon:translation_status>
-    </owl:Axiom>
     
 
 
@@ -12818,6 +12846,12 @@ For a further explanation of coding conventions in ICF, refer to Annex 2.</obo:I
         <rdfs:label>Long face</rdfs:label>
         <rdfs:label xml:lang="en">Long face</rdfs:label>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0000276"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>Facial height (length) is more than 2 standard deviations above the mean (objective); or, an apparent increase in the height (length) of the face (subjective).</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>PMID:19125436</oboInOwl:hasDbXref>
+    </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0000276"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
@@ -12924,12 +12958,6 @@ For a further explanation of coding conventions in ICF, refer to Annex 2.</obo:I
         <babelon:source_value>Long face</babelon:source_value>
         <babelon:translation_language>fr</babelon:translation_language>
         <babelon:translation_status>OFFICIAL</babelon:translation_status>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0000276"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>Facial height (length) is more than 2 standard deviations above the mean (objective); or, an apparent increase in the height (length) of the face (subjective).</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>PMID:19125436</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -22910,25 +22938,6 @@ For a further explanation of coding conventions in ICF, refer to Annex 2.</obo:I
         <oboInOwl:hasDbXref rdf:resource="https://orcid.org/0000-0002-6548-5200"/>
         <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#layperson"/>
     </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0003677"/>
-        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
-        <owl:annotatedTarget xml:lang="es">Progresión lenta</owl:annotatedTarget>
-        <babelon:source_language>en</babelon:source_language>
-        <babelon:source_value>Slowly progressive</babelon:source_value>
-        <babelon:translation_language>es</babelon:translation_language>
-        <babelon:translation_status>CANDIDATE</babelon:translation_status>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0003677"/>
-        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
-        <owl:annotatedTarget xml:lang="fr">Progression lente</owl:annotatedTarget>
-        <babelon:comment>label of HP:0003677 (Slow progression)  ; clinicalcourse</babelon:comment>
-        <babelon:source_language>en</babelon:source_language>
-        <babelon:source_value>Slowly progressive</babelon:source_value>
-        <babelon:translation_language>fr</babelon:translation_language>
-        <babelon:translation_status>CANDIDATE</babelon:translation_status>
-    </owl:Axiom>
     
 
 
@@ -24681,25 +24690,6 @@ For a further explanation of coding conventions in ICF, refer to Annex 2.</obo:I
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
         <owl:annotatedTarget>Early foetal demise</owl:annotatedTarget>
         <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#uk_spelling"/>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0005268"/>
-        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
-        <owl:annotatedTarget xml:lang="es">Aborto espontáneo</owl:annotatedTarget>
-        <babelon:source_language>en</babelon:source_language>
-        <babelon:source_value>Miscarriage</babelon:source_value>
-        <babelon:translation_language>es</babelon:translation_language>
-        <babelon:translation_status>CANDIDATE</babelon:translation_status>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0005268"/>
-        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
-        <owl:annotatedTarget xml:lang="fr">Risque accru d&apos;avortement spontané</owl:annotatedTarget>
-        <babelon:comment>label of HP:0005268 (Spontaneous abortion)  ; abnormality of prenatal development or birth</babelon:comment>
-        <babelon:source_language>en</babelon:source_language>
-        <babelon:source_value>Miscarriage</babelon:source_value>
-        <babelon:translation_language>fr</babelon:translation_language>
-        <babelon:translation_status>CANDIDATE</babelon:translation_status>
     </owl:Axiom>
     
 
@@ -36282,10 +36272,10 @@ Previous. An information content entity is a non-realizable information entity t
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0000004">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0000001"/>
         <obo:IAO_0000115 xml:lang="en">A sequence alteration located within the PABPN1 gene.</obo:IAO_0000115>
-        <obo:IAO_0000115 xml:lang="es">Una alteración genética ubicada en el gen PABPN1.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="es">Una alteración genética localizada en el gen PABPN1.</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="fr">Une altération génétique située au niveau du gène PABPN1.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
-        <rdfs:comment>JP: Translated to spanish using Bing Translator</rdfs:comment>
+        <rdfs:comment>Translation process: Frist translated to spanish using Bing Translator then manually reviewed</rdfs:comment>
         <rdfs:comment>[PROMOT note] [Derived from EURO-NMD] </rdfs:comment>
         <rdfs:comment>[PROMOT note] [EURO-NMD] Atalia A et al., EURO-NMD registry: federated FAIR infrastructure, innovative technologies and concepts of a patient-centred registry for rare neuromuscular disorders. Orphanet J Rare Dis. 2024 Feb 14;19(1):66. doi: 10.1186/s13023-024-03059-3. PMID: 38355534; PMCID: PMC10865673.</rdfs:comment>
         <rdfs:label xml:lang="en">PABPN1 variant</rdfs:label>
@@ -36293,6 +36283,18 @@ Previous. An information content entity is a non-realizable information entity t
         <rdfs:label xml:lang="fr">variant du gène PABPN1</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://purl.obolibrary.org/obo/NCIT_C204162"/>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0000004"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget xml:lang="es">Una alteración genética localizada en el gen PABPN1.</owl:annotatedTarget>
+        <obo:IAO_0000119>reviewed by https://orcid.org/0000-0002-1500-0236</obo:IAO_0000119>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0000004"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+        <owl:annotatedTarget xml:lang="es">mutación del gen PAPBN1</owl:annotatedTarget>
+        <rdfs:comment>reviewed by https://orcid.org/0000-0002-1500-0236</rdfs:comment>
+    </owl:Axiom>
     
 
 
@@ -36301,15 +36303,27 @@ Previous. An information content entity is a non-realizable information entity t
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0000005">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0000003"/>
         <obo:IAO_0000115 xml:lang="en">A sequence alteration located within the RYR1 gene.</obo:IAO_0000115>
-        <obo:IAO_0000115 xml:lang="es">Una alteración genética ubicada en el gen RYR1.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="es">Una alteración genética localizada en el gen RYR1.</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="fr">Une altération génétique située au niveau du gène RYR1.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
-        <rdfs:comment>JP: Translated to spanish using Bing Translator</rdfs:comment>
+        <rdfs:comment>Translation process: Frist translated to spanish using Bing Translator then manually reviewed</rdfs:comment>
         <rdfs:label xml:lang="en">RYR1 variant</rdfs:label>
         <rdfs:label xml:lang="es">mutación del gen RYR1</rdfs:label>
         <rdfs:label xml:lang="fr">variant du gène RYR1</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://purl.obolibrary.org/obo/NCIT_C150311"/>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0000005"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget xml:lang="es">Una alteración genética localizada en el gen RYR1.</owl:annotatedTarget>
+        <obo:IAO_0000119>reviewed by https://orcid.org/0000-0002-1500-0236</obo:IAO_0000119>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0000005"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+        <owl:annotatedTarget xml:lang="es">mutación del gen RYR1</owl:annotatedTarget>
+        <rdfs:comment>reviewed by https://orcid.org/0000-0002-1500-0236</rdfs:comment>
+    </owl:Axiom>
     
 
 
@@ -36318,15 +36332,27 @@ Previous. An information content entity is a non-realizable information entity t
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0000006">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0000003"/>
         <obo:IAO_0000115 xml:lang="en">A sequence alteration located within the TTN gene.</obo:IAO_0000115>
-        <obo:IAO_0000115 xml:lang="es">Una alteración genética ubicada en el gen TTN.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="es">Una alteración genética localizada en el gen TTN.</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="fr">Une altération génétique située au niveau du gène TTN.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
-        <rdfs:comment>JP: Translated to spanish using Bing Translator</rdfs:comment>
+        <rdfs:comment>Translation process: Frist translated to spanish using Bing Translator then manually reviewed</rdfs:comment>
         <rdfs:label xml:lang="en">TTN variant</rdfs:label>
         <rdfs:label xml:lang="es">mutación del gen TTN</rdfs:label>
         <rdfs:label xml:lang="fr">variant du gène TTN</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://purl.obolibrary.org/obo/NCIT_C101756"/>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0000006"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget xml:lang="es">Una alteración genética localizada en el gen TTN.</owl:annotatedTarget>
+        <obo:IAO_0000119>reviewed by https://orcid.org/0000-0002-1500-0236</obo:IAO_0000119>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0000006"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+        <owl:annotatedTarget xml:lang="es">mutación del gen TTN</owl:annotatedTarget>
+        <rdfs:comment>reviewed by https://orcid.org/0000-0002-1500-0236</rdfs:comment>
+    </owl:Axiom>
     
 
 
@@ -36335,15 +36361,27 @@ Previous. An information content entity is a non-realizable information entity t
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0000007">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0000003"/>
         <obo:IAO_0000115 xml:lang="en">A sequence alteration located within the NEB gene.</obo:IAO_0000115>
-        <obo:IAO_0000115 xml:lang="es">Una alteración genética ubicada en el gen NEB.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="es">Una alteración genética localizada en el gen NEB.</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="fr">Une altération génétique située au niveau du gène NEB.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
-        <rdfs:comment>JP: Translated to spanish using Bing Translator</rdfs:comment>
+        <rdfs:comment>Translation process: Frist translated to spanish using Bing Translator then manually reviewed</rdfs:comment>
         <rdfs:label xml:lang="en">NEB variant</rdfs:label>
         <rdfs:label xml:lang="es">mutación del gen NEB</rdfs:label>
         <rdfs:label xml:lang="fr">variant du gène NEB</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://purl.obolibrary.org/obo/NCIT_C203906"/>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0000007"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget xml:lang="es">Una alteración genética localizada en el gen NEB.</owl:annotatedTarget>
+        <obo:IAO_0000119>reviewed by https://orcid.org/0000-0002-1500-0236</obo:IAO_0000119>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0000007"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+        <owl:annotatedTarget xml:lang="es">mutación del gen NEB</owl:annotatedTarget>
+        <rdfs:comment>reviewed by https://orcid.org/0000-0002-1500-0236</rdfs:comment>
+    </owl:Axiom>
     
 
 
@@ -36352,15 +36390,27 @@ Previous. An information content entity is a non-realizable information entity t
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0000008">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0000003"/>
         <obo:IAO_0000115 xml:lang="en">A sequence alteration located within the MTM1 gene.</obo:IAO_0000115>
-        <obo:IAO_0000115 xml:lang="es">Una alteración genética ubicada en el gen MTM1.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="es">Una alteración genética localizada en el gen MTM1.</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="fr">Une altération génétique située au niveau du gène MTM1.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
-        <rdfs:comment>JP: Translated to spanish using Bing Translator</rdfs:comment>
+        <rdfs:comment>Translation process: Frist translated to spanish using Bing Translator then manually reviewed</rdfs:comment>
         <rdfs:label xml:lang="en">MTM1 variant</rdfs:label>
         <rdfs:label xml:lang="es">mutación del gen NMTM1</rdfs:label>
         <rdfs:label xml:lang="fr">variant du gène NMTM1</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://purl.obolibrary.org/obo/NCIT_C203822"/>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0000008"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget xml:lang="es">Una alteración genética localizada en el gen MTM1.</owl:annotatedTarget>
+        <obo:IAO_0000119>reviewed by https://orcid.org/0000-0002-1500-0236</obo:IAO_0000119>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0000008"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+        <owl:annotatedTarget xml:lang="es">mutación del gen NMTM1</owl:annotatedTarget>
+        <rdfs:comment>reviewed by https://orcid.org/0000-0002-1500-0236</rdfs:comment>
+    </owl:Axiom>
     
 
 
@@ -36369,15 +36419,27 @@ Previous. An information content entity is a non-realizable information entity t
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0000009">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0000003"/>
         <obo:IAO_0000115 xml:lang="en">A sequence alteration located within the ACTA1 gene.</obo:IAO_0000115>
-        <obo:IAO_0000115 xml:lang="es">Una alteración genética ubicada en el gen ACTA1.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="es">Una alteración genética localizada en el gen ACTA1.</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="fr">Une altération génétique située au niveau du gène ACTA1.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
-        <rdfs:comment>JP: Translated to spanish using Bing Translator</rdfs:comment>
+        <rdfs:comment>Translation process: Frist translated to spanish using Bing Translator then manually reviewed</rdfs:comment>
         <rdfs:label xml:lang="en">ACTA1 variant</rdfs:label>
         <rdfs:label xml:lang="es">mutación del gen ACTA1</rdfs:label>
         <rdfs:label xml:lang="fr">variant du gène ACTA1</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://purl.obolibrary.org/obo/NCIT_C191893"/>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0000009"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget xml:lang="es">Una alteración genética localizada en el gen ACTA1.</owl:annotatedTarget>
+        <obo:IAO_0000119>reviewed by https://orcid.org/0000-0002-1500-0236</obo:IAO_0000119>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0000009"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+        <owl:annotatedTarget xml:lang="es">mutación del gen ACTA1</owl:annotatedTarget>
+        <rdfs:comment>reviewed by https://orcid.org/0000-0002-1500-0236</rdfs:comment>
+    </owl:Axiom>
     
 
 
@@ -36386,15 +36448,27 @@ Previous. An information content entity is a non-realizable information entity t
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0000010">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0000003"/>
         <obo:IAO_0000115 xml:lang="en">A sequence alteration located within the SELENON gene.</obo:IAO_0000115>
-        <obo:IAO_0000115 xml:lang="es">Una alteración genética ubicada en el gen SELENON.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="es">Una alteración genética localizada en el gen SELENON.</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="fr">Une altération génétique située au niveau du gène SELENON.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
-        <rdfs:comment>JP: Translated to spanish using Bing Translator</rdfs:comment>
+        <rdfs:comment>Translation process: Frist translated to spanish using Bing Translator then manually reviewed</rdfs:comment>
         <rdfs:label xml:lang="en">SELENON variant</rdfs:label>
         <rdfs:label xml:lang="es">mutación del gen SELENON</rdfs:label>
         <rdfs:label xml:lang="fr">variant du gène SELENON</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://purl.obolibrary.org/obo/NCIT_C205071"/>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0000010"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget xml:lang="es">Una alteración genética localizada en el gen SELENON.</owl:annotatedTarget>
+        <obo:IAO_0000119>reviewed by https://orcid.org/0000-0002-1500-0236</obo:IAO_0000119>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0000010"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+        <owl:annotatedTarget xml:lang="es">mutación del gen SELENON</owl:annotatedTarget>
+        <rdfs:comment>reviewed by https://orcid.org/0000-0002-1500-0236</rdfs:comment>
+    </owl:Axiom>
     
 
 
@@ -36403,15 +36477,27 @@ Previous. An information content entity is a non-realizable information entity t
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0000011">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0000002"/>
         <obo:IAO_0000115 xml:lang="en">A sequence alteration located within the CHRNE gene.</obo:IAO_0000115>
-        <obo:IAO_0000115 xml:lang="es">Una alteración genética ubicada en el gen CHRNE.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="es">Una alteración genética localizada en el gen CHRNE.</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="fr">Une altération génétique située au niveau du gène CHRNE.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
-        <rdfs:comment>JP: Translated to spanish using Bing Translator</rdfs:comment>
+        <rdfs:comment>Translation process: Frist translated to spanish using Bing Translator then manually reviewed</rdfs:comment>
         <rdfs:label xml:lang="en">CHRNE variant</rdfs:label>
         <rdfs:label xml:lang="es">mutación del gen CHRNE</rdfs:label>
         <rdfs:label xml:lang="fr">variant du gène CHRNE</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://purl.obolibrary.org/obo/NCIT_C198628"/>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0000011"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget xml:lang="es">Una alteración genética localizada en el gen CHRNE.</owl:annotatedTarget>
+        <obo:IAO_0000119>reviewed by https://orcid.org/0000-0002-1500-0236</obo:IAO_0000119>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0000011"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+        <owl:annotatedTarget xml:lang="es">mutación del gen CHRNE</owl:annotatedTarget>
+        <rdfs:comment>reviewed by https://orcid.org/0000-0002-1500-0236</rdfs:comment>
+    </owl:Axiom>
     
 
 
@@ -36420,15 +36506,27 @@ Previous. An information content entity is a non-realizable information entity t
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0000012">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0000002"/>
         <obo:IAO_0000115 xml:lang="en">A sequence alteration located within the DOK7 gene.</obo:IAO_0000115>
-        <obo:IAO_0000115 xml:lang="es">Una alteración genética ubicada en el gen DOK7.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="es">Una alteración genética localizada en el gen DOK7.</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="fr">Une altération génétique située au niveau du gène DOK7.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
-        <rdfs:comment>JP: Translated to spanish using Bing Translator</rdfs:comment>
+        <rdfs:comment>Translation process: Frist translated to spanish using Bing Translator then manually reviewed</rdfs:comment>
         <rdfs:label xml:lang="en">DOK7 variant</rdfs:label>
         <rdfs:label xml:lang="es">mutación del gen DOK7</rdfs:label>
         <rdfs:label xml:lang="fr">variant du gène DOK7</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://purl.obolibrary.org/obo/NCIT_C216062"/>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0000012"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget xml:lang="es">Una alteración genética localizada en el gen DOK7.</owl:annotatedTarget>
+        <obo:IAO_0000119>reviewed by https://orcid.org/0000-0002-1500-0236</obo:IAO_0000119>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0000012"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+        <owl:annotatedTarget xml:lang="es">mutación del gen DOK7</owl:annotatedTarget>
+        <rdfs:comment>reviewed by https://orcid.org/0000-0002-1500-0236</rdfs:comment>
+    </owl:Axiom>
     
 
 
@@ -36437,15 +36535,27 @@ Previous. An information content entity is a non-realizable information entity t
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0000013">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0000002"/>
         <obo:IAO_0000115 xml:lang="en">A sequence alteration located within the COLQ gene.</obo:IAO_0000115>
-        <obo:IAO_0000115 xml:lang="es">Una alteración genética ubicada en el gen COLQ.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="es">Una alteración genética localizada en el gen COLQ.</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="fr">Une altération génétique située au niveau du gène COLQ.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
-        <rdfs:comment>JP: Translated to spanish using Bing Translator</rdfs:comment>
+        <rdfs:comment>Translation process: Frist translated to spanish using Bing Translator then manually reviewed</rdfs:comment>
         <rdfs:label xml:lang="en">COLQ variant</rdfs:label>
         <rdfs:label xml:lang="es">mutación del gen COLQ</rdfs:label>
         <rdfs:label xml:lang="fr">variant du gène COLQ</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://purl.obolibrary.org/obo/NCIT_C200235"/>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0000013"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget xml:lang="es">Una alteración genética localizada en el gen COLQ.</owl:annotatedTarget>
+        <obo:IAO_0000119>reviewed by https://orcid.org/0000-0002-1500-0236</obo:IAO_0000119>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0000013"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+        <owl:annotatedTarget xml:lang="es">mutación del gen COLQ</owl:annotatedTarget>
+        <rdfs:comment>reviewed by https://orcid.org/0000-0002-1500-0236</rdfs:comment>
+    </owl:Axiom>
     
 
 
@@ -36454,15 +36564,27 @@ Previous. An information content entity is a non-realizable information entity t
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0000014">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0000002"/>
         <obo:IAO_0000115 xml:lang="en">A sequence alteration located within the RAPSN gene.</obo:IAO_0000115>
-        <obo:IAO_0000115 xml:lang="es">Una alteración genética ubicada en el gen RAPSN.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="es">Una alteración genética localizada en el gen RAPSN.</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="fr">Une altération génétique située au niveau du gène RAPSN.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
-        <rdfs:comment>JP: Translated to spanish using Bing Translator</rdfs:comment>
+        <rdfs:comment>Translation process: Frist translated to spanish using Bing Translator then manually reviewed</rdfs:comment>
         <rdfs:label xml:lang="en">RAPSN variant</rdfs:label>
         <rdfs:label xml:lang="es">mutación del gen RAPSN</rdfs:label>
         <rdfs:label xml:lang="fr">variant du gène RAPSN</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://purl.obolibrary.org/obo/NCIT_C177668"/>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0000014"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget xml:lang="es">Una alteración genética localizada en el gen RAPSN.</owl:annotatedTarget>
+        <obo:IAO_0000119>reviewed by https://orcid.org/0000-0002-1500-0236</obo:IAO_0000119>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0000014"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+        <owl:annotatedTarget xml:lang="es">mutación del gen RAPSN</owl:annotatedTarget>
+        <rdfs:comment>reviewed by https://orcid.org/0000-0002-1500-0236</rdfs:comment>
+    </owl:Axiom>
     
 
 
@@ -36471,15 +36593,27 @@ Previous. An information content entity is a non-realizable information entity t
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0000015">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0000002"/>
         <obo:IAO_0000115 xml:lang="en">A sequence alteration located within the GFPT1 gene.</obo:IAO_0000115>
-        <obo:IAO_0000115 xml:lang="es">Una alteración genética ubicada en el gen GFPT1.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="es">Una alteración genética localizada en el gen GFPT1.</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="fr">Une altération génétique située au niveau du gène GFPT1.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
-        <rdfs:comment>JP: Translated to spanish using Bing Translator</rdfs:comment>
+        <rdfs:comment>Translation process: Frist translated to spanish using Bing Translator then manually reviewed</rdfs:comment>
         <rdfs:label xml:lang="en">GFPT1 variant</rdfs:label>
         <rdfs:label xml:lang="es">mutación del gen GFPT1</rdfs:label>
         <rdfs:label xml:lang="fr">variant du gène GFPT1</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://purl.obolibrary.org/obo/NCIT_C201657"/>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0000015"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget xml:lang="es">Una alteración genética localizada en el gen GFPT1.</owl:annotatedTarget>
+        <obo:IAO_0000119>reviewed by https://orcid.org/0000-0002-1500-0236</obo:IAO_0000119>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0000015"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+        <owl:annotatedTarget xml:lang="es">mutación del gen GFPT1</owl:annotatedTarget>
+        <rdfs:comment>reviewed by https://orcid.org/0000-0002-1500-0236</rdfs:comment>
+    </owl:Axiom>
     
 
 
@@ -36488,14 +36622,26 @@ Previous. An information content entity is a non-realizable information entity t
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0000016">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0000002"/>
         <obo:IAO_0000115 xml:lang="en">A sequence alteration located within the GMPPB gene.</obo:IAO_0000115>
-        <obo:IAO_0000115 xml:lang="es">Una alteración genética ubicada en el gen GMPPB.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="es">Una alteración genética localizada en el gen GMPPB.</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="fr">Une altération génétique située au niveau du gène GMPPB.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
-        <rdfs:comment>JP: Translated to spanish using Bing Translator</rdfs:comment>
+        <rdfs:comment>Translation process: Frist translated to spanish using Bing Translator then manually reviewed</rdfs:comment>
         <rdfs:label xml:lang="en">GMPPB variant</rdfs:label>
         <rdfs:label xml:lang="es">mutación del gen GMPPB</rdfs:label>
         <rdfs:label xml:lang="fr">variant du gène GMPPB</rdfs:label>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0000016"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget xml:lang="es">Una alteración genética localizada en el gen GMPPB.</owl:annotatedTarget>
+        <obo:IAO_0000119>reviewed by https://orcid.org/0000-0002-1500-0236</obo:IAO_0000119>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0000016"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+        <owl:annotatedTarget xml:lang="es">mutación del gen GMPPB</owl:annotatedTarget>
+        <rdfs:comment>reviewed by https://orcid.org/0000-0002-1500-0236</rdfs:comment>
+    </owl:Axiom>
     
 
 
@@ -36608,6 +36754,7 @@ Previous. An information content entity is a non-realizable information entity t
         </rdfs:subClassOf>
         <obo:IAO_0000115 xml:lang="en">A statement that describes a human.</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="fr">Un énoncé au sujet d’un être humain qui apporte des informations à son sujet.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="es">Una declaración sobre un ser humano que aporta información sobre él.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
         <rdfs:label xml:lang="es">Declaración sobre un ser humano</rdfs:label>
         <rdfs:label xml:lang="en">statement about a human</rdfs:label>
@@ -36765,7 +36912,6 @@ Previous. An information content entity is a non-realizable information entity t
         <obo:IAO_0000115 xml:lang="fr">Un énoncé au sujet d’un patient qui apporte des informations à son sujet.</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="es">Una declaración sobre un paciente que aporta información sobre él.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
-        <rdfs:comment>JP: Translated to spanish using Bing Translator</rdfs:comment>
         <rdfs:label xml:lang="es">declaración sobre un paciente</rdfs:label>
         <rdfs:label xml:lang="en">statement about a patient</rdfs:label>
         <rdfs:label xml:lang="fr">énoncé concernant un patient</rdfs:label>
@@ -36879,7 +37025,6 @@ Previous. An information content entity is a non-realizable information entity t
         <obo:IAO_0000115 xml:lang="es">Una declaración sobre un fenotipo que aporta información sobre él.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
         <rdfs:comment>BIH-CEI rd-cdm: Repo for the ontology-based rare disease common data model harmonising international registry use, FHIR, and Phenopackets </rdfs:comment>
-        <rdfs:comment>JP: Translated to spanish using Bing Translator</rdfs:comment>
         <rdfs:label xml:lang="es">declaración sobre un fenotipo</rdfs:label>
         <rdfs:label xml:lang="en">statement about a phenotype</rdfs:label>
         <rdfs:label xml:lang="fr">énoncé concernant un phénotype</rdfs:label>
@@ -36905,9 +37050,9 @@ Previous. An information content entity is a non-realizable information entity t
         </rdfs:subClassOf>
         <obo:IAO_0000115 xml:lang="en">A statement regarding a procedure to describe it.</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="fr">Un énoncé au sujet d’un processus qui apporte des informations à son sujet.</obo:IAO_0000115>
-        <obo:IAO_0000115 xml:lang="es">Una declaración sobre un proceso que aporta información sobre él.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="es">Una declaración sobre un procedimiento que aporta información sobre él.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
-        <rdfs:comment>JP: Translated to spanish using Bing Translator</rdfs:comment>
+        <rdfs:label xml:lang="es">declaración sobre un procedimiento</rdfs:label>
         <rdfs:label xml:lang="en">statement about a procedure</rdfs:label>
         <rdfs:label xml:lang="fr">énoncé au sujet d’une procédure</rdfs:label>
     </owl:Class>
@@ -36952,6 +37097,7 @@ Previous. An information content entity is a non-realizable information entity t
         </rdfs:subClassOf>
         <obo:IAO_0000115 xml:lang="en">A statement regarding a consent to describe it.</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="fr">Un énoncé au sujet d’un consentement qui apporte des informations à son sujet.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="es">Una declaración sobre un consentimiento que aporta información sobre él.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
         <rdfs:label xml:lang="es">declaración sobre un consentimiento </rdfs:label>
         <rdfs:label xml:lang="en">statement about a consent</rdfs:label>
@@ -36964,12 +37110,26 @@ Previous. An information content entity is a non-realizable information entity t
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0010006">
         <rdfs:subClassOf rdf:resource="http://snomed.info/id/363787002"/>
+        <obo:IAO_0000115 xml:lang="es">El año de la evaluación de una entidad, por ejemplo,  el año en el que se evalúa un fenotipo mediante pruebas médicas.</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="fr">L’année d’identification d’une entité, par exemple, l’année d’identification d’un phénotype via une procédure médicale.</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="en">The year of the assessment of an entity, e.g. the year when a phenotype is assessed by medical evidence.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
         <rdfs:label xml:lang="fr">Année d’identification</rdfs:label>
+        <rdfs:label xml:lang="es">Año de la evaluación</rdfs:label>
         <rdfs:label xml:lang="en">Year of assessment</rdfs:label>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0010006"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget xml:lang="es">El año de la evaluación de una entidad, por ejemplo,  el año en el que se evalúa un fenotipo mediante pruebas médicas.</owl:annotatedTarget>
+        <obo:IAO_0000119>reviewed by https://orcid.org/0000-0002-1500-0236</obo:IAO_0000119>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0010006"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+        <owl:annotatedTarget xml:lang="es">Año de la evaluación</owl:annotatedTarget>
+        <rdfs:comment>label by https://orcid.org/0000-0002-1500-0236</rdfs:comment>
+    </owl:Axiom>
     
 
 
@@ -36977,6 +37137,7 @@ Previous. An information content entity is a non-realizable information entity t
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0010007">
         <rdfs:subClassOf rdf:resource="http://snomed.info/id/363787002"/>
+        <obo:IAO_0000115 xml:lang="es">El año en que se resuelve una disposición anómala, por ejemplo, el año en que un fenotipo deja de existir.</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="fr">L’année de la disparition d’une entité, par exemple, l’année de disparition d’un phénotype.</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="en">The year of the resolution of an abnormal disposition, e.g. the year when a phenotype ceases existing.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
@@ -36984,8 +37145,21 @@ Previous. An information content entity is a non-realizable information entity t
         <rdfs:comment>[PROMOT note] [EURO-NMD] Atalia A et al., EURO-NMD registry: federated FAIR infrastructure, innovative technologies and concepts of a patient-centred registry for rare neuromuscular disorders. Orphanet J Rare Dis. 2024 Feb 14;19(1):66. doi: 10.1186/s13023-024-03059-3. PMID: 38355534; PMCID: PMC10865673.</rdfs:comment>
         <rdfs:comment>[PROMOT note] [RD-CDM] Graefe, A.S.L., Hübner, M.R., Rehburg, F. et al. An ontology-based rare disease common data model harmonising international registries, FHIR, and Phenopackets. Sci Data 12, 234 (2025). https://doi.org/10.1038/s41597-025-04558-z</rdfs:comment>
         <rdfs:label xml:lang="fr">Année de disparition</rdfs:label>
+        <rdfs:label xml:lang="es">Año de la resolución</rdfs:label>
         <rdfs:label xml:lang="en">Year of resolution</rdfs:label>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0010007"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget xml:lang="es">El año en que se resuelve una disposición anómala, por ejemplo, el año en que un fenotipo deja de existir.</owl:annotatedTarget>
+        <obo:IAO_0000119>reviewed by https://orcid.org/0000-0002-1500-0236</obo:IAO_0000119>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0010007"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+        <owl:annotatedTarget xml:lang="es">Año de la resolución</owl:annotatedTarget>
+        <rdfs:comment>label by https://orcid.org/0000-0002-1500-0236</rdfs:comment>
+    </owl:Axiom>
     
 
 
@@ -36994,7 +37168,7 @@ Previous. An information content entity is a non-realizable information entity t
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0010008">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCIT_C20587"/>
         <obo:IAO_0000115 xml:lang="en">Age category including people of 16 years old and above.</obo:IAO_0000115>
-        <obo:IAO_0000115 xml:lang="es">Un grupo de edad que incluye a las personas de 16 años y más.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="es">Categoría de edad que incluye a las personas de 16 años y más.</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="fr">Une tranche d’âge incluant les personnes de 16 ans et plus.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
         <oboInOwl:hasDbXref>http://snomed.info/id/41847000</oboInOwl:hasDbXref>
@@ -37002,7 +37176,7 @@ Previous. An information content entity is a non-realizable information entity t
         <rdfs:comment>[PROMOT note] [EURO-NMD] Atalia A et al., EURO-NMD registry: federated FAIR infrastructure, innovative technologies and concepts of a patient-centred registry for rare neuromuscular disorders. Orphanet J Rare Dis. 2024 Feb 14;19(1):66. doi: 10.1186/s13023-024-03059-3. PMID: 38355534; PMCID: PMC10865673.</rdfs:comment>
         <rdfs:comment>[PROMOT note] [RD-CDM] Graefe, A.S.L., Hübner, M.R., Rehburg, F. et al. An ontology-based rare disease common data model harmonising international registries, FHIR, and Phenopackets. Sci Data 12, 234 (2025). https://doi.org/10.1038/s41597-025-04558-z</rdfs:comment>
         <rdfs:label xml:lang="en">Adulthood</rdfs:label>
-        <rdfs:label xml:lang="es">edad adulta</rdfs:label>
+        <rdfs:label xml:lang="es">adultez</rdfs:label>
         <rdfs:label xml:lang="fr">âge adulte</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://purl.obolibrary.org/obo/HP_0003581"/>
         <skos:closeMatch>http://purl.obolibrary.org/obo/NCIT_C17600</skos:closeMatch>
@@ -37014,6 +37188,18 @@ Previous. An information content entity is a non-realizable information entity t
         <owl:annotatedTarget xml:lang="en">Age category including people of 16 years old and above.</owl:annotatedTarget>
         <obo:IAO_0000119>HP:0003581</obo:IAO_0000119>
     </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0010008"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget xml:lang="es">Categoría de edad que incluye a las personas de 16 años y más.</owl:annotatedTarget>
+        <obo:IAO_0000119>reviewed by https://orcid.org/0000-0002-1500-0236</obo:IAO_0000119>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0010008"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+        <owl:annotatedTarget xml:lang="es">adultez</owl:annotatedTarget>
+        <rdfs:comment>label by https://orcid.org/0000-0002-1500-0236</rdfs:comment>
+    </owl:Axiom>
     
 
 
@@ -37022,11 +37208,11 @@ Previous. An information content entity is a non-realizable information entity t
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0010009">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0010008"/>
         <obo:IAO_0000115 xml:lang="en">Age category including people of 60 years old and above.</obo:IAO_0000115>
-        <obo:IAO_0000115 xml:lang="es">Un grupo de edad que incluye a las personas de 60 años y más.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="es">Categoría de edad que incluye a las personas de 60 años y más.</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="fr">Une tranche d’âge incluant les personnes de 60 ans et plus.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
         <rdfs:label xml:lang="en">Late adulthood</rdfs:label>
-        <rdfs:label xml:lang="es">edad avanzada</rdfs:label>
+        <rdfs:label xml:lang="es">adultez avanzada</rdfs:label>
         <rdfs:label xml:lang="fr">âge avancé</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://purl.obolibrary.org/obo/HP_0003584"/>
         <skos:closeMatch>http://purl.obolibrary.org/obo/NCIT_C16268</skos:closeMatch>
@@ -37038,6 +37224,18 @@ Previous. An information content entity is a non-realizable information entity t
         <owl:annotatedTarget xml:lang="en">Age category including people of 60 years old and above.</owl:annotatedTarget>
         <obo:IAO_0000119>HP:0003584</obo:IAO_0000119>
     </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0010009"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget xml:lang="es">Categoría de edad que incluye a las personas de 60 años y más.</owl:annotatedTarget>
+        <obo:IAO_0000119>reviewed by https://orcid.org/0000-0002-1500-0236</obo:IAO_0000119>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0010009"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+        <owl:annotatedTarget xml:lang="es">adultez avanzada</owl:annotatedTarget>
+        <rdfs:comment>label by https://orcid.org/0000-0002-1500-0236</rdfs:comment>
+    </owl:Axiom>
     
 
 
@@ -37046,11 +37244,11 @@ Previous. An information content entity is a non-realizable information entity t
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0010010">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0010008"/>
         <obo:IAO_0000115 xml:lang="en">Age category including people between 40 and 59 years old (inclusive).</obo:IAO_0000115>
-        <obo:IAO_0000115 xml:lang="es">Un grupo de edad que incluye a las personas de 40 a 59 años incluidos.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="es">Categoría de edad que incluye a las personas de 40 a 59 años incluidos.</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="fr">Une tranche d’âge incluant les personnes de 40 à 59 ans inclus.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
         <rdfs:label xml:lang="en">Middle adulthood</rdfs:label>
-        <rdfs:label xml:lang="es">edad media</rdfs:label>
+        <rdfs:label xml:lang="es">adultez media</rdfs:label>
         <rdfs:label xml:lang="fr">âge moyen</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://purl.obolibrary.org/obo/HP_0003596"/>
         <skos:closeMatch>http://purl.obolibrary.org/obo/NCIT_C91108</skos:closeMatch>
@@ -37061,6 +37259,18 @@ Previous. An information content entity is a non-realizable information entity t
         <owl:annotatedTarget xml:lang="en">Age category including people between 40 and 59 years old (inclusive).</owl:annotatedTarget>
         <obo:IAO_0000119>HP:0003596</obo:IAO_0000119>
     </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0010010"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget xml:lang="es">Categoría de edad que incluye a las personas de 40 a 59 años incluidos.</owl:annotatedTarget>
+        <obo:IAO_0000119>reviewed by https://orcid.org/0000-0002-1500-0236</obo:IAO_0000119>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0010010"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+        <owl:annotatedTarget xml:lang="es">adultez media</owl:annotatedTarget>
+        <rdfs:comment>label by https://orcid.org/0000-0002-1500-0236</rdfs:comment>
+    </owl:Axiom>
     
 
 
@@ -37069,12 +37279,12 @@ Previous. An information content entity is a non-realizable information entity t
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0010011">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0010008"/>
         <obo:IAO_0000115 xml:lang="en">Age category including people between 16 and 39 years old (inclusive).</obo:IAO_0000115>
-        <obo:IAO_0000115 xml:lang="es">Un grupo de edad que incluye a las personas de 16 a 39 años incluidos.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="es">Categoría de edad que incluye a las personas de 16 a 39 años incluidos.</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="fr">Une tranche d’âge incluant les personnes entre 16 et 39 ans inclus.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
         <rdfs:label xml:lang="en">Young adulthood</rdfs:label>
+        <rdfs:label xml:lang="es">adultez joven</rdfs:label>
         <rdfs:label xml:lang="fr">jeune adulte</rdfs:label>
-        <rdfs:label xml:lang="es">joven adulto</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://purl.obolibrary.org/obo/HP_0011462"/>
         <skos:closeMatch>http://purl.obolibrary.org/obo/NCIT_C216187</skos:closeMatch>
         <skos:closeMatch>http://purl.obolibrary.org/obo/NCIT_C91107</skos:closeMatch>
@@ -37085,6 +37295,18 @@ Previous. An information content entity is a non-realizable information entity t
         <owl:annotatedTarget xml:lang="en">Age category including people between 16 and 39 years old (inclusive).</owl:annotatedTarget>
         <obo:IAO_0000119>HP:0011462</obo:IAO_0000119>
     </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0010011"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget xml:lang="es">Categoría de edad que incluye a las personas de 16 a 39 años incluidos.</owl:annotatedTarget>
+        <obo:IAO_0000119>reviewed by https://orcid.org/0000-0002-1500-0236</obo:IAO_0000119>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0010011"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+        <owl:annotatedTarget xml:lang="es">adultez joven</owl:annotatedTarget>
+        <rdfs:comment>label by https://orcid.org/0000-0002-1500-0236</rdfs:comment>
+    </owl:Axiom>
     
 
 
@@ -37093,7 +37315,7 @@ Previous. An information content entity is a non-realizable information entity t
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0010012">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0010011"/>
         <obo:IAO_0000115 xml:lang="en">Age category including people between 16 and 18 years old (inclusive).</obo:IAO_0000115>
-        <obo:IAO_0000115 xml:lang="es">Un grupo de edad que incluye a las personas de 16 a 18 años incluidos.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="es">Categoría de edad que incluye a las personas de 16 a 18 años incluidos.</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="fr">Une tranche d’âge incluant les personnes entre 16 et 18 ans inclus.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
         <oboInOwl:hasDbXref>http://snomed.info/id/263659003</oboInOwl:hasDbXref>
@@ -37102,6 +37324,7 @@ Previous. An information content entity is a non-realizable information entity t
         <rdfs:comment>[PROMOT note] [RD-CDM] Graefe, A.S.L., Hübner, M.R., Rehburg, F. et al. An ontology-based rare disease common data model harmonising international registries, FHIR, and Phenopackets. Sci Data 12, 234 (2025). https://doi.org/10.1038/s41597-025-04558-z</rdfs:comment>
         <rdfs:label xml:lang="en">Early young adulthood</rdfs:label>
         <rdfs:label xml:lang="fr">début de l’âge adulte</rdfs:label>
+        <rdfs:label xml:lang="es">primera etapa de la adultez temprana</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://purl.obolibrary.org/obo/HP_0025708"/>
         <skos:closeMatch>http://purl.obolibrary.org/obo/NCIT_C27954</skos:closeMatch>
     </owl:Class>
@@ -37111,6 +37334,18 @@ Previous. An information content entity is a non-realizable information entity t
         <owl:annotatedTarget xml:lang="en">Age category including people between 16 and 18 years old (inclusive).</owl:annotatedTarget>
         <obo:IAO_0000119>HP:0025708</obo:IAO_0000119>
     </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0010012"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget xml:lang="es">Categoría de edad que incluye a las personas de 16 a 18 años incluidos.</owl:annotatedTarget>
+        <obo:IAO_0000119>reviewed by https://orcid.org/0000-0002-1500-0236</obo:IAO_0000119>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0010012"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+        <owl:annotatedTarget xml:lang="es">primera etapa de la adultez temprana</owl:annotatedTarget>
+        <rdfs:comment>label by https://orcid.org/0000-0002-1500-0236</rdfs:comment>
+    </owl:Axiom>
     
 
 
@@ -37119,11 +37354,12 @@ Previous. An information content entity is a non-realizable information entity t
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0010013">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0010011"/>
         <obo:IAO_0000115 xml:lang="en">Age category including people between 19 and 24 years old (inclusive).</obo:IAO_0000115>
-        <obo:IAO_0000115 xml:lang="es">Un grupo de edad que incluye a las personas de 19 a 24 años incluidos.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="es">Categoría de edad que incluye a las personas de 19 a 24 años incluidos.</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="fr">Une tranche d’âge incluant les personnes entre 19 et 24 ans inclus.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
+        <rdfs:comment>This term includes the full 19th year of age up to the completed 25th year of age (i.e., less than the 25th birthday). [from: HP:0025709]</rdfs:comment>
         <rdfs:label xml:lang="en">Intermediate young adulthood</rdfs:label>
-        <rdfs:label xml:lang="es">edad intermedia</rdfs:label>
+        <rdfs:label xml:lang="es">adultez temprana intermedia</rdfs:label>
         <rdfs:label xml:lang="fr">âge intermédiaire</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://purl.obolibrary.org/obo/HP_0025709"/>
     </owl:Class>
@@ -37133,6 +37369,18 @@ Previous. An information content entity is a non-realizable information entity t
         <owl:annotatedTarget xml:lang="en">Age category including people between 19 and 24 years old (inclusive).</owl:annotatedTarget>
         <obo:IAO_0000119>HP:0025709</obo:IAO_0000119>
     </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0010013"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget xml:lang="es">Categoría de edad que incluye a las personas de 19 a 24 años incluidos.</owl:annotatedTarget>
+        <obo:IAO_0000119>reviewed by https://orcid.org/0000-0002-1500-0236</obo:IAO_0000119>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0010013"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+        <owl:annotatedTarget xml:lang="es">adultez temprana intermedia</owl:annotatedTarget>
+        <rdfs:comment>label by https://orcid.org/0000-0002-1500-0236</rdfs:comment>
+    </owl:Axiom>
     
 
 
@@ -37141,11 +37389,12 @@ Previous. An information content entity is a non-realizable information entity t
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0010014">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0010011"/>
         <obo:IAO_0000115 xml:lang="en">Age category including people between 25 and 39 years old (inclusive).</obo:IAO_0000115>
-        <obo:IAO_0000115 xml:lang="es">Un grupo de edad que incluye a las personas de 25 a 39 años incluidos.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="es">Categoría de edad que incluye a las personas de 25 a 39 años incluidos.</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="fr">Une tranche d’âge incluant les personnes entre 25 et 39 ans inclus.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
-        <rdfs:comment>This term includes the full 19th year of age up to the completed 25th year of age (i.e., less than the 25th birthday). [from: HP:0025709]</rdfs:comment>
+        <rdfs:comment>This term includes the full 25th year of age up to the completed 40th year of age (i.e., less than the 40th birthday). [from: HP:0025710]</rdfs:comment>
         <rdfs:label xml:lang="en">Late young adulthood</rdfs:label>
+        <rdfs:label xml:lang="es">adultez temprana tardía</rdfs:label>
         <rdfs:label xml:lang="fr">fin du début de l’âge adulte</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://purl.obolibrary.org/obo/HP_0025710"/>
     </owl:Class>
@@ -37154,6 +37403,18 @@ Previous. An information content entity is a non-realizable information entity t
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget xml:lang="en">Age category including people between 25 and 39 years old (inclusive).</owl:annotatedTarget>
         <obo:IAO_0000119>HP:0025710</obo:IAO_0000119>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0010014"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget xml:lang="es">Categoría de edad que incluye a las personas de 25 a 39 años incluidos.</owl:annotatedTarget>
+        <obo:IAO_0000119>reviewed by https://orcid.org/0000-0002-1500-0236</obo:IAO_0000119>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0010014"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+        <owl:annotatedTarget xml:lang="es">adultez temprana tardía</owl:annotatedTarget>
+        <rdfs:comment>label by https://orcid.org/0000-0002-1500-0236</rdfs:comment>
     </owl:Axiom>
     
 
@@ -37165,10 +37426,8 @@ Previous. An information content entity is a non-realizable information entity t
         <obo:IAO_0000115 xml:lang="en">Age category prior to birth.</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="fr">Une tranche d’âge inclus avant la naissance.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
-        <rdfs:comment>This term includes the full 25th year of age up to the completed 40th year of age (i.e., less than the 40th birthday). [from: HP:0025710]</rdfs:comment>
         <rdfs:label xml:lang="en">Antenatal age</rdfs:label>
         <rdfs:label xml:lang="fr">Période anténatale</rdfs:label>
-        <rdfs:seeAlso rdf:resource="http://purl.obolibrary.org/obo/HP_0025710"/>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0010015"/>
@@ -37738,10 +37997,10 @@ Previous. An information content entity is a non-realizable information entity t
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0010044">
         <rdfs:subClassOf rdf:resource="http://snomed.info/id/709880000"/>
         <obo:IAO_0000115 xml:lang="en">An handedness that is unrecorded.</obo:IAO_0000115>
-        <obo:IAO_0000115 xml:lang="fr">Un état de santé inconnu en raison de l’absence de renseignement à son sujet.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="fr">manualité inconnue en raison de l’absence de renseignement à son sujet.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
         <rdfs:label xml:lang="en">Unrecorded handedness</rdfs:label>
-        <rdfs:label xml:lang="fr">état de santé non renseigné</rdfs:label>
+        <rdfs:label xml:lang="fr">manualité non renseignée</rdfs:label>
     </owl:Class>
     
 
@@ -37781,13 +38040,26 @@ Previous. An information content entity is a non-realizable information entity t
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115 xml:lang="en">A body structure related to a phenotype such that the body structure is the location of the phenotype.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="es">Una estructura corporal relacionada con un fenotipo, de tal manera que la estructura corporal es la ubicación del fenotipo.</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="fr">Une structure anatomique qui est la localisation d’un phénotype.</obo:IAO_0000115>
         <obo:IAO_0000117>Paul Fabry, https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
         <rdfs:comment>(JP: unsure about definition)</rdfs:comment>
         <rdfs:label xml:lang="en">Phenotypically related body structure</rdfs:label>
         <rdfs:label xml:lang="fr">Structure anatomique liée à un phénotype</rdfs:label>
-        <rdfs:label xml:lang="es">estructura corporala relacionada con un fenotipo</rdfs:label>
+        <rdfs:label xml:lang="es">estructura corporal relacionada con un fenotipo</rdfs:label>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0020001"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget xml:lang="es">Una estructura corporal relacionada con un fenotipo, de tal manera que la estructura corporal es la ubicación del fenotipo.</owl:annotatedTarget>
+        <obo:IAO_0000119>definition by https://orcid.org/0000-0002-1500-0236</obo:IAO_0000119>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0020001"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+        <owl:annotatedTarget xml:lang="es">estructura corporal relacionada con un fenotipo</owl:annotatedTarget>
+        <rdfs:comment>reviewed by https://orcid.org/0000-0002-1500-0236</rdfs:comment>
+    </owl:Axiom>
     
 
 
@@ -37813,6 +38085,7 @@ Previous. An information content entity is a non-realizable information entity t
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115 xml:lang="en">An anatomical entity related to a phenotype such that the anatomical entity is the location of the phenotype. In other words, the phenotype is a disposition of the anatomical entity.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="es">Una entidad anatómica relacionada con un fenotipo, de tal manera que la entidad anatómica es la ubicación del fenotipo. En otras palabras, el fenotipo es una disposición de la entidad anatómica.</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="fr">Une entité anatomique qui peut avoir pour disposition un phénotype. L’entité anatomique est la localisation du phénotype.</obo:IAO_0000115>
         <obo:IAO_0000117>Paul Fabry, https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
         <rdfs:comment>(JP : unsure, attention au lien avec les body structures)</rdfs:comment>
@@ -37820,6 +38093,18 @@ Previous. An information content entity is a non-realizable information entity t
         <rdfs:label xml:lang="en">Phenotypically related anatomical entity</rdfs:label>
         <rdfs:label xml:lang="es">entidad anatómica relacionada con un fenotipo</rdfs:label>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0020002"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget xml:lang="es">Una entidad anatómica relacionada con un fenotipo, de tal manera que la entidad anatómica es la ubicación del fenotipo. En otras palabras, el fenotipo es una disposición de la entidad anatómica.</owl:annotatedTarget>
+        <obo:IAO_0000119>definition by https://orcid.org/0000-0002-1500-0236</obo:IAO_0000119>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0020002"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+        <owl:annotatedTarget xml:lang="es">entidad anatómica relacionada con un fenotipo</owl:annotatedTarget>
+        <rdfs:comment>Frist translated to spanish using Bing Translator then reviewed by https://orcid.org/0000-0002-1500-0236</rdfs:comment>
+    </owl:Axiom>
     
 
 
@@ -37961,13 +38246,26 @@ Previous. An information content entity is a non-realizable information entity t
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0032001">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000016"/>
-        <obo:IAO_0000115 xml:lang="en">A disposition that differs from the norm, such as a disease or a phenotypic abnormality.</obo:IAO_0000115>
-        <obo:IAO_0000115 xml:lang="fr">Une disposition qui dévie de la norme, comme une maladie ou une anormalité phénotypique.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">A disposition that differs from a norm, such as a disease or a phenotypic abnormality.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="es">Una disposición que difiere de la norma, como una enfermedad o una anomalía fenotípica.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="fr">Une disposition qui dévie d’une norme, comme une maladie ou une anormalité phénotypique.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
         <rdfs:label xml:lang="en">abnormal disposition</rdfs:label>
-        <rdfs:label xml:lang="es">disposición anormal</rdfs:label>
+        <rdfs:label xml:lang="es">disposición anómala</rdfs:label>
         <rdfs:label xml:lang="fr">disposition anormale</rdfs:label>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0032001"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget xml:lang="es">Una disposición que difiere de la norma, como una enfermedad o una anomalía fenotípica.</owl:annotatedTarget>
+        <obo:IAO_0000119>definition by https://orcid.org/0000-0002-1500-0236</obo:IAO_0000119>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0032001"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+        <owl:annotatedTarget xml:lang="es">disposición anómala</owl:annotatedTarget>
+        <rdfs:comment>reviewed by https://orcid.org/0000-0002-1500-0236</rdfs:comment>
+    </owl:Axiom>
     
 
 
@@ -37993,12 +38291,25 @@ Previous. An information content entity is a non-realizable information entity t
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115 xml:lang="en">A body function that is involved in an activity. The boby function is needed in order to fullfill the activity.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="es">Una función corporal que participa en una actividad. Es necesaria para que la actividad tenga lugar.</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="fr">Une fonction organique qui est impliquée dans une activité. Elle est nécessaire pour que l’activité ait lieu.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
         <rdfs:label xml:lang="en">Activity related body function</rdfs:label>
         <rdfs:label xml:lang="fr">Fonction organique liée à une activité</rdfs:label>
-        <rdfs:label xml:lang="es">función corporala relacionada con una actividad</rdfs:label>
+        <rdfs:label xml:lang="es">función corporal relacionada con una actividad</rdfs:label>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0032002"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget xml:lang="es">Una función corporal que participa en una actividad. Es necesaria para que la actividad tenga lugar.</owl:annotatedTarget>
+        <obo:IAO_0000119>definition by https://orcid.org/0000-0002-1500-0236</obo:IAO_0000119>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0032002"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+        <owl:annotatedTarget xml:lang="es">función corporal relacionada con una actividad</owl:annotatedTarget>
+        <rdfs:comment>reviewed by https://orcid.org/0000-0002-1500-0236</rdfs:comment>
+    </owl:Axiom>
     
 
 
@@ -38594,6 +38905,877 @@ Previous. An information content entity is a non-realizable information entity t
     
 
 
+    <!-- http://purl.obolibrary.org/obo/PROMOT_0032024 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0032024">
+        <rdfs:subClassOf rdf:resource="http://id.who.int/icd/entity/1789365017"/>
+        <obo:IAO_0000115 xml:lang="fr">Fonctions relatives à la force générée par la contraction des muscles du cou.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="es">Funciones relacionadas con la fuerza generada por la contracción de los músculos del cuello.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">Functions related to the force generated by the contraction of a neck muscle.</obo:IAO_0000115>
+        <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
+        <rdfs:label xml:lang="es">Fuerza de los músculos del cuello</rdfs:label>
+        <rdfs:label xml:lang="en">Power of neck muscle</rdfs:label>
+        <rdfs:label xml:lang="fr">Puissance des muscles du cou</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROMOT_0032025 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0032025">
+        <rdfs:subClassOf rdf:resource="http://id.who.int/icd/entity/1789365017"/>
+        <obo:IAO_0000115 xml:lang="fr">Fonctions relatives à la force générée par la contraction des muscles du visage.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="es">Funciones relacionadas con la fuerza generada por la contracción de los músculos faciales.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">Functions related to the force generated by the contraction of a muscle of the face.</obo:IAO_0000115>
+        <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
+        <rdfs:label xml:lang="es">Fuerza de los músculos faciales</rdfs:label>
+        <rdfs:label xml:lang="en">Power of facial muscle</rdfs:label>
+        <rdfs:label xml:lang="fr">Puissance des muscles du visage</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROMOT_0032026 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0032026">
+        <rdfs:subClassOf rdf:resource="http://id.who.int/icd/entity/1789365017"/>
+        <obo:IAO_0000115 xml:lang="fr">Fonctions relatives à la force générée par la contraction des muscles extra-oculaires.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="es">Funciones relacionadas con la fuerza generada por la contracción de los músculos extraoculares.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">Functions related to the force generated by the contraction of an extra-ocular muscle.</obo:IAO_0000115>
+        <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
+        <rdfs:label xml:lang="es">Fuerza de los músculos extraoculares</rdfs:label>
+        <rdfs:label xml:lang="en">Power of extra-ocular muscle</rdfs:label>
+        <rdfs:label xml:lang="fr">Puissance des muscles extra-oculaires</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROMOT_0032027 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0032027">
+        <rdfs:subClassOf rdf:resource="http://id.who.int/icd/entity/1789365017"/>
+        <obo:IAO_0000115 xml:lang="fr">Fonctions relatives à la force générée par la contraction des muscles intercostaux.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="es">Funciones relacionadas con la fuerza generada por la contracción de los músculos intercostales.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">Functions related to the force generated by the contraction of an intercostal muscle.</obo:IAO_0000115>
+        <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
+        <rdfs:label xml:lang="es">Fuerza de los músculos intercostales</rdfs:label>
+        <rdfs:label xml:lang="en">Power of intercostal muscle</rdfs:label>
+        <rdfs:label xml:lang="fr">Puissance des muscles intercostaux</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROMOT_0032028 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0032028">
+        <rdfs:subClassOf rdf:resource="http://id.who.int/icd/entity/1789365017"/>
+        <obo:IAO_0000115 xml:lang="fr">Fonctions relatives à la force générée par la contraction des muscles abdominaux.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="es">Funciones relacionadas con la fuerza generada por la contracción de los músculos abdominales.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">Functions related to the force generated by the contraction of an abdominal muscle.</obo:IAO_0000115>
+        <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
+        <rdfs:label xml:lang="es">Fuerza de los músculos abdominales</rdfs:label>
+        <rdfs:label xml:lang="en">Power of abdominal muscle</rdfs:label>
+        <rdfs:label xml:lang="fr">Puissance des muscles abdominaux</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROMOT_0032029 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0032029">
+        <rdfs:subClassOf rdf:resource="http://id.who.int/icd/entity/1302007745"/>
+        <obo:IAO_0000115 xml:lang="fr">Fonctions relatives au maintien d&apos;une contraction musculaire des muscles intercostaux pour la période de temps requise.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="es">Funciones relacionadas con el mantenimiento de la contracción de los músculos intercostales durante un determinado periodo de tiempo.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">Functions related to sustaining contraction of intercostal muscle for the required period of time.</obo:IAO_0000115>
+        <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
+        <rdfs:label xml:lang="fr">Endurance des muscles intercostaux</rdfs:label>
+        <rdfs:label xml:lang="en">Endurance of intercostal muscle</rdfs:label>
+        <rdfs:label xml:lang="es">Resistencia de los músculos intercostales</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROMOT_0032030 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0032030">
+        <rdfs:subClassOf rdf:resource="http://id.who.int/icd/entity/1302007745"/>
+        <obo:IAO_0000115 xml:lang="fr">Fonctions relatives au maintien d&apos;une contraction musculaire des muscles du tronc pour la période de temps requise.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="es">Funciones relacionadas con el mantenimiento de la contracción de los músculos del tronco durante un determinado periodo de tiempo.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">Functions related to sustaining contraction of trunk muscles for the required period of time.</obo:IAO_0000115>
+        <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
+        <rdfs:label xml:lang="fr">Endurance des muscles du tronc</rdfs:label>
+        <rdfs:label xml:lang="en">Endurance of muscle of trunk</rdfs:label>
+        <rdfs:label xml:lang="es">Resistencia de los músculos del tronco</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROMOT_0032031 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0032031">
+        <rdfs:subClassOf rdf:resource="http://id.who.int/icd/entity/1789365017"/>
+        <obo:IAO_0000115 xml:lang="fr">Fonctions relatives à la force générée par la contraction des muscles du bassin/de la ceinture pelvienne.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="es">Funciones relacionadas con la fuerza generada por la contracción de los músculos de la pelvis/de la cintura pélvica.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">Functions related to the force generated by the contraction of a pelvic girdle muscle.</obo:IAO_0000115>
+        <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
+        <rdfs:label xml:lang="es">Fuerza de los músculos de la pelvis/de la cintura pélvica</rdfs:label>
+        <rdfs:label xml:lang="en">Power of pelvic gridle muscle</rdfs:label>
+        <rdfs:label xml:lang="fr">Puissance des muscles du bassin/de la ceinture pelvienne</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROMOT_0032032 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0032032">
+        <rdfs:subClassOf rdf:resource="http://id.who.int/icd/entity/1789365017"/>
+        <obo:IAO_0000115 xml:lang="fr">Fonctions relatives à la force générée par la contraction des muscles de la cuisse.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="es">Funciones relacionadas con la fuerza generada por la contracción de músculos del muslo.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">Functions related to the force generated by the contraction of the thigh musculature.</obo:IAO_0000115>
+        <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
+        <rdfs:label xml:lang="es">Fuerza del muslo</rdfs:label>
+        <rdfs:label xml:lang="en">Power of thigh musculature</rdfs:label>
+        <rdfs:label xml:lang="fr">Puissance musculaire de la cuisse</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROMOT_0032033 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0032033">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0032032"/>
+        <obo:IAO_0000115 xml:lang="fr">Fonctions relatives à la force générée par la contraction du muscle quadriceps femoral.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="es">Funciones relacionadas con la fuerza generada por la contracción del músculo cuádriceps femoral.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">Functions related to the force generated by the contraction of the quadriceps femoris.</obo:IAO_0000115>
+        <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
+        <rdfs:label xml:lang="es">Fuerza del músculo cuádriceps femoral</rdfs:label>
+        <rdfs:label xml:lang="en">Power of quatriceps femoris</rdfs:label>
+        <rdfs:label xml:lang="fr">Puissance du muscle quadriceps fémoral</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROMOT_0032034 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0032034">
+        <rdfs:subClassOf rdf:resource="http://id.who.int/icd/entity/1789365017"/>
+        <obo:IAO_0000115 xml:lang="fr">Fonctions relatives à la force générée par la contraction des muscles de l’épaule.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="es">Funciones relacionadas con la fuerza generada por la contracción de los músculos del hombro.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">Functions related to the force generated by the contraction of a shoulder muscle.</obo:IAO_0000115>
+        <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
+        <rdfs:label xml:lang="es">Fuerza del hombro</rdfs:label>
+        <rdfs:label xml:lang="en">Power of shoulder muscle</rdfs:label>
+        <rdfs:label xml:lang="fr">Puissance musculaire de l’épaule</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROMOT_0032035 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0032035">
+        <rdfs:subClassOf rdf:resource="http://id.who.int/icd/entity/1789365017"/>
+        <obo:IAO_0000115 xml:lang="fr">Fonctions relatives à la force générée par la contraction des muscles du bras.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="es">Funciones relacionadas con la fuerza generada por la contracción de los músculos del brazo.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">Functions related to the force generated by the contraction of an arm muscle.</obo:IAO_0000115>
+        <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
+        <rdfs:label xml:lang="es">Fuerza del brazo</rdfs:label>
+        <rdfs:label xml:lang="en">Power of arm muscle</rdfs:label>
+        <rdfs:label xml:lang="fr">Puissance musculaire du bras</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROMOT_0032036 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0032036">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0032035"/>
+        <obo:IAO_0000115 xml:lang="fr">Fonctions relatives à la force générée par la contraction du muscle triceps brachial.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="es">Funciones relacionadas con la fuerza generada por la contracción del músculo tríceps braquial.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">Functions related to the force generated by the contraction of the triceps brachii.</obo:IAO_0000115>
+        <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
+        <rdfs:label xml:lang="es">Fuerza del músculo tríceps braquial</rdfs:label>
+        <rdfs:label xml:lang="en">Power of triceps brachii</rdfs:label>
+        <rdfs:label xml:lang="fr">Puissance du muscle triceps brachial</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROMOT_0032037 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0032037">
+        <rdfs:subClassOf rdf:resource="http://id.who.int/icd/entity/1789365017"/>
+        <obo:IAO_0000115 xml:lang="fr">Fonctions relatives à la force générée par la contraction des muscles du pied.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="es">Funciones relacionadas con la fuerza generada por la contracción del pie.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">Functions related to the force generated by the contraction of a foot muscle.</obo:IAO_0000115>
+        <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
+        <rdfs:label xml:lang="es">Fuerza del pie</rdfs:label>
+        <rdfs:label xml:lang="en">Power of foot muscle</rdfs:label>
+        <rdfs:label xml:lang="fr">Puissance musculaire du pied</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROMOT_0032038 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0032038">
+        <rdfs:subClassOf rdf:resource="http://id.who.int/icd/entity/1789365017"/>
+        <obo:IAO_0000115 xml:lang="fr">Fonctions relatives à la force générée par la contraction des muscles de la jambe.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="es">Funciones relacionadas con la fuerza generada por la contracción de los músculos de las piernas.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">Functions related to the force generated by the contraction of a leg muscle.</obo:IAO_0000115>
+        <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
+        <rdfs:label xml:lang="es">Fuerza de los músculos de las piernas</rdfs:label>
+        <rdfs:label xml:lang="en">Power of leg muscle</rdfs:label>
+        <rdfs:label xml:lang="fr">Puissance musculaire de la jambe</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROMOT_0032039 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0032039">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0032038"/>
+        <obo:IAO_0000115 xml:lang="fr">Fonctions relatives à la force générée par la contraction du muscle tibial antérieur.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="es">Funciones relacionadas con la fuerza generada por la contracción del músculo tibial anterior.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">Functions related to the force generated by the contraction of the tibialis anterior.</obo:IAO_0000115>
+        <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
+        <rdfs:label xml:lang="es">Fuerza del músculo tibial anterior</rdfs:label>
+        <rdfs:label xml:lang="en">Power of tibialis anterior</rdfs:label>
+        <rdfs:label xml:lang="fr">Puissance du muscle tibial antérieur</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROMOT_0032040 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0032040">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0032038"/>
+        <obo:IAO_0000115 xml:lang="fr">Fonctions relatives à la force générée par la contraction du muscle tibial postérieur.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="es">Funciones relacionadas con la fuerza generada por la contracción del músculo tibial posterior.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">Functions related to the force generated by the contraction of the tibialis posterior.</obo:IAO_0000115>
+        <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
+        <rdfs:label xml:lang="es">Fuerza del músculo tibial posterior</rdfs:label>
+        <rdfs:label xml:lang="en">Power of tibialis posterior</rdfs:label>
+        <rdfs:label xml:lang="fr">Puissance du muscle tibial postérieur</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROMOT_0032041 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0032041">
+        <rdfs:subClassOf rdf:resource="http://id.who.int/icd/entity/1789365017"/>
+        <obo:IAO_0000115 xml:lang="fr">Fonctions relatives à la force générée par la contraction des muscles de l’avant bras.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="es">Funciones relacionadas con la fuerza generada por la contracción de los músculos del antebrazo.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">Functions related to the force generated by the contraction of a forearm muscle.</obo:IAO_0000115>
+        <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
+        <rdfs:label xml:lang="es">Fuerza de los músculos del antebrazo</rdfs:label>
+        <rdfs:label xml:lang="en">Power of forearm muscle</rdfs:label>
+        <rdfs:label xml:lang="fr">Puissance musculaire de l’avant-bras</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROMOT_0032042 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0032042">
+        <rdfs:subClassOf rdf:resource="http://id.who.int/icd/entity/1789365017"/>
+        <obo:IAO_0000115 xml:lang="fr">Fonctions relatives à la force générée par la contraction des muscles de la main.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="es">Funciones relacionadas con la fuerza generada por la contracción de los músculos de la mano.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">Functions related to the force generated by the contraction of a hand muscle.</obo:IAO_0000115>
+        <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
+        <rdfs:label xml:lang="es">Fuerza de los músculos de la mano</rdfs:label>
+        <rdfs:label xml:lang="en">Power of hand muscle</rdfs:label>
+        <rdfs:label xml:lang="fr">Puissance musculaire de la main</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROMOT_0032043 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0032043">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0032041"/>
+        <obo:IAO_0000115 xml:lang="fr">Fonctions relatives à la force générée par la contraction du muscle extenseur des doigts de la main.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="es">Funciones relacionadas con la fuerza generada por la contracción del músculo extensor de los dedos de la mano.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">Functions related to the force generated by the contraction of the extensor digitorum.</obo:IAO_0000115>
+        <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
+        <rdfs:label xml:lang="es">Fuerza del músculo extensor de los dedos de la mano</rdfs:label>
+        <rdfs:label xml:lang="en">Power of extensor digitorum</rdfs:label>
+        <rdfs:label xml:lang="fr">Puissance du muscle extenseur des doigts de la main</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROMOT_0032044 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0032044">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0032042"/>
+        <obo:IAO_0000115 xml:lang="fr">Fonctions relatives à la force générée par la contraction du muscle intrinsèque de la main.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="es">Funciones relacionadas con la fuerza generada por la contracción del músculo intrínseco de la mano.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">Functions related to the force generated by the contraction of the intrinsic muscle of hand.</obo:IAO_0000115>
+        <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
+        <rdfs:label xml:lang="es">Fuerza del músculo intrínseco de la mano</rdfs:label>
+        <rdfs:label xml:lang="en">Power of intrinsic muscle of hand</rdfs:label>
+        <rdfs:label xml:lang="fr">Puissance du muscle intrinsèque de la main</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROMOT_0032045 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0032045">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0032042"/>
+        <obo:IAO_0000115 xml:lang="fr">Fonctions relatives à la force générée par la contraction du premier muscle dorsal interosseux de la main.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="es">Funciones relacionadas con la fuerza generada por la contracción del primer músculo dorsal interóseo de la mano.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">Functions related to the force generated by the contraction of the first dorsal interosseous of hand.</obo:IAO_0000115>
+        <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
+        <rdfs:label xml:lang="es">Fuerza del primer músculo dorsal interóseo de la mano</rdfs:label>
+        <rdfs:label xml:lang="en">Power of first dorsal interosseous of hand</rdfs:label>
+        <rdfs:label xml:lang="fr">Puissance du premier muscle dorsal interosseux de la main</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROMOT_0032046 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0032046">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0032042"/>
+        <obo:IAO_0000115 xml:lang="fr">Fonctions relatives à la force générée par la contraction de l’éminence thénar.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="es">Funciones relacionadas con la fuerza generada por la contracción de los músculos de la eminencia tenar.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">Functions related to the force generated by the contraction of the thenar muscle.</obo:IAO_0000115>
+        <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
+        <rdfs:label xml:lang="es">Fuerza de los músculos de la eminencia tenar</rdfs:label>
+        <rdfs:label xml:lang="en">Power of thenar muscle</rdfs:label>
+        <rdfs:label xml:lang="fr">Puissance musculaire de l’éminence thénar</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROMOT_0032047 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0032047">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0032052"/>
+        <obo:IAO_0000115 xml:lang="fr">Fonctions relatives à la force générée par la contraction du muscle masséter.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="es">Funciones relacionadas con la fuerza generada por la contracción del músculo de la mandíbula.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">Functions related to the force generated by the contraction of the masseter.</obo:IAO_0000115>
+        <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
+        <rdfs:label xml:lang="es">Fuerza del músculo de la mandíbula</rdfs:label>
+        <rdfs:label xml:lang="en">Power of masseter</rdfs:label>
+        <rdfs:label xml:lang="fr">Puissance du muscle masséter</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROMOT_0032048 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0032048">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0032025"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0032052"/>
+        <obo:IAO_0000115 xml:lang="fr">Fonctions relatives à la force générée par la contraction du muscle buccinateur.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="es">Funciones relacionadas con la fuerza generada por la contracción del músculo buccinador.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">Functions related to the force generated by the contraction of the buccinator.</obo:IAO_0000115>
+        <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
+        <rdfs:label xml:lang="es">Fuerza del músculo buccinador</rdfs:label>
+        <rdfs:label xml:lang="en">Power of buccinator</rdfs:label>
+        <rdfs:label xml:lang="fr">Puissance du muscle buccinateur</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROMOT_0032049 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0032049">
+        <rdfs:subClassOf rdf:resource="http://id.who.int/icd/entity/1789365017"/>
+        <obo:IAO_0000115 xml:lang="fr">Fonctions relatives à la force générée par la contraction du muscle de la langue.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="es">Funciones relacionadas con la fuerza generada por la contracción del músculo de la lengua.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">Functions related to the force generated by the contraction of the tongue muscle.</obo:IAO_0000115>
+        <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
+        <rdfs:label xml:lang="es">Fuerza del músculo de la lengua</rdfs:label>
+        <rdfs:label xml:lang="en">Power of tongue muscle</rdfs:label>
+        <rdfs:label xml:lang="fr">Puissance du muscle de la langue</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROMOT_0032050 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0032050">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0032052"/>
+        <obo:IAO_0000115 xml:lang="fr">Fonctions relatives à la force générée par la contraction du muscle temporal.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="es">Funciones relacionadas con la fuerza generada por la contracción del músculo temporal.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">Functions related to the force generated by the contraction of the temporalis.</obo:IAO_0000115>
+        <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
+        <rdfs:label xml:lang="es">Fuerza del músculo temporal</rdfs:label>
+        <rdfs:label xml:lang="en">Power of temporalis</rdfs:label>
+        <rdfs:label xml:lang="fr">Puissance du muscle temporal</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROMOT_0032051 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0032051">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0032052"/>
+        <obo:IAO_0000115 xml:lang="fr">Fonctions relatives à la force générée par la contraction du muscle ptérygoïdien.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="es">Funciones relacionadas con la fuerza generada por la contracción del músculo pterigoideo.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">Functions related to the force generated by the contraction of the pterygoid muscle.</obo:IAO_0000115>
+        <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
+        <rdfs:label xml:lang="es">Fuerza del músculo pterigoideo</rdfs:label>
+        <rdfs:label xml:lang="en">Power of pterygoid muscle</rdfs:label>
+        <rdfs:label xml:lang="fr">Puissance du muscle ptérygoïdien</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROMOT_0032052 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0032052">
+        <rdfs:subClassOf rdf:resource="http://id.who.int/icd/entity/1789365017"/>
+        <obo:IAO_0000115 xml:lang="fr">Fonctions relatives à la force générée par la contraction des muscles masticatoires.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="es">Funciones relacionadas con la fuerza generada por la contracción de los músculos masticatorios.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">Functions related to the force generated by the contraction of the masticatory muscles.</obo:IAO_0000115>
+        <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
+        <rdfs:label xml:lang="es">Fuerza de los músculos masticatorios</rdfs:label>
+        <rdfs:label xml:lang="en">Power of masticatory muscles</rdfs:label>
+        <rdfs:label xml:lang="fr">Puissance des muscles masticatoires</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROMOT_0032053 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0032053">
+        <rdfs:subClassOf rdf:resource="http://id.who.int/icd/entity/1789365017"/>
+        <obo:IAO_0000115 xml:lang="fr">Fonctions relatives à la force générée par la contraction des muscles du pharynx.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="es">Funciones relacionadas con la fuerza generada por la contracción de los músculos de la faringe.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">Functions related to the force generated by the contraction of the pharyngeal muscles.</obo:IAO_0000115>
+        <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
+        <rdfs:label xml:lang="es">Fuerza de los músculos de la faringe</rdfs:label>
+        <rdfs:label xml:lang="en">Power of pharyngeal muscles</rdfs:label>
+        <rdfs:label xml:lang="fr">Puissance des muscles du pharynx</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROMOT_0032054 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0032054">
+        <rdfs:subClassOf rdf:resource="http://id.who.int/icd/entity/1789365017"/>
+        <obo:IAO_0000115 xml:lang="fr">Fonctions relatives à la force générée par la contraction d’un muscle du pharynx.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="es">Funciones relacionadas con la fuerza generada por la contracción de un músculo de la faringe.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">Functions related to the force generated by the contraction of the muscle of pharynx.</obo:IAO_0000115>
+        <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
+        <rdfs:label xml:lang="es">Fuerza de un músculo de la faringe</rdfs:label>
+        <rdfs:label xml:lang="en">Power of muscle of pharynx</rdfs:label>
+        <rdfs:label xml:lang="fr">Puissance d’un muscle du pharynx</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROMOT_0032055 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0032055">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0032060"/>
+        <obo:IAO_0000115 xml:lang="fr">Fonctions relatives au maintien d&apos;une contraction musculaire du muscle masséter pour la période de temps requise.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="es">Funciones relacionadas con el mantenimiento de la contracción del músculo de la mandíbula durante un determinado periodo de tiempo.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">Functions related to sustaining masseter contraction for the required period of time.</obo:IAO_0000115>
+        <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
+        <rdfs:label xml:lang="fr">Endurance du muscle masséter</rdfs:label>
+        <rdfs:label xml:lang="en">Endurance of masseter</rdfs:label>
+        <rdfs:label xml:lang="es">Resistencia del músculo de la mandíbula</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROMOT_0032056 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0032056">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0032060"/>
+        <obo:IAO_0000115 xml:lang="fr">Fonctions relatives au maintien d&apos;une contraction musculaire du muscle buccinateur pour la période de temps requise.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="es">Funciones relacionadas con el mantenimiento de la contracción del músculo buccinador durante un determinado periodo de tiempo.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">Functions related to sustaining buccinator contraction for the required period of time.</obo:IAO_0000115>
+        <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
+        <rdfs:label xml:lang="fr">Endurance du muscle buccinateur</rdfs:label>
+        <rdfs:label xml:lang="en">Endurance of buccinator</rdfs:label>
+        <rdfs:label xml:lang="es">Resistencia del músculo buccinador</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROMOT_0032057 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0032057">
+        <rdfs:subClassOf rdf:resource="http://id.who.int/icd/entity/1302007745"/>
+        <obo:IAO_0000115 xml:lang="fr">Fonctions relatives au maintien d&apos;une contraction musculaire du muscle de la langue pour la période de temps requise.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="es">Funciones relacionadas con el mantenimiento de la contracción del músculo de la lengua durante un determinado periodo de tiempo.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">Functions related to sustaining contraction of tongue muscle for the required period of time.</obo:IAO_0000115>
+        <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
+        <rdfs:label xml:lang="fr">Endurance du muscle de la langue</rdfs:label>
+        <rdfs:label xml:lang="en">Endurance of tongue muscle</rdfs:label>
+        <rdfs:label xml:lang="es">Resistencia del músculo de la lengua</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROMOT_0032058 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0032058">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0032060"/>
+        <obo:IAO_0000115 xml:lang="fr">Fonctions relatives au maintien d&apos;une contraction musculaire du muscle temporal pour la période de temps requise.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="es">Funciones relacionadas con el mantenimiento de la contracción del músculo temporal durante un determinado periodo de tiempo.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">Functions related to sustaining temporalis contraction for the required period of time.</obo:IAO_0000115>
+        <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
+        <rdfs:label xml:lang="fr">Endurance du muscle temporal</rdfs:label>
+        <rdfs:label xml:lang="en">Endurance of temporalis</rdfs:label>
+        <rdfs:label xml:lang="es">Resistencia del músculo temporal</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROMOT_0032059 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0032059">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0032060"/>
+        <obo:IAO_0000115 xml:lang="fr">Fonctions relatives au maintien d&apos;une contraction musculaire du muscle ptérygoïdien pour la période de temps requise.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="es">Funciones relacionadas con el mantenimiento de la contracción del músculo pterigoideo durante un determinado periodo de tiempo.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">Functions related to sustaining contraction of pterygoid muscle for the required period of time.</obo:IAO_0000115>
+        <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
+        <rdfs:label xml:lang="fr">Endurance du muscle ptérygoïdien</rdfs:label>
+        <rdfs:label xml:lang="en">Endurance of pterygoid muscle</rdfs:label>
+        <rdfs:label xml:lang="es">Resistencia del músculo pterigoideo</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROMOT_0032060 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0032060">
+        <rdfs:subClassOf rdf:resource="http://id.who.int/icd/entity/1302007745"/>
+        <obo:IAO_0000115 xml:lang="fr">Fonctions relatives au maintien d&apos;une contraction musculaire des muscles masticatoires pour la période de temps requise.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="es">Funciones relacionadas con el mantenimiento de la contracción de los músculos masticatorios durante un determinado periodo de tiempo.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">Functions related to sustaining contraction of masticatory muscles for the required period of time.</obo:IAO_0000115>
+        <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
+        <rdfs:label xml:lang="fr">Endurance des muscles masticatoires</rdfs:label>
+        <rdfs:label xml:lang="en">Endurance of masticatory muscles</rdfs:label>
+        <rdfs:label xml:lang="es">Resistencia de los músculos masticatorios</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROMOT_0032061 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0032061">
+        <rdfs:subClassOf rdf:resource="http://id.who.int/icd/entity/1302007745"/>
+        <obo:IAO_0000115 xml:lang="fr">Fonctions relatives au maintien d&apos;une contraction musculaire des muscles intercostaux pour la période de temps requise.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="es">Funciones relacionadas con el mantenimiento de la contracción de los músculos intercostales durante un determinado periodo de tiempo.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">Functions related to sustaining contraction of intercostal muscles for the required period of time.</obo:IAO_0000115>
+        <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
+        <rdfs:label xml:lang="fr">Endurance des muscles intercostaux</rdfs:label>
+        <rdfs:label xml:lang="en">Endurance of intercostal muscles</rdfs:label>
+        <rdfs:label xml:lang="es">Resistencia de los músculos intercostales</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROMOT_0032062 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0032062">
+        <rdfs:subClassOf rdf:resource="http://id.who.int/icd/entity/1302007745"/>
+        <obo:IAO_0000115 xml:lang="fr">Fonctions relatives au maintien d&apos;une contraction musculaire du diaphragme pour la période de temps requise.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="es">Funciones relacionadas con el mantenimiento de la contracción del diafragma durante un determinado periodo de tiempo.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">Functions related to sustaining diaphragm contraction for the required period of time.</obo:IAO_0000115>
+        <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
+        <rdfs:label xml:lang="fr">Endurance du diaphragme</rdfs:label>
+        <rdfs:label xml:lang="en">Endurance of diaphragm</rdfs:label>
+        <rdfs:label xml:lang="es">Resistencia del diafragma</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROMOT_0032063 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0032063">
+        <rdfs:subClassOf rdf:resource="http://id.who.int/icd/entity/1302007745"/>
+        <obo:IAO_0000115 xml:lang="fr">Fonctions relatives au maintien d&apos;une contraction musculaire des muscles de l’avant-bras pour la période de temps requise.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="es">Funciones relacionadas con el mantenimiento de la contracción de los músculos del antebrazo durante un determinado periodo de tiempo.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">Functions related to sustaining forearm muscle contraction for the required period of time.</obo:IAO_0000115>
+        <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
+        <rdfs:label xml:lang="fr">Endurance des muscles de l’avant bras</rdfs:label>
+        <rdfs:label xml:lang="en">Endurance of forearm muscle</rdfs:label>
+        <rdfs:label xml:lang="es">Resistencia de los músculos del antebrazo</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROMOT_0032064 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0032064">
+        <rdfs:subClassOf rdf:resource="http://id.who.int/icd/entity/1302007745"/>
+        <obo:IAO_0000115 xml:lang="fr">Fonctions relatives au maintien d&apos;une contraction musculaire des muscles de la main pour la période de temps requise.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="es">Funciones relacionadas con el mantenimiento de la contracción de los músculos de la mano durante un determinado periodo de tiempo.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">Functions related to sustaining muscle contraction of the hand for the required period of time.</obo:IAO_0000115>
+        <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
+        <rdfs:label xml:lang="fr">Endurance des muscles de la main</rdfs:label>
+        <rdfs:label xml:lang="en">Endurance of hand muscle</rdfs:label>
+        <rdfs:label xml:lang="es">Resistencia de los músculos de la mano</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROMOT_0032065 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0032065">
+        <rdfs:subClassOf rdf:resource="http://id.who.int/icd/entity/1302007745"/>
+        <obo:IAO_0000115 xml:lang="fr">Fonctions relatives au maintien d&apos;une contraction musculaire des muscles du pied pour la période de temps requise.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="es">Funciones relacionadas con el mantenimiento de la contracción de los músculos del pie durante un determinado periodo de tiempo.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">Functions related to sustaining muscle contraction of the foot for the required period of time.</obo:IAO_0000115>
+        <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
+        <rdfs:label xml:lang="fr">Endurance des muscles du pied</rdfs:label>
+        <rdfs:label xml:lang="en">Endurance of foot muscle</rdfs:label>
+        <rdfs:label xml:lang="es">Resistencia de los músculos del pie</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROMOT_0032066 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0032066">
+        <rdfs:subClassOf rdf:resource="http://id.who.int/icd/entity/1302007745"/>
+        <obo:IAO_0000115 xml:lang="fr">Fonctions relatives au maintien d&apos;une contraction musculaire des muscles de la jambe pour la période de temps requise.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="es">Funciones relacionadas con el mantenimiento de la contracción de los músculos de las pierna durante un determinado periodo de tiempo.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">Functions related to sustaining muscle contraction of the leg for the required period of time.</obo:IAO_0000115>
+        <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
+        <rdfs:label xml:lang="fr">Endurance des muscles de la jambe</rdfs:label>
+        <rdfs:label xml:lang="en">Endurance of leg muscle</rdfs:label>
+        <rdfs:label xml:lang="es">Resistencia de los músculos de las piernas</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROMOT_0032067 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0032067">
+        <rdfs:subClassOf rdf:resource="http://id.who.int/icd/entity/1302007745"/>
+        <obo:IAO_0000115 xml:lang="fr">Fonctions relatives au maintien d&apos;une contraction musculaire des muscles du cou pour la période de temps requise.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="es">Funciones relacionadas con el mantenimiento de la contracción de los músculos del cuello durante un determinado periodo de tiempo.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">Functions related to sustaining muscle contraction of the neck the required period of time.</obo:IAO_0000115>
+        <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
+        <rdfs:label xml:lang="fr">Endurance des muscles du cou</rdfs:label>
+        <rdfs:label xml:lang="en">Endurance of neck muscle</rdfs:label>
+        <rdfs:label xml:lang="es">Resistencia de los músculos del cuello</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROMOT_0032068 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0032068">
+        <rdfs:subClassOf rdf:resource="http://id.who.int/icd/entity/1302007745"/>
+        <obo:IAO_0000115 xml:lang="fr">Fonctions relatives au maintien d&apos;une contraction musculaire des muscles de l’épaule pour la période de temps requise.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="es">Funciones relacionadas con el mantenimiento de la contracción de los músculos del hombro durante un determinado periodo de tiempo.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">Functions related to sustaining muscle contraction of the shoulder for the required period of time.</obo:IAO_0000115>
+        <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
+        <rdfs:label xml:lang="fr">Endurance des muscles de l’épaule</rdfs:label>
+        <rdfs:label xml:lang="en">Endurance of shoulder muscle</rdfs:label>
+        <rdfs:label xml:lang="es">Resistencia de los músculos del hombro</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROMOT_0032069 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0032069">
+        <rdfs:subClassOf rdf:resource="http://id.who.int/icd/entity/1302007745"/>
+        <obo:IAO_0000115 xml:lang="fr">Fonctions relatives au maintien d&apos;une contraction musculaire de muscles du bras pour la période de temps requise.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="es">Funciones relacionadas con el mantenimiento de la contracción de los músculos del brazo durante un determinado periodo de tiempo.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">Functions related to sustaining muscle contraction of the arm for the required period of time.</obo:IAO_0000115>
+        <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
+        <rdfs:label xml:lang="fr">Endurance des muscles du bras</rdfs:label>
+        <rdfs:label xml:lang="en">Endurance of arm muscle</rdfs:label>
+        <rdfs:label xml:lang="es">Resistencia de los músculos del brazo</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROMOT_0032070 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0032070">
+        <rdfs:subClassOf rdf:resource="http://id.who.int/icd/entity/1302007745"/>
+        <obo:IAO_0000115 xml:lang="fr">Fonctions relatives au maintien d&apos;une contraction musculaire des muscles du bassin/de la ceinture pelvienne pour la période de temps requise.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="es">Funciones relacionadas con el mantenimiento de la contracción de los músculos de la pelvis/de la cintura pélvica durante un determinado periodo de tiempo.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">Functions related to sustaining muscle contraction of the pelvic gridle muscle for the required period of time.</obo:IAO_0000115>
+        <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
+        <rdfs:label xml:lang="fr">Endurance des muscles du bassin/de la ceinture pelvienne</rdfs:label>
+        <rdfs:label xml:lang="en">Endurance of pelvic gridle muscle</rdfs:label>
+        <rdfs:label xml:lang="es">Resistencia de los músculos de la pelvis/de la cintura pélvica</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROMOT_0032071 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0032071">
+        <rdfs:subClassOf rdf:resource="http://id.who.int/icd/entity/1302007745"/>
+        <obo:IAO_0000115 xml:lang="fr">Fonctions relatives au maintien d&apos;une contraction musculaire des muscles de la cuisse pour la période de temps requise.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="es">Funciones relacionadas con el mantenimiento de la contracción de los músculos del muslo durante un determinado periodo de tiempo.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">Functions related to sustaining muscle contraction of the thigh for the required period of time.</obo:IAO_0000115>
+        <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
+        <rdfs:label xml:lang="fr">Endurance des muscles de la cuisse</rdfs:label>
+        <rdfs:label xml:lang="en">Endurance of thigh musculature</rdfs:label>
+        <rdfs:label xml:lang="es">Resistencia de los músculos del muslo</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROMOT_0032072 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0032072">
+        <rdfs:subClassOf rdf:resource="http://id.who.int/icd/entity/1302007745"/>
+        <obo:IAO_0000115 xml:lang="fr">Fonctions relatives au maintien d&apos;une contraction musculaire des muscles pharyngeaux pour la période de temps requise.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="es">Funciones relacionadas con el mantenimiento de la contracción de los músculos faríngeos durante un determinado periodo de tiempo.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">Functions related to sustaining muscle contraction of pharyngeal muscles for the required period of time.</obo:IAO_0000115>
+        <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
+        <rdfs:label xml:lang="fr">Endurance des muscles pharyngeaux</rdfs:label>
+        <rdfs:label xml:lang="en">Endurance of pharyngeal muscles</rdfs:label>
+        <rdfs:label xml:lang="es">Resistencia de los músculos faríngeos</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROMOT_0032073 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0032073">
+        <rdfs:subClassOf rdf:resource="http://id.who.int/icd/entity/1302007745"/>
+        <obo:IAO_0000115 xml:lang="fr">Fonctions relatives au maintien d&apos;une contraction musculaire d’un muscle du pharynx pour la période de temps requise.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="es">Funciones relacionadas con el mantenimiento de la contracción de un músculo de la faringe durante un determinado periodo de tiempo.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">Functions related to sustaining contraction of the muscle of pharynx for the required period of time.</obo:IAO_0000115>
+        <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
+        <rdfs:label xml:lang="fr">Endurance du muscle du pharynx</rdfs:label>
+        <rdfs:label xml:lang="en">Endurance of muscle of pharynx</rdfs:label>
+        <rdfs:label xml:lang="es">Resistencia de un músculo de la faringe</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROMOT_0032074 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0032074">
+        <rdfs:subClassOf rdf:resource="http://id.who.int/icd/entity/1302007745"/>
+        <obo:IAO_0000115 xml:lang="fr">Fonctions relatives au maintien d&apos;une contraction musculaire du trapèze pour la période de temps requise.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="es">Funciones relacionadas con el mantenimiento de la contracción del trapecio durante un determinado periodo de tiempo.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">Functions related to sustaining trapezius contraction for the required period of time.</obo:IAO_0000115>
+        <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
+        <rdfs:label xml:lang="fr">Endurance du trapèze</rdfs:label>
+        <rdfs:label xml:lang="en">Endurance of trapezius</rdfs:label>
+        <rdfs:label xml:lang="es">Resistencia del trapecio</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROMOT_0032075 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0032075">
+        <rdfs:subClassOf rdf:resource="http://id.who.int/icd/entity/1789365017"/>
+        <obo:IAO_0000115 xml:lang="fr">Fonctions relatives à la force générée par la contraction du trapèze.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="es">Funciones relacionadas con la fuerza generada por la contracción del trapecio.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">Functions related to the force generated by the contraction of the trapezius.</obo:IAO_0000115>
+        <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
+        <rdfs:label xml:lang="es">Fuerza del trapecio</rdfs:label>
+        <rdfs:label xml:lang="en">Power of trapezius</rdfs:label>
+        <rdfs:label xml:lang="fr">Puissance musculaire du trapèze</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROMOT_0032076 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0032076">
+        <rdfs:subClassOf rdf:resource="http://id.who.int/icd/entity/1302007745"/>
+        <obo:IAO_0000115 xml:lang="fr">Fonctions relatives au maintien d&apos;une contraction musculaire du muscle dentelé antérieur pour la période de temps requise.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="es">Funciones relacionadas con el mantenimiento de la contracción del serrato anterior durante un determinado periodo de tiempo.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">Functions related to sustaining serratus anterior contraction for the required period of time.</obo:IAO_0000115>
+        <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
+        <rdfs:label xml:lang="fr">Endurance du muscle dentelé antérieur</rdfs:label>
+        <rdfs:label xml:lang="en">Endurance of serratus anterior</rdfs:label>
+        <rdfs:label xml:lang="es">Resistencia del serrato anterior</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROMOT_0032077 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0032077">
+        <rdfs:subClassOf rdf:resource="http://id.who.int/icd/entity/1789365017"/>
+        <obo:IAO_0000115 xml:lang="fr">Fonctions relatives à la force générée par la contraction du muscle dentelé antérieur.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="es">Funciones relacionadas con la fuerza generada por la contracción del serrato anterior.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">Functions related to the force generated by the contraction of the serratus anterior.</obo:IAO_0000115>
+        <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
+        <rdfs:label xml:lang="es">Fuerza del serrato anterior</rdfs:label>
+        <rdfs:label xml:lang="en">Power of serratus anterior</rdfs:label>
+        <rdfs:label xml:lang="fr">Puissance du muscle dentelé antérieur</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROMOT_0032078 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0032078">
+        <rdfs:subClassOf rdf:resource="http://id.who.int/icd/entity/1302007745"/>
+        <obo:IAO_0000115 xml:lang="fr">Fonctions relatives au maintien d&apos;une contraction musculaire du muscle grand rhomboïde pour la période de temps requise.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="es">Funciones relacionadas con el mantenimiento de la contracción del músculo romboides mayor durante un determinado periodo de tiempo.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">Functions related to sustaining rhomboid major contraction for the required period of time.</obo:IAO_0000115>
+        <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
+        <rdfs:label xml:lang="fr">Endurance du muscle grand rhomboïde</rdfs:label>
+        <rdfs:label xml:lang="en">Endurance of rhomboid major</rdfs:label>
+        <rdfs:label xml:lang="es">Resistencia del músculo romboides mayor</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROMOT_0032079 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0032079">
+        <rdfs:subClassOf rdf:resource="http://id.who.int/icd/entity/1789365017"/>
+        <obo:IAO_0000115 xml:lang="fr">Fonctions relatives à la force générée par la contraction du muscle grand rhomboïde.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="es">Funciones relacionadas con la fuerza generada por la contracción del músculo romboides mayor.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">Functions related to the force generated by the contraction of the rhomboid major.</obo:IAO_0000115>
+        <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
+        <rdfs:label xml:lang="es">Fuerza del músculo romboides mayor </rdfs:label>
+        <rdfs:label xml:lang="en">Power of rhomboid major</rdfs:label>
+        <rdfs:label xml:lang="fr">Puissance du muscle grand rhomboïde</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROMOT_0032080 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0032080">
+        <rdfs:subClassOf rdf:resource="http://id.who.int/icd/entity/1302007745"/>
+        <obo:IAO_0000115 xml:lang="fr">Fonctions relatives au maintien d&apos;une contraction musculaire du muscle petit rhomboïde pour la période de temps requise.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="es">Funciones relacionadas con el mantenimiento de la contracción del músculo romboides menor durante un determinado periodo de tiempo..</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">Functions related to sustaining rhomboid minor contraction for the required period of time.</obo:IAO_0000115>
+        <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
+        <rdfs:label xml:lang="fr">Endurance du muscle petit rhomboïde</rdfs:label>
+        <rdfs:label xml:lang="en">Endurance of rhomboid minor</rdfs:label>
+        <rdfs:label xml:lang="es">Resistencia del músculo romboides menor</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROMOT_0032081 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0032081">
+        <rdfs:subClassOf rdf:resource="http://id.who.int/icd/entity/1789365017"/>
+        <obo:IAO_0000115 xml:lang="fr">Fonctions relatives à la force générée par la contraction du muscle petit rhomboïde.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="es">Funciones relacionadas con la fuerza generada por la contracción del músculo romboides menor.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">Functions related to the force generated by the contraction of the rhomboid minor.</obo:IAO_0000115>
+        <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
+        <rdfs:label xml:lang="es">Fuerza del músculo romboides menor</rdfs:label>
+        <rdfs:label xml:lang="en">Power of rhomboid minor</rdfs:label>
+        <rdfs:label xml:lang="fr">Puissance du muscle petit rhomboïde</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/PROMOT_0100001 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0100001">
@@ -38616,11 +39798,25 @@ Previous. An information content entity is a non-realizable information entity t
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115 xml:lang="en">A procedure that can assess a phenotype.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="es">Un procedimiento que evalua un fenotipo.</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="fr">Une procédure qui évalue un phénotype.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
         <rdfs:label xml:lang="en">Phenotypically related procedure</rdfs:label>
+        <rdfs:label xml:lang="es">Procedimiento relacionado con un fenotipo</rdfs:label>
         <rdfs:label xml:lang="fr">Procédure liée à un phénotype</rdfs:label>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0100001"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget xml:lang="es">Un procedimiento que evalua un fenotipo.</owl:annotatedTarget>
+        <obo:IAO_0000119>definition by https://orcid.org/0000-0002-1500-0236</obo:IAO_0000119>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0100001"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+        <owl:annotatedTarget xml:lang="es">Procedimiento relacionado con un fenotipo</owl:annotatedTarget>
+        <rdfs:comment>label by https://orcid.org/0000-0002-1500-0236</rdfs:comment>
+    </owl:Axiom>
     
 
 
@@ -38774,6 +39970,7 @@ Previous. An information content entity is a non-realizable information entity t
         <oboInOwl:hasDbXref>http://snomed.info/id/106221001</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>http://snomed.info/id/55446002</oboInOwl:hasDbXref>
         <rdfs:comment>EU-CDE</rdfs:comment>
+        <rdfs:comment>Suggested by Rachel Thompson</rdfs:comment>
         <rdfs:comment>[PROMOT note] [Derived from EURO-NMD] </rdfs:comment>
         <rdfs:comment>[PROMOT note] [Derived from RD-CDM] [6.1.1 Genomic Diagnosis]</rdfs:comment>
         <rdfs:comment>[PROMOT note] [EURO-NMD] Atalia A et al., EURO-NMD registry: federated FAIR infrastructure, innovative technologies and concepts of a patient-centred registry for rare neuromuscular disorders. Orphanet J Rare Dis. 2024 Feb 14;19(1):66. doi: 10.1186/s13023-024-03059-3. PMID: 38355534; PMCID: PMC10865673.</rdfs:comment>
@@ -42777,7 +43974,6 @@ pulmonary arterial and venous trees. Examples: There is only one heart.</rdfs:co
         <rdfs:label xml:lang="en">Twin sibling</rdfs:label>
         <rdfs:label xml:lang="en">Twin sibling (person)</rdfs:label>
         <rdfs:label xml:lang="es">hermano mellizo de sexo femenino o masculino</rdfs:label>
-        <rdfs:label xml:lang="es">hermano mellizo de sexo femenino o masculino (persona)</rdfs:label>
         <skos:changeNote xml:lang="en">[PROMOT note] The PROMOT ontology added a comment to quote the CDM used as a source for this entity.</skos:changeNote>
         <skos:notation>11286003</skos:notation>
     </owl:Class>
@@ -42798,7 +43994,6 @@ pulmonary arterial and venous trees. Examples: There is only one heart.</rdfs:co
         <rdfs:label xml:lang="en">Natural son</rdfs:label>
         <rdfs:label xml:lang="en">Natural son (person)</rdfs:label>
         <rdfs:label xml:lang="es">hijo natural</rdfs:label>
-        <rdfs:label xml:lang="es">hijo natural (persona)</rdfs:label>
         <skos:altLabel xml:lang="en">Biological son</skos:altLabel>
         <skos:altLabel xml:lang="es">hijo biológico</skos:altLabel>
         <skos:changeNote xml:lang="en">[PROMOT note] The PROMOT ontology added a comment to quote the CDMs used as a source for this entity.</skos:changeNote>
@@ -42819,7 +44014,6 @@ pulmonary arterial and venous trees. Examples: There is only one heart.</rdfs:co
         <rdfs:label xml:lang="en">Body height</rdfs:label>
         <rdfs:label xml:lang="en">Body height (observable entity)</rdfs:label>
         <rdfs:label xml:lang="es">altura corporal</rdfs:label>
-        <rdfs:label xml:lang="es">altura corporal (entidad observable)</rdfs:label>
         <rdfs:label xml:lang="fr">taille corporelle</rdfs:label>
         <skos:altLabel xml:lang="es">estatura</skos:altLabel>
         <skos:altLabel xml:lang="fr">stature</skos:altLabel>
@@ -42840,9 +44034,7 @@ pulmonary arterial and venous trees. Examples: There is only one heart.</rdfs:co
         <sct-ext:fsn xml:lang="en">Wheeled walker (physical object)</sct-ext:fsn>
         <dc11:type>physical object</dc11:type>
         <rdfs:label xml:lang="en">Wheeled walker</rdfs:label>
-        <rdfs:label xml:lang="en">Wheeled walker (physical object)</rdfs:label>
         <rdfs:label xml:lang="es">andador con ruedas</rdfs:label>
-        <rdfs:label xml:lang="es">andador con ruedas (objeto físico)</rdfs:label>
         <rdfs:label xml:lang="fr">déambulateur à roues</rdfs:label>
         <skos:altLabel xml:lang="en">Mobilator</skos:altLabel>
         <skos:altLabel xml:lang="en">Rollator</skos:altLabel>
@@ -42863,7 +44055,6 @@ pulmonary arterial and venous trees. Examples: There is only one heart.</rdfs:co
         <rdfs:label xml:lang="en">First degree blood relative</rdfs:label>
         <rdfs:label xml:lang="en">First degree blood relative (person)</rdfs:label>
         <rdfs:label xml:lang="es">familiar consanguíneo de primer grado</rdfs:label>
-        <rdfs:label xml:lang="es">familiar consanguíneo de primer grado (persona)</rdfs:label>
         <skos:altLabel xml:lang="en">First degree biological relative</skos:altLabel>
         <skos:altLabel xml:lang="es">familiar directo</skos:altLabel>
         <skos:altLabel xml:lang="es">pariente biológico de primer grado</skos:altLabel>
@@ -42897,7 +44088,6 @@ pulmonary arterial and venous trees. Examples: There is only one heart.</rdfs:co
         <rdfs:label xml:lang="en">Blood relative</rdfs:label>
         <rdfs:label xml:lang="en">Blood relative (person)</rdfs:label>
         <rdfs:label xml:lang="es">familiar consanguíneo</rdfs:label>
-        <rdfs:label xml:lang="es">familiar consanguíneo (persona)</rdfs:label>
         <skos:altLabel xml:lang="en">Biological relative</skos:altLabel>
         <skos:altLabel xml:lang="es">pariente biológico</skos:altLabel>
         <skos:changeNote xml:lang="en">[PROMOT note] The PROMOT ontology added a comment to quote the CDM used as a source for this entity.</skos:changeNote>
@@ -42917,7 +44107,6 @@ pulmonary arterial and venous trees. Examples: There is only one heart.</rdfs:co
         <rdfs:label xml:lang="en">Marital status</rdfs:label>
         <rdfs:label xml:lang="en">Marital status (observable entity)</rdfs:label>
         <rdfs:label xml:lang="es">estado civil</rdfs:label>
-        <rdfs:label xml:lang="es">estado civil (entidad observable)</rdfs:label>
         <rdfs:label xml:lang="fr">état matrimonial</rdfs:label>
         <skos:notation>125680007</skos:notation>
     </owl:Class>
@@ -42951,7 +44140,6 @@ pulmonary arterial and venous trees. Examples: There is only one heart.</rdfs:co
         <rdfs:label xml:lang="en">Procedure by method</rdfs:label>
         <rdfs:label xml:lang="en">Procedure by method (procedure)</rdfs:label>
         <rdfs:label xml:lang="es">procedimiento clasificado según el método</rdfs:label>
-        <rdfs:label xml:lang="es">procedimiento clasificado según el método (procedimiento)</rdfs:label>
         <rdfs:label xml:lang="fr">procédure selon la méthode</rdfs:label>
         <skos:altLabel xml:lang="fr">intervention selon la méthode</skos:altLabel>
         <skos:changeNote xml:lang="en">[PROMOT note] The PROMOT ontology added a comment to quote the CDM used as a source for this entity. A crossref to the orignal element has also been added.</skos:changeNote>
@@ -43115,7 +44303,6 @@ pulmonary arterial and venous trees. Examples: There is only one heart.</rdfs:co
         <rdfs:label xml:lang="en">Functional assessment</rdfs:label>
         <rdfs:label xml:lang="en">Functional assessment (procedure)</rdfs:label>
         <rdfs:label xml:lang="es">evaluación funcional</rdfs:label>
-        <rdfs:label xml:lang="es">evaluación funcional (procedimiento)</rdfs:label>
         <rdfs:label xml:lang="fr">évaluation fonctionnelle</rdfs:label>
         <skos:definition xml:lang="en">An evaluation of the performance of an organ, organ system, or body part</skos:definition>
         <skos:definition xml:lang="es">Evaluación de la función de un órgano, sistema orgánico o parte corporal</skos:definition>
@@ -43134,7 +44321,6 @@ pulmonary arterial and venous trees. Examples: There is only one heart.</rdfs:co
         <rdfs:label xml:lang="en">Natural parent</rdfs:label>
         <rdfs:label xml:lang="en">Natural parent (person)</rdfs:label>
         <rdfs:label xml:lang="es">padres naturales</rdfs:label>
-        <rdfs:label xml:lang="es">padres naturales (persona)</rdfs:label>
         <rdfs:label xml:lang="fr">parent biologique</rdfs:label>
         <skos:altLabel xml:lang="en">Biological parent</skos:altLabel>
         <skos:altLabel xml:lang="es">padres biológicos</skos:altLabel>
@@ -43151,9 +44337,7 @@ pulmonary arterial and venous trees. Examples: There is only one heart.</rdfs:co
         <sct-ext:fsn xml:lang="en">Social / personal history observable (observable entity)</sct-ext:fsn>
         <dc11:type>observable entity</dc11:type>
         <rdfs:label xml:lang="en">Social / personal history observable</rdfs:label>
-        <rdfs:label xml:lang="en">Social / personal history observable (observable entity)</rdfs:label>
         <rdfs:label xml:lang="es">característica observable relacionada con antecedente personal / social</rdfs:label>
-        <rdfs:label xml:lang="es">característica observable relacionada con antecedente personal / social (entidad observable)</rdfs:label>
         <rdfs:label xml:lang="fr">entité observable dans des antécédents personnels ou sociaux</rdfs:label>
         <skos:altLabel xml:lang="en">PH - Personal history</skos:altLabel>
         <skos:altLabel xml:lang="en">Personal and social circumstances</skos:altLabel>
@@ -43182,7 +44366,6 @@ pulmonary arterial and venous trees. Examples: There is only one heart.</rdfs:co
         <rdfs:label xml:lang="en">Natural grandmother</rdfs:label>
         <rdfs:label xml:lang="en">Natural grandmother (person)</rdfs:label>
         <rdfs:label xml:lang="es">abuela natural</rdfs:label>
-        <rdfs:label xml:lang="es">abuela natural (persona)</rdfs:label>
         <skos:altLabel xml:lang="en">Biological grand-mother</skos:altLabel>
         <skos:altLabel xml:lang="en">Biological grandmother</skos:altLabel>
         <skos:altLabel xml:lang="en">Natural grand-mother</skos:altLabel>
@@ -43201,10 +44384,8 @@ pulmonary arterial and venous trees. Examples: There is only one heart.</rdfs:co
         <sct-ext:fsn xml:lang="en">Tripod (physical object)</sct-ext:fsn>
         <dc11:type>physical object</dc11:type>
         <rdfs:label xml:lang="en">Tripod</rdfs:label>
-        <rdfs:label xml:lang="en">Tripod (physical object)</rdfs:label>
         <rdfs:label xml:lang="fr">canne tripode</rdfs:label>
         <rdfs:label xml:lang="es">trípode</rdfs:label>
-        <rdfs:label xml:lang="es">trípode (objeto físico)</rdfs:label>
         <skos:altLabel xml:lang="en">Walking tripod</skos:altLabel>
         <skos:notation>183147006</skos:notation>
     </owl:Class>
@@ -43224,10 +44405,8 @@ pulmonary arterial and venous trees. Examples: There is only one heart.</rdfs:co
         <rdfs:comment>[PROMOT note] [RD-CDM] Graefe, A.S.L., Hübner, M.R., Rehburg, F. et al. An ontology-based rare disease common data model harmonising international registries, FHIR, and Phenopackets. Sci Data 12, 234 (2025). https://doi.org/10.1038/s41597-025-04558-z</rdfs:comment>
         <rdfs:label xml:lang="en">Date of Birth (observable entity)</rdfs:label>
         <rdfs:label xml:lang="en">Date of birth</rdfs:label>
-        <rdfs:label xml:lang="en">Date of birth (observable entity)</rdfs:label>
         <rdfs:label xml:lang="fr">date de naissance</rdfs:label>
         <rdfs:label xml:lang="es">fecha de nacimiento</rdfs:label>
-        <rdfs:label xml:lang="es">fecha de nacimiento (entidad observable)</rdfs:label>
         <skos:altLabel xml:lang="en">DOB - Date of birth</skos:altLabel>
         <skos:changeNote xml:lang="en">[PROMOT note] The PROMOT ontology added a comment to quote the CDMs used as a source for this entity.</skos:changeNote>
         <skos:notation>184099003</skos:notation>
@@ -43243,10 +44422,8 @@ pulmonary arterial and venous trees. Examples: There is only one heart.</rdfs:co
         <sct-ext:fsn xml:lang="en">Patient occupation (observable entity)</sct-ext:fsn>
         <dc11:type>observable entity</dc11:type>
         <rdfs:label xml:lang="en">Patient occupation</rdfs:label>
-        <rdfs:label xml:lang="en">Patient occupation (observable entity)</rdfs:label>
         <rdfs:label xml:lang="fr">emploi du patient</rdfs:label>
         <rdfs:label xml:lang="es">ocupación del paciente</rdfs:label>
-        <rdfs:label xml:lang="es">ocupación del paciente (entidad observable)</rdfs:label>
         <skos:notation>184104002</skos:notation>
     </owl:Class>
     
@@ -43265,7 +44442,6 @@ pulmonary arterial and venous trees. Examples: There is only one heart.</rdfs:co
         <rdfs:label xml:lang="en">Cause of death</rdfs:label>
         <rdfs:label xml:lang="en">Cause of death (observable entity)</rdfs:label>
         <rdfs:label xml:lang="es">causa de muerte</rdfs:label>
-        <rdfs:label xml:lang="es">causa de muerte (entidad observable)</rdfs:label>
         <rdfs:label xml:lang="fr">cause du décès</rdfs:label>
         <skos:altLabel xml:lang="en">Condition fatal-cause of death</skos:altLabel>
         <skos:changeNote xml:lang="en">[PROMOT note] The PROMOT ontology added a comment to quote the CDM used as a source for this entity.</skos:changeNote>
@@ -43289,9 +44465,7 @@ pulmonary arterial and venous trees. Examples: There is only one heart.</rdfs:co
         <sct-ext:fsn xml:lang="en">Twin sister (person)</sct-ext:fsn>
         <dc11:type>person</dc11:type>
         <rdfs:label xml:lang="en">Twin sister</rdfs:label>
-        <rdfs:label xml:lang="en">Twin sister (person)</rdfs:label>
         <rdfs:label xml:lang="es">hermana melliza</rdfs:label>
-        <rdfs:label xml:lang="es">hermana melliza (persona)</rdfs:label>
         <skos:notation>19343003</skos:notation>
     </owl:Class>
     
@@ -43306,9 +44480,7 @@ pulmonary arterial and venous trees. Examples: There is only one heart.</rdfs:co
         <dc11:type>person</dc11:type>
         <rdfs:label xml:lang="en">Half sibling (person)</rdfs:label>
         <rdfs:label xml:lang="en">Half-sibling</rdfs:label>
-        <rdfs:label xml:lang="en">Half-sibling (person)</rdfs:label>
         <rdfs:label xml:lang="es">medio hermano de sexo femenino o masculino</rdfs:label>
-        <rdfs:label xml:lang="es">medio hermano de sexo femenino o masculino (persona)</rdfs:label>
         <skos:notation>21093007</skos:notation>
     </owl:Class>
     
@@ -43325,9 +44497,7 @@ pulmonary arterial and venous trees. Examples: There is only one heart.</rdfs:co
         <rdfs:comment>[PROMOT note] [EURO-NMD] Atalia A et al., EURO-NMD registry: federated FAIR infrastructure, innovative technologies and concepts of a patient-centred registry for rare neuromuscular disorders. Orphanet J Rare Dis. 2024 Feb 14;19(1):66. doi: 10.1186/s13023-024-03059-3. PMID: 38355534; PMCID: PMC10865673.</rdfs:comment>
         <rdfs:label xml:lang="en">NB of offspring (observable entity)</rdfs:label>
         <rdfs:label xml:lang="en">Number of offspring</rdfs:label>
-        <rdfs:label xml:lang="en">Number of offspring (observable entity)</rdfs:label>
         <rdfs:label xml:lang="es">cantidad de descendientes</rdfs:label>
-        <rdfs:label xml:lang="es">cantidad de descendientes (entidad observable)</rdfs:label>
         <rdfs:label xml:lang="fr">nombre d&apos;enfants engendrés</rdfs:label>
         <skos:changeNote xml:lang="en">[PROMOT note] The PROMOT ontology added a comment to quote the CDM used as a source for this entity.</skos:changeNote>
         <skos:notation>224118004</skos:notation>
@@ -43343,9 +44513,7 @@ pulmonary arterial and venous trees. Examples: There is only one heart.</rdfs:co
         <sct-ext:fsn xml:lang="en">Education and schooling detail (observable entity)</sct-ext:fsn>
         <dc11:type>observable entity</dc11:type>
         <rdfs:label xml:lang="en">Education and schooling detail</rdfs:label>
-        <rdfs:label xml:lang="en">Education and schooling detail (observable entity)</rdfs:label>
         <rdfs:label xml:lang="es">detalle de educación y escolaridad</rdfs:label>
-        <rdfs:label xml:lang="es">detalle de educación y escolaridad (entidad observable)</rdfs:label>
         <rdfs:label xml:lang="fr">détail concernant l&apos;enseignement et la scolarité</rdfs:label>
         <skos:altLabel xml:lang="en">Education and schooling</skos:altLabel>
         <skos:altLabel xml:lang="es">educación y escolaridad</skos:altLabel>
@@ -43362,9 +44530,7 @@ pulmonary arterial and venous trees. Examples: There is only one heart.</rdfs:co
         <sct-ext:fsn xml:lang="en">Duration of formal education (observable entity)</sct-ext:fsn>
         <dc11:type>observable entity</dc11:type>
         <rdfs:label xml:lang="en">Duration of formal education</rdfs:label>
-        <rdfs:label xml:lang="en">Duration of formal education (observable entity)</rdfs:label>
         <rdfs:label xml:lang="es">duración de la educación formal</rdfs:label>
-        <rdfs:label xml:lang="es">duración de la educación formal (entidad observable)</rdfs:label>
         <rdfs:label xml:lang="fr">durée de la scolarité</rdfs:label>
         <skos:notation>224288002</skos:notation>
     </owl:Class>
@@ -43382,7 +44548,6 @@ pulmonary arterial and venous trees. Examples: There is only one heart.</rdfs:co
         <rdfs:label xml:lang="en">Walking aid</rdfs:label>
         <rdfs:label xml:lang="en">Walking aid (physical object)</rdfs:label>
         <rdfs:label xml:lang="es">dispositivo de apoyo para la marcha</rdfs:label>
-        <rdfs:label xml:lang="es">dispositivo de apoyo para la marcha (objeto físico)</rdfs:label>
         <skos:notation>224899006</skos:notation>
     </owl:Class>
     
@@ -43401,7 +44566,6 @@ pulmonary arterial and venous trees. Examples: There is only one heart.</rdfs:co
         <rdfs:label xml:lang="en">Half-sister</rdfs:label>
         <rdfs:label xml:lang="en">Half-sister (person)</rdfs:label>
         <rdfs:label xml:lang="es">media hermana</rdfs:label>
-        <rdfs:label xml:lang="es">media hermana (persona)</rdfs:label>
         <skos:changeNote xml:lang="en">[PROMOT note] The PROMOT ontology added a comment to quote the CDM used as a source for this entity.</skos:changeNote>
         <skos:notation>2272004</skos:notation>
     </owl:Class>
@@ -43418,7 +44582,6 @@ pulmonary arterial and venous trees. Examples: There is only one heart.</rdfs:co
         <rdfs:label xml:lang="en">Ambidextrous</rdfs:label>
         <rdfs:label xml:lang="en">Ambidextrous (finding)</rdfs:label>
         <rdfs:label xml:lang="es">ambidestreza</rdfs:label>
-        <rdfs:label xml:lang="es">ambidestreza (hallazgo)</rdfs:label>
         <rdfs:label xml:lang="fr">ambidextre</rdfs:label>
         <skos:altLabel xml:lang="es">ambidiestro</skos:altLabel>
         <skos:notation>23088002</skos:notation>
@@ -43434,9 +44597,7 @@ pulmonary arterial and venous trees. Examples: There is only one heart.</rdfs:co
         <sct-ext:fsn xml:lang="en">Body measure (observable entity)</sct-ext:fsn>
         <dc11:type>observable entity</dc11:type>
         <rdfs:label xml:lang="en">Body measure</rdfs:label>
-        <rdfs:label xml:lang="en">Body measure (observable entity)</rdfs:label>
         <rdfs:label xml:lang="es">medida corporal</rdfs:label>
-        <rdfs:label xml:lang="es">medida corporal (entidad observable)</rdfs:label>
         <rdfs:label xml:lang="fr">mesure corporelle</rdfs:label>
         <skos:altLabel xml:lang="en">Body measurements</skos:altLabel>
         <skos:notation>248326004</skos:notation>
@@ -43460,7 +44621,6 @@ pulmonary arterial and venous trees. Examples: There is only one heart.</rdfs:co
         <rdfs:label xml:lang="en">Aid to vision</rdfs:label>
         <rdfs:label xml:lang="en">Aid to vision (physical object)</rdfs:label>
         <rdfs:label xml:lang="es">accesorio para la visión</rdfs:label>
-        <rdfs:label xml:lang="es">accesorio para la visión (objeto físico)</rdfs:label>
         <rdfs:label xml:lang="fr">aide à la vision</rdfs:label>
         <skos:altLabel xml:lang="fr">aide visuelle</skos:altLabel>
         <skos:notation>257192006</skos:notation>
@@ -43477,7 +44637,6 @@ pulmonary arterial and venous trees. Examples: There is only one heart.</rdfs:co
         <dc11:type>physical object</dc11:type>
         <rdfs:label xml:lang="en">Walking frame</rdfs:label>
         <rdfs:label xml:lang="en">Walking frame (physical object)</rdfs:label>
-        <rdfs:label xml:lang="es">dispositivo para andador (objeto físico)</rdfs:label>
         <rdfs:label xml:lang="es">dispositivos para andar</rdfs:label>
         <rdfs:label xml:lang="fr">marchette</rdfs:label>
         <skos:altLabel xml:lang="en">WF - Walking frame</skos:altLabel>
@@ -43502,7 +44661,6 @@ pulmonary arterial and venous trees. Examples: There is only one heart.</rdfs:co
         <rdfs:label xml:lang="en">Body weight</rdfs:label>
         <rdfs:label xml:lang="en">Body weight (observable entity)</rdfs:label>
         <rdfs:label xml:lang="es">peso corporal</rdfs:label>
-        <rdfs:label xml:lang="es">peso corporal (entidad observable)</rdfs:label>
         <rdfs:label xml:lang="fr">poids</rdfs:label>
         <skos:altLabel xml:lang="es">peso del cuerpo</skos:altLabel>
         <skos:altLabel xml:lang="fr">poids corporel</skos:altLabel>
@@ -43526,7 +44684,6 @@ pulmonary arterial and venous trees. Examples: There is only one heart.</rdfs:co
         <rdfs:label xml:lang="en">Date of onset (observable entity)</rdfs:label>
         <rdfs:label xml:lang="fr">date de début</rdfs:label>
         <rdfs:label xml:lang="es">fecha de inicio</rdfs:label>
-        <rdfs:label xml:lang="es">fecha de inicio (entidad observable)</rdfs:label>
         <skos:altLabel xml:lang="es">fecha de comienzo</skos:altLabel>
         <skos:changeNote xml:lang="en">[PROMOT note] The PROMOT ontology added a comment to quote the CDM used as a source for this entity.</skos:changeNote>
         <skos:notation>298059007</skos:notation>
@@ -43542,9 +44699,7 @@ pulmonary arterial and venous trees. Examples: There is only one heart.</rdfs:co
         <sct-ext:fsn xml:lang="en">Demographic history detail (observable entity)</sct-ext:fsn>
         <dc11:type>observable entity</dc11:type>
         <rdfs:label xml:lang="en">Demographic history detail</rdfs:label>
-        <rdfs:label xml:lang="en">Demographic history detail (observable entity)</rdfs:label>
         <rdfs:label xml:lang="es">detalle de antecedentes demográficos</rdfs:label>
-        <rdfs:label xml:lang="es">detalle de antecedentes demográficos (entidad observable)</rdfs:label>
         <rdfs:label xml:lang="fr">détail des renseignements démographiques</rdfs:label>
         <skos:altLabel xml:lang="en">Demographic history</skos:altLabel>
         <skos:notation>302147001</skos:notation>
@@ -43562,7 +44717,6 @@ pulmonary arterial and venous trees. Examples: There is only one heart.</rdfs:co
         <rdfs:label xml:lang="en">Examination by method</rdfs:label>
         <rdfs:label xml:lang="en">Examination by method (procedure)</rdfs:label>
         <rdfs:label xml:lang="es">examen según el método</rdfs:label>
-        <rdfs:label xml:lang="es">examen según el método (procedimiento)</rdfs:label>
         <rdfs:label xml:lang="fr">examen selon la méthode</rdfs:label>
         <skos:notation>315306007</skos:notation>
     </owl:Class>
@@ -43582,10 +44736,8 @@ pulmonary arterial and venous trees. Examples: There is only one heart.</rdfs:co
         <rdfs:comment>[PROMOT note] [RD-CDM] Graefe, A.S.L., Hübner, M.R., Rehburg, F. et al. An ontology-based rare disease common data model harmonising international registries, FHIR, and Phenopackets. Sci Data 12, 234 (2025). https://doi.org/10.1038/s41597-025-04558-z</rdfs:comment>
         <rdfs:label xml:lang="en">Country of Birth (observable entity)</rdfs:label>
         <rdfs:label xml:lang="en">Country of birth</rdfs:label>
-        <rdfs:label xml:lang="en">Country of birth (observable entity)</rdfs:label>
         <rdfs:label xml:lang="fr">pays de naissance</rdfs:label>
         <rdfs:label xml:lang="es">país de nacimiento</rdfs:label>
-        <rdfs:label xml:lang="es">país de nacimiento (entidad observable)</rdfs:label>
         <skos:altLabel xml:lang="en">Born in - country</skos:altLabel>
         <skos:altLabel xml:lang="es">nacido en - país</skos:altLabel>
         <skos:changeNote xml:lang="en">[PROMOT note] The PROMOT ontology added a comment to quote the CDMs used as a source for this entity. A crossref to the orignal RD-CDM element has also been added.</skos:changeNote>
@@ -43602,9 +44754,7 @@ pulmonary arterial and venous trees. Examples: There is only one heart.</rdfs:co
         <sct-ext:fsn xml:lang="en">Walking stick (physical object)</sct-ext:fsn>
         <dc11:type>physical object</dc11:type>
         <rdfs:label xml:lang="en">Walking stick</rdfs:label>
-        <rdfs:label xml:lang="en">Walking stick (physical object)</rdfs:label>
         <rdfs:label xml:lang="es">bastón</rdfs:label>
-        <rdfs:label xml:lang="es">bastón (objeto físico)</rdfs:label>
         <rdfs:label xml:lang="fr">bâton de marche</rdfs:label>
         <skos:altLabel xml:lang="en">Walking stick device</skos:altLabel>
         <skos:notation>360006004</skos:notation>
@@ -43626,10 +44776,8 @@ pulmonary arterial and venous trees. Examples: There is only one heart.</rdfs:co
         <sct-ext:fsn xml:lang="en">Assistive equipment (physical object)</sct-ext:fsn>
         <dc11:type>physical object</dc11:type>
         <rdfs:label xml:lang="en">Assistive equipment</rdfs:label>
-        <rdfs:label xml:lang="en">Assistive equipment (physical object)</rdfs:label>
         <rdfs:label xml:lang="en">Assitive equipment (physical object)</rdfs:label>
         <rdfs:label xml:lang="es">equipo de asistencia</rdfs:label>
-        <rdfs:label xml:lang="es">equipo de asistencia (objeto físico)</rdfs:label>
         <skos:notation>360296002</skos:notation>
     </owl:Class>
     
@@ -43645,7 +44793,6 @@ pulmonary arterial and venous trees. Examples: There is only one heart.</rdfs:co
         <rdfs:label xml:lang="en">Observable entity</rdfs:label>
         <rdfs:label xml:lang="en">Observable entity (observable entity)</rdfs:label>
         <rdfs:label xml:lang="es">entidad observable</rdfs:label>
-        <rdfs:label xml:lang="es">entidad observable (entidad observable)</rdfs:label>
         <rdfs:label xml:lang="fr">entité observable</rdfs:label>
         <skos:notation>363787002</skos:notation>
     </owl:Class>
@@ -43663,7 +44810,6 @@ pulmonary arterial and venous trees. Examples: There is only one heart.</rdfs:co
         <rdfs:label xml:lang="en">Handedness finding (finding)</rdfs:label>
         <rdfs:label xml:lang="fr">constatation concernant la main dominante</rdfs:label>
         <rdfs:label xml:lang="es">hallazgo en la preferencia manual</rdfs:label>
-        <rdfs:label xml:lang="es">hallazgo en la preferencia manual (hallazgo)</rdfs:label>
         <skos:altLabel xml:lang="fr">constatation concernant la manualité</skos:altLabel>
         <skos:altLabel xml:lang="fr">constatation concernant la prévalence manuelle</skos:altLabel>
         <skos:notation>364940007</skos:notation>
@@ -43684,7 +44830,6 @@ pulmonary arterial and venous trees. Examples: There is only one heart.</rdfs:co
         <rdfs:label xml:lang="en">Co-morbid conditions (finding)</rdfs:label>
         <rdfs:label xml:lang="fr">comorbidités</rdfs:label>
         <rdfs:label xml:lang="es">comorbilidades</rdfs:label>
-        <rdfs:label xml:lang="es">comorbilidades (hallazgo)</rdfs:label>
         <skos:altLabel xml:lang="en">Comorbid conditions</skos:altLabel>
         <skos:changeNote xml:lang="en">[PROMOT note] The PROMOT ontology added a comment to quote the CDM used as a source for this entity.</skos:changeNote>
         <skos:notation>398192003</skos:notation>
@@ -43707,7 +44852,6 @@ pulmonary arterial and venous trees. Examples: There is only one heart.</rdfs:co
         <rdfs:label xml:lang="en">Date of admission (observable entity)</rdfs:label>
         <rdfs:label xml:lang="fr">date d&apos;admission</rdfs:label>
         <rdfs:label xml:lang="es">fecha de admisión</rdfs:label>
-        <rdfs:label xml:lang="es">fecha de admisión (entidad observable)</rdfs:label>
         <skos:changeNote xml:lang="en">[PROMOT note] The PROMOT ontology added a comment to quote the CDMs used as a source for this entity.</skos:changeNote>
         <skos:notation>399423000</skos:notation>
     </owl:Class>
@@ -43730,7 +44874,6 @@ pulmonary arterial and venous trees. Examples: There is only one heart.</rdfs:co
         <rdfs:label xml:lang="en">Date of death (observable entity)</rdfs:label>
         <rdfs:label xml:lang="fr">date du décès</rdfs:label>
         <rdfs:label xml:lang="es">fecha de fallecimiento</rdfs:label>
-        <rdfs:label xml:lang="es">fecha de fallecimiento (entidad observable)</rdfs:label>
         <skos:changeNote xml:lang="en">[PROMOT note] The PROMOT ontology added a comment to quote the CDMs used as a source for this entity. A crossref to the orignal RD-CDM element has also been added.</skos:changeNote>
         <skos:notation>399753006</skos:notation>
     </owl:Class>
@@ -43750,7 +44893,6 @@ pulmonary arterial and venous trees. Examples: There is only one heart.</rdfs:co
         <rdfs:label xml:lang="en">Date of visit (observable entity)</rdfs:label>
         <rdfs:label xml:lang="fr">date de la visite</rdfs:label>
         <rdfs:label xml:lang="es">fecha de la visita</rdfs:label>
-        <rdfs:label xml:lang="es">fecha de la visita (entidad observable)</rdfs:label>
         <skos:changeNote xml:lang="en">[PROMOT note] The PROMOT ontology added a comment to quote the CDM used as a source for this entity.</skos:changeNote>
         <skos:notation>406543005</skos:notation>
     </owl:Class>
@@ -43765,10 +44907,8 @@ pulmonary arterial and venous trees. Examples: There is only one heart.</rdfs:co
         <sct-ext:fsn xml:lang="en">Ptosis crutch (physical object)</sct-ext:fsn>
         <dc11:type>physical object</dc11:type>
         <rdfs:label xml:lang="en">Ptosis crutch</rdfs:label>
-        <rdfs:label xml:lang="en">Ptosis crutch (physical object)</rdfs:label>
         <rdfs:label xml:lang="en">Ptosis crutch (pysical object)</rdfs:label>
         <rdfs:label xml:lang="es">sostenedor de ptosis palpebral</rdfs:label>
-        <rdfs:label xml:lang="es">sostenedor de ptosis palpebral (objeto físico)</rdfs:label>
         <skos:notation>420480000</skos:notation>
     </owl:Class>
     
@@ -43788,7 +44928,6 @@ pulmonary arterial and venous trees. Examples: There is only one heart.</rdfs:co
         <rdfs:label xml:lang="en">Age at diagnosis</rdfs:label>
         <rdfs:label xml:lang="en">Age at diagnosis (observable entity)</rdfs:label>
         <rdfs:label xml:lang="es">edad en el momento del diagnóstico</rdfs:label>
-        <rdfs:label xml:lang="es">edad en el momento del diagnóstico (entidad observable)</rdfs:label>
         <rdfs:label xml:lang="fr">âge au diagnostic</rdfs:label>
         <skos:changeNote xml:lang="en">[PROMOT note] The PROMOT ontology added a comment to quote the CDMs used as a source for this entity.</skos:changeNote>
         <skos:notation>423493009</skos:notation>
@@ -43810,7 +44949,6 @@ pulmonary arterial and venous trees. Examples: There is only one heart.</rdfs:co
         <rdfs:label xml:lang="en">Age at first symptom</rdfs:label>
         <rdfs:label xml:lang="en">Age at first symptom (observable entity)</rdfs:label>
         <rdfs:label xml:lang="es">edad al aparecer el primer síntoma</rdfs:label>
-        <rdfs:label xml:lang="es">edad al aparecer el primer síntoma (entidad observable)</rdfs:label>
         <rdfs:label xml:lang="fr">âge au premier symptôme</rdfs:label>
         <skos:changeNote xml:lang="en">[PROMOT note] The PROMOT ontology added a comment to quote the CDMs used as a source for this entity.</skos:changeNote>
         <skos:notation>424850005</skos:notation>
@@ -43832,7 +44970,6 @@ pulmonary arterial and venous trees. Examples: There is only one heart.</rdfs:co
         <rdfs:label xml:lang="en">Date of diagnosis (observable entity)</rdfs:label>
         <rdfs:label xml:lang="fr">date du diagnostic</rdfs:label>
         <rdfs:label xml:lang="es">fecha de diagnóstico</rdfs:label>
-        <rdfs:label xml:lang="es">fecha de diagnóstico (entidad observable)</rdfs:label>
         <skos:changeNote xml:lang="en">[PROMOT note] The PROMOT ontology added a comment to quote the CDM used as a source for this entity.</skos:changeNote>
         <skos:notation>432213005</skos:notation>
     </owl:Class>
@@ -43854,7 +44991,6 @@ pulmonary arterial and venous trees. Examples: There is only one heart.</rdfs:co
         <rdfs:label xml:lang="en">Date of procedure (observable entity)</rdfs:label>
         <rdfs:label xml:lang="fr">date de l&apos;intervention</rdfs:label>
         <rdfs:label xml:lang="es">fecha del procedimiento</rdfs:label>
-        <rdfs:label xml:lang="es">fecha del procedimiento (entidad observable)</rdfs:label>
         <skos:changeNote xml:lang="en">[PROMOT note] The PROMOT ontology added a comment to quote the CDM used as a source for this entity.</skos:changeNote>
         <skos:notation>439272007</skos:notation>
     </owl:Class>
@@ -43874,7 +45010,6 @@ pulmonary arterial and venous trees. Examples: There is only one heart.</rdfs:co
         <rdfs:label xml:lang="en">Half-brother</rdfs:label>
         <rdfs:label xml:lang="en">Half-brother (person)</rdfs:label>
         <rdfs:label xml:lang="es">medio hermano</rdfs:label>
-        <rdfs:label xml:lang="es">medio hermano (persona)</rdfs:label>
         <skos:changeNote xml:lang="en">[PROMOT note] The PROMOT ontology added a comment to quote the CDM used as a source for this entity.</skos:changeNote>
         <skos:notation>45929001</skos:notation>
     </owl:Class>
@@ -43889,9 +45024,7 @@ pulmonary arterial and venous trees. Examples: There is only one heart.</rdfs:co
         <sct-ext:fsn xml:lang="en">Walking aid handgrip (physical object)</sct-ext:fsn>
         <dc11:type>physical object</dc11:type>
         <rdfs:label xml:lang="en">Walking aid handgrip</rdfs:label>
-        <rdfs:label xml:lang="en">Walking aid handgrip (physical object)</rdfs:label>
         <rdfs:label xml:lang="es">empuñadura de dispositivo de ayuda para caminar</rdfs:label>
-        <rdfs:label xml:lang="es">empuñadura de dispositivo de ayuda para caminar (objeto físico)</rdfs:label>
         <skos:notation>466255006</skos:notation>
     </owl:Class>
     
@@ -43907,7 +45040,6 @@ pulmonary arterial and venous trees. Examples: There is only one heart.</rdfs:co
         <rdfs:label xml:lang="en">Right handed</rdfs:label>
         <rdfs:label xml:lang="en">Right handed (finding)</rdfs:label>
         <rdfs:label xml:lang="es">dextrolateralidad</rdfs:label>
-        <rdfs:label xml:lang="es">dextrolateralidad (hallazgo)</rdfs:label>
         <rdfs:label xml:lang="fr">droitier</rdfs:label>
         <skos:notation>46669005</skos:notation>
     </owl:Class>
@@ -43924,7 +45056,6 @@ pulmonary arterial and venous trees. Examples: There is only one heart.</rdfs:co
         <rdfs:label xml:lang="en">Eye glasses, device (physical object)</rdfs:label>
         <rdfs:label xml:lang="en">Eyeglasses</rdfs:label>
         <rdfs:label xml:lang="es">anteojos</rdfs:label>
-        <rdfs:label xml:lang="es">anteojos, dispositivo (objeto físico)</rdfs:label>
         <rdfs:label xml:lang="fr">lunettes</rdfs:label>
         <skos:altLabel xml:lang="en">Eye glasses, device</skos:altLabel>
         <skos:altLabel xml:lang="en">Glasses</skos:altLabel>
@@ -43952,9 +45083,7 @@ pulmonary arterial and venous trees. Examples: There is only one heart.</rdfs:co
         <dc11:type>procedure</dc11:type>
         <rdfs:label xml:lang="en">Physical examination</rdfs:label>
         <rdfs:label xml:lang="en">Physical examination (procedure)</rdfs:label>
-        <rdfs:label xml:lang="en">Physical examination procedure (procedure)</rdfs:label>
         <rdfs:label xml:lang="es">examen físico</rdfs:label>
-        <rdfs:label xml:lang="es">examen físico (procedimiento)</rdfs:label>
         <rdfs:label xml:lang="fr">examen physique</rdfs:label>
         <skos:altLabel xml:lang="en">Clinical examination</skos:altLabel>
         <skos:altLabel xml:lang="en">Examination of patient</skos:altLabel>
@@ -43983,7 +45112,6 @@ pulmonary arterial and venous trees. Examples: There is only one heart.</rdfs:co
         <rdfs:label xml:lang="en">Wheelchair device (physical object)</rdfs:label>
         <rdfs:label xml:lang="fr">fauteuil roulant</rdfs:label>
         <rdfs:label xml:lang="es">silla de ruedas</rdfs:label>
-        <rdfs:label xml:lang="es">silla de ruedas, dispositivo (objeto físico)</rdfs:label>
         <skos:altLabel xml:lang="en">WC - Wheelchair</skos:altLabel>
         <skos:altLabel xml:lang="en">Wch - Wheelchair</skos:altLabel>
         <skos:altLabel xml:lang="en">Wheelchair device</skos:altLabel>
@@ -44008,7 +45136,6 @@ pulmonary arterial and venous trees. Examples: There is only one heart.</rdfs:co
         <rdfs:label xml:lang="en">Natural brother</rdfs:label>
         <rdfs:label xml:lang="en">Natural brother (person)</rdfs:label>
         <rdfs:label xml:lang="es">hermano natural</rdfs:label>
-        <rdfs:label xml:lang="es">hermano natural (persona)</rdfs:label>
         <skos:altLabel xml:lang="en">Biological brother</skos:altLabel>
         <skos:altLabel xml:lang="es">hermano biológico</skos:altLabel>
         <skos:changeNote xml:lang="en">[PROMOT note] The PROMOT ontology added a comment to quote the CDMs used as a source for this entity.</skos:changeNote>
@@ -44028,7 +45155,6 @@ pulmonary arterial and venous trees. Examples: There is only one heart.</rdfs:co
         <rdfs:label xml:lang="en">Body mass index (observable entity)</rdfs:label>
         <rdfs:label xml:lang="fr">indice de masse corporelle</rdfs:label>
         <rdfs:label xml:lang="es">índice de masa corporal</rdfs:label>
-        <rdfs:label xml:lang="es">índice de masa corporal (entidad observable)</rdfs:label>
         <skos:altLabel xml:lang="en">BMI - Body mass index</skos:altLabel>
         <skos:altLabel xml:lang="es">IMC - índice de masa corporal</skos:altLabel>
         <skos:altLabel xml:lang="en">Quetelet index</skos:altLabel>
@@ -44053,7 +45179,6 @@ pulmonary arterial and venous trees. Examples: There is only one heart.</rdfs:co
         <rdfs:label xml:lang="en">Natural grandfather</rdfs:label>
         <rdfs:label xml:lang="en">Natural grandfather (person)</rdfs:label>
         <rdfs:label xml:lang="es">abuelo natural</rdfs:label>
-        <rdfs:label xml:lang="es">abuelo natural (persona)</rdfs:label>
         <skos:altLabel xml:lang="en">Biological grand-father</skos:altLabel>
         <skos:altLabel xml:lang="en">Biological grandfather</skos:altLabel>
         <skos:altLabel xml:lang="en">Natural grand-father</skos:altLabel>
@@ -44077,7 +45202,6 @@ pulmonary arterial and venous trees. Examples: There is only one heart.</rdfs:co
         <rdfs:label xml:lang="en">Natural mother</rdfs:label>
         <rdfs:label xml:lang="en">Natural mother (person)</rdfs:label>
         <rdfs:label xml:lang="es">madre natural</rdfs:label>
-        <rdfs:label xml:lang="es">madre natural (persona)</rdfs:label>
         <skos:altLabel xml:lang="en">Biological mother</skos:altLabel>
         <skos:altLabel xml:lang="es">madre biológica</skos:altLabel>
         <skos:changeNote xml:lang="en">[PROMOT note] The PROMOT ontology added a comment to quote the CDMs used as a source for this entity.</skos:changeNote>
@@ -44094,9 +45218,7 @@ pulmonary arterial and venous trees. Examples: There is only one heart.</rdfs:co
         <sct-ext:fsn xml:lang="en">Unknown handedness (finding)</sct-ext:fsn>
         <dc11:type>finding</dc11:type>
         <rdfs:label xml:lang="en">Unknown handedness</rdfs:label>
-        <rdfs:label xml:lang="en">Unknown handedness (finding)</rdfs:label>
         <rdfs:label xml:lang="es">lateralidad desconocida</rdfs:label>
-        <rdfs:label xml:lang="es">lateralidad desconocida (hallazgo)</rdfs:label>
         <rdfs:label xml:lang="fr">manualité inconnue</rdfs:label>
         <skos:altLabel xml:lang="en">Unknown dominant side</skos:altLabel>
         <skos:altLabel xml:lang="fr">préférence manuelle inconnue</skos:altLabel>
@@ -44113,9 +45235,7 @@ pulmonary arterial and venous trees. Examples: There is only one heart.</rdfs:co
         <sct-ext:fsn xml:lang="en">Paternal half brother (person)</sct-ext:fsn>
         <dc11:type>person</dc11:type>
         <rdfs:label xml:lang="en">Paternal half brother</rdfs:label>
-        <rdfs:label xml:lang="en">Paternal half brother (person)</rdfs:label>
         <rdfs:label xml:lang="es">medio hermano paterno</rdfs:label>
-        <rdfs:label xml:lang="es">medio hermano paterno (persona)</rdfs:label>
         <skos:altLabel xml:lang="en">Paternal half-brother</skos:altLabel>
         <skos:definition xml:lang="es">Hijo del propio padre y de una madre diferente.</skos:definition>
         <skos:definition xml:lang="en">The son of one&apos;s father who has a different mother,</skos:definition>
@@ -44132,9 +45252,7 @@ pulmonary arterial and venous trees. Examples: There is only one heart.</rdfs:co
         <sct-ext:fsn xml:lang="en">Paternal half sister (person)</sct-ext:fsn>
         <dc11:type>person</dc11:type>
         <rdfs:label xml:lang="en">Paternal half sister</rdfs:label>
-        <rdfs:label xml:lang="en">Paternal half sister (person)</rdfs:label>
         <rdfs:label xml:lang="es">media hermana paterna</rdfs:label>
-        <rdfs:label xml:lang="es">media hermana paterna (persona)</rdfs:label>
         <skos:altLabel xml:lang="en">Paternal half-sister</skos:altLabel>
         <skos:definition xml:lang="es">Hija del propio padre y de una madre diferente.</skos:definition>
         <skos:definition xml:lang="en">The daughter of one&apos;s father who has a different mother.</skos:definition>
@@ -44151,9 +45269,7 @@ pulmonary arterial and venous trees. Examples: There is only one heart.</rdfs:co
         <sct-ext:fsn xml:lang="en">Maternal half sister (person)</sct-ext:fsn>
         <dc11:type>person</dc11:type>
         <rdfs:label xml:lang="en">Maternal half sister</rdfs:label>
-        <rdfs:label xml:lang="en">Maternal half sister (person)</rdfs:label>
         <rdfs:label xml:lang="es">media hermana materna</rdfs:label>
-        <rdfs:label xml:lang="es">media hermana materna (persona)</rdfs:label>
         <skos:altLabel xml:lang="en">Maternal half-sister</skos:altLabel>
         <skos:definition xml:lang="es">Hija de una madre con un padre diferente.</skos:definition>
         <skos:definition xml:lang="en">The daughter of one&apos;s mother who has a different father.</skos:definition>
@@ -44170,9 +45286,7 @@ pulmonary arterial and venous trees. Examples: There is only one heart.</rdfs:co
         <sct-ext:fsn xml:lang="en">Maternal half brother (person)</sct-ext:fsn>
         <dc11:type>person</dc11:type>
         <rdfs:label xml:lang="en">Maternal half brother</rdfs:label>
-        <rdfs:label xml:lang="en">Maternal half brother (person)</rdfs:label>
         <rdfs:label xml:lang="es">medio hermano materno</rdfs:label>
-        <rdfs:label xml:lang="es">medio hermano materno (persona)</rdfs:label>
         <skos:altLabel xml:lang="en">Maternal half-brother</skos:altLabel>
         <skos:definition xml:lang="es">Hijo de la madre con un padre diferente.</skos:definition>
         <skos:definition xml:lang="en">The son of one&apos;s mother who has a different father.</skos:definition>
@@ -44195,7 +45309,6 @@ pulmonary arterial and venous trees. Examples: There is only one heart.</rdfs:co
         <rdfs:label xml:lang="en">Natural sister</rdfs:label>
         <rdfs:label xml:lang="en">Natural sister (person)</rdfs:label>
         <rdfs:label xml:lang="es">hermana natural</rdfs:label>
-        <rdfs:label xml:lang="es">hermana natural (persona)</rdfs:label>
         <skos:altLabel xml:lang="en">Biological sister</skos:altLabel>
         <skos:altLabel xml:lang="es">hermana biológica</skos:altLabel>
         <skos:changeNote xml:lang="en">[PROMOT note] The PROMOT ontology added a comment to quote the CDMs used as a source for this entity.</skos:changeNote>
@@ -44212,10 +45325,8 @@ pulmonary arterial and venous trees. Examples: There is only one heart.</rdfs:co
         <sct-ext:fsn xml:lang="en">Crutch, device (physical object)</sct-ext:fsn>
         <dc11:type>physical object</dc11:type>
         <rdfs:label xml:lang="en">Crutch</rdfs:label>
-        <rdfs:label xml:lang="en">Crutch, device (physical object)</rdfs:label>
         <rdfs:label xml:lang="fr">béquille</rdfs:label>
         <rdfs:label xml:lang="es">muleta</rdfs:label>
-        <rdfs:label xml:lang="es">muleta (objeto físico)</rdfs:label>
         <skos:altLabel xml:lang="en">Crutch, device</skos:altLabel>
         <skos:notation>74566002</skos:notation>
     </owl:Class>
@@ -44233,7 +45344,6 @@ pulmonary arterial and venous trees. Examples: There is only one heart.</rdfs:co
         <rdfs:label xml:lang="en">Natural child (person)</rdfs:label>
         <rdfs:label xml:lang="fr">enfant biologique</rdfs:label>
         <rdfs:label xml:lang="es">hijo natural (genérico)</rdfs:label>
-        <rdfs:label xml:lang="es">hijo natural (genérico) (persona)</rdfs:label>
         <skos:altLabel xml:lang="en">Biological child</skos:altLabel>
         <skos:notation>75226009</skos:notation>
     </owl:Class>
@@ -44250,7 +45360,6 @@ pulmonary arterial and venous trees. Examples: There is only one heart.</rdfs:co
         <rdfs:label xml:lang="en">Natural grandparent</rdfs:label>
         <rdfs:label xml:lang="en">Natural grandparent (person)</rdfs:label>
         <rdfs:label xml:lang="es">abuelos naturales</rdfs:label>
-        <rdfs:label xml:lang="es">abuelos naturales (persona)</rdfs:label>
         <skos:altLabel xml:lang="en">Biological grand-parent</skos:altLabel>
         <skos:altLabel xml:lang="en">Biological grandparent</skos:altLabel>
         <skos:altLabel xml:lang="en">Natural grand-parent</skos:altLabel>
@@ -44275,9 +45384,7 @@ pulmonary arterial and venous trees. Examples: There is only one heart.</rdfs:co
         <sct-ext:fsn xml:lang="en">Twin brother (person)</sct-ext:fsn>
         <dc11:type>person</dc11:type>
         <rdfs:label xml:lang="en">Twin brother</rdfs:label>
-        <rdfs:label xml:lang="en">Twin brother (person)</rdfs:label>
         <rdfs:label xml:lang="es">hermano mellizo</rdfs:label>
-        <rdfs:label xml:lang="es">hermano mellizo (persona)</rdfs:label>
         <skos:notation>81276006</skos:notation>
     </owl:Class>
     
@@ -44294,7 +45401,6 @@ pulmonary arterial and venous trees. Examples: There is only one heart.</rdfs:co
         <rdfs:label xml:lang="en">Natural sibling (person)</rdfs:label>
         <rdfs:label xml:lang="fr">frère ou sœur biologique</rdfs:label>
         <rdfs:label xml:lang="es">hermano natural de sexo femenino o masculino</rdfs:label>
-        <rdfs:label xml:lang="es">hermano natural de sexo femenino o masculino (persona)</rdfs:label>
         <skos:altLabel xml:lang="en">Biological sibling</skos:altLabel>
         <skos:altLabel xml:lang="es">hermano biológico de sexo femenino o masculino</skos:altLabel>
         <skos:notation>82101005</skos:notation>
@@ -44316,7 +45422,6 @@ pulmonary arterial and venous trees. Examples: There is only one heart.</rdfs:co
         <rdfs:label xml:lang="en">Natural daughter</rdfs:label>
         <rdfs:label xml:lang="en">Natural daughter (person)</rdfs:label>
         <rdfs:label xml:lang="es">hija natural</rdfs:label>
-        <rdfs:label xml:lang="es">hija natural (persona)</rdfs:label>
         <skos:altLabel xml:lang="en">Biological daughter</skos:altLabel>
         <skos:altLabel xml:lang="es">hija biológica</skos:altLabel>
         <skos:changeNote xml:lang="en">[PROMOT note] The PROMOT ontology added a comment to quote the CDMs used as a source for this entity.</skos:changeNote>
@@ -44383,7 +45488,6 @@ pulmonary arterial and venous trees. Examples: There is only one heart.</rdfs:co
         <rdfs:label xml:lang="en">Assessment of patient reported outcome measures</rdfs:label>
         <rdfs:label xml:lang="en">Assessment of patient reported outcome measures (procedure)</rdfs:label>
         <rdfs:label xml:lang="es">evaluación de indicadores de resultados informados por el paciente</rdfs:label>
-        <rdfs:label xml:lang="es">evaluación de indicadores de resultados informados por el paciente (procedimiento)</rdfs:label>
         <skos:altLabel xml:lang="en">Assessment of PROMs (patient reported outcome measures)</skos:altLabel>
         <skos:notation>840297006</skos:notation>
     </owl:Class>
@@ -45366,7 +46470,6 @@ pulmonary arterial and venous trees. Examples: There is only one heart.</rdfs:co
         <rdfs:label xml:lang="en">History taking</rdfs:label>
         <rdfs:label xml:lang="en">History taking (procedure)</rdfs:label>
         <rdfs:label xml:lang="es">obtención de historia clínica</rdfs:label>
-        <rdfs:label xml:lang="es">obtención de historia clínica (procedimiento)</rdfs:label>
         <rdfs:label xml:lang="fr">recueil des antécédents</rdfs:label>
         <skos:altLabel xml:lang="en">Clinical interview</skos:altLabel>
         <skos:altLabel xml:lang="en">History taking, health</skos:altLabel>
@@ -45390,7 +46493,6 @@ pulmonary arterial and venous trees. Examples: There is only one heart.</rdfs:co
         <rdfs:label xml:lang="en">Cane</rdfs:label>
         <rdfs:label xml:lang="en">Cane, device (physical object)</rdfs:label>
         <rdfs:label xml:lang="es">bastón, dispositivo</rdfs:label>
-        <rdfs:label xml:lang="es">bastón, dispositivo (objeto físico)</rdfs:label>
         <rdfs:label xml:lang="fr">canne</rdfs:label>
         <skos:altLabel xml:lang="en">Cane, device</skos:altLabel>
         <skos:notation>87405001</skos:notation>
@@ -45409,7 +46511,6 @@ pulmonary arterial and venous trees. Examples: There is only one heart.</rdfs:co
         <rdfs:label xml:lang="en">Left handed (finding)</rdfs:label>
         <rdfs:label xml:lang="fr">gaucher</rdfs:label>
         <rdfs:label xml:lang="es">sinistrómano</rdfs:label>
-        <rdfs:label xml:lang="es">sinistrómano (hallazgo)</rdfs:label>
         <skos:altLabel xml:lang="en">LH - Left handed</skos:altLabel>
         <skos:notation>87683000</skos:notation>
     </owl:Class>
@@ -45430,7 +46531,6 @@ pulmonary arterial and venous trees. Examples: There is only one heart.</rdfs:co
         <rdfs:label xml:lang="en">Natural father</rdfs:label>
         <rdfs:label xml:lang="en">Natural father (person)</rdfs:label>
         <rdfs:label xml:lang="es">padre natural</rdfs:label>
-        <rdfs:label xml:lang="es">padre natural (persona)</rdfs:label>
         <skos:altLabel xml:lang="en">Biological father</skos:altLabel>
         <skos:altLabel xml:lang="es">padre biológico</skos:altLabel>
         <skos:changeNote xml:lang="en">[PROMOT note] The PROMOT ontology added a comment to quote the CDMs used as a source for this entity.</skos:changeNote>

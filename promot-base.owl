@@ -64,7 +64,7 @@
      xmlns:CPATH_VISIT_OCCURRENCE="https://w3id.org/cpont/visit_occurrence/"
      xmlns:CPATH_CONDITION_OCCURRENCE="https://w3id.org/cpont/condition_occurrence/">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/promot/promot-base.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/promot/releases/2026-05-21/promot-base.owl"/>
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/promot/releases/2026-06-01/promot-base.owl"/>
         <dc11:contributor>Anita Burgun MD, PhD
 https://orcid.org/0000-0001-6855-4366</dc11:contributor>
         <dc11:contributor>Carole Faviez PhD
@@ -94,7 +94,7 @@ https://orcid.org/0000-0002-3336-2476</dc11:creator>
         <dcterms:description>Ontology for modeling the three following neuromuscular diseases : OPMD, Congenital myopathies and Congenital myastenic syndroms. It aims to be also an ontology for building the PROMOT project relational database.</dcterms:description>
         <dcterms:license rdf:resource="https://creativecommons.org/licenses/by-nc-sa/4.0/"/>
         <dcterms:title>PROMOT ontology</dcterms:title>
-        <oboInOwl:date>21:05:2026 15:46</oboInOwl:date>
+        <oboInOwl:date>01:06:2026 14:42</oboInOwl:date>
         <rdfs:comment>Additional acknowledgements:
 	- Rachel Thompson
 	- Thomas Bongivault, MSc
@@ -106,7 +106,7 @@ https://orcid.org/0000-0002-3336-2476</dc11:creator>
 </rdfs:comment>
         <rdfs:seeAlso>More about PROMOT initiative at https://www.promotinitiative.com/
 </rdfs:seeAlso>
-        <owl:versionInfo>2026-05-21</owl:versionInfo>
+        <owl:versionInfo>2026-06-01</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -371,6 +371,12 @@ https://orcid.org/0000-0002-3336-2476</dc11:creator>
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    
+
+
+    <!-- http://id.who.int/icd/entity/1302007745 -->
+
+    <owl:Class rdf:about="http://id.who.int/icd/entity/1302007745"/>
     
 
 
@@ -682,10 +688,10 @@ https://orcid.org/0000-0002-3336-2476</dc11:creator>
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0000004">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0000001"/>
         <obo:IAO_0000115 xml:lang="en">A sequence alteration located within the PABPN1 gene.</obo:IAO_0000115>
-        <obo:IAO_0000115 xml:lang="es">Una alteración genética ubicada en el gen PABPN1.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="es">Una alteración genética localizada en el gen PABPN1.</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="fr">Une altération génétique située au niveau du gène PABPN1.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
-        <rdfs:comment>JP: Translated to spanish using Bing Translator</rdfs:comment>
+        <rdfs:comment>Translation process: Frist translated to spanish using Bing Translator then manually reviewed</rdfs:comment>
         <rdfs:comment>[PROMOT note] [Derived from EURO-NMD] </rdfs:comment>
         <rdfs:comment>[PROMOT note] [EURO-NMD] Atalia A et al., EURO-NMD registry: federated FAIR infrastructure, innovative technologies and concepts of a patient-centred registry for rare neuromuscular disorders. Orphanet J Rare Dis. 2024 Feb 14;19(1):66. doi: 10.1186/s13023-024-03059-3. PMID: 38355534; PMCID: PMC10865673.</rdfs:comment>
         <rdfs:label xml:lang="en">PABPN1 variant</rdfs:label>
@@ -693,6 +699,18 @@ https://orcid.org/0000-0002-3336-2476</dc11:creator>
         <rdfs:label xml:lang="fr">variant du gène PABPN1</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://purl.obolibrary.org/obo/NCIT_C204162"/>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0000004"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget xml:lang="es">Una alteración genética localizada en el gen PABPN1.</owl:annotatedTarget>
+        <obo:IAO_0000119>reviewed by https://orcid.org/0000-0002-1500-0236</obo:IAO_0000119>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0000004"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+        <owl:annotatedTarget xml:lang="es">mutación del gen PAPBN1</owl:annotatedTarget>
+        <rdfs:comment>reviewed by https://orcid.org/0000-0002-1500-0236</rdfs:comment>
+    </owl:Axiom>
     
 
 
@@ -701,15 +719,27 @@ https://orcid.org/0000-0002-3336-2476</dc11:creator>
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0000005">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0000003"/>
         <obo:IAO_0000115 xml:lang="en">A sequence alteration located within the RYR1 gene.</obo:IAO_0000115>
-        <obo:IAO_0000115 xml:lang="es">Una alteración genética ubicada en el gen RYR1.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="es">Una alteración genética localizada en el gen RYR1.</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="fr">Une altération génétique située au niveau du gène RYR1.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
-        <rdfs:comment>JP: Translated to spanish using Bing Translator</rdfs:comment>
+        <rdfs:comment>Translation process: Frist translated to spanish using Bing Translator then manually reviewed</rdfs:comment>
         <rdfs:label xml:lang="en">RYR1 variant</rdfs:label>
         <rdfs:label xml:lang="es">mutación del gen RYR1</rdfs:label>
         <rdfs:label xml:lang="fr">variant du gène RYR1</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://purl.obolibrary.org/obo/NCIT_C150311"/>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0000005"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget xml:lang="es">Una alteración genética localizada en el gen RYR1.</owl:annotatedTarget>
+        <obo:IAO_0000119>reviewed by https://orcid.org/0000-0002-1500-0236</obo:IAO_0000119>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0000005"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+        <owl:annotatedTarget xml:lang="es">mutación del gen RYR1</owl:annotatedTarget>
+        <rdfs:comment>reviewed by https://orcid.org/0000-0002-1500-0236</rdfs:comment>
+    </owl:Axiom>
     
 
 
@@ -718,15 +748,27 @@ https://orcid.org/0000-0002-3336-2476</dc11:creator>
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0000006">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0000003"/>
         <obo:IAO_0000115 xml:lang="en">A sequence alteration located within the TTN gene.</obo:IAO_0000115>
-        <obo:IAO_0000115 xml:lang="es">Una alteración genética ubicada en el gen TTN.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="es">Una alteración genética localizada en el gen TTN.</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="fr">Une altération génétique située au niveau du gène TTN.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
-        <rdfs:comment>JP: Translated to spanish using Bing Translator</rdfs:comment>
+        <rdfs:comment>Translation process: Frist translated to spanish using Bing Translator then manually reviewed</rdfs:comment>
         <rdfs:label xml:lang="en">TTN variant</rdfs:label>
         <rdfs:label xml:lang="es">mutación del gen TTN</rdfs:label>
         <rdfs:label xml:lang="fr">variant du gène TTN</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://purl.obolibrary.org/obo/NCIT_C101756"/>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0000006"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget xml:lang="es">Una alteración genética localizada en el gen TTN.</owl:annotatedTarget>
+        <obo:IAO_0000119>reviewed by https://orcid.org/0000-0002-1500-0236</obo:IAO_0000119>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0000006"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+        <owl:annotatedTarget xml:lang="es">mutación del gen TTN</owl:annotatedTarget>
+        <rdfs:comment>reviewed by https://orcid.org/0000-0002-1500-0236</rdfs:comment>
+    </owl:Axiom>
     
 
 
@@ -735,15 +777,27 @@ https://orcid.org/0000-0002-3336-2476</dc11:creator>
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0000007">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0000003"/>
         <obo:IAO_0000115 xml:lang="en">A sequence alteration located within the NEB gene.</obo:IAO_0000115>
-        <obo:IAO_0000115 xml:lang="es">Una alteración genética ubicada en el gen NEB.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="es">Una alteración genética localizada en el gen NEB.</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="fr">Une altération génétique située au niveau du gène NEB.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
-        <rdfs:comment>JP: Translated to spanish using Bing Translator</rdfs:comment>
+        <rdfs:comment>Translation process: Frist translated to spanish using Bing Translator then manually reviewed</rdfs:comment>
         <rdfs:label xml:lang="en">NEB variant</rdfs:label>
         <rdfs:label xml:lang="es">mutación del gen NEB</rdfs:label>
         <rdfs:label xml:lang="fr">variant du gène NEB</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://purl.obolibrary.org/obo/NCIT_C203906"/>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0000007"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget xml:lang="es">Una alteración genética localizada en el gen NEB.</owl:annotatedTarget>
+        <obo:IAO_0000119>reviewed by https://orcid.org/0000-0002-1500-0236</obo:IAO_0000119>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0000007"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+        <owl:annotatedTarget xml:lang="es">mutación del gen NEB</owl:annotatedTarget>
+        <rdfs:comment>reviewed by https://orcid.org/0000-0002-1500-0236</rdfs:comment>
+    </owl:Axiom>
     
 
 
@@ -752,15 +806,27 @@ https://orcid.org/0000-0002-3336-2476</dc11:creator>
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0000008">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0000003"/>
         <obo:IAO_0000115 xml:lang="en">A sequence alteration located within the MTM1 gene.</obo:IAO_0000115>
-        <obo:IAO_0000115 xml:lang="es">Una alteración genética ubicada en el gen MTM1.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="es">Una alteración genética localizada en el gen MTM1.</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="fr">Une altération génétique située au niveau du gène MTM1.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
-        <rdfs:comment>JP: Translated to spanish using Bing Translator</rdfs:comment>
+        <rdfs:comment>Translation process: Frist translated to spanish using Bing Translator then manually reviewed</rdfs:comment>
         <rdfs:label xml:lang="en">MTM1 variant</rdfs:label>
         <rdfs:label xml:lang="es">mutación del gen NMTM1</rdfs:label>
         <rdfs:label xml:lang="fr">variant du gène NMTM1</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://purl.obolibrary.org/obo/NCIT_C203822"/>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0000008"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget xml:lang="es">Una alteración genética localizada en el gen MTM1.</owl:annotatedTarget>
+        <obo:IAO_0000119>reviewed by https://orcid.org/0000-0002-1500-0236</obo:IAO_0000119>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0000008"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+        <owl:annotatedTarget xml:lang="es">mutación del gen NMTM1</owl:annotatedTarget>
+        <rdfs:comment>reviewed by https://orcid.org/0000-0002-1500-0236</rdfs:comment>
+    </owl:Axiom>
     
 
 
@@ -769,15 +835,27 @@ https://orcid.org/0000-0002-3336-2476</dc11:creator>
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0000009">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0000003"/>
         <obo:IAO_0000115 xml:lang="en">A sequence alteration located within the ACTA1 gene.</obo:IAO_0000115>
-        <obo:IAO_0000115 xml:lang="es">Una alteración genética ubicada en el gen ACTA1.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="es">Una alteración genética localizada en el gen ACTA1.</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="fr">Une altération génétique située au niveau du gène ACTA1.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
-        <rdfs:comment>JP: Translated to spanish using Bing Translator</rdfs:comment>
+        <rdfs:comment>Translation process: Frist translated to spanish using Bing Translator then manually reviewed</rdfs:comment>
         <rdfs:label xml:lang="en">ACTA1 variant</rdfs:label>
         <rdfs:label xml:lang="es">mutación del gen ACTA1</rdfs:label>
         <rdfs:label xml:lang="fr">variant du gène ACTA1</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://purl.obolibrary.org/obo/NCIT_C191893"/>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0000009"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget xml:lang="es">Una alteración genética localizada en el gen ACTA1.</owl:annotatedTarget>
+        <obo:IAO_0000119>reviewed by https://orcid.org/0000-0002-1500-0236</obo:IAO_0000119>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0000009"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+        <owl:annotatedTarget xml:lang="es">mutación del gen ACTA1</owl:annotatedTarget>
+        <rdfs:comment>reviewed by https://orcid.org/0000-0002-1500-0236</rdfs:comment>
+    </owl:Axiom>
     
 
 
@@ -786,15 +864,27 @@ https://orcid.org/0000-0002-3336-2476</dc11:creator>
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0000010">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0000003"/>
         <obo:IAO_0000115 xml:lang="en">A sequence alteration located within the SELENON gene.</obo:IAO_0000115>
-        <obo:IAO_0000115 xml:lang="es">Una alteración genética ubicada en el gen SELENON.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="es">Una alteración genética localizada en el gen SELENON.</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="fr">Une altération génétique située au niveau du gène SELENON.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
-        <rdfs:comment>JP: Translated to spanish using Bing Translator</rdfs:comment>
+        <rdfs:comment>Translation process: Frist translated to spanish using Bing Translator then manually reviewed</rdfs:comment>
         <rdfs:label xml:lang="en">SELENON variant</rdfs:label>
         <rdfs:label xml:lang="es">mutación del gen SELENON</rdfs:label>
         <rdfs:label xml:lang="fr">variant du gène SELENON</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://purl.obolibrary.org/obo/NCIT_C205071"/>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0000010"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget xml:lang="es">Una alteración genética localizada en el gen SELENON.</owl:annotatedTarget>
+        <obo:IAO_0000119>reviewed by https://orcid.org/0000-0002-1500-0236</obo:IAO_0000119>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0000010"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+        <owl:annotatedTarget xml:lang="es">mutación del gen SELENON</owl:annotatedTarget>
+        <rdfs:comment>reviewed by https://orcid.org/0000-0002-1500-0236</rdfs:comment>
+    </owl:Axiom>
     
 
 
@@ -803,15 +893,27 @@ https://orcid.org/0000-0002-3336-2476</dc11:creator>
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0000011">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0000002"/>
         <obo:IAO_0000115 xml:lang="en">A sequence alteration located within the CHRNE gene.</obo:IAO_0000115>
-        <obo:IAO_0000115 xml:lang="es">Una alteración genética ubicada en el gen CHRNE.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="es">Una alteración genética localizada en el gen CHRNE.</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="fr">Une altération génétique située au niveau du gène CHRNE.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
-        <rdfs:comment>JP: Translated to spanish using Bing Translator</rdfs:comment>
+        <rdfs:comment>Translation process: Frist translated to spanish using Bing Translator then manually reviewed</rdfs:comment>
         <rdfs:label xml:lang="en">CHRNE variant</rdfs:label>
         <rdfs:label xml:lang="es">mutación del gen CHRNE</rdfs:label>
         <rdfs:label xml:lang="fr">variant du gène CHRNE</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://purl.obolibrary.org/obo/NCIT_C198628"/>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0000011"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget xml:lang="es">Una alteración genética localizada en el gen CHRNE.</owl:annotatedTarget>
+        <obo:IAO_0000119>reviewed by https://orcid.org/0000-0002-1500-0236</obo:IAO_0000119>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0000011"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+        <owl:annotatedTarget xml:lang="es">mutación del gen CHRNE</owl:annotatedTarget>
+        <rdfs:comment>reviewed by https://orcid.org/0000-0002-1500-0236</rdfs:comment>
+    </owl:Axiom>
     
 
 
@@ -820,15 +922,27 @@ https://orcid.org/0000-0002-3336-2476</dc11:creator>
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0000012">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0000002"/>
         <obo:IAO_0000115 xml:lang="en">A sequence alteration located within the DOK7 gene.</obo:IAO_0000115>
-        <obo:IAO_0000115 xml:lang="es">Una alteración genética ubicada en el gen DOK7.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="es">Una alteración genética localizada en el gen DOK7.</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="fr">Une altération génétique située au niveau du gène DOK7.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
-        <rdfs:comment>JP: Translated to spanish using Bing Translator</rdfs:comment>
+        <rdfs:comment>Translation process: Frist translated to spanish using Bing Translator then manually reviewed</rdfs:comment>
         <rdfs:label xml:lang="en">DOK7 variant</rdfs:label>
         <rdfs:label xml:lang="es">mutación del gen DOK7</rdfs:label>
         <rdfs:label xml:lang="fr">variant du gène DOK7</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://purl.obolibrary.org/obo/NCIT_C216062"/>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0000012"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget xml:lang="es">Una alteración genética localizada en el gen DOK7.</owl:annotatedTarget>
+        <obo:IAO_0000119>reviewed by https://orcid.org/0000-0002-1500-0236</obo:IAO_0000119>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0000012"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+        <owl:annotatedTarget xml:lang="es">mutación del gen DOK7</owl:annotatedTarget>
+        <rdfs:comment>reviewed by https://orcid.org/0000-0002-1500-0236</rdfs:comment>
+    </owl:Axiom>
     
 
 
@@ -837,15 +951,27 @@ https://orcid.org/0000-0002-3336-2476</dc11:creator>
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0000013">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0000002"/>
         <obo:IAO_0000115 xml:lang="en">A sequence alteration located within the COLQ gene.</obo:IAO_0000115>
-        <obo:IAO_0000115 xml:lang="es">Una alteración genética ubicada en el gen COLQ.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="es">Una alteración genética localizada en el gen COLQ.</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="fr">Une altération génétique située au niveau du gène COLQ.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
-        <rdfs:comment>JP: Translated to spanish using Bing Translator</rdfs:comment>
+        <rdfs:comment>Translation process: Frist translated to spanish using Bing Translator then manually reviewed</rdfs:comment>
         <rdfs:label xml:lang="en">COLQ variant</rdfs:label>
         <rdfs:label xml:lang="es">mutación del gen COLQ</rdfs:label>
         <rdfs:label xml:lang="fr">variant du gène COLQ</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://purl.obolibrary.org/obo/NCIT_C200235"/>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0000013"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget xml:lang="es">Una alteración genética localizada en el gen COLQ.</owl:annotatedTarget>
+        <obo:IAO_0000119>reviewed by https://orcid.org/0000-0002-1500-0236</obo:IAO_0000119>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0000013"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+        <owl:annotatedTarget xml:lang="es">mutación del gen COLQ</owl:annotatedTarget>
+        <rdfs:comment>reviewed by https://orcid.org/0000-0002-1500-0236</rdfs:comment>
+    </owl:Axiom>
     
 
 
@@ -854,15 +980,27 @@ https://orcid.org/0000-0002-3336-2476</dc11:creator>
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0000014">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0000002"/>
         <obo:IAO_0000115 xml:lang="en">A sequence alteration located within the RAPSN gene.</obo:IAO_0000115>
-        <obo:IAO_0000115 xml:lang="es">Una alteración genética ubicada en el gen RAPSN.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="es">Una alteración genética localizada en el gen RAPSN.</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="fr">Une altération génétique située au niveau du gène RAPSN.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
-        <rdfs:comment>JP: Translated to spanish using Bing Translator</rdfs:comment>
+        <rdfs:comment>Translation process: Frist translated to spanish using Bing Translator then manually reviewed</rdfs:comment>
         <rdfs:label xml:lang="en">RAPSN variant</rdfs:label>
         <rdfs:label xml:lang="es">mutación del gen RAPSN</rdfs:label>
         <rdfs:label xml:lang="fr">variant du gène RAPSN</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://purl.obolibrary.org/obo/NCIT_C177668"/>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0000014"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget xml:lang="es">Una alteración genética localizada en el gen RAPSN.</owl:annotatedTarget>
+        <obo:IAO_0000119>reviewed by https://orcid.org/0000-0002-1500-0236</obo:IAO_0000119>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0000014"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+        <owl:annotatedTarget xml:lang="es">mutación del gen RAPSN</owl:annotatedTarget>
+        <rdfs:comment>reviewed by https://orcid.org/0000-0002-1500-0236</rdfs:comment>
+    </owl:Axiom>
     
 
 
@@ -871,15 +1009,27 @@ https://orcid.org/0000-0002-3336-2476</dc11:creator>
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0000015">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0000002"/>
         <obo:IAO_0000115 xml:lang="en">A sequence alteration located within the GFPT1 gene.</obo:IAO_0000115>
-        <obo:IAO_0000115 xml:lang="es">Una alteración genética ubicada en el gen GFPT1.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="es">Una alteración genética localizada en el gen GFPT1.</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="fr">Une altération génétique située au niveau du gène GFPT1.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
-        <rdfs:comment>JP: Translated to spanish using Bing Translator</rdfs:comment>
+        <rdfs:comment>Translation process: Frist translated to spanish using Bing Translator then manually reviewed</rdfs:comment>
         <rdfs:label xml:lang="en">GFPT1 variant</rdfs:label>
         <rdfs:label xml:lang="es">mutación del gen GFPT1</rdfs:label>
         <rdfs:label xml:lang="fr">variant du gène GFPT1</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://purl.obolibrary.org/obo/NCIT_C201657"/>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0000015"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget xml:lang="es">Una alteración genética localizada en el gen GFPT1.</owl:annotatedTarget>
+        <obo:IAO_0000119>reviewed by https://orcid.org/0000-0002-1500-0236</obo:IAO_0000119>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0000015"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+        <owl:annotatedTarget xml:lang="es">mutación del gen GFPT1</owl:annotatedTarget>
+        <rdfs:comment>reviewed by https://orcid.org/0000-0002-1500-0236</rdfs:comment>
+    </owl:Axiom>
     
 
 
@@ -888,14 +1038,26 @@ https://orcid.org/0000-0002-3336-2476</dc11:creator>
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0000016">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0000002"/>
         <obo:IAO_0000115 xml:lang="en">A sequence alteration located within the GMPPB gene.</obo:IAO_0000115>
-        <obo:IAO_0000115 xml:lang="es">Una alteración genética ubicada en el gen GMPPB.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="es">Una alteración genética localizada en el gen GMPPB.</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="fr">Une altération génétique située au niveau du gène GMPPB.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
-        <rdfs:comment>JP: Translated to spanish using Bing Translator</rdfs:comment>
+        <rdfs:comment>Translation process: Frist translated to spanish using Bing Translator then manually reviewed</rdfs:comment>
         <rdfs:label xml:lang="en">GMPPB variant</rdfs:label>
         <rdfs:label xml:lang="es">mutación del gen GMPPB</rdfs:label>
         <rdfs:label xml:lang="fr">variant du gène GMPPB</rdfs:label>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0000016"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget xml:lang="es">Una alteración genética localizada en el gen GMPPB.</owl:annotatedTarget>
+        <obo:IAO_0000119>reviewed by https://orcid.org/0000-0002-1500-0236</obo:IAO_0000119>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0000016"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+        <owl:annotatedTarget xml:lang="es">mutación del gen GMPPB</owl:annotatedTarget>
+        <rdfs:comment>reviewed by https://orcid.org/0000-0002-1500-0236</rdfs:comment>
+    </owl:Axiom>
     
 
 
@@ -1008,6 +1170,7 @@ https://orcid.org/0000-0002-3336-2476</dc11:creator>
         </rdfs:subClassOf>
         <obo:IAO_0000115 xml:lang="en">A statement that describes a human.</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="fr">Un énoncé au sujet d’un être humain qui apporte des informations à son sujet.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="es">Una declaración sobre un ser humano que aporta información sobre él.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
         <rdfs:label xml:lang="es">Declaración sobre un ser humano</rdfs:label>
         <rdfs:label xml:lang="en">statement about a human</rdfs:label>
@@ -1165,7 +1328,6 @@ https://orcid.org/0000-0002-3336-2476</dc11:creator>
         <obo:IAO_0000115 xml:lang="fr">Un énoncé au sujet d’un patient qui apporte des informations à son sujet.</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="es">Una declaración sobre un paciente que aporta información sobre él.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
-        <rdfs:comment>JP: Translated to spanish using Bing Translator</rdfs:comment>
         <rdfs:label xml:lang="es">declaración sobre un paciente</rdfs:label>
         <rdfs:label xml:lang="en">statement about a patient</rdfs:label>
         <rdfs:label xml:lang="fr">énoncé concernant un patient</rdfs:label>
@@ -1279,7 +1441,6 @@ https://orcid.org/0000-0002-3336-2476</dc11:creator>
         <obo:IAO_0000115 xml:lang="es">Una declaración sobre un fenotipo que aporta información sobre él.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
         <rdfs:comment>BIH-CEI rd-cdm: Repo for the ontology-based rare disease common data model harmonising international registry use, FHIR, and Phenopackets </rdfs:comment>
-        <rdfs:comment>JP: Translated to spanish using Bing Translator</rdfs:comment>
         <rdfs:label xml:lang="es">declaración sobre un fenotipo</rdfs:label>
         <rdfs:label xml:lang="en">statement about a phenotype</rdfs:label>
         <rdfs:label xml:lang="fr">énoncé concernant un phénotype</rdfs:label>
@@ -1305,9 +1466,9 @@ https://orcid.org/0000-0002-3336-2476</dc11:creator>
         </rdfs:subClassOf>
         <obo:IAO_0000115 xml:lang="en">A statement regarding a procedure to describe it.</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="fr">Un énoncé au sujet d’un processus qui apporte des informations à son sujet.</obo:IAO_0000115>
-        <obo:IAO_0000115 xml:lang="es">Una declaración sobre un proceso que aporta información sobre él.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="es">Una declaración sobre un procedimiento que aporta información sobre él.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
-        <rdfs:comment>JP: Translated to spanish using Bing Translator</rdfs:comment>
+        <rdfs:label xml:lang="es">declaración sobre un procedimiento</rdfs:label>
         <rdfs:label xml:lang="en">statement about a procedure</rdfs:label>
         <rdfs:label xml:lang="fr">énoncé au sujet d’une procédure</rdfs:label>
     </owl:Class>
@@ -1352,6 +1513,7 @@ https://orcid.org/0000-0002-3336-2476</dc11:creator>
         </rdfs:subClassOf>
         <obo:IAO_0000115 xml:lang="en">A statement regarding a consent to describe it.</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="fr">Un énoncé au sujet d’un consentement qui apporte des informations à son sujet.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="es">Una declaración sobre un consentimiento que aporta información sobre él.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
         <rdfs:label xml:lang="es">declaración sobre un consentimiento </rdfs:label>
         <rdfs:label xml:lang="en">statement about a consent</rdfs:label>
@@ -1364,12 +1526,26 @@ https://orcid.org/0000-0002-3336-2476</dc11:creator>
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0010006">
         <rdfs:subClassOf rdf:resource="http://snomed.info/id/363787002"/>
+        <obo:IAO_0000115 xml:lang="es">El año de la evaluación de una entidad, por ejemplo,  el año en el que se evalúa un fenotipo mediante pruebas médicas.</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="fr">L’année d’identification d’une entité, par exemple, l’année d’identification d’un phénotype via une procédure médicale.</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="en">The year of the assessment of an entity, e.g. the year when a phenotype is assessed by medical evidence.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
         <rdfs:label xml:lang="fr">Année d’identification</rdfs:label>
+        <rdfs:label xml:lang="es">Año de la evaluación</rdfs:label>
         <rdfs:label xml:lang="en">Year of assessment</rdfs:label>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0010006"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget xml:lang="es">El año de la evaluación de una entidad, por ejemplo,  el año en el que se evalúa un fenotipo mediante pruebas médicas.</owl:annotatedTarget>
+        <obo:IAO_0000119>reviewed by https://orcid.org/0000-0002-1500-0236</obo:IAO_0000119>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0010006"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+        <owl:annotatedTarget xml:lang="es">Año de la evaluación</owl:annotatedTarget>
+        <rdfs:comment>label by https://orcid.org/0000-0002-1500-0236</rdfs:comment>
+    </owl:Axiom>
     
 
 
@@ -1377,6 +1553,7 @@ https://orcid.org/0000-0002-3336-2476</dc11:creator>
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0010007">
         <rdfs:subClassOf rdf:resource="http://snomed.info/id/363787002"/>
+        <obo:IAO_0000115 xml:lang="es">El año en que se resuelve una disposición anómala, por ejemplo, el año en que un fenotipo deja de existir.</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="fr">L’année de la disparition d’une entité, par exemple, l’année de disparition d’un phénotype.</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="en">The year of the resolution of an abnormal disposition, e.g. the year when a phenotype ceases existing.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
@@ -1384,8 +1561,21 @@ https://orcid.org/0000-0002-3336-2476</dc11:creator>
         <rdfs:comment>[PROMOT note] [EURO-NMD] Atalia A et al., EURO-NMD registry: federated FAIR infrastructure, innovative technologies and concepts of a patient-centred registry for rare neuromuscular disorders. Orphanet J Rare Dis. 2024 Feb 14;19(1):66. doi: 10.1186/s13023-024-03059-3. PMID: 38355534; PMCID: PMC10865673.</rdfs:comment>
         <rdfs:comment>[PROMOT note] [RD-CDM] Graefe, A.S.L., Hübner, M.R., Rehburg, F. et al. An ontology-based rare disease common data model harmonising international registries, FHIR, and Phenopackets. Sci Data 12, 234 (2025). https://doi.org/10.1038/s41597-025-04558-z</rdfs:comment>
         <rdfs:label xml:lang="fr">Année de disparition</rdfs:label>
+        <rdfs:label xml:lang="es">Año de la resolución</rdfs:label>
         <rdfs:label xml:lang="en">Year of resolution</rdfs:label>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0010007"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget xml:lang="es">El año en que se resuelve una disposición anómala, por ejemplo, el año en que un fenotipo deja de existir.</owl:annotatedTarget>
+        <obo:IAO_0000119>reviewed by https://orcid.org/0000-0002-1500-0236</obo:IAO_0000119>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0010007"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+        <owl:annotatedTarget xml:lang="es">Año de la resolución</owl:annotatedTarget>
+        <rdfs:comment>label by https://orcid.org/0000-0002-1500-0236</rdfs:comment>
+    </owl:Axiom>
     
 
 
@@ -1394,7 +1584,7 @@ https://orcid.org/0000-0002-3336-2476</dc11:creator>
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0010008">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCIT_C20587"/>
         <obo:IAO_0000115 xml:lang="en">Age category including people of 16 years old and above.</obo:IAO_0000115>
-        <obo:IAO_0000115 xml:lang="es">Un grupo de edad que incluye a las personas de 16 años y más.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="es">Categoría de edad que incluye a las personas de 16 años y más.</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="fr">Une tranche d’âge incluant les personnes de 16 ans et plus.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
         <oboInOwl:hasDbXref>http://snomed.info/id/41847000</oboInOwl:hasDbXref>
@@ -1402,7 +1592,7 @@ https://orcid.org/0000-0002-3336-2476</dc11:creator>
         <rdfs:comment>[PROMOT note] [EURO-NMD] Atalia A et al., EURO-NMD registry: federated FAIR infrastructure, innovative technologies and concepts of a patient-centred registry for rare neuromuscular disorders. Orphanet J Rare Dis. 2024 Feb 14;19(1):66. doi: 10.1186/s13023-024-03059-3. PMID: 38355534; PMCID: PMC10865673.</rdfs:comment>
         <rdfs:comment>[PROMOT note] [RD-CDM] Graefe, A.S.L., Hübner, M.R., Rehburg, F. et al. An ontology-based rare disease common data model harmonising international registries, FHIR, and Phenopackets. Sci Data 12, 234 (2025). https://doi.org/10.1038/s41597-025-04558-z</rdfs:comment>
         <rdfs:label xml:lang="en">Adulthood</rdfs:label>
-        <rdfs:label xml:lang="es">edad adulta</rdfs:label>
+        <rdfs:label xml:lang="es">adultez</rdfs:label>
         <rdfs:label xml:lang="fr">âge adulte</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://purl.obolibrary.org/obo/HP_0003581"/>
         <skos:closeMatch>http://purl.obolibrary.org/obo/NCIT_C17600</skos:closeMatch>
@@ -1414,6 +1604,18 @@ https://orcid.org/0000-0002-3336-2476</dc11:creator>
         <owl:annotatedTarget xml:lang="en">Age category including people of 16 years old and above.</owl:annotatedTarget>
         <obo:IAO_0000119>HP:0003581</obo:IAO_0000119>
     </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0010008"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget xml:lang="es">Categoría de edad que incluye a las personas de 16 años y más.</owl:annotatedTarget>
+        <obo:IAO_0000119>reviewed by https://orcid.org/0000-0002-1500-0236</obo:IAO_0000119>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0010008"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+        <owl:annotatedTarget xml:lang="es">adultez</owl:annotatedTarget>
+        <rdfs:comment>label by https://orcid.org/0000-0002-1500-0236</rdfs:comment>
+    </owl:Axiom>
     
 
 
@@ -1422,11 +1624,11 @@ https://orcid.org/0000-0002-3336-2476</dc11:creator>
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0010009">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0010008"/>
         <obo:IAO_0000115 xml:lang="en">Age category including people of 60 years old and above.</obo:IAO_0000115>
-        <obo:IAO_0000115 xml:lang="es">Un grupo de edad que incluye a las personas de 60 años y más.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="es">Categoría de edad que incluye a las personas de 60 años y más.</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="fr">Une tranche d’âge incluant les personnes de 60 ans et plus.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
         <rdfs:label xml:lang="en">Late adulthood</rdfs:label>
-        <rdfs:label xml:lang="es">edad avanzada</rdfs:label>
+        <rdfs:label xml:lang="es">adultez avanzada</rdfs:label>
         <rdfs:label xml:lang="fr">âge avancé</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://purl.obolibrary.org/obo/HP_0003584"/>
         <skos:closeMatch>http://purl.obolibrary.org/obo/NCIT_C16268</skos:closeMatch>
@@ -1434,9 +1636,21 @@ https://orcid.org/0000-0002-3336-2476</dc11:creator>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0010009"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+        <owl:annotatedTarget xml:lang="es">adultez avanzada</owl:annotatedTarget>
+        <rdfs:comment>label by https://orcid.org/0000-0002-1500-0236</rdfs:comment>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0010009"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget xml:lang="en">Age category including people of 60 years old and above.</owl:annotatedTarget>
         <obo:IAO_0000119>HP:0003584</obo:IAO_0000119>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0010009"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget xml:lang="es">Categoría de edad que incluye a las personas de 60 años y más.</owl:annotatedTarget>
+        <obo:IAO_0000119>reviewed by https://orcid.org/0000-0002-1500-0236</obo:IAO_0000119>
     </owl:Axiom>
     
 
@@ -1446,11 +1660,11 @@ https://orcid.org/0000-0002-3336-2476</dc11:creator>
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0010010">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0010008"/>
         <obo:IAO_0000115 xml:lang="en">Age category including people between 40 and 59 years old (inclusive).</obo:IAO_0000115>
-        <obo:IAO_0000115 xml:lang="es">Un grupo de edad que incluye a las personas de 40 a 59 años incluidos.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="es">Categoría de edad que incluye a las personas de 40 a 59 años incluidos.</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="fr">Une tranche d’âge incluant les personnes de 40 à 59 ans inclus.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
         <rdfs:label xml:lang="en">Middle adulthood</rdfs:label>
-        <rdfs:label xml:lang="es">edad media</rdfs:label>
+        <rdfs:label xml:lang="es">adultez media</rdfs:label>
         <rdfs:label xml:lang="fr">âge moyen</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://purl.obolibrary.org/obo/HP_0003596"/>
         <skos:closeMatch>http://purl.obolibrary.org/obo/NCIT_C91108</skos:closeMatch>
@@ -1461,6 +1675,18 @@ https://orcid.org/0000-0002-3336-2476</dc11:creator>
         <owl:annotatedTarget xml:lang="en">Age category including people between 40 and 59 years old (inclusive).</owl:annotatedTarget>
         <obo:IAO_0000119>HP:0003596</obo:IAO_0000119>
     </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0010010"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget xml:lang="es">Categoría de edad que incluye a las personas de 40 a 59 años incluidos.</owl:annotatedTarget>
+        <obo:IAO_0000119>reviewed by https://orcid.org/0000-0002-1500-0236</obo:IAO_0000119>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0010010"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+        <owl:annotatedTarget xml:lang="es">adultez media</owl:annotatedTarget>
+        <rdfs:comment>label by https://orcid.org/0000-0002-1500-0236</rdfs:comment>
+    </owl:Axiom>
     
 
 
@@ -1469,12 +1695,12 @@ https://orcid.org/0000-0002-3336-2476</dc11:creator>
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0010011">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0010008"/>
         <obo:IAO_0000115 xml:lang="en">Age category including people between 16 and 39 years old (inclusive).</obo:IAO_0000115>
-        <obo:IAO_0000115 xml:lang="es">Un grupo de edad que incluye a las personas de 16 a 39 años incluidos.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="es">Categoría de edad que incluye a las personas de 16 a 39 años incluidos.</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="fr">Une tranche d’âge incluant les personnes entre 16 et 39 ans inclus.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
         <rdfs:label xml:lang="en">Young adulthood</rdfs:label>
+        <rdfs:label xml:lang="es">adultez joven</rdfs:label>
         <rdfs:label xml:lang="fr">jeune adulte</rdfs:label>
-        <rdfs:label xml:lang="es">joven adulto</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://purl.obolibrary.org/obo/HP_0011462"/>
         <skos:closeMatch>http://purl.obolibrary.org/obo/NCIT_C216187</skos:closeMatch>
         <skos:closeMatch>http://purl.obolibrary.org/obo/NCIT_C91107</skos:closeMatch>
@@ -1485,6 +1711,18 @@ https://orcid.org/0000-0002-3336-2476</dc11:creator>
         <owl:annotatedTarget xml:lang="en">Age category including people between 16 and 39 years old (inclusive).</owl:annotatedTarget>
         <obo:IAO_0000119>HP:0011462</obo:IAO_0000119>
     </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0010011"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget xml:lang="es">Categoría de edad que incluye a las personas de 16 a 39 años incluidos.</owl:annotatedTarget>
+        <obo:IAO_0000119>reviewed by https://orcid.org/0000-0002-1500-0236</obo:IAO_0000119>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0010011"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+        <owl:annotatedTarget xml:lang="es">adultez joven</owl:annotatedTarget>
+        <rdfs:comment>label by https://orcid.org/0000-0002-1500-0236</rdfs:comment>
+    </owl:Axiom>
     
 
 
@@ -1493,7 +1731,7 @@ https://orcid.org/0000-0002-3336-2476</dc11:creator>
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0010012">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0010011"/>
         <obo:IAO_0000115 xml:lang="en">Age category including people between 16 and 18 years old (inclusive).</obo:IAO_0000115>
-        <obo:IAO_0000115 xml:lang="es">Un grupo de edad que incluye a las personas de 16 a 18 años incluidos.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="es">Categoría de edad que incluye a las personas de 16 a 18 años incluidos.</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="fr">Une tranche d’âge incluant les personnes entre 16 et 18 ans inclus.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
         <oboInOwl:hasDbXref>http://snomed.info/id/263659003</oboInOwl:hasDbXref>
@@ -1502,6 +1740,7 @@ https://orcid.org/0000-0002-3336-2476</dc11:creator>
         <rdfs:comment>[PROMOT note] [RD-CDM] Graefe, A.S.L., Hübner, M.R., Rehburg, F. et al. An ontology-based rare disease common data model harmonising international registries, FHIR, and Phenopackets. Sci Data 12, 234 (2025). https://doi.org/10.1038/s41597-025-04558-z</rdfs:comment>
         <rdfs:label xml:lang="en">Early young adulthood</rdfs:label>
         <rdfs:label xml:lang="fr">début de l’âge adulte</rdfs:label>
+        <rdfs:label xml:lang="es">primera etapa de la adultez temprana</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://purl.obolibrary.org/obo/HP_0025708"/>
         <skos:closeMatch>http://purl.obolibrary.org/obo/NCIT_C27954</skos:closeMatch>
     </owl:Class>
@@ -1511,6 +1750,18 @@ https://orcid.org/0000-0002-3336-2476</dc11:creator>
         <owl:annotatedTarget xml:lang="en">Age category including people between 16 and 18 years old (inclusive).</owl:annotatedTarget>
         <obo:IAO_0000119>HP:0025708</obo:IAO_0000119>
     </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0010012"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget xml:lang="es">Categoría de edad que incluye a las personas de 16 a 18 años incluidos.</owl:annotatedTarget>
+        <obo:IAO_0000119>reviewed by https://orcid.org/0000-0002-1500-0236</obo:IAO_0000119>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0010012"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+        <owl:annotatedTarget xml:lang="es">primera etapa de la adultez temprana</owl:annotatedTarget>
+        <rdfs:comment>label by https://orcid.org/0000-0002-1500-0236</rdfs:comment>
+    </owl:Axiom>
     
 
 
@@ -1519,11 +1770,12 @@ https://orcid.org/0000-0002-3336-2476</dc11:creator>
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0010013">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0010011"/>
         <obo:IAO_0000115 xml:lang="en">Age category including people between 19 and 24 years old (inclusive).</obo:IAO_0000115>
-        <obo:IAO_0000115 xml:lang="es">Un grupo de edad que incluye a las personas de 19 a 24 años incluidos.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="es">Categoría de edad que incluye a las personas de 19 a 24 años incluidos.</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="fr">Une tranche d’âge incluant les personnes entre 19 et 24 ans inclus.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
+        <rdfs:comment>This term includes the full 19th year of age up to the completed 25th year of age (i.e., less than the 25th birthday). [from: HP:0025709]</rdfs:comment>
         <rdfs:label xml:lang="en">Intermediate young adulthood</rdfs:label>
-        <rdfs:label xml:lang="es">edad intermedia</rdfs:label>
+        <rdfs:label xml:lang="es">adultez temprana intermedia</rdfs:label>
         <rdfs:label xml:lang="fr">âge intermédiaire</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://purl.obolibrary.org/obo/HP_0025709"/>
     </owl:Class>
@@ -1533,6 +1785,18 @@ https://orcid.org/0000-0002-3336-2476</dc11:creator>
         <owl:annotatedTarget xml:lang="en">Age category including people between 19 and 24 years old (inclusive).</owl:annotatedTarget>
         <obo:IAO_0000119>HP:0025709</obo:IAO_0000119>
     </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0010013"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget xml:lang="es">Categoría de edad que incluye a las personas de 19 a 24 años incluidos.</owl:annotatedTarget>
+        <obo:IAO_0000119>reviewed by https://orcid.org/0000-0002-1500-0236</obo:IAO_0000119>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0010013"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+        <owl:annotatedTarget xml:lang="es">adultez temprana intermedia</owl:annotatedTarget>
+        <rdfs:comment>label by https://orcid.org/0000-0002-1500-0236</rdfs:comment>
+    </owl:Axiom>
     
 
 
@@ -1541,11 +1805,12 @@ https://orcid.org/0000-0002-3336-2476</dc11:creator>
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0010014">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0010011"/>
         <obo:IAO_0000115 xml:lang="en">Age category including people between 25 and 39 years old (inclusive).</obo:IAO_0000115>
-        <obo:IAO_0000115 xml:lang="es">Un grupo de edad que incluye a las personas de 25 a 39 años incluidos.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="es">Categoría de edad que incluye a las personas de 25 a 39 años incluidos.</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="fr">Une tranche d’âge incluant les personnes entre 25 et 39 ans inclus.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
-        <rdfs:comment>This term includes the full 19th year of age up to the completed 25th year of age (i.e., less than the 25th birthday). [from: HP:0025709]</rdfs:comment>
+        <rdfs:comment>This term includes the full 25th year of age up to the completed 40th year of age (i.e., less than the 40th birthday). [from: HP:0025710]</rdfs:comment>
         <rdfs:label xml:lang="en">Late young adulthood</rdfs:label>
+        <rdfs:label xml:lang="es">adultez temprana tardía</rdfs:label>
         <rdfs:label xml:lang="fr">fin du début de l’âge adulte</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://purl.obolibrary.org/obo/HP_0025710"/>
     </owl:Class>
@@ -1554,6 +1819,18 @@ https://orcid.org/0000-0002-3336-2476</dc11:creator>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget xml:lang="en">Age category including people between 25 and 39 years old (inclusive).</owl:annotatedTarget>
         <obo:IAO_0000119>HP:0025710</obo:IAO_0000119>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0010014"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget xml:lang="es">Categoría de edad que incluye a las personas de 25 a 39 años incluidos.</owl:annotatedTarget>
+        <obo:IAO_0000119>reviewed by https://orcid.org/0000-0002-1500-0236</obo:IAO_0000119>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0010014"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+        <owl:annotatedTarget xml:lang="es">adultez temprana tardía</owl:annotatedTarget>
+        <rdfs:comment>label by https://orcid.org/0000-0002-1500-0236</rdfs:comment>
     </owl:Axiom>
     
 
@@ -1565,10 +1842,8 @@ https://orcid.org/0000-0002-3336-2476</dc11:creator>
         <obo:IAO_0000115 xml:lang="en">Age category prior to birth.</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="fr">Une tranche d’âge inclus avant la naissance.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
-        <rdfs:comment>This term includes the full 25th year of age up to the completed 40th year of age (i.e., less than the 40th birthday). [from: HP:0025710]</rdfs:comment>
         <rdfs:label xml:lang="en">Antenatal age</rdfs:label>
         <rdfs:label xml:lang="fr">Période anténatale</rdfs:label>
-        <rdfs:seeAlso rdf:resource="http://purl.obolibrary.org/obo/HP_0025710"/>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0010015"/>
@@ -2138,10 +2413,10 @@ https://orcid.org/0000-0002-3336-2476</dc11:creator>
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0010044">
         <rdfs:subClassOf rdf:resource="http://snomed.info/id/709880000"/>
         <obo:IAO_0000115 xml:lang="en">An handedness that is unrecorded.</obo:IAO_0000115>
-        <obo:IAO_0000115 xml:lang="fr">Un état de santé inconnu en raison de l’absence de renseignement à son sujet.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="fr">manualité inconnue en raison de l’absence de renseignement à son sujet.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
         <rdfs:label xml:lang="en">Unrecorded handedness</rdfs:label>
-        <rdfs:label xml:lang="fr">état de santé non renseigné</rdfs:label>
+        <rdfs:label xml:lang="fr">manualité non renseignée</rdfs:label>
     </owl:Class>
     
 
@@ -2181,13 +2456,26 @@ https://orcid.org/0000-0002-3336-2476</dc11:creator>
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115 xml:lang="en">A body structure related to a phenotype such that the body structure is the location of the phenotype.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="es">Una estructura corporal relacionada con un fenotipo, de tal manera que la estructura corporal es la ubicación del fenotipo.</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="fr">Une structure anatomique qui est la localisation d’un phénotype.</obo:IAO_0000115>
         <obo:IAO_0000117>Paul Fabry, https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
         <rdfs:comment>(JP: unsure about definition)</rdfs:comment>
         <rdfs:label xml:lang="en">Phenotypically related body structure</rdfs:label>
         <rdfs:label xml:lang="fr">Structure anatomique liée à un phénotype</rdfs:label>
-        <rdfs:label xml:lang="es">estructura corporala relacionada con un fenotipo</rdfs:label>
+        <rdfs:label xml:lang="es">estructura corporal relacionada con un fenotipo</rdfs:label>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0020001"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget xml:lang="es">Una estructura corporal relacionada con un fenotipo, de tal manera que la estructura corporal es la ubicación del fenotipo.</owl:annotatedTarget>
+        <obo:IAO_0000119>definition by https://orcid.org/0000-0002-1500-0236</obo:IAO_0000119>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0020001"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+        <owl:annotatedTarget xml:lang="es">estructura corporal relacionada con un fenotipo</owl:annotatedTarget>
+        <rdfs:comment>reviewed by https://orcid.org/0000-0002-1500-0236</rdfs:comment>
+    </owl:Axiom>
     
 
 
@@ -2213,6 +2501,7 @@ https://orcid.org/0000-0002-3336-2476</dc11:creator>
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115 xml:lang="en">An anatomical entity related to a phenotype such that the anatomical entity is the location of the phenotype. In other words, the phenotype is a disposition of the anatomical entity.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="es">Una entidad anatómica relacionada con un fenotipo, de tal manera que la entidad anatómica es la ubicación del fenotipo. En otras palabras, el fenotipo es una disposición de la entidad anatómica.</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="fr">Une entité anatomique qui peut avoir pour disposition un phénotype. L’entité anatomique est la localisation du phénotype.</obo:IAO_0000115>
         <obo:IAO_0000117>Paul Fabry, https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
         <rdfs:comment>(JP : unsure, attention au lien avec les body structures)</rdfs:comment>
@@ -2220,6 +2509,18 @@ https://orcid.org/0000-0002-3336-2476</dc11:creator>
         <rdfs:label xml:lang="en">Phenotypically related anatomical entity</rdfs:label>
         <rdfs:label xml:lang="es">entidad anatómica relacionada con un fenotipo</rdfs:label>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0020002"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget xml:lang="es">Una entidad anatómica relacionada con un fenotipo, de tal manera que la entidad anatómica es la ubicación del fenotipo. En otras palabras, el fenotipo es una disposición de la entidad anatómica.</owl:annotatedTarget>
+        <obo:IAO_0000119>definition by https://orcid.org/0000-0002-1500-0236</obo:IAO_0000119>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0020002"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+        <owl:annotatedTarget xml:lang="es">entidad anatómica relacionada con un fenotipo</owl:annotatedTarget>
+        <rdfs:comment>Frist translated to spanish using Bing Translator then reviewed by https://orcid.org/0000-0002-1500-0236</rdfs:comment>
+    </owl:Axiom>
     
 
 
@@ -2361,13 +2662,26 @@ https://orcid.org/0000-0002-3336-2476</dc11:creator>
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0032001">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000016"/>
-        <obo:IAO_0000115 xml:lang="en">A disposition that differs from the norm, such as a disease or a phenotypic abnormality.</obo:IAO_0000115>
-        <obo:IAO_0000115 xml:lang="fr">Une disposition qui dévie de la norme, comme une maladie ou une anormalité phénotypique.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">A disposition that differs from a norm, such as a disease or a phenotypic abnormality.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="es">Una disposición que difiere de la norma, como una enfermedad o una anomalía fenotípica.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="fr">Une disposition qui dévie d’une norme, comme une maladie ou une anormalité phénotypique.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
         <rdfs:label xml:lang="en">abnormal disposition</rdfs:label>
-        <rdfs:label xml:lang="es">disposición anormal</rdfs:label>
+        <rdfs:label xml:lang="es">disposición anómala</rdfs:label>
         <rdfs:label xml:lang="fr">disposition anormale</rdfs:label>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0032001"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget xml:lang="es">Una disposición que difiere de la norma, como una enfermedad o una anomalía fenotípica.</owl:annotatedTarget>
+        <obo:IAO_0000119>definition by https://orcid.org/0000-0002-1500-0236</obo:IAO_0000119>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0032001"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+        <owl:annotatedTarget xml:lang="es">disposición anómala</owl:annotatedTarget>
+        <rdfs:comment>reviewed by https://orcid.org/0000-0002-1500-0236</rdfs:comment>
+    </owl:Axiom>
     
 
 
@@ -2393,12 +2707,25 @@ https://orcid.org/0000-0002-3336-2476</dc11:creator>
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115 xml:lang="en">A body function that is involved in an activity. The boby function is needed in order to fullfill the activity.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="es">Una función corporal que participa en una actividad. Es necesaria para que la actividad tenga lugar.</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="fr">Une fonction organique qui est impliquée dans une activité. Elle est nécessaire pour que l’activité ait lieu.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
         <rdfs:label xml:lang="en">Activity related body function</rdfs:label>
         <rdfs:label xml:lang="fr">Fonction organique liée à une activité</rdfs:label>
-        <rdfs:label xml:lang="es">función corporala relacionada con una actividad</rdfs:label>
+        <rdfs:label xml:lang="es">función corporal relacionada con una actividad</rdfs:label>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0032002"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget xml:lang="es">Una función corporal que participa en una actividad. Es necesaria para que la actividad tenga lugar.</owl:annotatedTarget>
+        <obo:IAO_0000119>definition by https://orcid.org/0000-0002-1500-0236</obo:IAO_0000119>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0032002"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+        <owl:annotatedTarget xml:lang="es">función corporal relacionada con una actividad</owl:annotatedTarget>
+        <rdfs:comment>reviewed by https://orcid.org/0000-0002-1500-0236</rdfs:comment>
+    </owl:Axiom>
     
 
 
@@ -2994,6 +3321,877 @@ https://orcid.org/0000-0002-3336-2476</dc11:creator>
     
 
 
+    <!-- http://purl.obolibrary.org/obo/PROMOT_0032024 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0032024">
+        <rdfs:subClassOf rdf:resource="http://id.who.int/icd/entity/1789365017"/>
+        <obo:IAO_0000115 xml:lang="fr">Fonctions relatives à la force générée par la contraction des muscles du cou.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="es">Funciones relacionadas con la fuerza generada por la contracción de los músculos del cuello.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">Functions related to the force generated by the contraction of a neck muscle.</obo:IAO_0000115>
+        <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
+        <rdfs:label xml:lang="es">Fuerza de los músculos del cuello</rdfs:label>
+        <rdfs:label xml:lang="en">Power of neck muscle</rdfs:label>
+        <rdfs:label xml:lang="fr">Puissance des muscles du cou</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROMOT_0032025 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0032025">
+        <rdfs:subClassOf rdf:resource="http://id.who.int/icd/entity/1789365017"/>
+        <obo:IAO_0000115 xml:lang="fr">Fonctions relatives à la force générée par la contraction des muscles du visage.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="es">Funciones relacionadas con la fuerza generada por la contracción de los músculos faciales.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">Functions related to the force generated by the contraction of a muscle of the face.</obo:IAO_0000115>
+        <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
+        <rdfs:label xml:lang="es">Fuerza de los músculos faciales</rdfs:label>
+        <rdfs:label xml:lang="en">Power of facial muscle</rdfs:label>
+        <rdfs:label xml:lang="fr">Puissance des muscles du visage</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROMOT_0032026 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0032026">
+        <rdfs:subClassOf rdf:resource="http://id.who.int/icd/entity/1789365017"/>
+        <obo:IAO_0000115 xml:lang="fr">Fonctions relatives à la force générée par la contraction des muscles extra-oculaires.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="es">Funciones relacionadas con la fuerza generada por la contracción de los músculos extraoculares.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">Functions related to the force generated by the contraction of an extra-ocular muscle.</obo:IAO_0000115>
+        <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
+        <rdfs:label xml:lang="es">Fuerza de los músculos extraoculares</rdfs:label>
+        <rdfs:label xml:lang="en">Power of extra-ocular muscle</rdfs:label>
+        <rdfs:label xml:lang="fr">Puissance des muscles extra-oculaires</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROMOT_0032027 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0032027">
+        <rdfs:subClassOf rdf:resource="http://id.who.int/icd/entity/1789365017"/>
+        <obo:IAO_0000115 xml:lang="fr">Fonctions relatives à la force générée par la contraction des muscles intercostaux.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="es">Funciones relacionadas con la fuerza generada por la contracción de los músculos intercostales.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">Functions related to the force generated by the contraction of an intercostal muscle.</obo:IAO_0000115>
+        <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
+        <rdfs:label xml:lang="es">Fuerza de los músculos intercostales</rdfs:label>
+        <rdfs:label xml:lang="en">Power of intercostal muscle</rdfs:label>
+        <rdfs:label xml:lang="fr">Puissance des muscles intercostaux</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROMOT_0032028 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0032028">
+        <rdfs:subClassOf rdf:resource="http://id.who.int/icd/entity/1789365017"/>
+        <obo:IAO_0000115 xml:lang="fr">Fonctions relatives à la force générée par la contraction des muscles abdominaux.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="es">Funciones relacionadas con la fuerza generada por la contracción de los músculos abdominales.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">Functions related to the force generated by the contraction of an abdominal muscle.</obo:IAO_0000115>
+        <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
+        <rdfs:label xml:lang="es">Fuerza de los músculos abdominales</rdfs:label>
+        <rdfs:label xml:lang="en">Power of abdominal muscle</rdfs:label>
+        <rdfs:label xml:lang="fr">Puissance des muscles abdominaux</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROMOT_0032029 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0032029">
+        <rdfs:subClassOf rdf:resource="http://id.who.int/icd/entity/1302007745"/>
+        <obo:IAO_0000115 xml:lang="fr">Fonctions relatives au maintien d&apos;une contraction musculaire des muscles intercostaux pour la période de temps requise.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="es">Funciones relacionadas con el mantenimiento de la contracción de los músculos intercostales durante un determinado periodo de tiempo.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">Functions related to sustaining contraction of intercostal muscle for the required period of time.</obo:IAO_0000115>
+        <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
+        <rdfs:label xml:lang="fr">Endurance des muscles intercostaux</rdfs:label>
+        <rdfs:label xml:lang="en">Endurance of intercostal muscle</rdfs:label>
+        <rdfs:label xml:lang="es">Resistencia de los músculos intercostales</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROMOT_0032030 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0032030">
+        <rdfs:subClassOf rdf:resource="http://id.who.int/icd/entity/1302007745"/>
+        <obo:IAO_0000115 xml:lang="fr">Fonctions relatives au maintien d&apos;une contraction musculaire des muscles du tronc pour la période de temps requise.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="es">Funciones relacionadas con el mantenimiento de la contracción de los músculos del tronco durante un determinado periodo de tiempo.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">Functions related to sustaining contraction of trunk muscles for the required period of time.</obo:IAO_0000115>
+        <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
+        <rdfs:label xml:lang="fr">Endurance des muscles du tronc</rdfs:label>
+        <rdfs:label xml:lang="en">Endurance of muscle of trunk</rdfs:label>
+        <rdfs:label xml:lang="es">Resistencia de los músculos del tronco</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROMOT_0032031 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0032031">
+        <rdfs:subClassOf rdf:resource="http://id.who.int/icd/entity/1789365017"/>
+        <obo:IAO_0000115 xml:lang="fr">Fonctions relatives à la force générée par la contraction des muscles du bassin/de la ceinture pelvienne.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="es">Funciones relacionadas con la fuerza generada por la contracción de los músculos de la pelvis/de la cintura pélvica.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">Functions related to the force generated by the contraction of a pelvic girdle muscle.</obo:IAO_0000115>
+        <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
+        <rdfs:label xml:lang="es">Fuerza de los músculos de la pelvis/de la cintura pélvica</rdfs:label>
+        <rdfs:label xml:lang="en">Power of pelvic gridle muscle</rdfs:label>
+        <rdfs:label xml:lang="fr">Puissance des muscles du bassin/de la ceinture pelvienne</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROMOT_0032032 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0032032">
+        <rdfs:subClassOf rdf:resource="http://id.who.int/icd/entity/1789365017"/>
+        <obo:IAO_0000115 xml:lang="fr">Fonctions relatives à la force générée par la contraction des muscles de la cuisse.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="es">Funciones relacionadas con la fuerza generada por la contracción de músculos del muslo.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">Functions related to the force generated by the contraction of the thigh musculature.</obo:IAO_0000115>
+        <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
+        <rdfs:label xml:lang="es">Fuerza del muslo</rdfs:label>
+        <rdfs:label xml:lang="en">Power of thigh musculature</rdfs:label>
+        <rdfs:label xml:lang="fr">Puissance musculaire de la cuisse</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROMOT_0032033 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0032033">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0032032"/>
+        <obo:IAO_0000115 xml:lang="fr">Fonctions relatives à la force générée par la contraction du muscle quadriceps femoral.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="es">Funciones relacionadas con la fuerza generada por la contracción del músculo cuádriceps femoral.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">Functions related to the force generated by the contraction of the quadriceps femoris.</obo:IAO_0000115>
+        <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
+        <rdfs:label xml:lang="es">Fuerza del músculo cuádriceps femoral</rdfs:label>
+        <rdfs:label xml:lang="en">Power of quatriceps femoris</rdfs:label>
+        <rdfs:label xml:lang="fr">Puissance du muscle quadriceps fémoral</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROMOT_0032034 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0032034">
+        <rdfs:subClassOf rdf:resource="http://id.who.int/icd/entity/1789365017"/>
+        <obo:IAO_0000115 xml:lang="fr">Fonctions relatives à la force générée par la contraction des muscles de l’épaule.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="es">Funciones relacionadas con la fuerza generada por la contracción de los músculos del hombro.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">Functions related to the force generated by the contraction of a shoulder muscle.</obo:IAO_0000115>
+        <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
+        <rdfs:label xml:lang="es">Fuerza del hombro</rdfs:label>
+        <rdfs:label xml:lang="en">Power of shoulder muscle</rdfs:label>
+        <rdfs:label xml:lang="fr">Puissance musculaire de l’épaule</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROMOT_0032035 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0032035">
+        <rdfs:subClassOf rdf:resource="http://id.who.int/icd/entity/1789365017"/>
+        <obo:IAO_0000115 xml:lang="fr">Fonctions relatives à la force générée par la contraction des muscles du bras.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="es">Funciones relacionadas con la fuerza generada por la contracción de los músculos del brazo.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">Functions related to the force generated by the contraction of an arm muscle.</obo:IAO_0000115>
+        <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
+        <rdfs:label xml:lang="es">Fuerza del brazo</rdfs:label>
+        <rdfs:label xml:lang="en">Power of arm muscle</rdfs:label>
+        <rdfs:label xml:lang="fr">Puissance musculaire du bras</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROMOT_0032036 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0032036">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0032035"/>
+        <obo:IAO_0000115 xml:lang="fr">Fonctions relatives à la force générée par la contraction du muscle triceps brachial.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="es">Funciones relacionadas con la fuerza generada por la contracción del músculo tríceps braquial.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">Functions related to the force generated by the contraction of the triceps brachii.</obo:IAO_0000115>
+        <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
+        <rdfs:label xml:lang="es">Fuerza del músculo tríceps braquial</rdfs:label>
+        <rdfs:label xml:lang="en">Power of triceps brachii</rdfs:label>
+        <rdfs:label xml:lang="fr">Puissance du muscle triceps brachial</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROMOT_0032037 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0032037">
+        <rdfs:subClassOf rdf:resource="http://id.who.int/icd/entity/1789365017"/>
+        <obo:IAO_0000115 xml:lang="fr">Fonctions relatives à la force générée par la contraction des muscles du pied.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="es">Funciones relacionadas con la fuerza generada por la contracción del pie.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">Functions related to the force generated by the contraction of a foot muscle.</obo:IAO_0000115>
+        <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
+        <rdfs:label xml:lang="es">Fuerza del pie</rdfs:label>
+        <rdfs:label xml:lang="en">Power of foot muscle</rdfs:label>
+        <rdfs:label xml:lang="fr">Puissance musculaire du pied</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROMOT_0032038 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0032038">
+        <rdfs:subClassOf rdf:resource="http://id.who.int/icd/entity/1789365017"/>
+        <obo:IAO_0000115 xml:lang="fr">Fonctions relatives à la force générée par la contraction des muscles de la jambe.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="es">Funciones relacionadas con la fuerza generada por la contracción de los músculos de las piernas.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">Functions related to the force generated by the contraction of a leg muscle.</obo:IAO_0000115>
+        <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
+        <rdfs:label xml:lang="es">Fuerza de los músculos de las piernas</rdfs:label>
+        <rdfs:label xml:lang="en">Power of leg muscle</rdfs:label>
+        <rdfs:label xml:lang="fr">Puissance musculaire de la jambe</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROMOT_0032039 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0032039">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0032038"/>
+        <obo:IAO_0000115 xml:lang="fr">Fonctions relatives à la force générée par la contraction du muscle tibial antérieur.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="es">Funciones relacionadas con la fuerza generada por la contracción del músculo tibial anterior.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">Functions related to the force generated by the contraction of the tibialis anterior.</obo:IAO_0000115>
+        <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
+        <rdfs:label xml:lang="es">Fuerza del músculo tibial anterior</rdfs:label>
+        <rdfs:label xml:lang="en">Power of tibialis anterior</rdfs:label>
+        <rdfs:label xml:lang="fr">Puissance du muscle tibial antérieur</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROMOT_0032040 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0032040">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0032038"/>
+        <obo:IAO_0000115 xml:lang="fr">Fonctions relatives à la force générée par la contraction du muscle tibial postérieur.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="es">Funciones relacionadas con la fuerza generada por la contracción del músculo tibial posterior.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">Functions related to the force generated by the contraction of the tibialis posterior.</obo:IAO_0000115>
+        <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
+        <rdfs:label xml:lang="es">Fuerza del músculo tibial posterior</rdfs:label>
+        <rdfs:label xml:lang="en">Power of tibialis posterior</rdfs:label>
+        <rdfs:label xml:lang="fr">Puissance du muscle tibial postérieur</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROMOT_0032041 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0032041">
+        <rdfs:subClassOf rdf:resource="http://id.who.int/icd/entity/1789365017"/>
+        <obo:IAO_0000115 xml:lang="fr">Fonctions relatives à la force générée par la contraction des muscles de l’avant bras.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="es">Funciones relacionadas con la fuerza generada por la contracción de los músculos del antebrazo.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">Functions related to the force generated by the contraction of a forearm muscle.</obo:IAO_0000115>
+        <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
+        <rdfs:label xml:lang="es">Fuerza de los músculos del antebrazo</rdfs:label>
+        <rdfs:label xml:lang="en">Power of forearm muscle</rdfs:label>
+        <rdfs:label xml:lang="fr">Puissance musculaire de l’avant-bras</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROMOT_0032042 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0032042">
+        <rdfs:subClassOf rdf:resource="http://id.who.int/icd/entity/1789365017"/>
+        <obo:IAO_0000115 xml:lang="fr">Fonctions relatives à la force générée par la contraction des muscles de la main.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="es">Funciones relacionadas con la fuerza generada por la contracción de los músculos de la mano.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">Functions related to the force generated by the contraction of a hand muscle.</obo:IAO_0000115>
+        <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
+        <rdfs:label xml:lang="es">Fuerza de los músculos de la mano</rdfs:label>
+        <rdfs:label xml:lang="en">Power of hand muscle</rdfs:label>
+        <rdfs:label xml:lang="fr">Puissance musculaire de la main</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROMOT_0032043 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0032043">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0032041"/>
+        <obo:IAO_0000115 xml:lang="fr">Fonctions relatives à la force générée par la contraction du muscle extenseur des doigts de la main.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="es">Funciones relacionadas con la fuerza generada por la contracción del músculo extensor de los dedos de la mano.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">Functions related to the force generated by the contraction of the extensor digitorum.</obo:IAO_0000115>
+        <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
+        <rdfs:label xml:lang="es">Fuerza del músculo extensor de los dedos de la mano</rdfs:label>
+        <rdfs:label xml:lang="en">Power of extensor digitorum</rdfs:label>
+        <rdfs:label xml:lang="fr">Puissance du muscle extenseur des doigts de la main</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROMOT_0032044 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0032044">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0032042"/>
+        <obo:IAO_0000115 xml:lang="fr">Fonctions relatives à la force générée par la contraction du muscle intrinsèque de la main.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="es">Funciones relacionadas con la fuerza generada por la contracción del músculo intrínseco de la mano.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">Functions related to the force generated by the contraction of the intrinsic muscle of hand.</obo:IAO_0000115>
+        <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
+        <rdfs:label xml:lang="es">Fuerza del músculo intrínseco de la mano</rdfs:label>
+        <rdfs:label xml:lang="en">Power of intrinsic muscle of hand</rdfs:label>
+        <rdfs:label xml:lang="fr">Puissance du muscle intrinsèque de la main</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROMOT_0032045 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0032045">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0032042"/>
+        <obo:IAO_0000115 xml:lang="fr">Fonctions relatives à la force générée par la contraction du premier muscle dorsal interosseux de la main.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="es">Funciones relacionadas con la fuerza generada por la contracción del primer músculo dorsal interóseo de la mano.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">Functions related to the force generated by the contraction of the first dorsal interosseous of hand.</obo:IAO_0000115>
+        <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
+        <rdfs:label xml:lang="es">Fuerza del primer músculo dorsal interóseo de la mano</rdfs:label>
+        <rdfs:label xml:lang="en">Power of first dorsal interosseous of hand</rdfs:label>
+        <rdfs:label xml:lang="fr">Puissance du premier muscle dorsal interosseux de la main</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROMOT_0032046 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0032046">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0032042"/>
+        <obo:IAO_0000115 xml:lang="fr">Fonctions relatives à la force générée par la contraction de l’éminence thénar.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="es">Funciones relacionadas con la fuerza generada por la contracción de los músculos de la eminencia tenar.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">Functions related to the force generated by the contraction of the thenar muscle.</obo:IAO_0000115>
+        <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
+        <rdfs:label xml:lang="es">Fuerza de los músculos de la eminencia tenar</rdfs:label>
+        <rdfs:label xml:lang="en">Power of thenar muscle</rdfs:label>
+        <rdfs:label xml:lang="fr">Puissance musculaire de l’éminence thénar</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROMOT_0032047 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0032047">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0032052"/>
+        <obo:IAO_0000115 xml:lang="fr">Fonctions relatives à la force générée par la contraction du muscle masséter.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="es">Funciones relacionadas con la fuerza generada por la contracción del músculo de la mandíbula.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">Functions related to the force generated by the contraction of the masseter.</obo:IAO_0000115>
+        <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
+        <rdfs:label xml:lang="es">Fuerza del músculo de la mandíbula</rdfs:label>
+        <rdfs:label xml:lang="en">Power of masseter</rdfs:label>
+        <rdfs:label xml:lang="fr">Puissance du muscle masséter</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROMOT_0032048 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0032048">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0032025"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0032052"/>
+        <obo:IAO_0000115 xml:lang="fr">Fonctions relatives à la force générée par la contraction du muscle buccinateur.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="es">Funciones relacionadas con la fuerza generada por la contracción del músculo buccinador.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">Functions related to the force generated by the contraction of the buccinator.</obo:IAO_0000115>
+        <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
+        <rdfs:label xml:lang="es">Fuerza del músculo buccinador</rdfs:label>
+        <rdfs:label xml:lang="en">Power of buccinator</rdfs:label>
+        <rdfs:label xml:lang="fr">Puissance du muscle buccinateur</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROMOT_0032049 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0032049">
+        <rdfs:subClassOf rdf:resource="http://id.who.int/icd/entity/1789365017"/>
+        <obo:IAO_0000115 xml:lang="fr">Fonctions relatives à la force générée par la contraction du muscle de la langue.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="es">Funciones relacionadas con la fuerza generada por la contracción del músculo de la lengua.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">Functions related to the force generated by the contraction of the tongue muscle.</obo:IAO_0000115>
+        <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
+        <rdfs:label xml:lang="es">Fuerza del músculo de la lengua</rdfs:label>
+        <rdfs:label xml:lang="en">Power of tongue muscle</rdfs:label>
+        <rdfs:label xml:lang="fr">Puissance du muscle de la langue</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROMOT_0032050 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0032050">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0032052"/>
+        <obo:IAO_0000115 xml:lang="fr">Fonctions relatives à la force générée par la contraction du muscle temporal.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="es">Funciones relacionadas con la fuerza generada por la contracción del músculo temporal.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">Functions related to the force generated by the contraction of the temporalis.</obo:IAO_0000115>
+        <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
+        <rdfs:label xml:lang="es">Fuerza del músculo temporal</rdfs:label>
+        <rdfs:label xml:lang="en">Power of temporalis</rdfs:label>
+        <rdfs:label xml:lang="fr">Puissance du muscle temporal</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROMOT_0032051 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0032051">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0032052"/>
+        <obo:IAO_0000115 xml:lang="fr">Fonctions relatives à la force générée par la contraction du muscle ptérygoïdien.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="es">Funciones relacionadas con la fuerza generada por la contracción del músculo pterigoideo.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">Functions related to the force generated by the contraction of the pterygoid muscle.</obo:IAO_0000115>
+        <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
+        <rdfs:label xml:lang="es">Fuerza del músculo pterigoideo</rdfs:label>
+        <rdfs:label xml:lang="en">Power of pterygoid muscle</rdfs:label>
+        <rdfs:label xml:lang="fr">Puissance du muscle ptérygoïdien</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROMOT_0032052 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0032052">
+        <rdfs:subClassOf rdf:resource="http://id.who.int/icd/entity/1789365017"/>
+        <obo:IAO_0000115 xml:lang="fr">Fonctions relatives à la force générée par la contraction des muscles masticatoires.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="es">Funciones relacionadas con la fuerza generada por la contracción de los músculos masticatorios.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">Functions related to the force generated by the contraction of the masticatory muscles.</obo:IAO_0000115>
+        <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
+        <rdfs:label xml:lang="es">Fuerza de los músculos masticatorios</rdfs:label>
+        <rdfs:label xml:lang="en">Power of masticatory muscles</rdfs:label>
+        <rdfs:label xml:lang="fr">Puissance des muscles masticatoires</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROMOT_0032053 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0032053">
+        <rdfs:subClassOf rdf:resource="http://id.who.int/icd/entity/1789365017"/>
+        <obo:IAO_0000115 xml:lang="fr">Fonctions relatives à la force générée par la contraction des muscles du pharynx.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="es">Funciones relacionadas con la fuerza generada por la contracción de los músculos de la faringe.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">Functions related to the force generated by the contraction of the pharyngeal muscles.</obo:IAO_0000115>
+        <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
+        <rdfs:label xml:lang="es">Fuerza de los músculos de la faringe</rdfs:label>
+        <rdfs:label xml:lang="en">Power of pharyngeal muscles</rdfs:label>
+        <rdfs:label xml:lang="fr">Puissance des muscles du pharynx</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROMOT_0032054 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0032054">
+        <rdfs:subClassOf rdf:resource="http://id.who.int/icd/entity/1789365017"/>
+        <obo:IAO_0000115 xml:lang="fr">Fonctions relatives à la force générée par la contraction d’un muscle du pharynx.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="es">Funciones relacionadas con la fuerza generada por la contracción de un músculo de la faringe.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">Functions related to the force generated by the contraction of the muscle of pharynx.</obo:IAO_0000115>
+        <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
+        <rdfs:label xml:lang="es">Fuerza de un músculo de la faringe</rdfs:label>
+        <rdfs:label xml:lang="en">Power of muscle of pharynx</rdfs:label>
+        <rdfs:label xml:lang="fr">Puissance d’un muscle du pharynx</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROMOT_0032055 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0032055">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0032060"/>
+        <obo:IAO_0000115 xml:lang="fr">Fonctions relatives au maintien d&apos;une contraction musculaire du muscle masséter pour la période de temps requise.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="es">Funciones relacionadas con el mantenimiento de la contracción del músculo de la mandíbula durante un determinado periodo de tiempo.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">Functions related to sustaining masseter contraction for the required period of time.</obo:IAO_0000115>
+        <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
+        <rdfs:label xml:lang="fr">Endurance du muscle masséter</rdfs:label>
+        <rdfs:label xml:lang="en">Endurance of masseter</rdfs:label>
+        <rdfs:label xml:lang="es">Resistencia del músculo de la mandíbula</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROMOT_0032056 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0032056">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0032060"/>
+        <obo:IAO_0000115 xml:lang="fr">Fonctions relatives au maintien d&apos;une contraction musculaire du muscle buccinateur pour la période de temps requise.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="es">Funciones relacionadas con el mantenimiento de la contracción del músculo buccinador durante un determinado periodo de tiempo.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">Functions related to sustaining buccinator contraction for the required period of time.</obo:IAO_0000115>
+        <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
+        <rdfs:label xml:lang="fr">Endurance du muscle buccinateur</rdfs:label>
+        <rdfs:label xml:lang="en">Endurance of buccinator</rdfs:label>
+        <rdfs:label xml:lang="es">Resistencia del músculo buccinador</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROMOT_0032057 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0032057">
+        <rdfs:subClassOf rdf:resource="http://id.who.int/icd/entity/1302007745"/>
+        <obo:IAO_0000115 xml:lang="fr">Fonctions relatives au maintien d&apos;une contraction musculaire du muscle de la langue pour la période de temps requise.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="es">Funciones relacionadas con el mantenimiento de la contracción del músculo de la lengua durante un determinado periodo de tiempo.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">Functions related to sustaining contraction of tongue muscle for the required period of time.</obo:IAO_0000115>
+        <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
+        <rdfs:label xml:lang="fr">Endurance du muscle de la langue</rdfs:label>
+        <rdfs:label xml:lang="en">Endurance of tongue muscle</rdfs:label>
+        <rdfs:label xml:lang="es">Resistencia del músculo de la lengua</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROMOT_0032058 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0032058">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0032060"/>
+        <obo:IAO_0000115 xml:lang="fr">Fonctions relatives au maintien d&apos;une contraction musculaire du muscle temporal pour la période de temps requise.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="es">Funciones relacionadas con el mantenimiento de la contracción del músculo temporal durante un determinado periodo de tiempo.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">Functions related to sustaining temporalis contraction for the required period of time.</obo:IAO_0000115>
+        <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
+        <rdfs:label xml:lang="fr">Endurance du muscle temporal</rdfs:label>
+        <rdfs:label xml:lang="en">Endurance of temporalis</rdfs:label>
+        <rdfs:label xml:lang="es">Resistencia del músculo temporal</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROMOT_0032059 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0032059">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0032060"/>
+        <obo:IAO_0000115 xml:lang="fr">Fonctions relatives au maintien d&apos;une contraction musculaire du muscle ptérygoïdien pour la période de temps requise.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="es">Funciones relacionadas con el mantenimiento de la contracción del músculo pterigoideo durante un determinado periodo de tiempo.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">Functions related to sustaining contraction of pterygoid muscle for the required period of time.</obo:IAO_0000115>
+        <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
+        <rdfs:label xml:lang="fr">Endurance du muscle ptérygoïdien</rdfs:label>
+        <rdfs:label xml:lang="en">Endurance of pterygoid muscle</rdfs:label>
+        <rdfs:label xml:lang="es">Resistencia del músculo pterigoideo</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROMOT_0032060 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0032060">
+        <rdfs:subClassOf rdf:resource="http://id.who.int/icd/entity/1302007745"/>
+        <obo:IAO_0000115 xml:lang="fr">Fonctions relatives au maintien d&apos;une contraction musculaire des muscles masticatoires pour la période de temps requise.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="es">Funciones relacionadas con el mantenimiento de la contracción de los músculos masticatorios durante un determinado periodo de tiempo.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">Functions related to sustaining contraction of masticatory muscles for the required period of time.</obo:IAO_0000115>
+        <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
+        <rdfs:label xml:lang="fr">Endurance des muscles masticatoires</rdfs:label>
+        <rdfs:label xml:lang="en">Endurance of masticatory muscles</rdfs:label>
+        <rdfs:label xml:lang="es">Resistencia de los músculos masticatorios</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROMOT_0032061 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0032061">
+        <rdfs:subClassOf rdf:resource="http://id.who.int/icd/entity/1302007745"/>
+        <obo:IAO_0000115 xml:lang="fr">Fonctions relatives au maintien d&apos;une contraction musculaire des muscles intercostaux pour la période de temps requise.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="es">Funciones relacionadas con el mantenimiento de la contracción de los músculos intercostales durante un determinado periodo de tiempo.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">Functions related to sustaining contraction of intercostal muscles for the required period of time.</obo:IAO_0000115>
+        <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
+        <rdfs:label xml:lang="fr">Endurance des muscles intercostaux</rdfs:label>
+        <rdfs:label xml:lang="en">Endurance of intercostal muscles</rdfs:label>
+        <rdfs:label xml:lang="es">Resistencia de los músculos intercostales</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROMOT_0032062 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0032062">
+        <rdfs:subClassOf rdf:resource="http://id.who.int/icd/entity/1302007745"/>
+        <obo:IAO_0000115 xml:lang="fr">Fonctions relatives au maintien d&apos;une contraction musculaire du diaphragme pour la période de temps requise.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="es">Funciones relacionadas con el mantenimiento de la contracción del diafragma durante un determinado periodo de tiempo.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">Functions related to sustaining diaphragm contraction for the required period of time.</obo:IAO_0000115>
+        <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
+        <rdfs:label xml:lang="fr">Endurance du diaphragme</rdfs:label>
+        <rdfs:label xml:lang="en">Endurance of diaphragm</rdfs:label>
+        <rdfs:label xml:lang="es">Resistencia del diafragma</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROMOT_0032063 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0032063">
+        <rdfs:subClassOf rdf:resource="http://id.who.int/icd/entity/1302007745"/>
+        <obo:IAO_0000115 xml:lang="fr">Fonctions relatives au maintien d&apos;une contraction musculaire des muscles de l’avant-bras pour la période de temps requise.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="es">Funciones relacionadas con el mantenimiento de la contracción de los músculos del antebrazo durante un determinado periodo de tiempo.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">Functions related to sustaining forearm muscle contraction for the required period of time.</obo:IAO_0000115>
+        <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
+        <rdfs:label xml:lang="fr">Endurance des muscles de l’avant bras</rdfs:label>
+        <rdfs:label xml:lang="en">Endurance of forearm muscle</rdfs:label>
+        <rdfs:label xml:lang="es">Resistencia de los músculos del antebrazo</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROMOT_0032064 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0032064">
+        <rdfs:subClassOf rdf:resource="http://id.who.int/icd/entity/1302007745"/>
+        <obo:IAO_0000115 xml:lang="fr">Fonctions relatives au maintien d&apos;une contraction musculaire des muscles de la main pour la période de temps requise.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="es">Funciones relacionadas con el mantenimiento de la contracción de los músculos de la mano durante un determinado periodo de tiempo.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">Functions related to sustaining muscle contraction of the hand for the required period of time.</obo:IAO_0000115>
+        <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
+        <rdfs:label xml:lang="fr">Endurance des muscles de la main</rdfs:label>
+        <rdfs:label xml:lang="en">Endurance of hand muscle</rdfs:label>
+        <rdfs:label xml:lang="es">Resistencia de los músculos de la mano</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROMOT_0032065 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0032065">
+        <rdfs:subClassOf rdf:resource="http://id.who.int/icd/entity/1302007745"/>
+        <obo:IAO_0000115 xml:lang="fr">Fonctions relatives au maintien d&apos;une contraction musculaire des muscles du pied pour la période de temps requise.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="es">Funciones relacionadas con el mantenimiento de la contracción de los músculos del pie durante un determinado periodo de tiempo.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">Functions related to sustaining muscle contraction of the foot for the required period of time.</obo:IAO_0000115>
+        <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
+        <rdfs:label xml:lang="fr">Endurance des muscles du pied</rdfs:label>
+        <rdfs:label xml:lang="en">Endurance of foot muscle</rdfs:label>
+        <rdfs:label xml:lang="es">Resistencia de los músculos del pie</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROMOT_0032066 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0032066">
+        <rdfs:subClassOf rdf:resource="http://id.who.int/icd/entity/1302007745"/>
+        <obo:IAO_0000115 xml:lang="fr">Fonctions relatives au maintien d&apos;une contraction musculaire des muscles de la jambe pour la période de temps requise.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="es">Funciones relacionadas con el mantenimiento de la contracción de los músculos de las pierna durante un determinado periodo de tiempo.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">Functions related to sustaining muscle contraction of the leg for the required period of time.</obo:IAO_0000115>
+        <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
+        <rdfs:label xml:lang="fr">Endurance des muscles de la jambe</rdfs:label>
+        <rdfs:label xml:lang="en">Endurance of leg muscle</rdfs:label>
+        <rdfs:label xml:lang="es">Resistencia de los músculos de las piernas</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROMOT_0032067 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0032067">
+        <rdfs:subClassOf rdf:resource="http://id.who.int/icd/entity/1302007745"/>
+        <obo:IAO_0000115 xml:lang="fr">Fonctions relatives au maintien d&apos;une contraction musculaire des muscles du cou pour la période de temps requise.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="es">Funciones relacionadas con el mantenimiento de la contracción de los músculos del cuello durante un determinado periodo de tiempo.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">Functions related to sustaining muscle contraction of the neck the required period of time.</obo:IAO_0000115>
+        <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
+        <rdfs:label xml:lang="fr">Endurance des muscles du cou</rdfs:label>
+        <rdfs:label xml:lang="en">Endurance of neck muscle</rdfs:label>
+        <rdfs:label xml:lang="es">Resistencia de los músculos del cuello</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROMOT_0032068 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0032068">
+        <rdfs:subClassOf rdf:resource="http://id.who.int/icd/entity/1302007745"/>
+        <obo:IAO_0000115 xml:lang="fr">Fonctions relatives au maintien d&apos;une contraction musculaire des muscles de l’épaule pour la période de temps requise.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="es">Funciones relacionadas con el mantenimiento de la contracción de los músculos del hombro durante un determinado periodo de tiempo.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">Functions related to sustaining muscle contraction of the shoulder for the required period of time.</obo:IAO_0000115>
+        <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
+        <rdfs:label xml:lang="fr">Endurance des muscles de l’épaule</rdfs:label>
+        <rdfs:label xml:lang="en">Endurance of shoulder muscle</rdfs:label>
+        <rdfs:label xml:lang="es">Resistencia de los músculos del hombro</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROMOT_0032069 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0032069">
+        <rdfs:subClassOf rdf:resource="http://id.who.int/icd/entity/1302007745"/>
+        <obo:IAO_0000115 xml:lang="fr">Fonctions relatives au maintien d&apos;une contraction musculaire de muscles du bras pour la période de temps requise.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="es">Funciones relacionadas con el mantenimiento de la contracción de los músculos del brazo durante un determinado periodo de tiempo.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">Functions related to sustaining muscle contraction of the arm for the required period of time.</obo:IAO_0000115>
+        <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
+        <rdfs:label xml:lang="fr">Endurance des muscles du bras</rdfs:label>
+        <rdfs:label xml:lang="en">Endurance of arm muscle</rdfs:label>
+        <rdfs:label xml:lang="es">Resistencia de los músculos del brazo</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROMOT_0032070 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0032070">
+        <rdfs:subClassOf rdf:resource="http://id.who.int/icd/entity/1302007745"/>
+        <obo:IAO_0000115 xml:lang="fr">Fonctions relatives au maintien d&apos;une contraction musculaire des muscles du bassin/de la ceinture pelvienne pour la période de temps requise.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="es">Funciones relacionadas con el mantenimiento de la contracción de los músculos de la pelvis/de la cintura pélvica durante un determinado periodo de tiempo.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">Functions related to sustaining muscle contraction of the pelvic gridle muscle for the required period of time.</obo:IAO_0000115>
+        <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
+        <rdfs:label xml:lang="fr">Endurance des muscles du bassin/de la ceinture pelvienne</rdfs:label>
+        <rdfs:label xml:lang="en">Endurance of pelvic gridle muscle</rdfs:label>
+        <rdfs:label xml:lang="es">Resistencia de los músculos de la pelvis/de la cintura pélvica</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROMOT_0032071 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0032071">
+        <rdfs:subClassOf rdf:resource="http://id.who.int/icd/entity/1302007745"/>
+        <obo:IAO_0000115 xml:lang="fr">Fonctions relatives au maintien d&apos;une contraction musculaire des muscles de la cuisse pour la période de temps requise.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="es">Funciones relacionadas con el mantenimiento de la contracción de los músculos del muslo durante un determinado periodo de tiempo.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">Functions related to sustaining muscle contraction of the thigh for the required period of time.</obo:IAO_0000115>
+        <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
+        <rdfs:label xml:lang="fr">Endurance des muscles de la cuisse</rdfs:label>
+        <rdfs:label xml:lang="en">Endurance of thigh musculature</rdfs:label>
+        <rdfs:label xml:lang="es">Resistencia de los músculos del muslo</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROMOT_0032072 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0032072">
+        <rdfs:subClassOf rdf:resource="http://id.who.int/icd/entity/1302007745"/>
+        <obo:IAO_0000115 xml:lang="fr">Fonctions relatives au maintien d&apos;une contraction musculaire des muscles pharyngeaux pour la période de temps requise.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="es">Funciones relacionadas con el mantenimiento de la contracción de los músculos faríngeos durante un determinado periodo de tiempo.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">Functions related to sustaining muscle contraction of pharyngeal muscles for the required period of time.</obo:IAO_0000115>
+        <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
+        <rdfs:label xml:lang="fr">Endurance des muscles pharyngeaux</rdfs:label>
+        <rdfs:label xml:lang="en">Endurance of pharyngeal muscles</rdfs:label>
+        <rdfs:label xml:lang="es">Resistencia de los músculos faríngeos</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROMOT_0032073 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0032073">
+        <rdfs:subClassOf rdf:resource="http://id.who.int/icd/entity/1302007745"/>
+        <obo:IAO_0000115 xml:lang="fr">Fonctions relatives au maintien d&apos;une contraction musculaire d’un muscle du pharynx pour la période de temps requise.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="es">Funciones relacionadas con el mantenimiento de la contracción de un músculo de la faringe durante un determinado periodo de tiempo.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">Functions related to sustaining contraction of the muscle of pharynx for the required period of time.</obo:IAO_0000115>
+        <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
+        <rdfs:label xml:lang="fr">Endurance du muscle du pharynx</rdfs:label>
+        <rdfs:label xml:lang="en">Endurance of muscle of pharynx</rdfs:label>
+        <rdfs:label xml:lang="es">Resistencia de un músculo de la faringe</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROMOT_0032074 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0032074">
+        <rdfs:subClassOf rdf:resource="http://id.who.int/icd/entity/1302007745"/>
+        <obo:IAO_0000115 xml:lang="fr">Fonctions relatives au maintien d&apos;une contraction musculaire du trapèze pour la période de temps requise.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="es">Funciones relacionadas con el mantenimiento de la contracción del trapecio durante un determinado periodo de tiempo.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">Functions related to sustaining trapezius contraction for the required period of time.</obo:IAO_0000115>
+        <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
+        <rdfs:label xml:lang="fr">Endurance du trapèze</rdfs:label>
+        <rdfs:label xml:lang="en">Endurance of trapezius</rdfs:label>
+        <rdfs:label xml:lang="es">Resistencia del trapecio</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROMOT_0032075 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0032075">
+        <rdfs:subClassOf rdf:resource="http://id.who.int/icd/entity/1789365017"/>
+        <obo:IAO_0000115 xml:lang="fr">Fonctions relatives à la force générée par la contraction du trapèze.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="es">Funciones relacionadas con la fuerza generada por la contracción del trapecio.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">Functions related to the force generated by the contraction of the trapezius.</obo:IAO_0000115>
+        <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
+        <rdfs:label xml:lang="es">Fuerza del trapecio</rdfs:label>
+        <rdfs:label xml:lang="en">Power of trapezius</rdfs:label>
+        <rdfs:label xml:lang="fr">Puissance musculaire du trapèze</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROMOT_0032076 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0032076">
+        <rdfs:subClassOf rdf:resource="http://id.who.int/icd/entity/1302007745"/>
+        <obo:IAO_0000115 xml:lang="fr">Fonctions relatives au maintien d&apos;une contraction musculaire du muscle dentelé antérieur pour la période de temps requise.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="es">Funciones relacionadas con el mantenimiento de la contracción del serrato anterior durante un determinado periodo de tiempo.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">Functions related to sustaining serratus anterior contraction for the required period of time.</obo:IAO_0000115>
+        <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
+        <rdfs:label xml:lang="fr">Endurance du muscle dentelé antérieur</rdfs:label>
+        <rdfs:label xml:lang="en">Endurance of serratus anterior</rdfs:label>
+        <rdfs:label xml:lang="es">Resistencia del serrato anterior</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROMOT_0032077 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0032077">
+        <rdfs:subClassOf rdf:resource="http://id.who.int/icd/entity/1789365017"/>
+        <obo:IAO_0000115 xml:lang="fr">Fonctions relatives à la force générée par la contraction du muscle dentelé antérieur.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="es">Funciones relacionadas con la fuerza generada por la contracción del serrato anterior.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">Functions related to the force generated by the contraction of the serratus anterior.</obo:IAO_0000115>
+        <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
+        <rdfs:label xml:lang="es">Fuerza del serrato anterior</rdfs:label>
+        <rdfs:label xml:lang="en">Power of serratus anterior</rdfs:label>
+        <rdfs:label xml:lang="fr">Puissance du muscle dentelé antérieur</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROMOT_0032078 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0032078">
+        <rdfs:subClassOf rdf:resource="http://id.who.int/icd/entity/1302007745"/>
+        <obo:IAO_0000115 xml:lang="fr">Fonctions relatives au maintien d&apos;une contraction musculaire du muscle grand rhomboïde pour la période de temps requise.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="es">Funciones relacionadas con el mantenimiento de la contracción del músculo romboides mayor durante un determinado periodo de tiempo.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">Functions related to sustaining rhomboid major contraction for the required period of time.</obo:IAO_0000115>
+        <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
+        <rdfs:label xml:lang="fr">Endurance du muscle grand rhomboïde</rdfs:label>
+        <rdfs:label xml:lang="en">Endurance of rhomboid major</rdfs:label>
+        <rdfs:label xml:lang="es">Resistencia del músculo romboides mayor</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROMOT_0032079 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0032079">
+        <rdfs:subClassOf rdf:resource="http://id.who.int/icd/entity/1789365017"/>
+        <obo:IAO_0000115 xml:lang="fr">Fonctions relatives à la force générée par la contraction du muscle grand rhomboïde.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="es">Funciones relacionadas con la fuerza generada por la contracción del músculo romboides mayor.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">Functions related to the force generated by the contraction of the rhomboid major.</obo:IAO_0000115>
+        <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
+        <rdfs:label xml:lang="es">Fuerza del músculo romboides mayor </rdfs:label>
+        <rdfs:label xml:lang="en">Power of rhomboid major</rdfs:label>
+        <rdfs:label xml:lang="fr">Puissance du muscle grand rhomboïde</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROMOT_0032080 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0032080">
+        <rdfs:subClassOf rdf:resource="http://id.who.int/icd/entity/1302007745"/>
+        <obo:IAO_0000115 xml:lang="fr">Fonctions relatives au maintien d&apos;une contraction musculaire du muscle petit rhomboïde pour la période de temps requise.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="es">Funciones relacionadas con el mantenimiento de la contracción del músculo romboides menor durante un determinado periodo de tiempo..</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">Functions related to sustaining rhomboid minor contraction for the required period of time.</obo:IAO_0000115>
+        <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
+        <rdfs:label xml:lang="fr">Endurance du muscle petit rhomboïde</rdfs:label>
+        <rdfs:label xml:lang="en">Endurance of rhomboid minor</rdfs:label>
+        <rdfs:label xml:lang="es">Resistencia del músculo romboides menor</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROMOT_0032081 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0032081">
+        <rdfs:subClassOf rdf:resource="http://id.who.int/icd/entity/1789365017"/>
+        <obo:IAO_0000115 xml:lang="fr">Fonctions relatives à la force générée par la contraction du muscle petit rhomboïde.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="es">Funciones relacionadas con la fuerza generada por la contracción del músculo romboides menor.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">Functions related to the force generated by the contraction of the rhomboid minor.</obo:IAO_0000115>
+        <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
+        <rdfs:label xml:lang="es">Fuerza del músculo romboides menor</rdfs:label>
+        <rdfs:label xml:lang="en">Power of rhomboid minor</rdfs:label>
+        <rdfs:label xml:lang="fr">Puissance du muscle petit rhomboïde</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/PROMOT_0100001 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0100001">
@@ -3016,11 +4214,25 @@ https://orcid.org/0000-0002-3336-2476</dc11:creator>
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115 xml:lang="en">A procedure that can assess a phenotype.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="es">Un procedimiento que evalua un fenotipo.</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="fr">Une procédure qui évalue un phénotype.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
         <rdfs:label xml:lang="en">Phenotypically related procedure</rdfs:label>
+        <rdfs:label xml:lang="es">Procedimiento relacionado con un fenotipo</rdfs:label>
         <rdfs:label xml:lang="fr">Procédure liée à un phénotype</rdfs:label>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0100001"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget xml:lang="es">Un procedimiento que evalua un fenotipo.</owl:annotatedTarget>
+        <obo:IAO_0000119>definition by https://orcid.org/0000-0002-1500-0236</obo:IAO_0000119>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0100001"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+        <owl:annotatedTarget xml:lang="es">Procedimiento relacionado con un fenotipo</owl:annotatedTarget>
+        <rdfs:comment>label by https://orcid.org/0000-0002-1500-0236</rdfs:comment>
+    </owl:Axiom>
     
 
 

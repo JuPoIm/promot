@@ -6,12 +6,12 @@
 -->
 
 # PROMOT ontology
-<img src="https://github.com/JuPoIm/promot/blob/test/site/assets/images/Promot_Logo_Colours.png"/ height=150 width=250/>
+<img src="https://github.com/JuPoIm/promot/blob/test/site/assets/images/Promot_Logo_Colours.png" height=150 width=250/>
 
 The PROMOT ontology represents the 3 groups of neuromuscular diseases and 13 genes the PROMOT Master Observational Trial focuses on :
-* Oculopharyngeal Muscular Dystrophy
-* Congenital Myasthenic Syndromes
-* Congenital Myopathies
+* Oculopharyngeal Muscular Dystrophy (PABPN1)
+* Congenital Myasthenic Syndromes (CHRNE, DOK7, COLQ, RAPSN, GFPT1, GMPPB)
+* Congenital Myopathies (RYR1, TTN, NEB, MTM1, ACTA1, SELENON)
 
 The PROMOT ontology aims to be the conceptual schema for the common data model the PROMOT initiative will use to collect patient data scattered between the different sites involved in PROMOT initiative.
 

@@ -1,0 +1,10 @@
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+
+DELETE {
+  ?class rdfs:label ?label .
+}
+WHERE {
+  ?class a owl:Class ;
+	 rdfs:label ?label .
+}

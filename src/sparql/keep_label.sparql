@@ -1,7 +1,0 @@
-PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-SELECT ?entity ?label ?lang
-WHERE {
-  ?entity rdfs:label ?label .
-  BIND(lang(?label) AS ?lang)
-  FILTER(?lang IN ("fr", "es"))
-}
