@@ -40,21 +40,22 @@ The latest version of the ontology can always be found at:
 Editors of this ontology should use the edit version, [src/ontology/promot-edit.owl](src/ontology/promot-edit.owl)
 
 ## Core team
-* Juliette Potier MSc (Imagine Institut)
-* Cynthia Gagnon MD, PhD (CIUSSS Saguenay-Lac-Saint-Jean, University of Sherbrooke)
-* Paul Fabry MD, PhD student (University of Sherbrooke)
-* Anita Burgun MD, PhD (AP-HP Assistance publique - Hôpitaux de Paris)
-* Carole Faviez PhD (Imagine Institute)
-* Elizabeth Angelevski DC (University of Sherbrooke)
+* Juliette Potier MSc (Imagine Institut, France)
+* Cynthia Gagnon MD, PhD (CIUSSS Saguenay-Lac-Saint-Jean, University of Sherbrooke, Québec CA)
+* Paul Fabry MD, PhD student (University of Sherbrooke, Québec CA)
+* Anita Burgun MD, PhD (AP-HP Assistance publique - Hôpitaux de Paris, France)
+* Carole Faviez PhD (Imagine Institute, France)
+* Elizabeth Angelevski DC (University of Sherbrooke, Québec CA)
 
 ### Acknowledgements
-* Mansoore Gholizade MD (University of Sherbrooke)
-* Daniel Natera de Benito MD, PhD (Hospital Sant Joan de Deu, Instituto de Salud Carloss III)
-* Claudia Côté MD, PhD (University of Sherbrooke)
+* Mansoore Gholizade MD (University of Sherbrooke, Québec CA)
+* Daniel Natera de Benito MD, PhD (Hospital Sant Joan de Deu, Instituto de Salud Carloss III, Spain)
+* Claudia Côté MD, PhD (University of Sherbrooke, Québec CA)
+* Hanns Lochmuller (University of Ottawa, Ontario CA)
 
 ## How to cite
 
-FAVIEZ Carole, et al. Designing an ontology for rare neuromuscular diseases to support federated Master Observational Trials 
+FAVIEZ Carole, et al. Designing an ontology for rare neuromuscular diseases to support federated Master Observational Trials (Draft)
 
 ## Contact
 

@@ -85,7 +85,7 @@ $(IMPORTDIR)/hp_import.owl: $(MIRRORDIR)/hp.owl $(IMPORTDIR)/hp_terms_descendant
 		$(ROBOT) merge -i $< -i $(IMPORTSDATADIR)/hp-fr.babelon.owl -i $(IMPORTSDATADIR)/hp-es.babelon.owl \
 		-i $(IMPORTSDATADIR)/hp-fr.synonyms.owl -i $(IMPORTSDATADIR)/hp-es.synonyms.owl \
 		--output $(MIRRORDIR)/hp-merged.owl; \
-		$(ROBOT) query -i $(MIRRORDIR)/hp-merged.owl --update $(SPARQLDIR)/preprocess-module.ru --update $(SPARQLDIR)/delete_candidate_translations.sparql \
+		$(ROBOT) query -i $(MIRRORDIR)/hp-merged.owl --update $(SPARQLDIR)/preprocess-module.ru \
 		filter -T $(IMPORTDIR)/hp_terms_descendants.txt \
 		--select "self descendants annotations" --signature true \
 		--output $@.tmp.owl ; \

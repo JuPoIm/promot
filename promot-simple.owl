@@ -57,7 +57,7 @@
      xmlns:CPATH_VISIT_OCCURRENCE="https://w3id.org/cpont/visit_occurrence/"
      xmlns:CPATH_CONDITION_OCCURRENCE="https://w3id.org/cpont/condition_occurrence/">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/promot/promot-simple.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/promot/releases/2026-06-01/promot-simple.owl"/>
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/promot/releases/2026-06-08/promot-simple.owl"/>
         <dc11:contributor>Anita Burgun MD, PhD
 https://orcid.org/0000-0001-6855-4366</dc11:contributor>
         <dc11:contributor>Carole Faviez PhD
@@ -86,7 +86,7 @@ https://orcid.org/0000-0002-3336-2476</dc11:creator>
         <terms:description>Ontology for modeling the three following neuromuscular diseases : OPMD, Congenital myopathies and Congenital myastenic syndroms. It aims to be also an ontology for building the PROMOT project relational database.</terms:description>
         <terms:license rdf:resource="https://creativecommons.org/licenses/by-nc-sa/4.0/"/>
         <terms:title>PROMOT ontology</terms:title>
-        <oboInOwl:date>01:06:2026 14:42</oboInOwl:date>
+        <oboInOwl:date>08:06:2026 16:13</oboInOwl:date>
         <rdfs:comment>Additional acknowledgements:
 	- Rachel Thompson
 	- Thomas Bongivault, MSc
@@ -98,7 +98,7 @@ https://orcid.org/0000-0002-3336-2476</dc11:creator>
 </rdfs:comment>
         <rdfs:seeAlso>More about PROMOT initiative at https://www.promotinitiative.com/
 </rdfs:seeAlso>
-        <owl:versionInfo>2026-06-01</owl:versionInfo>
+        <owl:versionInfo>2026-06-08</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -527,7 +527,6 @@ We also have the outstanding issue of how to aim different definitions to differ
         <obo:IAO_0000117 rdf:resource="https://orcid.org/0000-0002-6601-2165"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/ro/subsets#ro-eco"/>
         <rdfs:label xml:lang="en">has phenotype</rdfs:label>
-        <rdfs:seeAlso rdf:resource="http://purl.obolibrary.org/obo/promot/components/promot-component.owl#c"/>
     </owl:ObjectProperty>
     
 
@@ -639,6 +638,80 @@ We also have the outstanding issue of how to aim different definitions to differ
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROMOT_2000008 -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.obolibrary.org/obo/PROMOT_2000008">
+        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0032082"/>
+        <rdfs:label xml:lang="en">has date for value</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROMOT_2000009 -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.obolibrary.org/obo/PROMOT_2000009">
+        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0032083"/>
+        <rdfs:label xml:lang="en">has token for value</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROMOT_2000010 -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.obolibrary.org/obo/PROMOT_2000010">
+        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0032084"/>
+        <rdfs:label xml:lang="en">has year for value</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROMOT_2000011 -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.obolibrary.org/obo/PROMOT_2000011">
+        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0032089"/>
+        <rdfs:label xml:lang="en">has age for value</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROMOT_2000012 -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.obolibrary.org/obo/PROMOT_2000012">
+        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0032090"/>
+        <rdfs:label xml:lang="en">has decimal for value</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROMOT_2000013 -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.obolibrary.org/obo/PROMOT_2000013">
+        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0032087"/>
+        <rdfs:label xml:lang="en">has int for value</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROMOT_2000014 -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.obolibrary.org/obo/PROMOT_2000014">
+        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0032088"/>
+        <rdfs:label xml:lang="en">has duration for value</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
     // Classes
     //
     ///////////////////////////////////////////////////////////////////////////////////////
@@ -654,6 +727,12 @@ We also have the outstanding issue of how to aim different definitions to differ
         <rdfs:label xml:lang="en">OPMD related mutation</rdfs:label>
         <rdfs:label xml:lang="en">OPMD related variant</rdfs:label>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0000001"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget xml:lang="en">A sequence alteration that is causal germline mutation in Oculopharyngeal Muscular Dystrophy.</owl:annotatedTarget>
+        <obo:IAO_0000119>a</obo:IAO_0000119>
+    </owl:Axiom>
     
 
 
@@ -811,15 +890,15 @@ We also have the outstanding issue of how to aim different definitions to differ
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0000008"/>
-        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
-        <owl:annotatedTarget xml:lang="es">mutación del gen NMTM1</owl:annotatedTarget>
-        <rdfs:comment>reviewed by https://orcid.org/0000-0002-1500-0236</rdfs:comment>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0000008"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget xml:lang="es">Una alteración genética localizada en el gen MTM1.</owl:annotatedTarget>
         <obo:IAO_0000119>reviewed by https://orcid.org/0000-0002-1500-0236</obo:IAO_0000119>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0000008"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+        <owl:annotatedTarget xml:lang="es">mutación del gen NMTM1</owl:annotatedTarget>
+        <rdfs:comment>reviewed by https://orcid.org/0000-0002-1500-0236</rdfs:comment>
     </owl:Axiom>
     
 
@@ -1188,6 +1267,7 @@ We also have the outstanding issue of how to aim different definitions to differ
     <!-- http://purl.obolibrary.org/obo/PROMOT_0010006 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0010006">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0032084"/>
         <obo:IAO_0000115 xml:lang="es">El año de la evaluación de una entidad, por ejemplo,  el año en el que se evalúa un fenotipo mediante pruebas médicas.</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="fr">L’année d’identification d’une entité, par exemple, l’année d’identification d’un phénotype via une procédure médicale.</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="en">The year of the assessment of an entity, e.g. the year when a phenotype is assessed by medical evidence.</obo:IAO_0000115>
@@ -1214,6 +1294,7 @@ We also have the outstanding issue of how to aim different definitions to differ
     <!-- http://purl.obolibrary.org/obo/PROMOT_0010007 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0010007">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0032084"/>
         <obo:IAO_0000115 xml:lang="es">El año en que se resuelve una disposición anómala, por ejemplo, el año en que un fenotipo deja de existir.</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="fr">L’année de la disparition d’une entité, par exemple, l’année de disparition d’un phénotype.</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="en">The year of the resolution of an abnormal disposition, e.g. the year when a phenotype ceases existing.</obo:IAO_0000115>
@@ -2497,6 +2578,12 @@ We also have the outstanding issue of how to aim different definitions to differ
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0032009"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget xml:lang="es">Pérdida de la satisfacción o del placer de comer debida a las dificultades para comer.</owl:annotatedTarget>
+        <obo:IAO_0000119>Translated from French using Reverso.</obo:IAO_0000119>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0032009"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget xml:lang="en">A loss of enjoyment of mealtime due to difficulties while eating.</owl:annotatedTarget>
         <obo:IAO_0000119>Medical experts</obo:IAO_0000119>
         <rdfs:comment>https://orcid.org/0000-0003-2829-8470</rdfs:comment>
@@ -2506,12 +2593,6 @@ We also have the outstanding issue of how to aim different definitions to differ
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget xml:lang="fr">Perte de la satisfaction ou du plaisir à manger due à des difficultés pour manger.</owl:annotatedTarget>
         <obo:IAO_0000119>translated from English by https://orcid.org/0009-0000-5160-7927 reviewed by https://orcid.org/0000-0003-2829-847</obo:IAO_0000119>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0032009"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget xml:lang="es">Pérdida de la satisfacción o del placer de comer debida a las dificultades para comer.</owl:annotatedTarget>
-        <obo:IAO_0000119>Translated from French using Reverso.</obo:IAO_0000119>
     </owl:Axiom>
     
 
@@ -2583,6 +2664,18 @@ We also have the outstanding issue of how to aim different definitions to differ
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0032012">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0032003"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0032004"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROMOT_2000005"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0032025"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROMOT_2000005"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0032082"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <obo:IAO_0000115 xml:lang="en">A type of weakness of the facial musculature (i.e. one or more muscles innervated by the seventh cranial nerve) that occurs after a muscle group is used and lessens if the muscle group has some rest. That is, there is diminution of the strength of the facial musculature with repetitive muscle actions.</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="es">Una debilidad de la musculatura facial, es decir, uno o varios músculos que están inerbidos por el séptimo nervio craneal, que se manifiesta cuando un grupo muscular facial está bajo presión y que disminuye después de que el grupo en cuestión ha sido puesto en reposo. En resumen, se trata de una disminución de la fuerza de los músculos faciales como resultado de una carga repetida.</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="fr">Une faiblesse de la musculature faciale, c.à.d. d’un ou plusieurs muscles inervés par le septième nerf cranial, qui se manifeste quand un groupe musculaire facial est sollicité et qui diminue après que le groupe en question a été mis au repos. En résumé, il s’agit d’une diminution de la force des muscles faciaux à la suite d’une sollicitation répêtée.</obo:IAO_0000115>
@@ -2620,6 +2713,18 @@ We also have the outstanding issue of how to aim different definitions to differ
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0032013">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0032003"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROMOT_2000005"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0032026"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROMOT_2000005"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0032027"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <obo:IAO_0000115 xml:lang="en">A type of weakness of the ocular muscles that occurs after a muscle group is used and lessens if the muscle group has some rest. That is, there is diminution of the strength of the ocular muscles with repetitive muscle actions.</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="es">Una debilidad de los músculos oculares que se manifiesta cuando un grupo muscular ocular está bajo presión y que disminuye después de que el grupo en cuestión ha sido puesto en reposo. En resumen, se trata de una disminución de la fuerza de los músculos oculares como resultado de una carga repetida.</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="fr">Une faiblesse des muscles occulaires qui se manifeste quand un groupe musculaire occulaire est sollicité et qui diminue après que le groupe en question a été mis au repos. En résumé, il s’agit d’une diminution de la force des muscles occulaires à la suite d’une sollicitation répêtée.</obo:IAO_0000115>
@@ -2733,6 +2838,18 @@ We also have the outstanding issue of how to aim different definitions to differ
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0032016">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0032003"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROMOT_2000005"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0032026"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROMOT_2000005"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0032027"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <obo:IAO_0000115 xml:lang="en">A type of ptosis that occurs after the external ocular muscle group is used and lessens if the muscle group has some rest. That is, there is a ptosis apparition with repetitive external ocular muscle actions</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
         <rdfs:label xml:lang="en">Fatigable ptosis</rdfs:label>
@@ -2851,7 +2968,6 @@ We also have the outstanding issue of how to aim different definitions to differ
     <!-- http://purl.obolibrary.org/obo/PROMOT_0032026 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0032026">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0032002"/>
         <obo:IAO_0000115 xml:lang="fr">Fonctions relatives à la force générée par la contraction des muscles extra-oculaires.</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="es">Funciones relacionadas con la fuerza generada por la contracción de los músculos extraoculares.</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="en">Functions related to the force generated by the contraction of an extra-ocular muscle.</obo:IAO_0000115>
@@ -2896,6 +3012,7 @@ We also have the outstanding issue of how to aim different definitions to differ
     <!-- http://purl.obolibrary.org/obo/PROMOT_0032029 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0032029">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0032002"/>
         <obo:IAO_0000115 xml:lang="fr">Fonctions relatives au maintien d&apos;une contraction musculaire des muscles intercostaux pour la période de temps requise.</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="es">Funciones relacionadas con el mantenimiento de la contracción de los músculos intercostales durante un determinado periodo de tiempo.</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="en">Functions related to sustaining contraction of intercostal muscle for the required period of time.</obo:IAO_0000115>
@@ -2910,6 +3027,7 @@ We also have the outstanding issue of how to aim different definitions to differ
     <!-- http://purl.obolibrary.org/obo/PROMOT_0032030 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0032030">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0032002"/>
         <obo:IAO_0000115 xml:lang="fr">Fonctions relatives au maintien d&apos;une contraction musculaire des muscles du tronc pour la période de temps requise.</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="es">Funciones relacionadas con el mantenimiento de la contracción de los músculos del tronco durante un determinado periodo de tiempo.</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="en">Functions related to sustaining contraction of trunk muscles for the required period of time.</obo:IAO_0000115>
@@ -3315,6 +3433,7 @@ We also have the outstanding issue of how to aim different definitions to differ
     <!-- http://purl.obolibrary.org/obo/PROMOT_0032057 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0032057">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0032002"/>
         <obo:IAO_0000115 xml:lang="fr">Fonctions relatives au maintien d&apos;une contraction musculaire du muscle de la langue pour la période de temps requise.</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="es">Funciones relacionadas con el mantenimiento de la contracción del músculo de la lengua durante un determinado periodo de tiempo.</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="en">Functions related to sustaining contraction of tongue muscle for the required period of time.</obo:IAO_0000115>
@@ -3359,6 +3478,7 @@ We also have the outstanding issue of how to aim different definitions to differ
     <!-- http://purl.obolibrary.org/obo/PROMOT_0032060 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0032060">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0032002"/>
         <obo:IAO_0000115 xml:lang="fr">Fonctions relatives au maintien d&apos;une contraction musculaire des muscles masticatoires pour la période de temps requise.</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="es">Funciones relacionadas con el mantenimiento de la contracción de los músculos masticatorios durante un determinado periodo de tiempo.</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="en">Functions related to sustaining contraction of masticatory muscles for the required period of time.</obo:IAO_0000115>
@@ -3387,12 +3507,14 @@ We also have the outstanding issue of how to aim different definitions to differ
     <!-- http://purl.obolibrary.org/obo/PROMOT_0032062 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0032062">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0032002"/>
         <obo:IAO_0000115 xml:lang="fr">Fonctions relatives au maintien d&apos;une contraction musculaire du diaphragme pour la période de temps requise.</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="es">Funciones relacionadas con el mantenimiento de la contracción del diafragma durante un determinado periodo de tiempo.</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="en">Functions related to sustaining diaphragm contraction for the required period of time.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
         <rdfs:label xml:lang="fr">Endurance du diaphragme</rdfs:label>
         <rdfs:label xml:lang="en">Endurance of diaphragm</rdfs:label>
+        <rdfs:label xml:lang="en">Endurance of forearm muscle</rdfs:label>
         <rdfs:label xml:lang="es">Resistencia del diafragma</rdfs:label>
     </owl:Class>
     
@@ -3401,12 +3523,14 @@ We also have the outstanding issue of how to aim different definitions to differ
     <!-- http://purl.obolibrary.org/obo/PROMOT_0032063 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0032063">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0032002"/>
         <obo:IAO_0000115 xml:lang="fr">Fonctions relatives au maintien d&apos;une contraction musculaire des muscles de l’avant-bras pour la période de temps requise.</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="es">Funciones relacionadas con el mantenimiento de la contracción de los músculos del antebrazo durante un determinado periodo de tiempo.</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="en">Functions related to sustaining forearm muscle contraction for the required period of time.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
         <rdfs:label xml:lang="fr">Endurance des muscles de l’avant bras</rdfs:label>
         <rdfs:label xml:lang="en">Endurance of forearm muscle</rdfs:label>
+        <rdfs:label xml:lang="en">Endurance of hand muscle</rdfs:label>
         <rdfs:label xml:lang="es">Resistencia de los músculos del antebrazo</rdfs:label>
     </owl:Class>
     
@@ -3415,11 +3539,13 @@ We also have the outstanding issue of how to aim different definitions to differ
     <!-- http://purl.obolibrary.org/obo/PROMOT_0032064 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0032064">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0032002"/>
         <obo:IAO_0000115 xml:lang="fr">Fonctions relatives au maintien d&apos;une contraction musculaire des muscles de la main pour la période de temps requise.</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="es">Funciones relacionadas con el mantenimiento de la contracción de los músculos de la mano durante un determinado periodo de tiempo.</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="en">Functions related to sustaining muscle contraction of the hand for the required period of time.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
         <rdfs:label xml:lang="fr">Endurance des muscles de la main</rdfs:label>
+        <rdfs:label xml:lang="en">Endurance of foot muscle</rdfs:label>
         <rdfs:label xml:lang="en">Endurance of hand muscle</rdfs:label>
         <rdfs:label xml:lang="es">Resistencia de los músculos de la mano</rdfs:label>
     </owl:Class>
@@ -3429,12 +3555,14 @@ We also have the outstanding issue of how to aim different definitions to differ
     <!-- http://purl.obolibrary.org/obo/PROMOT_0032065 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0032065">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0032002"/>
         <obo:IAO_0000115 xml:lang="fr">Fonctions relatives au maintien d&apos;une contraction musculaire des muscles du pied pour la période de temps requise.</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="es">Funciones relacionadas con el mantenimiento de la contracción de los músculos del pie durante un determinado periodo de tiempo.</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="en">Functions related to sustaining muscle contraction of the foot for the required period of time.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
         <rdfs:label xml:lang="fr">Endurance des muscles du pied</rdfs:label>
         <rdfs:label xml:lang="en">Endurance of foot muscle</rdfs:label>
+        <rdfs:label xml:lang="en">Endurance of leg muscle</rdfs:label>
         <rdfs:label xml:lang="es">Resistencia de los músculos del pie</rdfs:label>
     </owl:Class>
     
@@ -3443,12 +3571,14 @@ We also have the outstanding issue of how to aim different definitions to differ
     <!-- http://purl.obolibrary.org/obo/PROMOT_0032066 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0032066">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0032002"/>
         <obo:IAO_0000115 xml:lang="fr">Fonctions relatives au maintien d&apos;une contraction musculaire des muscles de la jambe pour la période de temps requise.</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="es">Funciones relacionadas con el mantenimiento de la contracción de los músculos de las pierna durante un determinado periodo de tiempo.</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="en">Functions related to sustaining muscle contraction of the leg for the required period of time.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
         <rdfs:label xml:lang="fr">Endurance des muscles de la jambe</rdfs:label>
         <rdfs:label xml:lang="en">Endurance of leg muscle</rdfs:label>
+        <rdfs:label xml:lang="en">Endurance of neck muscle</rdfs:label>
         <rdfs:label xml:lang="es">Resistencia de los músculos de las piernas</rdfs:label>
     </owl:Class>
     
@@ -3457,12 +3587,14 @@ We also have the outstanding issue of how to aim different definitions to differ
     <!-- http://purl.obolibrary.org/obo/PROMOT_0032067 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0032067">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0032002"/>
         <obo:IAO_0000115 xml:lang="fr">Fonctions relatives au maintien d&apos;une contraction musculaire des muscles du cou pour la période de temps requise.</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="es">Funciones relacionadas con el mantenimiento de la contracción de los músculos del cuello durante un determinado periodo de tiempo.</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="en">Functions related to sustaining muscle contraction of the neck the required period of time.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
         <rdfs:label xml:lang="fr">Endurance des muscles du cou</rdfs:label>
         <rdfs:label xml:lang="en">Endurance of neck muscle</rdfs:label>
+        <rdfs:label xml:lang="en">Endurance of shoulder muscle</rdfs:label>
         <rdfs:label xml:lang="es">Resistencia de los músculos del cuello</rdfs:label>
     </owl:Class>
     
@@ -3471,11 +3603,13 @@ We also have the outstanding issue of how to aim different definitions to differ
     <!-- http://purl.obolibrary.org/obo/PROMOT_0032068 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0032068">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0032002"/>
         <obo:IAO_0000115 xml:lang="fr">Fonctions relatives au maintien d&apos;une contraction musculaire des muscles de l’épaule pour la période de temps requise.</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="es">Funciones relacionadas con el mantenimiento de la contracción de los músculos del hombro durante un determinado periodo de tiempo.</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="en">Functions related to sustaining muscle contraction of the shoulder for the required period of time.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
         <rdfs:label xml:lang="fr">Endurance des muscles de l’épaule</rdfs:label>
+        <rdfs:label xml:lang="en">Endurance of arm muscle</rdfs:label>
         <rdfs:label xml:lang="en">Endurance of shoulder muscle</rdfs:label>
         <rdfs:label xml:lang="es">Resistencia de los músculos del hombro</rdfs:label>
     </owl:Class>
@@ -3485,12 +3619,14 @@ We also have the outstanding issue of how to aim different definitions to differ
     <!-- http://purl.obolibrary.org/obo/PROMOT_0032069 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0032069">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0032002"/>
         <obo:IAO_0000115 xml:lang="fr">Fonctions relatives au maintien d&apos;une contraction musculaire de muscles du bras pour la période de temps requise.</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="es">Funciones relacionadas con el mantenimiento de la contracción de los músculos del brazo durante un determinado periodo de tiempo.</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="en">Functions related to sustaining muscle contraction of the arm for the required period of time.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
         <rdfs:label xml:lang="fr">Endurance des muscles du bras</rdfs:label>
         <rdfs:label xml:lang="en">Endurance of arm muscle</rdfs:label>
+        <rdfs:label xml:lang="en">Endurance of pelvic gridle muscle</rdfs:label>
         <rdfs:label xml:lang="es">Resistencia de los músculos del brazo</rdfs:label>
     </owl:Class>
     
@@ -3499,12 +3635,14 @@ We also have the outstanding issue of how to aim different definitions to differ
     <!-- http://purl.obolibrary.org/obo/PROMOT_0032070 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0032070">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0032002"/>
         <obo:IAO_0000115 xml:lang="fr">Fonctions relatives au maintien d&apos;une contraction musculaire des muscles du bassin/de la ceinture pelvienne pour la période de temps requise.</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="es">Funciones relacionadas con el mantenimiento de la contracción de los músculos de la pelvis/de la cintura pélvica durante un determinado periodo de tiempo.</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="en">Functions related to sustaining muscle contraction of the pelvic gridle muscle for the required period of time.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
         <rdfs:label xml:lang="fr">Endurance des muscles du bassin/de la ceinture pelvienne</rdfs:label>
         <rdfs:label xml:lang="en">Endurance of pelvic gridle muscle</rdfs:label>
+        <rdfs:label xml:lang="en">Endurance of thigh musculature</rdfs:label>
         <rdfs:label xml:lang="es">Resistencia de los músculos de la pelvis/de la cintura pélvica</rdfs:label>
     </owl:Class>
     
@@ -3513,11 +3651,13 @@ We also have the outstanding issue of how to aim different definitions to differ
     <!-- http://purl.obolibrary.org/obo/PROMOT_0032071 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0032071">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0032002"/>
         <obo:IAO_0000115 xml:lang="fr">Fonctions relatives au maintien d&apos;une contraction musculaire des muscles de la cuisse pour la période de temps requise.</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="es">Funciones relacionadas con el mantenimiento de la contracción de los músculos del muslo durante un determinado periodo de tiempo.</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="en">Functions related to sustaining muscle contraction of the thigh for the required period of time.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
         <rdfs:label xml:lang="fr">Endurance des muscles de la cuisse</rdfs:label>
+        <rdfs:label xml:lang="en">Endurance of pharyngeal muscles</rdfs:label>
         <rdfs:label xml:lang="en">Endurance of thigh musculature</rdfs:label>
         <rdfs:label xml:lang="es">Resistencia de los músculos del muslo</rdfs:label>
     </owl:Class>
@@ -3527,11 +3667,13 @@ We also have the outstanding issue of how to aim different definitions to differ
     <!-- http://purl.obolibrary.org/obo/PROMOT_0032072 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0032072">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0032002"/>
         <obo:IAO_0000115 xml:lang="fr">Fonctions relatives au maintien d&apos;une contraction musculaire des muscles pharyngeaux pour la période de temps requise.</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="es">Funciones relacionadas con el mantenimiento de la contracción de los músculos faríngeos durante un determinado periodo de tiempo.</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="en">Functions related to sustaining muscle contraction of pharyngeal muscles for the required period of time.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
         <rdfs:label xml:lang="fr">Endurance des muscles pharyngeaux</rdfs:label>
+        <rdfs:label xml:lang="en">Endurance of muscle of pharynx</rdfs:label>
         <rdfs:label xml:lang="en">Endurance of pharyngeal muscles</rdfs:label>
         <rdfs:label xml:lang="es">Resistencia de los músculos faríngeos</rdfs:label>
     </owl:Class>
@@ -3541,12 +3683,14 @@ We also have the outstanding issue of how to aim different definitions to differ
     <!-- http://purl.obolibrary.org/obo/PROMOT_0032073 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0032073">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0032002"/>
         <obo:IAO_0000115 xml:lang="fr">Fonctions relatives au maintien d&apos;une contraction musculaire d’un muscle du pharynx pour la période de temps requise.</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="es">Funciones relacionadas con el mantenimiento de la contracción de un músculo de la faringe durante un determinado periodo de tiempo.</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="en">Functions related to sustaining contraction of the muscle of pharynx for the required period of time.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
         <rdfs:label xml:lang="fr">Endurance du muscle du pharynx</rdfs:label>
         <rdfs:label xml:lang="en">Endurance of muscle of pharynx</rdfs:label>
+        <rdfs:label xml:lang="en">Endurance of trapezius</rdfs:label>
         <rdfs:label xml:lang="es">Resistencia de un músculo de la faringe</rdfs:label>
     </owl:Class>
     
@@ -3555,12 +3699,14 @@ We also have the outstanding issue of how to aim different definitions to differ
     <!-- http://purl.obolibrary.org/obo/PROMOT_0032074 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0032074">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0032002"/>
         <obo:IAO_0000115 xml:lang="fr">Fonctions relatives au maintien d&apos;une contraction musculaire du trapèze pour la période de temps requise.</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="es">Funciones relacionadas con el mantenimiento de la contracción del trapecio durante un determinado periodo de tiempo.</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="en">Functions related to sustaining trapezius contraction for the required period of time.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
         <rdfs:label xml:lang="fr">Endurance du trapèze</rdfs:label>
         <rdfs:label xml:lang="en">Endurance of trapezius</rdfs:label>
+        <rdfs:label xml:lang="en">Power of trapezius</rdfs:label>
         <rdfs:label xml:lang="es">Resistencia del trapecio</rdfs:label>
     </owl:Class>
     
@@ -3574,6 +3720,7 @@ We also have the outstanding issue of how to aim different definitions to differ
         <obo:IAO_0000115 xml:lang="es">Funciones relacionadas con la fuerza generada por la contracción del trapecio.</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="en">Functions related to the force generated by the contraction of the trapezius.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
+        <rdfs:label xml:lang="en">Endurance of serratus anterior</rdfs:label>
         <rdfs:label xml:lang="es">Fuerza del trapecio</rdfs:label>
         <rdfs:label xml:lang="en">Power of trapezius</rdfs:label>
         <rdfs:label xml:lang="fr">Puissance musculaire du trapèze</rdfs:label>
@@ -3584,12 +3731,14 @@ We also have the outstanding issue of how to aim different definitions to differ
     <!-- http://purl.obolibrary.org/obo/PROMOT_0032076 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0032076">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0032002"/>
         <obo:IAO_0000115 xml:lang="fr">Fonctions relatives au maintien d&apos;une contraction musculaire du muscle dentelé antérieur pour la période de temps requise.</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="es">Funciones relacionadas con el mantenimiento de la contracción del serrato anterior durante un determinado periodo de tiempo.</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="en">Functions related to sustaining serratus anterior contraction for the required period of time.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
         <rdfs:label xml:lang="fr">Endurance du muscle dentelé antérieur</rdfs:label>
         <rdfs:label xml:lang="en">Endurance of serratus anterior</rdfs:label>
+        <rdfs:label xml:lang="en">Power of serratus anterior</rdfs:label>
         <rdfs:label xml:lang="es">Resistencia del serrato anterior</rdfs:label>
     </owl:Class>
     
@@ -3603,6 +3752,7 @@ We also have the outstanding issue of how to aim different definitions to differ
         <obo:IAO_0000115 xml:lang="es">Funciones relacionadas con la fuerza generada por la contracción del serrato anterior.</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="en">Functions related to the force generated by the contraction of the serratus anterior.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
+        <rdfs:label xml:lang="en">Endurance of rhomboid major</rdfs:label>
         <rdfs:label xml:lang="es">Fuerza del serrato anterior</rdfs:label>
         <rdfs:label xml:lang="en">Power of serratus anterior</rdfs:label>
         <rdfs:label xml:lang="fr">Puissance du muscle dentelé antérieur</rdfs:label>
@@ -3613,12 +3763,14 @@ We also have the outstanding issue of how to aim different definitions to differ
     <!-- http://purl.obolibrary.org/obo/PROMOT_0032078 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0032078">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0032002"/>
         <obo:IAO_0000115 xml:lang="fr">Fonctions relatives au maintien d&apos;une contraction musculaire du muscle grand rhomboïde pour la période de temps requise.</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="es">Funciones relacionadas con el mantenimiento de la contracción del músculo romboides mayor durante un determinado periodo de tiempo.</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="en">Functions related to sustaining rhomboid major contraction for the required period of time.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
         <rdfs:label xml:lang="fr">Endurance du muscle grand rhomboïde</rdfs:label>
         <rdfs:label xml:lang="en">Endurance of rhomboid major</rdfs:label>
+        <rdfs:label xml:lang="en">Power of rhomboid major</rdfs:label>
         <rdfs:label xml:lang="es">Resistencia del músculo romboides mayor</rdfs:label>
     </owl:Class>
     
@@ -3632,6 +3784,7 @@ We also have the outstanding issue of how to aim different definitions to differ
         <obo:IAO_0000115 xml:lang="es">Funciones relacionadas con la fuerza generada por la contracción del músculo romboides mayor.</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="en">Functions related to the force generated by the contraction of the rhomboid major.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
+        <rdfs:label xml:lang="en">Endurance of rhomboid minor</rdfs:label>
         <rdfs:label xml:lang="es">Fuerza del músculo romboides mayor </rdfs:label>
         <rdfs:label xml:lang="en">Power of rhomboid major</rdfs:label>
         <rdfs:label xml:lang="fr">Puissance du muscle grand rhomboïde</rdfs:label>
@@ -3642,12 +3795,14 @@ We also have the outstanding issue of how to aim different definitions to differ
     <!-- http://purl.obolibrary.org/obo/PROMOT_0032080 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0032080">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0032002"/>
         <obo:IAO_0000115 xml:lang="fr">Fonctions relatives au maintien d&apos;une contraction musculaire du muscle petit rhomboïde pour la période de temps requise.</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="es">Funciones relacionadas con el mantenimiento de la contracción del músculo romboides menor durante un determinado periodo de tiempo..</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="en">Functions related to sustaining rhomboid minor contraction for the required period of time.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
         <rdfs:label xml:lang="fr">Endurance du muscle petit rhomboïde</rdfs:label>
         <rdfs:label xml:lang="en">Endurance of rhomboid minor</rdfs:label>
+        <rdfs:label xml:lang="en">Power of rhomboid minor</rdfs:label>
         <rdfs:label xml:lang="es">Resistencia del músculo romboides menor</rdfs:label>
     </owl:Class>
     
@@ -3656,7 +3811,6 @@ We also have the outstanding issue of how to aim different definitions to differ
     <!-- http://purl.obolibrary.org/obo/PROMOT_0032081 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0032081">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0032002"/>
         <obo:IAO_0000115 xml:lang="fr">Fonctions relatives à la force générée par la contraction du muscle petit rhomboïde.</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="es">Funciones relacionadas con la fuerza generada por la contracción del músculo romboides menor.</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="en">Functions related to the force generated by the contraction of the rhomboid minor.</obo:IAO_0000115>
@@ -3664,6 +3818,70 @@ We also have the outstanding issue of how to aim different definitions to differ
         <rdfs:label xml:lang="es">Fuerza del músculo romboides menor</rdfs:label>
         <rdfs:label xml:lang="en">Power of rhomboid minor</rdfs:label>
         <rdfs:label xml:lang="fr">Puissance du muscle petit rhomboïde</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROMOT_0032082 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0032082">
+        <obo:IAO_0000115 xml:lang="en">an information content entity where the information is a date.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">date content entity</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROMOT_0032083 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0032083">
+        <obo:IAO_0000115 xml:lang="en">an information content entity where the information is a token.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">token content entity</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROMOT_0032084 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0032084">
+        <obo:IAO_0000115 xml:lang="en">an information content entity where the information is a year.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">year content entity</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROMOT_0032087 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0032087">
+        <obo:IAO_0000115 xml:lang="en">an information content entity where the information is an int.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">int content entity</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROMOT_0032088 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0032088">
+        <obo:IAO_0000115 xml:lang="en">an information content entity where the information is a duration.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">duration content entity</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROMOT_0032089 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0032089">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0032087"/>
+        <obo:IAO_0000115 xml:lang="en">an information content entity where the information is an age.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">age content entity</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROMOT_0032090 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0032090">
+        <obo:IAO_0000115 xml:lang="en">an information content entity where the information is a decimal.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">decimal content entity</rdfs:label>
     </owl:Class>
     
 

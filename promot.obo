@@ -1,6 +1,6 @@
 format-version: 1.2
-data-version: releases/2026-06-01
-date: 01:06:2026 14:41
+data-version: releases/2026-06-08
+date: 08:06:2026 16:12
 subsetdef: hposlim_core ""
 subsetdef: http://purl.obolibrary.org/obo/valid_for_go_annotation_extension ""
 subsetdef: http://purl.obolibrary.org/obo/valid_for_go_gp2term ""
@@ -167,7 +167,7 @@ property_value: dc11:creator "Paul Fabry MD, PhD student\nhttps://orcid.org/0000
 property_value: dcterms:description "Ontology for modeling the three following neuromuscular diseases : OPMD, Congenital myopathies and Congenital myastenic syndroms. It aims to be also an ontology for building the PROMOT project relational database." xsd:string
 property_value: dcterms:license https://creativecommons.org/licenses/by-nc-sa/4.0/
 property_value: dcterms:title "PROMOT ontology" xsd:string
-property_value: owl:versionInfo "2026-06-01" xsd:string
+property_value: owl:versionInfo "2026-06-08" xsd:string
 property_value: seeAlso "More about PROMOT initiative at https://www.promotinitiative.com/\n" xsd:string
 
 [Term]
@@ -1909,8 +1909,8 @@ is_a: PROMOT:0032003 ! Body function related phenotype
 is_a: PROMOT:0032004 ! Activity related phenotype
 relationship: PROMOT:2000005 ICF:1328675264 ! affecte Comer
 relationship: PROMOT:2000005 ICF:151046878 ! affecte Hablar
-relationship: PROMOT:2000005 ICF:1789365017 ! affecte Fuerza de músculos aislados o de grupos de músculos
 relationship: PROMOT:2000005 ICF:553784299 ! affecte Beber
+relationship: PROMOT:2000005 PROMOT:0032050 ! affecte Fuerza del músculo temporal
 property_value: PROMOT:1000001 "[OPMD Clinical Registry Form]" xsd:string
 
 [Term]
@@ -2028,7 +2028,7 @@ synonym: "anomalie de la musculature de la face|anomalie des muscles de la face|
 synonym: "Facial muscle issue" EXACT layperson []
 xref: UMLS:C4025865
 is_a: HP:0011799 ! Abnormality of facial soft tissue
-is_a: HP:0011805 ! Abnormal skeletal muscle morphology
+is_a: HP:0040286 ! Abnormal axial muscle morphology
 
 [Term]
 id: HP:0000467
@@ -2043,8 +2043,8 @@ xref: UMLS:C0240479
 is_a: HP:0001324 ! Muscle weakness
 is_a: PROMOT:0032003 ! Body function related phenotype
 is_a: PROMOT:0032004 ! Activity related phenotype
-relationship: PROMOT:2000005 ICF:1789365017 ! affecte Fuerza de músculos aislados o de grupos de músculos
 relationship: PROMOT:2000005 ICF:2048203604 ! affecte Mobility
+relationship: PROMOT:2000005 PROMOT:0032024 ! affecte Fuerza de los músculos del cuello
 property_value: PROMOT:1000001 "[OPMD HPO KB associations]" xsd:string
 property_value: PROMOT:1000001 "[OPMD Scoping review 2026] Bélair N, Gagnon C, Duchesne E. What is known about muscle weakness, balance impairments and indoor mobility limitations in oculopharyngeal muscular dystrophy? A scoping review. J Neuromuscul Dis. 2025 Dec 30:22143602251397052. doi: 10.1177/22143602251397052. Epub ahead of print. PMID: 41467981." xsd:string
 property_value: PROMOT:1000001 "Congenital myasthenic syndrom HPO DB associations" xsd:string
@@ -2113,7 +2113,7 @@ xref: UMLS:C0497202
 is_a: HP:0012373 ! Abnormal eye physiology
 is_a: PROMOT:0032003 ! Body function related phenotype
 relationship: PROMOT:2000005 ICF:1090716697 ! affecte Fonctions des muscles externes de l'œil
-relationship: PROMOT:2000005 ICF:1789365017 ! affecte Fuerza de músculos aislados o de grupos de músculos
+relationship: PROMOT:2000005 PROMOT:0032026 ! affecte Fuerza de los músculos extraoculares
 property_value: PROMOT:1000001 "Congenital myasthenic syndrom HPO DB associations" xsd:string
 property_value: PROMOT:1000001 "Congenital myasthenic syndrom Scoping review" xsd:string
 property_value: PROMOT:1000001 "Congenital myopathy Scoping review" xsd:string
@@ -2148,8 +2148,8 @@ xref: SNOMEDCT_US:11934000
 xref: UMLS:C0005745
 is_a: HP:0012373 ! Abnormal eye physiology
 is_a: PROMOT:0032003 ! Body function related phenotype
-relationship: PROMOT:2000005 ICF:1789365017 ! affecte Fuerza de músculos aislados o de grupos de músculos
 relationship: PROMOT:2000005 ICF:2021370201 ! affecte Fonctions de la paupière
+relationship: PROMOT:2000005 PROMOT:0032026 ! affecte Fuerza de los músculos extraoculares
 property_value: PROMOT:1000001 "[OPMD Clinical Registry Form]" xsd:string
 property_value: PROMOT:1000001 "[OPMD Clinical Research Form]" xsd:string
 property_value: PROMOT:1000001 "[OPMD HPO KB associations]" xsd:string
@@ -2571,7 +2571,7 @@ synonym: "Decreased reflex response|Decreased reflexes" EXACT []
 synonym: "Decreased reflexes" EXACT layperson [https://orcid.org/0000-0001-5208-3432, https://orcid.org/0000-0002-6548-5200]
 xref: SNOMEDCT_US:405946002
 xref: UMLS:C0700078
-is_a: HP:0001315 ! Reduced tendon reflexes
+is_a: HP:0001315 ! Diminished deep tendon reflex
 property_value: PROMOT:1000001 "Congenital myasthenic syndrom HPO DB associations" xsd:string
 property_value: PROMOT:1000001 "Congenital myasthenic syndrom Scoping review" xsd:string
 property_value: PROMOT:1000001 "Congenital myopathy HPO KB associations" xsd:string
@@ -2646,7 +2646,7 @@ xref: SNOMEDCT_US:37280007
 xref: UMLS:C0234146
 xref: UMLS:C0241772
 xref: UMLS:C0278124
-is_a: HP:0001315 ! Reduced tendon reflexes
+is_a: HP:0001315 ! Diminished deep tendon reflex
 property_value: PROMOT:1000001 "Congenital myasthenic syndrom HPO DB associations" xsd:string
 property_value: PROMOT:1000001 "Congenital myasthenic syndrom Scoping review" xsd:string
 property_value: PROMOT:1000001 "Congenital myopathy HPO KB associations" xsd:string
@@ -2703,9 +2703,9 @@ is_a: HP:0012638 ! Abnormal nervous system physiology
 
 [Term]
 id: HP:0001315
-name: Reduced tendon reflexes
+name: Diminished deep tendon reflex
 alt_id: HP:0001316
-def: "Diminution of tendon reflexes, which is an invariable sign of peripheral nerve disease." [https://orcid.org/0000-0002-0736-9199, PMID:20941667]
+def: "A reduction (hyporeflexia) or complete absence (areflexia) of the involuntary muscle contraction normally elicited by a reflex stimulus, such as tapping a deep tendon." [https://orcid.org/0000-0002-0736-9199, PMID:20941667]
 comment: The deep tendon reflex is a monosynaptic reflex arc with sensory and motor nerve components, but the arc is much more vulnerable to sensory nerve damage. Ankle plantar flexion is retained in all but the most severe peripheral neuropathies, and thus loss of the Achilles tendon reflex in an objective indication of a substantial sensory nerve defect.
 synonym: "Absent or decreased deep tendon reflexes" EXACT []
 synonym: "Absent or decreased deep tendon reflexes|Decreased deep tendon reflexes|Decreased tendon reflexes|Decreased to absent deep tendon reflexes|Decreased/absent deep tendon reflexes|Depressed tendon reflexes|Diminished deep tendon reflexes|Diminished or absent deep tendon reflexes|Diminished or absent tendon reflexes|Hypoactive to absent deep tendon reflexes|Impaired tendon reflexes|Reduced/absent deep tendon reflexes|Weak or absent deep tendon reflexes" EXACT []
@@ -2719,6 +2719,7 @@ synonym: "Diminished or absent deep tendon reflexes" EXACT []
 synonym: "Diminished or absent tendon reflexes" EXACT []
 synonym: "Hypoactive to absent deep tendon reflexes" EXACT []
 synonym: "Impaired tendon reflexes" EXACT []
+synonym: "Reduced tendon reflexes" EXACT []
 synonym: "Reduced/absent deep tendon reflexes" EXACT []
 synonym: "Weak or absent deep tendon reflexes" EXACT []
 xref: UMLS:C1866934
@@ -2956,7 +2957,7 @@ synonym: "Abnormal upper limb muscles" EXACT layperson [https://orcid.org/0000-0
 synonym: "Anomalie des muscules des membres supérieurs" EXACT []
 xref: UMLS:C4025779
 is_a: HP:0002817 ! Abnormality of the upper limb
-is_a: HP:0009127 ! Abnormality of the musculature of the limbs
+is_a: HP:0009127 ! Abnormal appendicular muscle morphology
 property_value: dcterms:creator https://orcid.org/0000-0002-0736-9199
 property_value: dcterms:date "2008-04-07T10:40:00Z" xsd:dateTime
 
@@ -2965,7 +2966,7 @@ id: HP:0001469
 name: Abnormal morphology of the pelvis musculature
 synonym: "Abnormality of the musculature of the pelvis" EXACT []
 xref: UMLS:C4025768
-is_a: HP:0011805 ! Abnormal skeletal muscle morphology
+is_a: HP:0009127 ! Abnormal appendicular muscle morphology
 property_value: dcterms:creator https://orcid.org/0000-0002-0736-9199
 property_value: dcterms:date "2008-04-07T10:55:00Z" xsd:dateTime
 
@@ -3450,8 +3451,8 @@ id: HP:0002033
 name: Poor suck
 def: "An inadequate sucking reflex, resulting in the difficult of newborns to be breast-fed." [https://orcid.org/0000-0002-0736-9199]
 synonym: "Poor suck" EXACT layperson []
-synonym: "Poor sucking" EXACT []
 synonym: "Poor sucking" EXACT layperson [https://orcid.org/0000-0002-5316-1399]
+synonym: "Poor sucking" EXACT []
 synonym: "Sucking weakness" EXACT []
 xref: UMLS:C1837142
 is_a: HP:0008872 ! Feeding difficulties in infancy
@@ -3486,7 +3487,7 @@ xref: SNOMEDCT_US:26432009
 xref: UMLS:C0332615
 is_a: HP:0004673 ! Decreased facial expression
 is_a: PROMOT:0032003 ! Body function related phenotype
-relationship: PROMOT:2000005 ICF:1789365017 ! affecte Fuerza de músculos aislados o de grupos de músculos
+relationship: PROMOT:2000005 PROMOT:0032025 ! affecte Fuerza de los músculos faciales
 property_value: PROMOT:1000001 "Congenital myopathy HPO KB associations" xsd:string
 property_value: PROMOT:1000001 "Congenital myopathy Scoping review" xsd:string
 
@@ -3566,7 +3567,6 @@ synonym: "difficultés respiratoires" EXACT []
 synonym: "détresse respiratoire" EXACT []
 synonym: "Labored breathing" EXACT layperson []
 synonym: "Laboured breathing" EXACT uk_spelling []
-synonym: "Respiratory difficulties" EXACT []
 xref: SNOMEDCT_US:230145002
 xref: SNOMEDCT_US:267036007
 xref: SNOMEDCT_US:271825005
@@ -4197,21 +4197,25 @@ relationship: PROMOT:2000005 ICF:2048203604 ! affecte Mobility
 
 [Term]
 id: HP:0003236
-name: Elevated circulating creatine kinase concentration
+name: Elevated circulating creatine kinase activity
 alt_id: HP:0002147
 alt_id: HP:0002906
 alt_id: HP:0003078
 alt_id: HP:0003525
 alt_id: HP:0003531
 alt_id: HP:0008164
-def: "An elevation of the level of the enzyme creatine kinase (also known as creatine phosphokinase (CK; EC 2.7.3.2) in the blood. CK levels can be elevated in a number of clinical disorders such as myocardial infarction, rhabdomyolysis, and muscular dystrophy." [https://orcid.org/0000-0002-0736-9199]
+def: "The activity of creatine kinase in the blood circulation is above the upper limit of normal." []
 comment: Elevated serum creatine kinase (CK) activity is usually an indicator of muscle damage. Diseases with very high CK values include subtypes of muscular dystrophies, idiopathic inflammatory myopathies and metabolic myopathies. However, a normal or only slightly elevated CK value does not exclude the presence of a myopathy. The normal range in the blood circulation is 34-171 U/l in males and 34-145 U/l in females, but may vary according to the test used.
 synonym: "Augmentation de la CPK" EXACT []
 synonym: "augmentation de la creatine-kinase" EXACT []
 synonym: "augmentation de la créatine phosphokinase" EXACT []
 synonym: "Elevated blood creatine phosphokinase" EXACT layperson []
+synonym: "Elevated circulating creatine kinase activity" EXACT []
 synonym: "Elevated circulating creatine phosphokinase" EXACT layperson []
 synonym: "Elevated creatine kinase" EXACT layperson []
+synonym: "Elevated creatine kinase concentration" EXACT []
+synonym: "Elevated creatine kinase level" EXACT []
+synonym: "Elevated creatine kinase level in blood" EXACT []
 synonym: "Elevated serum CPK" EXACT layperson []
 synonym: "Elevated serum creatine kinase" EXACT layperson []
 synonym: "Elevated serum creatine phosphokinase" EXACT layperson []
@@ -4220,13 +4224,17 @@ synonym: "Elévation de la CPK sérique|Augmentation de la CPK|augmentation de l
 synonym: "High serum creatine kinase" EXACT layperson []
 synonym: "Increased CPK" EXACT layperson []
 synonym: "Increased creatine kinase" EXACT layperson []
+synonym: "Increased creatine kinase concentration" EXACT []
+synonym: "Increased creatine kinase level" EXACT []
+synonym: "Increased creatine kinase level in blood" EXACT []
 synonym: "Increased creatine phosphokinase" EXACT layperson []
 synonym: "Increased serum CK" EXACT layperson []
 synonym: "Increased serum creatine kinase" EXACT layperson []
 synonym: "Increased serum creatine phosphokinase" EXACT layperson []
 xref: UMLS:C0151576
 xref: UMLS:C0241005
-is_a: HP:0040081 ! Abnormal circulating creatine kinase concentration
+is_a: HP:0040081 ! Abnormal circulating creatine kinase activity
+property_value: dcterms:contributor https://orcid.org/0000-0002-0736-9199
 property_value: PROMOT:1000001 "[OPMD HPO KB associations]" xsd:string
 property_value: PROMOT:1000001 "Congenital myasthenic syndrom HPO DB associations" xsd:string
 property_value: PROMOT:1000001 "Congenital myasthenic syndrom Scoping review" xsd:string
@@ -4304,7 +4312,7 @@ synonym: "Muscle weakness, limb-girdle" EXACT []
 synonym: "Muscular weakness, limb-girdle" EXACT []
 xref: UMLS:C1858127
 is_a: HP:0001324 ! Muscle weakness
-is_a: HP:0009127 ! Abnormality of the musculature of the limbs
+is_a: HP:0009127 ! Abnormal appendicular muscle morphology
 is_a: PROMOT:0032003 ! Body function related phenotype
 is_a: PROMOT:0032004 ! Activity related phenotype
 relationship: PROMOT:2000005 ICF:1789365017 ! affecte Fuerza de músculos aislados o de grupos de músculos
@@ -4373,6 +4381,7 @@ id: HP:0003392
 name: First dorsal interossei muscle weakness
 xref: UMLS:C1832277
 is_a: HP:0002460 ! Distal muscle weakness
+relationship: PROMOT:2000005 PROMOT:0032046 ! affecte Fuerza de los músculos de la eminencia tenar
 property_value: PROMOT:1000001 "[OPMD Clinical Registry Form]" xsd:string
 property_value: PROMOT:1000001 "[OPMD Scoping review 2026] Bélair N, Gagnon C, Duchesne E. What is known about muscle weakness, balance impairments and indoor mobility limitations in oculopharyngeal muscular dystrophy? A scoping review. J Neuromuscul Dis. 2025 Dec 30:22143602251397052. doi: 10.1177/22143602251397052. Epub ahead of print. PMID: 41467981." xsd:string
 property_value: PROMOT:1000001 "Congenital myasthenic syndrom Scoping review" xsd:string
@@ -4385,8 +4394,8 @@ alt_id: HP:0009018
 alt_id: HP:0031988
 def: "Sudden and involuntary contractions of one or more muscles." [https://orcid.org/0000-0002-0736-9199]
 synonym: "crampe musculaire" EXACT []
-synonym: "Muscle cramps" EXACT []
 synonym: "Muscle cramps" EXACT plural_form []
+synonym: "Muscle cramps" EXACT []
 synonym: "Muscle spasms" EXACT plural_form []
 synonym: "Nocturnal hand and foot cramps" NARROW []
 synonym: "Nocturnal leg cramp" NARROW []
@@ -4436,6 +4445,7 @@ id: HP:0003427
 name: Thenar muscle weakness
 xref: UMLS:C1832276
 is_a: HP:0030237 ! Hand muscle weakness
+relationship: PROMOT:2000005 PROMOT:0032047 ! affecte Fuerza del músculo de la mandíbula
 property_value: PROMOT:1000001 "[OPMD Clinical Registry Form]" xsd:string
 property_value: PROMOT:1000001 "[OPMD Clinical Research Form]" xsd:string
 property_value: PROMOT:1000001 "[OPMD Scoping review 2026] Bélair N, Gagnon C, Duchesne E. What is known about muscle weakness, balance impairments and indoor mobility limitations in oculopharyngeal muscular dystrophy? A scoping review. J Neuromuscul Dis. 2025 Dec 30:22143602251397052. doi: 10.1177/22143602251397052. Epub ahead of print. PMID: 41467981." xsd:string
@@ -4564,6 +4574,7 @@ xref: UMLS:C0427063
 xref: UMLS:C0748691
 is_a: HP:0001435 ! Abnormality of the shoulder girdle musculature
 is_a: HP:0003325 ! Limb-girdle muscle weakness
+relationship: PROMOT:2000005 PROMOT:0032035 ! affecte Fuerza del brazo
 property_value: PROMOT:1000001 "[OPMD Clinical Registry Form]" xsd:string
 property_value: PROMOT:1000001 "[OPMD Clinical Research Form]" xsd:string
 property_value: PROMOT:1000001 "[OPMD Scoping review 2026] Bélair N, Gagnon C, Duchesne E. What is known about muscle weakness, balance impairments and indoor mobility limitations in oculopharyngeal muscular dystrophy? A scoping review. J Neuromuscul Dis. 2025 Dec 30:22143602251397052. doi: 10.1177/22143602251397052. Epub ahead of print. PMID: 41467981." xsd:string
@@ -4846,7 +4857,7 @@ synonym: "Limb weakness" EXACT []
 xref: SNOMEDCT_US:713514005
 xref: UMLS:C0587246
 is_a: HP:0001324 ! Muscle weakness
-is_a: HP:0009127 ! Abnormality of the musculature of the limbs
+is_a: HP:0009127 ! Abnormal appendicular muscle morphology
 is_a: PROMOT:0032003 ! Body function related phenotype
 is_a: PROMOT:0032004 ! Activity related phenotype
 relationship: PROMOT:2000005 ICF:1789365017 ! affecte Fuerza de músculos aislados o de grupos de músculos
@@ -4880,9 +4891,9 @@ is_a: HP:0000782 ! Abnormal scapula morphology
 is_a: HP:0001435 ! Abnormality of the shoulder girdle musculature
 is_a: PROMOT:0032003 ! Body function related phenotype
 is_a: PROMOT:0032004 ! Activity related phenotype
-relationship: PROMOT:2000005 ICF:1521707777 ! affecte Endurance des groupes de muscles
-relationship: PROMOT:2000005 ICF:1789365017 ! affecte Fuerza de músculos aislados o de grupos de músculos
 relationship: PROMOT:2000005 ICF:2048203604 ! affecte Mobility
+relationship: PROMOT:2000005 PROMOT:0032035 ! affecte Fuerza del brazo
+relationship: PROMOT:2000005 PROMOT:0032068 ! affecte Endurance des muscles de l’épaule
 property_value: PROMOT:1000001 "Congenital myopathy HPO KB associations" xsd:string
 property_value: PROMOT:1000001 "Congenital myopathy Scoping review" xsd:string
 
@@ -4955,6 +4966,7 @@ synonym: "Quadriceps weakness" EXACT layperson []
 xref: SNOMEDCT_US:300948004
 xref: UMLS:C0577655
 is_a: HP:0008994 ! Proximal lower limb muscle weakness
+relationship: PROMOT:2000005 PROMOT:0032034 ! affecte Fuerza del hombro
 property_value: PROMOT:1000001 "[OPMD Clinical Registry Form]" xsd:string
 property_value: PROMOT:1000001 "[OPMD Scoping review 2026] Bélair N, Gagnon C, Duchesne E. What is known about muscle weakness, balance impairments and indoor mobility limitations in oculopharyngeal muscular dystrophy? A scoping review. J Neuromuscul Dis. 2025 Dec 30:22143602251397052. doi: 10.1177/22143602251397052. Epub ahead of print. PMID: 41467981." xsd:string
 property_value: PROMOT:1000001 "Congenital myasthenic syndrom Scoping review" xsd:string
@@ -4975,6 +4987,7 @@ synonym: "Pelvic girdle weakness" EXACT []
 xref: SNOMEDCT_US:249941003
 xref: UMLS:C0427064
 is_a: HP:0003325 ! Limb-girdle muscle weakness
+relationship: PROMOT:2000005 PROMOT:0032032 ! affecte Fuerza del muslo
 property_value: PROMOT:1000001 "[OPMD Clinical Registry Form]" xsd:string
 property_value: PROMOT:1000001 "[OPMD Clinical Research Form]" xsd:string
 property_value: PROMOT:1000001 "[OPMD Scoping review 2026] Bélair N, Gagnon C, Duchesne E. What is known about muscle weakness, balance impairments and indoor mobility limitations in oculopharyngeal muscular dystrophy? A scoping review. J Neuromuscul Dis. 2025 Dec 30:22143602251397052. doi: 10.1177/22143602251397052. Epub ahead of print. PMID: 41467981." xsd:string
@@ -5197,9 +5210,9 @@ xref: UMLS:C0240017
 is_a: HP:0001324 ! Muscle weakness
 is_a: HP:0002093 ! Respiratory insufficiency
 is_a: PROMOT:0032004 ! Activity related phenotype
-relationship: PROMOT:2000005 ICF:1789365017 ! affecte Fuerza de músculos aislados o de grupos de músculos
 relationship: PROMOT:2000005 ICF:2048203604 ! affecte Mobility
 relationship: PROMOT:2000005 ICF:556694745 ! affecte Fuerza de los músculos del tronco
+relationship: PROMOT:2000005 PROMOT:0032028 ! affecte Fuerza de los músculos abdominales
 property_value: PROMOT:1000001 "[OPMD Scoping review 2026] Bélair N, Gagnon C, Duchesne E. What is known about muscle weakness, balance impairments and indoor mobility limitations in oculopharyngeal muscular dystrophy? A scoping review. J Neuromuscul Dis. 2025 Dec 30:22143602251397052. doi: 10.1177/22143602251397052. Epub ahead of print. PMID: 41467981." xsd:string
 property_value: PROMOT:1000001 "Congenital myasthenic syndrom Scoping review" xsd:string
 property_value: PROMOT:1000001 "Congenital myopathy HPO KB associations" xsd:string
@@ -5395,7 +5408,7 @@ synonym: "Moderately elevated serum CK" EXACT abbreviation [https://orcid.org/00
 synonym: "Moderately elevated serum CPK" EXACT abbreviation [https://orcid.org/0000-0001-7941-2961]
 synonym: "Moderately increased serum creatine kinase" EXACT []
 xref: UMLS:C1850309
-is_a: HP:0003236 ! Elevated circulating creatine kinase concentration
+is_a: HP:0003236 ! Elevated circulating creatine kinase activity
 property_value: PROMOT:1000001 "Congenital myasthenic syndrom HPO DB associations" xsd:string
 property_value: PROMOT:1000001 "Congenital myasthenic syndrom Scoping review" xsd:string
 property_value: PROMOT:1000001 "Congenital myopathy HPO KB associations" xsd:string
@@ -5454,8 +5467,8 @@ is_a: HP:0001445 ! Abnormality of the hip-girdle musculature
 is_a: HP:0001471 ! Aplasia/Hypoplasia of the musculature of the pelvis
 is_a: PROMOT:0032003 ! Body function related phenotype
 is_a: PROMOT:0032004 ! Activity related phenotype
-relationship: PROMOT:2000005 ICF:1789365017 ! affecte Fuerza de músculos aislados o de grupos de músculos
 relationship: PROMOT:2000005 ICF:2048203604 ! affecte Mobility
+relationship: PROMOT:2000005 PROMOT:0032032 ! affecte Fuerza del muslo
 property_value: PROMOT:1000001 "[OPMD Clinical Research Form]" xsd:string
 
 [Term]
@@ -5501,8 +5514,8 @@ xref: UMLS:C1834536
 is_a: HP:0001421 ! Abnormality of the musculature of the hand
 is_a: PROMOT:0032003 ! Body function related phenotype
 is_a: PROMOT:0032004 ! Activity related phenotype
-relationship: PROMOT:2000005 ICF:1789365017 ! affecte Fuerza de músculos aislados o de grupos de músculos
 relationship: PROMOT:2000005 ICF:2048203604 ! affecte Mobility
+relationship: PROMOT:2000005 PROMOT:0032045 ! affecte Fuerza del primer músculo dorsal interóseo de la mano
 property_value: PROMOT:1000001 "[OPMD Clinical Registry Form]" xsd:string
 property_value: PROMOT:1000001 "[OPMD Scoping review 2026] Bélair N, Gagnon C, Duchesne E. What is known about muscle weakness, balance impairments and indoor mobility limitations in oculopharyngeal muscular dystrophy? A scoping review. J Neuromuscul Dis. 2025 Dec 30:22143602251397052. doi: 10.1177/22143602251397052. Epub ahead of print. PMID: 41467981." xsd:string
 property_value: PROMOT:1000001 "Congenital myasthenic syndrom HPO DB associations" xsd:string
@@ -5524,9 +5537,9 @@ xref: UMLS:C4021527
 is_a: HP:0001324 ! Muscle weakness
 is_a: PROMOT:0032003 ! Body function related phenotype
 is_a: PROMOT:0032004 ! Activity related phenotype
-relationship: PROMOT:2000005 ICF:1789365017 ! affecte Fuerza de músculos aislados o de grupos de músculos
 relationship: PROMOT:2000005 ICF:2048203604 ! affecte Mobility
 relationship: PROMOT:2000005 ICF:556694745 ! affecte Fuerza de los músculos del tronco
+relationship: PROMOT:2000005 PROMOT:0032029 ! affecte Endurance des muscles intercostaux
 property_value: PROMOT:1000001 "[OPMD Scoping review 2026] Bélair N, Gagnon C, Duchesne E. What is known about muscle weakness, balance impairments and indoor mobility limitations in oculopharyngeal muscular dystrophy? A scoping review. J Neuromuscul Dis. 2025 Dec 30:22143602251397052. doi: 10.1177/22143602251397052. Epub ahead of print. PMID: 41467981." xsd:string
 property_value: PROMOT:1000001 "Congenital myasthenic syndrom Scoping review" xsd:string
 property_value: PROMOT:1000001 "Congenital myopathy Scoping review" xsd:string
@@ -5547,6 +5560,7 @@ xref: SNOMEDCT_US:6077001
 xref: UMLS:C0085684
 xref: UMLS:C1866141
 is_a: HP:0003690 ! Limb muscle weakness
+relationship: PROMOT:2000005 PROMOT:0032038 ! affecte Fuerza de los músculos de las piernas
 property_value: PROMOT:1000001 "[OPMD Clinical Registry Form]" xsd:string
 property_value: PROMOT:1000001 "[OPMD Clinical Research Form]" xsd:string
 property_value: PROMOT:1000001 "[OPMD Scoping review 2026] Bélair N, Gagnon C, Duchesne E. What is known about muscle weakness, balance impairments and indoor mobility limitations in oculopharyngeal muscular dystrophy? A scoping review. J Neuromuscul Dis. 2025 Dec 30:22143602251397052. doi: 10.1177/22143602251397052. Epub ahead of print. PMID: 41467981." xsd:string
@@ -5560,7 +5574,7 @@ name: Generalized weakness of limb muscles
 def: "Generalized weakness of the muscles of the arms and legs." [https://orcid.org/0000-0002-0736-9199]
 synonym: "Generalised weakness of limb muscles" EXACT uk_spelling []
 xref: UMLS:C4024605
-is_a: HP:0009127 ! Abnormality of the musculature of the limbs
+is_a: HP:0009127 ! Abnormal appendicular muscle morphology
 is_a: PROMOT:0032003 ! Body function related phenotype
 is_a: PROMOT:0032004 ! Activity related phenotype
 relationship: PROMOT:2000005 ICF:1789365017 ! affecte Fuerza de músculos aislados o de grupos de músculos
@@ -5645,6 +5659,7 @@ id: HP:0009077
 name: Weakness of long finger extensor muscles
 xref: UMLS:C4024601
 is_a: HP:0030237 ! Hand muscle weakness
+relationship: PROMOT:2000005 PROMOT:0032044 ! affecte Fuerza del músculo intrínseco de la mano
 property_value: PROMOT:1000001 "[OPMD Clinical Registry Form]" xsd:string
 property_value: PROMOT:1000001 "[OPMD Scoping review 2026] Bélair N, Gagnon C, Duchesne E. What is known about muscle weakness, balance impairments and indoor mobility limitations in oculopharyngeal muscular dystrophy? A scoping review. J Neuromuscul Dis. 2025 Dec 30:22143602251397052. doi: 10.1177/22143602251397052. Epub ahead of print. PMID: 41467981." xsd:string
 property_value: PROMOT:1000001 "Congenital myasthenic syndrom HPO DB associations" xsd:string
@@ -5666,7 +5681,8 @@ property_value: dcterms:date "2008-04-05T11:16:00Z" xsd:dateTime
 
 [Term]
 id: HP:0009127
-name: Abnormality of the musculature of the limbs
+name: Abnormal appendicular muscle morphology
+def: "A structural anomaly of the appendicular musculature, comprising muscles of the upper limb and pectoral girdle as well as muscles of the lower limb and pelvic girdle." []
 synonym: "Abnormal limb muscles" EXACT layperson [https://orcid.org/0000-0001-5208-3432]
 synonym: "Abnormal limb muscles|Muscle issues in the arms and/or legs" EXACT []
 synonym: "Muscle issues in the arms and/or legs" EXACT layperson []
@@ -5716,7 +5732,7 @@ synonym: "Serum protein abnormality" RELATED []
 xref: UMLS:C4020763
 xref: UMLS:C4020764
 xref: UMLS:C4023679
-is_a: HP:0032180 ! Abnormal circulating metabolite concentration
+is_a: HP:0430071 ! Abnormal circulating organic compound concentration
 property_value: dcterms:creator https://orcid.org/0000-0002-0736-9199
 property_value: dcterms:date "2010-09-07T01:51:12Z" xsd:dateTime
 
@@ -5916,6 +5932,7 @@ synonym: "Fibularis muscle weakness" EXACT []
 synonym: "Fibularis muscle weakness" EXACT [https://orcid.org/0000-0001-6908-9849]
 xref: UMLS:C0240733
 is_a: HP:0009053 ! Distal lower limb muscle weakness
+relationship: PROMOT:2000005 PROMOT:0032039 ! affecte Fuerza del músculo tibial anterior
 property_value: dcterms:creator https://orcid.org/0000-0002-0736-9199
 property_value: dcterms:date "2012-04-11T10:26:15Z" xsd:dateTime
 property_value: PROMOT:1000001 "[OPMD Clinical Registry Form]" xsd:string
@@ -6041,13 +6058,11 @@ property_value: skos:changeNote "[PROMOT note] The PROMOT ontology added a comme
 [Term]
 id: HP:0012154
 name: Anhedonia
-def: "Decreased ability or inability to experience, feel, or anticipate pleasure from activities, experiences, or stimuli that are typically found pleasurable by the individual. This may involve diminished enjoyment of previously rewarding experiences (e.g., hobbies, social interactions, or sexual activity) or reduced pleasure in response to stimuli processed through the senses (e.g., music, food, or tactile contact). Anhedonia is a disruption in the capacity to derive emotional reward and is not due to primary sensory deficits or medical conditions (e.g., anosmia from viral illness). The phenomenon involves altered affective processing rather than impaired sensory perception." [PMID:3107136, PMID:32789515, PMID:37424409]
+def: "Decreased ability or inability to experience, feel, or anticipate pleasure from activities, experiences, or stimuli that are typically found pleasurable by the individual. This may involve diminished enjoyment of previously rewarding experiences (e.g., hobbies, social interactions, or sexual activity) or reduced pleasure in response to stimuli processed through the senses (e.g., music, food, or tactile contact). Anhedonia is a disruption in the capacity to derive emotional reward and is not due to primary sensory deficits or medical conditions (e.g., anosmia from viral illness). The phenomenon involves altered affective processing rather than impaired sensory perception." [PMID:3107136, PMID:32789515, PMID:33631251, PMID:37424409]
 synonym: "Anhedonic" EXACT []
 synonym: "Diminished capacity for joy" BROAD layperson []
 synonym: "Diminished pleasure response" EXACT []
 synonym: "Inability to experience pleasure" EXACT []
-synonym: "Joylessness" BROAD layperson []
-synonym: "Lack of joy or delight" BROAD []
 synonym: "Loss of ability to enjoy things" EXACT layperson []
 synonym: "Loss of enjoyment" BROAD []
 synonym: "Loss of interest in pleasurable activities" EXACT []
@@ -6134,8 +6149,8 @@ is_a: PROMOT:0032003 ! Body function related phenotype
 is_a: PROMOT:0032004 ! Activity related phenotype
 relationship: PROMOT:2000005 ICF:1328675264 ! affecte Comer
 relationship: PROMOT:2000005 ICF:151046878 ! affecte Hablar
-relationship: PROMOT:2000005 ICF:1789365017 ! affecte Fuerza de músculos aislados o de grupos de músculos
 relationship: PROMOT:2000005 ICF:553784299 ! affecte Beber
+relationship: PROMOT:2000005 PROMOT:0032050 ! affecte Fuerza del músculo temporal
 property_value: dcterms:creator https://orcid.org/0000-0002-0736-9199
 property_value: dcterms:date "2013-11-26T10:32:31Z" xsd:dateTime
 property_value: PROMOT:1000001 "[OPMD HPO KB associations]" xsd:string
@@ -6157,6 +6172,7 @@ def: "Reduced ability to flex the femur, that is, to pull the knee upward." [htt
 comment: Hip flexion is mediated by multiple muscles including the iliopsoas, the rectus femoris, the sartorius, and several muscles from the medial compartment of thigh.
 xref: UMLS:C3279725
 is_a: HP:0003749 ! Pelvic girdle muscle weakness
+relationship: PROMOT:2000005 PROMOT:0032033 ! affecte Fuerza del músculo cuádriceps femoral
 property_value: dcterms:creator https://orcid.org/0000-0002-0736-9199
 property_value: dcterms:date "2013-12-08T09:14:34Z" xsd:dateTime
 property_value: PROMOT:1000001 "[OPMD Clinical Registry Form]" xsd:string
@@ -6466,6 +6482,8 @@ property_value: dcterms:date "2024-07-21T12:00:05Z" xsd:dateTime
 [Term]
 id: HP:0025792
 name: Abnormal cognitive process
+def: "An abnormal cognitive process can be defined as a deviation from the typical development, structural organization, or functional execution of mental operations that connect informational inputs to behavioral outputs, typically involve at least one of the following processes: perception, memory, learning, emotion, intentionality, self-representation, rationality, and decision-making." []
+comment: Definition adapted from Newen A (2017) What are cognitive processes? An example-based approach. Synthese 194:4251-4268.
 is_a: HP:0011446 ! Abnormality of mental function
 property_value: dcterms:creator https://orcid.org/0000-0002-0736-9199
 property_value: dcterms:date "2024-08-07T17:25:08Z" xsd:dateTime
@@ -6605,6 +6623,8 @@ name: Fatigable weakness of neck muscles
 def: "A type of weakness of a skeletal muscle in the neck that occurs after a muscle group is used and lessens if the muscle group has some rest. That is, there is diminution of strength with repetitive muscle actions." [HPO_CONTRIBUTOR:UK_rheller]
 xref: UMLS:C4022584
 is_a: HP:0030197 ! Fatigable weakness of skeletal muscles
+relationship: PROMOT:2000005 PROMOT:0032024 ! affecte Fuerza de los músculos del cuello
+relationship: PROMOT:2000005 PROMOT:0032067 ! affecte Endurance des muscles du cou
 property_value: PROMOT:1000001 "Congenital myasthenic syndrom HPO DB associations" xsd:string
 property_value: PROMOT:1000001 "Congenital myasthenic syndrom Scoping review" xsd:string
 property_value: PROMOT:1000001 "Congenital myopathy Scoping review" xsd:string
@@ -6653,8 +6673,8 @@ id: HP:0030205
 name: Increased jitter at single fiber EMG
 def: "The variation in the time interval between the two action potentials of the same motor unit is called jitter. This term therefore applies to increased variability in the interval between successive action potentials of the same motor unit, which is measured by electromyography (EMG)." [HPO_CONTRIBUTOR:UK_rheller, PMID:21654930]
 comment: Increased jitter values are not pathogonomic for myasthenia, but indicate disturbed neuromuscular transmission.
-synonym: "Increased jitter at single fibre electromyography" EXACT []
 synonym: "Increased jitter at single fibre electromyography" EXACT uk_spelling []
+synonym: "Increased jitter at single fibre electromyography" EXACT []
 synonym: "Increased jitter at single fibre EMG" EXACT uk_spelling []
 xref: UMLS:C4021045
 is_a: HP:0030006 ! Single fiber EMG abnormality
@@ -6682,8 +6702,8 @@ xref: UMLS:C0239831
 is_a: HP:0001421 ! Abnormality of the musculature of the hand
 is_a: PROMOT:0032003 ! Body function related phenotype
 is_a: PROMOT:0032004 ! Activity related phenotype
-relationship: PROMOT:2000005 ICF:1789365017 ! affecte Fuerza de músculos aislados o de grupos de músculos
 relationship: PROMOT:2000005 ICF:2048203604 ! affecte Mobility
+relationship: PROMOT:2000005 PROMOT:0032043 ! affecte Fuerza del músculo extensor de los dedos de la mano
 property_value: PROMOT:1000001 "[OPMD Clinical Registry Form]" xsd:string
 property_value: PROMOT:1000001 "[OPMD Clinical Research Form]" xsd:string
 property_value: PROMOT:1000001 "[OPMD Scoping review 2026] Bélair N, Gagnon C, Duchesne E. What is known about muscle weakness, balance impairments and indoor mobility limitations in oculopharyngeal muscular dystrophy? A scoping review. J Neuromuscul Dis. 2025 Dec 30:22143602251397052. doi: 10.1177/22143602251397052. Epub ahead of print. PMID: 41467981." xsd:string
@@ -6721,7 +6741,7 @@ is_a: PROMOT:0032003 ! Body function related phenotype
 is_a: PROMOT:0032004 ! Activity related phenotype
 relationship: PROMOT:2000005 ICF:1328675264 ! affecte Comer
 relationship: PROMOT:2000005 ICF:1580195090 ! affecte Digestive functions
-relationship: PROMOT:2000005 ICF:1789365017 ! affecte Fuerza de músculos aislados o de grupos de músculos
+relationship: PROMOT:2000005 PROMOT:0032025 ! affecte Fuerza de los músculos faciales
 property_value: PROMOT:1000001 "[OPMD Clinical Registry Form]" xsd:string
 property_value: PROMOT:1000001 "[OPMD HPO KB associations]" xsd:string
 property_value: PROMOT:1000001 "[OPMD Scoping review 2026] Bélair N, Gagnon C, Duchesne E. What is known about muscle weakness, balance impairments and indoor mobility limitations in oculopharyngeal muscular dystrophy? A scoping review. J Neuromuscul Dis. 2025 Dec 30:22143602251397052. doi: 10.1177/22143602251397052. Epub ahead of print. PMID: 41467981." xsd:string
@@ -6849,6 +6869,7 @@ id: HP:0031108
 name: Triceps weakness
 def: "A lack of strength in the triceps muscle, which normally is responsible for extending (straightening) the elbow and mediating certain shoulder movements." []
 is_a: HP:0008997 ! Proximal upper limb muscle weakness
+relationship: PROMOT:2000005 PROMOT:0032037 ! affecte Fuerza del pie
 property_value: dcterms:creator https://orcid.org/0000-0002-0736-9199
 property_value: dcterms:date "2017-06-09T10:13:45Z" xsd:dateTime
 property_value: PROMOT:1000001 "[OPMD Clinical Registry Form]" xsd:string
@@ -6899,8 +6920,8 @@ def: "Reduced strength of the muscles that lift or otherwise move the foot at th
 is_a: HP:0001324 ! Muscle weakness
 is_a: PROMOT:0032003 ! Body function related phenotype
 is_a: PROMOT:0032004 ! Activity related phenotype
-relationship: PROMOT:2000005 ICF:1789365017 ! affecte Fuerza de músculos aislados o de grupos de músculos
 relationship: PROMOT:2000005 ICF:2048203604 ! affecte Mobility
+relationship: PROMOT:2000005 PROMOT:0032039 ! affecte Fuerza del músculo tibial anterior
 property_value: dcterms:creator https://orcid.org/0000-0002-0736-9199
 property_value: dcterms:date "2017-09-02T01:47:35Z" xsd:dateTime
 property_value: PROMOT:1000001 "[OPMD Clinical Registry Form]" xsd:string
@@ -6914,22 +6935,13 @@ id: HP:0031467
 name: Dysregulated negative emotional state
 def: "An emotional state characterized by excessive, persistent, or contextually inappropriate negative inner experiences involving emotional arousal and valence. These experiences are often associated with negative perceptions of the self, the future, the past, or the surrounding environment, and may include affective bias such as interpreting neutral or ambiguous stimuli as negative. The intensity, duration, or impact of the state exceeds what would be expected for the individual based on their baseline emotional functioning, the context, cultural norms, or situational triggers, or when it persists despite efforts at self-regulation." [PMID:27732016, PMID:36104987]
 comment: Manifestations may be conveyed through self-report or observed through behavior, allowing applicability across the lifespan and in individuals with limited verbal communication. This term refers to an observed negative emotional state rather than enduring traits of personality or temperament.
-synonym: "Dysregulated emotions" BROAD []
-synonym: "Dysregulated moods" BROAD []
 synonym: "Feeling bad" EXACT layperson []
 synonym: "Feeling out of sorts" EXACT layperson []
 synonym: "Foul mood" EXACT layperson []
 synonym: "Gloomy mood" EXACT layperson []
 synonym: "In a funk" EXACT layperson []
-synonym: "Maladaptive affect response" BROAD []
-synonym: "Maladaptive emotions" BROAD []
 synonym: "Mood dysregulation" BROAD []
 synonym: "Negative attitude" EXACT layperson []
-synonym: "Negative valence dysregulation" BROAD []
-synonym: "Overwhelming negative emotions" EXACT []
-synonym: "Pathologically negative emotions" EXACT []
-synonym: "Persistent negative affect state" EXACT []
-synonym: "Unregulated negative emotions" EXACT []
 is_a: HP:0100851 ! Abnormal emotional state
 property_value: dcterms:contributor https://orcid.org/0000-0002-1111-7357
 property_value: dcterms:contributor https://orcid.org/0000-0002-7954-5235
@@ -7122,6 +7134,7 @@ id: HP:0033416
 name: Hip adductor weakness
 def: "Reduced ability to bring the leg toward the midline of the body." [PMID:28914719]
 is_a: HP:0003749 ! Pelvic girdle muscle weakness
+relationship: PROMOT:2000005 PROMOT:0032033 ! affecte Fuerza del músculo cuádriceps femoral
 property_value: dcterms:creator https://orcid.org/0000-0002-0736-9199
 property_value: dcterms:date "2021-01-09T16:43:25Z" xsd:dateTime
 property_value: PROMOT:1000001 "[OPMD Clinical Registry Form]" xsd:string
@@ -7351,15 +7364,18 @@ property_value: dcterms:creator https://orcid.org/0000-0002-5316-1399
 
 [Term]
 id: HP:0040081
-name: Abnormal circulating creatine kinase concentration
-def: "Any deviation from the normal circulating creatine kinase concentration." [https://orcid.org/0000-0001-7941-2961]
+name: Abnormal circulating creatine kinase activity
+def: "Any deviation from the normal activity of creatine kinase in the blood circulation." []
 synonym: "Abnormal circulating CK concentration" EXACT abbreviation [https://orcid.org/0000-0001-7941-2961]
 synonym: "Abnormal circulating CPK concentration" EXACT abbreviation [https://orcid.org/0000-0001-7941-2961]
+synonym: "Abnormal circulating creatine kinase activity" EXACT []
 synonym: "Abnormal circulation phospho-CK concentration" EXACT []
+synonym: "Abnormal creatine kinase level" EXACT []
 synonym: "Abnormal levels of creatine kinase in blood" EXACT layperson []
 synonym: "Abnormal levels of creatine kinase in blood" EXACT []
 xref: UMLS:C4022449
 is_a: HP:0011021 ! Abnormal circulating enzyme concentration
+property_value: dcterms:contributor https://orcid.org/0000-0001-7941-2961
 property_value: dcterms:creator https://orcid.org/0000-0002-5316-1399
 property_value: PROMOT:1000001 "Congenital myasthenic syndrom Scoping review" xsd:string
 property_value: PROMOT:1000001 "Congenital myopathy HPO KB associations" xsd:string
@@ -7403,6 +7419,15 @@ property_value: dcterms:contributor https://orcid.org/0000-0003-2598-6622
 property_value: dcterms:contributor https://orcid.org/0000-0003-3777-1389
 property_value: dcterms:contributor https://orcid.org/0000-0003-4014-4490
 property_value: dcterms:date "2015-10-29T18:10:24Z" xsd:dateTime
+
+[Term]
+id: HP:0040286
+name: Abnormal axial muscle morphology
+def: "A structural anomaly of the axial musculature, comprising muscles of the head and neck, muscles of the vertebral column, muscles of the thoracic wall, muscles of the abdominal wall, and muscles of the pelvic floor." []
+synonym: "Abnormality of axial muscles" EXACT []
+is_a: HP:0011805 ! Abnormal skeletal muscle morphology
+property_value: dcterms:creator https://orcid.org/0000-0002-5316-1399
+property_value: dcterms:date "2017-03-10T14:04:28Z" xsd:dateTime
 
 [Term]
 id: HP:0040288
@@ -7512,9 +7537,10 @@ property_value: dcterms:date "2011-06-06T05:54:51Z" xsd:dateTime
 [Term]
 id: HP:0100851
 name: Abnormal emotional state
-def: "A disturbance in the experience or expression of emotion, characterized by alterations in valence, intensity, frequency, or duration. It may also involve emotional responses that are mismatched, exaggerated, or incongruent relative to internal expectations or external contextual stimuli, such as experiencing negative affect in response to neutral or positive events." [PMID:37925091]
+def: "A disturbance in the experience or expression of emotion, characterized by alterations in valence, intensity, frequency, or duration. It may also involve emotional responses that are mismatched, exaggerated, or incongruent relative to internal expectations or external contextual stimuli, such as experiencing negative affect in response to neutral or positive events." [PMID:35461985, PMID:37925091]
 comment: Emotions are complex psychological and physiological states that may include any combination of: a subjective internal experience, a physiological response, and a behavioral or expressive component. Behavioral expression is not required for the emotional state to be considered present or clinically relevant. The assessment of abnormal emotional states should consider sociocultural and individual context, as well as intra-individual baselines. The term 'abnormal' is used descriptively and non-pejoratively, to denote deviations from typical emotional patterns, which may or may not reach the threshold of clinical disorder.
 synonym: "Abnormal emotion/affect behaviour" EXACT []
+synonym: "Affective dysregulation" BROAD []
 synonym: "Emotional dysregulation" BROAD []
 synonym: "Mood disturbance" BROAD []
 synonym: "Psychological distress" BROAD []
@@ -7563,6 +7589,14 @@ is_a: HP:0003674 ! Onset
 property_value: dcterms:creator https://orcid.org/0000-0001-5208-3432
 property_value: dcterms:date "2018-11-01T15:27:45Z" xsd:dateTime
 property_value: skos:changeNote "[PROMOT note] The PROMOT ontology added a comment to quote the CDM used as a source for this entity." xsd:string
+
+[Term]
+id: HP:0430071
+name: Abnormal circulating organic compound concentration
+def: "Any deviation of the concentration of an orrganic compound from the normal range. An organic compound is defined as any compound that contains a carbon atom." []
+is_a: HP:0032180 ! Abnormal circulating metabolite concentration
+property_value: dcterms:creator https://orcid.org/0000-0002-0736-9199
+property_value: dcterms:date "2024-01-30T05:58:49Z" xsd:dateTime
 
 [Term]
 id: HP:4000040
@@ -7676,7 +7710,7 @@ name: identifier
 def: "An information content entity that is the outcome of a dubbing process and is used to refer to one instance of entity shared by a group of people to refer to that individual entity." []
 comment: EU-CDE
 xref: http://snomed.info/id/422549004
-is_a: IAO:0000030 ! information content entity
+is_a: PROMOT:0032087 ! int content entity
 property_value: dc11:creator "Mathias Brochhausen" xsd:string
 property_value: IAO:0000117 "Justin Whorton" xsd:string
 property_value: IAO:0000117 "Mathias Brochhausen" xsd:string
@@ -8207,10 +8241,6 @@ name: Endurance des groupes de muscles {comment="[PROMOT note] Source for offici
 def: "Functions related to sustaining muscle contraction of isolated muscle groups for the required period of time." []
 xref: https://data.esante.gouv.fr/terminologies/icf#5731
 is_a: ICF:389047611 ! Fonctions relatives à l'endurance musculaire
-is_a: PROMOT:0032002 ! Activity related body function
-relationship: RO:0002331 ICF:1328675264 ! involved in Comer
-relationship: RO:0002331 ICF:151046878 ! involved in Hablar
-relationship: RO:0002331 ICF:2048203604 ! involved in Mobility
 property_value: schema:browserUrl https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F1521707777
 property_value: skos:altLabel " Functions involved in endurance of muscle groups" xsd:string
 property_value: skos:changeNote "[PROMOT note] The PROMOT ontology added a crossref to the LIRMM version of the ICF (CIF-ASIP 2020). It also added the official French and Spanish translation for labels." xsd:string
@@ -8458,11 +8488,6 @@ name: Fuerza de músculos aislados o de grupos de músculos {comment="[PROMOT no
 def: "Functions related to the force generated by the contraction of specific and isolated muscles and muscle groups." []
 xref: https://data.esante.gouv.fr/terminologies/icf#23154
 is_a: ICF:274570113 ! Fonctions relatives à la puissance musculaire
-is_a: PROMOT:0032002 ! Activity related body function
-relationship: RO:0002331 ICF:1328675264 ! involved in Comer
-relationship: RO:0002331 ICF:151046878 ! involved in Hablar
-relationship: RO:0002331 ICF:2048203604 ! involved in Mobility
-relationship: RO:0002331 ICF:553784299 ! involved in Beber
 property_value: schema:browserUrl https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F1789365017
 property_value: skos:altLabel " Functions involved in power of isolated muscles and muscle groups" xsd:string
 property_value: skos:changeNote "[PROMOT note] The PROMOT ontology added a crossref to the LIRMM version of the ICF (CIF-ASIP 2020). It also added the official French and Spanish translation for labels." xsd:string
@@ -9980,6 +10005,7 @@ synonym: "pregnancy count" EXACT [] {NCIT:P383="AQS", NCIT:P385="VAR", NCIT:P384
 synonym: "pregnancy_count" EXACT [] {NCIT:P383="AQS", NCIT:P385="VAR", NCIT:P384="GDC"}
 synonym: "PREGNN" EXACT [] {NCIT:P383="PT", NCIT:P384="CDISC", NCIT:P385="SDTM-RPTESTCD"}
 synonym: "Total Number of Pregnancies" EXACT [] {NCIT:P383="PT", NCIT:P384="CPTAC"}
+is_a: PROMOT:0032087 ! int content entity
 is_a: SNOMED:160476009 ! Social / personal history observable
 property_value: NCIT:A31 NCIT:C159771
 property_value: NCIT:A31 NCIT:C17998
@@ -10047,6 +10073,7 @@ synonym: "Age at Death" EXACT [] {NCIT:P383="SY", NCIT:P384="CDISC"}
 synonym: "Age at Death" EXACT [] {NCIT:P383="PT", NCIT:P385="SDTM-DTHDX", NCIT:P384="CDISC"}
 synonym: "AGEDTH" EXACT [] {NCIT:P383="PT", NCIT:P385="SDTM-DTHDXCD", NCIT:P384="CDISC"}
 is_a: NCIT:C25150 ! Age
+is_a: PROMOT:0032089 ! age content entity
 property_value: NCIT:A42 NCIT:C38046
 property_value: NCIT:NHC0 "C135383" xsd:string
 property_value: NCIT:P106 "Organism Attribute" xsd:string
@@ -10096,6 +10123,7 @@ synonym: "Year of death" EXACT [] {NCIT:P383="PT", NCIT:P384="CPTAC"}
 synonym: "year of death" EXACT [] {NCIT:P383="SY", NCIT:P385="VAR", NCIT:P384="GDC"}
 synonym: "year_of_death" EXACT [] {NCIT:P383="PT", NCIT:P385="VAR", NCIT:P384="GDC"}
 is_a: NCIT:C25164 ! Date
+is_a: PROMOT:0032084 ! year content entity
 property_value: NCIT:NHC0 "C156426" xsd:string
 property_value: NCIT:P106 "Temporal Concept" xsd:string
 property_value: NCIT:P108 "Year of Death" xsd:string
@@ -10183,6 +10211,7 @@ synonym: "Date_of_Symptom_Resolution" EXACT [] {NCIT:P384="SeroNet", NCIT:P383="
 synonym: "Symptom Resolution Date" EXACT [] {NCIT:P383="PT", NCIT:P384="NCI"}
 xref: HP:0034382
 is_a: NCIT:C25164 ! Date
+is_a: PROMOT:0032082 ! date content entity
 property_value: NCIT:NHC0 "C178992" xsd:string
 property_value: NCIT:P106 "Temporal Concept" xsd:string
 property_value: NCIT:P108 "Symptom Resolution Date" xsd:string
@@ -10334,6 +10363,7 @@ synonym: "Diagnosis Year" EXACT [] {NCIT:P383="SY", NCIT:P384="NCI"}
 synonym: "Diagnosis Year" EXACT [] {NCIT:P383="SY", NCIT:P384="caDSR"}
 synonym: "Year of Diagnosis" EXACT [] {NCIT:P383="PT", NCIT:P384="NCI"}
 is_a: NCIT:C25164 ! Date
+is_a: PROMOT:0032084 ! year content entity
 property_value: NCIT:NHC0 "C210821" xsd:string
 property_value: NCIT:P106 "Temporal Concept" xsd:string
 property_value: NCIT:P108 "Year of Diagnosis" xsd:string
@@ -10375,7 +10405,9 @@ synonym: "Chronological Age" EXACT [] {NCIT:P383="PT", NCIT:P384="NICHD"}
 synonym: "Chronological Age" EXACT [] {NCIT:P384="INC", NCIT:P383="PT"}
 synonym: "Postnatal Age" EXACT [] {NCIT:P383="SY", NCIT:P384="NICHD"}
 synonym: "Postnatal Age" EXACT [] {NCIT:P383="SY", NCIT:P384="NCI"}
+is_a: PROMOT:0032087 ! int content entity
 is_a: SNOMED:363787002 ! Observable entity
+equivalent_to: PROMOT:0032089 ! age content entity
 property_value: NCIT:NHC0 "C25150" xsd:string
 property_value: NCIT:P106 "Organism Attribute" xsd:string
 property_value: NCIT:P108 "Age" xsd:string
@@ -10764,6 +10796,7 @@ synonym: "Year of Birth" EXACT [] {NCIT:P383="PT", NCIT:P384="OORO", NCIT:P386="
 synonym: "year of birth" EXACT [] {NCIT:P383="SY", NCIT:P385="VAR", NCIT:P384="GDC"}
 synonym: "year_of_birth" EXACT [] {NCIT:P383="PT", NCIT:P385="VAR", NCIT:P384="GDC"}
 is_a: NCIT:C25164 ! Date
+is_a: PROMOT:0032084 ! year content entity
 property_value: NCIT:A42 NCIT:C38046
 property_value: NCIT:NHC0 "C83164" xsd:string
 property_value: NCIT:P106 "Temporal Concept" xsd:string
@@ -10797,6 +10830,7 @@ id: NCIT:C93511
 name: Assessment date
 comment: [PROMOT note] [Derived from EURO-NMD] 
 is_a: NCIT:C25164 ! Date
+is_a: PROMOT:0032082 ! date content entity
 property_value: seeAlso SNOMED:363778006
 property_value: seeAlso SNOMED:439272007
 property_value: seeAlso SNOMED:704321009
@@ -10816,10 +10850,11 @@ synonym: "date of informed consent" EXACT [] {NCIT:P383="SY", NCIT:P386="ICDC", 
 synonym: "date_of_informed_consent" EXACT [] {NCIT:P383="PT", NCIT:P386="ICDC", NCIT:P384="ICDC"}
 synonym: "Demographics Date of Informed Consent" EXACT [] {NCIT:P383="SY", NCIT:P384="caDSR"}
 synonym: "Informed Consent Date" EXACT [] {NCIT:P383="PT", NCIT:P384="NCI"}
-synonym: "informedConsentDate" EXACT [] {NCIT:P383="PT", NCIT:P384="BRIDG 5.3"}
 synonym: "informedConsentDate" EXACT [] {NCIT:P383="PT", NCIT:P384="BRIDG 3.0.3"}
+synonym: "informedConsentDate" EXACT [] {NCIT:P383="PT", NCIT:P384="BRIDG 5.3"}
 synonym: "RFICDAT" EXACT [] {NCIT:P383="SY", NCIT:P384="caDSR"}
 is_a: NCIT:C25164 ! Date
+is_a: PROMOT:0032082 ! date content entity
 property_value: NCIT:NHC0 "C93579" xsd:string
 property_value: NCIT:P106 "Temporal Concept" xsd:string
 property_value: NCIT:P108 "Informed Consent Date" xsd:string
@@ -10838,6 +10873,7 @@ subset: NCIT:C156954
 synonym: "Year of Onset" EXACT [] {NCIT:P383="PT", NCIT:P384="NCI"}
 synonym: "Year of Onset (YYYY)" EXACT [] {NCIT:P383="PT", NCIT:P384="CPTAC"}
 is_a: NCIT:C25164 ! Date
+is_a: PROMOT:0032084 ! year content entity
 property_value: NCIT:NHC0 "C99800" xsd:string
 property_value: NCIT:P106 "Temporal Concept" xsd:string
 property_value: NCIT:P108 "Year of Onset" xsd:string
@@ -10870,7 +10906,7 @@ relationship: RO:0004029 HP:0002141 ! disease has feature Gait imbalance
 relationship: RO:0004029 HP:0002172 ! disease has feature Postural instability
 relationship: RO:0004029 HP:0002317 ! disease has feature Unsteady gait
 relationship: RO:0004029 HP:0002747 ! disease has feature Respiratory insufficiency due to muscle weakness
-relationship: RO:0004029 HP:0003236 ! disease has feature Elevated circulating creatine kinase concentration
+relationship: RO:0004029 HP:0003236 ! disease has feature Elevated circulating creatine kinase activity
 relationship: RO:0004029 HP:0003327 ! disease has feature Axial muscle weakness
 relationship: RO:0004029 HP:0003392 ! disease has feature First dorsal interossei muscle weakness
 relationship: RO:0004029 HP:0003427 ! disease has feature Thenar muscle weakness
@@ -11222,7 +11258,7 @@ property_value: skos:notation "ORPHA:97245" xsd:string
 [Term]
 id: PROMOT:0000001
 name: OPMD related mutation
-def: "A sequence alteration that is causal germline mutation in Oculopharyngeal Muscular Dystrophy." []
+def: "A sequence alteration that is causal germline mutation in Oculopharyngeal Muscular Dystrophy." [] {IAO:0000119="a"}
 is_a: SO:0001060 ! sequence_variant
 relationship: RO:0004013 ORDO:270 ! is causal germline mutation in Oculopharyngeal muscular dystrophy
 
@@ -11457,7 +11493,8 @@ property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 id: PROMOT:0010006
 name: Année d’identification
 def: "El año de la evaluación de una entidad, por ejemplo,  el año en el que se evalúa un fenotipo mediante pruebas médicas." [] {IAO:0000119="reviewed by https://orcid.org/0000-0002-1500-0236"}
-is_a: SNOMED:363787002 ! Observable entity
+is_a: NCIT:C25164 ! Date
+is_a: PROMOT:0032084 ! year content entity
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
@@ -11465,7 +11502,8 @@ id: PROMOT:0010007
 name: Année de disparition
 def: "El año en que se resuelve una disposición anómala, por ejemplo, el año en que un fenotipo deja de existir." [] {IAO:0000119="reviewed by https://orcid.org/0000-0002-1500-0236"}
 comment: [PROMOT note] [Derived from RD-CDM] [6.2.4 Resolution Date] 
-is_a: SNOMED:363787002 ! Observable entity
+is_a: NCIT:C25164 ! Date
+is_a: PROMOT:0032084 ! year content entity
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
@@ -12000,6 +12038,8 @@ def: "A type of weakness of the facial musculature (i.e. one or more muscles inn
 is_a: HP:0003473 ! Fatigable weakness
 is_a: PROMOT:0032004 ! Activity related phenotype
 relationship: PROMOT:2000005 ICF:1328675264 ! affecte Comer
+relationship: PROMOT:2000005 PROMOT:0032025 ! affecte Fuerza de los músculos faciales
+relationship: PROMOT:2000005 PROMOT:0032082 ! affecte date content entity
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 property_value: PROMOT:1000001 "Congenital myasthenic syndrom Scoping review" xsd:string
 property_value: PROMOT:1000001 "Congenital myopathy Scoping review" xsd:string
@@ -12009,6 +12049,8 @@ id: PROMOT:0032013
 name: Debilidad fatigable de los músculos oculares
 def: "A type of weakness of the ocular muscles that occurs after a muscle group is used and lessens if the muscle group has some rest. That is, there is diminution of the strength of the ocular muscles with repetitive muscle actions." [] {comment="[PROMOT project] Mansoore Gholizade (definition reviewer)", IAO:0000119="HP:0003473"}
 is_a: HP:0003473 ! Fatigable weakness
+relationship: PROMOT:2000005 PROMOT:0032026 ! affecte Fuerza de los músculos extraoculares
+relationship: PROMOT:2000005 PROMOT:0032027 ! affecte Fuerza de los músculos intercostales
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 property_value: PROMOT:1000001 "Congenital myasthenic syndrom Scoping review" xsd:string
 property_value: PROMOT:1000001 "Congenital myopathy Scoping review" xsd:string
@@ -12041,7 +12083,7 @@ id: PROMOT:0032016
 name: Fatigable ptosis
 def: "A type of ptosis that occurs after the external ocular muscle group is used and lessens if the muscle group has some rest. That is, there is a ptosis apparition with repetitive external ocular muscle actions" []
 is_a: HP:0000508 ! Ptosis
-relationship: PROMOT:2000005 ICF:1521707777 ! affecte Endurance des groupes de muscles
+relationship: PROMOT:2000005 PROMOT:0032027 ! affecte Fuerza de los músculos intercostales
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
@@ -12100,6 +12142,8 @@ id: PROMOT:0032024
 name: Fuerza de los músculos del cuello
 def: "Fonctions relatives à la force générée par la contraction des muscles du cou." []
 is_a: ICF:1789365017 ! Fuerza de músculos aislados o de grupos de músculos
+is_a: PROMOT:0032002 ! Activity related body function
+relationship: RO:0002331 ICF:2048203604 ! involved in Mobility
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
@@ -12107,6 +12151,8 @@ id: PROMOT:0032025
 name: Fuerza de los músculos faciales
 def: "Fonctions relatives à la force générée par la contraction des muscles du visage." []
 is_a: ICF:1789365017 ! Fuerza de músculos aislados o de grupos de músculos
+is_a: PROMOT:0032002 ! Activity related body function
+relationship: RO:0002331 ICF:1328675264 ! involved in Comer
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
@@ -12121,6 +12167,8 @@ id: PROMOT:0032027
 name: Fuerza de los músculos intercostales
 def: "Fonctions relatives à la force générée par la contraction des muscles intercostaux." []
 is_a: ICF:1789365017 ! Fuerza de músculos aislados o de grupos de músculos
+is_a: PROMOT:0032002 ! Activity related body function
+relationship: RO:0002331 ICF:2048203604 ! involved in Mobility
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
@@ -12128,6 +12176,8 @@ id: PROMOT:0032028
 name: Fuerza de los músculos abdominales
 def: "Fonctions relatives à la force générée par la contraction des muscles abdominaux." []
 is_a: ICF:1789365017 ! Fuerza de músculos aislados o de grupos de músculos
+is_a: PROMOT:0032002 ! Activity related body function
+relationship: RO:0002331 ICF:2048203604 ! involved in Mobility
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
@@ -12135,6 +12185,8 @@ id: PROMOT:0032029
 name: Endurance des muscles intercostaux
 def: "Fonctions relatives au maintien d'une contraction musculaire des muscles intercostaux pour la période de temps requise." []
 is_a: ICF:1302007745 ! Endurance de muscles isolés
+is_a: PROMOT:0032002 ! Activity related body function
+relationship: RO:0002331 ICF:2048203604 ! involved in Mobility
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
@@ -12142,6 +12194,8 @@ id: PROMOT:0032030
 name: Endurance des muscles du tronc
 def: "Fonctions relatives au maintien d'une contraction musculaire des muscles du tronc pour la période de temps requise." []
 is_a: ICF:1302007745 ! Endurance de muscles isolés
+is_a: PROMOT:0032002 ! Activity related body function
+relationship: RO:0002331 ICF:2048203604 ! involved in Mobility
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
@@ -12149,6 +12203,8 @@ id: PROMOT:0032031
 name: Fuerza de los músculos de la pelvis/de la cintura pélvica
 def: "Fonctions relatives à la force générée par la contraction des muscles du bassin/de la ceinture pelvienne." []
 is_a: ICF:1789365017 ! Fuerza de músculos aislados o de grupos de músculos
+is_a: PROMOT:0032002 ! Activity related body function
+relationship: RO:0002331 ICF:2048203604 ! involved in Mobility
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
@@ -12156,6 +12212,8 @@ id: PROMOT:0032032
 name: Fuerza del muslo
 def: "Fonctions relatives à la force générée par la contraction des muscles de la cuisse." []
 is_a: ICF:1789365017 ! Fuerza de músculos aislados o de grupos de músculos
+is_a: PROMOT:0032002 ! Activity related body function
+relationship: RO:0002331 ICF:2048203604 ! involved in Mobility
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
@@ -12170,6 +12228,8 @@ id: PROMOT:0032034
 name: Fuerza del hombro
 def: "Fonctions relatives à la force générée par la contraction des muscles de l’épaule." []
 is_a: ICF:1789365017 ! Fuerza de músculos aislados o de grupos de músculos
+is_a: PROMOT:0032002 ! Activity related body function
+relationship: RO:0002331 ICF:2048203604 ! involved in Mobility
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
@@ -12177,6 +12237,8 @@ id: PROMOT:0032035
 name: Fuerza del brazo
 def: "Fonctions relatives à la force générée par la contraction des muscles du bras." []
 is_a: ICF:1789365017 ! Fuerza de músculos aislados o de grupos de músculos
+is_a: PROMOT:0032002 ! Activity related body function
+relationship: RO:0002331 ICF:2048203604 ! involved in Mobility
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
@@ -12191,6 +12253,8 @@ id: PROMOT:0032037
 name: Fuerza del pie
 def: "Fonctions relatives à la force générée par la contraction des muscles du pied." []
 is_a: ICF:1789365017 ! Fuerza de músculos aislados o de grupos de músculos
+is_a: PROMOT:0032002 ! Activity related body function
+relationship: RO:0002331 ICF:2048203604 ! involved in Mobility
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
@@ -12198,6 +12262,8 @@ id: PROMOT:0032038
 name: Fuerza de los músculos de las piernas
 def: "Fonctions relatives à la force générée par la contraction des muscles de la jambe." []
 is_a: ICF:1789365017 ! Fuerza de músculos aislados o de grupos de músculos
+is_a: PROMOT:0032002 ! Activity related body function
+relationship: RO:0002331 ICF:2048203604 ! involved in Mobility
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
@@ -12219,6 +12285,8 @@ id: PROMOT:0032041
 name: Fuerza de los músculos del antebrazo
 def: "Fonctions relatives à la force générée par la contraction des muscles de l’avant bras." []
 is_a: ICF:1789365017 ! Fuerza de músculos aislados o de grupos de músculos
+is_a: PROMOT:0032002 ! Activity related body function
+relationship: RO:0002331 ICF:2048203604 ! involved in Mobility
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
@@ -12226,6 +12294,8 @@ id: PROMOT:0032042
 name: Fuerza de los músculos de la mano
 def: "Fonctions relatives à la force générée par la contraction des muscles de la main." []
 is_a: ICF:1789365017 ! Fuerza de músculos aislados o de grupos de músculos
+is_a: PROMOT:0032002 ! Activity related body function
+relationship: RO:0002331 ICF:2048203604 ! involved in Mobility
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
@@ -12276,6 +12346,8 @@ id: PROMOT:0032049
 name: Fuerza del músculo de la lengua
 def: "Fonctions relatives à la force générée par la contraction du muscle de la langue." []
 is_a: ICF:1789365017 ! Fuerza de músculos aislados o de grupos de músculos
+is_a: PROMOT:0032002 ! Activity related body function
+relationship: RO:0002331 ICF:1328675264 ! involved in Comer
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
@@ -12297,6 +12369,8 @@ id: PROMOT:0032052
 name: Fuerza de los músculos masticatorios
 def: "Fonctions relatives à la force générée par la contraction des muscles masticatoires." []
 is_a: ICF:1789365017 ! Fuerza de músculos aislados o de grupos de músculos
+is_a: PROMOT:0032002 ! Activity related body function
+relationship: RO:0002331 ICF:1328675264 ! involved in Comer
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
@@ -12304,6 +12378,10 @@ id: PROMOT:0032053
 name: Fuerza de los músculos de la faringe
 def: "Fonctions relatives à la force générée par la contraction des muscles du pharynx." []
 is_a: ICF:1789365017 ! Fuerza de músculos aislados o de grupos de músculos
+is_a: PROMOT:0032002 ! Activity related body function
+relationship: RO:0002331 ICF:1328675264 ! involved in Comer
+relationship: RO:0002331 ICF:151046878 ! involved in Hablar
+relationship: RO:0002331 ICF:553784299 ! involved in Beber
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
@@ -12311,6 +12389,10 @@ id: PROMOT:0032054
 name: Fuerza de un músculo de la faringe
 def: "Fonctions relatives à la force générée par la contraction d’un muscle du pharynx." []
 is_a: ICF:1789365017 ! Fuerza de músculos aislados o de grupos de músculos
+is_a: PROMOT:0032002 ! Activity related body function
+relationship: RO:0002331 ICF:1328675264 ! involved in Comer
+relationship: RO:0002331 ICF:151046878 ! involved in Hablar
+relationship: RO:0002331 ICF:553784299 ! involved in Beber
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
@@ -12332,6 +12414,8 @@ id: PROMOT:0032057
 name: Endurance du muscle de la langue
 def: "Fonctions relatives au maintien d'une contraction musculaire du muscle de la langue pour la période de temps requise." []
 is_a: ICF:1302007745 ! Endurance de muscles isolés
+is_a: PROMOT:0032002 ! Activity related body function
+relationship: RO:0002331 ICF:1328675264 ! involved in Comer
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
@@ -12353,6 +12437,8 @@ id: PROMOT:0032060
 name: Endurance des muscles masticatoires
 def: "Fonctions relatives au maintien d'une contraction musculaire des muscles masticatoires pour la période de temps requise." []
 is_a: ICF:1302007745 ! Endurance de muscles isolés
+is_a: PROMOT:0032002 ! Activity related body function
+relationship: RO:0002331 ICF:1328675264 ! involved in Comer
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
@@ -12367,6 +12453,8 @@ id: PROMOT:0032062
 name: Endurance du diaphragme
 def: "Fonctions relatives au maintien d'une contraction musculaire du diaphragme pour la période de temps requise." []
 is_a: ICF:1302007745 ! Endurance de muscles isolés
+is_a: PROMOT:0032002 ! Activity related body function
+relationship: RO:0002331 ICF:2048203604 ! involved in Mobility
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
@@ -12374,6 +12462,8 @@ id: PROMOT:0032063
 name: Endurance des muscles de l’avant bras
 def: "Fonctions relatives au maintien d'une contraction musculaire des muscles de l’avant-bras pour la période de temps requise." []
 is_a: ICF:1302007745 ! Endurance de muscles isolés
+is_a: PROMOT:0032002 ! Activity related body function
+relationship: RO:0002331 ICF:2048203604 ! involved in Mobility
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
@@ -12381,6 +12471,8 @@ id: PROMOT:0032064
 name: Endurance des muscles de la main
 def: "Fonctions relatives au maintien d'une contraction musculaire des muscles de la main pour la période de temps requise." []
 is_a: ICF:1302007745 ! Endurance de muscles isolés
+is_a: PROMOT:0032002 ! Activity related body function
+relationship: RO:0002331 ICF:2048203604 ! involved in Mobility
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
@@ -12388,6 +12480,8 @@ id: PROMOT:0032065
 name: Endurance des muscles du pied
 def: "Fonctions relatives au maintien d'une contraction musculaire des muscles du pied pour la période de temps requise." []
 is_a: ICF:1302007745 ! Endurance de muscles isolés
+is_a: PROMOT:0032002 ! Activity related body function
+relationship: RO:0002331 ICF:2048203604 ! involved in Mobility
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
@@ -12395,6 +12489,8 @@ id: PROMOT:0032066
 name: Endurance des muscles de la jambe
 def: "Fonctions relatives au maintien d'une contraction musculaire des muscles de la jambe pour la période de temps requise." []
 is_a: ICF:1302007745 ! Endurance de muscles isolés
+is_a: PROMOT:0032002 ! Activity related body function
+relationship: RO:0002331 ICF:2048203604 ! involved in Mobility
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
@@ -12402,6 +12498,8 @@ id: PROMOT:0032067
 name: Endurance des muscles du cou
 def: "Fonctions relatives au maintien d'une contraction musculaire des muscles du cou pour la période de temps requise." []
 is_a: ICF:1302007745 ! Endurance de muscles isolés
+is_a: PROMOT:0032002 ! Activity related body function
+relationship: RO:0002331 ICF:2048203604 ! involved in Mobility
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
@@ -12409,6 +12507,8 @@ id: PROMOT:0032068
 name: Endurance des muscles de l’épaule
 def: "Fonctions relatives au maintien d'une contraction musculaire des muscles de l’épaule pour la période de temps requise." []
 is_a: ICF:1302007745 ! Endurance de muscles isolés
+is_a: PROMOT:0032002 ! Activity related body function
+relationship: RO:0002331 ICF:2048203604 ! involved in Mobility
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
@@ -12416,6 +12516,8 @@ id: PROMOT:0032069
 name: Endurance des muscles du bras
 def: "Fonctions relatives au maintien d'une contraction musculaire de muscles du bras pour la période de temps requise." []
 is_a: ICF:1302007745 ! Endurance de muscles isolés
+is_a: PROMOT:0032002 ! Activity related body function
+relationship: RO:0002331 ICF:2048203604 ! involved in Mobility
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
@@ -12423,6 +12525,8 @@ id: PROMOT:0032070
 name: Endurance des muscles du bassin/de la ceinture pelvienne
 def: "Fonctions relatives au maintien d'une contraction musculaire des muscles du bassin/de la ceinture pelvienne pour la période de temps requise." []
 is_a: ICF:1302007745 ! Endurance de muscles isolés
+is_a: PROMOT:0032002 ! Activity related body function
+relationship: RO:0002331 ICF:2048203604 ! involved in Mobility
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
@@ -12430,6 +12534,10 @@ id: PROMOT:0032071
 name: Endurance des muscles de la cuisse
 def: "Fonctions relatives au maintien d'une contraction musculaire des muscles de la cuisse pour la période de temps requise." []
 is_a: ICF:1302007745 ! Endurance de muscles isolés
+is_a: PROMOT:0032002 ! Activity related body function
+relationship: RO:0002331 ICF:1328675264 ! involved in Comer
+relationship: RO:0002331 ICF:151046878 ! involved in Hablar
+relationship: RO:0002331 ICF:553784299 ! involved in Beber
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
@@ -12437,6 +12545,10 @@ id: PROMOT:0032072
 name: Endurance des muscles pharyngeaux
 def: "Fonctions relatives au maintien d'une contraction musculaire des muscles pharyngeaux pour la période de temps requise." []
 is_a: ICF:1302007745 ! Endurance de muscles isolés
+is_a: PROMOT:0032002 ! Activity related body function
+relationship: RO:0002331 ICF:1328675264 ! involved in Comer
+relationship: RO:0002331 ICF:151046878 ! involved in Hablar
+relationship: RO:0002331 ICF:553784299 ! involved in Beber
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
@@ -12444,6 +12556,8 @@ id: PROMOT:0032073
 name: Endurance du muscle du pharynx
 def: "Fonctions relatives au maintien d'une contraction musculaire d’un muscle du pharynx pour la période de temps requise." []
 is_a: ICF:1302007745 ! Endurance de muscles isolés
+is_a: PROMOT:0032002 ! Activity related body function
+relationship: RO:0002331 ICF:2048203604 ! involved in Mobility
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
@@ -12451,13 +12565,17 @@ id: PROMOT:0032074
 name: Endurance du trapèze
 def: "Fonctions relatives au maintien d'une contraction musculaire du trapèze pour la période de temps requise." []
 is_a: ICF:1302007745 ! Endurance de muscles isolés
+is_a: PROMOT:0032002 ! Activity related body function
+relationship: RO:0002331 ICF:2048203604 ! involved in Mobility
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
 id: PROMOT:0032075
-name: Fuerza del trapecio
+name: Endurance of serratus anterior
 def: "Fonctions relatives à la force générée par la contraction du trapèze." []
 is_a: ICF:1789365017 ! Fuerza de músculos aislados o de grupos de músculos
+is_a: PROMOT:0032002 ! Activity related body function
+relationship: RO:0002331 ICF:2048203604 ! involved in Mobility
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
@@ -12465,13 +12583,17 @@ id: PROMOT:0032076
 name: Endurance du muscle dentelé antérieur
 def: "Fonctions relatives au maintien d'une contraction musculaire du muscle dentelé antérieur pour la période de temps requise." []
 is_a: ICF:1302007745 ! Endurance de muscles isolés
+is_a: PROMOT:0032002 ! Activity related body function
+relationship: RO:0002331 ICF:2048203604 ! involved in Mobility
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
 id: PROMOT:0032077
-name: Fuerza del serrato anterior
+name: Endurance of rhomboid major
 def: "Fonctions relatives à la force générée par la contraction du muscle dentelé antérieur." []
 is_a: ICF:1789365017 ! Fuerza de músculos aislados o de grupos de músculos
+is_a: PROMOT:0032002 ! Activity related body function
+relationship: RO:0002331 ICF:2048203604 ! involved in Mobility
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
@@ -12479,13 +12601,17 @@ id: PROMOT:0032078
 name: Endurance du muscle grand rhomboïde
 def: "Fonctions relatives au maintien d'une contraction musculaire du muscle grand rhomboïde pour la période de temps requise." []
 is_a: ICF:1302007745 ! Endurance de muscles isolés
+is_a: PROMOT:0032002 ! Activity related body function
+relationship: RO:0002331 ICF:2048203604 ! involved in Mobility
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
 id: PROMOT:0032079
-name: Fuerza del músculo romboides mayor 
+name: Endurance of rhomboid minor
 def: "Fonctions relatives à la force générée par la contraction du muscle grand rhomboïde." []
 is_a: ICF:1789365017 ! Fuerza de músculos aislados o de grupos de músculos
+is_a: PROMOT:0032002 ! Activity related body function
+relationship: RO:0002331 ICF:2048203604 ! involved in Mobility
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
@@ -12493,6 +12619,8 @@ id: PROMOT:0032080
 name: Endurance du muscle petit rhomboïde
 def: "Fonctions relatives au maintien d'une contraction musculaire du muscle petit rhomboïde pour la période de temps requise." []
 is_a: ICF:1302007745 ! Endurance de muscles isolés
+is_a: PROMOT:0032002 ! Activity related body function
+relationship: RO:0002331 ICF:2048203604 ! involved in Mobility
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
@@ -12501,6 +12629,76 @@ name: Fuerza del músculo romboides menor
 def: "Fonctions relatives à la force générée par la contraction du muscle petit rhomboïde." []
 is_a: ICF:1789365017 ! Fuerza de músculos aislados o de grupos de músculos
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
+
+[Term]
+id: PROMOT:0032082
+name: date content entity
+def: "an information content entity where the information is a date." []
+is_a: IAO:0000030 ! information content entity
+union_of: NCIT:C178992 ! Symptom Resolution Date
+union_of: NCIT:C93511 ! Assessment date
+union_of: NCIT:C93579 ! Informed Consent Date
+union_of: SNOMED:184099003 ! Date of Birth (observable entity)
+union_of: SNOMED:298059007 ! Date of onset
+union_of: SNOMED:399423000 ! Date of admission
+union_of: SNOMED:399753006 ! Date of death
+union_of: SNOMED:406543005 ! Date of visit
+union_of: SNOMED:432213005 ! Date of diagnosis
+union_of: SNOMED:439272007 ! Date of procedure
+
+[Term]
+id: PROMOT:0032083
+name: token content entity
+def: "an information content entity where the information is a token." []
+is_a: IAO:0000030 ! information content entity
+union_of: SNOMED:125680007 ! Marital status
+union_of: SNOMED:184104002 ! Patient occupation
+union_of: SNOMED:184305005 ! Cause of death
+union_of: SNOMED:315354004 ! Country of Birth (observable entity)
+union_of: SNOMED:398192003 ! Co-morbid conditions
+
+[Term]
+id: PROMOT:0032084
+name: year content entity
+def: "an information content entity where the information is a year." []
+is_a: IAO:0000030 ! information content entity
+union_of: NCIT:C156426 ! Year of Death
+union_of: NCIT:C210821 ! Year of Diagnosis
+union_of: NCIT:C83164 ! Birth Year
+union_of: NCIT:C99800 ! Year of Onset
+union_of: PROMOT:0010006 ! Année d’identification
+union_of: PROMOT:0010007 ! Année de disparition
+
+[Term]
+id: PROMOT:0032087
+name: int content entity
+def: "an information content entity where the information is an int." []
+is_a: IAO:0000030 ! information content entity
+union_of: IAO:0020000 ! identifier
+union_of: NCIT:C106551 ! Number of Pregnancies
+union_of: NCIT:C25150 ! Age
+union_of: SNOMED:224118004 ! NB of offspring (observable entity)
+
+[Term]
+id: PROMOT:0032088
+name: duration content entity
+def: "an information content entity where the information is a duration." []
+is_a: SNOMED:224285004 ! Education and schooling detail
+equivalent_to: SNOMED:224288002 ! Duration of formal education
+
+[Term]
+id: PROMOT:0032089
+name: age content entity
+def: "an information content entity where the information is an age." []
+is_a: PROMOT:0032087 ! int content entity
+is_a: SNOMED:363787002 ! Observable entity
+
+[Term]
+id: PROMOT:0032090
+name: decimal content entity
+def: "an information content entity where the information is a decimal." []
+is_a: SNOMED:363787002 ! Observable entity
+equivalent_to: SNOMED:248326004 ! Body measure
 
 [Term]
 id: PROMOT:0100001
@@ -12576,6 +12774,7 @@ property_value: skos:notation "113160008" xsd:string
 id: SNOMED:1153637007
 name: Body height
 comment: [PROMOT note] [Derived from EURO-NMD] 
+is_a: PROMOT:0032090 ! decimal content entity
 is_a: SNOMED:248326004 ! Body measure
 property_value: dc11:type "observable entity" xsd:string
 property_value: sct-ext:definitionStatus "Défini" xsd:string
@@ -12632,6 +12831,7 @@ property_value: skos:notation "125679009" xsd:string
 id: SNOMED:125680007
 name: Marital status
 comment: OPMD research clinical form
+is_a: PROMOT:0032083 ! token content entity
 is_a: SNOMED:302147001 ! Demographic history detail
 property_value: dc11:type "observable entity" xsd:string
 property_value: sct-ext:definitionStatus "Primitif" xsd:string
@@ -12671,7 +12871,6 @@ relationship: PROMOT:2000003 ICF:1462755743 ! measures Ponerse de pie
 relationship: PROMOT:2000003 ICF:1470583183 ! measures Fonctions liées à la respiration par la bouche
 relationship: PROMOT:2000003 ICF:1521707777 ! measures Endurance des groupes de muscles
 relationship: PROMOT:2000003 ICF:1580195090 ! measures Digestive functions
-relationship: PROMOT:2000003 ICF:1789365017 ! measures Fuerza de músculos aislados o de grupos de músculos
 relationship: PROMOT:2000003 ICF:1831985718 ! measures Fonction vestibulaire de l'équilibre
 relationship: PROMOT:2000003 ICF:1993770860 ! measures Going up and down stairs
 relationship: PROMOT:2000003 ICF:2021370201 ! measures Fonctions de la paupière
@@ -12683,6 +12882,56 @@ relationship: PROMOT:2000003 ICF:576915490 ! measures Fonctions relatives aux r�
 relationship: PROMOT:2000003 ICF:623565657 ! measures Maintaining a sitting position
 relationship: PROMOT:2000003 ICF:691689627 ! measures Deglución faríngea
 relationship: PROMOT:2000003 ICF:855039967 ! measures S'asseoir
+relationship: PROMOT:2000003 PROMOT:0032024 ! measures Fuerza de los músculos del cuello
+relationship: PROMOT:2000003 PROMOT:0032026 ! measures Fuerza de los músculos extraoculares
+relationship: PROMOT:2000003 PROMOT:0032027 ! measures Fuerza de los músculos intercostales
+relationship: PROMOT:2000003 PROMOT:0032028 ! measures Fuerza de los músculos abdominales
+relationship: PROMOT:2000003 PROMOT:0032029 ! measures Endurance des muscles intercostaux
+relationship: PROMOT:2000003 PROMOT:0032030 ! measures Endurance des muscles du tronc
+relationship: PROMOT:2000003 PROMOT:0032031 ! measures Fuerza de los músculos de la pelvis/de la cintura pélvica
+relationship: PROMOT:2000003 PROMOT:0032033 ! measures Fuerza del músculo cuádriceps femoral
+relationship: PROMOT:2000003 PROMOT:0032034 ! measures Fuerza del hombro
+relationship: PROMOT:2000003 PROMOT:0032036 ! measures Fuerza del músculo tríceps braquial
+relationship: PROMOT:2000003 PROMOT:0032037 ! measures Fuerza del pie
+relationship: PROMOT:2000003 PROMOT:0032039 ! measures Fuerza del músculo tibial anterior
+relationship: PROMOT:2000003 PROMOT:0032040 ! measures Fuerza del músculo tibial posterior
+relationship: PROMOT:2000003 PROMOT:0032043 ! measures Fuerza del músculo extensor de los dedos de la mano
+relationship: PROMOT:2000003 PROMOT:0032044 ! measures Fuerza del músculo intrínseco de la mano
+relationship: PROMOT:2000003 PROMOT:0032045 ! measures Fuerza del primer músculo dorsal interóseo de la mano
+relationship: PROMOT:2000003 PROMOT:0032046 ! measures Fuerza de los músculos de la eminencia tenar
+relationship: PROMOT:2000003 PROMOT:0032047 ! measures Fuerza del músculo de la mandíbula
+relationship: PROMOT:2000003 PROMOT:0032048 ! measures Fuerza del músculo buccinador
+relationship: PROMOT:2000003 PROMOT:0032049 ! measures Fuerza del músculo de la lengua
+relationship: PROMOT:2000003 PROMOT:0032050 ! measures Fuerza del músculo temporal
+relationship: PROMOT:2000003 PROMOT:0032051 ! measures Fuerza del músculo pterigoideo
+relationship: PROMOT:2000003 PROMOT:0032053 ! measures Fuerza de los músculos de la faringe
+relationship: PROMOT:2000003 PROMOT:0032054 ! measures Fuerza de un músculo de la faringe
+relationship: PROMOT:2000003 PROMOT:0032055 ! measures Endurance du muscle masséter
+relationship: PROMOT:2000003 PROMOT:0032056 ! measures Endurance du muscle buccinateur
+relationship: PROMOT:2000003 PROMOT:0032057 ! measures Endurance du muscle de la langue
+relationship: PROMOT:2000003 PROMOT:0032058 ! measures Endurance du muscle temporal
+relationship: PROMOT:2000003 PROMOT:0032059 ! measures Endurance du muscle ptérygoïdien
+relationship: PROMOT:2000003 PROMOT:0032061 ! measures Endurance des muscles intercostaux
+relationship: PROMOT:2000003 PROMOT:0032062 ! measures Endurance du diaphragme
+relationship: PROMOT:2000003 PROMOT:0032063 ! measures Endurance des muscles de l’avant bras
+relationship: PROMOT:2000003 PROMOT:0032064 ! measures Endurance des muscles de la main
+relationship: PROMOT:2000003 PROMOT:0032065 ! measures Endurance des muscles du pied
+relationship: PROMOT:2000003 PROMOT:0032066 ! measures Endurance des muscles de la jambe
+relationship: PROMOT:2000003 PROMOT:0032067 ! measures Endurance des muscles du cou
+relationship: PROMOT:2000003 PROMOT:0032068 ! measures Endurance des muscles de l’épaule
+relationship: PROMOT:2000003 PROMOT:0032069 ! measures Endurance des muscles du bras
+relationship: PROMOT:2000003 PROMOT:0032070 ! measures Endurance des muscles du bassin/de la ceinture pelvienne
+relationship: PROMOT:2000003 PROMOT:0032071 ! measures Endurance des muscles de la cuisse
+relationship: PROMOT:2000003 PROMOT:0032072 ! measures Endurance des muscles pharyngeaux
+relationship: PROMOT:2000003 PROMOT:0032073 ! measures Endurance du muscle du pharynx
+relationship: PROMOT:2000003 PROMOT:0032074 ! measures Endurance du trapèze
+relationship: PROMOT:2000003 PROMOT:0032075 ! measures Endurance of serratus anterior
+relationship: PROMOT:2000003 PROMOT:0032076 ! measures Endurance du muscle dentelé antérieur
+relationship: PROMOT:2000003 PROMOT:0032077 ! measures Endurance of rhomboid major
+relationship: PROMOT:2000003 PROMOT:0032078 ! measures Endurance du muscle grand rhomboïde
+relationship: PROMOT:2000003 PROMOT:0032079 ! measures Endurance of rhomboid minor
+relationship: PROMOT:2000003 PROMOT:0032080 ! measures Endurance du muscle petit rhomboïde
+relationship: PROMOT:2000003 PROMOT:0032081 ! measures Fuerza del músculo romboides menor
 property_value: dc11:type "procedure" xsd:string
 property_value: sct-ext:definitionStatus "Défini" xsd:string
 property_value: sct-ext:fsn "Functional assessment (procedure)" xsd:string
@@ -12747,6 +12996,7 @@ property_value: skos:notation "183147006" xsd:string
 id: SNOMED:184099003
 name: Date of Birth (observable entity)
 comment: [PROMOT note] [Derived from EURO-NMD] 
+is_a: PROMOT:0032082 ! date content entity
 is_a: SNOMED:302147001 ! Demographic history detail
 property_value: dc11:type "observable entity" xsd:string
 property_value: sct-ext:definitionStatus "Primitif" xsd:string
@@ -12758,6 +13008,7 @@ property_value: skos:notation "184099003" xsd:string
 [Term]
 id: SNOMED:184104002
 name: Patient occupation
+is_a: PROMOT:0032083 ! token content entity
 is_a: SNOMED:302147001 ! Demographic history detail
 property_value: dc11:type "observable entity" xsd:string
 property_value: sct-ext:definitionStatus "Primitif" xsd:string
@@ -12768,6 +13019,7 @@ property_value: skos:notation "184104002" xsd:string
 id: SNOMED:184305005
 name: Cause of death
 comment: [PROMOT note] [Derived from RD-CDM] [3.3 Cause of Death] 
+is_a: PROMOT:0032083 ! token content entity
 is_a: SNOMED:363787002 ! Observable entity
 property_value: dc11:type "observable entity" xsd:string
 property_value: sct-ext:definitionStatus "Primitif" xsd:string
@@ -12797,6 +13049,7 @@ property_value: skos:notation "21093007" xsd:string
 id: SNOMED:224118004
 name: NB of offspring (observable entity)
 comment: [PROMOT note] [Derived from EURO-NMD] 
+is_a: PROMOT:0032087 ! int content entity
 is_a: SNOMED:160476009 ! Social / personal history observable
 property_value: dc11:type "observable entity" xsd:string
 property_value: sct-ext:definitionStatus "Primitif" xsd:string
@@ -12894,6 +13147,7 @@ property_value: skos:notation "266731002" xsd:string
 id: SNOMED:27113001
 name: Body weight
 comment: [PROMOT note] [Derived from EURO-NMD] 
+is_a: PROMOT:0032090 ! decimal content entity
 is_a: SNOMED:248326004 ! Body measure
 property_value: dc11:type "observable entity" xsd:string
 property_value: sct-ext:definitionStatus "Défini" xsd:string
@@ -12908,6 +13162,7 @@ id: SNOMED:298059007
 name: Date of onset
 comment: [PROMOT note] [Derived from RD-CDM] [5.4 Date of Onset] 
 is_a: NCIT:C25164 ! Date
+is_a: PROMOT:0032082 ! date content entity
 property_value: dc11:type "observable entity" xsd:string
 property_value: sct-ext:definitionStatus "Primitif" xsd:string
 property_value: sct-ext:fsn "Date of onset (observable entity)" xsd:string
@@ -12939,6 +13194,7 @@ id: SNOMED:315354004
 name: Country of Birth (observable entity)
 comment: [PROMOT note] [Derived from RD-CDM] [2.5 Country of Birth] 
 xref: http://snomed.info/id/370159000
+is_a: PROMOT:0032083 ! token content entity
 is_a: SNOMED:302147001 ! Demographic history detail
 property_value: dc11:type "observable entity" xsd:string
 property_value: sct-ext:definitionStatus "Primitif" xsd:string
@@ -12992,7 +13248,7 @@ property_value: skos:notation "364940007" xsd:string
 id: SNOMED:398192003
 name: Co-morbid conditions
 comment: [PROMOT note] [Derived from EURO-NMD] 
-is_a: IAO:0000030 ! information content entity
+is_a: PROMOT:0032083 ! token content entity
 property_value: dc11:type "finding" xsd:string
 property_value: sct-ext:definitionStatus "Primitif" xsd:string
 property_value: sct-ext:fsn "Co-morbid conditions (finding)" xsd:string
@@ -13005,6 +13261,7 @@ id: SNOMED:399423000
 name: Date of admission
 comment: [PROMOT note] [Derived from EURO-NMD] 
 is_a: NCIT:C25164 ! Date
+is_a: PROMOT:0032082 ! date content entity
 property_value: dc11:type "observable entity" xsd:string
 property_value: sct-ext:definitionStatus "Primitif" xsd:string
 property_value: sct-ext:fsn "Date of admission (observable entity)" xsd:string
@@ -13017,6 +13274,7 @@ name: Date of death
 comment: [PROMOT note] [Derived from EURO-NMD] 
 xref: http://snomed.info/id/398299004
 is_a: NCIT:C25164 ! Date
+is_a: PROMOT:0032082 ! date content entity
 property_value: dc11:type "observable entity" xsd:string
 property_value: sct-ext:definitionStatus "Primitif" xsd:string
 property_value: sct-ext:fsn "Date of death (observable entity)" xsd:string
@@ -13028,6 +13286,7 @@ id: SNOMED:406543005
 name: Date of visit
 comment: [PROMOT note] [Derived from EURO-NMD] 
 is_a: NCIT:C25164 ! Date
+is_a: PROMOT:0032082 ! date content entity
 property_value: dc11:type "observable entity" xsd:string
 property_value: sct-ext:definitionStatus "Primitif" xsd:string
 property_value: sct-ext:fsn "Date of visit (observable entity)" xsd:string
@@ -13048,6 +13307,7 @@ id: SNOMED:423493009
 name: Age at diagnosis
 comment: [PROMOT note] [Derived from EURO-NMD] 
 is_a: NCIT:C25150 ! Age
+is_a: PROMOT:0032089 ! age content entity
 property_value: dc11:type "observable entity" xsd:string
 property_value: sct-ext:definitionStatus "Primitif" xsd:string
 property_value: sct-ext:fsn "Age at diagnosis (observable entity)" xsd:string
@@ -13059,6 +13319,7 @@ id: SNOMED:424850005
 name: Age at first symptom
 comment: [PROMOT note] [Derived from EURO-NMD] 
 is_a: NCIT:C25150 ! Age
+is_a: PROMOT:0032089 ! age content entity
 property_value: dc11:type "observable entity" xsd:string
 property_value: sct-ext:definitionStatus "Primitif" xsd:string
 property_value: sct-ext:fsn "Age at first symptom (observable entity)" xsd:string
@@ -13070,6 +13331,7 @@ id: SNOMED:432213005
 name: Date of diagnosis
 comment: [PROMOT note] [Derived from RD-CDM] [5.6 Date of Diagnosis] 
 is_a: NCIT:C25164 ! Date
+is_a: PROMOT:0032082 ! date content entity
 property_value: dc11:type "observable entity" xsd:string
 property_value: sct-ext:definitionStatus "Primitif" xsd:string
 property_value: sct-ext:fsn "Date of diagnosis (observable entity)" xsd:string
@@ -13082,6 +13344,7 @@ name: Date of procedure
 comment: [PROMOT note] [Derived from RD-CDM] [6.3.3 Time Observed] 
 xref: NCIT:C82577
 is_a: NCIT:C25164 ! Date
+is_a: PROMOT:0032082 ! date content entity
 property_value: dc11:type "observable entity" xsd:string
 property_value: sct-ext:definitionStatus "Primitif" xsd:string
 property_value: sct-ext:fsn "Date of procedure (observable entity)" xsd:string
@@ -13182,6 +13445,7 @@ property_value: skos:notation "60614009" xsd:string
 [Term]
 id: SNOMED:60621009
 name: Body mass index
+is_a: PROMOT:0032090 ! decimal content entity
 is_a: SNOMED:248326004 ! Body measure
 property_value: dc11:type "observable entity" xsd:string
 property_value: sct-ext:definitionStatus "Primitif" xsd:string
@@ -13678,6 +13942,7 @@ id: PROMOT:2000007
 name: a pour identifiant
 def: "A relation between an entity and its identifier where the identifier allows to indentify the first entity." []
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
+range: IAO:0020000 ! identifier
 
 [Typedef]
 id: RO:0000080
@@ -13726,7 +13991,6 @@ def: "A relationship that holds between a biological entity and a phenotype. Her
 subset: ro-eco
 property_value: IAO:0000114 IAO:0000125
 property_value: IAO:0000117 https://orcid.org/0000-0002-6601-2165
-property_value: seeAlso c
 
 [Typedef]
 id: RO:0002234

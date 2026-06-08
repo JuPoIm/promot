@@ -1,6 +1,6 @@
 format-version: 1.2
-data-version: promot/releases/2026-06-01/promot-simple.owl
-date: 01:06:2026 14:42
+data-version: promot/releases/2026-06-08/promot-simple.owl
+date: 08:06:2026 16:13
 subsetdef: http://purl.obolibrary.org/obo/valid_for_go_annotation_extension ""
 subsetdef: http://purl.obolibrary.org/obo/valid_for_go_gp2term ""
 subsetdef: http://purl.obolibrary.org/obo/valid_for_go_ontology ""
@@ -54,7 +54,7 @@ property_value: dc11:contributor "Mansoore Gholizade MD" xsd:string
 property_value: dc11:creator "Cynthia Gagnon MD, PhD\nhttps://orcid.org/0000-0003-2829-8470" xsd:string
 property_value: dc11:creator "Juliette Potier MSc\nhttps://orcid.org/0009-0000-5160-7927" xsd:string
 property_value: dc11:creator "Paul Fabry MD, PhD student\nhttps://orcid.org/0000-0002-3336-2476" xsd:string
-property_value: owl:versionInfo "2026-06-01" xsd:string
+property_value: owl:versionInfo "2026-06-08" xsd:string
 property_value: seeAlso "More about PROMOT initiative at https://www.promotinitiative.com/\n" xsd:string
 property_value: terms:description "Ontology for modeling the three following neuromuscular diseases : OPMD, Congenital myopathies and Congenital myastenic syndroms. It aims to be also an ontology for building the PROMOT project relational database." xsd:string
 property_value: terms:license https://creativecommons.org/licenses/by-nc-sa/4.0/
@@ -63,7 +63,7 @@ property_value: terms:title "PROMOT ontology" xsd:string
 [Term]
 id: PROMOT:0000001
 name: OPMD related mutation
-def: "A sequence alteration that is causal germline mutation in Oculopharyngeal Muscular Dystrophy." []
+def: "A sequence alteration that is causal germline mutation in Oculopharyngeal Muscular Dystrophy." [] {IAO:0000119="a"}
 
 [Term]
 id: PROMOT:0000002
@@ -236,6 +236,7 @@ property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 id: PROMOT:0010006
 name: Année d’identification
 def: "El año de la evaluación de una entidad, por ejemplo,  el año en el que se evalúa un fenotipo mediante pruebas médicas." [] {IAO:0000119="reviewed by https://orcid.org/0000-0002-1500-0236"}
+is_a: PROMOT:0032084 ! year content entity
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
@@ -243,6 +244,7 @@ id: PROMOT:0010007
 name: Année de disparition
 def: "El año en que se resuelve una disposición anómala, por ejemplo, el año en que un fenotipo deja de existir." [] {IAO:0000119="reviewed by https://orcid.org/0000-0002-1500-0236"}
 comment: [PROMOT note] [Derived from RD-CDM] [6.2.4 Resolution Date] 
+is_a: PROMOT:0032084 ! year content entity
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
@@ -737,6 +739,8 @@ name: Debilidad fatigable de la musculatura facial 
 def: "A type of weakness of the facial musculature (i.e. one or more muscles innervated by the seventh cranial nerve) that occurs after a muscle group is used and lessens if the muscle group has some rest. That is, there is diminution of the strength of the facial musculature with repetitive muscle actions." [] {comment="[PROMOT project] Mansoore Gholizade (definition reviewer)", IAO:0000119="HP:0003473"}
 is_a: PROMOT:0032003 ! Body function related phenotype
 is_a: PROMOT:0032004 ! Activity related phenotype
+relationship: PROMOT:2000005 PROMOT:0032025 ! affecte Fuerza de los músculos faciales
+relationship: PROMOT:2000005 PROMOT:0032082 ! affecte date content entity
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 property_value: PROMOT:1000001 "Congenital myasthenic syndrom Scoping review" xsd:string
 property_value: PROMOT:1000001 "Congenital myopathy Scoping review" xsd:string
@@ -746,6 +750,8 @@ id: PROMOT:0032013
 name: Debilidad fatigable de los músculos oculares
 def: "A type of weakness of the ocular muscles that occurs after a muscle group is used and lessens if the muscle group has some rest. That is, there is diminution of the strength of the ocular muscles with repetitive muscle actions." [] {comment="[PROMOT project] Mansoore Gholizade (definition reviewer)", IAO:0000119="HP:0003473"}
 is_a: PROMOT:0032003 ! Body function related phenotype
+relationship: PROMOT:2000005 PROMOT:0032026 ! affecte Fuerza de los músculos extraoculares
+relationship: PROMOT:2000005 PROMOT:0032027 ! affecte Fuerza de los músculos intercostales
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 property_value: PROMOT:1000001 "Congenital myasthenic syndrom Scoping review" xsd:string
 property_value: PROMOT:1000001 "Congenital myopathy Scoping review" xsd:string
@@ -775,6 +781,8 @@ id: PROMOT:0032016
 name: Fatigable ptosis
 def: "A type of ptosis that occurs after the external ocular muscle group is used and lessens if the muscle group has some rest. That is, there is a ptosis apparition with repetitive external ocular muscle actions" []
 is_a: PROMOT:0032003 ! Body function related phenotype
+relationship: PROMOT:2000005 PROMOT:0032026 ! affecte Fuerza de los músculos extraoculares
+relationship: PROMOT:2000005 PROMOT:0032027 ! affecte Fuerza de los músculos intercostales
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
@@ -845,7 +853,6 @@ property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 id: PROMOT:0032026
 name: Fuerza de los músculos extraoculares
 def: "Fonctions relatives à la force générée par la contraction des muscles extra-oculaires." []
-is_a: PROMOT:0032002 ! Activity related body function
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
@@ -866,12 +873,14 @@ property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 id: PROMOT:0032029
 name: Endurance des muscles intercostaux
 def: "Fonctions relatives au maintien d'une contraction musculaire des muscles intercostaux pour la période de temps requise." []
+is_a: PROMOT:0032002 ! Activity related body function
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
 id: PROMOT:0032030
 name: Endurance des muscles du tronc
 def: "Fonctions relatives au maintien d'une contraction musculaire des muscles du tronc pour la période de temps requise." []
+is_a: PROMOT:0032002 ! Activity related body function
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
@@ -1061,6 +1070,7 @@ property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 id: PROMOT:0032057
 name: Endurance du muscle de la langue
 def: "Fonctions relatives au maintien d'une contraction musculaire du muscle de la langue pour la période de temps requise." []
+is_a: PROMOT:0032002 ! Activity related body function
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
@@ -1081,6 +1091,7 @@ property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 id: PROMOT:0032060
 name: Endurance des muscles masticatoires
 def: "Fonctions relatives au maintien d'une contraction musculaire des muscles masticatoires pour la période de temps requise." []
+is_a: PROMOT:0032002 ! Activity related body function
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
@@ -1093,83 +1104,96 @@ property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 id: PROMOT:0032062
 name: Endurance du diaphragme
 def: "Fonctions relatives au maintien d'une contraction musculaire du diaphragme pour la période de temps requise." []
+is_a: PROMOT:0032002 ! Activity related body function
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
 id: PROMOT:0032063
 name: Endurance des muscles de l’avant bras
 def: "Fonctions relatives au maintien d'une contraction musculaire des muscles de l’avant-bras pour la période de temps requise." []
+is_a: PROMOT:0032002 ! Activity related body function
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
 id: PROMOT:0032064
 name: Endurance des muscles de la main
 def: "Fonctions relatives au maintien d'une contraction musculaire des muscles de la main pour la période de temps requise." []
+is_a: PROMOT:0032002 ! Activity related body function
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
 id: PROMOT:0032065
 name: Endurance des muscles du pied
 def: "Fonctions relatives au maintien d'une contraction musculaire des muscles du pied pour la période de temps requise." []
+is_a: PROMOT:0032002 ! Activity related body function
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
 id: PROMOT:0032066
 name: Endurance des muscles de la jambe
 def: "Fonctions relatives au maintien d'une contraction musculaire des muscles de la jambe pour la période de temps requise." []
+is_a: PROMOT:0032002 ! Activity related body function
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
 id: PROMOT:0032067
 name: Endurance des muscles du cou
 def: "Fonctions relatives au maintien d'une contraction musculaire des muscles du cou pour la période de temps requise." []
+is_a: PROMOT:0032002 ! Activity related body function
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
 id: PROMOT:0032068
 name: Endurance des muscles de l’épaule
 def: "Fonctions relatives au maintien d'une contraction musculaire des muscles de l’épaule pour la période de temps requise." []
+is_a: PROMOT:0032002 ! Activity related body function
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
 id: PROMOT:0032069
 name: Endurance des muscles du bras
 def: "Fonctions relatives au maintien d'une contraction musculaire de muscles du bras pour la période de temps requise." []
+is_a: PROMOT:0032002 ! Activity related body function
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
 id: PROMOT:0032070
 name: Endurance des muscles du bassin/de la ceinture pelvienne
 def: "Fonctions relatives au maintien d'une contraction musculaire des muscles du bassin/de la ceinture pelvienne pour la période de temps requise." []
+is_a: PROMOT:0032002 ! Activity related body function
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
 id: PROMOT:0032071
 name: Endurance des muscles de la cuisse
 def: "Fonctions relatives au maintien d'une contraction musculaire des muscles de la cuisse pour la période de temps requise." []
+is_a: PROMOT:0032002 ! Activity related body function
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
 id: PROMOT:0032072
 name: Endurance des muscles pharyngeaux
 def: "Fonctions relatives au maintien d'une contraction musculaire des muscles pharyngeaux pour la période de temps requise." []
+is_a: PROMOT:0032002 ! Activity related body function
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
 id: PROMOT:0032073
 name: Endurance du muscle du pharynx
 def: "Fonctions relatives au maintien d'une contraction musculaire d’un muscle du pharynx pour la période de temps requise." []
+is_a: PROMOT:0032002 ! Activity related body function
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
 id: PROMOT:0032074
 name: Endurance du trapèze
 def: "Fonctions relatives au maintien d'une contraction musculaire du trapèze pour la période de temps requise." []
+is_a: PROMOT:0032002 ! Activity related body function
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
 id: PROMOT:0032075
-name: Fuerza del trapecio
+name: Endurance of serratus anterior
 def: "Fonctions relatives à la force générée par la contraction du trapèze." []
 is_a: PROMOT:0032002 ! Activity related body function
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
@@ -1178,11 +1202,12 @@ property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 id: PROMOT:0032076
 name: Endurance du muscle dentelé antérieur
 def: "Fonctions relatives au maintien d'une contraction musculaire du muscle dentelé antérieur pour la période de temps requise." []
+is_a: PROMOT:0032002 ! Activity related body function
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
 id: PROMOT:0032077
-name: Fuerza del serrato anterior
+name: Endurance of rhomboid major
 def: "Fonctions relatives à la force générée par la contraction du muscle dentelé antérieur." []
 is_a: PROMOT:0032002 ! Activity related body function
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
@@ -1191,11 +1216,12 @@ property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 id: PROMOT:0032078
 name: Endurance du muscle grand rhomboïde
 def: "Fonctions relatives au maintien d'une contraction musculaire du muscle grand rhomboïde pour la période de temps requise." []
+is_a: PROMOT:0032002 ! Activity related body function
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
 id: PROMOT:0032079
-name: Fuerza del músculo romboides mayor 
+name: Endurance of rhomboid minor
 def: "Fonctions relatives à la force générée par la contraction du muscle grand rhomboïde." []
 is_a: PROMOT:0032002 ! Activity related body function
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
@@ -1204,14 +1230,50 @@ property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 id: PROMOT:0032080
 name: Endurance du muscle petit rhomboïde
 def: "Fonctions relatives au maintien d'une contraction musculaire du muscle petit rhomboïde pour la période de temps requise." []
+is_a: PROMOT:0032002 ! Activity related body function
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
 id: PROMOT:0032081
 name: Fuerza del músculo romboides menor
 def: "Fonctions relatives à la force générée par la contraction du muscle petit rhomboïde." []
-is_a: PROMOT:0032002 ! Activity related body function
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
+
+[Term]
+id: PROMOT:0032082
+name: date content entity
+def: "an information content entity where the information is a date." []
+
+[Term]
+id: PROMOT:0032083
+name: token content entity
+def: "an information content entity where the information is a token." []
+
+[Term]
+id: PROMOT:0032084
+name: year content entity
+def: "an information content entity where the information is a year." []
+
+[Term]
+id: PROMOT:0032087
+name: int content entity
+def: "an information content entity where the information is an int." []
+
+[Term]
+id: PROMOT:0032088
+name: duration content entity
+def: "an information content entity where the information is a duration." []
+
+[Term]
+id: PROMOT:0032089
+name: age content entity
+def: "an information content entity where the information is an age." []
+is_a: PROMOT:0032087 ! int content entity
+
+[Term]
+id: PROMOT:0032090
+name: decimal content entity
+def: "an information content entity where the information is a decimal." []
 
 [Term]
 id: PROMOT:0100001
@@ -1342,7 +1404,6 @@ def: "A relationship that holds between a biological entity and a phenotype. Her
 subset: ro-eco
 property_value: IAO:0000114 IAO:0000125
 property_value: IAO:0000117 https://orcid.org/0000-0002-6601-2165
-property_value: seeAlso c
 
 [Typedef]
 id: RO:0002234
