@@ -75,6 +75,9 @@ $(IMPORTDIR)/fma_import.owl: $(MIRRORDIR)/fma.owl $(IMPORTDIR)/fma_terms_alone.t
 $(IMPORTDIR)/hp_import.owl: $(MIRRORDIR)/hp.owl $(IMPORTDIR)/hp_terms_descendants.txt $(IMPORTDIR)/hp_terms_alone.txt $(IMPORTDIR)/hp_terms_ancestors.txt
 	if [ $(IMP) = true ]; then \
 		curl -L https://raw.githubusercontent.com/obophenotype/human-phenotype-ontology/refs/heads/master/src/translations/hp-fr.babelon.owl \
+		--output $(TMPDIR)/hp-fr.babelon.owl; \
+		$(ROBOT) remove $(TMPDIR)/hp-fr.babelon.owl \
+		-T $(IMPORTDIR)/hp_fr-bab_exclude_terms.txt --select "self annotations" --signature true \
 		--output $(IMPORTSDATADIR)/hp-fr.babelon.owl; \
 		curl -L https://raw.githubusercontent.com/obophenotype/human-phenotype-ontology/refs/heads/master/src/translations/hp-es.babelon.owl \
 		--output $(IMPORTSDATADIR)/hp-es.babelon.owl; \
@@ -161,7 +164,12 @@ $(IMPORTDIR)/snomed_import.owl: $(IMPORTSDATADIR)/ontology-2025-11-14_EN-ES.owl 
 		filter -T $(IMPORTDIR)/snomed_terms.txt --select "annotations self" --signature true \
 		query --update $(SPARQLDIR)/inject-subset-declaration.ru --update $(SPARQLDIR)/postprocess-module.ru \
 		annotate --ontology-iri $(ONTBASE)/$@ $(ANNOTATE_ONTOLOGY_VERSION) \
-		merge -i $@.tmp.owl --output $@.tmp.owl && mv $@.tmp.owl $@ ; fi
+		merge -i $@.tmp.owl \
+		remove --select "annotations='http://data.esante.gouv.fr/NRC-France/sct-ext#fsn'" \
+  		--select "annotations='http://data.esante.gouv.fr/NRC-France/sct-ext#definitionStatus'" \
+		--select "annotations='http://purl.org/dc/elements/1.1/type'" \
+		--select "annotations='http://www.w3.org/2004/02/skos/core#notation'" \
+		--output $@.tmp.owl && mv $@.tmp.owl $@ ; fi
 
 # ----------------------------------------
 # Module ICF (EN):
@@ -299,3 +307,11 @@ $(COMPONENTSDIR)/promot-component.owl: credits create-template $(TEMPLATEDIR)/pr
 # ----------------------------------------
 documentation:
   documentation_system: mkdocs
+
+# ----------------------------------------
+# CUSTOM REASON_TEST - reason_test personnalisé pour avoir les logs sur les classes qui ne sont pas satisfaisante
+# ----------------------------------------
+.PHONY: reason_test
+reason_test: $(EDIT_PREPROCESSED) explain_unsat
+	$(ROBOT) reason --input $< --reasoner $(REASONER) --equivalent-classes-allowed asserted-only \
+		--exclude-tautologies structural --output test.owl && rm test.owl

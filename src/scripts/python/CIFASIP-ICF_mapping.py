@@ -36,7 +36,7 @@ with open('../data/imports/SimpleTabulation-ICF-fr.txt', newline='', encoding='u
             while '- ' in label_en :
                 label_en = re.sub('- ', '', label_en)  # deletion of '- ' within labels / suppression des tirets devant les labels
             label_en = label_en.lower()
-            print(label_en)
+            #print(label_en)
             # insert ICF data (URI, code, labels) in df / on ajoute les données dans la dataframe
             df.loc[len(df)]= {'Foundation URI ICF': icf_uri,
                               'predicate_id':'skos:exactMatch',
@@ -70,7 +70,7 @@ with open ('../scripts/python/tmp/CIF-ASIP.tsv', encoding='utf-8') as tsvfile:
                     df.loc[df['Label EN'] == icf_label_en, 'Code ICF'] = icf_code
                 # insert CIF-ASIP URIs where ICF code is the same / on ajoute les URI fondamentales via le code ICF 
                 elif len(icf_code) >= 2 :
-                    print(f'le code est {icf_code} et le label est {icf_label_en}')
+                    #print(f'le code est {icf_code} et le label est {icf_label_en}')
                     #print(icf_label_en)
                     df.loc[df['Label EN'] == icf_label_en, 'URI data.esante'] = asip_uri
                 df.loc[df['Code ICF'] == icf_code, 'URI data.esante'] = asip_uri

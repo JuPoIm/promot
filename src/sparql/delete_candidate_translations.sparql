@@ -1,10 +1,18 @@
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX owl: <http://www.w3.org/2002/07/owl#>
 PREFIX bab: <https://w3id.org/babelon/>
-DELETE {?axiom ?p ?o .}
+DELETE {
+  ?axiom ?p ?o .
+  ?concept ?labelProp ?label .
+}
 WHERE {
   ?axiom a owl:Axiom ;
+         owl:annotatedSource ?concept ;
          owl:annotatedProperty rdfs:label ;
-         bab:translation_status "CANDIDATE" .
- ?axiom ?p ?o .
+         owl:annotatedTarget ?annotatedTarget ;
+         babelon:translation_status "CANDIDATE" .
+  ?axiom ?p ?o .
+  ?concept ?labelProp ?label .
+  FILTER(STRSTARTS(STR(?labelProp), STR(rdfs:label)))
+  FILTER(CONTAINS(STR(?label), STR(?annotatedTarget)))
 }
