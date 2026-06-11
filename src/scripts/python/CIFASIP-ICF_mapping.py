@@ -2,7 +2,7 @@
 # utf-8
 # Autrice : 0009-0000-5160-7927
 # Author : 0009-0000-5160-7927
-# GOAL : create a tsv file to be parsed by sssom-py into a sssom file from files with 2025 ICF and 2020 CIF-ASIP (2009 ICF data?) data
+# GOAL : create a tsv file to be parsed by sssom-py into a sssom file from files with 2026 ICF and 2020 CIF-ASIP (2009 ICF data?) data
 # BUT : créer un fichier tsv qui sera converti en sssom.tsv par sssom-py avec des données issues de la version 2025 d'ICF et des données issues de la version 2020 de CIF-ASIP (traduction de la version 2009 d'ICF ?)
 # date de création : 23/09/2025??
 # Creation date : 23/09/2025??

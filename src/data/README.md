@@ -20,24 +20,28 @@
 #### SNOMED CT translations and imports
 #### Import des traductions de SNOMED CT
 ##### EN
-1. Download the latest SNOMED CT international edition (RF2 files) from https://www.nlm.nih.gov/healthit/snomedct/international.html
+1. Request for a licence and download the latest SNOMED CT international edition (RF2 files) from https://www.nlm.nih.gov/healthit/snomedct/international.html
 2. Download the latest SNOMED CT Spanish (castellano) edition from https://www.nlm.nih.gov/healthit/snomedct/international.html
-3. Download the latest SNOMED CT French edition from https://smt.esante.gouv.fr/terminologie-snomed-ct-fr/
+3. Request for a licence and download the latest SNOMED CT French edition from https://smt.esante.gouv.fr/terminologie-snomed-ct-fr/
 4. Merge the Spanish (castellano) and French files to the SNOMED CT international .zip (or create a new .zip such as 'SNOMEDCT_en-es-fr' if need to combine them)
 5. Convert RF2 files to owl with https://github.com/IHTSDO/snomed-owl-toolkit/releases
 6. Put the resulting snomed.owl in ../data/
 
-Note that you can also merge the terminologie-snomed-ct-fr/dat/SnomedCT-NationalFR_OWL_asserted_20250621.owl (French edition) to the .owl merging international and Spanish version
+Note that you can also merge the terminologie-snomed-ct-fr/dat/SnomedCT-NationalFR_OWL_asserted_20250621.owl (French edition) to the .owl merging international and Spanish version.
+
+Please consider contacting the SNOMED CT international if you usecase needs it.
 
 ###### FR
-1. Télécharger la dernière version internationale de SNOMED CT (fichiers RF2) depuis https://www.nlm.nih.gov/healthit/snomedct/international.html
+1. Demander une licence et télécharger la dernière version internationale de SNOMED CT (fichiers RF2) depuis https://www.nlm.nih.gov/healthit/snomedct/international.html
 2. Télécharger la dernière version espagnole (castillan) de SNOMED CT depuis https://www.nlm.nih.gov/healthit/snomedct/international.html
-3. Télécharger la dernière version française de SNOMED CT depuishttps://smt.esante.gouv.fr/terminologie-snomed-ct-fr/
+3. Demander une licence et télécharger la dernière version française de SNOMED CT depuishttps://smt.esante.gouv.fr/terminologie-snomed-ct-fr/
 4. Ajouter les fichiers .txt des versions espagnole et française au .zip de la version internationale (ou créer une nouvelle archive telle que 'SNOMEDCT_en-es-fr' pour les fusionner si besoin)
 5. Convertir l'archive vers owl avec https://github.com/IHTSDO/snomed-owl-toolkit/releases
 6. Mettre le résultat dans ../data/
 
-Il est aussi possible de fusionner terminologie-snomed-ct-fr/dat/SnomedCT-NationalFR_OWL_asserted_20250621.owl avec une fusion de la version internationale et espagnole
+Il est aussi possible de fusionner terminologie-snomed-ct-fr/dat/SnomedCT-NationalFR_OWL_asserted_20250621.owl avec une fusion de la version internationale et espagnole.
+
+Pensez à contacter la SNOMED CT internationnale et/ou l'Agence du numérique en santé si jamais l'usage que vous avez de la SNOMED le requiert.
 
 #### ICF translations and imports
 #### Import des traductions pour ICF
@@ -59,10 +63,25 @@ ALREADY IMPLEMENTED IN PROMOT.MAKEFILE (cf. translation-mapping-ICF)
 
 ### 2. PROMOT ###
 
-RELATIONS.tsv
-hand edited file with relations to be implemented in PROMOT
+Hand edited tsv files with axioms to be implemented in PROMOT:
+* axioms_anatomy-bf: logical axioms whose subject is an anatomical entity and whose object is a body function
+* axioms_anatomy-bs: logical axioms whose subject is an anatomical entity and whose object is a body structure
+* axioms_anatomy-pheno: logical axioms whose subject is an anatomical entity and whose object is a phenotype
+* axioms_annotations_source: annotation axioms whose subject is a phenotype and whose annotation Is the source justifying the phenotype relation to a disease or a group of disease
+* axioms_bf-activity: logical axioms whose subject is a body function and whose object is an activity
+* axioms_bs-bf: logical axioms whose subject is a body structure and whose object is a body function
+* axioms_bs-pheno: logical axioms whose subject is a body structure and whose object is a phenotype
+* axioms_disease-pheno: logical axioms whose subject is a disease and whose object is a phenotype
+* axioms_variant-disease: logical axioms whose subject is a gene variant and whose object is a disease or a group of disease
+* axioms_icf-procedure: logical axioms whose subject is a body function or an activity and whose object is an evaluation procedure
+* axioms_pheno-activity: logical axioms whose subject is a phenotype and whose object is an activity
+* axioms_pheno-bf: logical axioms whose subject is a phenotype and whose object is a body function
+* axioms_pheno-procedure: logical axioms whose subject is a phenotype and whose object is an evaluation procedure
+* axioms_statements: logical axioms whose subject is a statement
 
+### 3. SCRIPTS ###
 
-### 3. SCRIIPTS ###
+(Work in progress)
 
-Work in progress
+diseases_codes: diseases codes used for the project
+genes_names: genes used for the project
