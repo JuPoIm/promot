@@ -2,9 +2,9 @@
 [//]: # "This file is meant to be edited by the ontology maintainer."
 
 ## Diseases described
-* Oculopharyngeal Muscular Dystrophy (OPMD)
-* Congenital Myasthenic Syndromes (CMS)
-* Congenital Myopathies (CMYO)
+* [Oculopharyngeal Muscular Dystrophy](https://www.orpha.net/en/disease/detail/270?name=Oculopharyngeal%20Muscular%20Dystrophy&mode=name) (OPMD)
+* [Congenital Myasthenic Syndromes](https://www.orpha.net/en/disease/detail/590?name=Congenital%20myasthenic%20syndromes&mode=name) (CMS)
+* [Congenital Myopathies](https://www.orpha.net/en/disease/detail/97245?name=Congenital%20Myopathy&mode=name) (CMYO)
 
 ## Imported upper-ontology:
 * [Basic Formal Ontology](https://github.com/BFO-ontology) (BFO)
@@ -31,9 +31,13 @@
 (Upcoming)
 
 ### BFO classes
+(Upcoming)
 
 ### Number of entities
+(Upcoming)
 
 ### Number of relations
+(Upcoming)
 
 ### Translations rate
+(Upcoming)

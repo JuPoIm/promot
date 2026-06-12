@@ -165,10 +165,7 @@ $(IMPORTDIR)/snomed_import.owl: $(IMPORTSDATADIR)/ontology-2025-11-14_EN-ES.owl 
 		query --update $(SPARQLDIR)/inject-subset-declaration.ru --update $(SPARQLDIR)/postprocess-module.ru \
 		annotate --ontology-iri $(ONTBASE)/$@ $(ANNOTATE_ONTOLOGY_VERSION) \
 		merge -i $@.tmp.owl \
-		remove --select "annotations='http://data.esante.gouv.fr/NRC-France/sct-ext#fsn'" \
-  		--select "annotations='http://data.esante.gouv.fr/NRC-France/sct-ext#definitionStatus'" \
-		--select "annotations='http://purl.org/dc/elements/1.1/type'" \
-		--select "annotations='http://www.w3.org/2004/02/skos/core#notation'" \
+		remove --annotation dc:type \
 		--output $@.tmp.owl && mv $@.tmp.owl $@ ; fi
 
 # ----------------------------------------

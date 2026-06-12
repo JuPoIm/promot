@@ -7,9 +7,9 @@ The PROMOT ontology has been developed as part of the [PROMOT initiative](https:
 
 It aims to represent the 3 groups of neuromuscular diseases and the 13 genes the PROMOT Master Observational Trial focuses on :
 
-* Oculopharyngeal Muscular Dystrophy: *PABPN1*
-* Congenital Myasthenic Syndromes: *CHRNE*, *DOK7*, *COLQ*, *RAPSN*, *GFPT1*, *GMPPB*
-* Congenital Myopathies: *RYR1*, *TTN*, *NEB*, *MTM1*, *ACTA1*, *SELENON*
+* [Oculopharyngeal Muscular Dystrophy](https://www.orpha.net/en/disease/detail/270?name=Oculopharyngeal%20Muscular%20Dystrophy&mode=name): *PABPN1*
+* [Congenital Myasthenic Syndromes](https://www.orpha.net/en/disease/detail/590?name=Congenital%20myasthenic%20syndromes&mode=name): *CHRNE*, *DOK7*, *COLQ*, *RAPSN*, *GFPT1*, *GMPPB*
+* [Congenital Myopathies](https://www.orpha.net/en/disease/detail/97245?name=Congenital%20Myopathy&mode=name): *RYR1*, *TTN*, *NEB*, *MTM1*, *ACTA1*, *SELENON*
 
 This ontology also aims to be the conceptual schema for building the common data model of the PROMOT initiative. It will be used to collect patient data scattered between the different sites involved in PROMOT initiative. You will find the ontology description [here](OntologyDescription.md).
 

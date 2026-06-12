@@ -9,9 +9,9 @@
 <img src="https://github.com/JuPoIm/promot/blob/test/site/assets/images/Promot_Logo_Colours.png" height=250 width=350/>
 
 The PROMOT ontology represents the 3 groups of neuromuscular diseases and the 13 genes the PROMOT Master Observational Trial focuses on :
-* Oculopharyngeal Muscular Dystrophy (PABPN1)
-* Congenital Myasthenic Syndromes (CHRNE, DOK7, COLQ, RAPSN, GFPT1, GMPPB)
-* Congenital Myopathies (RYR1, TTN, NEB, MTM1, ACTA1, SELENON)
+* [Oculopharyngeal Muscular Dystrophy](https://www.orpha.net/en/disease/detail/270?name=Oculopharyngeal%20Muscular%20Dystrophy&mode=name) (PABPN1)
+* [Congenital Myasthenic Syndromes](https://www.orpha.net/en/disease/detail/590?name=Congenital%20myasthenic%20syndromes&mode=name) (CHRNE, DOK7, COLQ, RAPSN, GFPT1, GMPPB)
+* [Congenital Myopathies](https://www.orpha.net/en/disease/detail/97245?name=Congenital%20Myopathy&mode=name) (RYR1, TTN, NEB, MTM1, ACTA1, SELENON)
 
 The PROMOT ontology aims to be the conceptual schema for the common data model the PROMOT initiative will use to collect patient data scattered between the different sites involved in PROMOT initiative.
 
@@ -51,9 +51,9 @@ Editors of this ontology should use the edit version, [src/ontology/promot-edit.
 * Mansoore Gholizade MD (University of Sherbrooke, Québec CA)
 * Daniel Natera de Benito MD, PhD (Hospital Sant Joan de Deu, Instituto de Salud Carloss III, Spain)
 * Claudia Côté MD, PhD (University of Sherbrooke, Québec CA)
-* Hanns Lochmuller MD (University of Ottawa, Ontario CA)
+* Hanns Lochmuller MD (University of Ottawa, Children's Hospital of Eastern Ontario, Ontario CA)
 
-Additional thoughts for Marc Vincent, PhD, and Thomas Bongibault, MSc, for their help processing the OPMD patient form.
+Additional thoughts for Marc Vincent, PhD (Imagine Institut), and Thomas Bongibault, MSc, for their help processing the OPMD patient form, and for Rachel Thompson, PhD (Children's Hospital of Eastern Ontario).
 
 ## How to cite
 
@@ -67,23 +67,23 @@ Please use this GitHub repository's [Issue tracker](https://github.com/JuPoIm/pr
 
 This work has been supported by the PROMOT project. It has received funding from the Canadian Institutes of Health Research (CIHR), and in partnership with L’Agence Nationale de la Recherche (France), Health Research Board (Dublin, Ireland), Instituto de Salud Carloss III (Spain), IRSC–IG, Swedish Research Council (Sweden), and Swiss National Science Foundation (Switzerland), partners of the European Joint Programme on Rare Diseases (EJP RD).
 
-## AGENCE NATIONALE DE LA RECHERCHE
+### Agence Nationale de la Recherche
 [![ANR official logo](https://github.com/JuPoIm/promot/blob/test/site/assets/images/anr-logo-2021.avif)](https://anr.fr/)
 
 More informations about the Agence Nationale de la Recherche can be found on [ANR website](https://anr.fr/)
 
-## CANADIAN INSTITUTES OF HEALTH RESEARCH
+### Canadian Institutes of Health Research
 
 [![CIHR official logo](https://github.com/JuPoIm/promot/blob/test/site/assets/images/IRSC_CIHR.avif)](https://cihr-irsc.gc.ca/e/193.html)
 
 More informations about the Canadian Institutes of Health Research can be found on [CIHR website](https://cihr-irsc.gc.ca/e/193.html)
 
-### PROMOT INITIATIVE
+### PROMOT Initiative
 <img src="https://github.com/JuPoIm/promot/blob/test/site/assets/images/Promot_Logo_Colours.png" height=200 width=300/>
 
 More informations about PROMOT initiative can be found on [PROMOT initiative website](https://www.promotinitiative.com/).
 
-### EUROPEAN JOINT PROGRAMME ON RARE DISEASE
+### European Joint Programme On Rare Diseases
 [![EJP RD official logo](https://github.com/JuPoIm/promot/blob/test/site/assets/images/EJP-RD-1024x226.png)](https://www.ejprarediseases.org/)
 
 The EJP RD initiative has received funding from the European Union’s Horizon 2020 research and innovation programme under grant agreement N°825575.
@@ -97,17 +97,17 @@ Outstanding contributors are groups and institutions that have helped with build
 advice and infrastructure. We are very grateful for all your contributions - this project would not exist without you!
 --->
 
-### IMAGINE INSTITUTE
+### Imagine Institute
 <img src="https://github.com/JuPoIm/promot/blob/test/site/assets/images/logo_imagine.png" height=150 width=250/>
 
 More informations about Imagine Institute can be found on [Imagine Institute website](https://www.institutimagine.org/)
 
-### UNIVERSITY OF SHERBROOKE
+### University of Sherbrooke
 [![University of Sherbrooke official logo](https://github.com/JuPoIm/promot/blob/test/site/assets/images/logo_sherbrooke.png)](https://www.usherbrooke.ca/)
 
 More informations about the University of Sherbrooke can be found on [University of Sherbrooke website](https://www.usherbrooke.ca/)
 
-### ASSISTANCE PUBLIQUE - HÔPITAUX DE PARIS
+### Assistance Publique - Hôpitaux de Paris
 [![AP-HP official logo](https://github.com/JuPoIm/promot/blob/test/site/assets/images/logo_aphp.png)](https://www.aphp.fr/)
 
 More informations about AP-HP can be found on [AP-HP website](https://www.aphp.fr/)

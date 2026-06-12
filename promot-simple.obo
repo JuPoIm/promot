@@ -1,6 +1,6 @@
 format-version: 1.2
-data-version: promot/releases/2026-06-10/promot-simple.owl
-date: 10:06:2026 14:13
+data-version: promot/releases/2026-06-12/promot-simple.owl
+date: 12:06:2026 17:04
 subsetdef: http://purl.obolibrary.org/obo/valid_for_go_annotation_extension ""
 subsetdef: http://purl.obolibrary.org/obo/valid_for_go_gp2term ""
 subsetdef: http://purl.obolibrary.org/obo/valid_for_go_ontology ""
@@ -16,7 +16,6 @@ idspace: CPATH_MEASUREMENT https://w3id.org/cpont/measurement/
 idspace: CPATH_PERSON https://w3id.org/cpont/person/ 
 idspace: CPATH_VISIT_OCCURRENCE https://w3id.org/cpont/visit_occurrence/ 
 idspace: CPONT https://w3id.org/cpont/vocab/CPONT_ 
-idspace: dc http://purl.org/dc/terms/ 
 idspace: dc11 http://purl.org/dc/elements/1.1/ 
 idspace: FMA http://purl.org/sig/ont/fma/fma 
 idspace: foaf http://xmlns.com/foaf/0.1/ 
@@ -41,7 +40,6 @@ idspace: swrlb http://www.w3.org/2003/11/swrlb#
 idspace: terms http://purl.org/dc/terms/ 
 idspace: void http://rdfs.org/ns/void# 
 remark: Additional acknowledgements:\n	- Rachel Thompson\n	- Thomas Bongivault, MSc\n	- Marc Vincent, PhD\n
-remark: Additional acknowledgements:\n	- Thomas Bongivault, MSc\n	- Marc Vincent, PhD\n
 ontology: promot/promot-simple
 property_value: dc11:contributor "Anita Burgun MD, PhD\nhttps://orcid.org/0000-0001-6855-4366" xsd:string
 property_value: dc11:contributor "Carole Faviez PhD\nhttps://orcid.org/0000-0002-1500-0236" xsd:string
@@ -55,7 +53,7 @@ property_value: dc11:contributor "Mansoore Gholizade MD" xsd:string
 property_value: dc11:creator "Cynthia Gagnon MD, PhD\nhttps://orcid.org/0000-0003-2829-8470" xsd:string
 property_value: dc11:creator "Juliette Potier MSc\nhttps://orcid.org/0009-0000-5160-7927" xsd:string
 property_value: dc11:creator "Paul Fabry MD, PhD student\nhttps://orcid.org/0000-0002-3336-2476" xsd:string
-property_value: owl:versionInfo "2026-06-10" xsd:string
+property_value: owl:versionInfo "2026-06-12" xsd:string
 property_value: seeAlso "More about PROMOT initiative at https://www.promotinitiative.com/\n" xsd:string
 property_value: terms:description "Ontology for modeling the three following neuromuscular diseases : OPMD, Congenital myopathies and Congenital myastenic syndroms. It aims to be also an ontology for building the PROMOT project relational database." xsd:string
 property_value: terms:license https://creativecommons.org/licenses/by-nc-sa/4.0/
@@ -240,58 +238,34 @@ property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
 id: PROMOT:0010008
-name: declaración sobre un consentimiento 
+name: declaración sobre un consentimiento  {comment="reviewed by https://orcid.org/0000-0002-1500-0236"}
 def: "A statement regarding a consent to describe it." []
-relationship: RO:0002351 PROMOT:0010041 {cardinality="1"} ! has member Consent status
-relationship: RO:0002351 PROMOT:0010041 ! has member Consent status
-relationship: RO:0002351 PROMOT:0010048 ! has member Consent type
-relationship: RO:0002351 PROMOT:0010048 {cardinality="1"} ! has member Consent type
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
 id: PROMOT:0010009
-name: Declaración sobre un ser humano
+name: declaración sobre un ser humano {comment="reviewed by https://orcid.org/0000-0002-1500-0236"}
 def: "A statement that describes a human." []
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
 id: PROMOT:0010010
-name: declaración sobre un fenotipo
+name: declaración sobre un fenotipo {comment="reviewed by https://orcid.org/0000-0002-1500-0236"}
 def: "A statement regarding a phenotype to state details about it." []
-comment: BIH-CEI rd-cdm: Repo for the ontology-based rare disease common data model harmonising international registry use, FHIR, and Phenopackets 
-relationship: RO:0002351 PROMOT:0010013 {cardinality="1"} ! has member Année d’identification
-relationship: RO:0002351 PROMOT:0010013 ! has member Année d’identification
-relationship: RO:0002351 PROMOT:0010014 {maxCardinality="1"} ! has member Année de disparition
-relationship: RO:0002351 PROMOT:0010014 ! has member Année de disparition
+comment: [PROMOT note] [Derived from RD-CDM] ?
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
 id: PROMOT:0010011
-name: declaración sobre un procedimiento
+name: declaración sobre un procedimiento {comment="label by https://orcid.org/0000-0002-1500-0236"}
 def: "A statement regarding a procedure to describe it." []
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
 id: PROMOT:0010012
-name: declaración sobre un paciente
+name: declaración sobre un paciente {comment="reviewed by https://orcid.org/0000-0002-1500-0236"}
 def: "A statement regarding a patient to state details about them." []
-is_a: PROMOT:0010009 ! Declaración sobre un ser humano
-relationship: RO:0002351 PROMOT:0010052 ! has member Patient à risque de chute
-property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
-
-[Term]
-id: PROMOT:0010013
-name: Année d’identification
-def: "El año de la evaluación de una entidad, por ejemplo,  el año en el que se evalúa un fenotipo mediante pruebas médicas." [] {IAO:0000119="reviewed by https://orcid.org/0000-0002-1500-0236"}
-is_a: PROMOT:0010007 ! year content entity
-property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
-
-[Term]
-id: PROMOT:0010014
-name: Année de disparition
-def: "El año en que se resuelve una disposición anómala, por ejemplo, el año en que un fenotipo deja de existir." [] {IAO:0000119="reviewed by https://orcid.org/0000-0002-1500-0236"}
-comment: [PROMOT note] [Derived from RD-CDM] [6.2.4 Resolution Date] 
-is_a: PROMOT:0010007 ! year content entity
+is_a: PROMOT:0010009 ! declaración sobre un ser humano
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
@@ -300,6 +274,7 @@ name: Adulthood
 def: "Age category including people of 16 years old and above." [] {IAO:0000119="HP:0003581"}
 comment: [PROMOT note] [Derived from RD-CDM] [3.4 Age Category] 
 xref: http://snomed.info/id/41847000
+relationship: RO:0002350 PROMOT:0010009 ! member of declaración sobre un ser humano
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 property_value: seeAlso HP:0003581
 property_value: skos:closeMatch "http://purl.obolibrary.org/obo/NCIT_C17600" xsd:string
@@ -349,7 +324,6 @@ property_value: skos:closeMatch "http://purl.obolibrary.org/obo/NCIT_C27954" xsd
 id: PROMOT:0010020
 name: Intermediate young adulthood
 def: "Age category including people between 19 and 24 years old (inclusive)." [] {IAO:0000119="HP:0025709"}
-comment: This term includes the full 19th year of age up to the completed 25th year of age (i.e., less than the 25th birthday). [from: HP:0025709]
 is_a: PROMOT:0010018 ! Young adulthood
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 property_value: seeAlso HP:0025709
@@ -358,7 +332,6 @@ property_value: seeAlso HP:0025709
 id: PROMOT:0010021
 name: Late young adulthood
 def: "Age category including people between 25 and 39 years old (inclusive)." [] {IAO:0000119="HP:0025710"}
-comment: This term includes the full 25th year of age up to the completed 40th year of age (i.e., less than the 40th birthday). [from: HP:0025710]
 is_a: PROMOT:0010018 ! Young adulthood
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 property_value: seeAlso HP:0025710
@@ -367,6 +340,7 @@ property_value: seeAlso HP:0025710
 id: PROMOT:0010022
 name: Antenatal age
 def: "Age category prior to birth." [] {IAO:0000119="HP:0025710"}
+relationship: RO:0002350 PROMOT:0010009 ! member of declaración sobre un ser humano
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
@@ -417,6 +391,7 @@ property_value: seeAlso HP:0034197
 id: PROMOT:0010028
 name: Congenital
 def: "Age catefory corresponding to birth." [] {IAO:0000119="HP:0003577"}
+relationship: RO:0002350 PROMOT:0010009 ! member of declaración sobre un ser humano
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 property_value: seeAlso HP:0003577
 
@@ -424,6 +399,7 @@ property_value: seeAlso HP:0003577
 id: PROMOT:0010029
 name: Neonatal age
 def: "Age within the first 28 days of life." [] {IAO:0000119="HP:0003623"}
+relationship: RO:0002350 PROMOT:0010009 ! member of declaración sobre un ser humano
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 property_value: seeAlso HP:0003623
 property_value: skos:closeMatch "http://purl.obolibrary.org/obo/NCIT_C16731" xsd:string
@@ -432,6 +408,7 @@ property_value: skos:closeMatch "http://purl.obolibrary.org/obo/NCIT_C16731" xsd
 id: PROMOT:0010030
 name: Pediatric age
 def: "Age category before adulthood, defined here as before the age of 16 years, but excluding neonatal or congenital onset. It includes people from the age of 28 days to 15 years old (included)." [] {IAO:0000119="HP:0410280"}
+relationship: RO:0002350 PROMOT:0010009 ! member of declaración sobre un ser humano
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 property_value: seeAlso HP:0410280
 
@@ -439,7 +416,7 @@ property_value: seeAlso HP:0410280
 id: PROMOT:0010031
 name: Childhood
 def: "Age category including people from 1 to 4 years old (inclusive)." [] {IAO:0000119="HP:0011463"}
-comment: JP: Translated to spanish using Bing Translator
+comment: [PROMOT note] [Derived from RD-CDM] [3.4 Age Category] 
 xref: http://snomed.info/id/255398004
 is_a: PROMOT:0010030 ! Pediatric age
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
@@ -462,7 +439,7 @@ property_value: skos:closeMatch "http://purl.obolibrary.org/obo/NCIT_C49643" xsd
 id: PROMOT:0010033
 name: Juvenile age
 def: "Age category including people between 5 and 15 years old (inclusive)." [] {IAO:0000119="HP:0003621"}
-comment: JP: Translated to spanish using Bing Translator
+comment: [PROMOT note] [Derived from RD-CDM] [3.4 Age Category] 
 xref: http://snomed.info/id/713153009
 is_a: PROMOT:0010030 ! Pediatric age
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
@@ -473,6 +450,7 @@ property_value: skos:closeMatch "http://purl.obolibrary.org/obo/NCIT_C85405" xsd
 id: PROMOT:0010034
 name: Perimenopausal age
 def: "Age category including people undergoing perimenopause, i.e. the period of life shortly before the occurence of the menopause." [] {IAO:0000119="HP:6000314"}
+relationship: RO:0002350 PROMOT:0010009 ! member of declaración sobre un ser humano
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 property_value: seeAlso HP:6000314
 
@@ -480,6 +458,7 @@ property_value: seeAlso HP:6000314
 id: PROMOT:0010035
 name: Postmenopausal age
 def: "Age category including people undergoing postmenopause, i.e. the period of life after the occurrence of the menopause." [] {IAO:0000119="HP:6000315"}
+relationship: RO:0002350 PROMOT:0010009 ! member of declaración sobre un ser humano
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 property_value: seeAlso HP:6000315
 
@@ -487,6 +466,7 @@ property_value: seeAlso HP:6000315
 id: PROMOT:0010036
 name: Puerpural age
 def: "Age category including ages refering to childbirth or period after immediately following." [] {IAO:0000119="HP:4000040"}
+relationship: RO:0002350 PROMOT:0010009 ! member of declaración sobre un ser humano
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 property_value: seeAlso HP:4000040
 
@@ -496,6 +476,7 @@ name: Patient sex at birth unknown
 def: "Physical sexual characteristiscs at birth that are unknown." []
 comment: [PROMOT note] [Derived from EURO-NMD] 
 xref: http://snomed.info/id/184115007
+relationship: RO:0002350 PROMOT:0010009 ! member of declaración sobre un ser humano
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
@@ -513,6 +494,7 @@ name: Gender identity unknown
 def: "Gender identity of a person that is unknown." []
 comment: [PROMOT note] [Derived from RD-CDM] [2.4 Gender Identity] 
 xref: http://snomed.info/id/394743007
+relationship: RO:0002350 PROMOT:0010012 ! member of declaración sobre un paciente
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
@@ -528,15 +510,16 @@ property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 id: PROMOT:0010041
 name: Consent status
 def: "A status of the consent of a person." []
-comment: Ongoing discussion
+comment: [PROMOT note] [Derived from EURO-NMD] 
 xref: http://snomed.info/id/309370004
+relationship: RO:0002350 PROMOT:0010008 ! member of declaración sobre un consentimiento 
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
 id: PROMOT:0010042
 name: En attente
 def: "A status of a consent that is waiting to be defined." []
-comment: Ongoing discussion
+comment: [PROMOT note] [Derived from RD-CDM] [7.1 Consent Status] 
 is_a: PROMOT:0010041 ! Consent status
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
@@ -544,7 +527,7 @@ property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 id: PROMOT:0010043
 name: Proposed
 def: "A status of a consent that has been proposed to a person for them to decide." []
-comment: Ongoing discussion
+comment: [PROMOT note] [Derived from RD-CDM] [7.1 Consent Status] 
 is_a: PROMOT:0010041 ! Consent status
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
@@ -552,7 +535,7 @@ property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 id: PROMOT:0010044
 name: Actif
 def: "A status of a consent that has been approved by the concerned person." []
-comment: HL7 FHIR
+comment: [PROMOT note] [Derived from EURO-NMD] 
 is_a: PROMOT:0010041 ! Consent status
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
@@ -560,7 +543,7 @@ property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 id: PROMOT:0010045
 name: Rejected
 def: "A status of a consent that has been rejected by the concerned person." []
-comment: HL7 FHIR
+comment: [PROMOT note] [Derived from EURO-NMD] 
 is_a: PROMOT:0010041 ! Consent status
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
@@ -568,7 +551,7 @@ property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 id: PROMOT:0010046
 name: Inactif
 def: "A status of a consent that is inactive." []
-comment: Ongoing discussion
+comment: [PROMOT note] [Derived from RD-CDM] [7.1 Consent Status] 
 xref: http://snomed.info/id/73425007
 is_a: PROMOT:0010041 ! Consent status
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
@@ -577,7 +560,7 @@ property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 id: PROMOT:0010047
 name: Entered in Error
 def: "A status of a consent that has been entered by error." []
-comment: Ongoing discussion
+comment: [PROMOT note] [Derived from RD-CDM] [7.1 Consent Status] 
 xref: http://snomed.info/id/723510000
 is_a: PROMOT:0010041 ! Consent status
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
@@ -586,6 +569,8 @@ property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 id: PROMOT:0010048
 name: Consent type
 def: "The type of consent given by a person that precises the details of what is consented" []
+relationship: RO:0002350 PROMOT:0010008 ! member of declaración sobre un consentimiento 
+property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
 id: PROMOT:0010049
@@ -607,26 +592,26 @@ property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 id: PROMOT:0010051
 name: Unrecorded handedness
 def: "An handedness that is unrecorded." []
+relationship: RO:0002350 PROMOT:0010012 ! member of declaración sobre un paciente
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
 id: PROMOT:0010052
 name: Patient à risque de chute
 def: "A patient with phenotypes that allow to assess the patient undergo a risk of fall. (quality?)" []
+relationship: RO:0002350 PROMOT:0010012 ! member of declaración sobre un paciente
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
 id: PROMOT:0020001
 name: Phenotypically related body structure
 def: "A body structure related to a phenotype such that the body structure is the location of the phenotype." []
-comment: (JP: unsure about definition)
 property_value: IAO:0000117 "https://orcid.org/0000-0002-3336-2476, https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
 id: PROMOT:0020002
 name: Entité anatomique liée à un phénotype
 def: "An anatomical entity related to a phenotype such that the anatomical entity is the location of the phenotype. In other words, the phenotype is a disposition of the anatomical entity." []
-comment: (JP : unsure, attention au lien avec les body structures)
 property_value: IAO:0000117 "https://orcid.org/0000-0002-3336-2476, https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
@@ -639,6 +624,7 @@ property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 id: PROMOT:0020004
 name: Body function related anatomical entity
 def: "An anatomical entity that is involved in a body function." []
+property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
 id: PROMOT:0031001
@@ -835,14 +821,14 @@ id: PROMOT:0032018
 name: Fatigabilité des muscles extra-occulaires provoquant une ptose {babelon:translation_status="CANDIDATE"}
 def: "A type of ptosis that occurs after the external ocular muscle group is used and lessens if the muscle group has some rest. That is, there is a ptosis apparition with repetitive external ocular muscle actions" [] {comment="https://orcid.org/0000-0003-2829-8470", IAO:0000119="Medical experts"}
 is_a: PROMOT:0032005 ! Body function related phenotype
-relationship: PROMOT:2000001 PROMOT:0032027 ! affecte Endurance des muscles extra-oculaires
-relationship: PROMOT:2000001 PROMOT:0032056 ! affecte Fuerza de los músculos faciales
+relationship: PROMOT:2000001 PROMOT:0032029 ! affecte Endurance d’un muscle extra-oculaire
+relationship: PROMOT:2000001 PROMOT:0032065 ! affecte Fuerza del músculo extraocular
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 property_value: PROMOT:1000001 "Congenital myasthenic syndrom Scoping review" xsd:string
 
 [Term]
 id: PROMOT:0032019
-name: Debilidad fatigable muscular axial
+name: Debilidad fatigable muscular axial {babelon:translation_status="CANDIDATE"}
 def: "A type of weakness of the axial muscles (i.e., of the muscles of the head and neck, vertebral column, and intercostal muscles) that occurs after a muscle group is used and lessens if the muscle group has some rest. That is, there is diminution of the strength of the axial muscles with repetitive muscle actions." [] {comment="[PROMOT project] Mansoore Gholizade (definition reviewer)", IAO:0000119="HP:0003473"}
 is_a: PROMOT:0032003 ! Activity related phenotype
 is_a: PROMOT:0032005 ! Body function related phenotype
@@ -852,23 +838,23 @@ property_value: PROMOT:1000001 "Congenital myopathy Scoping review" xsd:string
 
 [Term]
 id: PROMOT:0032020
-name: Debilidad fatigable de la musculatura facial 
+name: Debilidad fatigable de la musculatura facial  {babelon:translation_status="CANDIDATE"}
 def: "A type of weakness of the facial musculature (i.e. one or more muscles innervated by the seventh cranial nerve) that occurs after a muscle group is used and lessens if the muscle group has some rest. That is, there is diminution of the strength of the facial musculature with repetitive muscle actions." [] {comment="[PROMOT project] Mansoore Gholizade (definition reviewer)", IAO:0000119="HP:0003473"}
 is_a: PROMOT:0032003 ! Activity related phenotype
 is_a: PROMOT:0032005 ! Body function related phenotype
-relationship: PROMOT:2000001 PROMOT:0032028 ! affecte Endurance des muscles du visage
-relationship: PROMOT:2000001 PROMOT:0032057 ! affecte Fuerza del primer músculo dorsal interóseo de la mano
+relationship: PROMOT:2000001 PROMOT:0032030 ! affecte Endurance d’un muscle du visage
+relationship: PROMOT:2000001 PROMOT:0032066 ! affecte Fuerza del músculo facial
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 property_value: PROMOT:1000001 "Congenital myasthenic syndrom Scoping review" xsd:string
 property_value: PROMOT:1000001 "Congenital myopathy Scoping review" xsd:string
 
 [Term]
 id: PROMOT:0032021
-name: Debilidad fatigable de los músculos oculares
+name: Debilidad fatigable del músculo oculares {babelon:translation_status="CANDIDATE"}
 def: "A type of weakness of the ocular muscles that occurs after a muscle group is used and lessens if the muscle group has some rest. That is, there is diminution of the strength of the ocular muscles with repetitive muscle actions." [] {comment="[PROMOT project] Mansoore Gholizade (definition reviewer)", IAO:0000119="HP:0003473"}
 is_a: PROMOT:0032005 ! Body function related phenotype
-relationship: PROMOT:2000001 PROMOT:0032027 ! affecte Endurance des muscles extra-oculaires
-relationship: PROMOT:2000001 PROMOT:0032056 ! affecte Fuerza de los músculos faciales
+relationship: PROMOT:2000001 PROMOT:0032029 ! affecte Endurance d’un muscle extra-oculaire
+relationship: PROMOT:2000001 PROMOT:0032065 ! affecte Fuerza del músculo extraocular
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 property_value: PROMOT:1000001 "Congenital myasthenic syndrom Scoping review" xsd:string
 property_value: PROMOT:1000001 "Congenital myopathy Scoping review" xsd:string
@@ -883,7 +869,7 @@ property_value: PROMOT:1000001 "[OPMD Scoping review on dysphagia] Côté C, Gag
 
 [Term]
 id: PROMOT:0032023
-name: Debilidad de músculos masticatorios
+name: Debilidad de músculos masticatorios {babelon:translation_status="CANDIDATE"}
 def: "A lack of strength in the muscles involved in chewing." [] {comment="[PROMOT project] Mansoore Gholizade (definition reviewer)", IAO:0000119="HP:0001324"}
 is_a: PROMOT:0032003 ! Activity related phenotype
 is_a: PROMOT:0032005 ! Body function related phenotype
@@ -893,420 +879,504 @@ property_value: PROMOT:1000001 "Congenital myopathy Scoping review" xsd:string
 
 [Term]
 id: PROMOT:0032024
-name: Endurance des muscles du bras {babelon:translation_status="CANDIDATE"}
-def: "Fonctions relatives au maintien d'une contraction musculaire de muscles du bras pour la période de temps requise." [] {babelon:translation_status="CANDIDATE"}
-is_a: PROMOT:0032002 ! Activity related body function
+name: Endurance d’un muscle abdominal {babelon:translation_status="CANDIDATE"}
+def: "Fonctions relatives au maintien d'une contraction musculaire d’un muscle abdominal pour la période de temps requise." [] {babelon:translation_status="CANDIDATE"}
+is_a: PROMOT:0032042 ! Endurance d’un muscle du tronc
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
 id: PROMOT:0032025
-name: Endurance du muscle buccinateur {babelon:translation_status="CANDIDATE"}
-def: "Fonctions relatives au maintien d'une contraction musculaire du muscle buccinateur pour la période de temps requise." [] {babelon:translation_status="CANDIDATE"}
-is_a: PROMOT:0032028 ! Endurance des muscles du visage
+name: Endurance d’un muscle du bras {babelon:translation_status="CANDIDATE"}
+def: "Fonctions relatives au maintien d'une contraction musculaire d’un muscle du bras pour la période de temps requise." [] {babelon:translation_status="CANDIDATE"}
+is_a: PROMOT:0032002 ! Activity related body function
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
 id: PROMOT:0032026
-name: Endurance du diaphragme {babelon:translation_status="CANDIDATE"}
-def: "Fonctions relatives au maintien d'une contraction musculaire du diaphragme pour la période de temps requise." [] {babelon:translation_status="CANDIDATE"}
+name: Endurance du muscle buccinateur {babelon:translation_status="CANDIDATE"}
+def: "Fonctions relatives au maintien d'une contraction musculaire du muscle buccinateur pour la période de temps requise." [] {babelon:translation_status="CANDIDATE"}
+is_a: PROMOT:0032030 ! Endurance d’un muscle du visage
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
 id: PROMOT:0032027
-name: Endurance des muscles extra-oculaires {babelon:translation_status="CANDIDATE"}
-def: "Fonctions relatives au maintien d'une contraction musculaire des muscles extra-oculaires pour la période de temps requise." [] {babelon:translation_status="CANDIDATE"}
-is_a: PROMOT:0032028 ! Endurance des muscles du visage
+name: Endurance du diaphragme {babelon:translation_status="CANDIDATE"}
+def: "Fonctions relatives au maintien d'une contraction musculaire du diaphragme pour la période de temps requise." [] {babelon:translation_status="CANDIDATE"}
+is_a: PROMOT:0032042 ! Endurance d’un muscle du tronc
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
 id: PROMOT:0032028
-name: Endurance des muscles du visage {babelon:translation_status="CANDIDATE"}
-def: "Fonctions relatives au maintien d'une contraction musculaire des muscles du visage pour la période de temps requise." [] {babelon:translation_status="CANDIDATE"}
-is_a: PROMOT:0032002 ! Activity related body function
+name: Endurance d’un muscle extenseur des doigts de la main {babelon:translation_status="CANDIDATE"}
+def: "Fonctions relatives au maintien d'une contraction du muscle extenseur des doigts de la main pour la période de temps requise." [] {babelon:translation_status="CANDIDATE"}
+is_a: PROMOT:0032033 ! Endurance d’un muscle de l’avant bras
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
 id: PROMOT:0032029
-name: Endurance des muscles du pied {babelon:translation_status="CANDIDATE"}
-def: "Fonctions relatives au maintien d'une contraction musculaire des muscles du pied pour la période de temps requise." [] {babelon:translation_status="CANDIDATE"}
-is_a: PROMOT:0032002 ! Activity related body function
+name: Endurance d’un muscle extra-oculaire {babelon:translation_status="CANDIDATE"}
+def: "Fonctions relatives au maintien d'une contraction musculaire d’un muscle extra-oculaire pour la période de temps requise." [] {babelon:translation_status="CANDIDATE"}
+is_a: PROMOT:0032030 ! Endurance d’un muscle du visage
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
 id: PROMOT:0032030
-name: Endurance des muscles de l’avant bras {babelon:translation_status="CANDIDATE"}
-def: "Fonctions relatives au maintien d'une contraction musculaire des muscles de l’avant-bras pour la période de temps requise." [] {babelon:translation_status="CANDIDATE"}
+name: Endurance d’un muscle du visage {babelon:translation_status="CANDIDATE"}
+def: "Fonctions relatives au maintien d'une contraction musculaire d’un muscle du visage pour la période de temps requise." [] {babelon:translation_status="CANDIDATE"}
 is_a: PROMOT:0032002 ! Activity related body function
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
 id: PROMOT:0032031
-name: Endurance des muscles de la main {babelon:translation_status="CANDIDATE"}
-def: "Fonctions relatives au maintien d'une contraction musculaire des muscles de la main pour la période de temps requise." [] {babelon:translation_status="CANDIDATE"}
-is_a: PROMOT:0032002 ! Activity related body function
+name: Endurance du premier muscle dorsal interosseux de la main {babelon:translation_status="CANDIDATE"}
+def: "Fonctions relatives au maintien d'une contraction du premier muscle dorsal interosseux de la main pour la période de temps requise." [] {babelon:translation_status="CANDIDATE"}
+is_a: PROMOT:0032037 ! Endurance d’un muscle intrinsèque de la main
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
 id: PROMOT:0032032
-name: Endurance des muscles intercostaux {babelon:translation_status="CANDIDATE"}
-def: "Fonctions relatives au maintien d'une contraction musculaire des muscles intercostaux pour la période de temps requise." [] {babelon:translation_status="CANDIDATE"}
+name: Endurance d’un muscle du pied {babelon:translation_status="CANDIDATE"}
+def: "Fonctions relatives au maintien d'une contraction musculaire d'un muscle du pied pour la période de temps requise." [] {babelon:translation_status="CANDIDATE"}
 is_a: PROMOT:0032002 ! Activity related body function
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
 id: PROMOT:0032033
-name: Endurance des muscles de la jambe {babelon:translation_status="CANDIDATE"}
-def: "Fonctions relatives au maintien d'une contraction musculaire des muscles de la jambe pour la période de temps requise." [] {babelon:translation_status="CANDIDATE"}
+name: Endurance d’un muscle de l’avant bras {babelon:translation_status="CANDIDATE"}
+def: "Fonctions relatives au maintien d'une contraction musculaire d'un muscle de l’avant-bras pour la période de temps requise." [] {babelon:translation_status="CANDIDATE"}
 is_a: PROMOT:0032002 ! Activity related body function
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
 id: PROMOT:0032034
-name: Endurance du muscle masséter {babelon:translation_status="CANDIDATE"}
-def: "Fonctions relatives au maintien d'une contraction musculaire du muscle masséter pour la période de temps requise." [] {babelon:translation_status="CANDIDATE"}
-is_a: PROMOT:0032028 ! Endurance des muscles du visage
+name: Endurance d’un muscle de la main {babelon:translation_status="CANDIDATE"}
+def: "Fonctions relatives au maintien d'une contraction musculaire d'un muscle de la main pour la période de temps requise." [] {babelon:translation_status="CANDIDATE"}
+is_a: PROMOT:0032002 ! Activity related body function
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
 id: PROMOT:0032035
-name: Endurance des muscles masticatoires {babelon:translation_status="CANDIDATE"}
-def: "Fonctions relatives au maintien d'une contraction musculaire des muscles masticatoires pour la période de temps requise." [] {babelon:translation_status="CANDIDATE"}
-is_a: PROMOT:0032002 ! Activity related body function
+name: Endurance d’un muscle intercostal {babelon:translation_status="CANDIDATE"}
+def: "Fonctions relatives au maintien d'une contraction musculaire d’un muscle intercostal pour la période de temps requise." [] {babelon:translation_status="CANDIDATE"}
+is_a: PROMOT:0032042 ! Endurance d’un muscle du tronc
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
 id: PROMOT:0032036
-name: Endurance du muscle du pharynx {babelon:translation_status="CANDIDATE"}
-def: "Fonctions relatives au maintien d'une contraction musculaire d’un muscle du pharynx pour la période de temps requise." [] {babelon:translation_status="CANDIDATE"}
-is_a: PROMOT:0032038 ! Endurance des muscles du cou
+name: Endurance des muscles intercostaux {babelon:translation_status="CANDIDATE"}
+def: "Fonctions relatives au maintien d'une contraction musculaire d'un groupe de muscles intercostaux pour la période de temps requise." [] {babelon:translation_status="CANDIDATE"}
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
 id: PROMOT:0032037
-name: Endurance des muscles du tronc {babelon:translation_status="CANDIDATE"}
-def: "Fonctions relatives au maintien d'une contraction musculaire des muscles du tronc pour la période de temps requise." [] {babelon:translation_status="CANDIDATE"}
-is_a: PROMOT:0032002 ! Activity related body function
+name: Endurance d’un muscle intrinsèque de la main {babelon:translation_status="CANDIDATE"}
+def: "Fonctions relatives au maintien d'une contraction du muscle intrinsèque de la main pour la période de temps requise." [] {babelon:translation_status="CANDIDATE"}
+is_a: PROMOT:0032034 ! Endurance d’un muscle de la main
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
 id: PROMOT:0032038
-name: Endurance des muscles du cou {babelon:translation_status="CANDIDATE"}
-def: "Fonctions relatives au maintien d'une contraction musculaire des muscles du cou pour la période de temps requise." [] {babelon:translation_status="CANDIDATE"}
+name: Endurance d’un muscle de la jambe {babelon:translation_status="CANDIDATE"}
+def: "Fonctions relatives au maintien d'une contraction musculaire d'un muscle de la jambe pour la période de temps requise." [] {babelon:translation_status="CANDIDATE"}
 is_a: PROMOT:0032002 ! Activity related body function
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
 id: PROMOT:0032039
-name: Endurance des muscles du bassin/de la ceinture pelvienne {babelon:translation_status="CANDIDATE"}
-def: "Fonctions relatives au maintien d'une contraction musculaire des muscles du bassin/de la ceinture pelvienne pour la période de temps requise." [] {babelon:translation_status="CANDIDATE"}
-is_a: PROMOT:0032002 ! Activity related body function
+name: Endurance d'un muscle masséter {babelon:translation_status="CANDIDATE"}
+def: "Fonctions relatives au maintien d'une contraction musculaire du muscle masséter pour la période de temps requise." [] {babelon:translation_status="CANDIDATE"}
+is_a: PROMOT:0032030 ! Endurance d’un muscle du visage
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
 id: PROMOT:0032040
-name: Endurance des muscles pharyngeaux {babelon:translation_status="CANDIDATE"}
-def: "Fonctions relatives au maintien d'une contraction musculaire des muscles pharyngeaux pour la période de temps requise." [] {babelon:translation_status="CANDIDATE"}
-is_a: PROMOT:0032038 ! Endurance des muscles du cou
-property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
-
-[Term]
-id: PROMOT:0032041
-name: Endurance du muscle ptérygoïdien {babelon:translation_status="CANDIDATE"}
-def: "Fonctions relatives au maintien d'une contraction musculaire du muscle ptérygoïdien pour la période de temps requise." [] {babelon:translation_status="CANDIDATE"}
+name: Endurance des muscles masticatoires {babelon:translation_status="CANDIDATE"}
+def: "Fonctions relatives au maintien d'une contraction musculaire d'un groupe de muscles masticatoires pour la période de temps requise." [] {babelon:translation_status="CANDIDATE"}
 is_a: PROMOT:0032002 ! Activity related body function
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
+id: PROMOT:0032041
+name: Endurance d’un muscle du pharynx {babelon:translation_status="CANDIDATE"}
+def: "Fonctions relatives au maintien d'une contraction musculaire d’un muscle du pharynx pour la période de temps requise." [] {babelon:translation_status="CANDIDATE"}
+is_a: PROMOT:0032043 ! Endurance d’un muscle du cou
+property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
+
+[Term]
 id: PROMOT:0032042
-name: Endurance du muscle grand rhomboïde {babelon:translation_status="CANDIDATE"}
-def: "Fonctions relatives au maintien d'une contraction musculaire du muscle grand rhomboïde pour la période de temps requise." [] {babelon:translation_status="CANDIDATE"}
-is_a: PROMOT:0032045 ! Endurance des muscles de l’épaule
+name: Endurance d’un muscle du tronc {babelon:translation_status="CANDIDATE"}
+def: "Fonctions relatives au maintien d'une contraction musculaire d'un muscle du tronc pour la période de temps requise." [] {babelon:translation_status="CANDIDATE"}
+is_a: PROMOT:0032002 ! Activity related body function
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
 id: PROMOT:0032043
-name: Endurance du muscle petit rhomboïde {babelon:translation_status="CANDIDATE"}
-def: "Fonctions relatives au maintien d'une contraction musculaire du muscle petit rhomboïde pour la période de temps requise." [] {babelon:translation_status="CANDIDATE"}
-is_a: PROMOT:0032045 ! Endurance des muscles de l’épaule
+name: Endurance d’un muscle du cou {babelon:translation_status="CANDIDATE"}
+def: "Fonctions relatives au maintien d'une contraction musculaire d'un muscle du cou pour la période de temps requise." [] {babelon:translation_status="CANDIDATE"}
+is_a: PROMOT:0032002 ! Activity related body function
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
 id: PROMOT:0032044
-name: Endurance du muscle dentelé antérieur {babelon:translation_status="CANDIDATE"}
-def: "Fonctions relatives au maintien d'une contraction musculaire du muscle dentelé antérieur pour la période de temps requise." [] {babelon:translation_status="CANDIDATE"}
-is_a: PROMOT:0032045 ! Endurance des muscles de l’épaule
+name: Endurance d’un muscle de la ceinture pelvienne {babelon:translation_status="CANDIDATE"}
+def: "Fonctions relatives au maintien d'une contraction musculaire d'un muscle de la ceinture pelvienne pour la période de temps requise." [] {babelon:translation_status="CANDIDATE"}
+is_a: PROMOT:0032002 ! Activity related body function
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
 id: PROMOT:0032045
-name: Endurance des muscles de l’épaule {babelon:translation_status="CANDIDATE"}
-def: "Fonctions relatives au maintien d'une contraction musculaire des muscles de l’épaule pour la période de temps requise." [] {babelon:translation_status="CANDIDATE"}
+name: Endurance des muscles pharyngeaux {babelon:translation_status="CANDIDATE"}
+def: "Fonctions relatives au maintien d'une contraction musculaire d'un groupe de muscles pharyngeaux pour la période de temps requise." [] {babelon:translation_status="CANDIDATE"}
 is_a: PROMOT:0032002 ! Activity related body function
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
 id: PROMOT:0032046
-name: Endurance du muscle temporal {babelon:translation_status="CANDIDATE"}
-def: "Fonctions relatives au maintien d'une contraction musculaire du muscle temporal pour la période de temps requise." [] {babelon:translation_status="CANDIDATE"}
-is_a: PROMOT:0032002 ! Activity related body function
+name: Endurance d'un muscle ptérygoïdien {babelon:translation_status="CANDIDATE"}
+def: "Fonctions relatives au maintien d'une contraction musculaire du muscle ptérygoïdien pour la période de temps requise." [] {babelon:translation_status="CANDIDATE"}
+is_a: PROMOT:0032030 ! Endurance d’un muscle du visage
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
 id: PROMOT:0032047
-name: Endurance des muscles de la cuisse {babelon:translation_status="CANDIDATE"}
-def: "Fonctions relatives au maintien d'une contraction musculaire des muscles de la cuisse pour la période de temps requise." [] {babelon:translation_status="CANDIDATE"}
-is_a: PROMOT:0032002 ! Activity related body function
+name: Endurance d'un muscle quadriceps fémoral {babelon:translation_status="CANDIDATE"}
+def: "Fonctions relatives au maintien d'une contraction du muscle quadriceps fémoral pour la période de temps requise." [] {babelon:translation_status="CANDIDATE"}
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
 id: PROMOT:0032048
-name: Endurance du muscle de la langue {babelon:translation_status="CANDIDATE"}
-def: "Fonctions relatives au maintien d'une contraction musculaire du muscle de la langue pour la période de temps requise." [] {babelon:translation_status="CANDIDATE"}
-is_a: PROMOT:0032028 ! Endurance des muscles du visage
+name: Endurance d'un muscle grand rhomboïde {babelon:translation_status="CANDIDATE"}
+def: "Fonctions relatives au maintien d'une contraction musculaire du muscle grand rhomboïde pour la période de temps requise." [] {babelon:translation_status="CANDIDATE"}
+is_a: PROMOT:0032051 ! Endurance d’un muscle de l’épaule
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
 id: PROMOT:0032049
-name: Endurance du trapèze {babelon:translation_status="CANDIDATE"}
-def: "Fonctions relatives au maintien d'une contraction musculaire du trapèze pour la période de temps requise." [] {babelon:translation_status="CANDIDATE"}
-is_a: PROMOT:0032045 ! Endurance des muscles de l’épaule
+name: Endurance d'un muscle petit rhomboïde {babelon:translation_status="CANDIDATE"}
+def: "Fonctions relatives au maintien d'une contraction musculaire du muscle petit rhomboïde pour la période de temps requise." [] {babelon:translation_status="CANDIDATE"}
+is_a: PROMOT:0032051 ! Endurance d’un muscle de l’épaule
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
 id: PROMOT:0032050
-name: Fuerza de los músculos abdominales {babelon:translation_status="CANDIDATE"}
-def: "Fonctions relatives à la force générée par la contraction des muscles abdominaux." [] {babelon:translation_status="CANDIDATE"}
-is_a: PROMOT:0032002 ! Activity related body function
+name: Endurance d'un muscle dentelé antérieur {babelon:translation_status="CANDIDATE"}
+def: "Fonctions relatives au maintien d'une contraction musculaire du muscle dentelé antérieur pour la période de temps requise." [] {babelon:translation_status="CANDIDATE"}
+is_a: PROMOT:0032051 ! Endurance d’un muscle de l’épaule
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
 id: PROMOT:0032051
-name: Fuerza del brazo {babelon:translation_status="CANDIDATE"}
-def: "Fonctions relatives à la force générée par la contraction des muscles du bras." [] {babelon:translation_status="CANDIDATE"}
+name: Endurance d’un muscle de l’épaule {babelon:translation_status="CANDIDATE"}
+def: "Fonctions relatives au maintien d'une contraction musculaire d'un muscle de l’épaule pour la période de temps requise." [] {babelon:translation_status="CANDIDATE"}
 is_a: PROMOT:0032002 ! Activity related body function
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
 id: PROMOT:0032052
-name: Fuerza del músculo buccinador {babelon:translation_status="CANDIDATE"}
-def: "Fonctions relatives à la force générée par la contraction du muscle buccinateur." [] {babelon:translation_status="CANDIDATE"}
-is_a: PROMOT:0032056 ! Fuerza de los músculos faciales
+name: Endurance d'un muscle temporal {babelon:translation_status="CANDIDATE"}
+def: "Fonctions relatives au maintien d'une contraction musculaire du muscle temporal pour la période de temps requise." [] {babelon:translation_status="CANDIDATE"}
+is_a: PROMOT:0032002 ! Activity related body function
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
 id: PROMOT:0032053
-name: Fuerza del diafragma {babelon:translation_status="CANDIDATE"}
-def: "Fonctions relatives à la force générée par la contraction du diaphragm." [] {babelon:translation_status="CANDIDATE"}
+name: Endurance de l’éminence thénar {babelon:translation_status="CANDIDATE"}
+def: "Fonctions relatives au maintien d'une contraction musculaire d’un muscle de l’éminence thénar pour la période de temps requise." [] {babelon:translation_status="CANDIDATE"}
+is_a: PROMOT:0032037 ! Endurance d’un muscle intrinsèque de la main
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
 id: PROMOT:0032054
-name: Fuerza del músculo extensor de los dedos de la mano {babelon:translation_status="CANDIDATE"}
-def: "Fonctions relatives à la force générée par la contraction du muscle extenseur des doigts de la main." [] {babelon:translation_status="CANDIDATE"}
-is_a: PROMOT:0032059 ! Fuerza de los músculos del antebrazo
+name: Endurance des muscles de la cuisse {babelon:translation_status="CANDIDATE"}
+def: "Fonctions relatives au maintien d'une contraction musculaire d'un muscle de la cuisse pour la période de temps requise." [] {babelon:translation_status="CANDIDATE"}
+is_a: PROMOT:0032002 ! Activity related body function
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
 id: PROMOT:0032055
-name: Fuerza de los músculos extraoculares {babelon:translation_status="CANDIDATE"}
-def: "Fonctions relatives à la force générée par la contraction des muscles extra-oculaires." [] {babelon:translation_status="CANDIDATE"}
-is_a: PROMOT:0032056 ! Fuerza de los músculos faciales
+name: Endurance d'un muscle tibial antérieur {babelon:translation_status="CANDIDATE"}
+def: "Fonctions relatives au maintien d'une contraction du muscle tibial antérieur pour la période de temps requise." [] {babelon:translation_status="CANDIDATE"}
+is_a: PROMOT:0032038 ! Endurance d’un muscle de la jambe
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
 id: PROMOT:0032056
-name: Fuerza de los músculos faciales {babelon:translation_status="CANDIDATE"}
-def: "Fonctions relatives à la force générée par la contraction des muscles du visage." [] {babelon:translation_status="CANDIDATE"}
-is_a: PROMOT:0032002 ! Activity related body function
+name: Endurance d'un muscle tibial postérieur {babelon:translation_status="CANDIDATE"}
+def: "Fonctions relatives au maintien d'une contraction du muscle tibial postérieur pour la période de temps requise." [] {babelon:translation_status="CANDIDATE"}
+is_a: PROMOT:0032038 ! Endurance d’un muscle de la jambe
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
 id: PROMOT:0032057
-name: Fuerza del primer músculo dorsal interóseo de la mano {babelon:translation_status="CANDIDATE"}
-def: "Fonctions relatives à la force générée par la contraction du premier muscle dorsal interosseux de la main." [] {babelon:translation_status="CANDIDATE"}
-is_a: PROMOT:0032062 ! Fuerza del músculo intrínseco de la mano
+name: Endurance du muscle de la langue {babelon:translation_status="CANDIDATE"}
+def: "Fonctions relatives au maintien d'une contraction musculaire du muscle de la langue pour la période de temps requise." [] {babelon:translation_status="CANDIDATE"}
+is_a: PROMOT:0032030 ! Endurance d’un muscle du visage
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
 id: PROMOT:0032058
-name: Fuerza del pie {babelon:translation_status="CANDIDATE"}
-def: "Fonctions relatives à la force générée par la contraction des muscles du pied." [] {babelon:translation_status="CANDIDATE"}
-is_a: PROMOT:0032002 ! Activity related body function
+name: Endurance du trapèze {babelon:translation_status="CANDIDATE"}
+def: "Fonctions relatives au maintien d'une contraction musculaire du trapèze pour la période de temps requise." [] {babelon:translation_status="CANDIDATE"}
+is_a: PROMOT:0032051 ! Endurance d’un muscle de l’épaule
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
 id: PROMOT:0032059
-name: Fuerza de los músculos del antebrazo {babelon:translation_status="CANDIDATE"}
-def: "Fonctions relatives à la force générée par la contraction des muscles de l’avant bras." [] {babelon:translation_status="CANDIDATE"}
-is_a: PROMOT:0032002 ! Activity related body function
+name: Endurance d'un muscle triceps brachial {babelon:translation_status="CANDIDATE"}
+def: "Fonctions relatives au maintien d'une contraction du muscle triceps brachial pour la période de temps requise." [] {babelon:translation_status="CANDIDATE"}
+is_a: PROMOT:0032025 ! Endurance d’un muscle du bras
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
 id: PROMOT:0032060
-name: Fuerza de los músculos de la mano {babelon:translation_status="CANDIDATE"}
-def: "Fonctions relatives à la force générée par la contraction des muscles de la main." [] {babelon:translation_status="CANDIDATE"}
+name: Fuerza del músculo abdominal {babelon:translation_status="CANDIDATE"}
+def: "Fonctions relatives à la force générée par la contraction d'un muscle abdominaux." [] {babelon:translation_status="CANDIDATE"}
 is_a: PROMOT:0032002 ! Activity related body function
+is_a: PROMOT:0032078 ! Fuerza del músculo del tronco
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
 id: PROMOT:0032061
-name: Fuerza de los músculos intercostales {babelon:translation_status="CANDIDATE"}
-def: "Fonctions relatives à la force générée par la contraction des muscles intercostaux." [] {babelon:translation_status="CANDIDATE"}
+name: Fuerza del brazo {babelon:translation_status="CANDIDATE"}
+def: "Fonctions relatives à la force générée par la contraction d'un muscle du bras." [] {babelon:translation_status="CANDIDATE"}
 is_a: PROMOT:0032002 ! Activity related body function
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
 id: PROMOT:0032062
-name: Fuerza del músculo intrínseco de la mano {babelon:translation_status="CANDIDATE"}
-def: "Fonctions relatives à la force générée par la contraction du muscle intrinsèque de la main." [] {babelon:translation_status="CANDIDATE"}
-is_a: PROMOT:0032060 ! Fuerza de los músculos de la mano
+name: Fuerza del músculo buccinador {babelon:translation_status="CANDIDATE"}
+def: "Fonctions relatives à la force générée par la contraction du muscle buccinateur." [] {babelon:translation_status="CANDIDATE"}
+is_a: PROMOT:0032066 ! Fuerza del músculo facial
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
 id: PROMOT:0032063
-name: Fuerza de los músculos de las piernas {babelon:translation_status="CANDIDATE"}
-def: "Fonctions relatives à la force générée par la contraction des muscles de la jambe." [] {babelon:translation_status="CANDIDATE"}
-is_a: PROMOT:0032002 ! Activity related body function
+name: Fuerza del diafragma {babelon:translation_status="CANDIDATE"}
+def: "Fonctions relatives à la force générée par la contraction du diaphragm." [] {babelon:translation_status="CANDIDATE"}
+is_a: PROMOT:0032078 ! Fuerza del músculo del tronco
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
 id: PROMOT:0032064
-name: Fuerza del músculo de la mandíbula {babelon:translation_status="CANDIDATE"}
-def: "Fonctions relatives à la force générée par la contraction du muscle masséter." [] {babelon:translation_status="CANDIDATE"}
-is_a: PROMOT:0032056 ! Fuerza de los músculos faciales
+name: Fuerza del músculo extensor de los dedos de la mano {babelon:translation_status="CANDIDATE"}
+def: "Fonctions relatives à la force générée par la contraction du muscle extenseur des doigts de la main." [] {babelon:translation_status="CANDIDATE"}
+is_a: PROMOT:0032069 ! Fuerza del músculo del antebrazo
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
 id: PROMOT:0032065
-name: Fuerza de los músculos masticatorios {babelon:translation_status="CANDIDATE"}
-def: "Fonctions relatives à la force générée par la contraction des muscles masticatoires." [] {babelon:translation_status="CANDIDATE"}
-is_a: PROMOT:0032002 ! Activity related body function
+name: Fuerza del músculo extraocular {babelon:translation_status="CANDIDATE"}
+def: "Fonctions relatives à la force générée par la contraction d'un muscle extra-oculaire." [] {babelon:translation_status="CANDIDATE"}
+is_a: PROMOT:0032066 ! Fuerza del músculo facial
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
 id: PROMOT:0032066
-name: Fuerza de un músculo de la faringe {babelon:translation_status="CANDIDATE"}
-def: "Fonctions relatives à la force générée par la contraction d’un muscle du pharynx." [] {babelon:translation_status="CANDIDATE"}
-is_a: PROMOT:0032067 ! Fuerza de los músculos del cuello
-property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
-
-[Term]
-id: PROMOT:0032067
-name: Fuerza de los músculos del cuello {babelon:translation_status="CANDIDATE"}
-def: "Fonctions relatives à la force générée par la contraction des muscles du cou." [] {babelon:translation_status="CANDIDATE"}
+name: Fuerza del músculo facial {babelon:translation_status="CANDIDATE"}
+def: "Fonctions relatives à la force générée par la contraction d'un muscle du visage." [] {babelon:translation_status="CANDIDATE"}
 is_a: PROMOT:0032002 ! Activity related body function
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
+id: PROMOT:0032067
+name: Fuerza del primer músculo dorsal interóseo de la mano {babelon:translation_status="CANDIDATE"}
+def: "Fonctions relatives à la force générée par la contraction du premier muscle dorsal interosseux de la main." [] {babelon:translation_status="CANDIDATE"}
+is_a: PROMOT:0032073 ! Fuerza del músculo intrínseco de la mano
+property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
+
+[Term]
 id: PROMOT:0032068
-name: Fuerza de los músculos de la pelvis/de la cintura pélvica {babelon:translation_status="CANDIDATE"}
-def: "Fonctions relatives à la force générée par la contraction des muscles du bassin/de la ceinture pelvienne." [] {babelon:translation_status="CANDIDATE"}
+name: Fuerza del pie {babelon:translation_status="CANDIDATE"}
+def: "Fonctions relatives à la force générée par la contraction d'un muscle du pied." [] {babelon:translation_status="CANDIDATE"}
 is_a: PROMOT:0032002 ! Activity related body function
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
 id: PROMOT:0032069
-name: Fuerza de los músculos de la faringe {babelon:translation_status="CANDIDATE"}
-def: "Fonctions relatives à la force générée par la contraction des muscles du pharynx." [] {babelon:translation_status="CANDIDATE"}
-is_a: PROMOT:0032067 ! Fuerza de los músculos del cuello
-property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
-
-[Term]
-id: PROMOT:0032070
-name: Fuerza del músculo pterigoideo {babelon:translation_status="CANDIDATE"}
-def: "Fonctions relatives à la force générée par la contraction du muscle ptérygoïdien." [] {babelon:translation_status="CANDIDATE"}
-is_a: PROMOT:0032056 ! Fuerza de los músculos faciales
-property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
-
-[Term]
-id: PROMOT:0032071
-name: Fuerza del músculo cuádriceps femoral {babelon:translation_status="CANDIDATE"}
-def: "Fonctions relatives à la force générée par la contraction du muscle quadriceps femoral." [] {babelon:translation_status="CANDIDATE"}
-is_a: PROMOT:0032063 ! Fuerza de los músculos de las piernas
-property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
-
-[Term]
-id: PROMOT:0032072
-name: Fuerza del músculo romboides mayor  {babelon:translation_status="CANDIDATE"}
-def: "Fonctions relatives à la force générée par la contraction du muscle grand rhomboïde." [] {babelon:translation_status="CANDIDATE"}
-is_a: PROMOT:0032075 ! Fuerza del hombro
-property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
-
-[Term]
-id: PROMOT:0032073
-name: Fuerza del músculo romboides menor {babelon:translation_status="CANDIDATE"}
-def: "Fonctions relatives à la force générée par la contraction du muscle petit rhomboïde." [] {babelon:translation_status="CANDIDATE"}
-is_a: PROMOT:0032075 ! Fuerza del hombro
-property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
-
-[Term]
-id: PROMOT:0032074
-name: Fuerza del serrato anterior {babelon:translation_status="CANDIDATE"}
-def: "Fonctions relatives à la force générée par la contraction du muscle dentelé antérieur." [] {babelon:translation_status="CANDIDATE"}
-is_a: PROMOT:0032075 ! Fuerza del hombro
-property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
-
-[Term]
-id: PROMOT:0032075
-name: Fuerza del hombro {babelon:translation_status="CANDIDATE"}
-def: "Fonctions relatives à la force générée par la contraction des muscles de l’épaule." [] {babelon:translation_status="CANDIDATE"}
+name: Fuerza del músculo del antebrazo {babelon:translation_status="CANDIDATE"}
+def: "Fonctions relatives à la force générée par la contraction d'un muscle de l’avant bras." [] {babelon:translation_status="CANDIDATE"}
 is_a: PROMOT:0032002 ! Activity related body function
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
+id: PROMOT:0032070
+name: Fuerza del músculo de la mano {babelon:translation_status="CANDIDATE"}
+def: "Fonctions relatives à la force générée par la contraction d'un muscle de la main." [] {babelon:translation_status="CANDIDATE"}
+is_a: PROMOT:0032002 ! Activity related body function
+property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
+
+[Term]
+id: PROMOT:0032071
+name: Fuerza del músculo intercostal {babelon:translation_status="CANDIDATE"}
+def: "Fonctions relatives à la force générée par la contraction d’un muscle intercostal." [] {babelon:translation_status="CANDIDATE"}
+is_a: PROMOT:0032002 ! Activity related body function
+is_a: PROMOT:0032078 ! Fuerza del músculo del tronco
+property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
+
+[Term]
+id: PROMOT:0032072
+name: Fuerza del los músculos intercostales {babelon:translation_status="CANDIDATE"}
+def: "Fonctions relatives à la force générée par la contraction d'un groupe de muscles intercostaux." [] {babelon:translation_status="CANDIDATE"}
+property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
+
+[Term]
+id: PROMOT:0032073
+name: Fuerza del músculo intrínseco de la mano {babelon:translation_status="CANDIDATE"}
+def: "Fonctions relatives à la force générée par la contraction du muscle intrinsèque de la main." [] {babelon:translation_status="CANDIDATE"}
+is_a: PROMOT:0032070 ! Fuerza del músculo de la mano
+property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
+
+[Term]
+id: PROMOT:0032074
+name: Fuerza del músculo de las piernas {babelon:translation_status="CANDIDATE"}
+def: "Fonctions relatives à la force générée par la contraction d'un muscle de la jambe." [] {babelon:translation_status="CANDIDATE"}
+is_a: PROMOT:0032002 ! Activity related body function
+property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
+
+[Term]
+id: PROMOT:0032075
+name: Fuerza del músculo de la mandíbula {babelon:translation_status="CANDIDATE"}
+def: "Fonctions relatives à la force générée par la contraction du muscle masséter." [] {babelon:translation_status="CANDIDATE"}
+is_a: PROMOT:0032066 ! Fuerza del músculo facial
+property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
+
+[Term]
 id: PROMOT:0032076
+name: Fuerza del músculo masticatorios {babelon:translation_status="CANDIDATE"}
+def: "Fonctions relatives à la force générée par la contraction d'un groupe de muscles masticatoires." [] {babelon:translation_status="CANDIDATE"}
+is_a: PROMOT:0032002 ! Activity related body function
+property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
+
+[Term]
+id: PROMOT:0032077
+name: Fuerza de un músculo de la faringe {babelon:translation_status="CANDIDATE"}
+def: "Fonctions relatives à la force générée par la contraction d’un muscle du pharynx." [] {babelon:translation_status="CANDIDATE"}
+is_a: PROMOT:0032079 ! Fuerza del músculo del cuello
+property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
+
+[Term]
+id: PROMOT:0032078
+name: Fuerza del músculo del tronco {babelon:translation_status="CANDIDATE"}
+def: "Fonctions relatives à la force générée par la contraction d'un muscle du tronc." [] {babelon:translation_status="CANDIDATE"}
+property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
+
+[Term]
+id: PROMOT:0032079
+name: Fuerza del músculo del cuello {babelon:translation_status="CANDIDATE"}
+def: "Fonctions relatives à la force générée par la contraction d'un muscle du cou." [] {babelon:translation_status="CANDIDATE"}
+is_a: PROMOT:0032002 ! Activity related body function
+property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
+
+[Term]
+id: PROMOT:0032080
+name: Fuerza del músculo de la cintura pélvica {babelon:translation_status="CANDIDATE"}
+def: "Fonctions relatives à la force générée par la contraction d'un muscle de la ceinture pelvienne." [] {babelon:translation_status="CANDIDATE"}
+is_a: PROMOT:0032002 ! Activity related body function
+property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
+
+[Term]
+id: PROMOT:0032081
+name: Fuerza de los músculos de la faringe {babelon:translation_status="CANDIDATE"}
+def: "Fonctions relatives à la force générée par la contraction d'un groupe de muscles du pharynx." [] {babelon:translation_status="CANDIDATE"}
+is_a: PROMOT:0032002 ! Activity related body function
+property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
+
+[Term]
+id: PROMOT:0032082
+name: Fuerza del músculo pterigoideo {babelon:translation_status="CANDIDATE"}
+def: "Fonctions relatives à la force générée par la contraction du muscle ptérygoïdien." [] {babelon:translation_status="CANDIDATE"}
+is_a: PROMOT:0032066 ! Fuerza del músculo facial
+property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
+
+[Term]
+id: PROMOT:0032083
+name: Fuerza del músculo cuádriceps femoral {babelon:translation_status="CANDIDATE"}
+def: "Fonctions relatives à la force générée par la contraction du muscle quadriceps femoral." [] {babelon:translation_status="CANDIDATE"}
+is_a: PROMOT:0032002 ! Activity related body function
+property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
+
+[Term]
+id: PROMOT:0032084
+name: Fuerza del músculo romboides mayor  {babelon:translation_status="CANDIDATE"}
+def: "Fonctions relatives à la force générée par la contraction du muscle grand rhomboïde." [] {babelon:translation_status="CANDIDATE"}
+is_a: PROMOT:0032087 ! Fuerza del hombro
+property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
+
+[Term]
+id: PROMOT:0032085
+name: Fuerza del músculo romboides menor {babelon:translation_status="CANDIDATE"}
+def: "Fonctions relatives à la force générée par la contraction du muscle petit rhomboïde." [] {babelon:translation_status="CANDIDATE"}
+is_a: PROMOT:0032087 ! Fuerza del hombro
+property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
+
+[Term]
+id: PROMOT:0032086
+name: Fuerza del serrato anterior {babelon:translation_status="CANDIDATE"}
+def: "Fonctions relatives à la force générée par la contraction du muscle dentelé antérieur." [] {babelon:translation_status="CANDIDATE"}
+is_a: PROMOT:0032087 ! Fuerza del hombro
+property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
+
+[Term]
+id: PROMOT:0032087
+name: Fuerza del hombro {babelon:translation_status="CANDIDATE"}
+def: "Fonctions relatives à la force générée par la contraction d'un muscle de l’épaule." [] {babelon:translation_status="CANDIDATE"}
+is_a: PROMOT:0032002 ! Activity related body function
+property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
+
+[Term]
+id: PROMOT:0032088
 name: Fuerza del músculo temporal {babelon:translation_status="CANDIDATE"}
 def: "Fonctions relatives à la force générée par la contraction du muscle temporal." [] {babelon:translation_status="CANDIDATE"}
 is_a: PROMOT:0032002 ! Activity related body function
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
-id: PROMOT:0032077
-name: Fuerza de los músculos de la eminencia tenar {babelon:translation_status="CANDIDATE"}
-def: "Fonctions relatives à la force générée par la contraction de l’éminence thénar." [] {babelon:translation_status="CANDIDATE"}
-is_a: PROMOT:0032062 ! Fuerza del músculo intrínseco de la mano
+id: PROMOT:0032089
+name: Fuerza del músculo de la eminencia tenar {babelon:translation_status="CANDIDATE"}
+def: "Fonctions relatives à la force générée par la contraction d’un muscle de l’éminence thénar." [] {babelon:translation_status="CANDIDATE"}
+is_a: PROMOT:0032073 ! Fuerza del músculo intrínseco de la mano
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
-id: PROMOT:0032078
+id: PROMOT:0032090
 name: Fuerza del muslo {babelon:translation_status="CANDIDATE"}
-def: "Fonctions relatives à la force générée par la contraction des muscles de la cuisse." [] {babelon:translation_status="CANDIDATE"}
+def: "Fonctions relatives à la force générée par la contraction d'un muscle de la cuisse." [] {babelon:translation_status="CANDIDATE"}
 is_a: PROMOT:0032002 ! Activity related body function
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
-id: PROMOT:0032079
+id: PROMOT:0032091
 name: Fuerza del músculo tibial anterior {babelon:translation_status="CANDIDATE"}
 def: "Fonctions relatives à la force générée par la contraction du muscle tibial antérieur." [] {babelon:translation_status="CANDIDATE"}
-is_a: PROMOT:0032063 ! Fuerza de los músculos de las piernas
+is_a: PROMOT:0032074 ! Fuerza del músculo de las piernas
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
-id: PROMOT:0032080
+id: PROMOT:0032092
 name: Fuerza del músculo tibial posterior {babelon:translation_status="CANDIDATE"}
 def: "Fonctions relatives à la force générée par la contraction du muscle tibial postérieur." [] {babelon:translation_status="CANDIDATE"}
-is_a: PROMOT:0032063 ! Fuerza de los músculos de las piernas
+is_a: PROMOT:0032074 ! Fuerza del músculo de las piernas
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
-id: PROMOT:0032081
+id: PROMOT:0032093
 name: Fuerza del músculo de la lengua {babelon:translation_status="CANDIDATE"}
 def: "Fonctions relatives à la force générée par la contraction du muscle de la langue." [] {babelon:translation_status="CANDIDATE"}
-is_a: PROMOT:0032056 ! Fuerza de los músculos faciales
+is_a: PROMOT:0032066 ! Fuerza del músculo facial
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
-id: PROMOT:0032082
+id: PROMOT:0032094
 name: Fuerza del trapecio {babelon:translation_status="CANDIDATE"}
 def: "Fonctions relatives à la force générée par la contraction du trapèze." [] {babelon:translation_status="CANDIDATE"}
-is_a: PROMOT:0032075 ! Fuerza del hombro
+is_a: PROMOT:0032087 ! Fuerza del hombro
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
-id: PROMOT:0032083
+id: PROMOT:0032095
 name: Fuerza del músculo tríceps braquial {babelon:translation_status="CANDIDATE"}
 def: "Fonctions relatives à la force générée par la contraction du muscle triceps brachial." [] {babelon:translation_status="CANDIDATE"}
-is_a: PROMOT:0032051 ! Fuerza del brazo
+is_a: PROMOT:0032061 ! Fuerza del brazo
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
@@ -1354,7 +1424,6 @@ property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 id: PROMOT:2000002
 name: assesses
 def: "A relation between an evaluation procedure and the entity assessed by the procedure that could be a patient or a phenotype. The evaluation procedure could be, for instance, a performance test, a patient reported questionnaire or a scale (non restrictive)." []
-comment: JP: Translated to spanish using Bing Translator
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Typedef]
@@ -1389,9 +1458,8 @@ property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Typedef]
 id: PROMOT:2000008
-name: es utilizado por
+name: es utilizado por {babelon:translation_status="CANDIDATE"}
 def: "A relation between an assistive device and a patient, where the patient uses the device in order to accomplish something, such as a task or an activity (e.g. moving, reading)." []
-comment: JP: Translated to spanish using Bing Translator
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Typedef]
@@ -1478,6 +1546,17 @@ property_value: IAO:0000118 "actively involved in" xsd:string
 property_value: IAO:0000118 "enables part of" xsd:string
 property_value: seeAlso "https://wiki.geneontology.org/Involved_in" xsd:anyURI
 is_a: RO:0002328 ! functionally related to
+
+[Typedef]
+id: RO:0002350
+name: member of
+def: "is member of is a mereological relation between a item and a collection." []
+property_value: IAO:0000112 "An organism that is a member of a population of organisms" xsd:string
+property_value: IAO:0000118 "is member of" xsd:string
+property_value: IAO:0000118 "member part of" xsd:string
+property_value: IAO:0000119 "SIO" xsd:string
+property_value: RO:0001900 RO:0001901
+inverse_of: RO:0002351 ! has member
 
 [Typedef]
 id: RO:0002351
