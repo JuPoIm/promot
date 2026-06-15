@@ -1,6 +1,6 @@
 format-version: 1.2
-data-version: releases/2026-06-12
-date: 12:06:2026 17:03
+data-version: releases/2026-06-15
+date: 15:06:2026 15:30
 subsetdef: hposlim_core ""
 subsetdef: http://purl.obolibrary.org/obo/valid_for_go_annotation_extension ""
 subsetdef: http://purl.obolibrary.org/obo/valid_for_go_gp2term ""
@@ -118,6 +118,7 @@ idspace: CPATH_MEASUREMENT https://w3id.org/cpont/measurement/
 idspace: CPATH_PERSON https://w3id.org/cpont/person/ 
 idspace: CPATH_VISIT_OCCURRENCE https://w3id.org/cpont/visit_occurrence/ 
 idspace: CPONT https://w3id.org/cpont/vocab/CPONT_ 
+idspace: dc http://purl.org/dc/terms/ 
 idspace: dc11 http://purl.org/dc/elements/1.1/ 
 idspace: dcterms http://purl.org/dc/terms/ 
 idspace: efo http://www.ebi.ac.uk/efo/ 
@@ -146,6 +147,7 @@ idspace: sssom https://w3id.org/sssom/
 idspace: swrl http://www.w3.org/2003/11/swrl# 
 idspace: swrla http://swrl.stanford.edu/ontologies/3.3/swrla.owl# 
 idspace: swrlb http://www.w3.org/2003/11/swrlb# 
+idspace: terms http://purl.org/dc/terms/ 
 idspace: void http://rdfs.org/ns/void# 
 remark: Additional acknowledgements:\n	- Rachel Thompson\n	- Thomas Bongivault, MSc\n	- Marc Vincent, PhD\n
 ontology: promot
@@ -164,7 +166,7 @@ property_value: dc11:creator "Paul Fabry MD, PhD student\nhttps://orcid.org/0000
 property_value: dcterms:description "Ontology for modeling the three following neuromuscular diseases : OPMD, Congenital myopathies and Congenital myastenic syndroms. It aims to be also an ontology for building the PROMOT project relational database." xsd:string
 property_value: dcterms:license https://creativecommons.org/licenses/by-nc-sa/4.0/
 property_value: dcterms:title "PROMOT ontology" xsd:string
-property_value: owl:versionInfo "2026-06-12" xsd:string
+property_value: owl:versionInfo "2026-06-15" xsd:string
 property_value: seeAlso "More about PROMOT initiative at https://www.promotinitiative.com/\n" xsd:string
 
 [Term]
@@ -760,11 +762,11 @@ id: ECO:0006151
 name: documented statement evidence
 namespace: eco
 def: "A type of evidence in which information is recorded in some documentation system, for example, but not limited to a publication, survey, or medical record." [ECO:SN]
-comment: [PROMOT note] [Derived from EURO-NMD] 
+comment: [PROMOT note] [Derived from RD-CDM] [6.2.9 Evidence]
 is_a: IAO:0000030 ! information content entity
 relationship: RO:0002350 PROMOT:0010010 ! member of declaración sobre un fenotipo
 relationship: RO:0002614 IAO:0000027 ! is evidence with support from data item
-property_value: skos:changeNote "[PROMOT note] The PROMOT ontology added a comment to quote the CDMs used as a source for this entity." xsd:string
+property_value: skos:changeNote "[PROMOT note] The PROMOT ontology added a comment to quote the CDMs used as a source for this entity. The original element is phenotypicfeature.evidence from GA4GH." xsd:string
 created_by: snadendla
 
 [Term]
@@ -1783,7 +1785,7 @@ alt_id: HP:0001455
 alt_id: HP:0001456
 alt_id: HP:0001463
 def: "A mode of inheritance that is observed for traits related to a gene encoded on one of the autosomes (i.e., the human chromosomes 1-22) in which a trait manifests in heterozygotes. In the context of medical genetics, an autosomal dominant disorder is caused when a single copy of the mutant allele is present. Males and females are affected equally, and can both transmit the disorder with a risk of 50% for each child of inheriting the mutant allele." [https://orcid.org/0000-0002-0736-9199]
-comment: [PROMOT note] [Derived from EURO-NMD] 
+comment: [PROMOT note] [Derived from EURO-NMD NMD-CDE] [gendia_inher]
 synonym: "Autosomal dominant" EXACT []
 synonym: "Autosomal dominant form" RELATED [https://orcid.org/0000-0002-5316-1399]
 synonym: "Autosomal dominant type" RELATED [https://orcid.org/0000-0002-5316-1399]
@@ -1808,7 +1810,7 @@ alt_id: HP:0001416
 alt_id: HP:0001526
 alt_id: HP:0031362
 def: "A mode of inheritance that is observed for traits related to a gene encoded on one of the autosomes (i.e., the human chromosomes 1-22) in which a trait manifests in individuals with two pathogenic alleles, either homozygotes (two copies of the same mutant allele) or compound heterozygotes (whereby each copy of a gene has a distinct mutant allele)." [https://orcid.org/0000-0002-0736-9199]
-comment: [PROMOT note] [Derived from EURO-NMD] 
+comment: [PROMOT note] [Derived from EURO-NMD NMD-CDE] [gendia_inher]
 synonym: "Autosomal recessive" EXACT []
 synonym: "Autosomal recessive form" RELATED [https://orcid.org/0000-0002-5316-1399]
 synonym: "Autosomal recessive predisposition" RELATED []
@@ -4783,7 +4785,7 @@ alt_id: HP:0003627
 alt_id: HP:0003662
 alt_id: HP:0003669
 def: "Onset of disease manifestations in adulthood, defined here as at the age of 16 years or later." [https://orcid.org/0000-0002-0736-9199]
-comment: [PROMOT note] [Derived from EURO-NMD] 
+comment: [PROMOT note] [Derived from EURO-NMD NMD-CDE] [age_at_onset]
 synonym: "Onset in adulthood" EXACT []
 synonym: "Onset in adulthood|Onset in early adulthood|Symptoms begin in adulthood" EXACT []
 synonym: "Onset in early adulthood" EXACT []
@@ -4796,7 +4798,7 @@ property_value: skos:changeNote "[PROMOT note] The PROMOT ontology added a comme
 id: HP:0003584
 name: Late onset
 def: "A type of adult onset with onset of symptoms after the age of 60 years." [https://orcid.org/0000-0002-0736-9199]
-comment: [PROMOT note] [Derived from RD-CDM] [6.2.5 Onset Category] 
+comment: [PROMOT note] [Derived from RD-CDM] [6.2.5 Onset Category]
 xref: UMLS:C4025592
 is_a: HP:0003581 ! Adult onset
 property_value: PROMOT:1000001 "[OPMD HPO KB associations] Gargano MA, Matentzoglu N, Coleman B, Addo-Lartey EB, et al. The Human Phenotype Ontology in 2024: phenotypes around the world. Nucleic Acids Res. 2024 Jan 5;52(D1):D1333-D1346. doi: 10.1093/nar/gkad1005. PMID: 37953324; PMCID: PMC10767975." xsd:string
@@ -4854,7 +4856,7 @@ alt_id: HP:0003659
 alt_id: HP:0003661
 alt_id: HP:0003670
 def: "Onset of signs or symptoms of disease between the age of 5 and 15 years." [https://orcid.org/0000-0002-0736-9199]
-comment: [PROMOT note] [Derived from RD-CDM] [6.2.5 Onset Category] 
+comment: [PROMOT note] [Derived from RD-CDM] [6.2.5 Onset Category]
 synonym: "Apparition dans l'enfance" EXACT []
 synonym: "Signs and symptoms begin before 15 years of age" EXACT []
 synonym: "Signs and symptoms begin before 15 years of age" EXACT layperson [https://orcid.org/0000-0001-5208-3432, https://orcid.org/0000-0002-6548-5200]
@@ -4868,7 +4870,7 @@ id: HP:0003623
 name: Neonatal onset
 alt_id: HP:0003622
 def: "Onset of signs or symptoms of disease within the first 28 days of life." [https://orcid.org/0000-0002-0736-9199]
-comment: [PROMOT note] [Derived from EURO-NMD] 
+comment: [PROMOT note] [Derived from EURO-NMD NMD-CDE] [age_at_onset]
 synonym: "Neonatal onset" EXACT layperson []
 synonym: "Onset in first weeks of life" EXACT []
 synonym: "Onset in first weeks of life|Onset in neonatal period" EXACT []
@@ -4952,9 +4954,11 @@ is_a: HP:0003676 ! Progressive
 [Term]
 id: HP:0003679
 name: Pace of progression
+comment: [PROMOT note] [Derived from RD-CDM] [6.2.7 Modifiers]
 xref: UMLS:C4025580
 is_a: HP:0012823 ! Clinical modifier
 relationship: RO:0000080 HP:0000118 ! quality of Phenotypic abnormality
+property_value: skos:changeNote "[PROMOT note] The PROMOT ontology added a comment to quote the CDM used as a source for this entity." xsd:string
 
 [Term]
 id: HP:0003680
@@ -5884,7 +5888,7 @@ property_value: dcterms:date "2010-09-07T01:51:12Z" xsd:dateTime
 id: HP:0011008
 name: Temporal pattern
 def: "The speed at which disease manifestations appear and develop." [https://orcid.org/0000-0002-0736-9199]
-comment: [PROMOT note] [Derived from RD-CDM] [6.2.6 Temporal pattern] 
+comment: [PROMOT note] [Derived from RD-CDM] [6.2.6 Temporal pattern]
 synonym: "Speed of onset" EXACT []
 xref: UMLS:C4021204
 is_a: HP:0031797 ! Clinical course
@@ -5936,9 +5940,12 @@ property_value: dcterms:date "2011-03-03T10:23:19Z" xsd:dateTime
 id: HP:0011420
 name: Age of death
 def: "The age group when the cessation of life happens." [https://orcid.org/0000-0002-0736-9199]
+comment: [PROMOT note] [Derived from EURO-NMD NMD-CDE]
+xref: LOINC:92662-6
 xref: UMLS:C1546180
 is_a: SNOMED:363787002 ! Observable entity
 relationship: RO:0002350 PROMOT:0010009 ! member of declaración sobre un ser humano
+property_value: skos:changeNote "[PROMOT note] The PROMOT ontology added a comment to quote the CDMs used as a source for this entity. A crossref to the orignal RD-CDM element has also been added." xsd:string
 
 [Term]
 id: HP:0011421
@@ -6004,7 +6011,7 @@ property_value: skos:changeNote "[PROMOT note] The PROMOT ontology added a comme
 id: HP:0011462
 name: Young adult onset
 def: "Onset of disease at the age of between 16 and 40 years." [https://orcid.org/0000-0002-6410-0882]
-comment: [PROMOT note] [Derived from RD-CDM] [6.2.5 Onset Category] 
+comment: [PROMOT note] [Derived from RD-CDM] [6.2.5 Onset Category]
 xref: UMLS:C3554568
 is_a: HP:0003581 ! Adult onset
 property_value: dcterms:creator https://orcid.org/0000-0002-0736-9199
@@ -6526,7 +6533,7 @@ property_value: skos:changeNote "[PROMOT note] The PROMOT ontology added a comme
 id: HP:0012829
 name: Profound
 def: "Having an extremely high degree of severity. For quantitative traits, a deviation of more than five standard deviations from the appropriate population mean." [https://orcid.org/0000-0002-0736-9199]
-comment: [PROMOT note] [Derived from RD-CDM] [6.2.7 Severity] 
+comment: [PROMOT note] [Derived from RD-CDM] [6.2.7 Severity]
 synonym: "Profound" EXACT layperson []
 xref: SNOMEDCT_US:795002
 xref: UMLS:C0439808
@@ -6829,8 +6836,8 @@ id: HP:0030205
 name: Increased jitter at single fiber EMG
 def: "The variation in the time interval between the two action potentials of the same motor unit is called jitter. This term therefore applies to increased variability in the interval between successive action potentials of the same motor unit, which is measured by electromyography (EMG)." [HPO_CONTRIBUTOR:UK_rheller, PMID:21654930]
 comment: Increased jitter values are not pathogonomic for myasthenia, but indicate disturbed neuromuscular transmission.
-synonym: "Increased jitter at single fibre electromyography" EXACT []
 synonym: "Increased jitter at single fibre electromyography" EXACT uk_spelling []
+synonym: "Increased jitter at single fibre electromyography" EXACT []
 synonym: "Increased jitter at single fibre EMG" EXACT uk_spelling []
 xref: UMLS:C4021045
 is_a: HP:0030006 ! Single fiber EMG abnormality
@@ -6912,7 +6919,7 @@ property_value: skos:changeNote "[PROMOT note] The PROMOT ontology added a comme
 id: HP:0030674
 name: Antenatal onset
 def: "Onset prior to birth." [https://orcid.org/0000-0002-0736-9199]
-comment: [PROMOT note] [Derived from EURO-NMD] 
+comment: [PROMOT note] [Derived from EURO-NMD NMD-CDE] [age_at_onset]
 synonym: "Intrauterine onset" EXACT []
 synonym: "Onset in utero" EXACT []
 synonym: "Prenatal onset" EXACT []
@@ -7161,7 +7168,7 @@ property_value: PROMOT:1000001 "Congenital myopathy Scoping review" xsd:string
 id: HP:0031914
 name: Fluctuating
 def: "Varying irregularly over time in severity, amount, or amplitude." []
-comment: [PROMOT note] [Derived from RD-CDM] [6.2.6 Temporal pattern] 
+comment: [PROMOT note] [Derived from RD-CDM] [6.2.6 Temporal pattern]
 is_a: HP:0011008 ! Temporal pattern
 property_value: dcterms:creator https://orcid.org/0000-0002-0736-9199
 property_value: dcterms:date "2018-07-01T21:29:25Z" xsd:dateTime
@@ -7219,6 +7226,8 @@ property_value: dcterms:date "2019-01-12T13:45:59Z" xsd:dateTime
 id: HP:0032319
 name: Health status
 def: "Health status of a family member with respect to the disease being investigated in a proband." []
+comment: EU-CDE
+xref: LOINC:75315-2
 is_a: BFO:0000019 ! quality
 property_value: dcterms:creator https://orcid.org/0000-0002-0736-9199
 property_value: dcterms:date "2019-02-14T11:46:18Z" xsd:dateTime
@@ -7754,7 +7763,7 @@ is_a: HP:0000707 ! Abnormality of the nervous system
 id: HP:0410280
 name: Pediatric onset
 def: "Onset of disease manifestations before adulthood, defined here as before the age of 16 years, but excluding neonatal or congenital onset." [https://orcid.org/0000-0002-0843-4271]
-comment: [PROMOT note] [Derived from EURO-NMD] 
+comment: [PROMOT note] [Derived from EURO-NMD NMD-CDE] [age_at_onset]
 synonym: "Onset before adulthood" EXACT []
 synonym: "Paediatric onset" EXACT uk_spelling []
 is_a: HP:0003674 ! Onset
@@ -7852,7 +7861,7 @@ property_value: PROMOT:1000001 "[OPMD Clinical Registry Form]" xsd:string
 id: IAO:0000027
 name: data item
 def: "An information content entity that is intended to be a truthful statement about something (modulo, e.g., measurement precision or other systematic errors) and is constructed/acquired by a method which reliably tends to produce (approximately) truthful statements." []
-comment: [PROMOT note] [Derived from RD-CDM] [6.3.2 Value] 
+comment: [PROMOT note] [Derived from RD-CDM] [6.3.2 Value]
 xref: NCIT:C25712
 is_a: IAO:0000030 ! information content entity
 property_value: IAO:0000112 "Data items include counts of things, analyte concentrations, and statistical summaries." xsd:string
@@ -7864,7 +7873,7 @@ property_value: IAO:0000116 "JAR: datum     -- well, this will be very tricky to
 property_value: IAO:0000117 "PERSON: Alan Ruttenberg" xsd:string
 property_value: IAO:0000117 "PERSON: Chris Stoeckert" xsd:string
 property_value: IAO:0000117 "PERSON: Jonathan Rees" xsd:string
-property_value: skos:changeNote "[PROMOT note] The PROMOT ontology added a comment to quote the CDM used as a source for this entity. A crossref to the orignal element has also been added." xsd:string
+property_value: skos:changeNote "[PROMOT note] The PROMOT ontology added a comment to quote the CDM used as a source for this entity. A crossref to the orignal RD-CDM element from NCIT has also been added." xsd:string
 
 [Term]
 id: IAO:0000030
@@ -10208,7 +10217,7 @@ relationship: RO:0000086 NCIT:C25717 ! has quality Vital Status
 id: NCIT:C106551
 name: Number of Pregnancies
 def: "A measurement of the total number of pregnancy events experienced by the female subject." [] {NCIT:P378="NCI"}
-comment: [PROMOT note] [Derived from EURO-NMD] 
+comment: [PROMOT note] [Derived from EURO-NMD NMD-CDE] [number_of_preg]
 subset: NCIT:C106478
 subset: NCIT:C106479
 subset: NCIT:C155946
@@ -10255,7 +10264,7 @@ property_value: NCIT:P325 "A measurement of the total number of pregnancy events
 id: NCIT:C124436
 name: Sex at Birth
 def: "The physical sexual characteristics of the neonate at birth." [] {NCIT:P378="NCI"}
-comment: [PROMOT note] [Derived from EURO-NMD] 
+comment: [PROMOT note] [Derived from EURO-NMD NMD-CDE] [sex_at_birth]
 subset: NCIT:C179026
 subset: NCIT:C189083
 subset: NCIT:C192234
@@ -10263,6 +10272,7 @@ synonym: "Sex at Birth" EXACT [] {NCIT:P383="PT", NCIT:P384="NCI"}
 synonym: "Sex at Birth" EXACT [] {NCIT:P383="PT", NCIT:P384="OORO", NCIT:P386="PC"}
 synonym: "Sex at Birth" EXACT [] {NCIT:P384="SeroNet", NCIT:P383="PT"}
 xref: http://snomed.info/id/281053000
+xref: LOINC:54123-5
 is_a: SNOMED:363787002 ! Observable entity
 relationship: RO:0002350 PROMOT:0010009 ! member of declaración sobre un ser humano
 property_value: NCIT:A37 NCIT:C132222
@@ -10283,7 +10293,7 @@ property_value: NCIT:P207 "C4086849" xsd:string
 property_value: NCIT:P322 "OORO" xsd:string
 property_value: NCIT:P322 "SeroNet" xsd:string
 property_value: NCIT:P325 "Sex patient classified with at time of birth" xsd:string {NCIT:P378="OORO", NCIT:P381="PC"}
-property_value: skos:changeNote "[PROMOT note] The PROMOT ontology added a comment to quote the CDM used as a source for this entity. A crossref to the orignal element has also been added." xsd:string
+property_value: skos:changeNote "[PROMOT note] The PROMOT ontology added a comment to quote the CDMs used as a source for this entity. A crossref to the orignal RD-CDM element from SNOMED and LOINC has also been added." xsd:string
 
 [Term]
 id: NCIT:C135383
@@ -10374,6 +10384,7 @@ synonym: "Gender Identity" EXACT [] {NCIT:P383="PT", NCIT:P384="OORO", NCIT:P386
 synonym: "Gender Identity" EXACT [] {NCIT:P383="PT", NCIT:P384="NCI"}
 synonym: "Gender Identity" EXACT [] {NCIT:P383="PT", NCIT:P384="CDISC", NCIT:P385="SDTM-SCTEST"}
 synonym: "GENIDENT" EXACT [] {NCIT:P383="PT", NCIT:P384="CDISC", NCIT:P385="SDTM-SCTESTCD"}
+xref: http://snomed.info/id/263495000
 is_a: SNOMED:302147001 ! Demographic history detail
 relationship: RO:0002350 PROMOT:0010012 ! member of declaración sobre un paciente
 property_value: IAO:0000116 "This term has been modified from the source to comply with OBO guidelines, see https://github.com/ncit-obo-org/ncit-obo-edition/blob/main/README.md for details." xsd:string
@@ -10393,6 +10404,7 @@ property_value: NCIT:P322 "OORO" xsd:string
 property_value: NCIT:P325 "A person's internally held sense of their gender, which may or may not correspond to the individual's genotypic or phenotypic sex." xsd:string {NCIT:P378="CDISC"}
 property_value: NCIT:P325 "A person's internally held sense of their gender, which may or may not correspond to the individual's genotypic or phenotypic sex. [The NCI Thesaurus contains biomedical terminologies that NCI does not own or control. This concept contains gender-related content that does not comply with Executive Order 14168.]" xsd:string {NCIT:P378="CDISC"}
 property_value: NCIT:P325 "Gender by which patient selects to identify themselves. This is important for research and health care policy using social determinants of health (SDOH)." xsd:string {NCIT:P378="OORO", NCIT:P381="PC"}
+property_value: skos:changeNote "[PROMOT note] The PROMOT ontology added a comment to quote the CDM used as a source for this entity. A crossref to the orignal element has also been added." xsd:string
 
 [Term]
 id: NCIT:C16960
@@ -10539,7 +10551,7 @@ property_value: NCIT:P325 "The sex assigned to an infant, most often based on th
 id: NCIT:C205473
 name: Assigned Male at Birth
 def: "Refers to an individual that was identified as male as a newborn infant, based on their external genitalia or other physical characteristics, with this designation noted on their birth records." [] {NCIT:P378="NCI"}
-comment: [PROMOT note] [Derived from EURO-NMD] 
+comment: [PROMOT note] [Derived from EURO-NMD NMD-CDE] [sex_at_birth]
 synonym: "AMAB" EXACT [] {NCIT:P383="SY", NCIT:P384="NCI"}
 synonym: "Assigned Male at Birth" EXACT [] {NCIT:P383="PT", NCIT:P384="NCI"}
 xref: http://snomed.info/id/248153007
@@ -10554,7 +10566,7 @@ property_value: skos:changeNote "[PROMOT note] The PROMOT ontology added a comme
 id: NCIT:C205474
 name: Assigned Female at Birth
 def: "Refers to an individual that was identified as female as a newborn infant, based on their external genitalia or other physical characteristics, with this designation noted on their birth records." [] {NCIT:P378="NCI"}
-comment: [PROMOT note] [Derived from EURO-NMD] 
+comment: [PROMOT note] [Derived from EURO-NMD NMD-CDE] [sex_at_birth]
 synonym: "AFAB" EXACT [] {NCIT:P383="SY", NCIT:P384="NCI"}
 synonym: "Assigned Female at Birth" EXACT [] {NCIT:P383="PT", NCIT:P384="NCI"}
 xref: http://snomed.info/id/248152002
@@ -10563,7 +10575,7 @@ property_value: NCIT:NHC0 "C205474" xsd:string
 property_value: NCIT:P106 "Organism Attribute" xsd:string
 property_value: NCIT:P108 "Assigned Female at Birth" xsd:string
 property_value: NCIT:P208 "CL1927702" xsd:string
-property_value: skos:changeNote "[PROMOT note] The PROMOT ontology added a comment to quote the CDM used as a source for this entity. A crossref to the orignal element has also been added." xsd:string
+property_value: skos:changeNote "[PROMOT note] The PROMOT ontology added a comment to quote the CDMs used as a source for this entity. A crossref to the orignal RD-CDM element has also been added." xsd:string
 
 [Term]
 id: NCIT:C20587
@@ -10605,7 +10617,7 @@ property_value: skos:changeNote "[PROMOT note] The PROMOT ontology added a comme
 id: NCIT:C25150
 name: Age
 def: "How long something has existed; elapsed time since birth." [] {NCIT:P378="NCI"}
-comment: [PROMOT note] [EURO-NMD] Atalia A et al., EURO-NMD registry: federated FAIR infrastructure, innovative technologies and concepts of a patient-centred registry for rare neuromuscular disorders. Orphanet J Rare Dis. 2024 Feb 14;19(1):66. doi: 10.1186/s13023-024-03059-3. PMID: 38355534; PMCID: PMC10865673.
+comment: [PROMOT note] [Derived from RD-CDM] [6.3.8 Family Member Age] 
 subset: NCIT:C118466
 subset: NCIT:C155946
 subset: NCIT:C159501
@@ -10636,6 +10648,7 @@ synonym: "Chronological Age" EXACT [] {NCIT:P383="PT", NCIT:P384="NICHD"}
 synonym: "Chronological Age" EXACT [] {NCIT:P384="INC", NCIT:P383="PT"}
 synonym: "Postnatal Age" EXACT [] {NCIT:P383="SY", NCIT:P384="NICHD"}
 synonym: "Postnatal Age" EXACT [] {NCIT:P383="SY", NCIT:P384="NCI"}
+xref: LOINC:54141-7
 is_a: PROMOT:0010005 ! int content entity
 is_a: SNOMED:363787002 ! Observable entity
 equivalent_to: PROMOT:0010001 ! age content entity
@@ -10653,7 +10666,7 @@ property_value: NCIT:P325 "How long something has existed; elapsed time since bi
 property_value: NCIT:P325 "The time elapsed since birth." xsd:string {NCIT:P378="NICHD"}
 property_value: NCIT:P325 "Time elapsed after birth." xsd:string {NCIT:P378="INC"}
 property_value: NCIT:P366 "Age" xsd:string
-property_value: skos:changeNote "[PROMOT note] The PROMOT ontology added a comment to quote the CDM used as a source for this entity." xsd:string
+property_value: skos:changeNote "[PROMOT note] The PROMOT ontology added a comment to quote the CDM used as a source for this entity. A crossref to the orignal RD-CDM element from LOINC has also been added." xsd:string
 
 [Term]
 id: NCIT:C25164
@@ -10763,7 +10776,7 @@ property_value: skos:changeNote "[PROMOT note] The PROMOT ontology added a comme
 id: NCIT:C25717
 name: Vital Status
 def: "The state or condition of being living or deceased; also includes the case where the vital status is unknown." [] {NCIT:P378="NCI"}
-comment: [PROMOT note] [Derived from RD-CDM] [3.1 Vital Status]
+comment: [PROMOT note] [Derived from RD-CDM] [3.1 Vital Status] & [6.3.10 Family Member Deceased]
 subset: NCIT:C124305
 subset: NCIT:C124306
 subset: NCIT:C156952
@@ -10796,6 +10809,7 @@ synonym: "Vital Status (at date of last contact)" EXACT [] {NCIT:P383="PT", NCIT
 synonym: "Vital_Status" EXACT [] {NCIT:P384="SeroNet", NCIT:P383="PT"}
 synonym: "vital_status" EXACT [] {NCIT:P383="PT", NCIT:P385="VAR", NCIT:P384="GDC"}
 xref: http://snomed.info/id/278844005
+xref: http://snomed.info/id/740604001
 is_a: BFO:0000019 ! quality
 relationship: RO:0000080 NCIT:C14250 ! quality of Organism
 property_value: NCIT:A31 NCIT:C141478
@@ -10825,6 +10839,7 @@ property_value: skos:changeNote "[PROMOT note] The PROMOT ontology added a comme
 id: NCIT:C37987
 name: Alive
 def: "Showing characteristics of life; displaying signs of life." [] {NCIT:P378="NCI"}
+comment: [PROMOT note] [Derived from RD-CDM] [3.1 Vital Status] & [6.3.10 Family Member Deceased]
 subset: NCIT:C124304
 subset: NCIT:C124317
 subset: NCIT:C156952
@@ -10875,6 +10890,7 @@ synonym: "alive" EXACT [] {NCIT:P383="SY", NCIT:P384="GDC"}
 synonym: "Live" EXACT [] {NCIT:P383="SY", NCIT:P384="caDSR"}
 synonym: "Living" EXACT [] {NCIT:P383="AD", NCIT:P384="NCI"}
 synonym: "Living" EXACT [] {NCIT:P383="PT", NCIT:P384="CPTAC"}
+xref: http://snomed.info/id/438949009
 is_a: NCIT:C25717 ! Vital Status
 property_value: NCIT:A24 NCIT:C168931
 property_value: NCIT:A28 NCIT:C168931
@@ -10895,6 +10911,7 @@ property_value: NCIT:P325 "Living; showing characteristics of life." xsd:string 
 property_value: NCIT:P366 "Life" xsd:string
 property_value: NCIT:P375 "Alive" xsd:string {NCIT:P393="Has Synonym", NCIT:P394="PT", NCIT:P395="vital_status", NCIT:P396="GDC"}
 property_value: NCIT:P375 "alive" xsd:string {NCIT:P393="Has Synonym", NCIT:P394="PT", NCIT:P395="vital_status", NCIT:P396="GDC"}
+property_value: skos:changeNote "[PROMOT note] The PROMOT ontology added a comment to quote the CDM used as a source for this entity. A crossref to the orignal element has also been added." xsd:string
 
 [Term]
 id: NCIT:C45908
@@ -10922,7 +10939,7 @@ property_value: NCIT:P322 "CDISC" xsd:string
 property_value: NCIT:P322 "SeroNet" xsd:string
 property_value: NCIT:P325 "A person (one of unisexual specimens) who is born with genitalia and/or secondary sexual characteristics of indeterminate sex, or which combine features of both sexes. (NCI)" xsd:string {NCIT:P378="CDISC"}
 property_value: NCIT:P366 "Intersex" xsd:string
-property_value: skos:changeNote "[PROMOT note] The PROMOT ontology added a comment to quote the CDM used as a source for this entity. A crossref to the orignal element has also been added." xsd:string
+property_value: skos:changeNote "[PROMOT note] The PROMOT ontology added a comment to quote the CDM used as a source for this entity. A crossref to the orignal RD-CDM element has also been added." xsd:string
 
 [Term]
 id: NCIT:C47944
@@ -11044,11 +11061,13 @@ property_value: skos:changeNote "[PROMOT note] The PROMOT ontology added a comme
 id: NCIT:C90387
 name: Found Dead
 def: "An indication that a subject was found in a deceased state." [] {NCIT:P378="NCI"}
+comment: [PROMOT note] [Derived from RD-CDM] [3.1 Vital Status] & [6.3.10 Family Member Deceased]
 subset: NCIT:C61410
 subset: NCIT:C77526
 subset: NCIT:C89968
 synonym: "FOUND DEAD" EXACT [] {NCIT:P383="PT", NCIT:P384="CDISC"}
 synonym: "Found Dead" EXACT [] {NCIT:P383="PT", NCIT:P384="NCI"}
+xref: http://snomed.info/id/419099009
 is_a: NCIT:C25717 ! Vital Status
 property_value: NCIT:NHC0 "C90387" xsd:string
 property_value: NCIT:P106 "Finding" xsd:string
@@ -11060,20 +11079,20 @@ property_value: NCIT:P325 "An indication that a subject was found in a deceased 
 [Term]
 id: NCIT:C93511
 name: Assessment date
-comment: [PROMOT note] [Derived from EURO-NMD] 
+comment: [PROMOT note] [Derived from EURO-NMD NMD-CDE] ?
 is_a: NCIT:C25164 ! Date
 is_a: PROMOT:0010002 ! date content entity
 relationship: RO:0002350 PROMOT:0010010 ! member of declaración sobre un fenotipo
 property_value: seeAlso SNOMED:363778006
 property_value: seeAlso SNOMED:439272007
 property_value: seeAlso SNOMED:704321009
-property_value: skos:changeNote "[PROMOT note] The PROMOT ontology added a comment to quote the CDM used as a source for this entity." xsd:string
+property_value: skos:changeNote "[PROMOT note] The PROMOT ontology added a comment to quote the CDMs used as a source for this entity. A SeeAlso comment to the orignal RD-CDM elements has also been added." xsd:string
 
 [Term]
 id: NCIT:C93579
 name: Informed Consent Date
 def: "The date (and time) the patient gives consent to a surgical or medical procedure or participation in a clinical study after achieving an understanding of the relevant medical facts and the risks involved." [] {NCIT:P378="NCI"}
-comment: [PROMOT note] [Derived from EURO-NMD] 
+comment: [PROMOT note] [Derived from EURO-NMD NMD-CDE] [date_of_consent]
 subset: NCIT:C159501
 subset: NCIT:C159502
 subset: NCIT:C165451
@@ -11095,6 +11114,7 @@ property_value: NCIT:P108 "Informed Consent Date" xsd:string
 property_value: NCIT:P207 "C2985782" xsd:string
 property_value: NCIT:P322 "BRIDG" xsd:string
 property_value: NCIT:P322 "ICDC" xsd:string
+property_value: skos:changeNote "[PROMOT note] The PROMOT ontology added a comment to quote the CDM. The original element is onsent.datetime from HL7 FHIR." xsd:string
 
 [Term]
 id: NCIT:C99800
@@ -11731,7 +11751,6 @@ property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 id: PROMOT:0010010
 name: declaración sobre un fenotipo {comment="reviewed by https://orcid.org/0000-0002-1500-0236"}
 def: "A statement regarding a phenotype to state details about it." []
-comment: [PROMOT note] [Derived from RD-CDM] ?
 is_a: NCIT:C49154 ! Statement
 relationship: RO:0002351 HP:0000118 {cardinality="1"} ! has member Phenotypic abnormality
 relationship: RO:0002351 HP:0000118 ! has member Phenotypic abnormality
@@ -11976,7 +11995,7 @@ property_value: seeAlso HP:4000040
 id: PROMOT:0010037
 name: Patient sex at birth unknown
 def: "Physical sexual characteristiscs at birth that are unknown." []
-comment: [PROMOT note] [Derived from EURO-NMD] 
+comment: [PROMOT note] A crossref to the orignal RD-CDM element has been added.
 xref: http://snomed.info/id/184115007
 is_a: NCIT:C124436 ! Sex at Birth
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
@@ -11985,7 +12004,7 @@ property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 id: PROMOT:0010038
 name: Sex at birth not recorded
 def: "Physical sexual characteristiscs at birth that are not recorded." []
-comment: [PROMOT note] [Derived from RD-CDM] [2.2 Sex at birth] 
+comment: [PROMOT note] A crossref to the orignal RD-CDM element has been added.
 xref: http://snomed.info/id/1220561009
 is_a: PROMOT:0010037 ! Patient sex at birth unknown
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
@@ -11994,7 +12013,7 @@ property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 id: PROMOT:0010039
 name: Gender identity unknown
 def: "Gender identity of a person that is unknown." []
-comment: [PROMOT note] [Derived from RD-CDM] [2.4 Gender Identity] 
+comment: [PROMOT note] A crossref to the orignal RD-CDM element has been added.
 xref: http://snomed.info/id/394743007
 is_a: NCIT:C158277 ! Gender Identity
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
@@ -12003,7 +12022,7 @@ property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 id: PROMOT:0010040
 name: Gender identity not recorded
 def: "Gender identity of a person that is unknown because unrecorded." []
-comment: [PROMOT note] [Derived from RD-CDM] [2.4 Gender Identity] 
+comment: [PROMOT note] A crossref to the orignal RD-CDM element has been added.
 xref: http://snomed.info/id/1220561009
 is_a: PROMOT:0010039 ! Gender identity unknown
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
@@ -12012,7 +12031,7 @@ property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 id: PROMOT:0010041
 name: Consent status
 def: "A status of the consent of a person." []
-comment: [PROMOT note] [Derived from EURO-NMD] 
+comment: [PROMOT note] A crossref to the orignal RD-CDM element has been added.
 xref: http://snomed.info/id/309370004
 is_a: SNOMED:363787002 ! Observable entity
 relationship: RO:0002350 PROMOT:0010008 ! member of declaración sobre un consentimiento 
@@ -12038,7 +12057,7 @@ property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 id: PROMOT:0010044
 name: Actif
 def: "A status of a consent that has been approved by the concerned person." []
-comment: [PROMOT note] [Derived from EURO-NMD] 
+comment: [PROMOT note] [Derived from EURO-NMD NMD-CDE] 
 is_a: PROMOT:0010041 ! Consent status
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
@@ -12046,7 +12065,7 @@ property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 id: PROMOT:0010045
 name: Rejected
 def: "A status of a consent that has been rejected by the concerned person." []
-comment: [PROMOT note] [Derived from EURO-NMD] 
+comment: [PROMOT note] [Derived from EURO-NMD NMD-CDE] 
 is_a: PROMOT:0010041 ! Consent status
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
@@ -12080,7 +12099,7 @@ property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 id: PROMOT:0010049
 name: Accord pour être contacté à des fins de recherche
 def: "An agreement given by a patient to be contacted by research teams for research purposes." []
-comment: [PROMOT note] [Derived from EURO-NMD] 
+comment: [PROMOT note] The PROMOT ontology added a comment to quote the CDM. The original element is consent_contact_research from RD-CDM.
 is_a: PROMOT:0010048 ! Consent type
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
@@ -12088,7 +12107,7 @@ property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 id: PROMOT:0010050
 name: Consent to the reuse of data
 def: "A consent given by a person to the reuse of their data." []
-comment: [PROMOT note] [Derived from RD-CDM] [7.5 Consent to the reuse of data] 
+comment: [PROMOT note] The PROMOT ontology added a comment to quote the CDM. The original element is consent_contact_research from RD-CDM.
 is_a: PROMOT:0010048 ! Consent type
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
@@ -12151,6 +12170,7 @@ property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 id: PROMOT:0031001
 name: estado vital desconocido {babelon:translation_status="CANDIDATE"}
 def: "A vital status that is unkown." []
+comment: [PROMOT note] [Derived from RD-CDM] [3.1 Vital Status] & [6.3.10 Family Member Deceased]
 is_a: NCIT:C25717 ! Vital Status
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
@@ -12158,6 +12178,7 @@ property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 id: PROMOT:0031002
 name: unrecorded vital status
 def: "A vital status that is unkown because unrecorded." []
+comment: [PROMOT note] [Derived from RD-CDM] [3.1 Vital Status]
 is_a: PROMOT:0031001 ! estado vital desconocido
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
@@ -12165,6 +12186,8 @@ property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 id: PROMOT:0031003
 name: lost in follow up
 def: "A recorded vital status because of the patient being lost in follow up." []
+comment: [PROMOT note] [Derived from RD-CDM] [3.1 Vital Status]
+xref: 399307001
 is_a: PROMOT:0031002 ! unrecorded vital status
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
@@ -12172,6 +12195,8 @@ property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 id: PROMOT:0031004
 name: opt out
 def: "A recorded vital status because of the patient being opted out from the study." []
+comment: [PROMOT note] [Derived from RD-CDM] [3.1 Vital Status]
+xref: 185924006
 is_a: PROMOT:0031002 ! unrecorded vital status
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
@@ -13060,7 +13085,7 @@ property_value: seeAlso ICF:1394728112
 [Term]
 id: SNOMED:11286003
 name: Twin sibling
-comment: [PROMOT note] [Derived from RD-CDM] [6.3.5 Family Member Relationship] 
+comment: [PROMOT note] [Derived from RD-CDM] [6.3.5 Family Member Relationship]
 is_a: SNOMED:82101005 ! Natural sibling
 property_value: dc11:type "person" xsd:string
 property_value: sct-ext:definitionStatus "Primitif" xsd:string
@@ -13071,7 +13096,7 @@ property_value: skos:notation "11286003" xsd:string
 [Term]
 id: SNOMED:113160008
 name: Natural son
-comment: [PROMOT note] [Derived from EURO-NMD] 
+comment: [PROMOT note] [Derived from EURO-NMD NMD-CDE] [which_affected_family]
 is_a: SNOMED:75226009 ! Natural child
 property_value: dc11:type "person" xsd:string
 property_value: sct-ext:definitionStatus "Primitif" xsd:string
@@ -13084,7 +13109,7 @@ property_value: skos:notation "113160008" xsd:string
 [Term]
 id: SNOMED:1153637007
 name: Body height
-comment: [PROMOT note] [Derived from EURO-NMD] 
+comment: [PROMOT note] [Derived from EURO-NMD NMD-CDE] [body_height_cm]
 is_a: PROMOT:0010003 ! decimal content entity
 is_a: SNOMED:248326004 ! Body measure
 relationship: RO:0002350 PROMOT:0010012 ! member of declaración sobre un paciente
@@ -13127,7 +13152,8 @@ property_value: skos:notation "125678001" xsd:string
 [Term]
 id: SNOMED:125679009
 name: Blood relative
-comment: [PROMOT note] [Derived from RD-CDM] [6.3.5 Family Member Relationship] 
+comment: [PROMOT note] [Derived from EURO-NMD NMD-CDE] [which_affected_family]
+xref: http://snomed.info/id/444018008
 is_a: NCBITaxon:9606 ! Homo sapiens
 relationship: PROMOT:2000007 NCIT:C16960 ! est lié à Patient
 relationship: RO:0000086 HP:0032319 ! has quality Health status
@@ -13136,7 +13162,7 @@ property_value: sct-ext:definitionStatus "Primitif" xsd:string
 property_value: sct-ext:fsn "Blood relative (person)" xsd:string
 property_value: skos:altLabel "Biological relative" xsd:string
 property_value: skos:altLabel "pariente biológico" xsd:string
-property_value: skos:changeNote "[PROMOT note] The PROMOT ontology added a comment to quote the CDM used as a source for this entity." xsd:string
+property_value: skos:changeNote "[PROMOT note] The PROMOT ontology added a comment to quote the CDM used as a source for this entity. A crossref to the orignal RD-CDM element from SNOMED has also been added." xsd:string
 property_value: skos:notation "125679009" xsd:string
 
 [Term]
@@ -13153,7 +13179,7 @@ property_value: skos:notation "125680007" xsd:string
 [Term]
 id: SNOMED:128927009
 name: Procedure by method
-comment: [PROMOT note] [Derived from RD-CDM] [6.3.4 Procedure] 
+comment: [PROMOT note] [Derived from RD-CDM] [6.3.4 Procedure]
 xref: http://snomed.info/id/122869004
 xref: NCIT:C60819
 is_a: BFO:0000015 ! process
@@ -13163,7 +13189,7 @@ property_value: dc11:type "procedure" xsd:string
 property_value: sct-ext:definitionStatus "Défini" xsd:string
 property_value: sct-ext:fsn "Procedure by method (procedure)" xsd:string
 property_value: skos:altLabel "intervention selon la méthode" xsd:string
-property_value: skos:changeNote "[PROMOT note] The PROMOT ontology added a comment to quote the CDM used as a source for this entity. A crossref to the orignal element has also been added." xsd:string
+property_value: skos:changeNote "[PROMOT note] The PROMOT ontology added a comment to quote the CDM used as a source for this entity. A crossref to the orignal RD-CDM element from SNOMED has also been added." xsd:string
 property_value: skos:notation "128927009" xsd:string
 
 [Term]
@@ -13208,7 +13234,7 @@ property_value: skos:notation "160476009" xsd:string
 [Term]
 id: SNOMED:17945006
 name: Natural grandmother
-comment: [PROMOT note] [Derived from EURO-NMD] 
+comment: [PROMOT note] [Derived from EURO-NMD NMD-CDE] [which_affected_family]
 is_a: SNOMED:78272007 ! Natural grandparent
 property_value: dc11:type "person" xsd:string
 property_value: sct-ext:definitionStatus "Primitif" xsd:string
@@ -13233,19 +13259,21 @@ property_value: skos:notation "183147006" xsd:string
 [Term]
 id: SNOMED:184099003
 name: Date of Birth
-comment: [PROMOT note] [Derived from EURO-NMD] 
+comment: [PROMOT note] [Derived from EURO-NMD NMD-CDE] [date_of_birth]
+xref: LOINC:54124-3
 is_a: PROMOT:0010002 ! date content entity
 is_a: SNOMED:302147001 ! Demographic history detail
 property_value: dc11:type "observable entity" xsd:string
 property_value: sct-ext:definitionStatus "Primitif" xsd:string
 property_value: sct-ext:fsn "Date of birth (observable entity)" xsd:string
 property_value: skos:altLabel "DOB - Date of birth" xsd:string
-property_value: skos:changeNote "[PROMOT note] The PROMOT ontology added a comment to quote the CDMs used as a source for this entity." xsd:string
+property_value: skos:changeNote "[PROMOT note] The PROMOT ontology added a comment to quote the CDMs used as a source for this entity. A crossref to the orignal RD-CDM element from SNOMED and LOINC has also been added." xsd:string
 property_value: skos:notation "184099003" xsd:string
 
 [Term]
 id: SNOMED:184104002
 name: Patient occupation
+comment: [PROMOT note] [Present in OPMD research clinical form]
 is_a: PROMOT:0010006 ! token content entity
 is_a: SNOMED:302147001 ! Demographic history detail
 property_value: dc11:type "observable entity" xsd:string
@@ -13256,7 +13284,8 @@ property_value: skos:notation "184104002" xsd:string
 [Term]
 id: SNOMED:184305005
 name: Cause of death
-comment: [PROMOT note] [Derived from RD-CDM] [3.3 Cause of Death] 
+comment: [PROMOT note] [Derived from RD-CDM] [3.3 Cause of Death] & [6.3.11 Family Member Cause of Death]
+xref: LOINC:54112-8
 is_a: PROMOT:0010006 ! token content entity
 is_a: SNOMED:363787002 ! Observable entity
 property_value: dc11:type "observable entity" xsd:string
@@ -13286,7 +13315,7 @@ property_value: skos:notation "21093007" xsd:string
 [Term]
 id: SNOMED:224118004
 name: NB of offspring
-comment: [PROMOT note] [Derived from EURO-NMD] 
+comment: [PROMOT note] [Derived from EURO-NMD NMD-CDE] [number_of_child]
 is_a: PROMOT:0010005 ! int content entity
 is_a: SNOMED:160476009 ! Social / personal history observable
 property_value: dc11:type "observable entity" xsd:string
@@ -13309,6 +13338,7 @@ property_value: skos:notation "224285004" xsd:string
 [Term]
 id: SNOMED:224288002
 name: Duration of formal education
+comment: [PROMOT note] [Present in OPMD research clinical form]
 is_a: SNOMED:224285004 ! Education and schooling detail
 relationship: RO:0002350 PROMOT:0010012 ! member of declaración sobre un paciente
 property_value: dc11:type "observable entity" xsd:string
@@ -13319,7 +13349,7 @@ property_value: skos:notation "224288002" xsd:string
 [Term]
 id: SNOMED:224899006
 name: Walking aid
-comment: [PROMOT note] related impairment: Gait disturbance HP:0001288
+comment: [PROMOT note] [Derived from EURO-NMD NMD-CDE] [ambulatory_status]
 is_a: SNOMED:360296002 ! Assistive equipment
 property_value: dc11:type "physical object" xsd:string
 property_value: sct-ext:definitionStatus "Primitif" xsd:string
@@ -13329,7 +13359,7 @@ property_value: skos:notation "224899006" xsd:string
 [Term]
 id: SNOMED:2272004
 name: Half-sister
-comment: [PROMOT note] [Derived from RD-CDM] [6.3.5 Family Member Relationship] 
+comment: [PROMOT note] [Derived from RD-CDM] [6.3.5 Family Member Relationship]
 is_a: SNOMED:21093007 ! Half sibling
 property_value: dc11:type "person" xsd:string
 property_value: sct-ext:definitionStatus "Primitif" xsd:string
@@ -13340,6 +13370,7 @@ property_value: skos:notation "2272004" xsd:string
 [Term]
 id: SNOMED:23088002
 name: Ambidextrous
+comment: [PROMOT note] [Present in OPMD research clinical form]
 is_a: SNOMED:364940007 ! Handedness finding
 property_value: dc11:type "finding" xsd:string
 property_value: sct-ext:definitionStatus "Primitif" xsd:string
@@ -13385,7 +13416,7 @@ property_value: skos:notation "266731002" xsd:string
 [Term]
 id: SNOMED:27113001
 name: Body weight
-comment: [PROMOT note] [Derived from EURO-NMD] 
+comment: [PROMOT note] [Derived from EURO-NMD NMD-CDE] [body_weight_kg]
 is_a: PROMOT:0010003 ! decimal content entity
 is_a: SNOMED:248326004 ! Body measure
 relationship: RO:0002350 PROMOT:0010012 ! member of declaración sobre un paciente
@@ -13400,7 +13431,7 @@ property_value: skos:notation "27113001" xsd:string
 [Term]
 id: SNOMED:298059007
 name: Date of onset
-comment: [PROMOT note] [Derived from RD-CDM] [5.4 Date of Onset] 
+comment: [PROMOT note] [Derived from EURO-NMD NMD-CDE] [date_for_age_at_onset]
 is_a: NCIT:C25164 ! Date
 is_a: PROMOT:0010002 ! date content entity
 property_value: dc11:type "observable entity" xsd:string
@@ -13432,7 +13463,7 @@ property_value: skos:notation "315306007" xsd:string
 [Term]
 id: SNOMED:315354004
 name: Country of Birth
-comment: [PROMOT note] [Derived from RD-CDM] [2.5 Country of Birth] 
+comment: [PROMOT note] [Derived from RD-CDM] [2.5 Country of Birth]
 xref: http://snomed.info/id/370159000
 is_a: PROMOT:0010006 ! token content entity
 is_a: SNOMED:302147001 ! Demographic history detail
@@ -13476,6 +13507,7 @@ property_value: skos:notation "363787002" xsd:string
 [Term]
 id: SNOMED:364940007
 name: Handedness finding
+comment: [PROMOT note] [Present in OPMD research clinical form]
 is_a: IAO:0000030 ! information content entity
 relationship: RO:0002350 PROMOT:0010012 ! member of declaración sobre un paciente
 property_value: dc11:type "finding" xsd:string
@@ -13488,7 +13520,7 @@ property_value: skos:notation "364940007" xsd:string
 [Term]
 id: SNOMED:398192003
 name: Co-morbid conditions
-comment: [PROMOT note] [Derived from EURO-NMD] 
+comment: [PROMOT note] [Derived from EURO-NMD NMD-CDE] [diagnosis_rd_2_orpha]
 is_a: PROMOT:0010006 ! token content entity
 property_value: dc11:type "finding" xsd:string
 property_value: sct-ext:definitionStatus "Primitif" xsd:string
@@ -13500,7 +13532,7 @@ property_value: skos:notation "398192003" xsd:string
 [Term]
 id: SNOMED:399423000
 name: Date of admission
-comment: [PROMOT note] [Derived from EURO-NMD] 
+comment: [PROMOT note] [Derived from EURO-NMD NMD-CDE] [date_of_first_contact]
 is_a: NCIT:C25164 ! Date
 is_a: PROMOT:0010002 ! date content entity
 property_value: dc11:type "observable entity" xsd:string
@@ -13512,7 +13544,7 @@ property_value: skos:notation "399423000" xsd:string
 [Term]
 id: SNOMED:399753006
 name: Date of death
-comment: [PROMOT note] [Derived from EURO-NMD] 
+comment: [PROMOT note] [Derived from EURO-NMD NMD-CDE] [eodc_date_of_death]
 xref: http://snomed.info/id/398299004
 is_a: NCIT:C25164 ! Date
 is_a: PROMOT:0010002 ! date content entity
@@ -13525,7 +13557,7 @@ property_value: skos:notation "399753006" xsd:string
 [Term]
 id: SNOMED:406543005
 name: Date of visit
-comment: [PROMOT note] [Derived from EURO-NMD] 
+comment: [PROMOT note] [Derived from EURO-NMD NMD-CDE] [date_of_visit]
 is_a: NCIT:C25164 ! Date
 is_a: PROMOT:0010002 ! date content entity
 property_value: dc11:type "observable entity" xsd:string
@@ -13546,7 +13578,7 @@ property_value: skos:notation "420480000" xsd:string
 [Term]
 id: SNOMED:423493009
 name: Age at diagnosis
-comment: [PROMOT note] [Derived from EURO-NMD] 
+comment: [PROMOT note] [Derived from EURO-NMD NMD-CDE] [age_at_diagnosis]
 is_a: NCIT:C25150 ! Age
 is_a: PROMOT:0010001 ! age content entity
 relationship: RO:0002350 PROMOT:0010012 ! member of declaración sobre un paciente
@@ -13559,7 +13591,7 @@ property_value: skos:notation "423493009" xsd:string
 [Term]
 id: SNOMED:424850005
 name: Age at first symptom
-comment: [PROMOT note] [Derived from EURO-NMD] 
+comment: [PROMOT note] [Derived from EURO-NMD NMD-CDE] [age_at_onset]
 is_a: NCIT:C25150 ! Age
 is_a: PROMOT:0010001 ! age content entity
 relationship: RO:0002350 PROMOT:0010012 ! member of declaración sobre un paciente
@@ -13572,7 +13604,7 @@ property_value: skos:notation "424850005" xsd:string
 [Term]
 id: SNOMED:432213005
 name: Date of diagnosis
-comment: [PROMOT note] [Derived from RD-CDM] [5.6 Date of Diagnosis] 
+comment: [PROMOT note] [Derived from EURO-NMD NMD-CDE] [date_for_age_at_diagnosis]
 is_a: NCIT:C25164 ! Date
 is_a: PROMOT:0010002 ! date content entity
 property_value: dc11:type "observable entity" xsd:string
@@ -13584,20 +13616,20 @@ property_value: skos:notation "432213005" xsd:string
 [Term]
 id: SNOMED:439272007
 name: Date of procedure
-comment: [PROMOT note] [Derived from RD-CDM] [6.3.3 Time Observed] 
+comment: [PROMOT note] [Derived from RD-CDM] [6.3.3 Time Observed]
 xref: NCIT:C82577
 is_a: NCIT:C25164 ! Date
 is_a: PROMOT:0010002 ! date content entity
 property_value: dc11:type "observable entity" xsd:string
 property_value: sct-ext:definitionStatus "Primitif" xsd:string
 property_value: sct-ext:fsn "Date of procedure (observable entity)" xsd:string
-property_value: skos:changeNote "[PROMOT note] The PROMOT ontology added a comment to quote the CDM used as a source for this entity." xsd:string
+property_value: skos:changeNote "[PROMOT note] The PROMOT ontology added a comment to quote the CDM used as a source for this entity. A crossref to the orignal RD-CDM element from NCIT has also been added." xsd:string
 property_value: skos:notation "439272007" xsd:string
 
 [Term]
 id: SNOMED:45929001
 name: Half-brother
-comment: [PROMOT note] [Derived from RD-CDM] [6.3.5 Family Member Relationship] 
+comment: [PROMOT note] [Derived from RD-CDM] [6.3.5 Family Member Relationship]
 is_a: SNOMED:21093007 ! Half sibling
 property_value: dc11:type "person" xsd:string
 property_value: sct-ext:definitionStatus "Primitif" xsd:string
@@ -13617,6 +13649,7 @@ property_value: skos:notation "466255006" xsd:string
 [Term]
 id: SNOMED:46669005
 name: Right handed
+comment: [PROMOT note] [Present in OPMD research clinical form]
 is_a: SNOMED:364940007 ! Handedness finding
 property_value: dc11:type "finding" xsd:string
 property_value: sct-ext:definitionStatus "Primitif" xsd:string
@@ -13659,7 +13692,7 @@ property_value: skos:notation "5880005" xsd:string
 [Term]
 id: SNOMED:58938008
 name: Wheelchair
-comment: [PROMOT note] [Derived from EURO-NMD] 
+comment: [PROMOT note] [Derived from EURO-NMD NMD-CDE] [ambulatory_status]
 is_a: SNOMED:360296002 ! Assistive equipment
 property_value: dc11:type "physical object" xsd:string
 property_value: sct-ext:definitionStatus "Primitif" xsd:string
@@ -13674,7 +13707,7 @@ property_value: skos:notation "58938008" xsd:string
 [Term]
 id: SNOMED:60614009
 name: Natural brother
-comment: [PROMOT note] [Derived from EURO-NMD] 
+comment: [PROMOT note] [Derived from EURO-NMD NMD-CDE] [which_affected_family]
 is_a: SNOMED:82101005 ! Natural sibling
 property_value: dc11:type "person" xsd:string
 property_value: sct-ext:definitionStatus "Primitif" xsd:string
@@ -13687,6 +13720,7 @@ property_value: skos:notation "60614009" xsd:string
 [Term]
 id: SNOMED:60621009
 name: Body mass index
+comment: [PROMOT note] [Present in OPMD research clinical form]
 is_a: PROMOT:0010003 ! decimal content entity
 is_a: SNOMED:248326004 ! Body measure
 relationship: RO:0002350 PROMOT:0010012 ! member of declaración sobre un paciente
@@ -13703,7 +13737,7 @@ property_value: skos:notation "60621009" xsd:string
 [Term]
 id: SNOMED:62296006
 name: Natural grandfather
-comment: [PROMOT note] [Derived from EURO-NMD] 
+comment: [PROMOT note] [Derived from EURO-NMD NMD-CDE] [which_affected_family]
 is_a: SNOMED:78272007 ! Natural grandparent
 property_value: dc11:type "person" xsd:string
 property_value: sct-ext:definitionStatus "Primitif" xsd:string
@@ -13717,7 +13751,7 @@ property_value: skos:notation "62296006" xsd:string
 [Term]
 id: SNOMED:65656005
 name: Natural mother
-comment: [PROMOT note] [Derived from EURO-NMD] 
+comment: [PROMOT note] [Derived from EURO-NMD NMD-CDE] [which_affected_family]
 is_a: SNOMED:13646006 ! Natural parent
 property_value: dc11:type "person" xsd:string
 property_value: sct-ext:definitionStatus "Primitif" xsd:string
@@ -13789,7 +13823,7 @@ property_value: skos:notation "719766008" xsd:string
 [Term]
 id: SNOMED:73678001
 name: Natural sister
-comment: [PROMOT note] [Derived from EURO-NMD] 
+comment: [PROMOT note] [Derived from EURO-NMD NMD-CDE] [which_affected_family]
 is_a: SNOMED:82101005 ! Natural sibling
 property_value: dc11:type "person" xsd:string
 property_value: sct-ext:definitionStatus "Primitif" xsd:string
@@ -13854,7 +13888,7 @@ property_value: skos:notation "82101005" xsd:string
 [Term]
 id: SNOMED:83420006
 name: Natural daughter
-comment: [PROMOT note] [Derived from EURO-NMD] 
+comment: [PROMOT note] [Derived from EURO-NMD NMD-CDE] [which_affected_family]
 is_a: SNOMED:75226009 ! Natural child
 property_value: dc11:type "person" xsd:string
 property_value: sct-ext:definitionStatus "Primitif" xsd:string
@@ -13903,6 +13937,7 @@ property_value: skos:notation "87405001" xsd:string
 [Term]
 id: SNOMED:87683000
 name: Left handed
+comment: [PROMOT note] [Present in OPMD research clinical form]
 is_a: SNOMED:364940007 ! Handedness finding
 property_value: dc11:type "finding" xsd:string
 property_value: sct-ext:definitionStatus "Primitif" xsd:string
@@ -13913,7 +13948,7 @@ property_value: skos:notation "87683000" xsd:string
 [Term]
 id: SNOMED:9947008
 name: Natural father
-comment: [PROMOT note] [Derived from EURO-NMD] 
+comment: [PROMOT note] [Derived from EURO-NMD NMD-CDE] [which_affected_family]
 is_a: SNOMED:13646006 ! Natural parent
 property_value: dc11:type "person" xsd:string
 property_value: sct-ext:definitionStatus "Primitif" xsd:string
@@ -13931,11 +13966,12 @@ comment: EU-CDE
 xref: GENO:0000492
 xref: http://snomed.info/id/106221001
 xref: http://snomed.info/id/55446002
+xref: LOINC:48018-6
 xref: NCIT:C18093
 is_a: BFO:0000002 ! continuant
 relationship: RO:0000086 SO:0001762 ! has quality variant_origin
 relationship: RO:0004013 ORDO:377788 ! is causal germline mutation in Disease
-property_value: skos:changeNote "[PROMOT note] The PROMOT ontology added a comment to quote the CDMs used as a source for this entity. A crossref to the orignal RD-CDM element has also been added." xsd:string
+property_value: skos:changeNote "[PROMOT note] The PROMOT ontology added a comment to quote the CDMs used as a source for this entity. A crossref to the orignal RD-CDM element has also been added (SNOMED:106221001)." xsd:string
 
 [Term]
 id: SO:0001762

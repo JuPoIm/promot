@@ -155,7 +155,7 @@ $(IMPORTDIR)/ro_import.owl: $(MIRRORDIR)/ro.owl $(IMPORTDIR)/ro_terms.txt
 $(IMPORTDIR)/snomed_import.owl: $(IMPORTSDATADIR)/ontology-2025-11-14_EN-ES.owl $(IMPORTSDATADIR)/SnomedCT_NationalFR_OWL.owl $(IMPORTDIR)/snomed_terms.txt
 	if [ $(IMP) = true ]; then $(ROBOT) query -i $< --update $(SPARQLDIR)/preprocess-module.ru \
 		filter -T $(IMPORTDIR)/snomed_terms.txt --select "annotations self" --signature true \
-		query --update $(SPARQLDIR)/delete_label.sparql \
+		query --update $(SPARQLDIR)/delete-label.sparql \
 		rename --mapping skos:prefLabel rdfs:label \
 		query --update $(SPARQLDIR)/inject-subset-declaration.ru --update $(SPARQLDIR)/postprocess-module.ru \
 		annotate --ontology-iri $(ONTBASE)/$@ $(ANNOTATE_ONTOLOGY_VERSION) \

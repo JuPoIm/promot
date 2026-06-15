@@ -1,6 +1,6 @@
 format-version: 1.2
-data-version: promot/releases/2026-06-12/promot-simple.owl
-date: 12:06:2026 17:04
+data-version: promot/releases/2026-06-15/promot-simple.owl
+date: 15:06:2026 15:31
 subsetdef: http://purl.obolibrary.org/obo/valid_for_go_annotation_extension ""
 subsetdef: http://purl.obolibrary.org/obo/valid_for_go_gp2term ""
 subsetdef: http://purl.obolibrary.org/obo/valid_for_go_ontology ""
@@ -16,6 +16,7 @@ idspace: CPATH_MEASUREMENT https://w3id.org/cpont/measurement/
 idspace: CPATH_PERSON https://w3id.org/cpont/person/ 
 idspace: CPATH_VISIT_OCCURRENCE https://w3id.org/cpont/visit_occurrence/ 
 idspace: CPONT https://w3id.org/cpont/vocab/CPONT_ 
+idspace: dc http://purl.org/dc/terms/ 
 idspace: dc11 http://purl.org/dc/elements/1.1/ 
 idspace: FMA http://purl.org/sig/ont/fma/fma 
 idspace: foaf http://xmlns.com/foaf/0.1/ 
@@ -53,7 +54,7 @@ property_value: dc11:contributor "Mansoore Gholizade MD" xsd:string
 property_value: dc11:creator "Cynthia Gagnon MD, PhD\nhttps://orcid.org/0000-0003-2829-8470" xsd:string
 property_value: dc11:creator "Juliette Potier MSc\nhttps://orcid.org/0009-0000-5160-7927" xsd:string
 property_value: dc11:creator "Paul Fabry MD, PhD student\nhttps://orcid.org/0000-0002-3336-2476" xsd:string
-property_value: owl:versionInfo "2026-06-12" xsd:string
+property_value: owl:versionInfo "2026-06-15" xsd:string
 property_value: seeAlso "More about PROMOT initiative at https://www.promotinitiative.com/\n" xsd:string
 property_value: terms:description "Ontology for modeling the three following neuromuscular diseases : OPMD, Congenital myopathies and Congenital myastenic syndroms. It aims to be also an ontology for building the PROMOT project relational database." xsd:string
 property_value: terms:license https://creativecommons.org/licenses/by-nc-sa/4.0/
@@ -252,7 +253,6 @@ property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 id: PROMOT:0010010
 name: declaración sobre un fenotipo {comment="reviewed by https://orcid.org/0000-0002-1500-0236"}
 def: "A statement regarding a phenotype to state details about it." []
-comment: [PROMOT note] [Derived from RD-CDM] ?
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
@@ -474,7 +474,7 @@ property_value: seeAlso HP:4000040
 id: PROMOT:0010037
 name: Patient sex at birth unknown
 def: "Physical sexual characteristiscs at birth that are unknown." []
-comment: [PROMOT note] [Derived from EURO-NMD] 
+comment: [PROMOT note] A crossref to the orignal RD-CDM element has been added.
 xref: http://snomed.info/id/184115007
 relationship: RO:0002350 PROMOT:0010009 ! member of declaración sobre un ser humano
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
@@ -483,7 +483,7 @@ property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 id: PROMOT:0010038
 name: Sex at birth not recorded
 def: "Physical sexual characteristiscs at birth that are not recorded." []
-comment: [PROMOT note] [Derived from RD-CDM] [2.2 Sex at birth] 
+comment: [PROMOT note] A crossref to the orignal RD-CDM element has been added.
 xref: http://snomed.info/id/1220561009
 is_a: PROMOT:0010037 ! Patient sex at birth unknown
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
@@ -492,7 +492,7 @@ property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 id: PROMOT:0010039
 name: Gender identity unknown
 def: "Gender identity of a person that is unknown." []
-comment: [PROMOT note] [Derived from RD-CDM] [2.4 Gender Identity] 
+comment: [PROMOT note] A crossref to the orignal RD-CDM element has been added.
 xref: http://snomed.info/id/394743007
 relationship: RO:0002350 PROMOT:0010012 ! member of declaración sobre un paciente
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
@@ -501,7 +501,7 @@ property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 id: PROMOT:0010040
 name: Gender identity not recorded
 def: "Gender identity of a person that is unknown because unrecorded." []
-comment: [PROMOT note] [Derived from RD-CDM] [2.4 Gender Identity] 
+comment: [PROMOT note] A crossref to the orignal RD-CDM element has been added.
 xref: http://snomed.info/id/1220561009
 is_a: PROMOT:0010039 ! Gender identity unknown
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
@@ -510,7 +510,7 @@ property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 id: PROMOT:0010041
 name: Consent status
 def: "A status of the consent of a person." []
-comment: [PROMOT note] [Derived from EURO-NMD] 
+comment: [PROMOT note] A crossref to the orignal RD-CDM element has been added.
 xref: http://snomed.info/id/309370004
 relationship: RO:0002350 PROMOT:0010008 ! member of declaración sobre un consentimiento 
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
@@ -535,7 +535,7 @@ property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 id: PROMOT:0010044
 name: Actif
 def: "A status of a consent that has been approved by the concerned person." []
-comment: [PROMOT note] [Derived from EURO-NMD] 
+comment: [PROMOT note] [Derived from EURO-NMD NMD-CDE] 
 is_a: PROMOT:0010041 ! Consent status
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
@@ -543,7 +543,7 @@ property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 id: PROMOT:0010045
 name: Rejected
 def: "A status of a consent that has been rejected by the concerned person." []
-comment: [PROMOT note] [Derived from EURO-NMD] 
+comment: [PROMOT note] [Derived from EURO-NMD NMD-CDE] 
 is_a: PROMOT:0010041 ! Consent status
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
@@ -576,7 +576,7 @@ property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 id: PROMOT:0010049
 name: Accord pour être contacté à des fins de recherche
 def: "An agreement given by a patient to be contacted by research teams for research purposes." []
-comment: [PROMOT note] [Derived from EURO-NMD] 
+comment: [PROMOT note] The PROMOT ontology added a comment to quote the CDM. The original element is consent_contact_research from RD-CDM.
 is_a: PROMOT:0010048 ! Consent type
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
@@ -584,7 +584,7 @@ property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 id: PROMOT:0010050
 name: Consent to the reuse of data
 def: "A consent given by a person to the reuse of their data." []
-comment: [PROMOT note] [Derived from RD-CDM] [7.5 Consent to the reuse of data] 
+comment: [PROMOT note] The PROMOT ontology added a comment to quote the CDM. The original element is consent_contact_research from RD-CDM.
 is_a: PROMOT:0010048 ! Consent type
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
@@ -630,12 +630,14 @@ property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 id: PROMOT:0031001
 name: estado vital desconocido {babelon:translation_status="CANDIDATE"}
 def: "A vital status that is unkown." []
+comment: [PROMOT note] [Derived from RD-CDM] [3.1 Vital Status] & [6.3.10 Family Member Deceased]
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
 id: PROMOT:0031002
 name: unrecorded vital status
 def: "A vital status that is unkown because unrecorded." []
+comment: [PROMOT note] [Derived from RD-CDM] [3.1 Vital Status]
 is_a: PROMOT:0031001 ! estado vital desconocido
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
@@ -643,6 +645,8 @@ property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 id: PROMOT:0031003
 name: lost in follow up
 def: "A recorded vital status because of the patient being lost in follow up." []
+comment: [PROMOT note] [Derived from RD-CDM] [3.1 Vital Status]
+xref: 399307001
 is_a: PROMOT:0031002 ! unrecorded vital status
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
@@ -650,6 +654,8 @@ property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 id: PROMOT:0031004
 name: opt out
 def: "A recorded vital status because of the patient being opted out from the study." []
+comment: [PROMOT note] [Derived from RD-CDM] [3.1 Vital Status]
+xref: 185924006
 is_a: PROMOT:0031002 ! unrecorded vital status
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
