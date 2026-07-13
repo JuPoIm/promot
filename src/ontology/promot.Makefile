@@ -25,12 +25,14 @@
 ## -------------------------------------------------------------------------------
 ## 1 - CUSTOM VARIABLES - variables personalisées
 ## -------------------------------------------------------------------------------
+### New variables
 IMPORTSDATADIR =  ../data/imports
 PROMOTDATADIR = ../data/promot
 SCRIPTSDATADIR = ../data/scripts
 METADATADIR = ../metadata
 PYTHONTMPDIR = ../scripts/python/tmp
 ICF = true
+SPARQL_STATS =            translation-stat-by-language class-count-by-prefix-all class-count-by-domain
 
 ## -------------------------------------------------------------------------------
 ## 2 - CUSTOM IMPORTS - imports personalisés
@@ -152,7 +154,7 @@ $(IMPORTDIR)/ro_import.owl: $(MIRRORDIR)/ro.owl $(IMPORTDIR)/ro_terms.txt
 # 8. Merge the .owl resulting from 4. with terminologie-snomed-ct-fr/dat/SnomedCT-NationalFR_OWL_asserted_20250621.owl (French edition)
 # 9. Put the resulting .owl in ../data/
 # 10. Custom hereafter code to fit your choice
-$(IMPORTDIR)/snomed_import.owl: $(IMPORTSDATADIR)/ontology-2025-11-14_EN-ES.owl $(IMPORTSDATADIR)/SnomedCT_NationalFR_OWL.owl $(IMPORTDIR)/snomed_terms.txt
+$(IMPORTDIR)/snomed_import.owl: $(IMPORTSDATADIR)/snomed-2026-07-13-en-es.owl $(IMPORTSDATADIR)/SnomedCT_NationalFR_OWL_2026.owl $(IMPORTDIR)/snomed_terms.txt
 	if [ $(IMP) = true ]; then $(ROBOT) query -i $< --update $(SPARQLDIR)/preprocess-module.ru \
 		filter -T $(IMPORTDIR)/snomed_terms.txt --select "annotations self" --signature true \
 		query --update $(SPARQLDIR)/delete-label.sparql \
@@ -160,13 +162,11 @@ $(IMPORTDIR)/snomed_import.owl: $(IMPORTSDATADIR)/ontology-2025-11-14_EN-ES.owl 
 		query --update $(SPARQLDIR)/inject-subset-declaration.ru --update $(SPARQLDIR)/postprocess-module.ru \
 		annotate --ontology-iri $(ONTBASE)/$@ $(ANNOTATE_ONTOLOGY_VERSION) \
 		--output $@.tmp.owl ; \
-		$(ROBOT) query -i $(IMPORTSDATADIR)/SnomedCT_NationalFR_OWL.owl --update $(SPARQLDIR)/preprocess-module.ru \
+		$(ROBOT) query -i $(IMPORTSDATADIR)/SnomedCT_NationalFR_OWL_2026.owl --update $(SPARQLDIR)/preprocess-module.ru \
 		filter -T $(IMPORTDIR)/snomed_terms.txt --select "annotations self" --signature true \
 		query --update $(SPARQLDIR)/inject-subset-declaration.ru --update $(SPARQLDIR)/postprocess-module.ru \
 		annotate --ontology-iri $(ONTBASE)/$@ $(ANNOTATE_ONTOLOGY_VERSION) \
-		merge -i $@.tmp.owl \
-		remove --annotation dc:type \
-		--output $@.tmp.owl && mv $@.tmp.owl $@ ; fi
+		merge -i $@.tmp.owl	--output $@.tmp.owl && mv $@.tmp.owl $@ ; fi
 
 # ----------------------------------------
 # Module ICF (EN):
@@ -312,3 +312,16 @@ documentation:
 reason_test: $(EDIT_PREPROCESSED) explain_unsat
 	$(ROBOT) reason --input $< --reasoner $(REASONER) --equivalent-classes-allowed asserted-only \
 		--exclude-tautologies structural --output test.owl && rm test.owl
+
+# ---------------------------------------------
+# Sparql queries: Table exports / Query Reports
+# ---------------------------------------------
+
+SPARQL_STATS_ARGS = $(foreach V,$(SPARQL_STATS),-s $(SPARQLDIR)/$(V).sparql $(REPORTDIR)/$(V).tsv)
+# This combines all into one single command
+
+.PHONY: stats_reports
+stats_reports:
+ifneq ($(SPARQL_STATS_ARGS),)
+	$(ROBOT) query -f tsv --use-graphs true -i ../../$(ONT).owl $(SPARQL_STATS_ARGS)
+endif

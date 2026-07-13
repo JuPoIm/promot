@@ -1,6 +1,6 @@
 format-version: 1.2
-data-version: promot/releases/2026-06-15/promot-non-classified.owl
-date: 15:06:2026 15:31
+data-version: promot/releases/2026-07-13/promot-non-classified.owl
+date: 13:07:2026 14:27
 subsetdef: hposlim_core ""
 subsetdef: http://purl.obolibrary.org/obo/valid_for_go_annotation_extension ""
 subsetdef: http://purl.obolibrary.org/obo/valid_for_go_gp2term ""
@@ -150,6 +150,7 @@ idspace: swrlb http://www.w3.org/2003/11/swrlb#
 idspace: terms http://purl.org/dc/terms/ 
 idspace: void http://rdfs.org/ns/void# 
 remark: Additional acknowledgements:\n	- Rachel Thompson\n	- Thomas Bongivault, MSc\n	- Marc Vincent, PhD\n
+remark: Additional acknowledgements:\n	- Thomas Bongivault, MSc\n	- Silvia Cerezo Corredera, https://orcid.org/0000-0002-3391-9772\n	- Christina Khnaisser, PhD, https://orcid.org/0000-0002-1186-0300\n	- Rachel Thompson\n	- Marc Vincent, PhD, https://orcid.org/0000-0001-6921-8161\n
 ontology: promot/promot-non-classified
 property_value: dc11:contributor "Anita Burgun MD, PhD\nhttps://orcid.org/0000-0001-6855-4366" xsd:string
 property_value: dc11:contributor "Carole Faviez PhD\nhttps://orcid.org/0000-0002-1500-0236" xsd:string
@@ -166,7 +167,7 @@ property_value: dc11:creator "Paul Fabry MD, PhD student\nhttps://orcid.org/0000
 property_value: dcterms:description "Ontology for modeling the three following neuromuscular diseases : OPMD, Congenital myopathies and Congenital myastenic syndroms. It aims to be also an ontology for building the PROMOT project relational database." xsd:string
 property_value: dcterms:license https://creativecommons.org/licenses/by-nc-sa/4.0/
 property_value: dcterms:title "PROMOT ontology" xsd:string
-property_value: owl:versionInfo "2026-06-15" xsd:string
+property_value: owl:versionInfo "2026-07-13" xsd:string
 property_value: seeAlso "More about PROMOT initiative at https://www.promotinitiative.com/\n" xsd:string
 
 [Term]
@@ -1944,7 +1945,7 @@ xref: http://snomed.info/id/8116006
 xref: UMLS:C4021819
 is_a: PROMOT:0032001 ! abnormal disposition
 relationship: RO:0000086 HP:0012823 ! has quality Clinical modifier
-relationship: RO:0000086 PROMOT:0031007 ! has quality Qualité qualifiant l’existance d’une entité
+relationship: RO:0000086 PROMOT:0031007 ! has quality Calificador de presencia
 property_value: skos:changeNote "[PROMOT note] The PROMOT ontology added a comment to quote the CDM used as a source for this entity. A crossref to the orignal element has also been added." xsd:string
 
 [Term]
@@ -3618,8 +3619,8 @@ id: HP:0002033
 name: Poor suck
 def: "An inadequate sucking reflex, resulting in the difficult of newborns to be breast-fed." [https://orcid.org/0000-0002-0736-9199]
 synonym: "Poor suck" EXACT layperson []
-synonym: "Poor sucking" EXACT []
 synonym: "Poor sucking" EXACT layperson [https://orcid.org/0000-0002-5316-1399]
+synonym: "Poor sucking" EXACT []
 synonym: "Sucking weakness" EXACT []
 xref: UMLS:C1837142
 is_a: HP:0008872 ! Feeding difficulties in infancy
@@ -7070,7 +7071,7 @@ property_value: skos:changeNote "[PROMOT note] The PROMOT ontology added a comme
 id: HP:0030674
 name: Antenatal onset
 def: "Onset prior to birth." [https://orcid.org/0000-0002-0736-9199]
-comment: [PROMOT note] [Derived from EURO-NMD NMD-CDE] [age_at_onset]
+comment: [PROMOT note] [Derived from EU-CDE] [5.1. Age at onset]
 synonym: "Intrauterine onset" EXACT []
 synonym: "Onset in utero" EXACT []
 synonym: "Prenatal onset" EXACT []
@@ -7386,6 +7387,7 @@ xref: LOINC:75315-2
 is_a: BFO:0000019 ! quality
 property_value: dcterms:creator https://orcid.org/0000-0002-0736-9199
 property_value: dcterms:date "2019-02-14T11:46:18Z" xsd:dateTime
+property_value: skos:changeNote "[PROMOT note] The PROMOT ontology added a comment to quote the CDM used as a source for this entity." xsd:string
 
 [Term]
 id: HP:0032320
@@ -8055,7 +8057,7 @@ property_value: IAO:0000119 "OBI_0000142" xsd:string
 id: IAO:0020000
 name: identifier
 def: "An information content entity that is the outcome of a dubbing process and is used to refer to one instance of entity shared by a group of people to refer to that individual entity." []
-comment: EU-CDE
+comment: Sep 29, 2016: The current definition has been amended from the previous version: "A proper name is an information content entity that is the outcome of a dubbing process and is used to refer to one instance of entity shared by a group of people to refer to that individual entity." to more accuratly reflect the necessary and sufficient condition on the class. (MB)
 xref: http://snomed.info/id/422549004
 is_a: IAO:0000030 ! information content entity
 property_value: dc11:creator "Mathias Brochhausen" xsd:string
@@ -10496,7 +10498,7 @@ property_value: NCIT:P325 "A measurement of the total number of pregnancy events
 id: NCIT:C124436
 name: Sex at Birth
 def: "The physical sexual characteristics of the neonate at birth." [] {NCIT:P378="NCI"}
-comment: [PROMOT note] [Derived from EURO-NMD NMD-CDE] [sex_at_birth]
+comment: [PROMOT note] [Derived from EU-CDE] [2.2. Sex]
 subset: NCIT:C179026
 subset: NCIT:C189083
 subset: NCIT:C192234
@@ -10780,7 +10782,7 @@ property_value: NCIT:P325 "The sex assigned to an infant, most often based on th
 id: NCIT:C205473
 name: Assigned Male at Birth
 def: "Refers to an individual that was identified as male as a newborn infant, based on their external genitalia or other physical characteristics, with this designation noted on their birth records." [] {NCIT:P378="NCI"}
-comment: [PROMOT note] [Derived from EURO-NMD NMD-CDE] [sex_at_birth]
+comment: [PROMOT note] [Derived from EU-CDE] [2.2. Sex] [Male]
 synonym: "AMAB" EXACT [] {NCIT:P383="SY", NCIT:P384="NCI"}
 synonym: "Assigned Male at Birth" EXACT [] {NCIT:P383="PT", NCIT:P384="NCI"}
 xref: http://snomed.info/id/248153007
@@ -10795,7 +10797,7 @@ property_value: skos:changeNote "[PROMOT note] The PROMOT ontology added a comme
 id: NCIT:C205474
 name: Assigned Female at Birth
 def: "Refers to an individual that was identified as female as a newborn infant, based on their external genitalia or other physical characteristics, with this designation noted on their birth records." [] {NCIT:P378="NCI"}
-comment: [PROMOT note] [Derived from EURO-NMD NMD-CDE] [sex_at_birth]
+comment: [PROMOT note] [Derived from EU-CDE] [2.2. Sex] [Female]
 synonym: "AFAB" EXACT [] {NCIT:P383="SY", NCIT:P384="NCI"}
 synonym: "Assigned Female at Birth" EXACT [] {NCIT:P383="PT", NCIT:P384="NCI"}
 xref: http://snomed.info/id/248152002
@@ -10868,8 +10870,8 @@ synonym: "Age" EXACT [] {NCIT:P383="PT", NCIT:P385="SEND-STSPRM", NCIT:P384="CDI
 synonym: "Age" EXACT [] {NCIT:P383="SY", NCIT:P384="caDSR"}
 synonym: "Age" EXACT [] {NCIT:P383="SY", NCIT:P384="CDISC"}
 synonym: "Age" EXACT [] {NCIT:P383="PT", NCIT:P384="NCI"}
-synonym: "age" EXACT [] {NCIT:P383="PT", NCIT:P384="BRIDG 5.3"}
 synonym: "age" EXACT [] {NCIT:P383="PT", NCIT:P384="BRIDG 3.0.3"}
+synonym: "age" EXACT [] {NCIT:P383="PT", NCIT:P384="BRIDG 5.3"}
 synonym: "Aged" EXACT [] {NCIT:P383="AD", NCIT:P384="NCI"}
 synonym: "Chronological Age" EXACT [] {NCIT:P383="SY", NCIT:P384="NCI"}
 synonym: "Chronological Age" EXACT [] {NCIT:P383="PT", NCIT:P384="NICHD"}
@@ -10975,7 +10977,7 @@ synonym: "Present" EXACT [] {NCIT:P383="PT", NCIT:P386="GCT", NCIT:P384="PCDC"}
 synonym: "Present" EXACT [] {NCIT:P383="SY", NCIT:P384="caDSR"}
 synonym: "Present (qualifier value)" EXACT [] {NCIT:P385="52101004", NCIT:P383="PT", NCIT:P386="SNOMED CT", NCIT:P384="mCode"}
 xref: http://snomed.info/id/410605003
-is_a: PROMOT:0031007 ! Qualité qualifiant l’existance d’une entité
+is_a: PROMOT:0031007 ! Calificador de presencia
 property_value: NCIT:A32 NCIT:C160827
 property_value: NCIT:A32 NCIT:C160996
 property_value: NCIT:A32 NCIT:C177597
@@ -11003,7 +11005,7 @@ property_value: skos:changeNote "[PROMOT note] The PROMOT ontology added a comme
 id: NCIT:C25717
 name: Vital Status
 def: "The state or condition of being living or deceased; also includes the case where the vital status is unknown." [] {NCIT:P378="NCI"}
-comment: [PROMOT note] [Derived from RD-CDM] [3.1 Vital Status] & [6.3.10 Family Member Deceased]
+comment: [PROMOT note] [Derived from EU-CDE] [3.1. Patient’s status]
 subset: NCIT:C124305
 subset: NCIT:C124306
 subset: NCIT:C156952
@@ -11066,7 +11068,7 @@ property_value: skos:changeNote "[PROMOT note] The PROMOT ontology added a comme
 id: NCIT:C37987
 name: Alive
 def: "Showing characteristics of life; displaying signs of life." [] {NCIT:P378="NCI"}
-comment: [PROMOT note] [Derived from RD-CDM] [3.1 Vital Status] & [6.3.10 Family Member Deceased]
+comment: [PROMOT note] [Derived from EU-CDE] [3.1. Patient’s status] [Alive]
 subset: NCIT:C124304
 subset: NCIT:C124317
 subset: NCIT:C156952
@@ -11179,7 +11181,7 @@ synonym: "Uncertain" EXACT [] {NCIT:P383="PT", NCIT:P384="NCI"}
 synonym: "Uncertain" EXACT [] {NCIT:P383="SY", NCIT:P384="caDSR"}
 synonym: "Uncertainty" EXACT [] {NCIT:P383="SY", NCIT:P384="NCI"}
 synonym: "Unsure" EXACT [] {NCIT:P383="SY", NCIT:P384="NCI"}
-is_a: PROMOT:0031007 ! Qualité qualifiant l’existance d’une entité
+is_a: PROMOT:0031007 ! Calificador de presencia
 property_value: NCIT:NHC0 "C47944" xsd:string
 property_value: NCIT:P106 "Qualitative Concept" xsd:string
 property_value: NCIT:P108 "Uncertain" xsd:string
@@ -11215,7 +11217,7 @@ synonym: "Absent (qualifier value)" EXACT [] {NCIT:P383="PT", NCIT:P385="2667000
 synonym: "Not Present" EXACT [] {NCIT:P383="SY", NCIT:P384="NCI"}
 synonym: "Not Present" EXACT [] {NCIT:P383="SY", NCIT:P384="caDSR"}
 xref: http://snomed.info/id/723511001
-is_a: PROMOT:0031007 ! Qualité qualifiant l’existance d’une entité
+is_a: PROMOT:0031007 ! Calificador de presencia
 property_value: NCIT:A32 NCIT:C160827
 property_value: NCIT:A32 NCIT:C160996
 property_value: NCIT:A32 NCIT:C177597
@@ -11287,7 +11289,7 @@ property_value: skos:changeNote "[PROMOT note] The PROMOT ontology added a comme
 id: NCIT:C90387
 name: Found Dead
 def: "An indication that a subject was found in a deceased state." [] {NCIT:P378="NCI"}
-comment: [PROMOT note] [Derived from RD-CDM] [3.1 Vital Status] & [6.3.10 Family Member Deceased]
+comment: [PROMOT note] [Derived from EU-CDE] [3.1. Patient’s status] [Dead]
 subset: NCIT:C61410
 subset: NCIT:C77526
 subset: NCIT:C89968
@@ -11456,9 +11458,9 @@ relationship: RO:0004029 HP:0033695 ! disease has feature Occupational disabilit
 relationship: RO:0004029 HP:0200136 ! disease has feature Oral-pharyngeal dysphagia
 relationship: RO:0004029 HP:6001011 ! disease has feature Wet voice
 relationship: RO:0004029 PROMOT:0032004 ! disease has feature Anhedonia cuando se come
-relationship: RO:0004029 PROMOT:0032006 ! disease has feature Choking on foods
-relationship: RO:0004029 PROMOT:0032007 ! disease has feature Choking on liquids
-relationship: RO:0004029 PROMOT:0032008 ! disease has feature Choking on saliva
+relationship: RO:0004029 PROMOT:0032006 ! disease has feature Atragantamiento con alimentos
+relationship: RO:0004029 PROMOT:0032007 ! disease has feature Atragantamiento con líquidos
+relationship: RO:0004029 PROMOT:0032008 ! disease has feature Atragantamiento con saliva
 relationship: RO:0004029 PROMOT:0032009 ! disease has feature Coughing on foods
 relationship: RO:0004029 PROMOT:0032010 ! disease has feature Coughing on liquids
 relationship: RO:0004029 PROMOT:0032011 ! disease has feature Coughing on saliva
@@ -11467,7 +11469,7 @@ relationship: RO:0004029 PROMOT:0032013 ! disease has feature Difficulty changin
 relationship: RO:0004029 PROMOT:0032014 ! disease has feature Difficulty walking short distance
 relationship: RO:0004029 PROMOT:0032016 ! disease has feature Disfagia con líquidos
 relationship: RO:0004029 PROMOT:0032017 ! disease has feature Disfagia con sólidos
-relationship: RO:0004029 PROMOT:0032022 ! disease has feature Choking on liquids
+relationship: RO:0004029 PROMOT:0032022 ! disease has feature Fatiga cuando se come
 relationship: RO:0004029 PROMOT:0032023 ! disease has feature Debilidad de músculos masticatorios
 property_value: efo:alternative_term "OPMD" xsd:string
 property_value: efo:definition "A rare, adult-onset, progressive myopathy characterized by progressive eyelid ptosis, ophthalmoplegia, dysphagia, dysarthria and proximal limb weakness." xsd:string
@@ -11487,7 +11489,7 @@ property_value: skos:notation "ORPHA:270" xsd:string
 [Term]
 id: ORDO:377788
 name: Disease
-comment: [PROMOT note] [Derived from RD-CDM] [5.1 Disease]
+comment: [PROMOT note] [Derived from EU-CDE] [6.1. Diagnosis of the rare disease]
 xref: http://snomed.info/id/64572001
 is_a: PROMOT:0032001 ! abnormal disposition
 relationship: RO:0000086 HP:0000005 ! has quality Mode of inheritance
@@ -11687,6 +11689,7 @@ property_value: skos:notation "ORPHA:590" xsd:string
 [Term]
 id: ORDO:97245
 name: Congenital myopathy
+comment: [PROMOT note] [Derived from EU-CDE] [6.1. Diagnosis of the rare disease]
 xref: ICD-10:G71.2 {ECO:0000218="- E (Exact mapping: the two concepts are equivalent).\n- Specific code (ICD-10/ICD-11: ORPHAcode has its own code in the targeted terminology)."}
 xref: ICD-11:8C72 {ECO:0000218="- E (Exact mapping: the two concepts are equivalent).\n- Specific code (ICD-10/ICD-11: ORPHAcode has its own code in the targeted terminology)."}
 xref: MedDRA:10062547 {ECO:0000218="E (Exact mapping: the two concepts are equivalent)"}
@@ -11856,6 +11859,7 @@ relationship: RO:0004029 PROMOT:0032023 ! disease has feature Debilidad de músc
 property_value: ORDO:C022 "United States AND has_point_prevalence_average_value : 3.8 AND has_point_prevalence_range : 1-9 / 100 000" xsd:string
 property_value: ORDO:C055 "https://www.orpha.net/consor/cgi-bin/OC_Exp.php?Lng=en&Expert=97245" xsd:string
 property_value: ORDO:C059 "https://www.orpha.net/en/disease/detail/97245" xsd:string
+property_value: skos:changeNote "[PROMOT note] The PROMOT ontology added a comment to quote the CDMs used as a source for this entity." xsd:string
 property_value: skos:notation "Category" xsd:string
 property_value: skos:notation "ORPHA:97245" xsd:string
 
@@ -11863,6 +11867,7 @@ property_value: skos:notation "ORPHA:97245" xsd:string
 id: PROMOT:0000001
 name: CMS related mutation
 def: "A sequence alteration that is causal germline mutation in Congenital Myasthenic Syndrom." []
+comment: https://orcid.org/0000-0001-7764-2085
 is_a: SO:0001060 ! sequence_variant
 relationship: RO:0004013 ORDO:590 ! is causal germline mutation in Congenital myasthenic syndrome
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
@@ -11871,6 +11876,7 @@ property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 id: PROMOT:0000002
 name: CMYO related mutation
 def: "A sequence alteration that is causal germline mutation in Congenital Myopathy." []
+comment: https://orcid.org/0000-0001-7764-2085
 is_a: SO:0001060 ! sequence_variant
 relationship: RO:0004013 ORDO:97245 ! is causal germline mutation in Congenital myopathy
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
@@ -11879,6 +11885,7 @@ property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 id: PROMOT:0000003
 name: OPMD related mutation
 def: "A sequence alteration that is causal germline mutation in Oculopharyngeal Muscular Dystrophy." []
+comment: https://orcid.org/0000-0001-7764-2085
 is_a: SO:0001060 ! sequence_variant
 relationship: RO:0004013 ORDO:270 ! is causal germline mutation in Oculopharyngeal muscular dystrophy
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
@@ -11998,51 +12005,35 @@ comment: Translation process: Frist translated to spanish using Bing Translator 
 is_a: PROMOT:0000003 ! OPMD related mutation
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 property_value: seeAlso NCIT:C204162
+property_value: skos:changeNote "[PROMOT note] The PROMOT ontology added a comment to quote the CDM used as a source for this entity." xsd:string
 
 [Term]
 id: PROMOT:0010001
 name: age content entity
-def: "an information content entity where the information is an age." []
+def: "Campo donde la información es una edad" [] {IAO:0000119="translation by https://orcid.org/0000-0001-7764-2085 and https://orcid.org/0000-0002-3391-9772", babelon:translation_status="OFFICIAL"}
 is_a: IAO:0000030 ! information content entity
-property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
-
-[Term]
-id: PROMOT:0010002
-name: date content entity
-def: "an information content entity where the information is a date." []
-is_a: IAO:0000030 ! information content entity
-union_of: NCIT:C178992 ! Symptom Resolution Date
-union_of: NCIT:C93511 ! Assessment date
-union_of: NCIT:C93579 ! Informed Consent Date
-union_of: SNOMED:184099003 ! Date of Birth
-union_of: SNOMED:298059007 ! Date of onset
-union_of: SNOMED:399423000 ! Date of admission
-union_of: SNOMED:399753006 ! Date of death
-union_of: SNOMED:406543005 ! Date of visit
-union_of: SNOMED:432213005 ! Date of diagnosis
-union_of: SNOMED:439272007 ! Date of procedure
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
 id: PROMOT:0010003
-name: decimal content entity
-def: "an information content entity where the information is a decimal." []
+name: campo decimal {babelon:translation_status="OFFICIAL", comment="translation by https://orcid.org/0000-0001-7764-2085 and https://orcid.org/0000-0002-3391-9772"}
+def: "Campo donde la información es un decimal" [] {IAO:0000119="translation by https://orcid.org/0000-0001-7764-2085 and https://orcid.org/0000-0002-3391-9772", babelon:translation_status="OFFICIAL"}
 is_a: IAO:0000030 ! information content entity
 equivalent_to: SNOMED:248326004 ! Body measure
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
 id: PROMOT:0010004
-name: duration content entity
-def: "an information content entity where the information is a duration." []
+name: campo de duración {babelon:translation_status="OFFICIAL", comment="translation by https://orcid.org/0000-0001-7764-2085 and https://orcid.org/0000-0002-3391-9772"}
+def: "Campo donde la información es una duración" [] {IAO:0000119="translation by https://orcid.org/0000-0001-7764-2085 and https://orcid.org/0000-0002-3391-9772", babelon:translation_status="OFFICIAL"}
 is_a: IAO:0000030 ! information content entity
 equivalent_to: SNOMED:224288002 ! Duration of formal education
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
 id: PROMOT:0010005
-name: int content entity
-def: "an information content entity where the information is an int." []
+name: campo de número entero {babelon:translation_status="OFFICIAL", comment="translation by https://orcid.org/0000-0001-7764-2085 and https://orcid.org/0000-0002-3391-9772"}
+def: "Campo donde la información es un número entero" [] {IAO:0000119="translation by https://orcid.org/0000-0001-7764-2085 and https://orcid.org/0000-0002-3391-9772", babelon:translation_status="OFFICIAL"}
 is_a: IAO:0000030 ! information content entity
 union_of: IAO:0020000 ! identifier
 union_of: NCIT:C106551 ! Number of Pregnancies
@@ -12052,8 +12043,8 @@ property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
 id: PROMOT:0010006
-name: token content entity
-def: "an information content entity where the information is a token." []
+name: campo de token {babelon:translation_status="OFFICIAL", comment="translation by https://orcid.org/0000-0001-7764-2085 and https://orcid.org/0000-0002-3391-9772"}
+def: "Campo donde la información es un token" [] {IAO:0000119="translation by https://orcid.org/0000-0001-7764-2085 and https://orcid.org/0000-0002-3391-9772", babelon:translation_status="OFFICIAL"}
 is_a: IAO:0000030 ! information content entity
 union_of: SNOMED:125680007 ! Marital status
 union_of: SNOMED:184104002 ! Patient occupation
@@ -12064,8 +12055,8 @@ property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
 id: PROMOT:0010007
-name: year content entity
-def: "an information content entity where the information is a year." []
+name: campo de año {babelon:translation_status="OFFICIAL", comment="translation by https://orcid.org/0000-0001-7764-2085 and https://orcid.org/0000-0002-3391-9772"}
+def: "Campo donde la información es un año" [] {IAO:0000119="translation by https://orcid.org/0000-0001-7764-2085 and https://orcid.org/0000-0002-3391-9772", babelon:translation_status="OFFICIAL"}
 is_a: IAO:0000030 ! information content entity
 union_of: NCIT:C156426 ! Year of Death
 union_of: NCIT:C210821 ! Year of Diagnosis
@@ -12077,14 +12068,14 @@ property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
 id: PROMOT:0010008
-name: declaración sobre un consentimiento  {comment="reviewed by https://orcid.org/0000-0002-1500-0236"}
+name: declaración sobre un consentimiento  {babelon:translation_status="OFFICIAL", comment="translation reviewed by https://orcid.org/0000-0002-1500-0236, https://orcid.org/0000-0001-7764-2085 and https://orcid.org/0000-0002-3391-9772"}
 def: "A statement regarding a consent to describe it." []
 is_a: NCIT:C49154 ! Statement
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
 id: PROMOT:0010009
-name: declaración sobre un ser humano {comment="reviewed by https://orcid.org/0000-0002-1500-0236"}
+name: declaración sobre un ser humano {babelon:translation_status="OFFICIAL", comment="translation reviewed by https://orcid.org/0000-0002-1500-0236, https://orcid.org/0000-0001-7764-2085 and https://orcid.org/0000-0002-3391-9772"}
 def: "A statement that describes a human." []
 is_a: NCIT:C49154 ! Statement
 relationship: RO:0002351 NCBITaxon:9606 {cardinality="1"} ! has member Homo sapiens
@@ -12092,7 +12083,7 @@ property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
 id: PROMOT:0010010
-name: declaración sobre un fenotipo {comment="reviewed by https://orcid.org/0000-0002-1500-0236"}
+name: declaración sobre un fenotipo {babelon:translation_status="OFFICIAL", comment="translation reviewed by https://orcid.org/0000-0002-1500-0236, https://orcid.org/0000-0001-7764-2085 and https://orcid.org/0000-0002-3391-9772"}
 def: "A statement regarding a phenotype to state details about it." []
 is_a: NCIT:C49154 ! Statement
 relationship: RO:0002351 HP:0000118 {cardinality="1"} ! has member Phenotypic abnormality
@@ -12100,14 +12091,14 @@ property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
 id: PROMOT:0010011
-name: declaración sobre un procedimiento {comment="label by https://orcid.org/0000-0002-1500-0236"}
+name: declaración sobre un procedimiento {comment="translation by https://orcid.org/0000-0002-1500-0236, reviewed by https://orcid.org/0000-0001-7764-2085 and https://orcid.org/0000-0002-3391-9772", babelon:translation_status="OFFICIAL"}
 def: "A statement regarding a procedure to describe it." []
 is_a: NCIT:C49154 ! Statement
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
 id: PROMOT:0010012
-name: declaración sobre un paciente {comment="reviewed by https://orcid.org/0000-0002-1500-0236"}
+name: declaración sobre un paciente {babelon:translation_status="OFFICIAL", comment="translation reviewed by https://orcid.org/0000-0002-1500-0236, https://orcid.org/0000-0001-7764-2085 and https://orcid.org/0000-0002-3391-9772"}
 def: "A statement regarding a patient to state details about them." []
 is_a: PROMOT:0010009 ! declaración sobre un ser humano
 relationship: RO:0002351 NCIT:C16960 {cardinality="1"} ! has member Patient
@@ -12116,17 +12107,18 @@ property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 [Term]
 id: PROMOT:0010013
 name: Année d’identification
-def: "El año de la evaluación de una entidad, por ejemplo,  el año en el que se evalúa un fenotipo mediante pruebas médicas." [] {IAO:0000119="reviewed by https://orcid.org/0000-0002-1500-0236"}
+def: "El año de la evaluación de una entidad, por ejemplo, el año en el que se evalúa un fenotipo mediante pruebas médicas." [] {IAO:0000119="translation reviewed by https://orcid.org/0000-0002-1500-0236, https://orcid.org/0000-0001-7764-2085 and https://orcid.org/0000-0002-3391-9772", babelon:translation_status="OFFICIAL"}
 is_a: NCIT:C25164 ! Date
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
 id: PROMOT:0010014
 name: Année de disparition
-def: "El año en que se resuelve una disposición anómala, por ejemplo, el año en que un fenotipo deja de existir." [] {IAO:0000119="reviewed by https://orcid.org/0000-0002-1500-0236"}
+def: "El año en que se resuelve una disposición anómala, por ejemplo, el año en que un fenotipo deja de existir." [] {IAO:0000119="translation reviewed by https://orcid.org/0000-0002-1500-0236, https://orcid.org/0000-0001-7764-2085 and https://orcid.org/0000-0002-3391-9772", babelon:translation_status="OFFICIAL"}
 comment: [PROMOT note] [Derived from RD-CDM] [6.2.4 Resolution Date] 
 is_a: NCIT:C25164 ! Date
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
+property_value: skos:changeNote "[PROMOT note] The PROMOT ontology added a comment to quote the CDM used as a source for this entity." xsd:string
 
 [Term]
 id: PROMOT:0010015
@@ -12205,7 +12197,7 @@ property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
 id: PROMOT:0010023
-name: Embryonal
+name: Embrional {babelon:translation_status="OFFICIAL", comment="translation by https://orcid.org/0000-0001-7764-2085 and https://orcid.org/0000-0002-3391-9772"}
 def: "Age category up to 8 weeks following fertilization, corresponding to 10 weeks of gestation (inclusive)." [] {IAO:0000119="HP:0011460"}
 is_a: PROMOT:0010022 ! Antenatal age
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
@@ -12241,7 +12233,7 @@ property_value: seeAlso HP:0034198
 
 [Term]
 id: PROMOT:0010027
-name: Third trimester
+name: Tercer trimestre {babelon:translation_status="OFFICIAL", comment="translation by https://orcid.org/0000-0001-7764-2085 and https://orcid.org/0000-0002-3391-9772"}
 def: "Category prior to birth during the third trimester, which is defined as 28 weeks and zero days (28+0) of gestation and beyond." [] {IAO:0000119="HP:0034197"}
 is_a: PROMOT:0010024 ! Fetal
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
@@ -12257,7 +12249,7 @@ property_value: seeAlso HP:0003577
 
 [Term]
 id: PROMOT:0010029
-name: Neonatal age
+name: Edad neonatal {babelon:translation_status="OFFICIAL", comment="translation by https://orcid.org/0000-0001-7764-2085 and https://orcid.org/0000-0002-3391-9772"}
 def: "Age within the first 28 days of life." [] {IAO:0000119="HP:0003623"}
 is_a: NCIT:C20587 ! Age Related Group
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
@@ -12266,7 +12258,7 @@ property_value: skos:closeMatch "http://purl.obolibrary.org/obo/NCIT_C16731" xsd
 
 [Term]
 id: PROMOT:0010030
-name: Pediatric age
+name: Edad pediátrica {babelon:translation_status="OFFICIAL", comment="translation by https://orcid.org/0000-0001-7764-2085 and https://orcid.org/0000-0002-3391-9772"}
 def: "Age category before adulthood, defined here as before the age of 16 years, but excluding neonatal or congenital onset. It includes people from the age of 28 days to 15 years old (included)." [] {IAO:0000119="HP:0410280"}
 is_a: NCIT:C20587 ! Age Related Group
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
@@ -12278,7 +12270,7 @@ name: Childhood
 def: "Age category including people from 1 to 4 years old (inclusive)." [] {IAO:0000119="HP:0011463"}
 comment: [PROMOT note] [Derived from RD-CDM] [3.4 Age Category] 
 xref: http://snomed.info/id/255398004
-is_a: PROMOT:0010030 ! Pediatric age
+is_a: PROMOT:0010030 ! Edad pediátrica
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 property_value: seeAlso HP:0011463
 property_value: skos:closeMatch "http://purl.obolibrary.org/obo/NCIT_C89345" xsd:string
@@ -12289,7 +12281,7 @@ name: Infantile age
 def: "Age category including people from 28 days to under 1 year old." [] {IAO:0000119="HP:0003593"}
 comment: [PROMOT note] [Derived from RD-CDM] [3.4 Age Category] 
 xref: http://snomed.info/id/3658006
-is_a: PROMOT:0010030 ! Pediatric age
+is_a: PROMOT:0010030 ! Edad pediátrica
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 property_value: seeAlso HP:0003593
 property_value: skos:closeMatch "http://purl.obolibrary.org/obo/NCIT_C27956" xsd:string
@@ -12301,7 +12293,7 @@ name: Juvenile age
 def: "Age category including people between 5 and 15 years old (inclusive)." [] {IAO:0000119="HP:0003621"}
 comment: [PROMOT note] [Derived from RD-CDM] [3.4 Age Category] 
 xref: http://snomed.info/id/713153009
-is_a: PROMOT:0010030 ! Pediatric age
+is_a: PROMOT:0010030 ! Edad pediátrica
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 property_value: seeAlso HP:0003621
 property_value: skos:closeMatch "http://purl.obolibrary.org/obo/NCIT_C85405" xsd:string
@@ -12333,8 +12325,8 @@ property_value: seeAlso HP:4000040
 [Term]
 id: PROMOT:0010037
 name: Patient sex at birth unknown
-def: "Physical sexual characteristiscs at birth that are unknown." []
-comment: [PROMOT note] A crossref to the orignal RD-CDM element has been added.
+def: "Physical sexual characteristics at birth that are unknown." []
+comment: [PROMOT note] [Derived from EU-CDE] [2.2. Sex]|[PROMOT note] A crossref to the orignal RD-CDM element has been added.
 xref: http://snomed.info/id/184115007
 is_a: NCIT:C124436 ! Sex at Birth
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
@@ -12342,8 +12334,8 @@ property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 [Term]
 id: PROMOT:0010038
 name: Sex at birth not recorded
-def: "Physical sexual characteristiscs at birth that are not recorded." []
-comment: [PROMOT note] A crossref to the orignal RD-CDM element has been added.
+def: "Physical sexual characteristics at birth that are not recorded." []
+comment: [PROMOT note] [Derived from EU-CDE] [2.2. Sex]|[PROMOT note] A crossref to the orignal RD-CDM element has been added.
 xref: http://snomed.info/id/1220561009
 is_a: PROMOT:0010037 ! Patient sex at birth unknown
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
@@ -12395,14 +12387,14 @@ property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 [Term]
 id: PROMOT:0010044
 name: Actif
-def: "A status of a consent that has been approved by the concerned person." []
+def: "A status of a consent that has been given by the concerned person." []
 comment: [PROMOT note] [Derived from EURO-NMD NMD-CDE] 
 is_a: PROMOT:0010041 ! Consent status
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
 id: PROMOT:0010045
-name: Rejected
+name: Rechazado {babelon:translation_status="OFFICIAL", comment="translation by https://orcid.org/0000-0001-7764-2085 and https://orcid.org/0000-0002-3391-9772"}
 def: "A status of a consent that has been rejected by the concerned person." []
 comment: [PROMOT note] [Derived from EURO-NMD NMD-CDE] 
 is_a: PROMOT:0010041 ! Consent status
@@ -12429,7 +12421,7 @@ property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 [Term]
 id: PROMOT:0010048
 name: Consent type
-def: "The type of consent given by a person that precises the details of what is consented" []
+def: "The type of consent given by a person that precises the details of what is consented." []
 is_a: SNOMED:363787002 ! Observable entity
 relationship: RO:0002350 PROMOT:0010008 ! member of declaración sobre un consentimiento 
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
@@ -12438,7 +12430,7 @@ property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 id: PROMOT:0010049
 name: Accord pour être contacté à des fins de recherche
 def: "An agreement given by a patient to be contacted by research teams for research purposes." []
-comment: [PROMOT note] The PROMOT ontology added a comment to quote the CDM. The original element is consent_contact_research from RD-CDM.
+comment: [PROMOT note] [Derived from EU-CDE] [7.1. Agreement to be contacted for research purposes]
 is_a: PROMOT:0010048 ! Consent type
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
@@ -12446,13 +12438,13 @@ property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 id: PROMOT:0010050
 name: Consent to the reuse of data
 def: "A consent given by a person to the reuse of their data." []
-comment: [PROMOT note] The PROMOT ontology added a comment to quote the CDM. The original element is consent_contact_research from RD-CDM.
+comment: [PROMOT note] [Derived from EU-CDE] [7.2. Consent to the reuse of data]
 is_a: PROMOT:0010048 ! Consent type
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
 id: PROMOT:0010051
-name: Unrecorded handedness
+name: Lateralidad no registrada {babelon:translation_status="OFFICIAL", comment="translation by https://orcid.org/0000-0001-7764-2085 and https://orcid.org/0000-0002-3391-9772"}
 def: "An handedness that is unrecorded." []
 is_a: SNOMED:709880000 ! Unknown handedness
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
@@ -12460,7 +12452,7 @@ property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 [Term]
 id: PROMOT:0010052
 name: Patient à risque de chute
-def: "A patient with phenotypes that allow to assess the patient undergo a risk of fall. (quality?)" []
+def: "A risk of fall assessed for a patient that has phenotypes that allow to assess they undergo a risk of fall." []
 is_a: SNOMED:363787002 ! Observable entity
 relationship: RO:0002350 PROMOT:0010012 ! member of declaración sobre un paciente
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
@@ -12507,55 +12499,55 @@ property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
 id: PROMOT:0031001
-name: estado vital desconocido {babelon:translation_status="CANDIDATE"}
+name: estado vital desconocido {comment="translation reviewed by https://orcid.org/0000-0001-7764-2085 and https://orcid.org/0000-0002-3391-9772", babelon:translation_status="OFFICIAL"}
 def: "A vital status that is unkown." []
-comment: [PROMOT note] [Derived from RD-CDM] [3.1 Vital Status] & [6.3.10 Family Member Deceased]
+comment: [PROMOT note] [Derived from EU-CDE] [3.1. Patient’s status]
 is_a: NCIT:C25717 ! Vital Status
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
 id: PROMOT:0031002
-name: unrecorded vital status
+name: Estado vital no registrado {babelon:translation_status="OFFICIAL", comment="translation by https://orcid.org/0000-0001-7764-2085 and https://orcid.org/0000-0002-3391-9772"}
 def: "A vital status that is unkown because unrecorded." []
-comment: [PROMOT note] [Derived from RD-CDM] [3.1 Vital Status]
+comment: [PROMOT note] [Derived from EU-CDE] [3.1. Patient’s status]
 is_a: PROMOT:0031001 ! estado vital desconocido
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
 id: PROMOT:0031003
-name: lost in follow up
+name: Pérdida en el seguimiento {babelon:translation_status="OFFICIAL", comment="translation by https://orcid.org/0000-0001-7764-2085 and https://orcid.org/0000-0002-3391-9772"}
 def: "A recorded vital status because of the patient being lost in follow up." []
-comment: [PROMOT note] [Derived from RD-CDM] [3.1 Vital Status]
+comment: [PROMOT note] [Derived from EU-CDE] [3.1. Patient’s status] [Lost in follow-up]
 xref: 399307001
-is_a: PROMOT:0031002 ! unrecorded vital status
+is_a: PROMOT:0031002 ! Estado vital no registrado
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
 id: PROMOT:0031004
-name: opt out
+name: Alta voluntaria (retirada del estudio) {babelon:translation_status="OFFICIAL", comment="translation by https://orcid.org/0000-0001-7764-2085 and https://orcid.org/0000-0002-3391-9772"}
 def: "A recorded vital status because of the patient being opted out from the study." []
-comment: [PROMOT note] [Derived from RD-CDM] [3.1 Vital Status]
+comment: [PROMOT note] [Derived from EU-CDE] [3.1. Patient’s status] [Opted-out]
 xref: 185924006
-is_a: PROMOT:0031002 ! unrecorded vital status
+is_a: PROMOT:0031002 ! Estado vital no registrado
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
 id: PROMOT:0031005
-name: Origine du variant inconnue
+name: Origen de la variante desconocido {babelon:translation_status="OFFICIAL", comment="translation by https://orcid.org/0000-0001-7764-2085 and https://orcid.org/0000-0002-3391-9772"}
 def: "A variant origin that is unknown." []
 is_a: SO:0001762 ! variant_origin
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
 id: PROMOT:0031006
-name: Origine du variant non renseignée
+name: Origen de la variante no registrado {babelon:translation_status="OFFICIAL", comment="translation by https://orcid.org/0000-0001-7764-2085 and https://orcid.org/0000-0002-3391-9772"}
 def: "A variant origin that is unknown because unrecorded." []
-is_a: PROMOT:0031005 ! Origine du variant inconnue
+is_a: PROMOT:0031005 ! Origen de la variante desconocido
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
 id: PROMOT:0031007
-name: Qualité qualifiant l’existance d’une entité
+name: Calificador de presencia {babelon:translation_status="OFFICIAL", comment="translation by https://orcid.org/0000-0001-7764-2085 and https://orcid.org/0000-0002-3391-9772"}
 def: "A qualifier for stating the presence, absence or uncertainty of a entity instance (e.g. a phenotype instance)." []
 comment: [PROMOT note] [Derived from RD-CDM] [6.2.2 Status] 
 xref: http://snomed.info/id/363778006
@@ -12593,7 +12585,7 @@ property_value: IAO:0000117 "https://orcid.org/0000-0002-3336-2476, https://orci
 
 [Term]
 id: PROMOT:0032004
-name: Anhedonia cuando se come {babelon:translation_status="CANDIDATE"}
+name: Anhedonia cuando se come {comment="translation reviewed by https://orcid.org/0000-0001-7764-2085 and https://orcid.org/0000-0002-3391-9772", babelon:translation_status="OFFICIAL"}
 def: "A loss of enjoyment of mealtime due to difficulties while eating." [] {comment="https://orcid.org/0000-0003-2829-8470", IAO:0000119="Medical experts"}
 is_a: HP:0012154 ! Anhedonia
 relationship: PROMOT:2000001 ICF:1328675264 ! affecte Comer
@@ -12613,7 +12605,7 @@ property_value: IAO:0000117 "https://orcid.org/0000-0002-3336-2476, https://orci
 
 [Term]
 id: PROMOT:0032006
-name: Choking on foods
+name: Atragantamiento con alimentos {babelon:translation_status="OFFICIAL", comment="translation by https://orcid.org/0000-0001-7764-2085 and https://orcid.org/0000-0002-3391-9772"}
 def: "Incidents in which a piece of food get stuck in the upper airway and provoke choking." [] {comment="https://orcid.org/0000-0003-2829-8470"}
 is_a: HP:0030842 ! Choking episodes
 relationship: PROMOT:2000001 ICF:1328675264 ! affecte Comer
@@ -12623,18 +12615,20 @@ property_value: PROMOT:1000001 "[OPMD Scoping review on dysphagia] Côté C, Gag
 
 [Term]
 id: PROMOT:0032007
-name: Choking on liquids
+name: Atragantamiento con líquidos {babelon:translation_status="OFFICIAL", comment="translation by https://orcid.org/0000-0001-7764-2085 and https://orcid.org/0000-0002-3391-9772"}
 def: "Incidents in which liquids provoke choking." [] {comment="https://orcid.org/0000-0003-2829-8470"}
 is_a: HP:0030842 ! Choking episodes
 relationship: PROMOT:2000001 ICF:553784299 ! affecte Beber
+relationship: PROMOT:2000005 SNOMED:840297006 ! est évalué par Assessment of patient reported outcome measures
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 property_value: PROMOT:1000001 "[OPMD Scoping review on dysphagia] Côté C, Gagnon C, Youssof S, et al. The requirement for a disease-specific patient-reported outcome measure of dysphagia in oculopharyngeal muscular dystrophy. Muscle Nerve. 2019;59:445–50. doi: 10.1002/mus.26405" xsd:string
 
 [Term]
 id: PROMOT:0032008
-name: Choking on saliva
+name: Atragantamiento con saliva {babelon:translation_status="OFFICIAL", comment="translation by https://orcid.org/0000-0001-7764-2085 and https://orcid.org/0000-0002-3391-9772"}
 def: "Incidents in which saliva provoke choking." [] {comment="https://orcid.org/0000-0003-2829-8470"}
-is_a: PROMOT:0032007 ! Choking on liquids
+is_a: PROMOT:0032007 ! Atragantamiento con líquidos
+relationship: PROMOT:2000005 SNOMED:840297006 ! est évalué par Assessment of patient reported outcome measures
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 property_value: PROMOT:1000001 "[OPMD Scoping review on dysphagia] Côté C, Gagnon C, Youssof S, et al. The requirement for a disease-specific patient-reported outcome measure of dysphagia in oculopharyngeal muscular dystrophy. Muscle Nerve. 2019;59:445–50. doi: 10.1002/mus.26405" xsd:string
 
@@ -12644,6 +12638,7 @@ name: Coughing on foods
 def: "Incidents in which a piece of food get stuck in the upper airway and provoke coughing." [] {comment="https://orcid.org/0000-0003-2829-8470"}
 is_a: HP:0030842 ! Choking episodes
 relationship: PROMOT:2000001 ICF:1328675264 ! affecte Comer
+relationship: PROMOT:2000005 SNOMED:840297006 ! est évalué par Assessment of patient reported outcome measures
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 property_value: PROMOT:1000001 "[OPMD Scoping review on dysphagia] Côté C, Gagnon C, Youssof S, et al. The requirement for a disease-specific patient-reported outcome measure of dysphagia in oculopharyngeal muscular dystrophy. Muscle Nerve. 2019;59:445–50. doi: 10.1002/mus.26405" xsd:string
 
@@ -12653,6 +12648,7 @@ name: Coughing on liquids
 def: "Incidents in which liquids provoke coughing." [] {comment="https://orcid.org/0000-0003-2829-8470"}
 is_a: HP:0030842 ! Choking episodes
 relationship: PROMOT:2000001 ICF:553784299 ! affecte Beber
+relationship: PROMOT:2000005 SNOMED:840297006 ! est évalué par Assessment of patient reported outcome measures
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 property_value: PROMOT:1000001 "[OPMD Scoping review on dysphagia] Côté C, Gagnon C, Youssof S, et al. The requirement for a disease-specific patient-reported outcome measure of dysphagia in oculopharyngeal muscular dystrophy. Muscle Nerve. 2019;59:445–50. doi: 10.1002/mus.26405" xsd:string
 
@@ -12661,6 +12657,7 @@ id: PROMOT:0032011
 name: Coughing on saliva
 def: "Incidents in which saliva provoke coughing." [] {comment="https://orcid.org/0000-0003-2829-8470"}
 is_a: PROMOT:0032010 ! Coughing on liquids
+relationship: PROMOT:2000005 SNOMED:840297006 ! est évalué par Assessment of patient reported outcome measures
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 property_value: PROMOT:1000001 "[OPMD Scoping review on dysphagia] Côté C, Gagnon C, Youssof S, et al. The requirement for a disease-specific patient-reported outcome measure of dysphagia in oculopharyngeal muscular dystrophy. Muscle Nerve. 2019;59:445–50. doi: 10.1002/mus.26405" xsd:string
 
@@ -12670,7 +12667,7 @@ name: Decreased walking speed
 def: "A walking speed that is below the lower limit of normal according to what is expected." [] {comment="https://orcid.org/0000-0003-2829-8470"}
 is_a: HP:0001288 ! Gait disturbance
 relationship: PROMOT:2000001 ICF:1550548595 ! affecte Andar
-relationship: PROMOT:2000005 SNOMED:84100007 ! est évalué par History taking
+relationship: PROMOT:2000005 SNOMED:12894003 ! est évalué par Functional assessment
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 property_value: PROMOT:1000001 "[OPMD Clinical Registry Form]" xsd:string
 
@@ -12680,7 +12677,6 @@ name: Difficulty changing basic position
 def: "A difficulty to change basic position, i.e. a difficulty getting into and out of a body position and moving from one location to another, such as getting up out of a chair to lie down on a bed, and getting into and out of positions of sitting, standing, kneeling or squatting. This is distinct from the difficulty of transferring oneself." [] {IAO:0000119="ICF:150502901"}
 is_a: HP:0100022 ! Abnormality of movement
 relationship: PROMOT:2000001 ICF:150502901 ! affecte Cambiar las posturas corporales básicas
-relationship: PROMOT:2000005 SNOMED:84100007 ! est évalué par History taking
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 property_value: PROMOT:1000001 "[OPMD Scoping review 2026] Bélair N, Gagnon C, Duchesne E. What is known about muscle weakness, balance impairments and indoor mobility limitations in oculopharyngeal muscular dystrophy? A scoping review. J Neuromuscul Dis. 2025 Dec 30:22143602251397052. doi: 10.1177/22143602251397052. Epub ahead of print. PMID: 41467981." xsd:string
 
@@ -12690,13 +12686,12 @@ name: Difficulty walking short distance
 def: "A difficulty to walk for less than a kilometre, such as walking around rooms or hallways, within a building or for short distances outside. This is distinct from the difficulty of moving around." [] {IAO:0000119="ICF:555410497"}
 is_a: HP:0001288 ! Gait disturbance
 relationship: PROMOT:2000001 ICF:555410497 ! affecte Andar distancias cortas
-relationship: PROMOT:2000005 SNOMED:12894003 ! est évalué par Functional assessment
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 property_value: PROMOT:1000001 "[OPMD Scoping review 2026] Bélair N, Gagnon C, Duchesne E. What is known about muscle weakness, balance impairments and indoor mobility limitations in oculopharyngeal muscular dystrophy? A scoping review. J Neuromuscul Dis. 2025 Dec 30:22143602251397052. doi: 10.1177/22143602251397052. Epub ahead of print. PMID: 41467981." xsd:string
 
 [Term]
 id: PROMOT:0032015
-name: Doble anomalía del potencial de acción motora compuesta {babelon:translation_status="CANDIDATE"}
+name: Doble anomalía del potencial de acción motora compuesta {comment="translation reviewed by https://orcid.org/0000-0001-7764-2085 and https://orcid.org/0000-0002-3391-9772", babelon:translation_status="OFFICIAL"}
 def: "Deux anomalies dans l’EMG mesurant le potentiel d’action global d’un muscle (PAM), aussi appelé potentiel d’action musculaire composé." [] {babelon:translation_status="CANDIDATE", IAO:0000119="translated from English by https://orcid.org/0009-0000-5160-7927"}
 is_a: HP:0033580 ! Compound motor action potential abnormality
 relationship: PROMOT:2000005 SNOMED:84100007 ! est évalué par History taking
@@ -12705,7 +12700,7 @@ property_value: PROMOT:1000001 "Congenital myasthenic syndrom Scoping review" xs
 
 [Term]
 id: PROMOT:0032016
-name: Disfagia con líquidos {babelon:translation_status="CANDIDATE"}
+name: Disfagia con líquidos {comment="translation reviewed by https://orcid.org/0000-0001-7764-2085 and https://orcid.org/0000-0002-3391-9772", babelon:translation_status="OFFICIAL"}
 def: "Difficulty in swallowing liquid food. This is distinct from hydrophobia." [] {comment="https://orcid.org/0000-0003-2829-8470", IAO:0000119="Medical experts"}
 is_a: HP:0002015 ! Dysphagia
 relationship: PROMOT:2000001 ICF:553784299 ! affecte Beber
@@ -12716,7 +12711,7 @@ property_value: PROMOT:1000001 "[OPMD Scoping review on dysphagia] Côté C, Gag
 
 [Term]
 id: PROMOT:0032017
-name: Disfagia con sólidos {babelon:translation_status="CANDIDATE"}
+name: Disfagia con sólidos {comment="translation reviewed by https://orcid.org/0000-0001-7764-2085 and https://orcid.org/0000-0002-3391-9772", babelon:translation_status="OFFICIAL"}
 def: "Difficulty in swallowing solid food." [] {comment="https://orcid.org/0000-0003-2829-8470", IAO:0000119="Medical experts"}
 is_a: HP:0002015 ! Dysphagia
 relationship: PROMOT:2000001 ICF:1328675264 ! affecte Comer
@@ -12729,71 +12724,70 @@ property_value: PROMOT:1000001 "[OPMD Scoping review on dysphagia] Côté C, Gag
 [Term]
 id: PROMOT:0032018
 name: Fatigabilité des muscles extra-occulaires provoquant une ptose {babelon:translation_status="CANDIDATE"}
-def: "A type of ptosis that occurs after the external ocular muscle group is used and lessens if the muscle group has some rest. That is, there is a ptosis apparition with repetitive external ocular muscle actions" [] {comment="https://orcid.org/0000-0003-2829-8470", IAO:0000119="Medical experts"}
+def: "A type of ptosis that occurs after the external ocular muscle group is used and lessens if the muscle group has some rest. That is, there is a ptosis apparition with repetitive external ocular muscle actions." [] {comment="https://orcid.org/0000-0003-2829-8470", IAO:0000119="Medical experts"}
 is_a: HP:0000508 ! Ptosis
 relationship: PROMOT:2000001 ICF:2021370201 ! affecte Fonctions de la paupière
 relationship: PROMOT:2000001 PROMOT:0032029 ! affecte Endurance d’un muscle extra-oculaire
 relationship: PROMOT:2000001 PROMOT:0032065 ! affecte Fuerza del músculo extraocular
-relationship: PROMOT:2000005 SNOMED:840297006 ! est évalué par Assessment of patient reported outcome measures
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 property_value: PROMOT:1000001 "Congenital myasthenic syndrom Scoping review" xsd:string
 
 [Term]
 id: PROMOT:0032019
-name: Debilidad fatigable muscular axial {babelon:translation_status="CANDIDATE"}
+name: Debilidad fatigable muscular axial {comment="translation reviewed by https://orcid.org/0000-0001-7764-2085 and https://orcid.org/0000-0002-3391-9772", babelon:translation_status="OFFICIAL"}
 def: "A type of weakness of the axial muscles (i.e., of the muscles of the head and neck, vertebral column, and intercostal muscles) that occurs after a muscle group is used and lessens if the muscle group has some rest. That is, there is diminution of the strength of the axial muscles with repetitive muscle actions." [] {comment="[PROMOT project] Mansoore Gholizade (definition reviewer)", IAO:0000119="HP:0003473"}
 is_a: HP:0030197 ! Fatigable weakness of skeletal muscles
 relationship: PROMOT:2000001 ICF:1521707777 ! affecte Endurance des groupes de muscles
 relationship: PROMOT:2000001 ICF:1789365017 ! affecte Fuerza de músculos aislados o de grupos de músculos
 relationship: PROMOT:2000001 ICF:2048203604 ! affecte Mobility
-relationship: PROMOT:2000005 SNOMED:840297006 ! est évalué par Assessment of patient reported outcome measures
+relationship: PROMOT:2000005 SNOMED:12894003 ! est évalué par Functional assessment
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 property_value: PROMOT:1000001 "Congenital myasthenic syndrom Scoping review" xsd:string
 property_value: PROMOT:1000001 "Congenital myopathy Scoping review" xsd:string
 
 [Term]
 id: PROMOT:0032020
-name: Debilidad fatigable de la musculatura facial  {babelon:translation_status="CANDIDATE"}
+name: Debilidad fatigable de la musculatura facial  {comment="translation reviewed by https://orcid.org/0000-0001-7764-2085 and https://orcid.org/0000-0002-3391-9772", babelon:translation_status="OFFICIAL"}
 def: "A type of weakness of the facial musculature (i.e. one or more muscles innervated by the seventh cranial nerve) that occurs after a muscle group is used and lessens if the muscle group has some rest. That is, there is diminution of the strength of the facial musculature with repetitive muscle actions." [] {comment="[PROMOT project] Mansoore Gholizade (definition reviewer)", IAO:0000119="HP:0003473"}
 is_a: HP:0003473 ! Fatigable weakness
 relationship: PROMOT:2000001 ICF:1328675264 ! affecte Comer
 relationship: PROMOT:2000001 PROMOT:0032030 ! affecte Endurance d’un muscle du visage
 relationship: PROMOT:2000001 PROMOT:0032066 ! affecte Fuerza del músculo facial
-relationship: PROMOT:2000005 SNOMED:840297006 ! est évalué par Assessment of patient reported outcome measures
+relationship: PROMOT:2000005 SNOMED:84100007 ! est évalué par History taking
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 property_value: PROMOT:1000001 "Congenital myasthenic syndrom Scoping review" xsd:string
 property_value: PROMOT:1000001 "Congenital myopathy Scoping review" xsd:string
 
 [Term]
 id: PROMOT:0032021
-name: Debilidad fatigable del músculo oculares {babelon:translation_status="CANDIDATE"}
+name: Debilidad fatigable del músculo oculares {comment="translation reviewed by https://orcid.org/0000-0001-7764-2085 and https://orcid.org/0000-0002-3391-9772", babelon:translation_status="OFFICIAL"}
 def: "A type of weakness of the ocular muscles that occurs after a muscle group is used and lessens if the muscle group has some rest. That is, there is diminution of the strength of the ocular muscles with repetitive muscle actions." [] {comment="[PROMOT project] Mansoore Gholizade (definition reviewer)", IAO:0000119="HP:0003473"}
 is_a: HP:0003473 ! Fatigable weakness
 relationship: PROMOT:2000001 PROMOT:0032029 ! affecte Endurance d’un muscle extra-oculaire
 relationship: PROMOT:2000001 PROMOT:0032065 ! affecte Fuerza del músculo extraocular
-relationship: PROMOT:2000005 SNOMED:840297006 ! est évalué par Assessment of patient reported outcome measures
+relationship: PROMOT:2000005 SNOMED:84100007 ! est évalué par History taking
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 property_value: PROMOT:1000001 "Congenital myasthenic syndrom Scoping review" xsd:string
 property_value: PROMOT:1000001 "Congenital myopathy Scoping review" xsd:string
 
 [Term]
 id: PROMOT:0032022
-name: Choking on liquids
+name: Fatiga cuando se come {comment="translation reviewed by https://orcid.org/0000-0001-7764-2085 and https://orcid.org/0000-0002-3391-9772", babelon:translation_status="OFFICIAL"}
 def: "A fatigue that occurs when one is eating. It is due to weakness or fatiguable weakness of chewing muscles." [] {comment="https://orcid.org/0000-0003-2829-8470", IAO:0000119="Medical experts"}
 is_a: HP:0012378 ! Fatigue
+relationship: PROMOT:2000001 ICF:1328675264 ! affecte Comer
 relationship: PROMOT:2000005 SNOMED:840297006 ! est évalué par Assessment of patient reported outcome measures
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 property_value: PROMOT:1000001 "[OPMD Scoping review on dysphagia] Côté C, Gagnon C, Youssof S, et al. The requirement for a disease-specific patient-reported outcome measure of dysphagia in oculopharyngeal muscular dystrophy. Muscle Nerve. 2019;59:445–50. doi: 10.1002/mus.26405" xsd:string
 
 [Term]
 id: PROMOT:0032023
-name: Debilidad de músculos masticatorios {babelon:translation_status="CANDIDATE"}
+name: Debilidad de músculos masticatorios {comment="translation reviewed by https://orcid.org/0000-0001-7764-2085 and https://orcid.org/0000-0002-3391-9772", babelon:translation_status="OFFICIAL"}
 def: "A lack of strength in the muscles involved in chewing." [] {comment="[PROMOT project] Mansoore Gholizade (definition reviewer)", IAO:0000119="HP:0001324"}
 is_a: HP:0001324 ! Muscle weakness
 relationship: PROMOT:2000001 ICF:1328675264 ! affecte Comer
 relationship: PROMOT:2000001 ICF:1389818830 ! affecte Chewing
 relationship: PROMOT:2000001 ICF:1789365017 ! affecte Fuerza de músculos aislados o de grupos de músculos
-relationship: PROMOT:2000005 SNOMED:840297006 ! est évalué par Assessment of patient reported outcome measures
 relationship: PROMOT:2000005 SNOMED:84100007 ! est évalué par History taking
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 property_value: PROMOT:1000001 "Congenital myasthenic syndrom Scoping review" xsd:string
@@ -13116,7 +13110,7 @@ property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
 id: PROMOT:0032060
-name: Fuerza del músculo abdominal {babelon:translation_status="CANDIDATE"}
+name: Fuerza del músculo abdominal {comment="translation reviewed by https://orcid.org/0000-0001-7764-2085 and https://orcid.org/0000-0002-3391-9772", babelon:translation_status="OFFICIAL"}
 def: "Fonctions relatives à la force générée par la contraction d'un muscle abdominaux." [] {babelon:translation_status="CANDIDATE"}
 is_a: PROMOT:0032078 ! Fuerza del músculo del tronco
 relationship: PROMOT:2000006 SNOMED:12894003 ! est mesuré par Functional assessment
@@ -13125,7 +13119,7 @@ property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
 id: PROMOT:0032061
-name: Fuerza del brazo {babelon:translation_status="CANDIDATE"}
+name: Fuerza del brazo {comment="translation reviewed by https://orcid.org/0000-0001-7764-2085 and https://orcid.org/0000-0002-3391-9772", babelon:translation_status="OFFICIAL"}
 def: "Fonctions relatives à la force générée par la contraction d'un muscle du bras." [] {babelon:translation_status="CANDIDATE"}
 is_a: ICF:1789365017 ! Fuerza de músculos aislados o de grupos de músculos
 relationship: PROMOT:2000006 SNOMED:12894003 ! est mesuré par Functional assessment
@@ -13134,7 +13128,7 @@ property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
 id: PROMOT:0032062
-name: Fuerza del músculo buccinador {babelon:translation_status="CANDIDATE"}
+name: Fuerza del músculo buccinador {comment="translation reviewed by https://orcid.org/0000-0001-7764-2085 and https://orcid.org/0000-0002-3391-9772", babelon:translation_status="OFFICIAL"}
 def: "Fonctions relatives à la force générée par la contraction du muscle buccinateur." [] {babelon:translation_status="CANDIDATE"}
 is_a: PROMOT:0032066 ! Fuerza del músculo facial
 relationship: PROMOT:2000006 SNOMED:12894003 ! est mesuré par Functional assessment
@@ -13143,7 +13137,7 @@ property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
 id: PROMOT:0032063
-name: Fuerza del diafragma {babelon:translation_status="CANDIDATE"}
+name: Fuerza del diafragma {comment="translation reviewed by https://orcid.org/0000-0001-7764-2085 and https://orcid.org/0000-0002-3391-9772", babelon:translation_status="OFFICIAL"}
 def: "Fonctions relatives à la force générée par la contraction du diaphragm." [] {babelon:translation_status="CANDIDATE"}
 is_a: PROMOT:0032078 ! Fuerza del músculo del tronco
 relationship: PROMOT:2000006 SNOMED:12894003 ! est mesuré par Functional assessment
@@ -13151,7 +13145,7 @@ property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
 id: PROMOT:0032064
-name: Fuerza del músculo extensor de los dedos de la mano {babelon:translation_status="CANDIDATE"}
+name: Fuerza del músculo extensor de los dedos de la mano {comment="translation reviewed by https://orcid.org/0000-0001-7764-2085 and https://orcid.org/0000-0002-3391-9772", babelon:translation_status="OFFICIAL"}
 def: "Fonctions relatives à la force générée par la contraction du muscle extenseur des doigts de la main." [] {babelon:translation_status="CANDIDATE"}
 is_a: PROMOT:0032069 ! Fuerza del músculo del antebrazo
 relationship: PROMOT:2000006 SNOMED:12894003 ! est mesuré par Functional assessment
@@ -13160,7 +13154,7 @@ property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
 id: PROMOT:0032065
-name: Fuerza del músculo extraocular {babelon:translation_status="CANDIDATE"}
+name: Fuerza del músculo extraocular {comment="translation reviewed by https://orcid.org/0000-0001-7764-2085 and https://orcid.org/0000-0002-3391-9772", babelon:translation_status="OFFICIAL"}
 def: "Fonctions relatives à la force générée par la contraction d'un muscle extra-oculaire." [] {babelon:translation_status="CANDIDATE"}
 is_a: PROMOT:0032066 ! Fuerza del músculo facial
 relationship: PROMOT:2000006 SNOMED:12894003 ! est mesuré par Functional assessment
@@ -13168,7 +13162,7 @@ property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
 id: PROMOT:0032066
-name: Fuerza del músculo facial {babelon:translation_status="CANDIDATE"}
+name: Fuerza del músculo facial {comment="translation reviewed by https://orcid.org/0000-0001-7764-2085 and https://orcid.org/0000-0002-3391-9772", babelon:translation_status="OFFICIAL"}
 def: "Fonctions relatives à la force générée par la contraction d'un muscle du visage." [] {babelon:translation_status="CANDIDATE"}
 is_a: ICF:1789365017 ! Fuerza de músculos aislados o de grupos de músculos
 relationship: PROMOT:2000006 SNOMED:12894003 ! est mesuré par Functional assessment
@@ -13177,7 +13171,7 @@ property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
 id: PROMOT:0032067
-name: Fuerza del primer músculo dorsal interóseo de la mano {babelon:translation_status="CANDIDATE"}
+name: Fuerza del primer músculo dorsal interóseo de la mano {comment="translation reviewed by https://orcid.org/0000-0001-7764-2085 and https://orcid.org/0000-0002-3391-9772", babelon:translation_status="OFFICIAL"}
 def: "Fonctions relatives à la force générée par la contraction du premier muscle dorsal interosseux de la main." [] {babelon:translation_status="CANDIDATE"}
 is_a: PROMOT:0032073 ! Fuerza del músculo intrínseco de la mano
 relationship: PROMOT:2000006 SNOMED:12894003 ! est mesuré par Functional assessment
@@ -13186,7 +13180,7 @@ property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
 id: PROMOT:0032068
-name: Fuerza del pie {babelon:translation_status="CANDIDATE"}
+name: Fuerza del pie {comment="translation reviewed by https://orcid.org/0000-0001-7764-2085 and https://orcid.org/0000-0002-3391-9772", babelon:translation_status="OFFICIAL"}
 def: "Fonctions relatives à la force générée par la contraction d'un muscle du pied." [] {babelon:translation_status="CANDIDATE"}
 is_a: ICF:1789365017 ! Fuerza de músculos aislados o de grupos de músculos
 relationship: PROMOT:2000006 SNOMED:12894003 ! est mesuré par Functional assessment
@@ -13195,7 +13189,7 @@ property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
 id: PROMOT:0032069
-name: Fuerza del músculo del antebrazo {babelon:translation_status="CANDIDATE"}
+name: Fuerza del músculo del antebrazo {comment="translation reviewed by https://orcid.org/0000-0001-7764-2085 and https://orcid.org/0000-0002-3391-9772", babelon:translation_status="OFFICIAL"}
 def: "Fonctions relatives à la force générée par la contraction d'un muscle de l’avant bras." [] {babelon:translation_status="CANDIDATE"}
 is_a: ICF:1789365017 ! Fuerza de músculos aislados o de grupos de músculos
 relationship: PROMOT:2000006 SNOMED:12894003 ! est mesuré par Functional assessment
@@ -13204,7 +13198,7 @@ property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
 id: PROMOT:0032070
-name: Fuerza del músculo de la mano {babelon:translation_status="CANDIDATE"}
+name: Fuerza del músculo de la mano {comment="translation reviewed by https://orcid.org/0000-0001-7764-2085 and https://orcid.org/0000-0002-3391-9772", babelon:translation_status="OFFICIAL"}
 def: "Fonctions relatives à la force générée par la contraction d'un muscle de la main." [] {babelon:translation_status="CANDIDATE"}
 is_a: ICF:1789365017 ! Fuerza de músculos aislados o de grupos de músculos
 relationship: PROMOT:2000006 SNOMED:12894003 ! est mesuré par Functional assessment
@@ -13213,7 +13207,7 @@ property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
 id: PROMOT:0032071
-name: Fuerza del músculo intercostal {babelon:translation_status="CANDIDATE"}
+name: Fuerza del músculo intercostal {comment="translation reviewed by https://orcid.org/0000-0001-7764-2085 and https://orcid.org/0000-0002-3391-9772", babelon:translation_status="OFFICIAL"}
 def: "Fonctions relatives à la force générée par la contraction d’un muscle intercostal." [] {babelon:translation_status="CANDIDATE"}
 is_a: PROMOT:0032078 ! Fuerza del músculo del tronco
 relationship: PROMOT:2000006 SNOMED:12894003 ! est mesuré par Functional assessment
@@ -13222,7 +13216,7 @@ property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
 id: PROMOT:0032072
-name: Fuerza del los músculos intercostales {babelon:translation_status="CANDIDATE"}
+name: Fuerza del los músculos intercostales {comment="translation reviewed by https://orcid.org/0000-0001-7764-2085 and https://orcid.org/0000-0002-3391-9772", babelon:translation_status="OFFICIAL"}
 def: "Fonctions relatives à la force générée par la contraction d'un groupe de muscles intercostaux." [] {babelon:translation_status="CANDIDATE"}
 is_a: ICF:1789365017 ! Fuerza de músculos aislados o de grupos de músculos
 relationship: PROMOT:2000006 SNOMED:12894003 ! est mesuré par Functional assessment
@@ -13230,7 +13224,7 @@ property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
 id: PROMOT:0032073
-name: Fuerza del músculo intrínseco de la mano {babelon:translation_status="CANDIDATE"}
+name: Fuerza del músculo intrínseco de la mano {comment="translation reviewed by https://orcid.org/0000-0001-7764-2085 and https://orcid.org/0000-0002-3391-9772", babelon:translation_status="OFFICIAL"}
 def: "Fonctions relatives à la force générée par la contraction du muscle intrinsèque de la main." [] {babelon:translation_status="CANDIDATE"}
 is_a: PROMOT:0032070 ! Fuerza del músculo de la mano
 relationship: PROMOT:2000006 SNOMED:12894003 ! est mesuré par Functional assessment
@@ -13239,7 +13233,7 @@ property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
 id: PROMOT:0032074
-name: Fuerza del músculo de las piernas {babelon:translation_status="CANDIDATE"}
+name: Fuerza del músculo de las piernas {comment="translation reviewed by https://orcid.org/0000-0001-7764-2085 and https://orcid.org/0000-0002-3391-9772", babelon:translation_status="OFFICIAL"}
 def: "Fonctions relatives à la force générée par la contraction d'un muscle de la jambe." [] {babelon:translation_status="CANDIDATE"}
 is_a: ICF:1789365017 ! Fuerza de músculos aislados o de grupos de músculos
 relationship: PROMOT:2000006 SNOMED:12894003 ! est mesuré par Functional assessment
@@ -13248,7 +13242,7 @@ property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
 id: PROMOT:0032075
-name: Fuerza del músculo de la mandíbula {babelon:translation_status="CANDIDATE"}
+name: Fuerza del músculo de la mandíbula {comment="translation reviewed by https://orcid.org/0000-0001-7764-2085 and https://orcid.org/0000-0002-3391-9772", babelon:translation_status="OFFICIAL"}
 def: "Fonctions relatives à la force générée par la contraction du muscle masséter." [] {babelon:translation_status="CANDIDATE"}
 is_a: PROMOT:0032066 ! Fuerza del músculo facial
 relationship: PROMOT:2000006 SNOMED:12894003 ! est mesuré par Functional assessment
@@ -13257,7 +13251,7 @@ property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
 id: PROMOT:0032076
-name: Fuerza del músculo masticatorios {babelon:translation_status="CANDIDATE"}
+name: Fuerza del músculo masticatorios {comment="translation reviewed by https://orcid.org/0000-0001-7764-2085 and https://orcid.org/0000-0002-3391-9772", babelon:translation_status="OFFICIAL"}
 def: "Fonctions relatives à la force générée par la contraction d'un groupe de muscles masticatoires." [] {babelon:translation_status="CANDIDATE"}
 is_a: ICF:1789365017 ! Fuerza de músculos aislados o de grupos de músculos
 relationship: PROMOT:2000006 SNOMED:12894003 ! est mesuré par Functional assessment
@@ -13266,7 +13260,7 @@ property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
 id: PROMOT:0032077
-name: Fuerza de un músculo de la faringe {babelon:translation_status="CANDIDATE"}
+name: Fuerza de un músculo de la faringe {comment="translation reviewed by https://orcid.org/0000-0001-7764-2085 and https://orcid.org/0000-0002-3391-9772", babelon:translation_status="OFFICIAL"}
 def: "Fonctions relatives à la force générée par la contraction d’un muscle du pharynx." [] {babelon:translation_status="CANDIDATE"}
 is_a: PROMOT:0032079 ! Fuerza del músculo del cuello
 relationship: PROMOT:2000006 SNOMED:12894003 ! est mesuré par Functional assessment
@@ -13277,7 +13271,7 @@ property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
 id: PROMOT:0032078
-name: Fuerza del músculo del tronco {babelon:translation_status="CANDIDATE"}
+name: Fuerza del músculo del tronco {comment="translation reviewed by https://orcid.org/0000-0001-7764-2085 and https://orcid.org/0000-0002-3391-9772", babelon:translation_status="OFFICIAL"}
 def: "Fonctions relatives à la force générée par la contraction d'un muscle du tronc." [] {babelon:translation_status="CANDIDATE"}
 is_a: ICF:1789365017 ! Fuerza de músculos aislados o de grupos de músculos
 relationship: PROMOT:2000006 SNOMED:12894003 ! est mesuré par Functional assessment
@@ -13285,7 +13279,7 @@ property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
 id: PROMOT:0032079
-name: Fuerza del músculo del cuello {babelon:translation_status="CANDIDATE"}
+name: Fuerza del músculo del cuello {comment="translation reviewed by https://orcid.org/0000-0001-7764-2085 and https://orcid.org/0000-0002-3391-9772", babelon:translation_status="OFFICIAL"}
 def: "Fonctions relatives à la force générée par la contraction d'un muscle du cou." [] {babelon:translation_status="CANDIDATE"}
 is_a: ICF:1789365017 ! Fuerza de músculos aislados o de grupos de músculos
 relationship: PROMOT:2000006 SNOMED:12894003 ! est mesuré par Functional assessment
@@ -13294,7 +13288,7 @@ property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
 id: PROMOT:0032080
-name: Fuerza del músculo de la cintura pélvica {babelon:translation_status="CANDIDATE"}
+name: Fuerza del músculo de la cintura pélvica {comment="translation reviewed by https://orcid.org/0000-0001-7764-2085 and https://orcid.org/0000-0002-3391-9772", babelon:translation_status="OFFICIAL"}
 def: "Fonctions relatives à la force générée par la contraction d'un muscle de la ceinture pelvienne." [] {babelon:translation_status="CANDIDATE"}
 is_a: ICF:1789365017 ! Fuerza de músculos aislados o de grupos de músculos
 relationship: PROMOT:2000006 SNOMED:12894003 ! est mesuré par Functional assessment
@@ -13303,7 +13297,7 @@ property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
 id: PROMOT:0032081
-name: Fuerza de los músculos de la faringe {babelon:translation_status="CANDIDATE"}
+name: Fuerza de los músculos de la faringe {comment="translation reviewed by https://orcid.org/0000-0001-7764-2085 and https://orcid.org/0000-0002-3391-9772", babelon:translation_status="OFFICIAL"}
 def: "Fonctions relatives à la force générée par la contraction d'un groupe de muscles du pharynx." [] {babelon:translation_status="CANDIDATE"}
 is_a: ICF:1789365017 ! Fuerza de músculos aislados o de grupos de músculos
 relationship: PROMOT:2000006 SNOMED:12894003 ! est mesuré par Functional assessment
@@ -13314,7 +13308,7 @@ property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
 id: PROMOT:0032082
-name: Fuerza del músculo pterigoideo {babelon:translation_status="CANDIDATE"}
+name: Fuerza del músculo pterigoideo {comment="translation reviewed by https://orcid.org/0000-0001-7764-2085 and https://orcid.org/0000-0002-3391-9772", babelon:translation_status="OFFICIAL"}
 def: "Fonctions relatives à la force générée par la contraction du muscle ptérygoïdien." [] {babelon:translation_status="CANDIDATE"}
 is_a: PROMOT:0032066 ! Fuerza del músculo facial
 relationship: PROMOT:2000006 SNOMED:12894003 ! est mesuré par Functional assessment
@@ -13323,7 +13317,7 @@ property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
 id: PROMOT:0032083
-name: Fuerza del músculo cuádriceps femoral {babelon:translation_status="CANDIDATE"}
+name: Fuerza del músculo cuádriceps femoral {comment="translation reviewed by https://orcid.org/0000-0001-7764-2085 and https://orcid.org/0000-0002-3391-9772", babelon:translation_status="OFFICIAL"}
 def: "Fonctions relatives à la force générée par la contraction du muscle quadriceps femoral." [] {babelon:translation_status="CANDIDATE"}
 is_a: ICF:1789365017 ! Fuerza de músculos aislados o de grupos de músculos
 relationship: PROMOT:2000006 SNOMED:12894003 ! est mesuré par Functional assessment
@@ -13332,7 +13326,7 @@ property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
 id: PROMOT:0032084
-name: Fuerza del músculo romboides mayor  {babelon:translation_status="CANDIDATE"}
+name: Fuerza del músculo romboides mayor  {comment="translation reviewed by https://orcid.org/0000-0001-7764-2085 and https://orcid.org/0000-0002-3391-9772", babelon:translation_status="OFFICIAL"}
 def: "Fonctions relatives à la force générée par la contraction du muscle grand rhomboïde." [] {babelon:translation_status="CANDIDATE"}
 is_a: PROMOT:0032087 ! Fuerza del hombro
 relationship: PROMOT:2000006 SNOMED:12894003 ! est mesuré par Functional assessment
@@ -13341,7 +13335,7 @@ property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
 id: PROMOT:0032085
-name: Fuerza del músculo romboides menor {babelon:translation_status="CANDIDATE"}
+name: Fuerza del músculo romboides menor {comment="translation reviewed by https://orcid.org/0000-0001-7764-2085 and https://orcid.org/0000-0002-3391-9772", babelon:translation_status="OFFICIAL"}
 def: "Fonctions relatives à la force générée par la contraction du muscle petit rhomboïde." [] {babelon:translation_status="CANDIDATE"}
 is_a: PROMOT:0032087 ! Fuerza del hombro
 relationship: PROMOT:2000006 SNOMED:12894003 ! est mesuré par Functional assessment
@@ -13350,7 +13344,7 @@ property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
 id: PROMOT:0032086
-name: Fuerza del serrato anterior {babelon:translation_status="CANDIDATE"}
+name: Fuerza del serrato anterior {comment="translation reviewed by https://orcid.org/0000-0001-7764-2085 and https://orcid.org/0000-0002-3391-9772", babelon:translation_status="OFFICIAL"}
 def: "Fonctions relatives à la force générée par la contraction du muscle dentelé antérieur." [] {babelon:translation_status="CANDIDATE"}
 is_a: PROMOT:0032087 ! Fuerza del hombro
 relationship: PROMOT:2000006 SNOMED:12894003 ! est mesuré par Functional assessment
@@ -13359,7 +13353,7 @@ property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
 id: PROMOT:0032087
-name: Fuerza del hombro {babelon:translation_status="CANDIDATE"}
+name: Fuerza del hombro {comment="translation reviewed by https://orcid.org/0000-0001-7764-2085 and https://orcid.org/0000-0002-3391-9772", babelon:translation_status="OFFICIAL"}
 def: "Fonctions relatives à la force générée par la contraction d'un muscle de l’épaule." [] {babelon:translation_status="CANDIDATE"}
 is_a: ICF:1789365017 ! Fuerza de músculos aislados o de grupos de músculos
 relationship: PROMOT:2000006 SNOMED:12894003 ! est mesuré par Functional assessment
@@ -13368,7 +13362,7 @@ property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
 id: PROMOT:0032088
-name: Fuerza del músculo temporal {babelon:translation_status="CANDIDATE"}
+name: Fuerza del músculo temporal {comment="translation reviewed by https://orcid.org/0000-0001-7764-2085 and https://orcid.org/0000-0002-3391-9772", babelon:translation_status="OFFICIAL"}
 def: "Fonctions relatives à la force générée par la contraction du muscle temporal." [] {babelon:translation_status="CANDIDATE"}
 is_a: ICF:1789365017 ! Fuerza de músculos aislados o de grupos de músculos
 relationship: PROMOT:2000006 SNOMED:12894003 ! est mesuré par Functional assessment
@@ -13377,7 +13371,7 @@ property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
 id: PROMOT:0032089
-name: Fuerza del músculo de la eminencia tenar {babelon:translation_status="CANDIDATE"}
+name: Fuerza del músculo de la eminencia tenar {comment="translation reviewed by https://orcid.org/0000-0001-7764-2085 and https://orcid.org/0000-0002-3391-9772", babelon:translation_status="OFFICIAL"}
 def: "Fonctions relatives à la force générée par la contraction d’un muscle de l’éminence thénar." [] {babelon:translation_status="CANDIDATE"}
 is_a: PROMOT:0032073 ! Fuerza del músculo intrínseco de la mano
 relationship: PROMOT:2000006 SNOMED:12894003 ! est mesuré par Functional assessment
@@ -13386,7 +13380,7 @@ property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
 id: PROMOT:0032090
-name: Fuerza del muslo {babelon:translation_status="CANDIDATE"}
+name: Fuerza del muslo {comment="translation reviewed by https://orcid.org/0000-0001-7764-2085 and https://orcid.org/0000-0002-3391-9772", babelon:translation_status="OFFICIAL"}
 def: "Fonctions relatives à la force générée par la contraction d'un muscle de la cuisse." [] {babelon:translation_status="CANDIDATE"}
 is_a: ICF:1789365017 ! Fuerza de músculos aislados o de grupos de músculos
 relationship: PROMOT:2000006 SNOMED:12894003 ! est mesuré par Functional assessment
@@ -13395,7 +13389,7 @@ property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
 id: PROMOT:0032091
-name: Fuerza del músculo tibial anterior {babelon:translation_status="CANDIDATE"}
+name: Fuerza del músculo tibial anterior {comment="translation reviewed by https://orcid.org/0000-0001-7764-2085 and https://orcid.org/0000-0002-3391-9772", babelon:translation_status="OFFICIAL"}
 def: "Fonctions relatives à la force générée par la contraction du muscle tibial antérieur." [] {babelon:translation_status="CANDIDATE"}
 is_a: PROMOT:0032074 ! Fuerza del músculo de las piernas
 relationship: PROMOT:2000006 SNOMED:12894003 ! est mesuré par Functional assessment
@@ -13404,7 +13398,7 @@ property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
 id: PROMOT:0032092
-name: Fuerza del músculo tibial posterior {babelon:translation_status="CANDIDATE"}
+name: Fuerza del músculo tibial posterior {comment="translation reviewed by https://orcid.org/0000-0001-7764-2085 and https://orcid.org/0000-0002-3391-9772", babelon:translation_status="OFFICIAL"}
 def: "Fonctions relatives à la force générée par la contraction du muscle tibial postérieur." [] {babelon:translation_status="CANDIDATE"}
 is_a: PROMOT:0032074 ! Fuerza del músculo de las piernas
 relationship: PROMOT:2000006 SNOMED:12894003 ! est mesuré par Functional assessment
@@ -13413,7 +13407,7 @@ property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
 id: PROMOT:0032093
-name: Fuerza del músculo de la lengua {babelon:translation_status="CANDIDATE"}
+name: Fuerza del músculo de la lengua {comment="translation reviewed by https://orcid.org/0000-0001-7764-2085 and https://orcid.org/0000-0002-3391-9772", babelon:translation_status="OFFICIAL"}
 def: "Fonctions relatives à la force générée par la contraction du muscle de la langue." [] {babelon:translation_status="CANDIDATE"}
 is_a: PROMOT:0032066 ! Fuerza del músculo facial
 relationship: PROMOT:2000006 SNOMED:12894003 ! est mesuré par Functional assessment
@@ -13422,7 +13416,7 @@ property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
 id: PROMOT:0032094
-name: Fuerza del trapecio {babelon:translation_status="CANDIDATE"}
+name: Fuerza del trapecio {comment="translation reviewed by https://orcid.org/0000-0001-7764-2085 and https://orcid.org/0000-0002-3391-9772", babelon:translation_status="OFFICIAL"}
 def: "Fonctions relatives à la force générée par la contraction du trapèze." [] {babelon:translation_status="CANDIDATE"}
 is_a: PROMOT:0032087 ! Fuerza del hombro
 relationship: PROMOT:2000006 SNOMED:12894003 ! est mesuré par Functional assessment
@@ -13431,7 +13425,7 @@ property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
 id: PROMOT:0032095
-name: Fuerza del músculo tríceps braquial {babelon:translation_status="CANDIDATE"}
+name: Fuerza del músculo tríceps braquial {comment="translation reviewed by https://orcid.org/0000-0001-7764-2085 and https://orcid.org/0000-0002-3391-9772", babelon:translation_status="OFFICIAL"}
 def: "Fonctions relatives à la force générée par la contraction du muscle triceps brachial." [] {babelon:translation_status="CANDIDATE"}
 is_a: PROMOT:0032061 ! Fuerza del brazo
 relationship: PROMOT:2000006 SNOMED:12894003 ! est mesuré par Functional assessment
@@ -13470,16 +13464,16 @@ property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
 id: PROMOT:0110001
-name: Actividad
-def: "Actividad es la realización de una tarea o acción por parte de una persona. Las limitaciones en la actividad son dificultades que una persona puede tener para realizar una tarea o acción." [] {IAO:0000119="Clasificación Internacional del Funcionamiento, de la Discapacidad y de la Salud"}
+name: Actividad {comment="translation reviewed by https://orcid.org/0000-0001-7764-2085 and https://orcid.org/0000-0002-3391-9772", babelon:translation_status="OFFICIAL"}
+def: "Actividad es la realización de una tarea o acción por parte de una persona. Las limitaciones en la actividad son dificultades que una persona puede tener para realizar una tarea o acción." [] {IAO:0000119="Clasificación Internacional del Funcionamiento, de la Discapacidad y de la Salud, translation reviewed by https://orcid.org/0000-0001-7764-2085 and https://orcid.org/0000-0002-3391-9772", babelon:translation_status="OFFICIAL"}
 is_a: BFO:0000015 ! process
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 property_value: seeAlso ICF:1394728112
 
 [Term]
 id: PROMOT:0120002
-name: Participación
-def: "A participation is an involvement in a life situation. Participation restrictions are problems an individual may experience in involvement in life situations" [] {IAO:0000119="International Classification of Functioning, Disability and Health (ICF)"}
+name: Participación {comment="translation reviewed by https://orcid.org/0000-0001-7764-2085 and https://orcid.org/0000-0002-3391-9772", babelon:translation_status="OFFICIAL"}
+def: "A participation is an involvement in a life situation. Participation restrictions are problems an individual may experience in involvement in life situations." [] {IAO:0000119="International Classification of Functioning, Disability and Health (ICF)"}
 is_a: BFO:0000015 ! process
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 property_value: seeAlso ICF:1394728112
@@ -13492,6 +13486,7 @@ is_a: SNOMED:82101005 ! Natural sibling
 property_value: dc11:type "person" xsd:string
 property_value: sct-ext:definitionStatus "Primitif" xsd:string
 property_value: sct-ext:fsn "Twin sibling (person)" xsd:string
+property_value: skos:altLabel "frère jumeau ou sœur jumelle" xsd:string
 property_value: skos:changeNote "[PROMOT note] The PROMOT ontology added a comment to quote the CDM used as a source for this entity." xsd:string
 property_value: skos:notation "11286003" xsd:string
 
@@ -13563,6 +13558,7 @@ property_value: sct-ext:definitionStatus "Primitif" xsd:string
 property_value: sct-ext:fsn "Blood relative (person)" xsd:string
 property_value: skos:altLabel "Biological relative" xsd:string
 property_value: skos:altLabel "pariente biológico" xsd:string
+property_value: skos:altLabel "personne de la même famille" xsd:string
 property_value: skos:changeNote "[PROMOT note] The PROMOT ontology added a comment to quote the CDM used as a source for this entity. A crossref to the orignal RD-CDM element from SNOMED has also been added." xsd:string
 property_value: skos:notation "125679009" xsd:string
 
@@ -13659,9 +13655,10 @@ property_value: skos:notation "183147006" xsd:string
 [Term]
 id: SNOMED:184099003
 name: Date of Birth
-comment: [PROMOT note] [Derived from EURO-NMD NMD-CDE] [date_of_birth]
+comment: [PROMOT note] [Derived from EU-CDE] [2.1. Date of birth]
 xref: LOINC:54124-3
 is_a: SNOMED:302147001 ! Demographic history detail
+relationship: RO:0002350 PROMOT:0010009 ! member of declaración sobre un ser humano
 property_value: dc11:type "observable entity" xsd:string
 property_value: sct-ext:definitionStatus "Primitif" xsd:string
 property_value: sct-ext:fsn "Date of birth (observable entity)" xsd:string
@@ -13698,6 +13695,7 @@ name: Twin sister
 property_value: dc11:type "person" xsd:string
 property_value: sct-ext:definitionStatus "Primitif" xsd:string
 property_value: sct-ext:fsn "Twin sister (person)" xsd:string
+property_value: skos:altLabel "sœur jumelle" xsd:string
 property_value: skos:notation "19343003" xsd:string
 
 [Term]
@@ -13750,6 +13748,7 @@ is_a: SNOMED:360296002 ! Assistive equipment
 property_value: dc11:type "physical object" xsd:string
 property_value: sct-ext:definitionStatus "Primitif" xsd:string
 property_value: sct-ext:fsn "Walking aid (physical object)" xsd:string
+property_value: skos:changeNote "[PROMOT note] The PROMOT ontology added a comment to quote the CDM used as a source for this entity." xsd:string
 property_value: skos:notation "224899006" xsd:string
 
 [Term]
@@ -13826,9 +13825,10 @@ property_value: skos:notation "27113001" xsd:string
 [Term]
 id: SNOMED:298059007
 name: Date of onset
-comment: [PROMOT note] [Derived from EURO-NMD NMD-CDE] [date_for_age_at_onset]
+comment: [PROMOT note] [Derived from EU-CDE] [5.1. Age at onset]
 is_a: NCIT:C25164 ! Date
 is_a: SNOMED:363787002 ! Observable entity
+relationship: RO:0002350 PROMOT:0010010 ! member of declaración sobre un fenotipo
 property_value: dc11:type "observable entity" xsd:string
 property_value: sct-ext:definitionStatus "Primitif" xsd:string
 property_value: sct-ext:fsn "Date of onset (observable entity)" xsd:string
@@ -13926,9 +13926,10 @@ property_value: skos:notation "398192003" xsd:string
 [Term]
 id: SNOMED:399423000
 name: Date of admission
-comment: [PROMOT note] [Derived from EURO-NMD NMD-CDE] [date_of_first_contact]
+comment: [PROMOT note] [Derived from EU-CDE] [4.1. First contact with specialised centre]
 is_a: NCIT:C25164 ! Date
 is_a: SNOMED:363787002 ! Observable entity
+relationship: RO:0002350 PROMOT:0010012 ! member of declaración sobre un paciente
 property_value: dc11:type "observable entity" xsd:string
 property_value: sct-ext:definitionStatus "Primitif" xsd:string
 property_value: sct-ext:fsn "Date of admission (observable entity)" xsd:string
@@ -13938,10 +13939,10 @@ property_value: skos:notation "399423000" xsd:string
 [Term]
 id: SNOMED:399753006
 name: Date of death
-comment: [PROMOT note] [Derived from EURO-NMD NMD-CDE] [eodc_date_of_death]
+comment: [PROMOT note] [Derived from EU-CDE] [3.2. Date of death]
 xref: http://snomed.info/id/398299004
 is_a: NCIT:C25164 ! Date
-is_a: SNOMED:363787002 ! Observable entity
+relationship: RO:0002350 PROMOT:0010009 ! member of declaración sobre un ser humano
 property_value: dc11:type "observable entity" xsd:string
 property_value: sct-ext:definitionStatus "Primitif" xsd:string
 property_value: sct-ext:fsn "Date of death (observable entity)" xsd:string
@@ -13951,9 +13952,10 @@ property_value: skos:notation "399753006" xsd:string
 [Term]
 id: SNOMED:406543005
 name: Date of visit
-comment: [PROMOT note] [Derived from EURO-NMD NMD-CDE] [date_of_visit]
+comment: [PROMOT note] [Derived from EU-CDE] [5.2. Age at diagnosis]
 is_a: NCIT:C25164 ! Date
 is_a: SNOMED:363787002 ! Observable entity
+relationship: RO:0002350 PROMOT:0010012 ! member of declaración sobre un paciente
 property_value: dc11:type "observable entity" xsd:string
 property_value: sct-ext:definitionStatus "Primitif" xsd:string
 property_value: sct-ext:fsn "Date of visit (observable entity)" xsd:string
@@ -13985,7 +13987,7 @@ property_value: skos:notation "423493009" xsd:string
 [Term]
 id: SNOMED:424850005
 name: Age at first symptom
-comment: [PROMOT note] [Derived from EURO-NMD NMD-CDE] [age_at_onset]
+comment: [PROMOT note] [Derived from EU-CDE] [5.1. Age at onset]
 is_a: NCIT:C25150 ! Age
 is_a: SNOMED:363787002 ! Observable entity
 relationship: RO:0002350 PROMOT:0010012 ! member of declaración sobre un paciente
@@ -13998,9 +14000,10 @@ property_value: skos:notation "424850005" xsd:string
 [Term]
 id: SNOMED:432213005
 name: Date of diagnosis
-comment: [PROMOT note] [Derived from EURO-NMD NMD-CDE] [date_for_age_at_diagnosis]
+comment: [PROMOT note] [Derived from EU-CDE] [5.2. Age at diagnosis]
 is_a: NCIT:C25164 ! Date
 is_a: SNOMED:363787002 ! Observable entity
+relationship: RO:0002350 PROMOT:0010012 ! member of declaración sobre un paciente
 property_value: dc11:type "observable entity" xsd:string
 property_value: sct-ext:definitionStatus "Primitif" xsd:string
 property_value: sct-ext:fsn "Date of diagnosis (observable entity)" xsd:string
@@ -14014,6 +14017,7 @@ comment: [PROMOT note] [Derived from RD-CDM] [6.3.3 Time Observed]
 xref: NCIT:C82577
 is_a: NCIT:C25164 ! Date
 is_a: SNOMED:363787002 ! Observable entity
+relationship: RO:0002350 PROMOT:0010011 ! member of declaración sobre un procedimiento
 property_value: dc11:type "observable entity" xsd:string
 property_value: sct-ext:definitionStatus "Primitif" xsd:string
 property_value: sct-ext:fsn "Date of procedure (observable entity)" xsd:string
@@ -14265,6 +14269,7 @@ name: Twin brother
 property_value: dc11:type "person" xsd:string
 property_value: sct-ext:definitionStatus "Primitif" xsd:string
 property_value: sct-ext:fsn "Twin brother (person)" xsd:string
+property_value: skos:altLabel "frère jumeau" xsd:string
 property_value: skos:notation "81276006" xsd:string
 
 [Term]
@@ -14299,6 +14304,7 @@ property_value: dc11:type "procedure" xsd:string
 property_value: sct-ext:definitionStatus "Primitif" xsd:string
 property_value: sct-ext:fsn "Assessment of patient reported outcome measures (procedure)" xsd:string
 property_value: skos:altLabel "Assessment of PROMs (patient reported outcome measures)" xsd:string
+property_value: skos:altLabel "évaluation des mesures du résultat des soins rapportées par les patient(e)s" xsd:string
 property_value: skos:notation "840297006" xsd:string
 
 [Term]
@@ -14313,7 +14319,7 @@ property_value: skos:altLabel "Clinical interview" xsd:string
 property_value: skos:altLabel "entrevista clínica" xsd:string
 property_value: skos:altLabel "History taking, health" xsd:string
 property_value: skos:altLabel "Taking health history" xsd:string
-property_value: skos:definition "A clinically oriented interview of a patient or someone familiar with the patient" xsd:string
+property_value: skos:definition "A clinically oriented interview of a patient or someone familiar with the patient." xsd:string
 property_value: skos:definition "Entrevista orientada clínicamente, realizada a un paciente o a un familiar" xsd:string
 property_value: skos:notation "84100007" xsd:string
 
@@ -14355,7 +14361,7 @@ property_value: skos:notation "9947008" xsd:string
 id: SO:0001060
 name: sequence_variant
 def: "A sequence_variant is a non exact copy of a sequence_feature or genome exhibiting one or more sequence_alteration." [SO:ke]
-comment: EU-CDE
+comment: [PROMOT note] [Derived from EU-CDE] [6.2. Genetic diagnosis]|SO suggested by Rachel Thompson
 xref: GENO:0000492
 xref: http://snomed.info/id/106221001
 xref: http://snomed.info/id/55446002

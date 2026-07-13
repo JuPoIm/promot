@@ -3,6 +3,8 @@
 
 <img src="https://github.com/JuPoIm/promot/blob/test/site/assets/images/Promot_Logo_Colours.png" height=150 width=250/>
 
+## Context
+
 The PROMOT ontology has been developed as part of the [PROMOT initiative](https://www.promotinitiative.com/project).
 
 It aims to represent the 3 groups of neuromuscular diseases and the 13 genes the PROMOT Master Observational Trial focuses on :
@@ -11,7 +13,7 @@ It aims to represent the 3 groups of neuromuscular diseases and the 13 genes the
 * [Congenital Myasthenic Syndromes](https://www.orpha.net/en/disease/detail/590?name=Congenital%20myasthenic%20syndromes&mode=name): *CHRNE*, *DOK7*, *COLQ*, *RAPSN*, *GFPT1*, *GMPPB*
 * [Congenital Myopathies](https://www.orpha.net/en/disease/detail/97245?name=Congenital%20Myopathy&mode=name): *RYR1*, *TTN*, *NEB*, *MTM1*, *ACTA1*, *SELENON*
 
-This ontology also aims to be the conceptual schema for building the common data model of the PROMOT initiative. It will be used to collect patient data scattered between the different sites involved in PROMOT initiative. You will find the ontology description [here](OntologyDescription.md).
+This ontology also aims to be the conceptual schema for building the common data model of the PROMOT initiative. It will be used to collect patient data scattered between the different sites involved in PROMOT initiative.
 
 ## Sources
 
@@ -30,7 +32,15 @@ The PROMOT ontology relies on three sources:
 
     - OPMD: [GRIIS](https://griis.ca/)
     
-3) [HPO annotations](https://hpo.jax.org/data/annotations)
+3) [HPO knowledge base](https://hpo.jax.org/data/annotations)
+
+## Ontology development
+
+You will find the details of the ontology development [here](OntologyDevelopment.md).
+
+## Ontology description
+
+You will find the ontology description [here](OntologyDescription.md).
 
 ## Acknowledgements
 
@@ -47,4 +57,3 @@ The [EJP RD initiative](https://www.ejprarediseases.org/) has received funding f
 [![CIHR official logo](https://github.com/JuPoIm/promot/blob/test/site/assets/images/IRSC_CIHR.avif)](https://cihr-irsc.gc.ca/e/193.html)
 
 [![ANR official logo](https://github.com/JuPoIm/promot/blob/test/site/assets/images/anr-logo-2021.avif)](https://anr.fr/)
-

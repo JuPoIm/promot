@@ -42,6 +42,7 @@
      xmlns:SNOMED="http://snomed.info/id/"
      xmlns:schema="http://schema.org/"
      xmlns:BIOLINK="https://w3id.org/biolink/vocab/"
+     xmlns:babelon="https://w3id.org/babelon/"
      xmlns:omoprel="https://w3id.org/cpont/omop/relations/"
      xmlns:sct-ext="http://data.esante.gouv.fr/NRC-France/sct-ext#"
      xmlns:subsets="http://purl.obolibrary.org/obo/ro/subsets#"
@@ -58,8 +59,8 @@
      xmlns:CPATH_VISIT_OCCURRENCE="https://w3id.org/cpont/visit_occurrence/"
      xmlns:CPATH_CONDITION_OCCURRENCE="https://w3id.org/cpont/condition_occurrence/">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/promot/imports/snomed_import.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/promot/releases/2026-05-29/imports/snomed_import.owl"/>
-        <owl:versionInfo>2026-05-29</owl:versionInfo>
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/promot/releases/2026-07-13/imports/snomed_import.owl"/>
+        <owl:versionInfo>2026-07-13</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -137,6 +138,8 @@
         <dc11:type>person</dc11:type>
         <rdfs:label xml:lang="en">Twin sibling</rdfs:label>
         <rdfs:label xml:lang="es">hermano mellizo de sexo femenino o masculino</rdfs:label>
+        <rdfs:label xml:lang="fr">jumeau ou jumelle</rdfs:label>
+        <skos:altLabel xml:lang="fr">frère jumeau ou sœur jumelle</skos:altLabel>
         <skos:notation>11286003</skos:notation>
     </owl:Class>
     
@@ -149,6 +152,7 @@
         <sct-ext:fsn xml:lang="en">Natural son (person)</sct-ext:fsn>
         <dc11:type>person</dc11:type>
         <rdfs:label xml:lang="en">Natural son</rdfs:label>
+        <rdfs:label xml:lang="fr">fils biologique</rdfs:label>
         <rdfs:label xml:lang="es">hijo natural</rdfs:label>
         <skos:altLabel xml:lang="en">Biological son</skos:altLabel>
         <skos:altLabel xml:lang="es">hijo biológico</skos:altLabel>
@@ -204,6 +208,7 @@
         <dc11:type>person</dc11:type>
         <rdfs:label xml:lang="en">First degree blood relative</rdfs:label>
         <rdfs:label xml:lang="es">familiar consanguíneo de primer grado</rdfs:label>
+        <rdfs:label xml:lang="fr">parent(e) au premier degré</rdfs:label>
         <skos:altLabel xml:lang="en">First degree biological relative</skos:altLabel>
         <skos:altLabel xml:lang="es">familiar directo</skos:altLabel>
         <skos:altLabel xml:lang="es">pariente biológico de primer grado</skos:altLabel>
@@ -220,8 +225,10 @@
         <dc11:type>person</dc11:type>
         <rdfs:label xml:lang="en">Blood relative</rdfs:label>
         <rdfs:label xml:lang="es">familiar consanguíneo</rdfs:label>
+        <rdfs:label xml:lang="fr">parent(e) biologique</rdfs:label>
         <skos:altLabel xml:lang="en">Biological relative</skos:altLabel>
         <skos:altLabel xml:lang="es">pariente biológico</skos:altLabel>
+        <skos:altLabel xml:lang="fr">personne de la même famille</skos:altLabel>
         <skos:notation>125679009</skos:notation>
     </owl:Class>
     
@@ -319,6 +326,7 @@
         <dc11:type>person</dc11:type>
         <rdfs:label xml:lang="en">Natural grandmother</rdfs:label>
         <rdfs:label xml:lang="es">abuela natural</rdfs:label>
+        <rdfs:label xml:lang="fr">grand-mère biologique</rdfs:label>
         <skos:altLabel xml:lang="en">Biological grand-mother</skos:altLabel>
         <skos:altLabel xml:lang="en">Biological grandmother</skos:altLabel>
         <skos:altLabel xml:lang="en">Natural grand-mother</skos:altLabel>
@@ -406,6 +414,8 @@
         <dc11:type>person</dc11:type>
         <rdfs:label xml:lang="en">Twin sister</rdfs:label>
         <rdfs:label xml:lang="es">hermana melliza</rdfs:label>
+        <rdfs:label xml:lang="fr">jumelle</rdfs:label>
+        <skos:altLabel xml:lang="fr">sœur jumelle</skos:altLabel>
         <skos:notation>19343003</skos:notation>
     </owl:Class>
     
@@ -419,6 +429,7 @@
         <sct-ext:fsn xml:lang="en">Half-sibling (person)</sct-ext:fsn>
         <dc11:type>person</dc11:type>
         <rdfs:label xml:lang="en">Half-sibling</rdfs:label>
+        <rdfs:label xml:lang="fr">demi-frère ou demi-sœur</rdfs:label>
         <rdfs:label xml:lang="es">medio hermano de sexo femenino o masculino</rdfs:label>
         <skos:notation>21093007</skos:notation>
     </owl:Class>
@@ -479,6 +490,7 @@
         <sct-ext:fsn xml:lang="en">Walking aid (physical object)</sct-ext:fsn>
         <dc11:type>physical object</dc11:type>
         <rdfs:label xml:lang="en">Walking aid</rdfs:label>
+        <rdfs:label xml:lang="fr">dispositif d&apos;aide à la marche</rdfs:label>
         <rdfs:label xml:lang="es">dispositivo de apoyo para la marcha</rdfs:label>
         <skos:notation>224899006</skos:notation>
     </owl:Class>
@@ -492,6 +504,7 @@
         <sct-ext:fsn xml:lang="en">Half-sister (person)</sct-ext:fsn>
         <dc11:type>person</dc11:type>
         <rdfs:label xml:lang="en">Half-sister</rdfs:label>
+        <rdfs:label xml:lang="fr">demi-sœur</rdfs:label>
         <rdfs:label xml:lang="es">media hermana</rdfs:label>
         <skos:notation>2272004</skos:notation>
     </owl:Class>
@@ -666,6 +679,7 @@
         <dc11:type>physical object</dc11:type>
         <rdfs:label xml:lang="en">Assistive equipment</rdfs:label>
         <rdfs:label xml:lang="es">equipo de asistencia</rdfs:label>
+        <rdfs:label xml:lang="fr">équipement d&apos;assistance</rdfs:label>
         <skos:notation>360296002</skos:notation>
     </owl:Class>
     
@@ -734,7 +748,6 @@
     <!-- http://snomed.info/id/399753006 -->
 
     <owl:Class rdf:about="http://snomed.info/id/399753006">
-        <rdfs:subClassOf rdf:resource="http://snomed.info/id/363787002"/>
         <sct-ext:definitionStatus>Primitif</sct-ext:definitionStatus>
         <sct-ext:fsn xml:lang="en">Date of death (observable entity)</sct-ext:fsn>
         <dc11:type>observable entity</dc11:type>
@@ -769,6 +782,7 @@
         <sct-ext:fsn xml:lang="en">Ptosis crutch (physical object)</sct-ext:fsn>
         <dc11:type>physical object</dc11:type>
         <rdfs:label xml:lang="en">Ptosis crutch</rdfs:label>
+        <rdfs:label xml:lang="fr">dispositif anti-ptosis</rdfs:label>
         <rdfs:label xml:lang="es">sostenedor de ptosis palpebral</rdfs:label>
         <skos:notation>420480000</skos:notation>
     </owl:Class>
@@ -842,6 +856,7 @@
         <sct-ext:fsn xml:lang="en">Half-brother (person)</sct-ext:fsn>
         <dc11:type>person</dc11:type>
         <rdfs:label xml:lang="en">Half-brother</rdfs:label>
+        <rdfs:label xml:lang="fr">demi-frère</rdfs:label>
         <rdfs:label xml:lang="es">medio hermano</rdfs:label>
         <skos:notation>45929001</skos:notation>
     </owl:Class>
@@ -856,6 +871,7 @@
         <sct-ext:fsn xml:lang="en">Walking aid handgrip (physical object)</sct-ext:fsn>
         <dc11:type>physical object</dc11:type>
         <rdfs:label xml:lang="en">Walking aid handgrip</rdfs:label>
+        <rdfs:label xml:lang="fr">dispositif d&apos;aide à la marche avec poignée</rdfs:label>
         <rdfs:label xml:lang="es">empuñadura de dispositivo de ayuda para caminar</rdfs:label>
         <skos:notation>466255006</skos:notation>
     </owl:Class>
@@ -945,6 +961,7 @@
         <sct-ext:fsn xml:lang="en">Natural brother (person)</sct-ext:fsn>
         <dc11:type>person</dc11:type>
         <rdfs:label xml:lang="en">Natural brother</rdfs:label>
+        <rdfs:label xml:lang="fr">frère biologique</rdfs:label>
         <rdfs:label xml:lang="es">hermano natural</rdfs:label>
         <skos:altLabel xml:lang="en">Biological brother</skos:altLabel>
         <skos:altLabel xml:lang="es">hermano biológico</skos:altLabel>
@@ -980,6 +997,7 @@
         <dc11:type>person</dc11:type>
         <rdfs:label xml:lang="en">Natural grandfather</rdfs:label>
         <rdfs:label xml:lang="es">abuelo natural</rdfs:label>
+        <rdfs:label xml:lang="fr">grand-père biologique</rdfs:label>
         <skos:altLabel xml:lang="en">Biological grand-father</skos:altLabel>
         <skos:altLabel xml:lang="en">Biological grandfather</skos:altLabel>
         <skos:altLabel xml:lang="en">Natural grand-father</skos:altLabel>
@@ -996,6 +1014,7 @@
         <dc11:type>person</dc11:type>
         <rdfs:label xml:lang="en">Natural mother</rdfs:label>
         <rdfs:label xml:lang="es">madre natural</rdfs:label>
+        <rdfs:label xml:lang="fr">mère biologique</rdfs:label>
         <skos:altLabel xml:lang="en">Biological mother</skos:altLabel>
         <skos:altLabel xml:lang="es">madre biológica</skos:altLabel>
         <skos:notation>65656005</skos:notation>
@@ -1028,6 +1047,7 @@
         <sct-ext:fsn xml:lang="en">Paternal half brother (person)</sct-ext:fsn>
         <dc11:type>person</dc11:type>
         <rdfs:label xml:lang="en">Paternal half brother</rdfs:label>
+        <rdfs:label xml:lang="fr">demi-frère paternel</rdfs:label>
         <rdfs:label xml:lang="es">medio hermano paterno</rdfs:label>
         <skos:altLabel xml:lang="en">Paternal half-brother</skos:altLabel>
         <skos:definition xml:lang="es">Hijo del propio padre y de una madre diferente.</skos:definition>
@@ -1045,6 +1065,7 @@
         <sct-ext:fsn xml:lang="en">Paternal half sister (person)</sct-ext:fsn>
         <dc11:type>person</dc11:type>
         <rdfs:label xml:lang="en">Paternal half sister</rdfs:label>
+        <rdfs:label xml:lang="fr">demi-sœur paternelle</rdfs:label>
         <rdfs:label xml:lang="es">media hermana paterna</rdfs:label>
         <skos:altLabel xml:lang="en">Paternal half-sister</skos:altLabel>
         <skos:definition xml:lang="es">Hija del propio padre y de una madre diferente.</skos:definition>
@@ -1062,6 +1083,7 @@
         <sct-ext:fsn xml:lang="en">Maternal half sister (person)</sct-ext:fsn>
         <dc11:type>person</dc11:type>
         <rdfs:label xml:lang="en">Maternal half sister</rdfs:label>
+        <rdfs:label xml:lang="fr">demi-sœur maternelle</rdfs:label>
         <rdfs:label xml:lang="es">media hermana materna</rdfs:label>
         <skos:altLabel xml:lang="en">Maternal half-sister</skos:altLabel>
         <skos:definition xml:lang="es">Hija de una madre con un padre diferente.</skos:definition>
@@ -1079,6 +1101,7 @@
         <sct-ext:fsn xml:lang="en">Maternal half brother (person)</sct-ext:fsn>
         <dc11:type>person</dc11:type>
         <rdfs:label xml:lang="en">Maternal half brother</rdfs:label>
+        <rdfs:label xml:lang="fr">demi-frère maternel</rdfs:label>
         <rdfs:label xml:lang="es">medio hermano materno</rdfs:label>
         <skos:altLabel xml:lang="en">Maternal half-brother</skos:altLabel>
         <skos:definition xml:lang="es">Hijo de la madre con un padre diferente.</skos:definition>
@@ -1096,6 +1119,7 @@
         <dc11:type>person</dc11:type>
         <rdfs:label xml:lang="en">Natural sister</rdfs:label>
         <rdfs:label xml:lang="es">hermana natural</rdfs:label>
+        <rdfs:label xml:lang="fr">sœur biologique</rdfs:label>
         <skos:altLabel xml:lang="en">Biological sister</skos:altLabel>
         <skos:altLabel xml:lang="es">hermana biológica</skos:altLabel>
         <skos:notation>73678001</skos:notation>
@@ -1142,6 +1166,7 @@
         <dc11:type>person</dc11:type>
         <rdfs:label xml:lang="en">Natural grandparent</rdfs:label>
         <rdfs:label xml:lang="es">abuelos naturales</rdfs:label>
+        <rdfs:label xml:lang="fr">grand-parent biologique</rdfs:label>
         <skos:altLabel xml:lang="en">Biological grand-parent</skos:altLabel>
         <skos:altLabel xml:lang="en">Biological grandparent</skos:altLabel>
         <skos:altLabel xml:lang="en">Natural grand-parent</skos:altLabel>
@@ -1167,6 +1192,8 @@
         <dc11:type>person</dc11:type>
         <rdfs:label xml:lang="en">Twin brother</rdfs:label>
         <rdfs:label xml:lang="es">hermano mellizo</rdfs:label>
+        <rdfs:label xml:lang="fr">jumeau</rdfs:label>
+        <skos:altLabel xml:lang="fr">frère jumeau</skos:altLabel>
         <skos:notation>81276006</skos:notation>
     </owl:Class>
     
@@ -1196,6 +1223,7 @@
         <sct-ext:fsn xml:lang="en">Natural daughter (person)</sct-ext:fsn>
         <dc11:type>person</dc11:type>
         <rdfs:label xml:lang="en">Natural daughter</rdfs:label>
+        <rdfs:label xml:lang="fr">fille biologique</rdfs:label>
         <rdfs:label xml:lang="es">hija natural</rdfs:label>
         <skos:altLabel xml:lang="en">Biological daughter</skos:altLabel>
         <skos:altLabel xml:lang="es">hija biológica</skos:altLabel>
@@ -1212,7 +1240,9 @@
         <dc11:type>procedure</dc11:type>
         <rdfs:label xml:lang="en">Assessment of patient reported outcome measures</rdfs:label>
         <rdfs:label xml:lang="es">evaluación de indicadores de resultados informados por el paciente</rdfs:label>
+        <rdfs:label xml:lang="fr">évaluation des PROMs</rdfs:label>
         <skos:altLabel xml:lang="en">Assessment of PROMs (patient reported outcome measures)</skos:altLabel>
+        <skos:altLabel xml:lang="fr">évaluation des mesures du résultat des soins rapportées par les patient(e)s</skos:altLabel>
         <skos:notation>840297006</skos:notation>
     </owl:Class>
     
@@ -1232,7 +1262,7 @@
         <skos:altLabel xml:lang="en">Taking health history</skos:altLabel>
         <skos:altLabel xml:lang="es">anamnesis</skos:altLabel>
         <skos:altLabel xml:lang="es">entrevista clínica</skos:altLabel>
-        <skos:definition xml:lang="en">A clinically oriented interview of a patient or someone familiar with the patient</skos:definition>
+        <skos:definition xml:lang="en">A clinically oriented interview of a patient or someone familiar with the patient.</skos:definition>
         <skos:definition xml:lang="es">Entrevista orientada clínicamente, realizada a un paciente o a un familiar</skos:definition>
         <skos:notation>84100007</skos:notation>
     </owl:Class>
@@ -1277,6 +1307,7 @@
         <dc11:type>person</dc11:type>
         <rdfs:label xml:lang="en">Natural father</rdfs:label>
         <rdfs:label xml:lang="es">padre natural</rdfs:label>
+        <rdfs:label xml:lang="fr">père biologique</rdfs:label>
         <skos:altLabel xml:lang="en">Biological father</skos:altLabel>
         <skos:altLabel xml:lang="es">padre biológico</skos:altLabel>
         <skos:notation>9947008</skos:notation>

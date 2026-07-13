@@ -20,6 +20,28 @@
 #### SNOMED CT translations and imports
 #### Import des traductions de SNOMED CT
 ##### EN
+REQUIREMENTS
+1. Create an account and get a UMLS licence on https://www.nlm.nih.gov/healthit/snomedct/international.html 
+2. Download the latest SNOMED CT international edition (RF2 files) from https://www.nlm.nih.gov/healthit/snomedct/international.html 
+3. Download the latest SNOMED CT Spanish (castellano) edition from https://www.nlm.nih.gov/healthit/snomedct/international.html
+4. Add the Spanish (castellano) files to the SNOMED CT international.zip (if needed, create a new .zip such as 'SNOMEDCT_en-es' to combine them)
+5. Convert RF2 files to owl with https://github.com/IHTSDO/snomed-owl-toolkit/releases
+6. Put the resulting 'ontology-YYYY-MM-DD_EN-ES.owl' in ../data/
+7. Create an account and get an licence on https://smt.esante.gouv.fr/terminologie-snomed-ct-fr/
+8. Download the latest SNOMED CT French edition from https://smt.esante.gouv.fr/terminologie-snomed-ct-fr/
+9. Put 'terminologie-snomed-ct-fr/dat/SnomedCT-NationalFR_OWL_asserted_20250621.owl' in ../data/
+10. Use hereafter code
+OR
+8. Download the latest SNOMED CT French edition from https://smt.esante.gouv.fr/terminologie-snomed-ct-fr/
+9. Same process than 1. to 5. with french files added in .zip at stage 3.
+10. Custom hereafter code to fit your choice
+OR
+7. Same process than 1. to 8.
+8. Merge the .owl resulting from 4. with terminologie-snomed-ct-fr/dat/SnomedCT-NationalFR_OWL_asserted_20250621.owl (French edition)
+9. Put the resulting .owl in ../data/
+10. Custom hereafter code to fit your choice
+
+# vielli #
 1. Request for a licence and download the latest SNOMED CT international edition (RF2 files) from https://www.nlm.nih.gov/healthit/snomedct/international.html
 2. Download the latest SNOMED CT Spanish (castellano) edition from https://www.nlm.nih.gov/healthit/snomedct/international.html
 3. Request for a licence and download the latest SNOMED CT French edition from https://smt.esante.gouv.fr/terminologie-snomed-ct-fr/
@@ -29,12 +51,12 @@
 
 Note that you can also merge the terminologie-snomed-ct-fr/dat/SnomedCT-NationalFR_OWL_asserted_20250621.owl (French edition) to the .owl merging international and Spanish version.
 
-Please consider contacting the SNOMED CT international if you usecase needs it.
+Please consider contacting the SNOMED CT international if your usecase needs it.
 
 ###### FR
 1. Demander une licence et télécharger la dernière version internationale de SNOMED CT (fichiers RF2) depuis https://www.nlm.nih.gov/healthit/snomedct/international.html
 2. Télécharger la dernière version espagnole (castillan) de SNOMED CT depuis https://www.nlm.nih.gov/healthit/snomedct/international.html
-3. Demander une licence et télécharger la dernière version française de SNOMED CT depuishttps://smt.esante.gouv.fr/terminologie-snomed-ct-fr/
+3. Demander une licence et télécharger la dernière version française de SNOMED CT depuis https://smt.esante.gouv.fr/terminologie-snomed-ct-fr/
 4. Ajouter les fichiers .txt des versions espagnole et française au .zip de la version internationale (ou créer une nouvelle archive telle que 'SNOMEDCT_en-es-fr' pour les fusionner si besoin)
 5. Convertir l'archive vers owl avec https://github.com/IHTSDO/snomed-owl-toolkit/releases
 6. Mettre le résultat dans ../data/
