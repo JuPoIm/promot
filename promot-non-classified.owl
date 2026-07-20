@@ -65,7 +65,7 @@
      xmlns:CPATH_VISIT_OCCURRENCE="https://w3id.org/cpont/visit_occurrence/"
      xmlns:CPATH_CONDITION_OCCURRENCE="https://w3id.org/cpont/condition_occurrence/">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/promot/promot-non-classified.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/promot/releases/2026-07-13/promot-non-classified.owl"/>
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/promot/releases/2026-07-20/promot-non-classified.owl"/>
         <dc11:contributor>Anita Burgun MD, PhD
 https://orcid.org/0000-0001-6855-4366</dc11:contributor>
         <dc11:contributor>Carole Faviez PhD
@@ -94,7 +94,7 @@ https://orcid.org/0000-0002-3336-2476</dc11:creator>
         <dcterms:description>Ontology for modeling the three following neuromuscular diseases : OPMD, Congenital myopathies and Congenital myastenic syndroms. It aims to be also an ontology for building the PROMOT project relational database.</dcterms:description>
         <dcterms:license rdf:resource="https://creativecommons.org/licenses/by-nc-sa/4.0/"/>
         <dcterms:title>PROMOT ontology</dcterms:title>
-        <oboInOwl:date>13:07:2026 14:27</oboInOwl:date>
+        <oboInOwl:date>20:07:2026 15:56</oboInOwl:date>
         <rdfs:comment>Additional acknowledgements:
 	- Rachel Thompson
 	- Thomas Bongivault, MSc
@@ -109,7 +109,7 @@ https://orcid.org/0000-0002-3336-2476</dc11:creator>
 </rdfs:comment>
         <rdfs:seeAlso>More about PROMOT initiative at https://www.promotinitiative.com/
 </rdfs:seeAlso>
-        <owl:versionInfo>2026-07-13</owl:versionInfo>
+        <owl:versionInfo>2026-07-20</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -1308,8 +1308,20 @@ We also have the outstanding issue of how to aim different definitions to differ
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_1000001"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget xml:lang="fr">Une annotation qui indique la source justifiant la présence de la classe dans le modèle.</owl:annotatedTarget>
+        <babelon:translation_status>CANDIDATE</babelon:translation_status>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_1000001"/>
         <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
         <owl:annotatedTarget xml:lang="es">encontrado gracias a</owl:annotatedTarget>
+        <babelon:translation_status>CANDIDATE</babelon:translation_status>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_1000001"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+        <owl:annotatedTarget xml:lang="fr">est trouvé avec</owl:annotatedTarget>
         <babelon:translation_status>CANDIDATE</babelon:translation_status>
     </owl:Axiom>
     
@@ -1781,6 +1793,18 @@ We also have the outstanding issue of how to aim different definitions to differ
         <rdfs:label xml:lang="fr">affecte</rdfs:label>
         <rdfs:label xml:lang="en">affects</rdfs:label>
     </owl:ObjectProperty>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_2000001"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget xml:lang="fr">Une relation entre deux entités où l’existence de la première affecte l’état de la seconde.</owl:annotatedTarget>
+        <babelon:translation_status>CANDIDATE</babelon:translation_status>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_2000001"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+        <owl:annotatedTarget xml:lang="fr">affecte</owl:annotatedTarget>
+        <babelon:translation_status>CANDIDATE</babelon:translation_status>
+    </owl:Axiom>
     
 
 
@@ -1798,9 +1822,21 @@ We also have the outstanding issue of how to aim different definitions to differ
     </owl:ObjectProperty>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_2000002"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+        <owl:annotatedTarget xml:lang="fr">évalue</owl:annotatedTarget>
+        <babelon:translation_status>CANDIDATE</babelon:translation_status>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_2000002"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget xml:lang="es">Una relación entre un procedimiento y un paciente donde el procedimiento evalúa al paciente mediante, por ejemplo, una prueba, un cuestionario o una escala.</owl:annotatedTarget>
         <obo:IAO_0000119>JP: Translated to spanish using Bing Translator</obo:IAO_0000119>
+        <babelon:translation_status>CANDIDATE</babelon:translation_status>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_2000002"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget xml:lang="fr">Une relation entre une procédure d’évaluation et une entité, telle qu’un patient ou un phénotype, où la procédure évalue l’entité. La procédure peut par exemple évaluer un patient au moyen d’un test encadré par un ou une professionnelle de santé ou d’un questionnaire autorapporté.</owl:annotatedTarget>
         <babelon:translation_status>CANDIDATE</babelon:translation_status>
     </owl:Axiom>
     <owl:Axiom>
@@ -1824,6 +1860,18 @@ We also have the outstanding issue of how to aim different definitions to differ
         <rdfs:label xml:lang="fr">est porteur de la mutation</rdfs:label>
         <rdfs:label xml:lang="en">has genetic mutation</rdfs:label>
     </owl:ObjectProperty>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_2000003"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget xml:lang="fr">Une relation entre un organisme et une mutation génétique présente dans le génome de cet organisme.</owl:annotatedTarget>
+        <babelon:translation_status>CANDIDATE</babelon:translation_status>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_2000003"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+        <owl:annotatedTarget xml:lang="fr">est porteur de la mutation</owl:annotatedTarget>
+        <babelon:translation_status>CANDIDATE</babelon:translation_status>
+    </owl:Axiom>
     
 
 
@@ -1837,6 +1885,18 @@ We also have the outstanding issue of how to aim different definitions to differ
         <rdfs:label xml:lang="fr">a pour identifiant</rdfs:label>
         <rdfs:label xml:lang="en">has identifier</rdfs:label>
     </owl:ObjectProperty>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_2000004"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget xml:lang="fr">Une relation entre une entité et son identifiant, où l’identifiant sert à identifier la première entité.</owl:annotatedTarget>
+        <babelon:translation_status>CANDIDATE</babelon:translation_status>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_2000004"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+        <owl:annotatedTarget xml:lang="fr">a pour identifiant</owl:annotatedTarget>
+        <babelon:translation_status>CANDIDATE</babelon:translation_status>
+    </owl:Axiom>
     
 
 
@@ -1848,6 +1908,18 @@ We also have the outstanding issue of how to aim different definitions to differ
         <rdfs:label xml:lang="fr">est évalué par</rdfs:label>
         <rdfs:label xml:lang="en">is assessed by</rdfs:label>
     </owl:ObjectProperty>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_2000005"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget xml:lang="fr">Une relation entre une entité et une procédure d’évaluation, où la procédure sert à évaluer la première entité.</owl:annotatedTarget>
+        <babelon:translation_status>CANDIDATE</babelon:translation_status>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_2000005"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+        <owl:annotatedTarget xml:lang="fr">est évalué par</owl:annotatedTarget>
+        <babelon:translation_status>CANDIDATE</babelon:translation_status>
+    </owl:Axiom>
     
 
 
@@ -1859,6 +1931,18 @@ We also have the outstanding issue of how to aim different definitions to differ
         <rdfs:label xml:lang="fr">est mesuré par</rdfs:label>
         <rdfs:label xml:lang="en">is measured by</rdfs:label>
     </owl:ObjectProperty>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_2000006"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget xml:lang="fr">Une relation entre une entité et une procédure d’évaluation, où la procédure sert à mesurer la première entité.</owl:annotatedTarget>
+        <babelon:translation_status>CANDIDATE</babelon:translation_status>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_2000006"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+        <owl:annotatedTarget xml:lang="fr">est mesuré par</owl:annotatedTarget>
+        <babelon:translation_status>CANDIDATE</babelon:translation_status>
+    </owl:Axiom>
     
 
 
@@ -1872,6 +1956,18 @@ We also have the outstanding issue of how to aim different definitions to differ
         <rdfs:label xml:lang="fr">est lié à</rdfs:label>
         <rdfs:label xml:lang="en">is related to</rdfs:label>
     </owl:ObjectProperty>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_2000007"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget xml:lang="fr">Une relation entre deux organismes où les organismes partagent un lien de parenté biologique.</owl:annotatedTarget>
+        <babelon:translation_status>CANDIDATE</babelon:translation_status>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_2000007"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+        <owl:annotatedTarget xml:lang="fr">est lié à</owl:annotatedTarget>
+        <babelon:translation_status>CANDIDATE</babelon:translation_status>
+    </owl:Axiom>
     
 
 
@@ -1896,8 +1992,20 @@ We also have the outstanding issue of how to aim different definitions to differ
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_2000008"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget xml:lang="fr">Une relation entre un appareil et un patient où le patient utilise l’appareil pour effectuer une action ou une activité, comme, par exemple, pour se déplacer ou pour lire.</owl:annotatedTarget>
+        <babelon:translation_status>CANDIDATE</babelon:translation_status>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_2000008"/>
         <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
         <owl:annotatedTarget xml:lang="es">es utilizado por</owl:annotatedTarget>
+        <babelon:translation_status>CANDIDATE</babelon:translation_status>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_2000008"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+        <owl:annotatedTarget xml:lang="fr">est utilisé par</owl:annotatedTarget>
         <babelon:translation_status>CANDIDATE</babelon:translation_status>
     </owl:Axiom>
     
@@ -1914,6 +2022,18 @@ We also have the outstanding issue of how to aim different definitions to differ
         <rdfs:label xml:lang="en">measures</rdfs:label>
         <rdfs:label xml:lang="fr">mesure</rdfs:label>
     </owl:ObjectProperty>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_2000009"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget xml:lang="fr">Une relation entre une procédure d’évaluation et l’entité qu’elle mesure, comme, par exemple, une structure organique, une fonction biologique ou une activité ou une participation.</owl:annotatedTarget>
+        <babelon:translation_status>CANDIDATE</babelon:translation_status>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_2000009"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+        <owl:annotatedTarget xml:lang="fr">mesure</owl:annotatedTarget>
+        <babelon:translation_status>CANDIDATE</babelon:translation_status>
+    </owl:Axiom>
     
 
 
@@ -11950,12 +12070,6 @@ For a further explanation of coding conventions in ICF, refer to Annex 2.</obo:I
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/BFO_0000040"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000602"/>
-        <owl:annotatedTarget>(forall (x) (if (and (Entity x) (exists (y t) (and (MaterialEntity y) (continuantPartOfAt y x t)))) (MaterialEntity x))) // axiom label in BFO2 CLIF: [020-002] </owl:annotatedTarget>
-        <obo:IAO_0010000 rdf:resource="http://purl.obolibrary.org/obo/bfo/axiom/020-002"/>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/BFO_0000040"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000600"/>
         <owl:annotatedTarget xml:lang="en">A material entity is an independent continuant that has some portion of matter as proper or improper continuant part. (axiom label in BFO2 Reference: [019-002])</owl:annotatedTarget>
         <obo:IAO_0010000 rdf:resource="http://purl.obolibrary.org/obo/bfo/axiom/019-002"/>
@@ -11983,6 +12097,12 @@ For a further explanation of coding conventions in ICF, refer to Annex 2.</obo:I
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000602"/>
         <owl:annotatedTarget>(forall (x) (if (and (Entity x) (exists (y t) (and (MaterialEntity y) (continuantPartOfAt x y t)))) (MaterialEntity x))) // axiom label in BFO2 CLIF: [021-002] </owl:annotatedTarget>
         <obo:IAO_0010000 rdf:resource="http://purl.obolibrary.org/obo/bfo/axiom/021-002"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/BFO_0000040"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000602"/>
+        <owl:annotatedTarget>(forall (x) (if (and (Entity x) (exists (y t) (and (MaterialEntity y) (continuantPartOfAt y x t)))) (MaterialEntity x))) // axiom label in BFO2 CLIF: [020-002] </owl:annotatedTarget>
+        <obo:IAO_0010000 rdf:resource="http://purl.obolibrary.org/obo/bfo/axiom/020-002"/>
     </owl:Axiom>
     
 
@@ -36971,6 +37091,7 @@ Previous. An information content entity is a non-realizable information entity t
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/IAO_0020000">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0010005"/>
         <obo:IAO_0000115 xml:lang="en">An information content entity that is the outcome of a dubbing process and is used to refer to one instance of entity shared by a group of people to refer to that individual entity.</obo:IAO_0000115>
         <obo:IAO_0000117 xml:lang="en">Justin Whorton</obo:IAO_0000117>
         <obo:IAO_0000117 xml:lang="en">Mathias Brochhausen</obo:IAO_0000117>
@@ -37005,6 +37126,7 @@ Previous. An information content entity is a non-realizable information entity t
     <!-- http://purl.obolibrary.org/obo/NCIT_C106551 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCIT_C106551">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0010005"/>
         <rdfs:subClassOf rdf:resource="http://snomed.info/id/160476009"/>
         <rdfs:subClassOf>
             <owl:Restriction>
@@ -37427,6 +37549,7 @@ Previous. An information content entity is a non-realizable information entity t
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCIT_C156426">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCIT_C25164"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0010007"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002350"/>
@@ -38285,7 +38408,8 @@ Previous. An information content entity is a non-realizable information entity t
     <!-- http://purl.obolibrary.org/obo/NCIT_C25150 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCIT_C25150">
-        <owl:equivalentClass rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0010001"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0010001"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0010005"/>
         <rdfs:subClassOf rdf:resource="http://snomed.info/id/363787002"/>
         <rdfs:subClassOf>
             <owl:Restriction>
@@ -39521,6 +39645,7 @@ Previous. An information content entity is a non-realizable information entity t
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCIT_C83164">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCIT_C25164"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0010007"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002350"/>
@@ -39797,6 +39922,7 @@ Previous. An information content entity is a non-realizable information entity t
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCIT_C99800">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCIT_C25164"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0010007"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002350"/>
@@ -39977,6 +40103,12 @@ Previous. An information content entity is a non-realizable information entity t
         <rdfs:comment>translation reviewed by https://orcid.org/0000-0002-1500-0236, https://orcid.org/0000-0001-7764-2085 and https://orcid.org/0000-0002-3391-9772</rdfs:comment>
         <babelon:translation_status>OFFICIAL</babelon:translation_status>
     </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0000004"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+        <owl:annotatedTarget xml:lang="fr">variant du gène CHRNE</owl:annotatedTarget>
+        <babelon:translation_status>CANDIDATE</babelon:translation_status>
+    </owl:Axiom>
     
 
 
@@ -40008,6 +40140,12 @@ Previous. An information content entity is a non-realizable information entity t
         <owl:annotatedTarget xml:lang="es">Variante en el gen COLQ</owl:annotatedTarget>
         <rdfs:comment>translation reviewed by https://orcid.org/0000-0002-1500-0236, https://orcid.org/0000-0001-7764-2085 and https://orcid.org/0000-0002-3391-9772</rdfs:comment>
         <babelon:translation_status>OFFICIAL</babelon:translation_status>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0000005"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+        <owl:annotatedTarget xml:lang="fr">variant du gène COLQ</owl:annotatedTarget>
+        <babelon:translation_status>CANDIDATE</babelon:translation_status>
     </owl:Axiom>
     
 
@@ -40347,7 +40485,6 @@ Previous. An information content entity is a non-realizable information entity t
         <rdfs:label xml:lang="es">Variante en el gen PABPN1</rdfs:label>
         <rdfs:label xml:lang="fr">variant du gène PABPN1</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://purl.obolibrary.org/obo/NCIT_C204162"/>
-        <skos:changeNote xml:lang="en">[PROMOT note] The PROMOT ontology added a comment to quote the CDM used as a source for this entity.</skos:changeNote>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0000016"/>
@@ -40396,7 +40533,6 @@ Previous. An information content entity is a non-realizable information entity t
     <!-- http://purl.obolibrary.org/obo/PROMOT_0010003 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0010003">
-        <owl:equivalentClass rdf:resource="http://snomed.info/id/248326004"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
         <obo:IAO_0000115 xml:lang="es">Campo donde la información es un decimal</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="en">an information content entity where the information is a decimal.</obo:IAO_0000115>
@@ -40424,7 +40560,6 @@ Previous. An information content entity is a non-realizable information entity t
     <!-- http://purl.obolibrary.org/obo/PROMOT_0010004 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0010004">
-        <owl:equivalentClass rdf:resource="http://snomed.info/id/224288002"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
         <obo:IAO_0000115 xml:lang="es">Campo donde la información es una duración</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="en">an information content entity where the information is a duration.</obo:IAO_0000115>
@@ -40452,16 +40587,6 @@ Previous. An information content entity is a non-realizable information entity t
     <!-- http://purl.obolibrary.org/obo/PROMOT_0010005 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0010005">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/IAO_0020000"/>
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/NCIT_C106551"/>
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/NCIT_C25150"/>
-                    <rdf:Description rdf:about="http://snomed.info/id/224118004"/>
-                </owl:unionOf>
-            </owl:Class>
-        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
         <obo:IAO_0000115 xml:lang="es">Campo donde la información es un número entero</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="en">an information content entity where the information is an int.</obo:IAO_0000115>
@@ -40489,17 +40614,6 @@ Previous. An information content entity is a non-realizable information entity t
     <!-- http://purl.obolibrary.org/obo/PROMOT_0010006 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0010006">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://snomed.info/id/125680007"/>
-                    <rdf:Description rdf:about="http://snomed.info/id/184104002"/>
-                    <rdf:Description rdf:about="http://snomed.info/id/184305005"/>
-                    <rdf:Description rdf:about="http://snomed.info/id/315354004"/>
-                    <rdf:Description rdf:about="http://snomed.info/id/398192003"/>
-                </owl:unionOf>
-            </owl:Class>
-        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
         <obo:IAO_0000115 xml:lang="es">Campo donde la información es un token</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="en">an information content entity where the information is a token.</obo:IAO_0000115>
@@ -40733,6 +40847,7 @@ Previous. An information content entity is a non-realizable information entity t
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0010013">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCIT_C25164"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0010007"/>
     </owl:Class>
     
 
@@ -40741,6 +40856,7 @@ Previous. An information content entity is a non-realizable information entity t
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0010014">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCIT_C25164"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0010007"/>
     </owl:Class>
     
 
@@ -42739,6 +42855,12 @@ Previous. An information content entity is a non-realizable information entity t
         <owl:annotatedTarget xml:lang="es">Fenotipo relacionado con la función corporal</owl:annotatedTarget>
         <rdfs:comment>translation by https://orcid.org/0000-0001-7764-2085 and https://orcid.org/0000-0002-3391-9772</rdfs:comment>
         <babelon:translation_status>OFFICIAL</babelon:translation_status>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0032005"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+        <owl:annotatedTarget xml:lang="fr">Phénotype lié à une fonction organique</owl:annotatedTarget>
+        <babelon:translation_status>CANDIDATE</babelon:translation_status>
     </owl:Axiom>
     
 
@@ -53011,7 +53133,22 @@ pulmonary arterial and venous trees. Examples: There is only one heart.</rdfs:co
     <!-- http://snomed.info/id/125680007 -->
 
     <owl:Class rdf:about="http://snomed.info/id/125680007">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0010006"/>
         <rdfs:subClassOf rdf:resource="http://snomed.info/id/302147001"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002350"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0010012"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <sct-ext:definitionStatus>Primitif</sct-ext:definitionStatus>
+        <sct-ext:fsn xml:lang="en">Marital status (observable entity)</sct-ext:fsn>
+        <dc11:type>observable entity</dc11:type>
+        <rdfs:comment>[PROMOT note] [Present in OPMD research clinical form]</rdfs:comment>
+        <rdfs:label xml:lang="en">Marital status</rdfs:label>
+        <rdfs:label xml:lang="es">estado civil</rdfs:label>
+        <rdfs:label xml:lang="fr">état matrimonial</rdfs:label>
+        <skos:notation>125680007</skos:notation>
     </owl:Class>
     
 
@@ -53167,7 +53304,22 @@ pulmonary arterial and venous trees. Examples: There is only one heart.</rdfs:co
     <!-- http://snomed.info/id/184104002 -->
 
     <owl:Class rdf:about="http://snomed.info/id/184104002">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0010006"/>
         <rdfs:subClassOf rdf:resource="http://snomed.info/id/302147001"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002350"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0010012"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <sct-ext:definitionStatus>Primitif</sct-ext:definitionStatus>
+        <sct-ext:fsn xml:lang="en">Patient occupation (observable entity)</sct-ext:fsn>
+        <dc11:type>observable entity</dc11:type>
+        <rdfs:comment>[PROMOT note] [Present in OPMD research clinical form]</rdfs:comment>
+        <rdfs:label xml:lang="en">Patient occupation</rdfs:label>
+        <rdfs:label xml:lang="fr">emploi du patient</rdfs:label>
+        <rdfs:label xml:lang="es">ocupación del paciente</rdfs:label>
+        <skos:notation>184104002</skos:notation>
     </owl:Class>
     
 
@@ -53175,7 +53327,26 @@ pulmonary arterial and venous trees. Examples: There is only one heart.</rdfs:co
     <!-- http://snomed.info/id/184305005 -->
 
     <owl:Class rdf:about="http://snomed.info/id/184305005">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0010006"/>
         <rdfs:subClassOf rdf:resource="http://snomed.info/id/363787002"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002350"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0010009"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <sct-ext:definitionStatus>Primitif</sct-ext:definitionStatus>
+        <sct-ext:fsn xml:lang="en">Cause of death (observable entity)</sct-ext:fsn>
+        <dc11:type>observable entity</dc11:type>
+        <oboInOwl:hasDbXref>LOINC:54112-8</oboInOwl:hasDbXref>
+        <rdfs:comment>[PROMOT note] [Derived from RD-CDM] [3.3 Cause of Death] &amp; [6.3.11 Family Member Cause of Death]</rdfs:comment>
+        <rdfs:comment>[PROMOT note] [RD-CDM] Graefe, A.S.L., Hübner, M.R., Rehburg, F. et al. An ontology-based rare disease common data model harmonising international registries, FHIR, and Phenopackets. Sci Data 12, 234 (2025). https://doi.org/10.1038/s41597-025-04558-z</rdfs:comment>
+        <rdfs:label xml:lang="en">Cause of death</rdfs:label>
+        <rdfs:label xml:lang="es">causa de muerte</rdfs:label>
+        <rdfs:label xml:lang="fr">cause du décès</rdfs:label>
+        <skos:altLabel xml:lang="en">Condition fatal-cause of death</skos:altLabel>
+        <skos:changeNote xml:lang="en">[PROMOT note] The PROMOT ontology added a comment to quote the CDM used as a source for this entity.</skos:changeNote>
+        <skos:notation>184305005</skos:notation>
     </owl:Class>
     
 
@@ -53222,7 +53393,25 @@ pulmonary arterial and venous trees. Examples: There is only one heart.</rdfs:co
     <!-- http://snomed.info/id/224118004 -->
 
     <owl:Class rdf:about="http://snomed.info/id/224118004">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0010005"/>
         <rdfs:subClassOf rdf:resource="http://snomed.info/id/160476009"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002350"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0010012"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <sct-ext:definitionStatus>Primitif</sct-ext:definitionStatus>
+        <sct-ext:fsn xml:lang="en">Number of offspring (observable entity)</sct-ext:fsn>
+        <dc11:type>observable entity</dc11:type>
+        <rdfs:comment>[PROMOT note] [Derived from EURO-NMD NMD-CDE] [number_of_child]</rdfs:comment>
+        <rdfs:comment>[PROMOT note] [EURO-NMD] Atalia A et al., EURO-NMD registry: federated FAIR infrastructure, innovative technologies and concepts of a patient-centred registry for rare neuromuscular disorders. Orphanet J Rare Dis. 2024 Feb 14;19(1):66. doi: 10.1186/s13023-024-03059-3. PMID: 38355534; PMCID: PMC10865673.</rdfs:comment>
+        <rdfs:label xml:lang="en">NB of offspring</rdfs:label>
+        <rdfs:label xml:lang="en">Number of offspring</rdfs:label>
+        <rdfs:label xml:lang="es">cantidad de descendientes</rdfs:label>
+        <rdfs:label xml:lang="fr">nombre d&apos;enfants engendrés</rdfs:label>
+        <skos:changeNote xml:lang="en">[PROMOT note] The PROMOT ontology added a comment to quote the CDM used as a source for this entity.</skos:changeNote>
+        <skos:notation>224118004</skos:notation>
     </owl:Class>
     
 
@@ -53247,6 +53436,7 @@ pulmonary arterial and venous trees. Examples: There is only one heart.</rdfs:co
     <!-- http://snomed.info/id/224288002 -->
 
     <owl:Class rdf:about="http://snomed.info/id/224288002">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0010004"/>
         <rdfs:subClassOf rdf:resource="http://snomed.info/id/224285004"/>
         <rdfs:subClassOf>
             <owl:Restriction>
@@ -53323,6 +53513,7 @@ pulmonary arterial and venous trees. Examples: There is only one heart.</rdfs:co
     <!-- http://snomed.info/id/248326004 -->
 
     <owl:Class rdf:about="http://snomed.info/id/248326004">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0010003"/>
         <rdfs:subClassOf rdf:resource="http://snomed.info/id/363787002"/>
         <sct-ext:definitionStatus>Primitif</sct-ext:definitionStatus>
         <sct-ext:fsn xml:lang="en">Body measure (observable entity)</sct-ext:fsn>
@@ -53468,7 +53659,28 @@ pulmonary arterial and venous trees. Examples: There is only one heart.</rdfs:co
     <!-- http://snomed.info/id/315354004 -->
 
     <owl:Class rdf:about="http://snomed.info/id/315354004">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0010006"/>
         <rdfs:subClassOf rdf:resource="http://snomed.info/id/302147001"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002350"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0010012"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <sct-ext:definitionStatus>Primitif</sct-ext:definitionStatus>
+        <sct-ext:fsn xml:lang="en">Country of birth (observable entity)</sct-ext:fsn>
+        <dc11:type>observable entity</dc11:type>
+        <oboInOwl:hasDbXref>http://snomed.info/id/370159000</oboInOwl:hasDbXref>
+        <rdfs:comment>[PROMOT note] [Derived from RD-CDM] [2.5 Country of Birth]</rdfs:comment>
+        <rdfs:comment>[PROMOT note] [RD-CDM] Graefe, A.S.L., Hübner, M.R., Rehburg, F. et al. An ontology-based rare disease common data model harmonising international registries, FHIR, and Phenopackets. Sci Data 12, 234 (2025). https://doi.org/10.1038/s41597-025-04558-z</rdfs:comment>
+        <rdfs:label xml:lang="en">Country of Birth</rdfs:label>
+        <rdfs:label xml:lang="en">Country of birth</rdfs:label>
+        <rdfs:label xml:lang="fr">pays de naissance</rdfs:label>
+        <rdfs:label xml:lang="es">país de nacimiento</rdfs:label>
+        <skos:altLabel xml:lang="en">Born in - country</skos:altLabel>
+        <skos:altLabel xml:lang="es">nacido en - país</skos:altLabel>
+        <skos:changeNote xml:lang="en">[PROMOT note] The PROMOT ontology added a comment to quote the CDMs used as a source for this entity. A crossref to the orignal RD-CDM element has also been added.</skos:changeNote>
+        <skos:notation>315354004</skos:notation>
     </owl:Class>
     
 
@@ -53554,6 +53766,24 @@ pulmonary arterial and venous trees. Examples: There is only one heart.</rdfs:co
 
     <owl:Class rdf:about="http://snomed.info/id/398192003">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0010006"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002350"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0010012"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <sct-ext:definitionStatus>Primitif</sct-ext:definitionStatus>
+        <sct-ext:fsn xml:lang="en">Co-morbid conditions (finding)</sct-ext:fsn>
+        <dc11:type>finding</dc11:type>
+        <rdfs:comment>[PROMOT note] [Derived from EURO-NMD NMD-CDE] [diagnosis_rd_2_orpha]</rdfs:comment>
+        <rdfs:comment>[PROMOT note] [EURO-NMD] Atalia A et al., EURO-NMD registry: federated FAIR infrastructure, innovative technologies and concepts of a patient-centred registry for rare neuromuscular disorders. Orphanet J Rare Dis. 2024 Feb 14;19(1):66. doi: 10.1186/s13023-024-03059-3. PMID: 38355534; PMCID: PMC10865673.</rdfs:comment>
+        <rdfs:label xml:lang="en">Co-morbid conditions</rdfs:label>
+        <rdfs:label xml:lang="fr">comorbidités</rdfs:label>
+        <rdfs:label xml:lang="es">comorbilidades</rdfs:label>
+        <skos:altLabel xml:lang="en">Comorbid conditions</skos:altLabel>
+        <skos:changeNote xml:lang="en">[PROMOT note] The PROMOT ontology added a comment to quote the CDM used as a source for this entity.</skos:changeNote>
+        <skos:notation>398192003</skos:notation>
     </owl:Class>
     
 
@@ -57139,57 +57369,9 @@ pulmonary arterial and venous trees. Examples: There is only one heart.</rdfs:co
     
 
 
-    <!-- http://snomed.info/id/125680007 -->
-
-    <owl:NamedIndividual rdf:about="http://snomed.info/id/125680007">
-        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/SO_0001762"/>
-    </owl:NamedIndividual>
-    
-
-
     <!-- http://snomed.info/id/128927009 -->
 
     <owl:NamedIndividual rdf:about="http://snomed.info/id/128927009">
-        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/SO_0001762"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://snomed.info/id/184104002 -->
-
-    <owl:NamedIndividual rdf:about="http://snomed.info/id/184104002">
-        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/SO_0001762"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://snomed.info/id/184305005 -->
-
-    <owl:NamedIndividual rdf:about="http://snomed.info/id/184305005">
-        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/SO_0001762"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://snomed.info/id/224118004 -->
-
-    <owl:NamedIndividual rdf:about="http://snomed.info/id/224118004">
-        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/SO_0001762"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://snomed.info/id/315354004 -->
-
-    <owl:NamedIndividual rdf:about="http://snomed.info/id/315354004">
-        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/SO_0001762"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://snomed.info/id/398192003 -->
-
-    <owl:NamedIndividual rdf:about="http://snomed.info/id/398192003">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/SO_0001762"/>
     </owl:NamedIndividual>
     
@@ -57236,7 +57418,6 @@ pulmonary arterial and venous trees. Examples: There is only one heart.</rdfs:co
         <rdfs:label xml:lang="fr">Année de disparition</rdfs:label>
         <rdfs:label xml:lang="es">Año de la resolución</rdfs:label>
         <rdfs:label xml:lang="en">Year of resolution</rdfs:label>
-        <skos:changeNote xml:lang="en">[PROMOT note] The PROMOT ontology added a comment to quote the CDM used as a source for this entity.</skos:changeNote>
     </rdf:Description>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0010014"/>
@@ -57252,16 +57433,6 @@ pulmonary arterial and venous trees. Examples: There is only one heart.</rdfs:co
         <rdfs:comment>translation by https://orcid.org/0000-0002-1500-0236, translation reviewed by https://orcid.org/0000-0001-7764-2085 and https://orcid.org/0000-0002-3391-9772</rdfs:comment>
         <babelon:translation_status>OFFICIAL</babelon:translation_status>
     </owl:Axiom>
-    <rdf:Description rdf:about="http://snomed.info/id/125680007">
-        <sct-ext:definitionStatus>Primitif</sct-ext:definitionStatus>
-        <sct-ext:fsn xml:lang="en">Marital status (observable entity)</sct-ext:fsn>
-        <dc11:type>observable entity</dc11:type>
-        <rdfs:comment>[PROMOT note] [Present in OPMD research clinical form]</rdfs:comment>
-        <rdfs:label xml:lang="en">Marital status</rdfs:label>
-        <rdfs:label xml:lang="es">estado civil</rdfs:label>
-        <rdfs:label xml:lang="fr">état matrimonial</rdfs:label>
-        <skos:notation>125680007</skos:notation>
-    </rdf:Description>
     <rdf:Description rdf:about="http://snomed.info/id/128927009">
         <sct-ext:definitionStatus>Défini</sct-ext:definitionStatus>
         <sct-ext:fsn xml:lang="en">Procedure by method (procedure)</sct-ext:fsn>
@@ -57276,72 +57447,6 @@ pulmonary arterial and venous trees. Examples: There is only one heart.</rdfs:co
         <skos:altLabel xml:lang="fr">intervention selon la méthode</skos:altLabel>
         <skos:changeNote xml:lang="en">[PROMOT note] The PROMOT ontology added a comment to quote the CDM used as a source for this entity. A crossref to the orignal RD-CDM element from SNOMED has also been added.</skos:changeNote>
         <skos:notation>128927009</skos:notation>
-    </rdf:Description>
-    <rdf:Description rdf:about="http://snomed.info/id/184104002">
-        <sct-ext:definitionStatus>Primitif</sct-ext:definitionStatus>
-        <sct-ext:fsn xml:lang="en">Patient occupation (observable entity)</sct-ext:fsn>
-        <dc11:type>observable entity</dc11:type>
-        <rdfs:comment>[PROMOT note] [Present in OPMD research clinical form]</rdfs:comment>
-        <rdfs:label xml:lang="en">Patient occupation</rdfs:label>
-        <rdfs:label xml:lang="fr">emploi du patient</rdfs:label>
-        <rdfs:label xml:lang="es">ocupación del paciente</rdfs:label>
-        <skos:notation>184104002</skos:notation>
-    </rdf:Description>
-    <rdf:Description rdf:about="http://snomed.info/id/184305005">
-        <sct-ext:definitionStatus>Primitif</sct-ext:definitionStatus>
-        <sct-ext:fsn xml:lang="en">Cause of death (observable entity)</sct-ext:fsn>
-        <dc11:type>observable entity</dc11:type>
-        <oboInOwl:hasDbXref>LOINC:54112-8</oboInOwl:hasDbXref>
-        <rdfs:comment>[PROMOT note] [Derived from RD-CDM] [3.3 Cause of Death] &amp; [6.3.11 Family Member Cause of Death]</rdfs:comment>
-        <rdfs:comment>[PROMOT note] [RD-CDM] Graefe, A.S.L., Hübner, M.R., Rehburg, F. et al. An ontology-based rare disease common data model harmonising international registries, FHIR, and Phenopackets. Sci Data 12, 234 (2025). https://doi.org/10.1038/s41597-025-04558-z</rdfs:comment>
-        <rdfs:label xml:lang="en">Cause of death</rdfs:label>
-        <rdfs:label xml:lang="es">causa de muerte</rdfs:label>
-        <rdfs:label xml:lang="fr">cause du décès</rdfs:label>
-        <skos:altLabel xml:lang="en">Condition fatal-cause of death</skos:altLabel>
-        <skos:changeNote xml:lang="en">[PROMOT note] The PROMOT ontology added a comment to quote the CDM used as a source for this entity.</skos:changeNote>
-        <skos:notation>184305005</skos:notation>
-    </rdf:Description>
-    <rdf:Description rdf:about="http://snomed.info/id/224118004">
-        <sct-ext:definitionStatus>Primitif</sct-ext:definitionStatus>
-        <sct-ext:fsn xml:lang="en">Number of offspring (observable entity)</sct-ext:fsn>
-        <dc11:type>observable entity</dc11:type>
-        <rdfs:comment>[PROMOT note] [Derived from EURO-NMD NMD-CDE] [number_of_child]</rdfs:comment>
-        <rdfs:comment>[PROMOT note] [EURO-NMD] Atalia A et al., EURO-NMD registry: federated FAIR infrastructure, innovative technologies and concepts of a patient-centred registry for rare neuromuscular disorders. Orphanet J Rare Dis. 2024 Feb 14;19(1):66. doi: 10.1186/s13023-024-03059-3. PMID: 38355534; PMCID: PMC10865673.</rdfs:comment>
-        <rdfs:label xml:lang="en">NB of offspring</rdfs:label>
-        <rdfs:label xml:lang="en">Number of offspring</rdfs:label>
-        <rdfs:label xml:lang="es">cantidad de descendientes</rdfs:label>
-        <rdfs:label xml:lang="fr">nombre d&apos;enfants engendrés</rdfs:label>
-        <skos:changeNote xml:lang="en">[PROMOT note] The PROMOT ontology added a comment to quote the CDM used as a source for this entity.</skos:changeNote>
-        <skos:notation>224118004</skos:notation>
-    </rdf:Description>
-    <rdf:Description rdf:about="http://snomed.info/id/315354004">
-        <sct-ext:definitionStatus>Primitif</sct-ext:definitionStatus>
-        <sct-ext:fsn xml:lang="en">Country of birth (observable entity)</sct-ext:fsn>
-        <dc11:type>observable entity</dc11:type>
-        <oboInOwl:hasDbXref>http://snomed.info/id/370159000</oboInOwl:hasDbXref>
-        <rdfs:comment>[PROMOT note] [Derived from RD-CDM] [2.5 Country of Birth]</rdfs:comment>
-        <rdfs:comment>[PROMOT note] [RD-CDM] Graefe, A.S.L., Hübner, M.R., Rehburg, F. et al. An ontology-based rare disease common data model harmonising international registries, FHIR, and Phenopackets. Sci Data 12, 234 (2025). https://doi.org/10.1038/s41597-025-04558-z</rdfs:comment>
-        <rdfs:label xml:lang="en">Country of Birth</rdfs:label>
-        <rdfs:label xml:lang="en">Country of birth</rdfs:label>
-        <rdfs:label xml:lang="fr">pays de naissance</rdfs:label>
-        <rdfs:label xml:lang="es">país de nacimiento</rdfs:label>
-        <skos:altLabel xml:lang="en">Born in - country</skos:altLabel>
-        <skos:altLabel xml:lang="es">nacido en - país</skos:altLabel>
-        <skos:changeNote xml:lang="en">[PROMOT note] The PROMOT ontology added a comment to quote the CDMs used as a source for this entity. A crossref to the orignal RD-CDM element has also been added.</skos:changeNote>
-        <skos:notation>315354004</skos:notation>
-    </rdf:Description>
-    <rdf:Description rdf:about="http://snomed.info/id/398192003">
-        <sct-ext:definitionStatus>Primitif</sct-ext:definitionStatus>
-        <sct-ext:fsn xml:lang="en">Co-morbid conditions (finding)</sct-ext:fsn>
-        <dc11:type>finding</dc11:type>
-        <rdfs:comment>[PROMOT note] [Derived from EURO-NMD NMD-CDE] [diagnosis_rd_2_orpha]</rdfs:comment>
-        <rdfs:comment>[PROMOT note] [EURO-NMD] Atalia A et al., EURO-NMD registry: federated FAIR infrastructure, innovative technologies and concepts of a patient-centred registry for rare neuromuscular disorders. Orphanet J Rare Dis. 2024 Feb 14;19(1):66. doi: 10.1186/s13023-024-03059-3. PMID: 38355534; PMCID: PMC10865673.</rdfs:comment>
-        <rdfs:label xml:lang="en">Co-morbid conditions</rdfs:label>
-        <rdfs:label xml:lang="fr">comorbidités</rdfs:label>
-        <rdfs:label xml:lang="es">comorbilidades</rdfs:label>
-        <skos:altLabel xml:lang="en">Comorbid conditions</skos:altLabel>
-        <skos:changeNote xml:lang="en">[PROMOT note] The PROMOT ontology added a comment to quote the CDM used as a source for this entity.</skos:changeNote>
-        <skos:notation>398192003</skos:notation>
     </rdf:Description>
     
 

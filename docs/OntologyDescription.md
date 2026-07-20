@@ -338,11 +338,11 @@ Table: Translation rate for labels in PROMOT ontology
 ----------------------------------------------------
 prefix|Source Ontology Name|English|Spanish|French
 ----------------------------------------------------
-hpo|Human Phenotype Ontology|100%|99%|90%
+hpo|Human Phenotype Ontology|100%|100%|89%
 icf|International Classification of Functioning, Disability and Health|100%|95%\*|95%\*
-snomed|Systematized Nomenclature of Medicine - Clinical |100%|100%|100%
-promotPROMOT ontology|100%||
-all|All classes in PROMOT ontology|100%|83%|78%
+snomed|Systematized Nomenclature of Medicine - Clinical Terms|100%|100%|100%
+promot|PROMOT ontology|100%||
+all prefixes|All ontologies in PROMOT ontology|100%|83%|78%
 
 * ICF does not provide a translation for the qualifier ‘anatomical localization’ and its subcategories.
 

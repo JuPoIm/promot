@@ -1,6 +1,6 @@
 format-version: 1.2
-data-version: promot/releases/2026-07-13/promot-full.owl
-date: 13:07:2026 14:26
+data-version: promot/releases/2026-07-20/promot-full.owl
+date: 20:07:2026 15:55
 subsetdef: hposlim_core ""
 subsetdef: http://purl.obolibrary.org/obo/valid_for_go_annotation_extension ""
 subsetdef: http://purl.obolibrary.org/obo/valid_for_go_gp2term ""
@@ -167,7 +167,7 @@ property_value: dc11:creator "Paul Fabry MD, PhD student\nhttps://orcid.org/0000
 property_value: dcterms:description "Ontology for modeling the three following neuromuscular diseases : OPMD, Congenital myopathies and Congenital myastenic syndroms. It aims to be also an ontology for building the PROMOT project relational database." xsd:string
 property_value: dcterms:license https://creativecommons.org/licenses/by-nc-sa/4.0/
 property_value: dcterms:title "PROMOT ontology" xsd:string
-property_value: owl:versionInfo "2026-07-13" xsd:string
+property_value: owl:versionInfo "2026-07-20" xsd:string
 property_value: seeAlso "More about PROMOT initiative at https://www.promotinitiative.com/\n" xsd:string
 
 [Term]
@@ -3566,8 +3566,8 @@ id: HP:0002033
 name: Poor suck
 def: "An inadequate sucking reflex, resulting in the difficult of newborns to be breast-fed." [https://orcid.org/0000-0002-0736-9199]
 synonym: "Poor suck" EXACT layperson []
-synonym: "Poor sucking" EXACT []
 synonym: "Poor sucking" EXACT layperson [https://orcid.org/0000-0002-5316-1399]
+synonym: "Poor sucking" EXACT []
 synonym: "Sucking weakness" EXACT []
 xref: UMLS:C1837142
 is_a: HP:0008872 ! Feeding difficulties in infancy
@@ -6837,8 +6837,8 @@ id: HP:0030205
 name: Increased jitter at single fiber EMG
 def: "The variation in the time interval between the two action potentials of the same motor unit is called jitter. This term therefore applies to increased variability in the interval between successive action potentials of the same motor unit, which is measured by electromyography (EMG)." [HPO_CONTRIBUTOR:UK_rheller, PMID:21654930]
 comment: Increased jitter values are not pathogonomic for myasthenia, but indicate disturbed neuromuscular transmission.
-synonym: "Increased jitter at single fibre electromyography" EXACT uk_spelling []
 synonym: "Increased jitter at single fibre electromyography" EXACT []
+synonym: "Increased jitter at single fibre electromyography" EXACT uk_spelling []
 synonym: "Increased jitter at single fibre EMG" EXACT uk_spelling []
 xref: UMLS:C4021045
 is_a: HP:0030006 ! Single fiber EMG abnormality
@@ -10312,7 +10312,6 @@ synonym: "Age at Death" EXACT [] {NCIT:P383="SY", NCIT:P384="CDISC"}
 synonym: "Age at Death" EXACT [] {NCIT:P383="PT", NCIT:P385="SDTM-DTHDX", NCIT:P384="CDISC"}
 synonym: "AGEDTH" EXACT [] {NCIT:P383="PT", NCIT:P385="SDTM-DTHDXCD", NCIT:P384="CDISC"}
 is_a: NCIT:C25150 ! Age
-is_a: PROMOT:0010001 ! age content entity
 property_value: NCIT:A42 NCIT:C38046
 property_value: NCIT:NHC0 "C135383" xsd:string
 property_value: NCIT:P106 "Organism Attribute" xsd:string
@@ -10650,9 +10649,9 @@ synonym: "Chronological Age" EXACT [] {NCIT:P384="INC", NCIT:P383="PT"}
 synonym: "Postnatal Age" EXACT [] {NCIT:P383="SY", NCIT:P384="NICHD"}
 synonym: "Postnatal Age" EXACT [] {NCIT:P383="SY", NCIT:P384="NCI"}
 xref: LOINC:54141-7
+is_a: PROMOT:0010001 ! age content entity
 is_a: PROMOT:0010005 ! campo de número entero
 is_a: SNOMED:363787002 ! Observable entity
-equivalent_to: PROMOT:0010001 ! age content entity
 relationship: RO:0002350 PROMOT:0010009 ! member of declaración sobre un ser humano
 property_value: NCIT:NHC0 "C25150" xsd:string
 property_value: NCIT:P106 "Organism Attribute" xsd:string
@@ -11657,30 +11656,26 @@ comment: Translation process: Frist translated to spanish using Bing Translator 
 is_a: PROMOT:0000003 ! OPMD related mutation
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 property_value: seeAlso NCIT:C204162
-property_value: skos:changeNote "[PROMOT note] The PROMOT ontology added a comment to quote the CDM used as a source for this entity." xsd:string
 
 [Term]
 id: PROMOT:0010001
 name: age content entity
 def: "Campo donde la información es una edad" [] {IAO:0000119="translation by https://orcid.org/0000-0001-7764-2085 and https://orcid.org/0000-0002-3391-9772", babelon:translation_status="OFFICIAL"}
-is_a: PROMOT:0010005 ! campo de número entero
-is_a: SNOMED:363787002 ! Observable entity
+is_a: IAO:0000030 ! information content entity
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
 id: PROMOT:0010003
 name: campo decimal {babelon:translation_status="OFFICIAL", comment="translation by https://orcid.org/0000-0001-7764-2085 and https://orcid.org/0000-0002-3391-9772"}
 def: "Campo donde la información es un decimal" [] {IAO:0000119="translation by https://orcid.org/0000-0001-7764-2085 and https://orcid.org/0000-0002-3391-9772", babelon:translation_status="OFFICIAL"}
-is_a: SNOMED:363787002 ! Observable entity
-equivalent_to: SNOMED:248326004 ! Body measure
+is_a: IAO:0000030 ! information content entity
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
 id: PROMOT:0010004
 name: campo de duración {babelon:translation_status="OFFICIAL", comment="translation by https://orcid.org/0000-0001-7764-2085 and https://orcid.org/0000-0002-3391-9772"}
 def: "Campo donde la información es una duración" [] {IAO:0000119="translation by https://orcid.org/0000-0001-7764-2085 and https://orcid.org/0000-0002-3391-9772", babelon:translation_status="OFFICIAL"}
-is_a: SNOMED:224285004 ! Education and schooling detail
-equivalent_to: SNOMED:224288002 ! Duration of formal education
+is_a: IAO:0000030 ! information content entity
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
@@ -11688,10 +11683,6 @@ id: PROMOT:0010005
 name: campo de número entero {babelon:translation_status="OFFICIAL", comment="translation by https://orcid.org/0000-0001-7764-2085 and https://orcid.org/0000-0002-3391-9772"}
 def: "Campo donde la información es un número entero" [] {IAO:0000119="translation by https://orcid.org/0000-0001-7764-2085 and https://orcid.org/0000-0002-3391-9772", babelon:translation_status="OFFICIAL"}
 is_a: IAO:0000030 ! information content entity
-union_of: IAO:0020000 ! identifier
-union_of: NCIT:C106551 ! Number of Pregnancies
-union_of: NCIT:C25150 ! Age
-union_of: SNOMED:224118004 ! NB of offspring
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
@@ -11699,11 +11690,6 @@ id: PROMOT:0010006
 name: campo de token {babelon:translation_status="OFFICIAL", comment="translation by https://orcid.org/0000-0001-7764-2085 and https://orcid.org/0000-0002-3391-9772"}
 def: "Campo donde la información es un token" [] {IAO:0000119="translation by https://orcid.org/0000-0001-7764-2085 and https://orcid.org/0000-0002-3391-9772", babelon:translation_status="OFFICIAL"}
 is_a: IAO:0000030 ! information content entity
-union_of: SNOMED:125680007 ! Marital status
-union_of: SNOMED:184104002 ! Patient occupation
-union_of: SNOMED:184305005 ! Cause of death
-union_of: SNOMED:315354004 ! Country of Birth
-union_of: SNOMED:398192003 ! Co-morbid conditions
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
@@ -11776,7 +11762,6 @@ comment: [PROMOT note] [Derived from RD-CDM] [6.2.4 Resolution Date]
 is_a: NCIT:C25164 ! Date
 is_a: PROMOT:0010007 ! campo de año
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
-property_value: skos:changeNote "[PROMOT note] The PROMOT ontology added a comment to quote the CDM used as a source for this entity." xsd:string
 
 [Term]
 id: PROMOT:0010015
@@ -13099,7 +13084,6 @@ property_value: skos:notation "113160008" xsd:string
 id: SNOMED:1153637007
 name: Body height
 comment: [PROMOT note] [Derived from EURO-NMD NMD-CDE] [body_height_cm]
-is_a: PROMOT:0010003 ! campo decimal
 is_a: SNOMED:248326004 ! Body measure
 relationship: RO:0002350 PROMOT:0010012 ! member of declaración sobre un paciente
 property_value: dc11:type "observable entity" xsd:string
@@ -13161,6 +13145,7 @@ name: Marital status
 comment: [PROMOT note] [Present in OPMD research clinical form]
 is_a: PROMOT:0010006 ! campo de token
 is_a: SNOMED:302147001 ! Demographic history detail
+relationship: RO:0002350 PROMOT:0010012 ! member of declaración sobre un paciente
 property_value: dc11:type "observable entity" xsd:string
 property_value: sct-ext:definitionStatus "Primitif" xsd:string
 property_value: sct-ext:fsn "Marital status (observable entity)" xsd:string
@@ -13266,6 +13251,7 @@ name: Patient occupation
 comment: [PROMOT note] [Present in OPMD research clinical form]
 is_a: PROMOT:0010006 ! campo de token
 is_a: SNOMED:302147001 ! Demographic history detail
+relationship: RO:0002350 PROMOT:0010012 ! member of declaración sobre un paciente
 property_value: dc11:type "observable entity" xsd:string
 property_value: sct-ext:definitionStatus "Primitif" xsd:string
 property_value: sct-ext:fsn "Patient occupation (observable entity)" xsd:string
@@ -13278,6 +13264,7 @@ comment: [PROMOT note] [Derived from RD-CDM] [3.3 Cause of Death] & [6.3.11 Fami
 xref: LOINC:54112-8
 is_a: PROMOT:0010006 ! campo de token
 is_a: SNOMED:363787002 ! Observable entity
+relationship: RO:0002350 PROMOT:0010009 ! member of declaración sobre un ser humano
 property_value: dc11:type "observable entity" xsd:string
 property_value: sct-ext:definitionStatus "Primitif" xsd:string
 property_value: sct-ext:fsn "Cause of death (observable entity)" xsd:string
@@ -13309,6 +13296,7 @@ name: NB of offspring
 comment: [PROMOT note] [Derived from EURO-NMD NMD-CDE] [number_of_child]
 is_a: PROMOT:0010005 ! campo de número entero
 is_a: SNOMED:160476009 ! Social / personal history observable
+relationship: RO:0002350 PROMOT:0010012 ! member of declaración sobre un paciente
 property_value: dc11:type "observable entity" xsd:string
 property_value: sct-ext:definitionStatus "Primitif" xsd:string
 property_value: sct-ext:fsn "Number of offspring (observable entity)" xsd:string
@@ -13330,6 +13318,7 @@ property_value: skos:notation "224285004" xsd:string
 id: SNOMED:224288002
 name: Duration of formal education
 comment: [PROMOT note] [Present in OPMD research clinical form]
+is_a: PROMOT:0010004 ! campo de duración
 is_a: SNOMED:224285004 ! Education and schooling detail
 relationship: RO:0002350 PROMOT:0010012 ! member of declaración sobre un paciente
 property_value: dc11:type "observable entity" xsd:string
@@ -13373,6 +13362,7 @@ property_value: skos:notation "23088002" xsd:string
 [Term]
 id: SNOMED:248326004
 name: Body measure
+is_a: PROMOT:0010003 ! campo decimal
 is_a: SNOMED:363787002 ! Observable entity
 property_value: dc11:type "observable entity" xsd:string
 property_value: sct-ext:definitionStatus "Primitif" xsd:string
@@ -13409,7 +13399,6 @@ property_value: skos:notation "266731002" xsd:string
 id: SNOMED:27113001
 name: Body weight
 comment: [PROMOT note] [Derived from EURO-NMD NMD-CDE] [body_weight_kg]
-is_a: PROMOT:0010003 ! campo decimal
 is_a: SNOMED:248326004 ! Body measure
 relationship: RO:0002350 PROMOT:0010012 ! member of declaración sobre un paciente
 property_value: dc11:type "observable entity" xsd:string
@@ -13459,6 +13448,7 @@ comment: [PROMOT note] [Derived from RD-CDM] [2.5 Country of Birth]
 xref: http://snomed.info/id/370159000
 is_a: PROMOT:0010006 ! campo de token
 is_a: SNOMED:302147001 ! Demographic history detail
+relationship: RO:0002350 PROMOT:0010012 ! member of declaración sobre un paciente
 property_value: dc11:type "observable entity" xsd:string
 property_value: sct-ext:definitionStatus "Primitif" xsd:string
 property_value: sct-ext:fsn "Country of birth (observable entity)" xsd:string
@@ -13514,6 +13504,7 @@ id: SNOMED:398192003
 name: Co-morbid conditions
 comment: [PROMOT note] [Derived from EURO-NMD NMD-CDE] [diagnosis_rd_2_orpha]
 is_a: PROMOT:0010006 ! campo de token
+relationship: RO:0002350 PROMOT:0010012 ! member of declaración sobre un paciente
 property_value: dc11:type "finding" xsd:string
 property_value: sct-ext:definitionStatus "Primitif" xsd:string
 property_value: sct-ext:fsn "Co-morbid conditions (finding)" xsd:string
@@ -13572,7 +13563,6 @@ id: SNOMED:423493009
 name: Age at diagnosis
 comment: [PROMOT note] [Derived from EURO-NMD NMD-CDE] [age_at_diagnosis]
 is_a: NCIT:C25150 ! Age
-is_a: PROMOT:0010001 ! age content entity
 relationship: RO:0002350 PROMOT:0010012 ! member of declaración sobre un paciente
 property_value: dc11:type "observable entity" xsd:string
 property_value: sct-ext:definitionStatus "Primitif" xsd:string
@@ -13585,7 +13575,6 @@ id: SNOMED:424850005
 name: Age at first symptom
 comment: [PROMOT note] [Derived from EU-CDE] [5.1. Age at onset]
 is_a: NCIT:C25150 ! Age
-is_a: PROMOT:0010001 ! age content entity
 relationship: RO:0002350 PROMOT:0010012 ! member of declaración sobre un paciente
 property_value: dc11:type "observable entity" xsd:string
 property_value: sct-ext:definitionStatus "Primitif" xsd:string
@@ -13713,7 +13702,6 @@ property_value: skos:notation "60614009" xsd:string
 id: SNOMED:60621009
 name: Body mass index
 comment: [PROMOT note] [Present in OPMD research clinical form]
-is_a: PROMOT:0010003 ! campo decimal
 is_a: SNOMED:248326004 ! Body measure
 relationship: RO:0002350 PROMOT:0010012 ! member of declaración sobre un paciente
 property_value: dc11:type "observable entity" xsd:string
@@ -13994,7 +13982,7 @@ is_a: SO:0001762 ! variant_origin
 
 [Typedef]
 id: PROMOT:2000001
-name: affecte
+name: affecte {babelon:translation_status="CANDIDATE"}
 def: "A relation between two entity where the first entity affects the state of the second entity." []
 xref: BIOLINK:affects
 xref: SIO:001158
@@ -14010,7 +13998,7 @@ domain: SNOMED:128927009 ! Procedure by method
 
 [Typedef]
 id: PROMOT:2000003
-name: est porteur de la mutation
+name: est porteur de la mutation {babelon:translation_status="CANDIDATE"}
 def: "A relation between an organism and a specific gene mutation that exists in the genome of that organism." []
 xref: VO:0001039
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
@@ -14019,24 +14007,24 @@ range: SO:0001060 ! sequence_variant
 
 [Typedef]
 id: PROMOT:2000004
-name: a pour identifiant
+name: a pour identifiant {babelon:translation_status="CANDIDATE"}
 def: "A relation between an entity and its identifier where the identifier allows to indentify the first entity." []
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 range: IAO:0020000 ! identifier
 
 [Typedef]
 id: PROMOT:2000005
-name: est évalué par
+name: est évalué par {babelon:translation_status="CANDIDATE"}
 def: "A relation between an entity and the evaluation procedure that assesses the entity." []
 
 [Typedef]
 id: PROMOT:2000006
-name: est mesuré par
+name: est mesuré par {babelon:translation_status="CANDIDATE"}
 def: "A relation between an entity and the evaluation procedure that measures the entity." []
 
 [Typedef]
 id: PROMOT:2000007
-name: est lié à
+name: est lié à {babelon:translation_status="CANDIDATE"}
 def: "A relation between two organisms where the two organisms share a biological bond." []
 xref: SIO:000709
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
