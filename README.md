@@ -41,7 +41,7 @@ Editors of this ontology should use the edit version, [src/ontology/promot-edit.
 
 ## Creators
 * Juliette Potier MSc (Imagine Institut, France)
-* Cynthia Gagnon MD, PhD (CIUSSS Saguenay-Lac-Saint-Jean, University of Sherbrooke, Québec CA)
+* Cynthia Gagnon OT, PhD (CIUSSS Saguenay-Lac-Saint-Jean, University of Sherbrooke, Québec CA)
 * Paul Fabry MD, PhD student (University of Sherbrooke, Québec CA)
 
 ## Contributors
@@ -52,13 +52,15 @@ Editors of this ontology should use the edit version, [src/ontology/promot-edit.
 * Daniel Natera de Benito MD, PhD (Hospital Sant Joan de Deu, Instituto de Salud Carloss III, Spain)
 * Claudia Côté MD, PhD (University of Sherbrooke, Québec CA)
 * Hanns Lochmuller MD (University of Ottawa, Children's Hospital of Eastern Ontario, Ontario CA)
+* Alexandre Girard (University of Sherbrooke, Québec CA)
+* Xuanning Yang (University of Sherbrooke, Québec CA)
 
 ### Acknowledgements
-* Marc Vincent, PhD (Imagine Institut)
-* Thomas Bongibault, MSc (Imagine Institut)
-* Rachel Thompson, PhD (Children's Hospital of Eastern Ontario)
-* Christina Khnaisser, PhD (University of Sherbrooke, Québec CA)
-* Silvia Cerezo Corredera (Hospital Sant Joan de Deu, Instituto de Salud Carloss III, Spain)
+* Marc Vincent PhD (Imagine Institut)
+* Thomas Bongibault MSc (Imagine Institut)
+* Rachel Thompson PhD (Children's Hospital of Eastern Ontario)
+* Christina Khnaisser PhD (University of Sherbrooke, Québec CA)
+* Silvia Cerezo Corredera MD (Hospital Sant Joan de Deu, Instituto de Salud Carloss III, Spain)
 
 ## How to cite
 
@@ -73,13 +75,13 @@ Please use this GitHub repository's [Issue tracker](https://github.com/JuPoIm/pr
 This work has been supported by the PROMOT project. It has received funding from the Canadian Institutes of Health Research (CIHR), and in partnership with L’Agence Nationale de la Recherche (France), Health Research Board (Dublin, Ireland), Instituto de Salud Carloss III (Spain), IRSC–IG, Swedish Research Council (Sweden), and Swiss National Science Foundation (Switzerland), partners of the European Joint Programme on Rare Diseases (EJP RD).
 
 ### Agence Nationale de la Recherche
-[![ANR official logo](https://github.com/JuPoIm/promot/blob/test/site/assets/images/anr-logo-2021.avif)](https://anr.fr/)
+<img src="https://github.com/JuPoIm/promot/blob/test/site/assets/images/anr-logo-2021.avif" height=200 width=300/>
 
 More informations about the Agence Nationale de la Recherche can be found on [ANR website](https://anr.fr/)
 
 ### Canadian Institutes of Health Research
 
-[![CIHR official logo](https://github.com/JuPoIm/promot/blob/test/site/assets/images/IRSC_CIHR.avif)](https://cihr-irsc.gc.ca/e/193.html)
+<img src="https://github.com/JuPoIm/promot/blob/test/site/assets/images/IRSC_CIHR.avif" height=200 width=300/>
 
 More informations about the Canadian Institutes of Health Research can be found on [CIHR website](https://cihr-irsc.gc.ca/e/193.html)
 
@@ -103,21 +105,21 @@ advice and infrastructure. We are very grateful for all your contributions - thi
 --->
 
 ### Imagine Institute
-<img src="https://github.com/JuPoIm/promot/blob/test/site/assets/images/logo_imagine.png" height=150 width=250/>
+<img src="https://github.com/JuPoIm/promot/blob/test/site/assets/images/logo_imagine.png" height=200 width=300/>
 
 More informations about Imagine Institute can be found on [Imagine Institute website](https://www.institutimagine.org/)
 
 ### University of Sherbrooke
-[![University of Sherbrooke official logo](https://github.com/JuPoIm/promot/blob/test/site/assets/images/logo_sherbrooke.png)](https://www.usherbrooke.ca/)
+<img src="https://github.com/JuPoIm/promot/blob/test/site/assets/images/UdeS_logo.png" height=200 width=300/>
 
 More informations about the University of Sherbrooke can be found on [University of Sherbrooke website](https://www.usherbrooke.ca/)
 
 ### Assistance Publique - Hôpitaux de Paris
-[![AP-HP official logo](https://github.com/JuPoIm/promot/blob/test/site/assets/images/logo_aphp.png)](https://www.aphp.fr/)
+<img src="https://github.com/JuPoIm/promot/blob/test/site/assets/images/logo_aphp.png" height=200 width=300/>
 
 More informations about AP-HP can be found on [AP-HP website](https://www.aphp.fr/)
 
 ## Technical acknowledgements
 
 This ontology repository was created using the [Ontology Development Kit (ODK)](https://github.com/INCATools/ontology-development-kit).
-<img src="https://github.com/JuPoIm/promot/blob/test/site/assets/images/odk-logo_black-banner.png" width="50%" height="50%"/>
+<img src="https://github.com/JuPoIm/promot/blob/test/site/assets/images/odk-logo_black-banner.png" height=200 width=300/>

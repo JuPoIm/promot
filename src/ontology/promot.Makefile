@@ -33,6 +33,7 @@ METADATADIR = ../metadata
 PYTHONTMPDIR = ../scripts/python/tmp
 ICF = true
 SPARQL_STATS =            translation-stat-by-language class-count-by-prefix-all class-count-by-domain
+EN = false
 
 ## -------------------------------------------------------------------------------
 ## 2 - CUSTOM IMPORTS - imports personalisés
@@ -218,7 +219,7 @@ $(IMPORTDIR)/icf_import.owl: $(IMPORTSDATADIR)/whofic-2025-05-24.owl $(IMPORTDIR
 ## -------------------
 
 # ----------------------------------------
-# UNDER DEVELOPMENT
+# DRAFT UNDER DEVELOPMENT
 # Extract phenotypes associated with a gene and a disease in HPO
 # Extraction des phénotypes associés en même temps à un gène et une maladie du projet dans HPO
 # ----------------------------------------
@@ -228,6 +229,27 @@ extract-pheno:
 	-o $(SCRIPTSDATADIR)/genes_to_phenotype.txt
 	python3.12 $(SCRIPTSDIR)/python/GenesToPhenos.py
 
+
+# ----------------------------------------
+# DRAFT UNDER DEVELOPMENT
+# CREATE EN ONLY ARTEFACT
+# Extraction des phénotypes associés en même temps à un gène et une maladie du projet dans HPO
+# ----------------------------------------
+#$(SRCMERGED): $(EDIT_PREPROCESSED) $(OTHER_SRC)
+#	$(ROBOT) remove --input $< --select imports --trim false \
+#		 merge $(foreach src, $(OTHER_SRC), --input $(src)) --output $@ \
+#	if [ $(EN) = true ]; then \
+#		$(ROBOT) remove --input $@ \
+#		 --select complement \
+#		 --drop-axiom-annotations "rdfs:label=~'.*@fr$'" \
+#		 --drop-axiom-annotations "rdfs:label=~'.*@es$'" \
+#		 --drop-axiom-annotations "http://purl.obolibrary/obo/IAO_0000115=~'.*@es$'" \
+#		 --drop-axiom-annotations "http://purl.obolibrary/obo/IAO_0000115=~'.*@fr$'" \
+#		 remove --term "rdfs:label=~'.*@fr$'" \
+#		 remove --term "rdfs:label=~'.*@es$'" \
+#		 remove --term "http://purl.obolibrary/obo/IAO_0000115=~'.*@es$'" \
+#		 remove --term "http://purl.obolibrary/obo/IAO_0000115=~'.*@fr$'" \
+#		 --output $@; fi
 
 # ---------------------------------------------
 # ICF Translations - Traductions - Traducciones
@@ -270,7 +292,9 @@ translation-icf: refresh-icf $(IMPORTDIR)/icf_import.owl
 	python3.12 $(SCRIPTSDIR)/python/ICF_labels-es-fr.py ; \
 	$(SSSOMPY) parse -m $(METADATADIR)/mapping-all.yml -o $(MAPPINGDIR)/icf-to-cif_all-mappings.sssom.tsv $(PYTHONTMPDIR)/icf-to-cifasip_all.tsv ; \
 	$(SSSOMPY) parse -m $(METADATADIR)/mapping-promot.yml -o $(MAPPINGDIR)/icf-to-cif_promot-mappings.sssom.tsv $(PYTHONTMPDIR)/icf-to-cifasip_promot.tsv ; fi
+# ----------------------------------------
 # DRAFT
+# ----------------------------------------
 #	$(ROBOT) -vvv query -i $(MIRRORDIR)/cif-asip.owl --update $(SPARQLDIR)/preprocess-module.ru filter -T $(IMPORTDIR)/cifasip_terms.txt \
 #	--select "self annotations" --signature true --output $(IMPORTDIR)/cif-asip_import.owl; \
 #	$(ROBOT) query -i $(IMPORTDIR)/cif-asip_import.owl --update $(SPARQLDIR)/preprocess-module.ru \
@@ -317,12 +341,18 @@ documentation:
 
 # ----------------------------------------
 # DRAFT
-# CUSTOM REASON_TEST - reason_test personnalisé pour avoir les logs sur les classes qui ne sont pas satisfaisante
 # ----------------------------------------
-.PHONY: prepare_release_en
-prepare_release_en: 
-	$(ROBOT) reason --input $< --reasoner $(REASONER) --equivalent-classes-allowed asserted-only \
-		--exclude-tautologies structural --output test.owl && rm test.owl
+# en: A version of the ontology that includes only english labels and definitions.
+$(ONT)-en.owl: $(EDIT_PREPROCESSED) $(OTHER_SRC) $(IMPORT_FILES)
+	$(ROBOT_RELEASE_IMPORT_MODE) \
+	reason --reasoner $(REASONER) --equivalent-classes-allowed asserted-only --exclude-tautologies structural --annotate-inferred-axioms false \
+	relax $(RELAX_OPTIONS) \
+	reduce -r $(REASONER) $(REDUCE_OPTIONS) \
+	remove --base-iri $(URIBASE)/PROMOT --axioms external --preserve-structure false --trim false \
+	$(SHARED_ROBOT_COMMANDS) \
+	annotate --link-annotation http://purl.org/dc/elements/1.1/type http://purl.obolibrary.org/obo/IAO_8000001 \
+		--ontology-iri $(ONTBASE)/$@ $(ANNOTATE_ONTOLOGY_VERSION) \
+		--annotation oboInOwl:date "$(OBODATE)" --output $@.tmp.owl && mv $@.tmp.owl $@
 
 
 # ----------------------------------------
