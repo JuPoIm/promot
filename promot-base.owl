@@ -64,7 +64,7 @@
      xmlns:CPATH_VISIT_OCCURRENCE="https://w3id.org/cpont/visit_occurrence/"
      xmlns:CPATH_CONDITION_OCCURRENCE="https://w3id.org/cpont/condition_occurrence/">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/promot/promot-base.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/promot/releases/2026-07-20/promot-base.owl"/>
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/promot/releases/2026-07-23/promot-base.owl"/>
         <dc11:contributor>Anita Burgun MD, PhD
 https://orcid.org/0000-0001-6855-4366</dc11:contributor>
         <dc11:contributor>Carole Faviez PhD
@@ -94,7 +94,7 @@ https://orcid.org/0000-0002-3336-2476</dc11:creator>
         <dcterms:description>Ontology for modeling the three following neuromuscular diseases : OPMD, Congenital myopathies and Congenital myastenic syndroms. It aims to be also an ontology for building the PROMOT project relational database.</dcterms:description>
         <dcterms:license rdf:resource="https://creativecommons.org/licenses/by-nc-sa/4.0/"/>
         <dcterms:title>PROMOT ontology</dcterms:title>
-        <oboInOwl:date>20:07:2026 15:55</oboInOwl:date>
+        <oboInOwl:date>23:07:2026 08:56</oboInOwl:date>
         <rdfs:comment>Additional acknowledgements:
 	- Rachel Thompson
 	- Thomas Bongivault, MSc
@@ -109,7 +109,7 @@ https://orcid.org/0000-0002-3336-2476</dc11:creator>
 </rdfs:comment>
         <rdfs:seeAlso>More about PROMOT initiative at https://www.promotinitiative.com/
 </rdfs:seeAlso>
-        <owl:versionInfo>2026-07-20</owl:versionInfo>
+        <owl:versionInfo>2026-07-23</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -901,12 +901,6 @@ https://orcid.org/0000-0002-3336-2476</dc11:creator>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/NCIT_C156426 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCIT_C156426"/>
-    
-
-
     <!-- http://purl.obolibrary.org/obo/NCIT_C158277 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCIT_C158277"/>
@@ -925,12 +919,6 @@ https://orcid.org/0000-0002-3336-2476</dc11:creator>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/NCIT_C210821 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCIT_C210821"/>
-    
-
-
     <!-- http://purl.obolibrary.org/obo/NCIT_C25164 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCIT_C25164"/>
@@ -946,18 +934,6 @@ https://orcid.org/0000-0002-3336-2476</dc11:creator>
     <!-- http://purl.obolibrary.org/obo/NCIT_C49154 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCIT_C49154"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/NCIT_C83164 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCIT_C83164"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/NCIT_C99800 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCIT_C99800"/>
     
 
 
@@ -1633,18 +1609,6 @@ https://orcid.org/0000-0002-3336-2476</dc11:creator>
     <!-- http://purl.obolibrary.org/obo/PROMOT_0010007 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0010007">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/NCIT_C156426"/>
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/NCIT_C210821"/>
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/NCIT_C83164"/>
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/NCIT_C99800"/>
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PROMOT_0010013"/>
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PROMOT_0010014"/>
-                </owl:unionOf>
-            </owl:Class>
-        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
         <obo:IAO_0000115 xml:lang="es">Campo donde la información es un año</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="en">an information content entity where the information is a year.</obo:IAO_0000115>
@@ -1858,7 +1822,34 @@ https://orcid.org/0000-0002-3336-2476</dc11:creator>
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0010013">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCIT_C25164"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0010007"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002350"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0010010"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000115 xml:lang="es">El año de la evaluación de una entidad, por ejemplo, el año en el que se evalúa un fenotipo mediante pruebas médicas.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="fr">L’année d’identification d’une entité, par exemple, l’année d’identification d’un phénotype via une procédure médicale.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">The year of the assessment of an entity, e.g. the year when a phenotype is assessed by medical evidence.</obo:IAO_0000115>
+        <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
+        <rdfs:label xml:lang="fr">Année d’identification</rdfs:label>
+        <rdfs:label xml:lang="es">Año de la evaluación</rdfs:label>
+        <rdfs:label xml:lang="en">Year of assessment</rdfs:label>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0010013"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget xml:lang="es">El año de la evaluación de una entidad, por ejemplo, el año en el que se evalúa un fenotipo mediante pruebas médicas.</owl:annotatedTarget>
+        <obo:IAO_0000119>translation reviewed by https://orcid.org/0000-0002-1500-0236, https://orcid.org/0000-0001-7764-2085 and https://orcid.org/0000-0002-3391-9772</obo:IAO_0000119>
+        <babelon:translation_status>OFFICIAL</babelon:translation_status>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0010013"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+        <owl:annotatedTarget xml:lang="es">Año de la evaluación</owl:annotatedTarget>
+        <rdfs:comment>translation by https://orcid.org/0000-0002-1500-0236, translation reviewed by https://orcid.org/0000-0001-7764-2085 and https://orcid.org/0000-0002-3391-9772</rdfs:comment>
+        <babelon:translation_status>OFFICIAL</babelon:translation_status>
+    </owl:Axiom>
     
 
 
@@ -1867,7 +1858,36 @@ https://orcid.org/0000-0002-3336-2476</dc11:creator>
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0010014">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCIT_C25164"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0010007"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002350"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0010010"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000115 xml:lang="es">El año en que se resuelve una disposición anómala, por ejemplo, el año en que un fenotipo deja de existir.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="fr">L’année de la disparition d’une entité, par exemple, l’année de disparition d’un phénotype.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">The year of the resolution of an abnormal disposition, e.g. the year when a phenotype ceases existing.</obo:IAO_0000115>
+        <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
+        <rdfs:comment>[PROMOT note] [Derived from RD-CDM] [6.2.4 Resolution Date] </rdfs:comment>
+        <rdfs:comment>[PROMOT note] [RD-CDM] Graefe, A.S.L., Hübner, M.R., Rehburg, F. et al. An ontology-based rare disease common data model harmonising international registries, FHIR, and Phenopackets. Sci Data 12, 234 (2025). https://doi.org/10.1038/s41597-025-04558-z</rdfs:comment>
+        <rdfs:label xml:lang="fr">Année de disparition</rdfs:label>
+        <rdfs:label xml:lang="es">Año de la resolución</rdfs:label>
+        <rdfs:label xml:lang="en">Year of resolution</rdfs:label>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0010014"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget xml:lang="es">El año en que se resuelve una disposición anómala, por ejemplo, el año en que un fenotipo deja de existir.</owl:annotatedTarget>
+        <obo:IAO_0000119>translation reviewed by https://orcid.org/0000-0002-1500-0236, https://orcid.org/0000-0001-7764-2085 and https://orcid.org/0000-0002-3391-9772</obo:IAO_0000119>
+        <babelon:translation_status>OFFICIAL</babelon:translation_status>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0010014"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+        <owl:annotatedTarget xml:lang="es">Año de la resolución</owl:annotatedTarget>
+        <rdfs:comment>translation by https://orcid.org/0000-0002-1500-0236, translation reviewed by https://orcid.org/0000-0001-7764-2085 and https://orcid.org/0000-0002-3391-9772</rdfs:comment>
+        <babelon:translation_status>OFFICIAL</babelon:translation_status>
+    </owl:Axiom>
     
 
 
@@ -1891,13 +1911,6 @@ https://orcid.org/0000-0002-3336-2476</dc11:creator>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0010015"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget xml:lang="es">Categoría de edad que incluye a las personas de 16 años y más.</owl:annotatedTarget>
-        <obo:IAO_0000119>translation reviewed by https://orcid.org/0000-0002-1500-0236, https://orcid.org/0000-0001-7764-2085 and https://orcid.org/0000-0002-3391-9772</obo:IAO_0000119>
-        <babelon:translation_status>OFFICIAL</babelon:translation_status>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0010015"/>
         <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
         <owl:annotatedTarget xml:lang="es">adultez</owl:annotatedTarget>
         <rdfs:comment>translation by https://orcid.org/0000-0002-1500-0236, translation reviewed by https://orcid.org/0000-0001-7764-2085 and https://orcid.org/0000-0002-3391-9772</rdfs:comment>
@@ -1908,6 +1921,13 @@ https://orcid.org/0000-0002-3336-2476</dc11:creator>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget xml:lang="en">Age category including people of 16 years old and above.</owl:annotatedTarget>
         <obo:IAO_0000119>HP:0003581</obo:IAO_0000119>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0010015"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget xml:lang="es">Categoría de edad que incluye a las personas de 16 años y más.</owl:annotatedTarget>
+        <obo:IAO_0000119>translation reviewed by https://orcid.org/0000-0002-1500-0236, https://orcid.org/0000-0001-7764-2085 and https://orcid.org/0000-0002-3391-9772</obo:IAO_0000119>
+        <babelon:translation_status>OFFICIAL</babelon:translation_status>
     </owl:Axiom>
     
 
@@ -8423,92 +8443,6 @@ https://orcid.org/0000-0002-3336-2476</dc11:creator>
     <!-- http://www.orpha.net/ORDO/Orphanet_97245 -->
 
     <owl:Class rdf:about="http://www.orpha.net/ORDO/Orphanet_97245"/>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Individuals
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/PROMOT_0010013 -->
-
-    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/PROMOT_0010013">
-        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/SO_0001762"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/PROMOT_0010014 -->
-
-    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/PROMOT_0010014">
-        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/SO_0001762"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Annotations
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PROMOT_0010013">
-        <obo:IAO_0000115 xml:lang="es">El año de la evaluación de una entidad, por ejemplo, el año en el que se evalúa un fenotipo mediante pruebas médicas.</obo:IAO_0000115>
-        <obo:IAO_0000115 xml:lang="fr">L’année d’identification d’une entité, par exemple, l’année d’identification d’un phénotype via une procédure médicale.</obo:IAO_0000115>
-        <obo:IAO_0000115 xml:lang="en">The year of the assessment of an entity, e.g. the year when a phenotype is assessed by medical evidence.</obo:IAO_0000115>
-        <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
-        <rdfs:label xml:lang="fr">Année d’identification</rdfs:label>
-        <rdfs:label xml:lang="es">Año de la evaluación</rdfs:label>
-        <rdfs:label xml:lang="en">Year of assessment</rdfs:label>
-    </rdf:Description>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0010013"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget xml:lang="es">El año de la evaluación de una entidad, por ejemplo, el año en el que se evalúa un fenotipo mediante pruebas médicas.</owl:annotatedTarget>
-        <obo:IAO_0000119>translation reviewed by https://orcid.org/0000-0002-1500-0236, https://orcid.org/0000-0001-7764-2085 and https://orcid.org/0000-0002-3391-9772</obo:IAO_0000119>
-        <babelon:translation_status>OFFICIAL</babelon:translation_status>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0010013"/>
-        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
-        <owl:annotatedTarget xml:lang="es">Año de la evaluación</owl:annotatedTarget>
-        <rdfs:comment>translation by https://orcid.org/0000-0002-1500-0236, translation reviewed by https://orcid.org/0000-0001-7764-2085 and https://orcid.org/0000-0002-3391-9772</rdfs:comment>
-        <babelon:translation_status>OFFICIAL</babelon:translation_status>
-    </owl:Axiom>
-    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PROMOT_0010014">
-        <obo:IAO_0000115 xml:lang="es">El año en que se resuelve una disposición anómala, por ejemplo, el año en que un fenotipo deja de existir.</obo:IAO_0000115>
-        <obo:IAO_0000115 xml:lang="fr">L’année de la disparition d’une entité, par exemple, l’année de disparition d’un phénotype.</obo:IAO_0000115>
-        <obo:IAO_0000115 xml:lang="en">The year of the resolution of an abnormal disposition, e.g. the year when a phenotype ceases existing.</obo:IAO_0000115>
-        <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
-        <rdfs:comment>[PROMOT note] [Derived from RD-CDM] [6.2.4 Resolution Date] </rdfs:comment>
-        <rdfs:comment>[PROMOT note] [RD-CDM] Graefe, A.S.L., Hübner, M.R., Rehburg, F. et al. An ontology-based rare disease common data model harmonising international registries, FHIR, and Phenopackets. Sci Data 12, 234 (2025). https://doi.org/10.1038/s41597-025-04558-z</rdfs:comment>
-        <rdfs:label xml:lang="fr">Année de disparition</rdfs:label>
-        <rdfs:label xml:lang="es">Año de la resolución</rdfs:label>
-        <rdfs:label xml:lang="en">Year of resolution</rdfs:label>
-    </rdf:Description>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0010014"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget xml:lang="es">El año en que se resuelve una disposición anómala, por ejemplo, el año en que un fenotipo deja de existir.</owl:annotatedTarget>
-        <obo:IAO_0000119>translation reviewed by https://orcid.org/0000-0002-1500-0236, https://orcid.org/0000-0001-7764-2085 and https://orcid.org/0000-0002-3391-9772</obo:IAO_0000119>
-        <babelon:translation_status>OFFICIAL</babelon:translation_status>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0010014"/>
-        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
-        <owl:annotatedTarget xml:lang="es">Año de la resolución</owl:annotatedTarget>
-        <rdfs:comment>translation by https://orcid.org/0000-0002-1500-0236, translation reviewed by https://orcid.org/0000-0001-7764-2085 and https://orcid.org/0000-0002-3391-9772</rdfs:comment>
-        <babelon:translation_status>OFFICIAL</babelon:translation_status>
-    </owl:Axiom>
 </rdf:RDF>
 
 

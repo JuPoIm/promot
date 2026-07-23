@@ -10,7 +10,7 @@
 # More information: https://github.com/INCATools/ontology-development-kit/
 
 # Fingerprint of the configuration file when this Makefile was last generated
-CONFIG_HASH=                59aee7494619eb35a6102b3adc46ee578ed86dedafee3bb1dcd46b845c322cf2
+CONFIG_HASH=                d43c8ed5269b964f4851eaf4a0da99730ab8b3049fe062ce6917eb74653afae5
 
 
 # ----------------------------------------
@@ -443,25 +443,6 @@ $(IMPORTDIR)/ncit_import.owl: $(MIRRORDIR)/ncit.owl
 	@echo "       This rule needs to be overwritten in promot.Makefile!"
 	@false
 endif # IMP_LARGE=true
-
-## Module for ontology: obi (filter)
-$(IMPORTDIR)/obi_import.owl: $(MIRRORDIR)/obi.owl $(IMPORTDIR)/obi_terms.txt $(IMPORTSEED) | all_robot_plugins
-	$(ROBOT) annotate --input $< --remove-annotations \
-		 odk:normalize --add-source true \
-		 extract --term-file $(IMPORTDIR)/obi_terms.txt $(T_IMPORTSEED) \
-		         --copy-ontology-annotations true --force true --method BOT \
-		 remove --axioms external --preserve-structure false --trim false \
-		        --base-iri http://purl.obolibrary.org/obo/OBI \
-		 remove $(foreach p, $(ANNOTATION_PROPERTIES), --term $(p)) \
-		        --term rdfs:label \
-		        --term IAO:0000115 \
-		        --term OMO:0002000 \
-		        --term-file $(IMPORTDIR)/obi_terms.txt $(T_IMPORTSEED) \
-		        --select complement \
-		 odk:normalize --base-iri http://purl.obolibrary.org/obo \
-		               --subset-decls true --synonym-decls true \
-		 repair --merge-axiom-annotations true \
-		 $(ANNOTATE_CONVERT_FILE)
 
 ## Module for ontology: snomed (custom)
 ifeq ($(IMP_LARGE),true)

@@ -49,7 +49,7 @@
         "val" : "PROMOT ontology"
       }, {
         "pred" : "http://www.geneontology.org/formats/oboInOwl#date",
-        "val" : "20:07:2026 15:56"
+        "val" : "23:07:2026 08:57"
       }, {
         "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
         "val" : "Additional acknowledgements:\n\t- Rachel Thompson\n\t- Thomas Bongivault, MSc\n\t- Marc Vincent, PhD\n"
@@ -61,9 +61,9 @@
         "val" : "More about PROMOT initiative at https://www.promotinitiative.com/\n"
       }, {
         "pred" : "http://www.w3.org/2002/07/owl#versionInfo",
-        "val" : "2026-07-20"
+        "val" : "2026-07-23"
       } ],
-      "version" : "http://purl.obolibrary.org/obo/promot/releases/2026-07-20/promot-simple.json"
+      "version" : "http://purl.obolibrary.org/obo/promot/releases/2026-07-23/promot-simple.json"
     },
     "nodes" : [ {
       "id" : "http://purl.obolibrary.org/obo/PROMOT_0000001",
@@ -535,6 +535,33 @@
             } ]
           }
         },
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
+          "val" : "https://orcid.org/0009-0000-5160-7927"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PROMOT_0010013",
+      "lbl" : "Year of assessment",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "The year of the assessment of an entity, e.g. the year when a phenotype is assessed by medical evidence."
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
+          "val" : "https://orcid.org/0009-0000-5160-7927"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PROMOT_0010014",
+      "lbl" : "Year of resolution",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "The year of the resolution of an abnormal disposition, e.g. the year when a phenotype ceases existing."
+        },
+        "comments" : [ "[PROMOT note] [Derived from RD-CDM] [6.2.4 Resolution Date] ", "[PROMOT note] [RD-CDM] Graefe, A.S.L., Hübner, M.R., Rehburg, F. et al. An ontology-based rare disease common data model harmonising international registries, FHIR, and Phenopackets. Sci Data 12, 234 (2025). https://doi.org/10.1038/s41597-025-04558-z" ],
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
           "val" : "https://orcid.org/0009-0000-5160-7927"
@@ -4005,6 +4032,22 @@
       "sub" : "http://purl.obolibrary.org/obo/PROMOT_0010012",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PROMOT_0010009"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PROMOT_0010013",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0010007"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PROMOT_0010013",
+      "pred" : "http://purl.obolibrary.org/obo/RO_0002350",
+      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0010010"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PROMOT_0010014",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0010007"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PROMOT_0010014",
+      "pred" : "http://purl.obolibrary.org/obo/RO_0002350",
+      "obj" : "http://purl.obolibrary.org/obo/PROMOT_0010010"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PROMOT_0010015",
       "pred" : "http://purl.obolibrary.org/obo/RO_0002350",

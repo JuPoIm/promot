@@ -114,6 +114,15 @@ imports/ncit_import.owl: $(MIRRORDIR)/ncit.owl $(IMPORTDIR)/ncit_terms.txt
 		annotate --ontology-iri $(ONTBASE)/$@ $(ANNOTATE_ONTOLOGY_VERSION) --output $@.tmp.owl && mv $@.tmp.owl $@; fi
 
 # ----------------------------------------
+# Module OBI : classes
+# ----------------------------------------
+imports/obi_import.owl: $(MIRRORDIR)/obi.owl $(IMPORTDIR)/obi_terms.txt
+	if [ $(IMP) = true ]; then $(ROBOT) query -i $< --update $(SPARQLDIR)/preprocess-module.ru \
+		filter -T $(IMPORTDIR)/obi_terms.txt --select "self annotations" --signature true \
+		query --update $(SPARQLDIR)/inject-subset-declaration.ru --update $(SPARQLDIR)/postprocess-module.ru \
+		annotate --ontology-iri $(ONTBASE)/$@ $(ANNOTATE_ONTOLOGY_VERSION) --output $@.tmp.owl && mv $@.tmp.owl $@; fi
+
+# ----------------------------------------
 # Module ORDO : classes
 # ----------------------------------------
 imports/ordo_import.owl: $(MIRRORDIR)/ordo.owl $(IMPORTDIR)/ordo_terms.txt
@@ -261,6 +270,7 @@ translation-icf: refresh-icf $(IMPORTDIR)/icf_import.owl
 	python3.12 $(SCRIPTSDIR)/python/ICF_labels-es-fr.py ; \
 	$(SSSOMPY) parse -m $(METADATADIR)/mapping-all.yml -o $(MAPPINGDIR)/icf-to-cif_all-mappings.sssom.tsv $(PYTHONTMPDIR)/icf-to-cifasip_all.tsv ; \
 	$(SSSOMPY) parse -m $(METADATADIR)/mapping-promot.yml -o $(MAPPINGDIR)/icf-to-cif_promot-mappings.sssom.tsv $(PYTHONTMPDIR)/icf-to-cifasip_promot.tsv ; fi
+# DRAFT
 #	$(ROBOT) -vvv query -i $(MIRRORDIR)/cif-asip.owl --update $(SPARQLDIR)/preprocess-module.ru filter -T $(IMPORTDIR)/cifasip_terms.txt \
 #	--select "self annotations" --signature true --output $(IMPORTDIR)/cif-asip_import.owl; \
 #	$(ROBOT) query -i $(IMPORTDIR)/cif-asip_import.owl --update $(SPARQLDIR)/preprocess-module.ru \
@@ -304,6 +314,16 @@ $(COMPONENTSDIR)/promot-component.owl: credits create-template $(TEMPLATEDIR)/pr
 # ----------------------------------------
 documentation:
   documentation_system: mkdocs
+
+# ----------------------------------------
+# DRAFT
+# CUSTOM REASON_TEST - reason_test personnalisé pour avoir les logs sur les classes qui ne sont pas satisfaisante
+# ----------------------------------------
+.PHONY: prepare_release_en
+prepare_release_en: 
+	$(ROBOT) reason --input $< --reasoner $(REASONER) --equivalent-classes-allowed asserted-only \
+		--exclude-tautologies structural --output test.owl && rm test.owl
+
 
 # ----------------------------------------
 # CUSTOM REASON_TEST - reason_test personnalisé pour avoir les logs sur les classes qui ne sont pas satisfaisante
