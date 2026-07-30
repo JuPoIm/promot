@@ -8,6 +8,8 @@
 # PROMOT ontology
 <img src="https://github.com/JuPoIm/promot/blob/test/site/assets/images/Promot_Logo_Colours.png" height=250 width=350/>
 
+The PROMOT ontology was built in the context of the "Performing a Rare Disease-Oriented Master Observational Trial".
+
 The PROMOT ontology represents the 3 groups of neuromuscular diseases and the 13 genes the PROMOT Master Observational Trial focuses on :
 * [Oculopharyngeal Muscular Dystrophy](https://www.orpha.net/en/disease/detail/270?name=Oculopharyngeal%20Muscular%20Dystrophy&mode=name) (PABPN1)
 * [Congenital Myasthenic Syndromes](https://www.orpha.net/en/disease/detail/590?name=Congenital%20myasthenic%20syndromes&mode=name) (CHRNE, DOK7, COLQ, RAPSN, GFPT1, GMPPB)
@@ -16,8 +18,10 @@ The PROMOT ontology represents the 3 groups of neuromuscular diseases and the 13
 The PROMOT ontology aims to be the conceptual schema for the common data model the PROMOT initiative will use to collect patient data scattered between the different sites involved in PROMOT initiative.
 
 Informations about the ontology can also be found at http://obofoundry.org/ontology/promot.
-
+<!---
 Ontology documentation is available [here](https://JuPoIm.github.io/promot_ontology/).
+-->
+Ontology documentation will be available soon...
 
 More about PROMOT initiative can be found at https://www.promotinitiative.com/project.
 
@@ -49,7 +53,7 @@ Editors of this ontology should use the edit version, [src/ontology/promot-edit.
 * Carole Faviez PhD, research engineer (Imagine Institute, France)
 * Elizabeth Angelevski DC, project manager (University of Sherbrooke, Québec CA)
 * Mansoore Gholizade MD (University of Sherbrooke, Québec CA)
-* Daniel Natera de Benito MD, PhD (Hospital Sant Joan de Deu, Instituto de Salud Carloss III, Spain)
+* Daniel Natera de Benito MD, PhD (Hospital Sant Joan de Deu, Spain)
 * Claudia Côté MD, PhD (University of Sherbrooke, Québec CA)
 * Hanns Lochmuller MD (University of Ottawa, Children's Hospital of Eastern Ontario, Ontario CA)
 * Alexandre Girard (University of Sherbrooke, Québec CA)
@@ -60,11 +64,11 @@ Editors of this ontology should use the edit version, [src/ontology/promot-edit.
 * Thomas Bongibault MSc (Imagine Institut)
 * Rachel Thompson PhD (Children's Hospital of Eastern Ontario)
 * Christina Khnaisser PhD (University of Sherbrooke, Québec CA)
-* Silvia Cerezo Corredera MD (Hospital Sant Joan de Deu, Instituto de Salud Carloss III, Spain)
+* Silvia Cerezo Corredera MD (Hospital Sant Joan de Deu, Spain)
 
 ## How to cite
 
-(Draft) FAVIEZ Carole, et al. Designing an ontology for rare neuromuscular diseases to support federated Master Observational Trials
+(Draft) FAVIEZ Carole, et al. Design and development of an ontology for rare neuromuscular diseases to support federated Master Observational Trials: A PROMOT study
 
 ## Contact
 
@@ -73,17 +77,6 @@ Please use this GitHub repository's [Issue tracker](https://github.com/JuPoIm/pr
 ## Outstanding contributions
 
 This work has been supported by the PROMOT project. It has received funding from the Canadian Institutes of Health Research (CIHR), and in partnership with L’Agence Nationale de la Recherche (France), Health Research Board (Dublin, Ireland), Instituto de Salud Carloss III (Spain), IRSC–IG, Swedish Research Council (Sweden), and Swiss National Science Foundation (Switzerland), partners of the European Joint Programme on Rare Diseases (EJP RD).
-
-### Agence Nationale de la Recherche
-<img src="https://github.com/JuPoIm/promot/blob/test/site/assets/images/anr-logo-2021.avif" height=200 width=300/>
-
-More informations about the Agence Nationale de la Recherche can be found on [ANR website](https://anr.fr/)
-
-### Canadian Institutes of Health Research
-
-<img src="https://github.com/JuPoIm/promot/blob/test/site/assets/images/IRSC_CIHR.avif" height=200 width=300/>
-
-More informations about the Canadian Institutes of Health Research can be found on [CIHR website](https://cihr-irsc.gc.ca/e/193.html)
 
 ### PROMOT Initiative
 <img src="https://github.com/JuPoIm/promot/blob/test/site/assets/images/Promot_Logo_Colours.png" height=200 width=300/>
@@ -98,26 +91,6 @@ The EJP RD initiative has received funding from the European Union’s Horizon 2
 More informations about EJP RD can be found on [EJP RD website](https://www.ejprarediseases.org/)
 
 <img src="https://github.com/JuPoIm/promot/blob/test/site/assets/images/Flag_of_Europe.png" height=200 width=300/> <img src="https://github.com/JuPoIm/promot/blob/test/site/assets/images/logo-inserm-300x124.jpg" height=200 width=300/>
-
-<!---
-Outstanding contributors are groups and institutions that have helped with building the PROMOT ontology, providing funding,
-advice and infrastructure. We are very grateful for all your contributions - this project would not exist without you!
---->
-
-### Imagine Institute
-<img src="https://github.com/JuPoIm/promot/blob/test/site/assets/images/logo_imagine.png" height=200 width=300/>
-
-More informations about Imagine Institute can be found on [Imagine Institute website](https://www.institutimagine.org/)
-
-### University of Sherbrooke
-<img src="https://github.com/JuPoIm/promot/blob/test/site/assets/images/UdeS_logo.png" height=200 width=300/>
-
-More informations about the University of Sherbrooke can be found on [University of Sherbrooke website](https://www.usherbrooke.ca/)
-
-### Assistance Publique - Hôpitaux de Paris
-<img src="https://github.com/JuPoIm/promot/blob/test/site/assets/images/logo_aphp.png" height=200 width=300/>
-
-More informations about AP-HP can be found on [AP-HP website](https://www.aphp.fr/)
 
 ## Technical acknowledgements
 

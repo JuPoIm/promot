@@ -2,4 +2,4 @@
 [//]: # "This file is meant to be edited by the ontology maintainer."
 
 (TO BE UPDATED)
-FAVIEZ Carole, et al. Designing an ontology for rare neuromuscular diseases to support federated Master Observational Trials
+Faviez C, Potier J, Angelevski E, Cerezo Corredera S, Lochmuller H, Natera de Benito D, Burgun A, Gagnon C, Design and development of an ontology for rare neuromuscular diseases to support federated Master Observational Trials: A PROMOT study 

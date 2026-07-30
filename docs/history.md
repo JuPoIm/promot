@@ -44,7 +44,7 @@ You will find the ontology description [here](OntologyDescription.md).
 
 ## Acknowledgements
 
-This work has been supported by the PROMOT project. It has received funding from the Canadian Institutes of Health Research (CIHR), and in partnership with L’Agence Nationale de la Recherche (France), Health Research Board (Dublin, Ireland), Instituto de Salud Carloss III (Spain), IRSC–IG, Swedish Research Council (Sweden), and Swiss National Science Foundation (Switzerland), partners of the European Joint Programme on Rare Diseases (EJP RD).
+This work has been supported by the PROMOT project. It has received funding from the [Canadian Institutes of Health Research](https://cihr-irsc.gc.ca/e/193.html) (CIHR), and in partnership with L’[Agence Nationale de la Recherche](https://anr.fr/) (France), [Health Research Boar](https://www.hrb.ie/) (Dublin, Ireland), [Instituto de Salud Carloss III](https://www.isciii.es/en/) (Spain), IRSC–IG, [Swedish Research Council](https://www.vr.se/english.html) (Sweden), and [Swiss National Science Foundation](https://www.snf.ch/en) (Switzerland), partners of the [European Joint Programme on Rare Diseases](https://www.ejprarediseases.org/) (EJP RD).
 
 The [EJP RD initiative](https://www.ejprarediseases.org/) has received funding from the European Union’s Horizon 2020 research and innovation programme under grant agreement N°825575.
 
