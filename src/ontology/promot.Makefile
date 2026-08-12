@@ -327,11 +327,18 @@ credits: credits.ttl
 # ----------------------------------------
 # CUSTOM RECREATE-COMPONENT
 # ----------------------------------------
-$(COMPONENTSDIR)/promot-component.owl: credits create-template $(TEMPLATEDIR)/promot-component-auto.tsv $(TMPDIR)/stamp-component-promot-component.owl
-	$(ROBOT) template --add-prefixes config/context.json \
-		 --template $(TEMPLATEDIR)/promot-component-auto.tsv \
-		 $(ANNOTATE_CONVERT_FILE)
-.PRECIOUS: $(COMPONENTSDIR)/promot-component.owl
+#$(COMPONENTSDIR)/promot-component.owl: credits create-template $(TEMPLATEDIR)/promot-component-auto.tsv $(TMPDIR)/stamp-component-promot-component.owl
+#	$(ROBOT) template --add-prefixes config/context.json \
+#		 --template $(TEMPLATEDIR)/promot-component-auto.tsv \
+#		 $(ANNOTATE_CONVERT_FILE)
+#.PRECIOUS: $(COMPONENTSDIR)/promot-component.owl
+
+# ----------------------------------------
+# CUSTOM PREPARE_RELEASE_FAST
+# ----------------------------------------
+.PHONY: prepare_release_fast
+prepare_release_fast:
+	$(MAKE) prepare_release IMP=false PAT=false MIR=false COMP=false ICF=FALSE
 
 # ----------------------------------------
 # Documentation - Documentación
@@ -340,19 +347,12 @@ documentation:
   documentation_system: mkdocs
 
 # ----------------------------------------
-# DRAFT
+# English-only release
 # ----------------------------------------
-# en: A version of the ontology that includes only english labels and definitions.
-$(ONT)-en.owl: $(EDIT_PREPROCESSED) $(OTHER_SRC) $(IMPORT_FILES)
-	$(ROBOT_RELEASE_IMPORT_MODE) \
-	reason --reasoner $(REASONER) --equivalent-classes-allowed asserted-only --exclude-tautologies structural --annotate-inferred-axioms false \
-	relax $(RELAX_OPTIONS) \
-	reduce -r $(REASONER) $(REDUCE_OPTIONS) \
-	remove --base-iri $(URIBASE)/PROMOT --axioms external --preserve-structure false --trim false \
-	$(SHARED_ROBOT_COMMANDS) \
-	annotate --link-annotation http://purl.org/dc/elements/1.1/type http://purl.obolibrary.org/obo/IAO_8000001 \
-		--ontology-iri $(ONTBASE)/$@ $(ANNOTATE_ONTOLOGY_VERSION) \
-		--annotation oboInOwl:date "$(OBODATE)" --output $@.tmp.owl && mv $@.tmp.owl $@
+# A version of the ontology that includes only english labels and definitions.
+english_only: prepare_release_fast
+	$(ROBOT) query --input $(RELEASEDIR)/$(ONT).owl --update $(SPARQLDIR)/delete-label.sparql --output $(TMPDIR)/fr-annotations.tsv
+	$(ROBOT) query --input $(RELEASEDIR)/$(ONT).owl --update $(SPARQLDIR)/remove-lang.sparql --output $(RELEASEDIR)/$(ONT)-en.owl
 
 
 # ----------------------------------------

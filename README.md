@@ -8,14 +8,14 @@
 # PROMOT ontology
 <img src="https://github.com/JuPoIm/promot/blob/test/site/assets/images/Promot_Logo_Colours.png" height=250 width=350/>
 
-The PROMOT ontology was built in the context of the "Performing a Rare Disease-Oriented Master Observational Trial".
+The PROMOT ontology was built in the context of the "Performing a Rare Disease-Oriented Master Observational Trial" initiative (PROMOT initiative).
 
-The PROMOT ontology represents the 3 groups of neuromuscular diseases and the 13 genes the PROMOT Master Observational Trial focuses on :
+This ontology represents the 3 groups of neuromuscular diseases and the 13 genes the PROMOT Master Observational Trial focuses on :
 * [Oculopharyngeal Muscular Dystrophy](https://www.orpha.net/en/disease/detail/270?name=Oculopharyngeal%20Muscular%20Dystrophy&mode=name) (PABPN1)
 * [Congenital Myasthenic Syndromes](https://www.orpha.net/en/disease/detail/590?name=Congenital%20myasthenic%20syndromes&mode=name) (CHRNE, DOK7, COLQ, RAPSN, GFPT1, GMPPB)
 * [Congenital Myopathies](https://www.orpha.net/en/disease/detail/97245?name=Congenital%20Myopathy&mode=name) (RYR1, TTN, NEB, MTM1, ACTA1, SELENON)
 
-The PROMOT ontology aims to be the conceptual schema for the common data model the PROMOT initiative will use to collect patient data scattered between the different sites involved in PROMOT initiative.
+This ontology aims to be the conceptual schema for the common data model the PROMOT initiative will use to collect patient data scattered between the different sites involved in PROMOT initiative.
 
 Informations about the ontology can also be found at http://obofoundry.org/ontology/promot.
 <!---
@@ -44,27 +44,27 @@ The latest version of the ontology can always be found at:
 Editors of this ontology should use the edit version, [src/ontology/promot-edit.owl](src/ontology/promot-edit.owl)
 
 ## Creators
-* Juliette Potier MSc (Imagine Institut, France)
+* Juliette Potier MSc (Imagine Institute, France)
 * Cynthia Gagnon OT, PhD (CIUSSS Saguenay-Lac-Saint-Jean, University of Sherbrooke, Québec CA)
 * Paul Fabry MD, PhD student (University of Sherbrooke, Québec CA)
 
 ## Contributors
 * Anita Burgun MD, PhD (AP-HP Assistance publique - Hôpitaux de Paris, France)
-* Carole Faviez PhD, research engineer (Imagine Institute, France)
+* Carole Faviez PhD, research engineer (Imagine Institute, Paris, France)
 * Elizabeth Angelevski DC, project manager (University of Sherbrooke, Québec CA)
 * Mansoore Gholizade MD (University of Sherbrooke, Québec CA)
-* Daniel Natera de Benito MD, PhD (Hospital Sant Joan de Deu, Spain)
-* Claudia Côté MD, PhD (University of Sherbrooke, Québec CA)
+* Daniel Natera de Benito MD, PhD (Hospital Sant Joan de Déu, Barcelona, Spain)
+* Claudia Côté RD, PhD (University of Sherbrooke, Québec CA)
 * Hanns Lochmuller MD (University of Ottawa, Children's Hospital of Eastern Ontario, Ontario CA)
 * Alexandre Girard (University of Sherbrooke, Québec CA)
-* Xuanning Yang (University of Sherbrooke, Québec CA)
+* Xuanning Yang, medical student (University of Sherbrooke, Québec CA)
 
 ### Acknowledgements
-* Marc Vincent PhD (Imagine Institut)
-* Thomas Bongibault MSc (Imagine Institut)
+* Marc Vincent PhD (Imagine Institute)
+* Thomas Bongibault MSc (Imagine Institute)
 * Rachel Thompson PhD (Children's Hospital of Eastern Ontario)
 * Christina Khnaisser PhD (University of Sherbrooke, Québec CA)
-* Silvia Cerezo Corredera MD (Hospital Sant Joan de Deu, Spain)
+* Silvia Cerezo Corredera MD (Hospital Sant Joan de Déu, Barcelona, Spain)
 
 ## How to cite
 
@@ -84,13 +84,11 @@ This work has been supported by the PROMOT project. It has received funding from
 More informations about PROMOT initiative can be found on [PROMOT initiative website](https://www.promotinitiative.com/).
 
 ### European Joint Programme On Rare Diseases
-<img src="https://github.com/JuPoIm/promot/blob/test/site/assets/images/EJP-RD-1024x226.png" height=200 width=300/>
+<img src="https://github.com/JuPoIm/promot/blob/test/site/assets/images/EJP-RD-1024x226.png" height=200 width=300/><img src="https://github.com/JuPoIm/promot/blob/test/site/assets/images/Flag_of_Europe.png" height=50 width=75/> <img src="https://github.com/JuPoIm/promot/blob/test/site/assets/images/logo-inserm-300x124.jpg" height=50 width=75/>
 
 The EJP RD initiative has received funding from the European Union’s Horizon 2020 research and innovation programme under grant agreement N°825575.
 
 More informations about EJP RD can be found on [EJP RD website](https://www.ejprarediseases.org/)
-
-<img src="https://github.com/JuPoIm/promot/blob/test/site/assets/images/Flag_of_Europe.png" height=200 width=300/> <img src="https://github.com/JuPoIm/promot/blob/test/site/assets/images/logo-inserm-300x124.jpg" height=200 width=300/>
 
 ## Technical acknowledgements
 
