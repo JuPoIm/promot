@@ -1,0 +1,49 @@
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+
+SELECT
+# Global counts for the whole ontology
+(SUM(?hasEnLabel) AS ?totalEnLabels) (SUM(?hasFrLabel) AS ?totalFrLabels) (SUM(?hasDeLabel) AS ?totalDeLabels)
+(SUM(?hasEnDef) AS ?totalEnDefs) (SUM(?hasFrDef) AS ?totalFrDefs) (SUM(?hasDeDef) AS ?totalDeDefs)
+
+# Counts for entities with specific prefix
+(SUM(IF(STRSTARTS(STR(?entity), "http://id.who.int/icd/entity/"), ?hasEnLabel, 0)) AS ?prefixEnLabels)
+(SUM(IF(STRSTARTS(STR(?entity), "http://snomed.info/id/"), ?hasFrLabel, 0)) AS ?prefixFrLabels)
+(SUM(IF(STRSTARTS(STR(?entity), "http://example.org/yourprefix/"), ?hasDeLabel, 0)) AS ?prefixDeLabels)
+(SUM(IF(STRSTARTS(STR(?entity), "http://example.org/yourprefix/"), ?hasEnDef, 0)) AS ?prefixEnDefs)
+(SUM(IF(STRSTARTS(STR(?entity), "http://example.org/yourprefix/"), ?hasFrDef, 0)) AS ?prefixFrDefs)
+(SUM(IF(STRSTARTS(STR(?entity), "http://example.org/yourprefix/"), ?hasDeDef, 0)) AS ?prefixDeDefs)
+WHERE {
+  {
+    # Get all entities that might have labels or definitions
+    { ?entity a ?type } UNION
+    { ?entity a owl:Class } UNION
+    { ?entity a owl:ObjectProperty } UNION
+    { ?entity a owl:DatatypeProperty } UNION
+    { ?entity a skos:Concept }
+  }
+
+  # Count labels in different languages
+  OPTIONAL { ?entity rdfs:label ?enLabel . FILTER(LANG(?enLabel) = "en") }
+  BIND(IF(BOUND(?enLabel), 1, 0) AS ?hasEnLabel)
+
+  OPTIONAL { ?entity rdfs:label ?frLabel . FILTER(LANG(?frLabel) = "fr") }
+  BIND(IF(BOUND(?frLabel), 1, 0) AS ?hasFrLabel)
+
+  OPTIONAL { ?entity rdfs:label ?deLabel . FILTER(LANG(?deLabel) = "de") }
+  BIND(IF(BOUND(?deLabel), 1, 0) AS ?hasDeLabel)
+
+  # Count definitions in different languages (using skos:definition or rdfs:comment)
+  OPTIONAL { ?entity skos:definition ?enDef . FILTER(LANG(?enDef) = "en") }
+  OPTIONAL { ?entity rdfs:comment ?enDefAlt . FILTER(LANG(?enDefAlt) = "en" && !BOUND(?enDef)) }
+  BIND(IF(BOUND(?enDef) || BOUND(?enDefAlt), 1, 0) AS ?hasEnDef)
+
+  OPTIONAL { ?entity skos:definition ?frDef . FILTER(LANG(?frDef) = "fr") }
+  OPTIONAL { ?entity rdfs:comment ?frDefAlt . FILTER(LANG(?frDefAlt) = "fr" && !BOUND(?frDef)) }
+  BIND(IF(BOUND(?frDef) || BOUND(?frDefAlt), 1, 0) AS ?hasFrDef)
+
+  OPTIONAL { ?entity skos:definition ?deDef . FILTER(LANG(?deDef) = "de") }
+  OPTIONAL { ?entity rdfs:comment ?deDefAlt . FILTER(LANG(?deDefAlt) = "de" && !BOUND(?deDef)) }
+  BIND(IF(BOUND(?deDef) || BOUND(?deDefAlt), 1, 0) AS ?hasDeDef)
+}

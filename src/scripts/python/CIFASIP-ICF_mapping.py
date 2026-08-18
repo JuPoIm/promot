@@ -2,11 +2,11 @@
 # utf-8
 # Autrice : 0009-0000-5160-7927
 # Author : 0009-0000-5160-7927
-# GOAL : create a tsv file to be parsed by sssom-py into a sssom file from files with 2025 ICF and 2020 CIF-ASIP (2009 ICF data?) data
+# GOAL : create a tsv file to be parsed by sssom-py into a sssom file from files with 2026 ICF and 2020 CIF-ASIP (2009 ICF data?) data
 # BUT : créer un fichier tsv qui sera converti en sssom.tsv par sssom-py avec des données issues de la version 2025 d'ICF et des données issues de la version 2020 de CIF-ASIP (traduction de la version 2009 d'ICF ?)
 # date de création : 23/09/2025??
 # Creation date : 23/09/2025??
-# date de version / Version date : 29/10/2025
+# date de version / Version date : 08/04/2026
 
 import csv
 import re
@@ -19,10 +19,10 @@ version = sys.argv[1]
 
 # df creation
 # création de la dataframe pour stocker les données ICF/CIF ASIP
-columns = ['Foundation URI ICF', 'predicate_id', 'Code ICF', 'Label EN', 'URI data.esante','mapping_justification', 'author_id', 'mapping_date', 'confidence', 'comment']
-df = pd.DataFrame(columns=columns)
+mapping_columns = ['Foundation URI ICF', 'predicate_id', 'Code ICF', 'Label EN', 'URI data.esante','mapping_justification', 'author_id', 'mapping_date', 'confidence', 'comment']
+df = pd.DataFrame(columns=mapping_columns)
 
-# read file listing ICF URIs, labels and codes from https://icdcdn.who.int/static/releasefiles/2025-01/SimpleTabulation-ICF-fr.zip
+# read file listing ICF URIs, labels and codes from https://icdcdn.who.int/static/releasefiles/2026-01/SimpleTabulation-ICF-fr.zip
 # ouverture du fichier avec les URIs, labels et codes d'ICF téléchargé depuis le web browser avec le makefile du projet
 with open('../data/imports/SimpleTabulation-ICF-fr.txt', newline='', encoding='utf-8') as tsvfile:
     reader = csv.reader(tsvfile, delimiter = '\t', quotechar = '"', quoting = csv.QUOTE_MINIMAL)
@@ -36,6 +36,7 @@ with open('../data/imports/SimpleTabulation-ICF-fr.txt', newline='', encoding='u
             while '- ' in label_en :
                 label_en = re.sub('- ', '', label_en)  # deletion of '- ' within labels / suppression des tirets devant les labels
             label_en = label_en.lower()
+            #print(label_en)
             # insert ICF data (URI, code, labels) in df / on ajoute les données dans la dataframe
             df.loc[len(df)]= {'Foundation URI ICF': icf_uri,
                               'predicate_id':'skos:exactMatch',
@@ -58,36 +59,44 @@ with open ('../scripts/python/tmp/CIF-ASIP.tsv', encoding='utf-8') as tsvfile:
             icf_code = row[1]
             icf_label_en = row[2]
             # pass unrelevant line / on saute les lignes sans importance
+            df['URI data.esante'] = df['URI data.esante'].astype(object)
             if asip_uri == 'IRI' or icf_code == '' or icf_label_en =='':
                 pass
             else:
+                # si le code est composé | if the code is made of two parts
                 if '-' in icf_code:
                     icf_label_en = re.sub(r' \([a-z][0-9]*-[a-z][0-9]*\)', '', icf_label_en)
                     # insert icf code via en label in df / on ajoute le code ICF via le label en anglais
                     df.loc[df['Label EN'] == icf_label_en, 'Code ICF'] = icf_code
                 # insert CIF-ASIP URIs where ICF code is the same / on ajoute les URI fondamentales via le code ICF 
+                elif len(icf_code) >= 2 :
+                    #print(f'le code est {icf_code} et le label est {icf_label_en}')
+                    #print(icf_label_en)
+                    df.loc[df['Label EN'] == icf_label_en, 'URI data.esante'] = asip_uri
                 df.loc[df['Code ICF'] == icf_code, 'URI data.esante'] = asip_uri
 
 # delete now useless columns (that were used for mapping URIs)
 # on supprime les colonnes qui nous ont servies de porte d'entrée pour lier les URIs ICF et CIF
 df = df.drop(columns=['Code ICF', 'Label EN'])
+
 # rename columns for suiting sssom
 # on renome les colonnes pour préparer le tsv
 df.rename(columns={'Foundation URI ICF': 'subject_id','URI data.esante': 'object_id'}, inplace=True)
+
 # delete incomplete columns (due to diff between used-by-CIF-ASIP 2009 (? the one used by UMLS) ICF version and the 2025 ICF version)
 # i dont know for subject_id
 # on supprime les lignes où il manque des données
 df = df.dropna(subset=["subject_id"])
 sssom_df = df.dropna(subset=["object_id"])
-# just a little check
-#print(sssom_df)
+
+
 # create tsv file for sssom parsing
 # on crée le tsv qui sera converti par la commande sssom-py en un fichier SSSOM
 sssom_df.to_csv('../scripts/python/tmp/icf-to-cifasip_all.tsv', sep='\t', index=False)
 
 
-# create tsv file for sssom parsing with only mapping for iri in whofic_import
-# on crée le tsv qui sera converti par la commande sssom-py en un fichier SSSOM pour seulement les mappings des iri présents dans whofic_import
+# create tsv file for sssom parsing with only mapping for iri in icf_import
+# on crée le tsv qui sera converti par la commande sssom-py en un fichier SSSOM pour seulement les mappings des iri présents dans icf_import
 promot_df = pd.DataFrame(columns=sssom_df.columns)
 
 with open ('../scripts/python/tmp/icf_import_iri.tsv', encoding='utf-8') as tsvfile:
@@ -98,9 +107,11 @@ with open ('../scripts/python/tmp/icf_import_iri.tsv', encoding='utf-8') as tsvf
         promot_df = pd.concat([promot_df, data], ignore_index = True)
 
 promot_df.to_csv('../scripts/python/tmp/icf-to-cifasip_promot.tsv', sep='\t', index=False)
-promot_cif_list_df = promot_df.filter("object_id")
-promot_cif_list_df = promot_cif_list_df.rename(columns={"object_id" : "#object_id"})
-promot_cif_list_df.to_csv('../ontology/imports/cif_terms.txt', sep='\t', index=False)
+
+# Work in Progress création d'une liste d'uri CIF ASIP pour importer des définitions de CIF ASIP avec l'import ICF
+# promot_cif_list_df = promot_df.filter("object_id")
+# promot_cif_list_df = promot_cif_list_df.rename(columns={"object_id" : "#object_id"})
+# promot_cif_list_df.to_csv('../ontology/imports/cif_terms.txt', sep='\t', index=False)
 
 # txt = open('../ontology/imports/cifasip_terms.txt', "w+", encoding='utf-8')
 # for index, row in promot_df.iterrows():

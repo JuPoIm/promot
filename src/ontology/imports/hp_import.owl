@@ -20,6 +20,7 @@
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:GENO="http://purl.obolibrary.org/obo/GENO_"
      xmlns:HGNC="http://identifiers.org/hgnc/"
+     xmlns:NCIT="http://purl.obolibrary.org/obo/NCIT_"
      xmlns:OMOP="https://athena.ohdsi.org/search-terms/terms/"
      xmlns:ORDO="http://www.orpha.net/ORDO/Orphanet_"
      xmlns:SCDO="http://purl.obolibrary.org/obo/SCDO_"
@@ -58,8 +59,8 @@
      xmlns:CPATH_VISIT_OCCURRENCE="https://w3id.org/cpont/visit_occurrence/"
      xmlns:CPATH_CONDITION_OCCURRENCE="https://w3id.org/cpont/condition_occurrence/">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/promot/imports/hp_import.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/promot/releases/2026-03-03/imports/hp_import.owl"/>
-        <owl:versionInfo>2026-03-03</owl:versionInfo>
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/promot/releases/2026-08-12/imports/hp_import.owl"/>
+        <owl:versionInfo>2026-08-12</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -1858,7 +1859,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0000301">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0011799"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0011805"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0040286"/>
         <obo:IAO_0000115 xml:lang="fr">Anomalie d&apos;un muscle innervé par le nerf facial (septième nerf crânien)</obo:IAO_0000115>
         <obo:IAO_0000115>An anomaly of a muscle that is innervated by the facial nerve (the seventh cranial nerve).</obo:IAO_0000115>
         <oboInOwl:hasDbXref>UMLS:C4025865</oboInOwl:hasDbXref>
@@ -4330,7 +4331,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0001315">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0031826"/>
-        <obo:IAO_0000115>Diminution of tendon reflexes, which is an invariable sign of peripheral nerve disease.</obo:IAO_0000115>
+        <obo:IAO_0000115>A reduction (hyporeflexia) or complete absence (areflexia) of the involuntary muscle contraction normally elicited by a reflex stimulus, such as tapping a deep tendon.</obo:IAO_0000115>
         <oboInOwl:hasAlternativeId>HP:0001316</oboInOwl:hasAlternativeId>
         <oboInOwl:hasDbXref>UMLS:C1866934</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym xml:lang="fr">Absent or decreased deep tendon reflexes|Decreased deep tendon reflexes|Decreased tendon reflexes|Decreased to absent deep tendon reflexes|Decreased/absent deep tendon reflexes|Depressed tendon reflexes|Diminished deep tendon reflexes|Diminished or absent deep tendon reflexes|Diminished or absent tendon reflexes|Hypoactive to absent deep tendon reflexes|Impaired tendon reflexes|Reduced/absent deep tendon reflexes|Weak or absent deep tendon reflexes</oboInOwl:hasExactSynonym>
@@ -4345,18 +4346,19 @@
         <oboInOwl:hasExactSynonym>Diminished or absent tendon reflexes</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>Hypoactive to absent deep tendon reflexes</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>Impaired tendon reflexes</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>Reduced tendon reflexes</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>Reduced/absent deep tendon reflexes</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>Weak or absent deep tendon reflexes</oboInOwl:hasExactSynonym>
         <oboInOwl:id>HP:0001315</oboInOwl:id>
         <rdfs:comment>The deep tendon reflex is a monosynaptic reflex arc with sensory and motor nerve components, but the arc is much more vulnerable to sensory nerve damage. Ankle plantar flexion is retained in all but the most severe peripheral neuropathies, and thus loss of the Achilles tendon reflex in an objective indication of a substantial sensory nerve defect.</rdfs:comment>
         <rdfs:label xml:lang="es">Reducción de los reflejos osteotendinosos</rdfs:label>
         <rdfs:label xml:lang="fr">Réflexes tendineux réduits</rdfs:label>
-        <rdfs:label>Reduced tendon reflexes</rdfs:label>
+        <rdfs:label>Diminished deep tendon reflex</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0001315"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>Diminution of tendon reflexes, which is an invariable sign of peripheral nerve disease.</owl:annotatedTarget>
+        <owl:annotatedTarget>A reduction (hyporeflexia) or complete absence (areflexia) of the involuntary muscle contraction normally elicited by a reflex stimulus, such as tapping a deep tendon.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
         <oboInOwl:hasDbXref>PMID:20941667</oboInOwl:hasDbXref>
     </owl:Axiom>
@@ -4365,9 +4367,9 @@
         <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
         <owl:annotatedTarget xml:lang="es">Reducción de los reflejos osteotendinosos</owl:annotatedTarget>
         <babelon:source_language>en</babelon:source_language>
-        <babelon:source_value>Reduced tendon reflexes</babelon:source_value>
+        <babelon:source_value>Diminished deep tendon reflex</babelon:source_value>
         <babelon:translation_language>es</babelon:translation_language>
-        <babelon:translation_status>OFFICIAL</babelon:translation_status>
+        <babelon:translation_status>CANDIDATE</babelon:translation_status>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0001315"/>
@@ -4375,9 +4377,9 @@
         <owl:annotatedTarget xml:lang="fr">Réflexes tendineux réduits</owl:annotatedTarget>
         <babelon:comment>label of HP:0001315 (Reduced tendon reflexes)  ; abnormality of the nervous system</babelon:comment>
         <babelon:source_language>en</babelon:source_language>
-        <babelon:source_value>Reduced tendon reflexes</babelon:source_value>
+        <babelon:source_value>Diminished deep tendon reflex</babelon:source_value>
         <babelon:translation_language>fr</babelon:translation_language>
-        <babelon:translation_status>OFFICIAL</babelon:translation_status>
+        <babelon:translation_status>CANDIDATE</babelon:translation_status>
     </owl:Axiom>
     
 
@@ -5064,22 +5066,23 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0001435">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0001446"/>
+        <obo:IAO_0000115>A structural or functional anomaly of the shoulder girdle, which which connects the upper limb to the axial skeleton via the sternoclavicular joint.</obo:IAO_0000115>
         <terms:creator rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
         <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2008-04-07T10:19:00Z</terms:date>
         <oboInOwl:hasAlternativeId>HP:0004301</oboInOwl:hasAlternativeId>
         <oboInOwl:hasDbXref>UMLS:C4021778</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym xml:lang="fr">Anomalie des muscules de la ceinture scapulaire</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>Abnormality of shoulder musculature</oboInOwl:hasExactSynonym>
         <oboInOwl:id>HP:0001435</oboInOwl:id>
+        <rdfs:comment>The shoulder girdle is composed of the clavicle and the scapula, which articulates with the proximal humerus of the upper limb. The muscles of the shoulder girdle include the trapezius, the major and minor rhomboids, the serratus anterior, and the levator scapulae.</rdfs:comment>
         <rdfs:label xml:lang="fr">Anomalie de la musculature de la ceinture scapulaire</rdfs:label>
         <rdfs:label xml:lang="es">Anomalía de la musculatura de la cintura escapular</rdfs:label>
         <rdfs:label>Abnormality of the shoulder girdle musculature</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0001435"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>Abnormality of shoulder musculature</owl:annotatedTarget>
-        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#layperson"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A structural or functional anomaly of the shoulder girdle, which which connects the upper limb to the axial skeleton via the sternoclavicular joint.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>PMID:30725618</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0001435"/>
@@ -5184,7 +5187,7 @@
     <!-- http://purl.obolibrary.org/obo/HP_0001469 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0001469">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0011805"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0009127"/>
         <terms:creator rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
         <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2008-04-07T10:55:00Z</terms:date>
         <oboInOwl:hasDbXref>UMLS:C4025768</oboInOwl:hasDbXref>
@@ -5317,97 +5320,6 @@
         <owl:annotatedTarget xml:lang="es">Anormalidad del crecimiento</owl:annotatedTarget>
         <babelon:source_language>en</babelon:source_language>
         <babelon:source_value>Growth abnormality</babelon:source_value>
-        <babelon:translation_language>es</babelon:translation_language>
-        <babelon:translation_status>OFFICIAL</babelon:translation_status>
-    </owl:Axiom>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/HP_0001508 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0001508">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0004325"/>
-        <obo:IAO_0000115>Failure to thrive (FTT) refers to a child whose physical growth is substantially below the norm.</obo:IAO_0000115>
-        <oboInOwl:hasAlternativeId>HP:0001535</oboInOwl:hasAlternativeId>
-        <oboInOwl:hasAlternativeId>HP:0008853</oboInOwl:hasAlternativeId>
-        <oboInOwl:hasAlternativeId>HP:0008878</oboInOwl:hasAlternativeId>
-        <oboInOwl:hasAlternativeId>HP:0008916</oboInOwl:hasAlternativeId>
-        <oboInOwl:hasBroadSynonym>Undergrowth</oboInOwl:hasBroadSynonym>
-        <oboInOwl:hasDbXref>SNOMEDCT_US:36440009</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>SNOMEDCT_US:432788009</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>UMLS:C0231246</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>UMLS:C2315100</oboInOwl:hasDbXref>
-        <oboInOwl:hasExactSynonym xml:lang="fr">Retard de croissance</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym xml:lang="fr">Retard de croissance staturo-pondérale</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym xml:lang="fr">prise de poids médiocre</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym xml:lang="fr">prise de poids médiocre|retard staturo-pondérale progressif|retard de croissance chez les survivants|Retard de croissance post-natal</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym xml:lang="fr">retard de croissance chez les survivants</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym xml:lang="fr">retard staturo-pondérale progressif</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>FTT</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>Faltering weight</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>Postnatal failure to thrive</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>Weight faltering</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasRelatedSynonym>Poor weight gain</oboInOwl:hasRelatedSynonym>
-        <oboInOwl:id>HP:0001508</oboInOwl:id>
-        <rdfs:comment>Although there is no clear consensus on the exact definition of FTT, it is usually diagnoses in a child growing below the 3rd percentile or in a child whose decreased growth has cross two major growth percentiles (for example, from above the 75th percentile to below the 25th percentile).</rdfs:comment>
-        <rdfs:label xml:lang="fr">Retard de croissance post-natal</rdfs:label>
-        <rdfs:label xml:lang="es">Retraso en el medro</rdfs:label>
-        <rdfs:label>Failure to thrive</rdfs:label>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0001508"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>Failure to thrive (FTT) refers to a child whose physical growth is substantially below the norm.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0001508"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasBroadSynonym"/>
-        <owl:annotatedTarget>Undergrowth</owl:annotatedTarget>
-        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#layperson"/>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0001508"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>FTT</owl:annotatedTarget>
-        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#abbreviation"/>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0001508"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>Faltering weight</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:resource="https://orcid.org/0000-0001-5208-3432"/>
-        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#layperson"/>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0001508"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>Weight faltering</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:resource="https://orcid.org/0000-0001-5208-3432"/>
-        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#layperson"/>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0001508"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
-        <owl:annotatedTarget>Poor weight gain</owl:annotatedTarget>
-        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#layperson"/>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0001508"/>
-        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
-        <owl:annotatedTarget xml:lang="fr">Retard de croissance post-natal</owl:annotatedTarget>
-        <babelon:comment>label of HP:0001508 (Failure to thrive)  ; growth abnormality</babelon:comment>
-        <babelon:source_language>en</babelon:source_language>
-        <babelon:source_value>Failure to thrive</babelon:source_value>
-        <babelon:translation_language>fr</babelon:translation_language>
-        <babelon:translation_status>OFFICIAL</babelon:translation_status>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0001508"/>
-        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
-        <owl:annotatedTarget xml:lang="es">Retraso en el medro</owl:annotatedTarget>
-        <babelon:source_language>en</babelon:source_language>
-        <babelon:source_value>Failure to thrive</babelon:source_value>
         <babelon:translation_language>es</babelon:translation_language>
         <babelon:translation_status>OFFICIAL</babelon:translation_status>
     </owl:Axiom>
@@ -5603,60 +5515,6 @@
         <owl:annotatedTarget xml:lang="es">Muerte en la infancia</owl:annotatedTarget>
         <babelon:source_language>en</babelon:source_language>
         <babelon:source_value>Death in infancy</babelon:source_value>
-        <babelon:translation_language>es</babelon:translation_language>
-        <babelon:translation_status>OFFICIAL</babelon:translation_status>
-    </owl:Axiom>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/HP_0001531 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0001531">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0001508"/>
-        <oboInOwl:hasAlternativeId>HP:0008863</oboInOwl:hasAlternativeId>
-        <oboInOwl:hasAlternativeId>HP:0008925</oboInOwl:hasAlternativeId>
-        <oboInOwl:hasDbXref>UMLS:C1867873</oboInOwl:hasDbXref>
-        <oboInOwl:hasExactSynonym xml:lang="fr">Retard de croissance chez le nourisson</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym xml:lang="fr">Retard de croissance dans la première année de vie</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym xml:lang="fr">Retard de croissance dans la première année de vie|retard de croissance chez les nourrissons mâles</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>Failure to thrive in first year of life</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>Faltering weight in infancy</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>Weight faltering in infancy</oboInOwl:hasExactSynonym>
-        <oboInOwl:id>HP:0001531</oboInOwl:id>
-        <rdfs:label xml:lang="fr">Retard de croissance chez le nourisson</rdfs:label>
-        <rdfs:label xml:lang="es">Retraso en el medro en la primera infancia</rdfs:label>
-        <rdfs:label>Failure to thrive in infancy</rdfs:label>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0001531"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>Faltering weight in infancy</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:resource="https://orcid.org/0000-0001-5208-3432"/>
-        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#layperson"/>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0001531"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>Weight faltering in infancy</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:resource="https://orcid.org/0000-0001-5208-3432"/>
-        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#layperson"/>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0001531"/>
-        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
-        <owl:annotatedTarget xml:lang="fr">Retard de croissance chez le nourisson</owl:annotatedTarget>
-        <babelon:comment>label of HP:0001531 (Failure to thrive in infancy)  ; growth abnormality</babelon:comment>
-        <babelon:source_language>en</babelon:source_language>
-        <babelon:source_value>Failure to thrive in infancy</babelon:source_value>
-        <babelon:translation_language>fr</babelon:translation_language>
-        <babelon:translation_status>OFFICIAL</babelon:translation_status>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0001531"/>
-        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
-        <owl:annotatedTarget xml:lang="es">Retraso en el medro en la primera infancia</owl:annotatedTarget>
-        <babelon:source_language>en</babelon:source_language>
-        <babelon:source_value>Failure to thrive in infancy</babelon:source_value>
         <babelon:translation_language>es</babelon:translation_language>
         <babelon:translation_status>OFFICIAL</babelon:translation_status>
     </owl:Axiom>
@@ -5863,6 +5721,104 @@
         <owl:annotatedTarget xml:lang="es">Disminución de los movimientos fetales</owl:annotatedTarget>
         <babelon:source_language>en</babelon:source_language>
         <babelon:source_value>Decreased fetal movement</babelon:source_value>
+        <babelon:translation_language>es</babelon:translation_language>
+        <babelon:translation_status>OFFICIAL</babelon:translation_status>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/HP_0001560 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0001560">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0001197"/>
+        <obo:IAO_0000115>Abnormality of the amniotic fluid, which is the fluid contained in the amniotic sac surrounding the developing fetus.</obo:IAO_0000115>
+        <oboInOwl:hasDbXref>SNOMEDCT_US:42170009</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>UMLS:C0266781</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym xml:lang="fr">Abnormal amniotic fluid</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>Abnormal amniotic fluid</oboInOwl:hasExactSynonym>
+        <oboInOwl:id>HP:0001560</oboInOwl:id>
+        <rdfs:label xml:lang="fr">Anomalie du liquide amniotique</rdfs:label>
+        <rdfs:label xml:lang="es">Anomalía del líquido amniótico</rdfs:label>
+        <rdfs:label>Abnormality of the amniotic fluid</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0001560"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>Abnormality of the amniotic fluid, which is the fluid contained in the amniotic sac surrounding the developing fetus.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0001560"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+        <owl:annotatedTarget xml:lang="fr">Anomalie du liquide amniotique</owl:annotatedTarget>
+        <babelon:comment>label of HP:0001560 (Abnormality of the amniotic fluid)  ; abnormality of prenatal development or birth</babelon:comment>
+        <babelon:source_language>en</babelon:source_language>
+        <babelon:source_value>Abnormality of the amniotic fluid</babelon:source_value>
+        <babelon:translation_language>fr</babelon:translation_language>
+        <babelon:translation_status>OFFICIAL</babelon:translation_status>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0001560"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+        <owl:annotatedTarget xml:lang="es">Anomalía del líquido amniótico</owl:annotatedTarget>
+        <babelon:source_language>en</babelon:source_language>
+        <babelon:source_value>Abnormality of the amniotic fluid</babelon:source_value>
+        <babelon:translation_language>es</babelon:translation_language>
+        <babelon:translation_status>OFFICIAL</babelon:translation_status>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/HP_0001561 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0001561">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0001560"/>
+        <obo:IAO_0000115>The presence of excess amniotic fluid in the uterus during pregnancy.</obo:IAO_0000115>
+        <oboInOwl:hasAlternativeId>HP:0005098</oboInOwl:hasAlternativeId>
+        <oboInOwl:hasDbXref>SNOMEDCT_US:86203003</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>UMLS:C0020224</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym xml:lang="fr">Hydramnios</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym xml:lang="fr">polyhydramnios</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym xml:lang="fr">polyhydramnios|hydramnios idiopathique chronique</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>High levels of amniotic fluid</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>Hydramnios</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasRelatedSynonym>Increased amniotic fluid index</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:id>HP:0001561</oboInOwl:id>
+        <rdfs:comment>Polyhydramnios is diagnosed if the deepest vertical pool of amniotic fluid is more than 8 cm or amniotic fluid index is more than 95th percentile for the corresponding gestational age.</rdfs:comment>
+        <rdfs:label xml:lang="fr">Hydramnios</rdfs:label>
+        <rdfs:label xml:lang="es">Polihidramnios</rdfs:label>
+        <rdfs:label>Polyhydramnios</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0001561"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>The presence of excess amniotic fluid in the uterus during pregnancy.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0001561"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget>High levels of amniotic fluid</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:resource="https://orcid.org/0000-0001-5208-3432"/>
+        <oboInOwl:hasDbXref rdf:resource="https://orcid.org/0000-0002-6548-5200"/>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#layperson"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0001561"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+        <owl:annotatedTarget xml:lang="fr">Hydramnios</owl:annotatedTarget>
+        <babelon:comment>label of HP:0001561 (Polyhydramnios)  ; abnormality of prenatal development or birth</babelon:comment>
+        <babelon:source_language>en</babelon:source_language>
+        <babelon:source_value>Polyhydramnios</babelon:source_value>
+        <babelon:translation_language>fr</babelon:translation_language>
+        <babelon:translation_status>OFFICIAL</babelon:translation_status>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0001561"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+        <owl:annotatedTarget xml:lang="es">Polihidramnios</owl:annotatedTarget>
+        <babelon:source_language>en</babelon:source_language>
+        <babelon:source_value>Polyhydramnios</babelon:source_value>
         <babelon:translation_language>es</babelon:translation_language>
         <babelon:translation_status>OFFICIAL</babelon:translation_status>
     </owl:Axiom>
@@ -7355,7 +7311,6 @@
         <oboInOwl:hasExactSynonym>Breathing difficulties</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>Labored breathing</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>Laboured breathing</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>Respiratory difficulties</oboInOwl:hasExactSynonym>
         <oboInOwl:id>HP:0002098</oboInOwl:id>
         <rdfs:label xml:lang="es">Distrés respiratorio</rdfs:label>
         <rdfs:label xml:lang="fr">Détresse respiratoire</rdfs:label>
@@ -9269,7 +9224,8 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0003236">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0040081"/>
-        <obo:IAO_0000115>An elevation of the level of the enzyme creatine kinase (also known as creatine phosphokinase (CK; EC 2.7.3.2) in the blood. CK levels can be elevated in a number of clinical disorders such as myocardial infarction, rhabdomyolysis, and muscular dystrophy.</obo:IAO_0000115>
+        <obo:IAO_0000115>The activity of creatine kinase in the blood circulation is above the upper limit of normal.</obo:IAO_0000115>
+        <terms:contributor rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
         <oboInOwl:hasAlternativeId>HP:0002147</oboInOwl:hasAlternativeId>
         <oboInOwl:hasAlternativeId>HP:0002906</oboInOwl:hasAlternativeId>
         <oboInOwl:hasAlternativeId>HP:0003078</oboInOwl:hasAlternativeId>
@@ -9284,14 +9240,21 @@
         <oboInOwl:hasExactSynonym xml:lang="fr">augmentation de la creatine-kinase</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym xml:lang="fr">augmentation de la créatine phosphokinase</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>Elevated blood creatine phosphokinase</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>Elevated circulating creatine kinase activity</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>Elevated circulating creatine phosphokinase</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>Elevated creatine kinase</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>Elevated creatine kinase concentration</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>Elevated creatine kinase level</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>Elevated creatine kinase level in blood</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>Elevated serum CPK</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>Elevated serum creatine kinase</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>Elevated serum creatine phosphokinase</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>High serum creatine kinase</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>Increased CPK</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>Increased creatine kinase</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>Increased creatine kinase concentration</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>Increased creatine kinase level</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>Increased creatine kinase level in blood</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>Increased creatine phosphokinase</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>Increased serum CK</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>Increased serum creatine kinase</oboInOwl:hasExactSynonym>
@@ -9300,14 +9263,8 @@
         <rdfs:comment>Elevated serum creatine kinase (CK) activity is usually an indicator of muscle damage. Diseases with very high CK values include subtypes of muscular dystrophies, idiopathic inflammatory myopathies and metabolic myopathies. However, a normal or only slightly elevated CK value does not exclude the presence of a myopathy. The normal range in the blood circulation is 34-171 U/l in males and 34-145 U/l in females, but may vary according to the test used.</rdfs:comment>
         <rdfs:label xml:lang="fr">Augmentation de la créatine phosphokinase sérique</rdfs:label>
         <rdfs:label xml:lang="es">Creatina fosfoquinasa elevada</rdfs:label>
-        <rdfs:label>Elevated circulating creatine kinase concentration</rdfs:label>
+        <rdfs:label>Elevated circulating creatine kinase activity</rdfs:label>
     </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0003236"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>An elevation of the level of the enzyme creatine kinase (also known as creatine phosphokinase (CK; EC 2.7.3.2) in the blood. CK levels can be elevated in a number of clinical disorders such as myocardial infarction, rhabdomyolysis, and muscular dystrophy.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
-    </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0003236"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
@@ -9395,7 +9352,7 @@
         <owl:annotatedTarget xml:lang="fr">Augmentation de la créatine phosphokinase sérique</owl:annotatedTarget>
         <babelon:comment>label of HP:0003236 (Elevated serum creatine kinase)  ; abnormality of metabolism/homeostasis</babelon:comment>
         <babelon:source_language>en</babelon:source_language>
-        <babelon:source_value>Elevated circulating creatine kinase concentration</babelon:source_value>
+        <babelon:source_value>Elevated circulating creatine kinase activity</babelon:source_value>
         <babelon:translation_language>fr</babelon:translation_language>
         <babelon:translation_status>CANDIDATE</babelon:translation_status>
     </owl:Axiom>
@@ -9404,7 +9361,7 @@
         <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
         <owl:annotatedTarget xml:lang="es">Creatina fosfoquinasa elevada</owl:annotatedTarget>
         <babelon:source_language>en</babelon:source_language>
-        <babelon:source_value>Elevated circulating creatine kinase concentration</babelon:source_value>
+        <babelon:source_value>Elevated circulating creatine kinase activity</babelon:source_value>
         <babelon:translation_language>es</babelon:translation_language>
         <babelon:translation_status>CANDIDATE</babelon:translation_status>
     </owl:Axiom>
@@ -10483,15 +10440,15 @@
         <oboInOwl:hasAlternativeId>HP:0003666</oboInOwl:hasAlternativeId>
         <oboInOwl:hasDbXref>UMLS:C1836142</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>UMLS:C2752013</oboInOwl:hasDbXref>
-        <oboInOwl:hasExactSynonym xml:lang="fr">d&apos;appararition in utéro</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym xml:lang="fr">d&apos;apparition congénitale</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>Onset at birth</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>Symptoms present at birth</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym xml:lang="fr">d&apos;appararition in utéro</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym xml:lang="fr">d&apos;apparition congénitale</oboInOwl:hasExactSynonym>
         <oboInOwl:id>HP:0003577</oboInOwl:id>
         <rdfs:comment>Congenital onset literally means present at birth. Congenital abnormalities are thus generally acquired during fetal development. Congenital abnormalities are often but not always hereditary in nature. Whether a disease manifestation is diagnosed to be intrauterine or congenital may depend on the time at which diagnostic procedures are performed. Thus, most congenital abnormalities are also intrauterine. This term should be used for phenotypic abnormalities or diseases initially observed at the time of birth. For abnormalities observed prior to (e.g., by fetal ultrasound), use the term Antenatal onset (HP:0030674).</rdfs:comment>
+        <rdfs:label>Congenital onset</rdfs:label>
         <rdfs:label xml:lang="fr">Début congénital</rdfs:label>
         <rdfs:label xml:lang="es">Inicio congénito</rdfs:label>
-        <rdfs:label>Congenital onset</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0003577"/>
@@ -10539,14 +10496,14 @@
         <oboInOwl:hasAlternativeId>HP:0003662</oboInOwl:hasAlternativeId>
         <oboInOwl:hasAlternativeId>HP:0003669</oboInOwl:hasAlternativeId>
         <oboInOwl:hasDbXref>UMLS:C1853562</oboInOwl:hasDbXref>
-        <oboInOwl:hasExactSynonym xml:lang="fr">Onset in adulthood|Onset in early adulthood|Symptoms begin in adulthood</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>Onset in adulthood</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym xml:lang="fr">Onset in adulthood|Onset in early adulthood|Symptoms begin in adulthood</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>Onset in early adulthood</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>Symptoms begin in adulthood</oboInOwl:hasExactSynonym>
         <oboInOwl:id>HP:0003581</oboInOwl:id>
+        <rdfs:label>Adult onset</rdfs:label>
         <rdfs:label xml:lang="fr">Début à l&apos;âge adulte</rdfs:label>
         <rdfs:label xml:lang="es">Inicio adulto</rdfs:label>
-        <rdfs:label>Adult onset</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0003581"/>
@@ -10639,15 +10596,15 @@
         <oboInOwl:hasAlternativeId>HP:0003672</oboInOwl:hasAlternativeId>
         <oboInOwl:hasAlternativeId>HP:0010573</oboInOwl:hasAlternativeId>
         <oboInOwl:hasDbXref>UMLS:C1848924</oboInOwl:hasDbXref>
-        <oboInOwl:hasExactSynonym xml:lang="fr">Onset in first year of life|Onset in infancy</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>Infantile onset</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>Onset in first year of life</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym xml:lang="fr">Onset in first year of life|Onset in infancy</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>Onset in infancy</oboInOwl:hasExactSynonym>
         <oboInOwl:id>HP:0003593</oboInOwl:id>
         <rdfs:comment>Onset of signs or symptoms of disease within the first 12 months of life.</rdfs:comment>
         <rdfs:label xml:lang="fr">Apparition dans l&apos;enfance</rdfs:label>
-        <rdfs:label xml:lang="es">Inicio infantil</rdfs:label>
         <rdfs:label>Infantile onset</rdfs:label>
+        <rdfs:label xml:lang="es">Inicio infantil</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0003593"/>
@@ -10755,8 +10712,8 @@
         <oboInOwl:hasAlternativeId>HP:0003670</oboInOwl:hasAlternativeId>
         <oboInOwl:hasDbXref>UMLS:C4025588</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym xml:lang="fr">Apparition dans l&apos;enfance</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym xml:lang="fr">Signs and symptoms begin before 15 years of age</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>Signs and symptoms begin before 15 years of age</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym xml:lang="fr">Signs and symptoms begin before 15 years of age</oboInOwl:hasExactSynonym>
         <oboInOwl:id>HP:0003621</oboInOwl:id>
         <rdfs:label xml:lang="fr">Début d&apos;apparition juvénile</rdfs:label>
         <rdfs:label xml:lang="es">Inicio juvenil</rdfs:label>
@@ -10805,9 +10762,9 @@
         <obo:IAO_0000115>Onset of signs or symptoms of disease within the first 28 days of life.</obo:IAO_0000115>
         <oboInOwl:hasAlternativeId>HP:0003622</oboInOwl:hasAlternativeId>
         <oboInOwl:hasDbXref>UMLS:C1855106</oboInOwl:hasDbXref>
-        <oboInOwl:hasExactSynonym xml:lang="fr">Onset in first weeks of life|Onset in neonatal period</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>Neonatal onset</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>Onset in first weeks of life</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym xml:lang="fr">Onset in first weeks of life|Onset in neonatal period</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>Onset in neonatal period</oboInOwl:hasExactSynonym>
         <oboInOwl:id>HP:0003623</oboInOwl:id>
         <rdfs:label xml:lang="fr">Début néonatal</rdfs:label>
@@ -10851,7 +10808,6 @@
     <!-- http://purl.obolibrary.org/obo/HP_0003674 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0003674">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0031797"/>
         <obo:IAO_0000115>The age group in which disease manifestations appear.</obo:IAO_0000115>
         <oboInOwl:hasAlternativeId>HP:0003588</oboInOwl:hasAlternativeId>
         <oboInOwl:hasAlternativeId>HP:0003590</oboInOwl:hasAlternativeId>
@@ -10867,11 +10823,11 @@
         <oboInOwl:hasAlternativeId>HP:0003668</oboInOwl:hasAlternativeId>
         <oboInOwl:hasAlternativeId>HP:0011007</oboInOwl:hasAlternativeId>
         <oboInOwl:hasDbXref>UMLS:C0206132</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym>Age of onset</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>Age symptoms begin</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym xml:lang="fr">début de</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym xml:lang="fr">âge de début à l&apos;adolescence</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym xml:lang="fr">âge de début à l&apos;adolescence|d&apos;apparition d&apos;âge variable|d&apos;appararition à l&apos;enfance ou chez l&apos;adulte jeune|début de|âge de début</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>Age of onset</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>Age symptoms begin</oboInOwl:hasExactSynonym>
         <oboInOwl:id>HP:0003674</oboInOwl:id>
         <rdfs:comment>Adolescent is defined by WHO as a person between 10-19 years of age.</rdfs:comment>
         <rdfs:label xml:lang="es">Comienzo</rdfs:label>
@@ -10923,13 +10879,13 @@
         <oboInOwl:hasDbXref>UMLS:C0205329</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>UMLS:C1864985</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym xml:lang="fr">Progressif</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym xml:lang="fr">trouble évolutif</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>Worsens with time</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym xml:lang="fr">trouble évolutif</oboInOwl:hasExactSynonym>
         <oboInOwl:hasRelatedSynonym>Progressive disorder</oboInOwl:hasRelatedSynonym>
         <oboInOwl:id>HP:0003676</oboInOwl:id>
         <rdfs:label xml:lang="es">Progresivo</rdfs:label>
-        <rdfs:label xml:lang="fr">Trouble progressif</rdfs:label>
         <rdfs:label>Progressive</rdfs:label>
+        <rdfs:label xml:lang="fr">Trouble progressif</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0003676"/>
@@ -11064,12 +11020,11 @@
     <!-- http://purl.obolibrary.org/obo/HP_0003679 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0003679">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0031797"/>
         <oboInOwl:hasDbXref>UMLS:C4025580</oboInOwl:hasDbXref>
         <oboInOwl:id>HP:0003679</oboInOwl:id>
+        <rdfs:label>Pace of progression</rdfs:label>
         <rdfs:label xml:lang="es">Ritmo de progresión</rdfs:label>
         <rdfs:label xml:lang="fr">Rythme de la progression</rdfs:label>
-        <rdfs:label>Pace of progression</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0003679"/>
@@ -11634,10 +11589,10 @@
         <oboInOwl:hasAlternativeId>HP:0003824</oboInOwl:hasAlternativeId>
         <oboInOwl:hasDbXref>SNOMEDCT_US:276506001</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>UMLS:C0410916</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym>Neonatal lethal</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym xml:lang="fr">mort du nouveau-né</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym xml:lang="fr">mort du nouveau-né|mort néonatale fréquente|mort de la majortié des nourissons rapidement après la naissance</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym xml:lang="fr">mort néonatale fréquente</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>Neonatal lethal</oboInOwl:hasExactSynonym>
         <oboInOwl:id>HP:0003811</oboInOwl:id>
         <rdfs:label xml:lang="fr">Décès néonatal</rdfs:label>
         <rdfs:label xml:lang="es">Muerte neonatal</rdfs:label>
@@ -11685,13 +11640,13 @@
         <oboInOwl:hasAlternativeId>HP:0001432</oboInOwl:hasAlternativeId>
         <oboInOwl:hasAlternativeId>HP:0004149</oboInOwl:hasAlternativeId>
         <oboInOwl:hasDbXref>UMLS:C1843392</oboInOwl:hasDbXref>
-        <oboInOwl:hasExactSynonym xml:lang="fr">Mort précoce</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>Death in childhood</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym xml:lang="fr">Mort précoce</oboInOwl:hasExactSynonym>
         <oboInOwl:id>HP:0003819</oboInOwl:id>
         <rdfs:comment>previous def was: &apos;has part&apos; some (premature and (&apos;inheres in&apos; some death) and (&apos;has modifier&apos; some abnormal))</rdfs:comment>
+        <rdfs:label>Death in childhood</rdfs:label>
         <rdfs:label xml:lang="fr">Mort dans l&apos;enfance</rdfs:label>
         <rdfs:label xml:lang="es">Muerte en la infancia</rdfs:label>
-        <rdfs:label>Death in childhood</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0003819"/>
@@ -12532,6 +12487,18 @@
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0005268"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A pregnancy that ends at a stage in which the fetus is incapable of surviving on its own, defined as the spontaneous loss of a fetus before the 22th week of pregnancy.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0005268"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget>Early foetal demise</owl:annotatedTarget>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#uk_spelling"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0005268"/>
         <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
         <owl:annotatedTarget xml:lang="es">Aborto espontáneo</owl:annotatedTarget>
         <babelon:source_language>en</babelon:source_language>
@@ -12548,18 +12515,6 @@
         <babelon:source_value>Miscarriage</babelon:source_value>
         <babelon:translation_language>fr</babelon:translation_language>
         <babelon:translation_status>CANDIDATE</babelon:translation_status>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0005268"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>A pregnancy that ends at a stage in which the fetus is incapable of surviving on its own, defined as the spontaneous loss of a fetus before the 22th week of pregnancy.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0005268"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>Early foetal demise</owl:annotatedTarget>
-        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#uk_spelling"/>
     </owl:Axiom>
     
 
@@ -12618,12 +12573,6 @@
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0005949"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>Recurrent episodes of apnea occurring during infancy.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0005949"/>
         <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
         <owl:annotatedTarget xml:lang="es">Episodios de apnea en la infancia</owl:annotatedTarget>
         <babelon:source_language>en</babelon:source_language>
@@ -12640,6 +12589,12 @@
         <babelon:source_value>Apneic episodes in infancy</babelon:source_value>
         <babelon:translation_language>fr</babelon:translation_language>
         <babelon:translation_status>OFFICIAL</babelon:translation_status>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0005949"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>Recurrent episodes of apnea occurring during infancy.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
     </owl:Axiom>
     
 
@@ -13731,6 +13686,7 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0009127">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0011805"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0040064"/>
+        <obo:IAO_0000115>A structural anomaly of the appendicular musculature, comprising muscles of the upper limb and pectoral girdle as well as muscles of the lower limb and pelvic girdle.</obo:IAO_0000115>
         <terms:creator rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
         <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2008-04-07T02:00:00Z</terms:date>
         <oboInOwl:hasDbXref>UMLS:C4024582</oboInOwl:hasDbXref>
@@ -13740,7 +13696,7 @@
         <oboInOwl:id>HP:0009127</oboInOwl:id>
         <rdfs:label xml:lang="fr">Anomalie de la musculature des membres</rdfs:label>
         <rdfs:label xml:lang="es">Anomalía de la musculatura de las extremidades</rdfs:label>
-        <rdfs:label>Abnormality of the musculature of the limbs</rdfs:label>
+        <rdfs:label>Abnormal appendicular muscle morphology</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0009127"/>
@@ -13761,18 +13717,18 @@
         <owl:annotatedTarget xml:lang="fr">Anomalie de la musculature des membres</owl:annotatedTarget>
         <babelon:comment>label of HP:0009127 (Abnormality of the musculature of the limbs)  ; abnormality of limbs ; abnormality of the musculature</babelon:comment>
         <babelon:source_language>en</babelon:source_language>
-        <babelon:source_value>Abnormality of the musculature of the limbs</babelon:source_value>
+        <babelon:source_value>Abnormal appendicular muscle morphology</babelon:source_value>
         <babelon:translation_language>fr</babelon:translation_language>
-        <babelon:translation_status>OFFICIAL</babelon:translation_status>
+        <babelon:translation_status>CANDIDATE</babelon:translation_status>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0009127"/>
         <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
         <owl:annotatedTarget xml:lang="es">Anomalía de la musculatura de las extremidades</owl:annotatedTarget>
         <babelon:source_language>en</babelon:source_language>
-        <babelon:source_value>Abnormality of the musculature of the limbs</babelon:source_value>
+        <babelon:source_value>Abnormal appendicular muscle morphology</babelon:source_value>
         <babelon:translation_language>es</babelon:translation_language>
-        <babelon:translation_status>OFFICIAL</babelon:translation_status>
+        <babelon:translation_status>CANDIDATE</babelon:translation_status>
     </owl:Axiom>
     
 
@@ -13898,7 +13854,7 @@
     <!-- http://purl.obolibrary.org/obo/HP_0010876 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0010876">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0032180"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0430071"/>
         <obo:IAO_0000115>An abnormal level of a circulating protein in the blood.</obo:IAO_0000115>
         <terms:creator rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
         <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2010-09-07T01:51:12Z</terms:date>
@@ -14149,13 +14105,12 @@
     <!-- http://purl.obolibrary.org/obo/HP_0011420 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0011420">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0040006"/>
         <obo:IAO_0000115>The age group when the cessation of life happens.</obo:IAO_0000115>
         <oboInOwl:hasDbXref>UMLS:C1546180</oboInOwl:hasDbXref>
         <oboInOwl:id>HP:0011420</oboInOwl:id>
+        <rdfs:label>Age of death</rdfs:label>
         <rdfs:label xml:lang="fr">Décès</rdfs:label>
         <rdfs:label xml:lang="es">Edad de la muerte</rdfs:label>
-        <rdfs:label>Age of death</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0011420"/>
@@ -14454,14 +14409,14 @@
         <oboInOwl:hasAlternativeId>HP:0003586</oboInOwl:hasAlternativeId>
         <oboInOwl:hasAlternativeId>HP:0003617</oboInOwl:hasAlternativeId>
         <oboInOwl:hasDbXref>UMLS:C1837352</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym>Symptoms begin in childhood</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym xml:lang="fr">Symptoms begin in childhood</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym xml:lang="fr">d&apos;apparition entre trois mois et cinq ans</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>Symptoms begin in childhood</oboInOwl:hasExactSynonym>
         <oboInOwl:id>HP:0011463</oboInOwl:id>
         <rdfs:comment>This term refers to ages up to but not including the fifth birthday (see Juvenile onset).</rdfs:comment>
         <rdfs:label xml:lang="fr">Apparition chez l&apos;enfant</rdfs:label>
-        <rdfs:label xml:lang="es">Inicio en la infancia</rdfs:label>
         <rdfs:label>Childhood onset</rdfs:label>
+        <rdfs:label xml:lang="es">Inicio en la infancia</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0011463"/>
@@ -15111,8 +15066,6 @@
         <terms:creator rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
         <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2012-09-20T06:51:36Z</terms:date>
         <oboInOwl:hasBroadSynonym>Diminished capacity for joy</oboInOwl:hasBroadSynonym>
-        <oboInOwl:hasBroadSynonym>Joylessness</oboInOwl:hasBroadSynonym>
-        <oboInOwl:hasBroadSynonym>Lack of joy or delight</oboInOwl:hasBroadSynonym>
         <oboInOwl:hasBroadSynonym>Loss of enjoyment</oboInOwl:hasBroadSynonym>
         <oboInOwl:hasBroadSynonym>Reduced pleasure response</oboInOwl:hasBroadSynonym>
         <oboInOwl:hasDbXref>SNOMEDCT_US:247796005</oboInOwl:hasDbXref>
@@ -15134,18 +15087,13 @@
         <owl:annotatedTarget>Decreased ability or inability to experience, feel, or anticipate pleasure from activities, experiences, or stimuli that are typically found pleasurable by the individual. This may involve diminished enjoyment of previously rewarding experiences (e.g., hobbies, social interactions, or sexual activity) or reduced pleasure in response to stimuli processed through the senses (e.g., music, food, or tactile contact). Anhedonia is a disruption in the capacity to derive emotional reward and is not due to primary sensory deficits or medical conditions (e.g., anosmia from viral illness). The phenomenon involves altered affective processing rather than impaired sensory perception.</owl:annotatedTarget>
         <oboInOwl:hasDbXref>PMID:3107136</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>PMID:32789515</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>PMID:33631251</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>PMID:37424409</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0012154"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasBroadSynonym"/>
         <owl:annotatedTarget>Diminished capacity for joy</owl:annotatedTarget>
-        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#layperson"/>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0012154"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasBroadSynonym"/>
-        <owl:annotatedTarget>Joylessness</owl:annotatedTarget>
         <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#layperson"/>
     </owl:Axiom>
     <owl:Axiom>
@@ -16587,8 +16535,10 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0025792">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0011446"/>
+        <obo:IAO_0000115>An abnormal cognitive process can be defined as a deviation from the typical development, structural organization, or functional execution of mental operations that connect informational inputs to behavioral outputs, typically involve at least one of the following processes: perception, memory, learning, emotion, intentionality, self-representation, rationality, and decision-making.</obo:IAO_0000115>
         <terms:creator rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
         <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-08-07T17:25:08Z</terms:date>
+        <rdfs:comment>Definition adapted from Newen A (2017) What are cognitive processes? An example-based approach. Synthese 194:4251-4268.</rdfs:comment>
         <rdfs:label xml:lang="es">Proceso cognitivo anormal</rdfs:label>
         <rdfs:label>Abnormal cognitive process</rdfs:label>
     </owl:Class>
@@ -16705,6 +16655,64 @@
         <owl:annotatedTarget xml:lang="es">EMG: anomalía de fibra única</owl:annotatedTarget>
         <babelon:source_language>en</babelon:source_language>
         <babelon:source_value>Single fiber EMG abnormality</babelon:source_value>
+        <babelon:translation_language>es</babelon:translation_language>
+        <babelon:translation_status>OFFICIAL</babelon:translation_status>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/HP_0030051 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0030051">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0001288"/>
+        <obo:IAO_0000115>An abnormal gait pattern characterized by the failure of the heel to contact the floor at the onset of stance during gait.</obo:IAO_0000115>
+        <oboInOwl:hasAlternativeId>HP:0002394</oboInOwl:hasAlternativeId>
+        <oboInOwl:hasAlternativeId>HP:0040083</oboInOwl:hasAlternativeId>
+        <oboInOwl:hasDbXref>UMLS:C1843570</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym xml:lang="fr">Walking on tiptoes</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>Tiptoe gait</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>Toe walking</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>Walking on tiptoes</oboInOwl:hasExactSynonym>
+        <rdfs:comment>Tip-toe walking (or simply toe-walking) is common in healthy young children, and should resolve spontaneously by 3 years of age. After this age, tip-toe gait must be differentiated from habitual toe gait, congenital short tendo calcaneus, cerebral palsy, syringomyelia, spinal tumor, hematoma in a lower limb muscle, or neuromuscular diseases like muscular dystrophy, Charcot-Marie-Tooth disease and hereditary sensorimotor neuropathies. If the toe gait persists for 2-3 years, this gait pattern is not considered to be habitual. Therefore, the judgment of habitual toe gait should not be determined without evaluation for other diseases.</rdfs:comment>
+        <rdfs:label xml:lang="fr">Larche sur les bout des orteils</rdfs:label>
+        <rdfs:label xml:lang="es">Marcha en puntillas o puntas de pie</rdfs:label>
+        <rdfs:label>Tip-toe gait</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0030051"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>An abnormal gait pattern characterized by the failure of the heel to contact the floor at the onset of stance during gait.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>PMID:24757457</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>PMID:26709689</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0030051"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget>Toe walking</owl:annotatedTarget>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#layperson"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0030051"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget>Walking on tiptoes</owl:annotatedTarget>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#layperson"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0030051"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+        <owl:annotatedTarget xml:lang="fr">Larche sur les bout des orteils</owl:annotatedTarget>
+        <babelon:comment>label of HP:0030051 (Tip-toe gait)  ; abnormality of the nervous system</babelon:comment>
+        <babelon:source_language>en</babelon:source_language>
+        <babelon:source_value>Tip-toe gait</babelon:source_value>
+        <babelon:translation_language>fr</babelon:translation_language>
+        <babelon:translation_status>OFFICIAL</babelon:translation_status>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0030051"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+        <owl:annotatedTarget xml:lang="es">Marcha en puntillas o puntas de pie</owl:annotatedTarget>
+        <babelon:source_language>en</babelon:source_language>
+        <babelon:source_value>Tip-toe gait</babelon:source_value>
         <babelon:translation_language>es</babelon:translation_language>
         <babelon:translation_status>OFFICIAL</babelon:translation_status>
     </owl:Axiom>
@@ -18125,22 +18133,13 @@
         <terms:contributor rdf:resource="https://orcid.org/0000-0003-4618-6544"/>
         <terms:creator rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
         <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-09-17T16:33:45Z</terms:date>
-        <oboInOwl:hasBroadSynonym>Dysregulated emotions</oboInOwl:hasBroadSynonym>
-        <oboInOwl:hasBroadSynonym>Dysregulated moods</oboInOwl:hasBroadSynonym>
-        <oboInOwl:hasBroadSynonym>Maladaptive affect response</oboInOwl:hasBroadSynonym>
-        <oboInOwl:hasBroadSynonym>Maladaptive emotions</oboInOwl:hasBroadSynonym>
         <oboInOwl:hasBroadSynonym>Mood dysregulation</oboInOwl:hasBroadSynonym>
-        <oboInOwl:hasBroadSynonym>Negative valence dysregulation</oboInOwl:hasBroadSynonym>
         <oboInOwl:hasExactSynonym>Feeling bad</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>Feeling out of sorts</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>Foul mood</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>Gloomy mood</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>In a funk</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>Negative attitude</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>Overwhelming negative emotions</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>Pathologically negative emotions</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>Persistent negative affect state</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>Unregulated negative emotions</oboInOwl:hasExactSynonym>
         <rdfs:comment>Manifestations may be conveyed through self-report or observed through behavior, allowing applicability across the lifespan and in individuals with limited verbal communication. This term refers to an observed negative emotional state rather than enduring traits of personality or temperament.</rdfs:comment>
         <rdfs:label xml:lang="es">Afectividad negativa</rdfs:label>
         <rdfs:label xml:lang="fr">Affectivité négative</rdfs:label>
@@ -18521,6 +18520,93 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/HP_0032319 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0032319">
+        <obo:IAO_0000115>Health status of a family member with respect to the disease being investigated in a proband.</obo:IAO_0000115>
+        <terms:creator rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
+        <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-02-14T11:46:18Z</terms:date>
+        <rdfs:label xml:lang="es">Estado de salud</rdfs:label>
+        <rdfs:label>Health status</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0032319"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+        <owl:annotatedTarget xml:lang="es">Estado de salud</owl:annotatedTarget>
+        <babelon:source_language>en</babelon:source_language>
+        <babelon:source_value>Health status</babelon:source_value>
+        <babelon:translation_language>es</babelon:translation_language>
+        <babelon:translation_status>OFFICIAL</babelon:translation_status>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/HP_0032320 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0032320">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0032319"/>
+        <obo:IAO_0000115>This term applies to a family member who is diagnosed with the same condition as the individual who is the primary focus of investigation (the proband).</obo:IAO_0000115>
+        <terms:creator rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
+        <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-02-14T11:47:51Z</terms:date>
+        <rdfs:label xml:lang="es">Afectado</rdfs:label>
+        <rdfs:label>Affected</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0032320"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+        <owl:annotatedTarget xml:lang="es">Afectado</owl:annotatedTarget>
+        <babelon:source_language>en</babelon:source_language>
+        <babelon:source_value>Affected</babelon:source_value>
+        <babelon:translation_language>es</babelon:translation_language>
+        <babelon:translation_status>OFFICIAL</babelon:translation_status>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/HP_0032321 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0032321">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0032319"/>
+        <obo:IAO_0000115>This term applies to a family member in whom the diagnosis that is the primary focus of investigation is excluded.</obo:IAO_0000115>
+        <terms:creator rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
+        <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-02-14T11:48:40Z</terms:date>
+        <rdfs:label xml:lang="es">No afectado</rdfs:label>
+        <rdfs:label>Unaffected</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0032321"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+        <owl:annotatedTarget xml:lang="es">No afectado</owl:annotatedTarget>
+        <babelon:source_language>en</babelon:source_language>
+        <babelon:source_value>Unaffected</babelon:source_value>
+        <babelon:translation_language>es</babelon:translation_language>
+        <babelon:translation_status>OFFICIAL</babelon:translation_status>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/HP_0032322 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0032322">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0032319"/>
+        <obo:IAO_0000115>No history of any serious disease, including the disease being investigated in the proband.</obo:IAO_0000115>
+        <terms:creator rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
+        <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-02-14T11:49:52Z</terms:date>
+        <rdfs:label>Healthy</rdfs:label>
+        <rdfs:label xml:lang="es">Saludable</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0032322"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+        <owl:annotatedTarget xml:lang="es">Saludable</owl:annotatedTarget>
+        <babelon:source_language>en</babelon:source_language>
+        <babelon:source_value>Healthy</babelon:source_value>
+        <babelon:translation_language>es</babelon:translation_language>
+        <babelon:translation_status>OFFICIAL</babelon:translation_status>
+    </owl:Axiom>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/HP_0032341 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0032341">
@@ -18553,6 +18639,35 @@
         <owl:annotatedTarget xml:lang="es">Capacidad vital forzada reducida</owl:annotatedTarget>
         <babelon:source_language>en</babelon:source_language>
         <babelon:source_value>Reduced forced vital capacity</babelon:source_value>
+        <babelon:translation_language>es</babelon:translation_language>
+        <babelon:translation_status>OFFICIAL</babelon:translation_status>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/HP_0032355 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0032355">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0030878"/>
+        <obo:IAO_0000115>A reduction in the maximum expiratory flow per minute, which can be used to measure how fast a subject can exhale as well as to judge the strength of the expiratory muscles and the condition of the large airways.</obo:IAO_0000115>
+        <terms:creator rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
+        <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-02-23T16:59:55Z</terms:date>
+        <rdfs:label xml:lang="es">Disminución del flujo espiratorio máximo</rdfs:label>
+        <rdfs:label>Decreased peak expiratory flow</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0032355"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A reduction in the maximum expiratory flow per minute, which can be used to measure how fast a subject can exhale as well as to judge the strength of the expiratory muscles and the condition of the large airways.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:resource="https://orcid.org/0000-0002-8169-9049"/>
+        <oboInOwl:hasDbXref>PMID:28005993</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0032355"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+        <owl:annotatedTarget xml:lang="es">Disminución del flujo espiratorio máximo</owl:annotatedTarget>
+        <babelon:source_language>en</babelon:source_language>
+        <babelon:source_value>Decreased peak expiratory flow</babelon:source_value>
         <babelon:translation_language>es</babelon:translation_language>
         <babelon:translation_status>OFFICIAL</babelon:translation_status>
     </owl:Axiom>
@@ -19195,38 +19310,6 @@
     
 
 
-    <!-- http://purl.obolibrary.org/obo/HP_0040006 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0040006">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0031797"/>
-        <terms:creator rdf:resource="https://orcid.org/0000-0002-5316-1399"/>
-        <oboInOwl:hasDbXref>UMLS:C4022499</oboInOwl:hasDbXref>
-        <rdfs:label xml:lang="es">Mortalidad/Envejecimiento</rdfs:label>
-        <rdfs:label xml:lang="fr">Mortalité/Vieillissement</rdfs:label>
-        <rdfs:label>Mortality/Aging</rdfs:label>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0040006"/>
-        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
-        <owl:annotatedTarget xml:lang="es">Mortalidad/Envejecimiento</owl:annotatedTarget>
-        <babelon:source_language>en</babelon:source_language>
-        <babelon:source_value>Mortality/Aging</babelon:source_value>
-        <babelon:translation_language>es</babelon:translation_language>
-        <babelon:translation_status>OFFICIAL</babelon:translation_status>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0040006"/>
-        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
-        <owl:annotatedTarget xml:lang="fr">Mortalité/Vieillissement</owl:annotatedTarget>
-        <babelon:comment>label of HP:0040006 (Mortality/Aging)  ; mortality_aging</babelon:comment>
-        <babelon:source_language>en</babelon:source_language>
-        <babelon:source_value>Mortality/Aging</babelon:source_value>
-        <babelon:translation_language>fr</babelon:translation_language>
-        <babelon:translation_status>OFFICIAL</babelon:translation_status>
-    </owl:Axiom>
-    
-
-
     <!-- http://purl.obolibrary.org/obo/HP_0040064 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0040064">
@@ -19295,24 +19378,21 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0040081">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0011021"/>
-        <obo:IAO_0000115>Any deviation from the normal circulating creatine kinase concentration.</obo:IAO_0000115>
+        <obo:IAO_0000115>Any deviation from the normal activity of creatine kinase in the blood circulation.</obo:IAO_0000115>
+        <terms:contributor rdf:resource="https://orcid.org/0000-0001-7941-2961"/>
         <terms:creator rdf:resource="https://orcid.org/0000-0002-5316-1399"/>
         <oboInOwl:hasDbXref>UMLS:C4022449</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym xml:lang="fr">Abnormal levels of creatine kinase in blood</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>Abnormal circulating CK concentration</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>Abnormal circulating CPK concentration</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>Abnormal circulating creatine kinase activity</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>Abnormal circulation phospho-CK concentration</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>Abnormal creatine kinase level</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>Abnormal levels of creatine kinase in blood</oboInOwl:hasExactSynonym>
         <rdfs:label xml:lang="es">Niveles anormales de creatin-quinasa en la sangre</rdfs:label>
         <rdfs:label xml:lang="fr">Taux plasmatique de créatine kinase anormal</rdfs:label>
-        <rdfs:label>Abnormal circulating creatine kinase concentration</rdfs:label>
+        <rdfs:label>Abnormal circulating creatine kinase activity</rdfs:label>
     </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0040081"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>Any deviation from the normal circulating creatine kinase concentration.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:resource="https://orcid.org/0000-0001-7941-2961"/>
-    </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0040081"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
@@ -19338,9 +19418,9 @@
         <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
         <owl:annotatedTarget xml:lang="es">Niveles anormales de creatin-quinasa en la sangre</owl:annotatedTarget>
         <babelon:source_language>en</babelon:source_language>
-        <babelon:source_value>Abnormal circulating creatine kinase concentration</babelon:source_value>
+        <babelon:source_value>Abnormal circulating creatine kinase activity</babelon:source_value>
         <babelon:translation_language>es</babelon:translation_language>
-        <babelon:translation_status>OFFICIAL</babelon:translation_status>
+        <babelon:translation_status>CANDIDATE</babelon:translation_status>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0040081"/>
@@ -19348,9 +19428,9 @@
         <owl:annotatedTarget xml:lang="fr">Taux plasmatique de créatine kinase anormal</owl:annotatedTarget>
         <babelon:comment>label of HP:0040081 (Abnormal circulating creatine kinase concentration)  ; abnormality of metabolism/homeostasis</babelon:comment>
         <babelon:source_language>en</babelon:source_language>
-        <babelon:source_value>Abnormal circulating creatine kinase concentration</babelon:source_value>
+        <babelon:source_value>Abnormal circulating creatine kinase activity</babelon:source_value>
         <babelon:translation_language>fr</babelon:translation_language>
-        <babelon:translation_status>OFFICIAL</babelon:translation_status>
+        <babelon:translation_status>CANDIDATE</babelon:translation_status>
     </owl:Axiom>
     
 
@@ -19476,6 +19556,40 @@
         <babelon:source_value>Abnormal consumption behavior</babelon:source_value>
         <babelon:translation_language>es</babelon:translation_language>
         <babelon:translation_status>OFFICIAL</babelon:translation_status>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/HP_0040286 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0040286">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0011805"/>
+        <obo:IAO_0000115>A structural anomaly of the axial musculature, comprising muscles of the head and neck, muscles of the vertebral column, muscles of the thoracic wall, muscles of the abdominal wall, and muscles of the pelvic floor.</obo:IAO_0000115>
+        <terms:creator rdf:resource="https://orcid.org/0000-0002-5316-1399"/>
+        <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-03-10T14:04:28Z</terms:date>
+        <oboInOwl:hasExactSynonym>Abnormality of axial muscles</oboInOwl:hasExactSynonym>
+        <rdfs:label xml:lang="fr">Anomalie des muscles axiaux</rdfs:label>
+        <rdfs:label xml:lang="es">Anormalidad de los músculos axiales</rdfs:label>
+        <rdfs:label>Abnormal axial muscle morphology</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0040286"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+        <owl:annotatedTarget xml:lang="fr">Anomalie des muscles axiaux</owl:annotatedTarget>
+        <babelon:comment>label of HP:0040286 (Abnormality of axial muscles)  ; abnormality of the musculature</babelon:comment>
+        <babelon:source_language>en</babelon:source_language>
+        <babelon:source_value>Abnormal axial muscle morphology</babelon:source_value>
+        <babelon:translation_language>fr</babelon:translation_language>
+        <babelon:translation_status>CANDIDATE</babelon:translation_status>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0040286"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+        <owl:annotatedTarget xml:lang="es">Anormalidad de los músculos axiales</owl:annotatedTarget>
+        <babelon:source_language>en</babelon:source_language>
+        <babelon:source_value>Abnormal axial muscle morphology</babelon:source_value>
+        <babelon:translation_language>es</babelon:translation_language>
+        <babelon:translation_status>CANDIDATE</babelon:translation_status>
     </owl:Axiom>
     
 
@@ -19906,6 +20020,7 @@
         <terms:contributor rdf:resource="https://orcid.org/0000-0003-4618-6544"/>
         <terms:creator rdf:resource="https://orcid.org/0009-0006-4530-3154"/>
         <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2011-06-23T11:07:13Z</terms:date>
+        <oboInOwl:hasBroadSynonym>Affective dysregulation</oboInOwl:hasBroadSynonym>
         <oboInOwl:hasBroadSynonym>Emotional dysregulation</oboInOwl:hasBroadSynonym>
         <oboInOwl:hasBroadSynonym>Mood disturbance</oboInOwl:hasBroadSynonym>
         <oboInOwl:hasBroadSynonym>Psychological distress</oboInOwl:hasBroadSynonym>
@@ -19921,6 +20036,7 @@
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0100851"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A disturbance in the experience or expression of emotion, characterized by alterations in valence, intensity, frequency, or duration. It may also involve emotional responses that are mismatched, exaggerated, or incongruent relative to internal expectations or external contextual stimuli, such as experiencing negative affect in response to neutral or positive events.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>PMID:35461985</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>PMID:37925091</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
@@ -20047,8 +20163,8 @@
         <obo:IAO_0000115>Onset of disease manifestations before adulthood, defined here as before the age of 16 years, but excluding neonatal or congenital onset.</obo:IAO_0000115>
         <terms:creator rdf:resource="https://orcid.org/0000-0001-5208-3432"/>
         <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-11-01T15:27:45Z</terms:date>
-        <oboInOwl:hasExactSynonym xml:lang="fr">Onset before adulthood</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>Onset before adulthood</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym xml:lang="fr">Onset before adulthood</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>Paediatric onset</oboInOwl:hasExactSynonym>
         <rdfs:label xml:lang="fr">Apparition en pédiatrie</rdfs:label>
         <rdfs:label xml:lang="es">Inicio pediátrico</rdfs:label>
@@ -20082,6 +20198,28 @@
         <owl:annotatedTarget xml:lang="es">Inicio pediátrico</owl:annotatedTarget>
         <babelon:source_language>en</babelon:source_language>
         <babelon:source_value>Pediatric onset</babelon:source_value>
+        <babelon:translation_language>es</babelon:translation_language>
+        <babelon:translation_status>OFFICIAL</babelon:translation_status>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/HP_0430071 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0430071">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0032180"/>
+        <obo:IAO_0000115>Any deviation of the concentration of an orrganic compound from the normal range. An organic compound is defined as any compound that contains a carbon atom.</obo:IAO_0000115>
+        <terms:creator rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
+        <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-01-30T05:58:49Z</terms:date>
+        <rdfs:label xml:lang="es">Concentración anormal de compuestos orgánicos circulantes.</rdfs:label>
+        <rdfs:label>Abnormal circulating organic compound concentration</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0430071"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+        <owl:annotatedTarget xml:lang="es">Concentración anormal de compuestos orgánicos circulantes.</owl:annotatedTarget>
+        <babelon:source_language>en</babelon:source_language>
+        <babelon:source_value>Abnormal circulating organic compound concentration</babelon:source_value>
         <babelon:translation_language>es</babelon:translation_language>
         <babelon:translation_status>OFFICIAL</babelon:translation_status>
     </owl:Axiom>

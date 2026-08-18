@@ -1,0 +1,34 @@
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX obo: <http://purl.obolibrary.org/obo/>
+PREFIX oboInOwl: <http://www.geneontology.org/formats/oboInOwl#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+DELETE {
+  ?annotationProperty ?value
+}
+WHERE {
+  ?entity ?annotationProperty ?value .
+  FILTER(isIRI(?annotationProperty))
+  FILTER(?annotationProperty NOT IN (
+    rdfs:label,
+    obo:IAO_0000115,
+    oboInOwl:hasExactSynonym,
+    skos:altLabel,
+    skos:definition
+  ))
+  FILTER NOT EXISTS {
+    ?entity a owl:Class .
+  }
+  FILTER NOT EXISTS {
+    ?entity a owl:ObjectProperty .
+  }
+  FILTER NOT EXISTS {
+    ?entity a owl:DatatypeProperty .
+  }
+  FILTER NOT EXISTS {
+    ?entity a owl:AnnotationProperty .
+  }
+  FILTER NOT EXISTS {
+    ?entity a rdf:Property .
+  }
+}
