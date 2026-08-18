@@ -35,9 +35,11 @@ The latest version of the ontology can always be found at:
 
 (note this will not show up until the request has been approved by obofoundry.org)
 
+Others versions can be found at (note that it can differ from the latest version):
+
 * [PROMOT initiative website](https://www.promotinitiative.com/project/ontology)
 
-* [Bioportal link]()
+* [Bioportal link](https://bioportal.bioontology.org/ontologies/PROMOT)
 
 ### Editors' version
 
@@ -49,13 +51,13 @@ Editors of this ontology should use the edit version, [src/ontology/promot-edit.
 * Paul Fabry MD, PhD student (University of Sherbrooke, Québec CA)
 
 ## Contributors
-* Anita Burgun MD, PhD (AP-HP Assistance publique - Hôpitaux de Paris, France)
+* Anita Burgun MD, PhD (Assistance publique - Hôpitaux de Paris, Imagine Institute, Université Paris Cité, France)
 * Carole Faviez PhD, research engineer (Imagine Institute, Paris, France)
 * Elizabeth Angelevski DC, project manager (University of Sherbrooke, Québec CA)
 * Mansoore Gholizade MD (University of Sherbrooke, Québec CA)
-* Daniel Natera de Benito MD, PhD (Hospital Sant Joan de Déu, Barcelona, Spain)
+* Daniel Natera-de Benito MD, PhD (Hospital Sant Joan de Déu, Barcelona, Spain)
 * Claudia Côté RD, PhD (University of Sherbrooke, Québec CA)
-* Hanns Lochmuller MD (University of Ottawa, Children's Hospital of Eastern Ontario, Ontario CA)
+* Hanns Lochmüller MD (University of Ottawa, Children's Hospital of Eastern Ontario, Ontario CA)
 * Alexandre Girard (University of Sherbrooke, Québec CA)
 * Xuanning Yang, medical student (University of Sherbrooke, Québec CA)
 
@@ -84,7 +86,7 @@ This work has been supported by the PROMOT project. It has received funding from
 More informations about PROMOT initiative can be found on [PROMOT initiative website](https://www.promotinitiative.com/).
 
 ### European Joint Programme On Rare Diseases
-<img src="https://github.com/JuPoIm/promot/blob/test/site/assets/images/EJP-RD-1024x226.png" height=200 width=300/><img src="https://github.com/JuPoIm/promot/blob/test/site/assets/images/Flag_of_Europe.png" height=50 width=75/> <img src="https://github.com/JuPoIm/promot/blob/test/site/assets/images/logo-inserm-300x124.jpg" height=50 width=75/>
+<img src="https://github.com/JuPoIm/promot/blob/test/site/assets/images/EJP-RD.png" height=200 width=300/><img src="https://github.com/JuPoIm/promot/blob/test/site/assets/images/Flag_of_Europe.png" height=50 width=75/> <img src="https://github.com/JuPoIm/promot/blob/test/site/assets/images/logo-inserm-300x124.jpg" height=50 width=75/>
 
 The EJP RD initiative has received funding from the European Union’s Horizon 2020 research and innovation programme under grant agreement N°825575.
 

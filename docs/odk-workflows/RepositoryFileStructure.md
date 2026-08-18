@@ -40,3 +40,4 @@ These are the components in PROMOT
 | Filename | URL |
 | -------- | --- |
 | promot-component.owl | None |
+| promot-component-en.owl | None |
