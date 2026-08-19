@@ -44,7 +44,6 @@
      xmlns:BIOLINK="https://w3id.org/biolink/vocab/"
      xmlns:babelon="https://w3id.org/babelon/"
      xmlns:omoprel="https://w3id.org/cpont/omop/relations/"
-     xmlns:sct-ext="http://data.esante.gouv.fr/NRC-France/sct-ext#"
      xmlns:subsets="http://purl.obolibrary.org/obo/ro/subsets#"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#"
      xmlns:omoptype="https://w3id.org/cpont/omop/types/"
@@ -59,8 +58,8 @@
      xmlns:CPATH_VISIT_OCCURRENCE="https://w3id.org/cpont/visit_occurrence/"
      xmlns:CPATH_CONDITION_OCCURRENCE="https://w3id.org/cpont/condition_occurrence/">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/promot/imports/snomed_import.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/promot/releases/2026-07-13/imports/snomed_import.owl"/>
-        <owl:versionInfo>2026-07-13</owl:versionInfo>
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/promot/releases/2026-08-17/imports/snomed_import.owl"/>
+        <owl:versionInfo>2026-08-17</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -76,45 +75,15 @@
     
 
 
-    <!-- http://data.esante.gouv.fr/NRC-France/sct-ext#definitionStatus -->
+    <!-- http://purl.obolibrary.org/obo/IAO_0000115 -->
 
-    <owl:AnnotationProperty rdf:about="http://data.esante.gouv.fr/NRC-France/sct-ext#definitionStatus"/>
-    
-
-
-    <!-- http://data.esante.gouv.fr/NRC-France/sct-ext#fsn -->
-
-    <owl:AnnotationProperty rdf:about="http://data.esante.gouv.fr/NRC-France/sct-ext#fsn"/>
-    
-
-
-    <!-- http://purl.org/dc/elements/1.1/type -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/type"/>
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000115"/>
     
 
 
     <!-- http://www.w3.org/2000/01/rdf-schema#label -->
 
     <owl:AnnotationProperty rdf:about="http://www.w3.org/2000/01/rdf-schema#label"/>
-    
-
-
-    <!-- http://www.w3.org/2004/02/skos/core#altLabel -->
-
-    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#altLabel"/>
-    
-
-
-    <!-- http://www.w3.org/2004/02/skos/core#definition -->
-
-    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#definition"/>
-    
-
-
-    <!-- http://www.w3.org/2004/02/skos/core#notation -->
-
-    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#notation"/>
     
 
 
@@ -133,14 +102,7 @@
 
     <owl:Class rdf:about="http://snomed.info/id/11286003">
         <rdfs:subClassOf rdf:resource="http://snomed.info/id/82101005"/>
-        <sct-ext:definitionStatus>Primitif</sct-ext:definitionStatus>
-        <sct-ext:fsn xml:lang="en">Twin sibling (person)</sct-ext:fsn>
-        <dc11:type>person</dc11:type>
         <rdfs:label xml:lang="en">Twin sibling</rdfs:label>
-        <rdfs:label xml:lang="es">hermano mellizo de sexo femenino o masculino</rdfs:label>
-        <rdfs:label xml:lang="fr">jumeau ou jumelle</rdfs:label>
-        <skos:altLabel xml:lang="fr">frère jumeau ou sœur jumelle</skos:altLabel>
-        <skos:notation>11286003</skos:notation>
     </owl:Class>
     
 
@@ -148,15 +110,8 @@
     <!-- http://snomed.info/id/113160008 -->
 
     <owl:Class rdf:about="http://snomed.info/id/113160008">
-        <sct-ext:definitionStatus>Primitif</sct-ext:definitionStatus>
-        <sct-ext:fsn xml:lang="en">Natural son (person)</sct-ext:fsn>
-        <dc11:type>person</dc11:type>
+        <rdfs:label xml:lang="en">Biological son</rdfs:label>
         <rdfs:label xml:lang="en">Natural son</rdfs:label>
-        <rdfs:label xml:lang="fr">fils biologique</rdfs:label>
-        <rdfs:label xml:lang="es">hijo natural</rdfs:label>
-        <skos:altLabel xml:lang="en">Biological son</skos:altLabel>
-        <skos:altLabel xml:lang="es">hijo biológico</skos:altLabel>
-        <skos:notation>113160008</skos:notation>
     </owl:Class>
     
 
@@ -164,18 +119,8 @@
     <!-- http://snomed.info/id/1153637007 -->
 
     <owl:Class rdf:about="http://snomed.info/id/1153637007">
-        <sct-ext:definitionStatus>Défini</sct-ext:definitionStatus>
-        <sct-ext:fsn xml:lang="en">Body height (observable entity)</sct-ext:fsn>
-        <dc11:type>observable entity</dc11:type>
+        <obo:IAO_0000115 xml:lang="en">The distance from the base to the top of a subject&apos;s entire body.</obo:IAO_0000115>
         <rdfs:label xml:lang="en">Body height</rdfs:label>
-        <rdfs:label xml:lang="es">altura corporal</rdfs:label>
-        <rdfs:label xml:lang="fr">taille corporelle</rdfs:label>
-        <skos:altLabel xml:lang="es">estatura</skos:altLabel>
-        <skos:altLabel xml:lang="fr">stature</skos:altLabel>
-        <skos:altLabel xml:lang="fr">taille</skos:altLabel>
-        <skos:definition xml:lang="es">La distancia desde el piso hasta el vértice del cráneo del cuerpo de un individuo.</skos:definition>
-        <skos:definition xml:lang="en">The distance from the base to the top of a subject&apos;s entire body.</skos:definition>
-        <skos:notation>1153637007</skos:notation>
     </owl:Class>
     
 
@@ -184,17 +129,10 @@
 
     <owl:Class rdf:about="http://snomed.info/id/1255320005">
         <rdfs:subClassOf rdf:resource="http://snomed.info/id/224899006"/>
-        <sct-ext:definitionStatus>Primitif</sct-ext:definitionStatus>
-        <sct-ext:fsn xml:lang="en">Wheeled walker (physical object)</sct-ext:fsn>
-        <dc11:type>physical object</dc11:type>
+        <obo:IAO_0000115 xml:lang="en">A walking aid that consists of a frame with 3 or 4 wheels that allow the walker to move freely without lifting or tilting.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">Mobilator</rdfs:label>
+        <rdfs:label xml:lang="en">Rollator</rdfs:label>
         <rdfs:label xml:lang="en">Wheeled walker</rdfs:label>
-        <rdfs:label xml:lang="es">andador con ruedas</rdfs:label>
-        <rdfs:label xml:lang="fr">déambulateur à roues</rdfs:label>
-        <skos:altLabel xml:lang="en">Mobilator</skos:altLabel>
-        <skos:altLabel xml:lang="en">Rollator</skos:altLabel>
-        <skos:definition xml:lang="en">A walking aid that consists of a frame with 3 or 4 wheels that allow the walker to move freely without lifting or tilting.</skos:definition>
-        <skos:definition xml:lang="es">Un dispositivo de apoyo para la marcha que consiste en una estructura con 3 o 4 ruedas que permite al caminante moverse con libertad sin necesidad de levantarlo o inclinarlo.</skos:definition>
-        <skos:notation>1255320005</skos:notation>
     </owl:Class>
     
 
@@ -203,16 +141,8 @@
 
     <owl:Class rdf:about="http://snomed.info/id/125678001">
         <rdfs:subClassOf rdf:resource="http://snomed.info/id/125679009"/>
-        <sct-ext:definitionStatus>Primitif</sct-ext:definitionStatus>
-        <sct-ext:fsn xml:lang="en">First degree blood relative (person)</sct-ext:fsn>
-        <dc11:type>person</dc11:type>
+        <rdfs:label xml:lang="en">First degree biological relative</rdfs:label>
         <rdfs:label xml:lang="en">First degree blood relative</rdfs:label>
-        <rdfs:label xml:lang="es">familiar consanguíneo de primer grado</rdfs:label>
-        <rdfs:label xml:lang="fr">parent(e) au premier degré</rdfs:label>
-        <skos:altLabel xml:lang="en">First degree biological relative</skos:altLabel>
-        <skos:altLabel xml:lang="es">familiar directo</skos:altLabel>
-        <skos:altLabel xml:lang="es">pariente biológico de primer grado</skos:altLabel>
-        <skos:notation>125678001</skos:notation>
     </owl:Class>
     
 
@@ -220,16 +150,8 @@
     <!-- http://snomed.info/id/125679009 -->
 
     <owl:Class rdf:about="http://snomed.info/id/125679009">
-        <sct-ext:definitionStatus>Primitif</sct-ext:definitionStatus>
-        <sct-ext:fsn xml:lang="en">Blood relative (person)</sct-ext:fsn>
-        <dc11:type>person</dc11:type>
+        <rdfs:label xml:lang="en">Biological relative</rdfs:label>
         <rdfs:label xml:lang="en">Blood relative</rdfs:label>
-        <rdfs:label xml:lang="es">familiar consanguíneo</rdfs:label>
-        <rdfs:label xml:lang="fr">parent(e) biologique</rdfs:label>
-        <skos:altLabel xml:lang="en">Biological relative</skos:altLabel>
-        <skos:altLabel xml:lang="es">pariente biológico</skos:altLabel>
-        <skos:altLabel xml:lang="fr">personne de la même famille</skos:altLabel>
-        <skos:notation>125679009</skos:notation>
     </owl:Class>
     
 
@@ -237,13 +159,7 @@
     <!-- http://snomed.info/id/125680007 -->
 
     <owl:Class rdf:about="http://snomed.info/id/125680007">
-        <sct-ext:definitionStatus>Primitif</sct-ext:definitionStatus>
-        <sct-ext:fsn xml:lang="en">Marital status (observable entity)</sct-ext:fsn>
-        <dc11:type>observable entity</dc11:type>
         <rdfs:label xml:lang="en">Marital status</rdfs:label>
-        <rdfs:label xml:lang="es">estado civil</rdfs:label>
-        <rdfs:label xml:lang="fr">état matrimonial</rdfs:label>
-        <skos:notation>125680007</skos:notation>
     </owl:Class>
     
 
@@ -251,14 +167,7 @@
     <!-- http://snomed.info/id/128927009 -->
 
     <owl:Class rdf:about="http://snomed.info/id/128927009">
-        <sct-ext:definitionStatus>Défini</sct-ext:definitionStatus>
-        <sct-ext:fsn xml:lang="en">Procedure by method (procedure)</sct-ext:fsn>
-        <dc11:type>procedure</dc11:type>
         <rdfs:label xml:lang="en">Procedure by method</rdfs:label>
-        <rdfs:label xml:lang="es">procedimiento clasificado según el método</rdfs:label>
-        <rdfs:label xml:lang="fr">procédure selon la méthode</rdfs:label>
-        <skos:altLabel xml:lang="fr">intervention selon la méthode</skos:altLabel>
-        <skos:notation>128927009</skos:notation>
     </owl:Class>
     
 
@@ -266,15 +175,8 @@
     <!-- http://snomed.info/id/12894003 -->
 
     <owl:Class rdf:about="http://snomed.info/id/12894003">
-        <sct-ext:definitionStatus>Défini</sct-ext:definitionStatus>
-        <sct-ext:fsn xml:lang="en">Functional assessment (procedure)</sct-ext:fsn>
-        <dc11:type>procedure</dc11:type>
+        <obo:IAO_0000115 xml:lang="en">An evaluation of the performance of an organ, organ system, or body part</obo:IAO_0000115>
         <rdfs:label xml:lang="en">Functional assessment</rdfs:label>
-        <rdfs:label xml:lang="es">evaluación funcional</rdfs:label>
-        <rdfs:label xml:lang="fr">évaluation fonctionnelle</rdfs:label>
-        <skos:definition xml:lang="en">An evaluation of the performance of an organ, organ system, or body part</skos:definition>
-        <skos:definition xml:lang="es">Evaluación de la función de un órgano, sistema orgánico o parte corporal</skos:definition>
-        <skos:notation>12894003</skos:notation>
     </owl:Class>
     
 
@@ -282,15 +184,8 @@
     <!-- http://snomed.info/id/13646006 -->
 
     <owl:Class rdf:about="http://snomed.info/id/13646006">
-        <sct-ext:definitionStatus>Primitif</sct-ext:definitionStatus>
-        <sct-ext:fsn xml:lang="en">Natural parent (person)</sct-ext:fsn>
-        <dc11:type>person</dc11:type>
+        <rdfs:label xml:lang="en">Biological parent</rdfs:label>
         <rdfs:label xml:lang="en">Natural parent</rdfs:label>
-        <rdfs:label xml:lang="es">padres naturales</rdfs:label>
-        <rdfs:label xml:lang="fr">parent biologique</rdfs:label>
-        <skos:altLabel xml:lang="en">Biological parent</skos:altLabel>
-        <skos:altLabel xml:lang="es">padres biológicos</skos:altLabel>
-        <skos:notation>13646006</skos:notation>
     </owl:Class>
     
 
@@ -299,21 +194,15 @@
 
     <owl:Class rdf:about="http://snomed.info/id/160476009">
         <rdfs:subClassOf rdf:resource="http://snomed.info/id/363787002"/>
-        <sct-ext:definitionStatus>Primitif</sct-ext:definitionStatus>
-        <sct-ext:fsn xml:lang="en">Social / personal history observable (observable entity)</sct-ext:fsn>
-        <dc11:type>observable entity</dc11:type>
+        <rdfs:label xml:lang="en">PH - Personal history</rdfs:label>
+        <rdfs:label xml:lang="en">Personal and social circumstances</rdfs:label>
+        <rdfs:label xml:lang="en">Personal details</rdfs:label>
+        <rdfs:label xml:lang="en">Personal history</rdfs:label>
+        <rdfs:label xml:lang="en">SH - Social history</rdfs:label>
         <rdfs:label xml:lang="en">Social / personal history observable</rdfs:label>
-        <rdfs:label xml:lang="es">característica observable relacionada con antecedente personal / social</rdfs:label>
-        <rdfs:label xml:lang="fr">entité observable dans des antécédents personnels ou sociaux</rdfs:label>
-        <skos:altLabel xml:lang="en">PH - Personal history</skos:altLabel>
-        <skos:altLabel xml:lang="en">Personal and social circumstances</skos:altLabel>
-        <skos:altLabel xml:lang="en">Personal details</skos:altLabel>
-        <skos:altLabel xml:lang="en">Personal history</skos:altLabel>
-        <skos:altLabel xml:lang="en">SH - Social history</skos:altLabel>
-        <skos:altLabel xml:lang="en">Social and personal circumstances</skos:altLabel>
-        <skos:altLabel xml:lang="en">Social and personal history</skos:altLabel>
-        <skos:altLabel xml:lang="en">Social history</skos:altLabel>
-        <skos:notation>160476009</skos:notation>
+        <rdfs:label xml:lang="en">Social and personal circumstances</rdfs:label>
+        <rdfs:label xml:lang="en">Social and personal history</rdfs:label>
+        <rdfs:label xml:lang="en">Social history</rdfs:label>
     </owl:Class>
     
 
@@ -321,17 +210,10 @@
     <!-- http://snomed.info/id/17945006 -->
 
     <owl:Class rdf:about="http://snomed.info/id/17945006">
-        <sct-ext:definitionStatus>Primitif</sct-ext:definitionStatus>
-        <sct-ext:fsn xml:lang="en">Natural grandmother (person)</sct-ext:fsn>
-        <dc11:type>person</dc11:type>
+        <rdfs:label xml:lang="en">Biological grand-mother</rdfs:label>
+        <rdfs:label xml:lang="en">Biological grandmother</rdfs:label>
+        <rdfs:label xml:lang="en">Natural grand-mother</rdfs:label>
         <rdfs:label xml:lang="en">Natural grandmother</rdfs:label>
-        <rdfs:label xml:lang="es">abuela natural</rdfs:label>
-        <rdfs:label xml:lang="fr">grand-mère biologique</rdfs:label>
-        <skos:altLabel xml:lang="en">Biological grand-mother</skos:altLabel>
-        <skos:altLabel xml:lang="en">Biological grandmother</skos:altLabel>
-        <skos:altLabel xml:lang="en">Natural grand-mother</skos:altLabel>
-        <skos:altLabel xml:lang="es">abuela biológica</skos:altLabel>
-        <skos:notation>17945006</skos:notation>
     </owl:Class>
     
 
@@ -340,14 +222,8 @@
 
     <owl:Class rdf:about="http://snomed.info/id/183147006">
         <rdfs:subClassOf rdf:resource="http://snomed.info/id/224899006"/>
-        <sct-ext:definitionStatus>Primitif</sct-ext:definitionStatus>
-        <sct-ext:fsn xml:lang="en">Tripod (physical object)</sct-ext:fsn>
-        <dc11:type>physical object</dc11:type>
         <rdfs:label xml:lang="en">Tripod</rdfs:label>
-        <rdfs:label xml:lang="fr">canne tripode</rdfs:label>
-        <rdfs:label xml:lang="es">trípode</rdfs:label>
-        <skos:altLabel xml:lang="en">Walking tripod</skos:altLabel>
-        <skos:notation>183147006</skos:notation>
+        <rdfs:label xml:lang="en">Walking tripod</rdfs:label>
     </owl:Class>
     
 
@@ -355,14 +231,8 @@
     <!-- http://snomed.info/id/184099003 -->
 
     <owl:Class rdf:about="http://snomed.info/id/184099003">
-        <sct-ext:definitionStatus>Primitif</sct-ext:definitionStatus>
-        <sct-ext:fsn xml:lang="en">Date of birth (observable entity)</sct-ext:fsn>
-        <dc11:type>observable entity</dc11:type>
+        <rdfs:label xml:lang="en">DOB - Date of birth</rdfs:label>
         <rdfs:label xml:lang="en">Date of birth</rdfs:label>
-        <rdfs:label xml:lang="fr">date de naissance</rdfs:label>
-        <rdfs:label xml:lang="es">fecha de nacimiento</rdfs:label>
-        <skos:altLabel xml:lang="en">DOB - Date of birth</skos:altLabel>
-        <skos:notation>184099003</skos:notation>
     </owl:Class>
     
 
@@ -371,13 +241,7 @@
 
     <owl:Class rdf:about="http://snomed.info/id/184104002">
         <rdfs:subClassOf rdf:resource="http://snomed.info/id/302147001"/>
-        <sct-ext:definitionStatus>Primitif</sct-ext:definitionStatus>
-        <sct-ext:fsn xml:lang="en">Patient occupation (observable entity)</sct-ext:fsn>
-        <dc11:type>observable entity</dc11:type>
         <rdfs:label xml:lang="en">Patient occupation</rdfs:label>
-        <rdfs:label xml:lang="fr">emploi du patient</rdfs:label>
-        <rdfs:label xml:lang="es">ocupación del paciente</rdfs:label>
-        <skos:notation>184104002</skos:notation>
     </owl:Class>
     
 
@@ -386,14 +250,8 @@
 
     <owl:Class rdf:about="http://snomed.info/id/184305005">
         <rdfs:subClassOf rdf:resource="http://snomed.info/id/363787002"/>
-        <sct-ext:definitionStatus>Primitif</sct-ext:definitionStatus>
-        <sct-ext:fsn xml:lang="en">Cause of death (observable entity)</sct-ext:fsn>
-        <dc11:type>observable entity</dc11:type>
         <rdfs:label xml:lang="en">Cause of death</rdfs:label>
-        <rdfs:label xml:lang="es">causa de muerte</rdfs:label>
-        <rdfs:label xml:lang="fr">cause du décès</rdfs:label>
-        <skos:altLabel xml:lang="en">Condition fatal-cause of death</skos:altLabel>
-        <skos:notation>184305005</skos:notation>
+        <rdfs:label xml:lang="en">Condition fatal-cause of death</rdfs:label>
     </owl:Class>
     
 
@@ -409,14 +267,7 @@
                 </owl:intersectionOf>
             </owl:Class>
         </rdfs:subClassOf>
-        <sct-ext:definitionStatus>Primitif</sct-ext:definitionStatus>
-        <sct-ext:fsn xml:lang="en">Twin sister (person)</sct-ext:fsn>
-        <dc11:type>person</dc11:type>
         <rdfs:label xml:lang="en">Twin sister</rdfs:label>
-        <rdfs:label xml:lang="es">hermana melliza</rdfs:label>
-        <rdfs:label xml:lang="fr">jumelle</rdfs:label>
-        <skos:altLabel xml:lang="fr">sœur jumelle</skos:altLabel>
-        <skos:notation>19343003</skos:notation>
     </owl:Class>
     
 
@@ -425,13 +276,7 @@
 
     <owl:Class rdf:about="http://snomed.info/id/21093007">
         <rdfs:subClassOf rdf:resource="http://snomed.info/id/125679009"/>
-        <sct-ext:definitionStatus>Primitif</sct-ext:definitionStatus>
-        <sct-ext:fsn xml:lang="en">Half-sibling (person)</sct-ext:fsn>
-        <dc11:type>person</dc11:type>
         <rdfs:label xml:lang="en">Half-sibling</rdfs:label>
-        <rdfs:label xml:lang="fr">demi-frère ou demi-sœur</rdfs:label>
-        <rdfs:label xml:lang="es">medio hermano de sexo femenino o masculino</rdfs:label>
-        <skos:notation>21093007</skos:notation>
     </owl:Class>
     
 
@@ -440,13 +285,7 @@
 
     <owl:Class rdf:about="http://snomed.info/id/224118004">
         <rdfs:subClassOf rdf:resource="http://snomed.info/id/160476009"/>
-        <sct-ext:definitionStatus>Primitif</sct-ext:definitionStatus>
-        <sct-ext:fsn xml:lang="en">Number of offspring (observable entity)</sct-ext:fsn>
-        <dc11:type>observable entity</dc11:type>
         <rdfs:label xml:lang="en">Number of offspring</rdfs:label>
-        <rdfs:label xml:lang="es">cantidad de descendientes</rdfs:label>
-        <rdfs:label xml:lang="fr">nombre d&apos;enfants engendrés</rdfs:label>
-        <skos:notation>224118004</skos:notation>
     </owl:Class>
     
 
@@ -455,15 +294,8 @@
 
     <owl:Class rdf:about="http://snomed.info/id/224285004">
         <rdfs:subClassOf rdf:resource="http://snomed.info/id/160476009"/>
-        <sct-ext:definitionStatus>Primitif</sct-ext:definitionStatus>
-        <sct-ext:fsn xml:lang="en">Education and schooling detail (observable entity)</sct-ext:fsn>
-        <dc11:type>observable entity</dc11:type>
+        <rdfs:label xml:lang="en">Education and schooling</rdfs:label>
         <rdfs:label xml:lang="en">Education and schooling detail</rdfs:label>
-        <rdfs:label xml:lang="es">detalle de educación y escolaridad</rdfs:label>
-        <rdfs:label xml:lang="fr">détail concernant l&apos;enseignement et la scolarité</rdfs:label>
-        <skos:altLabel xml:lang="en">Education and schooling</skos:altLabel>
-        <skos:altLabel xml:lang="es">educación y escolaridad</skos:altLabel>
-        <skos:notation>224285004</skos:notation>
     </owl:Class>
     
 
@@ -472,13 +304,7 @@
 
     <owl:Class rdf:about="http://snomed.info/id/224288002">
         <rdfs:subClassOf rdf:resource="http://snomed.info/id/224285004"/>
-        <sct-ext:definitionStatus>Primitif</sct-ext:definitionStatus>
-        <sct-ext:fsn xml:lang="en">Duration of formal education (observable entity)</sct-ext:fsn>
-        <dc11:type>observable entity</dc11:type>
         <rdfs:label xml:lang="en">Duration of formal education</rdfs:label>
-        <rdfs:label xml:lang="es">duración de la educación formal</rdfs:label>
-        <rdfs:label xml:lang="fr">durée de la scolarité</rdfs:label>
-        <skos:notation>224288002</skos:notation>
     </owl:Class>
     
 
@@ -486,13 +312,7 @@
     <!-- http://snomed.info/id/224899006 -->
 
     <owl:Class rdf:about="http://snomed.info/id/224899006">
-        <sct-ext:definitionStatus>Primitif</sct-ext:definitionStatus>
-        <sct-ext:fsn xml:lang="en">Walking aid (physical object)</sct-ext:fsn>
-        <dc11:type>physical object</dc11:type>
         <rdfs:label xml:lang="en">Walking aid</rdfs:label>
-        <rdfs:label xml:lang="fr">dispositif d&apos;aide à la marche</rdfs:label>
-        <rdfs:label xml:lang="es">dispositivo de apoyo para la marcha</rdfs:label>
-        <skos:notation>224899006</skos:notation>
     </owl:Class>
     
 
@@ -500,13 +320,7 @@
     <!-- http://snomed.info/id/2272004 -->
 
     <owl:Class rdf:about="http://snomed.info/id/2272004">
-        <sct-ext:definitionStatus>Primitif</sct-ext:definitionStatus>
-        <sct-ext:fsn xml:lang="en">Half-sister (person)</sct-ext:fsn>
-        <dc11:type>person</dc11:type>
         <rdfs:label xml:lang="en">Half-sister</rdfs:label>
-        <rdfs:label xml:lang="fr">demi-sœur</rdfs:label>
-        <rdfs:label xml:lang="es">media hermana</rdfs:label>
-        <skos:notation>2272004</skos:notation>
     </owl:Class>
     
 
@@ -514,14 +328,7 @@
     <!-- http://snomed.info/id/23088002 -->
 
     <owl:Class rdf:about="http://snomed.info/id/23088002">
-        <sct-ext:definitionStatus>Primitif</sct-ext:definitionStatus>
-        <sct-ext:fsn xml:lang="en">Ambidextrous (finding)</sct-ext:fsn>
-        <dc11:type>finding</dc11:type>
         <rdfs:label xml:lang="en">Ambidextrous</rdfs:label>
-        <rdfs:label xml:lang="es">ambidestreza</rdfs:label>
-        <rdfs:label xml:lang="fr">ambidextre</rdfs:label>
-        <skos:altLabel xml:lang="es">ambidiestro</skos:altLabel>
-        <skos:notation>23088002</skos:notation>
     </owl:Class>
     
 
@@ -530,14 +337,8 @@
 
     <owl:Class rdf:about="http://snomed.info/id/248326004">
         <rdfs:subClassOf rdf:resource="http://snomed.info/id/363787002"/>
-        <sct-ext:definitionStatus>Primitif</sct-ext:definitionStatus>
-        <sct-ext:fsn xml:lang="en">Body measure (observable entity)</sct-ext:fsn>
-        <dc11:type>observable entity</dc11:type>
         <rdfs:label xml:lang="en">Body measure</rdfs:label>
-        <rdfs:label xml:lang="es">medida corporal</rdfs:label>
-        <rdfs:label xml:lang="fr">mesure corporelle</rdfs:label>
-        <skos:altLabel xml:lang="en">Body measurements</skos:altLabel>
-        <skos:notation>248326004</skos:notation>
+        <rdfs:label xml:lang="en">Body measurements</rdfs:label>
     </owl:Class>
     
 
@@ -545,14 +346,7 @@
     <!-- http://snomed.info/id/257192006 -->
 
     <owl:Class rdf:about="http://snomed.info/id/257192006">
-        <sct-ext:definitionStatus>Primitif</sct-ext:definitionStatus>
-        <sct-ext:fsn xml:lang="en">Aid to vision (physical object)</sct-ext:fsn>
-        <dc11:type>physical object</dc11:type>
         <rdfs:label xml:lang="en">Aid to vision</rdfs:label>
-        <rdfs:label xml:lang="es">accesorio para la visión</rdfs:label>
-        <rdfs:label xml:lang="fr">aide à la vision</rdfs:label>
-        <skos:altLabel xml:lang="fr">aide visuelle</skos:altLabel>
-        <skos:notation>257192006</skos:notation>
     </owl:Class>
     
 
@@ -560,18 +354,9 @@
     <!-- http://snomed.info/id/266731002 -->
 
     <owl:Class rdf:about="http://snomed.info/id/266731002">
-        <sct-ext:definitionStatus>Primitif</sct-ext:definitionStatus>
-        <sct-ext:fsn xml:lang="en">Walking frame (physical object)</sct-ext:fsn>
-        <dc11:type>physical object</dc11:type>
+        <obo:IAO_0000115 xml:lang="en">A frame consisting of 3 or 4 legs which aids a person with walking. Some walking frames come with wheels at the front to help move the frame. The frame is moved by either lifting the entire frame or by tilting the frame off the back legs and onto the front wheels.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">WF - Walking frame</rdfs:label>
         <rdfs:label xml:lang="en">Walking frame</rdfs:label>
-        <rdfs:label xml:lang="es">dispositivos para andar</rdfs:label>
-        <rdfs:label xml:lang="fr">marchette</rdfs:label>
-        <skos:altLabel xml:lang="en">WF - Walking frame</skos:altLabel>
-        <skos:altLabel xml:lang="fr">cadre de marche</skos:altLabel>
-        <skos:altLabel xml:lang="es">dispositivo para andador</skos:altLabel>
-        <skos:definition xml:lang="en">A frame consisting of 3 or 4 legs which aids a person with walking. Some walking frames come with wheels at the front to help move the frame. The frame is moved by either lifting the entire frame or by tilting the frame off the back legs and onto the front wheels.</skos:definition>
-        <skos:definition xml:lang="es">Un andador de 3 o 4 patas que asiste a la persona en la marcha. Algunos andadores tienen ruedas en la parte delantera para facilitar la movilidad del dispositivo. El andador se desplaza levantándolo por completo o levantando las patas traseras e inclinándolo sobre las ruedas delanteras.</skos:definition>
-        <skos:notation>266731002</skos:notation>
     </owl:Class>
     
 
@@ -579,15 +364,7 @@
     <!-- http://snomed.info/id/27113001 -->
 
     <owl:Class rdf:about="http://snomed.info/id/27113001">
-        <sct-ext:definitionStatus>Défini</sct-ext:definitionStatus>
-        <sct-ext:fsn xml:lang="en">Body weight (observable entity)</sct-ext:fsn>
-        <dc11:type>observable entity</dc11:type>
         <rdfs:label xml:lang="en">Body weight</rdfs:label>
-        <rdfs:label xml:lang="es">peso corporal</rdfs:label>
-        <rdfs:label xml:lang="fr">poids</rdfs:label>
-        <skos:altLabel xml:lang="es">peso del cuerpo</skos:altLabel>
-        <skos:altLabel xml:lang="fr">poids corporel</skos:altLabel>
-        <skos:notation>27113001</skos:notation>
     </owl:Class>
     
 
@@ -596,14 +373,7 @@
 
     <owl:Class rdf:about="http://snomed.info/id/298059007">
         <rdfs:subClassOf rdf:resource="http://snomed.info/id/363787002"/>
-        <sct-ext:definitionStatus>Primitif</sct-ext:definitionStatus>
-        <sct-ext:fsn xml:lang="en">Date of onset (observable entity)</sct-ext:fsn>
-        <dc11:type>observable entity</dc11:type>
         <rdfs:label xml:lang="en">Date of onset</rdfs:label>
-        <rdfs:label xml:lang="fr">date de début</rdfs:label>
-        <rdfs:label xml:lang="es">fecha de inicio</rdfs:label>
-        <skos:altLabel xml:lang="es">fecha de comienzo</skos:altLabel>
-        <skos:notation>298059007</skos:notation>
     </owl:Class>
     
 
@@ -612,14 +382,8 @@
 
     <owl:Class rdf:about="http://snomed.info/id/302147001">
         <rdfs:subClassOf rdf:resource="http://snomed.info/id/160476009"/>
-        <sct-ext:definitionStatus>Primitif</sct-ext:definitionStatus>
-        <sct-ext:fsn xml:lang="en">Demographic history detail (observable entity)</sct-ext:fsn>
-        <dc11:type>observable entity</dc11:type>
+        <rdfs:label xml:lang="en">Demographic history</rdfs:label>
         <rdfs:label xml:lang="en">Demographic history detail</rdfs:label>
-        <rdfs:label xml:lang="es">detalle de antecedentes demográficos</rdfs:label>
-        <rdfs:label xml:lang="fr">détail des renseignements démographiques</rdfs:label>
-        <skos:altLabel xml:lang="en">Demographic history</skos:altLabel>
-        <skos:notation>302147001</skos:notation>
     </owl:Class>
     
 
@@ -627,13 +391,7 @@
     <!-- http://snomed.info/id/315306007 -->
 
     <owl:Class rdf:about="http://snomed.info/id/315306007">
-        <sct-ext:definitionStatus>Défini</sct-ext:definitionStatus>
-        <sct-ext:fsn xml:lang="en">Examination by method (procedure)</sct-ext:fsn>
-        <dc11:type>procedure</dc11:type>
         <rdfs:label xml:lang="en">Examination by method</rdfs:label>
-        <rdfs:label xml:lang="es">examen según el método</rdfs:label>
-        <rdfs:label xml:lang="fr">examen selon la méthode</rdfs:label>
-        <skos:notation>315306007</skos:notation>
     </owl:Class>
     
 
@@ -642,15 +400,8 @@
 
     <owl:Class rdf:about="http://snomed.info/id/315354004">
         <rdfs:subClassOf rdf:resource="http://snomed.info/id/302147001"/>
-        <sct-ext:definitionStatus>Primitif</sct-ext:definitionStatus>
-        <sct-ext:fsn xml:lang="en">Country of birth (observable entity)</sct-ext:fsn>
-        <dc11:type>observable entity</dc11:type>
+        <rdfs:label xml:lang="en">Born in - country</rdfs:label>
         <rdfs:label xml:lang="en">Country of birth</rdfs:label>
-        <rdfs:label xml:lang="fr">pays de naissance</rdfs:label>
-        <rdfs:label xml:lang="es">país de nacimiento</rdfs:label>
-        <skos:altLabel xml:lang="en">Born in - country</skos:altLabel>
-        <skos:altLabel xml:lang="es">nacido en - país</skos:altLabel>
-        <skos:notation>315354004</skos:notation>
     </owl:Class>
     
 
@@ -659,14 +410,8 @@
 
     <owl:Class rdf:about="http://snomed.info/id/360006004">
         <rdfs:subClassOf rdf:resource="http://snomed.info/id/224899006"/>
-        <sct-ext:definitionStatus>Primitif</sct-ext:definitionStatus>
-        <sct-ext:fsn xml:lang="en">Walking stick (physical object)</sct-ext:fsn>
-        <dc11:type>physical object</dc11:type>
         <rdfs:label xml:lang="en">Walking stick</rdfs:label>
-        <rdfs:label xml:lang="es">bastón</rdfs:label>
-        <rdfs:label xml:lang="fr">bâton de marche</rdfs:label>
-        <skos:altLabel xml:lang="en">Walking stick device</skos:altLabel>
-        <skos:notation>360006004</skos:notation>
+        <rdfs:label xml:lang="en">Walking stick device</rdfs:label>
     </owl:Class>
     
 
@@ -674,13 +419,7 @@
     <!-- http://snomed.info/id/360296002 -->
 
     <owl:Class rdf:about="http://snomed.info/id/360296002">
-        <sct-ext:definitionStatus>Primitif</sct-ext:definitionStatus>
-        <sct-ext:fsn xml:lang="en">Assistive equipment (physical object)</sct-ext:fsn>
-        <dc11:type>physical object</dc11:type>
         <rdfs:label xml:lang="en">Assistive equipment</rdfs:label>
-        <rdfs:label xml:lang="es">equipo de asistencia</rdfs:label>
-        <rdfs:label xml:lang="fr">équipement d&apos;assistance</rdfs:label>
-        <skos:notation>360296002</skos:notation>
     </owl:Class>
     
 
@@ -688,13 +427,7 @@
     <!-- http://snomed.info/id/363787002 -->
 
     <owl:Class rdf:about="http://snomed.info/id/363787002">
-        <sct-ext:definitionStatus>Primitif</sct-ext:definitionStatus>
-        <sct-ext:fsn xml:lang="en">Observable entity (observable entity)</sct-ext:fsn>
-        <dc11:type>observable entity</dc11:type>
         <rdfs:label xml:lang="en">Observable entity</rdfs:label>
-        <rdfs:label xml:lang="es">entidad observable</rdfs:label>
-        <rdfs:label xml:lang="fr">entité observable</rdfs:label>
-        <skos:notation>363787002</skos:notation>
     </owl:Class>
     
 
@@ -702,15 +435,7 @@
     <!-- http://snomed.info/id/364940007 -->
 
     <owl:Class rdf:about="http://snomed.info/id/364940007">
-        <sct-ext:definitionStatus>Défini</sct-ext:definitionStatus>
-        <sct-ext:fsn xml:lang="en">Handedness finding (finding)</sct-ext:fsn>
-        <dc11:type>finding</dc11:type>
         <rdfs:label xml:lang="en">Handedness finding</rdfs:label>
-        <rdfs:label xml:lang="fr">constatation concernant la main dominante</rdfs:label>
-        <rdfs:label xml:lang="es">hallazgo en la preferencia manual</rdfs:label>
-        <skos:altLabel xml:lang="fr">constatation concernant la manualité</skos:altLabel>
-        <skos:altLabel xml:lang="fr">constatation concernant la prévalence manuelle</skos:altLabel>
-        <skos:notation>364940007</skos:notation>
     </owl:Class>
     
 
@@ -718,14 +443,8 @@
     <!-- http://snomed.info/id/398192003 -->
 
     <owl:Class rdf:about="http://snomed.info/id/398192003">
-        <sct-ext:definitionStatus>Primitif</sct-ext:definitionStatus>
-        <sct-ext:fsn xml:lang="en">Co-morbid conditions (finding)</sct-ext:fsn>
-        <dc11:type>finding</dc11:type>
         <rdfs:label xml:lang="en">Co-morbid conditions</rdfs:label>
-        <rdfs:label xml:lang="fr">comorbidités</rdfs:label>
-        <rdfs:label xml:lang="es">comorbilidades</rdfs:label>
-        <skos:altLabel xml:lang="en">Comorbid conditions</skos:altLabel>
-        <skos:notation>398192003</skos:notation>
+        <rdfs:label xml:lang="en">Comorbid conditions</rdfs:label>
     </owl:Class>
     
 
@@ -734,13 +453,7 @@
 
     <owl:Class rdf:about="http://snomed.info/id/399423000">
         <rdfs:subClassOf rdf:resource="http://snomed.info/id/363787002"/>
-        <sct-ext:definitionStatus>Primitif</sct-ext:definitionStatus>
-        <sct-ext:fsn xml:lang="en">Date of admission (observable entity)</sct-ext:fsn>
-        <dc11:type>observable entity</dc11:type>
         <rdfs:label xml:lang="en">Date of admission</rdfs:label>
-        <rdfs:label xml:lang="fr">date d&apos;admission</rdfs:label>
-        <rdfs:label xml:lang="es">fecha de admisión</rdfs:label>
-        <skos:notation>399423000</skos:notation>
     </owl:Class>
     
 
@@ -748,13 +461,7 @@
     <!-- http://snomed.info/id/399753006 -->
 
     <owl:Class rdf:about="http://snomed.info/id/399753006">
-        <sct-ext:definitionStatus>Primitif</sct-ext:definitionStatus>
-        <sct-ext:fsn xml:lang="en">Date of death (observable entity)</sct-ext:fsn>
-        <dc11:type>observable entity</dc11:type>
         <rdfs:label xml:lang="en">Date of death</rdfs:label>
-        <rdfs:label xml:lang="fr">date du décès</rdfs:label>
-        <rdfs:label xml:lang="es">fecha de fallecimiento</rdfs:label>
-        <skos:notation>399753006</skos:notation>
     </owl:Class>
     
 
@@ -763,13 +470,7 @@
 
     <owl:Class rdf:about="http://snomed.info/id/406543005">
         <rdfs:subClassOf rdf:resource="http://snomed.info/id/363787002"/>
-        <sct-ext:definitionStatus>Primitif</sct-ext:definitionStatus>
-        <sct-ext:fsn xml:lang="en">Date of visit (observable entity)</sct-ext:fsn>
-        <dc11:type>observable entity</dc11:type>
         <rdfs:label xml:lang="en">Date of visit</rdfs:label>
-        <rdfs:label xml:lang="fr">date de la visite</rdfs:label>
-        <rdfs:label xml:lang="es">fecha de la visita</rdfs:label>
-        <skos:notation>406543005</skos:notation>
     </owl:Class>
     
 
@@ -778,13 +479,7 @@
 
     <owl:Class rdf:about="http://snomed.info/id/420480000">
         <rdfs:subClassOf rdf:resource="http://snomed.info/id/257192006"/>
-        <sct-ext:definitionStatus>Primitif</sct-ext:definitionStatus>
-        <sct-ext:fsn xml:lang="en">Ptosis crutch (physical object)</sct-ext:fsn>
-        <dc11:type>physical object</dc11:type>
         <rdfs:label xml:lang="en">Ptosis crutch</rdfs:label>
-        <rdfs:label xml:lang="fr">dispositif anti-ptosis</rdfs:label>
-        <rdfs:label xml:lang="es">sostenedor de ptosis palpebral</rdfs:label>
-        <skos:notation>420480000</skos:notation>
     </owl:Class>
     
 
@@ -793,13 +488,7 @@
 
     <owl:Class rdf:about="http://snomed.info/id/423493009">
         <rdfs:subClassOf rdf:resource="http://snomed.info/id/363787002"/>
-        <sct-ext:definitionStatus>Primitif</sct-ext:definitionStatus>
-        <sct-ext:fsn xml:lang="en">Age at diagnosis (observable entity)</sct-ext:fsn>
-        <dc11:type>observable entity</dc11:type>
         <rdfs:label xml:lang="en">Age at diagnosis</rdfs:label>
-        <rdfs:label xml:lang="es">edad en el momento del diagnóstico</rdfs:label>
-        <rdfs:label xml:lang="fr">âge au diagnostic</rdfs:label>
-        <skos:notation>423493009</skos:notation>
     </owl:Class>
     
 
@@ -808,13 +497,7 @@
 
     <owl:Class rdf:about="http://snomed.info/id/424850005">
         <rdfs:subClassOf rdf:resource="http://snomed.info/id/363787002"/>
-        <sct-ext:definitionStatus>Primitif</sct-ext:definitionStatus>
-        <sct-ext:fsn xml:lang="en">Age at first symptom (observable entity)</sct-ext:fsn>
-        <dc11:type>observable entity</dc11:type>
         <rdfs:label xml:lang="en">Age at first symptom</rdfs:label>
-        <rdfs:label xml:lang="es">edad al aparecer el primer síntoma</rdfs:label>
-        <rdfs:label xml:lang="fr">âge au premier symptôme</rdfs:label>
-        <skos:notation>424850005</skos:notation>
     </owl:Class>
     
 
@@ -823,13 +506,7 @@
 
     <owl:Class rdf:about="http://snomed.info/id/432213005">
         <rdfs:subClassOf rdf:resource="http://snomed.info/id/363787002"/>
-        <sct-ext:definitionStatus>Primitif</sct-ext:definitionStatus>
-        <sct-ext:fsn xml:lang="en">Date of diagnosis (observable entity)</sct-ext:fsn>
-        <dc11:type>observable entity</dc11:type>
         <rdfs:label xml:lang="en">Date of diagnosis</rdfs:label>
-        <rdfs:label xml:lang="fr">date du diagnostic</rdfs:label>
-        <rdfs:label xml:lang="es">fecha de diagnóstico</rdfs:label>
-        <skos:notation>432213005</skos:notation>
     </owl:Class>
     
 
@@ -838,13 +515,7 @@
 
     <owl:Class rdf:about="http://snomed.info/id/439272007">
         <rdfs:subClassOf rdf:resource="http://snomed.info/id/363787002"/>
-        <sct-ext:definitionStatus>Primitif</sct-ext:definitionStatus>
-        <sct-ext:fsn xml:lang="en">Date of procedure (observable entity)</sct-ext:fsn>
-        <dc11:type>observable entity</dc11:type>
         <rdfs:label xml:lang="en">Date of procedure</rdfs:label>
-        <rdfs:label xml:lang="fr">date de l&apos;intervention</rdfs:label>
-        <rdfs:label xml:lang="es">fecha del procedimiento</rdfs:label>
-        <skos:notation>439272007</skos:notation>
     </owl:Class>
     
 
@@ -852,13 +523,7 @@
     <!-- http://snomed.info/id/45929001 -->
 
     <owl:Class rdf:about="http://snomed.info/id/45929001">
-        <sct-ext:definitionStatus>Primitif</sct-ext:definitionStatus>
-        <sct-ext:fsn xml:lang="en">Half-brother (person)</sct-ext:fsn>
-        <dc11:type>person</dc11:type>
         <rdfs:label xml:lang="en">Half-brother</rdfs:label>
-        <rdfs:label xml:lang="fr">demi-frère</rdfs:label>
-        <rdfs:label xml:lang="es">medio hermano</rdfs:label>
-        <skos:notation>45929001</skos:notation>
     </owl:Class>
     
 
@@ -867,13 +532,7 @@
 
     <owl:Class rdf:about="http://snomed.info/id/466255006">
         <rdfs:subClassOf rdf:resource="http://snomed.info/id/224899006"/>
-        <sct-ext:definitionStatus>Primitif</sct-ext:definitionStatus>
-        <sct-ext:fsn xml:lang="en">Walking aid handgrip (physical object)</sct-ext:fsn>
-        <dc11:type>physical object</dc11:type>
         <rdfs:label xml:lang="en">Walking aid handgrip</rdfs:label>
-        <rdfs:label xml:lang="fr">dispositif d&apos;aide à la marche avec poignée</rdfs:label>
-        <rdfs:label xml:lang="es">empuñadura de dispositivo de ayuda para caminar</rdfs:label>
-        <skos:notation>466255006</skos:notation>
     </owl:Class>
     
 
@@ -881,13 +540,7 @@
     <!-- http://snomed.info/id/46669005 -->
 
     <owl:Class rdf:about="http://snomed.info/id/46669005">
-        <sct-ext:definitionStatus>Primitif</sct-ext:definitionStatus>
-        <sct-ext:fsn xml:lang="en">Right handed (finding)</sct-ext:fsn>
-        <dc11:type>finding</dc11:type>
         <rdfs:label xml:lang="en">Right handed</rdfs:label>
-        <rdfs:label xml:lang="es">dextrolateralidad</rdfs:label>
-        <rdfs:label xml:lang="fr">droitier</rdfs:label>
-        <skos:notation>46669005</skos:notation>
     </owl:Class>
     
 
@@ -896,19 +549,10 @@
 
     <owl:Class rdf:about="http://snomed.info/id/50121007">
         <rdfs:subClassOf rdf:resource="http://snomed.info/id/257192006"/>
-        <sct-ext:definitionStatus>Primitif</sct-ext:definitionStatus>
-        <sct-ext:fsn xml:lang="en">Eye glasses, device (physical object)</sct-ext:fsn>
-        <dc11:type>physical object</dc11:type>
+        <rdfs:label xml:lang="en">Eye glasses, device</rdfs:label>
         <rdfs:label xml:lang="en">Eyeglasses</rdfs:label>
-        <rdfs:label xml:lang="es">anteojos</rdfs:label>
-        <rdfs:label xml:lang="fr">lunettes</rdfs:label>
-        <skos:altLabel xml:lang="en">Eye glasses, device</skos:altLabel>
-        <skos:altLabel xml:lang="en">Glasses</skos:altLabel>
-        <skos:altLabel xml:lang="en">Spectacles</skos:altLabel>
-        <skos:altLabel xml:lang="es">anteojos, dispositivo</skos:altLabel>
-        <skos:altLabel xml:lang="es">gafas</skos:altLabel>
-        <skos:altLabel xml:lang="es">lentes</skos:altLabel>
-        <skos:notation>50121007</skos:notation>
+        <rdfs:label xml:lang="en">Glasses</rdfs:label>
+        <rdfs:label xml:lang="en">Spectacles</rdfs:label>
     </owl:Class>
     
 
@@ -916,22 +560,12 @@
     <!-- http://snomed.info/id/5880005 -->
 
     <owl:Class rdf:about="http://snomed.info/id/5880005">
-        <sct-ext:definitionStatus>Défini</sct-ext:definitionStatus>
-        <sct-ext:fsn xml:lang="en">Physical examination procedure (procedure)</sct-ext:fsn>
-        <dc11:type>procedure</dc11:type>
+        <obo:IAO_0000115 xml:lang="en">An observation of the body or a body part using one of the five human senses (e.g. inspection, palpation, percussion, auscultation)</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">Clinical examination</rdfs:label>
+        <rdfs:label xml:lang="en">Examination of patient</rdfs:label>
+        <rdfs:label xml:lang="en">PE - Physical examination</rdfs:label>
         <rdfs:label xml:lang="en">Physical examination</rdfs:label>
-        <rdfs:label xml:lang="es">examen físico</rdfs:label>
-        <rdfs:label xml:lang="fr">examen physique</rdfs:label>
-        <skos:altLabel xml:lang="en">Clinical examination</skos:altLabel>
-        <skos:altLabel xml:lang="en">Examination of patient</skos:altLabel>
-        <skos:altLabel xml:lang="en">PE - Physical examination</skos:altLabel>
-        <skos:altLabel xml:lang="en">Physical examination procedure</skos:altLabel>
-        <skos:altLabel xml:lang="es">examen clínico</skos:altLabel>
-        <skos:altLabel xml:lang="es">exploración física</skos:altLabel>
-        <skos:altLabel xml:lang="fr">intervention liée à l&apos;examen physique</skos:altLabel>
-        <skos:definition xml:lang="en">An observation of the body or a body part using one of the five human senses (e.g. inspection, palpation, percussion, auscultation)</skos:definition>
-        <skos:definition xml:lang="es">Observación del cuerpo o parte de él utilizando uno de los sentidos (ej. inspección, palpación, percusión, auscultación)</skos:definition>
-        <skos:notation>5880005</skos:notation>
+        <rdfs:label xml:lang="en">Physical examination procedure</rdfs:label>
     </owl:Class>
     
 
@@ -939,17 +573,10 @@
     <!-- http://snomed.info/id/58938008 -->
 
     <owl:Class rdf:about="http://snomed.info/id/58938008">
-        <sct-ext:definitionStatus>Primitif</sct-ext:definitionStatus>
-        <sct-ext:fsn xml:lang="en">Wheelchair device (physical object)</sct-ext:fsn>
-        <dc11:type>physical object</dc11:type>
+        <rdfs:label xml:lang="en">WC - Wheelchair</rdfs:label>
+        <rdfs:label xml:lang="en">Wch - Wheelchair</rdfs:label>
         <rdfs:label xml:lang="en">Wheelchair</rdfs:label>
-        <rdfs:label xml:lang="fr">fauteuil roulant</rdfs:label>
-        <rdfs:label xml:lang="es">silla de ruedas</rdfs:label>
-        <skos:altLabel xml:lang="en">WC - Wheelchair</skos:altLabel>
-        <skos:altLabel xml:lang="en">Wch - Wheelchair</skos:altLabel>
-        <skos:altLabel xml:lang="en">Wheelchair device</skos:altLabel>
-        <skos:altLabel xml:lang="es">silla de ruedas, dispositivo</skos:altLabel>
-        <skos:notation>58938008</skos:notation>
+        <rdfs:label xml:lang="en">Wheelchair device</rdfs:label>
     </owl:Class>
     
 
@@ -957,15 +584,8 @@
     <!-- http://snomed.info/id/60614009 -->
 
     <owl:Class rdf:about="http://snomed.info/id/60614009">
-        <sct-ext:definitionStatus>Primitif</sct-ext:definitionStatus>
-        <sct-ext:fsn xml:lang="en">Natural brother (person)</sct-ext:fsn>
-        <dc11:type>person</dc11:type>
+        <rdfs:label xml:lang="en">Biological brother</rdfs:label>
         <rdfs:label xml:lang="en">Natural brother</rdfs:label>
-        <rdfs:label xml:lang="fr">frère biologique</rdfs:label>
-        <rdfs:label xml:lang="es">hermano natural</rdfs:label>
-        <skos:altLabel xml:lang="en">Biological brother</skos:altLabel>
-        <skos:altLabel xml:lang="es">hermano biológico</skos:altLabel>
-        <skos:notation>60614009</skos:notation>
     </owl:Class>
     
 
@@ -973,18 +593,10 @@
     <!-- http://snomed.info/id/60621009 -->
 
     <owl:Class rdf:about="http://snomed.info/id/60621009">
-        <sct-ext:definitionStatus>Primitif</sct-ext:definitionStatus>
-        <sct-ext:fsn xml:lang="en">Body mass index (observable entity)</sct-ext:fsn>
-        <dc11:type>observable entity</dc11:type>
+        <rdfs:label xml:lang="en">BMI - Body mass index</rdfs:label>
         <rdfs:label xml:lang="en">Body mass index</rdfs:label>
-        <rdfs:label xml:lang="fr">indice de masse corporelle</rdfs:label>
-        <rdfs:label xml:lang="es">índice de masa corporal</rdfs:label>
-        <skos:altLabel xml:lang="en">BMI - Body mass index</skos:altLabel>
-        <skos:altLabel xml:lang="es">IMC - índice de masa corporal</skos:altLabel>
-        <skos:altLabel xml:lang="en">Quetelet index</skos:altLabel>
-        <skos:altLabel xml:lang="en">Weight: body mass</skos:altLabel>
-        <skos:altLabel xml:lang="es">índice de Quetelet</skos:altLabel>
-        <skos:notation>60621009</skos:notation>
+        <rdfs:label xml:lang="en">Quetelet index</rdfs:label>
+        <rdfs:label xml:lang="en">Weight: body mass</rdfs:label>
     </owl:Class>
     
 
@@ -992,16 +604,10 @@
     <!-- http://snomed.info/id/62296006 -->
 
     <owl:Class rdf:about="http://snomed.info/id/62296006">
-        <sct-ext:definitionStatus>Primitif</sct-ext:definitionStatus>
-        <sct-ext:fsn xml:lang="en">Natural grandfather (person)</sct-ext:fsn>
-        <dc11:type>person</dc11:type>
+        <rdfs:label xml:lang="en">Biological grand-father</rdfs:label>
+        <rdfs:label xml:lang="en">Biological grandfather</rdfs:label>
+        <rdfs:label xml:lang="en">Natural grand-father</rdfs:label>
         <rdfs:label xml:lang="en">Natural grandfather</rdfs:label>
-        <rdfs:label xml:lang="es">abuelo natural</rdfs:label>
-        <rdfs:label xml:lang="fr">grand-père biologique</rdfs:label>
-        <skos:altLabel xml:lang="en">Biological grand-father</skos:altLabel>
-        <skos:altLabel xml:lang="en">Biological grandfather</skos:altLabel>
-        <skos:altLabel xml:lang="en">Natural grand-father</skos:altLabel>
-        <skos:notation>62296006</skos:notation>
     </owl:Class>
     
 
@@ -1009,15 +615,8 @@
     <!-- http://snomed.info/id/65656005 -->
 
     <owl:Class rdf:about="http://snomed.info/id/65656005">
-        <sct-ext:definitionStatus>Primitif</sct-ext:definitionStatus>
-        <sct-ext:fsn xml:lang="en">Natural mother (person)</sct-ext:fsn>
-        <dc11:type>person</dc11:type>
+        <rdfs:label xml:lang="en">Biological mother</rdfs:label>
         <rdfs:label xml:lang="en">Natural mother</rdfs:label>
-        <rdfs:label xml:lang="es">madre natural</rdfs:label>
-        <rdfs:label xml:lang="fr">mère biologique</rdfs:label>
-        <skos:altLabel xml:lang="en">Biological mother</skos:altLabel>
-        <skos:altLabel xml:lang="es">madre biológica</skos:altLabel>
-        <skos:notation>65656005</skos:notation>
     </owl:Class>
     
 
@@ -1026,15 +625,8 @@
 
     <owl:Class rdf:about="http://snomed.info/id/709880000">
         <rdfs:subClassOf rdf:resource="http://snomed.info/id/364940007"/>
-        <sct-ext:definitionStatus>Primitif</sct-ext:definitionStatus>
-        <sct-ext:fsn xml:lang="en">Unknown handedness (finding)</sct-ext:fsn>
-        <dc11:type>finding</dc11:type>
+        <rdfs:label xml:lang="en">Unknown dominant side</rdfs:label>
         <rdfs:label xml:lang="en">Unknown handedness</rdfs:label>
-        <rdfs:label xml:lang="es">lateralidad desconocida</rdfs:label>
-        <rdfs:label xml:lang="fr">manualité inconnue</rdfs:label>
-        <skos:altLabel xml:lang="en">Unknown dominant side</skos:altLabel>
-        <skos:altLabel xml:lang="fr">préférence manuelle inconnue</skos:altLabel>
-        <skos:notation>709880000</skos:notation>
     </owl:Class>
     
 
@@ -1043,16 +635,9 @@
 
     <owl:Class rdf:about="http://snomed.info/id/719762005">
         <rdfs:subClassOf rdf:resource="http://snomed.info/id/45929001"/>
-        <sct-ext:definitionStatus>Primitif</sct-ext:definitionStatus>
-        <sct-ext:fsn xml:lang="en">Paternal half brother (person)</sct-ext:fsn>
-        <dc11:type>person</dc11:type>
+        <obo:IAO_0000115 xml:lang="en">The son of one&apos;s father who has a different mother,</obo:IAO_0000115>
         <rdfs:label xml:lang="en">Paternal half brother</rdfs:label>
-        <rdfs:label xml:lang="fr">demi-frère paternel</rdfs:label>
-        <rdfs:label xml:lang="es">medio hermano paterno</rdfs:label>
-        <skos:altLabel xml:lang="en">Paternal half-brother</skos:altLabel>
-        <skos:definition xml:lang="es">Hijo del propio padre y de una madre diferente.</skos:definition>
-        <skos:definition xml:lang="en">The son of one&apos;s father who has a different mother,</skos:definition>
-        <skos:notation>719762005</skos:notation>
+        <rdfs:label xml:lang="en">Paternal half-brother</rdfs:label>
     </owl:Class>
     
 
@@ -1061,16 +646,9 @@
 
     <owl:Class rdf:about="http://snomed.info/id/719764006">
         <rdfs:subClassOf rdf:resource="http://snomed.info/id/2272004"/>
-        <sct-ext:definitionStatus>Primitif</sct-ext:definitionStatus>
-        <sct-ext:fsn xml:lang="en">Paternal half sister (person)</sct-ext:fsn>
-        <dc11:type>person</dc11:type>
+        <obo:IAO_0000115 xml:lang="en">The daughter of one&apos;s father who has a different mother.</obo:IAO_0000115>
         <rdfs:label xml:lang="en">Paternal half sister</rdfs:label>
-        <rdfs:label xml:lang="fr">demi-sœur paternelle</rdfs:label>
-        <rdfs:label xml:lang="es">media hermana paterna</rdfs:label>
-        <skos:altLabel xml:lang="en">Paternal half-sister</skos:altLabel>
-        <skos:definition xml:lang="es">Hija del propio padre y de una madre diferente.</skos:definition>
-        <skos:definition xml:lang="en">The daughter of one&apos;s father who has a different mother.</skos:definition>
-        <skos:notation>719764006</skos:notation>
+        <rdfs:label xml:lang="en">Paternal half-sister</rdfs:label>
     </owl:Class>
     
 
@@ -1079,16 +657,9 @@
 
     <owl:Class rdf:about="http://snomed.info/id/719765007">
         <rdfs:subClassOf rdf:resource="http://snomed.info/id/2272004"/>
-        <sct-ext:definitionStatus>Primitif</sct-ext:definitionStatus>
-        <sct-ext:fsn xml:lang="en">Maternal half sister (person)</sct-ext:fsn>
-        <dc11:type>person</dc11:type>
+        <obo:IAO_0000115 xml:lang="en">The daughter of one&apos;s mother who has a different father.</obo:IAO_0000115>
         <rdfs:label xml:lang="en">Maternal half sister</rdfs:label>
-        <rdfs:label xml:lang="fr">demi-sœur maternelle</rdfs:label>
-        <rdfs:label xml:lang="es">media hermana materna</rdfs:label>
-        <skos:altLabel xml:lang="en">Maternal half-sister</skos:altLabel>
-        <skos:definition xml:lang="es">Hija de una madre con un padre diferente.</skos:definition>
-        <skos:definition xml:lang="en">The daughter of one&apos;s mother who has a different father.</skos:definition>
-        <skos:notation>719765007</skos:notation>
+        <rdfs:label xml:lang="en">Maternal half-sister</rdfs:label>
     </owl:Class>
     
 
@@ -1097,16 +668,9 @@
 
     <owl:Class rdf:about="http://snomed.info/id/719766008">
         <rdfs:subClassOf rdf:resource="http://snomed.info/id/45929001"/>
-        <sct-ext:definitionStatus>Primitif</sct-ext:definitionStatus>
-        <sct-ext:fsn xml:lang="en">Maternal half brother (person)</sct-ext:fsn>
-        <dc11:type>person</dc11:type>
+        <obo:IAO_0000115 xml:lang="en">The son of one&apos;s mother who has a different father.</obo:IAO_0000115>
         <rdfs:label xml:lang="en">Maternal half brother</rdfs:label>
-        <rdfs:label xml:lang="fr">demi-frère maternel</rdfs:label>
-        <rdfs:label xml:lang="es">medio hermano materno</rdfs:label>
-        <skos:altLabel xml:lang="en">Maternal half-brother</skos:altLabel>
-        <skos:definition xml:lang="es">Hijo de la madre con un padre diferente.</skos:definition>
-        <skos:definition xml:lang="en">The son of one&apos;s mother who has a different father.</skos:definition>
-        <skos:notation>719766008</skos:notation>
+        <rdfs:label xml:lang="en">Maternal half-brother</rdfs:label>
     </owl:Class>
     
 
@@ -1114,15 +678,8 @@
     <!-- http://snomed.info/id/73678001 -->
 
     <owl:Class rdf:about="http://snomed.info/id/73678001">
-        <sct-ext:definitionStatus>Primitif</sct-ext:definitionStatus>
-        <sct-ext:fsn xml:lang="en">Natural sister (person)</sct-ext:fsn>
-        <dc11:type>person</dc11:type>
+        <rdfs:label xml:lang="en">Biological sister</rdfs:label>
         <rdfs:label xml:lang="en">Natural sister</rdfs:label>
-        <rdfs:label xml:lang="es">hermana natural</rdfs:label>
-        <rdfs:label xml:lang="fr">sœur biologique</rdfs:label>
-        <skos:altLabel xml:lang="en">Biological sister</skos:altLabel>
-        <skos:altLabel xml:lang="es">hermana biológica</skos:altLabel>
-        <skos:notation>73678001</skos:notation>
     </owl:Class>
     
 
@@ -1131,14 +688,8 @@
 
     <owl:Class rdf:about="http://snomed.info/id/74566002">
         <rdfs:subClassOf rdf:resource="http://snomed.info/id/224899006"/>
-        <sct-ext:definitionStatus>Primitif</sct-ext:definitionStatus>
-        <sct-ext:fsn xml:lang="en">Crutch, device (physical object)</sct-ext:fsn>
-        <dc11:type>physical object</dc11:type>
         <rdfs:label xml:lang="en">Crutch</rdfs:label>
-        <rdfs:label xml:lang="fr">béquille</rdfs:label>
-        <rdfs:label xml:lang="es">muleta</rdfs:label>
-        <skos:altLabel xml:lang="en">Crutch, device</skos:altLabel>
-        <skos:notation>74566002</skos:notation>
+        <rdfs:label xml:lang="en">Crutch, device</rdfs:label>
     </owl:Class>
     
 
@@ -1146,14 +697,8 @@
     <!-- http://snomed.info/id/75226009 -->
 
     <owl:Class rdf:about="http://snomed.info/id/75226009">
-        <sct-ext:definitionStatus>Primitif</sct-ext:definitionStatus>
-        <sct-ext:fsn xml:lang="en">Natural child (person)</sct-ext:fsn>
-        <dc11:type>person</dc11:type>
+        <rdfs:label xml:lang="en">Biological child</rdfs:label>
         <rdfs:label xml:lang="en">Natural child</rdfs:label>
-        <rdfs:label xml:lang="fr">enfant biologique</rdfs:label>
-        <rdfs:label xml:lang="es">hijo natural (genérico)</rdfs:label>
-        <skos:altLabel xml:lang="en">Biological child</skos:altLabel>
-        <skos:notation>75226009</skos:notation>
     </owl:Class>
     
 
@@ -1161,17 +706,10 @@
     <!-- http://snomed.info/id/78272007 -->
 
     <owl:Class rdf:about="http://snomed.info/id/78272007">
-        <sct-ext:definitionStatus>Primitif</sct-ext:definitionStatus>
-        <sct-ext:fsn xml:lang="en">Natural grandparent (person)</sct-ext:fsn>
-        <dc11:type>person</dc11:type>
+        <rdfs:label xml:lang="en">Biological grand-parent</rdfs:label>
+        <rdfs:label xml:lang="en">Biological grandparent</rdfs:label>
+        <rdfs:label xml:lang="en">Natural grand-parent</rdfs:label>
         <rdfs:label xml:lang="en">Natural grandparent</rdfs:label>
-        <rdfs:label xml:lang="es">abuelos naturales</rdfs:label>
-        <rdfs:label xml:lang="fr">grand-parent biologique</rdfs:label>
-        <skos:altLabel xml:lang="en">Biological grand-parent</skos:altLabel>
-        <skos:altLabel xml:lang="en">Biological grandparent</skos:altLabel>
-        <skos:altLabel xml:lang="en">Natural grand-parent</skos:altLabel>
-        <skos:altLabel xml:lang="es">abuelo biológico</skos:altLabel>
-        <skos:notation>78272007</skos:notation>
     </owl:Class>
     
 
@@ -1187,14 +725,7 @@
                 </owl:intersectionOf>
             </owl:Class>
         </rdfs:subClassOf>
-        <sct-ext:definitionStatus>Primitif</sct-ext:definitionStatus>
-        <sct-ext:fsn xml:lang="en">Twin brother (person)</sct-ext:fsn>
-        <dc11:type>person</dc11:type>
         <rdfs:label xml:lang="en">Twin brother</rdfs:label>
-        <rdfs:label xml:lang="es">hermano mellizo</rdfs:label>
-        <rdfs:label xml:lang="fr">jumeau</rdfs:label>
-        <skos:altLabel xml:lang="fr">frère jumeau</skos:altLabel>
-        <skos:notation>81276006</skos:notation>
     </owl:Class>
     
 
@@ -1203,15 +734,8 @@
 
     <owl:Class rdf:about="http://snomed.info/id/82101005">
         <rdfs:subClassOf rdf:resource="http://snomed.info/id/125678001"/>
-        <sct-ext:definitionStatus>Primitif</sct-ext:definitionStatus>
-        <sct-ext:fsn xml:lang="en">Natural sibling (person)</sct-ext:fsn>
-        <dc11:type>person</dc11:type>
+        <rdfs:label xml:lang="en">Biological sibling</rdfs:label>
         <rdfs:label xml:lang="en">Natural sibling</rdfs:label>
-        <rdfs:label xml:lang="fr">frère ou sœur biologique</rdfs:label>
-        <rdfs:label xml:lang="es">hermano natural de sexo femenino o masculino</rdfs:label>
-        <skos:altLabel xml:lang="en">Biological sibling</skos:altLabel>
-        <skos:altLabel xml:lang="es">hermano biológico de sexo femenino o masculino</skos:altLabel>
-        <skos:notation>82101005</skos:notation>
     </owl:Class>
     
 
@@ -1219,15 +743,8 @@
     <!-- http://snomed.info/id/83420006 -->
 
     <owl:Class rdf:about="http://snomed.info/id/83420006">
-        <sct-ext:definitionStatus>Primitif</sct-ext:definitionStatus>
-        <sct-ext:fsn xml:lang="en">Natural daughter (person)</sct-ext:fsn>
-        <dc11:type>person</dc11:type>
+        <rdfs:label xml:lang="en">Biological daughter</rdfs:label>
         <rdfs:label xml:lang="en">Natural daughter</rdfs:label>
-        <rdfs:label xml:lang="fr">fille biologique</rdfs:label>
-        <rdfs:label xml:lang="es">hija natural</rdfs:label>
-        <skos:altLabel xml:lang="en">Biological daughter</skos:altLabel>
-        <skos:altLabel xml:lang="es">hija biológica</skos:altLabel>
-        <skos:notation>83420006</skos:notation>
     </owl:Class>
     
 
@@ -1235,15 +752,8 @@
     <!-- http://snomed.info/id/840297006 -->
 
     <owl:Class rdf:about="http://snomed.info/id/840297006">
-        <sct-ext:definitionStatus>Primitif</sct-ext:definitionStatus>
-        <sct-ext:fsn xml:lang="en">Assessment of patient reported outcome measures (procedure)</sct-ext:fsn>
-        <dc11:type>procedure</dc11:type>
+        <rdfs:label xml:lang="en">Assessment of PROMs (patient reported outcome measures)</rdfs:label>
         <rdfs:label xml:lang="en">Assessment of patient reported outcome measures</rdfs:label>
-        <rdfs:label xml:lang="es">evaluación de indicadores de resultados informados por el paciente</rdfs:label>
-        <rdfs:label xml:lang="fr">évaluation des PROMs</rdfs:label>
-        <skos:altLabel xml:lang="en">Assessment of PROMs (patient reported outcome measures)</skos:altLabel>
-        <skos:altLabel xml:lang="fr">évaluation des mesures du résultat des soins rapportées par les patient(e)s</skos:altLabel>
-        <skos:notation>840297006</skos:notation>
     </owl:Class>
     
 
@@ -1251,20 +761,11 @@
     <!-- http://snomed.info/id/84100007 -->
 
     <owl:Class rdf:about="http://snomed.info/id/84100007">
-        <sct-ext:definitionStatus>Défini</sct-ext:definitionStatus>
-        <sct-ext:fsn xml:lang="en">History taking (procedure)</sct-ext:fsn>
-        <dc11:type>procedure</dc11:type>
+        <obo:IAO_0000115 xml:lang="en">A clinically oriented interview of a patient or someone familiar with the patient.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">Clinical interview</rdfs:label>
         <rdfs:label xml:lang="en">History taking</rdfs:label>
-        <rdfs:label xml:lang="es">obtención de historia clínica</rdfs:label>
-        <rdfs:label xml:lang="fr">recueil des antécédents</rdfs:label>
-        <skos:altLabel xml:lang="en">Clinical interview</skos:altLabel>
-        <skos:altLabel xml:lang="en">History taking, health</skos:altLabel>
-        <skos:altLabel xml:lang="en">Taking health history</skos:altLabel>
-        <skos:altLabel xml:lang="es">anamnesis</skos:altLabel>
-        <skos:altLabel xml:lang="es">entrevista clínica</skos:altLabel>
-        <skos:definition xml:lang="en">A clinically oriented interview of a patient or someone familiar with the patient.</skos:definition>
-        <skos:definition xml:lang="es">Entrevista orientada clínicamente, realizada a un paciente o a un familiar</skos:definition>
-        <skos:notation>84100007</skos:notation>
+        <rdfs:label xml:lang="en">History taking, health</rdfs:label>
+        <rdfs:label xml:lang="en">Taking health history</rdfs:label>
     </owl:Class>
     
 
@@ -1272,14 +773,8 @@
     <!-- http://snomed.info/id/87405001 -->
 
     <owl:Class rdf:about="http://snomed.info/id/87405001">
-        <sct-ext:definitionStatus>Primitif</sct-ext:definitionStatus>
-        <sct-ext:fsn xml:lang="en">Cane, device (physical object)</sct-ext:fsn>
-        <dc11:type>physical object</dc11:type>
         <rdfs:label xml:lang="en">Cane</rdfs:label>
-        <rdfs:label xml:lang="es">bastón, dispositivo</rdfs:label>
-        <rdfs:label xml:lang="fr">canne</rdfs:label>
-        <skos:altLabel xml:lang="en">Cane, device</skos:altLabel>
-        <skos:notation>87405001</skos:notation>
+        <rdfs:label xml:lang="en">Cane, device</rdfs:label>
     </owl:Class>
     
 
@@ -1287,14 +782,8 @@
     <!-- http://snomed.info/id/87683000 -->
 
     <owl:Class rdf:about="http://snomed.info/id/87683000">
-        <sct-ext:definitionStatus>Primitif</sct-ext:definitionStatus>
-        <sct-ext:fsn xml:lang="en">Left handed (finding)</sct-ext:fsn>
-        <dc11:type>finding</dc11:type>
+        <rdfs:label xml:lang="en">LH - Left handed</rdfs:label>
         <rdfs:label xml:lang="en">Left handed</rdfs:label>
-        <rdfs:label xml:lang="fr">gaucher</rdfs:label>
-        <rdfs:label xml:lang="es">sinistrómano</rdfs:label>
-        <skos:altLabel xml:lang="en">LH - Left handed</skos:altLabel>
-        <skos:notation>87683000</skos:notation>
     </owl:Class>
     
 
@@ -1302,15 +791,8 @@
     <!-- http://snomed.info/id/9947008 -->
 
     <owl:Class rdf:about="http://snomed.info/id/9947008">
-        <sct-ext:definitionStatus>Primitif</sct-ext:definitionStatus>
-        <sct-ext:fsn xml:lang="en">Natural father (person)</sct-ext:fsn>
-        <dc11:type>person</dc11:type>
+        <rdfs:label xml:lang="en">Biological father</rdfs:label>
         <rdfs:label xml:lang="en">Natural father</rdfs:label>
-        <rdfs:label xml:lang="es">padre natural</rdfs:label>
-        <rdfs:label xml:lang="fr">père biologique</rdfs:label>
-        <skos:altLabel xml:lang="en">Biological father</skos:altLabel>
-        <skos:altLabel xml:lang="es">padre biológico</skos:altLabel>
-        <skos:notation>9947008</skos:notation>
     </owl:Class>
 </rdf:RDF>
 

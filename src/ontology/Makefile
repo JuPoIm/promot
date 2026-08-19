@@ -10,7 +10,7 @@
 # More information: https://github.com/INCATools/ontology-development-kit/
 
 # Fingerprint of the configuration file when this Makefile was last generated
-CONFIG_HASH=                d43c8ed5269b964f4851eaf4a0da99730ab8b3049fe062ce6917eb74653afae5
+CONFIG_HASH=                1b45083f8c389e0b2aa65ddb6043928292d2280c96f03fb0709f510f70c085bc
 
 
 # ----------------------------------------
@@ -58,7 +58,7 @@ OBODATE ?=                  $(shell date +'%d:%m:%Y %H:%M')
 VERSION=                    $(TODAY)
 ANNOTATE_ONTOLOGY_VERSION = annotate -V $(ONTBASE)/releases/$(VERSION)/$@ --annotation owl:versionInfo $(VERSION)
 ANNOTATE_CONVERT_FILE =     annotate --ontology-iri $(ONTBASE)/$@ $(ANNOTATE_ONTOLOGY_VERSION) convert -f ofn --output $@.tmp.owl && mv $@.tmp.owl $@
-OTHER_SRC =                 $(COMPONENTSDIR)/promot-component.owl 
+OTHER_SRC =                 $(COMPONENTSDIR)/promot-component.owl $(COMPONENTSDIR)/promot-component-en.owl 
 ONTOLOGYTERMS =             $(TMPDIR)/ontologyterms.txt
 EDIT_PREPROCESSED =         $(TMPDIR)/$(ONT)-preprocess.owl
 
@@ -71,7 +71,7 @@ MAPPING_RELEASE_FILES=      $(foreach n,$(MAPPINGS), $(MAPPINGDIR)/$(n).sssom.ts
 
 FORMATS = $(sort  owl obo json owl)
 FORMATS_INCL_TSV = $(sort $(FORMATS) tsv)
-RELEASE_ARTEFACTS = $(sort $(ONT)-base $(ONT)-full $(ONT)-non-classified $(ONT)-simple )
+RELEASE_ARTEFACTS = $(sort $(ONT)-base $(ONT)-full $(ONT)-non-classified $(ONT)-simple $(ONT)-en )
 
 ifeq ($(ODK_DEBUG),yes)
 ODK_DEBUG_FILE = debug.log
@@ -509,11 +509,13 @@ all_components: $(OTHER_SRC)
 .PHONY: recreate-components
 recreate-components:
 	$(MAKE) --assume-new=$(TMPDIR)/stamp-component-promot-component.owl \
+		--assume-new=$(TMPDIR)/stamp-component-promot-component-en.owl \
 		COMP=true IMP=false MIR=true PAT=true all_components
 
 .PHONY: no-mirror-recreate-components
 no-mirror-recreate-components:
 	$(MAKE) --assume-new=$(TMPDIR)/stamp-component-promot-component.owl \
+		--assume-new=$(TMPDIR)/stamp-component-promot-component-en.owl \
 		COMP=true IMP=false MIR=false PAT=true all_components
 
 .PHONY: recreate-%
@@ -539,6 +541,12 @@ $(COMPONENTSDIR)/promot-component.owl: $(TEMPLATEDIR)/promot-component-auto.tsv 
 		 --template $(TEMPLATEDIR)/promot-component-auto.tsv \
 		 $(ANNOTATE_CONVERT_FILE)
 .PRECIOUS: $(COMPONENTSDIR)/promot-component.owl
+
+$(COMPONENTSDIR)/promot-component-en.owl: $(TEMPLATEDIR)/promot-component-auto-en.tsv $(TMPDIR)/stamp-component-promot-component-en.owl
+	$(ROBOT) template --add-prefixes config/context.json \
+		 --template $(TEMPLATEDIR)/promot-component-auto-en.tsv \
+		 $(ANNOTATE_CONVERT_FILE)
+.PRECIOUS: $(COMPONENTSDIR)/promot-component-en.owl
 
 endif # COMP=true
 # ----------------------------------------
@@ -736,6 +744,12 @@ $(ONT)-non-classified.json: $(ONT)-non-classified.owl
 $(ONT)-simple.obo: $(ONT)-simple.owl
 	$(ROBOT) convert --input $< --check false -f obo $(OBO_FORMAT_OPTIONS) -o $@
 $(ONT)-simple.json: $(ONT)-simple.owl
+	$(ROBOT) annotate --input $< --ontology-iri $(ONTBASE)/$@ $(ANNOTATE_ONTOLOGY_VERSION) \
+		convert --check false -f json -o $@.tmp.json &&\
+		mv $@.tmp.json $@
+$(ONT)-en.obo: $(ONT)-en.owl
+	$(ROBOT) convert --input $< --check false -f obo $(OBO_FORMAT_OPTIONS) -o $@
+$(ONT)-en.json: $(ONT)-en.owl
 	$(ROBOT) annotate --input $< --ontology-iri $(ONTBASE)/$@ $(ANNOTATE_ONTOLOGY_VERSION) \
 		convert --check false -f json -o $@.tmp.json &&\
 		mv $@.tmp.json $@

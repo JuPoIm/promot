@@ -15,6 +15,7 @@ release_artefacts:
   - full
   - non-classified
   - simple
+  - en
 primary_release: full
 release_date: TRUE
 export_formats:
@@ -47,6 +48,15 @@ components:
       template_options: --add-prefixes config/context.json
       templates:
         - promot-component-auto.tsv
+      use_mappings: TRUE
+      mappings:
+        - promot-mappings.sssom.tsv
+        - icf-to-cif_promot-mappings.sssom.tsv
+    - filename: promot-component-en.owl
+      use_template: TRUE
+      template_options: --add-prefixes config/context.json
+      templates:
+        - promot-component-auto-en.tsv
       use_mappings: TRUE
       mappings:
         - promot-mappings.sssom.tsv

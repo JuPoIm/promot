@@ -123,3 +123,7 @@ template_df = template_df.reindex(new_index).reset_index(drop=True)
 print ('Creation of PROMOT template file')
 # Conversion de la dataframe en un template ROBOT | Convert of the dataframe into a ROBOT template
 template_df.to_csv('../templates/promot-component-auto.tsv', sep='\t', index=False)
+
+# Conversion de la dataframe en un template ROBOT en anglais uniquement | Convert of the dataframe into a ROBOT template English only
+template_df = template_df.drop(columns=['Label FR', 'Translation status LAB FR', 'Label FR annotation', 'Definition FR', 'Translation status DEF FR', 'Definition FR Source', 'Label ES', 'Translation status LAB ES', 'Label ES annotation', 'Definition ES', 'Translation status DEF ES', 'Definition ES Source'])
+template_df.to_csv('../templates/promot-component-auto-en.tsv', sep='\t', index=False)
