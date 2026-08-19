@@ -33,7 +33,7 @@ METADATADIR = ../metadata
 PYTHONTMPDIR = ../scripts/python/tmp
 ICF = true
 SPARQL_STATS =            translation-stat-by-language class-count-by-prefix-all class-count-by-domain
-EN = false
+EN = false # par défaut pipeline multilingue | multilingual pipeline by default
 
 ## -------------------------------------------------------------------------------
 ## 2 - CUSTOM IMPORTS - imports personalisés
@@ -76,7 +76,7 @@ $(IMPORTDIR)/fma_import.owl: $(MIRRORDIR)/fma.owl $(IMPORTDIR)/fma_terms_alone.t
 # Import of self ancestors annotations
 # Merging of the results into imports/hp_import.owl
 $(IMPORTDIR)/hp_import.owl: $(MIRRORDIR)/hp.owl $(IMPORTDIR)/hp_terms_descendants.txt $(IMPORTDIR)/hp_terms_alone.txt $(IMPORTDIR)/hp_terms_ancestors.txt
-	if [ $(IMP) = true ]; then \
+	if [ $(IMP) = true ] && [ $(EN) = false ] ; then \
 		curl -L https://raw.githubusercontent.com/obophenotype/human-phenotype-ontology/refs/heads/master/src/translations/hp-fr.babelon.owl \
 		--output $(TMPDIR)/hp-fr.babelon.owl; \
 		$(ROBOT) remove $(TMPDIR)/hp-fr.babelon.owl \
@@ -99,6 +99,20 @@ $(IMPORTDIR)/hp_import.owl: $(MIRRORDIR)/hp.owl $(IMPORTDIR)/hp_terms_descendant
 		--select "self annotations" --signature true \
 		merge -i $@.tmp.owl --output $@.tmp.owl ; \
 		$(ROBOT) filter -i $(MIRRORDIR)/hp-merged.owl -T $(IMPORTDIR)/hp_terms_ancestors.txt \
+		--select "self ancestors annotations" --signature true \
+		remove -T $(IMPORTDIR)/hp_exclude_terms.txt --select "self annotations" --signature true \
+		query --update $(SPARQLDIR)/inject-subset-declaration.ru --update $(SPARQLDIR)/postprocess-module.ru \
+		annotate --ontology-iri $(ONTBASE)/$@ $(ANNOTATE_ONTOLOGY_VERSION) \
+		merge -i $@.tmp.owl --output $@.tmp.owl && mv $@.tmp.owl $@; fi ;\
+	if [ $(IMP) = true ] && [ $(EN) = true ] ; then \
+	$(ROBOT) query -i $< --update $(SPARQLDIR)/preprocess-module.ru \
+		filter -T $(IMPORTDIR)/hp_terms_descendants.txt \
+		--select "self descendants annotations" --signature true \
+		--output $@.tmp.owl ; \
+		$(ROBOT) filter -i $< -T $(IMPORTDIR)/hp_terms_alone.txt \
+		--select "self annotations" --signature true \
+		merge -i $@.tmp.owl --output $@.tmp.owl ; \
+		$(ROBOT) filter -i $< -T $(IMPORTDIR)/hp_terms_ancestors.txt \
 		--select "self ancestors annotations" --signature true \
 		remove -T $(IMPORTDIR)/hp_exclude_terms.txt --select "self annotations" --signature true \
 		query --update $(SPARQLDIR)/inject-subset-declaration.ru --update $(SPARQLDIR)/postprocess-module.ru \
@@ -164,19 +178,32 @@ $(IMPORTDIR)/ro_import.owl: $(MIRRORDIR)/ro.owl $(IMPORTDIR)/ro_terms.txt
 # 8. Merge the .owl resulting from 4. with terminologie-snomed-ct-fr/dat/SnomedCT-NationalFR_OWL_asserted_20250621.owl (French edition)
 # 9. Put the resulting .owl in ../data/
 # 10. Custom hereafter code to fit your choice
-$(IMPORTDIR)/snomed_import.owl: $(IMPORTSDATADIR)/snomed-2026-07-13-en-es.owl $(IMPORTSDATADIR)/SnomedCT_NationalFR_OWL_2026.owl $(IMPORTDIR)/snomed_terms.txt
-	if [ $(IMP) = true ]; then $(ROBOT) query -i $< --update $(SPARQLDIR)/preprocess-module.ru \
+$(IMPORTDIR)/snomed_import.owl: $(IMPORTSDATADIR)/snomed-2026-07-13_en-es.owl $(IMPORTSDATADIR)/snomed-2026-08-17_en.owl $(IMPORTSDATADIR)/SnomedCT_NationalFR_OWL_2026.owl $(IMPORTDIR)/snomed_terms.txt
+	if [ $(IMP) = true ] && [ $(EN) = false ] ; then \
+		$(ROBOT) query -i $< --update $(SPARQLDIR)/preprocess-module.ru \
+		filter -T $(IMPORTDIR)/snomed_terms.txt --select "annotations self" --signature true \
+		query --update $(SPARQLDIR)/delete-label.sparql \
+		rename --mapping skos:prefLabel rdfs:label \
+		query --update $(SPARQLDIR)/inject-subset-declaration.ru --update $(SPARQLDIR)/postprocess-module.ru \
+		annotate --ontology-iri $(ONTBASE)/$@ $(ANNOTATE_ONTOLOGY_VERSION) --output $@.tmp.owl ; \
+		$(ROBOT) query -i $(IMPORTSDATADIR)/SnomedCT_NationalFR_OWL_2026.owl --update $(SPARQLDIR)/preprocess-module.ru \
+		filter -T $(IMPORTDIR)/snomed_terms.txt --select "annotations self" --signature true \
+		query --update $(SPARQLDIR)/inject-subset-declaration.ru --update $(SPARQLDIR)/postprocess-module.ru \
+		annotate --ontology-iri $(ONTBASE)/$@ $(ANNOTATE_ONTOLOGY_VERSION) \
+		merge -i $@.tmp.owl	\
+		rename --mapping skos:altLabel rdfs:label \
+		rename --mapping skos:definition "http://purl.obolibrary.org/obo/IAO_0000115" \
+		--output $@.tmp.owl && mv $@.tmp.owl $@ ; fi ; \
+	if [ $(IMP) = true ] && [ $(EN) = true ] ; then \
+		$(ROBOT) query -i $(IMPORTSDATADIR)/snomed-2026-08-17_en.owl --update $(SPARQLDIR)/preprocess-module.ru \
 		filter -T $(IMPORTDIR)/snomed_terms.txt --select "annotations self" --signature true \
 		query --update $(SPARQLDIR)/delete-label.sparql \
 		rename --mapping skos:prefLabel rdfs:label \
 		query --update $(SPARQLDIR)/inject-subset-declaration.ru --update $(SPARQLDIR)/postprocess-module.ru \
 		annotate --ontology-iri $(ONTBASE)/$@ $(ANNOTATE_ONTOLOGY_VERSION) \
-		--output $@.tmp.owl ; \
-		$(ROBOT) query -i $(IMPORTSDATADIR)/SnomedCT_NationalFR_OWL_2026.owl --update $(SPARQLDIR)/preprocess-module.ru \
-		filter -T $(IMPORTDIR)/snomed_terms.txt --select "annotations self" --signature true \
-		query --update $(SPARQLDIR)/inject-subset-declaration.ru --update $(SPARQLDIR)/postprocess-module.ru \
-		annotate --ontology-iri $(ONTBASE)/$@ $(ANNOTATE_ONTOLOGY_VERSION) \
-		merge -i $@.tmp.owl	--output $@.tmp.owl && mv $@.tmp.owl $@ ; fi
+		rename --mapping skos:altLabel rdfs:label \
+		rename --mapping skos:definition "http://purl.obolibrary.org/obo/IAO_0000115" \
+		--output $@.tmp.owl && mv $@.tmp.owl $@ ; fi
 
 # ----------------------------------------
 # Module ICF (EN):
@@ -189,7 +216,7 @@ $(IMPORTDIR)/snomed_import.owl: $(IMPORTSDATADIR)/snomed-2026-07-13-en-es.owl $(
 # C. merge des fichiers
 # D. rename des préfixes skos pour passer les tests de la release
 $(IMPORTDIR)/icf_import.owl: $(IMPORTSDATADIR)/whofic-2025-05-24.owl $(IMPORTDIR)/icf_terms_descendants.txt $(IMPORTDIR)/icf_terms.txt $(IMPORTDIR)/icf_exclude_terms.txt
-	if [ $(IMP) = true ] && [ $(ICF) = true ]; then $(ROBOT) query -i $< --update $(SPARQLDIR)/preprocess-module.ru \
+	if [ $(IMP) = true ] && [ $(ICF) = true ] ; then $(ROBOT) query -i $< --update $(SPARQLDIR)/preprocess-module.ru \
 		filter -T $(IMPORTDIR)/icf_terms_descendants.txt \
 		--select "self descendants annotations" \
 		--exclude-term http://id.who.int/icd/entity/721275161 \
@@ -230,27 +257,6 @@ extract-pheno:
 	python3.12 $(SCRIPTSDIR)/python/GenesToPhenos.py
 
 
-# ----------------------------------------
-# DRAFT UNDER DEVELOPMENT
-# CREATE EN ONLY ARTEFACT
-# Extraction des phénotypes associés en même temps à un gène et une maladie du projet dans HPO
-# ----------------------------------------
-#$(SRCMERGED): $(EDIT_PREPROCESSED) $(OTHER_SRC)
-#	$(ROBOT) remove --input $< --select imports --trim false \
-#		 merge $(foreach src, $(OTHER_SRC), --input $(src)) --output $@ \
-#	if [ $(EN) = true ]; then \
-#		$(ROBOT) remove --input $@ \
-#		 --select complement \
-#		 --drop-axiom-annotations "rdfs:label=~'.*@fr$'" \
-#		 --drop-axiom-annotations "rdfs:label=~'.*@es$'" \
-#		 --drop-axiom-annotations "http://purl.obolibrary/obo/IAO_0000115=~'.*@es$'" \
-#		 --drop-axiom-annotations "http://purl.obolibrary/obo/IAO_0000115=~'.*@fr$'" \
-#		 remove --term "rdfs:label=~'.*@fr$'" \
-#		 remove --term "rdfs:label=~'.*@es$'" \
-#		 remove --term "http://purl.obolibrary/obo/IAO_0000115=~'.*@es$'" \
-#		 remove --term "http://purl.obolibrary/obo/IAO_0000115=~'.*@fr$'" \
-#		 --output $@; fi
-
 # ---------------------------------------------
 # ICF Translations - Traductions - Traducciones
 # ---------------------------------------------
@@ -273,7 +279,7 @@ extract-pheno:
 # ----------------------------------------
 .PHONY: translation-icf
 translation-icf: refresh-icf $(IMPORTDIR)/icf_import.owl
-	if [ $(ICF) = true ]; then \
+	if [ $(ICF) = true ] AND [ $(EN) = false ] ; then \
 	curl -L https://data.bioportal.lirmm.fr/ontologies/ICF/submissions/2/download?apikey=1de0a270-29c5-4dda-b043-7c3580628cd5 -o $(IMPORTSDATADIR)/cif-asip.ttl ; \
 	$(ROBOT) --prefix "skos: http://www.w3.org/2004/02/skos/core#" --prefix "rdfs: http://www.w3.org/2000/01/rdf-schema#" -vvv export -i $(IMPORTSDATADIR)/cif-asip.ttl --header "IRI|skos:notation|skos:altLabel" --export $(PYTHONTMPDIR)/CIF-ASIP.tsv ; \
 	$(ROBOT) convert --input $(IMPORTSDATADIR)/cif-asip.ttl --output $(MIRRORDIR)/cif-asip.owl ; \
@@ -310,10 +316,11 @@ translation-icf: refresh-icf $(IMPORTDIR)/icf_import.owl
 #  - NEED 1 promot-component-base.tsv ROBOT template in promot/src/templates/ (hand edited)
 #  - NEED 1 RELATIONS.TSV DATA FILE in promot/src/data/promot/ (hand edited)
 #  - NEED translation-icf TO BE EXECUTED FIRST to have the ROBOT template icf_labels-es-fr.tsv in promot/src/templates/
-# OUTPUT promot-component.tsv in promot/src/templates/ that would be transformed into promot/components/promot-component.owl
+# OUTPUT promot-component-base.tsv in promot/src/templates/ that would be transformed into promot/components/promot-component.owl
+# OUTPUT 2 promot-component-base-en.tsv in promot/src/templates/ that would be transformed into promot/components/promot-component-en.owl
 # ----------------------------------------
 .PHONY: create-template
-create-template: translation-icf $(TEMPLATEDIR)/promot-component-base.tsv $(TEMPLATEDIR)/icf_labels_es-fr.tsv $(PROMOTDATADIR)/*.tsv
+create-template: translation-icf $(TEMPLATEDIR)/promot-component-base.tsv $(TEMPLATEDIR)/promot-component-base-en.tsv $(TEMPLATEDIR)/icf_labels_es-fr.tsv $(PROMOTDATADIR)/*.tsv
 	python3.12 $(SCRIPTSDIR)/python/relations-to-template.py
 
 # ----------------------------------------
@@ -341,19 +348,41 @@ prepare_release_fast:
 	$(MAKE) prepare_release IMP=false PAT=false MIR=false COMP=false ICF=FALSE
 
 # ----------------------------------------
+# English-only release
+# ----------------------------------------
+# A version of the ontology that includes only english labels and definitions with SPARQL queries
+#english_only: prepare_release_fast
+#	$(ROBOT) query --input $(RELEASEDIR)/$(ONT).owl --update $(SPARQLDIR)/delete-label_es-fr.ru \
+#	query --update $(SPARQLDIR)/delete-def_es-fr.ru --output $(RELEASEDIR)/$(ONT)-en.owl
+
+$(ONT)-en.owl: $(EDIT_PREPROCESSED) $(COMPONENTSDIR)/promot-component-en.owl prepare_en
+	$(ROBOT_RELEASE_IMPORT_MODE) \
+		reason --reasoner $(REASONER) --equivalent-classes-allowed asserted-only --exclude-tautologies structural \
+		relax $(RELAX_OPTIONS) \
+		reduce -r $(REASONER) $(REDUCE_OPTIONS) \
+		$(SHARED_ROBOT_COMMANDS) annotate --ontology-iri $(ONTBASE)/$@ $(ANNOTATE_ONTOLOGY_VERSION) --annotation oboInOwl:date "$(OBODATE)" --output $@.tmp.owl && mv $@.tmp.owl $@
+
+# ----------------------------------------
+# CUSTOM PREPARE_EN
+# ----------------------------------------
+.PHONY: prepare_en
+prepare_en:
+	$(MAKE) no-mirror-refresh-hp EN=true
+	$(MAKE) refresh-snomed EN=true
+	$(MAKE) create-template EN=true
+
+# ----------------------------------------
+# CUSTOM PREPARE_RELEASE_EN
+# ----------------------------------------
+#.PHONY: prepare_release_en
+#prepare_release_en:
+#	$(MAKE) prepare_release_fast
+
+# ----------------------------------------
 # Documentation - Documentación
 # ----------------------------------------
 documentation:
   documentation_system: mkdocs
-
-# ----------------------------------------
-# English-only release
-# ----------------------------------------
-# A version of the ontology that includes only english labels and definitions.
-english_only: prepare_release_fast
-	$(ROBOT) query --input $(RELEASEDIR)/$(ONT).owl --update $(SPARQLDIR)/delete-label.sparql --output $(TMPDIR)/fr-annotations.tsv
-	$(ROBOT) query --input $(RELEASEDIR)/$(ONT).owl --update $(SPARQLDIR)/remove-lang.sparql --output $(RELEASEDIR)/$(ONT)-en.owl
-
 
 # ----------------------------------------
 # CUSTOM REASON_TEST - reason_test personnalisé pour avoir les logs sur les classes qui ne sont pas satisfaisante
