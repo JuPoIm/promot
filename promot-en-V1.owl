@@ -66,11 +66,6 @@
      xmlns:CPATH_CONDITION_OCCURRENCE="https://w3id.org/cpont/condition_occurrence/">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/promot/promot-en.owl">
         <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/promot/releases/2026-08-17/promot-en.owl"/>
-        <dc11:contributor>Claudia Côté MD, PhD
-https://orcid.org/0000-0003-2508-2500</dc11:contributor>
-        <dc11:contributor>European Joint Programme on Rare Diseases (EJP RD)
-
-Website: https://www.ejprarediseases.org/</dc11:contributor>
         <dc11:contributor>Alexandre Girard
 University of Sherbrooke</dc11:contributor>
         <dc11:contributor>Anita Burgun MD, PhD
@@ -88,6 +83,9 @@ https://orcid.org/0000-0001-7764-2085</dc11:contributor>
         <dc11:contributor>Elizabeth Angelevski DC
 University of Sherbrooke
 https://orcid.org/0009-0008-3096-582X</dc11:contributor>
+        <dc11:contributor>European Joint Programme on Rare Diseases (EJP RD)
+
+Website: https://www.ejprarediseases.org/</dc11:contributor>
         <dc11:contributor>Hanns Lochmüller MD
 University of Ottawa, Children&apos;s Hospital of Eastern Ontario
 https://orcid.org/0000-0003-2324-8001</dc11:contributor>
@@ -141,6 +139,18 @@ PROMOT initiative has received funding from the Canadian Institutes of Health Re
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    
+
+
+    <!-- http://data.esante.gouv.fr/NRC-France/sct-ext#definitionStatus -->
+
+    <owl:AnnotationProperty rdf:about="http://data.esante.gouv.fr/NRC-France/sct-ext#definitionStatus"/>
+    
+
+
+    <!-- http://data.esante.gouv.fr/NRC-France/sct-ext#fsn -->
+
+    <owl:AnnotationProperty rdf:about="http://data.esante.gouv.fr/NRC-France/sct-ext#fsn"/>
     
 
 
@@ -1383,6 +1393,12 @@ We also have the outstanding issue of how to aim different definitions to differ
     
 
 
+    <!-- http://purl.org/dc/elements/1.1/type -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/type"/>
+    
+
+
     <!-- http://purl.org/dc/terms/contributor -->
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/contributor"/>
@@ -1677,6 +1693,12 @@ We also have the outstanding issue of how to aim different definitions to differ
     
 
 
+    <!-- http://www.w3.org/2004/02/skos/core#definition -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#definition"/>
+    
+
+
     <!-- http://www.w3.org/2004/02/skos/core#notation -->
 
     <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#notation"/>
@@ -1739,6 +1761,7 @@ We also have the outstanding issue of how to aim different definitions to differ
     <!-- http://purl.obolibrary.org/obo/PROMOT_2000002 -->
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/PROMOT_2000002">
+        <owl:inverseOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_2000005"/>
         <rdfs:domain rdf:resource="http://snomed.info/id/128927009"/>
         <obo:IAO_0000115 xml:lang="en">A relation between an evaluation procedure and the entity assessed by the procedure that could be a patient or a phenotype. The evaluation procedure could be, for instance, a performance test, a patient reported questionnaire or a scale (non restrictive).</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
@@ -1783,6 +1806,7 @@ We also have the outstanding issue of how to aim different definitions to differ
     <!-- http://purl.obolibrary.org/obo/PROMOT_2000006 -->
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/PROMOT_2000006">
+        <owl:inverseOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_2000009"/>
         <obo:IAO_0000115 xml:lang="en">A relation between an entity and the evaluation procedure that measures the entity.</obo:IAO_0000115>
         <rdfs:label xml:lang="en">is measured by</rdfs:label>
     </owl:ObjectProperty>
@@ -3548,12 +3572,6 @@ We also have the outstanding issue of how to aim different definitions to differ
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000086"/>
                 <owl:someValuesFrom rdf:resource="http://id.who.int/icd/entity/437219407"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002331"/>
-                <owl:someValuesFrom rdf:resource="http://id.who.int/icd/entity/567313968"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <schema:browserUrl rdf:resource="https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F1626363729"/>
@@ -5731,12 +5749,6 @@ Generic qualifier with the negative scale, used to indicate the extent or an imp
 
     <owl:Class rdf:about="http://id.who.int/icd/entity/437219407">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000019"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000080"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/sig/ont/fma/fma62955"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <schema:browserUrl rdf:resource="https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F437219407"/>
         <rdfs:label xml:lang="en">Anatomical localization</rdfs:label>
     </owl:Class>
@@ -14313,6 +14325,13 @@ For a further explanation of coding conventions in ICF, refer to Annex 2.</obo:I
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0002141"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget>Imbalanced walk</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:resource="https://orcid.org/0000-0001-5208-3432"/>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#layperson"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0002141"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
         <owl:annotatedTarget>Abnormality of balance</owl:annotatedTarget>
         <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#layperson"/>
     </owl:Axiom>
@@ -14320,13 +14339,6 @@ For a further explanation of coding conventions in ICF, refer to Annex 2.</obo:I
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0002141"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
         <owl:annotatedTarget>Abnormality of equilibrium</owl:annotatedTarget>
-        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#layperson"/>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0002141"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>Imbalanced walk</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:resource="https://orcid.org/0000-0001-5208-3432"/>
         <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#layperson"/>
     </owl:Axiom>
     
@@ -24431,6 +24443,12 @@ Previous. An information content entity is a non-realizable information entity t
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0010010"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROMOT_3000002"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <obo:IAO_0000115>The date when the symptom(s) are fully resolved.</obo:IAO_0000115>
         <obo:NCIT_NHC0>C178992</obo:NCIT_NHC0>
         <obo:NCIT_P106>Temporal Concept</obo:NCIT_P106>
@@ -24971,6 +24989,12 @@ Previous. An information content entity is a non-realizable information entity t
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002350"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0010009"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROMOT_3000001"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115>How long something has existed; elapsed time since birth.</obo:IAO_0000115>
@@ -26381,6 +26405,12 @@ Previous. An information content entity is a non-realizable information entity t
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0010008"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROMOT_3000002"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <obo:IAO_0000115>The date (and time) the patient gives consent to a surgical or medical procedure or participation in a clinical study after achieving an understanding of the relevant medical facts and the risks involved.</obo:IAO_0000115>
         <obo:NCIT_NHC0>C93579</obo:NCIT_NHC0>
         <obo:NCIT_P106>Temporal Concept</obo:NCIT_P106>
@@ -26766,6 +26796,12 @@ Previous. An information content entity is a non-realizable information entity t
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0010001">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROMOT_3000001"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <obo:IAO_0000115 xml:lang="en">an information content entity where the information is an age.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
         <rdfs:label xml:lang="en">age content entity</rdfs:label>
@@ -26777,6 +26813,12 @@ Previous. An information content entity is a non-realizable information entity t
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0010003">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROMOT_3000003"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <obo:IAO_0000115 xml:lang="en">an information content entity where the information is a decimal.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
         <rdfs:label xml:lang="en">decimal content entity</rdfs:label>
@@ -26788,6 +26830,12 @@ Previous. An information content entity is a non-realizable information entity t
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0010004">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROMOT_3000004"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#duration"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <obo:IAO_0000115 xml:lang="en">an information content entity where the information is a duration.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
         <rdfs:label xml:lang="en">duration content entity</rdfs:label>
@@ -26799,6 +26847,12 @@ Previous. An information content entity is a non-realizable information entity t
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0010005">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROMOT_3000005"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <obo:IAO_0000115 xml:lang="en">an information content entity where the information is an int.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
         <rdfs:label xml:lang="en">int content entity</rdfs:label>
@@ -26810,6 +26864,12 @@ Previous. An information content entity is a non-realizable information entity t
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0010006">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROMOT_3000006"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#token"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <obo:IAO_0000115 xml:lang="en">an information content entity where the information is a token.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
         <rdfs:label xml:lang="en">token content entity</rdfs:label>
@@ -26821,6 +26881,12 @@ Previous. An information content entity is a non-realizable information entity t
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0010007">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROMOT_3000007"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#gYear"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <obo:IAO_0000115 xml:lang="en">an information content entity where the information is a year.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
         <rdfs:label xml:lang="en">year content entity</rdfs:label>
@@ -26832,6 +26898,13 @@ Previous. An information content entity is a non-realizable information entity t
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0010008">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCIT_C49154"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002351"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0010048"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <obo:IAO_0000115 xml:lang="en">A statement regarding a consent to describe it.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
         <rdfs:label xml:lang="en">statement about a consent</rdfs:label>
@@ -26843,12 +26916,6 @@ Previous. An information content entity is a non-realizable information entity t
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0010009">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCIT_C49154"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002351"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_9606"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002351"/>
@@ -26870,12 +26937,6 @@ Previous. An information content entity is a non-realizable information entity t
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002351"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/HP_0000118"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002351"/>
                 <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
                 <owl:onClass rdf:resource="http://purl.obolibrary.org/obo/HP_0000118"/>
             </owl:Restriction>
@@ -26891,6 +26952,13 @@ Previous. An information content entity is a non-realizable information entity t
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0010011">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCIT_C49154"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002351"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://snomed.info/id/128927009"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <obo:IAO_0000115 xml:lang="en">A statement regarding a procedure to describe it.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
         <rdfs:label xml:lang="en">statement about a procedure</rdfs:label>
@@ -26902,12 +26970,6 @@ Previous. An information content entity is a non-realizable information entity t
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0010012">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0010009"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002351"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/NCIT_C16960"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002351"/>
@@ -27629,6 +27691,12 @@ Previous. An information content entity is a non-realizable information entity t
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0010012"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROMOT_3000008"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <obo:IAO_0000115 xml:lang="en">A risk of fall assessed for a patient that has phenotypes that allow to assess they undergo a risk of fall.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
         <rdfs:label xml:lang="en">Risk of fall assessed</rdfs:label>
@@ -27748,6 +27816,38 @@ Previous. An information content entity is a non-realizable information entity t
     
 
 
+    <!-- http://purl.obolibrary.org/obo/PROMOT_0020005 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0020005">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://id.who.int/icd/entity/1626363729"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002328"/>
+                        <owl:someValuesFrom rdf:resource="http://id.who.int/icd/entity/567313968"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://id.who.int/icd/entity/1626363729"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002328"/>
+                <owl:someValuesFrom rdf:resource="http://id.who.int/icd/entity/567313968"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000115 xml:lang="en">A body structure related to a body function such that the body structure is functionally related to the body function.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="es">Estructura corporal que está implicada en una función corporal.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="fr">Une structure anatomique qui est nécessaire au fonctionnement d&apos;une fonction organique.</obo:IAO_0000115>
+        <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
+        <rdfs:label xml:lang="en">Body function related body structure</rdfs:label>
+        <rdfs:label xml:lang="fr">Structure anatomique nécessaire à une fonction corporelle</rdfs:label>
+        <rdfs:label xml:lang="es">estructura corporal relacionada con la función corporal</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/PROMOT_0031001 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0031001">
@@ -27832,12 +27932,6 @@ Previous. An information content entity is a non-realizable information entity t
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0031007">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000019"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000080"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/HP_0000118"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <obo:IAO_0000115 xml:lang="en">A qualifier for stating the presence, absence or uncertainty of a entity instance (e.g. a phenotype instance).</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
         <oboInOwl:hasDbXref>http://snomed.info/id/363778006</oboInOwl:hasDbXref>
@@ -29602,7 +29696,7 @@ Previous. An information content entity is a non-realizable information entity t
                 <owl:intersectionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="http://snomed.info/id/128927009"/>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROMOT_2000002"/>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROMOT_2000009"/>
                         <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0110001"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
@@ -29611,7 +29705,7 @@ Previous. An information content entity is a non-realizable information entity t
         <rdfs:subClassOf rdf:resource="http://snomed.info/id/128927009"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROMOT_2000002"/>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROMOT_2000009"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0110001"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -29630,7 +29724,7 @@ Previous. An information content entity is a non-realizable information entity t
                 <owl:intersectionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="http://snomed.info/id/128927009"/>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROMOT_2000002"/>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROMOT_2000009"/>
                         <owl:someValuesFrom rdf:resource="http://id.who.int/icd/entity/567313968"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
@@ -29639,7 +29733,7 @@ Previous. An information content entity is a non-realizable information entity t
         <rdfs:subClassOf rdf:resource="http://snomed.info/id/128927009"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROMOT_2000002"/>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROMOT_2000009"/>
                 <owl:someValuesFrom rdf:resource="http://id.who.int/icd/entity/567313968"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -33061,6 +33155,12 @@ FEBS J. 2013 Sep; 280(17): 10.1111/febs.12274. Published online 2013 May 7. doi:
 
     <owl:Class rdf:about="http://purl.org/sig/ont/fma/fma62955">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000040"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000086"/>
+                <owl:someValuesFrom rdf:resource="http://id.who.int/icd/entity/437219407"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <fma:FMAID rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">62955</fma:FMAID>
         <fma:definition>Organismal continuant entity which is enclosed by the bona fide boundary of an organism or is an attribute of its structural organization. Examples: cell, heart, head, peritoneal cavity, apex of lung, anatomical term, sagittal plane.</fma:definition>
         <fma:non-English_equivalent>Entité anatomique</fma:non-English_equivalent>
@@ -34183,10 +34283,17 @@ pulmonary arterial and venous trees. Examples: There is only one heart.</rdfs:co
 
     <owl:Class rdf:about="http://snomed.info/id/11286003">
         <rdfs:subClassOf rdf:resource="http://snomed.info/id/82101005"/>
+        <sct-ext:definitionStatus>Primitif</sct-ext:definitionStatus>
+        <sct-ext:fsn xml:lang="en">Twin sibling (person)</sct-ext:fsn>
+        <dc11:type>person</dc11:type>
         <rdfs:comment>[PROMOT note] [Derived from RD-CDM] [6.3.5 Family Member Relationship]</rdfs:comment>
         <rdfs:comment>[PROMOT note] [RD-CDM] Graefe, A.S.L., Hübner, M.R., Rehburg, F. et al. An ontology-based rare disease common data model harmonising international registries, FHIR, and Phenopackets. Sci Data 12, 234 (2025). https://doi.org/10.1038/s41597-025-04558-z</rdfs:comment>
         <rdfs:label xml:lang="en">Twin sibling</rdfs:label>
+        <rdfs:label xml:lang="es">hermano mellizo de sexo femenino o masculino</rdfs:label>
+        <rdfs:label xml:lang="fr">jumeau ou jumelle</rdfs:label>
+        <skos:altLabel xml:lang="fr">frère jumeau ou sœur jumelle</skos:altLabel>
         <skos:changeNote xml:lang="en">[PROMOT note] The PROMOT ontology added a comment to quote the CDM used as a source for this entity.</skos:changeNote>
+        <skos:notation>11286003</skos:notation>
     </owl:Class>
     
 
@@ -34195,13 +34302,21 @@ pulmonary arterial and venous trees. Examples: There is only one heart.</rdfs:co
 
     <owl:Class rdf:about="http://snomed.info/id/113160008">
         <rdfs:subClassOf rdf:resource="http://snomed.info/id/75226009"/>
+        <sct-ext:definitionStatus>Primitif</sct-ext:definitionStatus>
+        <sct-ext:fsn xml:lang="en">Natural son (person)</sct-ext:fsn>
+        <dc11:type>person</dc11:type>
         <rdfs:comment>[PROMOT note] [Derived from EURO-NMD NMD-CDE] [which_affected_family]</rdfs:comment>
         <rdfs:comment>[PROMOT note] [Derived from RD-CDM] [6.3.5 Family Member Relationship]</rdfs:comment>
         <rdfs:comment>[PROMOT note] [EURO-NMD] Atalia A et al., EURO-NMD registry: federated FAIR infrastructure, innovative technologies and concepts of a patient-centred registry for rare neuromuscular disorders. Orphanet J Rare Dis. 2024 Feb 14;19(1):66. doi: 10.1186/s13023-024-03059-3. PMID: 38355534; PMCID: PMC10865673.</rdfs:comment>
         <rdfs:comment>[PROMOT note] [RD-CDM] Graefe, A.S.L., Hübner, M.R., Rehburg, F. et al. An ontology-based rare disease common data model harmonising international registries, FHIR, and Phenopackets. Sci Data 12, 234 (2025). https://doi.org/10.1038/s41597-025-04558-z</rdfs:comment>
         <rdfs:label xml:lang="en">Biological son</rdfs:label>
         <rdfs:label xml:lang="en">Natural son</rdfs:label>
+        <rdfs:label xml:lang="fr">fils biologique</rdfs:label>
+        <rdfs:label xml:lang="es">hijo natural</rdfs:label>
+        <skos:altLabel xml:lang="en">Biological son</skos:altLabel>
+        <skos:altLabel xml:lang="es">hijo biológico</skos:altLabel>
         <skos:changeNote xml:lang="en">[PROMOT note] The PROMOT ontology added a comment to quote the CDMs used as a source for this entity.</skos:changeNote>
+        <skos:notation>113160008</skos:notation>
     </owl:Class>
     
 
@@ -34216,12 +34331,23 @@ pulmonary arterial and venous trees. Examples: There is only one heart.</rdfs:co
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0010012"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <sct-ext:definitionStatus>Défini</sct-ext:definitionStatus>
+        <sct-ext:fsn xml:lang="en">Body height (observable entity)</sct-ext:fsn>
         <obo:IAO_0000115 xml:lang="en">The distance from the base to the top of a subject&apos;s entire body.</obo:IAO_0000115>
+        <dc11:type>observable entity</dc11:type>
         <rdfs:comment>[PROMOT note] [Derived from EURO-NMD NMD-CDE] [body_height_cm]</rdfs:comment>
         <rdfs:comment>[PROMOT note] [EURO-NMD] Atalia A et al., EURO-NMD registry: federated FAIR infrastructure, innovative technologies and concepts of a patient-centred registry for rare neuromuscular disorders. Orphanet J Rare Dis. 2024 Feb 14;19(1):66. doi: 10.1186/s13023-024-03059-3. PMID: 38355534; PMCID: PMC10865673.</rdfs:comment>
         <rdfs:comment>[PROMOT note] [Present in OPMD research clinical form]</rdfs:comment>
         <rdfs:label xml:lang="en">Body height</rdfs:label>
+        <rdfs:label xml:lang="es">altura corporal</rdfs:label>
+        <rdfs:label xml:lang="fr">taille corporelle</rdfs:label>
+        <skos:altLabel xml:lang="es">estatura</skos:altLabel>
+        <skos:altLabel xml:lang="fr">stature</skos:altLabel>
+        <skos:altLabel xml:lang="fr">taille</skos:altLabel>
         <skos:changeNote xml:lang="en">[PROMOT note] The PROMOT ontology added a comment to quote the CDM used as a source for this entity.</skos:changeNote>
+        <skos:definition xml:lang="es">La distancia desde el piso hasta el vértice del cráneo del cuerpo de un individuo.</skos:definition>
+        <skos:definition xml:lang="en">The distance from the base to the top of a subject&apos;s entire body.</skos:definition>
+        <skos:notation>1153637007</skos:notation>
     </owl:Class>
     
 
@@ -34230,10 +34356,20 @@ pulmonary arterial and venous trees. Examples: There is only one heart.</rdfs:co
 
     <owl:Class rdf:about="http://snomed.info/id/1255320005">
         <rdfs:subClassOf rdf:resource="http://snomed.info/id/224899006"/>
+        <sct-ext:definitionStatus>Primitif</sct-ext:definitionStatus>
+        <sct-ext:fsn xml:lang="en">Wheeled walker (physical object)</sct-ext:fsn>
         <obo:IAO_0000115 xml:lang="en">A walking aid that consists of a frame with 3 or 4 wheels that allow the walker to move freely without lifting or tilting.</obo:IAO_0000115>
+        <dc11:type>physical object</dc11:type>
         <rdfs:label xml:lang="en">Mobilator</rdfs:label>
         <rdfs:label xml:lang="en">Rollator</rdfs:label>
         <rdfs:label xml:lang="en">Wheeled walker</rdfs:label>
+        <rdfs:label xml:lang="es">andador con ruedas</rdfs:label>
+        <rdfs:label xml:lang="fr">déambulateur à roues</rdfs:label>
+        <skos:altLabel xml:lang="en">Mobilator</skos:altLabel>
+        <skos:altLabel xml:lang="en">Rollator</skos:altLabel>
+        <skos:definition xml:lang="en">A walking aid that consists of a frame with 3 or 4 wheels that allow the walker to move freely without lifting or tilting.</skos:definition>
+        <skos:definition xml:lang="es">Un dispositivo de apoyo para la marcha que consiste en una estructura con 3 o 4 ruedas que permite al caminante moverse con libertad sin necesidad de levantarlo o inclinarlo.</skos:definition>
+        <skos:notation>1255320005</skos:notation>
     </owl:Class>
     
 
@@ -34242,8 +34378,17 @@ pulmonary arterial and venous trees. Examples: There is only one heart.</rdfs:co
 
     <owl:Class rdf:about="http://snomed.info/id/125678001">
         <rdfs:subClassOf rdf:resource="http://snomed.info/id/125679009"/>
+        <sct-ext:definitionStatus>Primitif</sct-ext:definitionStatus>
+        <sct-ext:fsn xml:lang="en">First degree blood relative (person)</sct-ext:fsn>
+        <dc11:type>person</dc11:type>
         <rdfs:label xml:lang="en">First degree biological relative</rdfs:label>
         <rdfs:label xml:lang="en">First degree blood relative</rdfs:label>
+        <rdfs:label xml:lang="es">familiar consanguíneo de primer grado</rdfs:label>
+        <rdfs:label xml:lang="fr">parent(e) au premier degré</rdfs:label>
+        <skos:altLabel xml:lang="en">First degree biological relative</skos:altLabel>
+        <skos:altLabel xml:lang="es">familiar directo</skos:altLabel>
+        <skos:altLabel xml:lang="es">pariente biológico de primer grado</skos:altLabel>
+        <skos:notation>125678001</skos:notation>
     </owl:Class>
     
 
@@ -34264,6 +34409,9 @@ pulmonary arterial and venous trees. Examples: There is only one heart.</rdfs:co
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/HP_0032319"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <sct-ext:definitionStatus>Primitif</sct-ext:definitionStatus>
+        <sct-ext:fsn xml:lang="en">Blood relative (person)</sct-ext:fsn>
+        <dc11:type>person</dc11:type>
         <oboInOwl:hasDbXref>http://snomed.info/id/444018008</oboInOwl:hasDbXref>
         <rdfs:comment>[PROMOT note] [Derived from EURO-NMD NMD-CDE] [which_affected_family]</rdfs:comment>
         <rdfs:comment>[PROMOT note] [Derived from RD-CDM] [6.3.5 Family Member Relationship]</rdfs:comment>
@@ -34271,7 +34419,13 @@ pulmonary arterial and venous trees. Examples: There is only one heart.</rdfs:co
         <rdfs:comment>[PROMOT note] [RD-CDM] Graefe, A.S.L., Hübner, M.R., Rehburg, F. et al. An ontology-based rare disease common data model harmonising international registries, FHIR, and Phenopackets. Sci Data 12, 234 (2025). https://doi.org/10.1038/s41597-025-04558-z</rdfs:comment>
         <rdfs:label xml:lang="en">Biological relative</rdfs:label>
         <rdfs:label xml:lang="en">Blood relative</rdfs:label>
+        <rdfs:label xml:lang="es">familiar consanguíneo</rdfs:label>
+        <rdfs:label xml:lang="fr">parent(e) biologique</rdfs:label>
+        <skos:altLabel xml:lang="en">Biological relative</skos:altLabel>
+        <skos:altLabel xml:lang="es">pariente biológico</skos:altLabel>
+        <skos:altLabel xml:lang="fr">personne de la même famille</skos:altLabel>
         <skos:changeNote xml:lang="en">[PROMOT note] The PROMOT ontology added a comment to quote the CDM used as a source for this entity. A crossref to the orignal RD-CDM element from SNOMED has also been added.</skos:changeNote>
+        <skos:notation>125679009</skos:notation>
     </owl:Class>
     
 
@@ -34287,8 +34441,14 @@ pulmonary arterial and venous trees. Examples: There is only one heart.</rdfs:co
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0010012"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <sct-ext:definitionStatus>Primitif</sct-ext:definitionStatus>
+        <sct-ext:fsn xml:lang="en">Marital status (observable entity)</sct-ext:fsn>
+        <dc11:type>observable entity</dc11:type>
         <rdfs:comment>[PROMOT note] [Present in OPMD research clinical form]</rdfs:comment>
         <rdfs:label xml:lang="en">Marital status</rdfs:label>
+        <rdfs:label xml:lang="es">estado civil</rdfs:label>
+        <rdfs:label xml:lang="fr">état matrimonial</rdfs:label>
+        <skos:notation>125680007</skos:notation>
     </owl:Class>
     
 
@@ -34315,12 +34475,19 @@ pulmonary arterial and venous trees. Examples: There is only one heart.</rdfs:co
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0010011"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <sct-ext:definitionStatus>Défini</sct-ext:definitionStatus>
+        <sct-ext:fsn xml:lang="en">Procedure by method (procedure)</sct-ext:fsn>
+        <dc11:type>procedure</dc11:type>
         <oboInOwl:hasDbXref>NCIT:C60819</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>http://snomed.info/id/122869004</oboInOwl:hasDbXref>
         <rdfs:comment>[PROMOT note] [Derived from RD-CDM] [6.3.4 Procedure]</rdfs:comment>
         <rdfs:comment>[PROMOT note] [RD-CDM] Graefe, A.S.L., Hübner, M.R., Rehburg, F. et al. An ontology-based rare disease common data model harmonising international registries, FHIR, and Phenopackets. Sci Data 12, 234 (2025). https://doi.org/10.1038/s41597-025-04558-z</rdfs:comment>
         <rdfs:label xml:lang="en">Procedure by method</rdfs:label>
+        <rdfs:label xml:lang="es">procedimiento clasificado según el método</rdfs:label>
+        <rdfs:label xml:lang="fr">procédure selon la méthode</rdfs:label>
+        <skos:altLabel xml:lang="fr">intervention selon la méthode</skos:altLabel>
         <skos:changeNote xml:lang="en">[PROMOT note] The PROMOT ontology added a comment to quote the CDM used as a source for this entity. A crossref to the orignal RD-CDM element from SNOMED has also been added.</skos:changeNote>
+        <skos:notation>128927009</skos:notation>
     </owl:Class>
     
 
@@ -34329,8 +34496,16 @@ pulmonary arterial and venous trees. Examples: There is only one heart.</rdfs:co
 
     <owl:Class rdf:about="http://snomed.info/id/12894003">
         <rdfs:subClassOf rdf:resource="http://snomed.info/id/315306007"/>
+        <sct-ext:definitionStatus>Défini</sct-ext:definitionStatus>
+        <sct-ext:fsn xml:lang="en">Functional assessment (procedure)</sct-ext:fsn>
         <obo:IAO_0000115 xml:lang="en">An evaluation of the performance of an organ, organ system, or body part</obo:IAO_0000115>
+        <dc11:type>procedure</dc11:type>
         <rdfs:label xml:lang="en">Functional assessment</rdfs:label>
+        <rdfs:label xml:lang="es">evaluación funcional</rdfs:label>
+        <rdfs:label xml:lang="fr">évaluation fonctionnelle</rdfs:label>
+        <skos:definition xml:lang="en">An evaluation of the performance of an organ, organ system, or body part</skos:definition>
+        <skos:definition xml:lang="es">Evaluación de la función de un órgano, sistema orgánico o parte corporal</skos:definition>
+        <skos:notation>12894003</skos:notation>
     </owl:Class>
     
 
@@ -34339,8 +34514,16 @@ pulmonary arterial and venous trees. Examples: There is only one heart.</rdfs:co
 
     <owl:Class rdf:about="http://snomed.info/id/13646006">
         <rdfs:subClassOf rdf:resource="http://snomed.info/id/125678001"/>
+        <sct-ext:definitionStatus>Primitif</sct-ext:definitionStatus>
+        <sct-ext:fsn xml:lang="en">Natural parent (person)</sct-ext:fsn>
+        <dc11:type>person</dc11:type>
         <rdfs:label xml:lang="en">Biological parent</rdfs:label>
         <rdfs:label xml:lang="en">Natural parent</rdfs:label>
+        <rdfs:label xml:lang="es">padres naturales</rdfs:label>
+        <rdfs:label xml:lang="fr">parent biologique</rdfs:label>
+        <skos:altLabel xml:lang="en">Biological parent</skos:altLabel>
+        <skos:altLabel xml:lang="es">padres biológicos</skos:altLabel>
+        <skos:notation>13646006</skos:notation>
     </owl:Class>
     
 
@@ -34349,6 +34532,9 @@ pulmonary arterial and venous trees. Examples: There is only one heart.</rdfs:co
 
     <owl:Class rdf:about="http://snomed.info/id/160476009">
         <rdfs:subClassOf rdf:resource="http://snomed.info/id/363787002"/>
+        <sct-ext:definitionStatus>Primitif</sct-ext:definitionStatus>
+        <sct-ext:fsn xml:lang="en">Social / personal history observable (observable entity)</sct-ext:fsn>
+        <dc11:type>observable entity</dc11:type>
         <rdfs:label xml:lang="en">PH - Personal history</rdfs:label>
         <rdfs:label xml:lang="en">Personal and social circumstances</rdfs:label>
         <rdfs:label xml:lang="en">Personal details</rdfs:label>
@@ -34358,6 +34544,17 @@ pulmonary arterial and venous trees. Examples: There is only one heart.</rdfs:co
         <rdfs:label xml:lang="en">Social and personal circumstances</rdfs:label>
         <rdfs:label xml:lang="en">Social and personal history</rdfs:label>
         <rdfs:label xml:lang="en">Social history</rdfs:label>
+        <rdfs:label xml:lang="es">característica observable relacionada con antecedente personal / social</rdfs:label>
+        <rdfs:label xml:lang="fr">entité observable dans des antécédents personnels ou sociaux</rdfs:label>
+        <skos:altLabel xml:lang="en">PH - Personal history</skos:altLabel>
+        <skos:altLabel xml:lang="en">Personal and social circumstances</skos:altLabel>
+        <skos:altLabel xml:lang="en">Personal details</skos:altLabel>
+        <skos:altLabel xml:lang="en">Personal history</skos:altLabel>
+        <skos:altLabel xml:lang="en">SH - Social history</skos:altLabel>
+        <skos:altLabel xml:lang="en">Social and personal circumstances</skos:altLabel>
+        <skos:altLabel xml:lang="en">Social and personal history</skos:altLabel>
+        <skos:altLabel xml:lang="en">Social history</skos:altLabel>
+        <skos:notation>160476009</skos:notation>
     </owl:Class>
     
 
@@ -34366,6 +34563,9 @@ pulmonary arterial and venous trees. Examples: There is only one heart.</rdfs:co
 
     <owl:Class rdf:about="http://snomed.info/id/17945006">
         <rdfs:subClassOf rdf:resource="http://snomed.info/id/78272007"/>
+        <sct-ext:definitionStatus>Primitif</sct-ext:definitionStatus>
+        <sct-ext:fsn xml:lang="en">Natural grandmother (person)</sct-ext:fsn>
+        <dc11:type>person</dc11:type>
         <rdfs:comment>[PROMOT note] [Derived from EURO-NMD NMD-CDE] [which_affected_family]</rdfs:comment>
         <rdfs:comment>[PROMOT note] [Derived from RD-CDM] [6.3.5 Family Member Relationship] </rdfs:comment>
         <rdfs:comment>[PROMOT note] [EURO-NMD] Atalia A et al., EURO-NMD registry: federated FAIR infrastructure, innovative technologies and concepts of a patient-centred registry for rare neuromuscular disorders. Orphanet J Rare Dis. 2024 Feb 14;19(1):66. doi: 10.1186/s13023-024-03059-3. PMID: 38355534; PMCID: PMC10865673.</rdfs:comment>
@@ -34374,7 +34574,14 @@ pulmonary arterial and venous trees. Examples: There is only one heart.</rdfs:co
         <rdfs:label xml:lang="en">Biological grandmother</rdfs:label>
         <rdfs:label xml:lang="en">Natural grand-mother</rdfs:label>
         <rdfs:label xml:lang="en">Natural grandmother</rdfs:label>
+        <rdfs:label xml:lang="es">abuela natural</rdfs:label>
+        <rdfs:label xml:lang="fr">grand-mère biologique</rdfs:label>
+        <skos:altLabel xml:lang="en">Biological grand-mother</skos:altLabel>
+        <skos:altLabel xml:lang="en">Biological grandmother</skos:altLabel>
+        <skos:altLabel xml:lang="en">Natural grand-mother</skos:altLabel>
+        <skos:altLabel xml:lang="es">abuela biológica</skos:altLabel>
         <skos:changeNote xml:lang="en">[PROMOT note] The PROMOT ontology added a comment to quote the CDMs used as a source for this entity.</skos:changeNote>
+        <skos:notation>17945006</skos:notation>
     </owl:Class>
     
 
@@ -34383,8 +34590,15 @@ pulmonary arterial and venous trees. Examples: There is only one heart.</rdfs:co
 
     <owl:Class rdf:about="http://snomed.info/id/183147006">
         <rdfs:subClassOf rdf:resource="http://snomed.info/id/224899006"/>
+        <sct-ext:definitionStatus>Primitif</sct-ext:definitionStatus>
+        <sct-ext:fsn xml:lang="en">Tripod (physical object)</sct-ext:fsn>
+        <dc11:type>physical object</dc11:type>
         <rdfs:label xml:lang="en">Tripod</rdfs:label>
         <rdfs:label xml:lang="en">Walking tripod</rdfs:label>
+        <rdfs:label xml:lang="fr">canne tripode</rdfs:label>
+        <rdfs:label xml:lang="es">trípode</rdfs:label>
+        <skos:altLabel xml:lang="en">Walking tripod</skos:altLabel>
+        <skos:notation>183147006</skos:notation>
     </owl:Class>
     
 
@@ -34399,6 +34613,15 @@ pulmonary arterial and venous trees. Examples: There is only one heart.</rdfs:co
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0010009"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROMOT_3000002"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <sct-ext:definitionStatus>Primitif</sct-ext:definitionStatus>
+        <sct-ext:fsn xml:lang="en">Date of birth (observable entity)</sct-ext:fsn>
+        <dc11:type>observable entity</dc11:type>
         <oboInOwl:hasDbXref>LOINC:54124-3</oboInOwl:hasDbXref>
         <rdfs:comment>[PROMOT note] [Derived from EU-CDE] [2.1. Date of birth]</rdfs:comment>
         <rdfs:comment>[PROMOT note] [Derived from EURO-NMD NMD-CDE] [date_of_birth]</rdfs:comment>
@@ -34409,7 +34632,11 @@ pulmonary arterial and venous trees. Examples: There is only one heart.</rdfs:co
         <rdfs:label xml:lang="en">DOB - Date of birth</rdfs:label>
         <rdfs:label xml:lang="en">Date of Birth</rdfs:label>
         <rdfs:label xml:lang="en">Date of birth</rdfs:label>
+        <rdfs:label xml:lang="fr">date de naissance</rdfs:label>
+        <rdfs:label xml:lang="es">fecha de nacimiento</rdfs:label>
+        <skos:altLabel xml:lang="en">DOB - Date of birth</skos:altLabel>
         <skos:changeNote xml:lang="en">[PROMOT note] The PROMOT ontology added a comment to quote the CDMs used as a source for this entity. A crossref to the orignal RD-CDM element from SNOMED and LOINC has also been added.</skos:changeNote>
+        <skos:notation>184099003</skos:notation>
     </owl:Class>
     
 
@@ -34425,8 +34652,14 @@ pulmonary arterial and venous trees. Examples: There is only one heart.</rdfs:co
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0010012"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <sct-ext:definitionStatus>Primitif</sct-ext:definitionStatus>
+        <sct-ext:fsn xml:lang="en">Patient occupation (observable entity)</sct-ext:fsn>
+        <dc11:type>observable entity</dc11:type>
         <rdfs:comment>[PROMOT note] [Present in OPMD research clinical form]</rdfs:comment>
         <rdfs:label xml:lang="en">Patient occupation</rdfs:label>
+        <rdfs:label xml:lang="fr">emploi du patient</rdfs:label>
+        <rdfs:label xml:lang="es">ocupación del paciente</rdfs:label>
+        <skos:notation>184104002</skos:notation>
     </owl:Class>
     
 
@@ -34442,12 +34675,19 @@ pulmonary arterial and venous trees. Examples: There is only one heart.</rdfs:co
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0010009"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <sct-ext:definitionStatus>Primitif</sct-ext:definitionStatus>
+        <sct-ext:fsn xml:lang="en">Cause of death (observable entity)</sct-ext:fsn>
+        <dc11:type>observable entity</dc11:type>
         <oboInOwl:hasDbXref>LOINC:54112-8</oboInOwl:hasDbXref>
         <rdfs:comment>[PROMOT note] [Derived from RD-CDM] [3.3 Cause of Death] &amp; [6.3.11 Family Member Cause of Death]</rdfs:comment>
         <rdfs:comment>[PROMOT note] [RD-CDM] Graefe, A.S.L., Hübner, M.R., Rehburg, F. et al. An ontology-based rare disease common data model harmonising international registries, FHIR, and Phenopackets. Sci Data 12, 234 (2025). https://doi.org/10.1038/s41597-025-04558-z</rdfs:comment>
         <rdfs:label xml:lang="en">Cause of death</rdfs:label>
         <rdfs:label xml:lang="en">Condition fatal-cause of death</rdfs:label>
+        <rdfs:label xml:lang="es">causa de muerte</rdfs:label>
+        <rdfs:label xml:lang="fr">cause du décès</rdfs:label>
+        <skos:altLabel xml:lang="en">Condition fatal-cause of death</skos:altLabel>
         <skos:changeNote xml:lang="en">[PROMOT note] The PROMOT ontology added a comment to quote the CDM used as a source for this entity.</skos:changeNote>
+        <skos:notation>184305005</skos:notation>
     </owl:Class>
     
 
@@ -34463,7 +34703,14 @@ pulmonary arterial and venous trees. Examples: There is only one heart.</rdfs:co
                 </owl:intersectionOf>
             </owl:Class>
         </rdfs:subClassOf>
+        <sct-ext:definitionStatus>Primitif</sct-ext:definitionStatus>
+        <sct-ext:fsn xml:lang="en">Twin sister (person)</sct-ext:fsn>
+        <dc11:type>person</dc11:type>
         <rdfs:label xml:lang="en">Twin sister</rdfs:label>
+        <rdfs:label xml:lang="es">hermana melliza</rdfs:label>
+        <rdfs:label xml:lang="fr">jumelle</rdfs:label>
+        <skos:altLabel xml:lang="fr">sœur jumelle</skos:altLabel>
+        <skos:notation>19343003</skos:notation>
     </owl:Class>
     
 
@@ -34472,8 +34719,14 @@ pulmonary arterial and venous trees. Examples: There is only one heart.</rdfs:co
 
     <owl:Class rdf:about="http://snomed.info/id/21093007">
         <rdfs:subClassOf rdf:resource="http://snomed.info/id/125679009"/>
+        <sct-ext:definitionStatus>Primitif</sct-ext:definitionStatus>
+        <sct-ext:fsn xml:lang="en">Half-sibling (person)</sct-ext:fsn>
+        <dc11:type>person</dc11:type>
         <rdfs:label xml:lang="en">Half sibling</rdfs:label>
         <rdfs:label xml:lang="en">Half-sibling</rdfs:label>
+        <rdfs:label xml:lang="fr">demi-frère ou demi-sœur</rdfs:label>
+        <rdfs:label xml:lang="es">medio hermano de sexo femenino o masculino</rdfs:label>
+        <skos:notation>21093007</skos:notation>
     </owl:Class>
     
 
@@ -34489,11 +34742,17 @@ pulmonary arterial and venous trees. Examples: There is only one heart.</rdfs:co
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0010012"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <sct-ext:definitionStatus>Primitif</sct-ext:definitionStatus>
+        <sct-ext:fsn xml:lang="en">Number of offspring (observable entity)</sct-ext:fsn>
+        <dc11:type>observable entity</dc11:type>
         <rdfs:comment>[PROMOT note] [Derived from EURO-NMD NMD-CDE] [number_of_child]</rdfs:comment>
         <rdfs:comment>[PROMOT note] [EURO-NMD] Atalia A et al., EURO-NMD registry: federated FAIR infrastructure, innovative technologies and concepts of a patient-centred registry for rare neuromuscular disorders. Orphanet J Rare Dis. 2024 Feb 14;19(1):66. doi: 10.1186/s13023-024-03059-3. PMID: 38355534; PMCID: PMC10865673.</rdfs:comment>
         <rdfs:label xml:lang="en">NB of offspring</rdfs:label>
         <rdfs:label xml:lang="en">Number of offspring</rdfs:label>
+        <rdfs:label xml:lang="es">cantidad de descendientes</rdfs:label>
+        <rdfs:label xml:lang="fr">nombre d&apos;enfants engendrés</rdfs:label>
         <skos:changeNote xml:lang="en">[PROMOT note] The PROMOT ontology added a comment to quote the CDM used as a source for this entity.</skos:changeNote>
+        <skos:notation>224118004</skos:notation>
     </owl:Class>
     
 
@@ -34502,8 +34761,16 @@ pulmonary arterial and venous trees. Examples: There is only one heart.</rdfs:co
 
     <owl:Class rdf:about="http://snomed.info/id/224285004">
         <rdfs:subClassOf rdf:resource="http://snomed.info/id/160476009"/>
+        <sct-ext:definitionStatus>Primitif</sct-ext:definitionStatus>
+        <sct-ext:fsn xml:lang="en">Education and schooling detail (observable entity)</sct-ext:fsn>
+        <dc11:type>observable entity</dc11:type>
         <rdfs:label xml:lang="en">Education and schooling</rdfs:label>
         <rdfs:label xml:lang="en">Education and schooling detail</rdfs:label>
+        <rdfs:label xml:lang="es">detalle de educación y escolaridad</rdfs:label>
+        <rdfs:label xml:lang="fr">détail concernant l&apos;enseignement et la scolarité</rdfs:label>
+        <skos:altLabel xml:lang="en">Education and schooling</skos:altLabel>
+        <skos:altLabel xml:lang="es">educación y escolaridad</skos:altLabel>
+        <skos:notation>224285004</skos:notation>
     </owl:Class>
     
 
@@ -34519,8 +34786,14 @@ pulmonary arterial and venous trees. Examples: There is only one heart.</rdfs:co
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0010012"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <sct-ext:definitionStatus>Primitif</sct-ext:definitionStatus>
+        <sct-ext:fsn xml:lang="en">Duration of formal education (observable entity)</sct-ext:fsn>
+        <dc11:type>observable entity</dc11:type>
         <rdfs:comment>[PROMOT note] [Present in OPMD research clinical form]</rdfs:comment>
         <rdfs:label xml:lang="en">Duration of formal education</rdfs:label>
+        <rdfs:label xml:lang="es">duración de la educación formal</rdfs:label>
+        <rdfs:label xml:lang="fr">durée de la scolarité</rdfs:label>
+        <skos:notation>224288002</skos:notation>
     </owl:Class>
     
 
@@ -34529,11 +34802,17 @@ pulmonary arterial and venous trees. Examples: There is only one heart.</rdfs:co
 
     <owl:Class rdf:about="http://snomed.info/id/224899006">
         <rdfs:subClassOf rdf:resource="http://snomed.info/id/360296002"/>
+        <sct-ext:definitionStatus>Primitif</sct-ext:definitionStatus>
+        <sct-ext:fsn xml:lang="en">Walking aid (physical object)</sct-ext:fsn>
+        <dc11:type>physical object</dc11:type>
         <rdfs:comment>[PROMOT note] [Derived from EURO-NMD NMD-CDE] [ambulatory_status]</rdfs:comment>
         <rdfs:comment>[PROMOT note] [EURO-NMD] Atalia A et al., EURO-NMD registry: federated FAIR infrastructure, innovative technologies and concepts of a patient-centred registry for rare neuromuscular disorders. Orphanet J Rare Dis. 2024 Feb 14;19(1):66. doi: 10.1186/s13023-024-03059-3. PMID: 38355534; PMCID: PMC10865673.</rdfs:comment>
         <rdfs:comment>[PROMOT note] related impairment: Gait disturbance HP:0001288</rdfs:comment>
         <rdfs:label xml:lang="en">Walking aid</rdfs:label>
+        <rdfs:label xml:lang="fr">dispositif d&apos;aide à la marche</rdfs:label>
+        <rdfs:label xml:lang="es">dispositivo de apoyo para la marcha</rdfs:label>
         <skos:changeNote xml:lang="en">[PROMOT note] The PROMOT ontology added a comment to quote the CDM used as a source for this entity.</skos:changeNote>
+        <skos:notation>224899006</skos:notation>
     </owl:Class>
     
 
@@ -34542,10 +34821,16 @@ pulmonary arterial and venous trees. Examples: There is only one heart.</rdfs:co
 
     <owl:Class rdf:about="http://snomed.info/id/2272004">
         <rdfs:subClassOf rdf:resource="http://snomed.info/id/21093007"/>
+        <sct-ext:definitionStatus>Primitif</sct-ext:definitionStatus>
+        <sct-ext:fsn xml:lang="en">Half-sister (person)</sct-ext:fsn>
+        <dc11:type>person</dc11:type>
         <rdfs:comment>[PROMOT note] [Derived from RD-CDM] [6.3.5 Family Member Relationship]</rdfs:comment>
         <rdfs:comment>[PROMOT note] [RD-CDM] Graefe, A.S.L., Hübner, M.R., Rehburg, F. et al. An ontology-based rare disease common data model harmonising international registries, FHIR, and Phenopackets. Sci Data 12, 234 (2025). https://doi.org/10.1038/s41597-025-04558-z</rdfs:comment>
         <rdfs:label xml:lang="en">Half-sister</rdfs:label>
+        <rdfs:label xml:lang="fr">demi-sœur</rdfs:label>
+        <rdfs:label xml:lang="es">media hermana</rdfs:label>
         <skos:changeNote xml:lang="en">[PROMOT note] The PROMOT ontology added a comment to quote the CDM used as a source for this entity.</skos:changeNote>
+        <skos:notation>2272004</skos:notation>
     </owl:Class>
     
 
@@ -34554,8 +34839,15 @@ pulmonary arterial and venous trees. Examples: There is only one heart.</rdfs:co
 
     <owl:Class rdf:about="http://snomed.info/id/23088002">
         <rdfs:subClassOf rdf:resource="http://snomed.info/id/364940007"/>
+        <sct-ext:definitionStatus>Primitif</sct-ext:definitionStatus>
+        <sct-ext:fsn xml:lang="en">Ambidextrous (finding)</sct-ext:fsn>
+        <dc11:type>finding</dc11:type>
         <rdfs:comment>[PROMOT note] [Present in OPMD research clinical form]</rdfs:comment>
         <rdfs:label xml:lang="en">Ambidextrous</rdfs:label>
+        <rdfs:label xml:lang="es">ambidestreza</rdfs:label>
+        <rdfs:label xml:lang="fr">ambidextre</rdfs:label>
+        <skos:altLabel xml:lang="es">ambidiestro</skos:altLabel>
+        <skos:notation>23088002</skos:notation>
     </owl:Class>
     
 
@@ -34565,8 +34857,15 @@ pulmonary arterial and venous trees. Examples: There is only one heart.</rdfs:co
     <owl:Class rdf:about="http://snomed.info/id/248326004">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0010003"/>
         <rdfs:subClassOf rdf:resource="http://snomed.info/id/363787002"/>
+        <sct-ext:definitionStatus>Primitif</sct-ext:definitionStatus>
+        <sct-ext:fsn xml:lang="en">Body measure (observable entity)</sct-ext:fsn>
+        <dc11:type>observable entity</dc11:type>
         <rdfs:label xml:lang="en">Body measure</rdfs:label>
         <rdfs:label xml:lang="en">Body measurements</rdfs:label>
+        <rdfs:label xml:lang="es">medida corporal</rdfs:label>
+        <rdfs:label xml:lang="fr">mesure corporelle</rdfs:label>
+        <skos:altLabel xml:lang="en">Body measurements</skos:altLabel>
+        <skos:notation>248326004</skos:notation>
     </owl:Class>
     
 
@@ -34581,7 +34880,14 @@ pulmonary arterial and venous trees. Examples: There is only one heart.</rdfs:co
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/NCIT_C16960"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <sct-ext:definitionStatus>Primitif</sct-ext:definitionStatus>
+        <sct-ext:fsn xml:lang="en">Aid to vision (physical object)</sct-ext:fsn>
+        <dc11:type>physical object</dc11:type>
         <rdfs:label xml:lang="en">Aid to vision</rdfs:label>
+        <rdfs:label xml:lang="es">accesorio para la visión</rdfs:label>
+        <rdfs:label xml:lang="fr">aide à la vision</rdfs:label>
+        <skos:altLabel xml:lang="fr">aide visuelle</skos:altLabel>
+        <skos:notation>257192006</skos:notation>
     </owl:Class>
     
 
@@ -34590,9 +34896,20 @@ pulmonary arterial and venous trees. Examples: There is only one heart.</rdfs:co
 
     <owl:Class rdf:about="http://snomed.info/id/266731002">
         <rdfs:subClassOf rdf:resource="http://snomed.info/id/224899006"/>
+        <sct-ext:definitionStatus>Primitif</sct-ext:definitionStatus>
+        <sct-ext:fsn xml:lang="en">Walking frame (physical object)</sct-ext:fsn>
         <obo:IAO_0000115 xml:lang="en">A frame consisting of 3 or 4 legs which aids a person with walking. Some walking frames come with wheels at the front to help move the frame. The frame is moved by either lifting the entire frame or by tilting the frame off the back legs and onto the front wheels.</obo:IAO_0000115>
+        <dc11:type>physical object</dc11:type>
         <rdfs:label xml:lang="en">WF - Walking frame</rdfs:label>
         <rdfs:label xml:lang="en">Walking frame</rdfs:label>
+        <rdfs:label xml:lang="es">dispositivos para andar</rdfs:label>
+        <rdfs:label xml:lang="fr">marchette</rdfs:label>
+        <skos:altLabel xml:lang="en">WF - Walking frame</skos:altLabel>
+        <skos:altLabel xml:lang="fr">cadre de marche</skos:altLabel>
+        <skos:altLabel xml:lang="es">dispositivo para andador</skos:altLabel>
+        <skos:definition xml:lang="en">A frame consisting of 3 or 4 legs which aids a person with walking. Some walking frames come with wheels at the front to help move the frame. The frame is moved by either lifting the entire frame or by tilting the frame off the back legs and onto the front wheels.</skos:definition>
+        <skos:definition xml:lang="es">Un andador de 3 o 4 patas que asiste a la persona en la marcha. Algunos andadores tienen ruedas en la parte delantera para facilitar la movilidad del dispositivo. El andador se desplaza levantándolo por completo o levantando las patas traseras e inclinándolo sobre las ruedas delanteras.</skos:definition>
+        <skos:notation>266731002</skos:notation>
     </owl:Class>
     
 
@@ -34607,10 +34924,18 @@ pulmonary arterial and venous trees. Examples: There is only one heart.</rdfs:co
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0010012"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <sct-ext:definitionStatus>Défini</sct-ext:definitionStatus>
+        <sct-ext:fsn xml:lang="en">Body weight (observable entity)</sct-ext:fsn>
+        <dc11:type>observable entity</dc11:type>
         <rdfs:comment>[PROMOT note] [Derived from EURO-NMD NMD-CDE] [body_weight_kg]</rdfs:comment>
         <rdfs:comment>[PROMOT note] [EURO-NMD] Atalia A et al., EURO-NMD registry: federated FAIR infrastructure, innovative technologies and concepts of a patient-centred registry for rare neuromuscular disorders. Orphanet J Rare Dis. 2024 Feb 14;19(1):66. doi: 10.1186/s13023-024-03059-3. PMID: 38355534; PMCID: PMC10865673.</rdfs:comment>
         <rdfs:label xml:lang="en">Body weight</rdfs:label>
+        <rdfs:label xml:lang="es">peso corporal</rdfs:label>
+        <rdfs:label xml:lang="fr">poids</rdfs:label>
+        <skos:altLabel xml:lang="es">peso del cuerpo</skos:altLabel>
+        <skos:altLabel xml:lang="fr">poids corporel</skos:altLabel>
         <skos:changeNote xml:lang="en">[PROMOT note] The PROMOT ontology added a comment to quote the CDM used as a source for this entity.</skos:changeNote>
+        <skos:notation>27113001</skos:notation>
     </owl:Class>
     
 
@@ -34625,6 +34950,15 @@ pulmonary arterial and venous trees. Examples: There is only one heart.</rdfs:co
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0010010"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROMOT_3000002"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <sct-ext:definitionStatus>Primitif</sct-ext:definitionStatus>
+        <sct-ext:fsn xml:lang="en">Date of onset (observable entity)</sct-ext:fsn>
+        <dc11:type>observable entity</dc11:type>
         <rdfs:comment>[PROMOT note] [Derived from EU-CDE] [5.1. Age at onset]</rdfs:comment>
         <rdfs:comment>[PROMOT note] [Derived from EURO-NMD NMD-CDE] [date_for_age_at_onset]</rdfs:comment>
         <rdfs:comment>[PROMOT note] [Derived from RD-CDM] [5.4 Date of Onset]</rdfs:comment>
@@ -34632,7 +34966,11 @@ pulmonary arterial and venous trees. Examples: There is only one heart.</rdfs:co
         <rdfs:comment>[PROMOT note] [EURO-NMD] Atalia A et al., EURO-NMD registry: federated FAIR infrastructure, innovative technologies and concepts of a patient-centred registry for rare neuromuscular disorders. Orphanet J Rare Dis. 2024 Feb 14;19(1):66. doi: 10.1186/s13023-024-03059-3. PMID: 38355534; PMCID: PMC10865673.</rdfs:comment>
         <rdfs:comment>[PROMOT note] [RD-CDM] Graefe, A.S.L., Hübner, M.R., Rehburg, F. et al. An ontology-based rare disease common data model harmonising international registries, FHIR, and Phenopackets. Sci Data 12, 234 (2025). https://doi.org/10.1038/s41597-025-04558-z</rdfs:comment>
         <rdfs:label xml:lang="en">Date of onset</rdfs:label>
+        <rdfs:label xml:lang="fr">date de début</rdfs:label>
+        <rdfs:label xml:lang="es">fecha de inicio</rdfs:label>
+        <skos:altLabel xml:lang="es">fecha de comienzo</skos:altLabel>
         <skos:changeNote xml:lang="en">[PROMOT note] The PROMOT ontology added a comment to quote the CDM used as a source for this entity.</skos:changeNote>
+        <skos:notation>298059007</skos:notation>
     </owl:Class>
     
 
@@ -34641,8 +34979,15 @@ pulmonary arterial and venous trees. Examples: There is only one heart.</rdfs:co
 
     <owl:Class rdf:about="http://snomed.info/id/302147001">
         <rdfs:subClassOf rdf:resource="http://snomed.info/id/160476009"/>
+        <sct-ext:definitionStatus>Primitif</sct-ext:definitionStatus>
+        <sct-ext:fsn xml:lang="en">Demographic history detail (observable entity)</sct-ext:fsn>
+        <dc11:type>observable entity</dc11:type>
         <rdfs:label xml:lang="en">Demographic history</rdfs:label>
         <rdfs:label xml:lang="en">Demographic history detail</rdfs:label>
+        <rdfs:label xml:lang="es">detalle de antecedentes demográficos</rdfs:label>
+        <rdfs:label xml:lang="fr">détail des renseignements démographiques</rdfs:label>
+        <skos:altLabel xml:lang="en">Demographic history</skos:altLabel>
+        <skos:notation>302147001</skos:notation>
     </owl:Class>
     
 
@@ -34651,7 +34996,13 @@ pulmonary arterial and venous trees. Examples: There is only one heart.</rdfs:co
 
     <owl:Class rdf:about="http://snomed.info/id/315306007">
         <rdfs:subClassOf rdf:resource="http://snomed.info/id/128927009"/>
+        <sct-ext:definitionStatus>Défini</sct-ext:definitionStatus>
+        <sct-ext:fsn xml:lang="en">Examination by method (procedure)</sct-ext:fsn>
+        <dc11:type>procedure</dc11:type>
         <rdfs:label xml:lang="en">Examination by method</rdfs:label>
+        <rdfs:label xml:lang="es">examen según el método</rdfs:label>
+        <rdfs:label xml:lang="fr">examen selon la méthode</rdfs:label>
+        <skos:notation>315306007</skos:notation>
     </owl:Class>
     
 
@@ -34667,13 +35018,21 @@ pulmonary arterial and venous trees. Examples: There is only one heart.</rdfs:co
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0010012"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <sct-ext:definitionStatus>Primitif</sct-ext:definitionStatus>
+        <sct-ext:fsn xml:lang="en">Country of birth (observable entity)</sct-ext:fsn>
+        <dc11:type>observable entity</dc11:type>
         <oboInOwl:hasDbXref>http://snomed.info/id/370159000</oboInOwl:hasDbXref>
         <rdfs:comment>[PROMOT note] [Derived from RD-CDM] [2.5 Country of Birth]</rdfs:comment>
         <rdfs:comment>[PROMOT note] [RD-CDM] Graefe, A.S.L., Hübner, M.R., Rehburg, F. et al. An ontology-based rare disease common data model harmonising international registries, FHIR, and Phenopackets. Sci Data 12, 234 (2025). https://doi.org/10.1038/s41597-025-04558-z</rdfs:comment>
         <rdfs:label xml:lang="en">Born in - country</rdfs:label>
         <rdfs:label xml:lang="en">Country of Birth</rdfs:label>
         <rdfs:label xml:lang="en">Country of birth</rdfs:label>
+        <rdfs:label xml:lang="fr">pays de naissance</rdfs:label>
+        <rdfs:label xml:lang="es">país de nacimiento</rdfs:label>
+        <skos:altLabel xml:lang="en">Born in - country</skos:altLabel>
+        <skos:altLabel xml:lang="es">nacido en - país</skos:altLabel>
         <skos:changeNote xml:lang="en">[PROMOT note] The PROMOT ontology added a comment to quote the CDMs used as a source for this entity. A crossref to the orignal RD-CDM element has also been added.</skos:changeNote>
+        <skos:notation>315354004</skos:notation>
     </owl:Class>
     
 
@@ -34682,8 +35041,15 @@ pulmonary arterial and venous trees. Examples: There is only one heart.</rdfs:co
 
     <owl:Class rdf:about="http://snomed.info/id/360006004">
         <rdfs:subClassOf rdf:resource="http://snomed.info/id/224899006"/>
+        <sct-ext:definitionStatus>Primitif</sct-ext:definitionStatus>
+        <sct-ext:fsn xml:lang="en">Walking stick (physical object)</sct-ext:fsn>
+        <dc11:type>physical object</dc11:type>
         <rdfs:label xml:lang="en">Walking stick</rdfs:label>
         <rdfs:label xml:lang="en">Walking stick device</rdfs:label>
+        <rdfs:label xml:lang="es">bastón</rdfs:label>
+        <rdfs:label xml:lang="fr">bâton de marche</rdfs:label>
+        <skos:altLabel xml:lang="en">Walking stick device</skos:altLabel>
+        <skos:notation>360006004</skos:notation>
     </owl:Class>
     
 
@@ -34698,8 +35064,14 @@ pulmonary arterial and venous trees. Examples: There is only one heart.</rdfs:co
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/NCIT_C16960"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <sct-ext:definitionStatus>Primitif</sct-ext:definitionStatus>
+        <sct-ext:fsn xml:lang="en">Assistive equipment (physical object)</sct-ext:fsn>
+        <dc11:type>physical object</dc11:type>
         <rdfs:label xml:lang="en">Assistive equipment</rdfs:label>
         <rdfs:label xml:lang="en">Assitive equipment</rdfs:label>
+        <rdfs:label xml:lang="es">equipo de asistencia</rdfs:label>
+        <rdfs:label xml:lang="fr">équipement d&apos;assistance</rdfs:label>
+        <skos:notation>360296002</skos:notation>
     </owl:Class>
     
 
@@ -34708,7 +35080,13 @@ pulmonary arterial and venous trees. Examples: There is only one heart.</rdfs:co
 
     <owl:Class rdf:about="http://snomed.info/id/363787002">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
+        <sct-ext:definitionStatus>Primitif</sct-ext:definitionStatus>
+        <sct-ext:fsn xml:lang="en">Observable entity (observable entity)</sct-ext:fsn>
+        <dc11:type>observable entity</dc11:type>
         <rdfs:label xml:lang="en">Observable entity</rdfs:label>
+        <rdfs:label xml:lang="es">entidad observable</rdfs:label>
+        <rdfs:label xml:lang="fr">entité observable</rdfs:label>
+        <skos:notation>363787002</skos:notation>
     </owl:Class>
     
 
@@ -34723,8 +35101,16 @@ pulmonary arterial and venous trees. Examples: There is only one heart.</rdfs:co
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0010012"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <sct-ext:definitionStatus>Défini</sct-ext:definitionStatus>
+        <sct-ext:fsn xml:lang="en">Handedness finding (finding)</sct-ext:fsn>
+        <dc11:type>finding</dc11:type>
         <rdfs:comment>[PROMOT note] [Present in OPMD research clinical form]</rdfs:comment>
         <rdfs:label xml:lang="en">Handedness finding</rdfs:label>
+        <rdfs:label xml:lang="fr">constatation concernant la main dominante</rdfs:label>
+        <rdfs:label xml:lang="es">hallazgo en la preferencia manual</rdfs:label>
+        <skos:altLabel xml:lang="fr">constatation concernant la manualité</skos:altLabel>
+        <skos:altLabel xml:lang="fr">constatation concernant la prévalence manuelle</skos:altLabel>
+        <skos:notation>364940007</skos:notation>
     </owl:Class>
     
 
@@ -34739,11 +35125,18 @@ pulmonary arterial and venous trees. Examples: There is only one heart.</rdfs:co
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0010012"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <sct-ext:definitionStatus>Primitif</sct-ext:definitionStatus>
+        <sct-ext:fsn xml:lang="en">Co-morbid conditions (finding)</sct-ext:fsn>
+        <dc11:type>finding</dc11:type>
         <rdfs:comment>[PROMOT note] [Derived from EURO-NMD NMD-CDE] [diagnosis_rd_2_orpha]</rdfs:comment>
         <rdfs:comment>[PROMOT note] [EURO-NMD] Atalia A et al., EURO-NMD registry: federated FAIR infrastructure, innovative technologies and concepts of a patient-centred registry for rare neuromuscular disorders. Orphanet J Rare Dis. 2024 Feb 14;19(1):66. doi: 10.1186/s13023-024-03059-3. PMID: 38355534; PMCID: PMC10865673.</rdfs:comment>
         <rdfs:label xml:lang="en">Co-morbid conditions</rdfs:label>
         <rdfs:label xml:lang="en">Comorbid conditions</rdfs:label>
+        <rdfs:label xml:lang="fr">comorbidités</rdfs:label>
+        <rdfs:label xml:lang="es">comorbilidades</rdfs:label>
+        <skos:altLabel xml:lang="en">Comorbid conditions</skos:altLabel>
         <skos:changeNote xml:lang="en">[PROMOT note] The PROMOT ontology added a comment to quote the CDM used as a source for this entity.</skos:changeNote>
+        <skos:notation>398192003</skos:notation>
     </owl:Class>
     
 
@@ -34758,6 +35151,15 @@ pulmonary arterial and venous trees. Examples: There is only one heart.</rdfs:co
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0010012"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROMOT_3000002"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <sct-ext:definitionStatus>Primitif</sct-ext:definitionStatus>
+        <sct-ext:fsn xml:lang="en">Date of admission (observable entity)</sct-ext:fsn>
+        <dc11:type>observable entity</dc11:type>
         <rdfs:comment>[PROMOT note] [Derived from EU-CDE] [4.1. First contact with specialised centre]</rdfs:comment>
         <rdfs:comment>[PROMOT note] [Derived from EURO-NMD NMD-CDE] [date_of_first_contact]</rdfs:comment>
         <rdfs:comment>[PROMOT note] [Derived from RD-CDM] [1.2 Date of Admission]</rdfs:comment>
@@ -34765,7 +35167,10 @@ pulmonary arterial and venous trees. Examples: There is only one heart.</rdfs:co
         <rdfs:comment>[PROMOT note] [EURO-NMD] Atalia A et al., EURO-NMD registry: federated FAIR infrastructure, innovative technologies and concepts of a patient-centred registry for rare neuromuscular disorders. Orphanet J Rare Dis. 2024 Feb 14;19(1):66. doi: 10.1186/s13023-024-03059-3. PMID: 38355534; PMCID: PMC10865673.</rdfs:comment>
         <rdfs:comment>[PROMOT note] [RD-CDM] Graefe, A.S.L., Hübner, M.R., Rehburg, F. et al. An ontology-based rare disease common data model harmonising international registries, FHIR, and Phenopackets. Sci Data 12, 234 (2025). https://doi.org/10.1038/s41597-025-04558-z</rdfs:comment>
         <rdfs:label xml:lang="en">Date of admission</rdfs:label>
+        <rdfs:label xml:lang="fr">date d&apos;admission</rdfs:label>
+        <rdfs:label xml:lang="es">fecha de admisión</rdfs:label>
         <skos:changeNote xml:lang="en">[PROMOT note] The PROMOT ontology added a comment to quote the CDMs used as a source for this entity.</skos:changeNote>
+        <skos:notation>399423000</skos:notation>
     </owl:Class>
     
 
@@ -34780,6 +35185,15 @@ pulmonary arterial and venous trees. Examples: There is only one heart.</rdfs:co
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0010009"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROMOT_3000002"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <sct-ext:definitionStatus>Primitif</sct-ext:definitionStatus>
+        <sct-ext:fsn xml:lang="en">Date of death (observable entity)</sct-ext:fsn>
+        <dc11:type>observable entity</dc11:type>
         <oboInOwl:hasDbXref>http://snomed.info/id/398299004</oboInOwl:hasDbXref>
         <rdfs:comment>[PROMOT note] [Derived from EU-CDE] [3.2. Date of death]</rdfs:comment>
         <rdfs:comment>[PROMOT note] [Derived from EURO-NMD NMD-CDE] [eodc_date_of_death]</rdfs:comment>
@@ -34788,7 +35202,10 @@ pulmonary arterial and venous trees. Examples: There is only one heart.</rdfs:co
         <rdfs:comment>[PROMOT note] [EURO-NMD] Atalia A et al., EURO-NMD registry: federated FAIR infrastructure, innovative technologies and concepts of a patient-centred registry for rare neuromuscular disorders. Orphanet J Rare Dis. 2024 Feb 14;19(1):66. doi: 10.1186/s13023-024-03059-3. PMID: 38355534; PMCID: PMC10865673.</rdfs:comment>
         <rdfs:comment>[PROMOT note] [RD-CDM] Graefe, A.S.L., Hübner, M.R., Rehburg, F. et al. An ontology-based rare disease common data model harmonising international registries, FHIR, and Phenopackets. Sci Data 12, 234 (2025). https://doi.org/10.1038/s41597-025-04558-z</rdfs:comment>
         <rdfs:label xml:lang="en">Date of death</rdfs:label>
+        <rdfs:label xml:lang="fr">date du décès</rdfs:label>
+        <rdfs:label xml:lang="es">fecha de fallecimiento</rdfs:label>
         <skos:changeNote xml:lang="en">[PROMOT note] The PROMOT ontology added a comment to quote the CDMs used as a source for this entity. A crossref to the orignal RD-CDM element has also been added.</skos:changeNote>
+        <skos:notation>399753006</skos:notation>
     </owl:Class>
     
 
@@ -34803,12 +35220,24 @@ pulmonary arterial and venous trees. Examples: There is only one heart.</rdfs:co
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0010012"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROMOT_3000002"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <sct-ext:definitionStatus>Primitif</sct-ext:definitionStatus>
+        <sct-ext:fsn xml:lang="en">Date of visit (observable entity)</sct-ext:fsn>
+        <dc11:type>observable entity</dc11:type>
         <rdfs:comment>[PROMOT note] [Derived from EU-CDE] [5.2. Age at diagnosis]</rdfs:comment>
         <rdfs:comment>[PROMOT note] [Derived from EURO-NMD NMD-CDE] [date_of_visit]</rdfs:comment>
         <rdfs:comment>[PROMOT note] [EU-CDE] Set of Common Data Elements, EU RD Platform [Internet]. [cited 2026 Jun 17]. Available from: https://eu-rd-platform.jrc.ec.europa.eu/set-of-common-data-elements_en</rdfs:comment>
         <rdfs:comment>[PROMOT note] [EURO-NMD] Atalia A et al., EURO-NMD registry: federated FAIR infrastructure, innovative technologies and concepts of a patient-centred registry for rare neuromuscular disorders. Orphanet J Rare Dis. 2024 Feb 14;19(1):66. doi: 10.1186/s13023-024-03059-3. PMID: 38355534; PMCID: PMC10865673.</rdfs:comment>
         <rdfs:label xml:lang="en">Date of visit</rdfs:label>
+        <rdfs:label xml:lang="fr">date de la visite</rdfs:label>
+        <rdfs:label xml:lang="es">fecha de la visita</rdfs:label>
         <skos:changeNote xml:lang="en">[PROMOT note] The PROMOT ontology added a comment to quote the CDM used as a source for this entity.</skos:changeNote>
+        <skos:notation>406543005</skos:notation>
     </owl:Class>
     
 
@@ -34817,7 +35246,13 @@ pulmonary arterial and venous trees. Examples: There is only one heart.</rdfs:co
 
     <owl:Class rdf:about="http://snomed.info/id/420480000">
         <rdfs:subClassOf rdf:resource="http://snomed.info/id/257192006"/>
+        <sct-ext:definitionStatus>Primitif</sct-ext:definitionStatus>
+        <sct-ext:fsn xml:lang="en">Ptosis crutch (physical object)</sct-ext:fsn>
+        <dc11:type>physical object</dc11:type>
         <rdfs:label xml:lang="en">Ptosis crutch</rdfs:label>
+        <rdfs:label xml:lang="fr">dispositif anti-ptosis</rdfs:label>
+        <rdfs:label xml:lang="es">sostenedor de ptosis palpebral</rdfs:label>
+        <skos:notation>420480000</skos:notation>
     </owl:Class>
     
 
@@ -34875,6 +35310,15 @@ pulmonary arterial and venous trees. Examples: There is only one heart.</rdfs:co
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0010012"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROMOT_3000002"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <sct-ext:definitionStatus>Primitif</sct-ext:definitionStatus>
+        <sct-ext:fsn xml:lang="en">Date of diagnosis (observable entity)</sct-ext:fsn>
+        <dc11:type>observable entity</dc11:type>
         <rdfs:comment>[PROMOT note] [Derived from EU-CDE] [5.2. Age at diagnosis]</rdfs:comment>
         <rdfs:comment>[PROMOT note] [Derived from EURO-NMD NMD-CDE] [date_for_age_at_diagnosis]</rdfs:comment>
         <rdfs:comment>[PROMOT note] [Derived from RD-CDM] [5.6 Date of Diagnosis]</rdfs:comment>
@@ -34882,7 +35326,10 @@ pulmonary arterial and venous trees. Examples: There is only one heart.</rdfs:co
         <rdfs:comment>[PROMOT note] [EURO-NMD] Atalia A et al., EURO-NMD registry: federated FAIR infrastructure, innovative technologies and concepts of a patient-centred registry for rare neuromuscular disorders. Orphanet J Rare Dis. 2024 Feb 14;19(1):66. doi: 10.1186/s13023-024-03059-3. PMID: 38355534; PMCID: PMC10865673.</rdfs:comment>
         <rdfs:comment>[PROMOT note] [RD-CDM] Graefe, A.S.L., Hübner, M.R., Rehburg, F. et al. An ontology-based rare disease common data model harmonising international registries, FHIR, and Phenopackets. Sci Data 12, 234 (2025). https://doi.org/10.1038/s41597-025-04558-z</rdfs:comment>
         <rdfs:label xml:lang="en">Date of diagnosis</rdfs:label>
+        <rdfs:label xml:lang="fr">date du diagnostic</rdfs:label>
+        <rdfs:label xml:lang="es">fecha de diagnóstico</rdfs:label>
         <skos:changeNote xml:lang="en">[PROMOT note] The PROMOT ontology added a comment to quote the CDM used as a source for this entity.</skos:changeNote>
+        <skos:notation>432213005</skos:notation>
     </owl:Class>
     
 
@@ -34897,11 +35344,23 @@ pulmonary arterial and venous trees. Examples: There is only one heart.</rdfs:co
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0010011"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROMOT_3000002"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <sct-ext:definitionStatus>Primitif</sct-ext:definitionStatus>
+        <sct-ext:fsn xml:lang="en">Date of procedure (observable entity)</sct-ext:fsn>
+        <dc11:type>observable entity</dc11:type>
         <oboInOwl:hasDbXref>NCIT:C82577</oboInOwl:hasDbXref>
         <rdfs:comment>[PROMOT note] [Derived from RD-CDM] [6.3.3 Time Observed]</rdfs:comment>
         <rdfs:comment>[PROMOT note] [RD-CDM] Graefe, A.S.L., Hübner, M.R., Rehburg, F. et al. An ontology-based rare disease common data model harmonising international registries, FHIR, and Phenopackets. Sci Data 12, 234 (2025). https://doi.org/10.1038/s41597-025-04558-z</rdfs:comment>
         <rdfs:label xml:lang="en">Date of procedure</rdfs:label>
+        <rdfs:label xml:lang="fr">date de l&apos;intervention</rdfs:label>
+        <rdfs:label xml:lang="es">fecha del procedimiento</rdfs:label>
         <skos:changeNote xml:lang="en">[PROMOT note] The PROMOT ontology added a comment to quote the CDM used as a source for this entity. A crossref to the orignal RD-CDM element from NCIT has also been added.</skos:changeNote>
+        <skos:notation>439272007</skos:notation>
     </owl:Class>
     
 
@@ -34910,10 +35369,16 @@ pulmonary arterial and venous trees. Examples: There is only one heart.</rdfs:co
 
     <owl:Class rdf:about="http://snomed.info/id/45929001">
         <rdfs:subClassOf rdf:resource="http://snomed.info/id/21093007"/>
+        <sct-ext:definitionStatus>Primitif</sct-ext:definitionStatus>
+        <sct-ext:fsn xml:lang="en">Half-brother (person)</sct-ext:fsn>
+        <dc11:type>person</dc11:type>
         <rdfs:comment>[PROMOT note] [Derived from RD-CDM] [6.3.5 Family Member Relationship]</rdfs:comment>
         <rdfs:comment>[PROMOT note] [RD-CDM] Graefe, A.S.L., Hübner, M.R., Rehburg, F. et al. An ontology-based rare disease common data model harmonising international registries, FHIR, and Phenopackets. Sci Data 12, 234 (2025). https://doi.org/10.1038/s41597-025-04558-z</rdfs:comment>
         <rdfs:label xml:lang="en">Half-brother</rdfs:label>
+        <rdfs:label xml:lang="fr">demi-frère</rdfs:label>
+        <rdfs:label xml:lang="es">medio hermano</rdfs:label>
         <skos:changeNote xml:lang="en">[PROMOT note] The PROMOT ontology added a comment to quote the CDM used as a source for this entity.</skos:changeNote>
+        <skos:notation>45929001</skos:notation>
     </owl:Class>
     
 
@@ -34922,7 +35387,13 @@ pulmonary arterial and venous trees. Examples: There is only one heart.</rdfs:co
 
     <owl:Class rdf:about="http://snomed.info/id/466255006">
         <rdfs:subClassOf rdf:resource="http://snomed.info/id/224899006"/>
+        <sct-ext:definitionStatus>Primitif</sct-ext:definitionStatus>
+        <sct-ext:fsn xml:lang="en">Walking aid handgrip (physical object)</sct-ext:fsn>
+        <dc11:type>physical object</dc11:type>
         <rdfs:label xml:lang="en">Walking aid handgrip</rdfs:label>
+        <rdfs:label xml:lang="fr">dispositif d&apos;aide à la marche avec poignée</rdfs:label>
+        <rdfs:label xml:lang="es">empuñadura de dispositivo de ayuda para caminar</rdfs:label>
+        <skos:notation>466255006</skos:notation>
     </owl:Class>
     
 
@@ -34931,8 +35402,14 @@ pulmonary arterial and venous trees. Examples: There is only one heart.</rdfs:co
 
     <owl:Class rdf:about="http://snomed.info/id/46669005">
         <rdfs:subClassOf rdf:resource="http://snomed.info/id/364940007"/>
+        <sct-ext:definitionStatus>Primitif</sct-ext:definitionStatus>
+        <sct-ext:fsn xml:lang="en">Right handed (finding)</sct-ext:fsn>
+        <dc11:type>finding</dc11:type>
         <rdfs:comment>[PROMOT note] [Present in OPMD research clinical form]</rdfs:comment>
         <rdfs:label xml:lang="en">Right handed</rdfs:label>
+        <rdfs:label xml:lang="es">dextrolateralidad</rdfs:label>
+        <rdfs:label xml:lang="fr">droitier</rdfs:label>
+        <skos:notation>46669005</skos:notation>
     </owl:Class>
     
 
@@ -34941,11 +35418,23 @@ pulmonary arterial and venous trees. Examples: There is only one heart.</rdfs:co
 
     <owl:Class rdf:about="http://snomed.info/id/50121007">
         <rdfs:subClassOf rdf:resource="http://snomed.info/id/257192006"/>
+        <sct-ext:definitionStatus>Primitif</sct-ext:definitionStatus>
+        <sct-ext:fsn xml:lang="en">Eye glasses, device (physical object)</sct-ext:fsn>
+        <dc11:type>physical object</dc11:type>
         <rdfs:label xml:lang="en">Eye glasses</rdfs:label>
         <rdfs:label xml:lang="en">Eye glasses, device</rdfs:label>
         <rdfs:label xml:lang="en">Eyeglasses</rdfs:label>
         <rdfs:label xml:lang="en">Glasses</rdfs:label>
         <rdfs:label xml:lang="en">Spectacles</rdfs:label>
+        <rdfs:label xml:lang="es">anteojos</rdfs:label>
+        <rdfs:label xml:lang="fr">lunettes</rdfs:label>
+        <skos:altLabel xml:lang="en">Eye glasses, device</skos:altLabel>
+        <skos:altLabel xml:lang="en">Glasses</skos:altLabel>
+        <skos:altLabel xml:lang="en">Spectacles</skos:altLabel>
+        <skos:altLabel xml:lang="es">anteojos, dispositivo</skos:altLabel>
+        <skos:altLabel xml:lang="es">gafas</skos:altLabel>
+        <skos:altLabel xml:lang="es">lentes</skos:altLabel>
+        <skos:notation>50121007</skos:notation>
     </owl:Class>
     
 
@@ -34954,12 +35443,27 @@ pulmonary arterial and venous trees. Examples: There is only one heart.</rdfs:co
 
     <owl:Class rdf:about="http://snomed.info/id/5880005">
         <rdfs:subClassOf rdf:resource="http://snomed.info/id/128927009"/>
+        <sct-ext:definitionStatus>Défini</sct-ext:definitionStatus>
+        <sct-ext:fsn xml:lang="en">Physical examination procedure (procedure)</sct-ext:fsn>
         <obo:IAO_0000115 xml:lang="en">An observation of the body or a body part using one of the five human senses (e.g. inspection, palpation, percussion, auscultation)</obo:IAO_0000115>
+        <dc11:type>procedure</dc11:type>
         <rdfs:label xml:lang="en">Clinical examination</rdfs:label>
         <rdfs:label xml:lang="en">Examination of patient</rdfs:label>
         <rdfs:label xml:lang="en">PE - Physical examination</rdfs:label>
         <rdfs:label xml:lang="en">Physical examination</rdfs:label>
         <rdfs:label xml:lang="en">Physical examination procedure</rdfs:label>
+        <rdfs:label xml:lang="es">examen físico</rdfs:label>
+        <rdfs:label xml:lang="fr">examen physique</rdfs:label>
+        <skos:altLabel xml:lang="en">Clinical examination</skos:altLabel>
+        <skos:altLabel xml:lang="en">Examination of patient</skos:altLabel>
+        <skos:altLabel xml:lang="en">PE - Physical examination</skos:altLabel>
+        <skos:altLabel xml:lang="en">Physical examination procedure</skos:altLabel>
+        <skos:altLabel xml:lang="es">examen clínico</skos:altLabel>
+        <skos:altLabel xml:lang="es">exploración física</skos:altLabel>
+        <skos:altLabel xml:lang="fr">intervention liée à l&apos;examen physique</skos:altLabel>
+        <skos:definition xml:lang="en">An observation of the body or a body part using one of the five human senses (e.g. inspection, palpation, percussion, auscultation)</skos:definition>
+        <skos:definition xml:lang="es">Observación del cuerpo o parte de él utilizando uno de los sentidos (ej. inspección, palpación, percusión, auscultación)</skos:definition>
+        <skos:notation>5880005</skos:notation>
     </owl:Class>
     
 
@@ -34968,13 +35472,23 @@ pulmonary arterial and venous trees. Examples: There is only one heart.</rdfs:co
 
     <owl:Class rdf:about="http://snomed.info/id/58938008">
         <rdfs:subClassOf rdf:resource="http://snomed.info/id/360296002"/>
+        <sct-ext:definitionStatus>Primitif</sct-ext:definitionStatus>
+        <sct-ext:fsn xml:lang="en">Wheelchair device (physical object)</sct-ext:fsn>
+        <dc11:type>physical object</dc11:type>
         <rdfs:comment>[PROMOT note] [Derived from EURO-NMD NMD-CDE] [ambulatory_status]</rdfs:comment>
         <rdfs:comment>[PROMOT note] [EURO-NMD] Atalia A et al., EURO-NMD registry: federated FAIR infrastructure, innovative technologies and concepts of a patient-centred registry for rare neuromuscular disorders. Orphanet J Rare Dis. 2024 Feb 14;19(1):66. doi: 10.1186/s13023-024-03059-3. PMID: 38355534; PMCID: PMC10865673.</rdfs:comment>
         <rdfs:label xml:lang="en">WC - Wheelchair</rdfs:label>
         <rdfs:label xml:lang="en">Wch - Wheelchair</rdfs:label>
         <rdfs:label xml:lang="en">Wheelchair</rdfs:label>
         <rdfs:label xml:lang="en">Wheelchair device</rdfs:label>
+        <rdfs:label xml:lang="fr">fauteuil roulant</rdfs:label>
+        <rdfs:label xml:lang="es">silla de ruedas</rdfs:label>
+        <skos:altLabel xml:lang="en">WC - Wheelchair</skos:altLabel>
+        <skos:altLabel xml:lang="en">Wch - Wheelchair</skos:altLabel>
+        <skos:altLabel xml:lang="en">Wheelchair device</skos:altLabel>
+        <skos:altLabel xml:lang="es">silla de ruedas, dispositivo</skos:altLabel>
         <skos:changeNote xml:lang="en">[PROMOT note] The PROMOT ontology added a comment to quote the CDM used as a source for this entity.</skos:changeNote>
+        <skos:notation>58938008</skos:notation>
     </owl:Class>
     
 
@@ -34983,13 +35497,21 @@ pulmonary arterial and venous trees. Examples: There is only one heart.</rdfs:co
 
     <owl:Class rdf:about="http://snomed.info/id/60614009">
         <rdfs:subClassOf rdf:resource="http://snomed.info/id/82101005"/>
+        <sct-ext:definitionStatus>Primitif</sct-ext:definitionStatus>
+        <sct-ext:fsn xml:lang="en">Natural brother (person)</sct-ext:fsn>
+        <dc11:type>person</dc11:type>
         <rdfs:comment>[PROMOT note] [Derived from EURO-NMD NMD-CDE] [which_affected_family]</rdfs:comment>
         <rdfs:comment>[PROMOT note] [Derived from RD-CDM] [6.3.5 Family Member Relationship]</rdfs:comment>
         <rdfs:comment>[PROMOT note] [EURO-NMD] Atalia A et al., EURO-NMD registry: federated FAIR infrastructure, innovative technologies and concepts of a patient-centred registry for rare neuromuscular disorders. Orphanet J Rare Dis. 2024 Feb 14;19(1):66. doi: 10.1186/s13023-024-03059-3. PMID: 38355534; PMCID: PMC10865673.</rdfs:comment>
         <rdfs:comment>[PROMOT note] [RD-CDM] Graefe, A.S.L., Hübner, M.R., Rehburg, F. et al. An ontology-based rare disease common data model harmonising international registries, FHIR, and Phenopackets. Sci Data 12, 234 (2025). https://doi.org/10.1038/s41597-025-04558-z</rdfs:comment>
         <rdfs:label xml:lang="en">Biological brother</rdfs:label>
         <rdfs:label xml:lang="en">Natural brother</rdfs:label>
+        <rdfs:label xml:lang="fr">frère biologique</rdfs:label>
+        <rdfs:label xml:lang="es">hermano natural</rdfs:label>
+        <skos:altLabel xml:lang="en">Biological brother</skos:altLabel>
+        <skos:altLabel xml:lang="es">hermano biológico</skos:altLabel>
         <skos:changeNote xml:lang="en">[PROMOT note] The PROMOT ontology added a comment to quote the CDMs used as a source for this entity.</skos:changeNote>
+        <skos:notation>60614009</skos:notation>
     </owl:Class>
     
 
@@ -35004,11 +35526,22 @@ pulmonary arterial and venous trees. Examples: There is only one heart.</rdfs:co
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0010012"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <sct-ext:definitionStatus>Primitif</sct-ext:definitionStatus>
+        <sct-ext:fsn xml:lang="en">Body mass index (observable entity)</sct-ext:fsn>
+        <dc11:type>observable entity</dc11:type>
         <rdfs:comment>[PROMOT note] [Present in OPMD research clinical form]</rdfs:comment>
         <rdfs:label xml:lang="en">BMI - Body mass index</rdfs:label>
         <rdfs:label xml:lang="en">Body mass index</rdfs:label>
         <rdfs:label xml:lang="en">Quetelet index</rdfs:label>
         <rdfs:label xml:lang="en">Weight: body mass</rdfs:label>
+        <rdfs:label xml:lang="fr">indice de masse corporelle</rdfs:label>
+        <rdfs:label xml:lang="es">índice de masa corporal</rdfs:label>
+        <skos:altLabel xml:lang="en">BMI - Body mass index</skos:altLabel>
+        <skos:altLabel xml:lang="es">IMC - índice de masa corporal</skos:altLabel>
+        <skos:altLabel xml:lang="en">Quetelet index</skos:altLabel>
+        <skos:altLabel xml:lang="en">Weight: body mass</skos:altLabel>
+        <skos:altLabel xml:lang="es">índice de Quetelet</skos:altLabel>
+        <skos:notation>60621009</skos:notation>
     </owl:Class>
     
 
@@ -35017,6 +35550,9 @@ pulmonary arterial and venous trees. Examples: There is only one heart.</rdfs:co
 
     <owl:Class rdf:about="http://snomed.info/id/62296006">
         <rdfs:subClassOf rdf:resource="http://snomed.info/id/78272007"/>
+        <sct-ext:definitionStatus>Primitif</sct-ext:definitionStatus>
+        <sct-ext:fsn xml:lang="en">Natural grandfather (person)</sct-ext:fsn>
+        <dc11:type>person</dc11:type>
         <rdfs:comment>[PROMOT note] [Derived from EURO-NMD NMD-CDE] [which_affected_family]</rdfs:comment>
         <rdfs:comment>[PROMOT note] [Derived from RD-CDM] [6.3.5 Family Member Relationship] </rdfs:comment>
         <rdfs:comment>[PROMOT note] [EURO-NMD] Atalia A et al., EURO-NMD registry: federated FAIR infrastructure, innovative technologies and concepts of a patient-centred registry for rare neuromuscular disorders. Orphanet J Rare Dis. 2024 Feb 14;19(1):66. doi: 10.1186/s13023-024-03059-3. PMID: 38355534; PMCID: PMC10865673.</rdfs:comment>
@@ -35025,7 +35561,13 @@ pulmonary arterial and venous trees. Examples: There is only one heart.</rdfs:co
         <rdfs:label xml:lang="en">Biological grandfather</rdfs:label>
         <rdfs:label xml:lang="en">Natural grand-father</rdfs:label>
         <rdfs:label xml:lang="en">Natural grandfather</rdfs:label>
+        <rdfs:label xml:lang="es">abuelo natural</rdfs:label>
+        <rdfs:label xml:lang="fr">grand-père biologique</rdfs:label>
+        <skos:altLabel xml:lang="en">Biological grand-father</skos:altLabel>
+        <skos:altLabel xml:lang="en">Biological grandfather</skos:altLabel>
+        <skos:altLabel xml:lang="en">Natural grand-father</skos:altLabel>
         <skos:changeNote xml:lang="en">[PROMOT note] The PROMOT ontology added a comment to quote the CDMs used as a source for this entity.</skos:changeNote>
+        <skos:notation>62296006</skos:notation>
     </owl:Class>
     
 
@@ -35034,13 +35576,21 @@ pulmonary arterial and venous trees. Examples: There is only one heart.</rdfs:co
 
     <owl:Class rdf:about="http://snomed.info/id/65656005">
         <rdfs:subClassOf rdf:resource="http://snomed.info/id/13646006"/>
+        <sct-ext:definitionStatus>Primitif</sct-ext:definitionStatus>
+        <sct-ext:fsn xml:lang="en">Natural mother (person)</sct-ext:fsn>
+        <dc11:type>person</dc11:type>
         <rdfs:comment>[PROMOT note] [Derived from EURO-NMD NMD-CDE] [which_affected_family]</rdfs:comment>
         <rdfs:comment>[PROMOT note] [Derived from RD-CDM] [6.3.5 Family Member Relationship]</rdfs:comment>
         <rdfs:comment>[PROMOT note] [EURO-NMD] Atalia A et al., EURO-NMD registry: federated FAIR infrastructure, innovative technologies and concepts of a patient-centred registry for rare neuromuscular disorders. Orphanet J Rare Dis. 2024 Feb 14;19(1):66. doi: 10.1186/s13023-024-03059-3. PMID: 38355534; PMCID: PMC10865673.</rdfs:comment>
         <rdfs:comment>[PROMOT note] [RD-CDM] Graefe, A.S.L., Hübner, M.R., Rehburg, F. et al. An ontology-based rare disease common data model harmonising international registries, FHIR, and Phenopackets. Sci Data 12, 234 (2025). https://doi.org/10.1038/s41597-025-04558-z</rdfs:comment>
         <rdfs:label xml:lang="en">Biological mother</rdfs:label>
         <rdfs:label xml:lang="en">Natural mother</rdfs:label>
+        <rdfs:label xml:lang="es">madre natural</rdfs:label>
+        <rdfs:label xml:lang="fr">mère biologique</rdfs:label>
+        <skos:altLabel xml:lang="en">Biological mother</skos:altLabel>
+        <skos:altLabel xml:lang="es">madre biológica</skos:altLabel>
         <skos:changeNote xml:lang="en">[PROMOT note] The PROMOT ontology added a comment to quote the CDMs used as a source for this entity.</skos:changeNote>
+        <skos:notation>65656005</skos:notation>
     </owl:Class>
     
 
@@ -35059,9 +35609,18 @@ pulmonary arterial and venous trees. Examples: There is only one heart.</rdfs:co
 
     <owl:Class rdf:about="http://snomed.info/id/719762005">
         <rdfs:subClassOf rdf:resource="http://snomed.info/id/45929001"/>
+        <sct-ext:definitionStatus>Primitif</sct-ext:definitionStatus>
+        <sct-ext:fsn xml:lang="en">Paternal half brother (person)</sct-ext:fsn>
         <obo:IAO_0000115 xml:lang="en">The son of one&apos;s father who has a different mother,</obo:IAO_0000115>
+        <dc11:type>person</dc11:type>
         <rdfs:label xml:lang="en">Paternal half brother</rdfs:label>
         <rdfs:label xml:lang="en">Paternal half-brother</rdfs:label>
+        <rdfs:label xml:lang="fr">demi-frère paternel</rdfs:label>
+        <rdfs:label xml:lang="es">medio hermano paterno</rdfs:label>
+        <skos:altLabel xml:lang="en">Paternal half-brother</skos:altLabel>
+        <skos:definition xml:lang="es">Hijo del propio padre y de una madre diferente.</skos:definition>
+        <skos:definition xml:lang="en">The son of one&apos;s father who has a different mother,</skos:definition>
+        <skos:notation>719762005</skos:notation>
     </owl:Class>
     
 
@@ -35070,9 +35629,18 @@ pulmonary arterial and venous trees. Examples: There is only one heart.</rdfs:co
 
     <owl:Class rdf:about="http://snomed.info/id/719764006">
         <rdfs:subClassOf rdf:resource="http://snomed.info/id/2272004"/>
+        <sct-ext:definitionStatus>Primitif</sct-ext:definitionStatus>
+        <sct-ext:fsn xml:lang="en">Paternal half sister (person)</sct-ext:fsn>
         <obo:IAO_0000115 xml:lang="en">The daughter of one&apos;s father who has a different mother.</obo:IAO_0000115>
+        <dc11:type>person</dc11:type>
         <rdfs:label xml:lang="en">Paternal half sister</rdfs:label>
         <rdfs:label xml:lang="en">Paternal half-sister</rdfs:label>
+        <rdfs:label xml:lang="fr">demi-sœur paternelle</rdfs:label>
+        <rdfs:label xml:lang="es">media hermana paterna</rdfs:label>
+        <skos:altLabel xml:lang="en">Paternal half-sister</skos:altLabel>
+        <skos:definition xml:lang="es">Hija del propio padre y de una madre diferente.</skos:definition>
+        <skos:definition xml:lang="en">The daughter of one&apos;s father who has a different mother.</skos:definition>
+        <skos:notation>719764006</skos:notation>
     </owl:Class>
     
 
@@ -35081,9 +35649,18 @@ pulmonary arterial and venous trees. Examples: There is only one heart.</rdfs:co
 
     <owl:Class rdf:about="http://snomed.info/id/719765007">
         <rdfs:subClassOf rdf:resource="http://snomed.info/id/2272004"/>
+        <sct-ext:definitionStatus>Primitif</sct-ext:definitionStatus>
+        <sct-ext:fsn xml:lang="en">Maternal half sister (person)</sct-ext:fsn>
         <obo:IAO_0000115 xml:lang="en">The daughter of one&apos;s mother who has a different father.</obo:IAO_0000115>
+        <dc11:type>person</dc11:type>
         <rdfs:label xml:lang="en">Maternal half sister</rdfs:label>
         <rdfs:label xml:lang="en">Maternal half-sister</rdfs:label>
+        <rdfs:label xml:lang="fr">demi-sœur maternelle</rdfs:label>
+        <rdfs:label xml:lang="es">media hermana materna</rdfs:label>
+        <skos:altLabel xml:lang="en">Maternal half-sister</skos:altLabel>
+        <skos:definition xml:lang="es">Hija de una madre con un padre diferente.</skos:definition>
+        <skos:definition xml:lang="en">The daughter of one&apos;s mother who has a different father.</skos:definition>
+        <skos:notation>719765007</skos:notation>
     </owl:Class>
     
 
@@ -35092,9 +35669,18 @@ pulmonary arterial and venous trees. Examples: There is only one heart.</rdfs:co
 
     <owl:Class rdf:about="http://snomed.info/id/719766008">
         <rdfs:subClassOf rdf:resource="http://snomed.info/id/45929001"/>
+        <sct-ext:definitionStatus>Primitif</sct-ext:definitionStatus>
+        <sct-ext:fsn xml:lang="en">Maternal half brother (person)</sct-ext:fsn>
         <obo:IAO_0000115 xml:lang="en">The son of one&apos;s mother who has a different father.</obo:IAO_0000115>
+        <dc11:type>person</dc11:type>
         <rdfs:label xml:lang="en">Maternal half brother</rdfs:label>
         <rdfs:label xml:lang="en">Maternal half-brother</rdfs:label>
+        <rdfs:label xml:lang="fr">demi-frère maternel</rdfs:label>
+        <rdfs:label xml:lang="es">medio hermano materno</rdfs:label>
+        <skos:altLabel xml:lang="en">Maternal half-brother</skos:altLabel>
+        <skos:definition xml:lang="es">Hijo de la madre con un padre diferente.</skos:definition>
+        <skos:definition xml:lang="en">The son of one&apos;s mother who has a different father.</skos:definition>
+        <skos:notation>719766008</skos:notation>
     </owl:Class>
     
 
@@ -35103,13 +35689,21 @@ pulmonary arterial and venous trees. Examples: There is only one heart.</rdfs:co
 
     <owl:Class rdf:about="http://snomed.info/id/73678001">
         <rdfs:subClassOf rdf:resource="http://snomed.info/id/82101005"/>
+        <sct-ext:definitionStatus>Primitif</sct-ext:definitionStatus>
+        <sct-ext:fsn xml:lang="en">Natural sister (person)</sct-ext:fsn>
+        <dc11:type>person</dc11:type>
         <rdfs:comment>[PROMOT note] [Derived from EURO-NMD NMD-CDE] [which_affected_family]</rdfs:comment>
         <rdfs:comment>[PROMOT note] [Derived from RD-CDM] [6.3.5 Family Member Relationship]</rdfs:comment>
         <rdfs:comment>[PROMOT note] [EURO-NMD] Atalia A et al., EURO-NMD registry: federated FAIR infrastructure, innovative technologies and concepts of a patient-centred registry for rare neuromuscular disorders. Orphanet J Rare Dis. 2024 Feb 14;19(1):66. doi: 10.1186/s13023-024-03059-3. PMID: 38355534; PMCID: PMC10865673.</rdfs:comment>
         <rdfs:comment>[PROMOT note] [RD-CDM] Graefe, A.S.L., Hübner, M.R., Rehburg, F. et al. An ontology-based rare disease common data model harmonising international registries, FHIR, and Phenopackets. Sci Data 12, 234 (2025). https://doi.org/10.1038/s41597-025-04558-z</rdfs:comment>
         <rdfs:label xml:lang="en">Biological sister</rdfs:label>
         <rdfs:label xml:lang="en">Natural sister</rdfs:label>
+        <rdfs:label xml:lang="es">hermana natural</rdfs:label>
+        <rdfs:label xml:lang="fr">sœur biologique</rdfs:label>
+        <skos:altLabel xml:lang="en">Biological sister</skos:altLabel>
+        <skos:altLabel xml:lang="es">hermana biológica</skos:altLabel>
         <skos:changeNote xml:lang="en">[PROMOT note] The PROMOT ontology added a comment to quote the CDMs used as a source for this entity.</skos:changeNote>
+        <skos:notation>73678001</skos:notation>
     </owl:Class>
     
 
@@ -35118,8 +35712,15 @@ pulmonary arterial and venous trees. Examples: There is only one heart.</rdfs:co
 
     <owl:Class rdf:about="http://snomed.info/id/74566002">
         <rdfs:subClassOf rdf:resource="http://snomed.info/id/224899006"/>
+        <sct-ext:definitionStatus>Primitif</sct-ext:definitionStatus>
+        <sct-ext:fsn xml:lang="en">Crutch, device (physical object)</sct-ext:fsn>
+        <dc11:type>physical object</dc11:type>
         <rdfs:label xml:lang="en">Crutch</rdfs:label>
         <rdfs:label xml:lang="en">Crutch, device</rdfs:label>
+        <rdfs:label xml:lang="fr">béquille</rdfs:label>
+        <rdfs:label xml:lang="es">muleta</rdfs:label>
+        <skos:altLabel xml:lang="en">Crutch, device</skos:altLabel>
+        <skos:notation>74566002</skos:notation>
     </owl:Class>
     
 
@@ -35128,8 +35729,15 @@ pulmonary arterial and venous trees. Examples: There is only one heart.</rdfs:co
 
     <owl:Class rdf:about="http://snomed.info/id/75226009">
         <rdfs:subClassOf rdf:resource="http://snomed.info/id/125678001"/>
+        <sct-ext:definitionStatus>Primitif</sct-ext:definitionStatus>
+        <sct-ext:fsn xml:lang="en">Natural child (person)</sct-ext:fsn>
+        <dc11:type>person</dc11:type>
         <rdfs:label xml:lang="en">Biological child</rdfs:label>
         <rdfs:label xml:lang="en">Natural child</rdfs:label>
+        <rdfs:label xml:lang="fr">enfant biologique</rdfs:label>
+        <rdfs:label xml:lang="es">hijo natural (genérico)</rdfs:label>
+        <skos:altLabel xml:lang="en">Biological child</skos:altLabel>
+        <skos:notation>75226009</skos:notation>
     </owl:Class>
     
 
@@ -35138,10 +35746,20 @@ pulmonary arterial and venous trees. Examples: There is only one heart.</rdfs:co
 
     <owl:Class rdf:about="http://snomed.info/id/78272007">
         <rdfs:subClassOf rdf:resource="http://snomed.info/id/125679009"/>
+        <sct-ext:definitionStatus>Primitif</sct-ext:definitionStatus>
+        <sct-ext:fsn xml:lang="en">Natural grandparent (person)</sct-ext:fsn>
+        <dc11:type>person</dc11:type>
         <rdfs:label xml:lang="en">Biological grand-parent</rdfs:label>
         <rdfs:label xml:lang="en">Biological grandparent</rdfs:label>
         <rdfs:label xml:lang="en">Natural grand-parent</rdfs:label>
         <rdfs:label xml:lang="en">Natural grandparent</rdfs:label>
+        <rdfs:label xml:lang="es">abuelos naturales</rdfs:label>
+        <rdfs:label xml:lang="fr">grand-parent biologique</rdfs:label>
+        <skos:altLabel xml:lang="en">Biological grand-parent</skos:altLabel>
+        <skos:altLabel xml:lang="en">Biological grandparent</skos:altLabel>
+        <skos:altLabel xml:lang="en">Natural grand-parent</skos:altLabel>
+        <skos:altLabel xml:lang="es">abuelo biológico</skos:altLabel>
+        <skos:notation>78272007</skos:notation>
     </owl:Class>
     
 
@@ -35157,7 +35775,14 @@ pulmonary arterial and venous trees. Examples: There is only one heart.</rdfs:co
                 </owl:intersectionOf>
             </owl:Class>
         </rdfs:subClassOf>
+        <sct-ext:definitionStatus>Primitif</sct-ext:definitionStatus>
+        <sct-ext:fsn xml:lang="en">Twin brother (person)</sct-ext:fsn>
+        <dc11:type>person</dc11:type>
         <rdfs:label xml:lang="en">Twin brother</rdfs:label>
+        <rdfs:label xml:lang="es">hermano mellizo</rdfs:label>
+        <rdfs:label xml:lang="fr">jumeau</rdfs:label>
+        <skos:altLabel xml:lang="fr">frère jumeau</skos:altLabel>
+        <skos:notation>81276006</skos:notation>
     </owl:Class>
     
 
@@ -35166,8 +35791,16 @@ pulmonary arterial and venous trees. Examples: There is only one heart.</rdfs:co
 
     <owl:Class rdf:about="http://snomed.info/id/82101005">
         <rdfs:subClassOf rdf:resource="http://snomed.info/id/125678001"/>
+        <sct-ext:definitionStatus>Primitif</sct-ext:definitionStatus>
+        <sct-ext:fsn xml:lang="en">Natural sibling (person)</sct-ext:fsn>
+        <dc11:type>person</dc11:type>
         <rdfs:label xml:lang="en">Biological sibling</rdfs:label>
         <rdfs:label xml:lang="en">Natural sibling</rdfs:label>
+        <rdfs:label xml:lang="fr">frère ou sœur biologique</rdfs:label>
+        <rdfs:label xml:lang="es">hermano natural de sexo femenino o masculino</rdfs:label>
+        <skos:altLabel xml:lang="en">Biological sibling</skos:altLabel>
+        <skos:altLabel xml:lang="es">hermano biológico de sexo femenino o masculino</skos:altLabel>
+        <skos:notation>82101005</skos:notation>
     </owl:Class>
     
 
@@ -35176,13 +35809,21 @@ pulmonary arterial and venous trees. Examples: There is only one heart.</rdfs:co
 
     <owl:Class rdf:about="http://snomed.info/id/83420006">
         <rdfs:subClassOf rdf:resource="http://snomed.info/id/75226009"/>
+        <sct-ext:definitionStatus>Primitif</sct-ext:definitionStatus>
+        <sct-ext:fsn xml:lang="en">Natural daughter (person)</sct-ext:fsn>
+        <dc11:type>person</dc11:type>
         <rdfs:comment>[PROMOT note] [Derived from EURO-NMD NMD-CDE] [which_affected_family]</rdfs:comment>
         <rdfs:comment>[PROMOT note] [Derived from RD-CDM] [6.3.5 Family Member Relationship]</rdfs:comment>
         <rdfs:comment>[PROMOT note] [EURO-NMD] Atalia A et al., EURO-NMD registry: federated FAIR infrastructure, innovative technologies and concepts of a patient-centred registry for rare neuromuscular disorders. Orphanet J Rare Dis. 2024 Feb 14;19(1):66. doi: 10.1186/s13023-024-03059-3. PMID: 38355534; PMCID: PMC10865673.</rdfs:comment>
         <rdfs:comment>[PROMOT note] [RD-CDM] Graefe, A.S.L., Hübner, M.R., Rehburg, F. et al. An ontology-based rare disease common data model harmonising international registries, FHIR, and Phenopackets. Sci Data 12, 234 (2025). https://doi.org/10.1038/s41597-025-04558-z</rdfs:comment>
         <rdfs:label xml:lang="en">Biological daughter</rdfs:label>
         <rdfs:label xml:lang="en">Natural daughter</rdfs:label>
+        <rdfs:label xml:lang="fr">fille biologique</rdfs:label>
+        <rdfs:label xml:lang="es">hija natural</rdfs:label>
+        <skos:altLabel xml:lang="en">Biological daughter</skos:altLabel>
+        <skos:altLabel xml:lang="es">hija biológica</skos:altLabel>
         <skos:changeNote xml:lang="en">[PROMOT note] The PROMOT ontology added a comment to quote the CDMs used as a source for this entity.</skos:changeNote>
+        <skos:notation>83420006</skos:notation>
     </owl:Class>
     
 
@@ -35191,8 +35832,16 @@ pulmonary arterial and venous trees. Examples: There is only one heart.</rdfs:co
 
     <owl:Class rdf:about="http://snomed.info/id/840297006">
         <rdfs:subClassOf rdf:resource="http://snomed.info/id/315306007"/>
+        <sct-ext:definitionStatus>Primitif</sct-ext:definitionStatus>
+        <sct-ext:fsn xml:lang="en">Assessment of patient reported outcome measures (procedure)</sct-ext:fsn>
+        <dc11:type>procedure</dc11:type>
         <rdfs:label xml:lang="en">Assessment of PROMs (patient reported outcome measures)</rdfs:label>
         <rdfs:label xml:lang="en">Assessment of patient reported outcome measures</rdfs:label>
+        <rdfs:label xml:lang="es">evaluación de indicadores de resultados informados por el paciente</rdfs:label>
+        <rdfs:label xml:lang="fr">évaluation des PROMs</rdfs:label>
+        <skos:altLabel xml:lang="en">Assessment of PROMs (patient reported outcome measures)</skos:altLabel>
+        <skos:altLabel xml:lang="fr">évaluation des mesures du résultat des soins rapportées par les patient(e)s</skos:altLabel>
+        <skos:notation>840297006</skos:notation>
     </owl:Class>
     
 
@@ -35201,11 +35850,24 @@ pulmonary arterial and venous trees. Examples: There is only one heart.</rdfs:co
 
     <owl:Class rdf:about="http://snomed.info/id/84100007">
         <rdfs:subClassOf rdf:resource="http://snomed.info/id/128927009"/>
+        <sct-ext:definitionStatus>Défini</sct-ext:definitionStatus>
+        <sct-ext:fsn xml:lang="en">History taking (procedure)</sct-ext:fsn>
         <obo:IAO_0000115 xml:lang="en">A clinically oriented interview of a patient or someone familiar with the patient.</obo:IAO_0000115>
+        <dc11:type>procedure</dc11:type>
         <rdfs:label xml:lang="en">Clinical interview</rdfs:label>
         <rdfs:label xml:lang="en">History taking</rdfs:label>
         <rdfs:label xml:lang="en">History taking, health</rdfs:label>
         <rdfs:label xml:lang="en">Taking health history</rdfs:label>
+        <rdfs:label xml:lang="es">obtención de historia clínica</rdfs:label>
+        <rdfs:label xml:lang="fr">recueil des antécédents</rdfs:label>
+        <skos:altLabel xml:lang="en">Clinical interview</skos:altLabel>
+        <skos:altLabel xml:lang="en">History taking, health</skos:altLabel>
+        <skos:altLabel xml:lang="en">Taking health history</skos:altLabel>
+        <skos:altLabel xml:lang="es">anamnesis</skos:altLabel>
+        <skos:altLabel xml:lang="es">entrevista clínica</skos:altLabel>
+        <skos:definition xml:lang="en">A clinically oriented interview of a patient or someone familiar with the patient.</skos:definition>
+        <skos:definition xml:lang="es">Entrevista orientada clínicamente, realizada a un paciente o a un familiar</skos:definition>
+        <skos:notation>84100007</skos:notation>
     </owl:Class>
     
 
@@ -35214,8 +35876,15 @@ pulmonary arterial and venous trees. Examples: There is only one heart.</rdfs:co
 
     <owl:Class rdf:about="http://snomed.info/id/87405001">
         <rdfs:subClassOf rdf:resource="http://snomed.info/id/224899006"/>
+        <sct-ext:definitionStatus>Primitif</sct-ext:definitionStatus>
+        <sct-ext:fsn xml:lang="en">Cane, device (physical object)</sct-ext:fsn>
+        <dc11:type>physical object</dc11:type>
         <rdfs:label xml:lang="en">Cane</rdfs:label>
         <rdfs:label xml:lang="en">Cane, device</rdfs:label>
+        <rdfs:label xml:lang="es">bastón, dispositivo</rdfs:label>
+        <rdfs:label xml:lang="fr">canne</rdfs:label>
+        <skos:altLabel xml:lang="en">Cane, device</skos:altLabel>
+        <skos:notation>87405001</skos:notation>
     </owl:Class>
     
 
@@ -35224,9 +35893,16 @@ pulmonary arterial and venous trees. Examples: There is only one heart.</rdfs:co
 
     <owl:Class rdf:about="http://snomed.info/id/87683000">
         <rdfs:subClassOf rdf:resource="http://snomed.info/id/364940007"/>
+        <sct-ext:definitionStatus>Primitif</sct-ext:definitionStatus>
+        <sct-ext:fsn xml:lang="en">Left handed (finding)</sct-ext:fsn>
+        <dc11:type>finding</dc11:type>
         <rdfs:comment>[PROMOT note] [Present in OPMD research clinical form]</rdfs:comment>
         <rdfs:label xml:lang="en">LH - Left handed</rdfs:label>
         <rdfs:label xml:lang="en">Left handed</rdfs:label>
+        <rdfs:label xml:lang="fr">gaucher</rdfs:label>
+        <rdfs:label xml:lang="es">sinistrómano</rdfs:label>
+        <skos:altLabel xml:lang="en">LH - Left handed</skos:altLabel>
+        <skos:notation>87683000</skos:notation>
     </owl:Class>
     
 
@@ -35235,13 +35911,21 @@ pulmonary arterial and venous trees. Examples: There is only one heart.</rdfs:co
 
     <owl:Class rdf:about="http://snomed.info/id/9947008">
         <rdfs:subClassOf rdf:resource="http://snomed.info/id/13646006"/>
+        <sct-ext:definitionStatus>Primitif</sct-ext:definitionStatus>
+        <sct-ext:fsn xml:lang="en">Natural father (person)</sct-ext:fsn>
+        <dc11:type>person</dc11:type>
         <rdfs:comment>[PROMOT note] [Derived from EURO-NMD NMD-CDE] [which_affected_family]</rdfs:comment>
         <rdfs:comment>[PROMOT note] [Derived from RD-CDM] [6.3.5 Family Member Relationship] </rdfs:comment>
         <rdfs:comment>[PROMOT note] [EURO-NMD] Atalia A et al., EURO-NMD registry: federated FAIR infrastructure, innovative technologies and concepts of a patient-centred registry for rare neuromuscular disorders. Orphanet J Rare Dis. 2024 Feb 14;19(1):66. doi: 10.1186/s13023-024-03059-3. PMID: 38355534; PMCID: PMC10865673.</rdfs:comment>
         <rdfs:comment>[PROMOT note] [RD-CDM] Graefe, A.S.L., Hübner, M.R., Rehburg, F. et al. An ontology-based rare disease common data model harmonising international registries, FHIR, and Phenopackets. Sci Data 12, 234 (2025). https://doi.org/10.1038/s41597-025-04558-z</rdfs:comment>
         <rdfs:label xml:lang="en">Biological father</rdfs:label>
         <rdfs:label xml:lang="en">Natural father</rdfs:label>
+        <rdfs:label xml:lang="es">padre natural</rdfs:label>
+        <rdfs:label xml:lang="fr">père biologique</rdfs:label>
+        <skos:altLabel xml:lang="en">Biological father</skos:altLabel>
+        <skos:altLabel xml:lang="es">padre biológico</skos:altLabel>
         <skos:changeNote xml:lang="en">[PROMOT note] The PROMOT ontology added a comment to quote the CDMs used as a source for this entity.</skos:changeNote>
+        <skos:notation>9947008</skos:notation>
     </owl:Class>
     
 

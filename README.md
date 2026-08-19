@@ -35,11 +35,13 @@ The latest version of the ontology can always be found at:
 
 (note this will not show up until the request has been approved by obofoundry.org)
 
-Others versions can be found at (note that it can differ from the latest version):
+Others versions can be found at:
 
 * [PROMOT initiative website](https://www.promotinitiative.com/project/ontology)
 
 * [Bioportal link](https://bioportal.bioontology.org/ontologies/PROMOT)
+
+(note that these versions can differ from the latest one)
 
 ### Editors' version
 
