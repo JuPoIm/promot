@@ -5,7 +5,8 @@ Prefix(VO:=<http://purl.obolibrary.org/obo/VO_>)
 Prefix(cc:=<http://creativecommons.org/ns#>)
 Prefix(dc:=<http://purl.org/dc/terms/>)
 Prefix(BFO:=<http://purl.obolibrary.org/obo/BFO_>)
-Prefix(FMA:=<http://purl.obolibrary.org/obo/FMA_>)
+Prefix(ECO:=<http://purl.obolibrary.org/obo/ECO_>)
+Prefix(FMA:=<http://purl.org/sig/ont/fma/fma>)
 Prefix(IAO:=<http://purl.obolibrary.org/obo/IAO_>)
 Prefix(ICF:=<http://id.who.int/icd/entity/>)
 Prefix(OBI:=<http://purl.obolibrary.org/obo/OBI_>)
@@ -15,8 +16,10 @@ Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
 Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
 Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
 Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
+Prefix(GENO:=<http://purl.obolibrary.org/obo/GENO_>)
 Prefix(HGNC:=<http://identifiers.org/hgnc/>)
 Prefix(OMOP:=<https://athena.ohdsi.org/search-terms/terms/>)
+Prefix(ORDO:=<http://www.orpha.net/ORDO/Orphanet_>)
 Prefix(SCDO:=<http://purl.obolibrary.org/obo/SCDO_>)
 Prefix(dc11:=<http://purl.org/dc/elements/1.1/>)
 Prefix(foaf:=<http://xmlns.com/foaf/0.1/>)
@@ -54,20 +57,20 @@ Prefix(CPATH_CONDITION_OCCURRENCE:=<https://w3id.org/cpont/condition_occurrence/
 
 
 Ontology(<http://purl.obolibrary.org/obo/promot/imports/iao_import.owl>
-<http://purl.obolibrary.org/obo/promot/releases/2025-12-23/imports/iao_import.owl>
+<http://purl.obolibrary.org/obo/promot/releases/2026-03-11/imports/iao_import.owl>
 Annotation(dc11:source <http://purl.obolibrary.org/obo/iao/2022-11-07/iao.owl>)
-Annotation(owl:versionInfo "2025-12-23")
+Annotation(owl:versionInfo "2026-03-11")
 
 Declaration(Class(obo:BFO_0000031))
 Declaration(Class(obo:IAO_0000027))
 Declaration(Class(obo:IAO_0000030))
-Declaration(Class(obo:IAO_0000109))
 Declaration(Class(obo:IAO_0020000))
-Declaration(ObjectProperty(obo:IAO_0000219))
+Declaration(AnnotationProperty(obo:IAO_0000112))
 Declaration(AnnotationProperty(obo:IAO_0000115))
 Declaration(AnnotationProperty(obo:IAO_0000116))
 Declaration(AnnotationProperty(obo:IAO_0000117))
 Declaration(AnnotationProperty(obo:IAO_0000119))
+Declaration(AnnotationProperty(dc11:creator))
 Declaration(AnnotationProperty(dc11:source))
 ############################
 #   Annotation Properties
@@ -124,25 +127,6 @@ AnnotationAssertion(obo:IAO_0000119 obo:IAO_0000119 "GROUP:OBI:<http://purl.obol
 AnnotationAssertion(rdfs:label obo:IAO_0000119 "definition source"@en)
 
 
-############################
-#   Object Properties
-############################
-
-# Object Property: obo:IAO_0000219 (denotes)
-
-AnnotationAssertion(obo:IAO_0000115 obo:IAO_0000219 "A primitive, instance-level, relation obtaining between an information content entity and some portion of reality. Denotation is what happens when someone creates an information content entity E in order to specifically refer to something. The only relation between E and the thing is that E can be used to 'pick out' the thing. This relation connects those two together. Freedictionary.com sense 3: To signify directly; refer to specifically"@en)
-AnnotationAssertion(obo:IAO_0000116 obo:IAO_0000219 "2009-11-10 Alan Ruttenberg. Old definition said the following to emphasize the generic nature of this relation. We no longer have 'specifically denotes', which would have been primitive, so make this relation primitive.
-g denotes r =def 
-r is a portion of reality
-there is some c that is a concretization of g 
-every c that is a concretization of g specifically denotes r"@en)
-AnnotationAssertion(obo:IAO_0000117 obo:IAO_0000219 "person:Alan Ruttenberg"@en)
-AnnotationAssertion(obo:IAO_0000119 obo:IAO_0000219 "Conversations with Barry Smith, Werner Ceusters, Bjoern Peters, Michel Dumontier, Melanie Courtot, James Malone, Bill Hogan"@en)
-AnnotationAssertion(rdfs:comment obo:IAO_0000219 ""@en)
-AnnotationAssertion(rdfs:label obo:IAO_0000219 "denotes"@en)
-ObjectPropertyDomain(obo:IAO_0000219 obo:IAO_0000030)
-
-
 
 ############################
 #   Classes
@@ -150,6 +134,7 @@ ObjectPropertyDomain(obo:IAO_0000219 obo:IAO_0000030)
 
 # Class: obo:IAO_0000027 (data item)
 
+AnnotationAssertion(obo:IAO_0000112 obo:IAO_0000027 "Data items include counts of things, analyte concentrations, and statistical summaries."@en)
 AnnotationAssertion(obo:IAO_0000115 obo:IAO_0000027 "An information content entity that is intended to be a truthful statement about something (modulo, e.g., measurement precision or other systematic errors) and is constructed/acquired by a method which reliably tends to produce (approximately) truthful statements."@en)
 AnnotationAssertion(obo:IAO_0000116 obo:IAO_0000027 "2/2/2009 Alan and Bjoern discussing FACS run output data. This is a data item because it is about the cell population. Each element records an event and is typically further composed a set of measurment data items that record the fluorescent intensity stimulated by one of the lasers."@en)
 AnnotationAssertion(obo:IAO_0000116 obo:IAO_0000027 "2009-03-16: data item deliberatly ambiguous: we merged data set and datum to be one entity, not knowing how to define singular versus plural. So data item is more general than datum."@en)
@@ -170,6 +155,7 @@ SubClassOf(obo:IAO_0000027 obo:IAO_0000030)
 
 # Class: obo:IAO_0000030 (information content entity)
 
+AnnotationAssertion(obo:IAO_0000112 obo:IAO_0000030 "Examples of information content entites include journal articles, data, graphical layouts, and graphs."@en)
 AnnotationAssertion(obo:IAO_0000115 obo:IAO_0000030 "A generically dependent continuant that is about some thing."@en)
 AnnotationAssertion(obo:IAO_0000116 obo:IAO_0000030 "2014-03-10: The use of \"thing\" is intended to be general enough to include universals and configurations (see https://groups.google.com/d/msg/information-ontology/GBxvYZCk1oc/-L6B5fSBBTQJ)."@en)
 AnnotationAssertion(obo:IAO_0000116 obo:IAO_0000030 "information_content_entity 'is_encoded_in' some digital_entity in obi before split (040907). information_content_entity 'is_encoded_in' some physical_document in obi before split (040907).
@@ -180,21 +166,12 @@ AnnotationAssertion(obo:IAO_0000119 obo:IAO_0000030 "OBI_0000142"@en)
 AnnotationAssertion(rdfs:label obo:IAO_0000030 "information content entity"@en)
 SubClassOf(obo:IAO_0000030 obo:BFO_0000031)
 
-# Class: obo:IAO_0000109 (measurement datum)
-
-AnnotationAssertion(obo:IAO_0000115 obo:IAO_0000109 "A measurement datum is an information content entity that is a recording of the output of a measurement such as produced by a device."@en)
-AnnotationAssertion(obo:IAO_0000116 obo:IAO_0000109 "2/2/2009 is_specified_output of some assay?"@en)
-AnnotationAssertion(obo:IAO_0000117 obo:IAO_0000109 "person:Chris Stoeckert"@en)
-AnnotationAssertion(obo:IAO_0000119 obo:IAO_0000109 "OBI_0000305"@en)
-AnnotationAssertion(obo:IAO_0000119 obo:IAO_0000109 "group:OBI"@en)
-AnnotationAssertion(rdfs:label obo:IAO_0000109 "measurement datum"@en)
-SubClassOf(obo:IAO_0000109 obo:IAO_0000027)
-
 # Class: obo:IAO_0020000 (identifier)
 
 AnnotationAssertion(obo:IAO_0000115 obo:IAO_0020000 "An information content entity that is the outcome of a dubbing process and is used to refer to one instance of entity shared by a group of people to refer to that individual entity."@en)
 AnnotationAssertion(obo:IAO_0000117 obo:IAO_0020000 "Justin Whorton"@en)
 AnnotationAssertion(obo:IAO_0000117 obo:IAO_0020000 "Mathias Brochhausen"@en)
+AnnotationAssertion(dc11:creator obo:IAO_0020000 "Mathias Brochhausen")
 AnnotationAssertion(rdfs:comment obo:IAO_0020000 "Sep 29, 2016: The current definition has been amended from the previous version: \"A proper name is an information content entity that is the outcome of a dubbing process and is used to refer to one instance of entity shared by a group of people to refer to that individual entity.\" to more accuratly reflect the necessary and sufficient condition on the class. (MB)"@en)
 AnnotationAssertion(rdfs:label obo:IAO_0020000 "identifier"@en)
 SubClassOf(obo:IAO_0020000 obo:IAO_0000030)

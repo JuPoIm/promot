@@ -1,0 +1,83 @@
+# python3.12.3
+# utf-8
+# Autrice / Author : juliette.potier@institutimagine.org
+# GOAL : create a template ROBOT with spanish and french labels for ICF classes
+# BUT : créer un template avec les labels espagnols et français pour les classes ICF issus des traductions officielles sur le web browser
+# date de création / Creation date : 23/09/2025
+# date de version / Version date : 08/04/2026
+
+import csv
+import re
+import pandas as pd
+
+# df creation
+# création de la dataframe au format template ROBOT
+columns = ['ID', 'Label EN', 'Label FR', 'Label FR annotation', 'Label ES', 'Label ES annotation', 'Change Note', 'CrossRef']
+df = pd.DataFrame(columns=columns)
+
+
+# Read file with 2026 Fundational URI and french translated labels from https://icdcdn.who.int/static/releasefiles/2026-01/SimpleTabulation-ICF-fr.zip
+with open('../data/imports/SimpleTabulation-ICF-fr.txt', newline='', encoding='utf-8') as tsvfile:
+    reader = csv.reader(tsvfile, delimiter = '\t', quotechar = '"', quoting = csv.QUOTE_MINIMAL)
+    for row in reader:
+        if 'http://id.who.int/icd/entity/' not in row[0]: # if no Fundational URI pass
+            pass
+        else:
+            icf_uri = row[0]
+            label_fr = row[5]
+            while '- ' in label_fr :
+                label_fr = re.sub('- ', '', label_fr)  # suppression des '- ' dans les labels
+            df.loc[len(df)] =  {'ID': icf_uri,
+            'Label FR': label_fr,
+            'Label FR annotation': '[PROMOT note] Source for official translation: https://icd.who.int/browse/2026-01/icf/fr > Info > Fichier du tableur'}
+
+
+# Read file with 2026 Fundational URI and spanish translated labels from https://icdcdn.who.int/static/releasefiles/2026-01/SimpleTabulation-ICF-es.zip
+with open('../data/imports/SimpleTabulation-ICF-es.txt', newline='', encoding='utf-8') as tsvfile:
+    reader = csv.reader(tsvfile, delimiter = '\t', quotechar = '"', quoting = csv.QUOTE_MINIMAL)
+    for row in reader:
+        if 'http://id.who.int/icd/entity/' not in row[0] : # if no Fundational URI pass
+            pass
+        else:
+            df['Label ES'] = df['Label ES'].astype('string')
+            df['Label EN'] = df['Label EN'].astype('string')
+            df['Label ES annotation'] = df['Label ES annotation'].astype('string')
+            icf_uri = row[0]
+            label_en = row[4]
+            while '- ' in label_en :
+                label_en = re.sub('- ', '', label_en)  # suppression des '- ' dans les labels 
+            label_es = row[5]
+            while '- ' in label_es :
+                label_es = re.sub('- ', '', label_es)  # suppression des '- ' dans les labels 
+            df.loc[df['ID'] == icf_uri, 'Label ES'] = label_es
+            df.loc[df['ID'] == icf_uri, 'Label ES annotation'] = '[PROMOT note] Source for official translation: https://icd.who.int/browse/2026-01/icf/es > Información > Archivo de hoja de cálculo'
+            df.loc[df['ID'] == icf_uri, 'Label EN'] = label_en
+
+template_df = pd.DataFrame(columns=columns)
+template_df.loc[0]= {'ID': 'ID',
+            'Label EN': 'AL rdfs:label@en',
+            'Label FR': 'AL rdfs:label@fr',
+            'Label FR annotation': '>A rdfs:comment',
+            'Label ES' : 'AL rdfs:label@es',
+            'Label ES annotation': '>A rdfs:comment',
+            'Change Note': 'AL skos:changeNote@en',
+            'CrossRef': 'A oboInOwl:hasDbXref SPLIT=|'
+            }
+
+with open ('../scripts/python/tmp/icf_import_iri.tsv', encoding='utf-8') as tsvfile:
+    reader = csv.reader(tsvfile, delimiter = '\t', quotechar = '"', quoting = csv.QUOTE_MINIMAL)
+    for row in reader:
+        iri = row[0]
+        data = df[df['ID'] == iri]
+        template_df = pd.concat([template_df, data], ignore_index = True)
+
+with open ('../scripts/python/tmp/icf-to-cifasip_promot.tsv', encoding='utf-8') as xref_file:
+    reader = csv.reader(xref_file, delimiter = '\t', quotechar = '"', quoting = csv.QUOTE_MINIMAL)
+    for row in reader:
+        iri = row[0]
+        xref = row[2]
+        template_df.loc[template_df['ID'] == iri, 'CrossRef'] = xref
+        template_df.loc[template_df['ID'] == iri, 'Change Note'] = '[PROMOT note] The PROMOT ontology added a crossref to the LIRMM version of the ICF (CIF-ASIP 2020). It also added the official French and Spanish translation for labels.'
+
+print(template_df)
+template_df.to_csv('../templates/icf_labels_es-fr.tsv', sep='\t', index=False)

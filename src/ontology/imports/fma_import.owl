@@ -6,18 +6,22 @@
      xmlns:VO="http://purl.obolibrary.org/obo/VO_"
      xmlns:cc="http://creativecommons.org/ns#"
      xmlns:BFO="http://purl.obolibrary.org/obo/BFO_"
-     xmlns:FMA="http://purl.obolibrary.org/obo/FMA_"
+     xmlns:ECO="http://purl.obolibrary.org/obo/ECO_"
+     xmlns:FMA="http://purl.org/sig/ont/fma/fma"
      xmlns:IAO="http://purl.obolibrary.org/obo/IAO_"
      xmlns:ICF="http://id.who.int/icd/entity/"
      xmlns:OBI="http://purl.obolibrary.org/obo/OBI_"
      xmlns:SIO="http://semanticscience.org/resource/SIO_"
+     xmlns:fma="http://purl.org/sig/ont/fma/"
      xmlns:obo="http://purl.obolibrary.org/obo/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:GENO="http://purl.obolibrary.org/obo/GENO_"
      xmlns:HGNC="http://identifiers.org/hgnc/"
      xmlns:OMOP="https://athena.ohdsi.org/search-terms/terms/"
+     xmlns:ORDO="http://www.orpha.net/ORDO/Orphanet_"
      xmlns:SCDO="http://purl.obolibrary.org/obo/SCDO_"
      xmlns:dc11="http://purl.org/dc/elements/1.1/"
      xmlns:foaf="http://xmlns.com/foaf/0.1/"
@@ -53,9 +57,3212 @@
      xmlns:CPATH_VISIT_OCCURRENCE="https://w3id.org/cpont/visit_occurrence/"
      xmlns:CPATH_CONDITION_OCCURRENCE="https://w3id.org/cpont/condition_occurrence/">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/promot/imports/fma_import.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/promot/releases/2025-12-23/imports/fma_import.owl"/>
-        <owl:versionInfo>2025-12-23</owl:versionInfo>
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/promot/releases/2026-03-11/imports/fma_import.owl"/>
+        <owl:versionInfo>2026-03-11</owl:versionInfo>
     </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/sig/ont/fma/Date_entered_modified -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/sig/ont/fma/Date_entered_modified"/>
+    
+
+
+    <!-- http://purl.org/sig/ont/fma/English_equivalent -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/sig/ont/fma/English_equivalent"/>
+    
+
+
+    <!-- http://purl.org/sig/ont/fma/Eponym -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/sig/ont/fma/Eponym"/>
+    
+
+
+    <!-- http://purl.org/sig/ont/fma/FMAID -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/sig/ont/fma/FMAID"/>
+    
+
+
+    <!-- http://purl.org/sig/ont/fma/TA_ID -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/sig/ont/fma/TA_ID"/>
+    
+
+
+    <!-- http://purl.org/sig/ont/fma/author -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/sig/ont/fma/author"/>
+    
+
+
+    <!-- http://purl.org/sig/ont/fma/authority -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/sig/ont/fma/authority"/>
+    
+
+
+    <!-- http://purl.org/sig/ont/fma/definition -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/sig/ont/fma/definition"/>
+    
+
+
+    <!-- http://purl.org/sig/ont/fma/language -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/sig/ont/fma/language"/>
+    
+
+
+    <!-- http://purl.org/sig/ont/fma/modification -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/sig/ont/fma/modification"/>
+    
+
+
+    <!-- http://purl.org/sig/ont/fma/non-English_equivalent -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/sig/ont/fma/non-English_equivalent"/>
+    
+
+
+    <!-- http://purl.org/sig/ont/fma/preferred_name -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/sig/ont/fma/preferred_name"/>
+    
+
+
+    <!-- http://purl.org/sig/ont/fma/reference -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/sig/ont/fma/reference"/>
+    
+
+
+    <!-- http://purl.org/sig/ont/fma/synonym -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/sig/ont/fma/synonym"/>
+    
+
+
+    <!-- http://purl.org/sig/ont/fma/term_status -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/sig/ont/fma/term_status"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/sig/ont/fma/fma0328100 -->
+
+    <owl:Class rdf:about="http://purl.org/sig/ont/fma/fma0328100">
+        <rdfs:subClassOf rdf:resource="http://purl.org/sig/ont/fma/fma5022"/>
+        <fma:FMAID rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">328100</fma:FMAID>
+        <fma:preferred_name>Muscle of limb</fma:preferred_name>
+        <rdfs:label xml:lang="en">Muscle of limb</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/sig/ont/fma/fma0329044 -->
+
+    <owl:Class rdf:about="http://purl.org/sig/ont/fma/fma0329044">
+        <rdfs:subClassOf rdf:resource="http://purl.org/sig/ont/fma/fma5022"/>
+        <fma:FMAID rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">329044</fma:FMAID>
+        <fma:preferred_name>Muscle of body proper</fma:preferred_name>
+        <rdfs:label xml:lang="en">Muscle of body proper</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/sig/ont/fma/fma0329099 -->
+
+    <owl:Class rdf:about="http://purl.org/sig/ont/fma/fma0329099">
+        <rdfs:subClassOf rdf:resource="http://purl.org/sig/ont/fma/fma58274"/>
+        <fma:FMAID rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">329099</fma:FMAID>
+        <fma:preferred_name>Muscle of abdominal part of trunk</fma:preferred_name>
+        <rdfs:label xml:lang="en">Muscle of abdominal part of trunk</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/sig/ont/fma/fma0329118 -->
+
+    <owl:Class rdf:about="http://purl.org/sig/ont/fma/fma0329118">
+        <rdfs:subClassOf rdf:resource="http://purl.org/sig/ont/fma/fma58274"/>
+        <fma:FMAID rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">329118</fma:FMAID>
+        <fma:preferred_name>Muscle of thoracic part of trunk</fma:preferred_name>
+        <rdfs:label xml:lang="en">Muscle of thoracic part of trunk</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/sig/ont/fma/fma13295 -->
+
+    <owl:Class rdf:about="http://purl.org/sig/ont/fma/fma13295">
+        <rdfs:subClassOf rdf:resource="http://purl.org/sig/ont/fma/fma9619"/>
+        <fma:FMAID rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13295</fma:FMAID>
+        <fma:non-English_equivalent>Diaphragma</fma:non-English_equivalent>
+        <fma:non-English_equivalent>Diaphragme</fma:non-English_equivalent>
+        <fma:preferred_name>Diaphragm</fma:preferred_name>
+        <fma:reference>Allyson J. Merrell, Gabrielle Kardon. Development of the diaphragm, a skeletal muscle essential for mammalian respiration
+FEBS J. 2013 Sep; 280(17): 10.1111/febs.12274. Published online 2013 May 7. doi: 10.1111/febs.12274</fma:reference>
+        <fma:synonym>Thoracic diaphragm</fma:synonym>
+        <rdfs:label xml:lang="en">Diaphragm</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.org/sig/ont/fma/fma13295"/>
+        <owl:annotatedProperty rdf:resource="http://purl.org/sig/ont/fma/non-English_equivalent"/>
+        <owl:annotatedTarget>Diaphragma</owl:annotatedTarget>
+        <fma:Date_entered_modified>Thu May 12 14:26:32 GMT-08:00 2005</fma:Date_entered_modified>
+        <fma:English_equivalent>Diaphragm</fma:English_equivalent>
+        <fma:TA_ID>A04.4.02.001</fma:TA_ID>
+        <fma:author>JOSE MEJINO, MD</fma:author>
+        <fma:authority>Rosse MD</fma:authority>
+        <fma:authority>Terminologia Anatomica 1998</fma:authority>
+        <fma:language>Latin</fma:language>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.org/sig/ont/fma/fma13295"/>
+        <owl:annotatedProperty rdf:resource="http://purl.org/sig/ont/fma/non-English_equivalent"/>
+        <owl:annotatedTarget>Diaphragme</owl:annotatedTarget>
+        <fma:Date_entered_modified>Thu May 12 14:24:40 GMT-08:00 2005</fma:Date_entered_modified>
+        <fma:author>JOSE MEJINO, MD</fma:author>
+        <fma:authority>Robert Baud, PhD</fma:authority>
+        <fma:authority>Rosse MD</fma:authority>
+        <fma:language>French</fma:language>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.org/sig/ont/fma/fma13295"/>
+        <owl:annotatedProperty rdf:resource="http://purl.org/sig/ont/fma/preferred_name"/>
+        <owl:annotatedTarget>Diaphragm</owl:annotatedTarget>
+        <fma:Date_entered_modified>Thu Feb 20 14:53:00 PST 2003</fma:Date_entered_modified>
+        <fma:TA_ID>A04.4.02.001</fma:TA_ID>
+        <fma:author>JOSE MEJINO, MD</fma:author>
+        <fma:authority>Terminologia Anatomica 1998</fma:authority>
+        <fma:modification>Mar  6 1997 11:41:22:540AM</fma:modification>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.org/sig/ont/fma/fma13295"/>
+        <owl:annotatedProperty rdf:resource="http://purl.org/sig/ont/fma/synonym"/>
+        <owl:annotatedTarget>Thoracic diaphragm</owl:annotatedTarget>
+        <fma:Date_entered_modified>Thu Feb 20 14:52:47 PST 2003</fma:Date_entered_modified>
+        <fma:author>JOSE MEJINO, MD</fma:author>
+        <fma:authority>Rosse MD</fma:authority>
+        <fma:modification>Mon Oct 23 14:49:58 PDT 2000</fma:modification>
+        <fma:term_status>Inappropriate</fma:term_status>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.org/sig/ont/fma/fma13354 -->
+
+    <owl:Class rdf:about="http://purl.org/sig/ont/fma/fma13354">
+        <rdfs:subClassOf rdf:resource="http://purl.org/sig/ont/fma/fma9619"/>
+        <fma:FMAID rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13354</fma:FMAID>
+        <fma:non-English_equivalent>Musculus intercostalis</fma:non-English_equivalent>
+        <fma:preferred_name>Intercostal muscle</fma:preferred_name>
+        <rdfs:label xml:lang="en">Intercostal muscle</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.org/sig/ont/fma/fma13354"/>
+        <owl:annotatedProperty rdf:resource="http://purl.org/sig/ont/fma/non-English_equivalent"/>
+        <owl:annotatedTarget>Musculus intercostalis</owl:annotatedTarget>
+        <fma:Date_entered_modified>Thu May 12 14:26:32 GMT-08:00 2005</fma:Date_entered_modified>
+        <fma:English_equivalent>Intercostal muscle</fma:English_equivalent>
+        <fma:author>JOSE MEJINO, MD</fma:author>
+        <fma:authority>Rosse MD</fma:authority>
+        <fma:authority>Terminologia Anatomica 1998</fma:authority>
+        <fma:language>Latin</fma:language>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.org/sig/ont/fma/fma13354"/>
+        <owl:annotatedProperty rdf:resource="http://purl.org/sig/ont/fma/preferred_name"/>
+        <owl:annotatedTarget>Intercostal muscle</owl:annotatedTarget>
+        <fma:Date_entered_modified>Thu May 12 14:33:24 GMT-08:00 2005</fma:Date_entered_modified>
+        <fma:author>JOSE MEJINO, MD</fma:author>
+        <fma:authority>Rosse MD</fma:authority>
+        <fma:modification>Mar  7 1997 12:10:00:986PM</fma:modification>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.org/sig/ont/fma/fma13379 -->
+
+    <owl:Class rdf:about="http://purl.org/sig/ont/fma/fma13379">
+        <rdfs:subClassOf rdf:resource="http://purl.org/sig/ont/fma/fma32518"/>
+        <fma:FMAID rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13379</fma:FMAID>
+        <fma:non-English_equivalent>Muscle grand rhomboïde</fma:non-English_equivalent>
+        <fma:non-English_equivalent>Musculus rhomboideus major</fma:non-English_equivalent>
+        <fma:preferred_name>Rhomboid major</fma:preferred_name>
+        <fma:synonym>Rhomboid major muscle</fma:synonym>
+        <fma:synonym>Rhomboideus major</fma:synonym>
+        <fma:synonym>Rhomboideus major muscle</fma:synonym>
+        <rdfs:label xml:lang="en">Rhomboid major</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.org/sig/ont/fma/fma13379"/>
+        <owl:annotatedProperty rdf:resource="http://purl.org/sig/ont/fma/synonym"/>
+        <owl:annotatedTarget>Rhomboid major muscle</owl:annotatedTarget>
+        <fma:Date_entered_modified>Wed Apr 07 15:48:58 PDT 2004</fma:Date_entered_modified>
+        <fma:author>NANCE QUIMOSING-MADARANG, MD</fma:author>
+        <fma:authority>Rosse MD</fma:authority>
+        <fma:language>English</fma:language>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.org/sig/ont/fma/fma13379"/>
+        <owl:annotatedProperty rdf:resource="http://purl.org/sig/ont/fma/synonym"/>
+        <owl:annotatedTarget>Rhomboideus major</owl:annotatedTarget>
+        <fma:Date_entered_modified>Thu May 12 14:33:23 GMT-08:00 2005</fma:Date_entered_modified>
+        <fma:author>JOSE MEJINO, MD</fma:author>
+        <fma:authority>Rosse MD</fma:authority>
+        <fma:modification>Mar 10 1997 11:51:06:200AM</fma:modification>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.org/sig/ont/fma/fma13379"/>
+        <owl:annotatedProperty rdf:resource="http://purl.org/sig/ont/fma/synonym"/>
+        <owl:annotatedTarget>Rhomboideus major muscle</owl:annotatedTarget>
+        <fma:author>onard</fma:author>
+        <fma:authority>Rosse MD</fma:authority>
+        <fma:language>English</fma:language>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.org/sig/ont/fma/fma13379"/>
+        <owl:annotatedProperty rdf:resource="http://purl.org/sig/ont/fma/non-English_equivalent"/>
+        <owl:annotatedTarget>Muscle grand rhomboïde</owl:annotatedTarget>
+        <fma:Date_entered_modified>Thu May 12 14:24:40 GMT-08:00 2005</fma:Date_entered_modified>
+        <fma:author>JOSE MEJINO, MD</fma:author>
+        <fma:authority>Robert Baud, PhD</fma:authority>
+        <fma:authority>Rosse MD</fma:authority>
+        <fma:language>French</fma:language>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.org/sig/ont/fma/fma13379"/>
+        <owl:annotatedProperty rdf:resource="http://purl.org/sig/ont/fma/non-English_equivalent"/>
+        <owl:annotatedTarget>Musculus rhomboideus major</owl:annotatedTarget>
+        <fma:Date_entered_modified>Thu May 12 14:26:32 GMT-08:00 2005</fma:Date_entered_modified>
+        <fma:English_equivalent>Rhomboid major</fma:English_equivalent>
+        <fma:TA_ID>A04.3.01.007</fma:TA_ID>
+        <fma:author>JOSE MEJINO, MD</fma:author>
+        <fma:authority>Rosse MD</fma:authority>
+        <fma:authority>Terminologia Anatomica 1998</fma:authority>
+        <fma:language>Latin</fma:language>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.org/sig/ont/fma/fma13379"/>
+        <owl:annotatedProperty rdf:resource="http://purl.org/sig/ont/fma/preferred_name"/>
+        <owl:annotatedTarget>Rhomboid major</owl:annotatedTarget>
+        <fma:Date_entered_modified>Thu May 12 14:33:23 GMT-08:00 2005</fma:Date_entered_modified>
+        <fma:TA_ID>A04.3.01.007</fma:TA_ID>
+        <fma:author>AUGUSTO V. AGONCILLO, MD</fma:author>
+        <fma:authority>Terminologia Anatomica 1998</fma:authority>
+        <fma:modification>Mon Oct 11 09:41:44 PDT 1999</fma:modification>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.org/sig/ont/fma/fma13380 -->
+
+    <owl:Class rdf:about="http://purl.org/sig/ont/fma/fma13380">
+        <rdfs:subClassOf rdf:resource="http://purl.org/sig/ont/fma/fma32518"/>
+        <fma:FMAID rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13380</fma:FMAID>
+        <fma:non-English_equivalent>Muscle petit rhomboïde</fma:non-English_equivalent>
+        <fma:non-English_equivalent>Musculus rhomboideus minor</fma:non-English_equivalent>
+        <fma:preferred_name>Rhomboid minor</fma:preferred_name>
+        <fma:synonym>Rhomboid minor muscle</fma:synonym>
+        <fma:synonym>Rhomboideus minor</fma:synonym>
+        <fma:synonym>Rhomboideus minor muscle</fma:synonym>
+        <rdfs:label xml:lang="en">Rhomboid minor</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.org/sig/ont/fma/fma13380"/>
+        <owl:annotatedProperty rdf:resource="http://purl.org/sig/ont/fma/non-English_equivalent"/>
+        <owl:annotatedTarget>Muscle petit rhomboïde</owl:annotatedTarget>
+        <fma:Date_entered_modified>Thu May 12 14:24:40 GMT-08:00 2005</fma:Date_entered_modified>
+        <fma:author>JOSE MEJINO, MD</fma:author>
+        <fma:authority>Robert Baud, PhD</fma:authority>
+        <fma:authority>Rosse MD</fma:authority>
+        <fma:language>French</fma:language>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.org/sig/ont/fma/fma13380"/>
+        <owl:annotatedProperty rdf:resource="http://purl.org/sig/ont/fma/non-English_equivalent"/>
+        <owl:annotatedTarget>Musculus rhomboideus minor</owl:annotatedTarget>
+        <fma:Date_entered_modified>Thu May 12 14:26:32 GMT-08:00 2005</fma:Date_entered_modified>
+        <fma:English_equivalent>Rhomboid minor</fma:English_equivalent>
+        <fma:TA_ID>A04.3.01.008</fma:TA_ID>
+        <fma:author>JOSE MEJINO, MD</fma:author>
+        <fma:authority>Rosse MD</fma:authority>
+        <fma:authority>Terminologia Anatomica 1998</fma:authority>
+        <fma:language>Latin</fma:language>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.org/sig/ont/fma/fma13380"/>
+        <owl:annotatedProperty rdf:resource="http://purl.org/sig/ont/fma/preferred_name"/>
+        <owl:annotatedTarget>Rhomboid minor</owl:annotatedTarget>
+        <fma:Date_entered_modified>Thu May 12 14:33:23 GMT-08:00 2005</fma:Date_entered_modified>
+        <fma:TA_ID>A04.3.01.008</fma:TA_ID>
+        <fma:author>AUGUSTO V. AGONCILLO, MD</fma:author>
+        <fma:authority>Terminologia Anatomica 1998</fma:authority>
+        <fma:modification>Mon Oct 11 09:42:11 PDT 1999</fma:modification>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.org/sig/ont/fma/fma13380"/>
+        <owl:annotatedProperty rdf:resource="http://purl.org/sig/ont/fma/synonym"/>
+        <owl:annotatedTarget>Rhomboid minor muscle</owl:annotatedTarget>
+        <fma:Date_entered_modified>Wed Apr 07 15:49:27 PDT 2004</fma:Date_entered_modified>
+        <fma:author>NANCE QUIMOSING-MADARANG, MD</fma:author>
+        <fma:authority>Rosse MD</fma:authority>
+        <fma:language>English</fma:language>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.org/sig/ont/fma/fma13380"/>
+        <owl:annotatedProperty rdf:resource="http://purl.org/sig/ont/fma/synonym"/>
+        <owl:annotatedTarget>Rhomboideus minor</owl:annotatedTarget>
+        <fma:Date_entered_modified>Thu May 12 14:33:23 GMT-08:00 2005</fma:Date_entered_modified>
+        <fma:author>JOSE MEJINO, MD</fma:author>
+        <fma:authority>Rosse MD</fma:authority>
+        <fma:modification>Mar 10 1997 11:52:28:410AM</fma:modification>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.org/sig/ont/fma/fma13380"/>
+        <owl:annotatedProperty rdf:resource="http://purl.org/sig/ont/fma/synonym"/>
+        <owl:annotatedTarget>Rhomboideus minor muscle</owl:annotatedTarget>
+        <fma:author>onard</fma:author>
+        <fma:authority>Rosse MD</fma:authority>
+        <fma:language>English</fma:language>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.org/sig/ont/fma/fma13397 -->
+
+    <owl:Class rdf:about="http://purl.org/sig/ont/fma/fma13397">
+        <rdfs:subClassOf rdf:resource="http://purl.org/sig/ont/fma/fma32518"/>
+        <fma:FMAID rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13397</fma:FMAID>
+        <fma:non-English_equivalent>Muscle dentelé antérieur</fma:non-English_equivalent>
+        <fma:non-English_equivalent>Musculus serratus anterior</fma:non-English_equivalent>
+        <fma:preferred_name>Serratus anterior</fma:preferred_name>
+        <fma:synonym>Boxer&apos;s muscle</fma:synonym>
+        <fma:synonym>Serratus anterior muscle</fma:synonym>
+        <rdfs:label xml:lang="en">Serratus anterior</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.org/sig/ont/fma/fma13397"/>
+        <owl:annotatedProperty rdf:resource="http://purl.org/sig/ont/fma/non-English_equivalent"/>
+        <owl:annotatedTarget>Muscle dentelé antérieur</owl:annotatedTarget>
+        <fma:Date_entered_modified>Thu May 12 14:24:40 GMT-08:00 2005</fma:Date_entered_modified>
+        <fma:author>JOSE MEJINO, MD</fma:author>
+        <fma:authority>Robert Baud, PhD</fma:authority>
+        <fma:authority>Rosse MD</fma:authority>
+        <fma:language>French</fma:language>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.org/sig/ont/fma/fma13397"/>
+        <owl:annotatedProperty rdf:resource="http://purl.org/sig/ont/fma/non-English_equivalent"/>
+        <owl:annotatedTarget>Musculus serratus anterior</owl:annotatedTarget>
+        <fma:Date_entered_modified>Thu May 12 14:33:23 GMT-08:00 2005</fma:Date_entered_modified>
+        <fma:English_equivalent>Serratus anterior</fma:English_equivalent>
+        <fma:TA_ID>A04.4.01.008</fma:TA_ID>
+        <fma:author>JOSE MEJINO, MD</fma:author>
+        <fma:authority>Nomina Anatomica</fma:authority>
+        <fma:authority>Terminologia Anatomica 1998</fma:authority>
+        <fma:language>Latin</fma:language>
+        <fma:modification>Mar 10 1997  1:25:25:190PM</fma:modification>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.org/sig/ont/fma/fma13397"/>
+        <owl:annotatedProperty rdf:resource="http://purl.org/sig/ont/fma/preferred_name"/>
+        <owl:annotatedTarget>Serratus anterior</owl:annotatedTarget>
+        <fma:Date_entered_modified>Thu May 12 14:33:23 GMT-08:00 2005</fma:Date_entered_modified>
+        <fma:TA_ID>A04.4.01.008</fma:TA_ID>
+        <fma:author>JOSE MEJINO, MD</fma:author>
+        <fma:authority>Terminologia Anatomica 1998</fma:authority>
+        <fma:modification>Mar 10 1997  1:25:04:116PM</fma:modification>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.org/sig/ont/fma/fma13397"/>
+        <owl:annotatedProperty rdf:resource="http://purl.org/sig/ont/fma/synonym"/>
+        <owl:annotatedTarget>Boxer&apos;s muscle</owl:annotatedTarget>
+        <fma:Date_entered_modified>Thu May 12 14:27:33 GMT-08:00 2005</fma:Date_entered_modified>
+        <fma:Eponym rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</fma:Eponym>
+        <fma:TA_ID>A04.4.01.008</fma:TA_ID>
+        <fma:author>JOSE MEJINO, MD</fma:author>
+        <fma:authority>Rosse MD</fma:authority>
+        <fma:authority>Terminologia Anatomica 1998</fma:authority>
+        <fma:language>English</fma:language>
+        <fma:term_status>Legitimate</fma:term_status>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.org/sig/ont/fma/fma13397"/>
+        <owl:annotatedProperty rdf:resource="http://purl.org/sig/ont/fma/synonym"/>
+        <owl:annotatedTarget>Serratus anterior muscle</owl:annotatedTarget>
+        <fma:Date_entered_modified>Wed Apr 07 15:54:34 PDT 2004</fma:Date_entered_modified>
+        <fma:author>NANCE QUIMOSING-MADARANG, MD</fma:author>
+        <fma:authority>Rosse MD</fma:authority>
+        <fma:language>English</fma:language>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.org/sig/ont/fma/fma22428 -->
+
+    <owl:Class rdf:about="http://purl.org/sig/ont/fma/fma22428">
+        <rdfs:subClassOf rdf:resource="http://purl.org/sig/ont/fma/fma32406"/>
+        <fma:FMAID rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">22428</fma:FMAID>
+        <fma:definition>Organ cluster of muscle organs in the anterior compartment of thigh.</fma:definition>
+        <fma:non-English_equivalent>Muscle quadriceps fémoral</fma:non-English_equivalent>
+        <fma:non-English_equivalent>Musculus quadriceps femoris</fma:non-English_equivalent>
+        <fma:preferred_name>Quadriceps femoris</fma:preferred_name>
+        <fma:synonym>Quadriceps</fma:synonym>
+        <fma:synonym>Quadriceps femoris muscle</fma:synonym>
+        <rdfs:label xml:lang="en">Quadriceps femoris</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.org/sig/ont/fma/fma22428"/>
+        <owl:annotatedProperty rdf:resource="http://purl.org/sig/ont/fma/non-English_equivalent"/>
+        <owl:annotatedTarget>Muscle quadriceps fémoral</owl:annotatedTarget>
+        <fma:Date_entered_modified>Thu May 12 14:24:39 GMT-08:00 2005</fma:Date_entered_modified>
+        <fma:author>JOSE MEJINO, MD</fma:author>
+        <fma:authority>Robert Baud, PhD</fma:authority>
+        <fma:authority>Rosse MD</fma:authority>
+        <fma:language>French</fma:language>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.org/sig/ont/fma/fma22428"/>
+        <owl:annotatedProperty rdf:resource="http://purl.org/sig/ont/fma/non-English_equivalent"/>
+        <owl:annotatedTarget>Musculus quadriceps femoris</owl:annotatedTarget>
+        <fma:Date_entered_modified>Thu May 12 14:32:35 GMT-08:00 2005</fma:Date_entered_modified>
+        <fma:English_equivalent>Quadriceps femoris</fma:English_equivalent>
+        <fma:TA_ID>A04.7.02.017</fma:TA_ID>
+        <fma:author>JOSE MEJINO, MD</fma:author>
+        <fma:authority>Nomina Anatomica</fma:authority>
+        <fma:authority>Terminologia Anatomica 1998</fma:authority>
+        <fma:language>Latin</fma:language>
+        <fma:modification>Fri Jan 29 16:03:09 PST 1999</fma:modification>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.org/sig/ont/fma/fma22428"/>
+        <owl:annotatedProperty rdf:resource="http://purl.org/sig/ont/fma/preferred_name"/>
+        <owl:annotatedTarget>Quadriceps femoris</owl:annotatedTarget>
+        <fma:Date_entered_modified>Thu May 12 14:32:35 GMT-08:00 2005</fma:Date_entered_modified>
+        <fma:TA_ID>A04.7.02.017</fma:TA_ID>
+        <fma:author>JOSE MEJINO, MD</fma:author>
+        <fma:authority>Terminologia Anatomica 1998</fma:authority>
+        <fma:modification>Mon Mar 20 15:34:02 PST 2000</fma:modification>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.org/sig/ont/fma/fma22428"/>
+        <owl:annotatedProperty rdf:resource="http://purl.org/sig/ont/fma/synonym"/>
+        <owl:annotatedTarget>Quadriceps</owl:annotatedTarget>
+        <fma:Date_entered_modified>Thu Jan 04 09:13:03 PST 2001</fma:Date_entered_modified>
+        <fma:author>AUGUSTO V. AGONCILLO, MD</fma:author>
+        <fma:authority>Rosse MD</fma:authority>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.org/sig/ont/fma/fma22428"/>
+        <owl:annotatedProperty rdf:resource="http://purl.org/sig/ont/fma/synonym"/>
+        <owl:annotatedTarget>Quadriceps femoris muscle</owl:annotatedTarget>
+        <fma:author>onard</fma:author>
+        <fma:authority>Rosse MD</fma:authority>
+        <fma:language>English</fma:language>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.org/sig/ont/fma/fma22471 -->
+
+    <owl:Class rdf:about="http://purl.org/sig/ont/fma/fma22471">
+        <rdfs:subClassOf rdf:resource="http://purl.org/sig/ont/fma/fma37368"/>
+        <fma:FMAID rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">22471</fma:FMAID>
+        <fma:preferred_name>Muscle of leg</fma:preferred_name>
+        <fma:synonym>Leg muscle</fma:synonym>
+        <rdfs:label xml:lang="en">Muscle of leg</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.org/sig/ont/fma/fma22471"/>
+        <owl:annotatedProperty rdf:resource="http://purl.org/sig/ont/fma/preferred_name"/>
+        <owl:annotatedTarget>Muscle of leg</owl:annotatedTarget>
+        <fma:Date_entered_modified>Thu May 12 14:32:35 GMT-08:00 2005</fma:Date_entered_modified>
+        <fma:author>JOSE MEJINO, MD</fma:author>
+        <fma:authority>Rosse MD</fma:authority>
+        <fma:modification>Fri Jan 29 16:30:24 PST 1999</fma:modification>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.org/sig/ont/fma/fma22471"/>
+        <owl:annotatedProperty rdf:resource="http://purl.org/sig/ont/fma/synonym"/>
+        <owl:annotatedTarget>Leg muscle</owl:annotatedTarget>
+        <fma:Date_entered_modified>Thu May 12 14:32:35 GMT-08:00 2005</fma:Date_entered_modified>
+        <fma:author>JOSE MEJINO, MD</fma:author>
+        <fma:authority>Rosse MD</fma:authority>
+        <fma:modification>Fri Jan 29 16:30:30 PST 1999</fma:modification>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.org/sig/ont/fma/fma22472 -->
+
+    <owl:Class rdf:about="http://purl.org/sig/ont/fma/fma22472">
+        <rdfs:subClassOf rdf:resource="http://purl.org/sig/ont/fma/fma22471"/>
+        <fma:FMAID rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">22472</fma:FMAID>
+        <fma:preferred_name>Muscle of anterior compartment of leg</fma:preferred_name>
+        <fma:synonym>Anterior crural muscle</fma:synonym>
+        <rdfs:label xml:lang="en">Muscle of anterior compartment of leg</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.org/sig/ont/fma/fma22472"/>
+        <owl:annotatedProperty rdf:resource="http://purl.org/sig/ont/fma/preferred_name"/>
+        <owl:annotatedTarget>Muscle of anterior compartment of leg</owl:annotatedTarget>
+        <fma:Date_entered_modified>Thu Jan 04 11:39:20 PST 2001</fma:Date_entered_modified>
+        <fma:author>AUGUSTO V. AGONCILLO, MD</fma:author>
+        <fma:authority>Rosse MD</fma:authority>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.org/sig/ont/fma/fma22472"/>
+        <owl:annotatedProperty rdf:resource="http://purl.org/sig/ont/fma/synonym"/>
+        <owl:annotatedTarget>Anterior crural muscle</owl:annotatedTarget>
+        <fma:Date_entered_modified>Thu May 12 14:32:35 GMT-08:00 2005</fma:Date_entered_modified>
+        <fma:author>JOSE MEJINO, MD</fma:author>
+        <fma:authority>Gray&apos;s 1989</fma:authority>
+        <fma:modification>Fri Jan 29 16:31:07 PST 1999</fma:modification>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.org/sig/ont/fma/fma22474 -->
+
+    <owl:Class rdf:about="http://purl.org/sig/ont/fma/fma22474">
+        <rdfs:subClassOf rdf:resource="http://purl.org/sig/ont/fma/fma22471"/>
+        <fma:FMAID rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">22474</fma:FMAID>
+        <fma:preferred_name>Muscle of posterior compartment of leg</fma:preferred_name>
+        <fma:synonym>Posterior crural muscle</fma:synonym>
+        <rdfs:label xml:lang="en">Muscle of posterior compartment of leg</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.org/sig/ont/fma/fma22474"/>
+        <owl:annotatedProperty rdf:resource="http://purl.org/sig/ont/fma/preferred_name"/>
+        <owl:annotatedTarget>Muscle of posterior compartment of leg</owl:annotatedTarget>
+        <fma:Date_entered_modified>Thu Jan 04 11:30:35 PST 2001</fma:Date_entered_modified>
+        <fma:author>AUGUSTO V. AGONCILLO, MD</fma:author>
+        <fma:authority>Hollinshead&apos;s 1997:372</fma:authority>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.org/sig/ont/fma/fma22474"/>
+        <owl:annotatedProperty rdf:resource="http://purl.org/sig/ont/fma/synonym"/>
+        <owl:annotatedTarget>Posterior crural muscle</owl:annotatedTarget>
+        <fma:Date_entered_modified>Thu May 12 14:32:35 GMT-08:00 2005</fma:Date_entered_modified>
+        <fma:author>JOSE MEJINO, MD</fma:author>
+        <fma:authority>Gray&apos;s 1989</fma:authority>
+        <fma:modification>Fri Jan 29 16:31:51 PST 1999</fma:modification>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.org/sig/ont/fma/fma22532 -->
+
+    <owl:Class rdf:about="http://purl.org/sig/ont/fma/fma22532">
+        <rdfs:subClassOf rdf:resource="http://purl.org/sig/ont/fma/fma22472"/>
+        <fma:FMAID rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">22532</fma:FMAID>
+        <fma:non-English_equivalent>Muscle tibial antérieur</fma:non-English_equivalent>
+        <fma:non-English_equivalent>Musculus tibialis anterior</fma:non-English_equivalent>
+        <fma:preferred_name>Tibialis anterior</fma:preferred_name>
+        <fma:synonym>Anterior tibial muscle</fma:synonym>
+        <fma:synonym>Tibialis anterior muscle</fma:synonym>
+        <rdfs:label xml:lang="en">Tibialis anterior</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.org/sig/ont/fma/fma22532"/>
+        <owl:annotatedProperty rdf:resource="http://purl.org/sig/ont/fma/non-English_equivalent"/>
+        <owl:annotatedTarget>Muscle tibial antérieur</owl:annotatedTarget>
+        <fma:Date_entered_modified>Thu May 12 14:24:39 GMT-08:00 2005</fma:Date_entered_modified>
+        <fma:author>JOSE MEJINO, MD</fma:author>
+        <fma:authority>Robert Baud, PhD</fma:authority>
+        <fma:authority>Rosse MD</fma:authority>
+        <fma:language>French</fma:language>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.org/sig/ont/fma/fma22532"/>
+        <owl:annotatedProperty rdf:resource="http://purl.org/sig/ont/fma/non-English_equivalent"/>
+        <owl:annotatedTarget>Musculus tibialis anterior</owl:annotatedTarget>
+        <fma:Date_entered_modified>Thu May 12 14:32:35 GMT-08:00 2005</fma:Date_entered_modified>
+        <fma:English_equivalent>Tibialis anterior</fma:English_equivalent>
+        <fma:TA_ID>A04.7.02.037</fma:TA_ID>
+        <fma:author>JOSE MEJINO, MD</fma:author>
+        <fma:authority>Nomina Anatomica</fma:authority>
+        <fma:authority>Terminologia Anatomica 1998</fma:authority>
+        <fma:language>Latin</fma:language>
+        <fma:modification>Tue Feb 02 11:40:11 PST 1999</fma:modification>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.org/sig/ont/fma/fma22532"/>
+        <owl:annotatedProperty rdf:resource="http://purl.org/sig/ont/fma/preferred_name"/>
+        <owl:annotatedTarget>Tibialis anterior</owl:annotatedTarget>
+        <fma:Date_entered_modified>Thu May 12 14:32:35 GMT-08:00 2005</fma:Date_entered_modified>
+        <fma:TA_ID>A04.7.02.037</fma:TA_ID>
+        <fma:author>JOSE MEJINO, MD</fma:author>
+        <fma:authority>Terminologia Anatomica 1998</fma:authority>
+        <fma:modification>Tue Mar 21 10:57:55 PST 2000</fma:modification>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.org/sig/ont/fma/fma22532"/>
+        <owl:annotatedProperty rdf:resource="http://purl.org/sig/ont/fma/synonym"/>
+        <owl:annotatedTarget>Anterior tibial muscle</owl:annotatedTarget>
+        <fma:author>onard</fma:author>
+        <fma:authority>Rosse MD</fma:authority>
+        <fma:language>English</fma:language>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.org/sig/ont/fma/fma22532"/>
+        <owl:annotatedProperty rdf:resource="http://purl.org/sig/ont/fma/synonym"/>
+        <owl:annotatedTarget>Tibialis anterior muscle</owl:annotatedTarget>
+        <fma:author>onard</fma:author>
+        <fma:authority>Rosse MD</fma:authority>
+        <fma:language>English</fma:language>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.org/sig/ont/fma/fma305751 -->
+
+    <owl:Class rdf:about="http://purl.org/sig/ont/fma/fma305751">
+        <rdfs:subClassOf rdf:resource="http://purl.org/sig/ont/fma/fma62955"/>
+        <fma:FMAID rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">305751</fma:FMAID>
+        <fma:definition>Material anatomical entity which is generated by coordinated expression of the organism&apos;s own genes that guide its morphogenesis; has inherent 3D shape; its parts are connected and spatially related to one another in patterns determined by coordinated gene expression. Examples: embryo, mesoderm, heart, right ventricle, mitral valve, myocardium, endothelium, lymphocyte, fibroblast, thorax, cardiovascular system, hemoglobin, T cell receptor.</fma:definition>
+        <fma:non-English_equivalent>Anatomische Struktur</fma:non-English_equivalent>
+        <fma:non-English_equivalent>Estructura anatómica</fma:non-English_equivalent>
+        <fma:non-English_equivalent>Structure anatomique</fma:non-English_equivalent>
+        <fma:non-English_equivalent>Struttura anatomica</fma:non-English_equivalent>
+        <fma:preferred_name>Anatomical structure</fma:preferred_name>
+        <fma:synonym>Biological structure</fma:synonym>
+        <rdfs:label xml:lang="en">Anatomical structure</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.org/sig/ont/fma/fma305751"/>
+        <owl:annotatedProperty rdf:resource="http://purl.org/sig/ont/fma/non-English_equivalent"/>
+        <owl:annotatedTarget>Anatomische Struktur</owl:annotatedTarget>
+        <fma:language>German</fma:language>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.org/sig/ont/fma/fma305751"/>
+        <owl:annotatedProperty rdf:resource="http://purl.org/sig/ont/fma/non-English_equivalent"/>
+        <owl:annotatedTarget>Estructura anatómica</owl:annotatedTarget>
+        <fma:language>Spanish</fma:language>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.org/sig/ont/fma/fma305751"/>
+        <owl:annotatedProperty rdf:resource="http://purl.org/sig/ont/fma/non-English_equivalent"/>
+        <owl:annotatedTarget>Structure anatomique</owl:annotatedTarget>
+        <fma:authority>Robert Baud</fma:authority>
+        <fma:language>French</fma:language>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.org/sig/ont/fma/fma305751"/>
+        <owl:annotatedProperty rdf:resource="http://purl.org/sig/ont/fma/non-English_equivalent"/>
+        <owl:annotatedTarget>Struttura anatomica</owl:annotatedTarget>
+        <fma:language>Italian</fma:language>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.org/sig/ont/fma/fma305751"/>
+        <owl:annotatedProperty rdf:resource="http://purl.org/sig/ont/fma/preferred_name"/>
+        <owl:annotatedTarget>Anatomical structure</owl:annotatedTarget>
+        <fma:Date_entered_modified>Fri Apr 26 15:16:32 PDT 2013</fma:Date_entered_modified>
+        <fma:author>Jose Mejino. MD</fma:author>
+        <fma:authority>Rosse MD</fma:authority>
+        <fma:language>English</fma:language>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.org/sig/ont/fma/fma323229 -->
+
+    <owl:Class rdf:about="http://purl.org/sig/ont/fma/fma323229">
+        <rdfs:subClassOf rdf:resource="http://purl.org/sig/ont/fma/fma46751"/>
+        <fma:FMAID rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">323229</fma:FMAID>
+        <rdfs:label xml:lang="en">Pterygoid muscle</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/sig/ont/fma/fma32406 -->
+
+    <owl:Class rdf:about="http://purl.org/sig/ont/fma/fma32406">
+        <rdfs:subClassOf rdf:resource="http://purl.org/sig/ont/fma/fma305751"/>
+        <fma:FMAID rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">32406</fma:FMAID>
+        <fma:definition>Anatomical cluster which has as its direct parts all or some members of one or more organ types which are grouped together according to some shared attributes. Examples: abdominal viscera, pelvic viscera.</fma:definition>
+        <fma:preferred_name>Organ cluster</fma:preferred_name>
+        <rdfs:label xml:lang="en">Organ cluster</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.org/sig/ont/fma/fma32406"/>
+        <owl:annotatedProperty rdf:resource="http://purl.org/sig/ont/fma/preferred_name"/>
+        <owl:annotatedTarget>Organ cluster</owl:annotatedTarget>
+        <fma:Date_entered_modified>Thu May 12 14:31:47 GMT-08:00 2005</fma:Date_entered_modified>
+        <fma:author>JOSE MEJINO, MD</fma:author>
+        <fma:authority>Rosse MD</fma:authority>
+        <fma:modification>Tue Jun 22 15:04:56 PDT 1999</fma:modification>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.org/sig/ont/fma/fma32516 -->
+
+    <owl:Class rdf:about="http://purl.org/sig/ont/fma/fma32516">
+        <rdfs:subClassOf rdf:resource="http://purl.org/sig/ont/fma/fma33531"/>
+        <fma:FMAID rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">32516</fma:FMAID>
+        <fma:preferred_name>Extrinsic muscle of shoulder</fma:preferred_name>
+        <rdfs:label xml:lang="en">Extrinsic muscle of shoulder</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.org/sig/ont/fma/fma32516"/>
+        <owl:annotatedProperty rdf:resource="http://purl.org/sig/ont/fma/preferred_name"/>
+        <owl:annotatedTarget>Extrinsic muscle of shoulder</owl:annotatedTarget>
+        <fma:Date_entered_modified>Thu May 12 14:31:47 GMT-08:00 2005</fma:Date_entered_modified>
+        <fma:author>AUGUSTO V. AGONCILLO, MD</fma:author>
+        <fma:authority>Rosse MD</fma:authority>
+        <fma:modification>Thu Jun 24 09:50:16 PDT 1999</fma:modification>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.org/sig/ont/fma/fma32517 -->
+
+    <owl:Class rdf:about="http://purl.org/sig/ont/fma/fma32517">
+        <rdfs:subClassOf rdf:resource="http://purl.org/sig/ont/fma/fma32516"/>
+        <owl:disjointWith rdf:resource="http://purl.org/sig/ont/fma/fma32518"/>
+        <fma:FMAID rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">32517</fma:FMAID>
+        <fma:preferred_name>Superficial extrinsic muscle of shoulder</fma:preferred_name>
+        <rdfs:label xml:lang="en">Superficial extrinsic muscle of shoulder</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.org/sig/ont/fma/fma32517"/>
+        <owl:annotatedProperty rdf:resource="http://purl.org/sig/ont/fma/preferred_name"/>
+        <owl:annotatedTarget>Superficial extrinsic muscle of shoulder</owl:annotatedTarget>
+        <fma:Date_entered_modified>Thu May 12 14:31:47 GMT-08:00 2005</fma:Date_entered_modified>
+        <fma:author>AUGUSTO V. AGONCILLO, MD</fma:author>
+        <fma:authority>Rosse MD</fma:authority>
+        <fma:modification>Thu Jun 24 09:55:35 PDT 1999</fma:modification>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.org/sig/ont/fma/fma32518 -->
+
+    <owl:Class rdf:about="http://purl.org/sig/ont/fma/fma32518">
+        <rdfs:subClassOf rdf:resource="http://purl.org/sig/ont/fma/fma32516"/>
+        <fma:FMAID rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">32518</fma:FMAID>
+        <fma:preferred_name>Deep extrinsic muscle of shoulder</fma:preferred_name>
+        <rdfs:label xml:lang="en">Deep extrinsic muscle of shoulder</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.org/sig/ont/fma/fma32518"/>
+        <owl:annotatedProperty rdf:resource="http://purl.org/sig/ont/fma/preferred_name"/>
+        <owl:annotatedTarget>Deep extrinsic muscle of shoulder</owl:annotatedTarget>
+        <fma:Date_entered_modified>Thu May 12 14:31:47 GMT-08:00 2005</fma:Date_entered_modified>
+        <fma:author>AUGUSTO V. AGONCILLO, MD</fma:author>
+        <fma:authority>Rosse MD</fma:authority>
+        <fma:modification>Thu Jun 24 09:56:18 PDT 1999</fma:modification>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.org/sig/ont/fma/fma32558 -->
+
+    <owl:Class rdf:about="http://purl.org/sig/ont/fma/fma32558">
+        <rdfs:subClassOf rdf:resource="http://purl.org/sig/ont/fma/fma62955"/>
+        <fma:FMAID rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">32558</fma:FMAID>
+        <fma:definition>Anatomical set consisting of muscle organs and/or zones of muscles.</fma:definition>
+        <fma:non-English_equivalent>Musculi</fma:non-English_equivalent>
+        <fma:preferred_name>Musculature</fma:preferred_name>
+        <fma:synonym>Muscle group</fma:synonym>
+        <fma:synonym>Muscles</fma:synonym>
+        <fma:synonym>Muscles set</fma:synonym>
+        <fma:synonym>Set of skeletal muscles</fma:synonym>
+        <rdfs:label xml:lang="en">Musculature</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.org/sig/ont/fma/fma32558"/>
+        <owl:annotatedProperty rdf:resource="http://purl.org/sig/ont/fma/non-English_equivalent"/>
+        <owl:annotatedTarget>Musculi</owl:annotatedTarget>
+        <fma:Date_entered_modified>Thu May 12 14:26:17 GMT-08:00 2005</fma:Date_entered_modified>
+        <fma:English_equivalent>Muscles</fma:English_equivalent>
+        <fma:TA_ID>A04.0.00.000</fma:TA_ID>
+        <fma:TA_ID>A04.6.02.001</fma:TA_ID>
+        <fma:TA_ID>A04.7.02.001</fma:TA_ID>
+        <fma:author>JOSE MEJINO, MD</fma:author>
+        <fma:authority>Rosse MD</fma:authority>
+        <fma:authority>Terminologia Anatomica 1998</fma:authority>
+        <fma:language>Latin</fma:language>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.org/sig/ont/fma/fma32558"/>
+        <owl:annotatedProperty rdf:resource="http://purl.org/sig/ont/fma/preferred_name"/>
+        <owl:annotatedTarget>Musculature</owl:annotatedTarget>
+        <fma:Date_entered_modified>Mon Jun 04 13:26:33 PDT 2007</fma:Date_entered_modified>
+        <fma:author>JOSE MEJINO, MD</fma:author>
+        <fma:authority>Rosse MD</fma:authority>
+        <fma:language>English</fma:language>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.org/sig/ont/fma/fma32558"/>
+        <owl:annotatedProperty rdf:resource="http://purl.org/sig/ont/fma/synonym"/>
+        <owl:annotatedTarget>Muscle group</owl:annotatedTarget>
+        <fma:Date_entered_modified>Thu May 12 14:31:47 GMT-08:00 2005</fma:Date_entered_modified>
+        <fma:author>AUGUSTO V. AGONCILLO, MD</fma:author>
+        <fma:authority>Rosse MD</fma:authority>
+        <fma:modification>Thu Jun 24 11:48:31 PDT 1999</fma:modification>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.org/sig/ont/fma/fma32558"/>
+        <owl:annotatedProperty rdf:resource="http://purl.org/sig/ont/fma/synonym"/>
+        <owl:annotatedTarget>Muscles</owl:annotatedTarget>
+        <fma:Date_entered_modified>Thu May 12 14:27:52 GMT-08:00 2005</fma:Date_entered_modified>
+        <fma:TA_ID>A04.0.00.000</fma:TA_ID>
+        <fma:TA_ID>A04.6.02.001</fma:TA_ID>
+        <fma:TA_ID>A04.7.02.001</fma:TA_ID>
+        <fma:author>AUGUSTO V. AGONCILLO, MD</fma:author>
+        <fma:authority>Rosse MD</fma:authority>
+        <fma:authority>Terminologia Anatomica 1998</fma:authority>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.org/sig/ont/fma/fma32558"/>
+        <owl:annotatedProperty rdf:resource="http://purl.org/sig/ont/fma/synonym"/>
+        <owl:annotatedTarget>Muscles set</owl:annotatedTarget>
+        <fma:Date_entered_modified>Thu May 12 14:24:57 GMT-08:00 2005</fma:Date_entered_modified>
+        <fma:author>JOSE MEJINO, MD</fma:author>
+        <fma:authority>Rosse MD</fma:authority>
+        <fma:language>English</fma:language>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.org/sig/ont/fma/fma32558"/>
+        <owl:annotatedProperty rdf:resource="http://purl.org/sig/ont/fma/synonym"/>
+        <owl:annotatedTarget>Set of skeletal muscles</owl:annotatedTarget>
+        <fma:Date_entered_modified>Thu May 12 14:27:50 GMT-08:00 2005</fma:Date_entered_modified>
+        <fma:author>JOSE MEJINO, MD</fma:author>
+        <fma:authority>Rosse MD</fma:authority>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.org/sig/ont/fma/fma33531 -->
+
+    <owl:Class rdf:about="http://purl.org/sig/ont/fma/fma33531">
+        <rdfs:subClassOf rdf:resource="http://purl.org/sig/ont/fma/fma37347"/>
+        <fma:FMAID rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">33531</fma:FMAID>
+        <fma:preferred_name>Muscle of shoulder</fma:preferred_name>
+        <fma:synonym>Shoulder muscle</fma:synonym>
+        <rdfs:label xml:lang="en">Muscle of shoulder</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.org/sig/ont/fma/fma33531"/>
+        <owl:annotatedProperty rdf:resource="http://purl.org/sig/ont/fma/preferred_name"/>
+        <owl:annotatedTarget>Muscle of shoulder</owl:annotatedTarget>
+        <fma:Date_entered_modified>Thu May 12 14:31:38 GMT-08:00 2005</fma:Date_entered_modified>
+        <fma:author>AUGUSTO V. AGONCILLO, MD</fma:author>
+        <fma:authority>Rosse MD</fma:authority>
+        <fma:modification>Wed Jul 07 13:04:04 PDT 1999</fma:modification>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.org/sig/ont/fma/fma33531"/>
+        <owl:annotatedProperty rdf:resource="http://purl.org/sig/ont/fma/synonym"/>
+        <owl:annotatedTarget>Shoulder muscle</owl:annotatedTarget>
+        <fma:Date_entered_modified>Thu May 12 14:25:33 GMT-08:00 2005</fma:Date_entered_modified>
+        <fma:author>JOSE MEJINO, MD</fma:author>
+        <fma:authority>Rosse MD</fma:authority>
+        <fma:language>English</fma:language>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.org/sig/ont/fma/fma35173 -->
+
+    <owl:Class rdf:about="http://purl.org/sig/ont/fma/fma35173">
+        <rdfs:subClassOf rdf:resource="http://purl.org/sig/ont/fma/fma7501"/>
+        <fma:FMAID rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">35173</fma:FMAID>
+        <fma:preferred_name>Synovial joint of pelvic girdle</fma:preferred_name>
+        <fma:synonym>Pelvic girdle joint</fma:synonym>
+        <rdfs:label xml:lang="en">Synovial joint of pelvic girdle</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.org/sig/ont/fma/fma35173"/>
+        <owl:annotatedProperty rdf:resource="http://purl.org/sig/ont/fma/preferred_name"/>
+        <owl:annotatedTarget>Synovial joint of pelvic girdle</owl:annotatedTarget>
+        <fma:Date_entered_modified>Thu May 12 14:31:29 GMT-08:00 2005</fma:Date_entered_modified>
+        <fma:author>JOSE MEJINO, MD</fma:author>
+        <fma:authority>Rosse MD</fma:authority>
+        <fma:modification>Mon Jul 12 17:00:23 PDT 1999</fma:modification>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.org/sig/ont/fma/fma35173"/>
+        <owl:annotatedProperty rdf:resource="http://purl.org/sig/ont/fma/synonym"/>
+        <owl:annotatedTarget>Pelvic girdle joint</owl:annotatedTarget>
+        <fma:Date_entered_modified>Thu May 12 14:24:59 GMT-08:00 2005</fma:Date_entered_modified>
+        <fma:author>JOSE MEJINO, MD</fma:author>
+        <fma:authority>Rosse MD</fma:authority>
+        <fma:language>English</fma:language>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.org/sig/ont/fma/fma35178 -->
+
+    <owl:Class rdf:about="http://purl.org/sig/ont/fma/fma35178">
+        <rdfs:subClassOf rdf:resource="http://purl.org/sig/ont/fma/fma35173"/>
+        <fma:FMAID rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">35178</fma:FMAID>
+        <fma:non-English_equivalent>Articulatio coxae</fma:non-English_equivalent>
+        <fma:non-English_equivalent>Articulation coxofémorale</fma:non-English_equivalent>
+        <fma:preferred_name>Hip joint</fma:preferred_name>
+        <fma:synonym>Articulatio coxofemoralis</fma:synonym>
+        <fma:synonym>Coxafemoral joint</fma:synonym>
+        <rdfs:label xml:lang="en">Hip joint</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.org/sig/ont/fma/fma35178"/>
+        <owl:annotatedProperty rdf:resource="http://purl.org/sig/ont/fma/non-English_equivalent"/>
+        <owl:annotatedTarget>Articulatio coxae</owl:annotatedTarget>
+        <fma:Date_entered_modified>Thu Nov 07 14:32:06 PST 2002</fma:Date_entered_modified>
+        <fma:English_equivalent>Hip joint</fma:English_equivalent>
+        <fma:TA_ID>A03.6.07.001</fma:TA_ID>
+        <fma:author>JOSE MEJINO, MD</fma:author>
+        <fma:authority>Terminologia Anatomica 1998</fma:authority>
+        <fma:language>Latin</fma:language>
+        <fma:modification>Mon Jul 12 17:11:27 PDT 1999</fma:modification>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.org/sig/ont/fma/fma35178"/>
+        <owl:annotatedProperty rdf:resource="http://purl.org/sig/ont/fma/non-English_equivalent"/>
+        <owl:annotatedTarget>Articulation coxofémorale</owl:annotatedTarget>
+        <fma:Date_entered_modified>Thu May 12 14:24:41 GMT-08:00 2005</fma:Date_entered_modified>
+        <fma:author>JOSE MEJINO, MD</fma:author>
+        <fma:authority>Robert Baud, PhD</fma:authority>
+        <fma:authority>Rosse MD</fma:authority>
+        <fma:language>French</fma:language>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.org/sig/ont/fma/fma35178"/>
+        <owl:annotatedProperty rdf:resource="http://purl.org/sig/ont/fma/preferred_name"/>
+        <owl:annotatedTarget>Hip joint</owl:annotatedTarget>
+        <fma:Date_entered_modified>Thu May 12 14:31:29 GMT-08:00 2005</fma:Date_entered_modified>
+        <fma:TA_ID>A03.6.07.001</fma:TA_ID>
+        <fma:author>JOSE MEJINO, MD</fma:author>
+        <fma:authority>Terminologia Anatomica 1998</fma:authority>
+        <fma:modification>Mon Jul 12 17:09:42 PDT 1999</fma:modification>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.org/sig/ont/fma/fma35178"/>
+        <owl:annotatedProperty rdf:resource="http://purl.org/sig/ont/fma/synonym"/>
+        <owl:annotatedTarget>Articulatio coxofemoralis</owl:annotatedTarget>
+        <fma:Date_entered_modified>Thu Nov 07 14:31:42 PST 2002</fma:Date_entered_modified>
+        <fma:TA_ID>A03.6.07.001</fma:TA_ID>
+        <fma:author>JOSE MEJINO, MD</fma:author>
+        <fma:authority>Terminologia Anatomica 1998</fma:authority>
+        <fma:language>Latin</fma:language>
+        <fma:modification>Mon Jul 12 17:11:56 PDT 1999</fma:modification>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.org/sig/ont/fma/fma35178"/>
+        <owl:annotatedProperty rdf:resource="http://purl.org/sig/ont/fma/synonym"/>
+        <owl:annotatedTarget>Coxafemoral joint</owl:annotatedTarget>
+        <fma:author>onard</fma:author>
+        <fma:authority>Rosse MD</fma:authority>
+        <fma:language>English</fma:language>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.org/sig/ont/fma/fma37347 -->
+
+    <owl:Class rdf:about="http://purl.org/sig/ont/fma/fma37347">
+        <rdfs:subClassOf rdf:resource="http://purl.org/sig/ont/fma/fma9621"/>
+        <owl:disjointWith rdf:resource="http://purl.org/sig/ont/fma/fma37348"/>
+        <fma:FMAID rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">37347</fma:FMAID>
+        <fma:preferred_name>Muscle of pectoral girdle</fma:preferred_name>
+        <fma:synonym>Muscle of shoulder girdle</fma:synonym>
+        <fma:synonym>Pectoral girdle muscle</fma:synonym>
+        <rdfs:label xml:lang="en">Muscle of pectoral girdle</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.org/sig/ont/fma/fma37347"/>
+        <owl:annotatedProperty rdf:resource="http://purl.org/sig/ont/fma/preferred_name"/>
+        <owl:annotatedTarget>Muscle of pectoral girdle</owl:annotatedTarget>
+        <fma:Date_entered_modified>Thu May 12 14:31:15 GMT-08:00 2005</fma:Date_entered_modified>
+        <fma:author>JOSE MEJINO, MD</fma:author>
+        <fma:authority>Rosse MD</fma:authority>
+        <fma:modification>Fri Jul 16 12:52:37 PDT 1999</fma:modification>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.org/sig/ont/fma/fma37347"/>
+        <owl:annotatedProperty rdf:resource="http://purl.org/sig/ont/fma/synonym"/>
+        <owl:annotatedTarget>Muscle of shoulder girdle</owl:annotatedTarget>
+        <fma:Date_entered_modified>Thu May 12 14:28:20 GMT-08:00 2005</fma:Date_entered_modified>
+        <fma:author>AUGUSTO V. AGONCILLO, MD</fma:author>
+        <fma:authority>Rosse MD</fma:authority>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.org/sig/ont/fma/fma37347"/>
+        <owl:annotatedProperty rdf:resource="http://purl.org/sig/ont/fma/synonym"/>
+        <owl:annotatedTarget>Pectoral girdle muscle</owl:annotatedTarget>
+        <fma:Date_entered_modified>Thu May 12 14:25:33 GMT-08:00 2005</fma:Date_entered_modified>
+        <fma:author>JOSE MEJINO, MD</fma:author>
+        <fma:authority>Rosse MD</fma:authority>
+        <fma:language>English</fma:language>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.org/sig/ont/fma/fma37348 -->
+
+    <owl:Class rdf:about="http://purl.org/sig/ont/fma/fma37348">
+        <rdfs:subClassOf rdf:resource="http://purl.org/sig/ont/fma/fma9621"/>
+        <fma:FMAID rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">37348</fma:FMAID>
+        <fma:preferred_name>Muscle of free upper limb</fma:preferred_name>
+        <fma:synonym>Free upper limb muscle</fma:synonym>
+        <rdfs:label xml:lang="en">Muscle of free upper limb</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.org/sig/ont/fma/fma37348"/>
+        <owl:annotatedProperty rdf:resource="http://purl.org/sig/ont/fma/preferred_name"/>
+        <owl:annotatedTarget>Muscle of free upper limb</owl:annotatedTarget>
+        <fma:Date_entered_modified>Thu May 12 14:31:15 GMT-08:00 2005</fma:Date_entered_modified>
+        <fma:author>JOSE MEJINO, MD</fma:author>
+        <fma:authority>Rosse MD</fma:authority>
+        <fma:modification>Fri Jul 16 12:53:38 PDT 1999</fma:modification>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.org/sig/ont/fma/fma37348"/>
+        <owl:annotatedProperty rdf:resource="http://purl.org/sig/ont/fma/synonym"/>
+        <owl:annotatedTarget>Free upper limb muscle</owl:annotatedTarget>
+        <fma:Date_entered_modified>Thu May 12 14:25:33 GMT-08:00 2005</fma:Date_entered_modified>
+        <fma:author>JOSE MEJINO, MD</fma:author>
+        <fma:authority>Rosse MD</fma:authority>
+        <fma:language>English</fma:language>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.org/sig/ont/fma/fma37367 -->
+
+    <owl:Class rdf:about="http://purl.org/sig/ont/fma/fma37367">
+        <rdfs:subClassOf rdf:resource="http://purl.org/sig/ont/fma/fma9622"/>
+        <owl:disjointWith rdf:resource="http://purl.org/sig/ont/fma/fma37368"/>
+        <fma:FMAID rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">37367</fma:FMAID>
+        <fma:preferred_name>Muscle of pelvic girdle</fma:preferred_name>
+        <fma:synonym>Pelvic girdle muscle</fma:synonym>
+        <rdfs:label xml:lang="en">Muscle of pelvic girdle</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.org/sig/ont/fma/fma37367"/>
+        <owl:annotatedProperty rdf:resource="http://purl.org/sig/ont/fma/preferred_name"/>
+        <owl:annotatedTarget>Muscle of pelvic girdle</owl:annotatedTarget>
+        <fma:Date_entered_modified>Thu May 12 14:31:15 GMT-08:00 2005</fma:Date_entered_modified>
+        <fma:author>JOSE MEJINO, MD</fma:author>
+        <fma:authority>Rosse MD</fma:authority>
+        <fma:modification>Fri Jul 16 14:04:51 PDT 1999</fma:modification>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.org/sig/ont/fma/fma37367"/>
+        <owl:annotatedProperty rdf:resource="http://purl.org/sig/ont/fma/synonym"/>
+        <owl:annotatedTarget>Pelvic girdle muscle</owl:annotatedTarget>
+        <fma:Date_entered_modified>Thu May 12 14:25:33 GMT-08:00 2005</fma:Date_entered_modified>
+        <fma:author>JOSE MEJINO, MD</fma:author>
+        <fma:authority>Rosse MD</fma:authority>
+        <fma:language>English</fma:language>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.org/sig/ont/fma/fma37368 -->
+
+    <owl:Class rdf:about="http://purl.org/sig/ont/fma/fma37368">
+        <rdfs:subClassOf rdf:resource="http://purl.org/sig/ont/fma/fma9622"/>
+        <fma:FMAID rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">37368</fma:FMAID>
+        <fma:preferred_name>Muscle of free lower limb</fma:preferred_name>
+        <fma:synonym>Free lower limb muscle</fma:synonym>
+        <rdfs:label xml:lang="en">Muscle of free lower limb</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.org/sig/ont/fma/fma37368"/>
+        <owl:annotatedProperty rdf:resource="http://purl.org/sig/ont/fma/preferred_name"/>
+        <owl:annotatedTarget>Muscle of free lower limb</owl:annotatedTarget>
+        <fma:Date_entered_modified>Thu May 12 14:31:15 GMT-08:00 2005</fma:Date_entered_modified>
+        <fma:author>JOSE MEJINO, MD</fma:author>
+        <fma:authority>Rosse MD</fma:authority>
+        <fma:modification>Fri Jul 16 14:05:08 PDT 1999</fma:modification>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.org/sig/ont/fma/fma37368"/>
+        <owl:annotatedProperty rdf:resource="http://purl.org/sig/ont/fma/synonym"/>
+        <owl:annotatedTarget>Free lower limb muscle</owl:annotatedTarget>
+        <fma:Date_entered_modified>Thu May 12 14:25:33 GMT-08:00 2005</fma:Date_entered_modified>
+        <fma:author>JOSE MEJINO, MD</fma:author>
+        <fma:authority>Rosse MD</fma:authority>
+        <fma:language>English</fma:language>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.org/sig/ont/fma/fma37369 -->
+
+    <owl:Class rdf:about="http://purl.org/sig/ont/fma/fma37369">
+        <rdfs:subClassOf rdf:resource="http://purl.org/sig/ont/fma/fma37368"/>
+        <fma:FMAID rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">37369</fma:FMAID>
+        <fma:preferred_name>Muscle of foot</fma:preferred_name>
+        <fma:synonym>Foot muscle</fma:synonym>
+        <rdfs:label xml:lang="en">Muscle of foot</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.org/sig/ont/fma/fma37369"/>
+        <owl:annotatedProperty rdf:resource="http://purl.org/sig/ont/fma/preferred_name"/>
+        <owl:annotatedTarget>Muscle of foot</owl:annotatedTarget>
+        <fma:Date_entered_modified>Thu May 12 14:31:15 GMT-08:00 2005</fma:Date_entered_modified>
+        <fma:author>JOSE MEJINO, MD</fma:author>
+        <fma:authority>Rosse MD</fma:authority>
+        <fma:modification>Mon Jul 19 15:20:24 PDT 1999</fma:modification>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.org/sig/ont/fma/fma37369"/>
+        <owl:annotatedProperty rdf:resource="http://purl.org/sig/ont/fma/synonym"/>
+        <owl:annotatedTarget>Foot muscle</owl:annotatedTarget>
+        <fma:Date_entered_modified>Thu May 12 14:31:15 GMT-08:00 2005</fma:Date_entered_modified>
+        <fma:author>JOSE MEJINO, MD</fma:author>
+        <fma:authority>Rosse MD</fma:authority>
+        <fma:modification>Mon Jul 19 15:20:38 PDT 1999</fma:modification>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.org/sig/ont/fma/fma37370 -->
+
+    <owl:Class rdf:about="http://purl.org/sig/ont/fma/fma37370">
+        <rdfs:subClassOf rdf:resource="http://purl.org/sig/ont/fma/fma37348"/>
+        <fma:FMAID rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">37370</fma:FMAID>
+        <fma:preferred_name>Muscle of arm</fma:preferred_name>
+        <fma:synonym>Arm muscle</fma:synonym>
+        <rdfs:label xml:lang="en">Muscle of arm</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.org/sig/ont/fma/fma37370"/>
+        <owl:annotatedProperty rdf:resource="http://purl.org/sig/ont/fma/preferred_name"/>
+        <owl:annotatedTarget>Muscle of arm</owl:annotatedTarget>
+        <fma:Date_entered_modified>Thu May 12 14:31:15 GMT-08:00 2005</fma:Date_entered_modified>
+        <fma:author>AUGUSTO V. AGONCILLO, MD</fma:author>
+        <fma:authority>Rosse MD</fma:authority>
+        <fma:modification>Mon Jul 19 11:02:17 PDT 1999</fma:modification>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.org/sig/ont/fma/fma37370"/>
+        <owl:annotatedProperty rdf:resource="http://purl.org/sig/ont/fma/synonym"/>
+        <owl:annotatedTarget>Arm muscle</owl:annotatedTarget>
+        <fma:Date_entered_modified>Thu May 12 14:25:33 GMT-08:00 2005</fma:Date_entered_modified>
+        <fma:author>JOSE MEJINO, MD</fma:author>
+        <fma:authority>Rosse MD</fma:authority>
+        <fma:language>English</fma:language>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.org/sig/ont/fma/fma37371 -->
+
+    <owl:Class rdf:about="http://purl.org/sig/ont/fma/fma37371">
+        <rdfs:subClassOf rdf:resource="http://purl.org/sig/ont/fma/fma37348"/>
+        <fma:FMAID rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">37371</fma:FMAID>
+        <fma:preferred_name>Muscle of forearm</fma:preferred_name>
+        <fma:synonym>Forearm muscle</fma:synonym>
+        <rdfs:label xml:lang="en">Muscle of forearm</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.org/sig/ont/fma/fma37371"/>
+        <owl:annotatedProperty rdf:resource="http://purl.org/sig/ont/fma/preferred_name"/>
+        <owl:annotatedTarget>Muscle of forearm</owl:annotatedTarget>
+        <fma:Date_entered_modified>Thu May 12 14:31:15 GMT-08:00 2005</fma:Date_entered_modified>
+        <fma:author>JOSE MEJINO, MD</fma:author>
+        <fma:authority>Rosse MD</fma:authority>
+        <fma:modification>Fri Jul 16 14:08:34 PDT 1999</fma:modification>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.org/sig/ont/fma/fma37371"/>
+        <owl:annotatedProperty rdf:resource="http://purl.org/sig/ont/fma/synonym"/>
+        <owl:annotatedTarget>Forearm muscle</owl:annotatedTarget>
+        <fma:Date_entered_modified>Thu May 12 14:25:33 GMT-08:00 2005</fma:Date_entered_modified>
+        <fma:author>JOSE MEJINO, MD</fma:author>
+        <fma:authority>Rosse MD</fma:authority>
+        <fma:language>English</fma:language>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.org/sig/ont/fma/fma37372 -->
+
+    <owl:Class rdf:about="http://purl.org/sig/ont/fma/fma37372">
+        <rdfs:subClassOf rdf:resource="http://purl.org/sig/ont/fma/fma37348"/>
+        <fma:FMAID rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">37372</fma:FMAID>
+        <fma:preferred_name>Muscle of hand</fma:preferred_name>
+        <fma:synonym>Hand muscle</fma:synonym>
+        <rdfs:label xml:lang="en">Muscle of hand</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.org/sig/ont/fma/fma37372"/>
+        <owl:annotatedProperty rdf:resource="http://purl.org/sig/ont/fma/preferred_name"/>
+        <owl:annotatedTarget>Muscle of hand</owl:annotatedTarget>
+        <fma:Date_entered_modified>Thu Jan 04 18:05:00 PST 2001</fma:Date_entered_modified>
+        <fma:author>JOSE MEJINO, MD</fma:author>
+        <fma:authority>Rosse MD</fma:authority>
+        <fma:modification>Fri Jul 16 14:09:44 PDT 1999</fma:modification>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.org/sig/ont/fma/fma37372"/>
+        <owl:annotatedProperty rdf:resource="http://purl.org/sig/ont/fma/synonym"/>
+        <owl:annotatedTarget>Hand muscle</owl:annotatedTarget>
+        <fma:Date_entered_modified>Thu May 12 14:31:15 GMT-08:00 2005</fma:Date_entered_modified>
+        <fma:author>JOSE MEJINO, MD</fma:author>
+        <fma:authority>Rosse MD</fma:authority>
+        <fma:modification>Fri Jul 16 14:09:54 PDT 1999</fma:modification>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.org/sig/ont/fma/fma37417 -->
+
+    <owl:Class rdf:about="http://purl.org/sig/ont/fma/fma37417">
+        <rdfs:subClassOf rdf:resource="http://purl.org/sig/ont/fma/fma42380"/>
+        <fma:FMAID rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">37417</fma:FMAID>
+        <fma:preferred_name>Interosseous muscle of hand</fma:preferred_name>
+        <rdfs:label xml:lang="en">Interosseous muscle of hand</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.org/sig/ont/fma/fma37417"/>
+        <owl:annotatedProperty rdf:resource="http://purl.org/sig/ont/fma/preferred_name"/>
+        <owl:annotatedTarget>Interosseous muscle of hand</owl:annotatedTarget>
+        <fma:Date_entered_modified>Thu May 12 14:31:15 GMT-08:00 2005</fma:Date_entered_modified>
+        <fma:author>JOSE MEJINO, MD</fma:author>
+        <fma:authority>Rosse MD</fma:authority>
+        <fma:modification>Fri Jul 16 15:37:18 PDT 1999</fma:modification>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.org/sig/ont/fma/fma37418 -->
+
+    <owl:Class rdf:about="http://purl.org/sig/ont/fma/fma37418">
+        <rdfs:subClassOf rdf:resource="http://purl.org/sig/ont/fma/fma37417"/>
+        <fma:FMAID rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">37418</fma:FMAID>
+        <fma:preferred_name>Dorsal interosseous of hand</fma:preferred_name>
+        <fma:synonym>Dorsal interosseous muscle of hand</fma:synonym>
+        <rdfs:label xml:lang="en">Dorsal interosseous of hand</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.org/sig/ont/fma/fma37418"/>
+        <owl:annotatedProperty rdf:resource="http://purl.org/sig/ont/fma/preferred_name"/>
+        <owl:annotatedTarget>Dorsal interosseous of hand</owl:annotatedTarget>
+        <fma:Date_entered_modified>Thu May 12 14:31:15 GMT-08:00 2005</fma:Date_entered_modified>
+        <fma:author>JOSE MEJINO, MD</fma:author>
+        <fma:authority>Rosse MD</fma:authority>
+        <fma:modification>Fri Jul 16 15:37:32 PDT 1999</fma:modification>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.org/sig/ont/fma/fma37418"/>
+        <owl:annotatedProperty rdf:resource="http://purl.org/sig/ont/fma/synonym"/>
+        <owl:annotatedTarget>Dorsal interosseous muscle of hand</owl:annotatedTarget>
+        <fma:author>onard</fma:author>
+        <fma:authority>Rosse MD</fma:authority>
+        <fma:language>English</fma:language>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.org/sig/ont/fma/fma37424 -->
+
+    <owl:Class rdf:about="http://purl.org/sig/ont/fma/fma37424">
+        <rdfs:subClassOf rdf:resource="http://purl.org/sig/ont/fma/fma37418"/>
+        <fma:FMAID rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">37424</fma:FMAID>
+        <fma:preferred_name>First dorsal interosseous of hand</fma:preferred_name>
+        <fma:synonym>Abductor indicis</fma:synonym>
+        <fma:synonym>First dorsal interosseous muscle of hand</fma:synonym>
+        <rdfs:label xml:lang="en">First dorsal interosseous of hand</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.org/sig/ont/fma/fma37424"/>
+        <owl:annotatedProperty rdf:resource="http://purl.org/sig/ont/fma/preferred_name"/>
+        <owl:annotatedTarget>First dorsal interosseous of hand</owl:annotatedTarget>
+        <fma:Date_entered_modified>Thu May 12 14:31:15 GMT-08:00 2005</fma:Date_entered_modified>
+        <fma:author>JOSE MEJINO, MD</fma:author>
+        <fma:authority>Rosse MD</fma:authority>
+        <fma:modification>Fri Jul 16 15:40:33 PDT 1999</fma:modification>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.org/sig/ont/fma/fma37424"/>
+        <owl:annotatedProperty rdf:resource="http://purl.org/sig/ont/fma/synonym"/>
+        <owl:annotatedTarget>Abductor indicis</owl:annotatedTarget>
+        <fma:Date_entered_modified>Thu Jan 04 18:47:32 PST 2001</fma:Date_entered_modified>
+        <fma:author>JOSE MEJINO, MD</fma:author>
+        <fma:authority>Gray&apos;s 1989</fma:authority>
+        <fma:modification>Fri Jul 16 15:41:35 PDT 1999</fma:modification>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.org/sig/ont/fma/fma37424"/>
+        <owl:annotatedProperty rdf:resource="http://purl.org/sig/ont/fma/synonym"/>
+        <owl:annotatedTarget>First dorsal interosseous muscle of hand</owl:annotatedTarget>
+        <fma:author>onard</fma:author>
+        <fma:authority>Rosse MD</fma:authority>
+        <fma:language>English</fma:language>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.org/sig/ont/fma/fma37688 -->
+
+    <owl:Class rdf:about="http://purl.org/sig/ont/fma/fma37688">
+        <rdfs:subClassOf rdf:resource="http://purl.org/sig/ont/fma/fma37712"/>
+        <fma:FMAID rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">37688</fma:FMAID>
+        <fma:non-English_equivalent>Muscle triceps brachial</fma:non-English_equivalent>
+        <fma:non-English_equivalent>Musculus triceps brachii</fma:non-English_equivalent>
+        <fma:preferred_name>Triceps brachii</fma:preferred_name>
+        <fma:synonym>Triceps brachii muscle</fma:synonym>
+        <rdfs:label xml:lang="en">Triceps brachii</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.org/sig/ont/fma/fma37688"/>
+        <owl:annotatedProperty rdf:resource="http://purl.org/sig/ont/fma/non-English_equivalent"/>
+        <owl:annotatedTarget>Muscle triceps brachial</owl:annotatedTarget>
+        <fma:Date_entered_modified>Thu May 12 14:24:39 GMT-08:00 2005</fma:Date_entered_modified>
+        <fma:author>JOSE MEJINO, MD</fma:author>
+        <fma:authority>Robert Baud, PhD</fma:authority>
+        <fma:authority>Rosse MD</fma:authority>
+        <fma:language>French</fma:language>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.org/sig/ont/fma/fma37688"/>
+        <owl:annotatedProperty rdf:resource="http://purl.org/sig/ont/fma/non-English_equivalent"/>
+        <owl:annotatedTarget>Musculus triceps brachii</owl:annotatedTarget>
+        <fma:Date_entered_modified>Thu May 12 14:26:32 GMT-08:00 2005</fma:Date_entered_modified>
+        <fma:English_equivalent>Triceps brachii</fma:English_equivalent>
+        <fma:TA_ID>A04.6.02.019</fma:TA_ID>
+        <fma:author>JOSE MEJINO, MD</fma:author>
+        <fma:authority>Rosse MD</fma:authority>
+        <fma:authority>Terminologia Anatomica 1998</fma:authority>
+        <fma:language>Latin</fma:language>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.org/sig/ont/fma/fma37688"/>
+        <owl:annotatedProperty rdf:resource="http://purl.org/sig/ont/fma/preferred_name"/>
+        <owl:annotatedTarget>Triceps brachii</owl:annotatedTarget>
+        <fma:Date_entered_modified>Thu May 12 14:31:12 GMT-08:00 2005</fma:Date_entered_modified>
+        <fma:TA_ID>A04.6.02.019</fma:TA_ID>
+        <fma:author>AUGUSTO V. AGONCILLO, MD</fma:author>
+        <fma:authority>Terminologia Anatomica 1998</fma:authority>
+        <fma:modification>Fri Dec 10 14:19:54 PST 1999</fma:modification>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.org/sig/ont/fma/fma37688"/>
+        <owl:annotatedProperty rdf:resource="http://purl.org/sig/ont/fma/synonym"/>
+        <owl:annotatedTarget>Triceps brachii muscle</owl:annotatedTarget>
+        <fma:author>onard</fma:author>
+        <fma:authority>Rosse MD</fma:authority>
+        <fma:language>English</fma:language>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.org/sig/ont/fma/fma37712 -->
+
+    <owl:Class rdf:about="http://purl.org/sig/ont/fma/fma37712">
+        <rdfs:subClassOf rdf:resource="http://purl.org/sig/ont/fma/fma37370"/>
+        <fma:FMAID rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">37712</fma:FMAID>
+        <fma:preferred_name>Muscle of posterior compartment of arm</fma:preferred_name>
+        <rdfs:label xml:lang="en">Muscle of posterior compartment of arm</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.org/sig/ont/fma/fma37712"/>
+        <owl:annotatedProperty rdf:resource="http://purl.org/sig/ont/fma/preferred_name"/>
+        <owl:annotatedTarget>Muscle of posterior compartment of arm</owl:annotatedTarget>
+        <fma:Date_entered_modified>Thu May 12 14:31:12 GMT-08:00 2005</fma:Date_entered_modified>
+        <fma:author>AUGUSTO V. AGONCILLO, MD</fma:author>
+        <fma:authority>Rosse MD</fma:authority>
+        <fma:modification>Mon Jul 19 13:50:39 PDT 1999</fma:modification>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.org/sig/ont/fma/fma38488 -->
+
+    <owl:Class rdf:about="http://purl.org/sig/ont/fma/fma38488">
+        <rdfs:subClassOf rdf:resource="http://purl.org/sig/ont/fma/fma37371"/>
+        <fma:FMAID rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">38488</fma:FMAID>
+        <fma:preferred_name>Muscle of posterior compartment of forearm</fma:preferred_name>
+        <rdfs:label xml:lang="en">Muscle of posterior compartment of forearm</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.org/sig/ont/fma/fma38488"/>
+        <owl:annotatedProperty rdf:resource="http://purl.org/sig/ont/fma/preferred_name"/>
+        <owl:annotatedTarget>Muscle of posterior compartment of forearm</owl:annotatedTarget>
+        <fma:Date_entered_modified>Thu May 12 14:31:08 GMT-08:00 2005</fma:Date_entered_modified>
+        <fma:author>AUGUSTO V. AGONCILLO, MD</fma:author>
+        <fma:authority>Rosse MD</fma:authority>
+        <fma:modification>Thu Jul 22 13:39:15 PDT 1999</fma:modification>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.org/sig/ont/fma/fma38491 -->
+
+    <owl:Class rdf:about="http://purl.org/sig/ont/fma/fma38491">
+        <rdfs:subClassOf rdf:resource="http://purl.org/sig/ont/fma/fma38488"/>
+        <fma:FMAID rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">38491</fma:FMAID>
+        <fma:preferred_name>Superficial muscle of posterior compartment of forearm</fma:preferred_name>
+        <rdfs:label xml:lang="en">Superficial muscle of posterior compartment of forearm</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.org/sig/ont/fma/fma38491"/>
+        <owl:annotatedProperty rdf:resource="http://purl.org/sig/ont/fma/preferred_name"/>
+        <owl:annotatedTarget>Superficial muscle of posterior compartment of forearm</owl:annotatedTarget>
+        <fma:Date_entered_modified>Thu May 12 14:31:08 GMT-08:00 2005</fma:Date_entered_modified>
+        <fma:author>AUGUSTO V. AGONCILLO, MD</fma:author>
+        <fma:authority>Rosse MD</fma:authority>
+        <fma:modification>Thu Jul 22 13:42:01 PDT 1999</fma:modification>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.org/sig/ont/fma/fma38500 -->
+
+    <owl:Class rdf:about="http://purl.org/sig/ont/fma/fma38500">
+        <rdfs:subClassOf rdf:resource="http://purl.org/sig/ont/fma/fma38491"/>
+        <fma:FMAID rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">38500</fma:FMAID>
+        <fma:non-English_equivalent>Muscle extenseur commun des doigts</fma:non-English_equivalent>
+        <fma:non-English_equivalent>Musculus extensor digitorum</fma:non-English_equivalent>
+        <fma:preferred_name>Extensor digitorum</fma:preferred_name>
+        <rdfs:label xml:lang="en">Extensor digitorum</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.org/sig/ont/fma/fma38500"/>
+        <owl:annotatedProperty rdf:resource="http://purl.org/sig/ont/fma/non-English_equivalent"/>
+        <owl:annotatedTarget>Muscle extenseur commun des doigts</owl:annotatedTarget>
+        <fma:Date_entered_modified>Thu May 12 14:24:39 GMT-08:00 2005</fma:Date_entered_modified>
+        <fma:author>JOSE MEJINO, MD</fma:author>
+        <fma:authority>Robert Baud, PhD</fma:authority>
+        <fma:authority>Rosse MD</fma:authority>
+        <fma:language>French</fma:language>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.org/sig/ont/fma/fma38500"/>
+        <owl:annotatedProperty rdf:resource="http://purl.org/sig/ont/fma/non-English_equivalent"/>
+        <owl:annotatedTarget>Musculus extensor digitorum</owl:annotatedTarget>
+        <fma:Date_entered_modified>Thu May 12 14:26:32 GMT-08:00 2005</fma:Date_entered_modified>
+        <fma:English_equivalent>Extensor digitorum</fma:English_equivalent>
+        <fma:TA_ID>A04.6.02.042</fma:TA_ID>
+        <fma:author>JOSE MEJINO, MD</fma:author>
+        <fma:authority>Rosse MD</fma:authority>
+        <fma:authority>Terminologia Anatomica 1998</fma:authority>
+        <fma:language>Latin</fma:language>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.org/sig/ont/fma/fma38500"/>
+        <owl:annotatedProperty rdf:resource="http://purl.org/sig/ont/fma/preferred_name"/>
+        <owl:annotatedTarget>Extensor digitorum</owl:annotatedTarget>
+        <fma:Date_entered_modified>Thu May 12 14:31:08 GMT-08:00 2005</fma:Date_entered_modified>
+        <fma:TA_ID>A04.6.02.042</fma:TA_ID>
+        <fma:author>AUGUSTO V. AGONCILLO, MD</fma:author>
+        <fma:authority>Terminologia Anatomica 1998</fma:authority>
+        <fma:modification>Thu Jul 22 14:09:40 PDT 1999</fma:modification>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.org/sig/ont/fma/fma42380 -->
+
+    <owl:Class rdf:about="http://purl.org/sig/ont/fma/fma42380">
+        <rdfs:subClassOf rdf:resource="http://purl.org/sig/ont/fma/fma37372"/>
+        <fma:FMAID rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">42380</fma:FMAID>
+        <fma:preferred_name>Intrinsic muscle of hand</fma:preferred_name>
+        <rdfs:label xml:lang="en">Intrinsic muscle of hand</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.org/sig/ont/fma/fma42380"/>
+        <owl:annotatedProperty rdf:resource="http://purl.org/sig/ont/fma/preferred_name"/>
+        <owl:annotatedTarget>Intrinsic muscle of hand</owl:annotatedTarget>
+        <fma:Date_entered_modified>Wed Jan 03 11:13:08 PST 2001</fma:Date_entered_modified>
+        <fma:author>AUGUSTO V. AGONCILLO, MD</fma:author>
+        <fma:authority>Rosse MD</fma:authority>
+        <fma:modification>Thu Aug 19 10:33:34 PDT 1999</fma:modification>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.org/sig/ont/fma/fma46619 -->
+
+    <owl:Class rdf:about="http://purl.org/sig/ont/fma/fma46619">
+        <rdfs:subClassOf rdf:resource="http://purl.org/sig/ont/fma/fma9617"/>
+        <fma:FMAID rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">46619</fma:FMAID>
+        <fma:preferred_name>Muscle of pharynx</fma:preferred_name>
+        <fma:synonym>Pharyngeal muscle</fma:synonym>
+        <rdfs:label xml:lang="en">Muscle of pharynx</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.org/sig/ont/fma/fma46619"/>
+        <owl:annotatedProperty rdf:resource="http://purl.org/sig/ont/fma/preferred_name"/>
+        <owl:annotatedTarget>Muscle of pharynx</owl:annotatedTarget>
+        <fma:Date_entered_modified>Thu May 12 14:30:32 GMT-08:00 2005</fma:Date_entered_modified>
+        <fma:author>AUGUSTO V. AGONCILLO, MD</fma:author>
+        <fma:authority>Rosse MD</fma:authority>
+        <fma:modification>Wed Jan 05 11:34:36 PST 2000</fma:modification>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.org/sig/ont/fma/fma46619"/>
+        <owl:annotatedProperty rdf:resource="http://purl.org/sig/ont/fma/synonym"/>
+        <owl:annotatedTarget>Pharyngeal muscle</owl:annotatedTarget>
+        <fma:Date_entered_modified>Thu May 12 14:27:33 GMT-08:00 2005</fma:Date_entered_modified>
+        <fma:author>AUGUSTO V. AGONCILLO, MD</fma:author>
+        <fma:authority>Rosse MD</fma:authority>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.org/sig/ont/fma/fma46689 -->
+
+    <owl:Class rdf:about="http://purl.org/sig/ont/fma/fma46689">
+        <rdfs:subClassOf rdf:resource="http://purl.org/sig/ont/fma/fma46751"/>
+        <fma:FMAID rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">46689</fma:FMAID>
+        <fma:non-English_equivalent>Músculo de la lengüeta</fma:non-English_equivalent>
+        <fma:preferred_name>Muscle of tongue</fma:preferred_name>
+        <fma:synonym>Tongue muscle</fma:synonym>
+        <rdfs:label xml:lang="en">Muscle of tongue</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.org/sig/ont/fma/fma46689"/>
+        <owl:annotatedProperty rdf:resource="http://purl.org/sig/ont/fma/non-English_equivalent"/>
+        <owl:annotatedTarget>Músculo de la lengüeta</owl:annotatedTarget>
+        <fma:Date_entered_modified>Fri Apr 29 16:44:57 PDT 2005</fma:Date_entered_modified>
+        <fma:author>JOSE MEJINO, MD</fma:author>
+        <fma:authority>Rosse MD</fma:authority>
+        <fma:language>Spanish</fma:language>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.org/sig/ont/fma/fma46689"/>
+        <owl:annotatedProperty rdf:resource="http://purl.org/sig/ont/fma/preferred_name"/>
+        <owl:annotatedTarget>Muscle of tongue</owl:annotatedTarget>
+        <fma:Date_entered_modified>Thu May 12 14:30:32 GMT-08:00 2005</fma:Date_entered_modified>
+        <fma:author>AUGUSTO V. AGONCILLO, MD</fma:author>
+        <fma:authority>Rosse MD</fma:authority>
+        <fma:modification>Fri Jan 07 14:50:10 PST 2000</fma:modification>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.org/sig/ont/fma/fma46689"/>
+        <owl:annotatedProperty rdf:resource="http://purl.org/sig/ont/fma/synonym"/>
+        <owl:annotatedTarget>Tongue muscle</owl:annotatedTarget>
+        <fma:Date_entered_modified>Thu May 12 14:25:33 GMT-08:00 2005</fma:Date_entered_modified>
+        <fma:author>JOSE MEJINO, MD</fma:author>
+        <fma:authority>Rosse MD</fma:authority>
+        <fma:language>English</fma:language>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.org/sig/ont/fma/fma46751 -->
+
+    <owl:Class rdf:about="http://purl.org/sig/ont/fma/fma46751">
+        <rdfs:subClassOf rdf:resource="http://purl.org/sig/ont/fma/fma9616"/>
+        <owl:disjointWith rdf:resource="http://purl.org/sig/ont/fma/fma57791"/>
+        <fma:FMAID rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">46751</fma:FMAID>
+        <fma:non-English_equivalent>Músculo de la cara</fma:non-English_equivalent>
+        <fma:preferred_name>Muscle of face</fma:preferred_name>
+        <fma:synonym>Face muscle</fma:synonym>
+        <fma:synonym>Facial muscle</fma:synonym>
+        <rdfs:label xml:lang="en">Muscle of face</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.org/sig/ont/fma/fma46751"/>
+        <owl:annotatedProperty rdf:resource="http://purl.org/sig/ont/fma/non-English_equivalent"/>
+        <owl:annotatedTarget>Músculo de la cara</owl:annotatedTarget>
+        <fma:Date_entered_modified>Fri Apr 29 16:44:26 PDT 2005</fma:Date_entered_modified>
+        <fma:author>JOSE MEJINO, MD</fma:author>
+        <fma:authority>Rosse MD</fma:authority>
+        <fma:language>Spanish</fma:language>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.org/sig/ont/fma/fma46751"/>
+        <owl:annotatedProperty rdf:resource="http://purl.org/sig/ont/fma/preferred_name"/>
+        <owl:annotatedTarget>Muscle of face</owl:annotatedTarget>
+        <fma:Date_entered_modified>Thu May 12 14:30:30 GMT-08:00 2005</fma:Date_entered_modified>
+        <fma:author>AUGUSTO V. AGONCILLO, MD</fma:author>
+        <fma:authority>Rosse MD</fma:authority>
+        <fma:modification>Tue Jan 11 09:34:21 PST 2000</fma:modification>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.org/sig/ont/fma/fma46751"/>
+        <owl:annotatedProperty rdf:resource="http://purl.org/sig/ont/fma/synonym"/>
+        <owl:annotatedTarget>Face muscle</owl:annotatedTarget>
+        <fma:Date_entered_modified>Thu May 12 14:25:33 GMT-08:00 2005</fma:Date_entered_modified>
+        <fma:author>JOSE MEJINO, MD</fma:author>
+        <fma:authority>Rosse MD</fma:authority>
+        <fma:language>English</fma:language>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.org/sig/ont/fma/fma46751"/>
+        <owl:annotatedProperty rdf:resource="http://purl.org/sig/ont/fma/synonym"/>
+        <owl:annotatedTarget>Facial muscle</owl:annotatedTarget>
+        <fma:Date_entered_modified>Thu May 12 14:30:30 GMT-08:00 2005</fma:Date_entered_modified>
+        <fma:author>AUGUSTO V. AGONCILLO, MD</fma:author>
+        <fma:authority>Rosse MD</fma:authority>
+        <fma:modification>Tue Jan 11 09:34:36 PST 2000</fma:modification>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.org/sig/ont/fma/fma46834 -->
+
+    <owl:Class rdf:about="http://purl.org/sig/ont/fma/fma46834">
+        <rdfs:subClassOf rdf:resource="http://purl.org/sig/ont/fma/fma46751"/>
+        <fma:FMAID rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">46834</fma:FMAID>
+        <fma:non-English_equivalent>Muscle buccinateur</fma:non-English_equivalent>
+        <fma:non-English_equivalent>Musculus buccinator</fma:non-English_equivalent>
+        <fma:preferred_name>Buccinator</fma:preferred_name>
+        <fma:synonym>Buccinator muscle</fma:synonym>
+        <rdfs:label xml:lang="en">Buccinator</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.org/sig/ont/fma/fma46834"/>
+        <owl:annotatedProperty rdf:resource="http://purl.org/sig/ont/fma/non-English_equivalent"/>
+        <owl:annotatedTarget>Muscle buccinateur</owl:annotatedTarget>
+        <fma:Date_entered_modified>Thu May 12 14:24:40 GMT-08:00 2005</fma:Date_entered_modified>
+        <fma:author>JOSE MEJINO, MD</fma:author>
+        <fma:authority>Robert Baud, PhD</fma:authority>
+        <fma:authority>Rosse MD</fma:authority>
+        <fma:language>French</fma:language>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.org/sig/ont/fma/fma46834"/>
+        <owl:annotatedProperty rdf:resource="http://purl.org/sig/ont/fma/non-English_equivalent"/>
+        <owl:annotatedTarget>Musculus buccinator</owl:annotatedTarget>
+        <fma:Date_entered_modified>Thu May 12 14:30:30 GMT-08:00 2005</fma:Date_entered_modified>
+        <fma:English_equivalent>Buccinator</fma:English_equivalent>
+        <fma:TA_ID>A04.1.03.036</fma:TA_ID>
+        <fma:author>AUGUSTO V. AGONCILLO, MD</fma:author>
+        <fma:authority>Terminologia Anatomica 1998</fma:authority>
+        <fma:language>Latin</fma:language>
+        <fma:modification>Tue Jan 11 14:56:14 PST 2000</fma:modification>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.org/sig/ont/fma/fma46834"/>
+        <owl:annotatedProperty rdf:resource="http://purl.org/sig/ont/fma/preferred_name"/>
+        <owl:annotatedTarget>Buccinator</owl:annotatedTarget>
+        <fma:Date_entered_modified>Thu May 12 14:30:30 GMT-08:00 2005</fma:Date_entered_modified>
+        <fma:TA_ID>A04.1.03.036</fma:TA_ID>
+        <fma:author>AUGUSTO V. AGONCILLO, MD</fma:author>
+        <fma:authority>Terminologia Anatomica 1998</fma:authority>
+        <fma:modification>Tue Jan 11 14:55:54 PST 2000</fma:modification>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.org/sig/ont/fma/fma46834"/>
+        <owl:annotatedProperty rdf:resource="http://purl.org/sig/ont/fma/synonym"/>
+        <owl:annotatedTarget>Buccinator muscle</owl:annotatedTarget>
+        <fma:author>onard</fma:author>
+        <fma:authority>Rosse MD</fma:authority>
+        <fma:language>English</fma:language>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.org/sig/ont/fma/fma48996 -->
+
+    <owl:Class rdf:about="http://purl.org/sig/ont/fma/fma48996">
+        <rdfs:subClassOf rdf:resource="http://purl.org/sig/ont/fma/fma46751"/>
+        <fma:FMAID rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">48996</fma:FMAID>
+        <fma:non-English_equivalent>Muscle masséter</fma:non-English_equivalent>
+        <fma:non-English_equivalent>Musculus masseter</fma:non-English_equivalent>
+        <fma:preferred_name>Masseter</fma:preferred_name>
+        <fma:synonym>Masseter muscle</fma:synonym>
+        <rdfs:label xml:lang="en">Masseter</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.org/sig/ont/fma/fma48996"/>
+        <owl:annotatedProperty rdf:resource="http://purl.org/sig/ont/fma/non-English_equivalent"/>
+        <owl:annotatedTarget>Muscle masséter</owl:annotatedTarget>
+        <fma:Date_entered_modified>Thu May 12 14:24:40 GMT-08:00 2005</fma:Date_entered_modified>
+        <fma:author>JOSE MEJINO, MD</fma:author>
+        <fma:authority>Robert Baud, PhD</fma:authority>
+        <fma:authority>Rosse MD</fma:authority>
+        <fma:language>French</fma:language>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.org/sig/ont/fma/fma48996"/>
+        <owl:annotatedProperty rdf:resource="http://purl.org/sig/ont/fma/non-English_equivalent"/>
+        <owl:annotatedTarget>Musculus masseter</owl:annotatedTarget>
+        <fma:Date_entered_modified>Thu May 12 14:30:22 GMT-08:00 2005</fma:Date_entered_modified>
+        <fma:English_equivalent>Masseter</fma:English_equivalent>
+        <fma:TA_ID>A04.1.04.002</fma:TA_ID>
+        <fma:author>AUGUSTO V. AGONCILLO, MD</fma:author>
+        <fma:authority>Terminologia Anatomica 1998</fma:authority>
+        <fma:language>Latin</fma:language>
+        <fma:modification>Wed Jan 12 15:55:55 PST 2000</fma:modification>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.org/sig/ont/fma/fma48996"/>
+        <owl:annotatedProperty rdf:resource="http://purl.org/sig/ont/fma/preferred_name"/>
+        <owl:annotatedTarget>Masseter</owl:annotatedTarget>
+        <fma:Date_entered_modified>Thu May 12 14:30:22 GMT-08:00 2005</fma:Date_entered_modified>
+        <fma:TA_ID>A04.1.04.002</fma:TA_ID>
+        <fma:author>AUGUSTO V. AGONCILLO, MD</fma:author>
+        <fma:authority>Terminologia Anatomica 1998</fma:authority>
+        <fma:modification>Wed Jan 12 15:51:07 PST 2000</fma:modification>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.org/sig/ont/fma/fma48996"/>
+        <owl:annotatedProperty rdf:resource="http://purl.org/sig/ont/fma/synonym"/>
+        <owl:annotatedTarget>Masseter muscle</owl:annotatedTarget>
+        <fma:author>onard</fma:author>
+        <fma:authority>Rosse MD</fma:authority>
+        <fma:language>English</fma:language>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.org/sig/ont/fma/fma49006 -->
+
+    <owl:Class rdf:about="http://purl.org/sig/ont/fma/fma49006">
+        <rdfs:subClassOf rdf:resource="http://purl.org/sig/ont/fma/fma57791"/>
+        <fma:FMAID rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">49006</fma:FMAID>
+        <fma:non-English_equivalent>Muscle temporal</fma:non-English_equivalent>
+        <fma:non-English_equivalent>Musculus temporalis</fma:non-English_equivalent>
+        <fma:preferred_name>Temporalis</fma:preferred_name>
+        <fma:synonym>Temporal muscle</fma:synonym>
+        <fma:synonym>Temporalis muscle</fma:synonym>
+        <rdfs:label xml:lang="en">Temporalis</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.org/sig/ont/fma/fma49006"/>
+        <owl:annotatedProperty rdf:resource="http://purl.org/sig/ont/fma/non-English_equivalent"/>
+        <owl:annotatedTarget>Muscle temporal</owl:annotatedTarget>
+        <fma:Date_entered_modified>Thu May 12 14:24:40 GMT-08:00 2005</fma:Date_entered_modified>
+        <fma:author>JOSE MEJINO, MD</fma:author>
+        <fma:authority>Robert Baud, PhD</fma:authority>
+        <fma:authority>Rosse MD</fma:authority>
+        <fma:language>French</fma:language>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.org/sig/ont/fma/fma49006"/>
+        <owl:annotatedProperty rdf:resource="http://purl.org/sig/ont/fma/non-English_equivalent"/>
+        <owl:annotatedTarget>Musculus temporalis</owl:annotatedTarget>
+        <fma:Date_entered_modified>Thu May 12 14:30:22 GMT-08:00 2005</fma:Date_entered_modified>
+        <fma:English_equivalent>Temporal muscle</fma:English_equivalent>
+        <fma:TA_ID>A04.1.04.005</fma:TA_ID>
+        <fma:author>AUGUSTO V. AGONCILLO, MD</fma:author>
+        <fma:authority>Terminologia Anatomica 1998</fma:authority>
+        <fma:language>Latin</fma:language>
+        <fma:modification>Wed Jan 12 16:53:43 PST 2000</fma:modification>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.org/sig/ont/fma/fma49006"/>
+        <owl:annotatedProperty rdf:resource="http://purl.org/sig/ont/fma/preferred_name"/>
+        <owl:annotatedTarget>Temporalis</owl:annotatedTarget>
+        <fma:Date_entered_modified>Wed Feb 26 09:45:41 PST 2003</fma:Date_entered_modified>
+        <fma:TA_ID>A04.1.04.005</fma:TA_ID>
+        <fma:author>AUGUSTO V. AGONCILLO, MD</fma:author>
+        <fma:authority>Terminologia Anatomica 1998</fma:authority>
+        <fma:modification>Wed Jan 12 16:21:41 PST 2000</fma:modification>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.org/sig/ont/fma/fma49006"/>
+        <owl:annotatedProperty rdf:resource="http://purl.org/sig/ont/fma/synonym"/>
+        <owl:annotatedTarget>Temporal muscle</owl:annotatedTarget>
+        <fma:Date_entered_modified>Thu May 12 14:30:22 GMT-08:00 2005</fma:Date_entered_modified>
+        <fma:TA_ID>A04.1.04.005</fma:TA_ID>
+        <fma:author>AUGUSTO V. AGONCILLO, MD</fma:author>
+        <fma:authority>Terminologia Anatomica 1998</fma:authority>
+        <fma:modification>Wed Jan 12 16:47:53 PST 2000</fma:modification>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.org/sig/ont/fma/fma49006"/>
+        <owl:annotatedProperty rdf:resource="http://purl.org/sig/ont/fma/synonym"/>
+        <owl:annotatedTarget>Temporalis muscle</owl:annotatedTarget>
+        <fma:authority>Rosse MD</fma:authority>
+        <fma:language>English</fma:language>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.org/sig/ont/fma/fma49033 -->
+
+    <owl:Class rdf:about="http://purl.org/sig/ont/fma/fma49033">
+        <rdfs:subClassOf rdf:resource="http://purl.org/sig/ont/fma/fma46751"/>
+        <fma:FMAID rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">49033</fma:FMAID>
+        <fma:preferred_name>Extra-ocular muscle</fma:preferred_name>
+        <fma:synonym>Extraocular muscle</fma:synonym>
+        <fma:synonym>Extrinsic muscle of eyeball</fma:synonym>
+        <rdfs:label xml:lang="en">Extra-ocular muscle</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.org/sig/ont/fma/fma49033"/>
+        <owl:annotatedProperty rdf:resource="http://purl.org/sig/ont/fma/preferred_name"/>
+        <owl:annotatedTarget>Extra-ocular muscle</owl:annotatedTarget>
+        <fma:Date_entered_modified>Thu May 12 14:30:22 GMT-08:00 2005</fma:Date_entered_modified>
+        <fma:author>AUGUSTO V. AGONCILLO, MD</fma:author>
+        <fma:authority>Rosse MD</fma:authority>
+        <fma:modification>Wed Jan 12 17:48:28 PST 2000</fma:modification>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.org/sig/ont/fma/fma49033"/>
+        <owl:annotatedProperty rdf:resource="http://purl.org/sig/ont/fma/synonym"/>
+        <owl:annotatedTarget>Extraocular muscle</owl:annotatedTarget>
+        <fma:Date_entered_modified>Thu May 12 14:30:22 GMT-08:00 2005</fma:Date_entered_modified>
+        <fma:author>AUGUSTO V. AGONCILLO, MD</fma:author>
+        <fma:authority>Rosse MD</fma:authority>
+        <fma:modification>Wed Jan 12 17:45:05 PST 2000</fma:modification>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.org/sig/ont/fma/fma49033"/>
+        <owl:annotatedProperty rdf:resource="http://purl.org/sig/ont/fma/synonym"/>
+        <owl:annotatedTarget>Extrinsic muscle of eyeball</owl:annotatedTarget>
+        <fma:Date_entered_modified>Thu May 12 14:30:22 GMT-08:00 2005</fma:Date_entered_modified>
+        <fma:author>AUGUSTO V. AGONCILLO, MD</fma:author>
+        <fma:authority>Rosse MD</fma:authority>
+        <fma:modification>Thu Jan 13 10:03:39 PST 2000</fma:modification>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.org/sig/ont/fma/fma50185 -->
+
+    <owl:Class rdf:about="http://purl.org/sig/ont/fma/fma50185">
+        <rdfs:subClassOf rdf:resource="http://purl.org/sig/ont/fma/fma32558"/>
+        <fma:FMAID rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">50185</fma:FMAID>
+        <fma:preferred_name>Musculature of subdivision of trunk</fma:preferred_name>
+        <fma:synonym>Muscle group of subdivision of trunk</fma:synonym>
+        <fma:synonym>Set of muscles of subdivision of trunk</fma:synonym>
+        <rdfs:label xml:lang="en">Musculature of subdivision of trunk</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.org/sig/ont/fma/fma50185"/>
+        <owl:annotatedProperty rdf:resource="http://purl.org/sig/ont/fma/preferred_name"/>
+        <owl:annotatedTarget>Musculature of subdivision of trunk</owl:annotatedTarget>
+        <fma:Date_entered_modified>Mon Nov 15 10:39:19 PST 2004</fma:Date_entered_modified>
+        <fma:author>JOSE MEJINO, MD</fma:author>
+        <fma:authority>Rosse MD</fma:authority>
+        <fma:language>English</fma:language>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.org/sig/ont/fma/fma50185"/>
+        <owl:annotatedProperty rdf:resource="http://purl.org/sig/ont/fma/synonym"/>
+        <owl:annotatedTarget>Muscle group of subdivision of trunk</owl:annotatedTarget>
+        <fma:Date_entered_modified>Thu May 12 14:30:16 GMT-08:00 2005</fma:Date_entered_modified>
+        <fma:author>JOSE MEJINO, MD</fma:author>
+        <fma:authority>Rosse MD</fma:authority>
+        <fma:modification>Mon Feb 28 16:46:27 PST 2000</fma:modification>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.org/sig/ont/fma/fma50185"/>
+        <owl:annotatedProperty rdf:resource="http://purl.org/sig/ont/fma/synonym"/>
+        <owl:annotatedTarget>Set of muscles of subdivision of trunk</owl:annotatedTarget>
+        <fma:Date_entered_modified>Thu May 12 14:27:52 GMT-08:00 2005</fma:Date_entered_modified>
+        <fma:author>AUGUSTO V. AGONCILLO, MD</fma:author>
+        <fma:authority>Rosse MD</fma:authority>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.org/sig/ont/fma/fma50201 -->
+
+    <owl:Class rdf:about="http://purl.org/sig/ont/fma/fma50201">
+        <rdfs:subClassOf rdf:resource="http://purl.org/sig/ont/fma/fma32558"/>
+        <fma:FMAID rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">50201</fma:FMAID>
+        <fma:preferred_name>Musculature of subdivision of lower limb</fma:preferred_name>
+        <fma:synonym>Muscle group of subdivision of lower limb</fma:synonym>
+        <fma:synonym>Set of muscles of subdivision of lower limb</fma:synonym>
+        <rdfs:label xml:lang="en">Musculature of subdivision of lower limb</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.org/sig/ont/fma/fma50201"/>
+        <owl:annotatedProperty rdf:resource="http://purl.org/sig/ont/fma/preferred_name"/>
+        <owl:annotatedTarget>Musculature of subdivision of lower limb</owl:annotatedTarget>
+        <fma:Date_entered_modified>Mon Nov 15 10:13:04 PST 2004</fma:Date_entered_modified>
+        <fma:author>JOSE MEJINO, MD</fma:author>
+        <fma:authority>Rosse MD</fma:authority>
+        <fma:language>English</fma:language>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.org/sig/ont/fma/fma50201"/>
+        <owl:annotatedProperty rdf:resource="http://purl.org/sig/ont/fma/synonym"/>
+        <owl:annotatedTarget>Muscle group of subdivision of lower limb</owl:annotatedTarget>
+        <fma:Date_entered_modified>Thu May 12 14:30:16 GMT-08:00 2005</fma:Date_entered_modified>
+        <fma:author>JOSE MEJINO, MD</fma:author>
+        <fma:authority>Rosse MD</fma:authority>
+        <fma:modification>Mon Feb 28 17:02:03 PST 2000</fma:modification>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.org/sig/ont/fma/fma50201"/>
+        <owl:annotatedProperty rdf:resource="http://purl.org/sig/ont/fma/synonym"/>
+        <owl:annotatedTarget>Set of muscles of subdivision of lower limb</owl:annotatedTarget>
+        <fma:Date_entered_modified>Thu May 12 14:27:52 GMT-08:00 2005</fma:Date_entered_modified>
+        <fma:author>AUGUSTO V. AGONCILLO, MD</fma:author>
+        <fma:authority>Rosse MD</fma:authority>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.org/sig/ont/fma/fma50208 -->
+
+    <owl:Class rdf:about="http://purl.org/sig/ont/fma/fma50208">
+        <rdfs:subClassOf rdf:resource="http://purl.org/sig/ont/fma/fma50392"/>
+        <fma:FMAID rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">50208</fma:FMAID>
+        <fma:preferred_name>Musculature of thigh</fma:preferred_name>
+        <fma:synonym>Muscle group of thigh</fma:synonym>
+        <fma:synonym>Set of muscles of thigh</fma:synonym>
+        <fma:synonym>Thigh musculature</fma:synonym>
+        <rdfs:label xml:lang="en">Musculature of thigh</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.org/sig/ont/fma/fma50208"/>
+        <owl:annotatedProperty rdf:resource="http://purl.org/sig/ont/fma/preferred_name"/>
+        <owl:annotatedTarget>Musculature of thigh</owl:annotatedTarget>
+        <fma:Date_entered_modified>Mon Nov 15 10:29:17 PST 2004</fma:Date_entered_modified>
+        <fma:author>JOSE MEJINO, MD</fma:author>
+        <fma:authority>Rosse MD</fma:authority>
+        <fma:language>English</fma:language>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.org/sig/ont/fma/fma50208"/>
+        <owl:annotatedProperty rdf:resource="http://purl.org/sig/ont/fma/synonym"/>
+        <owl:annotatedTarget>Muscle group of thigh</owl:annotatedTarget>
+        <fma:Date_entered_modified>Thu May 12 14:30:16 GMT-08:00 2005</fma:Date_entered_modified>
+        <fma:author>JOSE MEJINO, MD</fma:author>
+        <fma:authority>Rosse MD</fma:authority>
+        <fma:modification>Mon Feb 28 17:03:59 PST 2000</fma:modification>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.org/sig/ont/fma/fma50208"/>
+        <owl:annotatedProperty rdf:resource="http://purl.org/sig/ont/fma/synonym"/>
+        <owl:annotatedTarget>Set of muscles of thigh</owl:annotatedTarget>
+        <fma:Date_entered_modified>Thu May 12 14:27:32 GMT-08:00 2005</fma:Date_entered_modified>
+        <fma:author>AUGUSTO V. AGONCILLO, MD</fma:author>
+        <fma:authority>Rosse MD</fma:authority>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.org/sig/ont/fma/fma50208"/>
+        <owl:annotatedProperty rdf:resource="http://purl.org/sig/ont/fma/synonym"/>
+        <owl:annotatedTarget>Thigh musculature</owl:annotatedTarget>
+        <fma:Date_entered_modified>Thu May 12 14:24:47 GMT-08:00 2005</fma:Date_entered_modified>
+        <fma:author>JOSE MEJINO, MD</fma:author>
+        <fma:authority>Rosse MD</fma:authority>
+        <fma:language>English</fma:language>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.org/sig/ont/fma/fma5022 -->
+
+    <owl:Class rdf:about="http://purl.org/sig/ont/fma/fma5022">
+        <rdfs:subClassOf rdf:resource="http://purl.org/sig/ont/fma/fma67498"/>
+        <fma:FMAID rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5022</fma:FMAID>
+        <fma:definition>Nonparenchymatous organ that primarily consists of skeletal muscle tissue aggregated into macroscopic fasciculi by connective tissue; together with other muscles, it constitutes the muscular system. Examples: biceps, diaphragm, masseter, right third external intercostal muscle, external oblique, levator ani, serratus anterior.</fma:definition>
+        <fma:non-English_equivalent>Muskel</fma:non-English_equivalent>
+        <fma:non-English_equivalent>Músculo</fma:non-English_equivalent>
+        <fma:non-English_equivalent>Organo del muscolo</fma:non-English_equivalent>
+        <fma:preferred_name>Muscle organ</fma:preferred_name>
+        <fma:synonym>Myotendinous unit</fma:synonym>
+        <fma:synonym>Skeletal muscle organ</fma:synonym>
+        <rdfs:label xml:lang="en">Muscle organ</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.org/sig/ont/fma/fma5022"/>
+        <owl:annotatedProperty rdf:resource="http://purl.org/sig/ont/fma/non-English_equivalent"/>
+        <owl:annotatedTarget>Muskel</owl:annotatedTarget>
+        <fma:Date_entered_modified>Fri Apr 29 13:02:01 PDT 2005</fma:Date_entered_modified>
+        <fma:author>JOSE MEJINO, MD</fma:author>
+        <fma:authority>Rosse MD</fma:authority>
+        <fma:language>German</fma:language>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.org/sig/ont/fma/fma5022"/>
+        <owl:annotatedProperty rdf:resource="http://purl.org/sig/ont/fma/non-English_equivalent"/>
+        <owl:annotatedTarget>Músculo</owl:annotatedTarget>
+        <fma:Date_entered_modified>Fri Apr 29 16:43:40 PDT 2005</fma:Date_entered_modified>
+        <fma:author>JOSE MEJINO, MD</fma:author>
+        <fma:authority>Rosse MD</fma:authority>
+        <fma:language>Spanish</fma:language>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.org/sig/ont/fma/fma5022"/>
+        <owl:annotatedProperty rdf:resource="http://purl.org/sig/ont/fma/non-English_equivalent"/>
+        <owl:annotatedTarget>Organo del muscolo</owl:annotatedTarget>
+        <fma:Date_entered_modified>Fri Apr 29 18:31:00 PDT 2005</fma:Date_entered_modified>
+        <fma:author>JOSE MEJINO, MD</fma:author>
+        <fma:authority>Rosse MD</fma:authority>
+        <fma:language>Italian</fma:language>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.org/sig/ont/fma/fma5022"/>
+        <owl:annotatedProperty rdf:resource="http://purl.org/sig/ont/fma/preferred_name"/>
+        <owl:annotatedTarget>Muscle organ</owl:annotatedTarget>
+        <fma:Date_entered_modified>Thu May 12 14:34:07 GMT-08:00 2005</fma:Date_entered_modified>
+        <fma:author>CORNELIUS ROSSE, MD, DSc</fma:author>
+        <fma:authority>Cornelius Rosse</fma:authority>
+        <fma:modification>Jul 30 1996 12:59:37:350PM</fma:modification>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.org/sig/ont/fma/fma5022"/>
+        <owl:annotatedProperty rdf:resource="http://purl.org/sig/ont/fma/synonym"/>
+        <owl:annotatedTarget>Myotendinous unit</owl:annotatedTarget>
+        <fma:author>onard</fma:author>
+        <fma:authority>Rosse MD</fma:authority>
+        <fma:language>English</fma:language>
+        <fma:reference>This is a term used by radiologists to mean the tendons and muscle body (fleshy part).</fma:reference>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.org/sig/ont/fma/fma5022"/>
+        <owl:annotatedProperty rdf:resource="http://purl.org/sig/ont/fma/synonym"/>
+        <owl:annotatedTarget>Skeletal muscle organ</owl:annotatedTarget>
+        <fma:authority>Rosse MD</fma:authority>
+        <fma:language>English</fma:language>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.org/sig/ont/fma/fma50392 -->
+
+    <owl:Class rdf:about="http://purl.org/sig/ont/fma/fma50392">
+        <rdfs:subClassOf rdf:resource="http://purl.org/sig/ont/fma/fma50201"/>
+        <fma:FMAID rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">50392</fma:FMAID>
+        <fma:preferred_name>Musculature of subdivision of free lower limb</fma:preferred_name>
+        <fma:synonym>Muscle group of subdivision of free lower limb</fma:synonym>
+        <fma:synonym>Set of muscles of subdivision of free lower limb</fma:synonym>
+        <rdfs:label xml:lang="en">Musculature of subdivision of free lower limb</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.org/sig/ont/fma/fma50392"/>
+        <owl:annotatedProperty rdf:resource="http://purl.org/sig/ont/fma/preferred_name"/>
+        <owl:annotatedTarget>Musculature of subdivision of free lower limb</owl:annotatedTarget>
+        <fma:Date_entered_modified>Mon Nov 15 10:28:47 PST 2004</fma:Date_entered_modified>
+        <fma:author>JOSE MEJINO, MD</fma:author>
+        <fma:authority>Rosse MD</fma:authority>
+        <fma:language>English</fma:language>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.org/sig/ont/fma/fma50392"/>
+        <owl:annotatedProperty rdf:resource="http://purl.org/sig/ont/fma/synonym"/>
+        <owl:annotatedTarget>Muscle group of subdivision of free lower limb</owl:annotatedTarget>
+        <fma:Date_entered_modified>Thu May 12 14:30:15 GMT-08:00 2005</fma:Date_entered_modified>
+        <fma:author>JOSE MEJINO, MD</fma:author>
+        <fma:authority>Rosse MD</fma:authority>
+        <fma:modification>Thu Mar 02 16:16:50 PST 2000</fma:modification>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.org/sig/ont/fma/fma50392"/>
+        <owl:annotatedProperty rdf:resource="http://purl.org/sig/ont/fma/synonym"/>
+        <owl:annotatedTarget>Set of muscles of subdivision of free lower limb</owl:annotatedTarget>
+        <fma:Date_entered_modified>Thu May 12 14:27:32 GMT-08:00 2005</fma:Date_entered_modified>
+        <fma:author>AUGUSTO V. AGONCILLO, MD</fma:author>
+        <fma:authority>Rosse MD</fma:authority>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.org/sig/ont/fma/fma51099 -->
+
+    <owl:Class rdf:about="http://purl.org/sig/ont/fma/fma51099">
+        <rdfs:subClassOf rdf:resource="http://purl.org/sig/ont/fma/fma65008"/>
+        <fma:FMAID rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">51099</fma:FMAID>
+        <fma:non-English_equivalent>Muscle tibial postérieur</fma:non-English_equivalent>
+        <fma:non-English_equivalent>Musculus tibialis posterior</fma:non-English_equivalent>
+        <fma:preferred_name>Tibialis posterior</fma:preferred_name>
+        <fma:synonym>Posterior tibial muscle</fma:synonym>
+        <fma:synonym>Tibialis posterior muscle</fma:synonym>
+        <rdfs:label xml:lang="en">Tibialis posterior</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.org/sig/ont/fma/fma51099"/>
+        <owl:annotatedProperty rdf:resource="http://purl.org/sig/ont/fma/non-English_equivalent"/>
+        <owl:annotatedTarget>Muscle tibial postérieur</owl:annotatedTarget>
+        <fma:Date_entered_modified>Thu May 12 14:24:39 GMT-08:00 2005</fma:Date_entered_modified>
+        <fma:author>JOSE MEJINO, MD</fma:author>
+        <fma:authority>Robert Baud, PhD</fma:authority>
+        <fma:authority>Rosse MD</fma:authority>
+        <fma:language>French</fma:language>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.org/sig/ont/fma/fma51099"/>
+        <owl:annotatedProperty rdf:resource="http://purl.org/sig/ont/fma/non-English_equivalent"/>
+        <owl:annotatedTarget>Musculus tibialis posterior</owl:annotatedTarget>
+        <fma:Date_entered_modified>Thu May 12 14:30:11 GMT-08:00 2005</fma:Date_entered_modified>
+        <fma:English_equivalent>Tibialis posterior</fma:English_equivalent>
+        <fma:TA_ID>A04.7.02.051</fma:TA_ID>
+        <fma:author>JOSE MEJINO, MD</fma:author>
+        <fma:authority>Terminologia Anatomica 1998</fma:authority>
+        <fma:language>Latin</fma:language>
+        <fma:modification>Mon Mar 20 17:41:14 PST 2000</fma:modification>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.org/sig/ont/fma/fma51099"/>
+        <owl:annotatedProperty rdf:resource="http://purl.org/sig/ont/fma/preferred_name"/>
+        <owl:annotatedTarget>Tibialis posterior</owl:annotatedTarget>
+        <fma:Date_entered_modified>Thu May 12 14:30:11 GMT-08:00 2005</fma:Date_entered_modified>
+        <fma:TA_ID>A04.7.02.051</fma:TA_ID>
+        <fma:author>JOSE MEJINO, MD</fma:author>
+        <fma:authority>Terminologia Anatomica 1998</fma:authority>
+        <fma:modification>Mon Mar 20 17:40:28 PST 2000</fma:modification>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.org/sig/ont/fma/fma51099"/>
+        <owl:annotatedProperty rdf:resource="http://purl.org/sig/ont/fma/synonym"/>
+        <owl:annotatedTarget>Posterior tibial muscle</owl:annotatedTarget>
+        <fma:author>onard</fma:author>
+        <fma:authority>Rosse MD</fma:authority>
+        <fma:language>English</fma:language>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.org/sig/ont/fma/fma51099"/>
+        <owl:annotatedProperty rdf:resource="http://purl.org/sig/ont/fma/synonym"/>
+        <owl:annotatedTarget>Tibialis posterior muscle</owl:annotatedTarget>
+        <fma:author>onard</fma:author>
+        <fma:authority>Rosse MD</fma:authority>
+        <fma:language>English</fma:language>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.org/sig/ont/fma/fma55600 -->
+
+    <owl:Class rdf:about="http://purl.org/sig/ont/fma/fma55600">
+        <rdfs:subClassOf rdf:resource="http://purl.org/sig/ont/fma/fma32558"/>
+        <fma:FMAID rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">55600</fma:FMAID>
+        <fma:preferred_name>Musculature of subdivision of face</fma:preferred_name>
+        <fma:synonym>Muscle group of subdivision of face</fma:synonym>
+        <fma:synonym>Set of muscles of subdivision of face</fma:synonym>
+        <rdfs:label xml:lang="en">Musculature of subdivision of face</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.org/sig/ont/fma/fma55600"/>
+        <owl:annotatedProperty rdf:resource="http://purl.org/sig/ont/fma/preferred_name"/>
+        <owl:annotatedTarget>Musculature of subdivision of face</owl:annotatedTarget>
+        <fma:Date_entered_modified>Tue Jun 12 14:39:00 PDT 2007</fma:Date_entered_modified>
+        <fma:author>JOSE MEJINO, MD</fma:author>
+        <fma:authority>Rosse MD</fma:authority>
+        <fma:language>English</fma:language>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.org/sig/ont/fma/fma55600"/>
+        <owl:annotatedProperty rdf:resource="http://purl.org/sig/ont/fma/synonym"/>
+        <owl:annotatedTarget>Muscle group of subdivision of face</owl:annotatedTarget>
+        <fma:Date_entered_modified>Thu May 12 14:29:45 GMT-08:00 2005</fma:Date_entered_modified>
+        <fma:author>AUGUSTO V. AGONCILLO, MD</fma:author>
+        <fma:authority>Rosse MD</fma:authority>
+        <fma:modification>Wed Aug 02 10:11:18 PDT 2000</fma:modification>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.org/sig/ont/fma/fma55600"/>
+        <owl:annotatedProperty rdf:resource="http://purl.org/sig/ont/fma/synonym"/>
+        <owl:annotatedTarget>Set of muscles of subdivision of face</owl:annotatedTarget>
+        <fma:Date_entered_modified>Thu May 12 14:27:52 GMT-08:00 2005</fma:Date_entered_modified>
+        <fma:author>AUGUSTO V. AGONCILLO, MD</fma:author>
+        <fma:authority>Rosse MD</fma:authority>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.org/sig/ont/fma/fma57791 -->
+
+    <owl:Class rdf:about="http://purl.org/sig/ont/fma/fma57791">
+        <rdfs:subClassOf rdf:resource="http://purl.org/sig/ont/fma/fma9616"/>
+        <fma:FMAID rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">57791</fma:FMAID>
+        <fma:preferred_name>Muscle of head proper</fma:preferred_name>
+        <fma:synonym>Head proper muscle</fma:synonym>
+        <rdfs:label xml:lang="en">Muscle of head proper</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.org/sig/ont/fma/fma57791"/>
+        <owl:annotatedProperty rdf:resource="http://purl.org/sig/ont/fma/preferred_name"/>
+        <owl:annotatedTarget>Muscle of head proper</owl:annotatedTarget>
+        <fma:Date_entered_modified>Thu May 12 14:29:19 GMT-08:00 2005</fma:Date_entered_modified>
+        <fma:author>JOSE MEJINO, MD</fma:author>
+        <fma:authority>Rosse MD</fma:authority>
+        <fma:modification>Thu Aug 17 11:33:23 PDT 2000</fma:modification>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.org/sig/ont/fma/fma57791"/>
+        <owl:annotatedProperty rdf:resource="http://purl.org/sig/ont/fma/synonym"/>
+        <owl:annotatedTarget>Head proper muscle</owl:annotatedTarget>
+        <fma:Date_entered_modified>Thu May 12 14:25:33 GMT-08:00 2005</fma:Date_entered_modified>
+        <fma:author>JOSE MEJINO, MD</fma:author>
+        <fma:authority>Rosse MD</fma:authority>
+        <fma:language>English</fma:language>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.org/sig/ont/fma/fma58274 -->
+
+    <owl:Class rdf:about="http://purl.org/sig/ont/fma/fma58274">
+        <rdfs:subClassOf rdf:resource="http://purl.org/sig/ont/fma/fma0329044"/>
+        <fma:FMAID rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">58274</fma:FMAID>
+        <fma:definition>Muscle organ which is a part of the trunk. Examples: external intercostal muscle, external oblique,  levator ani.</fma:definition>
+        <fma:non-English_equivalent>Músculo del tronco</fma:non-English_equivalent>
+        <fma:preferred_name>Muscle of trunk</fma:preferred_name>
+        <fma:synonym>Trunk muscle</fma:synonym>
+        <rdfs:label xml:lang="en">Muscle of trunk</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.org/sig/ont/fma/fma58274"/>
+        <owl:annotatedProperty rdf:resource="http://purl.org/sig/ont/fma/non-English_equivalent"/>
+        <owl:annotatedTarget>Músculo del tronco</owl:annotatedTarget>
+        <fma:Date_entered_modified>Fri Apr 29 16:45:27 PDT 2005</fma:Date_entered_modified>
+        <fma:author>JOSE MEJINO, MD</fma:author>
+        <fma:authority>Rosse MD</fma:authority>
+        <fma:language>Spanish</fma:language>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.org/sig/ont/fma/fma58274"/>
+        <owl:annotatedProperty rdf:resource="http://purl.org/sig/ont/fma/preferred_name"/>
+        <owl:annotatedTarget>Muscle of trunk</owl:annotatedTarget>
+        <fma:Date_entered_modified>Thu May 12 14:29:15 GMT-08:00 2005</fma:Date_entered_modified>
+        <fma:author>JOSE MEJINO, MD</fma:author>
+        <fma:authority>Rosse MD</fma:authority>
+        <fma:modification>Wed Aug 23 16:41:38 PDT 2000</fma:modification>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.org/sig/ont/fma/fma58274"/>
+        <owl:annotatedProperty rdf:resource="http://purl.org/sig/ont/fma/synonym"/>
+        <owl:annotatedTarget>Trunk muscle</owl:annotatedTarget>
+        <fma:Date_entered_modified>Thu May 12 14:25:33 GMT-08:00 2005</fma:Date_entered_modified>
+        <fma:author>JOSE MEJINO, MD</fma:author>
+        <fma:authority>Rosse MD</fma:authority>
+        <fma:language>English</fma:language>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.org/sig/ont/fma/fma62955 -->
+
+    <owl:Class rdf:about="http://purl.org/sig/ont/fma/fma62955">
+        <fma:FMAID rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">62955</fma:FMAID>
+        <fma:definition>Organismal continuant entity which is enclosed by the bona fide boundary of an organism or is an attribute of its structural organization. Examples: cell, heart, head, peritoneal cavity, apex of lung, anatomical term, sagittal plane.</fma:definition>
+        <fma:non-English_equivalent>Entité anatomique</fma:non-English_equivalent>
+        <fma:preferred_name>Anatomical entity</fma:preferred_name>
+        <rdfs:label xml:lang="en">Anatomical entity</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.org/sig/ont/fma/fma62955"/>
+        <owl:annotatedProperty rdf:resource="http://purl.org/sig/ont/fma/non-English_equivalent"/>
+        <owl:annotatedTarget>Entité anatomique</owl:annotatedTarget>
+        <fma:Date_entered_modified>Thu Dec 09 10:17:53 GMT-08:00 2004</fma:Date_entered_modified>
+        <fma:author>JOSE MEJINO, MD</fma:author>
+        <fma:authority>Robert Baud, PhD</fma:authority>
+        <fma:authority>Rosse MD</fma:authority>
+        <fma:language>French</fma:language>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.org/sig/ont/fma/fma62955"/>
+        <owl:annotatedProperty rdf:resource="http://purl.org/sig/ont/fma/preferred_name"/>
+        <owl:annotatedTarget>Anatomical entity</owl:annotatedTarget>
+        <fma:Date_entered_modified>Wed Sep 15 17:06:24 GMT-08:00 2004</fma:Date_entered_modified>
+        <fma:author>Jose Mejino, MD</fma:author>
+        <fma:authority>Rosse MD</fma:authority>
+        <fma:term_status>Legitimate</fma:term_status>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.org/sig/ont/fma/fma64916 -->
+
+    <owl:Class rdf:about="http://purl.org/sig/ont/fma/fma64916">
+        <rdfs:subClassOf rdf:resource="http://purl.org/sig/ont/fma/fma42380"/>
+        <fma:FMAID rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">64916</fma:FMAID>
+        <fma:preferred_name>Thenar muscle</fma:preferred_name>
+        <rdfs:label xml:lang="en">Thenar muscle</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.org/sig/ont/fma/fma64916"/>
+        <owl:annotatedProperty rdf:resource="http://purl.org/sig/ont/fma/preferred_name"/>
+        <owl:annotatedTarget>Thenar muscle</owl:annotatedTarget>
+        <fma:Date_entered_modified>Fri Jan 05 16:05:39 PST 2001</fma:Date_entered_modified>
+        <fma:author>AUGUSTO V. AGONCILLO, MD</fma:author>
+        <fma:authority>Rosse MD</fma:authority>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.org/sig/ont/fma/fma65008 -->
+
+    <owl:Class rdf:about="http://purl.org/sig/ont/fma/fma65008">
+        <rdfs:subClassOf rdf:resource="http://purl.org/sig/ont/fma/fma22474"/>
+        <fma:FMAID rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">65008</fma:FMAID>
+        <fma:preferred_name>Deep muscle of posterior compartment of leg</fma:preferred_name>
+        <fma:synonym>Deep posterior crural muscle</fma:synonym>
+        <rdfs:label xml:lang="en">Deep muscle of posterior compartment of leg</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.org/sig/ont/fma/fma65008"/>
+        <owl:annotatedProperty rdf:resource="http://purl.org/sig/ont/fma/preferred_name"/>
+        <owl:annotatedTarget>Deep muscle of posterior compartment of leg</owl:annotatedTarget>
+        <fma:Date_entered_modified>Thu Jan 04 11:32:04 PST 2001</fma:Date_entered_modified>
+        <fma:author>AUGUSTO V. AGONCILLO, MD</fma:author>
+        <fma:authority>Rosse MD</fma:authority>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.org/sig/ont/fma/fma67169 -->
+
+    <owl:Class rdf:about="http://purl.org/sig/ont/fma/fma67169">
+        <rdfs:subClassOf rdf:resource="http://purl.org/sig/ont/fma/fma32558"/>
+        <fma:FMAID rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">67169</fma:FMAID>
+        <fma:non-English_equivalent>Muscularis pharyngis</fma:non-English_equivalent>
+        <fma:non-English_equivalent>Musculi pharyngis</fma:non-English_equivalent>
+        <fma:preferred_name>Set of pharyngeal muscles</fma:preferred_name>
+        <fma:synonym>Muscle group of pharynx</fma:synonym>
+        <fma:synonym>Muscle layer of pharynx</fma:synonym>
+        <fma:synonym>Pharyngeal muscles</fma:synonym>
+        <fma:synonym>Pharyngeal muscles set</fma:synonym>
+        <rdfs:label xml:lang="en">Set of pharyngeal muscles</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.org/sig/ont/fma/fma67169"/>
+        <owl:annotatedProperty rdf:resource="http://purl.org/sig/ont/fma/non-English_equivalent"/>
+        <owl:annotatedTarget>Muscularis pharyngis</owl:annotatedTarget>
+        <fma:Date_entered_modified>Thu May 12 14:26:17 GMT-08:00 2005</fma:Date_entered_modified>
+        <fma:English_equivalent>Muscle layer of pharynx</fma:English_equivalent>
+        <fma:TA_ID>A04.2.06.001</fma:TA_ID>
+        <fma:author>JOSE MEJINO, MD</fma:author>
+        <fma:authority>Rosse MD</fma:authority>
+        <fma:authority>Terminologia Anatomica 1998</fma:authority>
+        <fma:language>Latin</fma:language>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.org/sig/ont/fma/fma67169"/>
+        <owl:annotatedProperty rdf:resource="http://purl.org/sig/ont/fma/non-English_equivalent"/>
+        <owl:annotatedTarget>Musculi pharyngis</owl:annotatedTarget>
+        <fma:author>onard</fma:author>
+        <fma:authority>Rosse MD</fma:authority>
+        <fma:language>Latin</fma:language>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.org/sig/ont/fma/fma67169"/>
+        <owl:annotatedProperty rdf:resource="http://purl.org/sig/ont/fma/preferred_name"/>
+        <owl:annotatedTarget>Set of pharyngeal muscles</owl:annotatedTarget>
+        <fma:Date_entered_modified>Thu May 13 10:55:32 PDT 2004</fma:Date_entered_modified>
+        <fma:author>AUGUSTO V. AGONCILLO, MD</fma:author>
+        <fma:authority>Rosse MD</fma:authority>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.org/sig/ont/fma/fma67169"/>
+        <owl:annotatedProperty rdf:resource="http://purl.org/sig/ont/fma/synonym"/>
+        <owl:annotatedTarget>Muscle group of pharynx</owl:annotatedTarget>
+        <fma:Date_entered_modified>Thu May 12 14:28:30 GMT-08:00 2005</fma:Date_entered_modified>
+        <fma:author>JOSE MEJINO, MD</fma:author>
+        <fma:authority>Rosse MD</fma:authority>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.org/sig/ont/fma/fma67169"/>
+        <owl:annotatedProperty rdf:resource="http://purl.org/sig/ont/fma/synonym"/>
+        <owl:annotatedTarget>Muscle layer of pharynx</owl:annotatedTarget>
+        <fma:Date_entered_modified>Thu May 12 14:27:12 GMT-08:00 2005</fma:Date_entered_modified>
+        <fma:TA_ID>A04.2.06.001</fma:TA_ID>
+        <fma:author>JOSE MEJINO, MD</fma:author>
+        <fma:authority>Rosse MD</fma:authority>
+        <fma:authority>Terminologia Anatomica 1998</fma:authority>
+        <fma:language>English</fma:language>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.org/sig/ont/fma/fma67169"/>
+        <owl:annotatedProperty rdf:resource="http://purl.org/sig/ont/fma/synonym"/>
+        <owl:annotatedTarget>Pharyngeal muscles</owl:annotatedTarget>
+        <fma:Date_entered_modified>Thu May 12 14:27:36 GMT-08:00 2005</fma:Date_entered_modified>
+        <fma:author>AUGUSTO V. AGONCILLO, MD</fma:author>
+        <fma:authority>Rosse MD</fma:authority>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.org/sig/ont/fma/fma67169"/>
+        <owl:annotatedProperty rdf:resource="http://purl.org/sig/ont/fma/synonym"/>
+        <owl:annotatedTarget>Pharyngeal muscles set</owl:annotatedTarget>
+        <fma:Date_entered_modified>Thu May 12 14:24:57 GMT-08:00 2005</fma:Date_entered_modified>
+        <fma:author>JOSE MEJINO, MD</fma:author>
+        <fma:authority>Rosse MD</fma:authority>
+        <fma:language>English</fma:language>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.org/sig/ont/fma/fma67498 -->
+
+    <owl:Class rdf:about="http://purl.org/sig/ont/fma/fma67498">
+        <rdfs:subClassOf rdf:resource="http://purl.org/sig/ont/fma/fma305751"/>
+        <fma:FMAID rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">67498</fma:FMAID>
+        <fma:definition>Anatomical structure, each instance of which has a maximal complement of instances of  two or more types of tissue or one or more types of essential morphologic unit, a predominantly bona fide boundary and intrinsic vasculature and neural network. Examples: liver, lung, kidney, stomach, urinary bladder, gall bladder.</fma:definition>
+        <fma:non-English_equivalent>Organe</fma:non-English_equivalent>
+        <fma:non-English_equivalent>Organo</fma:non-English_equivalent>
+        <fma:non-English_equivalent>Órgano</fma:non-English_equivalent>
+        <fma:preferred_name>Organ</fma:preferred_name>
+        <rdfs:comment>Old definition: Anatomical structure which has as its direct parts portions of two or more types of tissue or two or more types of cardinal organ part which constitute a maximally connected anatomical structure demarcated predominantly by a bona fide anatomical surface. Examples: femur, biceps brachii, liver, heart, skin, tracheobronchial tree, ovary.</rdfs:comment>
+        <rdfs:label xml:lang="en">Organ</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.org/sig/ont/fma/fma67498"/>
+        <owl:annotatedProperty rdf:resource="http://purl.org/sig/ont/fma/non-English_equivalent"/>
+        <owl:annotatedTarget>Organe</owl:annotatedTarget>
+        <fma:Date_entered_modified>Thu Dec 09 13:48:42 GMT-08:00 2004</fma:Date_entered_modified>
+        <fma:author>JOSE MEJINO, MD</fma:author>
+        <fma:authority>Robert Baud, PhD</fma:authority>
+        <fma:authority>Rosse MD</fma:authority>
+        <fma:language>French</fma:language>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.org/sig/ont/fma/fma67498"/>
+        <owl:annotatedProperty rdf:resource="http://purl.org/sig/ont/fma/non-English_equivalent"/>
+        <owl:annotatedTarget>Organo</owl:annotatedTarget>
+        <fma:Date_entered_modified>Fri Apr 29 18:24:18 PDT 2005</fma:Date_entered_modified>
+        <fma:author>JOSE MEJINO, MD</fma:author>
+        <fma:authority>Rosse MD</fma:authority>
+        <fma:language>Italian</fma:language>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.org/sig/ont/fma/fma67498"/>
+        <owl:annotatedProperty rdf:resource="http://purl.org/sig/ont/fma/non-English_equivalent"/>
+        <owl:annotatedTarget>Órgano</owl:annotatedTarget>
+        <fma:Date_entered_modified>Fri Apr 29 18:09:16 PDT 2005</fma:Date_entered_modified>
+        <fma:author>JOSE MEJINO, MD</fma:author>
+        <fma:authority>Rosse MD</fma:authority>
+        <fma:language>Spanish</fma:language>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.org/sig/ont/fma/fma67498"/>
+        <owl:annotatedProperty rdf:resource="http://purl.org/sig/ont/fma/preferred_name"/>
+        <owl:annotatedTarget>Organ</owl:annotatedTarget>
+        <fma:Date_entered_modified>Tue Aug 28 16:40:09 PDT 2001</fma:Date_entered_modified>
+        <fma:author>JOSE MEJINO, MD</fma:author>
+        <fma:authority>Rosse MD</fma:authority>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.org/sig/ont/fma/fma7088 -->
+
+    <owl:Class rdf:about="http://purl.org/sig/ont/fma/fma7088">
+        <rdfs:subClassOf rdf:resource="http://purl.org/sig/ont/fma/fma67498"/>
+        <fma:FMAID rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7088</fma:FMAID>
+        <fma:definition>Organ with cavitated organ parts, each instance of which is continuous with some systemic and pulmonary arterial and venous trees. Examples: There is only one heart.</fma:definition>
+        <fma:non-English_equivalent>Coeur</fma:non-English_equivalent>
+        <fma:non-English_equivalent>Cor</fma:non-English_equivalent>
+        <fma:non-English_equivalent>Corazon</fma:non-English_equivalent>
+        <fma:non-English_equivalent>Cuore</fma:non-English_equivalent>
+        <fma:non-English_equivalent>Herz</fma:non-English_equivalent>
+        <fma:non-English_equivalent>Puso</fma:non-English_equivalent>
+        <fma:preferred_name>Heart</fma:preferred_name>
+        <rdfs:comment>Old definition: Organ with cavitated organ parts, which is continuous with the systemic and 
+pulmonary arterial and venous trees. Examples: There is only one heart.</rdfs:comment>
+        <rdfs:label xml:lang="en">Heart</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.org/sig/ont/fma/fma7088"/>
+        <owl:annotatedProperty rdf:resource="http://purl.org/sig/ont/fma/non-English_equivalent"/>
+        <owl:annotatedTarget>Coeur</owl:annotatedTarget>
+        <fma:Date_entered_modified>Thu May 12 14:24:34 GMT-08:00 2005</fma:Date_entered_modified>
+        <fma:author>JOSE MEJINO, MD</fma:author>
+        <fma:authority>Robert Baud, PhD</fma:authority>
+        <fma:authority>Rosse MD</fma:authority>
+        <fma:language>French</fma:language>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.org/sig/ont/fma/fma7088"/>
+        <owl:annotatedProperty rdf:resource="http://purl.org/sig/ont/fma/non-English_equivalent"/>
+        <owl:annotatedTarget>Cor</owl:annotatedTarget>
+        <fma:Date_entered_modified>Mon May 24 14:12:15 PDT 2004</fma:Date_entered_modified>
+        <fma:English_equivalent>Heart</fma:English_equivalent>
+        <fma:TA_ID>A12.1.00.001</fma:TA_ID>
+        <fma:author>JOSE MEJINO, MD</fma:author>
+        <fma:authority>Rosse MD</fma:authority>
+        <fma:authority>Terminologia Anatomica 1998</fma:authority>
+        <fma:language>Latin</fma:language>
+        <fma:term_status>Legitimate</fma:term_status>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.org/sig/ont/fma/fma7088"/>
+        <owl:annotatedProperty rdf:resource="http://purl.org/sig/ont/fma/non-English_equivalent"/>
+        <owl:annotatedTarget>Corazon</owl:annotatedTarget>
+        <fma:Date_entered_modified>Thu Aug 21 13:28:02 PDT 2003</fma:Date_entered_modified>
+        <fma:author>JOSE MEJINO, MD</fma:author>
+        <fma:authority>Rosse MD</fma:authority>
+        <fma:language>Spanish</fma:language>
+        <fma:term_status>Legitimate</fma:term_status>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.org/sig/ont/fma/fma7088"/>
+        <owl:annotatedProperty rdf:resource="http://purl.org/sig/ont/fma/non-English_equivalent"/>
+        <owl:annotatedTarget>Cuore</owl:annotatedTarget>
+        <fma:Date_entered_modified>Fri Apr 29 18:29:10 PDT 2005</fma:Date_entered_modified>
+        <fma:author>JOSE MEJINO, MD</fma:author>
+        <fma:authority>Rosse MD</fma:authority>
+        <fma:language>Italian</fma:language>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.org/sig/ont/fma/fma7088"/>
+        <owl:annotatedProperty rdf:resource="http://purl.org/sig/ont/fma/non-English_equivalent"/>
+        <owl:annotatedTarget>Herz</owl:annotatedTarget>
+        <fma:Date_entered_modified>Fri Apr 29 13:35:04 PDT 2005</fma:Date_entered_modified>
+        <fma:author>JOSE MEJINO, MD</fma:author>
+        <fma:authority>Rosse MD</fma:authority>
+        <fma:language>German</fma:language>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.org/sig/ont/fma/fma7088"/>
+        <owl:annotatedProperty rdf:resource="http://purl.org/sig/ont/fma/non-English_equivalent"/>
+        <owl:annotatedTarget>Puso</owl:annotatedTarget>
+        <fma:Date_entered_modified>Wed May 04 16:07:05 PDT 2005</fma:Date_entered_modified>
+        <fma:author>JOSE MEJINO, MD</fma:author>
+        <fma:authority>Rosse MD</fma:authority>
+        <fma:language>Filipino</fma:language>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.org/sig/ont/fma/fma7088"/>
+        <owl:annotatedProperty rdf:resource="http://purl.org/sig/ont/fma/preferred_name"/>
+        <owl:annotatedTarget>Heart</owl:annotatedTarget>
+        <fma:Date_entered_modified>Mon Apr 30 10:06:00 PDT 2001</fma:Date_entered_modified>
+        <fma:TA_ID>A12.1.00.001</fma:TA_ID>
+        <fma:author>JOSE MEJINO, MD</fma:author>
+        <fma:authority>Cornelius Rosse</fma:authority>
+        <fma:authority>Terminologia Anatomica 1998</fma:authority>
+        <fma:language>English</fma:language>
+        <fma:modification>Thu Jun 10 14:19:00 PDT 1999</fma:modification>
+        <fma:term_status>Legitimate</fma:term_status>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.org/sig/ont/fma/fma71437 -->
+
+    <owl:Class rdf:about="http://purl.org/sig/ont/fma/fma71437">
+        <rdfs:subClassOf rdf:resource="http://purl.org/sig/ont/fma/fma55600"/>
+        <fma:FMAID rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">71437</fma:FMAID>
+        <fma:non-English_equivalent>Muscles masticateurs</fma:non-English_equivalent>
+        <fma:non-English_equivalent>Musculus masticatorii</fma:non-English_equivalent>
+        <fma:preferred_name>Set of masticatory muscles</fma:preferred_name>
+        <fma:synonym>Masticatory muscles</fma:synonym>
+        <fma:synonym>Masticatory muscles set</fma:synonym>
+        <rdfs:label xml:lang="en">Set of masticatory muscles</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.org/sig/ont/fma/fma71437"/>
+        <owl:annotatedProperty rdf:resource="http://purl.org/sig/ont/fma/non-English_equivalent"/>
+        <owl:annotatedTarget>Muscles masticateurs</owl:annotatedTarget>
+        <fma:Date_entered_modified>Thu May 12 14:24:40 GMT-08:00 2005</fma:Date_entered_modified>
+        <fma:author>JOSE MEJINO, MD</fma:author>
+        <fma:authority>Robert Baud, PhD</fma:authority>
+        <fma:authority>Rosse MD</fma:authority>
+        <fma:language>French</fma:language>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.org/sig/ont/fma/fma71437"/>
+        <owl:annotatedProperty rdf:resource="http://purl.org/sig/ont/fma/non-English_equivalent"/>
+        <owl:annotatedTarget>Musculus masticatorii</owl:annotatedTarget>
+        <fma:Date_entered_modified>Thu May 12 14:26:17 GMT-08:00 2005</fma:Date_entered_modified>
+        <fma:English_equivalent>Masticatory muscles</fma:English_equivalent>
+        <fma:TA_ID>A04.1.04.001</fma:TA_ID>
+        <fma:author>JOSE MEJINO, MD</fma:author>
+        <fma:authority>Rosse MD</fma:authority>
+        <fma:authority>Terminologia Anatomica 1998</fma:authority>
+        <fma:language>Latin</fma:language>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.org/sig/ont/fma/fma71437"/>
+        <owl:annotatedProperty rdf:resource="http://purl.org/sig/ont/fma/preferred_name"/>
+        <owl:annotatedTarget>Set of masticatory muscles</owl:annotatedTarget>
+        <fma:Date_entered_modified>Thu May 12 14:27:49 GMT-08:00 2005</fma:Date_entered_modified>
+        <fma:author>JOSE MEJINO, MD</fma:author>
+        <fma:authority>Rosse MD</fma:authority>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.org/sig/ont/fma/fma71437"/>
+        <owl:annotatedProperty rdf:resource="http://purl.org/sig/ont/fma/synonym"/>
+        <owl:annotatedTarget>Masticatory muscles</owl:annotatedTarget>
+        <fma:Date_entered_modified>Thu May 12 14:27:49 GMT-08:00 2005</fma:Date_entered_modified>
+        <fma:TA_ID>A04.1.04.001</fma:TA_ID>
+        <fma:author>AUGUSTO V. AGONCILLO, MD</fma:author>
+        <fma:authority>Gray&apos;s 38th ed:799</fma:authority>
+        <fma:authority>Terminologia Anatomica 1998</fma:authority>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.org/sig/ont/fma/fma71437"/>
+        <owl:annotatedProperty rdf:resource="http://purl.org/sig/ont/fma/synonym"/>
+        <owl:annotatedTarget>Masticatory muscles set</owl:annotatedTarget>
+        <fma:Date_entered_modified>Thu May 12 14:24:47 GMT-08:00 2005</fma:Date_entered_modified>
+        <fma:author>JOSE MEJINO, MD</fma:author>
+        <fma:authority>Rosse MD</fma:authority>
+        <fma:language>English</fma:language>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.org/sig/ont/fma/fma74081 -->
+
+    <owl:Class rdf:about="http://purl.org/sig/ont/fma/fma74081">
+        <rdfs:subClassOf rdf:resource="http://purl.org/sig/ont/fma/fma74779"/>
+        <fma:FMAID rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">74081</fma:FMAID>
+        <fma:preferred_name>Set of intercostal muscles</fma:preferred_name>
+        <fma:synonym>Intercostal muscles set</fma:synonym>
+        <rdfs:label xml:lang="en">Set of intercostal muscles</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.org/sig/ont/fma/fma74081"/>
+        <owl:annotatedProperty rdf:resource="http://purl.org/sig/ont/fma/preferred_name"/>
+        <owl:annotatedTarget>Set of intercostal muscles</owl:annotatedTarget>
+        <fma:Date_entered_modified>Thu May 12 14:27:32 GMT-08:00 2005</fma:Date_entered_modified>
+        <fma:author>JOSE MEJINO, MD</fma:author>
+        <fma:authority>Rosse MD</fma:authority>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.org/sig/ont/fma/fma74081"/>
+        <owl:annotatedProperty rdf:resource="http://purl.org/sig/ont/fma/synonym"/>
+        <owl:annotatedTarget>Intercostal muscles set</owl:annotatedTarget>
+        <fma:Date_entered_modified>Thu May 12 14:24:47 GMT-08:00 2005</fma:Date_entered_modified>
+        <fma:author>JOSE MEJINO, MD</fma:author>
+        <fma:authority>Rosse MD</fma:authority>
+        <fma:language>English</fma:language>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.org/sig/ont/fma/fma74779 -->
+
+    <owl:Class rdf:about="http://purl.org/sig/ont/fma/fma74779">
+        <rdfs:subClassOf rdf:resource="http://purl.org/sig/ont/fma/fma50185"/>
+        <fma:FMAID rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">74779</fma:FMAID>
+        <fma:preferred_name>Musculature of chest</fma:preferred_name>
+        <fma:synonym>Chest musculature</fma:synonym>
+        <fma:synonym>Set of muscles of chest</fma:synonym>
+        <rdfs:label xml:lang="en">Musculature of chest</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.org/sig/ont/fma/fma74779"/>
+        <owl:annotatedProperty rdf:resource="http://purl.org/sig/ont/fma/preferred_name"/>
+        <owl:annotatedTarget>Musculature of chest</owl:annotatedTarget>
+        <fma:Date_entered_modified>Mon Nov 15 10:39:33 PST 2004</fma:Date_entered_modified>
+        <fma:author>JOSE MEJINO, MD</fma:author>
+        <fma:authority>Rosse MD</fma:authority>
+        <fma:language>English</fma:language>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.org/sig/ont/fma/fma74779"/>
+        <owl:annotatedProperty rdf:resource="http://purl.org/sig/ont/fma/synonym"/>
+        <owl:annotatedTarget>Chest musculature</owl:annotatedTarget>
+        <fma:Date_entered_modified>Thu May 12 14:24:47 GMT-08:00 2005</fma:Date_entered_modified>
+        <fma:author>JOSE MEJINO, MD</fma:author>
+        <fma:authority>Rosse MD</fma:authority>
+        <fma:language>English</fma:language>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.org/sig/ont/fma/fma74779"/>
+        <owl:annotatedProperty rdf:resource="http://purl.org/sig/ont/fma/synonym"/>
+        <owl:annotatedTarget>Set of muscles of chest</owl:annotatedTarget>
+        <fma:Date_entered_modified>Thu May 12 14:27:17 GMT-08:00 2005</fma:Date_entered_modified>
+        <fma:author>JOSE MEJINO, MD</fma:author>
+        <fma:authority>Rosse MD</fma:authority>
+        <fma:language>English</fma:language>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.org/sig/ont/fma/fma7490 -->
+
+    <owl:Class rdf:about="http://purl.org/sig/ont/fma/fma7490">
+        <rdfs:subClassOf rdf:resource="http://purl.org/sig/ont/fma/fma305751"/>
+        <fma:FMAID rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7490</fma:FMAID>
+        <fma:definition>Anatomical junction which consists of parts of two or more adjacent bones or cartilages which are interconnected by organs and/or organ parts that consist of various types of connective tissue. Together with other joints and bones, a joint constitutes the skeletal system. Examples: pubic symphysis, knee joint, temporomandibular joint.</fma:definition>
+        <fma:non-English_equivalent>Jointure</fma:non-English_equivalent>
+        <fma:non-English_equivalent>Junctura</fma:non-English_equivalent>
+        <fma:non-English_equivalent>Kasu-kasuan</fma:non-English_equivalent>
+        <fma:preferred_name>Joint</fma:preferred_name>
+        <rdfs:label xml:lang="en">Joint</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.org/sig/ont/fma/fma7490"/>
+        <owl:annotatedProperty rdf:resource="http://purl.org/sig/ont/fma/non-English_equivalent"/>
+        <owl:annotatedTarget>Jointure</owl:annotatedTarget>
+        <fma:Date_entered_modified>Thu May 12 14:24:44 GMT-08:00 2005</fma:Date_entered_modified>
+        <fma:author>JOSE MEJINO, MD</fma:author>
+        <fma:authority>Robert Baud, PhD</fma:authority>
+        <fma:authority>Rosse MD</fma:authority>
+        <fma:language>French</fma:language>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.org/sig/ont/fma/fma7490"/>
+        <owl:annotatedProperty rdf:resource="http://purl.org/sig/ont/fma/non-English_equivalent"/>
+        <owl:annotatedTarget>Junctura</owl:annotatedTarget>
+        <fma:Date_entered_modified>Thu May 12 14:26:17 GMT-08:00 2005</fma:Date_entered_modified>
+        <fma:English_equivalent>Joint</fma:English_equivalent>
+        <fma:TA_ID>A03.0.00.001</fma:TA_ID>
+        <fma:author>JOSE MEJINO, MD</fma:author>
+        <fma:authority>Rosse MD</fma:authority>
+        <fma:authority>Terminologia Anatomica 1998</fma:authority>
+        <fma:language>Latin</fma:language>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.org/sig/ont/fma/fma7490"/>
+        <owl:annotatedProperty rdf:resource="http://purl.org/sig/ont/fma/non-English_equivalent"/>
+        <owl:annotatedTarget>Kasu-kasuan</owl:annotatedTarget>
+        <fma:Date_entered_modified>Fri Jun 24 17:13:25 PDT 2005</fma:Date_entered_modified>
+        <fma:author>JOSE MEJINO, MD</fma:author>
+        <fma:authority>Rosse MD</fma:authority>
+        <fma:language>Filipino</fma:language>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.org/sig/ont/fma/fma7490"/>
+        <owl:annotatedProperty rdf:resource="http://purl.org/sig/ont/fma/preferred_name"/>
+        <owl:annotatedTarget>Joint</owl:annotatedTarget>
+        <fma:Date_entered_modified>Thu May 12 14:33:56 GMT-08:00 2005</fma:Date_entered_modified>
+        <fma:TA_ID>A03.0.00.001</fma:TA_ID>
+        <fma:author>JOSE MEJINO, MD</fma:author>
+        <fma:authority>Cornelius Rosse</fma:authority>
+        <fma:authority>Terminologia Anatomica 1998</fma:authority>
+        <fma:modification>Fri Aug 04 14:07:09 PDT 2000</fma:modification>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.org/sig/ont/fma/fma7501 -->
+
+    <owl:Class rdf:about="http://purl.org/sig/ont/fma/fma7501">
+        <rdfs:subClassOf rdf:resource="http://purl.org/sig/ont/fma/fma7490"/>
+        <fma:FMAID rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7501</fma:FMAID>
+        <fma:definition>Joint in which the articulating bones or cartilages are connected by an articular capsule which encloses a synovial membrane and a synovial cavity. Examples: Temporomandibular joint, knee joint.</fma:definition>
+        <fma:non-English_equivalent>Articulation synoviale</fma:non-English_equivalent>
+        <fma:non-English_equivalent>Diarthrosis</fma:non-English_equivalent>
+        <fma:non-English_equivalent>Junctura synovialis</fma:non-English_equivalent>
+        <fma:preferred_name>Synovial joint</fma:preferred_name>
+        <fma:synonym>Articulatio synoviale</fma:synonym>
+        <rdfs:label xml:lang="en">Synovial joint</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.org/sig/ont/fma/fma7501"/>
+        <owl:annotatedProperty rdf:resource="http://purl.org/sig/ont/fma/non-English_equivalent"/>
+        <owl:annotatedTarget>Articulation synoviale</owl:annotatedTarget>
+        <fma:Date_entered_modified>Thu May 12 14:24:41 GMT-08:00 2005</fma:Date_entered_modified>
+        <fma:author>JOSE MEJINO, MD</fma:author>
+        <fma:authority>Robert Baud, PhD</fma:authority>
+        <fma:authority>Rosse MD</fma:authority>
+        <fma:language>French</fma:language>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.org/sig/ont/fma/fma7501"/>
+        <owl:annotatedProperty rdf:resource="http://purl.org/sig/ont/fma/non-English_equivalent"/>
+        <owl:annotatedTarget>Diarthrosis</owl:annotatedTarget>
+        <fma:Date_entered_modified>Thu May 12 14:33:56 GMT-08:00 2005</fma:Date_entered_modified>
+        <fma:English_equivalent>Diarthrosis</fma:English_equivalent>
+        <fma:TA_ID>A03.0.00.020</fma:TA_ID>
+        <fma:author>JOSE MEJINO, MD</fma:author>
+        <fma:authority>Terminologia Anatomica 1998</fma:authority>
+        <fma:language>Latin</fma:language>
+        <fma:modification>Tue Sep 12 10:11:06 PDT 2000</fma:modification>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.org/sig/ont/fma/fma7501"/>
+        <owl:annotatedProperty rdf:resource="http://purl.org/sig/ont/fma/non-English_equivalent"/>
+        <owl:annotatedTarget>Junctura synovialis</owl:annotatedTarget>
+        <fma:Date_entered_modified>Thu Nov 07 13:49:19 PST 2002</fma:Date_entered_modified>
+        <fma:English_equivalent>Synovial joint</fma:English_equivalent>
+        <fma:TA_ID>A03.0.00.020</fma:TA_ID>
+        <fma:author>AUGUSTO V. AGONCILLO, MD</fma:author>
+        <fma:authority>Terminologia Anatomica 1998</fma:authority>
+        <fma:language>Latin</fma:language>
+        <fma:modification>Wed May 05 11:06:34 PDT 1999</fma:modification>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.org/sig/ont/fma/fma7501"/>
+        <owl:annotatedProperty rdf:resource="http://purl.org/sig/ont/fma/preferred_name"/>
+        <owl:annotatedTarget>Synovial joint</owl:annotatedTarget>
+        <fma:Date_entered_modified>Thu May 12 14:33:56 GMT-08:00 2005</fma:Date_entered_modified>
+        <fma:TA_ID>A03.0.00.020</fma:TA_ID>
+        <fma:author>JOSE MEJINO, MD</fma:author>
+        <fma:authority>Cornelius Rosse</fma:authority>
+        <fma:authority>Terminologia Anatomica 1998</fma:authority>
+        <fma:modification>May 14 1996  4:18:01:853PM</fma:modification>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.org/sig/ont/fma/fma7501"/>
+        <owl:annotatedProperty rdf:resource="http://purl.org/sig/ont/fma/synonym"/>
+        <owl:annotatedTarget>Articulatio synoviale</owl:annotatedTarget>
+        <fma:Date_entered_modified>Thu Nov 07 13:49:55 PST 2002</fma:Date_entered_modified>
+        <fma:TA_ID>A03.0.00.020</fma:TA_ID>
+        <fma:author>JOSE MEJINO, MD</fma:author>
+        <fma:authority>Cornelius Rosse</fma:authority>
+        <fma:authority>Terminologia Anatomica 1998</fma:authority>
+        <fma:language>Latin</fma:language>
+        <fma:modification>May 14 1996  4:17:28:706PM</fma:modification>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.org/sig/ont/fma/fma9616 -->
+
+    <owl:Class rdf:about="http://purl.org/sig/ont/fma/fma9616">
+        <rdfs:subClassOf rdf:resource="http://purl.org/sig/ont/fma/fma5022"/>
+        <fma:FMAID rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9616</fma:FMAID>
+        <fma:definition>Muscle organ which is a part of the head. Examples: masseter, orbicularis oculi.</fma:definition>
+        <fma:non-English_equivalent>Muskel des Kopfes</fma:non-English_equivalent>
+        <fma:non-English_equivalent>Músculo de la cabeza</fma:non-English_equivalent>
+        <fma:preferred_name>Muscle of head</fma:preferred_name>
+        <fma:synonym>Head muscle</fma:synonym>
+        <fma:synonym>Musculus caput</fma:synonym>
+        <rdfs:label xml:lang="en">Muscle of head</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.org/sig/ont/fma/fma9616"/>
+        <owl:annotatedProperty rdf:resource="http://purl.org/sig/ont/fma/non-English_equivalent"/>
+        <owl:annotatedTarget>Muskel des Kopfes</owl:annotatedTarget>
+        <fma:Date_entered_modified>Fri Apr 29 13:02:20 PDT 2005</fma:Date_entered_modified>
+        <fma:author>JOSE MEJINO, MD</fma:author>
+        <fma:authority>Rosse MD</fma:authority>
+        <fma:language>German</fma:language>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.org/sig/ont/fma/fma9616"/>
+        <owl:annotatedProperty rdf:resource="http://purl.org/sig/ont/fma/non-English_equivalent"/>
+        <owl:annotatedTarget>Músculo de la cabeza</owl:annotatedTarget>
+        <fma:Date_entered_modified>Fri Apr 29 16:44:07 PDT 2005</fma:Date_entered_modified>
+        <fma:author>JOSE MEJINO, MD</fma:author>
+        <fma:authority>Rosse MD</fma:authority>
+        <fma:language>Spanish</fma:language>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.org/sig/ont/fma/fma9616"/>
+        <owl:annotatedProperty rdf:resource="http://purl.org/sig/ont/fma/preferred_name"/>
+        <owl:annotatedTarget>Muscle of head</owl:annotatedTarget>
+        <fma:Date_entered_modified>Thu May 12 14:33:44 GMT-08:00 2005</fma:Date_entered_modified>
+        <fma:author>JOSE MEJINO, MD</fma:author>
+        <fma:authority>Cornelius Rosse</fma:authority>
+        <fma:modification>Jul 29 1996  4:28:44:183PM</fma:modification>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.org/sig/ont/fma/fma9616"/>
+        <owl:annotatedProperty rdf:resource="http://purl.org/sig/ont/fma/synonym"/>
+        <owl:annotatedTarget>Head muscle</owl:annotatedTarget>
+        <fma:Date_entered_modified>Thu May 12 14:33:44 GMT-08:00 2005</fma:Date_entered_modified>
+        <fma:author>JOSE MEJINO, MD</fma:author>
+        <fma:authority>Cornelius Rosse</fma:authority>
+        <fma:modification>Jul 29 1996  4:31:13:736PM</fma:modification>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.org/sig/ont/fma/fma9616"/>
+        <owl:annotatedProperty rdf:resource="http://purl.org/sig/ont/fma/synonym"/>
+        <owl:annotatedTarget>Musculus caput</owl:annotatedTarget>
+        <fma:Date_entered_modified>Thu May 12 14:33:44 GMT-08:00 2005</fma:Date_entered_modified>
+        <fma:author>JOSE MEJINO, MD</fma:author>
+        <fma:authority>Cornelius Rosse</fma:authority>
+        <fma:modification>Jul 29 1996  4:31:03:416PM</fma:modification>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.org/sig/ont/fma/fma9617 -->
+
+    <owl:Class rdf:about="http://purl.org/sig/ont/fma/fma9617">
+        <rdfs:subClassOf rdf:resource="http://purl.org/sig/ont/fma/fma0329044"/>
+        <fma:FMAID rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9617</fma:FMAID>
+        <fma:definition>Muscle organ which is a part of the neck. Examples: platysma, sternocleidomastoid, cricothyroid muscle.</fma:definition>
+        <fma:non-English_equivalent>Músculo del cuello</fma:non-English_equivalent>
+        <fma:preferred_name>Muscle of neck</fma:preferred_name>
+        <fma:synonym>Neck muscle</fma:synonym>
+        <rdfs:label xml:lang="en">Muscle of neck</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.org/sig/ont/fma/fma9617"/>
+        <owl:annotatedProperty rdf:resource="http://purl.org/sig/ont/fma/non-English_equivalent"/>
+        <owl:annotatedTarget>Músculo del cuello</owl:annotatedTarget>
+        <fma:Date_entered_modified>Fri Apr 29 16:45:13 PDT 2005</fma:Date_entered_modified>
+        <fma:author>JOSE MEJINO, MD</fma:author>
+        <fma:authority>Rosse MD</fma:authority>
+        <fma:language>German</fma:language>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.org/sig/ont/fma/fma9617"/>
+        <owl:annotatedProperty rdf:resource="http://purl.org/sig/ont/fma/preferred_name"/>
+        <owl:annotatedTarget>Muscle of neck</owl:annotatedTarget>
+        <fma:Date_entered_modified>Thu May 12 14:33:44 GMT-08:00 2005</fma:Date_entered_modified>
+        <fma:author>JOSE MEJINO, MD</fma:author>
+        <fma:authority>Cornelius Rosse</fma:authority>
+        <fma:modification>Jul 29 1996  4:30:45:076PM</fma:modification>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.org/sig/ont/fma/fma9617"/>
+        <owl:annotatedProperty rdf:resource="http://purl.org/sig/ont/fma/synonym"/>
+        <owl:annotatedTarget>Neck muscle</owl:annotatedTarget>
+        <fma:Date_entered_modified>Wed Aug 01 15:54:01 PDT 2001</fma:Date_entered_modified>
+        <fma:author>JOSE MEJINO, MD</fma:author>
+        <fma:authority>Cornelius Rosse</fma:authority>
+        <fma:modification>Jul 29 1996  4:30:56:923PM</fma:modification>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.org/sig/ont/fma/fma9619 -->
+
+    <owl:Class rdf:about="http://purl.org/sig/ont/fma/fma9619">
+        <rdfs:subClassOf rdf:resource="http://purl.org/sig/ont/fma/fma0329118"/>
+        <fma:FMAID rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9619</fma:FMAID>
+        <fma:definition>Muscle organ which is a part of the thorax. Examples: external intercostal muscle, diaphragm.</fma:definition>
+        <fma:preferred_name>Muscle of thorax</fma:preferred_name>
+        <fma:synonym>Chest muscle</fma:synonym>
+        <fma:synonym>Musculus thoracicus</fma:synonym>
+        <fma:synonym>Thoracic muscle</fma:synonym>
+        <rdfs:label xml:lang="en">Muscle of thorax</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.org/sig/ont/fma/fma9619"/>
+        <owl:annotatedProperty rdf:resource="http://purl.org/sig/ont/fma/preferred_name"/>
+        <owl:annotatedTarget>Muscle of thorax</owl:annotatedTarget>
+        <fma:Date_entered_modified>Thu May 12 14:33:44 GMT-08:00 2005</fma:Date_entered_modified>
+        <fma:author>JOSE MEJINO, MD</fma:author>
+        <fma:authority>Cornelius Rosse</fma:authority>
+        <fma:modification>Jul 29 1996  4:35:01:226PM</fma:modification>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.org/sig/ont/fma/fma9619"/>
+        <owl:annotatedProperty rdf:resource="http://purl.org/sig/ont/fma/synonym"/>
+        <owl:annotatedTarget>Chest muscle</owl:annotatedTarget>
+        <fma:Date_entered_modified>Thu May 12 14:33:44 GMT-08:00 2005</fma:Date_entered_modified>
+        <fma:author>JOSE MEJINO, MD</fma:author>
+        <fma:authority>Cornelius Rosse</fma:authority>
+        <fma:modification>Jul 29 1996  4:35:09:450PM</fma:modification>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.org/sig/ont/fma/fma9619"/>
+        <owl:annotatedProperty rdf:resource="http://purl.org/sig/ont/fma/synonym"/>
+        <owl:annotatedTarget>Musculus thoracicus</owl:annotatedTarget>
+        <fma:Date_entered_modified>Thu May 12 14:33:44 GMT-08:00 2005</fma:Date_entered_modified>
+        <fma:author>JOSE MEJINO, MD</fma:author>
+        <fma:authority>Cornelius Rosse</fma:authority>
+        <fma:modification>Jul 29 1996  4:35:14:403PM</fma:modification>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.org/sig/ont/fma/fma9619"/>
+        <owl:annotatedProperty rdf:resource="http://purl.org/sig/ont/fma/synonym"/>
+        <owl:annotatedTarget>Thoracic muscle</owl:annotatedTarget>
+        <fma:Date_entered_modified>Thu May 12 14:33:44 GMT-08:00 2005</fma:Date_entered_modified>
+        <fma:author>JOSE MEJINO, MD</fma:author>
+        <fma:authority>Cornelius Rosse</fma:authority>
+        <fma:modification>Jul 29 1996  4:35:18:666PM</fma:modification>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.org/sig/ont/fma/fma9620 -->
+
+    <owl:Class rdf:about="http://purl.org/sig/ont/fma/fma9620">
+        <rdfs:subClassOf rdf:resource="http://purl.org/sig/ont/fma/fma0329099"/>
+        <fma:FMAID rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9620</fma:FMAID>
+        <fma:definition>Muscle (organ) which is a part of the abdomen. Examples: external oblique, rectus abdominis.</fma:definition>
+        <fma:preferred_name>Muscle of abdomen</fma:preferred_name>
+        <fma:synonym>Abdominal muscle</fma:synonym>
+        <fma:synonym>Abdominal wall muscle</fma:synonym>
+        <rdfs:label xml:lang="en">Muscle of abdomen</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.org/sig/ont/fma/fma9620"/>
+        <owl:annotatedProperty rdf:resource="http://purl.org/sig/ont/fma/preferred_name"/>
+        <owl:annotatedTarget>Muscle of abdomen</owl:annotatedTarget>
+        <fma:Date_entered_modified>Thu May 12 14:33:44 GMT-08:00 2005</fma:Date_entered_modified>
+        <fma:author>JOSE MEJINO, MD</fma:author>
+        <fma:authority>Cornelius Rosse</fma:authority>
+        <fma:modification>Jul 29 1996  4:37:00:786PM</fma:modification>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.org/sig/ont/fma/fma9620"/>
+        <owl:annotatedProperty rdf:resource="http://purl.org/sig/ont/fma/synonym"/>
+        <owl:annotatedTarget>Abdominal muscle</owl:annotatedTarget>
+        <fma:Date_entered_modified>Thu May 12 14:33:44 GMT-08:00 2005</fma:Date_entered_modified>
+        <fma:author>JOSE MEJINO, MD</fma:author>
+        <fma:authority>Cornelius Rosse</fma:authority>
+        <fma:modification>Jul 29 1996  4:36:29:073PM</fma:modification>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.org/sig/ont/fma/fma9620"/>
+        <owl:annotatedProperty rdf:resource="http://purl.org/sig/ont/fma/synonym"/>
+        <owl:annotatedTarget>Abdominal wall muscle</owl:annotatedTarget>
+        <fma:Date_entered_modified>Thu May 12 14:33:44 GMT-08:00 2005</fma:Date_entered_modified>
+        <fma:author>JOSE MEJINO, MD</fma:author>
+        <fma:authority>Cornelius Rosse</fma:authority>
+        <fma:modification>Jul 29 1996  4:37:26:400PM</fma:modification>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.org/sig/ont/fma/fma9621 -->
+
+    <owl:Class rdf:about="http://purl.org/sig/ont/fma/fma9621">
+        <rdfs:subClassOf rdf:resource="http://purl.org/sig/ont/fma/fma0328100"/>
+        <owl:disjointWith rdf:resource="http://purl.org/sig/ont/fma/fma9622"/>
+        <fma:FMAID rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9621</fma:FMAID>
+        <fma:non-English_equivalent>Músculo del miembro superior</fma:non-English_equivalent>
+        <fma:preferred_name>Muscle of upper limb</fma:preferred_name>
+        <fma:synonym>Upper limb muscle</fma:synonym>
+        <rdfs:label xml:lang="en">Muscle of upper limb</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.org/sig/ont/fma/fma9621"/>
+        <owl:annotatedProperty rdf:resource="http://purl.org/sig/ont/fma/non-English_equivalent"/>
+        <owl:annotatedTarget>Músculo del miembro superior</owl:annotatedTarget>
+        <fma:Date_entered_modified>Fri Apr 29 16:46:10 PDT 2005</fma:Date_entered_modified>
+        <fma:author>JOSE MEJINO, MD</fma:author>
+        <fma:authority>Rosse MD</fma:authority>
+        <fma:language>Spanish</fma:language>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.org/sig/ont/fma/fma9621"/>
+        <owl:annotatedProperty rdf:resource="http://purl.org/sig/ont/fma/preferred_name"/>
+        <owl:annotatedTarget>Muscle of upper limb</owl:annotatedTarget>
+        <fma:Date_entered_modified>Thu May 12 14:33:44 GMT-08:00 2005</fma:Date_entered_modified>
+        <fma:author>JOSE MEJINO, MD</fma:author>
+        <fma:authority>Cornelius Rosse</fma:authority>
+        <fma:modification>Jul 29 1996  4:39:06:423PM</fma:modification>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.org/sig/ont/fma/fma9621"/>
+        <owl:annotatedProperty rdf:resource="http://purl.org/sig/ont/fma/synonym"/>
+        <owl:annotatedTarget>Upper limb muscle</owl:annotatedTarget>
+        <fma:Date_entered_modified>Thu May 12 14:33:44 GMT-08:00 2005</fma:Date_entered_modified>
+        <fma:author>JOSE MEJINO, MD</fma:author>
+        <fma:authority>Cornelius Rosse</fma:authority>
+        <fma:modification>Jul 29 1996  4:38:24:346PM</fma:modification>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.org/sig/ont/fma/fma9622 -->
+
+    <owl:Class rdf:about="http://purl.org/sig/ont/fma/fma9622">
+        <rdfs:subClassOf rdf:resource="http://purl.org/sig/ont/fma/fma0328100"/>
+        <fma:FMAID rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9622</fma:FMAID>
+        <fma:non-English_equivalent>Músculo de un miembro más bajo</fma:non-English_equivalent>
+        <fma:preferred_name>Muscle of lower limb</fma:preferred_name>
+        <fma:synonym>Lower limb muscle</fma:synonym>
+        <rdfs:label xml:lang="en">Muscle of lower limb</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.org/sig/ont/fma/fma9622"/>
+        <owl:annotatedProperty rdf:resource="http://purl.org/sig/ont/fma/non-English_equivalent"/>
+        <owl:annotatedTarget>Músculo de un miembro más bajo</owl:annotatedTarget>
+        <fma:Date_entered_modified>Fri Apr 29 16:46:25 PDT 2005</fma:Date_entered_modified>
+        <fma:author>JOSE MEJINO, MD</fma:author>
+        <fma:authority>Rosse MD</fma:authority>
+        <fma:language>Spanish</fma:language>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.org/sig/ont/fma/fma9622"/>
+        <owl:annotatedProperty rdf:resource="http://purl.org/sig/ont/fma/preferred_name"/>
+        <owl:annotatedTarget>Muscle of lower limb</owl:annotatedTarget>
+        <fma:Date_entered_modified>Thu May 12 14:33:44 GMT-08:00 2005</fma:Date_entered_modified>
+        <fma:author>JOSE MEJINO, MD</fma:author>
+        <fma:authority>Rosse MD</fma:authority>
+        <fma:modification>Jul 29 1996  4:40:05:756PM</fma:modification>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.org/sig/ont/fma/fma9622"/>
+        <owl:annotatedProperty rdf:resource="http://purl.org/sig/ont/fma/synonym"/>
+        <owl:annotatedTarget>Lower limb muscle</owl:annotatedTarget>
+        <fma:Date_entered_modified>Thu May 12 14:33:44 GMT-08:00 2005</fma:Date_entered_modified>
+        <fma:author>JOSE MEJINO, MD</fma:author>
+        <fma:authority>Rosse MD</fma:authority>
+        <fma:modification>Jul 29 1996  4:40:08:950PM</fma:modification>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.org/sig/ont/fma/fma9626 -->
+
+    <owl:Class rdf:about="http://purl.org/sig/ont/fma/fma9626">
+        <rdfs:subClassOf rdf:resource="http://purl.org/sig/ont/fma/fma32517"/>
+        <fma:FMAID rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9626</fma:FMAID>
+        <fma:non-English_equivalent>Muscle trapèze</fma:non-English_equivalent>
+        <fma:non-English_equivalent>Musculus trapezius</fma:non-English_equivalent>
+        <fma:preferred_name>Trapezius</fma:preferred_name>
+        <fma:synonym>Trapezius muscle</fma:synonym>
+        <rdfs:label xml:lang="en">Trapezius</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.org/sig/ont/fma/fma9626"/>
+        <owl:annotatedProperty rdf:resource="http://purl.org/sig/ont/fma/non-English_equivalent"/>
+        <owl:annotatedTarget>Muscle trapèze</owl:annotatedTarget>
+        <fma:Date_entered_modified>Thu May 12 14:24:40 GMT-08:00 2005</fma:Date_entered_modified>
+        <fma:author>JOSE MEJINO, MD</fma:author>
+        <fma:authority>Robert Baud, PhD</fma:authority>
+        <fma:authority>Rosse MD</fma:authority>
+        <fma:language>French</fma:language>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.org/sig/ont/fma/fma9626"/>
+        <owl:annotatedProperty rdf:resource="http://purl.org/sig/ont/fma/non-English_equivalent"/>
+        <owl:annotatedTarget>Musculus trapezius</owl:annotatedTarget>
+        <fma:Date_entered_modified>Thu May 12 14:26:32 GMT-08:00 2005</fma:Date_entered_modified>
+        <fma:English_equivalent>Trapezius</fma:English_equivalent>
+        <fma:TA_ID>A04.3.01.001</fma:TA_ID>
+        <fma:author>JOSE MEJINO, MD</fma:author>
+        <fma:authority>Rosse MD</fma:authority>
+        <fma:authority>Terminologia Anatomica 1998</fma:authority>
+        <fma:language>Latin</fma:language>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.org/sig/ont/fma/fma9626"/>
+        <owl:annotatedProperty rdf:resource="http://purl.org/sig/ont/fma/preferred_name"/>
+        <owl:annotatedTarget>Trapezius</owl:annotatedTarget>
+        <fma:Date_entered_modified>Mon Apr 07 15:41:24 PDT 2003</fma:Date_entered_modified>
+        <fma:TA_ID>A04.3.01.001</fma:TA_ID>
+        <fma:author>JOSE MEJINO, MD</fma:author>
+        <fma:authority>Terminologia Anatomica 1998</fma:authority>
+        <fma:modification>Jul 29 1996  5:04:13:130PM</fma:modification>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.org/sig/ont/fma/fma9626"/>
+        <owl:annotatedProperty rdf:resource="http://purl.org/sig/ont/fma/synonym"/>
+        <owl:annotatedTarget>Trapezius muscle</owl:annotatedTarget>
+        <fma:Date_entered_modified>Fri Apr 04 15:18:01 PST 2008</fma:Date_entered_modified>
+        <fma:author>JOSE MEJINO, MD</fma:author>
+        <fma:authority>Rosse MD</fma:authority>
+        <fma:language>English</fma:language>
+    </owl:Axiom>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://purl.org/sig/ont/fma/fma0328100"/>
+            <rdf:Description rdf:about="http://purl.org/sig/ont/fma/fma58274"/>
+            <rdf:Description rdf:about="http://purl.org/sig/ont/fma/fma9616"/>
+            <rdf:Description rdf:about="http://purl.org/sig/ont/fma/fma9617"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://purl.org/sig/ont/fma/fma37370"/>
+            <rdf:Description rdf:about="http://purl.org/sig/ont/fma/fma37371"/>
+            <rdf:Description rdf:about="http://purl.org/sig/ont/fma/fma37372"/>
+        </owl:members>
+    </rdf:Description>
 </rdf:RDF>
 
 

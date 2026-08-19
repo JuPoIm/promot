@@ -6,7 +6,8 @@
      xmlns:VO="http://purl.obolibrary.org/obo/VO_"
      xmlns:cc="http://creativecommons.org/ns#"
      xmlns:BFO="http://purl.obolibrary.org/obo/BFO_"
-     xmlns:FMA="http://purl.obolibrary.org/obo/FMA_"
+     xmlns:ECO="http://purl.obolibrary.org/obo/ECO_"
+     xmlns:FMA="http://purl.org/sig/ont/fma/fma"
      xmlns:IAO="http://purl.obolibrary.org/obo/IAO_"
      xmlns:ICF="http://id.who.int/icd/entity/"
      xmlns:OBI="http://purl.obolibrary.org/obo/OBI_"
@@ -16,8 +17,11 @@
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:GENO="http://purl.obolibrary.org/obo/GENO_"
      xmlns:HGNC="http://identifiers.org/hgnc/"
+     xmlns:NCIT="http://purl.obolibrary.org/obo/NCIT_"
      xmlns:OMOP="https://athena.ohdsi.org/search-terms/terms/"
+     xmlns:ORDO="http://www.orpha.net/ORDO/Orphanet_"
      xmlns:SCDO="http://purl.obolibrary.org/obo/SCDO_"
      xmlns:dc11="http://purl.org/dc/elements/1.1/"
      xmlns:foaf="http://xmlns.com/foaf/0.1/"
@@ -38,6 +42,7 @@
      xmlns:SNOMED="http://snomed.info/id/"
      xmlns:schema="http://schema.org/"
      xmlns:BIOLINK="https://w3id.org/biolink/vocab/"
+     xmlns:babelon="https://w3id.org/babelon/"
      xmlns:omoprel="https://w3id.org/cpont/omop/relations/"
      xmlns:schema1="http://id.who.int/icd/schema/"
      xmlns:subsets="http://purl.obolibrary.org/obo/ro/subsets#"
@@ -54,8 +59,8 @@
      xmlns:CPATH_VISIT_OCCURRENCE="https://w3id.org/cpont/visit_occurrence/"
      xmlns:CPATH_CONDITION_OCCURRENCE="https://w3id.org/cpont/condition_occurrence/">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/promot/imports/icf_import.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/promot/releases/2025-12-23/imports/icf_import.owl"/>
-        <owl:versionInfo>2025-12-23</owl:versionInfo>
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/promot/releases/2026-08-12/imports/icf_import.owl"/>
+        <owl:versionInfo>2026-08-12</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -127,16 +132,6 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    
-
-
-    <!-- http://id.who.int/icd/entity/1014916094 -->
-
-    <owl:Class rdf:about="http://id.who.int/icd/entity/1014916094">
-        <rdfs:subClassOf rdf:resource="http://id.who.int/icd/entity/2011053685"/>
-        <schema1:browserUrl rdf:resource="https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F1014916094"/>
-        <rdfs:label xml:lang="en">Applying knowledge</rdfs:label>
-    </owl:Class>
     
 
 
@@ -288,6 +283,24 @@
     
 
 
+    <!-- http://id.who.int/icd/entity/1119392889 -->
+
+    <owl:Class rdf:about="http://id.who.int/icd/entity/1119392889">
+        <rdfs:subClassOf rdf:resource="http://id.who.int/icd/entity/1266389839"/>
+        <schema1:browserUrl rdf:resource="https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F1119392889"/>
+        <schema1:exclusion xml:lang="en">Changing basic body position</schema1:exclusion>
+        <obo:IAO_0000115 xml:lang="en">Moving from one surface to another, such as sliding along a bench or moving from a bed to a chair, without changing body position.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">Transferring oneself</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://id.who.int/icd/entity/1119392889"/>
+        <owl:annotatedProperty rdf:resource="http://id.who.int/icd/schema/exclusion"/>
+        <owl:annotatedTarget xml:lang="en">Changing basic body position</owl:annotatedTarget>
+        <schema1:foundationReference rdf:resource="http://id.who.int/icd/entity/150502901"/>
+    </owl:Axiom>
+    
+
+
     <!-- http://id.who.int/icd/entity/1131514421 -->
 
     <owl:Class rdf:about="http://id.who.int/icd/entity/1131514421">
@@ -305,37 +318,6 @@
         <rdfs:subClassOf rdf:resource="http://id.who.int/icd/entity/161488596"/>
         <schema1:browserUrl rdf:resource="https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F1134562249"/>
         <rdfs:label xml:lang="en">Functions of the joints and bones</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://id.who.int/icd/entity/1143753652 -->
-
-    <owl:Class rdf:about="http://id.who.int/icd/entity/1143753652">
-        <rdfs:subClassOf rdf:resource="http://id.who.int/icd/entity/634949825"/>
-        <schema1:browserUrl rdf:resource="https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F1143753652"/>
-        <rdfs:label xml:lang="en">Structure of cranial nerves</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://id.who.int/icd/entity/114446184 -->
-
-    <owl:Class rdf:about="http://id.who.int/icd/entity/114446184">
-        <rdfs:subClassOf rdf:resource="http://id.who.int/icd/entity/834607195"/>
-        <schema1:browserUrl rdf:resource="https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F114446184"/>
-        <rdfs:label xml:lang="en">Atria</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://id.who.int/icd/entity/1145793041 -->
-
-    <owl:Class rdf:about="http://id.who.int/icd/entity/1145793041">
-        <rdfs:subClassOf rdf:resource="http://id.who.int/icd/entity/222589883"/>
-        <schema1:browserUrl rdf:resource="https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F1145793041"/>
-        <obo:IAO_0000115 xml:lang="en">Functions related to the volume of blood available to the heart muscle.</obo:IAO_0000115>
-        <rdfs:label xml:lang="en">Blood supply to the heart</rdfs:label>
     </owl:Class>
     
 
@@ -385,7 +367,6 @@
     <!-- http://id.who.int/icd/entity/1228414013 -->
 
     <owl:Class rdf:about="http://id.who.int/icd/entity/1228414013">
-        <rdfs:subClassOf rdf:resource="http://id.who.int/icd/entity/1394728112"/>
         <schema1:browserUrl rdf:resource="https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F1228414013"/>
         <obo:IAO_0000115 xml:lang="en">This chapter is about general aspects of carrying out single or multiple tasks, organizing routines and handling stress. These items can be used in conjunction with more specific tasks or actions to identify the underlying features of the execution of tasks under different circumstances.</obo:IAO_0000115>
         <rdfs:label xml:lang="en">General tasks and demands</rdfs:label>
@@ -431,31 +412,6 @@
     
 
 
-    <!-- http://id.who.int/icd/entity/126518990 -->
-
-    <owl:Class rdf:about="http://id.who.int/icd/entity/126518990">
-        <rdfs:subClassOf rdf:resource="http://id.who.int/icd/entity/1014916094"/>
-        <schema1:browserUrl rdf:resource="https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F126518990"/>
-        <schema1:exclusion xml:lang="en">Making decisions</schema1:exclusion>
-        <schema1:exclusion xml:lang="en">Thinking</schema1:exclusion>
-        <obo:IAO_0000115 xml:lang="en">Finding solutions to questions or situations by identifying and analysing issues, developing options and solutions, evaluating potential effects of solutions, and executing a chosen solution, such as in resolving a dispute between two people.</obo:IAO_0000115>
-        <rdfs:label xml:lang="en">Solving problems</rdfs:label>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://id.who.int/icd/entity/126518990"/>
-        <owl:annotatedProperty rdf:resource="http://id.who.int/icd/schema/exclusion"/>
-        <owl:annotatedTarget xml:lang="en">Making decisions</owl:annotatedTarget>
-        <schema1:foundationReference rdf:resource="http://id.who.int/icd/entity/278208942"/>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://id.who.int/icd/entity/126518990"/>
-        <owl:annotatedProperty rdf:resource="http://id.who.int/icd/schema/exclusion"/>
-        <owl:annotatedTarget xml:lang="en">Thinking</owl:annotatedTarget>
-        <schema1:foundationReference rdf:resource="http://id.who.int/icd/entity/854468725"/>
-    </owl:Axiom>
-    
-
-
     <!-- http://id.who.int/icd/entity/1266389839 -->
 
     <owl:Class rdf:about="http://id.who.int/icd/entity/1266389839">
@@ -487,12 +443,14 @@
     
 
 
-    <!-- http://id.who.int/icd/entity/1314143106 -->
+    <!-- http://id.who.int/icd/entity/1302007745 -->
 
-    <owl:Class rdf:about="http://id.who.int/icd/entity/1314143106">
-        <rdfs:subClassOf rdf:resource="http://id.who.int/icd/entity/2011053685"/>
-        <schema1:browserUrl rdf:resource="https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F1314143106"/>
-        <rdfs:label xml:lang="en">Basic learning</rdfs:label>
+    <owl:Class rdf:about="http://id.who.int/icd/entity/1302007745">
+        <rdfs:subClassOf rdf:resource="http://id.who.int/icd/entity/389047611"/>
+        <schema1:browserUrl rdf:resource="https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F1302007745"/>
+        <obo:IAO_0000115 xml:lang="en">Functions related to sustaining muscle contraction of isolated muscles for the required period of time.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">Endurance of isolated muscles</rdfs:label>
+        <skos:altLabel xml:lang="en">Functions involved in endurance of isolated muscles</skos:altLabel>
     </owl:Class>
     
 
@@ -514,12 +472,6 @@
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://id.who.int/icd/entity/1328466963"/>
         <owl:annotatedProperty rdf:resource="http://id.who.int/icd/schema/exclusion"/>
-        <owl:annotatedTarget xml:lang="en">Muscle power functions</owl:annotatedTarget>
-        <schema1:foundationReference rdf:resource="http://id.who.int/icd/entity/274570113"/>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://id.who.int/icd/entity/1328466963"/>
-        <owl:annotatedProperty rdf:resource="http://id.who.int/icd/schema/exclusion"/>
         <owl:annotatedTarget xml:lang="en">Muscle tone functions</owl:annotatedTarget>
         <schema1:foundationReference rdf:resource="http://id.who.int/icd/entity/1839310222"/>
     </owl:Axiom>
@@ -534,6 +486,12 @@
         <owl:annotatedProperty rdf:resource="http://id.who.int/icd/schema/exclusion"/>
         <owl:annotatedTarget xml:lang="en">Involuntary movement functions</owl:annotatedTarget>
         <schema1:foundationReference rdf:resource="http://id.who.int/icd/entity/2055053578"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://id.who.int/icd/entity/1328466963"/>
+        <owl:annotatedProperty rdf:resource="http://id.who.int/icd/schema/exclusion"/>
+        <owl:annotatedTarget xml:lang="en">Muscle power functions</owl:annotatedTarget>
+        <schema1:foundationReference rdf:resource="http://id.who.int/icd/entity/274570113"/>
     </owl:Axiom>
     
 
@@ -636,20 +594,6 @@
     
 
 
-    <!-- http://id.who.int/icd/entity/1371343352 -->
-
-    <owl:Class rdf:about="http://id.who.int/icd/entity/1371343352">
-        <rdfs:subClassOf rdf:resource="http://id.who.int/icd/entity/248265067"/>
-        <schema1:browserUrl rdf:resource="https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F1371343352"/>
-        <schema1:inclusion xml:lang="en">hypermobility of joints</schema1:inclusion>
-        <schema1:narrowerTerm xml:lang="en">hypermobility of joints</schema1:narrowerTerm>
-        <obo:IAO_0000115 xml:lang="en">Functions of the range and ease of movement of joints throughout the body.</obo:IAO_0000115>
-        <rdfs:label xml:lang="en">Mobility of joints generalized</rdfs:label>
-        <skos:altLabel xml:lang="en">Functions involved in mobility of joints generalized</skos:altLabel>
-    </owl:Class>
-    
-
-
     <!-- http://id.who.int/icd/entity/1389818830 -->
 
     <owl:Class rdf:about="http://id.who.int/icd/entity/1389818830">
@@ -657,23 +601,6 @@
         <schema1:browserUrl rdf:resource="https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F1389818830"/>
         <obo:IAO_0000115 xml:lang="en">Functions of crushing, grinding and masticating food with the back teeth (e.g. molars).</obo:IAO_0000115>
         <rdfs:label xml:lang="en">Chewing</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://id.who.int/icd/entity/1394728112 -->
-
-    <owl:Class rdf:about="http://id.who.int/icd/entity/1394728112">
-        <schema1:browserUrl rdf:resource="https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F1394728112"/>
-        <obo:IAO_0000115 xml:lang="en">Activity is the execution of a task or action by an individual.
-Participation is involvement in a life situation.
-Activity limitations are difficulties an individual may have in executing activities.
-Participation restrictions are problems an individual may experience in involvement in life situations.
-The domains for the Activities and Participation component are given in a single list that covers the full range of life areas (from basic learning and watching to composite areas such as social tasks). This component can be used to dedefinition activities (a) or participation (p) or both.
-The two qualifiers for the Activities and Participation component are the performance qualifier and the capacity qualifier. The performance qualifier describes what an individual does in his or her current environment. Because the current environment brings in a societal context, performance as recorded by this qualifier can also be understood as &quot;involvement in a life situation&quot; or &quot;the lived experience&quot; of people in the actual context in which they live. This context includes the environmental factors - all aspects of the physical, social and attitudinal world, which can be coded using the Environmental Factors component.
-The capacity qualifier describes an individual&apos;s ability to execute a task or an action. This qualifier identifies the highest probable level of functioning that a person may reach in a given domain at a given moment. Capacity is measured in a uniform or standard environment, and thus reflects the environmentally adjusted ability of the individual. The Environmental Factors component can be used to describe the features of this uniform or standard environment.
-Both capacity and performance qualifiers can be used with and without assistive devices or personal assistance, and in accordance with the following scale:</obo:IAO_0000115>
-        <rdfs:label xml:lang="en">Activities and participation</rdfs:label>
     </owl:Class>
     
 
@@ -696,17 +623,6 @@ Both capacity and performance qualifiers can be used with and without assistive 
         <schema1:browserUrl rdf:resource="https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F1399000785"/>
         <obo:IAO_0000115 xml:lang="en">Functions related to the amount of blood pumped by the ventricular muscles during every beat.</obo:IAO_0000115>
         <rdfs:label xml:lang="en">Contraction force of ventricular muscles</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://id.who.int/icd/entity/1401433117 -->
-
-    <owl:Class rdf:about="http://id.who.int/icd/entity/1401433117">
-        <rdfs:subClassOf rdf:resource="http://id.who.int/icd/entity/1314143106"/>
-        <schema1:browserUrl rdf:resource="https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F1401433117"/>
-        <obo:IAO_0000115 xml:lang="en">Developing the competence to manipulate numbers and perform simple and complex mathematical operations, such as using mathematical signs for addition and subtraction and applying the correct mathematical operation to a problem.</obo:IAO_0000115>
-        <rdfs:label xml:lang="en">Learning to calculate</rdfs:label>
     </owl:Class>
     
 
@@ -787,38 +703,6 @@ Both capacity and performance qualifiers can be used with and without assistive 
     
 
 
-    <!-- http://id.who.int/icd/entity/1432017555 -->
-
-    <owl:Class rdf:about="http://id.who.int/icd/entity/1432017555">
-        <rdfs:subClassOf rdf:resource="http://id.who.int/icd/entity/719872561"/>
-        <schema1:browserUrl rdf:resource="https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F1432017555"/>
-        <schema1:exclusion xml:lang="en">Blood vessel functions</schema1:exclusion>
-        <schema1:exclusion xml:lang="en">Exercise tolerance functions</schema1:exclusion>
-        <schema1:exclusion xml:lang="en">Heart functions</schema1:exclusion>
-        <obo:IAO_0000115 xml:lang="en">Functions of maintaining the pressure of blood within the arteries.</obo:IAO_0000115>
-        <rdfs:label xml:lang="en">Blood pressure functions</rdfs:label>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://id.who.int/icd/entity/1432017555"/>
-        <owl:annotatedProperty rdf:resource="http://id.who.int/icd/schema/exclusion"/>
-        <owl:annotatedTarget xml:lang="en">Blood vessel functions</owl:annotatedTarget>
-        <schema1:foundationReference rdf:resource="http://id.who.int/icd/entity/1187873915"/>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://id.who.int/icd/entity/1432017555"/>
-        <owl:annotatedProperty rdf:resource="http://id.who.int/icd/schema/exclusion"/>
-        <owl:annotatedTarget xml:lang="en">Exercise tolerance functions</owl:annotatedTarget>
-        <schema1:foundationReference rdf:resource="http://id.who.int/icd/entity/1409534054"/>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://id.who.int/icd/entity/1432017555"/>
-        <owl:annotatedProperty rdf:resource="http://id.who.int/icd/schema/exclusion"/>
-        <owl:annotatedTarget xml:lang="en">Heart functions</owl:annotatedTarget>
-        <schema1:foundationReference rdf:resource="http://id.who.int/icd/entity/222589883"/>
-    </owl:Axiom>
-    
-
-
     <!-- http://id.who.int/icd/entity/1434015402 -->
 
     <owl:Class rdf:about="http://id.who.int/icd/entity/1434015402">
@@ -844,7 +728,6 @@ Both capacity and performance qualifiers can be used with and without assistive 
     <!-- http://id.who.int/icd/entity/1436113794 -->
 
     <owl:Class rdf:about="http://id.who.int/icd/entity/1436113794">
-        <rdfs:subClassOf rdf:resource="http://id.who.int/icd/entity/1394728112"/>
         <schema1:browserUrl rdf:resource="https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F1436113794"/>
         <obo:IAO_0000115 xml:lang="en">This chapter is about the actions and tasks required to engage in organized social life outside the family, in community, social and civic areas of life.</obo:IAO_0000115>
         <rdfs:label xml:lang="en">Community, social and civic life</rdfs:label>
@@ -992,31 +875,6 @@ Both capacity and performance qualifiers can be used with and without assistive 
     
 
 
-    <!-- http://id.who.int/icd/entity/1526093901 -->
-
-    <owl:Class rdf:about="http://id.who.int/icd/entity/1526093901">
-        <rdfs:subClassOf rdf:resource="http://id.who.int/icd/entity/1314143106"/>
-        <schema1:browserUrl rdf:resource="https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F1526093901"/>
-        <schema1:exclusion xml:lang="en">Acquiring concepts</schema1:exclusion>
-        <schema1:exclusion xml:lang="en">Acquiring skills</schema1:exclusion>
-        <obo:IAO_0000115 xml:lang="en">Obtaining facts about persons, things and events, such as asking why, what, where and how, asking for names.</obo:IAO_0000115>
-        <rdfs:label xml:lang="en">Acquiring information</rdfs:label>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://id.who.int/icd/entity/1526093901"/>
-        <owl:annotatedProperty rdf:resource="http://id.who.int/icd/schema/exclusion"/>
-        <owl:annotatedTarget xml:lang="en">Acquiring concepts</owl:annotatedTarget>
-        <schema1:foundationReference rdf:resource="http://id.who.int/icd/entity/2039726067"/>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://id.who.int/icd/entity/1526093901"/>
-        <owl:annotatedProperty rdf:resource="http://id.who.int/icd/schema/exclusion"/>
-        <owl:annotatedTarget xml:lang="en">Acquiring skills</owl:annotatedTarget>
-        <schema1:foundationReference rdf:resource="http://id.who.int/icd/entity/402775005"/>
-    </owl:Axiom>
-    
-
-
     <!-- http://id.who.int/icd/entity/1528299701 -->
 
     <owl:Class rdf:about="http://id.who.int/icd/entity/1528299701">
@@ -1030,7 +888,6 @@ Both capacity and performance qualifiers can be used with and without assistive 
     <!-- http://id.who.int/icd/entity/1535125568 -->
 
     <owl:Class rdf:about="http://id.who.int/icd/entity/1535125568">
-        <rdfs:subClassOf rdf:resource="http://id.who.int/icd/entity/1394728112"/>
         <schema1:browserUrl rdf:resource="https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F1535125568"/>
         <obo:IAO_0000115 xml:lang="en">This chapter is about carrying out domestic and everyday actions and tasks. Areas of domestic life include caring for one&apos;s belongings and space, acquiring food, clothing and other necessities, household cleaning and repairing, caring for personal and other household objects, and assisting others.</obo:IAO_0000115>
         <rdfs:label xml:lang="en">Domestic life</rdfs:label>
@@ -1073,15 +930,42 @@ Both capacity and performance qualifiers can be used with and without assistive 
     
 
 
-    <!-- http://id.who.int/icd/entity/1590369495 -->
+    <!-- http://id.who.int/icd/entity/1580195090 -->
 
-    <owl:Class rdf:about="http://id.who.int/icd/entity/1590369495">
-        <rdfs:subClassOf rdf:resource="http://id.who.int/icd/entity/1432017555"/>
-        <schema1:browserUrl rdf:resource="https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F1590369495"/>
-        <obo:IAO_0000115 xml:lang="en">Functions related to maintaining an appropriate blood pressure in response to changes in the body.</obo:IAO_0000115>
-        <rdfs:label xml:lang="en">Maintenance of blood pressure</rdfs:label>
-        <skos:altLabel xml:lang="en">Maintenance of blood pressure functions</skos:altLabel>
+    <owl:Class rdf:about="http://id.who.int/icd/entity/1580195090">
+        <rdfs:subClassOf rdf:resource="http://id.who.int/icd/entity/1976873960"/>
+        <schema1:browserUrl rdf:resource="https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F1580195090"/>
+        <schema1:exclusion xml:lang="en">Assimilation functions</schema1:exclusion>
+        <schema1:exclusion xml:lang="en">Defecation functions</schema1:exclusion>
+        <schema1:exclusion xml:lang="en">Ingestion functions</schema1:exclusion>
+        <schema1:exclusion xml:lang="en">Sensations associated with the digestive system</schema1:exclusion>
+        <obo:IAO_0000115 xml:lang="en">Functions of transporting food through the gastrointestinal tract, breakdown of food and absorption of nutrients.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">Digestive functions</rdfs:label>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://id.who.int/icd/entity/1580195090"/>
+        <owl:annotatedProperty rdf:resource="http://id.who.int/icd/schema/exclusion"/>
+        <owl:annotatedTarget xml:lang="en">Assimilation functions</owl:annotatedTarget>
+        <schema1:foundationReference rdf:resource="http://id.who.int/icd/entity/1303938042"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://id.who.int/icd/entity/1580195090"/>
+        <owl:annotatedProperty rdf:resource="http://id.who.int/icd/schema/exclusion"/>
+        <owl:annotatedTarget xml:lang="en">Defecation functions</owl:annotatedTarget>
+        <schema1:foundationReference rdf:resource="http://id.who.int/icd/entity/103904314"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://id.who.int/icd/entity/1580195090"/>
+        <owl:annotatedProperty rdf:resource="http://id.who.int/icd/schema/exclusion"/>
+        <owl:annotatedTarget xml:lang="en">Ingestion functions</owl:annotatedTarget>
+        <schema1:foundationReference rdf:resource="http://id.who.int/icd/entity/363211474"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://id.who.int/icd/entity/1580195090"/>
+        <owl:annotatedProperty rdf:resource="http://id.who.int/icd/schema/exclusion"/>
+        <owl:annotatedTarget xml:lang="en">Sensations associated with the digestive system</owl:annotatedTarget>
+        <schema1:foundationReference rdf:resource="http://id.who.int/icd/entity/2028728035"/>
+    </owl:Axiom>
     
 
 
@@ -1106,7 +990,6 @@ Both capacity and performance qualifiers can be used with and without assistive 
     <!-- http://id.who.int/icd/entity/1608009360 -->
 
     <owl:Class rdf:about="http://id.who.int/icd/entity/1608009360">
-        <rdfs:subClassOf rdf:resource="http://id.who.int/icd/entity/1394728112"/>
         <schema1:browserUrl rdf:resource="https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F1608009360"/>
         <obo:IAO_0000115 xml:lang="en">This chapter is about caring for oneself, washing and drying oneself, caring for one&apos;s body and body parts, dressing, eating and drinking, and looking after one&apos;s health.</obo:IAO_0000115>
         <rdfs:label xml:lang="en">Self-care</rdfs:label>
@@ -1197,29 +1080,6 @@ Generic qualifier with the negative scale, used to indicate the extent or an imp
         <rdfs:subClassOf rdf:resource="http://id.who.int/icd/entity/436620656"/>
         <schema1:browserUrl rdf:resource="https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F169456190"/>
         <rdfs:label xml:lang="en">Joints of head and neck region</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://id.who.int/icd/entity/1725645062 -->
-
-    <owl:Class rdf:about="http://id.who.int/icd/entity/1725645062">
-        <rdfs:subClassOf rdf:resource="http://id.who.int/icd/entity/1314143106"/>
-        <schema1:browserUrl rdf:resource="https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F1725645062"/>
-        <obo:IAO_0000115 xml:lang="en">Developing the competence to produce symbols that represent sounds, words or phrases in order to convey meaning (including Braille writing, and other symbols), such as spelling and effectively using correct grammar.</obo:IAO_0000115>
-        <rdfs:label xml:lang="en">Learning to write</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://id.who.int/icd/entity/1739829655 -->
-
-    <owl:Class rdf:about="http://id.who.int/icd/entity/1739829655">
-        <rdfs:subClassOf rdf:resource="http://id.who.int/icd/entity/1432017555"/>
-        <schema1:browserUrl rdf:resource="https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F1739829655"/>
-        <obo:IAO_0000115 xml:lang="en">Functions related to a fall in systolic or diastolic blood pressure below normal for the age.</obo:IAO_0000115>
-        <rdfs:label xml:lang="en">Decreased blood pressure</rdfs:label>
-        <skos:altLabel xml:lang="en">Decreased blood pressure functions</skos:altLabel>
     </owl:Class>
     
 
@@ -1316,6 +1176,16 @@ Generic qualifier with the negative scale, used to indicate the extent or an imp
         <obo:IAO_0000115 xml:lang="en">Functions related to the force generated by the contraction of specific and isolated muscles and muscle groups.</obo:IAO_0000115>
         <rdfs:label xml:lang="en">Power of isolated muscles and muscle groups</rdfs:label>
         <skos:altLabel xml:lang="en"> Functions involved in power of isolated muscles and muscle groups</skos:altLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://id.who.int/icd/entity/1794398084 -->
+
+    <owl:Class rdf:about="http://id.who.int/icd/entity/1794398084">
+        <rdfs:subClassOf rdf:resource="http://id.who.int/icd/entity/435521956"/>
+        <schema1:browserUrl rdf:resource="https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F1794398084"/>
+        <rdfs:label xml:lang="en">Muscles of thigh</rdfs:label>
     </owl:Class>
     
 
@@ -1430,7 +1300,6 @@ Generic qualifier with the negative scale, used to indicate the extent or an imp
     <!-- http://id.who.int/icd/entity/1828012543 -->
 
     <owl:Class rdf:about="http://id.who.int/icd/entity/1828012543">
-        <rdfs:subClassOf rdf:resource="http://id.who.int/icd/entity/1394728112"/>
         <schema1:browserUrl rdf:resource="https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F1828012543"/>
         <obo:IAO_0000115 xml:lang="en">This chapter is about general and specific features of communicating by language, signs and symbols, including receiving and producing messages, carrying on conversations, and using communication devices and techniques.</obo:IAO_0000115>
         <rdfs:label xml:lang="en">Communication</rdfs:label>
@@ -1602,18 +1471,6 @@ Generic qualifier with the negative scale, used to indicate the extent or an imp
     
 
 
-    <!-- http://id.who.int/icd/entity/1889260887 -->
-
-    <owl:Class rdf:about="http://id.who.int/icd/entity/1889260887">
-        <rdfs:subClassOf rdf:resource="http://id.who.int/icd/entity/1432017555"/>
-        <schema1:browserUrl rdf:resource="https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F1889260887"/>
-        <obo:IAO_0000115 xml:lang="en">Functions related to a rise in systolic or diastolic blood pressure above normal for the age.</obo:IAO_0000115>
-        <rdfs:label xml:lang="en">Increased blood pressure</rdfs:label>
-        <skos:altLabel xml:lang="en">Increased blood pressure functions</skos:altLabel>
-    </owl:Class>
-    
-
-
     <!-- http://id.who.int/icd/entity/1896301954 -->
 
     <owl:Class rdf:about="http://id.who.int/icd/entity/1896301954">
@@ -1622,31 +1479,6 @@ Generic qualifier with the negative scale, used to indicate the extent or an imp
         <obo:IAO_0000115 xml:lang="en">Using the sense of hearing intentionally to experience auditory stimuli, such as listening to a radio, to the human voice, to music, to a lecture, or to a story told.</obo:IAO_0000115>
         <rdfs:label xml:lang="en">Listening</rdfs:label>
     </owl:Class>
-    
-
-
-    <!-- http://id.who.int/icd/entity/191030643 -->
-
-    <owl:Class rdf:about="http://id.who.int/icd/entity/191030643">
-        <rdfs:subClassOf rdf:resource="http://id.who.int/icd/entity/1314143106"/>
-        <schema1:browserUrl rdf:resource="https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F191030643"/>
-        <schema1:exclusion xml:lang="en">Carrying, moving and handling objects</schema1:exclusion>
-        <schema1:exclusion xml:lang="en">Play</schema1:exclusion>
-        <obo:IAO_0000115 xml:lang="en">Learning through simple actions on a single object, two or more objects, relating symbolically to objects, pretending or substituting, such as in banging blocks, playing with dolls or cars, and role playing.</obo:IAO_0000115>
-        <rdfs:label xml:lang="en">Learning through actions with objects and persons</rdfs:label>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://id.who.int/icd/entity/191030643"/>
-        <owl:annotatedProperty rdf:resource="http://id.who.int/icd/schema/exclusion"/>
-        <owl:annotatedTarget xml:lang="en">Carrying, moving and handling objects</owl:annotatedTarget>
-        <schema1:foundationReference rdf:resource="http://id.who.int/icd/entity/2086581809"/>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://id.who.int/icd/entity/191030643"/>
-        <owl:annotatedProperty rdf:resource="http://id.who.int/icd/schema/exclusion"/>
-        <owl:annotatedTarget xml:lang="en">Play</owl:annotatedTarget>
-        <schema1:foundationReference rdf:resource="http://id.who.int/icd/entity/216760602"/>
-    </owl:Axiom>
     
 
 
@@ -1700,35 +1532,6 @@ Generic qualifier with the negative scale, used to indicate the extent or an imp
     
 
 
-    <!-- http://id.who.int/icd/entity/194413877 -->
-
-    <owl:Class rdf:about="http://id.who.int/icd/entity/194413877">
-        <rdfs:subClassOf rdf:resource="http://id.who.int/icd/entity/1014916094"/>
-        <schema1:browserUrl rdf:resource="https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F194413877"/>
-        <obo:IAO_0000115 xml:lang="en">Intentionally focusing on specific stimuli, such as by filtering out distracting noises.</obo:IAO_0000115>
-        <rdfs:label xml:lang="en">Focusing attention</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://id.who.int/icd/entity/1967923182 -->
-
-    <owl:Class rdf:about="http://id.who.int/icd/entity/1967923182">
-        <rdfs:subClassOf rdf:resource="http://id.who.int/icd/entity/1014916094"/>
-        <schema1:browserUrl rdf:resource="https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F1967923182"/>
-        <schema1:exclusion xml:lang="en">Learning to write</schema1:exclusion>
-        <obo:IAO_0000115 xml:lang="en">Using or producing symbols or language to convey information, such as producing a written record of events or ideas or drafting a letter.</obo:IAO_0000115>
-        <rdfs:label xml:lang="en">Writing</rdfs:label>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://id.who.int/icd/entity/1967923182"/>
-        <owl:annotatedProperty rdf:resource="http://id.who.int/icd/schema/exclusion"/>
-        <owl:annotatedTarget xml:lang="en">Learning to write</owl:annotatedTarget>
-        <schema1:foundationReference rdf:resource="http://id.who.int/icd/entity/1725645062"/>
-    </owl:Axiom>
-    
-
-
     <!-- http://id.who.int/icd/entity/1976873960 -->
 
     <owl:Class rdf:about="http://id.who.int/icd/entity/1976873960">
@@ -1777,7 +1580,6 @@ Generic qualifier with the negative scale, used to indicate the extent or an imp
     <!-- http://id.who.int/icd/entity/2011053685 -->
 
     <owl:Class rdf:about="http://id.who.int/icd/entity/2011053685">
-        <rdfs:subClassOf rdf:resource="http://id.who.int/icd/entity/1394728112"/>
         <schema1:browserUrl rdf:resource="https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F2011053685"/>
         <obo:IAO_0000115 xml:lang="en">This chapter is about learning, applying the knowledge that is learned, thinking, solving problems, and making decisions.</obo:IAO_0000115>
         <rdfs:label xml:lang="en">Learning and applying knowledge</rdfs:label>
@@ -1835,39 +1637,9 @@ Generic qualifier with the negative scale, used to indicate the extent or an imp
     
 
 
-    <!-- http://id.who.int/icd/entity/2036850613 -->
-
-    <owl:Class rdf:about="http://id.who.int/icd/entity/2036850613">
-        <rdfs:subClassOf rdf:resource="http://id.who.int/icd/entity/1014916094"/>
-        <schema1:browserUrl rdf:resource="https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F2036850613"/>
-        <schema1:exclusion xml:lang="en">Learning to read</schema1:exclusion>
-        <obo:IAO_0000115 xml:lang="en">Performing activities involved in the comprehension and interpretation of written language (e.g. books, instructions or newspapers in text or Braille), for the purpose of obtaining general knowledge or specific information.</obo:IAO_0000115>
-        <rdfs:label xml:lang="en">Reading</rdfs:label>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://id.who.int/icd/entity/2036850613"/>
-        <owl:annotatedProperty rdf:resource="http://id.who.int/icd/schema/exclusion"/>
-        <owl:annotatedTarget xml:lang="en">Learning to read</owl:annotatedTarget>
-        <schema1:foundationReference rdf:resource="http://id.who.int/icd/entity/760395462"/>
-    </owl:Axiom>
-    
-
-
-    <!-- http://id.who.int/icd/entity/2039726067 -->
-
-    <owl:Class rdf:about="http://id.who.int/icd/entity/2039726067">
-        <rdfs:subClassOf rdf:resource="http://id.who.int/icd/entity/1314143106"/>
-        <schema1:browserUrl rdf:resource="https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F2039726067"/>
-        <obo:IAO_0000115 xml:lang="en">Developing competence to understand and use basic and complex concepts related to characteristics, properties and features defining things, persons or events.</obo:IAO_0000115>
-        <rdfs:label xml:lang="en">Acquiring concepts</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- http://id.who.int/icd/entity/2048203604 -->
 
     <owl:Class rdf:about="http://id.who.int/icd/entity/2048203604">
-        <rdfs:subClassOf rdf:resource="http://id.who.int/icd/entity/1394728112"/>
         <schema1:browserUrl rdf:resource="https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F2048203604"/>
         <obo:IAO_0000115 xml:lang="en">This chapter is about moving by changing body position or location or by transferring from one place to another, by carrying, moving or manipulating objects, by walking, running or climbing, and by using various forms of transportation.</obo:IAO_0000115>
         <rdfs:label xml:lang="en">Mobility</rdfs:label>
@@ -1984,16 +1756,6 @@ Generic qualifier with the negative scale, used to indicate the extent or an imp
         <schema1:browserUrl rdf:resource="https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F2100545361"/>
         <obo:IAO_0000115 xml:lang="en">Functions related to the number of times the heart contracts every minute.</obo:IAO_0000115>
         <rdfs:label xml:lang="en">Heart rate</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://id.who.int/icd/entity/2102716148 -->
-
-    <owl:Class rdf:about="http://id.who.int/icd/entity/2102716148">
-        <rdfs:subClassOf rdf:resource="http://id.who.int/icd/entity/634949825"/>
-        <schema1:browserUrl rdf:resource="https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F2102716148"/>
-        <rdfs:label xml:lang="en">Structure of brain stem</rdfs:label>
     </owl:Class>
     
 
@@ -2193,31 +1955,6 @@ Generic qualifier with the negative scale, used to indicate the extent or an imp
     
 
 
-    <!-- http://id.who.int/icd/entity/278208942 -->
-
-    <owl:Class rdf:about="http://id.who.int/icd/entity/278208942">
-        <rdfs:subClassOf rdf:resource="http://id.who.int/icd/entity/1014916094"/>
-        <schema1:browserUrl rdf:resource="https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F278208942"/>
-        <schema1:exclusion xml:lang="en">Solving problems</schema1:exclusion>
-        <schema1:exclusion xml:lang="en">Thinking</schema1:exclusion>
-        <obo:IAO_0000115 xml:lang="en">Making a choice among options, implementing the choice, and evaluating the effects of the choice, such as selecting and purchasing a specific item, or deciding to undertake and undertaking one task from among several tasks that need to be done.</obo:IAO_0000115>
-        <rdfs:label xml:lang="en">Making decisions</rdfs:label>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://id.who.int/icd/entity/278208942"/>
-        <owl:annotatedProperty rdf:resource="http://id.who.int/icd/schema/exclusion"/>
-        <owl:annotatedTarget xml:lang="en">Solving problems</owl:annotatedTarget>
-        <schema1:foundationReference rdf:resource="http://id.who.int/icd/entity/126518990"/>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://id.who.int/icd/entity/278208942"/>
-        <owl:annotatedProperty rdf:resource="http://id.who.int/icd/schema/exclusion"/>
-        <owl:annotatedTarget xml:lang="en">Thinking</owl:annotatedTarget>
-        <schema1:foundationReference rdf:resource="http://id.who.int/icd/entity/854468725"/>
-    </owl:Axiom>
-    
-
-
     <!-- http://id.who.int/icd/entity/278512890 -->
 
     <owl:Class rdf:about="http://id.who.int/icd/entity/278512890">
@@ -2245,16 +1982,6 @@ Generic qualifier with the negative scale, used to indicate the extent or an imp
         <schema1:browserUrl rdf:resource="https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F299098423"/>
         <obo:IAO_0000115 xml:lang="en">Sensation of unpleasant feeling indicating potential or actual damage to some body structure felt in the head and neck.</obo:IAO_0000115>
         <rdfs:label xml:lang="en">Pain in head and neck</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://id.who.int/icd/entity/301607848 -->
-
-    <owl:Class rdf:about="http://id.who.int/icd/entity/301607848">
-        <rdfs:subClassOf rdf:resource="http://id.who.int/icd/entity/834607195"/>
-        <schema1:browserUrl rdf:resource="https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F301607848"/>
-        <rdfs:label xml:lang="en">Ventricles</rdfs:label>
     </owl:Class>
     
 
@@ -2422,17 +2149,6 @@ Generic qualifier with the negative scale, used to indicate the extent or an imp
         <owl:annotatedTarget xml:lang="en">Singing</owl:annotatedTarget>
         <schema1:foundationReference rdf:resource="http://id.who.int/icd/entity/659555166"/>
     </owl:Axiom>
-    
-
-
-    <!-- http://id.who.int/icd/entity/402775005 -->
-
-    <owl:Class rdf:about="http://id.who.int/icd/entity/402775005">
-        <rdfs:subClassOf rdf:resource="http://id.who.int/icd/entity/1314143106"/>
-        <schema1:browserUrl rdf:resource="https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F402775005"/>
-        <obo:IAO_0000115 xml:lang="en">Developing basic and complex competencies in integrated sets of actions or tasks so as to initiate and follow through with the acquisition of a skill, such as manipulating tools or toys or playing games.</obo:IAO_0000115>
-        <rdfs:label xml:lang="en">Acquiring skills</rdfs:label>
-    </owl:Class>
     
 
 
@@ -2621,7 +2337,6 @@ Generic qualifier with the negative scale, used to indicate the extent or an imp
     <!-- http://id.who.int/icd/entity/524305529 -->
 
     <owl:Class rdf:about="http://id.who.int/icd/entity/524305529">
-        <rdfs:subClassOf rdf:resource="http://id.who.int/icd/entity/1394728112"/>
         <schema1:browserUrl rdf:resource="https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F524305529"/>
         <obo:IAO_0000115 xml:lang="en">This chapter is about carrying out the tasks and actions required to engage in education, work and employment and to conduct economic transactions.</obo:IAO_0000115>
         <rdfs:label xml:lang="en">Major life areas</rdfs:label>
@@ -3068,17 +2783,6 @@ For a further explanation of coding conventions in ICF, refer to Annex 2.</obo:I
     
 
 
-    <!-- http://id.who.int/icd/entity/760395462 -->
-
-    <owl:Class rdf:about="http://id.who.int/icd/entity/760395462">
-        <rdfs:subClassOf rdf:resource="http://id.who.int/icd/entity/1314143106"/>
-        <schema1:browserUrl rdf:resource="https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F760395462"/>
-        <obo:IAO_0000115 xml:lang="en">Developing the competence to read written material (including Braille and other symbols) with fluency and accuracy, such as recognizing characters and alphabet letters, sounding out written words with correct pronunciation, and understanding written words and phrases.</obo:IAO_0000115>
-        <rdfs:label xml:lang="en">Learning to read</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- http://id.who.int/icd/entity/773343048 -->
 
     <owl:Class rdf:about="http://id.who.int/icd/entity/773343048">
@@ -3189,31 +2893,6 @@ For a further explanation of coding conventions in ICF, refer to Annex 2.</obo:I
     
 
 
-    <!-- http://id.who.int/icd/entity/854468725 -->
-
-    <owl:Class rdf:about="http://id.who.int/icd/entity/854468725">
-        <rdfs:subClassOf rdf:resource="http://id.who.int/icd/entity/1014916094"/>
-        <schema1:browserUrl rdf:resource="https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F854468725"/>
-        <schema1:exclusion xml:lang="en">Making decisions</schema1:exclusion>
-        <schema1:exclusion xml:lang="en">Solving problems</schema1:exclusion>
-        <obo:IAO_0000115 xml:lang="en">Formulating and manipulating ideas, concepts, and images, whether goal-oriented or not, either alone or with others, such as creating fiction, proving a theorem, playing with ideas, brainstorming, meditating, pondering, speculating, or reflecting.</obo:IAO_0000115>
-        <rdfs:label xml:lang="en">Thinking</rdfs:label>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://id.who.int/icd/entity/854468725"/>
-        <owl:annotatedProperty rdf:resource="http://id.who.int/icd/schema/exclusion"/>
-        <owl:annotatedTarget xml:lang="en">Making decisions</owl:annotatedTarget>
-        <schema1:foundationReference rdf:resource="http://id.who.int/icd/entity/278208942"/>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://id.who.int/icd/entity/854468725"/>
-        <owl:annotatedProperty rdf:resource="http://id.who.int/icd/schema/exclusion"/>
-        <owl:annotatedTarget xml:lang="en">Solving problems</owl:annotatedTarget>
-        <schema1:foundationReference rdf:resource="http://id.who.int/icd/entity/126518990"/>
-    </owl:Axiom>
-    
-
-
     <!-- http://id.who.int/icd/entity/855039967 -->
 
     <owl:Class rdf:about="http://id.who.int/icd/entity/855039967">
@@ -3223,17 +2902,6 @@ For a further explanation of coding conventions in ICF, refer to Annex 2.</obo:I
         <schema1:inclusion xml:lang="en">getting into a sitting position with feet supported or unsupported</schema1:inclusion>
         <obo:IAO_0000115 xml:lang="en">Getting into and out of a seated position and changing body position from sitting down to any other position, such as standing up or lying down.</obo:IAO_0000115>
         <rdfs:label xml:lang="en">Sitting</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://id.who.int/icd/entity/858957383 -->
-
-    <owl:Class rdf:about="http://id.who.int/icd/entity/858957383">
-        <rdfs:subClassOf rdf:resource="http://id.who.int/icd/entity/1967923182"/>
-        <schema1:browserUrl rdf:resource="https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F858957383"/>
-        <obo:IAO_0000115 xml:lang="en">Applying words which convey appropriate meaning, employing conventional sentence structure.</obo:IAO_0000115>
-        <rdfs:label xml:lang="en">Using general skills and strategies of the writing process</rdfs:label>
     </owl:Class>
     
 
@@ -3279,12 +2947,6 @@ For a further explanation of coding conventions in ICF, refer to Annex 2.</obo:I
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://id.who.int/icd/entity/862066979"/>
         <owl:annotatedProperty rdf:resource="http://id.who.int/icd/schema/exclusion"/>
-        <owl:annotatedTarget xml:lang="en">General metabolic functions</owl:annotatedTarget>
-        <schema1:foundationReference rdf:resource="http://id.who.int/icd/entity/41561686"/>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://id.who.int/icd/entity/862066979"/>
-        <owl:annotatedProperty rdf:resource="http://id.who.int/icd/schema/exclusion"/>
         <owl:annotatedTarget xml:lang="en">Assimilation functions</owl:annotatedTarget>
         <schema1:foundationReference rdf:resource="http://id.who.int/icd/entity/1303938042"/>
     </owl:Axiom>
@@ -3293,6 +2955,12 @@ For a further explanation of coding conventions in ICF, refer to Annex 2.</obo:I
         <owl:annotatedProperty rdf:resource="http://id.who.int/icd/schema/exclusion"/>
         <owl:annotatedTarget xml:lang="en">Endocrine gland functions</owl:annotatedTarget>
         <schema1:foundationReference rdf:resource="http://id.who.int/icd/entity/925451085"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://id.who.int/icd/entity/862066979"/>
+        <owl:annotatedProperty rdf:resource="http://id.who.int/icd/schema/exclusion"/>
+        <owl:annotatedTarget xml:lang="en">General metabolic functions</owl:annotatedTarget>
+        <schema1:foundationReference rdf:resource="http://id.who.int/icd/entity/41561686"/>
     </owl:Axiom>
     
 
@@ -3475,6 +3143,18 @@ For a further explanation of coding conventions in ICF, refer to Annex 2.</obo:I
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://id.who.int/icd/entity/925451085"/>
         <owl:annotatedProperty rdf:resource="http://id.who.int/icd/schema/exclusion"/>
+        <owl:annotatedTarget xml:lang="en">Thermoregulatory functions</owl:annotatedTarget>
+        <schema1:foundationReference rdf:resource="http://id.who.int/icd/entity/2090906765"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://id.who.int/icd/entity/925451085"/>
+        <owl:annotatedProperty rdf:resource="http://id.who.int/icd/schema/exclusion"/>
+        <owl:annotatedTarget xml:lang="en">Water, mineral and electrolyte balance functions</owl:annotatedTarget>
+        <schema1:foundationReference rdf:resource="http://id.who.int/icd/entity/1240717718"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://id.who.int/icd/entity/925451085"/>
+        <owl:annotatedProperty rdf:resource="http://id.who.int/icd/schema/exclusion"/>
         <owl:annotatedTarget xml:lang="en">General metabolic functions</owl:annotatedTarget>
         <schema1:foundationReference rdf:resource="http://id.who.int/icd/entity/41561686"/>
     </owl:Axiom>
@@ -3489,18 +3169,6 @@ For a further explanation of coding conventions in ICF, refer to Annex 2.</obo:I
         <owl:annotatedProperty rdf:resource="http://id.who.int/icd/schema/exclusion"/>
         <owl:annotatedTarget xml:lang="en">Sexual functions</owl:annotatedTarget>
         <schema1:foundationReference rdf:resource="http://id.who.int/icd/entity/1847835424"/>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://id.who.int/icd/entity/925451085"/>
-        <owl:annotatedProperty rdf:resource="http://id.who.int/icd/schema/exclusion"/>
-        <owl:annotatedTarget xml:lang="en">Thermoregulatory functions</owl:annotatedTarget>
-        <schema1:foundationReference rdf:resource="http://id.who.int/icd/entity/2090906765"/>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://id.who.int/icd/entity/925451085"/>
-        <owl:annotatedProperty rdf:resource="http://id.who.int/icd/schema/exclusion"/>
-        <owl:annotatedTarget xml:lang="en">Water, mineral and electrolyte balance functions</owl:annotatedTarget>
-        <schema1:foundationReference rdf:resource="http://id.who.int/icd/entity/1240717718"/>
     </owl:Axiom>
     
 
@@ -3518,7 +3186,6 @@ For a further explanation of coding conventions in ICF, refer to Annex 2.</obo:I
     <!-- http://id.who.int/icd/entity/982325691 -->
 
     <owl:Class rdf:about="http://id.who.int/icd/entity/982325691">
-        <rdfs:subClassOf rdf:resource="http://id.who.int/icd/entity/1394728112"/>
         <schema1:browserUrl rdf:resource="https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F982325691"/>
         <obo:IAO_0000115 xml:lang="en">This chapter is about carrying out the actions and tasks required for basic and complex interactions with people (strangers, friends, relatives, family members and lovers) in a contextually and socially appropriate manner.</obo:IAO_0000115>
         <rdfs:label xml:lang="en">Interpersonal interactions and relationships</rdfs:label>
