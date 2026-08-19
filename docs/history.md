@@ -49,11 +49,3 @@ This work has been supported by the PROMOT project. It has received funding from
 The [EJP RD initiative](https://www.ejprarediseases.org/) has received funding from the European Union’s Horizon 2020 research and innovation programme under grant agreement N°825575.
 
 [![EJP RD official logo](https://github.com/JuPoIm/promot/blob/test/site/assets/images/EJP-RD-1024x226.png)](https://www.ejprarediseases.org/)
-
-<img src="https://github.com/JuPoIm/promot/blob/test/site/assets/images/logo_imagine.png" height=150 width=250/>
-
-[![University of Sherbrooke official logo](https://github.com/JuPoIm/promot/blob/test/site/assets/images/logo_sherbrooke.png)](https://www.usherbrooke.ca/)
-
-[![CIHR official logo](https://github.com/JuPoIm/promot/blob/test/site/assets/images/IRSC_CIHR.avif)](https://cihr-irsc.gc.ca/e/193.html)
-
-[![ANR official logo](https://github.com/JuPoIm/promot/blob/test/site/assets/images/anr-logo-2021.avif)](https://anr.fr/)

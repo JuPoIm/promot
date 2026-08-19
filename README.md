@@ -11,9 +11,9 @@
 The PROMOT ontology was built in the context of the "Performing a Rare Disease-Oriented Master Observational Trial" initiative (PROMOT initiative).
 
 This ontology represents the 3 groups of neuromuscular diseases and the 13 genes the PROMOT Master Observational Trial focuses on :
-* [Oculopharyngeal Muscular Dystrophy](https://www.orpha.net/en/disease/detail/270?name=Oculopharyngeal%20Muscular%20Dystrophy&mode=name) (PABPN1)
-* [Congenital Myasthenic Syndromes](https://www.orpha.net/en/disease/detail/590?name=Congenital%20myasthenic%20syndromes&mode=name) (CHRNE, DOK7, COLQ, RAPSN, GFPT1, GMPPB)
-* [Congenital Myopathies](https://www.orpha.net/en/disease/detail/97245?name=Congenital%20Myopathy&mode=name) (RYR1, TTN, NEB, MTM1, ACTA1, SELENON)
+* [Oculopharyngeal Muscular Dystrophy](https://www.orpha.net/en/disease/detail/270?name=Oculopharyngeal%20Muscular%20Dystrophy&mode=name) (_PABPN1_)
+* [Congenital Myasthenic Syndromes](https://www.orpha.net/en/disease/detail/590?name=Congenital%20myasthenic%20syndromes&mode=name) (_CHRNE_, _DOK7_, _COLQ_, _RAPSN_, _GFPT1_, _GMPPB_)
+* [Congenital Myopathies](https://www.orpha.net/en/disease/detail/97245?name=Congenital%20Myopathy&mode=name) (_RYR1_, _TTN_, _NEB_, _MTM1_, _ACTA1_, _SELENON_)
 
 This ontology aims to be the conceptual schema for the common data model the PROMOT initiative will use to collect patient data scattered between the different sites involved in PROMOT initiative.
 
@@ -57,18 +57,19 @@ Editors of this ontology should use the edit version, [src/ontology/promot-edit.
 * Carole Faviez PhD, research engineer (Imagine Institute, Paris, France)
 * Elizabeth Angelevski DC, project manager (University of Sherbrooke, Québec CA)
 * Mansoore Gholizade MD (University of Sherbrooke, Québec CA)
-* Daniel Natera-de Benito MD, PhD (Hospital Sant Joan de Déu, Barcelona, Spain)
 * Claudia Côté RD, PhD (University of Sherbrooke, Québec CA)
+* Daniel Natera-de Benito MD, PhD (Hospital Sant Joan de Déu, Barcelona, Spain)
+* Silvia Cerezo Corredera MD (Hospital Sant Joan de Déu, Barcelona, Spain)
 * Hanns Lochmüller MD (University of Ottawa, Children's Hospital of Eastern Ontario, Ontario CA)
+* Rachel Thompson PhD (Children's Hospital of Eastern Ontario)
+* Fien Oelbrandt MD (Children's Hospital of Eastern Ontario)
 * Alexandre Girard (University of Sherbrooke, Québec CA)
 * Xuanning Yang, medical student (University of Sherbrooke, Québec CA)
 
 ### Acknowledgements
 * Marc Vincent PhD (Imagine Institute)
 * Thomas Bongibault MSc (Imagine Institute)
-* Rachel Thompson PhD (Children's Hospital of Eastern Ontario)
 * Christina Khnaisser PhD (University of Sherbrooke, Québec CA)
-* Silvia Cerezo Corredera MD (Hospital Sant Joan de Déu, Barcelona, Spain)
 
 ## How to cite
 
