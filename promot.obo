@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: promot/releases/2026-08-17/promot-en.owl
+data-version: promot/releases/2026-08-17/promot.owl
 date: 17:08:2026 15:56
 subsetdef: hposlim_core ""
 subsetdef: http://purl.obolibrary.org/obo/valid_for_go_annotation_extension ""
@@ -148,7 +148,7 @@ idspace: swrla http://swrl.stanford.edu/ontologies/3.3/swrla.owl#
 idspace: swrlb http://www.w3.org/2003/11/swrlb# 
 idspace: void http://rdfs.org/ns/void# 
 remark: Additional acknowledgements:\n	- Thomas Bongibault MSc, Imagine Institute\n	- Silvia Cerezo Corredera MD, Hospital Sant Joan de Déu, https://orcid.org/0000-0002-3391-9772\n	- Christina Khnaisser PhD, University of Sherbrooke, https://orcid.org/0000-0002-1186-0300\n	- Fien Oelbrandt MD, Children's Hospital of Eastern Ontario, https://orcid.org/0009-0009-2848-7993\n	- Rachel Thompson PhD, Children's Hospital of Eastern Ontario, https://orcid.org/0000-0002-6889-0121\n	- Marc Vincent PhD, Imagine Institute, https://orcid.org/0000-0001-6921-8161
-ontology: promot/promot-en
+ontology: promot/promot
 property_value: dc11:contributor "Alexandre Girard\nUniversity of Sherbrooke" xsd:string
 property_value: dc11:contributor "Anita Burgun MD, PhD\nAssistance publique - Hôpitaux de Paris, Imagine Institute, Université Paris Cité\nhttps://orcid.org/0000-0001-6855-4366" xsd:string
 property_value: dc11:contributor "Carole Faviez PhD\nImagine Institute\nhttps://orcid.org/0000-0002-1500-0236" xsd:string
@@ -1586,7 +1586,7 @@ is_a: PROMOT:0020003 ! Body structure related anatomical entity
 relationship: RO:0000091 HP:0001638 ! has disposition Cardiomyopathy
 relationship: RO:0000091 HP:0001713 ! has disposition Abnormal cardiac ventricle morphology
 relationship: RO:0000091 HP:0030872 ! has disposition Abnormal cardiac ventricular function
-relationship: RO:0001025 ICF:834607195 ! located in Heart (Body structure)
+relationship: RO:0001025 ICF:834607195 ! located in Heart
 property_value: fma:definition "Organ with cavitated organ parts, each instance of which is continuous with some systemic and pulmonary arterial and venous trees. Examples: There is only one heart." xsd:string
 property_value: fma:FMAID "7088" xsd:integer
 property_value: fma:non-English_equivalent "Coeur" xsd:string {fma:Date_entered_modified="Thu May 12 14:24:34 GMT-08:00 2005", fma:author="JOSE MEJINO, MD", fma:authority="Robert Baud, PhD", fma:authority="Rosse MD", fma:language="French"}
@@ -8312,7 +8312,7 @@ name: Walking
 name: Walking on different surfaces
 def: "Moving along a surface on foot, step by step, so that one foot is always on the ground, such as when strolling, sauntering, walking forwards, backwards, or sideways." []
 xref: https://data.esante.gouv.fr/terminologies/icf#68663
-is_a: ICF:1334556216 ! Walking and Moving
+is_a: ICF:1334556216 ! Walking and moving
 property_value: schema:browserUrl https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F1550548595
 property_value: schema:exclusion "Moving around" xsd:string {schema:foundationReference="ICF:712447084"}
 property_value: schema:exclusion "Transferring oneself" xsd:string {schema:foundationReference="ICF:1119392889"}
@@ -8813,7 +8813,7 @@ property_value: schema:browserUrl https://icd.who.int/dev11/f/en#/http%3A%2F%2Fi
 id: ICF:1993770860
 name: Going up and down stairs
 def: "Moving upwards and downwards so that at least one foot is always on the ground such as ascending and descending stairs or curbs." []
-is_a: ICF:1334556216 ! Walking and Moving
+is_a: ICF:1334556216 ! Walking and moving
 property_value: schema:browserUrl https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F1993770860
 property_value: schema:exclusion "Climbing" xsd:string {schema:foundationReference="ICF:569279495"}
 property_value: schema:exclusion "Walking" xsd:string {schema:foundationReference="ICF:1550548595"}
@@ -9638,7 +9638,7 @@ id: ICF:712447084
 name: Moving around
 def: "Moving the whole body from one place to another by means other than walking, such as climbing over a rock or running down a street, skipping, scampering, jumping, somersaulting or running around obstacles." []
 xref: https://data.esante.gouv.fr/terminologies/icf#29521
-is_a: ICF:1334556216 ! Walking and Moving
+is_a: ICF:1334556216 ! Walking and moving
 property_value: schema:browserUrl https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F712447084
 property_value: schema:exclusion "Transferring oneself" xsd:string {schema:foundationReference="ICF:1119392889"}
 property_value: schema:exclusion "Walking" xsd:string {schema:foundationReference="ICF:1550548595"}
@@ -10988,8 +10988,8 @@ synonym: "date of informed consent" EXACT [] {NCIT:P383="SY", NCIT:P386="ICDC", 
 synonym: "date_of_informed_consent" EXACT [] {NCIT:P383="PT", NCIT:P386="ICDC", NCIT:P384="ICDC"}
 synonym: "Demographics Date of Informed Consent" EXACT [] {NCIT:P383="SY", NCIT:P384="caDSR"}
 synonym: "Informed Consent Date" EXACT [] {NCIT:P383="PT", NCIT:P384="NCI"}
-synonym: "informedConsentDate" EXACT [] {NCIT:P383="PT", NCIT:P384="BRIDG 5.3"}
 synonym: "informedConsentDate" EXACT [] {NCIT:P383="PT", NCIT:P384="BRIDG 3.0.3"}
+synonym: "informedConsentDate" EXACT [] {NCIT:P383="PT", NCIT:P384="BRIDG 5.3"}
 synonym: "RFICDAT" EXACT [] {NCIT:P383="SY", NCIT:P384="caDSR"}
 is_a: NCIT:C25164 ! Date
 relationship: RO:0002350 PROMOT:0010008 ! member of statement about a consent
@@ -12096,11 +12096,7 @@ property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 [Term]
 id: PROMOT:0020005
 name: Body function related body structure
-name: estructura corporal relacionada con la función corporal
-name: Structure anatomique nécessaire à une fonction corporelle
 def: "A body structure related to a body function such that the body structure is functionally related to the body function." []
-def: "Estructura corporal que está implicada en una función corporal." []
-def: "Une structure anatomique qui est nécessaire au fonctionnement d'une fonction organique." []
 is_a: ICF:1626363729 ! Body structures
 intersection_of: ICF:1626363729 ! Body structures
 intersection_of: RO:0002328 ICF:567313968 ! functionally related to Body functions
@@ -13183,7 +13179,7 @@ name: evaluación funcional
 name: Functional assessment
 name: évaluation fonctionnelle
 def: "An evaluation of the performance of an organ, organ system, or body part" []
-is_a: SNOMED:315306007 ! examen selon la méthode
+is_a: SNOMED:315306007 ! Examination by method
 property_value: dc11:type "procedure" xsd:string
 property_value: sct-ext:definitionStatus "Défini" xsd:string
 property_value: sct-ext:fsn "Functional assessment (procedure)" xsd:string
@@ -13691,7 +13687,7 @@ id: SNOMED:420480000
 name: dispositif anti-ptosis
 name: Ptosis crutch
 name: sostenedor de ptosis palpebral
-is_a: SNOMED:257192006 ! Aid to vision
+is_a: SNOMED:257192006 ! aide à la vision
 property_value: dc11:type "physical object" xsd:string
 property_value: sct-ext:definitionStatus "Primitif" xsd:string
 property_value: sct-ext:fsn "Ptosis crutch (physical object)" xsd:string
@@ -13803,7 +13799,7 @@ name: Eyeglasses
 name: Glasses
 name: lunettes
 name: Spectacles
-is_a: SNOMED:257192006 ! Aid to vision
+is_a: SNOMED:257192006 ! aide à la vision
 property_value: dc11:type "physical object" xsd:string
 property_value: sct-ext:definitionStatus "Primitif" xsd:string
 property_value: sct-ext:fsn "Eye glasses, device (physical object)" xsd:string
@@ -14125,7 +14121,7 @@ name: Assessment of patient reported outcome measures
 name: Assessment of PROMs (patient reported outcome measures)
 name: evaluación de indicadores de resultados informados por el paciente
 name: évaluation des PROMs
-is_a: SNOMED:315306007 ! examen selon la méthode
+is_a: SNOMED:315306007 ! Examination by method
 property_value: dc11:type "procedure" xsd:string
 property_value: sct-ext:definitionStatus "Primitif" xsd:string
 property_value: sct-ext:fsn "Assessment of patient reported outcome measures (procedure)" xsd:string

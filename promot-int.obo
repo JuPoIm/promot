@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: releases/2026-08-14
+data-version: promot/releases/2026-08-14
 date: 14:08:2026 08:47
 subsetdef: hposlim_core ""
 subsetdef: http://purl.obolibrary.org/obo/valid_for_go_annotation_extension ""
@@ -148,7 +148,7 @@ idspace: swrla http://swrl.stanford.edu/ontologies/3.3/swrla.owl#
 idspace: swrlb http://www.w3.org/2003/11/swrlb# 
 idspace: void http://rdfs.org/ns/void# 
 remark: Additional acknowledgements:\n	- Thomas Bongibault MSc, Imagine Institute\n	- Silvia Cerezo Corredera MD, Hospital Sant Joan de Déu, https://orcid.org/0000-0002-3391-9772\n	- Christina Khnaisser PhD, University of Sherbrooke, https://orcid.org/0000-0002-1186-0300\n	- Fien Oelbrandt MD, Children's Hospital of Eastern Ontario, https://orcid.org/0009-0009-2848-7993\n	- Rachel Thompson PhD, Children's Hospital of Eastern Ontario, https://orcid.org/0000-0002-6889-0121\n	- Marc Vincent PhD, Imagine Institute, https://orcid.org/0000-0001-6921-8161
-ontology: promot
+ontology: promot-int
 property_value: dc11:contributor "Alexandre Girard\nUniversity of Sherbrooke" xsd:string
 property_value: dc11:contributor "Anita Burgun MD, PhD\nAssistance publique - Hôpitaux de Paris, Imagine Institute, Université Paris Cité\nhttps://orcid.org/0000-0001-6855-4366" xsd:string
 property_value: dc11:contributor "Carole Faviez PhD\nImagine Institute\nhttps://orcid.org/0000-0002-1500-0236" xsd:string
@@ -896,7 +896,7 @@ is_a: PROMOT:0020002 ! Entité anatomique liée à un phénotype
 is_a: PROMOT:0020003 ! Body structure related anatomical entity
 is_a: PROMOT:0020004 ! Body function related anatomical entity
 relationship: RO:0000091 HP:0003694 ! has disposition Late-onset proximal muscle weakness
-relationship: RO:0000091 HP:0003731 ! has disposition Faiblesse musculaire quadricipitale
+relationship: RO:0000091 HP:0003731 ! has disposition Quadriceps muscle weakness
 relationship: RO:0000091 HP:0007340 ! has disposition Lower limb muscle weakness
 relationship: RO:0000091 HP:0009073 ! has disposition Faiblesse progressive des muscles proximaux
 relationship: RO:0001025 ICF:1794398084 ! located in Muscles of thigh
@@ -1100,7 +1100,7 @@ disjoint_from: FMA:37368 ! Muscle of free lower limb
 relationship: RO:0000091 HP:0003694 ! has disposition Late-onset proximal muscle weakness
 relationship: RO:0000091 HP:0003749 ! has disposition Debilidad muscular de cintura pélvica
 relationship: RO:0000091 HP:0007340 ! has disposition Lower limb muscle weakness
-relationship: RO:0000091 HP:0008988 ! has disposition amyotrophie de la ceinture pelvienne
+relationship: RO:0000091 HP:0008988 ! has disposition Atrofia muscular de cintura pélvica
 relationship: RO:0000091 HP:0008994 ! has disposition Proximal lower limb muscle weakness
 relationship: RO:0000091 HP:0009028 ! has disposition Generalized weakness of limb muscles
 relationship: RO:0000091 HP:0009073 ! has disposition Faiblesse progressive des muscles proximaux
@@ -1153,7 +1153,7 @@ relationship: RO:0000091 HP:0008997 ! has disposition Debilidad muscular proxima
 relationship: RO:0000091 HP:0009028 ! has disposition Generalized weakness of limb muscles
 relationship: RO:0000091 HP:0009073 ! has disposition Faiblesse progressive des muscles proximaux
 relationship: RO:0000091 HP:0030200 ! has disposition Debilidad fatigable de los músculos de las extremidades proximales
-relationship: RO:0001025 ICF:1867012554 ! located in Muscles du bras
+relationship: RO:0001025 ICF:1867012554 ! located in Muscles of upper arm
 relationship: RO:0002328 PROMOT:0032025 ! functionally related to Endurance d’un muscle du bras
 relationship: RO:0002328 PROMOT:0032061 ! functionally related to Puissance d’un muscle du bras
 property_value: fma:FMAID "37370" xsd:integer
@@ -1172,7 +1172,7 @@ relationship: RO:0000091 HP:0008959 ! has disposition Distal upper limb muscle w
 relationship: RO:0000091 HP:0009028 ! has disposition Generalized weakness of limb muscles
 relationship: RO:0000091 HP:0009063 ! has disposition Faiblesse musculaire, distale, progressive
 relationship: RO:0000091 HP:0030198 ! has disposition Fatigable weakness of distal limb muscles
-relationship: RO:0001025 ICF:294830867 ! located in Muscles de l'avant-bras
+relationship: RO:0001025 ICF:294830867 ! located in Muscles of forearm
 relationship: RO:0002328 PROMOT:0032033 ! functionally related to Endurance d’un muscle de l’avant bras
 relationship: RO:0002328 PROMOT:0032069 ! functionally related to Power of forearm muscle
 property_value: fma:FMAID "37371" xsd:integer
@@ -1191,7 +1191,7 @@ relationship: RO:0000091 HP:0008959 ! has disposition Distal upper limb muscle w
 relationship: RO:0000091 HP:0009028 ! has disposition Generalized weakness of limb muscles
 relationship: RO:0000091 HP:0009063 ! has disposition Faiblesse musculaire, distale, progressive
 relationship: RO:0000091 HP:0030198 ! has disposition Fatigable weakness of distal limb muscles
-relationship: RO:0000091 HP:0031177 ! has disposition Debilidad del flexor de los dedos
+relationship: RO:0000091 HP:0031177 ! has disposition Finger flexor weakness
 relationship: RO:0000091 HP:0033466 ! has disposition Weak grip
 relationship: RO:0001025 ICF:1233939003 ! located in Muscles de la main
 relationship: RO:0002328 PROMOT:0032034 ! functionally related to Endurance of hand muscle
@@ -1233,7 +1233,7 @@ name: Triceps brachii
 is_a: FMA:37712 ! Muscle of posterior compartment of arm
 relationship: RO:0000091 HP:0031108 ! has disposition Debilidad del tríceps
 relationship: RO:0002328 PROMOT:0032059 ! functionally related to Endurance d'un muscle triceps brachial
-relationship: RO:0002328 PROMOT:0032095 ! functionally related to Fuerza del músculo tríceps braquial
+relationship: RO:0002328 PROMOT:0032095 ! functionally related to Power of triceps brachii
 property_value: fma:FMAID "37688" xsd:integer
 property_value: fma:non-English_equivalent "Muscle triceps brachial" xsd:string {fma:Date_entered_modified="Thu May 12 14:24:39 GMT-08:00 2005", fma:author="JOSE MEJINO, MD", fma:authority="Robert Baud, PhD", fma:authority="Rosse MD", fma:language="French"}
 property_value: fma:non-English_equivalent "Musculus triceps brachii" xsd:string {fma:Date_entered_modified="Thu May 12 14:26:32 GMT-08:00 2005", fma:English_equivalent="Triceps brachii", fma:TA_ID="A04.6.02.019", fma:author="JOSE MEJINO, MD", fma:authority="Rosse MD", fma:authority="Terminologia Anatomica 1998", fma:language="Latin"}
@@ -1280,7 +1280,7 @@ name: Intrinsic muscle of hand
 is_a: FMA:37372 ! Muscle of hand
 relationship: RO:0000091 HP:0009005 ! has disposition Debilidad de los músculos intrínsecos de la mano
 relationship: RO:0002328 PROMOT:0032037 ! functionally related to Endurance d’un muscle intrinsèque de la main
-relationship: RO:0002328 PROMOT:0032073 ! functionally related to Fuerza del músculo intrínseco de la mano
+relationship: RO:0002328 PROMOT:0032073 ! functionally related to Power of intrinsic muscle of hand
 property_value: fma:FMAID "42380" xsd:integer
 property_value: fma:preferred_name "Intrinsic muscle of hand" xsd:string {fma:Date_entered_modified="Wed Jan 03 11:13:08 PST 2001", fma:author="AUGUSTO V. AGONCILLO, MD", fma:authority="Rosse MD", fma:modification="Thu Aug 19 10:33:34 PDT 1999"}
 
@@ -1505,7 +1505,7 @@ is_a: PROMOT:0020003 ! Body structure related anatomical entity
 is_a: PROMOT:0020004 ! Body function related anatomical entity
 relationship: RO:0000091 HP:0003327 ! has disposition Axial muscle weakness
 relationship: RO:0000091 HP:0009023 ! has disposition Abdominal wall muscle weakness
-relationship: RO:0000091 PROMOT:0032014 ! has disposition Dificultad para andar distancias cortas
+relationship: RO:0000091 PROMOT:0032014 ! has disposition Difficulty walking short distance
 relationship: RO:0001025 ICF:58064740 ! located in Músculos del tronco
 relationship: RO:0002328 PROMOT:0032042 ! functionally related to Resistencia del músculo del tronco
 relationship: RO:0002328 PROMOT:0032078 ! functionally related to Fuerza del músculo del tronco
@@ -1693,7 +1693,7 @@ is_a: PROMOT:0020004 ! Body function related anatomical entity
 relationship: RO:0000091 HP:0003722 ! has disposition Neck flexor weakness
 relationship: RO:0000091 HP:0030199 ! has disposition Debilidad fatigable de los músculos del cuello
 relationship: RO:0001025 ICF:1874889854 ! located in Músculos de la cabeza y de la región del cuello
-relationship: RO:0002328 PROMOT:0032043 ! functionally related to Endurance of neck muscle
+relationship: RO:0002328 PROMOT:0032043 ! functionally related to Endurance d’un muscle du cou
 relationship: RO:0002328 PROMOT:0032079 ! functionally related to Fuerza del músculo del cuello
 property_value: fma:definition "Muscle organ which is a part of the neck. Examples: platysma, sternocleidomastoid, cricothyroid muscle." xsd:string
 property_value: fma:FMAID "9617" xsd:integer
@@ -1868,7 +1868,7 @@ xref: Fyler:4493
 xref: SNOMEDCT_US:204878001
 xref: UMLS:C0010417
 is_a: HP:0000035 ! Anormalidad del testículo
-is_a: PROMOT:0032005 ! Body function related phenotype
+is_a: PROMOT:0032005 ! Phénotype lié à une fonction organique
 relationship: PROMOT:2000001 ICF:859818654 ! affects Penis, testes and scrotum development
 relationship: PROMOT:2000005 SNOMED:84100007 ! est évalué par History taking
 property_value: PROMOT:1000001 "[Congenital Myopathy HPO KB associations] Gargano MA, Matentzoglu N, Coleman B, Addo-Lartey EB, et al. The Human Phenotype Ontology in 2024: phenotypes around the world. Nucleic Acids Res. 2024 Jan 5;52(D1):D1333-D1346. doi: 10.1093/nar/gkad1005. PMID: 37953324; PMCID: PMC10767975." xsd:string
@@ -2061,7 +2061,7 @@ def: "Reduced strength of the tongue musculature, resulting in difficulties movi
 synonym: "Difficulty in lingual movements|Hypokinesia of the tongue|Lingual hypokinesia" EXACT []
 is_a: HP:0000182 ! Mouvements anormaux de la langue
 is_a: PROMOT:0032003 ! Phénotype lié à une activité
-is_a: PROMOT:0032005 ! Body function related phenotype
+is_a: PROMOT:0032005 ! Phénotype lié à une fonction organique
 relationship: PROMOT:2000001 ICF:1328675264 ! affects Comer
 relationship: PROMOT:2000001 ICF:151046878 ! affects Speaking
 relationship: PROMOT:2000001 ICF:553784299 ! affects Beber
@@ -2221,7 +2221,7 @@ synonym: "Neck muscle weakness" EXACT layperson []
 xref: UMLS:C0240479
 is_a: HP:0001324 ! Muscle weakness
 is_a: PROMOT:0032003 ! Phénotype lié à une activité
-is_a: PROMOT:0032005 ! Body function related phenotype
+is_a: PROMOT:0032005 ! Phénotype lié à une fonction organique
 relationship: PROMOT:2000001 ICF:2048203604 ! affects Mobilité
 relationship: PROMOT:2000001 PROMOT:0032079 ! affects Fuerza del músculo del cuello
 relationship: PROMOT:2000005 SNOMED:84100007 ! est évalué par History taking
@@ -2300,7 +2300,7 @@ synonym: "Oculomotor abnormalities" EXACT []
 xref: SNOMEDCT_US:103252009
 xref: UMLS:C0497202
 is_a: HP:0012373 ! Physiologie de l'oeil anormale
-is_a: PROMOT:0032005 ! Body function related phenotype
+is_a: PROMOT:0032005 ! Phénotype lié à une fonction organique
 relationship: PROMOT:2000001 ICF:1090716697 ! affects Funciones de los músculos externos del ojo
 relationship: PROMOT:2000001 PROMOT:0032065 ! affects Power of extra-ocular muscle
 relationship: PROMOT:2000005 SNOMED:84100007 ! est évalué par History taking
@@ -2343,7 +2343,7 @@ synonym: "Ptosis" EXACT []
 xref: SNOMEDCT_US:11934000
 xref: UMLS:C0005745
 is_a: HP:0012373 ! Physiologie de l'oeil anormale
-is_a: PROMOT:0032005 ! Body function related phenotype
+is_a: PROMOT:0032005 ! Phénotype lié à une fonction organique
 relationship: PROMOT:2000001 ICF:2021370201 ! affects Functions of the eyelid
 relationship: PROMOT:2000001 PROMOT:0032065 ! affects Power of extra-ocular muscle
 relationship: PROMOT:2000005 SNOMED:84100007 ! est évalué par History taking
@@ -2446,7 +2446,7 @@ synonym: "dédoublement de la vision" EXACT []
 xref: SNOMEDCT_US:24982008
 xref: UMLS:C0012569
 is_a: HP:0011514 ! Abnormality of binocular vision
-is_a: PROMOT:0032005 ! Body function related phenotype
+is_a: PROMOT:0032005 ! Phénotype lié à une fonction organique
 relationship: PROMOT:2000001 ICF:2022689055 ! affects Fonctions d'acuité visuelle
 relationship: PROMOT:2000005 SNOMED:84100007 ! est évalué par History taking
 property_value: PROMOT:1000001 "[Congenital Myasthenic syndrom HPO KB associations] Gargano MA, Matentzoglu N, Coleman B, Addo-Lartey EB, et al. The Human Phenotype Ontology in 2024: phenotypes around the world. Nucleic Acids Res. 2024 Jan 5;52(D1):D1333-D1346. doi: 10.1093/nar/gkad1005. PMID: 37953324; PMCID: PMC10767975." xsd:string
@@ -2760,7 +2760,7 @@ xref: UMLS:C3714756
 xref: UMLS:C4020876
 is_a: HP:0011446 ! Anomalie des fonctions mentales supérieures
 is_a: HP:0012759 ! Neurodevelopmental abnormality
-is_a: PROMOT:0032005 ! Body function related phenotype
+is_a: PROMOT:0032005 ! Phénotype lié à une fonction organique
 relationship: PROMOT:2000001 ICF:1525383756 ! affects Funciones intelectuales
 relationship: PROMOT:2000005 SNOMED:84100007 ! est évalué par History taking
 property_value: PROMOT:1000001 "[Congenital Myasthenic syndrom HPO KB associations] Gargano MA, Matentzoglu N, Coleman B, Addo-Lartey EB, et al. The Human Phenotype Ontology in 2024: phenotypes around the world. Nucleic Acids Res. 2024 Jan 5;52(D1):D1333-D1346. doi: 10.1093/nar/gkad1005. PMID: 37953324; PMCID: PMC10767975." xsd:string
@@ -2785,7 +2785,7 @@ xref: SNOMEDCT_US:398151007
 xref: SNOMEDCT_US:398152000
 xref: UMLS:C0026827
 is_a: HP:0003808 ! Abnormal muscle tone
-is_a: PROMOT:0032005 ! Body function related phenotype
+is_a: PROMOT:0032005 ! Phénotype lié à une fonction organique
 relationship: PROMOT:2000001 ICF:260756767 ! affects Tone of all muscles of the body
 relationship: PROMOT:2000005 SNOMED:84100007 ! est évalué par History taking
 property_value: PROMOT:1000001 "[Congenital Myasthenic syndrom HPO KB associations] Gargano MA, Matentzoglu N, Coleman B, Addo-Lartey EB, et al. The Human Phenotype Ontology in 2024: phenotypes around the world. Nucleic Acids Res. 2024 Jan 5;52(D1):D1333-D1346. doi: 10.1093/nar/gkad1005. PMID: 37953324; PMCID: PMC10767975." xsd:string
@@ -2808,9 +2808,9 @@ xref: SNOMEDCT_US:8011004
 xref: UMLS:C0013362
 is_a: HP:0002167 ! Deterioro neurológico para el habla
 is_a: PROMOT:0032003 ! Phénotype lié à une activité
-is_a: PROMOT:0032005 ! Body function related phenotype
+is_a: PROMOT:0032005 ! Phénotype lié à une fonction organique
 relationship: PROMOT:2000001 ICF:151046878 ! affects Speaking
-relationship: PROMOT:2000001 ICF:1919311435 ! affects Fonctions d'articulation
+relationship: PROMOT:2000001 ICF:1919311435 ! affects Funciones de articulación
 relationship: PROMOT:2000005 SNOMED:84100007 ! est évalué par History taking
 property_value: PROMOT:1000001 "[OPMD HPO KB associations] Gargano MA, Matentzoglu N, Coleman B, Addo-Lartey EB, et al. The Human Phenotype Ontology in 2024: phenotypes around the world. Nucleic Acids Res. 2024 Jan 5;52(D1):D1333-D1346. doi: 10.1093/nar/gkad1005. PMID: 37953324; PMCID: PMC10767975." xsd:string
 
@@ -2875,7 +2875,7 @@ relationship: PROMOT:2000001 ICF:1474003417 ! affects Mantener la posición de l
 relationship: PROMOT:2000001 ICF:1550548595 ! affects Andar
 relationship: PROMOT:2000001 ICF:1851215071 ! affects Rolling over
 relationship: PROMOT:2000001 ICF:485719194 ! affects Maintaining a standing position
-relationship: PROMOT:2000001 ICF:623565657 ! affects Permanecer sentado
+relationship: PROMOT:2000001 ICF:623565657 ! affects Rester assis
 relationship: PROMOT:2000001 ICF:855039967 ! affects Sentarse
 relationship: PROMOT:2000001 ICF:919003335 ! affects Ramper
 relationship: PROMOT:2000005 SNOMED:84100007 ! est évalué par History taking
@@ -2939,7 +2939,7 @@ xref: SNOMEDCT_US:22325002
 xref: UMLS:C0575081
 is_a: HP:0100022 ! Anomalie des mouvements
 is_a: PROMOT:0032003 ! Phénotype lié à une activité
-is_a: PROMOT:0032005 ! Body function related phenotype
+is_a: PROMOT:0032005 ! Phénotype lié à une fonction organique
 relationship: PROMOT:2000001 ICF:1328466963 ! affects Fonctions relatives au type de démarche
 relationship: PROMOT:2000001 ICF:1550548595 ! affects Andar
 relationship: PROMOT:2000005 SNOMED:84100007 ! est évalué par History taking
@@ -3135,7 +3135,7 @@ xref: SNOMEDCT_US:52781008
 xref: UMLS:C0019555
 is_a: HP:0001385 ! Dysplasie de la hanche
 is_a: HP:0002827 ! Luxation de la hanche
-is_a: PROMOT:0032005 ! Body function related phenotype
+is_a: PROMOT:0032005 ! Phénotype lié à une fonction organique
 relationship: PROMOT:2000001 ICF:1748092144 ! affects Stabilité d'une seule articulation
 relationship: PROMOT:2000005 SNOMED:84100007 ! est évalué par History taking
 property_value: PROMOT:1000001 "[Congenital Myopathy HPO KB associations] Gargano MA, Matentzoglu N, Coleman B, Addo-Lartey EB, et al. The Human Phenotype Ontology in 2024: phenotypes around the world. Nucleic Acids Res. 2024 Jan 5;52(D1):D1333-D1346. doi: 10.1093/nar/gkad1005. PMID: 37953324; PMCID: PMC10767975." xsd:string
@@ -3195,8 +3195,8 @@ synonym: "légère hypermobilité articulaire|légère hyperlaxité articulaire"
 xref: SNOMEDCT_US:298181000
 xref: UMLS:C1844820
 is_a: HP:0011729 ! Abnormality of joint mobility
-is_a: PROMOT:0032005 ! Body function related phenotype
-relationship: PROMOT:2000001 ICF:1757783224 ! affects Movilidad de varias articulaciones
+is_a: PROMOT:0032005 ! Phénotype lié à une fonction organique
+relationship: PROMOT:2000001 ICF:1757783224 ! affects Mobility of several joints
 relationship: PROMOT:2000005 SNOMED:84100007 ! est évalué par History taking
 property_value: PROMOT:1000001 "[Congenital Myopathy HPO KB associations] Gargano MA, Matentzoglu N, Coleman B, Addo-Lartey EB, et al. The Human Phenotype Ontology in 2024: phenotypes around the world. Nucleic Acids Res. 2024 Jan 5;52(D1):D1333-D1346. doi: 10.1093/nar/gkad1005. PMID: 37953324; PMCID: PMC10767975." xsd:string
 property_value: PROMOT:1000001 "[Congenital myopathy Scoping review] \"Performing a Rare Disease-Oriented Master Observational Trial\" initiative, European Joint Programme on Rare Diseases, https://www.promotinitiative.com/" xsd:string
@@ -3248,8 +3248,8 @@ synonym: "Stiff joints" EXACT layperson []
 xref: SNOMEDCT_US:84445001
 xref: UMLS:C0162298
 is_a: HP:0001376 ! Limitación de la movilidad de las articulaciones
-is_a: PROMOT:0032005 ! Body function related phenotype
-relationship: PROMOT:2000001 ICF:1757783224 ! affects Movilidad de varias articulaciones
+is_a: PROMOT:0032005 ! Phénotype lié à une fonction organique
+relationship: PROMOT:2000001 ICF:1757783224 ! affects Mobility of several joints
 property_value: PROMOT:1000001 "[Congenital Myopathy HPO KB associations] Gargano MA, Matentzoglu N, Coleman B, Addo-Lartey EB, et al. The Human Phenotype Ontology in 2024: phenotypes around the world. Nucleic Acids Res. 2024 Jan 5;52(D1):D1333-D1346. doi: 10.1093/nar/gkad1005. PMID: 37953324; PMCID: PMC10767975." xsd:string
 
 [Term]
@@ -3528,7 +3528,7 @@ xref: UMLS:C0019825
 xref: UMLS:C1854348
 is_a: HP:0001608 ! Abnormality of the voice
 is_a: PROMOT:0032003 ! Phénotype lié à une activité
-is_a: PROMOT:0032005 ! Body function related phenotype
+is_a: PROMOT:0032005 ! Phénotype lié à une fonction organique
 relationship: PROMOT:2000001 ICF:151046878 ! affects Speaking
 relationship: PROMOT:2000001 ICF:712570723 ! affects Voice functions
 relationship: PROMOT:2000005 SNOMED:84100007 ! est évalué par History taking
@@ -3557,7 +3557,7 @@ xref: UMLS:C0454555
 xref: UMLS:C0566620
 is_a: HP:0001608 ! Abnormality of the voice
 is_a: PROMOT:0032003 ! Phénotype lié à une activité
-is_a: PROMOT:0032005 ! Body function related phenotype
+is_a: PROMOT:0032005 ! Phénotype lié à une fonction organique
 relationship: PROMOT:2000001 ICF:151046878 ! affects Speaking
 relationship: PROMOT:2000001 ICF:1846694084 ! affects Qualité de la voix
 relationship: PROMOT:2000005 SNOMED:84100007 ! est évalué par History taking
@@ -3575,7 +3575,7 @@ name: Weak cry
 xref: SNOMEDCT_US:2120003
 xref: UMLS:C0234860
 is_a: HP:0025429 ! Cri anormal
-is_a: PROMOT:0032005 ! Body function related phenotype
+is_a: PROMOT:0032005 ! Phénotype lié à une fonction organique
 relationship: PROMOT:2000001 ICF:1034220517 ! affects Funciones alternativas de vocalización
 relationship: PROMOT:2000005 SNOMED:84100007 ! est évalué par History taking
 property_value: PROMOT:1000001 "[Congenital Myasthenic syndrom HPO KB associations] Gargano MA, Matentzoglu N, Coleman B, Addo-Lartey EB, et al. The Human Phenotype Ontology in 2024: phenotypes around the world. Nucleic Acids Res. 2024 Jan 5;52(D1):D1333-D1346. doi: 10.1093/nar/gkad1005. PMID: 37953324; PMCID: PMC10767975." xsd:string
@@ -3594,7 +3594,7 @@ xref: SNOMEDCT_US:47004009
 xref: UMLS:C1527344
 is_a: HP:0001608 ! Abnormality of the voice
 is_a: PROMOT:0032003 ! Phénotype lié à une activité
-is_a: PROMOT:0032005 ! Body function related phenotype
+is_a: PROMOT:0032005 ! Phénotype lié à une fonction organique
 relationship: PROMOT:2000001 ICF:1034220517 ! affects Funciones alternativas de vocalización
 relationship: PROMOT:2000001 ICF:1109440237 ! affects Vitesse de la parole
 relationship: PROMOT:2000001 ICF:1426641453 ! affects Melody of speech
@@ -3674,7 +3674,7 @@ xref: SNOMEDCT_US:13213009
 xref: UMLS:C0018798
 xref: UMLS:C0152021
 is_a: HP:0030680 ! Anormalidad de la morfología del sistema cardiovascular
-is_a: PROMOT:0032005 ! Body function related phenotype
+is_a: PROMOT:0032005 ! Phénotype lié à une fonction organique
 relationship: PROMOT:2000001 ICF:1399000785 ! affects Fuerza de contracción de los músculos ventriculares
 relationship: PROMOT:2000001 ICF:1780196241 ! affects Heart rhythm
 relationship: PROMOT:2000001 ICF:2100545361 ! affects Heart rate
@@ -3759,7 +3759,7 @@ xref: SNOMEDCT_US:205091006
 xref: UMLS:C0728829
 is_a: HP:0001760 ! Anomalie de la morphologie du pied
 is_a: PROMOT:0032003 ! Phénotype lié à une activité
-is_a: PROMOT:0032005 ! Body function related phenotype
+is_a: PROMOT:0032005 ! Phénotype lié à une fonction organique
 relationship: PROMOT:2000001 ICF:1789365017 ! affects Fuerza de músculos aislados o de grupos de músculos
 relationship: PROMOT:2000001 ICF:2048203604 ! affects Mobilité
 relationship: PROMOT:2000005 SNOMED:84100007 ! est évalué par History taking
@@ -3866,7 +3866,7 @@ xref: UMLS:C0011168
 is_a: HP:0012638 ! Anomalie de la physiologie du système nerveux
 is_a: HP:0025270 ! Anomalie de la physiologie de l'œsophage
 is_a: PROMOT:0032003 ! Phénotype lié à une activité
-is_a: PROMOT:0032005 ! Body function related phenotype
+is_a: PROMOT:0032005 ! Phénotype lié à une fonction organique
 relationship: PROMOT:2000001 ICF:1328675264 ! affects Comer
 relationship: PROMOT:2000001 ICF:553784299 ! affects Beber
 relationship: PROMOT:2000001 ICF:923782542 ! affects Déglutir
@@ -3908,7 +3908,7 @@ xref: SNOMEDCT_US:213026003
 xref: SNOMEDCT_US:405501007
 xref: UMLS:C0024591
 is_a: HP:0004370 ! Anomalía de regulación de la temperatura
-is_a: PROMOT:0032005 ! Body function related phenotype
+is_a: PROMOT:0032005 ! Phénotype lié à une fonction organique
 relationship: PROMOT:2000001 ICF:2090906765 ! affects Fonctions thermorégulatrices
 relationship: PROMOT:2000005 SNOMED:84100007 ! est évalué par History taking
 property_value: PROMOT:1000001 "[Congenital Myopathy HPO KB associations] Gargano MA, Matentzoglu N, Coleman B, Addo-Lartey EB, et al. The Human Phenotype Ontology in 2024: phenotypes around the world. Nucleic Acids Res. 2024 Jan 5;52(D1):D1333-D1346. doi: 10.1093/nar/gkad1005. PMID: 37953324; PMCID: PMC10767975." xsd:string
@@ -3927,7 +3927,7 @@ synonym: "Myopathic facial appearance" EXACT [https://orcid.org/0000-0001-5889-4
 xref: SNOMEDCT_US:26432009
 xref: UMLS:C0332615
 is_a: HP:0004673 ! Expression faciale diminuée
-is_a: PROMOT:0032005 ! Body function related phenotype
+is_a: PROMOT:0032005 ! Phénotype lié à une fonction organique
 relationship: PROMOT:2000001 PROMOT:0032066 ! affects Power of facial muscle
 relationship: PROMOT:2000005 SNOMED:84100007 ! est évalué par History taking
 property_value: PROMOT:1000001 "[Congenital Myopathy HPO KB associations] Gargano MA, Matentzoglu N, Coleman B, Addo-Lartey EB, et al. The Human Phenotype Ontology in 2024: phenotypes around the world. Nucleic Acids Res. 2024 Jan 5;52(D1):D1333-D1346. doi: 10.1093/nar/gkad1005. PMID: 37953324; PMCID: PMC10767975." xsd:string
@@ -3973,7 +3973,7 @@ xref: SNOMEDCT_US:409623005
 xref: UMLS:C0035229
 xref: UMLS:C4020855
 is_a: HP:0002795 ! Abnormal respiratory system physiology
-is_a: PROMOT:0032005 ! Body function related phenotype
+is_a: PROMOT:0032005 ! Phénotype lié à une fonction organique
 relationship: PROMOT:2000001 ICF:1360101629 ! affects Respiratory muscle functions
 relationship: PROMOT:2000001 ICF:446199613 ! affects Respiration functions
 relationship: PROMOT:2000005 SNOMED:84100007 ! est évalué par History taking
@@ -4003,7 +4003,7 @@ xref: SNOMEDCT_US:230145002
 xref: SNOMEDCT_US:267036007
 xref: UMLS:C0013404
 is_a: HP:0002793 ! Abnormal pattern of respiration
-is_a: PROMOT:0032005 ! Body function related phenotype
+is_a: PROMOT:0032005 ! Phénotype lié à une fonction organique
 relationship: PROMOT:2000001 ICF:1360101629 ! affects Respiratory muscle functions
 relationship: PROMOT:2000001 ICF:446199613 ! affects Respiration functions
 relationship: PROMOT:2000005 SNOMED:84100007 ! est évalué par History taking
@@ -4050,7 +4050,7 @@ xref: SNOMEDCT_US:1023001
 xref: SNOMEDCT_US:248583008
 xref: UMLS:C0003578
 is_a: HP:0002793 ! Abnormal pattern of respiration
-is_a: PROMOT:0032005 ! Body function related phenotype
+is_a: PROMOT:0032005 ! Phénotype lié à une fonction organique
 relationship: PROMOT:2000001 ICF:1470583183 ! affects Fonctions liées à la respiration par la bouche
 relationship: PROMOT:2000001 ICF:744367503 ! affects Fonctions du système respiratoire
 relationship: PROMOT:2000005 SNOMED:84100007 ! est évalué par History taking
@@ -4072,7 +4072,7 @@ synonym: "Imbalanced walk" EXACT layperson [https://orcid.org/0000-0001-5208-343
 synonym: "trouble de l'équilibre" EXACT []
 xref: UMLS:C1836150
 is_a: HP:0001288 ! Gait disturbance
-relationship: PROMOT:2000001 ICF:1831985718 ! affects Vestibular function of balance
+relationship: PROMOT:2000001 ICF:1831985718 ! affects Función vestibular relacionada con el equilibrio
 relationship: PROMOT:2000001 ICF:409094401 ! affects Andar sorteando obstáculos
 relationship: PROMOT:2000001 ICF:576915490 ! affects Involuntary movement reaction functions
 property_value: PROMOT:1000001 "[OPMD Clinical Registry Form] \"Performing a Rare Disease-Oriented Master Observational Trial\" initiative, European Joint Programme on Rare Diseases, https://www.promotinitiative.com/" xsd:string
@@ -4168,7 +4168,7 @@ name: Chutes fréquentes {babelon:translation_language="fr", babelon:source_valu
 name: Frequent falls
 synonym: "Frequent falls" EXACT layperson []
 xref: UMLS:C0850703
-is_a: HP:0004302 ! Déficit moteur fonctionnel
+is_a: HP:0004302 ! Problemas motores funcionales
 is_a: PROMOT:0032003 ! Phénotype lié à une activité
 relationship: PROMOT:2000001 ICF:1550548595 ! affects Andar
 relationship: PROMOT:2000005 SNOMED:84100007 ! est évalué par History taking
@@ -4205,7 +4205,7 @@ xref: UMLS:C0427065
 xref: UMLS:C1864696
 is_a: HP:0001324 ! Muscle weakness
 is_a: PROMOT:0032003 ! Phénotype lié à une activité
-is_a: PROMOT:0032005 ! Body function related phenotype
+is_a: PROMOT:0032005 ! Phénotype lié à une fonction organique
 relationship: PROMOT:2000001 ICF:1789365017 ! affects Fuerza de músculos aislados o de grupos de músculos
 relationship: PROMOT:2000001 ICF:2048203604 ! affects Mobilité
 property_value: PROMOT:1000001 "[Congenital Myasthenic syndrom HPO KB associations] Gargano MA, Matentzoglu N, Coleman B, Addo-Lartey EB, et al. The Human Phenotype Ontology in 2024: phenotypes around the world. Nucleic Acids Res. 2024 Jan 5;52(D1):D1333-D1346. doi: 10.1093/nar/gkad1005. PMID: 37953324; PMCID: PMC10767975." xsd:string
@@ -4223,7 +4223,7 @@ name: Signos bulbares {babelon:source_value="Bulbar signs", babelon:translation_
 xref: UMLS:C1856507
 is_a: HP:0012638 ! Anomalie de la physiologie du système nerveux
 is_a: PROMOT:0032003 ! Phénotype lié à une activité
-is_a: PROMOT:0032005 ! Body function related phenotype
+is_a: PROMOT:0032005 ! Phénotype lié à une fonction organique
 relationship: PROMOT:2000001 ICF:1328675264 ! affects Comer
 relationship: PROMOT:2000001 ICF:151046878 ! affects Speaking
 relationship: PROMOT:2000001 ICF:1789365017 ! affects Fuerza de músculos aislados o de grupos de músculos
@@ -4718,7 +4718,7 @@ xref: UMLS:C0541794
 xref: UMLS:C1843479
 is_a: HP:0011805 ! Anomalía de la morfología muscular
 is_a: PROMOT:0032003 ! Phénotype lié à une activité
-is_a: PROMOT:0032005 ! Body function related phenotype
+is_a: PROMOT:0032005 ! Phénotype lié à une fonction organique
 relationship: PROMOT:2000001 ICF:1789365017 ! affects Fuerza de músculos aislados o de grupos de músculos
 relationship: PROMOT:2000001 ICF:2048203604 ! affects Mobilité
 relationship: PROMOT:2000005 SNOMED:84100007 ! est évalué par History taking
@@ -4783,7 +4783,7 @@ synonym: "Abnormality of the hip bone" EXACT layperson []
 synonym: "Abnormality of the hips" EXACT layperson []
 synonym: "Abnormality of the hips" EXACT []
 xref: UMLS:C4021735
-is_a: HP:0002644 ! Abnormal pelvic girdle bone morphology
+is_a: HP:0002644 ! Anomalie morphologique de la ceinture pelvienne
 
 [Term]
 id: HP:0003306
@@ -4796,7 +4796,7 @@ synonym: "Reduced spine movement|Rigid spine" EXACT []
 synonym: "Rigid spine" EXACT []
 xref: UMLS:C1858025
 is_a: HP:0000925 ! Anomalía de la columna vertebral
-is_a: PROMOT:0032005 ! Body function related phenotype
+is_a: PROMOT:0032005 ! Phénotype lié à une fonction organique
 relationship: PROMOT:2000001 ICF:248265067 ! affects Mobility of joint functions
 relationship: PROMOT:2000001 ICF:841397411 ! affects Sensation de raideur musculaire
 relationship: PROMOT:2000005 SNOMED:84100007 ! est évalué par History taking
@@ -4857,7 +4857,7 @@ xref: UMLS:C1858127
 is_a: HP:0001324 ! Muscle weakness
 is_a: HP:0009127 ! Anomalía de la musculatura de las extremidades
 is_a: PROMOT:0032003 ! Phénotype lié à une activité
-is_a: PROMOT:0032005 ! Body function related phenotype
+is_a: PROMOT:0032005 ! Phénotype lié à une fonction organique
 relationship: PROMOT:2000001 ICF:1789365017 ! affects Fuerza de músculos aislados o de grupos de músculos
 relationship: PROMOT:2000001 ICF:2048203604 ! affects Mobilité
 property_value: PROMOT:1000001 "[Congenital Myasthenic syndrom HPO KB associations] Gargano MA, Matentzoglu N, Coleman B, Addo-Lartey EB, et al. The Human Phenotype Ontology in 2024: phenotypes around the world. Nucleic Acids Res. 2024 Jan 5;52(D1):D1333-D1346. doi: 10.1093/nar/gkad1005. PMID: 37953324; PMCID: PMC10767975." xsd:string
@@ -4895,7 +4895,7 @@ def: "Reduced strength of the axial musculature (i.e., of the muscles of the hea
 xref: UMLS:C1843697
 is_a: HP:0001324 ! Muscle weakness
 is_a: PROMOT:0032003 ! Phénotype lié à une activité
-is_a: PROMOT:0032005 ! Body function related phenotype
+is_a: PROMOT:0032005 ! Phénotype lié à une fonction organique
 relationship: PROMOT:2000001 ICF:1789365017 ! affects Fuerza de músculos aislados o de grupos de músculos
 relationship: PROMOT:2000001 ICF:2048203604 ! affects Mobilité
 relationship: PROMOT:2000001 ICF:556694745 ! affects Fuerza de los músculos del tronco
@@ -4949,8 +4949,8 @@ alt_id: HP:0009018
 alt_id: HP:0031988
 def: "Sudden and involuntary contractions of one or more muscles." [https://orcid.org/0000-0002-0736-9199]
 synonym: "crampe musculaire" EXACT []
-synonym: "Muscle cramps" EXACT []
 synonym: "Muscle cramps" EXACT plural_form []
+synonym: "Muscle cramps" EXACT []
 synonym: "Muscle spasms" EXACT plural_form []
 synonym: "Nocturnal hand and foot cramps" NARROW []
 synonym: "Nocturnal leg cramp" NARROW []
@@ -4958,7 +4958,7 @@ synonym: "Sleep-related dystonia" NARROW []
 xref: SNOMEDCT_US:55300003
 xref: UMLS:C0026821
 is_a: HP:0011804 ! Anomalía de la función muscular
-is_a: PROMOT:0032005 ! Body function related phenotype
+is_a: PROMOT:0032005 ! Phénotype lié à une fonction organique
 relationship: PROMOT:2000001 ICF:621727843 ! affects Sensation de spasme musculaire
 relationship: PROMOT:2000005 SNOMED:84100007 ! est évalué par History taking
 property_value: PROMOT:1000001 "[Congenital Myasthenic syndrom HPO KB associations] Gargano MA, Matentzoglu N, Coleman B, Addo-Lartey EB, et al. The Human Phenotype Ontology in 2024: phenotypes around the world. Nucleic Acids Res. 2024 Jan 5;52(D1):D1333-D1346. doi: 10.1093/nar/gkad1005. PMID: 37953324; PMCID: PMC10767975." xsd:string
@@ -4976,7 +4976,7 @@ synonym: "anomalie de la jonction neuro-musculaire" EXACT []
 xref: UMLS:C4020842
 xref: UMLS:C4025618
 is_a: HP:0030191 ! Transmission synaptique anormale du système nerveux périphérique
-is_a: PROMOT:0032005 ! Body function related phenotype
+is_a: PROMOT:0032005 ! Phénotype lié à une fonction organique
 relationship: PROMOT:2000001 ICF:1789365017 ! affects Fuerza de músculos aislados o de grupos de músculos
 property_value: PROMOT:1000001 "[Congenital Myasthenic syndrom HPO KB associations] Gargano MA, Matentzoglu N, Coleman B, Addo-Lartey EB, et al. The Human Phenotype Ontology in 2024: phenotypes around the world. Nucleic Acids Res. 2024 Jan 5;52(D1):D1333-D1346. doi: 10.1093/nar/gkad1005. PMID: 37953324; PMCID: PMC10767975." xsd:string
 property_value: PROMOT:1000001 "[Congenital myasthenic syndrom Scoping review] \"Performing a Rare Disease-Oriented Master Observational Trial\" initiative, European Joint Programme on Rare Diseases, https://www.promotinitiative.com/" xsd:string
@@ -5057,7 +5057,7 @@ synonym: "EMG abnormalities" EXACT []
 xref: SNOMEDCT_US:274523007
 xref: UMLS:C0476403
 is_a: HP:0011804 ! Anomalía de la función muscular
-is_a: PROMOT:0032005 ! Body function related phenotype
+is_a: PROMOT:0032005 ! Phénotype lié à une fonction organique
 relationship: PROMOT:2000001 ICF:1789365017 ! affects Fuerza de músculos aislados o de grupos de músculos
 relationship: PROMOT:2000005 SNOMED:84100007 ! est évalué par History taking
 property_value: PROMOT:1000001 "[Congenital Myopathy HPO KB associations] Gargano MA, Matentzoglu N, Coleman B, Addo-Lartey EB, et al. The Human Phenotype Ontology in 2024: phenotypes around the world. Nucleic Acids Res. 2024 Jan 5;52(D1):D1333-D1346. doi: 10.1093/nar/gkad1005. PMID: 37953324; PMCID: PMC10767975." xsd:string
@@ -5109,7 +5109,7 @@ xref: UMLS:C0947912
 is_a: HP:0001324 ! Muscle weakness
 is_a: HP:0003398 ! Abnormal synaptic transmission at the neuromuscular junction 
 relationship: PROMOT:2000001 ICF:1521707777 ! affects Endurance of muscle groups
-relationship: PROMOT:2000001 ICF:1674298945 ! affects Resistencia de todos los músculos del cuerpo
+relationship: PROMOT:2000001 ICF:1674298945 ! affects Endurance of all muscles of the body
 relationship: PROMOT:2000005 SNOMED:84100007 ! est évalué par History taking
 property_value: PROMOT:1000001 "[Congenital Myasthenic syndrom HPO KB associations] Gargano MA, Matentzoglu N, Coleman B, Addo-Lartey EB, et al. The Human Phenotype Ontology in 2024: phenotypes around the world. Nucleic Acids Res. 2024 Jan 5;52(D1):D1333-D1346. doi: 10.1093/nar/gkad1005. PMID: 37953324; PMCID: PMC10767975." xsd:string
 property_value: PROMOT:1000001 "[Congenital myasthenic syndrom Scoping review] \"Performing a Rare Disease-Oriented Master Observational Trial\" initiative, European Joint Programme on Rare Diseases, https://www.promotinitiative.com/" xsd:string
@@ -5183,7 +5183,7 @@ synonym: "difficulté à marcher et à monter les escaliers" EXACT []
 synonym: "difficulté à monter les escaliers" EXACT []
 xref: SNOMEDCT_US:282195009
 xref: UMLS:C0239067
-is_a: HP:0004302 ! Déficit moteur fonctionnel
+is_a: HP:0004302 ! Problemas motores funcionales
 is_a: PROMOT:0032003 ! Phénotype lié à une activité
 relationship: PROMOT:2000001 ICF:1993770860 ! affects Going up and down stairs
 property_value: PROMOT:1000001 "[OPMD Clinical Research Form] \"Performing a Rare Disease-Oriented Master Observational Trial\" initiative, European Joint Programme on Rare Diseases, https://www.promotinitiative.com/" xsd:string
@@ -5200,7 +5200,7 @@ synonym: "Courbature" EXACT []
 xref: SNOMEDCT_US:16046003
 xref: UMLS:C0221170
 is_a: HP:0011804 ! Anomalía de la función muscular
-is_a: PROMOT:0032005 ! Body function related phenotype
+is_a: PROMOT:0032005 ! Phénotype lié à une fonction organique
 relationship: PROMOT:2000001 ICF:841397411 ! affects Sensation de raideur musculaire
 relationship: PROMOT:2000005 SNOMED:84100007 ! est évalué par History taking
 property_value: PROMOT:1000001 "[Congenital Myopathy HPO KB associations] Gargano MA, Matentzoglu N, Coleman B, Addo-Lartey EB, et al. The Human Phenotype Ontology in 2024: phenotypes around the world. Nucleic Acids Res. 2024 Jan 5;52(D1):D1333-D1346. doi: 10.1093/nar/gkad1005. PMID: 37953324; PMCID: PMC10767975." xsd:string
@@ -5502,7 +5502,7 @@ xref: UMLS:C0587246
 is_a: HP:0001324 ! Muscle weakness
 is_a: HP:0009127 ! Anomalía de la musculatura de las extremidades
 is_a: PROMOT:0032003 ! Phénotype lié à une activité
-is_a: PROMOT:0032005 ! Body function related phenotype
+is_a: PROMOT:0032005 ! Phénotype lié à une fonction organique
 relationship: PROMOT:2000001 ICF:1789365017 ! affects Fuerza de músculos aislados o de grupos de músculos
 relationship: PROMOT:2000001 ICF:2048203604 ! affects Mobilité
 property_value: PROMOT:1000001 "[Congenital Myasthenic syndrom HPO KB associations] Gargano MA, Matentzoglu N, Coleman B, Addo-Lartey EB, et al. The Human Phenotype Ontology in 2024: phenotypes around the world. Nucleic Acids Res. 2024 Jan 5;52(D1):D1333-D1346. doi: 10.1093/nar/gkad1005. PMID: 37953324; PMCID: PMC10767975." xsd:string
@@ -5535,7 +5535,7 @@ xref: UMLS:C4072849
 is_a: HP:0000782 ! Anomalie de la scapula
 is_a: HP:0001435 ! Abnormality of the shoulder girdle musculature
 is_a: PROMOT:0032003 ! Phénotype lié à une activité
-is_a: PROMOT:0032005 ! Body function related phenotype
+is_a: PROMOT:0032005 ! Phénotype lié à une fonction organique
 relationship: PROMOT:2000001 ICF:2048203604 ! affects Mobilité
 relationship: PROMOT:2000001 PROMOT:0032051 ! affects Resistencia del músculo del hombro
 relationship: PROMOT:2000001 PROMOT:0032087 ! affects Power of shoulder muscle
@@ -5581,7 +5581,7 @@ xref: UMLS:C0221629
 xref: UMLS:C1838869
 is_a: HP:0001324 ! Muscle weakness
 is_a: PROMOT:0032003 ! Phénotype lié à une activité
-is_a: PROMOT:0032005 ! Body function related phenotype
+is_a: PROMOT:0032005 ! Phénotype lié à une fonction organique
 relationship: PROMOT:2000001 ICF:1789365017 ! affects Fuerza de músculos aislados o de grupos de músculos
 relationship: PROMOT:2000001 ICF:2048203604 ! affects Mobilité
 property_value: PROMOT:1000001 "[Congenital Myasthenic syndrom HPO KB associations] Gargano MA, Matentzoglu N, Coleman B, Addo-Lartey EB, et al. The Human Phenotype Ontology in 2024: phenotypes around the world. Nucleic Acids Res. 2024 Jan 5;52(D1):D1333-D1346. doi: 10.1093/nar/gkad1005. PMID: 37953324; PMCID: PMC10767975." xsd:string
@@ -5820,7 +5820,7 @@ xref: UMLS:C0041667
 xref: UMLS:C1262477
 xref: UMLS:C1844806
 is_a: HP:0004323 ! Anormalidad del peso corporal
-is_a: PROMOT:0032005 ! Body function related phenotype
+is_a: PROMOT:0032005 ! Phénotype lié à une fonction organique
 relationship: PROMOT:2000001 ICF:862066979 ! affects Weight maintenance functions
 property_value: dcterms:creator https://orcid.org/0000-0002-0736-9199
 property_value: dcterms:date "2008-02-27T03:22:00Z" xsd:dateTime
@@ -5835,7 +5835,7 @@ def: "Reduced function of the muscles required to generate subatmospheric pressu
 xref: UMLS:C4025347
 is_a: HP:0001324 ! Muscle weakness
 is_a: HP:0002795 ! Abnormal respiratory system physiology
-is_a: PROMOT:0032005 ! Body function related phenotype
+is_a: PROMOT:0032005 ! Phénotype lié à une fonction organique
 relationship: PROMOT:2000001 ICF:1360101629 ! affects Respiratory muscle functions
 relationship: PROMOT:2000001 ICF:1789365017 ! affects Fuerza de músculos aislados o de grupos de músculos
 relationship: PROMOT:2000001 ICF:446199613 ! affects Respiration functions
@@ -5938,7 +5938,7 @@ name: Episodios intermitentes de insuficiencia respiratoria debido a la debilida
 name: Intermittent episodes of respiratory insufficiency due to muscle weakness
 name: épisodes intermittents d'insuffisance respiratoire dûs à une faiblesse musculaire {babelon:translation_language="fr", babelon:comment="label of HP:0004889 (Intermittent episodes of respiratory insufficiency due to muscle weakness)  ; abnormality of the musculature ; abnormality of the respiratory system", babelon:source_value="Intermittent episodes of respiratory insufficiency due to muscle weakness", babelon:translation_status="OFFICIAL", babelon:source_language="en"}
 xref: UMLS:C3807025
-is_a: HP:0002747 ! Respiratory insufficiency due to muscle weakness
+is_a: HP:0002747 ! Insuffisance respiratoire due à une faiblesse musculaire
 relationship: PROMOT:2000001 ICF:1470583183 ! affects Fonctions liées à la respiration par la bouche
 property_value: PROMOT:1000001 "[Congenital myasthenic syndrom Scoping review] \"Performing a Rare Disease-Oriented Master Observational Trial\" initiative, European Joint Programme on Rare Diseases, https://www.promotinitiative.com/" xsd:string
 property_value: PROMOT:1000001 "[Congenital Myopathy HPO KB associations] Gargano MA, Matentzoglu N, Coleman B, Addo-Lartey EB, et al. The Human Phenotype Ontology in 2024: phenotypes around the world. Nucleic Acids Res. 2024 Jan 5;52(D1):D1333-D1346. doi: 10.1093/nar/gkad1005. PMID: 37953324; PMCID: PMC10767975." xsd:string
@@ -5959,7 +5959,7 @@ xref: SNOMEDCT_US:162020001
 xref: UMLS:C0239043
 is_a: HP:0031815 ! Anomalie de la physiologie buccale
 is_a: PROMOT:0032003 ! Phénotype lié à une activité
-is_a: PROMOT:0032005 ! Body function related phenotype
+is_a: PROMOT:0032005 ! Phénotype lié à une fonction organique
 relationship: PROMOT:2000001 ICF:1328675264 ! affects Comer
 relationship: PROMOT:2000001 ICF:1389818830 ! affects Chewing
 relationship: PROMOT:2000001 ICF:1789365017 ! affects Fuerza de músculos aislados o de grupos de músculos
@@ -6189,7 +6189,7 @@ xref: UMLS:C0240679
 is_a: HP:0001445 ! Anomalía de la musculatura de la cadera
 is_a: HP:0001471 ! Aplasia / hipoplasia de la musculatura de la pelvis
 is_a: PROMOT:0032003 ! Phénotype lié à une activité
-is_a: PROMOT:0032005 ! Body function related phenotype
+is_a: PROMOT:0032005 ! Phénotype lié à une fonction organique
 relationship: PROMOT:2000001 ICF:2048203604 ! affects Mobilité
 relationship: PROMOT:2000001 PROMOT:0032080 ! affects Fuerza del músculo de la cintura pélvica
 relationship: PROMOT:2000005 SNOMED:84100007 ! est évalué par History taking
@@ -6245,9 +6245,9 @@ synonym: "Intrinsic hand muscles weakness" EXACT []
 xref: UMLS:C1834536
 is_a: HP:0001421 ! Anomalía de la musculatura de la mano
 is_a: PROMOT:0032003 ! Phénotype lié à une activité
-is_a: PROMOT:0032005 ! Body function related phenotype
+is_a: PROMOT:0032005 ! Phénotype lié à une fonction organique
 relationship: PROMOT:2000001 ICF:2048203604 ! affects Mobilité
-relationship: PROMOT:2000001 PROMOT:0032073 ! affects Fuerza del músculo intrínseco de la mano
+relationship: PROMOT:2000001 PROMOT:0032073 ! affects Power of intrinsic muscle of hand
 property_value: PROMOT:1000001 "[Congenital Myasthenic syndrom HPO KB associations] Gargano MA, Matentzoglu N, Coleman B, Addo-Lartey EB, et al. The Human Phenotype Ontology in 2024: phenotypes around the world. Nucleic Acids Res. 2024 Jan 5;52(D1):D1333-D1346. doi: 10.1093/nar/gkad1005. PMID: 37953324; PMCID: PMC10767975." xsd:string
 property_value: PROMOT:1000001 "[Congenital myasthenic syndrom Scoping review] \"Performing a Rare Disease-Oriented Master Observational Trial\" initiative, European Joint Programme on Rare Diseases, https://www.promotinitiative.com/" xsd:string
 property_value: PROMOT:1000001 "[Congenital Myopathy HPO KB associations] Gargano MA, Matentzoglu N, Coleman B, Addo-Lartey EB, et al. The Human Phenotype Ontology in 2024: phenotypes around the world. Nucleic Acids Res. 2024 Jan 5;52(D1):D1333-D1346. doi: 10.1093/nar/gkad1005. PMID: 37953324; PMCID: PMC10767975." xsd:string
@@ -6270,7 +6270,7 @@ synonym: "Lax abdominal musculature" EXACT []
 xref: UMLS:C4021527
 is_a: HP:0001324 ! Muscle weakness
 is_a: PROMOT:0032003 ! Phénotype lié à une activité
-is_a: PROMOT:0032005 ! Body function related phenotype
+is_a: PROMOT:0032005 ! Phénotype lié à une fonction organique
 relationship: PROMOT:2000001 ICF:2048203604 ! affects Mobilité
 relationship: PROMOT:2000001 ICF:556694745 ! affects Fuerza de los músculos del tronco
 relationship: PROMOT:2000001 PROMOT:0032060 ! affects Puissance d’un muscle abdominal
@@ -6316,7 +6316,7 @@ synonym: "Generalised weakness of limb muscles" EXACT uk_spelling []
 xref: UMLS:C4024605
 is_a: HP:0009127 ! Anomalía de la musculatura de las extremidades
 is_a: PROMOT:0032003 ! Phénotype lié à une activité
-is_a: PROMOT:0032005 ! Body function related phenotype
+is_a: PROMOT:0032005 ! Phénotype lié à une fonction organique
 relationship: PROMOT:2000001 ICF:1789365017 ! affects Fuerza de músculos aislados o de grupos de músculos
 relationship: PROMOT:2000001 ICF:2048203604 ! affects Mobilité
 property_value: PROMOT:1000001 "[Congenital Myasthenic syndrom HPO KB associations] Gargano MA, Matentzoglu N, Coleman B, Addo-Lartey EB, et al. The Human Phenotype Ontology in 2024: phenotypes around the world. Nucleic Acids Res. 2024 Jan 5;52(D1):D1333-D1346. doi: 10.1093/nar/gkad1005. PMID: 37953324; PMCID: PMC10767975." xsd:string
@@ -6332,9 +6332,9 @@ def: "Reduced ability to run." [https://orcid.org/0000-0002-0736-9199]
 synonym: "Difficulty running" EXACT layperson []
 xref: SNOMEDCT_US:282479002
 xref: UMLS:C0560346
-is_a: HP:0004302 ! Déficit moteur fonctionnel
+is_a: HP:0004302 ! Problemas motores funcionales
 is_a: PROMOT:0032003 ! Phénotype lié à une activité
-is_a: PROMOT:0032005 ! Body function related phenotype
+is_a: PROMOT:0032005 ! Phénotype lié à une fonction organique
 relationship: PROMOT:2000001 ICF:1328466963 ! affects Fonctions relatives au type de démarche
 relationship: PROMOT:2000001 ICF:412494151 ! affects Correr
 relationship: PROMOT:2000005 SNOMED:84100007 ! est évalué par History taking
@@ -6864,7 +6864,7 @@ xref: SNOMEDCT_US:78164000
 xref: UMLS:C0232466
 is_a: HP:0011458 ! Abdominal symptom
 is_a: PROMOT:0032003 ! Phénotype lié à une activité
-is_a: PROMOT:0032005 ! Body function related phenotype
+is_a: PROMOT:0032005 ! Phénotype lié à une fonction organique
 relationship: PROMOT:2000001 ICF:1174312718 ! affects Manipulation of food in the mouth
 relationship: PROMOT:2000001 ICF:1328675264 ! affects Comer
 relationship: PROMOT:2000001 ICF:1389818830 ! affects Chewing
@@ -6962,8 +6962,8 @@ xref: SNOMEDCT_US:248274002
 xref: SNOMEDCT_US:84229001
 xref: UMLS:C0015672
 is_a: HP:0025142 ! Síntoma constitucional
-is_a: PROMOT:0032005 ! Body function related phenotype
-relationship: PROMOT:2000001 ICF:1864074583 ! affects Energy level
+is_a: PROMOT:0032005 ! Phénotype lié à une fonction organique
+relationship: PROMOT:2000001 ICF:1864074583 ! affects Niveau d'énergie
 relationship: PROMOT:2000005 SNOMED:840297006 ! est évalué par évaluation des PROMs
 property_value: dcterms:creator https://orcid.org/0000-0002-0736-9199
 property_value: dcterms:date "2013-10-15T08:52:04Z" xsd:dateTime
@@ -6988,7 +6988,7 @@ xref: UMLS:C0241423
 xref: UMLS:C0426494
 is_a: HP:0030809 ! Morfología anormal de la lengua
 is_a: PROMOT:0032003 ! Phénotype lié à une activité
-is_a: PROMOT:0032005 ! Body function related phenotype
+is_a: PROMOT:0032005 ! Phénotype lié à une fonction organique
 relationship: PROMOT:2000001 ICF:1328675264 ! affects Comer
 relationship: PROMOT:2000001 ICF:151046878 ! affects Speaking
 relationship: PROMOT:2000001 ICF:553784299 ! affects Beber
@@ -7039,7 +7039,7 @@ synonym: "Pain" EXACT layperson []
 xref: SNOMEDCT_US:22253000
 xref: UMLS:C0030193
 is_a: HP:0025142 ! Síntoma constitucional
-is_a: PROMOT:0032005 ! Body function related phenotype
+is_a: PROMOT:0032005 ! Phénotype lié à une fonction organique
 relationship: PROMOT:2000001 ICF:1065560247 ! affects Douleur à l'estomac ou dans l'abdomen
 relationship: PROMOT:2000001 ICF:117147127 ! affects Douleur dans la poitrine
 relationship: PROMOT:2000001 ICF:1299345975 ! affects Dolor en una extremidad superior
@@ -7111,7 +7111,7 @@ xref: SNOMEDCT_US:272039006
 xref: SNOMEDCT_US:49727002
 xref: UMLS:C0010200
 is_a: HP:0002795 ! Abnormal respiratory system physiology
-is_a: PROMOT:0032005 ! Body function related phenotype
+is_a: PROMOT:0032005 ! Phénotype lié à une fonction organique
 relationship: PROMOT:2000001 ICF:1083127119 ! affects funciones de toser
 relationship: PROMOT:2000005 SNOMED:12894003 ! est évalué par evaluación funcional
 property_value: dcterms:creator https://orcid.org/0000-0002-0736-9199
@@ -7590,7 +7590,7 @@ name: Fatigable weakness of neck muscles 
 def: "A type of weakness of a skeletal muscle in the neck that occurs after a muscle group is used and lessens if the muscle group has some rest. That is, there is diminution of strength with repetitive muscle actions." [HPO_CONTRIBUTOR:UK_rheller]
 xref: UMLS:C4022584
 is_a: HP:0030197 ! Faiblesse fatigable des muscles squelettiques
-relationship: PROMOT:2000001 PROMOT:0032043 ! affects Endurance of neck muscle
+relationship: PROMOT:2000001 PROMOT:0032043 ! affects Endurance d’un muscle du cou
 relationship: PROMOT:2000001 PROMOT:0032079 ! affects Fuerza del músculo del cuello
 property_value: PROMOT:1000001 "[Congenital Myasthenic syndrom HPO KB associations] Gargano MA, Matentzoglu N, Coleman B, Addo-Lartey EB, et al. The Human Phenotype Ontology in 2024: phenotypes around the world. Nucleic Acids Res. 2024 Jan 5;52(D1):D1333-D1346. doi: 10.1093/nar/gkad1005. PMID: 37953324; PMCID: PMC10767975." xsd:string
 property_value: PROMOT:1000001 "[Congenital myasthenic syndrom Scoping review] \"Performing a Rare Disease-Oriented Master Observational Trial\" initiative, European Joint Programme on Rare Diseases, https://www.promotinitiative.com/" xsd:string
@@ -7653,8 +7653,8 @@ name: EMG: aumento de la inestabilidad en una sola fibra {babelon:translation_st
 name: Increased jitter at single fiber EMG
 def: "The variation in the time interval between the two action potentials of the same motor unit is called jitter. This term therefore applies to increased variability in the interval between successive action potentials of the same motor unit, which is measured by electromyography (EMG)." [HPO_CONTRIBUTOR:UK_rheller, PMID:21654930]
 comment: Increased jitter values are not pathogonomic for myasthenia, but indicate disturbed neuromuscular transmission.
-synonym: "Increased jitter at single fibre electromyography" EXACT uk_spelling []
 synonym: "Increased jitter at single fibre electromyography" EXACT []
+synonym: "Increased jitter at single fibre electromyography" EXACT uk_spelling []
 synonym: "Increased jitter at single fibre EMG" EXACT uk_spelling []
 xref: UMLS:C4021045
 is_a: HP:0030006 ! EMG: anomalía de fibra única
@@ -7685,7 +7685,7 @@ xref: SNOMEDCT_US:298283006
 xref: UMLS:C0239831
 is_a: HP:0001421 ! Anomalía de la musculatura de la mano
 is_a: PROMOT:0032003 ! Phénotype lié à une activité
-is_a: PROMOT:0032005 ! Body function related phenotype
+is_a: PROMOT:0032005 ! Phénotype lié à une fonction organique
 relationship: PROMOT:2000001 ICF:2048203604 ! affects Mobilité
 relationship: PROMOT:2000001 PROMOT:0032070 ! affects Fuerza del músculo de la mano
 property_value: PROMOT:1000001 "[Congenital Myasthenic syndrom HPO KB associations] Gargano MA, Matentzoglu N, Coleman B, Addo-Lartey EB, et al. The Human Phenotype Ontology in 2024: phenotypes around the world. Nucleic Acids Res. 2024 Jan 5;52(D1):D1333-D1346. doi: 10.1093/nar/gkad1005. PMID: 37953324; PMCID: PMC10767975." xsd:string
@@ -7727,7 +7727,7 @@ synonym: "Weakness of facial musculature" EXACT layperson []
 xref: UMLS:C4022514
 is_a: HP:0000301 ! Anomalía de la musculatura facial
 is_a: PROMOT:0032003 ! Phénotype lié à une activité
-is_a: PROMOT:0032005 ! Body function related phenotype
+is_a: PROMOT:0032005 ! Phénotype lié à une fonction organique
 relationship: PROMOT:2000001 ICF:1328675264 ! affects Comer
 relationship: PROMOT:2000001 ICF:1580195090 ! affects Fonctions digestives
 relationship: PROMOT:2000001 PROMOT:0032066 ! affects Power of facial muscle
@@ -7819,7 +7819,7 @@ name: Función ventricular cardíaca anormal {babelon:source_value="Abnormal car
 def: "An abnormality of the cardiac ventricular function." [https://orcid.org/0000-0003-4546-6667]
 xref: UMLS:C4280733
 is_a: HP:0011025 ! Anomalie de la physiologie du système cardiovasculaire
-is_a: PROMOT:0032005 ! Body function related phenotype
+is_a: PROMOT:0032005 ! Phénotype lié à une fonction organique
 relationship: PROMOT:2000001 ICF:1399000785 ! affects Fuerza de contracción de los músculos ventriculares
 relationship: PROMOT:2000001 ICF:1780196241 ! affects Heart rhythm
 relationship: PROMOT:2000001 ICF:2100545361 ! affects Heart rate
@@ -7889,7 +7889,7 @@ name: Faiblesse du triceps {babelon:translation_language="fr", babelon:comment="
 name: Triceps weakness
 def: "A lack of strength in the triceps muscle, which normally is responsible for extending (straightening) the elbow and mediating certain shoulder movements." []
 is_a: HP:0008997 ! Debilidad muscular proximal de extremidades superiores
-relationship: PROMOT:2000001 PROMOT:0032095 ! affects Fuerza del músculo tríceps braquial
+relationship: PROMOT:2000001 PROMOT:0032095 ! affects Power of triceps brachii
 relationship: PROMOT:2000005 SNOMED:84100007 ! est évalué par History taking
 property_value: dcterms:creator https://orcid.org/0000-0002-0736-9199
 property_value: dcterms:date "2017-06-09T10:13:45Z" xsd:dateTime
@@ -7950,7 +7950,7 @@ name: Faiblesse de la cheville {babelon:translation_language="fr", babelon:sourc
 def: "Reduced strength of the muscles that lift or otherwise move the foot at the ankle." []
 is_a: HP:0001324 ! Muscle weakness
 is_a: PROMOT:0032003 ! Phénotype lié à une activité
-is_a: PROMOT:0032005 ! Body function related phenotype
+is_a: PROMOT:0032005 ! Phénotype lié à une fonction organique
 relationship: PROMOT:2000001 ICF:2048203604 ! affects Mobilité
 relationship: PROMOT:2000001 PROMOT:0032074 ! affects Puissance d’un muscle de la jambe
 relationship: PROMOT:2000005 SNOMED:12894003 ! est évalué par evaluación funcional
@@ -8025,7 +8025,7 @@ name: Reflejo anormal {babelon:source_value="Abnormal reflex", babelon:translati
 name: Réflexe anormal {babelon:translation_language="fr", babelon:comment="label of HP:0031826 (Abnormal reflex)  ; abnormality of the nervous system", babelon:source_value="Abnormal reflex", babelon:translation_status="OFFICIAL", babelon:source_language="en"}
 def: "Any anomaly of a reflex, i.e., of an automatic response mediated by the nervous system (a reflex does not need the intervention of conscious thought to occur)." []
 is_a: HP:0100022 ! Anomalie des mouvements
-is_a: PROMOT:0032005 ! Body function related phenotype
+is_a: PROMOT:0032005 ! Phénotype lié à une fonction organique
 relationship: PROMOT:2000001 ICF:1434015402 ! affects Réflexe moteur d'étirement
 relationship: PROMOT:2000005 SNOMED:84100007 ! est évalué par History taking
 property_value: dcterms:creator https://orcid.org/0000-0002-0736-9199
@@ -8073,7 +8073,7 @@ synonym: "Painful swallowing" EXACT layperson []
 synonym: "Painful swallowing" EXACT []
 is_a: HP:0012719 ! Anormalidad funcional del tracto gastrointestinal
 is_a: PROMOT:0032003 ! Phénotype lié à une activité
-is_a: PROMOT:0032005 ! Body function related phenotype
+is_a: PROMOT:0032005 ! Phénotype lié à une fonction organique
 relationship: PROMOT:2000001 ICF:1328675264 ! affects Comer
 relationship: PROMOT:2000001 ICF:299098423 ! affects Dolor en la cabeza y el cuello
 relationship: PROMOT:2000001 ICF:553784299 ! affects Beber
@@ -8153,7 +8153,7 @@ comment: The threshold for an abnormally low FVC is defined as less than the LLN
 synonym: "Decreased forced vital capacity" EXACT []
 synonym: "Reduced FVC" EXACT abbreviation []
 is_a: HP:0030878 ! Abnormality on pulmonary function testing
-is_a: PROMOT:0032005 ! Body function related phenotype
+is_a: PROMOT:0032005 ! Phénotype lié à une fonction organique
 relationship: PROMOT:2000001 ICF:1360101629 ! affects Respiratory muscle functions
 relationship: PROMOT:2000001 ICF:446199613 ! affects Respiration functions
 property_value: dcterms:creator https://orcid.org/0000-0002-0736-9199
@@ -8168,7 +8168,7 @@ name: Decreased peak expiratory flow
 name: Disminución del flujo espiratorio máximo {babelon:translation_status="OFFICIAL", babelon:source_language="en", babelon:translation_language="es", babelon:source_value="Decreased peak expiratory flow"}
 def: "A reduction in the maximum expiratory flow per minute, which can be used to measure how fast a subject can exhale as well as to judge the strength of the expiratory muscles and the condition of the large airways." [https://orcid.org/0000-0002-8169-9049, PMID:28005993]
 is_a: HP:0030878 ! Abnormality on pulmonary function testing
-is_a: PROMOT:0032005 ! Body function related phenotype
+is_a: PROMOT:0032005 ! Phénotype lié à une fonction organique
 relationship: PROMOT:2000001 ICF:1789365017 ! affects Fuerza de músculos aislados o de grupos de músculos
 relationship: PROMOT:2000001 ICF:446199613 ! affects Respiration functions
 relationship: PROMOT:2000005 SNOMED:12894003 ! est évalué par evaluación funcional
@@ -8191,7 +8191,7 @@ name: Difficulty descending stairs
 name: Dificultad para bajar escaleras {babelon:translation_status="OFFICIAL", babelon:source_value="Difficulty descending stairs", babelon:source_language="en", babelon:translation_language="es"}
 def: "Reduced ability to desscend stairs." []
 synonym: "Difficulty walking down stairs" EXACT []
-is_a: HP:0004302 ! Déficit moteur fonctionnel
+is_a: HP:0004302 ! Problemas motores funcionales
 is_a: PROMOT:0032003 ! Phénotype lié à une activité
 relationship: PROMOT:2000001 ICF:1993770860 ! affects Going up and down stairs
 property_value: dcterms:creator https://orcid.org/0000-0002-0736-9199
@@ -8410,8 +8410,8 @@ is_a: HP:0003549 ! Abnormality of connective tissue
 is_a: HP:0011729 ! Abnormality of joint mobility
 is_a: HP:0011805 ! Anomalía de la morfología muscular
 is_a: HP:0100261 ! Morphologie anormale des tendons
-is_a: PROMOT:0032005 ! Body function related phenotype
-relationship: PROMOT:2000001 ICF:1757783224 ! affects Movilidad de varias articulaciones
+is_a: PROMOT:0032005 ! Phénotype lié à une fonction organique
+relationship: PROMOT:2000001 ICF:1757783224 ! affects Mobility of several joints
 relationship: PROMOT:2000005 SNOMED:84100007 ! est évalué par History taking
 property_value: dcterms:creator https://orcid.org/0000-0002-0736-9199
 property_value: dcterms:date "2022-09-30T12:53:13Z" xsd:dateTime
@@ -8813,7 +8813,7 @@ name: Wet voice
 def: "Wet voice is a perceptual vocal quality that is gurgly or liquid sounding and is due to the voice being produced through moisture. It is commonly used as an indicator of penetration and/or aspiration in clinical swallowing assessments and bedside screening tests." [PMID:25001523]
 is_a: HP:0001608 ! Abnormality of the voice
 is_a: PROMOT:0032003 ! Phénotype lié à une activité
-is_a: PROMOT:0032005 ! Body function related phenotype
+is_a: PROMOT:0032005 ! Phénotype lié à une fonction organique
 relationship: PROMOT:2000001 ICF:151046878 ! affects Speaking
 relationship: PROMOT:2000001 ICF:1846694084 ! affects Qualité de la voix
 relationship: PROMOT:2000005 SNOMED:84100007 ! est évalué par History taking
@@ -8918,7 +8918,7 @@ name: Douleur à l'estomac ou dans l'abdomen {comment="[PROMOT note] Source for 
 name: Pain in stomach or abdomen
 def: "Sensation of unpleasant feeling indicating potential or actual damage to some body structure felt in the stomach or abdomen." []
 xref: https://data.esante.gouv.fr/terminologies/icf#74415
-is_a: ICF:577558794 ! Dolor en una parte del cuerpo
+is_a: ICF:577558794 ! Pain in body part
 relationship: PROMOT:2000006 SNOMED:84100007 ! est mesuré par History taking
 property_value: schema:browserUrl https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F1065560247
 property_value: schema:inclusion "pain in the pelvic region" xsd:string
@@ -9045,7 +9045,7 @@ name: Douleur dans la poitrine {comment="[PROMOT note] Source for official trans
 name: Pain in chest
 def: "Sensation of unpleasant feeling indicating potential or actual damage to some body structure felt in the chest." []
 xref: https://data.esante.gouv.fr/terminologies/icf#41527
-is_a: ICF:577558794 ! Dolor en una parte del cuerpo
+is_a: ICF:577558794 ! Pain in body part
 relationship: PROMOT:2000006 SNOMED:84100007 ! est mesuré par History taking
 property_value: schema:browserUrl https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F117147127
 property_value: skos:changeNote "[PROMOT note] The PROMOT ontology added a crossref to the LIRMM version of the ICF (CIF-ASIP 2020). It also added the official French and Spanish translation for labels." xsd:string
@@ -9104,7 +9104,7 @@ relationship: RO:0000091 HP:0009028 ! has disposition Generalized weakness of li
 relationship: RO:0000091 HP:0009063 ! has disposition Faiblesse musculaire, distale, progressive
 relationship: RO:0000091 HP:0009077 ! has disposition Faiblesse des muscles longs extenseurs des doigts
 relationship: RO:0000091 HP:0030198 ! has disposition Fatigable weakness of distal limb muscles
-relationship: RO:0000091 HP:0031177 ! has disposition Debilidad del flexor de los dedos
+relationship: RO:0000091 HP:0031177 ! has disposition Finger flexor weakness
 relationship: RO:0000091 HP:0033466 ! has disposition Weak grip
 relationship: RO:0002328 ICF:1521707777 ! functionally related to Endurance of muscle groups
 relationship: RO:0002328 ICF:1789365017 ! functionally related to Fuerza de músculos aislados o de grupos de músculos
@@ -9170,7 +9170,7 @@ name: Douleur au membre supérieur {comment="[PROMOT note] Source for official t
 name: Pain in upper limb
 def: "Sensation of unpleasant feeling indicating potential or actual damage to some body structure felt in either one or both upper limbs, including hands." []
 xref: https://data.esante.gouv.fr/terminologies/icf#23587
-is_a: ICF:577558794 ! Dolor en una parte del cuerpo
+is_a: ICF:577558794 ! Pain in body part
 relationship: PROMOT:2000006 SNOMED:84100007 ! est mesuré par History taking
 property_value: schema:browserUrl https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F1299345975
 property_value: skos:changeNote "[PROMOT note] The PROMOT ontology added a crossref to the LIRMM version of the ICF (CIF-ASIP 2020). It also added the official French and Spanish translation for labels." xsd:string
@@ -9330,7 +9330,7 @@ name: Articulation de la hanche (Structure anatomique)
 name: Hip joint
 name: Hip joint (Body structure)
 xref: https://data.esante.gouv.fr/terminologies/icf#23251
-is_a: ICF:435521956 ! Estructura del muslo
+is_a: ICF:435521956 ! Structure de la cuisse
 relationship: RO:0000091 HP:0001374 ! has disposition Congenital hip dislocation
 relationship: RO:0002328 ICF:1748092144 ! functionally related to Stabilité d'une seule articulation
 property_value: schema:browserUrl https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F1401748164
@@ -9515,7 +9515,7 @@ name: Douleur au membre inférieur {comment="[PROMOT note] Source for official t
 name: Pain in lower limb
 def: "Sensation of unpleasant feeling indicating potential or actual damage to some body structure felt in either one or both lower limbs, including feet." []
 xref: https://data.esante.gouv.fr/terminologies/icf#81894
-is_a: ICF:577558794 ! Dolor en una parte del cuerpo
+is_a: ICF:577558794 ! Pain in body part
 relationship: PROMOT:2000006 SNOMED:84100007 ! est mesuré par History taking
 property_value: schema:browserUrl https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F1515853559
 property_value: skos:changeNote "[PROMOT note] The PROMOT ontology added a crossref to the LIRMM version of the ICF (CIF-ASIP 2020). It also added the official French and Spanish translation for labels." xsd:string
@@ -9753,7 +9753,7 @@ name: Estructura de la boca {comment="[PROMOT note] Source for official translat
 name: Structure de la bouche {comment="[PROMOT note] Source for official translation: https://icd.who.int/browse/2026-01/icf/fr > Info > Fichier du tableur"}
 name: Structure of mouth
 xref: https://data.esante.gouv.fr/terminologies/icf#47856
-is_a: ICF:2060264919 ! Structures involved in voice and speech
+is_a: ICF:2060264919 ! Capítulo 3 estructuras involucradas en la voz y el habla
 property_value: schema:browserUrl https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F1754034822
 property_value: skos:changeNote "[PROMOT note] The PROMOT ontology added a crossref to the LIRMM version of the ICF (CIF-ASIP 2020). It also added the official French and Spanish translation for labels." xsd:string
 
@@ -9835,9 +9835,9 @@ name: Muscles de la cuisse {comment="[PROMOT note] Source for official translati
 name: Muscles of thigh
 name: Músculos del muslo {comment="[PROMOT note] Source for official translation: https://icd.who.int/browse/2026-01/icf/es > Información > Archivo de hoja de cálculo"}
 xref: https://data.esante.gouv.fr/terminologies/icf#92170
-is_a: ICF:435521956 ! Estructura del muslo
+is_a: ICF:435521956 ! Structure de la cuisse
 relationship: RO:0000091 HP:0003694 ! has disposition Late-onset proximal muscle weakness
-relationship: RO:0000091 HP:0003731 ! has disposition Faiblesse musculaire quadricipitale
+relationship: RO:0000091 HP:0003731 ! has disposition Quadriceps muscle weakness
 relationship: RO:0000091 HP:0007340 ! has disposition Lower limb muscle weakness
 relationship: RO:0000091 HP:0009028 ! has disposition Generalized weakness of limb muscles
 relationship: RO:0000091 HP:0009073 ! has disposition Faiblesse progressive des muscles proximaux
@@ -9934,7 +9934,7 @@ name: Transportation of mucus
 name: Trasportación de moco {comment="[PROMOT note] Source for official translation: https://icd.who.int/browse/2026-01/icf/es > Información > Archivo de hoja de cálculo"}
 def: "Functions of transportation of mucus of upper and lower airways." []
 xref: https://data.esante.gouv.fr/terminologies/icf#18009
-is_a: ICF:184992399 ! Fonctions liées au mucus
+is_a: ICF:184992399 ! Functions related to mucus
 relationship: PROMOT:2000006 SNOMED:84100007 ! est mesuré par History taking
 property_value: schema:browserUrl https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F1834472768
 property_value: skos:changeNote "[PROMOT note] The PROMOT ontology added a crossref to the LIRMM version of the ICF (CIF-ASIP 2020). It also added the official French and Spanish translation for labels." xsd:string
@@ -10004,7 +10004,7 @@ name: Niveau d'énergie {comment="[PROMOT note] Source for official translation:
 name: Nivel de energía {comment="[PROMOT note] Source for official translation: https://icd.who.int/browse/2026-01/icf/es > Información > Archivo de hoja de cálculo"}
 def: "Mental functions that produce vigour and stamina." []
 xref: https://data.esante.gouv.fr/terminologies/icf#1160
-is_a: ICF:723665457 ! Energy and drive functions
+is_a: ICF:723665457 ! Fonctions de l'énergie et des pulsions
 property_value: schema:browserUrl https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F1864074583
 property_value: skos:altLabel "Functions involved in energy level" xsd:string
 property_value: skos:changeNote "[PROMOT note] The PROMOT ontology added a crossref to the LIRMM version of the ICF (CIF-ASIP 2020). It also added the official French and Spanish translation for labels." xsd:string
@@ -10461,7 +10461,7 @@ name: Tono de todos los músculos del cuerpo {comment="[PROMOT note] Source for 
 name: Tonus de tous les muscles du corps {comment="[PROMOT note] Source for official translation: https://icd.who.int/browse/2026-01/icf/fr > Info > Fichier du tableur"}
 def: "Functions related to the tension present in the resting muscles and muscle groups of the whole body and the resistance offered when trying to move those muscles passively." []
 xref: https://data.esante.gouv.fr/terminologies/icf#40861
-is_a: ICF:1839310222 ! Funciones relacionadas con el tono muscular
+is_a: ICF:1839310222 ! Fonctions relatives au tonus musculaire
 relationship: PROMOT:2000006 SNOMED:84100007 ! est mesuré par History taking
 property_value: schema:browserUrl https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F260756767
 property_value: skos:altLabel "Functions involved in tone of all muscles of the body" xsd:string
@@ -10524,7 +10524,7 @@ name: Douleur à la tête et au cou {comment="[PROMOT note] Source for official 
 name: Pain in head and neck
 def: "Sensation of unpleasant feeling indicating potential or actual damage to some body structure felt in the head and neck." []
 xref: https://data.esante.gouv.fr/terminologies/icf#55346
-is_a: ICF:577558794 ! Dolor en una parte del cuerpo
+is_a: ICF:577558794 ! Pain in body part
 relationship: PROMOT:2000006 SNOMED:84100007 ! est mesuré par History taking
 property_value: schema:browserUrl https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F299098423
 property_value: skos:changeNote "[PROMOT note] The PROMOT ontology added a crossref to the LIRMM version of the ICF (CIF-ASIP 2020). It also added the official French and Spanish translation for labels." xsd:string
@@ -10623,7 +10623,7 @@ name: Estructura del sistema cardiovascular {comment="[PROMOT note] Source for o
 name: Structure of cardiovascular system
 name: Structures du système cardio-vasculaire {comment="[PROMOT note] Source for official translation: https://icd.who.int/browse/2026-01/icf/fr > Info > Fichier du tableur"}
 xref: https://data.esante.gouv.fr/terminologies/icf#21148
-is_a: ICF:521411479 ! Structures des systèmes cardio-vasculaire, immunitaire et respiratoire
+is_a: ICF:521411479 ! Structures of cardiovascular, immunological and respiratory systems
 property_value: schema:browserUrl https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F397303672
 property_value: skos:changeNote "[PROMOT note] The PROMOT ontology added a crossref to the LIRMM version of the ICF (CIF-ASIP 2020). It also added the official French and Spanish translation for labels." xsd:string
 
@@ -10650,7 +10650,7 @@ id: ICF:405925948
 name: External ocular muscles
 name: Muscles oculomoteurs {comment="[PROMOT note] Source for official translation: https://icd.who.int/browse/2026-01/icf/fr > Info > Fichier du tableur"}
 name: Músculos oculares externos {comment="[PROMOT note] Source for official translation: https://icd.who.int/browse/2026-01/icf/es > Información > Archivo de hoja de cálculo"}
-is_a: ICF:246722870 ! Structures around eye
+is_a: ICF:246722870 ! Estructuras periféricas oculares
 is_a: PROMOT:0020001 ! estructura corporal relacionada con un fenotipo
 relationship: RO:0000091 HP:0000486 ! has disposition Strabismus
 relationship: RO:0000091 HP:0000544 ! has disposition Ophtalmoplégie externe
@@ -10765,7 +10765,7 @@ relationship: RO:0000091 HP:0001382 ! has disposition Joint hypermobility
 relationship: RO:0000091 HP:0001387 ! has disposition Joint stiffness
 relationship: RO:0000091 HP:0002804 ! has disposition Arthrogryposis multiplex congenita
 relationship: RO:0000091 HP:0002828 ! has disposition Contracturas articulares múltiples
-relationship: RO:0002328 ICF:1757783224 ! functionally related to Movilidad de varias articulaciones
+relationship: RO:0002328 ICF:1757783224 ! functionally related to Mobility of several joints
 property_value: schema:browserUrl https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F462923277
 property_value: skos:changeNote "[PROMOT note] The PROMOT ontology added a crossref to the LIRMM version of the ICF (CIF-ASIP 2020). It also added the official French and Spanish translation for labels." xsd:string
 
@@ -11090,7 +11090,7 @@ name: Douleur dans le dos {comment="[PROMOT note] Source for official translatio
 name: Pain in back
 def: "Sensation of unpleasant feeling indicating potential or actual damage to some body structure felt in the back." []
 xref: https://data.esante.gouv.fr/terminologies/icf#63075
-is_a: ICF:577558794 ! Dolor en una parte del cuerpo
+is_a: ICF:577558794 ! Pain in body part
 relationship: PROMOT:2000006 SNOMED:84100007 ! est mesuré par History taking
 property_value: schema:browserUrl https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F682314871
 property_value: schema:inclusion "low backache" xsd:string
@@ -11105,10 +11105,10 @@ name: Laberinto vestibular {comment="[PROMOT note] Source for official translati
 name: Vestibular labyrinth
 name: Vestibule {comment="[PROMOT note] Source for official translation: https://icd.who.int/browse/2026-01/icf/fr > Info > Fichier du tableur"}
 xref: https://data.esante.gouv.fr/terminologies/icf#83877
-is_a: ICF:426292658 ! Structure of inner ear
+is_a: ICF:426292658 ! Structure de l'oreille interne
 is_a: PROMOT:0020001 ! estructura corporal relacionada con un fenotipo
 relationship: RO:0000091 HP:0002141 ! has disposition Gait imbalance
-relationship: RO:0002328 ICF:1831985718 ! functionally related to Vestibular function of balance
+relationship: RO:0002328 ICF:1831985718 ! functionally related to Función vestibular relacionada con el equilibrio
 property_value: schema:browserUrl https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F68679181
 property_value: skos:changeNote "[PROMOT note] The PROMOT ontology added a crossref to the LIRMM version of the ICF (CIF-ASIP 2020). It also added the official French and Spanish translation for labels." xsd:string
 
@@ -11233,7 +11233,7 @@ name: Reception of spoken language
 name: Réception du langage parlé {comment="[PROMOT note] Source for official translation: https://icd.who.int/browse/2026-01/icf/fr > Info > Fichier du tableur"}
 def: "Mental functions of decoding spoken messages to obtain their meaning." []
 xref: https://data.esante.gouv.fr/terminologies/icf#78049
-is_a: ICF:1819639191 ! Recepción de lenguaje
+is_a: ICF:1819639191 ! Reception of language
 is_a: PROMOT:0032002 ! Activity related body function
 relationship: RO:0002331 ICF:1896301954 ! involved in Listening
 property_value: schema:browserUrl https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F75971722
@@ -11260,7 +11260,7 @@ is_a: ICF:232409592 ! Estructura de la región pélvica
 relationship: RO:0000091 HP:0003694 ! has disposition Late-onset proximal muscle weakness
 relationship: RO:0000091 HP:0003749 ! has disposition Debilidad muscular de cintura pélvica
 relationship: RO:0000091 HP:0007340 ! has disposition Lower limb muscle weakness
-relationship: RO:0000091 HP:0008988 ! has disposition amyotrophie de la ceinture pelvienne
+relationship: RO:0000091 HP:0008988 ! has disposition Atrofia muscular de cintura pélvica
 relationship: RO:0000091 HP:0008994 ! has disposition Proximal lower limb muscle weakness
 relationship: RO:0000091 HP:0009028 ! has disposition Generalized weakness of limb muscles
 relationship: RO:0000091 HP:0009073 ! has disposition Faiblesse progressive des muscles proximaux
@@ -11302,7 +11302,7 @@ name: Estructura del sistema respiratorio {comment="[PROMOT note] Source for off
 name: Structure du système respiratoire {comment="[PROMOT note] Source for official translation: https://icd.who.int/browse/2026-01/icf/fr > Info > Fichier du tableur"}
 name: Structure of respiratory system
 xref: https://data.esante.gouv.fr/terminologies/icf#96637
-is_a: ICF:521411479 ! Structures des systèmes cardio-vasculaire, immunitaire et respiratoire
+is_a: ICF:521411479 ! Structures of cardiovascular, immunological and respiratory systems
 property_value: schema:browserUrl https://icd.who.int/dev11/f/en#/http%3A%2F%2Fid.who.int%2Ficd%2Fentity%2F829058183
 property_value: skos:changeNote "[PROMOT note] The PROMOT ontology added a crossref to the LIRMM version of the ICF (CIF-ASIP 2020). It also added the official French and Spanish translation for labels." xsd:string
 
@@ -11768,7 +11768,7 @@ synonym: "Year of death" EXACT [] {NCIT:P383="PT", NCIT:P384="CPTAC"}
 synonym: "year of death" EXACT [] {NCIT:P383="SY", NCIT:P385="VAR", NCIT:P384="GDC"}
 synonym: "year_of_death" EXACT [] {NCIT:P383="PT", NCIT:P385="VAR", NCIT:P384="GDC"}
 is_a: NCIT:C25164 ! Date
-is_a: PROMOT:0010007 ! campo de año
+is_a: PROMOT:0010007 ! year content entity
 relationship: RO:0002350 PROMOT:0010009 ! member of Énoncé concernant un être humain
 property_value: NCIT:NHC0 "C156426" xsd:string
 property_value: NCIT:P106 "Temporal Concept" xsd:string
@@ -12068,8 +12068,8 @@ synonym: "Age" EXACT [] {NCIT:P383="SY", NCIT:P384="caDSR"}
 synonym: "Age" EXACT [] {NCIT:P383="SY", NCIT:P384="CDISC"}
 synonym: "Age" EXACT [] {NCIT:P383="PT", NCIT:P384="NCI"}
 synonym: "Age" EXACT [] {NCIT:P383="PT", NCIT:P385="SEND-STSPRM", NCIT:P384="CDISC"}
-synonym: "age" EXACT [] {NCIT:P383="PT", NCIT:P384="BRIDG 3.0.3"}
 synonym: "age" EXACT [] {NCIT:P383="PT", NCIT:P384="BRIDG 5.3"}
+synonym: "age" EXACT [] {NCIT:P383="PT", NCIT:P384="BRIDG 3.0.3"}
 synonym: "Aged" EXACT [] {NCIT:P383="AD", NCIT:P384="NCI"}
 synonym: "Chronological Age" EXACT [] {NCIT:P383="PT", NCIT:P384="NICHD"}
 synonym: "Chronological Age" EXACT [] {NCIT:P384="INC", NCIT:P383="PT"}
@@ -12484,7 +12484,7 @@ synonym: "Year of Birth" EXACT [] {NCIT:P383="PT", NCIT:P384="OORO", NCIT:P386="
 synonym: "year of birth" EXACT [] {NCIT:P383="SY", NCIT:P385="VAR", NCIT:P384="GDC"}
 synonym: "year_of_birth" EXACT [] {NCIT:P383="PT", NCIT:P385="VAR", NCIT:P384="GDC"}
 is_a: NCIT:C25164 ! Date
-is_a: PROMOT:0010007 ! campo de año
+is_a: PROMOT:0010007 ! year content entity
 relationship: RO:0002350 PROMOT:0010009 ! member of Énoncé concernant un être humain
 property_value: NCIT:A42 NCIT:C38046
 property_value: NCIT:NHC0 "C83164" xsd:string
@@ -12550,8 +12550,8 @@ synonym: "date of informed consent" EXACT [] {NCIT:P383="SY", NCIT:P386="ICDC", 
 synonym: "date_of_informed_consent" EXACT [] {NCIT:P383="PT", NCIT:P386="ICDC", NCIT:P384="ICDC"}
 synonym: "Demographics Date of Informed Consent" EXACT [] {NCIT:P383="SY", NCIT:P384="caDSR"}
 synonym: "Informed Consent Date" EXACT [] {NCIT:P383="PT", NCIT:P384="NCI"}
-synonym: "informedConsentDate" EXACT [] {NCIT:P383="PT", NCIT:P384="BRIDG 3.0.3"}
 synonym: "informedConsentDate" EXACT [] {NCIT:P383="PT", NCIT:P384="BRIDG 5.3"}
+synonym: "informedConsentDate" EXACT [] {NCIT:P383="PT", NCIT:P384="BRIDG 3.0.3"}
 synonym: "RFICDAT" EXACT [] {NCIT:P383="SY", NCIT:P384="caDSR"}
 is_a: NCIT:C25164 ! Date
 relationship: RO:0002350 PROMOT:0010008 ! member of declaración sobre un consentimiento 
@@ -12576,7 +12576,7 @@ subset: NCIT:C156954
 synonym: "Year of Onset" EXACT [] {NCIT:P383="PT", NCIT:P384="NCI"}
 synonym: "Year of Onset (YYYY)" EXACT [] {NCIT:P383="PT", NCIT:P384="CPTAC"}
 is_a: NCIT:C25164 ! Date
-is_a: PROMOT:0010007 ! campo de año
+is_a: PROMOT:0010007 ! year content entity
 relationship: RO:0002350 PROMOT:0010010 ! member of énoncé concernant un phénotype
 property_value: NCIT:NHC0 "C99800" xsd:string
 property_value: NCIT:P106 "Temporal Concept" xsd:string
@@ -12609,7 +12609,7 @@ relationship: RO:0004029 HP:0002098 ! disease has feature Distrés respiratorio
 relationship: RO:0004029 HP:0002141 ! disease has feature Gait imbalance
 relationship: RO:0004029 HP:0002172 ! disease has feature Postural instability
 relationship: RO:0004029 HP:0002317 ! disease has feature Marcha inestable
-relationship: RO:0004029 HP:0002747 ! disease has feature Respiratory insufficiency due to muscle weakness
+relationship: RO:0004029 HP:0002747 ! disease has feature Insuffisance respiratoire due à une faiblesse musculaire
 relationship: RO:0004029 HP:0003236 ! disease has feature Elevated circulating creatine kinase activity
 relationship: RO:0004029 HP:0003327 ! disease has feature Axial muscle weakness
 relationship: RO:0004029 HP:0003392 ! disease has feature First dorsal interossei muscle weakness
@@ -12618,14 +12618,14 @@ relationship: RO:0004029 HP:0003458 ! disease has feature EMG: myopathic abnorma
 relationship: RO:0004029 HP:0003547 ! disease has feature Shoulder girdle muscle weakness
 relationship: RO:0004029 HP:0003551 ! disease has feature Difficulty climbing stairs
 relationship: RO:0004029 HP:0003722 ! disease has feature Neck flexor weakness
-relationship: RO:0004029 HP:0003731 ! disease has feature Faiblesse musculaire quadricipitale
+relationship: RO:0004029 HP:0003731 ! disease has feature Quadriceps muscle weakness
 relationship: RO:0004029 HP:0004878 ! disease has feature Faiblesse musculaire intercostale
 relationship: RO:0004029 HP:0005216 ! disease has feature Impaired mastication
 relationship: RO:0004029 HP:0007715 ! disease has feature Faiblesse musculaire extraoculaire
 relationship: RO:0004029 HP:0007838 ! disease has feature Ptosis progresiva
 relationship: RO:0004029 HP:0008959 ! disease has feature Distal upper limb muscle weakness
 relationship: RO:0004029 HP:0008963 ! disease has feature faiblesse du muscle tibial antérieur
-relationship: RO:0004029 HP:0008988 ! disease has feature amyotrophie de la ceinture pelvienne
+relationship: RO:0004029 HP:0008988 ! disease has feature Atrofia muscular de cintura pélvica
 relationship: RO:0004029 HP:0009005 ! disease has feature Debilidad de los músculos intrínsecos de la mano
 relationship: RO:0004029 HP:0009023 ! disease has feature Abdominal wall muscle weakness
 relationship: RO:0004029 HP:0009027 ! disease has feature Debilidad en dorsiflexión del pie
@@ -12644,7 +12644,7 @@ relationship: RO:0004029 HP:0031058 ! disease has feature Impairment of activiti
 relationship: RO:0004029 HP:0031108 ! disease has feature Debilidad del tríceps
 relationship: RO:0004029 HP:0031146 ! disease has feature Impaired oral bolus formation
 relationship: RO:0004029 HP:0031162 ! disease has feature Altération de la réponse à la déglutition oropharyngée
-relationship: RO:0004029 HP:0031177 ! disease has feature Debilidad del flexor de los dedos
+relationship: RO:0004029 HP:0031177 ! disease has feature Finger flexor weakness
 relationship: RO:0004029 HP:0031374 ! disease has feature Faiblesse de la cheville
 relationship: RO:0004029 HP:0032043 ! disease has feature Odynophagie
 relationship: RO:0004029 HP:0032341 ! disease has feature Reduced forced vital capacity
@@ -12664,7 +12664,7 @@ relationship: RO:0004029 PROMOT:0032009 ! disease has feature Tos con alimentos
 relationship: RO:0004029 PROMOT:0032011 ! disease has feature Coughing on saliva
 relationship: RO:0004029 PROMOT:0032012 ! disease has feature Decreased walking speed
 relationship: RO:0004029 PROMOT:0032013 ! disease has feature Dificultad para cambiar las posturas corporales básicas
-relationship: RO:0004029 PROMOT:0032014 ! disease has feature Dificultad para andar distancias cortas
+relationship: RO:0004029 PROMOT:0032014 ! disease has feature Difficulty walking short distance
 relationship: RO:0004029 PROMOT:0032016 ! disease has feature Disfagia con líquidos
 relationship: RO:0004029 PROMOT:0032017 ! disease has feature Dysphagia for solid
 relationship: RO:0004029 PROMOT:0032022 ! disease has feature Fatigue while eating
@@ -12774,12 +12774,12 @@ relationship: RO:0004029 HP:0003392 ! disease has feature First dorsal interosse
 relationship: RO:0004029 HP:0003394 ! disease has feature Spasme musculaire
 relationship: RO:0004029 HP:0003403 ! disease has feature EMG: respuesta decreciente del potencial de acción muscular compuesto (CMAP) de la estimulación nerviosa repetitiva
 relationship: RO:0004029 HP:0003427 ! disease has feature Debilidad muscular de la eminencia tenar
-relationship: RO:0004029 HP:0003445 ! disease has feature EMG: neuropathic changes
+relationship: RO:0004029 HP:0003445 ! disease has feature EMG : modifications neurogéniques, dénervation
 relationship: RO:0004029 HP:0003458 ! disease has feature EMG: myopathic abnormalities
 relationship: RO:0004029 HP:0003547 ! disease has feature Shoulder girdle muscle weakness
 relationship: RO:0004029 HP:0003694 ! disease has feature Late-onset proximal muscle weakness
 relationship: RO:0004029 HP:0003722 ! disease has feature Neck flexor weakness
-relationship: RO:0004029 HP:0003731 ! disease has feature Faiblesse musculaire quadricipitale
+relationship: RO:0004029 HP:0003731 ! disease has feature Quadriceps muscle weakness
 relationship: RO:0004029 HP:0003810 ! disease has feature Debilidad muscular distal de inicio tardío
 relationship: RO:0004029 HP:0004878 ! disease has feature Faiblesse musculaire intercostale
 relationship: RO:0004029 HP:0004885 ! disease has feature Episodic respiratory distress
@@ -12818,7 +12818,7 @@ relationship: RO:0004029 HP:0030211 ! disease has feature Slow pupillary light r
 relationship: RO:0004029 HP:0030319 ! disease has feature Faiblesse de la musculature faciale
 relationship: RO:0004029 HP:0031058 ! disease has feature Impairment of activities of daily living
 relationship: RO:0004029 HP:0031108 ! disease has feature Debilidad del tríceps
-relationship: RO:0004029 HP:0031177 ! disease has feature Debilidad del flexor de los dedos
+relationship: RO:0004029 HP:0031177 ! disease has feature Finger flexor weakness
 relationship: RO:0004029 HP:0031374 ! disease has feature Faiblesse de la cheville
 relationship: RO:0004029 HP:0031936 ! disease has feature Delayed ability to walk 
 relationship: RO:0004029 HP:0032341 ! disease has feature Reduced forced vital capacity
@@ -12907,14 +12907,14 @@ relationship: RO:0004029 HP:0003391 ! disease has feature Signo de Gowers
 relationship: RO:0004029 HP:0003392 ! disease has feature First dorsal interossei muscle weakness
 relationship: RO:0004029 HP:0003403 ! disease has feature EMG: respuesta decreciente del potencial de acción muscular compuesto (CMAP) de la estimulación nerviosa repetitiva
 relationship: RO:0004029 HP:0003427 ! disease has feature Debilidad muscular de la eminencia tenar
-relationship: RO:0004029 HP:0003445 ! disease has feature EMG: neuropathic changes
+relationship: RO:0004029 HP:0003445 ! disease has feature EMG : modifications neurogéniques, dénervation
 relationship: RO:0004029 HP:0003458 ! disease has feature EMG: myopathic abnormalities
 relationship: RO:0004029 HP:0003547 ! disease has feature Shoulder girdle muscle weakness
 relationship: RO:0004029 HP:0003552 ! disease has feature Rigidez muscular
 relationship: RO:0004029 HP:0003691 ! disease has feature Escápula alada
 relationship: RO:0004029 HP:0003694 ! disease has feature Late-onset proximal muscle weakness
 relationship: RO:0004029 HP:0003722 ! disease has feature Neck flexor weakness
-relationship: RO:0004029 HP:0003731 ! disease has feature Faiblesse musculaire quadricipitale
+relationship: RO:0004029 HP:0003731 ! disease has feature Quadriceps muscle weakness
 relationship: RO:0004029 HP:0003810 ! disease has feature Debilidad muscular distal de inicio tardío
 relationship: RO:0004029 HP:0004322 ! disease has feature Talla baja
 relationship: RO:0004029 HP:0004325 ! disease has feature Decreased body weight
@@ -12957,7 +12957,7 @@ relationship: RO:0004029 HP:0030872 ! disease has feature Abnormal cardiac ventr
 relationship: RO:0004029 HP:0030884 ! disease has feature Gastrojejunal tube feeding in infancy
 relationship: RO:0004029 HP:0031063 ! disease has feature Impaired feeding ability
 relationship: RO:0004029 HP:0031108 ! disease has feature Debilidad del tríceps
-relationship: RO:0004029 HP:0031177 ! disease has feature Debilidad del flexor de los dedos
+relationship: RO:0004029 HP:0031177 ! disease has feature Finger flexor weakness
 relationship: RO:0004029 HP:0031374 ! disease has feature Faiblesse de la cheville
 relationship: RO:0004029 HP:0031936 ! disease has feature Delayed ability to walk 
 relationship: RO:0004029 HP:0032341 ! disease has feature Reduced forced vital capacity
@@ -13200,7 +13200,7 @@ property_value: seeAlso NCIT:C204162
 id: PROMOT:0010001
 name: age content entity
 name: campo de edad {babelon:translation_status="OFFICIAL", comment="translation by https://orcid.org/0000-0001-7764-2085 and https://orcid.org/0000-0002-3391-9772"}
-def: "an information content entity where the information is an age." []
+def: "An information content entity where the information is an age." []
 def: "Campo donde la información es una edad" [] {IAO:0000119="translation by https://orcid.org/0000-0001-7764-2085 and https://orcid.org/0000-0002-3391-9772", babelon:translation_status="OFFICIAL"}
 is_a: IAO:0000030 ! information content entity
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
@@ -13209,7 +13209,7 @@ property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 id: PROMOT:0010003
 name: campo decimal {babelon:translation_status="OFFICIAL", comment="translation by https://orcid.org/0000-0001-7764-2085 and https://orcid.org/0000-0002-3391-9772"}
 name: decimal content entity
-def: "an information content entity where the information is a decimal." []
+def: "An information content entity where the information is a decimal." []
 def: "Campo donde la información es un decimal" [] {IAO:0000119="translation by https://orcid.org/0000-0001-7764-2085 and https://orcid.org/0000-0002-3391-9772", babelon:translation_status="OFFICIAL"}
 is_a: IAO:0000030 ! information content entity
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
@@ -13218,7 +13218,7 @@ property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 id: PROMOT:0010004
 name: campo de duración {babelon:translation_status="OFFICIAL", comment="translation by https://orcid.org/0000-0001-7764-2085 and https://orcid.org/0000-0002-3391-9772"}
 name: duration content entity
-def: "an information content entity where the information is a duration." []
+def: "An information content entity where the information is a duration." []
 def: "Campo donde la información es una duración" [] {IAO:0000119="translation by https://orcid.org/0000-0001-7764-2085 and https://orcid.org/0000-0002-3391-9772", babelon:translation_status="OFFICIAL"}
 is_a: IAO:0000030 ! information content entity
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
@@ -13227,7 +13227,7 @@ property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 id: PROMOT:0010005
 name: campo de número entero {babelon:translation_status="OFFICIAL", comment="translation by https://orcid.org/0000-0001-7764-2085 and https://orcid.org/0000-0002-3391-9772"}
 name: int content entity
-def: "an information content entity where the information is an int." []
+def: "An information content entity where the information is an int." []
 def: "Campo donde la información es un número entero" [] {IAO:0000119="translation by https://orcid.org/0000-0001-7764-2085 and https://orcid.org/0000-0002-3391-9772", babelon:translation_status="OFFICIAL"}
 is_a: IAO:0000030 ! information content entity
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
@@ -13236,7 +13236,7 @@ property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 id: PROMOT:0010006
 name: campo de token {babelon:translation_status="OFFICIAL", comment="translation by https://orcid.org/0000-0001-7764-2085 and https://orcid.org/0000-0002-3391-9772"}
 name: token content entity
-def: "an information content entity where the information is a token." []
+def: "An information content entity where the information is a token." []
 def: "Campo donde la información es un token" [] {IAO:0000119="translation by https://orcid.org/0000-0001-7764-2085 and https://orcid.org/0000-0002-3391-9772", babelon:translation_status="OFFICIAL"}
 is_a: IAO:0000030 ! information content entity
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
@@ -13245,7 +13245,7 @@ property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 id: PROMOT:0010007
 name: campo de año {babelon:translation_status="OFFICIAL", comment="translation by https://orcid.org/0000-0001-7764-2085 and https://orcid.org/0000-0002-3391-9772"}
 name: year content entity
-def: "an information content entity where the information is a year." []
+def: "An information content entity where the information is a year." []
 def: "Campo donde la información es un año" [] {IAO:0000119="translation by https://orcid.org/0000-0001-7764-2085 and https://orcid.org/0000-0002-3391-9772", babelon:translation_status="OFFICIAL"}
 is_a: IAO:0000030 ! information content entity
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
@@ -13319,7 +13319,7 @@ def: "El año de la evaluación de una entidad, por ejemplo, el año en el que s
 def: "L’année d’identification d’une entité, par exemple, l’année d’identification d’un phénotype via une procédure médicale." []
 def: "The year of the assessment of an entity, e.g. the year when a phenotype is assessed by medical evidence." []
 is_a: NCIT:C25164 ! Date
-is_a: PROMOT:0010007 ! campo de año
+is_a: PROMOT:0010007 ! year content entity
 relationship: RO:0002350 PROMOT:0010010 ! member of énoncé concernant un phénotype
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
@@ -13334,7 +13334,7 @@ def: "The year of the resolution of an abnormal disposition, e.g. the year when 
 comment: [PROMOT note] [Derived from RD-CDM] [6.2.4 Resolution Date] 
 comment: [PROMOT note] [RD-CDM] Graefe, A.S.L., Hübner, M.R., Rehburg, F. et al. An ontology-based rare disease common data model harmonising international registries, FHIR, and Phenopackets. Sci Data 12, 234 (2025). https://doi.org/10.1038/s41597-025-04558-z
 is_a: NCIT:C25164 ! Date
-is_a: PROMOT:0010007 ! campo de año
+is_a: PROMOT:0010007 ! year content entity
 relationship: RO:0002350 PROMOT:0010010 ! member of énoncé concernant un phénotype
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
@@ -13726,7 +13726,7 @@ def: "Estado de un consentimiento está pendiente de ser definido" [] {IAO:00001
 def: "Le statut d’un consentement qui est en attente de définition." []
 comment: [PROMOT note] [Derived from RD-CDM] [7.1 Consent Status] 
 comment: [PROMOT note] [RD-CDM] Graefe, A.S.L., Hübner, M.R., Rehburg, F. et al. An ontology-based rare disease common data model harmonising international registries, FHIR, and Phenopackets. Sci Data 12, 234 (2025). https://doi.org/10.1038/s41597-025-04558-z
-is_a: PROMOT:0010041 ! estado del consentimiento
+is_a: PROMOT:0010041 ! Consent status
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
@@ -13739,7 +13739,7 @@ def: "Estado de un consentimiento que ha sido propuesto a una persona para que d
 def: "Le statut d’un consentement qui a été proposé à une personne pour son accord ou son refus." []
 comment: [PROMOT note] [Derived from RD-CDM] [7.1 Consent Status] 
 comment: [PROMOT note] [RD-CDM] Graefe, A.S.L., Hübner, M.R., Rehburg, F. et al. An ontology-based rare disease common data model harmonising international registries, FHIR, and Phenopackets. Sci Data 12, 234 (2025). https://doi.org/10.1038/s41597-025-04558-z
-is_a: PROMOT:0010041 ! estado del consentimiento
+is_a: PROMOT:0010041 ! Consent status
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
@@ -13754,7 +13754,7 @@ comment: [PROMOT note] [Derived from EURO-NMD NMD-CDE]
 comment: [PROMOT note] [Derived from RD-CDM] [7.1 Consent Status] 
 comment: [PROMOT note] [EURO-NMD] Atalia A et al., EURO-NMD registry: federated FAIR infrastructure, innovative technologies and concepts of a patient-centred registry for rare neuromuscular disorders. Orphanet J Rare Dis. 2024 Feb 14;19(1):66. doi: 10.1186/s13023-024-03059-3. PMID: 38355534; PMCID: PMC10865673.
 comment: [PROMOT note] [RD-CDM] Graefe, A.S.L., Hübner, M.R., Rehburg, F. et al. An ontology-based rare disease common data model harmonising international registries, FHIR, and Phenopackets. Sci Data 12, 234 (2025). https://doi.org/10.1038/s41597-025-04558-z
-is_a: PROMOT:0010041 ! estado del consentimiento
+is_a: PROMOT:0010041 ! Consent status
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
@@ -13769,7 +13769,7 @@ comment: [PROMOT note] [Derived from EURO-NMD NMD-CDE]
 comment: [PROMOT note] [Derived from RD-CDM] [7.1 Consent Status] 
 comment: [PROMOT note] [EURO-NMD] Atalia A et al., EURO-NMD registry: federated FAIR infrastructure, innovative technologies and concepts of a patient-centred registry for rare neuromuscular disorders. Orphanet J Rare Dis. 2024 Feb 14;19(1):66. doi: 10.1186/s13023-024-03059-3. PMID: 38355534; PMCID: PMC10865673.
 comment: [PROMOT note] [RD-CDM] Graefe, A.S.L., Hübner, M.R., Rehburg, F. et al. An ontology-based rare disease common data model harmonising international registries, FHIR, and Phenopackets. Sci Data 12, 234 (2025). https://doi.org/10.1038/s41597-025-04558-z
-is_a: PROMOT:0010041 ! estado del consentimiento
+is_a: PROMOT:0010041 ! Consent status
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
@@ -13783,7 +13783,7 @@ def: "Le statut d’un consentement qui est inactif." []
 comment: [PROMOT note] [Derived from RD-CDM] [7.1 Consent Status] 
 comment: [PROMOT note] [RD-CDM] Graefe, A.S.L., Hübner, M.R., Rehburg, F. et al. An ontology-based rare disease common data model harmonising international registries, FHIR, and Phenopackets. Sci Data 12, 234 (2025). https://doi.org/10.1038/s41597-025-04558-z
 xref: http://snomed.info/id/73425007
-is_a: PROMOT:0010041 ! estado del consentimiento
+is_a: PROMOT:0010041 ! Consent status
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
@@ -13797,7 +13797,7 @@ def: "Le statut d’un consentement qui a été entré par erreur." []
 comment: [PROMOT note] [Derived from RD-CDM] [7.1 Consent Status] 
 comment: [PROMOT note] [RD-CDM] Graefe, A.S.L., Hübner, M.R., Rehburg, F. et al. An ontology-based rare disease common data model harmonising international registries, FHIR, and Phenopackets. Sci Data 12, 234 (2025). https://doi.org/10.1038/s41597-025-04558-z
 xref: http://snomed.info/id/723510000
-is_a: PROMOT:0010041 ! estado del consentimiento
+is_a: PROMOT:0010041 ! Consent status
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
@@ -13850,7 +13850,7 @@ name: Unrecorded handedness
 def: "An handedness that is unrecorded." []
 def: "Lateralidad no registrada." [] {IAO:0000119="translation by https://orcid.org/0000-0001-7764-2085 and https://orcid.org/0000-0002-3391-9772", babelon:translation_status="OFFICIAL"}
 def: "manualité inconnue en raison de l’absence de renseignement à son sujet." []
-is_a: SNOMED:709880000 ! lateralidad desconocida
+is_a: SNOMED:709880000 ! manualité inconnue
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
@@ -14167,7 +14167,7 @@ name: Quinte de toux causée par de la salive {babelon:translation_status="CANDI
 name: Tos con saliva {babelon:translation_status="OFFICIAL", comment="translation by https://orcid.org/0000-0001-7764-2085 and https://orcid.org/0000-0002-3391-9772"}
 def: "Episodios en los que la saliva provoca tos." [] {IAO:0000119="translation by https://orcid.org/0000-0001-7764-2085 and https://orcid.org/0000-0002-3391-9772", babelon:translation_status="OFFICIAL"}
 def: "Incidents in which saliva provoke coughing." [] {comment="https://orcid.org/0000-0003-2829-8470"}
-is_a: PROMOT:0032010 ! Tos con líquidos
+is_a: PROMOT:0032010 ! Quinte de toux causée par un liquide
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 property_value: PROMOT:1000001 "[OPMD Scoping review on dysphagia] Côté C, Gagnon C, Youssof S, et al. The requirement for a disease-specific patient-reported outcome measure of dysphagia in oculopharyngeal muscular dystrophy. Muscle Nerve. 2019;59:445–50. doi: 10.1002/mus.26405" xsd:string
 
@@ -14218,7 +14218,7 @@ name: Double compound motor action potential abnormality
 def: "Deux anomalies dans l’EMG mesurant le potentiel d’action global d’un muscle (PAM), aussi appelé potentiel d’action musculaire composé." [] {babelon:translation_status="CANDIDATE", IAO:0000119="translated from English by https://orcid.org/0009-0000-5160-7927"}
 def: "Dos hallazgos anormales en una medición de potencial de acción motora compuesta en EMG." [] {babelon:translation_status="OFFICIAL", IAO:0000119="translation reviewed by https://orcid.org/0000-0001-7764-2085 and https://orcid.org/0000-0002-3391-9772"}
 def: "Two abnormal findings in a compound motor action potential measurement in EMG." [] {comment="[PROMOT project] Mansoore Gholizade (definition reviewer)", IAO:0000119="HP:0033580"}
-is_a: HP:0033580 ! Anomalía del potencial de acción motora compuesta
+is_a: HP:0033580 ! Compound motor action potential abnormality
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 property_value: PROMOT:1000001 "[Congenital myasthenic syndrom Scoping review] \"Performing a Rare Disease-Oriented Master Observational Trial\" initiative, European Joint Programme on Rare Diseases, https://www.promotinitiative.com/" xsd:string
 
@@ -14331,7 +14331,7 @@ def: "Debilidad muscular del músculo involucrados en la masticación." [] {IAO:
 def: "Une faiblesse musculaire des muscles impliqués dans la mastication." [] {babelon:translation_status="OFFICIAL", IAO:0000119="translated from English by https://orcid.org/0009-0000-5160-7927 reviewed by https://orcid.org/0000-0003-2829-847"}
 is_a: HP:0001324 ! Muscle weakness
 is_a: PROMOT:0032003 ! Phénotype lié à une activité
-is_a: PROMOT:0032005 ! Body function related phenotype
+is_a: PROMOT:0032005 ! Phénotype lié à une fonction organique
 relationship: PROMOT:2000001 ICF:1328675264 ! affects Comer
 relationship: PROMOT:2000001 ICF:1389818830 ! affects Chewing
 relationship: PROMOT:2000001 ICF:1789365017 ! affects Fuerza de músculos aislados o de grupos de músculos
@@ -14555,7 +14555,7 @@ name: Resistencia de un músculo de la faringe {comment="translation reviewed by
 def: "Fonctions relatives au maintien d'une contraction musculaire d’un muscle du pharynx pour la période de temps requise." [] {babelon:translation_status="CANDIDATE"}
 def: "Funciones relacionadas con el mantenimiento de la contracción de un músculo de la faringe durante un determinado periodo de tiempo." [] {babelon:translation_status="OFFICIAL", IAO:0000119="translation reviewed by https://orcid.org/0000-0001-7764-2085 and https://orcid.org/0000-0002-3391-9772"}
 def: "Functions related to sustaining contraction of a muscle of pharynx for the required period of time." []
-is_a: PROMOT:0032043 ! Endurance of neck muscle
+is_a: PROMOT:0032043 ! Endurance d’un muscle du cou
 relationship: RO:0002331 ICF:1328675264 ! involved in Comer
 relationship: RO:0002331 ICF:151046878 ! involved in Speaking
 relationship: RO:0002331 ICF:553784299 ! involved in Beber
@@ -14872,7 +14872,7 @@ name: Puissance du premier muscle dorsal interosseux de la main {babelon:transla
 def: "Fonctions relatives à la force générée par la contraction du premier muscle dorsal interosseux de la main." [] {babelon:translation_status="CANDIDATE"}
 def: "Funciones relacionadas con la fuerza generada por la contracción del primer músculo dorsal interóseo de la mano." [] {babelon:translation_status="OFFICIAL", IAO:0000119="translation reviewed by https://orcid.org/0000-0001-7764-2085 and https://orcid.org/0000-0002-3391-9772"}
 def: "Functions related to the force generated by the contraction of a first dorsal interosseous of hand." []
-is_a: PROMOT:0032073 ! Fuerza del músculo intrínseco de la mano
+is_a: PROMOT:0032073 ! Power of intrinsic muscle of hand
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
@@ -15143,7 +15143,7 @@ name: Puissance d’un muscle de l’éminence thénar {babelon:translation_stat
 def: "Fonctions relatives à la force générée par la contraction d’un muscle de l’éminence thénar." [] {babelon:translation_status="CANDIDATE"}
 def: "Funciones relacionadas con la fuerza generada por la contracción del músculo de la eminencia tenar." [] {babelon:translation_status="OFFICIAL", IAO:0000119="translation reviewed by https://orcid.org/0000-0001-7764-2085 and https://orcid.org/0000-0002-3391-9772"}
 def: "Functions related to the force generated by the contraction of a thenar muscle." []
-is_a: PROMOT:0032073 ! Fuerza del músculo intrínseco de la mano
+is_a: PROMOT:0032073 ! Power of intrinsic muscle of hand
 property_value: IAO:0000117 "https://orcid.org/0009-0000-5160-7927" xsd:string
 
 [Term]
@@ -15672,7 +15672,7 @@ name: accesorio para la visión
 name: Aid to vision
 name: aide à la vision
 is_a: BFO:0000030 ! object
-relationship: PROMOT:2000008 NCIT:C16960 ! est utilisé par Patient
+relationship: PROMOT:2000008 NCIT:C16960 ! es utilizado por Patient
 property_value: dc11:type "physical object" xsd:string
 property_value: sct-ext:definitionStatus "Primitif" xsd:string
 property_value: sct-ext:fsn "Aid to vision (physical object)" xsd:string
@@ -15794,7 +15794,7 @@ name: Assitive equipment
 name: equipo de asistencia
 name: équipement d'assistance
 is_a: BFO:0000030 ! object
-relationship: PROMOT:2000008 NCIT:C16960 ! est utilisé par Patient
+relationship: PROMOT:2000008 NCIT:C16960 ! es utilizado por Patient
 property_value: dc11:type "physical object" xsd:string
 property_value: sct-ext:definitionStatus "Primitif" xsd:string
 property_value: sct-ext:fsn "Assistive equipment (physical object)" xsd:string
