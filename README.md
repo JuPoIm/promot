@@ -25,10 +25,6 @@ Ontology documentation will be available soon...
 
 More about PROMOT initiative can be found at https://www.promotinitiative.com/project.
 
-## Licence
-
-PROMOT Ontology is licensed under the [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0) licence.
-
 ## Versions
 
 ### Stable release versions
@@ -78,6 +74,10 @@ Editors of this ontology should use the edit version, [src/ontology/promot-edit.
 ## How to cite
 
 (Draft) FAVIEZ Carole, et al. Design and development of an ontology for rare neuromuscular diseases to support federated Master Observational Trials: A PROMOT study
+
+## Licence
+
+PROMOT Ontology is licensed under the [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0) licence.
 
 ## Contact
 
