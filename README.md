@@ -62,7 +62,6 @@ Editors of this ontology should use the edit version, [src/ontology/promot-edit.
 * Silvia Cerezo Corredera MD (Hospital Sant Joan de Déu, Barcelona, Spain)
 * Hanns Lochmüller MD (University of Ottawa, Children's Hospital of Eastern Ontario, Ontario CA)
 * Rachel Thompson PhD (Children's Hospital of Eastern Ontario)
-* Fien Oelbrandt MD (Children's Hospital of Eastern Ontario)
 * Alexandre Girard (University of Sherbrooke, Québec CA)
 * Xuanning Yang, medical student (University of Sherbrooke, Québec CA)
 
@@ -77,7 +76,7 @@ Editors of this ontology should use the edit version, [src/ontology/promot-edit.
 
 ## Licence
 
-PROMOT Ontology is licensed under the [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0) licence.
+PROMOT Ontology is licensed under the [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) licence.
 
 ## Contact
 

@@ -24,10 +24,14 @@ These are the current imports in PROMOT
 | icf | http://purl.obolibrary.org/obo/icf.owl | custom |
 | ncit | http://purl.obolibrary.org/obo/ncit.owl | custom |
 | obi | http://purl.obolibrary.org/obo/obi.owl | custom |
+| opmi | http://purl.obolibrary.org/obo/opmi.owl | filter |
 | ordo | https://www.orphadata.com/data/ontologies/ordo/last_version/ORDO_en_4.8.owl | custom |
 | ro | http://purl.obolibrary.org/obo/ro.owl | custom |
 | snomed | http://purl.obolibrary.org/obo/snomed.owl | custom |
+| scdo | http://purl.obolibrary.org/obo/scdo.owl | filter |
 | so | http://purl.obolibrary.org/obo/so.owl | filter |
+| vo | http://purl.obolibrary.org/obo/vo.owl | filter |
+| xco | http://purl.obolibrary.org/obo/xco.owl | filter |
 ## Components
 Components, in contrast to imports, are considered full members of the ontology. This means that any axiom in a component is also included in the ontology base - which means it is considered _native_ to the ontology. While this sounds complicated, consider this: conceptually, no component should be part of more than one ontology. If that seems to be the case, we are most likely talking about an import. Components are often not needed for ontologies, but there are some use cases:
 
