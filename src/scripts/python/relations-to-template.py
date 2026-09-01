@@ -68,7 +68,7 @@ for f in files:
                 else: # if no relation using the class as a subject already exists
                     list = [f'{data}', subject_label]
                     dico_annotations[subject_iri] = list
-            else: # add the relation to the template-to-be column
+            else: # add the relation (data or object property) to the template-to-be column
                 subject_iri = row[0]
                 subject_label = row[1]
                 predicate = row[2]
