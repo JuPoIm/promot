@@ -1,0 +1,97 @@
+Prefix(:=<http://purl.obolibrary.org/obo/promot/imports/scdo_import.owl#>)
+Prefix(HP:=<http://purl.obolibrary.org/obo/HP_>)
+Prefix(RO:=<http://purl.obolibrary.org/obo/RO_>)
+Prefix(VO:=<http://purl.obolibrary.org/obo/VO_>)
+Prefix(cc:=<http://creativecommons.org/ns#>)
+Prefix(dc:=<http://purl.org/dc/terms/>)
+Prefix(BFO:=<http://purl.obolibrary.org/obo/BFO_>)
+Prefix(ECO:=<http://purl.obolibrary.org/obo/ECO_>)
+Prefix(FMA:=<http://purl.org/sig/ont/fma/fma>)
+Prefix(IAO:=<http://purl.obolibrary.org/obo/IAO_>)
+Prefix(ICF:=<http://id.who.int/icd/entity/>)
+Prefix(OBI:=<http://purl.obolibrary.org/obo/OBI_>)
+Prefix(SIO:=<http://semanticscience.org/resource/SIO_>)
+Prefix(XCO:=<http://purl.obolibrary.org/obo/XCO_>)
+Prefix(obo:=<http://purl.obolibrary.org/obo/>)
+Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
+Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
+Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
+Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
+Prefix(GENO:=<http://purl.obolibrary.org/obo/GENO_>)
+Prefix(HGNC:=<http://identifiers.org/hgnc/>)
+Prefix(NCIT:=<http://purl.obolibrary.org/obo/NCIT_>)
+Prefix(OMOP:=<https://athena.ohdsi.org/search-terms/terms/>)
+Prefix(OPMI:=<http://purl.obolibrary.org/obo/OPMI_>)
+Prefix(ORDO:=<http://www.orpha.net/ORDO/Orphanet_>)
+Prefix(SCDO:=<http://purl.obolibrary.org/obo/SCDO_>)
+Prefix(dc11:=<http://purl.org/dc/elements/1.1/>)
+Prefix(foaf:=<http://xmlns.com/foaf/0.1/>)
+Prefix(prov:=<http://www.w3.org/ns/prov#>)
+Prefix(rdfa:=<http://www.w3.org/ns/rdfa#>)
+Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
+Prefix(skos:=<http://www.w3.org/2004/02/skos/core#>)
+Prefix(swrl:=<http://www.w3.org/2003/11/swrl#>)
+Prefix(void:=<http://rdfs.org/ns/void#>)
+Prefix(CPONT:=<https://w3id.org/cpont/vocab/CPONT_>)
+Prefix(MONDO:=<http://purl.obolibrary.org/obo/MONDO_>)
+Prefix(chebi:=<http://purl.obolibrary.org/obo/chebi/>)
+Prefix(sssom:=<https://w3id.org/sssom/>)
+Prefix(swrla:=<http://swrl.stanford.edu/ontologies/3.3/swrla.owl#>)
+Prefix(swrlb:=<http://www.w3.org/2003/11/swrlb#>)
+Prefix(terms:=<http://purl.org/dc/terms/>)
+Prefix(PROMOT:=<http://purl.obolibrary.org/obo/PROMOT_>)
+Prefix(SNOMED:=<http://snomed.info/id/>)
+Prefix(schema:=<http://schema.org/>)
+Prefix(BIOLINK:=<https://w3id.org/biolink/vocab/>)
+Prefix(babelon:=<https://w3id.org/babelon/>)
+Prefix(omoprel:=<https://w3id.org/cpont/omop/relations/>)
+Prefix(subsets:=<http://purl.obolibrary.org/obo/ro/subsets#>)
+Prefix(oboInOwl:=<http://www.geneontology.org/formats/oboInOwl#>)
+Prefix(omoptype:=<https://w3id.org/cpont/omop/types/>)
+Prefix(NCBITaxon:=<http://purl.obolibrary.org/obo/NCBITaxon_>)
+Prefix(ncbitaxon:=<http://purl.obolibrary.org/obo/ncbitaxon#>)
+Prefix(omopclass:=<https://w3id.org/cpont/omop/classes/>)
+Prefix(ace_lexicon:=<http://attempto.ifi.uzh.ch/ace_lexicon#>)
+Prefix(uberon_core:=<http://purl.obolibrary.org/obo/uberon/core#>)
+Prefix(CPATH_PERSON:=<https://w3id.org/cpont/person/>)
+Prefix(CPATH_CARE_SITE:=<https://w3id.org/cpont/care_site/>)
+Prefix(CPATH_MEASUREMENT:=<https://w3id.org/cpont/measurement/>)
+Prefix(CPATH_VISIT_OCCURRENCE:=<https://w3id.org/cpont/visit_occurrence/>)
+Prefix(CPATH_CONDITION_OCCURRENCE:=<https://w3id.org/cpont/condition_occurrence/>)
+
+
+Ontology(<http://purl.obolibrary.org/obo/promot/imports/scdo_import.owl>
+<http://purl.obolibrary.org/obo/promot/releases/2026-08-28/imports/scdo_import.owl>
+Annotation(dc11:source <http://purl.obolibrary.org/obo/scdo/releases/2021-04-15/scdo.owl>)
+Annotation(owl:versionInfo "2026-08-28")
+
+Declaration(Class(obo:SCDO_1000490))
+Declaration(ObjectProperty(obo:SCDO_1000194))
+Declaration(AnnotationProperty(obo:IAO_0000115))
+Declaration(AnnotationProperty(dc11:creator))
+Declaration(AnnotationProperty(dc11:source))
+
+############################
+#   Object Properties
+############################
+
+# Object Property: obo:SCDO_1000194 (measures)
+
+AnnotationAssertion(obo:IAO_0000115 obo:SCDO_1000194 "A relation between a diagnostic tool and the diagnostic measurement that it measures.")
+AnnotationAssertion(dc11:creator obo:SCDO_1000194 "SCDO (Jade Hotchkiss)")
+AnnotationAssertion(rdfs:label obo:SCDO_1000194 "measures")
+
+
+
+############################
+#   Classes
+############################
+
+# Class: obo:SCDO_1000490 (Consent Status)
+
+AnnotationAssertion(obo:IAO_0000115 obo:SCDO_1000490 "The situation, with regard to obtaining consent from a respondent, at a particular stage during a process.")
+AnnotationAssertion(dc11:creator obo:SCDO_1000490 "SCDO (Jade Hotchkiss)")
+AnnotationAssertion(rdfs:label obo:SCDO_1000490 "Consent Status")
+
+
+)

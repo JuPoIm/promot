@@ -6,7 +6,7 @@ git_main_branch: main
 repo: promot_ontology
 contact: juliette.potier@institutimagine.org
 description: "Ontology of the PROMOT initiative for modeling three neuromuscular diseases: Oculopharyngeal Muscular Dystrophy, Congenital Myopathies and Congenital Myastenic Syndroms. It also aims to be the conceptual schema for building the PROMOT initiative relational database."
-license: "https://creativecommons.org/licenses/by-nc-sa/4.0/"
+license: "https://creativecommons.org/licenses/by/4.0/"
 documentation:
   documentation_system: mkdocs
 #### RELEASE CONFIG
@@ -82,24 +82,33 @@ import_group:
   products:
     - id: bfo # high-level classes
     - id: eco # evidence classes
-    - id: fma # anatomy classes
+    - id: fma # anatomical entity classes
       mirror_from: http://purl.org/sig/ont/fma.owl
     - id: hp # phenotypic abnormality classes
     - id: iao # information content entity classes
       module_type: filter
-    - id: icf # body structures/functions, activities and participation classes
+    - id: icf # anatomical localization, body structures/functions, activities and participation classes
       mirror_type: no_mirror # manual download required from https://raw.githubusercontent.com/whoficitc/harmonization/main/ontology/whofic-2025-05-24.owl (or later version)
-    - id: ncit
+    - id: ncit # generic classes
       is_large: TRUE
     - id: obi # NCBITaxon Homo sapiens
-    - id: ordo # diseases classes ORDO
+    - id: opmi # 'has identifier' OP
+      module_type: filter
+    - id: ordo # diseases classes
       mirror_from: https://www.orphadata.com/data/ontologies/ordo/last_version/ORDO_en_4.8.owl
     - id: ro # OP
     - id: snomed # See promot.Makefile and src/data/README.md for details
       is_large: TRUE
       mirror_type: no_mirror # manual downloads required from https://www.nlm.nih.gov/healthit/snomedct/international.html & https://smt.esante.gouv.fr/terminologie-snomed-ct-fr/
-    - id: so
+    - id: scdo
       module_type: filter
+    - id: so # sequence & variant origin
+      module_type: filter
+    - id: vo # 'has gene mutation'
+      module_type: filter
+    - id: xco # activity
+      module_type: filter
+
 #### ROBOT CONFIG
 robot_java_args: '-Xmx25G'
 robot_report:
