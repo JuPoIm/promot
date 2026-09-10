@@ -13,6 +13,7 @@
      xmlns:ICF="http://id.who.int/icd/entity/"
      xmlns:OBI="http://purl.obolibrary.org/obo/OBI_"
      xmlns:SIO="http://semanticscience.org/resource/SIO_"
+     xmlns:XCO="http://purl.obolibrary.org/obo/XCO_"
      xmlns:efo="http://www.ebi.ac.uk/efo/"
      xmlns:fma="http://purl.org/sig/ont/fma/"
      xmlns:obo="http://purl.obolibrary.org/obo/"
@@ -24,6 +25,7 @@
      xmlns:HGNC="http://identifiers.org/hgnc/"
      xmlns:NCIT="http://purl.obolibrary.org/obo/NCIT_"
      xmlns:OMOP="https://athena.ohdsi.org/search-terms/terms/"
+     xmlns:OPMI="http://purl.obolibrary.org/obo/OPMI_"
      xmlns:ORDO="http://www.orpha.net/ORDO/Orphanet_"
      xmlns:SCDO="http://purl.obolibrary.org/obo/SCDO_"
      xmlns:dc11="http://purl.org/dc/elements/1.1/"
@@ -64,53 +66,72 @@
      xmlns:CPATH_VISIT_OCCURRENCE="https://w3id.org/cpont/visit_occurrence/"
      xmlns:CPATH_CONDITION_OCCURRENCE="https://w3id.org/cpont/condition_occurrence/">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/promot/promot-base.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/promot/releases/2026-08-17/promot-base.owl"/>
-        <dc11:contributor>Alexandre Girard</dc11:contributor>
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/promot/releases/2026-09-10/promot-base.owl"/>
+        <dc11:contributor>Alexandre Girard
+University of Sherbrooke</dc11:contributor>
         <dc11:contributor>Anita Burgun MD, PhD
+Assistance publique - Hôpitaux de Paris, Imagine Institute, Université Paris Cité
 https://orcid.org/0000-0001-6855-4366</dc11:contributor>
         <dc11:contributor>Carole Faviez PhD
+Imagine Institute
 https://orcid.org/0000-0002-1500-0236</dc11:contributor>
-        <dc11:contributor>Claudia Côté MD, PhD
+        <dc11:contributor>Claudia Côté RD, PhD
+University of Sherbrooke
 https://orcid.org/0000-0003-2508-2500</dc11:contributor>
-        <dc11:contributor>Claudia Côté RD, PhD</dc11:contributor>
-        <dc11:contributor>Daniel Natera De Benito MD, PhD
+        <dc11:contributor>Daniel Natera-De Benito MD, PhD
+Hospital Sant Joan de Déu
 https://orcid.org/0000-0001-7764-2085</dc11:contributor>
         <dc11:contributor>Elizabeth Angelevski DC
- https://orcid.org/0009-0008-3096-582X</dc11:contributor>
+University of Sherbrooke
+https://orcid.org/0009-0008-3096-582X</dc11:contributor>
         <dc11:contributor>European Joint Programme on Rare Diseases (EJP RD)
 
 Website: https://www.ejprarediseases.org/</dc11:contributor>
-        <dc11:contributor>European Rare Diseases Research Alliance (ERDERA)
-
-Website: https://erdera.org</dc11:contributor>
-        <dc11:contributor>Hanns Lochmuller MD
+        <dc11:contributor>Hanns Lochmüller MD
+University of Ottawa, Children&apos;s Hospital of Eastern Ontario
 https://orcid.org/0000-0003-2324-8001</dc11:contributor>
-        <dc11:contributor>Hanns Lochmuller MD, PhD
-https://orcid.org/0000-0003-2324-8001</dc11:contributor>
-        <dc11:contributor>Mansoore Gholizade MD</dc11:contributor>
-        <dc11:contributor>Xuanning Yang</dc11:contributor>
-        <dc11:contributor>Xuanning Yang, medical student at Université de Sherbrooke</dc11:contributor>
+        <dc11:contributor>Mansoore Gholizade MD
+University of Sherbrooke</dc11:contributor>
+        <dc11:contributor>Rachel Thompson PhD
+Children&apos;s Hospital of Eastern Ontario
+https://orcid.org/0000-0002-6889-0121</dc11:contributor>
+        <dc11:contributor>Silvia Cerezo Corredera MD
+Hospital Sant Joan de Déu
+https://orcid.org/0000-0002-3391-9772</dc11:contributor>
+        <dc11:contributor>Xuanning Yang, medical student
+University of Sherbrooke</dc11:contributor>
         <dc11:creator>Cynthia Gagnon OT, PhD
+CIUSSS Saguenay-Lac-Saint-Jean, University of Sherbrooke
 https://orcid.org/0000-0003-2829-8470</dc11:creator>
         <dc11:creator>Juliette Potier MSc
+Imagine Institute
 https://orcid.org/0009-0000-5160-7927</dc11:creator>
         <dc11:creator>Paul Fabry MD, PhD student
+University of Sherbrooke
 https://orcid.org/0000-0002-3336-2476</dc11:creator>
         <dc11:type rdf:resource="http://purl.obolibrary.org/obo/IAO_8000001"/>
-        <dcterms:description>Ontology for modeling the three following neuromuscular diseases : OPMD, Congenital myopathies and Congenital myastenic syndroms. It aims to be also an ontology for building the PROMOT project relational database.</dcterms:description>
-        <dcterms:license rdf:resource="https://creativecommons.org/licenses/by-nc-sa/4.0/"/>
+        <dcterms:description>The PROMOT ontology was built in the context of the &quot;Performing a Rare Disease-Oriented Master Observational Trial&quot; initiative (PROMOT initiative).
+
+PROMOT ontology represents three groups of neuromuscular diseases related to the 13 genes the PROMOT Master Observational Trial focuses on:
+ 
+- Oculopharyngeal Muscular Dystrophy (PABPN1)
+- Congenital Myasthenic Syndromes (CHRNE, DOK7, COLQ, RAPSN, GFPT1, GMPPB)
+- Congenital Myopathies (RYR1, TTN, NEB, MTM1, ACTA1, SELENON)
+
+This ontology aims to be the conceptual schema for the common data model the PROMOT initiative will use to collect patient data scattered between the different sites involved in the project.
+ 
+PROMOT initiative has received funding from the Canadian Institutes of Health Research (CIHR), and in partnership with L’Agence Nationale de la Recherche (France), Health Research Board (Dublin, Ireland), Instituto de Salud Carloss III (Spain), IRSC–IG, Swedish Research Council (Sweden), and Swiss National Science Foundation (Switzerland), partners of the European Joint Programme on Rare Diseases (EJP RD).</dcterms:description>
+        <dcterms:license rdf:resource="https://creativecommons.org/licenses/by/4.0/"/>
         <dcterms:title>PROMOT ontology</dcterms:title>
-        <oboInOwl:date>17:08:2026 15:51</oboInOwl:date>
+        <oboInOwl:date>10:09:2026 14:20</oboInOwl:date>
         <rdfs:comment>Additional acknowledgements:
 	- Thomas Bongibault MSc, Imagine Institute
-	- Silvia Cerezo Corredera MD, https://orcid.org/0000-0002-3391-9772
-	- Christina Khnaisser PhD, https://orcid.org/0000-0002-1186-0300
-	- Rachel Thompson PhD, https://orcid.org/0000-0002-6889-0121
-	- Marc Vincent PhD, Imagine Institute, https://orcid.org/0000-0001-6921-8161
-</rdfs:comment>
+	- Christina Khnaisser PhD, University of Sherbrooke, https://orcid.org/0000-0002-1186-0300
+	- Marc Vincent PhD, Imagine Institute, https://orcid.org/0000-0001-6921-8161</rdfs:comment>
+        <rdfs:comment>V1.02</rdfs:comment>
         <rdfs:seeAlso>More about PROMOT initiative at https://www.promotinitiative.com/
 </rdfs:seeAlso>
-        <owl:versionInfo>2026-08-17</owl:versionInfo>
+        <owl:versionInfo>2026-09-10</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -270,34 +291,11 @@ https://orcid.org/0000-0002-3336-2476</dc11:creator>
     <!-- http://purl.obolibrary.org/obo/PROMOT_2000002 -->
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/PROMOT_2000002">
+        <owl:inverseOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_2000005"/>
         <rdfs:domain rdf:resource="http://snomed.info/id/128927009"/>
         <obo:IAO_0000115 xml:lang="en">A relation between an evaluation procedure and the entity assessed by the procedure that could be a patient or a phenotype. The evaluation procedure could be, for instance, a performance test, a patient reported questionnaire or a scale (non restrictive).</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
         <rdfs:label xml:lang="en">assesses</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/PROMOT_2000003 -->
-
-    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/PROMOT_2000003">
-        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/NCIT_C14250"/>
-        <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/SO_0001060"/>
-        <obo:IAO_0000115 xml:lang="en">A relation between an organism and a specific gene mutation that exists in the genome of that organism.</obo:IAO_0000115>
-        <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
-        <oboInOwl:hasDbXref>VO:0001039</oboInOwl:hasDbXref>
-        <rdfs:label xml:lang="en">has genetic mutation</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/PROMOT_2000004 -->
-
-    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/PROMOT_2000004">
-        <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/IAO_0020000"/>
-        <obo:IAO_0000115 xml:lang="en">A relation between an entity and its identifier where the identifier allows to indentify the first entity.</obo:IAO_0000115>
-        <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
-        <rdfs:label xml:lang="en">has identifier</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -342,24 +340,6 @@ https://orcid.org/0000-0002-3336-2476</dc11:creator>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/PROMOT_2000009 -->
-
-    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/PROMOT_2000009">
-        <rdfs:domain rdf:resource="http://snomed.info/id/128927009"/>
-        <obo:IAO_0000115 xml:lang="en">A relation between an evaluation procedure and the entity measured by the procedure, such as a structure, a function, an activity or a participation.</obo:IAO_0000115>
-        <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
-        <oboInOwl:hasDbXref>SCDO:1000194</oboInOwl:hasDbXref>
-        <rdfs:label xml:lang="en">measures</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/RO_0000080 -->
-
-    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0000080"/>
-    
-
-
     <!-- http://purl.obolibrary.org/obo/RO_0000091 -->
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0000091"/>
@@ -399,6 +379,12 @@ https://orcid.org/0000-0002-3336-2476</dc11:creator>
     <!-- http://purl.obolibrary.org/obo/RO_0004013 -->
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0004013"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SCDO_1000194 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/SCDO_1000194"/>
     
 
 
@@ -687,12 +673,6 @@ https://orcid.org/0000-0002-3336-2476</dc11:creator>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/IAO_0020000 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IAO_0020000"/>
-    
-
-
     <!-- http://purl.obolibrary.org/obo/NCBITaxon_9606 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_9606"/>
@@ -702,12 +682,6 @@ https://orcid.org/0000-0002-3336-2476</dc11:creator>
     <!-- http://purl.obolibrary.org/obo/NCIT_C124436 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCIT_C124436"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/NCIT_C14250 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCIT_C14250"/>
     
 
 
@@ -759,8 +733,6 @@ https://orcid.org/0000-0002-3336-2476</dc11:creator>
         </rdfs:subClassOf>
         <obo:IAO_0000115 xml:lang="en">A sequence alteration that is causal germline mutation in Congenital Myasthenic Syndrom.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
-        <rdfs:comment>https://orcid.org/0000-0001-7764-2085</rdfs:comment>
-        <rdfs:label xml:lang="en">CMS related mutation</rdfs:label>
         <rdfs:label xml:lang="en">CMS related variant</rdfs:label>
     </owl:Class>
     
@@ -778,8 +750,6 @@ https://orcid.org/0000-0002-3336-2476</dc11:creator>
         </rdfs:subClassOf>
         <obo:IAO_0000115 xml:lang="en">A sequence alteration that is causal germline mutation in Congenital Myopathy.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
-        <rdfs:comment>https://orcid.org/0000-0001-7764-2085</rdfs:comment>
-        <rdfs:label xml:lang="en">CMYO related mutation</rdfs:label>
         <rdfs:label xml:lang="en">CMYO related variant</rdfs:label>
     </owl:Class>
     
@@ -797,8 +767,6 @@ https://orcid.org/0000-0002-3336-2476</dc11:creator>
         </rdfs:subClassOf>
         <obo:IAO_0000115 xml:lang="en">A sequence alteration that is causal germline mutation in Oculopharyngeal Muscular Dystrophy.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
-        <rdfs:comment>https://orcid.org/0000-0001-7764-2085</rdfs:comment>
-        <rdfs:label xml:lang="en">OPMD related mutation</rdfs:label>
         <rdfs:label xml:lang="en">OPMD related variant</rdfs:label>
     </owl:Class>
     
@@ -810,8 +778,6 @@ https://orcid.org/0000-0002-3336-2476</dc11:creator>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0000001"/>
         <obo:IAO_0000115 xml:lang="en">A sequence alteration located within the CHRNE gene.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
-        <rdfs:comment>Translation process: Frist translated to spanish using Bing Translator then manually reviewed</rdfs:comment>
-        <rdfs:comment>https://orcid.org/0000-0001-7764-2085</rdfs:comment>
         <rdfs:label xml:lang="en">CHRNE variant</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://purl.obolibrary.org/obo/NCIT_C198628"/>
     </owl:Class>
@@ -824,8 +790,6 @@ https://orcid.org/0000-0002-3336-2476</dc11:creator>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0000001"/>
         <obo:IAO_0000115 xml:lang="en">A sequence alteration located within the COLQ gene.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
-        <rdfs:comment>Translation process: Frist translated to spanish using Bing Translator then manually reviewed</rdfs:comment>
-        <rdfs:comment>https://orcid.org/0000-0001-7764-2085</rdfs:comment>
         <rdfs:label xml:lang="en">COLQ variant</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://purl.obolibrary.org/obo/NCIT_C200235"/>
     </owl:Class>
@@ -838,8 +802,6 @@ https://orcid.org/0000-0002-3336-2476</dc11:creator>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0000001"/>
         <obo:IAO_0000115 xml:lang="en">A sequence alteration located within the DOK7 gene.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
-        <rdfs:comment>Translation process: Frist translated to spanish using Bing Translator then manually reviewed</rdfs:comment>
-        <rdfs:comment>https://orcid.org/0000-0001-7764-2085</rdfs:comment>
         <rdfs:label xml:lang="en">DOK7 variant</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://purl.obolibrary.org/obo/NCIT_C216062"/>
     </owl:Class>
@@ -852,8 +814,6 @@ https://orcid.org/0000-0002-3336-2476</dc11:creator>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0000001"/>
         <obo:IAO_0000115 xml:lang="en">A sequence alteration located within the GFPT1 gene.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
-        <rdfs:comment>Translation process: Frist translated to spanish using Bing Translator then manually reviewed</rdfs:comment>
-        <rdfs:comment>https://orcid.org/0000-0001-7764-2085</rdfs:comment>
         <rdfs:label xml:lang="en">GFPT1 variant</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://purl.obolibrary.org/obo/NCIT_C201657"/>
     </owl:Class>
@@ -866,8 +826,6 @@ https://orcid.org/0000-0002-3336-2476</dc11:creator>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0000001"/>
         <obo:IAO_0000115 xml:lang="en">A sequence alteration located within the GMPPB gene.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
-        <rdfs:comment>Translation process: Frist translated to spanish using Bing Translator then manually reviewed</rdfs:comment>
-        <rdfs:comment>https://orcid.org/0000-0001-7764-2085</rdfs:comment>
         <rdfs:label xml:lang="en">GMPPB variant</rdfs:label>
     </owl:Class>
     
@@ -879,8 +837,6 @@ https://orcid.org/0000-0002-3336-2476</dc11:creator>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0000001"/>
         <obo:IAO_0000115 xml:lang="en">A sequence alteration located within the RAPSN gene.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
-        <rdfs:comment>Translation process: Frist translated to spanish using Bing Translator then manually reviewed</rdfs:comment>
-        <rdfs:comment>https://orcid.org/0000-0001-7764-2085</rdfs:comment>
         <rdfs:label xml:lang="en">RAPSN variant</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://purl.obolibrary.org/obo/NCIT_C177668"/>
     </owl:Class>
@@ -893,8 +849,6 @@ https://orcid.org/0000-0002-3336-2476</dc11:creator>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0000002"/>
         <obo:IAO_0000115 xml:lang="en">A sequence alteration located within the ACTA1 gene.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
-        <rdfs:comment>Translation process: Frist translated to spanish using Bing Translator then manually reviewed</rdfs:comment>
-        <rdfs:comment>https://orcid.org/0000-0001-7764-2085</rdfs:comment>
         <rdfs:label xml:lang="en">ACTA1 variant</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://purl.obolibrary.org/obo/NCIT_C191893"/>
     </owl:Class>
@@ -907,8 +861,6 @@ https://orcid.org/0000-0002-3336-2476</dc11:creator>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0000002"/>
         <obo:IAO_0000115 xml:lang="en">A sequence alteration located within the MTM1 gene.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
-        <rdfs:comment>Translation process: Frist translated to spanish using Bing Translator then manually reviewed</rdfs:comment>
-        <rdfs:comment>https://orcid.org/0000-0001-7764-2085</rdfs:comment>
         <rdfs:label xml:lang="en">MTM1 variant</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://purl.obolibrary.org/obo/NCIT_C203822"/>
     </owl:Class>
@@ -921,8 +873,6 @@ https://orcid.org/0000-0002-3336-2476</dc11:creator>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0000002"/>
         <obo:IAO_0000115 xml:lang="en">A sequence alteration located within the NEB gene.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
-        <rdfs:comment>Translation process: Frist translated to spanish using Bing Translator then manually reviewed</rdfs:comment>
-        <rdfs:comment>https://orcid.org/0000-0001-7764-2085</rdfs:comment>
         <rdfs:label xml:lang="en">NEB variant</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://purl.obolibrary.org/obo/NCIT_C203906"/>
     </owl:Class>
@@ -935,8 +885,6 @@ https://orcid.org/0000-0002-3336-2476</dc11:creator>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0000002"/>
         <obo:IAO_0000115 xml:lang="en">A sequence alteration located within the RYR1 gene.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
-        <rdfs:comment>Translation process: Frist translated to spanish using Bing Translator then manually reviewed</rdfs:comment>
-        <rdfs:comment>https://orcid.org/0000-0001-7764-2085</rdfs:comment>
         <rdfs:label xml:lang="en">RYR1 variant</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://purl.obolibrary.org/obo/NCIT_C150311"/>
     </owl:Class>
@@ -949,8 +897,6 @@ https://orcid.org/0000-0002-3336-2476</dc11:creator>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0000002"/>
         <obo:IAO_0000115 xml:lang="en">A sequence alteration located within the SELENON gene.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
-        <rdfs:comment>Translation process: Frist translated to spanish using Bing Translator then manually reviewed</rdfs:comment>
-        <rdfs:comment>https://orcid.org/0000-0001-7764-2085</rdfs:comment>
         <rdfs:label xml:lang="en">SELENON variant</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://purl.obolibrary.org/obo/NCIT_C205071"/>
     </owl:Class>
@@ -963,8 +909,6 @@ https://orcid.org/0000-0002-3336-2476</dc11:creator>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0000002"/>
         <obo:IAO_0000115 xml:lang="en">A sequence alteration located within the TTN gene.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
-        <rdfs:comment>Translation process: Frist translated to spanish using Bing Translator then manually reviewed</rdfs:comment>
-        <rdfs:comment>https://orcid.org/0000-0001-7764-2085</rdfs:comment>
         <rdfs:label xml:lang="en">TTN variant</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://purl.obolibrary.org/obo/NCIT_C101756"/>
     </owl:Class>
@@ -977,10 +921,8 @@ https://orcid.org/0000-0002-3336-2476</dc11:creator>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0000003"/>
         <obo:IAO_0000115 xml:lang="en">A sequence alteration located within the PABPN1 gene.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
-        <rdfs:comment>Translation process: Frist translated to spanish using Bing Translator then manually reviewed</rdfs:comment>
         <rdfs:comment>[PROMOT note] [Derived from EURO-NMD NMD-CDE] </rdfs:comment>
         <rdfs:comment>[PROMOT note] [EURO-NMD] Atalia A et al., EURO-NMD registry: federated FAIR infrastructure, innovative technologies and concepts of a patient-centred registry for rare neuromuscular disorders. Orphanet J Rare Dis. 2024 Feb 14;19(1):66. doi: 10.1186/s13023-024-03059-3. PMID: 38355534; PMCID: PMC10865673.</rdfs:comment>
-        <rdfs:comment>https://orcid.org/0000-0001-7764-2085</rdfs:comment>
         <rdfs:label xml:lang="en">PABPN1 variant</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://purl.obolibrary.org/obo/NCIT_C204162"/>
     </owl:Class>
@@ -991,7 +933,19 @@ https://orcid.org/0000-0002-3336-2476</dc11:creator>
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0010001">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
-        <obo:IAO_0000115 xml:lang="en">an information content entity where the information is an age.</obo:IAO_0000115>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROMOT_3000001"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROMOT_3000005"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000115 xml:lang="en">An information content entity where the information is an age.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
         <rdfs:label xml:lang="en">age content entity</rdfs:label>
     </owl:Class>
@@ -1002,7 +956,13 @@ https://orcid.org/0000-0002-3336-2476</dc11:creator>
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0010003">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
-        <obo:IAO_0000115 xml:lang="en">an information content entity where the information is a decimal.</obo:IAO_0000115>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROMOT_3000003"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000115 xml:lang="en">An information content entity where the information is a decimal.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
         <rdfs:label xml:lang="en">decimal content entity</rdfs:label>
     </owl:Class>
@@ -1013,7 +973,13 @@ https://orcid.org/0000-0002-3336-2476</dc11:creator>
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0010004">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
-        <obo:IAO_0000115 xml:lang="en">an information content entity where the information is a duration.</obo:IAO_0000115>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROMOT_3000004"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#duration"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000115 xml:lang="en">An information content entity where the information is a duration.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
         <rdfs:label xml:lang="en">duration content entity</rdfs:label>
     </owl:Class>
@@ -1024,7 +990,13 @@ https://orcid.org/0000-0002-3336-2476</dc11:creator>
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0010005">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
-        <obo:IAO_0000115 xml:lang="en">an information content entity where the information is an int.</obo:IAO_0000115>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROMOT_3000005"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000115 xml:lang="en">An information content entity where the information is an int.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
         <rdfs:label xml:lang="en">int content entity</rdfs:label>
     </owl:Class>
@@ -1035,7 +1007,13 @@ https://orcid.org/0000-0002-3336-2476</dc11:creator>
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0010006">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
-        <obo:IAO_0000115 xml:lang="en">an information content entity where the information is a token.</obo:IAO_0000115>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROMOT_3000006"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#token"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000115 xml:lang="en">An information content entity where the information is a token.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
         <rdfs:label xml:lang="en">token content entity</rdfs:label>
     </owl:Class>
@@ -1046,7 +1024,13 @@ https://orcid.org/0000-0002-3336-2476</dc11:creator>
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0010007">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
-        <obo:IAO_0000115 xml:lang="en">an information content entity where the information is a year.</obo:IAO_0000115>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROMOT_3000007"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#gYear"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000115 xml:lang="en">An information content entity where the information is a year.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
         <rdfs:label xml:lang="en">year content entity</rdfs:label>
     </owl:Class>
@@ -1057,6 +1041,19 @@ https://orcid.org/0000-0002-3336-2476</dc11:creator>
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0010008">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCIT_C49154"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002351"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0010048"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002351"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0010048"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <obo:IAO_0000115 xml:lang="en">A statement regarding a consent to describe it.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
         <rdfs:label xml:lang="en">statement about a consent</rdfs:label>
@@ -1116,6 +1113,19 @@ https://orcid.org/0000-0002-3336-2476</dc11:creator>
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0010011">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCIT_C49154"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002351"/>
+                <owl:someValuesFrom rdf:resource="http://snomed.info/id/128927009"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002351"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://snomed.info/id/128927009"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <obo:IAO_0000115 xml:lang="en">A statement regarding a procedure to describe it.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
         <rdfs:label xml:lang="en">statement about a procedure</rdfs:label>
@@ -1677,33 +1687,10 @@ https://orcid.org/0000-0002-3336-2476</dc11:creator>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/PROMOT_0010041 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0010041">
-        <rdfs:subClassOf rdf:resource="http://snomed.info/id/363787002"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002350"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0010008"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <obo:IAO_0000115 xml:lang="en">A status of the consent of a person.</obo:IAO_0000115>
-        <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
-        <oboInOwl:hasDbXref>http://snomed.info/id/309370004</oboInOwl:hasDbXref>
-        <rdfs:comment>[PROMOT note] A crossref to the orignal RD-CDM element has been added.</rdfs:comment>
-        <rdfs:comment>[PROMOT note] [Derived from EURO-NMD NMD-CDE] </rdfs:comment>
-        <rdfs:comment>[PROMOT note] [Derived from RD-CDM] [7.1 Consent Status] </rdfs:comment>
-        <rdfs:comment>[PROMOT note] [EURO-NMD] Atalia A et al., EURO-NMD registry: federated FAIR infrastructure, innovative technologies and concepts of a patient-centred registry for rare neuromuscular disorders. Orphanet J Rare Dis. 2024 Feb 14;19(1):66. doi: 10.1186/s13023-024-03059-3. PMID: 38355534; PMCID: PMC10865673.</rdfs:comment>
-        <rdfs:comment>[PROMOT note] [RD-CDM] Graefe, A.S.L., Hübner, M.R., Rehburg, F. et al. An ontology-based rare disease common data model harmonising international registries, FHIR, and Phenopackets. Sci Data 12, 234 (2025). https://doi.org/10.1038/s41597-025-04558-z</rdfs:comment>
-        <rdfs:label xml:lang="en">Consent status</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- http://purl.obolibrary.org/obo/PROMOT_0010042 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0010042">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0010041"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SCDO_1000490"/>
         <obo:IAO_0000115 xml:lang="en">A status of a consent that is waiting to be defined.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
         <rdfs:comment>[PROMOT note] [Derived from RD-CDM] [7.1 Consent Status] </rdfs:comment>
@@ -1716,7 +1703,7 @@ https://orcid.org/0000-0002-3336-2476</dc11:creator>
     <!-- http://purl.obolibrary.org/obo/PROMOT_0010043 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0010043">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0010041"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SCDO_1000490"/>
         <obo:IAO_0000115 xml:lang="en">A status of a consent that has been proposed to a person for them to decide.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
         <rdfs:comment>[PROMOT note] [Derived from RD-CDM] [7.1 Consent Status] </rdfs:comment>
@@ -1729,7 +1716,7 @@ https://orcid.org/0000-0002-3336-2476</dc11:creator>
     <!-- http://purl.obolibrary.org/obo/PROMOT_0010044 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0010044">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0010041"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SCDO_1000490"/>
         <obo:IAO_0000115 xml:lang="en">A status of a consent that has been given by the concerned person.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
         <rdfs:comment>[PROMOT note] [Derived from EURO-NMD NMD-CDE] </rdfs:comment>
@@ -1744,7 +1731,7 @@ https://orcid.org/0000-0002-3336-2476</dc11:creator>
     <!-- http://purl.obolibrary.org/obo/PROMOT_0010045 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0010045">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0010041"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SCDO_1000490"/>
         <obo:IAO_0000115 xml:lang="en">A status of a consent that has been rejected by the concerned person.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
         <rdfs:comment>[PROMOT note] [Derived from EURO-NMD NMD-CDE] </rdfs:comment>
@@ -1759,7 +1746,7 @@ https://orcid.org/0000-0002-3336-2476</dc11:creator>
     <!-- http://purl.obolibrary.org/obo/PROMOT_0010046 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0010046">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0010041"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SCDO_1000490"/>
         <obo:IAO_0000115 xml:lang="en">A status of a consent that is inactive.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
         <oboInOwl:hasDbXref>http://snomed.info/id/73425007</oboInOwl:hasDbXref>
@@ -1773,7 +1760,7 @@ https://orcid.org/0000-0002-3336-2476</dc11:creator>
     <!-- http://purl.obolibrary.org/obo/PROMOT_0010047 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0010047">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0010041"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SCDO_1000490"/>
         <obo:IAO_0000115 xml:lang="en">A status of a consent that has been entered by error.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
         <oboInOwl:hasDbXref>http://snomed.info/id/723510000</oboInOwl:hasDbXref>
@@ -1852,6 +1839,12 @@ https://orcid.org/0000-0002-3336-2476</dc11:creator>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002350"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0010012"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROMOT_3000008"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115 xml:lang="en">A risk of fall assessed for a patient that has phenotypes that allow to assess they undergo a risk of fall.</obo:IAO_0000115>
@@ -1973,6 +1966,34 @@ https://orcid.org/0000-0002-3336-2476</dc11:creator>
     
 
 
+    <!-- http://purl.obolibrary.org/obo/PROMOT_0020005 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0020005">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://id.who.int/icd/entity/1626363729"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002328"/>
+                        <owl:someValuesFrom rdf:resource="http://id.who.int/icd/entity/567313968"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://id.who.int/icd/entity/1626363729"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002328"/>
+                <owl:someValuesFrom rdf:resource="http://id.who.int/icd/entity/567313968"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000115 xml:lang="en">A body structure related to a body function such that the body structure is functionally related to the body function.</obo:IAO_0000115>
+        <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
+        <rdfs:label xml:lang="en">Body function related body structure</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/PROMOT_0031001 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0031001">
@@ -2057,12 +2078,6 @@ https://orcid.org/0000-0002-3336-2476</dc11:creator>
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0031007">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000019"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000080"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/HP_0000118"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <obo:IAO_0000115 xml:lang="en">A qualifier for stating the presence, absence or uncertainty of a entity instance (e.g. a phenotype instance).</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
         <oboInOwl:hasDbXref>http://snomed.info/id/363778006</oboInOwl:hasDbXref>
@@ -2095,7 +2110,7 @@ https://orcid.org/0000-0002-3336-2476</dc11:creator>
                     <rdf:Description rdf:about="http://id.who.int/icd/entity/567313968"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002331"/>
-                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0110001"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/XCO_0000001"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
@@ -2104,7 +2119,7 @@ https://orcid.org/0000-0002-3336-2476</dc11:creator>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002331"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0110001"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/XCO_0000001"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115 xml:lang="en">A body function that is involved in an activity. The boby function is needed in order to fullfill the activity.</obo:IAO_0000115>
@@ -2123,7 +2138,7 @@ https://orcid.org/0000-0002-3336-2476</dc11:creator>
                     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/HP_0000118"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROMOT_2000001"/>
-                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0110001"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/XCO_0000001"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
@@ -2132,7 +2147,7 @@ https://orcid.org/0000-0002-3336-2476</dc11:creator>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROMOT_2000001"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0110001"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/XCO_0000001"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115 xml:lang="en">A phenotype that affects an activity.</obo:IAO_0000115>
@@ -3827,8 +3842,8 @@ https://orcid.org/0000-0002-3336-2476</dc11:creator>
                 <owl:intersectionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="http://snomed.info/id/128927009"/>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROMOT_2000002"/>
-                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0110001"/>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/SCDO_1000194"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/XCO_0000001"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
@@ -3836,8 +3851,8 @@ https://orcid.org/0000-0002-3336-2476</dc11:creator>
         <rdfs:subClassOf rdf:resource="http://snomed.info/id/128927009"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROMOT_2000002"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0110001"/>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/SCDO_1000194"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/XCO_0000001"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115 xml:lang="en">A procedure that can measure an activity.</obo:IAO_0000115>
@@ -3855,7 +3870,7 @@ https://orcid.org/0000-0002-3336-2476</dc11:creator>
                 <owl:intersectionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="http://snomed.info/id/128927009"/>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROMOT_2000002"/>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/SCDO_1000194"/>
                         <owl:someValuesFrom rdf:resource="http://id.who.int/icd/entity/567313968"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
@@ -3864,7 +3879,7 @@ https://orcid.org/0000-0002-3336-2476</dc11:creator>
         <rdfs:subClassOf rdf:resource="http://snomed.info/id/128927009"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROMOT_2000002"/>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/SCDO_1000194"/>
                 <owl:someValuesFrom rdf:resource="http://id.who.int/icd/entity/567313968"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -3903,24 +3918,6 @@ https://orcid.org/0000-0002-3336-2476</dc11:creator>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/PROMOT_0110001 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0110001">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000015"/>
-        <obo:IAO_0000115 xml:lang="en">An activity is the execution of a task or action by an individual. Activity limitations are difficulties an individual may have in executing activities.</obo:IAO_0000115>
-        <obo:IAO_0000117>https://orcid.org/0009-0000-5160-7927</obo:IAO_0000117>
-        <rdfs:label xml:lang="en">Activity</rdfs:label>
-        <rdfs:seeAlso rdf:resource="http://id.who.int/icd/entity/1394728112"/>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PROMOT_0110001"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget xml:lang="en">An activity is the execution of a task or action by an individual. Activity limitations are difficulties an individual may have in executing activities.</owl:annotatedTarget>
-        <obo:IAO_0000119>International Classification of Functioning, Disability and Health (ICF)</obo:IAO_0000119>
-    </owl:Axiom>
-    
-
-
     <!-- http://purl.obolibrary.org/obo/PROMOT_0120002 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROMOT_0120002">
@@ -3939,6 +3936,12 @@ https://orcid.org/0000-0002-3336-2476</dc11:creator>
     
 
 
+    <!-- http://purl.obolibrary.org/obo/SCDO_1000490 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SCDO_1000490"/>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/SO_0001060 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/SO_0001060"/>
@@ -3948,6 +3951,12 @@ https://orcid.org/0000-0002-3336-2476</dc11:creator>
     <!-- http://purl.obolibrary.org/obo/SO_0001762 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/SO_0001762"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/XCO_0000001 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/XCO_0000001"/>
     
 
 
@@ -4012,5 +4021,5 @@ https://orcid.org/0000-0002-3336-2476</dc11:creator>
 
 
 
-<!-- Generated by the OWL API (version 4.5.29) https://github.com/owlcs/owlapi -->
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
 

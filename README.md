@@ -5,7 +5,7 @@
 [![DOI](https://zenodo.org/badge/48047921.svg)](https://zenodo.org/badge/latestdoi/48047921)
 -->
 
-# PROMOT ontology
+# PROMOT Ontology
 <img src="https://github.com/JuPoIm/promot/blob/test/site/assets/images/Promot_Logo_Colours.png" height=250 width=350/>
 
 The PROMOT ontology was built in the context of the "Performing a Rare Disease-Oriented Master Observational Trial" initiative (PROMOT initiative).
@@ -54,7 +54,7 @@ Editors of this ontology should use the edit version, [src/ontology/promot-edit.
 
 ## Contributors
 * Anita Burgun MD, PhD (Assistance publique - Hôpitaux de Paris, Imagine Institute, Université Paris Cité, France)
-* Carole Faviez PhD, research engineer (Imagine Institute, Paris, France)
+* Carole Faviez PhD (Imagine Institute, Paris, France)
 * Elizabeth Angelevski DC, project manager (University of Sherbrooke, Québec CA)
 * Mansoore Gholizade MD (University of Sherbrooke, Québec CA)
 * Claudia Côté RD, PhD (University of Sherbrooke, Québec CA)

@@ -61,8 +61,8 @@ Prefix(CPATH_CONDITION_OCCURRENCE:=<https://w3id.org/cpont/condition_occurrence/
 
 
 Ontology(<http://purl.obolibrary.org/obo/promot/components/promot-component.owl>
-<http://purl.obolibrary.org/obo/promot/releases/2026-08-28/components/promot-component.owl>
-Annotation(owl:versionInfo "2026-08-28")
+<http://purl.obolibrary.org/obo/promot/releases/2026-09-10/components/promot-component.owl>
+Annotation(owl:versionInfo "2026-09-10")
 
 Declaration(Class(<http://id.who.int/icd/entity/1019379329>))
 Declaration(Class(<http://id.who.int/icd/entity/1034220517>))
@@ -592,7 +592,6 @@ Declaration(Class(obo:PROMOT_0010037))
 Declaration(Class(obo:PROMOT_0010038))
 Declaration(Class(obo:PROMOT_0010039))
 Declaration(Class(obo:PROMOT_0010040))
-Declaration(Class(obo:PROMOT_0010041))
 Declaration(Class(obo:PROMOT_0010042))
 Declaration(Class(obo:PROMOT_0010043))
 Declaration(Class(obo:PROMOT_0010044))
@@ -608,6 +607,7 @@ Declaration(Class(obo:PROMOT_0020001))
 Declaration(Class(obo:PROMOT_0020002))
 Declaration(Class(obo:PROMOT_0020003))
 Declaration(Class(obo:PROMOT_0020004))
+Declaration(Class(obo:PROMOT_0020005))
 Declaration(Class(obo:PROMOT_0031001))
 Declaration(Class(obo:PROMOT_0031002))
 Declaration(Class(obo:PROMOT_0031003))
@@ -713,10 +713,11 @@ Declaration(Class(obo:PROMOT_0032095))
 Declaration(Class(obo:PROMOT_0100001))
 Declaration(Class(obo:PROMOT_0100002))
 Declaration(Class(obo:PROMOT_0100003))
-Declaration(Class(obo:PROMOT_0110001))
 Declaration(Class(obo:PROMOT_0120002))
+Declaration(Class(obo:SCDO_1000490))
 Declaration(Class(obo:SO_0001060))
 Declaration(Class(obo:SO_0001762))
+Declaration(Class(obo:XCO_0000001))
 Declaration(Class(<http://purl.org/sig/ont/fma/fma13295>))
 Declaration(Class(<http://purl.org/sig/ont/fma/fma13354>))
 Declaration(Class(<http://purl.org/sig/ont/fma/fma13379>))
@@ -821,15 +822,13 @@ Declaration(Class(<http://www.orpha.net/ORDO/Orphanet_270>))
 Declaration(Class(<http://www.orpha.net/ORDO/Orphanet_377788>))
 Declaration(Class(<http://www.orpha.net/ORDO/Orphanet_590>))
 Declaration(Class(<http://www.orpha.net/ORDO/Orphanet_97245>))
+Declaration(ObjectProperty(obo:OPMI_0000481))
 Declaration(ObjectProperty(obo:PROMOT_2000001))
 Declaration(ObjectProperty(obo:PROMOT_2000002))
-Declaration(ObjectProperty(obo:PROMOT_2000003))
-Declaration(ObjectProperty(obo:PROMOT_2000004))
 Declaration(ObjectProperty(obo:PROMOT_2000005))
 Declaration(ObjectProperty(obo:PROMOT_2000006))
 Declaration(ObjectProperty(obo:PROMOT_2000007))
 Declaration(ObjectProperty(obo:PROMOT_2000008))
-Declaration(ObjectProperty(obo:PROMOT_2000009))
 Declaration(ObjectProperty(obo:RO_0000080))
 Declaration(ObjectProperty(obo:RO_0000086))
 Declaration(ObjectProperty(obo:RO_0000091))
@@ -844,6 +843,8 @@ Declaration(ObjectProperty(obo:RO_0002614))
 Declaration(ObjectProperty(obo:RO_0004003))
 Declaration(ObjectProperty(obo:RO_0004013))
 Declaration(ObjectProperty(obo:RO_0004029))
+Declaration(ObjectProperty(obo:SCDO_1000194))
+Declaration(ObjectProperty(obo:VO_0001039))
 Declaration(DataProperty(obo:PROMOT_3000001))
 Declaration(DataProperty(obo:PROMOT_3000002))
 Declaration(DataProperty(obo:PROMOT_3000003))
@@ -884,6 +885,10 @@ AnnotationPropertyRange(obo:PROMOT_1000001 xsd:string)
 #   Object Properties
 ############################
 
+# Object Property: obo:OPMI_0000481 (has identifier)
+
+AnnotationAssertion(rdfs:label obo:OPMI_0000481 "has identifier"@en)
+
 # Object Property: obo:PROMOT_2000001 (affects)
 
 AnnotationAssertion(obo:IAO_0000115 obo:PROMOT_2000001 "A relation between two entity where the first entity affects the state of the second entity."@en)
@@ -904,27 +909,8 @@ AnnotationAssertion(obo:IAO_0000117 obo:PROMOT_2000002 "https://orcid.org/0009-0
 AnnotationAssertion(rdfs:label obo:PROMOT_2000002 "assesses"@en)
 AnnotationAssertion(Annotation(babelon:translation_status "CANDIDATE") rdfs:label obo:PROMOT_2000002 "evalúa"@es)
 AnnotationAssertion(Annotation(babelon:translation_status "CANDIDATE") rdfs:label obo:PROMOT_2000002 "évalue"@fr)
+InverseObjectProperties(obo:PROMOT_2000002 obo:PROMOT_2000005)
 ObjectPropertyDomain(obo:PROMOT_2000002 <http://snomed.info/id/128927009>)
-
-# Object Property: obo:PROMOT_2000003 (est porteur de la mutation)
-
-AnnotationAssertion(obo:IAO_0000115 obo:PROMOT_2000003 "A relation between an organism and a specific gene mutation that exists in the genome of that organism."@en)
-AnnotationAssertion(Annotation(babelon:translation_status "CANDIDATE") obo:IAO_0000115 obo:PROMOT_2000003 "Une relation entre un organisme et une mutation génétique présente dans le génome de cet organisme."@fr)
-AnnotationAssertion(obo:IAO_0000117 obo:PROMOT_2000003 "https://orcid.org/0009-0000-5160-7927")
-AnnotationAssertion(oboInOwl:hasDbXref obo:PROMOT_2000003 "VO:0001039")
-AnnotationAssertion(Annotation(babelon:translation_status "CANDIDATE") rdfs:label obo:PROMOT_2000003 "est porteur de la mutation"@fr)
-AnnotationAssertion(rdfs:label obo:PROMOT_2000003 "has genetic mutation"@en)
-ObjectPropertyDomain(obo:PROMOT_2000003 obo:NCIT_C14250)
-ObjectPropertyRange(obo:PROMOT_2000003 obo:SO_0001060)
-
-# Object Property: obo:PROMOT_2000004 (has identifier)
-
-AnnotationAssertion(obo:IAO_0000115 obo:PROMOT_2000004 "A relation between an entity and its identifier where the identifier allows to indentify the first entity."@en)
-AnnotationAssertion(Annotation(babelon:translation_status "CANDIDATE") obo:IAO_0000115 obo:PROMOT_2000004 "Une relation entre une entité et son identifiant, où l’identifiant sert à identifier la première entité."@fr)
-AnnotationAssertion(obo:IAO_0000117 obo:PROMOT_2000004 "https://orcid.org/0009-0000-5160-7927")
-AnnotationAssertion(Annotation(babelon:translation_status "CANDIDATE") rdfs:label obo:PROMOT_2000004 "a pour identifiant"@fr)
-AnnotationAssertion(rdfs:label obo:PROMOT_2000004 "has identifier"@en)
-ObjectPropertyRange(obo:PROMOT_2000004 obo:IAO_0020000)
 
 # Object Property: obo:PROMOT_2000005 (est évalué par)
 
@@ -949,7 +935,7 @@ AnnotationAssertion(oboInOwl:hasDbXref obo:PROMOT_2000007 "SIO:000709")
 AnnotationAssertion(Annotation(babelon:translation_status "CANDIDATE") rdfs:label obo:PROMOT_2000007 "est lié à"@fr)
 AnnotationAssertion(rdfs:label obo:PROMOT_2000007 "is related to"@en)
 
-# Object Property: obo:PROMOT_2000008 (es utilizado por)
+# Object Property: obo:PROMOT_2000008 (est utilisé par)
 
 AnnotationAssertion(obo:IAO_0000115 obo:PROMOT_2000008 "A relation between an assistive device and a patient, where the patient uses the device in order to accomplish something, such as a task or an activity (e.g. moving, reading)."@en)
 AnnotationAssertion(Annotation(obo:IAO_0000119 "JP: Translated to spanish using Bing Translator") Annotation(babelon:translation_status "CANDIDATE") obo:IAO_0000115 obo:PROMOT_2000008 "Una relación entre un dispositivo y un paciente donde el paciente utiliza el dispositivo para moverse, realizar una acción o una actividad."@es)
@@ -959,16 +945,6 @@ AnnotationAssertion(Annotation(babelon:translation_status "CANDIDATE") rdfs:labe
 AnnotationAssertion(Annotation(babelon:translation_status "CANDIDATE") rdfs:label obo:PROMOT_2000008 "est utilisé par"@fr)
 AnnotationAssertion(rdfs:label obo:PROMOT_2000008 "is used by"@en)
 ObjectPropertyRange(obo:PROMOT_2000008 obo:NCIT_C16960)
-
-# Object Property: obo:PROMOT_2000009 (mesure)
-
-AnnotationAssertion(obo:IAO_0000115 obo:PROMOT_2000009 "A relation between an evaluation procedure and the entity measured by the procedure, such as a structure, a function, an activity or a participation."@en)
-AnnotationAssertion(Annotation(babelon:translation_status "CANDIDATE") obo:IAO_0000115 obo:PROMOT_2000009 "Une relation entre une procédure d’évaluation et l’entité qu’elle mesure, comme, par exemple, une structure organique, une fonction biologique ou une activité ou une participation."@fr)
-AnnotationAssertion(obo:IAO_0000117 obo:PROMOT_2000009 "https://orcid.org/0009-0000-5160-7927")
-AnnotationAssertion(oboInOwl:hasDbXref obo:PROMOT_2000009 "SCDO:1000194")
-AnnotationAssertion(rdfs:label obo:PROMOT_2000009 "measures"@en)
-AnnotationAssertion(Annotation(babelon:translation_status "CANDIDATE") rdfs:label obo:PROMOT_2000009 "mesure"@fr)
-ObjectPropertyDomain(obo:PROMOT_2000009 <http://snomed.info/id/128927009>)
 
 # Object Property: obo:RO_0000080 (quality of)
 
@@ -1026,6 +1002,14 @@ ObjectPropertyDomain(obo:RO_0004013 obo:SO_0001060)
 # Object Property: obo:RO_0004029 (disease has feature)
 
 AnnotationAssertion(rdfs:label obo:RO_0004029 "disease has feature"@en)
+
+# Object Property: obo:SCDO_1000194 (measures)
+
+AnnotationAssertion(rdfs:label obo:SCDO_1000194 "measures"@en)
+
+# Object Property: obo:VO_0001039 (has gene mutation)
+
+AnnotationAssertion(rdfs:label obo:VO_0001039 "has gene mutation"@en)
 
 
 ############################
@@ -1235,7 +1219,7 @@ AnnotationAssertion(skos:changeNote <http://id.who.int/icd/entity/1174312718> "[
 SubClassOf(<http://id.who.int/icd/entity/1174312718> ObjectSomeValuesFrom(obo:PROMOT_2000006 <http://snomed.info/id/840297006>))
 SubClassOf(<http://id.who.int/icd/entity/1174312718> ObjectSomeValuesFrom(obo:RO_0002331 <http://id.who.int/icd/entity/1328675264>))
 
-# Class: <http://id.who.int/icd/entity/1182439715> (Cervical vertebral column)
+# Class: <http://id.who.int/icd/entity/1182439715> (Colonne cervicale)
 
 AnnotationAssertion(oboInOwl:hasDbXref <http://id.who.int/icd/entity/1182439715> "https://data.esante.gouv.fr/terminologies/icf#99004")
 AnnotationAssertion(rdfs:label <http://id.who.int/icd/entity/1182439715> "Cervical vertebral column"@en)
@@ -1362,7 +1346,7 @@ AnnotationAssertion(Annotation(rdfs:comment "[PROMOT note] Source for official t
 AnnotationAssertion(rdfs:label <http://id.who.int/icd/entity/1328675264> "Eating"@en)
 AnnotationAssertion(Annotation(rdfs:comment "[PROMOT note] Source for official translation: https://icd.who.int/browse/2026-01/icf/fr > Info > Fichier du tableur") rdfs:label <http://id.who.int/icd/entity/1328675264> "Manger"@fr)
 AnnotationAssertion(skos:changeNote <http://id.who.int/icd/entity/1328675264> "[PROMOT note] The PROMOT ontology added a crossref to the LIRMM version of the ICF (CIF-ASIP 2020). It also added the official French and Spanish translation for labels."@en)
-SubClassOf(<http://id.who.int/icd/entity/1328675264> obo:PROMOT_0110001)
+SubClassOf(<http://id.who.int/icd/entity/1328675264> obo:XCO_0000001)
 SubClassOf(<http://id.who.int/icd/entity/1328675264> ObjectSomeValuesFrom(obo:PROMOT_2000006 <http://snomed.info/id/840297006>))
 
 # Class: <http://id.who.int/icd/entity/1334556216> (Andar y moverse)
@@ -1557,7 +1541,7 @@ AnnotationAssertion(rdfs:label <http://id.who.int/icd/entity/150502901> "Changin
 AnnotationAssertion(skos:changeNote <http://id.who.int/icd/entity/150502901> "[PROMOT note] The PROMOT ontology added a crossref to the LIRMM version of the ICF (CIF-ASIP 2020). It also added the official French and Spanish translation for labels."@en)
 SubClassOf(<http://id.who.int/icd/entity/150502901> ObjectSomeValuesFrom(obo:PROMOT_2000006 <http://snomed.info/id/84100007>))
 
-# Class: <http://id.who.int/icd/entity/151046878> (Speaking)
+# Class: <http://id.who.int/icd/entity/151046878> (Hablar)
 
 AnnotationAssertion(oboInOwl:hasDbXref <http://id.who.int/icd/entity/151046878> "https://data.esante.gouv.fr/terminologies/icf#44403")
 AnnotationAssertion(Annotation(rdfs:comment "[PROMOT note] Source for official translation: https://icd.who.int/browse/2026-01/icf/es > Información > Archivo de hoja de cálculo") rdfs:label <http://id.who.int/icd/entity/151046878> "Hablar"@es)
@@ -1680,7 +1664,6 @@ AnnotationAssertion(Annotation(rdfs:comment "[PROMOT note] Source for official t
 AnnotationAssertion(skos:changeNote <http://id.who.int/icd/entity/1626363729> "[PROMOT note] The PROMOT ontology added a comment to quote the CDM used as a source for this entity. A crossref to the orignal element has also been added."@en)
 SubClassOf(<http://id.who.int/icd/entity/1626363729> obo:BFO_0000028)
 SubClassOf(<http://id.who.int/icd/entity/1626363729> ObjectSomeValuesFrom(obo:RO_0000086 <http://id.who.int/icd/entity/437219407>))
-SubClassOf(<http://id.who.int/icd/entity/1626363729> ObjectSomeValuesFrom(obo:RO_0002331 <http://id.who.int/icd/entity/567313968>))
 
 # Class: <http://id.who.int/icd/entity/1650503157> (Bones of ankle and foot)
 
@@ -1708,7 +1691,7 @@ AnnotationAssertion(Annotation(rdfs:comment "[PROMOT note] Source for official t
 AnnotationAssertion(Annotation(rdfs:comment "[PROMOT note] Source for official translation: https://icd.who.int/browse/2026-01/icf/es > Información > Archivo de hoja de cálculo") rdfs:label <http://id.who.int/icd/entity/1682107878> "Funciones respiratorias adicionales"@es)
 AnnotationAssertion(skos:changeNote <http://id.who.int/icd/entity/1682107878> "[PROMOT note] The PROMOT ontology added a crossref to the LIRMM version of the ICF (CIF-ASIP 2020). It also added the official French and Spanish translation for labels."@en)
 
-# Class: <http://id.who.int/icd/entity/169456190> (Articulaciones de la cabeza y de la región del cuello)
+# Class: <http://id.who.int/icd/entity/169456190> (Joints of head and neck region)
 
 AnnotationAssertion(oboInOwl:hasDbXref <http://id.who.int/icd/entity/169456190> "https://data.esante.gouv.fr/terminologies/icf#89690")
 AnnotationAssertion(Annotation(rdfs:comment "[PROMOT note] Source for official translation: https://icd.who.int/browse/2026-01/icf/es > Información > Archivo de hoja de cálculo") rdfs:label <http://id.who.int/icd/entity/169456190> "Articulaciones de la cabeza y de la región del cuello"@es)
@@ -1836,7 +1819,7 @@ AnnotationAssertion(Annotation(rdfs:comment "[PROMOT note] Source for official t
 AnnotationAssertion(rdfs:label <http://id.who.int/icd/entity/1811133755> "Mental functions of language"@en)
 AnnotationAssertion(skos:changeNote <http://id.who.int/icd/entity/1811133755> "[PROMOT note] The PROMOT ontology added a crossref to the LIRMM version of the ICF (CIF-ASIP 2020). It also added the official French and Spanish translation for labels."@en)
 
-# Class: <http://id.who.int/icd/entity/1819639191> (Reception of language)
+# Class: <http://id.who.int/icd/entity/1819639191> (Recepción de lenguaje)
 
 AnnotationAssertion(oboInOwl:hasDbXref <http://id.who.int/icd/entity/1819639191> "https://data.esante.gouv.fr/terminologies/icf#66239")
 AnnotationAssertion(Annotation(rdfs:comment "[PROMOT note] Source for official translation: https://icd.who.int/browse/2026-01/icf/es > Información > Archivo de hoja de cálculo") rdfs:label <http://id.who.int/icd/entity/1819639191> "Recepción de lenguaje"@es)
@@ -1851,8 +1834,8 @@ AnnotationAssertion(rdfs:label <http://id.who.int/icd/entity/1828012543> "Commun
 AnnotationAssertion(Annotation(rdfs:comment "[PROMOT note] Source for official translation: https://icd.who.int/browse/2026-01/icf/fr > Info > Fichier du tableur") rdfs:label <http://id.who.int/icd/entity/1828012543> "Communication"@fr)
 AnnotationAssertion(Annotation(rdfs:comment "[PROMOT note] Source for official translation: https://icd.who.int/browse/2026-01/icf/es > Información > Archivo de hoja de cálculo") rdfs:label <http://id.who.int/icd/entity/1828012543> "Comunicación"@es)
 AnnotationAssertion(skos:changeNote <http://id.who.int/icd/entity/1828012543> "[PROMOT note] The PROMOT ontology added a crossref to the LIRMM version of the ICF (CIF-ASIP 2020). It also added the official French and Spanish translation for labels."@en)
-SubClassOf(<http://id.who.int/icd/entity/1828012543> obo:PROMOT_0110001)
 SubClassOf(<http://id.who.int/icd/entity/1828012543> obo:PROMOT_0120002)
+SubClassOf(<http://id.who.int/icd/entity/1828012543> obo:XCO_0000001)
 
 # Class: <http://id.who.int/icd/entity/1831985718> (Función vestibular relacionada con el equilibrio)
 
@@ -2054,8 +2037,8 @@ AnnotationAssertion(Annotation(rdfs:comment "[PROMOT note] Source for official t
 AnnotationAssertion(Annotation(rdfs:comment "[PROMOT note] Source for official translation: https://icd.who.int/browse/2026-01/icf/es > Información > Archivo de hoja de cálculo") rdfs:label <http://id.who.int/icd/entity/2011053685> "Aprendizaje y aplicación del conocimiento"@es)
 AnnotationAssertion(rdfs:label <http://id.who.int/icd/entity/2011053685> "Learning and applying knowledge"@en)
 AnnotationAssertion(skos:changeNote <http://id.who.int/icd/entity/2011053685> "[PROMOT note] The PROMOT ontology added a crossref to the LIRMM version of the ICF (CIF-ASIP 2020). It also added the official French and Spanish translation for labels."@en)
-SubClassOf(<http://id.who.int/icd/entity/2011053685> obo:PROMOT_0110001)
 SubClassOf(<http://id.who.int/icd/entity/2011053685> obo:PROMOT_0120002)
+SubClassOf(<http://id.who.int/icd/entity/2011053685> obo:XCO_0000001)
 
 # Class: <http://id.who.int/icd/entity/2021370201> (Functions of the eyelid)
 
@@ -2101,7 +2084,7 @@ AnnotationAssertion(rdfs:label <http://id.who.int/icd/entity/2048203604> "Mobili
 AnnotationAssertion(Annotation(rdfs:comment "[PROMOT note] Source for official translation: https://icd.who.int/browse/2026-01/icf/fr > Info > Fichier du tableur") rdfs:label <http://id.who.int/icd/entity/2048203604> "Mobilité"@fr)
 AnnotationAssertion(Annotation(rdfs:comment "[PROMOT note] Source for official translation: https://icd.who.int/browse/2026-01/icf/es > Información > Archivo de hoja de cálculo") rdfs:label <http://id.who.int/icd/entity/2048203604> "Movilidad"@es)
 AnnotationAssertion(skos:changeNote <http://id.who.int/icd/entity/2048203604> "[PROMOT note] The PROMOT ontology added a crossref to the LIRMM version of the ICF (CIF-ASIP 2020). It also added the official French and Spanish translation for labels."@en)
-SubClassOf(<http://id.who.int/icd/entity/2048203604> obo:PROMOT_0110001)
+SubClassOf(<http://id.who.int/icd/entity/2048203604> obo:XCO_0000001)
 SubClassOf(<http://id.who.int/icd/entity/2048203604> ObjectSomeValuesFrom(obo:PROMOT_2000006 <http://snomed.info/id/12894003>))
 
 # Class: <http://id.who.int/icd/entity/2052957777> (Expresión de lenguaje oral)
@@ -2229,7 +2212,7 @@ AnnotationAssertion(Annotation(rdfs:comment "[PROMOT note] Source for official t
 AnnotationAssertion(skos:changeNote <http://id.who.int/icd/entity/242704590> "[PROMOT note] The PROMOT ontology added a crossref to the LIRMM version of the ICF (CIF-ASIP 2020). It also added the official French and Spanish translation for labels."@en)
 SubClassOf(<http://id.who.int/icd/entity/242704590> ObjectSomeValuesFrom(obo:PROMOT_2000006 <http://snomed.info/id/84100007>))
 
-# Class: <http://id.who.int/icd/entity/246722870> (Structures around eye)
+# Class: <http://id.who.int/icd/entity/246722870> (Estructuras periféricas oculares)
 
 AnnotationAssertion(oboInOwl:hasDbXref <http://id.who.int/icd/entity/246722870> "https://data.esante.gouv.fr/terminologies/icf#52807")
 AnnotationAssertion(Annotation(rdfs:comment "[PROMOT note] Source for official translation: https://icd.who.int/browse/2026-01/icf/es > Información > Archivo de hoja de cálculo") rdfs:label <http://id.who.int/icd/entity/246722870> "Estructuras periféricas oculares"@es)
@@ -2292,7 +2275,7 @@ SubClassOf(<http://id.who.int/icd/entity/278512890> ObjectSomeValuesFrom(obo:RO_
 SubClassOf(<http://id.who.int/icd/entity/278512890> ObjectSomeValuesFrom(obo:RO_0002328 <http://id.who.int/icd/entity/1521707777>))
 SubClassOf(<http://id.who.int/icd/entity/278512890> ObjectSomeValuesFrom(obo:RO_0002328 <http://id.who.int/icd/entity/1789365017>))
 
-# Class: <http://id.who.int/icd/entity/294830867> (Muscles de l'avant-bras)
+# Class: <http://id.who.int/icd/entity/294830867> (Muscles of forearm)
 
 AnnotationAssertion(oboInOwl:hasDbXref <http://id.who.int/icd/entity/294830867> "https://data.esante.gouv.fr/terminologies/icf#44569")
 AnnotationAssertion(Annotation(rdfs:comment "[PROMOT note] Source for official translation: https://icd.who.int/browse/2026-01/icf/fr > Info > Fichier du tableur") rdfs:label <http://id.who.int/icd/entity/294830867> "Muscles de l'avant-bras"@fr)
@@ -2446,7 +2429,7 @@ AnnotationAssertion(rdfs:label <http://id.who.int/icd/entity/412494151> "Running
 AnnotationAssertion(skos:changeNote <http://id.who.int/icd/entity/412494151> "[PROMOT note] The PROMOT ontology added a crossref to the LIRMM version of the ICF (CIF-ASIP 2020). It also added the official French and Spanish translation for labels."@en)
 SubClassOf(<http://id.who.int/icd/entity/412494151> ObjectSomeValuesFrom(obo:PROMOT_2000006 <http://snomed.info/id/84100007>))
 
-# Class: <http://id.who.int/icd/entity/426292658> (Structure de l'oreille interne)
+# Class: <http://id.who.int/icd/entity/426292658> (Structure of inner ear)
 
 AnnotationAssertion(oboInOwl:hasDbXref <http://id.who.int/icd/entity/426292658> "https://data.esante.gouv.fr/terminologies/icf#84736")
 AnnotationAssertion(Annotation(rdfs:comment "[PROMOT note] Source for official translation: https://icd.who.int/browse/2026-01/icf/es > Información > Archivo de hoja de cálculo") rdfs:label <http://id.who.int/icd/entity/426292658> "Estructura del oído interno"@es)
@@ -2454,7 +2437,7 @@ AnnotationAssertion(Annotation(rdfs:comment "[PROMOT note] Source for official t
 AnnotationAssertion(rdfs:label <http://id.who.int/icd/entity/426292658> "Structure of inner ear"@en)
 AnnotationAssertion(skos:changeNote <http://id.who.int/icd/entity/426292658> "[PROMOT note] The PROMOT ontology added a crossref to the LIRMM version of the ICF (CIF-ASIP 2020). It also added the official French and Spanish translation for labels."@en)
 
-# Class: <http://id.who.int/icd/entity/435521956> (Structure de la cuisse)
+# Class: <http://id.who.int/icd/entity/435521956> (Estructura del muslo)
 
 AnnotationAssertion(oboInOwl:hasDbXref <http://id.who.int/icd/entity/435521956> "https://data.esante.gouv.fr/terminologies/icf#51431")
 AnnotationAssertion(Annotation(rdfs:comment "[PROMOT note] Source for official translation: https://icd.who.int/browse/2026-01/icf/es > Información > Archivo de hoja de cálculo") rdfs:label <http://id.who.int/icd/entity/435521956> "Estructura del muslo"@es)
@@ -2474,7 +2457,6 @@ AnnotationAssertion(skos:changeNote <http://id.who.int/icd/entity/436620656> "[P
 
 AnnotationAssertion(rdfs:label <http://id.who.int/icd/entity/437219407> "Anatomical localization"@en)
 SubClassOf(<http://id.who.int/icd/entity/437219407> obo:BFO_0000019)
-SubClassOf(<http://id.who.int/icd/entity/437219407> ObjectSomeValuesFrom(obo:RO_0000080 <http://purl.org/sig/ont/fma/fma62955>))
 
 # Class: <http://id.who.int/icd/entity/446199613> (Respiration functions)
 
@@ -2517,7 +2499,7 @@ AnnotationAssertion(Annotation(rdfs:comment "[PROMOT note] Source for official t
 AnnotationAssertion(skos:changeNote <http://id.who.int/icd/entity/485719194> "[PROMOT note] The PROMOT ontology added a crossref to the LIRMM version of the ICF (CIF-ASIP 2020). It also added the official French and Spanish translation for labels."@en)
 SubClassOf(<http://id.who.int/icd/entity/485719194> ObjectSomeValuesFrom(obo:PROMOT_2000006 <http://snomed.info/id/12894003>))
 
-# Class: <http://id.who.int/icd/entity/49044301> (Education)
+# Class: <http://id.who.int/icd/entity/49044301> (Éducation)
 
 AnnotationAssertion(oboInOwl:hasDbXref <http://id.who.int/icd/entity/49044301> "https://data.esante.gouv.fr/terminologies/icf#4126")
 AnnotationAssertion(Annotation(rdfs:comment "[PROMOT note] Source for official translation: https://icd.who.int/browse/2026-01/icf/es > Información > Archivo de hoja de cálculo") rdfs:label <http://id.who.int/icd/entity/49044301> "Educación"@es)
@@ -2593,7 +2575,7 @@ AnnotationAssertion(Annotation(rdfs:comment "[PROMOT note] Source for official t
 AnnotationAssertion(Annotation(rdfs:comment "[PROMOT note] Source for official translation: https://icd.who.int/browse/2026-01/icf/fr > Info > Fichier du tableur") rdfs:label <http://id.who.int/icd/entity/553784299> "Boire"@fr)
 AnnotationAssertion(rdfs:label <http://id.who.int/icd/entity/553784299> "Drinking"@en)
 AnnotationAssertion(skos:changeNote <http://id.who.int/icd/entity/553784299> "[PROMOT note] The PROMOT ontology added a crossref to the LIRMM version of the ICF (CIF-ASIP 2020). It also added the official French and Spanish translation for labels."@en)
-SubClassOf(<http://id.who.int/icd/entity/553784299> obo:PROMOT_0110001)
+SubClassOf(<http://id.who.int/icd/entity/553784299> obo:XCO_0000001)
 
 # Class: <http://id.who.int/icd/entity/555410497> (Andar distancias cortas)
 
@@ -2680,7 +2662,7 @@ AnnotationAssertion(skos:changeNote <http://id.who.int/icd/entity/608795582> "[P
 SubClassOf(<http://id.who.int/icd/entity/608795582> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0000276))
 SubClassOf(<http://id.who.int/icd/entity/608795582> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0002058))
 
-# Class: <http://id.who.int/icd/entity/621727843> (Sensation of muscle spasm)
+# Class: <http://id.who.int/icd/entity/621727843> (Sensation de spasme musculaire)
 
 AnnotationAssertion(oboInOwl:hasDbXref <http://id.who.int/icd/entity/621727843> "https://data.esante.gouv.fr/terminologies/icf#43934")
 AnnotationAssertion(Annotation(rdfs:comment "[PROMOT note] Source for official translation: https://icd.who.int/browse/2026-01/icf/es > Información > Archivo de hoja de cálculo") rdfs:label <http://id.who.int/icd/entity/621727843> "Sensación de espasmo muscular"@es)
@@ -2689,7 +2671,7 @@ AnnotationAssertion(rdfs:label <http://id.who.int/icd/entity/621727843> "Sensati
 AnnotationAssertion(skos:changeNote <http://id.who.int/icd/entity/621727843> "[PROMOT note] The PROMOT ontology added a crossref to the LIRMM version of the ICF (CIF-ASIP 2020). It also added the official French and Spanish translation for labels."@en)
 SubClassOf(<http://id.who.int/icd/entity/621727843> ObjectSomeValuesFrom(obo:PROMOT_2000006 <http://snomed.info/id/84100007>))
 
-# Class: <http://id.who.int/icd/entity/623565657> (Permanecer sentado)
+# Class: <http://id.who.int/icd/entity/623565657> (Rester assis)
 
 AnnotationAssertion(oboInOwl:hasDbXref <http://id.who.int/icd/entity/623565657> "https://data.esante.gouv.fr/terminologies/icf#1419")
 AnnotationAssertion(rdfs:label <http://id.who.int/icd/entity/623565657> "Maintaining a sitting position"@en)
@@ -2805,7 +2787,7 @@ SubClassOf(<http://id.who.int/icd/entity/723417607> ObjectSomeValuesFrom(obo:RO_
 SubClassOf(<http://id.who.int/icd/entity/723417607> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_0001547))
 SubClassOf(<http://id.who.int/icd/entity/723417607> ObjectSomeValuesFrom(obo:RO_0000091 obo:HP_6000327))
 
-# Class: <http://id.who.int/icd/entity/723665457> (Energy and drive functions)
+# Class: <http://id.who.int/icd/entity/723665457> (Fonctions de l'énergie et des pulsions)
 
 AnnotationAssertion(oboInOwl:hasDbXref <http://id.who.int/icd/entity/723665457> "https://data.esante.gouv.fr/terminologies/icf#11541")
 AnnotationAssertion(rdfs:label <http://id.who.int/icd/entity/723665457> "Energy and drive functions"@en)
@@ -5424,9 +5406,9 @@ SubClassOf(obo:NCIT_C158277 ObjectSomeValuesFrom(obo:RO_0002350 obo:PROMOT_00100
 
 AnnotationAssertion(rdfs:label obo:NCIT_C16960 "patient"@en)
 SubClassOf(obo:NCIT_C16960 obo:NCBITaxon_9606)
-SubClassOf(obo:NCIT_C16960 ObjectSomeValuesFrom(obo:PROMOT_2000003 obo:SO_0001060))
 SubClassOf(obo:NCIT_C16960 ObjectSomeValuesFrom(obo:RO_0002200 obo:HP_0000118))
-SubClassOf(obo:NCIT_C16960 ObjectExactCardinality(1 obo:PROMOT_2000004 obo:IAO_0020000))
+SubClassOf(obo:NCIT_C16960 ObjectSomeValuesFrom(obo:VO_0001039 obo:SO_0001060))
+SubClassOf(obo:NCIT_C16960 ObjectExactCardinality(1 obo:OPMI_0000481 obo:IAO_0020000))
 
 # Class: obo:NCIT_C178992 (Date of resolution)
 
@@ -5437,6 +5419,7 @@ AnnotationAssertion(rdfs:label obo:NCIT_C178992 "Date of resolution"@en)
 AnnotationAssertion(skos:changeNote obo:NCIT_C178992 "[PROMOT note] The PROMOT ontology added a comment to quote the CDM used as a source for this entity. A crossref to the orignal element has also been added."@en)
 SubClassOf(obo:NCIT_C178992 obo:NCIT_C25164)
 SubClassOf(obo:NCIT_C178992 ObjectSomeValuesFrom(obo:RO_0002350 obo:PROMOT_0010010))
+SubClassOf(obo:NCIT_C178992 DataSomeValuesFrom(obo:PROMOT_3000002 xsd:date))
 
 # Class: obo:NCIT_C185193 (Not Recorded)
 
@@ -5620,6 +5603,7 @@ AnnotationAssertion(rdfs:seeAlso obo:NCIT_C93511 <http://snomed.info/id/70432100
 AnnotationAssertion(skos:changeNote obo:NCIT_C93511 "[PROMOT note] The PROMOT ontology added a comment to quote the CDMs used as a source for this entity. A SeeAlso comment to the orignal RD-CDM elements has also been added."@en)
 SubClassOf(obo:NCIT_C93511 obo:NCIT_C25164)
 SubClassOf(obo:NCIT_C93511 ObjectSomeValuesFrom(obo:RO_0002350 obo:PROMOT_0010010))
+SubClassOf(obo:NCIT_C93511 DataSomeValuesFrom(obo:PROMOT_3000002 xsd:date))
 
 # Class: obo:NCIT_C93579 (Date of consent)
 
@@ -5631,6 +5615,7 @@ AnnotationAssertion(rdfs:label obo:NCIT_C93579 "Date of consent"@en)
 AnnotationAssertion(skos:changeNote obo:NCIT_C93579 "[PROMOT note] The PROMOT ontology added a comment to quote the CDM. The original element is onsent.datetime from HL7 FHIR."@en)
 SubClassOf(obo:NCIT_C93579 obo:NCIT_C25164)
 SubClassOf(obo:NCIT_C93579 ObjectSomeValuesFrom(obo:RO_0002350 obo:PROMOT_0010008))
+SubClassOf(obo:NCIT_C93579 DataSomeValuesFrom(obo:PROMOT_3000002 xsd:date))
 
 # Class: obo:NCIT_C99800 (Year of onset)
 
@@ -5648,8 +5633,8 @@ AnnotationAssertion(obo:IAO_0000115 obo:PROMOT_0000001 "A sequence alteration th
 AnnotationAssertion(Annotation(obo:IAO_0000119 "translation by https://orcid.org/0000-0001-7764-2085 and https://orcid.org/0000-0002-3391-9772") Annotation(babelon:translation_status "OFFICIAL") obo:IAO_0000115 obo:PROMOT_0000001 "Una alteración genética que causa un síndrome miasténico congénito"@es)
 AnnotationAssertion(obo:IAO_0000117 obo:PROMOT_0000001 "https://orcid.org/0009-0000-5160-7927")
 AnnotationAssertion(rdfs:comment obo:PROMOT_0000001 "https://orcid.org/0000-0001-7764-2085")
-AnnotationAssertion(rdfs:label obo:PROMOT_0000001 "CMS related mutation"@en)
 AnnotationAssertion(rdfs:label obo:PROMOT_0000001 "CMS related variant"@en)
+AnnotationAssertion(Annotation(babelon:translation_status "CANDIDATE") rdfs:label obo:PROMOT_0000001 "Variant associé à SMC"@fr)
 AnnotationAssertion(Annotation(rdfs:comment "translation by https://orcid.org/0000-0001-7764-2085 and https://orcid.org/0000-0002-3391-9772") Annotation(babelon:translation_status "OFFICIAL") rdfs:label obo:PROMOT_0000001 "Variante asociada con SMC"@es)
 SubClassOf(obo:PROMOT_0000001 obo:SO_0001060)
 SubClassOf(obo:PROMOT_0000001 ObjectSomeValuesFrom(obo:RO_0004013 <http://www.orpha.net/ORDO/Orphanet_590>))
@@ -5660,8 +5645,8 @@ AnnotationAssertion(obo:IAO_0000115 obo:PROMOT_0000002 "A sequence alteration th
 AnnotationAssertion(Annotation(obo:IAO_0000119 "translation by https://orcid.org/0000-0001-7764-2085 and https://orcid.org/0000-0002-3391-9772") Annotation(babelon:translation_status "OFFICIAL") obo:IAO_0000115 obo:PROMOT_0000002 "Una alteración genética que causa una miopatía congénita"@es)
 AnnotationAssertion(obo:IAO_0000117 obo:PROMOT_0000002 "https://orcid.org/0009-0000-5160-7927")
 AnnotationAssertion(rdfs:comment obo:PROMOT_0000002 "https://orcid.org/0000-0001-7764-2085")
-AnnotationAssertion(rdfs:label obo:PROMOT_0000002 "CMYO related mutation"@en)
 AnnotationAssertion(rdfs:label obo:PROMOT_0000002 "CMYO related variant"@en)
+AnnotationAssertion(Annotation(babelon:translation_status "CANDIDATE") rdfs:label obo:PROMOT_0000002 "Variant associé à MC"@fr)
 AnnotationAssertion(Annotation(rdfs:comment "translation by https://orcid.org/0000-0001-7764-2085 and https://orcid.org/0000-0002-3391-9772") Annotation(babelon:translation_status "OFFICIAL") rdfs:label obo:PROMOT_0000002 "Variante asociada con MC"@es)
 SubClassOf(obo:PROMOT_0000002 obo:SO_0001060)
 SubClassOf(obo:PROMOT_0000002 ObjectSomeValuesFrom(obo:RO_0004013 <http://www.orpha.net/ORDO/Orphanet_97245>))
@@ -5672,8 +5657,8 @@ AnnotationAssertion(obo:IAO_0000115 obo:PROMOT_0000003 "A sequence alteration th
 AnnotationAssertion(Annotation(obo:IAO_0000119 "translation by https://orcid.org/0000-0001-7764-2085 and https://orcid.org/0000-0002-3391-9772") Annotation(babelon:translation_status "OFFICIAL") obo:IAO_0000115 obo:PROMOT_0000003 "Una alteración genética que causa una distrofia muscular oculofaríngea"@es)
 AnnotationAssertion(obo:IAO_0000117 obo:PROMOT_0000003 "https://orcid.org/0009-0000-5160-7927")
 AnnotationAssertion(rdfs:comment obo:PROMOT_0000003 "https://orcid.org/0000-0001-7764-2085")
-AnnotationAssertion(rdfs:label obo:PROMOT_0000003 "OPMD related mutation"@en)
 AnnotationAssertion(rdfs:label obo:PROMOT_0000003 "OPMD related variant"@en)
+AnnotationAssertion(Annotation(babelon:translation_status "CANDIDATE") rdfs:label obo:PROMOT_0000003 "Variant associé à DMOP"@fr)
 AnnotationAssertion(Annotation(rdfs:comment "translation by https://orcid.org/0000-0001-7764-2085 and https://orcid.org/0000-0002-3391-9772") Annotation(babelon:translation_status "OFFICIAL") rdfs:label obo:PROMOT_0000003 "Variante asociada con DMOF"@es)
 SubClassOf(obo:PROMOT_0000003 obo:SO_0001060)
 SubClassOf(obo:PROMOT_0000003 ObjectSomeValuesFrom(obo:RO_0004013 <http://www.orpha.net/ORDO/Orphanet_270>))
@@ -5706,7 +5691,7 @@ AnnotationAssertion(Annotation(babelon:translation_status "CANDIDATE") rdfs:labe
 AnnotationAssertion(rdfs:seeAlso obo:PROMOT_0000005 obo:NCIT_C200235)
 SubClassOf(obo:PROMOT_0000005 obo:PROMOT_0000001)
 
-# Class: obo:PROMOT_0000006 (variant du gène DOK7)
+# Class: obo:PROMOT_0000006 (Variante en el gen DOK7)
 
 AnnotationAssertion(obo:IAO_0000115 obo:PROMOT_0000006 "A sequence alteration located within the DOK7 gene."@en)
 AnnotationAssertion(Annotation(obo:IAO_0000119 "translation reviewed by https://orcid.org/0000-0002-1500-0236, https://orcid.org/0000-0001-7764-2085 and https://orcid.org/0000-0002-3391-9772") Annotation(babelon:translation_status "OFFICIAL") obo:IAO_0000115 obo:PROMOT_0000006 "Una alteración genética localizada en el gen DOK7."@es)
@@ -5817,7 +5802,7 @@ AnnotationAssertion(rdfs:label obo:PROMOT_0000013 "variant du gène RYR1"@fr)
 AnnotationAssertion(rdfs:seeAlso obo:PROMOT_0000013 obo:NCIT_C150311)
 SubClassOf(obo:PROMOT_0000013 obo:PROMOT_0000002)
 
-# Class: obo:PROMOT_0000014 (variant du gène SELENON)
+# Class: obo:PROMOT_0000014 (SELENON variant)
 
 AnnotationAssertion(obo:IAO_0000115 obo:PROMOT_0000014 "A sequence alteration located within the SELENON gene."@en)
 AnnotationAssertion(Annotation(obo:IAO_0000119 "translation reviewed by https://orcid.org/0000-0002-1500-0236, https://orcid.org/0000-0001-7764-2085 and https://orcid.org/0000-0002-3391-9772") Annotation(babelon:translation_status "OFFICIAL") obo:IAO_0000115 obo:PROMOT_0000014 "Una alteración genética localizada en el gen SELENON."@es)
@@ -5863,57 +5848,64 @@ SubClassOf(obo:PROMOT_0000016 obo:PROMOT_0000003)
 
 # Class: obo:PROMOT_0010001 (campo de edad)
 
+AnnotationAssertion(obo:IAO_0000115 obo:PROMOT_0010001 "An information content entity where the information is an age."@en)
 AnnotationAssertion(Annotation(obo:IAO_0000119 "translation by https://orcid.org/0000-0001-7764-2085 and https://orcid.org/0000-0002-3391-9772") Annotation(babelon:translation_status "OFFICIAL") obo:IAO_0000115 obo:PROMOT_0010001 "Campo donde la información es una edad"@es)
-AnnotationAssertion(obo:IAO_0000115 obo:PROMOT_0010001 "an information content entity where the information is an age."@en)
 AnnotationAssertion(obo:IAO_0000117 obo:PROMOT_0010001 "https://orcid.org/0009-0000-5160-7927")
 AnnotationAssertion(rdfs:label obo:PROMOT_0010001 "age content entity"@en)
 AnnotationAssertion(Annotation(rdfs:comment "translation by https://orcid.org/0000-0001-7764-2085 and https://orcid.org/0000-0002-3391-9772") Annotation(babelon:translation_status "OFFICIAL") rdfs:label obo:PROMOT_0010001 "campo de edad"@es)
 SubClassOf(obo:PROMOT_0010001 obo:IAO_0000030)
+SubClassOf(obo:PROMOT_0010001 DataSomeValuesFrom(obo:PROMOT_3000001 xsd:int))
+SubClassOf(obo:PROMOT_0010001 DataSomeValuesFrom(obo:PROMOT_3000005 xsd:int))
 
 # Class: obo:PROMOT_0010003 (campo decimal)
 
+AnnotationAssertion(obo:IAO_0000115 obo:PROMOT_0010003 "An information content entity where the information is a decimal."@en)
 AnnotationAssertion(Annotation(obo:IAO_0000119 "translation by https://orcid.org/0000-0001-7764-2085 and https://orcid.org/0000-0002-3391-9772") Annotation(babelon:translation_status "OFFICIAL") obo:IAO_0000115 obo:PROMOT_0010003 "Campo donde la información es un decimal"@es)
-AnnotationAssertion(obo:IAO_0000115 obo:PROMOT_0010003 "an information content entity where the information is a decimal."@en)
 AnnotationAssertion(obo:IAO_0000117 obo:PROMOT_0010003 "https://orcid.org/0009-0000-5160-7927")
 AnnotationAssertion(Annotation(rdfs:comment "translation by https://orcid.org/0000-0001-7764-2085 and https://orcid.org/0000-0002-3391-9772") Annotation(babelon:translation_status "OFFICIAL") rdfs:label obo:PROMOT_0010003 "campo decimal"@es)
 AnnotationAssertion(rdfs:label obo:PROMOT_0010003 "decimal content entity"@en)
 SubClassOf(obo:PROMOT_0010003 obo:IAO_0000030)
+SubClassOf(obo:PROMOT_0010003 DataSomeValuesFrom(obo:PROMOT_3000003 xsd:decimal))
 
 # Class: obo:PROMOT_0010004 (duration content entity)
 
+AnnotationAssertion(obo:IAO_0000115 obo:PROMOT_0010004 "An information content entity where the information is a duration."@en)
 AnnotationAssertion(Annotation(obo:IAO_0000119 "translation by https://orcid.org/0000-0001-7764-2085 and https://orcid.org/0000-0002-3391-9772") Annotation(babelon:translation_status "OFFICIAL") obo:IAO_0000115 obo:PROMOT_0010004 "Campo donde la información es una duración"@es)
-AnnotationAssertion(obo:IAO_0000115 obo:PROMOT_0010004 "an information content entity where the information is a duration."@en)
 AnnotationAssertion(obo:IAO_0000117 obo:PROMOT_0010004 "https://orcid.org/0009-0000-5160-7927")
 AnnotationAssertion(Annotation(rdfs:comment "translation by https://orcid.org/0000-0001-7764-2085 and https://orcid.org/0000-0002-3391-9772") Annotation(babelon:translation_status "OFFICIAL") rdfs:label obo:PROMOT_0010004 "campo de duración"@es)
 AnnotationAssertion(rdfs:label obo:PROMOT_0010004 "duration content entity"@en)
 SubClassOf(obo:PROMOT_0010004 obo:IAO_0000030)
+SubClassOf(obo:PROMOT_0010004 DataSomeValuesFrom(obo:PROMOT_3000004 xsd:duration))
 
 # Class: obo:PROMOT_0010005 (campo de número entero)
 
+AnnotationAssertion(obo:IAO_0000115 obo:PROMOT_0010005 "An information content entity where the information is an int."@en)
 AnnotationAssertion(Annotation(obo:IAO_0000119 "translation by https://orcid.org/0000-0001-7764-2085 and https://orcid.org/0000-0002-3391-9772") Annotation(babelon:translation_status "OFFICIAL") obo:IAO_0000115 obo:PROMOT_0010005 "Campo donde la información es un número entero"@es)
-AnnotationAssertion(obo:IAO_0000115 obo:PROMOT_0010005 "an information content entity where the information is an int."@en)
 AnnotationAssertion(obo:IAO_0000117 obo:PROMOT_0010005 "https://orcid.org/0009-0000-5160-7927")
 AnnotationAssertion(Annotation(rdfs:comment "translation by https://orcid.org/0000-0001-7764-2085 and https://orcid.org/0000-0002-3391-9772") Annotation(babelon:translation_status "OFFICIAL") rdfs:label obo:PROMOT_0010005 "campo de número entero"@es)
 AnnotationAssertion(rdfs:label obo:PROMOT_0010005 "int content entity"@en)
 SubClassOf(obo:PROMOT_0010005 obo:IAO_0000030)
+SubClassOf(obo:PROMOT_0010005 DataSomeValuesFrom(obo:PROMOT_3000005 xsd:int))
 
 # Class: obo:PROMOT_0010006 (campo de token)
 
+AnnotationAssertion(obo:IAO_0000115 obo:PROMOT_0010006 "An information content entity where the information is a token."@en)
 AnnotationAssertion(Annotation(obo:IAO_0000119 "translation by https://orcid.org/0000-0001-7764-2085 and https://orcid.org/0000-0002-3391-9772") Annotation(babelon:translation_status "OFFICIAL") obo:IAO_0000115 obo:PROMOT_0010006 "Campo donde la información es un token"@es)
-AnnotationAssertion(obo:IAO_0000115 obo:PROMOT_0010006 "an information content entity where the information is a token."@en)
 AnnotationAssertion(obo:IAO_0000117 obo:PROMOT_0010006 "https://orcid.org/0009-0000-5160-7927")
 AnnotationAssertion(Annotation(rdfs:comment "translation by https://orcid.org/0000-0001-7764-2085 and https://orcid.org/0000-0002-3391-9772") Annotation(babelon:translation_status "OFFICIAL") rdfs:label obo:PROMOT_0010006 "campo de token"@es)
 AnnotationAssertion(rdfs:label obo:PROMOT_0010006 "token content entity"@en)
 SubClassOf(obo:PROMOT_0010006 obo:IAO_0000030)
+SubClassOf(obo:PROMOT_0010006 DataSomeValuesFrom(obo:PROMOT_3000006 xsd:token))
 
-# Class: obo:PROMOT_0010007 (year content entity)
+# Class: obo:PROMOT_0010007 (campo de año)
 
+AnnotationAssertion(obo:IAO_0000115 obo:PROMOT_0010007 "An information content entity where the information is a year."@en)
 AnnotationAssertion(Annotation(obo:IAO_0000119 "translation by https://orcid.org/0000-0001-7764-2085 and https://orcid.org/0000-0002-3391-9772") Annotation(babelon:translation_status "OFFICIAL") obo:IAO_0000115 obo:PROMOT_0010007 "Campo donde la información es un año"@es)
-AnnotationAssertion(obo:IAO_0000115 obo:PROMOT_0010007 "an information content entity where the information is a year."@en)
 AnnotationAssertion(obo:IAO_0000117 obo:PROMOT_0010007 "https://orcid.org/0009-0000-5160-7927")
 AnnotationAssertion(Annotation(rdfs:comment "translation by https://orcid.org/0000-0001-7764-2085 and https://orcid.org/0000-0002-3391-9772") Annotation(babelon:translation_status "OFFICIAL") rdfs:label obo:PROMOT_0010007 "campo de año"@es)
 AnnotationAssertion(rdfs:label obo:PROMOT_0010007 "year content entity"@en)
 SubClassOf(obo:PROMOT_0010007 obo:IAO_0000030)
+SubClassOf(obo:PROMOT_0010007 DataSomeValuesFrom(obo:PROMOT_3000007 xsd:gYear))
 
 # Class: obo:PROMOT_0010008 (declaración sobre un consentimiento )
 
@@ -5925,6 +5917,7 @@ AnnotationAssertion(Annotation(rdfs:comment "translation reviewed by https://orc
 AnnotationAssertion(rdfs:label obo:PROMOT_0010008 "statement about a consent"@en)
 AnnotationAssertion(rdfs:label obo:PROMOT_0010008 "énoncé concernant un consentement"@fr)
 SubClassOf(obo:PROMOT_0010008 obo:NCIT_C49154)
+SubClassOf(obo:PROMOT_0010008 ObjectExactCardinality(1 obo:RO_0002351 obo:PROMOT_0010048))
 
 # Class: obo:PROMOT_0010009 (Énoncé concernant un être humain)
 
@@ -5960,6 +5953,7 @@ AnnotationAssertion(Annotation(rdfs:comment "translation by https://orcid.org/00
 AnnotationAssertion(rdfs:label obo:PROMOT_0010011 "statement about a procedure"@en)
 AnnotationAssertion(rdfs:label obo:PROMOT_0010011 "énoncé au sujet d’une procédure"@fr)
 SubClassOf(obo:PROMOT_0010011 obo:NCIT_C49154)
+SubClassOf(obo:PROMOT_0010011 ObjectExactCardinality(1 obo:RO_0002351 <http://snomed.info/id/128927009>))
 
 # Class: obo:PROMOT_0010012 (declaración sobre un paciente)
 
@@ -6361,24 +6355,6 @@ AnnotationAssertion(rdfs:label obo:PROMOT_0010040 "Identité de genre non rensei
 AnnotationAssertion(Annotation(rdfs:comment "translation by https://orcid.org/0000-0001-7764-2085 and https://orcid.org/0000-0002-3391-9772") Annotation(babelon:translation_status "OFFICIAL") rdfs:label obo:PROMOT_0010040 "identidad de género no registrada"@es)
 SubClassOf(obo:PROMOT_0010040 obo:PROMOT_0010039)
 
-# Class: obo:PROMOT_0010041 (Consent status)
-
-AnnotationAssertion(obo:IAO_0000115 obo:PROMOT_0010041 "A status of the consent of a person."@en)
-AnnotationAssertion(Annotation(obo:IAO_0000119 "translation by https://orcid.org/0000-0001-7764-2085 and https://orcid.org/0000-0002-3391-9772") Annotation(babelon:translation_status "OFFICIAL") obo:IAO_0000115 obo:PROMOT_0010041 "Estado de un consentimiento"@es)
-AnnotationAssertion(obo:IAO_0000115 obo:PROMOT_0010041 "Le status d’un consentement, qu’il soit accepté, refusé ou autre."@fr)
-AnnotationAssertion(obo:IAO_0000117 obo:PROMOT_0010041 "https://orcid.org/0009-0000-5160-7927")
-AnnotationAssertion(oboInOwl:hasDbXref obo:PROMOT_0010041 "http://snomed.info/id/309370004")
-AnnotationAssertion(rdfs:comment obo:PROMOT_0010041 "[PROMOT note] A crossref to the orignal RD-CDM element has been added.")
-AnnotationAssertion(rdfs:comment obo:PROMOT_0010041 "[PROMOT note] [Derived from EURO-NMD NMD-CDE] ")
-AnnotationAssertion(rdfs:comment obo:PROMOT_0010041 "[PROMOT note] [Derived from RD-CDM] [7.1 Consent Status] ")
-AnnotationAssertion(rdfs:comment obo:PROMOT_0010041 "[PROMOT note] [EURO-NMD] Atalia A et al., EURO-NMD registry: federated FAIR infrastructure, innovative technologies and concepts of a patient-centred registry for rare neuromuscular disorders. Orphanet J Rare Dis. 2024 Feb 14;19(1):66. doi: 10.1186/s13023-024-03059-3. PMID: 38355534; PMCID: PMC10865673.")
-AnnotationAssertion(rdfs:comment obo:PROMOT_0010041 "[PROMOT note] [RD-CDM] Graefe, A.S.L., Hübner, M.R., Rehburg, F. et al. An ontology-based rare disease common data model harmonising international registries, FHIR, and Phenopackets. Sci Data 12, 234 (2025). https://doi.org/10.1038/s41597-025-04558-z")
-AnnotationAssertion(rdfs:label obo:PROMOT_0010041 "Consent status"@en)
-AnnotationAssertion(rdfs:label obo:PROMOT_0010041 "Status du consentement"@fr)
-AnnotationAssertion(Annotation(rdfs:comment "translation reviewed by https://orcid.org/0000-0001-7764-2085 and https://orcid.org/0000-0002-3391-9772") Annotation(babelon:translation_status "OFFICIAL") rdfs:label obo:PROMOT_0010041 "estado del consentimiento"@es)
-SubClassOf(obo:PROMOT_0010041 <http://snomed.info/id/363787002>)
-SubClassOf(obo:PROMOT_0010041 ObjectSomeValuesFrom(obo:RO_0002350 obo:PROMOT_0010008))
-
 # Class: obo:PROMOT_0010042 (Pendiente)
 
 AnnotationAssertion(obo:IAO_0000115 obo:PROMOT_0010042 "A status of a consent that is waiting to be defined."@en)
@@ -6390,7 +6366,7 @@ AnnotationAssertion(rdfs:comment obo:PROMOT_0010042 "[PROMOT note] [RD-CDM] Grae
 AnnotationAssertion(rdfs:label obo:PROMOT_0010042 "En attente"@fr)
 AnnotationAssertion(Annotation(rdfs:comment "translation by https://orcid.org/0000-0001-7764-2085 and https://orcid.org/0000-0002-3391-9772") Annotation(babelon:translation_status "OFFICIAL") rdfs:label obo:PROMOT_0010042 "Pendiente"@es)
 AnnotationAssertion(rdfs:label obo:PROMOT_0010042 "Pending"@en)
-SubClassOf(obo:PROMOT_0010042 obo:PROMOT_0010041)
+SubClassOf(obo:PROMOT_0010042 obo:SCDO_1000490)
 
 # Class: obo:PROMOT_0010043 (Proposé)
 
@@ -6403,7 +6379,7 @@ AnnotationAssertion(rdfs:comment obo:PROMOT_0010043 "[PROMOT note] [RD-CDM] Grae
 AnnotationAssertion(rdfs:label obo:PROMOT_0010043 "Proposed"@en)
 AnnotationAssertion(rdfs:label obo:PROMOT_0010043 "Proposé"@fr)
 AnnotationAssertion(Annotation(rdfs:comment "translation by https://orcid.org/0000-0001-7764-2085 and https://orcid.org/0000-0002-3391-9772") Annotation(babelon:translation_status "OFFICIAL") rdfs:label obo:PROMOT_0010043 "Propuesto"@es)
-SubClassOf(obo:PROMOT_0010043 obo:PROMOT_0010041)
+SubClassOf(obo:PROMOT_0010043 obo:SCDO_1000490)
 
 # Class: obo:PROMOT_0010044 (Actif)
 
@@ -6418,7 +6394,7 @@ AnnotationAssertion(rdfs:comment obo:PROMOT_0010044 "[PROMOT note] [RD-CDM] Grae
 AnnotationAssertion(rdfs:label obo:PROMOT_0010044 "Actif"@fr)
 AnnotationAssertion(rdfs:label obo:PROMOT_0010044 "Active"@en)
 AnnotationAssertion(Annotation(rdfs:comment "translation by https://orcid.org/0000-0001-7764-2085 and https://orcid.org/0000-0002-3391-9772") Annotation(babelon:translation_status "OFFICIAL") rdfs:label obo:PROMOT_0010044 "Activo"@es)
-SubClassOf(obo:PROMOT_0010044 obo:PROMOT_0010041)
+SubClassOf(obo:PROMOT_0010044 obo:SCDO_1000490)
 
 # Class: obo:PROMOT_0010045 (Rechazado)
 
@@ -6433,7 +6409,7 @@ AnnotationAssertion(rdfs:comment obo:PROMOT_0010045 "[PROMOT note] [RD-CDM] Grae
 AnnotationAssertion(Annotation(rdfs:comment "translation by https://orcid.org/0000-0001-7764-2085 and https://orcid.org/0000-0002-3391-9772") Annotation(babelon:translation_status "OFFICIAL") rdfs:label obo:PROMOT_0010045 "Rechazado"@es)
 AnnotationAssertion(rdfs:label obo:PROMOT_0010045 "Rejected"@en)
 AnnotationAssertion(rdfs:label obo:PROMOT_0010045 "Rejeté"@fr)
-SubClassOf(obo:PROMOT_0010045 obo:PROMOT_0010041)
+SubClassOf(obo:PROMOT_0010045 obo:SCDO_1000490)
 
 # Class: obo:PROMOT_0010046 (Inactivo)
 
@@ -6447,7 +6423,7 @@ AnnotationAssertion(rdfs:comment obo:PROMOT_0010046 "[PROMOT note] [RD-CDM] Grae
 AnnotationAssertion(rdfs:label obo:PROMOT_0010046 "Inactif"@fr)
 AnnotationAssertion(rdfs:label obo:PROMOT_0010046 "Inactive"@en)
 AnnotationAssertion(Annotation(rdfs:comment "translation by https://orcid.org/0000-0001-7764-2085 and https://orcid.org/0000-0002-3391-9772") Annotation(babelon:translation_status "OFFICIAL") rdfs:label obo:PROMOT_0010046 "Inactivo"@es)
-SubClassOf(obo:PROMOT_0010046 obo:PROMOT_0010041)
+SubClassOf(obo:PROMOT_0010046 obo:SCDO_1000490)
 
 # Class: obo:PROMOT_0010047 (Entré par erreur)
 
@@ -6461,7 +6437,7 @@ AnnotationAssertion(rdfs:comment obo:PROMOT_0010047 "[PROMOT note] [RD-CDM] Grae
 AnnotationAssertion(rdfs:label obo:PROMOT_0010047 "Entered in Error"@en)
 AnnotationAssertion(rdfs:label obo:PROMOT_0010047 "Entré par erreur"@fr)
 AnnotationAssertion(Annotation(rdfs:comment "translation by https://orcid.org/0000-0001-7764-2085 and https://orcid.org/0000-0002-3391-9772") Annotation(babelon:translation_status "OFFICIAL") rdfs:label obo:PROMOT_0010047 "Introducido por error"@es)
-SubClassOf(obo:PROMOT_0010047 obo:PROMOT_0010041)
+SubClassOf(obo:PROMOT_0010047 obo:SCDO_1000490)
 
 # Class: obo:PROMOT_0010048 (Consent type)
 
@@ -6527,6 +6503,7 @@ AnnotationAssertion(Annotation(rdfs:comment "translation by https://orcid.org/00
 AnnotationAssertion(rdfs:label obo:PROMOT_0010052 "Risk of fall assessed"@en)
 SubClassOf(obo:PROMOT_0010052 <http://snomed.info/id/363787002>)
 SubClassOf(obo:PROMOT_0010052 ObjectSomeValuesFrom(obo:RO_0002350 obo:PROMOT_0010012))
+SubClassOf(obo:PROMOT_0010052 DataSomeValuesFrom(obo:PROMOT_3000008 xsd:boolean))
 
 # Class: obo:PROMOT_0020001 (estructura corporal relacionada con un fenotipo)
 
@@ -6579,6 +6556,19 @@ AnnotationAssertion(rdfs:label obo:PROMOT_0020004 "Entité anatomique impliquée
 EquivalentClasses(obo:PROMOT_0020004 ObjectIntersectionOf(<http://purl.org/sig/ont/fma/fma62955> ObjectSomeValuesFrom(obo:RO_0002328 <http://id.who.int/icd/entity/567313968>)))
 SubClassOf(obo:PROMOT_0020004 <http://purl.org/sig/ont/fma/fma62955>)
 SubClassOf(obo:PROMOT_0020004 ObjectSomeValuesFrom(obo:RO_0002328 <http://id.who.int/icd/entity/567313968>))
+
+# Class: obo:PROMOT_0020005 (estructura corporal relacionada con la función corporal)
+
+AnnotationAssertion(obo:IAO_0000115 obo:PROMOT_0020005 "A body structure related to a body function such that the body structure is functionally related to the body function."@en)
+AnnotationAssertion(Annotation(babelon:translation_status "CANDIDATE") obo:IAO_0000115 obo:PROMOT_0020005 "Estructura corporal que está implicada en una función corporal."@es)
+AnnotationAssertion(Annotation(babelon:translation_status "CANDIDATE") obo:IAO_0000115 obo:PROMOT_0020005 "Une structure anatomique qui est nécessaire au fonctionnement d'une fonction organique."@fr)
+AnnotationAssertion(obo:IAO_0000117 obo:PROMOT_0020005 "https://orcid.org/0009-0000-5160-7927")
+AnnotationAssertion(rdfs:label obo:PROMOT_0020005 "Body function related body structure"@en)
+AnnotationAssertion(Annotation(babelon:translation_status "CANDIDATE") rdfs:label obo:PROMOT_0020005 "Structure anatomique nécessaire à une fonction corporelle"@fr)
+AnnotationAssertion(Annotation(babelon:translation_status "CANDIDATE") rdfs:label obo:PROMOT_0020005 "estructura corporal relacionada con la función corporal"@es)
+EquivalentClasses(obo:PROMOT_0020005 ObjectIntersectionOf(<http://id.who.int/icd/entity/1626363729> ObjectSomeValuesFrom(obo:RO_0002328 <http://id.who.int/icd/entity/567313968>)))
+SubClassOf(obo:PROMOT_0020005 <http://id.who.int/icd/entity/1626363729>)
+SubClassOf(obo:PROMOT_0020005 ObjectSomeValuesFrom(obo:RO_0002328 <http://id.who.int/icd/entity/567313968>))
 
 # Class: obo:PROMOT_0031001 (unkown vital status)
 
@@ -6675,7 +6665,6 @@ AnnotationAssertion(rdfs:label obo:PROMOT_0031007 "Qualité qualifiant l’exist
 AnnotationAssertion(rdfs:label obo:PROMOT_0031007 "presence qualifier"@en)
 AnnotationAssertion(skos:changeNote obo:PROMOT_0031007 "[PROMOT note] The PROMOT ontology added a comment to quote the CDM used as a source for this entity. A crossref to the orignal element has also been added."@en)
 SubClassOf(obo:PROMOT_0031007 obo:BFO_0000019)
-SubClassOf(obo:PROMOT_0031007 ObjectSomeValuesFrom(obo:RO_0000080 obo:HP_0000118))
 
 # Class: obo:PROMOT_0032001 (disposition anormale)
 
@@ -6697,9 +6686,9 @@ AnnotationAssertion(obo:IAO_0000117 obo:PROMOT_0032002 "https://orcid.org/0009-0
 AnnotationAssertion(rdfs:label obo:PROMOT_0032002 "Activity related body function"@en)
 AnnotationAssertion(rdfs:label obo:PROMOT_0032002 "Fonction organique liée à une activité"@fr)
 AnnotationAssertion(Annotation(rdfs:comment "translation reviewed by https://orcid.org/0000-0002-1500-0236, https://orcid.org/0000-0001-7764-2085 and https://orcid.org/0000-0002-3391-9772") Annotation(babelon:translation_status "OFFICIAL") rdfs:label obo:PROMOT_0032002 "función corporal relacionada con una actividad"@es)
-EquivalentClasses(obo:PROMOT_0032002 ObjectIntersectionOf(<http://id.who.int/icd/entity/567313968> ObjectSomeValuesFrom(obo:RO_0002331 obo:PROMOT_0110001)))
+EquivalentClasses(obo:PROMOT_0032002 ObjectIntersectionOf(<http://id.who.int/icd/entity/567313968> ObjectSomeValuesFrom(obo:RO_0002331 obo:XCO_0000001)))
 SubClassOf(obo:PROMOT_0032002 <http://id.who.int/icd/entity/567313968>)
-SubClassOf(obo:PROMOT_0032002 ObjectSomeValuesFrom(obo:RO_0002331 obo:PROMOT_0110001))
+SubClassOf(obo:PROMOT_0032002 ObjectSomeValuesFrom(obo:RO_0002331 obo:XCO_0000001))
 
 # Class: obo:PROMOT_0032003 (Phénotype lié à une activité)
 
@@ -6710,9 +6699,9 @@ AnnotationAssertion(obo:IAO_0000117 obo:PROMOT_0032003 "https://orcid.org/0000-0
 AnnotationAssertion(rdfs:label obo:PROMOT_0032003 "Activity related phenotype"@en)
 AnnotationAssertion(Annotation(rdfs:comment "translation by https://orcid.org/0000-0001-7764-2085 and https://orcid.org/0000-0002-3391-9772") Annotation(babelon:translation_status "OFFICIAL") rdfs:label obo:PROMOT_0032003 "Fenotipo relacionado con la actividad"@es)
 AnnotationAssertion(rdfs:label obo:PROMOT_0032003 "Phénotype lié à une activité"@fr)
-EquivalentClasses(obo:PROMOT_0032003 ObjectIntersectionOf(obo:HP_0000118 ObjectSomeValuesFrom(obo:PROMOT_2000001 obo:PROMOT_0110001)))
+EquivalentClasses(obo:PROMOT_0032003 ObjectIntersectionOf(obo:HP_0000118 ObjectSomeValuesFrom(obo:PROMOT_2000001 obo:XCO_0000001)))
 SubClassOf(obo:PROMOT_0032003 obo:HP_0000118)
-SubClassOf(obo:PROMOT_0032003 ObjectSomeValuesFrom(obo:PROMOT_2000001 obo:PROMOT_0110001))
+SubClassOf(obo:PROMOT_0032003 ObjectSomeValuesFrom(obo:PROMOT_2000001 obo:XCO_0000001))
 
 # Class: obo:PROMOT_0032004 (Anhédonie légère corrélée au fait de manger)
 
@@ -6728,7 +6717,7 @@ SubClassOf(obo:PROMOT_0032004 obo:HP_0012154)
 SubClassOf(obo:PROMOT_0032004 ObjectSomeValuesFrom(obo:PROMOT_2000001 <http://id.who.int/icd/entity/1328675264>))
 SubClassOf(obo:PROMOT_0032004 ObjectSomeValuesFrom(obo:PROMOT_2000005 <http://snomed.info/id/84100007>))
 
-# Class: obo:PROMOT_0032005 (Phénotype lié à une fonction organique)
+# Class: obo:PROMOT_0032005 (Body function related phenotype)
 
 AnnotationAssertion(obo:IAO_0000115 obo:PROMOT_0032005 "A phenotype that affects a body function."@en)
 AnnotationAssertion(Annotation(obo:IAO_0000119 "translation by https://orcid.org/0000-0001-7764-2085 and https://orcid.org/0000-0002-3391-9772") Annotation(babelon:translation_status "OFFICIAL") obo:IAO_0000115 obo:PROMOT_0032005 "Fenotipo que afecta a una función corporal."@es)
@@ -7048,7 +7037,7 @@ AnnotationAssertion(Annotation(rdfs:comment "translation reviewed by https://orc
 SubClassOf(obo:PROMOT_0032027 obo:PROMOT_0032042)
 SubClassOf(obo:PROMOT_0032027 ObjectSomeValuesFrom(obo:PROMOT_2000006 <http://snomed.info/id/12894003>))
 
-# Class: obo:PROMOT_0032028 (Endurance of extensor digitorum)
+# Class: obo:PROMOT_0032028 (Endurance d’un muscle extenseur des doigts de la main)
 
 AnnotationAssertion(Annotation(babelon:translation_status "CANDIDATE") obo:IAO_0000115 obo:PROMOT_0032028 "Fonctions relatives au maintien d'une contraction du muscle extenseur des doigts de la main pour la période de temps requise."@fr)
 AnnotationAssertion(Annotation(obo:IAO_0000119 "translation reviewed by https://orcid.org/0000-0001-7764-2085 and https://orcid.org/0000-0002-3391-9772") Annotation(babelon:translation_status "OFFICIAL") obo:IAO_0000115 obo:PROMOT_0032028 "Funciones relacionadas con el mantenimiento de la contracción del músculo extensor de los dedos de la mano durante un determinado periodo de tiempo."@es)
@@ -7097,7 +7086,7 @@ AnnotationAssertion(Annotation(rdfs:comment "translation reviewed by https://orc
 SubClassOf(obo:PROMOT_0032031 obo:PROMOT_0032037)
 SubClassOf(obo:PROMOT_0032031 ObjectSomeValuesFrom(obo:PROMOT_2000006 <http://snomed.info/id/12894003>))
 
-# Class: obo:PROMOT_0032032 (Endurance d’un muscle du pied)
+# Class: obo:PROMOT_0032032 (Endurance of foot muscle)
 
 AnnotationAssertion(Annotation(babelon:translation_status "CANDIDATE") obo:IAO_0000115 obo:PROMOT_0032032 "Fonctions relatives au maintien d'une contraction musculaire d'un muscle du pied pour la période de temps requise."@fr)
 AnnotationAssertion(Annotation(obo:IAO_0000119 "translation reviewed by https://orcid.org/0000-0001-7764-2085 and https://orcid.org/0000-0002-3391-9772") Annotation(babelon:translation_status "OFFICIAL") obo:IAO_0000115 obo:PROMOT_0032032 "Funciones relacionadas con el mantenimiento de la contracción del músculo del pie durante un determinado periodo de tiempo."@es)
@@ -7624,7 +7613,7 @@ AnnotationAssertion(Annotation(babelon:translation_status "CANDIDATE") rdfs:labe
 SubClassOf(obo:PROMOT_0032072 <http://id.who.int/icd/entity/1789365017>)
 SubClassOf(obo:PROMOT_0032072 ObjectSomeValuesFrom(obo:PROMOT_2000006 <http://snomed.info/id/12894003>))
 
-# Class: obo:PROMOT_0032073 (Power of intrinsic muscle of hand)
+# Class: obo:PROMOT_0032073 (Fuerza del músculo intrínseco de la mano)
 
 AnnotationAssertion(Annotation(babelon:translation_status "CANDIDATE") obo:IAO_0000115 obo:PROMOT_0032073 "Fonctions relatives à la force générée par la contraction du muscle intrinsèque de la main."@fr)
 AnnotationAssertion(Annotation(obo:IAO_0000119 "translation reviewed by https://orcid.org/0000-0001-7764-2085 and https://orcid.org/0000-0002-3391-9772") Annotation(babelon:translation_status "OFFICIAL") obo:IAO_0000115 obo:PROMOT_0032073 "Funciones relacionadas con la fuerza generada por la contracción del músculo intrínseco de la mano."@es)
@@ -7650,7 +7639,7 @@ SubClassOf(obo:PROMOT_0032074 <http://id.who.int/icd/entity/1789365017>)
 SubClassOf(obo:PROMOT_0032074 ObjectSomeValuesFrom(obo:PROMOT_2000006 <http://snomed.info/id/12894003>))
 SubClassOf(obo:PROMOT_0032074 ObjectSomeValuesFrom(obo:RO_0002331 <http://id.who.int/icd/entity/2048203604>))
 
-# Class: obo:PROMOT_0032075 (Power of masseter)
+# Class: obo:PROMOT_0032075 (Fuerza del músculo de la mandíbula)
 
 AnnotationAssertion(Annotation(babelon:translation_status "CANDIDATE") obo:IAO_0000115 obo:PROMOT_0032075 "Fonctions relatives à la force générée par la contraction du muscle masséter."@fr)
 AnnotationAssertion(Annotation(obo:IAO_0000119 "translation reviewed by https://orcid.org/0000-0001-7764-2085 and https://orcid.org/0000-0002-3391-9772") Annotation(babelon:translation_status "OFFICIAL") obo:IAO_0000115 obo:PROMOT_0032075 "Funciones relacionadas con la fuerza generada por la contracción del músculo de la mandíbula."@es)
@@ -7848,7 +7837,7 @@ SubClassOf(obo:PROMOT_0032089 obo:PROMOT_0032073)
 SubClassOf(obo:PROMOT_0032089 ObjectSomeValuesFrom(obo:PROMOT_2000006 <http://snomed.info/id/12894003>))
 SubClassOf(obo:PROMOT_0032089 ObjectSomeValuesFrom(obo:RO_0002331 <http://id.who.int/icd/entity/2048203604>))
 
-# Class: obo:PROMOT_0032090 (Power of thigh musculature)
+# Class: obo:PROMOT_0032090 (Fuerza del muslo)
 
 AnnotationAssertion(Annotation(babelon:translation_status "CANDIDATE") obo:IAO_0000115 obo:PROMOT_0032090 "Fonctions relatives à la force générée par la contraction d'un muscle de la cuisse."@fr)
 AnnotationAssertion(Annotation(obo:IAO_0000119 "translation reviewed by https://orcid.org/0000-0001-7764-2085 and https://orcid.org/0000-0002-3391-9772") Annotation(babelon:translation_status "OFFICIAL") obo:IAO_0000115 obo:PROMOT_0032090 "Funciones relacionadas con la fuerza generada por la contracción de músculos del muslo."@es)
@@ -7887,7 +7876,7 @@ SubClassOf(obo:PROMOT_0032092 obo:PROMOT_0032074)
 SubClassOf(obo:PROMOT_0032092 ObjectSomeValuesFrom(obo:PROMOT_2000006 <http://snomed.info/id/12894003>))
 SubClassOf(obo:PROMOT_0032092 ObjectSomeValuesFrom(obo:RO_0002331 <http://id.who.int/icd/entity/2048203604>))
 
-# Class: obo:PROMOT_0032093 (Fuerza del músculo de la lengua)
+# Class: obo:PROMOT_0032093 (Power of tongue muscle)
 
 AnnotationAssertion(Annotation(babelon:translation_status "CANDIDATE") obo:IAO_0000115 obo:PROMOT_0032093 "Fonctions relatives à la force générée par la contraction du muscle de la langue."@fr)
 AnnotationAssertion(Annotation(obo:IAO_0000119 "translation reviewed by https://orcid.org/0000-0001-7764-2085 and https://orcid.org/0000-0002-3391-9772") Annotation(babelon:translation_status "OFFICIAL") obo:IAO_0000115 obo:PROMOT_0032093 "Funciones relacionadas con la fuerza generada por la contracción del músculo de la lengua."@es)
@@ -7935,9 +7924,9 @@ AnnotationAssertion(obo:IAO_0000117 obo:PROMOT_0100001 "https://orcid.org/0009-0
 AnnotationAssertion(rdfs:label obo:PROMOT_0100001 "Activity related procedure"@en)
 AnnotationAssertion(Annotation(rdfs:comment "translation reviewed by https://orcid.org/0000-0001-7764-2085 and https://orcid.org/0000-0002-3391-9772") Annotation(babelon:translation_status "OFFICIAL") rdfs:label obo:PROMOT_0100001 "Procedimiento relacionado con la actividad"@es)
 AnnotationAssertion(rdfs:label obo:PROMOT_0100001 "Procédure liée à une activité"@fr)
-EquivalentClasses(obo:PROMOT_0100001 ObjectIntersectionOf(<http://snomed.info/id/128927009> ObjectSomeValuesFrom(obo:PROMOT_2000002 obo:PROMOT_0110001)))
+EquivalentClasses(obo:PROMOT_0100001 ObjectIntersectionOf(<http://snomed.info/id/128927009> ObjectSomeValuesFrom(obo:SCDO_1000194 obo:XCO_0000001)))
 SubClassOf(obo:PROMOT_0100001 <http://snomed.info/id/128927009>)
-SubClassOf(obo:PROMOT_0100001 ObjectSomeValuesFrom(obo:PROMOT_2000002 obo:PROMOT_0110001))
+SubClassOf(obo:PROMOT_0100001 ObjectSomeValuesFrom(obo:SCDO_1000194 obo:XCO_0000001))
 
 # Class: obo:PROMOT_0100002 (Body function related procedure)
 
@@ -7948,9 +7937,9 @@ AnnotationAssertion(obo:IAO_0000117 obo:PROMOT_0100002 "https://orcid.org/0009-0
 AnnotationAssertion(rdfs:label obo:PROMOT_0100002 "Body function related procedure"@en)
 AnnotationAssertion(Annotation(rdfs:comment "translation reviewed by https://orcid.org/0000-0001-7764-2085 and https://orcid.org/0000-0002-3391-9772") Annotation(babelon:translation_status "OFFICIAL") rdfs:label obo:PROMOT_0100002 "Procedimiento relacionado con la función corporal"@es)
 AnnotationAssertion(rdfs:label obo:PROMOT_0100002 "Procédure liée à une fonction organique"@fr)
-EquivalentClasses(obo:PROMOT_0100002 ObjectIntersectionOf(<http://snomed.info/id/128927009> ObjectSomeValuesFrom(obo:PROMOT_2000002 <http://id.who.int/icd/entity/567313968>)))
+EquivalentClasses(obo:PROMOT_0100002 ObjectIntersectionOf(<http://snomed.info/id/128927009> ObjectSomeValuesFrom(obo:SCDO_1000194 <http://id.who.int/icd/entity/567313968>)))
 SubClassOf(obo:PROMOT_0100002 <http://snomed.info/id/128927009>)
-SubClassOf(obo:PROMOT_0100002 ObjectSomeValuesFrom(obo:PROMOT_2000002 <http://id.who.int/icd/entity/567313968>))
+SubClassOf(obo:PROMOT_0100002 ObjectSomeValuesFrom(obo:SCDO_1000194 <http://id.who.int/icd/entity/567313968>))
 
 # Class: obo:PROMOT_0100003 (Phenotypically related procedure)
 
@@ -7965,18 +7954,6 @@ EquivalentClasses(obo:PROMOT_0100003 ObjectIntersectionOf(<http://snomed.info/id
 SubClassOf(obo:PROMOT_0100003 <http://snomed.info/id/128927009>)
 SubClassOf(obo:PROMOT_0100003 ObjectSomeValuesFrom(obo:PROMOT_2000002 obo:HP_0000118))
 
-# Class: obo:PROMOT_0110001 (Actividad)
-
-AnnotationAssertion(Annotation(obo:IAO_0000119 "Clasificación Internacional del Funcionamiento, de la Discapacidad y de la Salud, translation reviewed by https://orcid.org/0000-0001-7764-2085 and https://orcid.org/0000-0002-3391-9772") Annotation(babelon:translation_status "OFFICIAL") obo:IAO_0000115 obo:PROMOT_0110001 "Actividad es la realización de una tarea o acción por parte de una persona. Las limitaciones en la actividad son dificultades que una persona puede tener para realizar una tarea o acción."@es)
-AnnotationAssertion(Annotation(obo:IAO_0000119 "International Classification of Functioning, Disability and Health (ICF)") obo:IAO_0000115 obo:PROMOT_0110001 "An activity is the execution of a task or action by an individual. Activity limitations are difficulties an individual may have in executing activities."@en)
-AnnotationAssertion(Annotation(obo:IAO_0000119 "Classification internationale du fonctionnement, du handicap et de la santé") obo:IAO_0000115 obo:PROMOT_0110001 "Une activité signifie l'exécution d'une tâche ou le fait pour une personne de faire quelque chose. Les limitations d'activité désignent les difficultés qu'une personne peut rencontrer pour mener une activité."@fr)
-AnnotationAssertion(obo:IAO_0000117 obo:PROMOT_0110001 "https://orcid.org/0009-0000-5160-7927")
-AnnotationAssertion(Annotation(rdfs:comment "translation reviewed by https://orcid.org/0000-0001-7764-2085 and https://orcid.org/0000-0002-3391-9772") Annotation(babelon:translation_status "OFFICIAL") rdfs:label obo:PROMOT_0110001 "Actividad"@es)
-AnnotationAssertion(rdfs:label obo:PROMOT_0110001 "Activity"@en)
-AnnotationAssertion(rdfs:label obo:PROMOT_0110001 "Activité"@fr)
-AnnotationAssertion(rdfs:seeAlso obo:PROMOT_0110001 <http://id.who.int/icd/entity/1394728112>)
-SubClassOf(obo:PROMOT_0110001 obo:BFO_0000015)
-
 # Class: obo:PROMOT_0120002 (Participación)
 
 AnnotationAssertion(Annotation(obo:IAO_0000119 "International Classification of Functioning, Disability and Health (ICF)") obo:IAO_0000115 obo:PROMOT_0120002 "A participation is an involvement in a life situation. Participation restrictions are problems an individual may experience in involvement in life situations."@en)
@@ -7988,6 +7965,18 @@ AnnotationAssertion(rdfs:label obo:PROMOT_0120002 "Participation"@en)
 AnnotationAssertion(rdfs:label obo:PROMOT_0120002 "Participation"@fr)
 AnnotationAssertion(rdfs:seeAlso obo:PROMOT_0120002 <http://id.who.int/icd/entity/1394728112>)
 SubClassOf(obo:PROMOT_0120002 obo:BFO_0000015)
+
+# Class: obo:SCDO_1000490 (Consent Status)
+
+AnnotationAssertion(oboInOwl:hasDbXref obo:SCDO_1000490 "http://snomed.info/id/309370004")
+AnnotationAssertion(rdfs:comment obo:SCDO_1000490 "[PROMOT note] A crossref to the orignal RD-CDM element has been added.")
+AnnotationAssertion(rdfs:comment obo:SCDO_1000490 "[PROMOT note] [Derived from EURO-NMD NMD-CDE] ")
+AnnotationAssertion(rdfs:comment obo:SCDO_1000490 "[PROMOT note] [Derived from RD-CDM] [7.1 Consent Status] ")
+AnnotationAssertion(rdfs:comment obo:SCDO_1000490 "[PROMOT note] [EURO-NMD] Atalia A et al., EURO-NMD registry: federated FAIR infrastructure, innovative technologies and concepts of a patient-centred registry for rare neuromuscular disorders. Orphanet J Rare Dis. 2024 Feb 14;19(1):66. doi: 10.1186/s13023-024-03059-3. PMID: 38355534; PMCID: PMC10865673.")
+AnnotationAssertion(rdfs:comment obo:SCDO_1000490 "[PROMOT note] [RD-CDM] Graefe, A.S.L., Hübner, M.R., Rehburg, F. et al. An ontology-based rare disease common data model harmonising international registries, FHIR, and Phenopackets. Sci Data 12, 234 (2025). https://doi.org/10.1038/s41597-025-04558-z")
+AnnotationAssertion(rdfs:label obo:SCDO_1000490 "Consent Status"@en)
+SubClassOf(obo:SCDO_1000490 <http://snomed.info/id/363787002>)
+SubClassOf(obo:SCDO_1000490 ObjectSomeValuesFrom(obo:RO_0002350 obo:PROMOT_0010008))
 
 # Class: obo:SO_0001060 (sequence_variant)
 
@@ -8010,6 +7999,11 @@ SubClassOf(obo:SO_0001060 ObjectSomeValuesFrom(obo:RO_0004013 <http://www.orpha.
 AnnotationAssertion(rdfs:label obo:SO_0001762 "variant_origin"@en)
 SubClassOf(obo:SO_0001762 obo:BFO_0000019)
 SubClassOf(obo:SO_0001762 ObjectSomeValuesFrom(obo:RO_0000080 obo:SO_0001060))
+
+# Class: obo:XCO_0000001 (Activity)
+
+AnnotationAssertion(rdfs:label obo:XCO_0000001 "Activity"@en)
+SubClassOf(obo:XCO_0000001 obo:BFO_0000015)
 
 # Class: <http://purl.org/sig/ont/fma/fma13295> (Diaphragm)
 
@@ -8397,6 +8391,7 @@ SubClassOf(<http://purl.org/sig/ont/fma/fma58274> ObjectSomeValuesFrom(obo:RO_00
 
 AnnotationAssertion(rdfs:label <http://purl.org/sig/ont/fma/fma62955> "Anatomical entity"@en)
 SubClassOf(<http://purl.org/sig/ont/fma/fma62955> obo:BFO_0000040)
+SubClassOf(<http://purl.org/sig/ont/fma/fma62955> ObjectSomeValuesFrom(obo:RO_0000086 <http://id.who.int/icd/entity/437219407>))
 
 # Class: <http://purl.org/sig/ont/fma/fma64916> (Thenar muscle)
 
@@ -8585,6 +8580,7 @@ AnnotationAssertion(rdfs:label <http://snomed.info/id/184099003> "Date of Birth"
 AnnotationAssertion(skos:changeNote <http://snomed.info/id/184099003> "[PROMOT note] The PROMOT ontology added a comment to quote the CDMs used as a source for this entity. A crossref to the orignal RD-CDM element from SNOMED and LOINC has also been added."@en)
 SubClassOf(<http://snomed.info/id/184099003> <http://snomed.info/id/302147001>)
 SubClassOf(<http://snomed.info/id/184099003> ObjectSomeValuesFrom(obo:RO_0002350 obo:PROMOT_0010009))
+SubClassOf(<http://snomed.info/id/184099003> DataSomeValuesFrom(obo:PROMOT_3000002 xsd:date))
 
 # Class: <http://snomed.info/id/184104002> (Patient occupation)
 
@@ -8685,6 +8681,7 @@ AnnotationAssertion(rdfs:label <http://snomed.info/id/298059007> "Date of onset"
 AnnotationAssertion(skos:changeNote <http://snomed.info/id/298059007> "[PROMOT note] The PROMOT ontology added a comment to quote the CDM used as a source for this entity."@en)
 SubClassOf(<http://snomed.info/id/298059007> obo:NCIT_C25164)
 SubClassOf(<http://snomed.info/id/298059007> ObjectSomeValuesFrom(obo:RO_0002350 obo:PROMOT_0010010))
+SubClassOf(<http://snomed.info/id/298059007> DataSomeValuesFrom(obo:PROMOT_3000002 xsd:date))
 
 # Class: <http://snomed.info/id/315306007> (Examination by method)
 
@@ -8741,6 +8738,7 @@ AnnotationAssertion(rdfs:label <http://snomed.info/id/399423000> "Date of admiss
 AnnotationAssertion(skos:changeNote <http://snomed.info/id/399423000> "[PROMOT note] The PROMOT ontology added a comment to quote the CDMs used as a source for this entity."@en)
 SubClassOf(<http://snomed.info/id/399423000> obo:NCIT_C25164)
 SubClassOf(<http://snomed.info/id/399423000> ObjectSomeValuesFrom(obo:RO_0002350 obo:PROMOT_0010012))
+SubClassOf(<http://snomed.info/id/399423000> DataSomeValuesFrom(obo:PROMOT_3000002 xsd:date))
 
 # Class: <http://snomed.info/id/399753006> (Date of death)
 
@@ -8755,6 +8753,7 @@ AnnotationAssertion(rdfs:label <http://snomed.info/id/399753006> "Date of death"
 AnnotationAssertion(skos:changeNote <http://snomed.info/id/399753006> "[PROMOT note] The PROMOT ontology added a comment to quote the CDMs used as a source for this entity. A crossref to the orignal RD-CDM element has also been added."@en)
 SubClassOf(<http://snomed.info/id/399753006> obo:NCIT_C25164)
 SubClassOf(<http://snomed.info/id/399753006> ObjectSomeValuesFrom(obo:RO_0002350 obo:PROMOT_0010009))
+SubClassOf(<http://snomed.info/id/399753006> DataSomeValuesFrom(obo:PROMOT_3000002 xsd:date))
 
 # Class: <http://snomed.info/id/406543005> (Date of visit)
 
@@ -8766,6 +8765,7 @@ AnnotationAssertion(rdfs:label <http://snomed.info/id/406543005> "Date of visit"
 AnnotationAssertion(skos:changeNote <http://snomed.info/id/406543005> "[PROMOT note] The PROMOT ontology added a comment to quote the CDM used as a source for this entity."@en)
 SubClassOf(<http://snomed.info/id/406543005> obo:NCIT_C25164)
 SubClassOf(<http://snomed.info/id/406543005> ObjectSomeValuesFrom(obo:RO_0002350 obo:PROMOT_0010012))
+SubClassOf(<http://snomed.info/id/406543005> DataSomeValuesFrom(obo:PROMOT_3000002 xsd:date))
 
 # Class: <http://snomed.info/id/420480000> (Ptosis crutch)
 
@@ -8809,6 +8809,7 @@ AnnotationAssertion(rdfs:label <http://snomed.info/id/432213005> "Date of diagno
 AnnotationAssertion(skos:changeNote <http://snomed.info/id/432213005> "[PROMOT note] The PROMOT ontology added a comment to quote the CDM used as a source for this entity."@en)
 SubClassOf(<http://snomed.info/id/432213005> obo:NCIT_C25164)
 SubClassOf(<http://snomed.info/id/432213005> ObjectSomeValuesFrom(obo:RO_0002350 obo:PROMOT_0010012))
+SubClassOf(<http://snomed.info/id/432213005> DataSomeValuesFrom(obo:PROMOT_3000002 xsd:date))
 
 # Class: <http://snomed.info/id/439272007> (Date of procedure)
 
@@ -8819,6 +8820,7 @@ AnnotationAssertion(rdfs:label <http://snomed.info/id/439272007> "Date of proced
 AnnotationAssertion(skos:changeNote <http://snomed.info/id/439272007> "[PROMOT note] The PROMOT ontology added a comment to quote the CDM used as a source for this entity. A crossref to the orignal RD-CDM element from NCIT has also been added."@en)
 SubClassOf(<http://snomed.info/id/439272007> obo:NCIT_C25164)
 SubClassOf(<http://snomed.info/id/439272007> ObjectSomeValuesFrom(obo:RO_0002350 obo:PROMOT_0010011))
+SubClassOf(<http://snomed.info/id/439272007> DataSomeValuesFrom(obo:PROMOT_3000002 xsd:date))
 
 # Class: <http://snomed.info/id/45929001> (Half-brother)
 
@@ -8958,7 +8960,7 @@ SubClassOf(<http://snomed.info/id/9947008> <http://snomed.info/id/13646006>)
 # Class: <http://www.orpha.net/ORDO/Orphanet_270> (Oculopharyngeal muscular dystrophy)
 
 AnnotationAssertion(rdfs:label <http://www.orpha.net/ORDO/Orphanet_270> "Oculopharyngeal muscular dystrophy"@en)
-SubClassOf(<http://www.orpha.net/ORDO/Orphanet_270> ObjectSomeValuesFrom(obo:RO_0004003 obo:PROMOT_0000001))
+SubClassOf(<http://www.orpha.net/ORDO/Orphanet_270> ObjectSomeValuesFrom(obo:RO_0004003 obo:PROMOT_0000003))
 SubClassOf(<http://www.orpha.net/ORDO/Orphanet_270> ObjectSomeValuesFrom(obo:RO_0004029 obo:HP_0000183))
 SubClassOf(<http://www.orpha.net/ORDO/Orphanet_270> ObjectSomeValuesFrom(obo:RO_0004029 obo:HP_0000467))
 SubClassOf(<http://www.orpha.net/ORDO/Orphanet_270> ObjectSomeValuesFrom(obo:RO_0004029 obo:HP_0000508))
@@ -9077,7 +9079,7 @@ SubClassOf(<http://www.orpha.net/ORDO/Orphanet_377788> ObjectSomeValuesFrom(obo:
 # Class: <http://www.orpha.net/ORDO/Orphanet_590> (Congenital myasthenic syndrom)
 
 AnnotationAssertion(rdfs:label <http://www.orpha.net/ORDO/Orphanet_590> "Congenital myasthenic syndrom"@en)
-SubClassOf(<http://www.orpha.net/ORDO/Orphanet_590> ObjectSomeValuesFrom(obo:RO_0004003 obo:PROMOT_0000002))
+SubClassOf(<http://www.orpha.net/ORDO/Orphanet_590> ObjectSomeValuesFrom(obo:RO_0004003 obo:PROMOT_0000001))
 SubClassOf(<http://www.orpha.net/ORDO/Orphanet_590> ObjectSomeValuesFrom(obo:RO_0004029 obo:HP_0000218))
 SubClassOf(<http://www.orpha.net/ORDO/Orphanet_590> ObjectSomeValuesFrom(obo:RO_0004029 obo:HP_0000467))
 SubClassOf(<http://www.orpha.net/ORDO/Orphanet_590> ObjectSomeValuesFrom(obo:RO_0004029 obo:HP_0000496))
@@ -9225,7 +9227,7 @@ AnnotationAssertion(rdfs:label <http://www.orpha.net/ORDO/Orphanet_97245> "Conge
 AnnotationAssertion(skos:changeNote <http://www.orpha.net/ORDO/Orphanet_97245> "[PROMOT note] The PROMOT ontology added a comment to quote the CDMs used as a source for this entity."@en)
 SubClassOf(<http://www.orpha.net/ORDO/Orphanet_97245> obo:PROMOT_0032001)
 SubClassOf(<http://www.orpha.net/ORDO/Orphanet_97245> ObjectSomeValuesFrom(obo:RO_0000086 obo:HP_0000005))
-SubClassOf(<http://www.orpha.net/ORDO/Orphanet_97245> ObjectSomeValuesFrom(obo:RO_0004003 obo:PROMOT_0000003))
+SubClassOf(<http://www.orpha.net/ORDO/Orphanet_97245> ObjectSomeValuesFrom(obo:RO_0004003 obo:PROMOT_0000002))
 SubClassOf(<http://www.orpha.net/ORDO/Orphanet_97245> ObjectSomeValuesFrom(obo:RO_0004003 obo:SO_0001060))
 SubClassOf(<http://www.orpha.net/ORDO/Orphanet_97245> ObjectSomeValuesFrom(obo:RO_0004029 obo:HP_0000028))
 SubClassOf(<http://www.orpha.net/ORDO/Orphanet_97245> ObjectSomeValuesFrom(obo:RO_0004029 obo:HP_0000118))
@@ -9396,7 +9398,7 @@ SubClassOf(<http://www.orpha.net/ORDO/Orphanet_97245> ObjectSomeValuesFrom(obo:R
 
 # Individual: <http://snomed.info/id/128927009> (Procedure by method)
 
-ClassAssertion(obo:SO_0001762 <http://snomed.info/id/128927009>)
+ClassAssertion(obo:XCO_0000001 <http://snomed.info/id/128927009>)
 
 
 )
