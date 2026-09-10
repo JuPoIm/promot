@@ -376,27 +376,27 @@ extract-pheno:
 # 5. python script that creates 2 files : one with the overall ICF-CIF mapping and a second with ICF URIs used in PROMOT only
 # 6. creates two SSSOM files for the two herebefore files
 # ----------------------------------------
-.PHONY: translation-icf
-translation-icf: refresh-icf $(IMPORTDIR)/icf_import.owl
-	if [ $(ICF) = true ] AND [ $(EN) = false ] ; then \
-	curl -L https://data.bioportal.lirmm.fr/ontologies/ICF/submissions/2/download?apikey=1de0a270-29c5-4dda-b043-7c3580628cd5 -o $(IMPORTSDATADIR)/cif-asip.ttl ; \
-	$(ROBOT) --prefix "skos: http://www.w3.org/2004/02/skos/core#" --prefix "rdfs: http://www.w3.org/2000/01/rdf-schema#" -vvv export -i $(IMPORTSDATADIR)/cif-asip.ttl --header "IRI|skos:notation|skos:altLabel" --export $(PYTHONTMPDIR)/CIF-ASIP.tsv ; \
-	$(ROBOT) convert --input $(IMPORTSDATADIR)/cif-asip.ttl --output $(MIRRORDIR)/cif-asip.owl ; \
-	curl -L "https://icdcdn.who.int/static/releasefiles/2026-01/SimpleTabulation-ICF-fr.zip" -o $(IMPORTSDATADIR)/SimpleTabulation-ICF-fr.zip ; \
-	unzip -q $(IMPORTSDATADIR)/SimpleTabulation-ICF-fr.zip -d $(IMPORTSDATADIR)/SimpleTabulation-ICF-fr/ ; \
-	mv $(IMPORTSDATADIR)/SimpleTabulation-ICF-fr/SimpleTabulation-ICF-fr.txt $(IMPORTSDATADIR)/SimpleTabulation-ICF-fr.txt ; \
-	rm $(IMPORTSDATADIR)/SimpleTabulation-ICF-fr.zip ; \
-	rm -r $(IMPORTSDATADIR)/SimpleTabulation-ICF-fr/ ; \
-	curl -L "https://icdcdn.who.int/static/releasefiles/2026-01/SimpleTabulation-ICF-es.zip" -o $(IMPORTSDATADIR)/SimpleTabulation-ICF-es.zip ; \
-	unzip -q $(IMPORTSDATADIR)/SimpleTabulation-ICF-es.zip -d $(IMPORTSDATADIR)/SimpleTabulation-ICF-es/ ; \
-	mv $(IMPORTSDATADIR)/SimpleTabulation-ICF-es/SimpleTabulation-ICF-es.txt $(IMPORTSDATADIR)/SimpleTabulation-ICF-es.txt ; \
-	rm $(IMPORTSDATADIR)/SimpleTabulation-ICF-es.zip ; \
-	rm -r $(IMPORTSDATADIR)/SimpleTabulation-ICF-es/ ; \
-	$(ROBOT) export -i $(IMPORTDIR)/icf_import.owl --header "IRI" --export $(PYTHONTMPDIR)/icf_import_iri.tsv ; \
-	python3.12 $(SCRIPTSDIR)/python/CIFASIP-ICF_mapping.py $(VERSION) ; \
-	python3.12 $(SCRIPTSDIR)/python/ICF_labels-es-fr.py ; \
-	$(SSSOMPY) parse -m $(METADATADIR)/mapping-all.yml -o $(MAPPINGDIR)/icf-to-cif_all-mappings.sssom.tsv $(PYTHONTMPDIR)/icf-to-cifasip_all.tsv ; \
-	$(SSSOMPY) parse -m $(METADATADIR)/mapping-promot.yml -o $(MAPPINGDIR)/icf-to-cif_promot-mappings.sssom.tsv $(PYTHONTMPDIR)/icf-to-cifasip_promot.tsv ; fi
+#.PHONY: translation-icf
+#translation-icf: refresh-icf $(IMPORTDIR)/icf_import.owl
+#	if [ $(ICF) = true ] AND [ $(EN) = false ] ; then \
+#	curl -L https://data.bioportal.lirmm.fr/ontologies/ICF/submissions/2/download?apikey=1de0a270-29c5-4dda-b043-7c3580628cd5 -o $(IMPORTSDATADIR)/cif-asip.ttl ; \
+#	$(ROBOT) --prefix "skos: http://www.w3.org/2004/02/skos/core#" --prefix "rdfs: http://www.w3.org/2000/01/rdf-schema#" -vvv export -i $(IMPORTSDATADIR)/cif-asip.ttl --header "IRI|skos:notation|skos:altLabel" --export $(PYTHONTMPDIR)/CIF-ASIP.tsv ; \
+#	$(ROBOT) convert --input $(IMPORTSDATADIR)/cif-asip.ttl --output $(MIRRORDIR)/cif-asip.owl ; \
+#	curl -L "https://icdcdn.who.int/static/releasefiles/2026-01/SimpleTabulation-ICF-fr.zip" -o $(IMPORTSDATADIR)/SimpleTabulation-ICF-fr.zip ; \
+#	unzip -q $(IMPORTSDATADIR)/SimpleTabulation-ICF-fr.zip -d $(IMPORTSDATADIR)/SimpleTabulation-ICF-fr/ ; \
+#	mv $(IMPORTSDATADIR)/SimpleTabulation-ICF-fr/SimpleTabulation-ICF-fr.txt $(IMPORTSDATADIR)/SimpleTabulation-ICF-fr.txt ; \
+#	rm $(IMPORTSDATADIR)/SimpleTabulation-ICF-fr.zip ; \
+#	rm -r $(IMPORTSDATADIR)/SimpleTabulation-ICF-fr/ ; \
+#	curl -L "https://icdcdn.who.int/static/releasefiles/2026-01/SimpleTabulation-ICF-es.zip" -o $(IMPORTSDATADIR)/SimpleTabulation-ICF-es.zip ; \
+#	unzip -q $(IMPORTSDATADIR)/SimpleTabulation-ICF-es.zip -d $(IMPORTSDATADIR)/SimpleTabulation-ICF-es/ ; \
+#	mv $(IMPORTSDATADIR)/SimpleTabulation-ICF-es/SimpleTabulation-ICF-es.txt $(IMPORTSDATADIR)/SimpleTabulation-ICF-es.txt ; \
+#	rm $(IMPORTSDATADIR)/SimpleTabulation-ICF-es.zip ; \
+#	rm -r $(IMPORTSDATADIR)/SimpleTabulation-ICF-es/ ; \
+#	$(ROBOT) export -i $(IMPORTDIR)/icf_import.owl --header "IRI" --export $(PYTHONTMPDIR)/icf_import_iri.tsv ; \
+#	python3.12 $(SCRIPTSDIR)/python/CIFASIP-ICF_mapping.py $(VERSION) ; \
+#	python3.12 $(SCRIPTSDIR)/python/ICF_labels-es-fr.py ; \
+#	$(SSSOMPY) parse -m $(METADATADIR)/mapping-all.yml -o $(MAPPINGDIR)/icf-to-cif_all-mappings.sssom.tsv $(PYTHONTMPDIR)/icf-to-cifasip_all.tsv ; \
+#	$(SSSOMPY) parse -m $(METADATADIR)/mapping-promot.yml -o $(MAPPINGDIR)/icf-to-cif_promot-mappings.sssom.tsv $(PYTHONTMPDIR)/icf-to-cifasip_promot.tsv ; fi
 # ----------------------------------------
 # DRAFT
 # ----------------------------------------
